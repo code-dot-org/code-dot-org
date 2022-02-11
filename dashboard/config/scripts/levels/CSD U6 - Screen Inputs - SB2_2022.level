@@ -59,9 +59,7 @@
       "declareAssign_x": null
     },
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "Z35m1lY4EomhJGgjUivQoVUaM9zHDbUwqYK7YjL8+bGWEU79SFTTG1D4xL7b\nCPdSGeMzHY71s34Q0UXb5zHu0A==\n"
   },
   "game_id": 41,
   "published": true,
@@ -69,7 +67,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-11-29T21:56:39.099+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - SB1_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - SB1_2022\"},{\"changed_at\":\"2021-11-29 22:03:44 +0000\",\"changed\":[\"long_instructions\",\"validation_enabled\",\"hide_design_mode\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:05:28 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:05:59 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:06:50 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:09:18 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:11:55 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-11-29T21:56:39.099+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - SB1_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - SB1_2022\"},{\"changed_at\":\"2021-11-29 22:03:44 +0000\",\"changed\":[\"long_instructions\",\"validation_enabled\",\"hide_design_mode\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:05:28 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:05:59 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:06:50 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:09:18 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:11:55 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 20:03:34 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

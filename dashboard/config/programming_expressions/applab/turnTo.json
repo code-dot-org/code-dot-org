@@ -2,6 +2,7 @@
   "key": "turnTo",
   "name": "turnTo",
   "category": "Turtle",
+  "category_key": "turtle",
   "palette_params": [
     {
       "name": "angle"

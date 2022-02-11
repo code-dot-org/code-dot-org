@@ -2,5 +2,6 @@
   "key": "keyTyped",
   "name": "keyTyped",
   "category": "World",
+  "category_key": "world",
   "syntax": "function keyTyped() {}"
 }

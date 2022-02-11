@@ -15,9 +15,15 @@
 class ProgrammingEnvironment < ApplicationRecord
   include SerializedProperties
 
+  NAME_CHAR_RE = /[a-z0-9\-]/
+  NAME_RE = /\A#{NAME_CHAR_RE}+\Z/
+  validates_format_of :name, with: NAME_RE, message: "must contain only lowercase alphanumeric characters and dashes; got \"%{value}\"."
+
   validates_uniqueness_of :name, case_sensitive: false
 
-  has_many :programming_expressions
+  alias_attribute :categories, :programming_environment_categories
+  has_many :programming_environment_categories, dependent: :destroy
+  has_many :programming_expressions, dependent: :destroy
 
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
   serialized_attrs %w(
@@ -44,12 +50,18 @@ class ProgrammingEnvironment < ApplicationRecord
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
     environment = ProgrammingEnvironment.find_or_initialize_by(name: properties[:name])
-    environment.update! properties
+    environment.update! properties.except(:categories)
+    environment.categories = properties[:categories].map do |category_config|
+      category = ProgrammingEnvironmentCategory.find_or_initialize_by(programming_environment_id: environment.id, key: category_config['key'])
+      category.update! category_config
+      category
+    end
     environment.name
   end
 
   def serialize
-    {name: name}.merge(properties.sort.to_h)
+    env_hash = {name: name}.merge(properties.sort.to_h)
+    env_hash.merge(categories: programming_environment_categories.map(&:serialize))
   end
 
   def write_serialization
@@ -69,11 +81,8 @@ class ProgrammingEnvironment < ApplicationRecord
       title: title,
       imageUrl: image_url,
       description: description,
-      editorType: editor_type
+      editorType: editor_type,
+      categories: categories.map(&:serialize_for_edit)
     }
-  end
-
-  def categories
-    programming_expressions.pluck(:category).uniq
   end
 end

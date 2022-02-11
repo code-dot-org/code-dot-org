@@ -2,5 +2,6 @@
   "key": "getLastFrame",
   "name": "getLastFrame",
   "category": "Animations",
+  "category_key": "animations",
   "syntax": "getLastFrame"
 }

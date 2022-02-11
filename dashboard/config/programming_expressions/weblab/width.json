@@ -2,5 +2,6 @@
   "key": "width",
   "name": "width",
   "category": "CSS Properties",
+  "category_key": "css_properties",
   "syntax": "width: value;"
 }

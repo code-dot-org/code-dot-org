@@ -2499,6 +2499,10 @@ si:
               display_name: ලැයිස්තු
             csp_loops:
               display_name: ලූපයන්
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ඇල්ගොරිතම්
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
@@ -2800,10 +2804,21 @@ si:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: For ලුපයේ සතුට
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: විචල්‍යන්
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2813,6 +2828,176 @@ si:
             lessonGroup-2:
               display_name: අන්තර්ගතය
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: සතුටු සිතියම්
+            'Programming: Happy Maps':
+              name: සතුටු සිතියම්
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_variables:
+              display_name: විචල්‍යන්
+            csf_for_loops:
+              display_name: ලූපයන් සඳහා
+        csp1-2022:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: 'ඒකක 1: ඩිජිටල් තොරතුරු'
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'පාඩම් අංක 2: අන්තර්ජාලය'
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: විචල්‍යන්
+            csp_conditionals:
+              display_name: කන්ඩිෂනලස්
+            csp_functions:
+              display_name: ශ්‍රිතයන්
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: ලැයිස්තු
+            csp_loops:
+              display_name: ලූපයන්
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: එය ගෙන යන්න, ගෙන යන්න
+              key: එය ගෙන යන්න, ගෙන යන්න
+            Getting Loopy:
+              name: ඔල්මාද වීම
+            'Loops: Getting Loopy':
+              name: ඔල්මාද වීම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: විශාල සිදුවීම
+            Binary Bracelets:
+              name: ද්විමය වළලු
+              key: ද්විමය වළලු
+            'Events: The Big Event':
+              name: විශාල සිදුවීම
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_data:
+              display_name: දත්ත
+        csp9-2022:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(පැරණි) 9 වෙනි ඒකකය: දත්ත"
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: ප්‍රස්තාර රටා වැඩසටහන්
+            Relay Programming:
+              name: ක්‍රමලේඛණය ප්‍රතිචාරණය
+              key: ක්‍රමලේඛණය ප්‍රතිචාරණය
+            Conditionals with Cards:
+              name: කාඩ්පත් සමඟ කොන්දේසික
+              key: කාඩ්පත් සමඟ කොන්දේසික
+            'Algorithms: Graph Paper Programming':
+              name: ප්‍රස්තාර රටා වැඩසටහන්
+          lesson_groups:
+            lessonGroup-6:
+              display_name: ඩිජිටල් පුරවැසිකම
+            csf_events:
+              display_name: වැඩසටහන්
+            csf_loops:
+              display_name: ලූපයන්
+            csf_conditionals:
+              display_name: කන්ඩිෂනලස්
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: ගීත ලිවීම
+            'Functions: Songwriting':
+              name: ගීත ලිවීම
+            Conditionals:
+              key: කන්ඩිෂනලස්
+          lesson_groups:
+            csf_digcit:
+              display_name: ඩිජිටල් පුරවැසිකම
+            ramp_up:
+              display_name: නැවත නැවත සිදුවන ලුප
+            csf_functions:
+              display_name: ශ්‍රිතයන්
+            csf_nested_loops:
+              display_name: කන්ඩිෂනලස්
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: For ලුපයේ සතුට
+              key: For ලුපයේ සතුට
+            The Internet:
+              name: අන්තර්ජාලය
+            Internet:
+              key: අන්තර්ජාලය
+              name: අන්තර්ජාලය
+          lesson_groups:
+            lessonGroup-7:
+              display_name: ඩිජිටල් පුරවැසිකම
+            lessonGroup-8:
+              display_name: විචල්‍යන්
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: ලූපයන්
+            csf_events:
+              display_name: වැඩසටහන්
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: කන්ඩිෂනලස්
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: අන්තර්ගතය
+        csa5-2022:
           lesson_groups:
             lessonGroup-2:
               display_name: අන්තර්ගතය

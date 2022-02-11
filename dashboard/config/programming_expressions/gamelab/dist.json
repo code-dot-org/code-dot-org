@@ -2,6 +2,7 @@
   "key": "dist",
   "name": "dist",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "x1"

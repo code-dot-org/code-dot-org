@@ -2,6 +2,7 @@
   "key": "dot",
   "name": "dot",
   "category": "Turtle",
+  "category_key": "turtle",
   "palette_params": [
     {
       "name": "radius"

@@ -1291,11 +1291,9 @@ pl-PL:
 
           W części 2 stworzysz swój własny projekt. Nie ma tu żadnych łamigłówek - zamiast tego przedstawionych jest wiele projektów, które pokazują różne sposoby tworzenia bardziej złożonych układów tanecznych.
 
-          Możesz zrealizować te poziomy _w dowolnej kolejności_. Zobacz w jaki sposób coś zostało zrobione na poprzednim poziomie lub połącz koncepcje między projektami. Wypróbuj je wszystkie, wybierz swoje ulubione i poświęć swój czas na pracę nad dodaniem ich do tego projektu, aby powstał z niego twój własny.
+          Możesz zrealizować te poziomy _w dowolnej kolejności_. Zobacz, w jaki sposób coś zostało zrobione na poprzednim poziomie lub połącz pomysły między projektami. Wypróbuj je wszystkie, wybierz swoje ulubione i poświęć swój czas na pracę nad dodaniem ich do tego projektu, aby powstał z niego Twój własny.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Kontynuuj</a>
-
-          <div class="clearfix"></div>
+          <a class="clearfix"></div>
 
           <div style="float: left; margin: 10px">
           <a href="2">
@@ -1357,11 +1355,11 @@ pl-PL:
 
           </div>
       Dance_Party_extras_intro_2019:
-        markdown: "\"# Tańcz dalej!\n\nW Ii części stworzysz swój własny projekt.
+        markdown: "\"# Tańcz dalej!\n\nW części 2, stworzysz swój własny projekt.
           Nie ma tam żadnych łamigłówek — za to jest zbiór projektów, które pokazują
           różne sposoby, w jakie można stworzyć bardziej złożone potańcówki.\n\nMożesz
-          przerabiać te poziomy _w dowolnej kolejności_. Przeskocz do poprzedniego
-          poziomu, aby zobaczyć, jak coś zostało w nim zrobione, lub połącz koncepcje
+          przechodzić te poziomy _w dowolnej kolejności_. Przeskocz do poprzedniego
+          poziomu, aby zobaczyć, jak coś zostało w nim zrobione, lub połącz pomysły
           z różnych projektów. Wypróbuj je wszystkie, wybierz swój ulubiony i poświęć
           trochę czasu na tworzenie projektu, tak by stał się on naprawdę Twój.\n\n<a
           class=\"\"btn btn-large btn-primary next-stage submitButton pull-right\"\">Dalej</a>\n\n<div
@@ -5204,7 +5202,7 @@ pl-PL:
         markdown: |
           # Bransoletki binarne
 
-          Utwórz bransoletkę, która przedstawia Twoje imię w systemie, zrozumiałą dla komputera!
+          Utwórz bransoletkę, która przedstawia Twoje imię w systemie, zrozumiałym dla komputerów!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CourseF_outbreak_story:
@@ -5743,7 +5741,7 @@ pl-PL:
           feedback: Poprawnie! Oba zachowania będą zachodzić jednocześnie.
         - text: Duszek najpierw będzie się obracał wokół własnej osi, a potem będzie
             się przemieszczał.
-          feedback: Błąd. W Sprite Lab, połączone bloki będą się pojawiać jednocześnie,
+          feedback: Niepoprawnie. W Sprite Lab połączone bloki będą się pojawiać jednocześnie,
             po każdym ostatni, zatem do obu zachowań dojdzie jednocześnie.
         questions:
         - text: Przeczytaj kod, a potem zgadnij.
@@ -5831,12 +5829,12 @@ pl-PL:
         - text: Przeczytaj kod, a potem zgadnij.
       courseF_variables_predict_multi:
         answers:
-        - text: Program wydrukuje Cześć imię!
-          feedback: Niepoprawnie. Blok imienia zastąpi to, co wpiszesz.
-        - text: Program przywita się z tobą imieniem, które wpiszesz.
+        - text: Program wydrukuje "Cześć imię!"
+          feedback: Niepoprawnie. Blok imienia zostanie zastąpiony przez to, co wpiszesz.
+        - text: Program przywita się z Tobą imieniem, które wpiszesz.
           correct: true
-          feedback: Poprawnie! To, co wpisujesz, stosuje się w miejscu bloku imieniu.
-        - text: 'Duszek będzie zmieniał rozmiary.
+          feedback: Poprawnie! To, co wpiszesz, zostanie użyte w miejscu w bloku imienia.
+        - text: 'Duszek zmieni rozmiar.
 
 '
           feedback: Niepoprawnie. Tekst jest wydrukowany na ekranie.

@@ -2,6 +2,7 @@
   "key": "indexOf",
   "name": "indexOf",
   "category": "Variables",
+  "category_key": "variables",
   "palette_params": [
     {
       "name": "searchValue"

@@ -371,6 +371,12 @@
             null
           ]
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Uvod"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Slobodna igra"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Uvod",
           "tips": [
@@ -725,12 +731,6 @@
           "tips": [
             null
           ]
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Uvod"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Slobodna igra"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [

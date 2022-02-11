@@ -15676,6 +15676,8 @@ uz:
             'Lesson 18: Assessment Day':
               key: '18-dars: Baholash kuni'
               name: Baholash kuni
+            lesson-1:
+              name: CS Principles Post-Course Survey
           lesson_groups:
             csp_lists:
               display_name: Ro‘yxatlar
@@ -15683,15 +15685,21 @@ uz:
               display_name: Sikllar
             csp_project:
               display_name: Loyiha
+            lessonGroup-5:
+              display_name: Post-Course Survey
           name: csp5-2021
         csp6-2021:
           lessons:
             'Lesson 6: Assessment Day':
               key: '6-dars: Baholash kuni'
               name: Baholash kuni
+            lesson-1:
+              name: CS Principles Post-Course Survey
           lesson_groups:
             csp_unit6_2020:
-              display_name: 'Unit 6: Algoritmlar'
+              display_name: Algoritmlar
+            lessonGroup-2:
+              display_name: Post-Course Survey
           name: csp6-2021
         csp7-2021:
           lessons:
@@ -15704,11 +15712,23 @@ uz:
             'Lesson 11: Assessment Day':
               key: '11-dars: Baholash kuni'
               name: Baholash kuni
+            lesson-1:
+              name: CS Principles Post-Course Survey
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Survey
           name: csp7-2021
         csp8-2021:
           lessons:
             Create PT - Complete the Task:
               key: Create PT - Complete the Task
+            lesson-1:
+              name: CS Principles Post-Course Survey
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Create PT
+            lessonGroup-3:
+              display_name: Survey
           name: csp8-2021
         csp9-2021:
           lessons:
@@ -15717,6 +15737,11 @@ uz:
             'Lesson 9: Assessment Day':
               key: '9-dars: Baholash kuni'
               name: Baholash kuni
+            lesson-1:
+              name: CS Principles Post-Course Survey
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survey
           name: csp9-2021
         csp10-2021:
           lessons:
@@ -15744,6 +15769,11 @@ uz:
             'Lesson 14: Unit Assessment Day':
               key: '14-dars: Baholash kuni'
               name: Baholash kuni
+            lesson-1:
+              name: CS Principles Post-Course Survey
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survey
           name: csp10-2021
         coursea-2021:
           description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
@@ -17112,6 +17142,8 @@ uz:
               name: Jismoniy hisoblash
         self-paced-pl-csd6-2021:
           lessons:
+            lesson-4:
+              name: Ma'lumotlar va jamiyat
             lesson-6:
               name: Ma'lumotlar va jamiyat
         csa1-exemplars:
@@ -17334,6 +17366,43 @@ uz:
               name: Oʻzgaruvchilar bilan sanash
             lesson-5:
               name: Men haqimda Sprite Lab bilan
+            Drawing with Loops:
+              name: Drawing with Loops
+              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+            Using Variables with the Artist:
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
+              description_teacher: Ushbu darsda talabalar Artist  muhitida o'zgaruvchilar yordamida takrorlanadigan dizaynlarni yaratishni o'rganadilar. Talabalar o'zgaruvchilar yordamida qanday qilib kodni yozishni va o'qishni osonlashtirish uchun qanday foydalanish mumkinligini bilib oladilar. Yonaltirilgan jumboqlar tugagandan  so'ng talabalar freeplay darajasida o'zlarining o'rgangan narsalarini namoyish etish va o'z dizaynlarini yaratishni o’rganadilar
+            Programming with the Bee:
+              name: Nested Loops in Maze
+              description_student: Sikl ichidagi sikl ichida sikllar. Bu nimani anglatadi? Bu dars sizni biron sikl ichida boshqa siklni joylashtirganingizda nima sodir bo‘lishini o‘rgatadi.
+              description_teacher: Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.
+            Variables with the Bee:
+              name: Changing Variables with Bee
+              description_student: This bee loves variables!
+              description_teacher: This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running.
+            For Loop Fun:
+              name: Zavqli For sikli
+              description_student: Siz for sikllari haqida juda ko‘p qiziqarli ma’lumotlarga ega bo‘lasiz!
+              description_teacher: Biz bilamizki, ilmoqlar bizga narsalarni qayta-qayta bajarishga imkon beradi, ammo endi biz qo'shimcha tuzilmalarga ega bo'lgan sikllardan qanday foydalanishni o'rganamiz. Ushbu yangi tuzilmalar talabalarga kodni yanada kuchli va dinamik yaratishga imkon beradi. .
+            For Loops with Bee:
+              name: Asalari bilan for sikllari
+              description_student: Buzz buzz. Ushbu jumboqlarda siz asalarini for sikllari yordamida gul shirasi va asalga yo'naltirasiz.
+              description_teacher: Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.
+            For Loops with Artist:
+              name: Rassom bilan For Sikllarini ishlatish
+              description_student: Keyingi asaringizni yaratishga tayyorlaning. Bu yerda siz 'for' sikllari yordamida hayratlantiruvchi rasmlarni yaratasiz.
+              description_teacher: In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
+            Follow the Algorithm:
+              description_student: O‘ynang va natijaga erishish uchun qanday buyruqlar kerakligini o‘ylab ko‘ring.
+              description_teacher: Ushbu darsda o‘quvchilar to‘g‘ri natija berish uchun qanday buyruqlar berish kerakligi haqida fikr yuritishga mo‘ljallangan o‘yin o‘ynaydilar. Bu ularga kelgusi darslarda Sprite Labga osonroq o‘tishga yordam beradi.
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: Create an interactive project that can be shared with classmates.
+              description_teacher: Ushbu darsda o‘quvchilar o‘z interaktiv animatsiyalari va o‘yinlarini yaratishlari mumkin bo‘lgan "Sprite Lab" platformasi bilan tanishtiriladi. Xatti-harakatdan tashqari, bugun talabalar "begonalar raqs partiyasini" yaratish uchun foydalanuvchi kiritishlarini hodisa sifatida qo‘shadilar.
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Dasturlash soati
         csa7-exemplars:
           lessons:
             lesson-15:
@@ -17345,6 +17414,30 @@ uz:
           lessons:
             lesson-2:
               name: Oʻzgaruvchilar bilan sanash
+            Introducing Sprite Lab:
+              name: Sprite laboratoriyasi bilan tanishish
+            Sprites in Action:
+              name: Spraytlar amalda
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-loyiha: Virtual Pet'
+              description_student: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
+              description_teacher: Bu darsda talabalar ular xohlagandek ko‘rinadigan va o‘zini tutadigan interfaol virtual uy hayvonini yaratishadi. Talabalar uy hayvoninig tashqi ko‘rinishini moslashtirish uchun Sprite Labning "Costumes" qurilmasidan foydalanishadi. Keyin ular uy hayvonini jonlantirish uchun hodisalar, xatti-harakatlar va ular o‘rgangan boshqa tushunchalardan foydalanishadi!
+            'Mini-Project: User Input Programs':
+              name: Chat-Bot yaratish
+            Simulating Experiments:
+              name: Simulating Experiments
+              description_student: Run simulations on the computer and experiment by changing variables.
+              description_teacher: By running a simple simulation in Sprite Lab, students will experience how computing can be used to collect data that identify trends or patterns. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.
+            End of Course Project:
+              description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
+              description_teacher: Ushbu yakunlovchi dars o‘quvchilarni o‘zlarining loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi!
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spraytlar
+            lessonGroup-3:
+              display_name: O‘zgaruvchilar
+            lessonGroup-4:
+              display_name: End of Course Project
           title: Kompyuter fanlari asoslari 2019-2020 (Pilot)
         csa8-exemplars:
           lessons:
@@ -17368,6 +17461,1267 @@ uz:
               name: Baholash kuni
             lesson-15:
               name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        coursea-2022:
+          lessons:
+            Safety in My Online Neighborhood:
+              name: Mening onlayn atrofimda xavfsizlik
+              description_student: Xavfsiz onlayn aylanishni o'rganing
+              description_teacher: |-
+                [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
+
+                Ushbu dars Common Sense Education tomonidan yaratilgan. [Batafsil.](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Internetning kuchi o‘quvchilarga shaxsan ko‘rishlari mumkin bo‘lmagan joylarni ko‘rish va aylanish imkoniyatini beradi. Ammo, xuddi real dunyoda sayohat qilish kabi, Internetda sayohat qilishda ham xavfsiz bo‘lish muhim hisoblanadi. Ushbu virtual ekskursiyada bolalar onlayn sarguzashtlarda xavfsizlikni ta'minlash bilan shug‘ullanishlari mumkin.
+              key: Mening onlayn atrofimda xavfsizlik
+            Learn to Drag and Drop:
+              name: Drag&Drop - Olib ko‘chirishni o‘rganish
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi, shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda o‘sish kuzatiladi.
+              key: Drag&Drop - Olib ko‘chirishni o‘rganish
+            Happy Maps:
+              name: Xursand Xaritalar
+              description_student: Write instructions to get the Flurb to the fruit.
+              description_teacher: 'Bu kompyutersiz o‘tiladigan dars jamoalarga oddiy vazifa yuklaydi: "flurb"ni mevaga yetkazing. Talabalar ko‘rsatmalarni taqdim etilgan belgilarga tarjima qilish jarayonida aniq ko‘rsatmalar yozishni mashq qiladilar. Kodda muammolar tug‘ilsa, talabalar xatolikni topish uchun va yechim topish uchun ham birgalikda ishlashlari kerak bo‘ladi.'
+            Sequencing with Scrat:
+              name: Sequencing with Scrat
+              description_student: Program Scrat to reach the acorn.
+              description_teacher: Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.
+              key: Sequencing with Scrat
+            Programming with Scrat:
+              name: Programming with Scrat
+              description_student: Write programs to help Scrat reach the acorn.
+              description_teacher: Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+            Programming with Rey and BB-8:
+              name: Rey va BB-8 bilan dasturlash
+              description_student: Help BB-8 collect the scrap metal.
+              description_teacher: Ushbu darsda talabalar o'zlarining yangi dasturlash qobiliyatlaridan yanada murakkab usullarda BB-8 bilan murakkab kursni o'tish uchun foydalanadilar.
+              key: Rey va BB-8 bilan dasturlash
+            Happy Loops:
+              name: Xursand sikllar
+              description_student: Help the Flurb solve bigger problems using loops.
+              description_teacher: Bu mashg‘ulot Xursand Xaritalarga qayta tashrif buyuradi. Bu safar, talabalar ularni uzun kodlarni osonroq yo‘l bilan yozishga imkon beruvchi tuzilmalardan foydalanishni ko‘rishga yetaklaydigan kodlari bilan kattaroq va uzunroq boshqotirmalarni yechishadi.
+            Loops with Scrat:
+              name: Loops with Scrat
+              description_student: Help Scrat cover more ground using loops.
+              description_teacher: '"Xursand sikllar"dan takrorlanuvchi ko‘rsatmalar tushunchasini yaratgan holda, bu bosqichda Code.orgdagi yong‘oqni samaraliroq usulda yig‘ish uchun sikllardan foydalanish ko‘rsatiladi.'
+            Loops with Laurel:
+              name: Laurel bilan sikllar
+              description_student: Help Laurel the adventurer collect the treasure underground.
+              description_teacher: Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Oldingi darsda, talabalar labirint bo‘yicha harkatlanish va hosilni yig‘ish orqali sikllar bilan tanishtirilgan edi. Bu yerda, sikllar ochiq g‘orlardagi xazinalarni yig‘ish uchun ishlatiladi.
+            Ocean Scene with Loops:
+              name: Sikllar bilan okean manzarasi
+              description_student: Use loops and patterns to finish the images.
+              description_teacher: Sikllar mavzusiga qaytgan holda, talabalar ko‘rsatmalarning oddiy ketma-ketligini takrorlash orqali rasmlar chizishni o‘rganishadi. Kompyuter bilan o‘tilgan oldingi darsda, sikllar labirintdan o‘tish va xazinani yig‘ish uchun foydalanilgan edi. Bu yerda, sikllar yordamida shakllar yaratilyapti. Bu bosqichning oxirida, talabalarga sikllardan foydalanib o‘z rasmlarini yaratish imkoniyati beriladi.
+              key: Sikllar bilan okean manzarasi
+            The Big Event Jr.:
+              name: Katta hodisa Jr.
+              description_student: Move and shout when your teachers presses buttons on a giant remote.
+              description_teacher: Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.
+            'Mini-Project: On the Move with Play Lab':
+              description_student: O'z o'yiningiz yoki hikoyangizni yarating!
+              description_teacher: Bu onlayn mashg‘ulotda, o‘quvchilar Play Labdagi hodisalardan qanday foydalanishni o‘rganish va ular animatsiyalashtirilgan o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish imkoniyatiga ega bo‘ladilar. Ijod qilish va Play Labda o‘z hikoyangizni yaratish vaqti keldi!
+            End of Course Project:
+              name: End of Course Project
+            'Programming: Happy Maps':
+              key: 'Dasturlash: Xursand Xaritalar'
+              name: Xursand Xaritalar
+              description_student: Write instructions to get the Flurb to the fruit.
+              description_teacher: 'Bu kompyutersiz o‘tiladigan dars jamoalarga oddiy vazifa yuklaydi: "flurb"ni mevaga yetkazing. Talabalar ko‘rsatmalarni taqdim etilgan belgilarga tarjima qilish jarayonida aniq ko‘rsatmalar yozishni mashq qiladilar. Kodda muammolar tug‘ilsa, talabalar xatolikni topish uchun va yechim topish uchun ham birgalikda ishlashlari kerak bo‘ladi.'
+            Programming in Ice Age:
+              key: Programming in Ice Age
+              name: Programming with Scrat
+              description_student: Write programs to help Scrat reach the acorn.
+              description_teacher: Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+            'Loops: Happy Loops':
+              key: 'Sikllar: Xursand sikllar'
+              name: Xursand sikllar
+              description_student: Help the Flurb solve bigger problems using loops.
+              description_teacher: Bu mashg‘ulot Xursand Xaritalarga qayta tashrif buyuradi. Bu safar, talabalar ularni uzun kodlarni osonroq yo‘l bilan yozishga imkon beruvchi tuzilmalardan foydalanishni ko‘rishga yetaklaydigan kodlari bilan kattaroq va uzunroq boshqotirmalarni yechishadi.
+            Loops in Ice Age:
+              key: Muz davridagi sikllar
+              name: Loops with Scrat
+              description_student: Help Scrat cover more ground using loops.
+              description_teacher: '"Xursand sikllar"dan takrorlanuvchi ko‘rsatmalar tushunchasini yaratgan holda, bu bosqichda Code.orgdagi yong‘oqni samaraliroq usulda yig‘ish uchun sikllardan foydalanish ko‘rsatiladi.'
+            Loops in Collector:
+              key: Yig‘uvchidagi sikllar
+              name: Laurel bilan sikllar
+              description_student: Help Laurel the adventurer collect the treasure underground.
+              description_teacher: Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Oldingi darsda, talabalar labirint bo‘yicha harkatlanish va hosilni yig‘ish orqali sikllar bilan tanishtirilgan edi. Bu yerda, sikllar ochiq g‘orlardagi xazinalarni yig‘ish uchun ishlatiladi.
+            'Events: The Big Event':
+              key: 'Hodisalar: Katta Hodisa'
+              name: Katta hodisa Jr.
+              description_student: Move and shout when your teachers presses buttons on a giant remote.
+              description_teacher: Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.
+            Events in Play Lab:
+              key: Play Labdagi hodisalar
+              description_student: O'z o'yiningiz yoki hikoyangizni yarating!
+              description_teacher: Bu onlayn mashg‘ulotda, o‘quvchilar Play Labdagi hodisalardan qanday foydalanishni o‘rganish va ular animatsiyalashtirilgan o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish imkoniyatiga ega bo‘ladilar. Ijod qilish va Play Labda o‘z hikoyangizni yaratish vaqti keldi!
+            lesson-1:
+              name: End of Course Project
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+            lessonGroup-5:
+              display_name: End of Course Project
+          student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
+          description_short: Maktabgacha yoshdagilarni kompyuter fanlari bilan tanishtirish
+          description_audience: 'Yosh: 4-7'
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: Jahldor qushlar bilan dasturlash
+              description_student: Angry Birds bilan ketma-ketlik va algoritmlar haqida o‘rganing.
+              description_teacher: Jahldor qushlar o‘yinidagi obrazlardan foydalanib, talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar. Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.
+              key: Jahldor qushlar bilan dasturlash
+            Debugging in Maze:
+              name: Debugging in Maze
+              description_student: Boshqotirmalardagi muammolarni toping va debug qilish mahoratingizni amalda sinab ko‘ring.
+              description_teacher: Debug qilish dasturlashni o‘rganishning muhim elementidir. Bu darsda, talabalar noto‘g‘ri yechilgan boshqotirmalarga duch kelishadi. Ular xatolikni topish uchun mavjud kodni qatorma-qator tekshirib chiqishadi, jumladan, noto‘g‘ri ishlatilgan sikllar, unutib qoldirilgan bo‘limlar, ortiqcha bo‘limlar va tartibdan tashqaridagi bo‘limlarni.
+            Collecting Treasure with Laurel:
+              name: Laurel bilan xazina yig‘ish
+              key: Laurel bilan xazina yig‘ish
+            Creating Art with Code:
+              name: Kod bilan san’at yaratish
+              description_student: Rassomni dasturlash orqali chiroyli rasmlar yarating.
+              description_teacher: Bu darsda talabalar ekrandagi chizmalarni tugatish uchun Rassomni boshqarishadi. Bu Rassom bosqichi talabalarga yangi bo‘limlar, masalan, `move forward by 100 pixels` va `turn right by 90 degrees` kabilardan foydalangan holda yuqori mukammallikdagi rasmlar yaratish imkonini beradi.
+              key: Kod bilan san’at yaratish
+            Swimming Fish in Sprite Lab:
+              description_student: Learn how to create and edit sprites.
+              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.'
+            Sprites in Action:
+              name: Spraytlar amalda
+            Virtual Pet with Sprite Lab:
+              name: Virtual Pet with Sprite Lab
+              description_student: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
+              description_teacher: Bu darsda talabalar ular xohlagandek ko‘rinadigan va o‘zini tutadigan interfaol virtual uy hayvonini yaratishadi. Talabalar uy hayvoninig tashqi ko‘rinishini moslashtirish uchun Sprite Labning "Costumes" qurilmasidan foydalanishadi. Keyin ular uy hayvonini jonlantirish uchun hodisalar, xatti-harakatlar va ular o‘rgangan boshqa tushunchalardan foydalanishadi!
+              key: Virtual Pet with Sprite Lab
+            Dance Party:
+              name: Dance Party
+              description_student: Bayram qilish vaqti keldi! Ushbu darsda siz o‘z interaktiv raqs bazmingizni dasturlashtirasiz.
+              description_teacher: Bu darsda, talabalar o‘zlarining interaktiv raqs bazmini dasturlashtiradilar. Qurilma musiqaga javob qaytarish uchun yaratilganligi sababli bu mashg‘ulot tovushni talab qiladi.
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+              description_student: 'Sikllardan foydalanib BB-8 ga labirint bo‘ylab harakatlanishida yordam bering! '
+              key: Loops with Rey and BB-8
+            'Mini-Project: Sticker Art':
+              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+              description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
+              description_teacher: Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.
+              key: Nested Loops in Maze
+            Snowflakes with Anna and Elsa:
+              name: Snowflakes with Anna and Elsa
+              description_student: 'Anna va Elsaning ajoyib muzda uchish qobiliyati bor, ammo muzda shakllar yaratish uchun ularga yordamingiz kerak. AJOYIB nimadir yaratish uchun ichma-ich sikllardan foydalaning. '
+              description_teacher: Endi talabalar o‘z siklarini qatlamlarga ajratishni bilib olishadi, ular ko‘plab chiroyli narsalar yarata olishadi.  Ushbu dars talabalarni Anna va Elzaning muzda uchish bo'yicha mukammal qobiliyatlaridan foydalangan holda o'zlarining portfoliosi uchun tayyor tasvirlarini yaratishda yordam beradigan bir qator mashqlarni bajaradi!
+              key: Snowflakes with Anna and Elsa
+            Looking Ahead with Minecraft:
+              name: Minecraft bilan oldinga qarab
+              description_student: Lavadan saqlaning! Bu yerda siz Minecraft dunyosidagi shartli bayonotlar haqida o‘rgana boshlaysiz.
+              description_teacher: Bu dars aslida, Minecraft jamoasi bilan birgalikda Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin jihatlarini ko‘rib chiqish imkoniyatiga ham ega bo‘ladilar!
+            If/Else with Bee:
+              name: Asalari bilan If/Else
+              description_student: 'Siz hozir shartli boyonotlarni tushunib oldingiz, endi asal va gul shirasini yig‘adigan Asalari dasturini tuzishda ulardan foydalansak bo‘ladi. '
+              description_teacher: Shu paytgacha talabalar har safar ishlatib ko‘rilganda aynan bir xil tarzda ijro etiladigan -ishonchli, ammo moslashuvchan bo‘lmagan kod yozib kelishayotgan edi. Bu darsda, sinfingiz dasturingiz turli xil maxsus holatlarga duch kelishiga qarab turli xil vazifalarni bajaradigan funksiyalarni yozishga imkon beradigan shartli boyonotlar bilan kod yozishni boshlashadi.
+              key: Asalari bilan If/Else
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: 'Sikllar kod yozishda juda foydali. Bu dars sizga siklning yangi turini o‘rgatadi: while sikllari!'
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraftda shartli bayonotlar: Suv sayohati'
+              description_student: Bu yerda siz Minecreaft dunyosidagi shartli bayonotlar haqida o‘rganasiz.
+              description_teacher: Bu dars aslida, Minecraft jamoasi bilan birgalikda Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin jihatlarini ko‘rib chiqish imkoniyatiga ham ega bo‘ladilar!
+              key: 'Minecraftda shartli bayonotlar: Suv sayohati'
+            Until Loops in Maze:
+              name: Until Loops in Maze
+              description_student: "`Until` sikli bilan siz ba’zi bir ajoyib narsalarni amalga oshira olasiz!"
+              description_teacher: Bu darsda, talabalar `until` sikllari haqida o‘rganishadi. Talabalar o‘zlari xohlagan nuqtagacha qaytarilaveradigan harakatlarni ijro etuvchi obrazga ega bo‘lgan dastur yaratishadi.
+              key: Until Loops in Maze
+            Harvesting with Conditionals:
+              name: Harvesting with Conditionals
+              description_student: Har bir shartli bayonotni qachon ishlatish kerakligini har doim ham aniq bilib bo‘lmaydi. Bu dars sizga nima qilish kerakligini hal qilishingizga yordam beradi.
+              description_teacher: Talabalar `while` sikllarini, `until` sikllarini va `if / else` bayonotlarini amalda ishlatib ko‘rishadi. Bu bo‘limlarning barchasi shartli bayonotlardan foydalanishadi. Bu uchchalasini ham amalda bajarib ko‘rish orqali, talabalar mukammal va moslashuvchan kod yozishni o‘rganishadi.
+              key: Harvesting with Conditionals
+            Functions in Minecraft:
+              name: Minecraftdagi funksiyalar
+              description_student: Can you figure out how to use functions for the most efficient code?
+              description_teacher: Students will begin to understand how functions can be helpful in this fun and interactive Minecraft adventure!
+              key: Minecraftdagi funksiyalar
+            Functions with Artist:
+              name: Rassom bilan funksiyalar
+              description_student: Funksiyalar bilan murakkab chizmalarni osonlashtiring!
+              description_teacher: Talabalar Rassom bilan funksiyalarni ishlatishga kirishadi. Jozibali rasmlar yaratiladi va o‘zgartiriladi. Yanada murakkabroq ko‘rinishlar uchun, talabalar biron funksiya ichida boshqa birini chaqirish orqali ichma-ich funksiyalar haqida o‘rganishadi.
+              key: Rassom bilan funksiyalar
+            Functions with Harvester:
+              name: Terimchi bilan funksiyalar
+              description_student: Fermerga yordam berayotganingizda, funksiyalar sizni ko‘p ishlar qilishdan saqlab qoladi!
+              description_teacher: Talabalar Rassom loyihasida ta’sirchan dizaynlar yaratishni va Asalarini labirintda yo‘naltirishni mashq qilib ko‘rishgan, ammo bugun ular funksiyalardan dehqondagi hosilni yig‘ish uchun ishlatadilar. Bu dars talabalarni funksiyalardan 'while' sikli va 'if/else' bayononotlari bilan birlashtirgan holda foydalanishga undaydi.
+              key: Terimchi bilan funksiyalar
+            Using Variables with the Artist:
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
+              description_teacher: Ushbu darsda talabalar Artist  muhitida o'zgaruvchilar yordamida takrorlanadigan dizaynlarni yaratishni o'rganadilar. Talabalar o'zgaruvchilar yordamida qanday qilib kodni yozishni va o'qishni osonlashtirish uchun qanday foydalanish mumkinligini bilib oladilar. Yonaltirilgan jumboqlar tugagandan  so'ng talabalar freeplay darajasida o'zlarining o'rgangan narsalarini namoyish etish va o'z dizaynlarini yaratishni o’rganadilar
+            Variables with the Bee:
+              name: Changing Variables with Bee
+              description_student: This bee loves variables!
+              description_teacher: This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running.
+            For Loops with Bee:
+              name: Asalari bilan for sikllari
+              description_student: Buzz buzz. Ushbu jumboqlarda siz asalarini for sikllari yordamida gul shirasi va asalga yo'naltirasiz.
+              description_teacher: Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.
+              key: Asalari bilan for sikllari
+            For Loops with Artist:
+              name: Rassom bilan For Sikllarini ishlatish
+              description_student: Keyingi asaringizni yaratishga tayyorlaning. Bu yerda siz 'for' sikllari yordamida hayratlantiruvchi rasmlarni yaratasiz.
+              description_teacher: In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
+              key: Rassom bilan For Sikllarini ishlatish
+            End of Course Project:
+              name: End of Course Project
+              description_student: Ushbu qo‘llarni bir dunyo kod yozish uchun tayyorlang! Loyihangizni yaratishni boshlashning vaqti keldi.
+              description_teacher: Ushbu yakunlovchi dars o‘quvchilarni o‘zlarining loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi!
+              key: End of Course Project
+            Debugging with Scrat:
+              key: Skrat bilan debug qilish
+              name: Debugging in Maze
+              description_student: Boshqotirmalardagi muammolarni toping va debug qilish mahoratingizni amalda sinab ko‘ring.
+              description_teacher: Debug qilish dasturlashni o‘rganishning muhim elementidir. Bu darsda, talabalar noto‘g‘ri yechilgan boshqotirmalarga duch kelishadi. Ular xatolikni topish uchun mavjud kodni qatorma-qator tekshirib chiqishadi, jumladan, noto‘g‘ri ishlatilgan sikllar, unutib qoldirilgan bo‘limlar, ortiqcha bo‘limlar va tartibdan tashqaridagi bo‘limlarni.
+            lesson-3:
+              name: Spraytlar amalda
+            lesson-1:
+              name: Dance Party
+              description_student: Bayram qilish vaqti keldi! Ushbu darsda siz o‘z interaktiv raqs bazmingizni dasturlashtirasiz.
+              description_teacher: Bu darsda, talabalar o‘zlarining interaktiv raqs bazmini dasturlashtiradilar. Qurilma musiqaga javob qaytarish uchun yaratilganligi sababli bu mashg‘ulot tovushni talab qiladi.
+            Sticker Art with Loops:
+              key: Sticker Art with Loops
+              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+            'Looking Ahead with Minecraft ':
+              name: Minecraft bilan oldinga qarab
+              description_student: Lavadan saqlaning! Bu yerda siz Minecraft dunyosidagi shartli bayonotlar haqida o‘rgana boshlaysiz.
+              description_teacher: Bu dars aslida, Minecraft jamoasi bilan birgalikda Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin jihatlarini ko‘rib chiqish imkoniyatiga ham ega bo‘ladilar!
+            While Loops with the Farmer:
+              key: While Loops with the Farmer
+              name: While Loops in Farmer
+              description_student: 'Sikllar kod yozishda juda foydali. Bu dars sizga siklning yangi turini o‘rgatadi: while sikllari!'
+            Variables with Artist:
+              key: Variables with Artist
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
+              description_teacher: Ushbu darsda talabalar Artist  muhitida o'zgaruvchilar yordamida takrorlanadigan dizaynlarni yaratishni o'rganadilar. Talabalar o'zgaruvchilar yordamida qanday qilib kodni yozishni va o'qishni osonlashtirish uchun qanday foydalanish mumkinligini bilib oladilar. Yonaltirilgan jumboqlar tugagandan  so'ng talabalar freeplay darajasida o'zlarining o'rgangan narsalarini namoyish etish va o'z dizaynlarini yaratishni o’rganadilar
+            Changing Variables with Bee:
+              key: Changing Variables with Bee
+              name: Changing Variables with Bee
+              description_student: This bee loves variables!
+              description_teacher: This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_sprites:
+              display_name: Spraytlar
+            lessonGroup-9:
+              display_name: Hodisalar
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shartli bayonotlar
+            csf_functions:
+              display_name: Funksiyalar
+            csf_variables:
+              display_name: O‘zgaruvchilar
+            csf_for_loops:
+              display_name: For sikllari
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Ekspress Kurs (2020)
+          description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
+          student_description: Quyidagi darslarni bor g‘ayratingiz bilan uringan holda kompyuter fanini o‘rganing! Kompyuter dasturlarini yaratishni, muammolarni hal qilish ko‘nikmalarini rivojlantirishni va qiziqarli muammolarni hal qilishni o‘rganing! Do‘stlaringiz, oilangiz va o‘qituvchilaringiz bilan ulashish uchun o‘yinlar va ijodiy loyihalar qiling.
+          description_short: 'Kompyuter fanlariga kirish: boshlang''ich o''quv dasturlarining eng saralarini birlashtiradi.'
+          description_audience: 'Yosh: 9-18'
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey:
+              name: CS Principles Pre-survey
+              key: CS Principles Pre-survey
+            Welcome to CSP:
+              name: Informatikaga xush kelibsiz
+              key: Informatikaga xush kelibsiz
+            Representing Information:
+              name: Representing Information
+              key: Representing Information
+            Circle Square Patterns:
+              name: Doiraviy kvadrat naqshlar
+              key: Doiraviy kvadrat naqshlar
+            Representing Text:
+              name: Matnni ifodalash
+              key: Matnni ifodalash
+            Lossless Compression:
+              name: Lossless Compression
+              key: Lossless Compression
+            Intellectual Property:
+              name: Intellectual Property
+              key: Intellectual Property
+            Assessment Day:
+              name: Baholash kuni
+            Project - Digital Information Dilemmas Part 1:
+              key: Loyiha - Raqamli axborot dilemmalari. 1-qism
+            Project - Digital Information Dilemmas Part 2:
+              key: Loyiha - Raqamli axborot dilemmalari. 2-qism
+            'Lesson 14: Assessment Day':
+              key: '14-dars: Baholash kuni'
+              name: Baholash kuni
+          lesson_groups:
+            cspSurvey:
+              display_name: Survey
+            csp_unit1_2020:
+              display_name: 'Unit 1: Digital Information'
+        csp2-2022:
+          lessons:
+            Routers and Redundancy:
+              name: Routers and Redundancy
+              key: Routers and Redundancy
+            Packets:
+              name: Paketlar
+              key: Paketlar
+            Assessment Day:
+              name: Baholash kuni
+            'Lesson 9: Assessment Day':
+              key: '9-dars: Baholash kuni'
+              name: Baholash kuni
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Unit 2: Internet'
+        csp3-2022:
+          lessons:
+            Introduction to Apps:
+              name: Ilovalar. Kirish
+              key: Ilovalar. Kirish
+            Project   Designing an App Part 1:
+              name: 'Loyiha: Ilova dizayni. 1-qism'
+            Project   Designing an App Part 2:
+              name: 'Loyiha: Ilova dizayni. 2-qism'
+            Intro to Programming:
+              name: Dasturlashga kirish
+              key: Dasturlashga kirish
+            Debugging:
+              name: Nosozliklarni bartaraf etish (Debugging)
+              key: Nosozliklarni bartaraf etish (Debugging)
+            Project   Designing an App Part 3:
+              name: 'Loyiha: Ilova dizayni. 3-qism'
+            Project   Designing an App Part 4:
+              name: 'Loyiha: Ilova dizayni. 4-qism'
+            Project   Designing an App Part 5:
+              name: 'Loyiha: Ilova dizayni. 5-qism'
+            Assessment Day:
+              name: Baholash kuni
+            Project - Designing an App Part 1:
+              key: Loyiha - Ilova dizayni. 1-qism
+              name: 'Loyiha: Ilova dizayni. 1-qism'
+            Project - Designing an App Part 2:
+              key: Loyiha - Ilova dizayni. 2-qism
+              name: 'Loyiha: Ilova dizayni. 2-qism'
+            Project - Designing an App Part 3:
+              key: Loyiha - Ilova dizayni. 3-qism
+              name: 'Loyiha: Ilova dizayni. 3-qism'
+            Project - Designing an App Part 4:
+              key: Loyiha - Ilova dizayni. 4-qism
+              name: 'Loyiha: Ilova dizayni. 4-qism'
+            Project - Designing an App Part 5:
+              key: Loyiha - Ilova dizayni. 5-qism
+              name: 'Loyiha: Ilova dizayni. 5-qism'
+            'Lesson 11: Assessment Day':
+              key: '11-dars: Baholash kuni'
+              name: Baholash kuni
+        csp4-2022:
+          lessons:
+            Variables Explore:
+              name: Variables Explore
+              key: Variables Explore
+            Variables Investigate:
+              name: Variables Investigate
+              key: Variables Investigate
+            Variables Practice:
+              name: Variables Practice
+              key: Variables Practice
+            Variables Make:
+              name: Variables Make
+              key: Variables Make
+            Conditionals Explore:
+              name: Conditionals Explore
+              key: Conditionals Explore
+            Conditionals Investigate:
+              name: Conditionals Investigate
+              key: Conditionals Investigate
+            Conditionals Practice:
+              name: Conditionals Practice
+              key: Conditionals Practice
+            Functions Explore / Investigate:
+              name: Functions Explore / Investigate
+              key: Functions Explore / Investigate
+            Functions Practice:
+              name: Funksiyalar. Amaliyot
+              key: Funksiyalar. Amaliyot
+            Functions Make:
+              name: Funksiyalar. Yaratish
+              key: Funksiyalar. Yaratish
+            Project   Decision Maker App Part 1:
+              name: 'Loyiha: Qaror qilish ilovasi. 1-qism'
+            Project   Decision Maker App Part 2:
+              name: 'Loyiha: Qaror qilish ilovasi. 2-qism'
+            Project   Decision Maker App Part 3:
+              name: 'Loyiha: Qaror qilish ilovasi. 3-qism'
+            Assessment Day:
+              name: Baholash kuni
+            Conditional Make:
+              key: Conditional Make
+            Project - Decision Maker App Part 1:
+              key: Loyiha - Qaror qilish ilovasi. 1-qism
+              name: 'Loyiha: Qaror qilish ilovasi. 1-qism'
+            Project - Decision Maker App Part 2:
+              key: Loyiha - Qaror qilish ilovasi. 2-qism
+              name: 'Loyiha: Qaror qilish ilovasi. 2-qism'
+            Project - Decision Maker App Part 3:
+              key: Loyiha - Qaror qilish ilovasi. 3-qism
+              name: 'Loyiha: Qaror qilish ilovasi. 3-qism'
+            'Lesson 15: Assessment Day':
+              key: '15-dars: Baholash kuni'
+              name: Baholash kuni
+          lesson_groups:
+            csp_variables:
+              display_name: O‘zgaruvchilar
+            csp_conditionals:
+              display_name: Shartli bayonotlar
+            csp_functions:
+              display_name: Funksiyalar
+            csp_project:
+              display_name: Loyiha
+        csp5-2022:
+          lessons:
+            Lists Explore:
+              name: Lists Explore
+              key: Lists Explore
+            Project   Hackathon Part 1:
+              name: Loyiha Hakaton - 1-qism
+            Project   Hackathon Part 2:
+              name: Loyiha Hakaton - 2-qism
+            Project   Hackathon Part 3:
+              name: Loyiha Hakaton - 3-qism
+            Project   Hackathon Part 4:
+              name: Loyiha Hakaton - 4-qism
+            Project   Hackathon Part 5:
+              name: Loyiha Hakaton - 5-qism
+            Assessment Day:
+              name: Baholash kuni
+            Semester Hackathon Part 1:
+              key: Semestr xakatoni. 1-qism
+              name: Loyiha Hakaton - 1-qism
+            Semester Hackathon Part 2:
+              key: Semestr xakatoni. 2-qism
+              name: Loyiha Hakaton - 2-qism
+            Semester Hackathon Part 3:
+              key: Semestr xakatoni. 3-qism
+              name: Loyiha Hakaton - 3-qism
+            Semester Hackathon Part 4:
+              key: Semestr xakatoni. 4-qism
+              name: Loyiha Hakaton - 4-qism
+            Semester Hackathon Part 5:
+              key: Semestr xakatoni. 5-qism
+              name: Loyiha Hakaton - 5-qism
+            'Lesson 18: Assessment Day':
+              key: '18-dars: Baholash kuni'
+              name: Baholash kuni
+          lesson_groups:
+            csp_lists:
+              display_name: Ro‘yxatlar
+            csp_loops:
+              display_name: Sikllar
+            csp_project:
+              display_name: Loyiha
+        courseb-2022:
+          lessons:
+            Digital Trails:
+              name: Raqamli izlar
+              description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
+              key: Raqamli izlar
+            Move It, Move It:
+              name: Move It, Move It (Harakatlan)
+              description_student: Program your classmates to step carefully from place to place.
+              description_teacher: Ushbu dars o'quvchilarni ushbu kurs davomida duch keladigan kodlash mashqlariga ruhiy jihatdan tayyorlash uchun mo'ljallangan. Kichik jamoalarda talabalar jismoniy mashqlar yordamida sinfdoshlarini bir joydan boshqa joyga diqqat bilan qadam qo'yishni dasturlash uchun foydalanadilar
+              key: Move It, Move It (Harakatlan)
+            Sequencing with Angry Birds:
+              name: Jahldor qushlar bilan tartiblash
+              description_student: Qizil Jahldor Qushga yaramas cho‘chqaga boradigan yo‘ldan yurishiga yordam bering.
+              description_teacher: Jahldor qushlar o‘yinidagi obrazlardan foydalanib, talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar. Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.
+            Programming with Angry Birds:
+              name: Jahldor qushlar bilan dasturlash
+              description_student: Create programs to help the Angry Bird move through the maze.
+              description_teacher: Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+            Programming with Harvester:
+              name: Terimchi bilan dasturlash
+              description_student: Terimchiga yo‘lida sabzavotlarni yig‘ib olishiga yordam bering.
+              description_teacher: Talabalar Terimchi (Harvester) muhitida o‘rgangan dasturlash tushunchalariga murojaat qiladilar. Endi, shunchaki obrazni maqsadiga yetkazish o‘rniga, talabalar biron yangi bo‘limdan foydalanib hosilni yig‘ishi kerak bo‘ladi. Talabalar algoritmlar ketma-ketligi bo‘yicha mahoratlarini oshirishda davom etadilar va debug qilish jarayonidan foydalanishni boshlashadi.
+            Getting Loopy:
+              name: Sikllashtirish
+              description_student: Bu darsda, takrorlanuvchi sikllardan foydalanib, raqs bazmi tashkillashtiramiz!
+              description_teacher: Bu uzoq va qiziqarli dasturlarni yozishni boshlaganimiz sayin kodimiz ko‘pincha ko‘plab takrorlanishlardan tashkil topadi. Bu darsda, talabalar sikllar qanday qilib biron raqsdagi harakatning takrorlanuvchi ko‘rinishiga qarash orqali ko‘plab takrorlanishlarga ega bo‘lgan ko‘rsatmalar bilan osonroq aloqa qilishi haqida o‘rganishadi.
+            Loops with Harvester:
+              name: Terimchi (Harvester) bilan sikllar
+              description_student: Help the Harvester collect even more, using loops!
+              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to pick corn more efficiently on Code.org.
+            Loops with Laurel:
+              name: Laurel bilan sikllar
+              description_student: Program Laurel the adventurer to collect treasure in an open cave.
+              description_teacher: Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Mana bu yerda, Laurel the Adventurer ochiq g‘ordagi xazinani yig‘ishda sikllardan foydalanadi. Uning sayohati davomida unga yordam berish uchun yangi 'get treasure' bo‘limi tanishtiriladi.
+            Drawing Gardens with Loops:
+              name: Drawing Gardens with Loops
+              description_student: Use patterns and loops to finish the images.
+              description_teacher: Sikllarga qaytadigan bo‘lsak, talabalar ko‘rsatmalarning oddiy ketma-ketligini takrorlash orqali rasm chizishni o‘rganishadi. Oldingi onlayn darsda, sikllar labirintni kesib o‘tish va xazina to‘plash uchun ishlatilgan. Bu yerda talabalar sikllardan ko‘rinishlar yaratishda foydalanishadi. Bu bosqichning oxirida, talabalarga sikllardan foydalanib o‘zlarining shaxsiy rasmlarini yaratish imkoniyati beriladi.
+            The Right App:
+              name: To'g'ri ilova
+              description_teacher: Ushbu dars o‘quvchilarga kompyuter fanlari hayotda odamlarga yordam berishi mumkinligini o‘rgatadi. Birinchidan, o‘quvchilar o‘zlarining ehtiyojlarini qondiradigan "to‘g‘ri dastur"ni topishda yordam berish uchun xayolan bir nechta smartfon foydalanuvchilarini tasavvur qilishadi. So‘ngra, o‘quvchilar o‘zlarining smartfon dasturlarini qo‘shimcha ravishda bitta foydalanuvchi ehtiyojlarini qondirish uchun yordam beradilar va ijodkorlikdan foydalanadilar.
+              key: To'g'ri ilova
+            The Big Event Jr.:
+              name: Katta hodisa Jr.
+              description_teacher: Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.
+            'Mini-Project: A Royal Battle with Events':
+              description_student: Use events to create a story or make an interactive game.
+              description_teacher: Bu onlayn mashg‘ulotda, talabalarda Play Labda hodisalardan qanday foydalanishni o‘rganish va animatsiyalashtirilgan o‘yin yaratish uchun ular o‘rgangan barcha kod yozish mahoratlariga murojaat qilish imkoniyati mavjud. Yaratuvchan bo‘lish vaqti keldi va Play Labda biron o‘yin yarating!
+            End of Course Project:
+              name: End of Course Project
+            Sequencing in Maze:
+              name: Jahldor qushlar bilan tartiblash
+              description_student: Qizil Jahldor Qushga yaramas cho‘chqaga boradigan yo‘ldan yurishiga yordam bering.
+              description_teacher: Jahldor qushlar o‘yinidagi obrazlardan foydalanib, talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar. Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.
+            Programming in Maze:
+              key: Labirintdagi dasturlash
+              name: Jahldor qushlar bilan dasturlash
+              description_student: Create programs to help the Angry Bird move through the maze.
+              description_teacher: Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.
+            Programming in Harvester:
+              name: Terimchi bilan dasturlash
+              description_student: Terimchiga yo‘lida sabzavotlarni yig‘ib olishiga yordam bering.
+              description_teacher: Talabalar Terimchi (Harvester) muhitida o‘rgangan dasturlash tushunchalariga murojaat qiladilar. Endi, shunchaki obrazni maqsadiga yetkazish o‘rniga, talabalar biron yangi bo‘limdan foydalanib hosilni yig‘ishi kerak bo‘ladi. Talabalar algoritmlar ketma-ketligi bo‘yicha mahoratlarini oshirishda davom etadilar va debug qilish jarayonidan foydalanishni boshlashadi.
+            'Loops: Getting Loopy':
+              key: 'Loops: Getting Loopy'
+              name: Sikllashtirish
+              description_student: Bu darsda, takrorlanuvchi sikllardan foydalanib, raqs bazmi tashkillashtiramiz!
+              description_teacher: Bu uzoq va qiziqarli dasturlarni yozishni boshlaganimiz sayin kodimiz ko‘pincha ko‘plab takrorlanishlardan tashkil topadi. Bu darsda, talabalar sikllar qanday qilib biron raqsdagi harakatning takrorlanuvchi ko‘rinishiga qarash orqali ko‘plab takrorlanishlarga ega bo‘lgan ko‘rsatmalar bilan osonroq aloqa qilishi haqida o‘rganishadi.
+            Loops in Harvester:
+              key: Terimchi (Harvester) bilan sikllar
+              name: Terimchi (Harvester) bilan sikllar
+              description_student: Help the Harvester collect even more, using loops!
+              description_teacher: Building on the concept of repeating instructions from "Getting Loopy," this stage will have students using loops to pick corn more efficiently on Code.org.
+            Loops in Collector:
+              key: Yig‘uvchidagi sikllar
+              name: Laurel bilan sikllar
+              description_student: Program Laurel the adventurer to collect treasure in an open cave.
+              description_teacher: Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Mana bu yerda, Laurel the Adventurer ochiq g‘ordagi xazinani yig‘ishda sikllardan foydalanadi. Uning sayohati davomida unga yordam berish uchun yangi 'get treasure' bo‘limi tanishtiriladi.
+            Loops in Artist:
+              key: Rassom bilan sikllar
+              name: Drawing Gardens with Loops
+              description_student: Use patterns and loops to finish the images.
+              description_teacher: Sikllarga qaytadigan bo‘lsak, talabalar ko‘rsatmalarning oddiy ketma-ketligini takrorlash orqali rasm chizishni o‘rganishadi. Oldingi onlayn darsda, sikllar labirintni kesib o‘tish va xazina to‘plash uchun ishlatilgan. Bu yerda talabalar sikllardan ko‘rinishlar yaratishda foydalanishadi. Bu bosqichning oxirida, talabalarga sikllardan foydalanib o‘zlarining shaxsiy rasmlarini yaratish imkoniyati beriladi.
+            'Events: The Big Event':
+              key: 'Hodisalar: Katta Hodisa'
+              name: Katta hodisa Jr.
+              description_teacher: Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.
+            Events in Play Lab:
+              key: Play Labdagi hodisalar
+              description_student: Use events to create a story or make an interactive game.
+              description_teacher: Bu onlayn mashg‘ulotda, talabalarda Play Labda hodisalardan qanday foydalanishni o‘rganish va animatsiyalashtirilgan o‘yin yaratish uchun ular o‘rgangan barcha kod yozish mahoratlariga murojaat qilish imkoniyati mavjud. Yaratuvchan bo‘lish vaqti keldi va Play Labda biron o‘yin yarating!
+            lesson-1:
+              name: End of Course Project
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_impacts:
+              display_name: Kompyuterlar ta'siri
+            csf_events:
+              display_name: Hodisalar
+            lessonGroup-6:
+              display_name: End of Course Project
+          student_description: Kompyuter fanlari va Internet xavfsizligi asoslarini o‘rganing. Kurs oxirida ulashish mumkin bo‘lgan o‘z o‘yin yoki hikoyangizni yarating.
+          description_short: Maktabgacha yoshdagi o‘quvchilar uchun kompyuter fanlariga kirish. (A kursiga o‘xshash, ammo tushunchalar chuqurroq o‘rganilgan).
+          description_audience: 'Yosh: 5-8'
+        coursec-2022:
+          lessons:
+            Putting a STOP to Online Meanness:
+              description_student: Ushbu darsda siz ma'nosizlik haqida va agar Internetda duch kelganda nima qilish kerakligi haqida bilib olasiz.
+            My Robotic Friends Jr.:
+              name: Mening robot do‘stlarim Jr.
+              description_student: In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.
+              description_teacher: Kod o‘rniga belgilar to‘plamidan foydalangan holda, talabalar chashkalarni turli xil ko‘rinishlarda taxlaydigan "robot" yasash uchun algoritmlarni dizaynlashtirishadi. Talabalar faqatgina tengdoshlari tomonidan ta’riflangan algoritmlarga javob bergan holda navbatma-navbat robot sifatida qatnashishadi. Bu bo‘lim talabalarga belgilar va harakatlar o‘rtasidagi bog‘liqlikni, biron algoritm va dastur o‘rtasidagi farqni va qimmatli debug qilish mahoratlarini o‘rgatadi.
+            Programming with Angry Birds:
+              name: Jahldor qushlar bilan dasturlash
+              description_student: Angry Birds bilan ketma-ketlik va algoritmlar haqida o‘rganing.
+              description_teacher: Jahldor qushlar o‘yinidagi obrazlardan foydalanib, talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar. Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.
+            Debugging in Maze:
+              name: Debugging in Maze
+              description_student: Boshqotirmalardagi muammolarni toping va debug qilish mahoratingizni amalda sinab ko‘ring.
+              description_teacher: Debug qilish dasturlashni o‘rganishning muhim elementidir. Bu darsda, talabalar noto‘g‘ri yechilgan boshqotirmalarga duch kelishadi. Ular xatolikni topish uchun mavjud kodni qatorma-qator tekshirib chiqishadi, jumladan, noto‘g‘ri ishlatilgan sikllar, unutib qoldirilgan bo‘limlar, ortiqcha bo‘limlar va tartibdan tashqaridagi bo‘limlarni.
+              key: Debugging in Maze
+            Collecting Treasure with Laurel:
+              name: Laurel bilan xazina yig‘ish
+              description_student: Sarguzashtchi Laurelga ko‘plab marvaridlar yig‘ishda yordam berish uchun algoritm yozing!
+              description_teacher: Boshqotirmalar to‘plamida, talabalar algoritmlar va debug qilish bo‘yicha o‘zlarining tushunchalarini rivojlantirishda davom etishadi. Yangi obraz, sarguzashtchi Laurel bilan talabalar Laurelni u yo‘lak bo‘ylab harakatlanganda xazinalar cho‘qqisiga olib chiqish uchun algoritmlar ketma-ketligini yaratishadi.
+            Creating Art with Code:
+              name: Kod bilan san’at yaratish
+              description_student: Rassomni dasturlash orqali chiroyli rasmlar yarating.
+              description_teacher: Bu darsda talabalar ekrandagi chizmalarni tugatish uchun Rassomni boshqarishadi. Bu Rassom bosqichi talabalarga yangi bo‘limlar, masalan, `move forward by 100 pixels` va `turn right by 90 degrees` kabilardan foydalangan holda yuqori mukammallikdagi rasmlar yaratish imkonini beradi.
+            My Loopy Robotic Friends Jr.:
+              name: Mening sikllashtirilgan robot do‘stlarim Jr.
+              description_student: In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.
+              description_teacher: '"Mening Robot Do‘stlarim" mashg‘ulotiga asoslangan holda, talabalar kattaroq va yanada mukammalroq dizaynlarni ham yecha olishadi. Bu mukammalroq dizaynlarni yaratish jarayonida o‘z robotlarini dasturlash maqsadida talabalar o‘z ko‘rsatmalaridagi biron sikl bilan almashtirsa bo‘ladigan takrorlanuvchi ko‘rinishlarni aniqlashi kerak bo‘ladi.'
+            Loops with Rey and BB-8:
+              name: Loops with Rey and BB-8
+              description_student: 'Sikllardan foydalanib BB-8 ga labirint bo‘ylab harakatlanishida yordam bering! '
+              description_teacher: '"Getting loopy"dagi takrorlanuvchi ko‘rsatmalar tushunchalari asosida yaratilib, bu bosqichda talabalar BB-8ga labirintdan oldingiga qaraganda samaraliroq o‘tishiga yordam berish uchun sikllardan foydalanishadi.'
+              key: Loops with Rey and BB-8
+            Harvesting Crops with Loops:
+              name: Harvesting Crops with Loops
+              description_student: Keling, dehqonga ba’zi sabzavotlarni yig‘ishda sikllardan foydalanib yordam beramiz!
+            'Mini-Project: Sticker Art':
+              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+            The Big Event:
+              name: Katta hodisa
+              description_student: Hodisalar haqida o‘rganish uchun biron qiziqarli o‘yin o‘ynang.
+              description_teacher: Talabalar tez orada hodisalar oldindan yozib qo‘yilgan algoritmlarga qulaylik qo‘shishning eng yaxshi yo‘li ekanligini bilib olishadi. Ba’zida siz dasturingiz foydalanuvchi aynan xohlagan paytda unga javob qaytarishini xohlaysiz. Hodisalar dasturingizni yanada qiziqarli va interfaol qiladi.
+            Build a Flappy Game:
+              name: Build a Flappy Game
+              description_student: O‘zingizning Flappy Bird o‘yiningizni yarating, agar xohlasangiz keyin uni do‘stlaringiz bilan ulashishingiz mumkin!
+              description_teacher: Bu maxsus bosqichda, talabalar obyektlar to‘qnashuvi va sichqoncha bosilishini taniy oladigan hodisa tinglovchilaridan foydalangan holda o‘zlarining Flappy Bird o‘yinini yaratishadi. Bu bosqichning oxirida talabalar tasvirlar yoki qoidalarni o‘zgartirgan holda o‘z o‘yinlarini yarata oladilar.
+              key: Build a Flappy Game
+            'Mini-Project: Chase Game':
+              description_student: Yaratuvchan bo‘lishning ayni vaqti va Play Labda biron o‘yin yarating!
+              description_teacher: Bu onlayn mashg‘ulotda, talabalalarda Play Labda hodisalardan qanday foydalanishni o‘rganishga va biron animatsiyalashtirilgan o‘yin yaratish uchun ular o‘rgangan barcha ko‘nikmalarini qo‘llab ko‘rishga imkoniyat bo‘ladi. Yaratuvchan bo‘lishning vaqti keldi! Play Labda o‘yin yarating!
+            Picturing Data:
+              name: Ma'lumotlarni tasvirlash
+              description_student: Ushbu ma'lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma'lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.
+              description_teacher: Ushbu ma'lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma'lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.
+              key: Ma'lumotlarni tasvirlash
+            Binary Bracelets:
+              name: Ikkilik bilakuzuklar
+              description_student: O‘zingizning ikkilik bilakuzugingizni yarating va komputerlar qanday qilib ma’lumotni eslab qolishini o‘rganing!
+              description_teacher: Ikkilik sanoq tizimi komputerlar dunyosida juda muhim ahamiyatga ega. Bugungi kunda, komputerlarning ko‘pchiligi barcha turdagi ma’lumotni ikkilik ko‘rinishida saqlaydi. Bu dars haqiqiy hayotdan nimadirni olib uni birlar va nollar to‘plamiga tarjima qilishni ko‘rsatishga yordam beradi.
+              key: Ikkilik bilakuzuklar
+            End of Course Project:
+              name: End of Course Project
+              description_student: Ushbu qo‘llarni bir dunyo kod yozish uchun tayyorlang! Loyihangizni yaratishni boshlashning vaqti keldi.
+              description_teacher: Ushbu yakunlovchi dars o‘quvchilarni o‘z Play Lab loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi! Ushbu jarayon muammosiz o‘tishini ta'minlash uchun biz o‘quvchilarga qog‘ozda rejalashtirishdan boshlab veb-saytimizdagi kodlashgacha bosqichma-bosqich o‘tish tuzilmasini ta'minladik. Bundan tashqari, biz o'qituvchilarga taqdimotli finalni engillashtirishda yordam beradigan g'oyalarni taklif etamiz!
+            'Programming: My Robotic Friends':
+              key: 'Programming: My Robotic Friends'
+              name: Mening robot do‘stlarim Jr.
+              description_student: In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups.
+              description_teacher: Kod o‘rniga belgilar to‘plamidan foydalangan holda, talabalar chashkalarni turli xil ko‘rinishlarda taxlaydigan "robot" yasash uchun algoritmlarni dizaynlashtirishadi. Talabalar faqatgina tengdoshlari tomonidan ta’riflangan algoritmlarga javob bergan holda navbatma-navbat robot sifatida qatnashishadi. Bu bo‘lim talabalarga belgilar va harakatlar o‘rtasidagi bog‘liqlikni, biron algoritm va dastur o‘rtasidagi farqni va qimmatli debug qilish mahoratlarini o‘rgatadi.
+            Programming in Maze:
+              key: Labirintdagi dasturlash
+              name: Jahldor qushlar bilan dasturlash
+              description_student: Angry Birds bilan ketma-ketlik va algoritmlar haqida o‘rganing.
+              description_teacher: Jahldor qushlar o‘yinidagi obrazlardan foydalanib, talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar. Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.
+            Programming in Collector:
+              key: Programming in Collector
+              name: Laurel bilan xazina yig‘ish
+              description_student: Sarguzashtchi Laurelga ko‘plab marvaridlar yig‘ishda yordam berish uchun algoritm yozing!
+              description_teacher: Boshqotirmalar to‘plamida, talabalar algoritmlar va debug qilish bo‘yicha o‘zlarining tushunchalarini rivojlantirishda davom etishadi. Yangi obraz, sarguzashtchi Laurel bilan talabalar Laurelni u yo‘lak bo‘ylab harakatlanganda xazinalar cho‘qqisiga olib chiqish uchun algoritmlar ketma-ketligini yaratishadi.
+            Programming in Artist:
+              key: Programming in Artist
+              name: Kod bilan san’at yaratish
+              description_student: Rassomni dasturlash orqali chiroyli rasmlar yarating.
+              description_teacher: Bu darsda talabalar ekrandagi chizmalarni tugatish uchun Rassomni boshqarishadi. Bu Rassom bosqichi talabalarga yangi bo‘limlar, masalan, `move forward by 100 pixels` va `turn right by 90 degrees` kabilardan foydalangan holda yuqori mukammallikdagi rasmlar yaratish imkonini beradi.
+            'Loops: My Loopy Robotic Friends':
+              key: 'Loops: My Loopy Robotic Friends'
+              name: Mening sikllashtirilgan robot do‘stlarim Jr.
+              description_student: In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems.
+              description_teacher: '"Mening Robot Do‘stlarim" mashg‘ulotiga asoslangan holda, talabalar kattaroq va yanada mukammalroq dizaynlarni ham yecha olishadi. Bu mukammalroq dizaynlarni yaratish jarayonida o‘z robotlarini dasturlash maqsadida talabalar o‘z ko‘rsatmalaridagi biron sikl bilan almashtirsa bo‘ladigan takrorlanuvchi ko‘rinishlarni aniqlashi kerak bo‘ladi.'
+            Loops in Harvester:
+              key: Terimchi (Harvester) bilan sikllar
+              name: Harvesting Crops with Loops
+              description_student: Keling, dehqonga ba’zi sabzavotlarni yig‘ishda sikllardan foydalanib yordam beramiz!
+            Sticker Art with Loops:
+              key: Sticker Art with Loops
+              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+            'Events: The Big Event':
+              key: 'Hodisalar: Katta Hodisa'
+              name: Katta hodisa
+              description_student: Hodisalar haqida o‘rganish uchun biron qiziqarli o‘yin o‘ynang.
+              description_teacher: Talabalar tez orada hodisalar oldindan yozib qo‘yilgan algoritmlarga qulaylik qo‘shishning eng yaxshi yo‘li ekanligini bilib olishadi. Ba’zida siz dasturingiz foydalanuvchi aynan xohlagan paytda unga javob qaytarishini xohlaysiz. Hodisalar dasturingizni yanada qiziqarli va interfaol qiladi.
+            Events in Play Lab:
+              key: Play Labdagi hodisalar
+              description_student: Yaratuvchan bo‘lishning ayni vaqti va Play Labda biron o‘yin yarating!
+              description_teacher: Bu onlayn mashg‘ulotda, talabalalarda Play Labda hodisalardan qanday foydalanishni o‘rganishga va biron animatsiyalashtirilgan o‘yin yaratish uchun ular o‘rgangan barcha ko‘nikmalarini qo‘llab ko‘rishga imkoniyat bo‘ladi. Yaratuvchan bo‘lishning vaqti keldi! Play Labda o‘yin yarating!
+            'End of Course Project: Create a Play Lab Game':
+              name: End of Course Project
+              description_student: Ushbu qo‘llarni bir dunyo kod yozish uchun tayyorlang! Loyihangizni yaratishni boshlashning vaqti keldi.
+              description_teacher: Ushbu yakunlovchi dars o‘quvchilarni o‘z Play Lab loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi! Ushbu jarayon muammosiz o‘tishini ta'minlash uchun biz o‘quvchilarga qog‘ozda rejalashtirishdan boshlab veb-saytimizdagi kodlashgacha bosqichma-bosqich o‘tish tuzilmasini ta'minladik. Bundan tashqari, biz o'qituvchilarga taqdimotli finalni engillashtirishda yordam beradigan g'oyalarni taklif etamiz!
+          lesson_groups:
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+            end_of_course_project:
+              display_name: End of Course Project
+          student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_short: Informatika asoslarini o‘rganing va o‘z san'at asari, hikoya va o‘yinlaringizni yarating.
+          description_audience: 'Yosh: 6-10'
+        csp6-2022:
+          lessons:
+            Assessment Day:
+              name: Baholash kuni
+            'Lesson 6: Assessment Day':
+              key: '6-dars: Baholash kuni'
+              name: Baholash kuni
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: 'Unit 6: Algoritmlar'
+        csp7-2022:
+          lessons:
+            Assessment Day:
+              name: Baholash kuni
+            Project - Make a Library Part 1:
+              key: Loyiha - Kutubxona yarating, 1-qism
+            Project - Make a Library Part 2:
+              key: Loyiha - Kutubxona yarating, 2-qism
+            Project - Make a Library Part 3:
+              key: Loyiha - Kutubxona yarating, 3-qism
+            'Lesson 11: Assessment Day':
+              key: '11-dars: Baholash kuni'
+              name: Baholash kuni
+        csp8-2022:
+          lessons:
+            Create PT - Complete the Task:
+              key: Create PT - Complete the Task
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: Mashinalar o‘rganishi
+            Assessment Day:
+              name: Baholash kuni
+            Machine Learning and Bias:
+              name: Mashinalar o‘rganishi
+            'Lesson 9: Assessment Day':
+              key: '9-dars: Baholash kuni'
+              name: Baholash kuni
+        csp10-2022:
+          lessons:
+            Project   Innovation Simulation Part 1:
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 1-qism'
+            Project   Innovation Simulation Part 2:
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 2-qism'
+            Project   Innovation Simulation Part 3:
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 3-qism'
+            Project   Innovation Simulation Part 4:
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 4-qism'
+            Project   Innovation Simulation Part 5:
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 5-qism'
+            Project   Innovation Simulation Part 6:
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 6-qism'
+            Project   Innovation Simulation Part 7:
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 7-qism'
+            Assessment Day:
+              name: Baholash kuni
+            Project - Innovation Simulation Part 1:
+              key: Loyiha - Innovatsiya simulatsiyasi. 1-qism
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 1-qism'
+            Project - Innovation Simulation Part 2:
+              key: Loyiha - Innovatsiya simulatsiyasi. 2-qism
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 2-qism'
+            Project - Innovation Simulation Part 3:
+              key: Loyiha - Innovatsiya simulatsiyasi. 3-qism
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 3-qism'
+            'Project: Innovation Simulation Part 4':
+              key: 'Loyiha: Innovatsiya simulatsiyasi. 4-qism'
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 4-qism'
+            'Project: Innovation Simulation Part 5':
+              key: 'Loyiha: Innovatsiya simulatsiyasi. 5-qism'
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 5-qism'
+            'Project: Innovation Simulation Part 6':
+              key: 'Loyiha: Innovatsiya simulatsiyasi. 6-qism'
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 6-qism'
+            'Project: Innovation Simulation Part 7':
+              key: 'Loyiha: Innovatsiya simulatsiyasi. 7-qism'
+              name: 'Loyiha: Innovatsiya simulatsiyasi. 7-qism'
+            'Lesson 14: Unit Assessment Day':
+              key: '14-dars: Baholash kuni'
+              name: Baholash kuni
+        coursed-2022:
+          lessons:
+            Password Power-Up:
+              description_student: Ushbu darsda siz parollar sizning ma'lumotlaringizni qanday himoya qilishi va yaxshi parolni tanlash haqida bilib olasiz.
+            Graph Paper Programming:
+              name: Katakchali varaqda dasturlash
+              description_student: In this lesson, you will program your classmate to draw pictures!
+              description_teacher: 'By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. The class will start by having students use symbols to instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.  '
+            Introduction to Online Puzzles:
+              name: Onlayn boshqotirmalar bilan tanishish.
+              description_student: Bu dars ushbu kurs uchun sizga kerak bo‘ladigan ko‘nikmalarni amalda bajarib ko‘rishingizga imkon beradi.
+              description_teacher: 'Boshqotirmalarning bu to‘plamini talabalar Code.orgning onlayn ish joyi bilan tanishtiruvdan (yoki sinfingizning tajribasiga bog‘liq holda ko‘rib chiqish) boshlashadi. U yerda ish joyining asosiy vazifalariga ishora qiluvchi videolar bo‘ladi, jumladan, `Run`, `Reset`, va `Step` tugmalari. Shuningdek, mana bu videolarda ham muhokama qilinadi: Blockly bo‘limlarini ko‘chirib olish, Blockly bo‘limlarini o‘chirish, va Blockly bo‘limlarini bog‘lash. Keyingisi, talabalar labirintda o‘zlarining ketma-ketlik va debug qilish bo‘yicha mahoratlarini amalda qo‘llab ko‘rishadi. Bu yerda talabalar sikllar asoslarini o‘rganish davomida boshqotirmalarning yangi turlari, Yig‘uvchi, San’atkor va Hosil yig‘uvchi kabi turlarini ko‘rishadi.'
+              key: Onlayn boshqotirmalar bilan tanishish.
+            Relay Programming:
+              name: Estafetali dasturlash
+              description_student: Kursni boshida kod bilan chizmalar chizganingizni eslaysizmi? Bu darsda, xuddi shunga o‘xshash narsa qiish uchun biron jamoa bilan ishlaysiz!
+              key: Estafetali dasturlash
+            Debugging with Laurel:
+              name: Debugging with Laurel
+              description_student: Siz hech kod yozish davomida muammolarga duch kelganmisiz? Bu darsda siz debug qilish sirlari haqida o‘rganasiz. Debug qilish bu kodingizdagi muammolarni topish va to‘g‘rilash jarayonidir.
+              description_teacher: Bu onlayn mashg‘ulotda talabalar "yig‘uvchi" muhitida debug qilishni mashq qilishadi. Talabalar boshqotirmalarni oddiy algoritmlar, sikllar va ichma-ich sikllar bilan to‘g‘rilash uchun kodni o‘qish va o‘zgartirishni mashq qilib ko‘rishadi.
+            Events in Bounce:
+              name: Events in Bounce
+              description_student: Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!
+              description_teacher: Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.
+              key: Events in Bounce
+            Build a Star Wars Game:
+              name: Build a Star Wars Game
+              description_student: Bu darsda o‘z Star Wars o‘yiningizni yarata olish kuchini jis qiling.
+              description_teacher: Bu darsda, talabalar onlayn tarzda tarqata oladigan o‘yinni yaratish uchun hodisalardan foydalanishni amalda sinab ko‘rishadi. R2-D2 va boshqa "Star Wars" belgilarini namoyish etgan holda, talabalar hodisalarni boshqaradilar, so'ngra o'zlarining o'yinlarini yaratish uchun joy ajratadilar.
+              key: Build a Star Wars Game
+            Dance Party:
+              name: Dance Party
+              description_student: Bayram qilish vaqti keldi! Ushbu darsda siz o‘z interaktiv raqs bazmingizni dasturlashtirasiz.
+              description_teacher: Bu darsda, talabalar o‘zlarining interaktiv raqs bazmini dasturlashtiradilar. Qurilma musiqaga javob qaytarish uchun yaratilganligi sababli bu mashg‘ulot tovushni talab qiladi.
+              key: Dance Party
+            Loops in Ice Age:
+              name: Muz davridagi sikllar
+              description_student: In this lesson you'll use the repeat block to help Scrat reach the acorn as efficiently as possible.
+              description_teacher: As a quick update (or introduction) to using loops, this stage will have students using the `repeat` block to get Scrat to the acorn more efficiently.
+              key: Muz davridagi sikllar
+            Drawing Shapes with Loops:
+              name: Drawing Shapes with Loops
+              description_student: In this lesson, loops make it easy to make cool images with the Artist!
+              description_teacher: This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity doubles as a debugging exercise for extra problem-solving practice.
+            Nested Loops in Maze:
+              name: Nested Loops in Maze
+              description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
+              description_teacher: Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.
+            Conditionals with Cards:
+              name: Conditionals with Cards
+              description_student: Ma’lum bir shartlar bajarilgandagina bal yig‘ishingiz mumkin bo‘lgan o‘yin o‘ynashning vaqti!
+              key: Conditionals with Cards
+            Looking Ahead with Minecraft:
+              name: Minecraft bilan oldinga qarab
+              description_student: Lavadan saqlaning! Bu yerda siz Minecraft dunyosidagi shartli bayonotlar haqida o‘rgana boshlaysiz.
+              description_teacher: Bu dars aslida, Minecraft jamoasi bilan birgalikda Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin jihatlarini ko‘rib chiqish imkoniyatiga ham ega bo‘ladilar!
+            If/Else with Bee:
+              name: Asalari bilan If/Else
+              description_student: 'Siz hozir shartli boyonotlarni tushunib oldingiz, endi asal va gul shirasini yig‘adigan Asalari dasturini tuzishda ulardan foydalansak bo‘ladi. '
+              description_teacher: Shu paytgacha talabalar har safar ishlatib ko‘rilganda aynan bir xil tarzda ijro etiladigan -ishonchli, ammo moslashuvchan bo‘lmagan kod yozib kelishayotgan edi. Bu darsda, sinfingiz dasturingiz turli xil maxsus holatlarga duch kelishiga qarab turli xil vazifalarni bajaradigan funksiyalarni yozishga imkon beradigan shartli boyonotlar bilan kod yozishni boshlashadi.
+            While Loops in Farmer:
+              name: While Loops in Farmer
+              description_student: 'Sikllar kod yozishda juda foydali. Bu dars sizga siklning yangi turini o‘rgatadi: while sikllari!'
+              key: While Loops in Farmer
+            Until Loops in Maze:
+              name: Until Loops in Maze
+              description_student: "`Until` sikli bilan siz ba’zi bir ajoyib narsalarni amalga oshira olasiz!"
+              description_teacher: Bu darsda, talabalar `until` sikllari haqida o‘rganishadi. Talabalar o‘zlari xohlagan nuqtagacha qaytarilaveradigan harakatlarni ijro etuvchi obrazga ega bo‘lgan dastur yaratishadi.
+              key: Until Loops in Maze
+            End of Course Project:
+              name: End of Course Project
+              description_student: Ushbu qo‘llarni bir dunyo kod yozish uchun tayyorlang! Loyihangizni yaratishni boshlashning vaqti keldi.
+              description_teacher: Ushbu yakunlovchi dars o‘quvchilarni o‘zlarining loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi!
+              key: End of Course Project
+            lesson-5:
+              description_student: Ushbu darsda siz parollar sizning ma'lumotlaringizni qanday himoya qilishi va yaxshi parolni tanlash haqida bilib olasiz.
+            'Algorithms: Graph Paper Programming':
+              key: 'Algorithms: Graph Paper Programming'
+              name: Katakchali varaqda dasturlash
+              description_student: In this lesson, you will program your classmate to draw pictures!
+              description_teacher: 'By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. The class will start by having students use symbols to instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.  '
+            Debugging in Collector:
+              key: Yig‘uvchi bilan debug qilish
+              name: Debugging with Laurel
+              description_student: Siz hech kod yozish davomida muammolarga duch kelganmisiz? Bu darsda siz debug qilish sirlari haqida o‘rganasiz. Debug qilish bu kodingizdagi muammolarni topish va to‘g‘rilash jarayonidir.
+              description_teacher: Bu onlayn mashg‘ulotda talabalar "yig‘uvchi" muhitida debug qilishni mashq qilishadi. Talabalar boshqotirmalarni oddiy algoritmlar, sikllar va ichma-ich sikllar bilan to‘g‘rilash uchun kodni o‘qish va o‘zgartirishni mashq qilib ko‘rishadi.
+            Loops in Artist:
+              key: Rassom bilan sikllar
+              name: Drawing Shapes with Loops
+              description_student: In this lesson, loops make it easy to make cool images with the Artist!
+              description_teacher: This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity doubles as a debugging exercise for extra problem-solving practice.
+            Nested Loops in Bee:
+              key: Nested Loops in Bee
+              name: Nested Loops in Maze
+              description_student: Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop.
+              description_teacher: Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.
+            lesson-6:
+              name: Minecraft bilan oldinga qarab
+              description_student: Lavadan saqlaning! Bu yerda siz Minecraft dunyosidagi shartli bayonotlar haqida o‘rgana boshlaysiz.
+              description_teacher: Bu dars aslida, Minecraft jamoasi bilan birgalikda Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin jihatlarini ko‘rib chiqish imkoniyatiga ham ega bo‘ladilar!
+            Conditionals in Bee:
+              key: Conditionals in Bee
+              name: Asalari bilan If/Else
+              description_student: 'Siz hozir shartli boyonotlarni tushunib oldingiz, endi asal va gul shirasini yig‘adigan Asalari dasturini tuzishda ulardan foydalansak bo‘ladi. '
+              description_teacher: Shu paytgacha talabalar har safar ishlatib ko‘rilganda aynan bir xil tarzda ijro etiladigan -ishonchli, ammo moslashuvchan bo‘lmagan kod yozib kelishayotgan edi. Bu darsda, sinfingiz dasturingiz turli xil maxsus holatlarga duch kelishiga qarab turli xil vazifalarni bajaradigan funksiyalarni yozishga imkon beradigan shartli boyonotlar bilan kod yozishni boshlashadi.
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Raqamli Fuqarolik
+            csf_sequencing:
+              display_name: Sequencing
+            csf_events:
+              display_name: Hodisalar
+            csf_loops:
+              display_name: Sikllar
+            csf_conditionals:
+              display_name: Shartli bayonotlar
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Kurs D (2021)
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_audience: 'Yosh: 7-11'
+        coursee-2022:
+          lessons:
+            Follow the Algorithm:
+              description_student: O‘ynang va natijaga erishish uchun qanday buyruqlar kerakligini o‘ylab ko‘ring.
+              description_teacher: Ushbu darsda o‘quvchilar to‘g‘ri natija berish uchun qanday buyruqlar berish kerakligi haqida fikr yuritishga mo‘ljallangan o‘yin o‘ynaydilar. Bu ularga kelgusi darslarda Sprite Labga osonroq o‘tishga yordam beradi.
+            Swimming Fish with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+              description_student: Learn how to create and edit sprites.
+              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.'
+            Alien Dance Party with Sprite Lab:
+              name: Alien Dance Party with Sprite Lab
+              description_student: Create an interactive project that can be shared with classmates.
+              description_teacher: Ushbu darsda o‘quvchilar o‘z interaktiv animatsiyalari va o‘yinlarini yaratishlari mumkin bo‘lgan "Sprite Lab" platformasi bilan tanishtiriladi. Xatti-harakatdan tashqari, bugun talabalar "begonalar raqs partiyasini" yaratish uchun foydalanuvchi kiritishlarini hodisa sifatida qo‘shadilar.
+              key: Alien Dance Party with Sprite Lab
+            Be A Super Digital Citizen:
+              description_student: Kiberhujumni ko‘rganingizda qanday qilib undan himoyada bo‘lishingizni bilib oling.
+            Private and Personal Information:
+              name: Maxfiy va Shaxsiy ma'lumotlar
+              description_student: Internet qiziqarli va maroqli, ammo xavfsiz bo‘lish ham muhim. Bu dars sizga tarqatish uchun xavfsiz bo‘lgan axborot va maxfiy qolishi kerak bo‘lgan axborotlar o‘rtasidagi farqni o‘rgatishadi.
+              key: Maxfiy va Shaxsiy ma'lumotlar
+            'Mini-Project: About Me':
+              name: Men haqimda Sprite Lab bilan
+              description_student: SpriteLab bilan interaktiv plakat yaratish orqali talabalar Internetda shaxsiy va maxfiy ma'lumotlarni almashish haqidagi bilimlarini qo‘llaydilar.
+            Digital Sharing:
+              name: Raqamli Ulashish
+              description_student: 'In this lesson, you''ll learn about the challenges and benefits of ownership and copyright. '
+              key: Raqamli Ulashish
+            Drawing with Loops:
+              name: Drawing with Loops
+              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+            Fancy Shapes using Nested Loops:
+              name: Fancy Shapes using Nested Loops
+              description_student: Ko‘proq ichma-ich sikllar! Bu safar biz ichma-ich sikllar bilan AJOYIB chizmalar chizamiz.
+            'Mini-Project: Design a Snowflake':
+              description_student: 'Anna va Elsaning ajoyib muzda uchish qobiliyati bor, ammo muzda shakllar yaratish uchun ularga yordamingiz kerak. AJOYIB nimadir yaratish uchun ichma-ich sikllardan foydalaning. '
+            Songwriting:
+              name: Qo'shiq yozish
+              description_student: Hatto rok yulduzlari ham dasturlash ko'nikmalariga muhtoj. Ushbu dars sizga qo'shiqlar matnlaridan foydalangan holda funksiyalar haqida ma'lumot beradi.
+              description_teacher: Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar (ba'zida protsedura deb ham yuritiladi) - bu kichik dastur bo'lib, undan kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars talabalarga intuitiv ravishda funksiyalar nima uchun ekanligini va kod qismlarini funksiyalarga birlashtirish qanchalik foydali amaliyot bo'lishi mumkinligini tushunishga  yordam beradi.
+            Functions in Minecraft:
+              name: Minecraftdagi funksiyalar
+              description_student: Can you figure out how to use functions for the most efficient code?
+              description_teacher: Students will begin to understand how functions can be helpful in this fun and interactive Minecraft adventure!
+              key: Minecraftdagi funksiyalar
+            Functions with Artist:
+              name: Rassom bilan funksiyalar
+              description_student: Funksiyalar bilan murakkab chizmalarni osonlashtiring!
+              description_teacher: Talabalar Rassom bilan funksiyalarni ishlatishga kirishadi. Jozibali rasmlar yaratiladi va o‘zgartiriladi. Yanada murakkabroq ko‘rinishlar uchun, talabalar biron funksiya ichida boshqa birini chaqirish orqali ichma-ich funksiyalar haqida o‘rganishadi.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Minecraftda shartli bayonotlar: Suv sayohati'
+              description_student: Bu yerda siz Minecreaft dunyosidagi shartli bayonotlar haqida o‘rganasiz.
+              description_teacher: Bu dars aslida, Minecraft jamoasi bilan birgalikda Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin jihatlarini ko‘rib chiqish imkoniyatiga ham ega bo‘ladilar!
+              key: 'Minecraftda shartli bayonotlar: Suv sayohati'
+            Conditionals with the Farmer:
+              name: Conditionals with the Farmer
+              description_student: Bu qiziqarli va qiyin bosqichda siz komputerga biron narsani ma’lum bir shart ostida bajarishni aytasiz.
+              description_teacher: Bu dars talabalarga `while` siklari va `if / else` bayonotlarini tanishtiradi.  _While sikllari_ biron shart bajarilmaguncha davom etaveradigan sikllardir.  While sikllari dasturchi buyruqlarni aynan necha marta takrorlanishini bilmagan holda, ammo dasturchi sikl davom etishi uchun qanaqa shart bajarilishi kerakligini bilgan holda ishlatiladi. `If / Else` bayonotlari agar nimadir to‘g‘ri bo‘lsa, kodning butun bo‘limini ishlatish orqali va aks holda boshqa bir narsani ishlatish orqali dasturlashda qulayliklar taklif qiladi.
+            Functions with Harvester:
+              name: Terimchi bilan funksiyalar
+              description_student: Fermerga yordam berayotganingizda, funksiyalar sizni ko‘p ishlar qilishdan saqlab qoladi!
+              description_teacher: Talabalar Rassom loyihasida ta’sirchan dizaynlar yaratishni va Asalarini labirintda yo‘naltirishni mashq qilib ko‘rishgan, ammo bugun ular funksiyalardan dehqondagi hosilni yig‘ish uchun ishlatadilar. Bu dars talabalarni funksiyalardan 'while' sikli va 'if/else' bayononotlari bilan birlashtirgan holda foydalanishga undaydi.
+            Designing for Accessibility:
+              description_teacher: 'Miya hujumi (brainstorm) va faraziy ilovalar uchun qulay yechimlarni loyihalashtirish orqali kirish imkoniyati va empatiya qiymati haqida bilib oling. '
+            End of Course Project:
+              name: End of Course Project
+              description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
+              description_teacher: "Keyingi to‘rtta dars talabalarga biron kapston loyihasida kod yozish ko‘nikmalaridan foydalanish imkonini beradi. Bu loyiha yakka holda kod yozish bo‘yicha tajriba orttirishga va tengdoshlar va yaxshi ko‘rgan insonlar bilan ulashish uchun namuna yaratishga yordam beradi. Ko‘p dars  yoki ko‘p haftalik tajribaga ega bo‘lishi kutilgan holda, talabalar aqlli saralash, dizaynlashtirishni o‘rganish, yaratish va o‘zlarining yakuniy loyihalarini namoyish qilishga vaqt sarflashadi. \n\nTadqiq qilish bosqichida,  talabalar Rassom va ilhomlantirish uchun Sprite Labdagi loyihalarning oldindan yaratilgan misollari bilan ishlashadi. Keyingisida, talabalar dizaynlashtirish jarayoni va uni o‘z loyihalarida qanday amalga oshirishni o‘rganishadi. Keyin ularga Rassom, Sprite Lab yoki ular tanishib chiqadigan biron interfeysda o‘zlarining loyihalarini yaratishi uchun joy beriladi (bu loyihaning eng uzun bosqichi bo‘lishi kutiladi). Va nihoyat, talabalar tugatgan ishlarini do‘stlari bilan ulasha oladi."
+              key: End of Course Project
+            Simon Says:
+              key: Simon so'zlaydi
+              description_student: O‘ynang va natijaga erishish uchun qanday buyruqlar kerakligini o‘ylab ko‘ring.
+              description_teacher: Ushbu darsda o‘quvchilar to‘g‘ri natija berish uchun qanday buyruqlar berish kerakligi haqida fikr yuritishga mo‘ljallangan o‘yin o‘ynaydilar. Bu ularga kelgusi darslarda Sprite Labga osonroq o‘tishga yordam beradi.
+            Learning Sprites with Sprite Lab:
+              name: Swimming Fish with Sprite Lab
+              description_student: Learn how to create and edit sprites.
+              description_teacher: 'In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.'
+            lesson-4:
+              description_student: Kiberhujumni ko‘rganingizda qanday qilib undan himoyada bo‘lishingizni bilib oling.
+            About Me:
+              name: Men haqimda Sprite Lab bilan
+              description_student: SpriteLab bilan interaktiv plakat yaratish orqali talabalar Internetda shaxsiy va maxfiy ma'lumotlarni almashish haqidagi bilimlarini qo‘llaydilar.
+            Programming and Loops with the Artist:
+              name: Drawing with Loops
+              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+            Nested Loops in Artist:
+              key: Nested Loops in Artist
+              name: Fancy Shapes using Nested Loops
+              description_student: Ko‘proq ichma-ich sikllar! Bu safar biz ichma-ich sikllar bilan AJOYIB chizmalar chizamiz.
+            Nested Loops in Frozen:
+              key: Frozen bilan ichma-ich sikllar
+              description_student: 'Anna va Elsaning ajoyib muzda uchish qobiliyati bor, ammo muzda shakllar yaratish uchun ularga yordamingiz kerak. AJOYIB nimadir yaratish uchun ichma-ich sikllardan foydalaning. '
+            'Functions: Songwriting':
+              key: 'Functions: Songwriting'
+              name: Qo'shiq yozish
+              description_student: Hatto rok yulduzlari ham dasturlash ko'nikmalariga muhtoj. Ushbu dars sizga qo'shiqlar matnlaridan foydalangan holda funksiyalar haqida ma'lumot beradi.
+              description_teacher: Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar (ba'zida protsedura deb ham yuritiladi) - bu kichik dastur bo'lib, undan kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars talabalarga intuitiv ravishda funksiyalar nima uchun ekanligini va kod qismlarini funksiyalarga birlashtirish qanchalik foydali amaliyot bo'lishi mumkinligini tushunishga  yordam beradi.
+            Functions in Artist:
+              key: Functions in Artist
+              name: Rassom bilan funksiyalar
+              description_student: Funksiyalar bilan murakkab chizmalarni osonlashtiring!
+              description_teacher: Talabalar Rassom bilan funksiyalarni ishlatishga kirishadi. Jozibali rasmlar yaratiladi va o‘zgartiriladi. Yanada murakkabroq ko‘rinishlar uchun, talabalar biron funksiya ichida boshqa birini chaqirish orqali ichma-ich funksiyalar haqida o‘rganishadi.
+            Conditionals:
+              key: Shartli bayonotlar
+              name: Conditionals with the Farmer
+              description_student: Bu qiziqarli va qiyin bosqichda siz komputerga biron narsani ma’lum bir shart ostida bajarishni aytasiz.
+              description_teacher: Bu dars talabalarga `while` siklari va `if / else` bayonotlarini tanishtiradi.  _While sikllari_ biron shart bajarilmaguncha davom etaveradigan sikllardir.  While sikllari dasturchi buyruqlarni aynan necha marta takrorlanishini bilmagan holda, ammo dasturchi sikl davom etishi uchun qanaqa shart bajarilishi kerakligini bilgan holda ishlatiladi. `If / Else` bayonotlari agar nimadir to‘g‘ri bo‘lsa, kodning butun bo‘limini ishlatish orqali va aks holda boshqa bir narsani ishlatish orqali dasturlashda qulayliklar taklif qiladi.
+            Functions in Harvester:
+              key: Terimchidagi Funksiyalar
+              name: Terimchi bilan funksiyalar
+              description_student: Fermerga yordam berayotganingizda, funksiyalar sizni ko‘p ishlar qilishdan saqlab qoladi!
+              description_teacher: Talabalar Rassom loyihasida ta’sirchan dizaynlar yaratishni va Asalarini labirintda yo‘naltirishni mashq qilib ko‘rishgan, ammo bugun ular funksiyalardan dehqondagi hosilni yig‘ish uchun ishlatadilar. Bu dars talabalarni funksiyalardan 'while' sikli va 'if/else' bayononotlari bilan birlashtirgan holda foydalanishga undaydi.
+            lesson-1:
+              description_teacher: 'Miya hujumi (brainstorm) va faraziy ilovalar uchun qulay yechimlarni loyihalashtirish orqali kirish imkoniyati va empatiya qiymati haqida bilib oling. '
+          lesson_groups:
+            csf_sprites:
+              display_name: Spraytlar
+            csf_digcit:
+              display_name: Raqamli Fuqarolik
+            ramp_up:
+              display_name: Ichma-ich sikllar
+            csf_functions:
+              display_name: Funksiyalar
+            csf_nested_loops:
+              display_name: Shartli bayonotlar
+            lessonGroup-7:
+              display_name: Kompyuterlar ta'siri
+            end_of_course_project:
+              display_name: End of Course Project
+          description_audience: 'Yosh: 8-12'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Sprite laboratoriyasi bilan tanishish
+            Sprites in Action:
+              name: Spraytlar amalda
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-loyiha: Virtual Pet'
+              description_student: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
+              description_teacher: Bu darsda talabalar ular xohlagandek ko‘rinadigan va o‘zini tutadigan interfaol virtual uy hayvonini yaratishadi. Talabalar uy hayvoninig tashqi ko‘rinishini moslashtirish uchun Sprite Labning "Costumes" qurilmasidan foydalanishadi. Keyin ular uy hayvonini jonlantirish uchun hodisalar, xatti-harakatlar va ular o‘rgangan boshqa tushunchalardan foydalanishadi!
+            The Power of Words:
+              name: The Power of Words
+              description_student: Bezorilik hech qachon yaxshi bo’lmaydi. Ushbu dars sizga onlaynda nima deyish va nima deyish mumkinligi to’g’risida ma’lumot beradi.
+            'Mini-Project: User Input Programs':
+              name: Chat-Bot yaratish
+            Drawing with Loops:
+              name: Drawing with Loops
+              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+            Using Variables with the Artist:
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
+              description_teacher: Ushbu darsda talabalar Artist  muhitida o'zgaruvchilar yordamida takrorlanadigan dizaynlarni yaratishni o'rganadilar. Talabalar o'zgaruvchilar yordamida qanday qilib kodni yozishni va o'qishni osonlashtirish uchun qanday foydalanish mumkinligini bilib oladilar. Yonaltirilgan jumboqlar tugagandan  so'ng talabalar freeplay darajasida o'zlarining o'rgangan narsalarini namoyish etish va o'z dizaynlarini yaratishni o’rganadilar
+            Programming with the Bee:
+              name: Nested Loops in Maze
+              description_student: Sikl ichidagi sikl ichida sikllar. Bu nimani anglatadi? Bu dars sizni biron sikl ichida boshqa siklni joylashtirganingizda nima sodir bo‘lishini o‘rgatadi.
+              description_teacher: Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.
+            Variables with the Bee:
+              name: Changing Variables with Bee
+              description_student: This bee loves variables!
+              description_teacher: This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running.
+            For Loop Fun:
+              name: Zavqli For sikli
+              description_student: Siz for sikllari haqida juda ko‘p qiziqarli ma’lumotlarga ega bo‘lasiz!
+              description_teacher: Biz bilamizki, ilmoqlar bizga narsalarni qayta-qayta bajarishga imkon beradi, ammo endi biz qo'shimcha tuzilmalarga ega bo'lgan sikllardan qanday foydalanishni o'rganamiz. Ushbu yangi tuzilmalar talabalarga kodni yanada kuchli va dinamik yaratishga imkon beradi. .
+              key: Zavqli For sikli
+            For Loops with Bee:
+              name: Asalari bilan for sikllari
+              description_student: Buzz buzz. Ushbu jumboqlarda siz asalarini for sikllari yordamida gul shirasi va asalga yo'naltirasiz.
+              description_teacher: Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.
+            For Loops with Artist:
+              name: Rassom bilan For Sikllarini ishlatish
+              description_student: Keyingi asaringizni yaratishga tayyorlaning. Bu yerda siz 'for' sikllari yordamida hayratlantiruvchi rasmlarni yaratasiz.
+              description_teacher: In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
+            Simulating Experiments:
+              name: Simulating Experiments
+              description_student: Run simulations on the computer and experiment by changing variables.
+              description_teacher: By running a simple simulation in Sprite Lab, students will experience how computing can be used to collect data that identify trends or patterns. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.
+              key: Simulating Experiments
+            AI For Oceans:
+              name: AI for Oceans
+              description_student: 'O''quv qo''llanmasining qisqacha mazmuni: Dastlab talabalar okeandan chiqindilarni olib tashlash uchun obyektlarni ''baliqlar'' yoki ''baliqlar emas'' deb tasniflashadi. Keyin talabalar o''zlarining ma''lumot to''plamlarini boshqa dengizni o''z ichiga olgan holda kengaytirishlari kerak bo''ladi. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo''lgan baliqlarning rasmlariga murojaat qilish uchun o''zlarining yorliqlarini tanlaydilar. Ushbu ma''lumotlar yangi tasvirlarni belgilashga qodir bo''lgan mashina o''rganish modeli uchun ishlatiladi. '
+              description_teacher: |-
+                \*\* O'quv qo'llanmasining qisqacha mazmuni: \*\* Dastlabki talabalar okeandan chiqindilarni olib tashlash uchun ob'ektlarni " baliq yoki 'baliq emas 'deb tasniflashadi. Keyin talabalar o'zlarining o'quv ma'lumotlari to'plamini kengaytirishlari kerak bo'ladi. Suvga kiradigan boshqa dengiz jonivorlarini qo'shish. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo'lgan baliqlarning rasmlariga murojaat qilish uchun o'zlarining yorliqlarini tanlaydilar. Bu o'quv ma'lumotlari keyinchalik o'rganish imkoniyatiga ega bo'lishi kerak bo'lgan mashinani o'rganish modeli uchun ishlatiladi. U o'z-o'zidan yangi rasmlarni belgilay oladi.\\r
+                \\r
+                \\r
+                \*\* To'g'rilikni tekshirish: \*\* Ushbu o'quv qo'llanma talabalarga ularning saviyasini to'g'ri to'ldirgan-qilmaganligini aytmaydi. Faoliyatning turli qismlaridan tezda o'tish mumkin. Talabalarni rasmlarni tomosha qilishga undaydi. Videolar, ko'rsatmalarni o'qing va yo'lda turli xil narsalarni sinab ko'ring. Istalgan vaqtda ular siz yoki sinfdoshingiz bilan o'zlarining topilmalari haqida bo'lishishlari mumkin. \\r
+            The Internet:
+              name: Internet
+              description_student: Axborot qanday qilib Internet orqali tarqalishini o'ylab ko'rganmisiz? Bu sehr emas! Bu dars sizga Internet qanday ishlashi asoslarini o'rgatadi.
+              description_teacher: Ko'pchilik Internetdan har kuni foydalanayotganiga qaramay, ko'pchilik uning qanday ishlashini bilmaydi. Ushbu darsda talabalar ulanishlar, URL manzillari, IP-manzillar va DNS haqida ma'lumot olish davomida o'zlarini Internetda aylanib yurgandek his qilishadi.
+            End of Course Project:
+              name: End of Course Project
+              description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
+              description_teacher: Ushbu yakunlovchi dars o‘quvchilarni o‘zlarining loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi!
+              key: End of Course Project
+            lesson-8:
+              name: Spraytlar amalda
+            Virtual Pet:
+              key: Virtual hayvoncha do‘st
+              name: 'Mini-loyiha: Virtual Pet'
+              description_student: In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!
+              description_teacher: Bu darsda talabalar ular xohlagandek ko‘rinadigan va o‘zini tutadigan interfaol virtual uy hayvonini yaratishadi. Talabalar uy hayvoninig tashqi ko‘rinishini moslashtirish uchun Sprite Labning "Costumes" qurilmasidan foydalanishadi. Keyin ular uy hayvonini jonlantirish uchun hodisalar, xatti-harakatlar va ular o‘rgangan boshqa tushunchalardan foydalanishadi!
+            lesson-2:
+              name: The Power of Words
+              description_student: Bezorilik hech qachon yaxshi bo’lmaydi. Ushbu dars sizga onlaynda nima deyish va nima deyish mumkinligi to’g’risida ma’lumot beradi.
+            lesson-11:
+              name: Chat-Bot yaratish
+            Loops with the Artist:
+              key: Rassom bilan sikllar
+              name: Drawing with Loops
+              description_student: In this lesson, loops make it easy to make even cooler images with Artist!
+              description_teacher: Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.
+            Variables that Change in Artist:
+              description_student: In this lesson, you'll make drawings using variables that change as the program runs.
+              description_teacher: Ushbu darsda talabalar Artist  muhitida o'zgaruvchilar yordamida takrorlanadigan dizaynlarni yaratishni o'rganadilar. Talabalar o'zgaruvchilar yordamida qanday qilib kodni yozishni va o'qishni osonlashtirish uchun qanday foydalanish mumkinligini bilib oladilar. Yonaltirilgan jumboqlar tugagandan  so'ng talabalar freeplay darajasida o'zlarining o'rgangan narsalarini namoyish etish va o'z dizaynlarini yaratishni o’rganadilar
+            Nested Loops in the Maze:
+              key: Labirintdagi ichma-ich sikllar
+              name: Nested Loops in Maze
+              description_student: Sikl ichidagi sikl ichida sikllar. Bu nimani anglatadi? Bu dars sizni biron sikl ichida boshqa siklni joylashtirganingizda nima sodir bo‘lishini o‘rgatadi.
+              description_teacher: Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.
+            Variables that Change in Bee:
+              name: Changing Variables with Bee
+              description_student: This bee loves variables!
+              description_teacher: This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running.
+            For Loops in Bee:
+              key: For Loops in Bee
+              name: Asalari bilan for sikllari
+              description_student: Buzz buzz. Ushbu jumboqlarda siz asalarini for sikllari yordamida gul shirasi va asalga yo'naltirasiz.
+              description_teacher: Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.
+            For Loops in Artist:
+              key: For Loops in Artist
+              name: Rassom bilan For Sikllarini ishlatish
+              description_student: Keyingi asaringizni yaratishga tayyorlaning. Bu yerda siz 'for' sikllari yordamida hayratlantiruvchi rasmlarni yaratasiz.
+              description_teacher: In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.
+            lesson-5:
+              name: Oʻzgaruvchilar bilan sanash
+            AI for Oceans:
+              key: AI for Oceans
+              name: AI for Oceans
+              description_student: 'O''quv qo''llanmasining qisqacha mazmuni: Dastlab talabalar okeandan chiqindilarni olib tashlash uchun obyektlarni ''baliqlar'' yoki ''baliqlar emas'' deb tasniflashadi. Keyin talabalar o''zlarining ma''lumot to''plamlarini boshqa dengizni o''z ichiga olgan holda kengaytirishlari kerak bo''ladi. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo''lgan baliqlarning rasmlariga murojaat qilish uchun o''zlarining yorliqlarini tanlaydilar. Ushbu ma''lumotlar yangi tasvirlarni belgilashga qodir bo''lgan mashina o''rganish modeli uchun ishlatiladi. '
+              description_teacher: |-
+                \*\* O'quv qo'llanmasining qisqacha mazmuni: \*\* Dastlabki talabalar okeandan chiqindilarni olib tashlash uchun ob'ektlarni " baliq yoki 'baliq emas 'deb tasniflashadi. Keyin talabalar o'zlarining o'quv ma'lumotlari to'plamini kengaytirishlari kerak bo'ladi. Suvga kiradigan boshqa dengiz jonivorlarini qo'shish. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo'lgan baliqlarning rasmlariga murojaat qilish uchun o'zlarining yorliqlarini tanlaydilar. Bu o'quv ma'lumotlari keyinchalik o'rganish imkoniyatiga ega bo'lishi kerak bo'lgan mashinani o'rganish modeli uchun ishlatiladi. U o'z-o'zidan yangi rasmlarni belgilay oladi.\\r
+                \\r
+                \\r
+                \*\* To'g'rilikni tekshirish: \*\* Ushbu o'quv qo'llanma talabalarga ularning saviyasini to'g'ri to'ldirgan-qilmaganligini aytmaydi. Faoliyatning turli qismlaridan tezda o'tish mumkin. Talabalarni rasmlarni tomosha qilishga undaydi. Videolar, ko'rsatmalarni o'qing va yo'lda turli xil narsalarni sinab ko'ring. Istalgan vaqtda ular siz yoki sinfdoshingiz bilan o'zlarining topilmalari haqida bo'lishishlari mumkin. \\r
+            Internet:
+              key: Internet
+              name: Internet
+              description_student: Axborot qanday qilib Internet orqali tarqalishini o'ylab ko'rganmisiz? Bu sehr emas! Bu dars sizga Internet qanday ishlashi asoslarini o'rgatadi.
+              description_teacher: Ko'pchilik Internetdan har kuni foydalanayotganiga qaramay, ko'pchilik uning qanday ishlashini bilmaydi. Ushbu darsda talabalar ulanishlar, URL manzillari, IP-manzillar va DNS haqida ma'lumot olish davomida o'zlarini Internetda aylanib yurgandek his qilishadi.
+          lesson_groups:
+            ramp_up:
+              display_name: Spraytlar
+            lessonGroup-7:
+              display_name: Raqamli Fuqarolik
+            lessonGroup-8:
+              display_name: O‘zgaruvchilar
+            end_of_course_project:
+              display_name: End of Course Project
+          description_short: Informatika asoslari kursidan barcha tushunchalarni o'rganing va o'z san'at asari, hikoya yoki o'yiningizni yarating.
+          description_audience: 'Yosh: 9-13'
+        csp-post-survey-2021:
+          title: CS Principles Post-Course Survey
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        pre-express-2022:
+          lessons:
+            Learn to Drag and Drop:
+              key: Drag&Drop - Olib ko‘chirishni o‘rganish
+              name: Drag&Drop - Olib ko‘chirishni o‘rganish
+            Sequencing with Scrat:
+              key: Sequencing with Scrat
+              name: Sequencing with Scrat
+            Programming with Angry Birds:
+              key: Jahldor qushlar bilan dasturlash
+              name: Jahldor qushlar bilan dasturlash
+            Programming with Rey and BB-8:
+              key: Rey va BB-8 bilan dasturlash
+              name: Rey va BB-8 bilan dasturlash
+            Programming with Harvester:
+              key: Terimchi bilan dasturlash
+              name: Terimchi bilan dasturlash
+            Loops with Scrat:
+              key: Loops with Scrat
+              name: Loops with Scrat
+            Loops with Laurel:
+              key: Laurel bilan sikllar
+              name: Laurel bilan sikllar
+            Ocean Scene with Loops:
+              key: Sikllar bilan okean manzarasi
+              name: Sikllar bilan okean manzarasi
+            Drawing Gardens with Loops:
+              key: Drawing Gardens with Loops
+              name: Drawing Gardens with Loops
+            On the Move with Events:
+              key: Hodisalar bilan harakatda
+              name: Hodisalar bilan harakatda
+            A Royal Battle with Events:
+              key: A Royal Battle with Events
+              name: A Royal Battle with Events
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Sikllar
+            csf_events:
+              display_name: Hodisalar
+        csa2-2022:
+          lessons:
+            lesson-5:
+              name: Unit 2 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Shartli bayonotlar
+            lesson-14:
+              name: Minecraftdagi shartli boyonotlar
+            lesson-16:
+              name: Nosozliklarni bartaraf etish (Debugging)
+            lesson-19:
+              name: Nosozliklarni bartaraf etish (Debugging)
+        csa4-2022:
+          lessons:
+            lesson-2:
+              name: Unit 4. Baholash
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa5-2022:
+          lessons:
+            lesson-2:
+              name: Unit 5. Baholash
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
