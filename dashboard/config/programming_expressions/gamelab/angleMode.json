@@ -2,6 +2,7 @@
   "key": "angleMode",
   "name": "angleMode",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "mode"

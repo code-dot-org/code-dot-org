@@ -218,6 +218,14 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Kompresja bezstratna"
         },
+        "event/outbreak/unversioned": {
+          "word": "Zdarzenie",
+          "definition": "Działanie, które powoduje, że coś się dzieje."
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modele i symulacje",
+          "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
+        },
         "event/sports/unversioned": {
           "word": "Zdarzenie",
           "definition": "Działanie, które powoduje, że coś się dzieje."
@@ -304,14 +312,6 @@
         "line/poem-art/unversioned": {
           "word": "Wiersz",
           "definition": "(poezja) - podział wiersza ułożonego w wierszu, który kończy się na prawym marginesie."
-        },
-        "event/outbreak/unversioned": {
-          "word": "Zdarzenie",
-          "definition": "Działanie, które powoduje, że coś się dzieje."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modele i symulacje",
-          "definition": "program, który replikuje lub naśladuje kluczowe cechy wydarzenia ze świata rzeczywistego w celu zbadania jego zachowania bez kosztów, czasu lub niebezpieczeństwa przeprowadzenia eksperymentu w prawdziwym życiu."
         },
         "sprite/coursef/2021": {
           "word": "Duszek",
@@ -785,7 +785,7 @@
         },
         "algorithm/coursee/2021": {
           "word": "algorytm",
-          "definition": "Lista działań, aby ukończyć zadanie."
+          "definition": "Lista kroków, aby ukończyć zadanie."
         },
         "sprite/coursee/2021": {
           "word": "Duszek",

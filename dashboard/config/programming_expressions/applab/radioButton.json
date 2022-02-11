@@ -2,6 +2,7 @@
   "key": "radioButton",
   "name": "radioButton",
   "category": "UI controls",
+  "category_key": "ui_controls",
   "palette_params": [
     {
       "name": "id"

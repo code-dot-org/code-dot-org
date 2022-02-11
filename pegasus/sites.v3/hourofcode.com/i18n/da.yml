@@ -234,7 +234,7 @@ da:
   hoc2018_tutorial_mchoc_description: Brug kodeblokkene til at tage Alex eller Steve
     med på eventyr gennem Minecraft universet.
   codeorg_homepage_hoc2019_dance_heading: Prøv den nye <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Støtte til forældre og lærere, der står over
     for skolelukninger.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -971,6 +971,7 @@ da:
   footer_menu_support: Support
   footer_menu_terms: Vilkår
   footer_menu_privacy: Privatlivspolitik
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Prøv en times lektion for alle aldre på mere end 45 sprog.  Slut
     dig til millioner af elever og lærere i mere end 180 lande og start med Programmeringstimen.

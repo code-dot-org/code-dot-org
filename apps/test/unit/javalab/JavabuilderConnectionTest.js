@@ -64,6 +64,18 @@ describe('JavabuilderConnection', () => {
       expect(onOutputMessage).to.have.been.calledWith(data.value);
     });
 
+    it('passes the data value for test results', () => {
+      const data = {
+        type: WebSocketMessageType.TEST_RESULT,
+        value: 'your test has passed!'
+      };
+      const event = {
+        data: JSON.stringify(data)
+      };
+      connection.onMessage(event);
+      expect(onOutputMessage).to.have.been.calledWith(data.value);
+    });
+
     it('appends [JAVALAB] to status messages', () => {
       const data = {
         type: WebSocketMessageType.STATUS,

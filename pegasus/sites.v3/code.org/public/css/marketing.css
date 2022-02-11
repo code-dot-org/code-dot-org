@@ -84,6 +84,10 @@ hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm
 .blackstudentdata p {margin: 1em;}
 .blackstudentdata h3 {font-weight:bold; margin-bottom: .75em; text-align: center;}
 
+/* misc */
+
+.bold-text {font-family: 'Gotham 7r', sans-serif;}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 600px) and (min-width: 0px) {
@@ -99,4 +103,12 @@ hr.bhm-border {  border:none;  height:5px;  background-image: url('../images/bhm
 .bhm-banner {  padding-bottom:135px;  background-position: center bottom;}
 .bhm-banner h1, .bhm-banner h2{text-align: center; color:#000000}
 .banner-pt1, .banner-pt2 {  text-align:center;  padding: 15px;}
+}
+
+.center {
+  text-align: center;
+}
+
+.clearboth {
+  clear: both;
 }

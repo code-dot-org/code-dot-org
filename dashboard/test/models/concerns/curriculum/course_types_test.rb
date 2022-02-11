@@ -227,11 +227,11 @@ class CourseTypesTests < ActiveSupport::TestCase
   end
 
   test 'get_family_courses should get all UnitGroups with the same family name if called for UnitGroup' do
-    assert_equal @unit_group_2.get_family_courses.map(&:name), ['course-instructed-by-teacher', 'course-instructed-by-teacher-2', 'course-teacher-to-student']
+    assert_equal @unit_group_2.get_family_courses.map(&:name).sort!, ['course-instructed-by-teacher', 'course-instructed-by-teacher-2', 'course-teacher-to-student']
   end
 
   test 'get_family_courses should get all Unit with the same family name if called for Unit not in UnitGroup' do
-    assert_equal @unit_teacher_to_students_2.get_family_courses.map(&:name), ['unit-teacher-to-student', 'unit-teacher-to-student-2']
+    assert_equal @unit_teacher_to_students_2.get_family_courses.map(&:name).sort!, ['unit-teacher-to-student', 'unit-teacher-to-student-2']
   end
 
   test 'get_family_courses should return nil if there is no family name' do

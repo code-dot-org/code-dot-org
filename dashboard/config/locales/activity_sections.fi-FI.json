@@ -10,6 +10,12 @@
             null
           ]
         },
+        "7de94e25-7e33-4258-af1c-1e792ba78c5f": {
+          "name": "Jatka tanssimista"
+        },
+        "473c0737-e82d-49ec-bffa-5b738ba06438": {
+          "progression_name": "Jatka tanssimista!"
+        },
         "1f7acf41-57a9-4dc5-8cbb-945faffbdc41": {
           "progression_name": "Mene muodostelmaan"
         },
@@ -378,6 +384,12 @@
             null
           ]
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Johdanto"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Vapaata kokeilua"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Johdanto",
           "tips": [
@@ -440,6 +452,9 @@
           "tips": [
             null
           ]
+        },
+        "ef4b8eed-a408-4dfa-919f-b5575e3cdea5": {
+          "progression_name": "Jatka tanssimista!"
         },
         "ef068b27-a180-4c77-8254-b150c8499acb": {
           "progression_name": "Taakse- ja eteenpäin"
@@ -792,12 +807,6 @@
           "tips": [
             null
           ]
-        },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "Johdanto"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "Vapaata kokeilua"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
@@ -1493,6 +1502,9 @@
         "da9ffffb-f192-44c2-86e8-1fe7d4de71c9": {
           "progression_name": "Tapahtumat"
         },
+        "3dbac671-c428-479f-8a2b-301d4a5578e5": {
+          "progression_name": "Video: Tahdit"
+        },
         "41bca090-a4b2-4019-b05e-3b3b3b0cca14": {
           "progression_name": "Tahdit"
         },
@@ -1672,6 +1684,9 @@
         },
         "dc1332e9-8b48-4325-a310-3de22c787e7d": {
           "name": "Johdanto"
+        },
+        "59ec2b50-dbdf-4df1-9593-1bb961c5edd8": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
         },
         "7064cb92-5320-4d9f-9de2-6de2ca05c5d1": {
           "progression_name": "Vapaata kokeilua"
@@ -1979,6 +1994,9 @@
         },
         "26475297-6a91-4f8c-a64d-ded841ff0cb9": {
           "name": "Johdanto"
+        },
+        "6e3ca289-2d9d-4ff7-b9c6-dd6d8fcad1bf": {
+          "name": "Ehtolauseet Minecraft: Merellisessä matkassa"
         },
         "dc8187ff-3bc9-4079-adda-93abea4abd16": {
           "progression_name": "Vapaata kokeilua"

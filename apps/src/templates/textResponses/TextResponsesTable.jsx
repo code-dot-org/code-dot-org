@@ -7,7 +7,7 @@ import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
-import {textResponsePropType} from './textResponsesRedux';
+import {textResponsePropType} from './textReponsesDataApi';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;

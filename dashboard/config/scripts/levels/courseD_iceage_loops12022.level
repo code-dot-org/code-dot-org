@@ -38,11 +38,16 @@
     "encrypted": "false",
     "hint_prompt_attempts_threshold": "1",
     "show_type_hints": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "\"Free Play\"",
-  "audit_log": "[{\"changed_at\":\"2022-01-12T20:48:25.288+00:00\",\"changed\":[\"cloned from \\\"courseD_iceage_loops1_2021\\\"\"],\"cloned_from\":\"courseD_iceage_loops1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-12T20:48:25.288+00:00\",\"changed\":[\"cloned from \\\"courseD_iceage_loops1_2021\\\"\"],\"cloned_from\":\"courseD_iceage_loops1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

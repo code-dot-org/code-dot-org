@@ -94,6 +94,12 @@
         "text-compression/Text Compression": {
           "student_overview": "W pewnym momencie osiągamy fizyczną granicę szybkości przesyłania bitów i jeśli chcemy szybciej przesłać dużą ilość informacji, musimy znaleźć sposób na przedstawienie tej samej informacji za pomocą mniejszej liczby bitów – musimy skompresować dane."
         },
+        "outbreak/Outbreak": {
+          "overview": "Na tej lekcji uczniowie utworzą symulator epidemii przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić zarażanie. ",
+          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
+          "purpose": "Na poprzedniej lekcji uczniowie zebrali i zinterpretowali dane z prostej symulacji. Podczas tej lekcji uczniowie będą postępować zgodnie z instrukcjami, aby zakodować własny model symulacyjny. Wcześniejsza wiedza uczniów na temat epidemii wirusów w rzeczywistej sytuacji zostanie zastosowana do fikcyjnego scenariusza.",
+          "student_overview": "W Mieście Potworów pojawił się wirus! Naucz się tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia. "
+        },
         "sports/Sports": {
           "overview": "Na tych zajęciach internetowych uczniowie będą się uczyć, czym są zdarzenia oraz jak komputery z nich korzystają w programach takich, jak gry wideo. Uczniowie będą pracować nad łamigłówkami sprawiając, że program reaguje na zdarzenia (jak naciskanie klawiszy ze strzałkami). Na końcu łamigłówki uczniowie będą mieli możliwość spersonalizowano grę przy pomocy różnych prędkości i dźwięków.",
           "student_overview": "Czy kiedykolwiek chciałeś grać w szkole w gry wideo? Na tej lekcji będziesz tworzyć swoje własne!"
@@ -126,12 +132,6 @@
         "poem-art/lesson-1": {
           "overview": "W tej zintegrowanej lekcji informatyki i ELA uczniowie będą animować wiersz z kodem, aby zilustrować nastrój wiersza. Podczas tego wprowadzającego ćwiczenia kodowania, będą czytać i wykrywać nastrój wiersza. Następnie znajdą odpowiednie efekty i obrazy, które pomogą zilustrować nastrój wiersza. Na koniec wykorzystają zdarzenia (kod), aby zilustrować zmianę nastroju lub animować wprowadzenie nowych obrazów w wierszu.\n\nTę lekcję można ukończyć jako samodzielną jednogodzinną lekcję . Można ją również wykorzystać jako pierwszą lekcję modułu pięciu lekcji o nazwie [Kodowanie z poezją](http://code.org/poetry). Pod koniec tego modułu uczniowie napiszą własne wiersze i utworzą aplikację do generowania wierszy, którą będą mogli dzielić się ze znajomymi.\n\nKodowanie z poezją jest częścią programu Powiązania z informatyką inicjatywy Code.org, który ma na celu zintegrowanie informatyki z innymi obszarami przedmiotowymi, takimi jak matematyka, ELA i przyroda, z dostosowaniem do standardów CCSS, NGSS i CSTA.",
           "preparation": "-   Przejrzyj i wypełnij samouczek online: [Sztuka poezji](http://studio.code.org/s/poem-art).\n\n-   Pamiętaj, aby najpierw wypróbować ćwiczenia, zanim poprosisz uczniów o ich wykonanie.\n\n-   Sprawdź swoją technologię i zdecyduj, czy musisz wcześniej coś naprawić.\n\n-   Niektóre poziomy wymagają dźwięku do odtworzenia. Rozdaj słuchawki z wyprzedzeniem.\n\n-   [Opcjonalnie] 2 karteczki samoprzylepne na ucznia do oceny.\n\n-   [Opcjonalnie] Programowanie w parach – Zdecyduj, czy chcesz, aby uczniowie brali udział w programowaniu w parach. Obejrzyj ten [film](https://www.youtube.com/watch?v=sxToW3ixrwo) i odwiedź tę stronę [Wsparcie](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-), aby uzyskać więcej informacji na temat programowania w parach."
-        },
-        "outbreak/Outbreak": {
-          "overview": "Na tej lekcji uczniowie utworzą symulator epidemii przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić zarażanie. ",
-          "preparation": "-   Przeglądaj łamigłówki, aby znaleźć potencjalne obszary problemów dla swojej klasy. \n-   Upewnij się, że każdy uczeń ma dzienniczek refleksji.",
-          "purpose": "Na poprzedniej lekcji uczniowie zebrali i zinterpretowali dane z prostej symulacji. Podczas tej lekcji uczniowie będą postępować zgodnie z instrukcjami, aby zakodować własny model symulacyjny. Wcześniejsza wiedza uczniów na temat epidemii wirusów w rzeczywistej sytuacji zostanie zastosowana do fikcyjnego scenariusza.",
-          "student_overview": "W Mieście Potworów pojawił się wirus! Naucz się tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia. "
         },
         "jigsaw/Jigsaw": {
           "overview": "Ta lekcja da uczniom wyobrażenie, czego się spodziewać po wejściu do laboratorium komputerowego. Zaczyna się od krótkiej dyskusji wprowadzającej ich do zachowania się w laboratorium komputerowym, a następnie przechodzą oni do korzystania z komputera, aby ukończyć łamigłówki online.",

@@ -35,7 +35,7 @@ class ProgrammingExpressionsController < ApplicationController
   def edit
     @programming_expression = ProgrammingExpression.find_by_id(params[:id])
     return render :not_found unless @programming_expression
-    @environment_categories = @programming_expression.programming_environment.categories
+    @environment_categories = @programming_expression.programming_environment.categories.map {|c| {key: c.key, name: c.name}}
   end
 
   def update
@@ -44,8 +44,12 @@ class ProgrammingExpressionsController < ApplicationController
       render :not_found
       return
     end
-    programming_expression.assign_attributes(programming_expression_params.except(:parameters))
+    programming_expression.assign_attributes(programming_expression_params.except(:category_key, :parameters))
     programming_expression.palette_params = programming_expression_params[:parameters]
+    programming_environment_category = programming_expression.programming_environment.categories.find_by_key(programming_expression_params[:category_key])
+    programming_expression.programming_environment_category_id = programming_environment_category&.id
+    # TODO: get rid of this when we remove the category column
+    programming_expression.category = programming_environment_category&.name || programming_expression_params[:category_key]
     begin
       programming_expression.save! if programming_expression.changed?
       programming_expression.write_serialization
@@ -79,7 +83,7 @@ class ProgrammingExpressionsController < ApplicationController
     transformed_params = transformed_params.permit(
       :name,
       :block_name,
-      :category,
+      :category_key,
       :video_key,
       :image_url,
       :short_description,

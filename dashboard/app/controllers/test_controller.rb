@@ -2,13 +2,6 @@
 class TestController < ApplicationController
   layout false
 
-  def hidden_script_access
-    return unless (user = current_user)
-    user.permission = UserPermission::HIDDEN_SCRIPT_ACCESS
-    user.save!
-    head :ok
-  end
-
   def levelbuilder_access
     return unless (user = current_user)
     user.permission = UserPermission::LEVELBUILDER

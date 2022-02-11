@@ -2,5 +2,6 @@
   "key": "title",
   "name": "title",
   "category": "HTML Tags",
+  "category_key": "html_tags",
   "syntax": "<title></title>"
 }

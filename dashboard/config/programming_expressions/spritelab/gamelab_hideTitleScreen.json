@@ -2,6 +2,7 @@
   "key": "gamelab_hideTitleScreen",
   "name": "hideTitleScreen",
   "category": "World",
+  "category_key": "world",
   "block_name": "gamelab_hideTitleScreen",
   "syntax": "hideTitleScreen"
 }
