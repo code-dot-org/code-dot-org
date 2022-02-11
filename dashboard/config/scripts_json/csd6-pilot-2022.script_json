@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-02-10 22:56:01 UTC",
+    "serialized_at": "2022-02-11 19:54:15 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -80,6 +80,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
+        "purpose": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -196,6 +198,48 @@
       "seeding_key": {
         "lesson_activity.key": "15fdc7bc-c6a6-4c95-b6bc-be237a08b611",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "56dc9448-0851-4c35-8ee9-1f907fed6b05",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "56dc9448-0851-4c35-8ee9-1f907fed6b05",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef",
+      "position": 2,
+      "properties": {
+        "duration": 80,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "csd6-pilot-2022"
       }
@@ -405,7 +449,6 @@
       "properties": {
         "duration": "25",
         "name": "Start Coding",
-        "progression_name": "Human Device Interaction Project",
         "tips": [
           {
             "type": "teachingTip",
@@ -513,6 +556,53 @@
         "activity_section.key": "5000c31b-514e-4487-85ff-2867801c772d",
         "lesson_activity.key": "15fdc7bc-c6a6-4c95-b6bc-be237a08b611"
       }
+    },
+    {
+      "key": "49118001-a0ba-4136-841e-f1e76f05b9b6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "49118001-a0ba-4136-841e-f1e76f05b9b6",
+        "lesson_activity.key": "56dc9448-0851-4c35-8ee9-1f907fed6b05"
+      }
+    },
+    {
+      "key": "2468e920-7f26-4940-af45-ce6987c6a2be",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Lesson Timing:** This mini-project is designed to take at most 2 days to complete, mostly due to time it takes construct the physical materials that can be used by students in their project and the extra time it takes to manage these additional materials. In practice, this lesson could extend longer if students need more time to construct their devices or gather materials."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2468e920-7f26-4940-af45-ce6987c6a2be",
+        "lesson_activity.key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef"
+      }
+    },
+    {
+      "key": "b2d08749-3883-46a7-b99c-86a519b515b6",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.\n\n**Slides:** Present an overview of the project and the steps students will take to complete it.\n\n**Transition:** Send students to Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "b2d08749-3883-46a7-b99c-86a519b515b6",
+        "lesson_activity.key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef"
+      }
+    },
+    {
+      "key": "8eac32aa-4346-42aa-a744-a522e989e4a4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8eac32aa-4346-42aa-a744-a522e989e4a4",
+        "lesson_activity.key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa"
+      }
     }
   ],
   "script_levels": [
@@ -522,6 +612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Design_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -543,6 +636,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Events_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -564,6 +660,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Logic_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -585,6 +684,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Review_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -606,7 +708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Human Device Interaction Project"
+        "level_keys": [
+          "CSD U6 - Human Device - Design_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -628,7 +732,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Human Device Interaction Project"
+        "level_keys": [
+          "CSD U6 - Human Device - Events_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -650,7 +756,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Human Device Interaction Project"
+        "level_keys": [
+          "CSD U6 - Human Device - Logic_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -672,7 +780,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "progression": "Human Device Interaction Project"
+        "level_keys": [
+          "CSD U6 - Human Device - Review_2022"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -789,6 +899,18 @@
   ],
   "resources": [
     {
+      "name": "Exemplar 1 - City Silhouette",
+      "url": "https://docs.google.com/document/d/1uh66nCn4WxChNRU8rwmmBmTWPRCNepLFux-vinawm3Y/view",
+      "key": "exemplar_1_-_city_silhouette",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_1_-_city_silhouette"
+      }
+    },
+    {
       "name": "Exemplar 1 - Lights and Music",
       "url": "https://docs.google.com/document/d/1JGY-WC_C0yFcu0kn_vvc_0GyPCsTTXXpj0sqDPmtYlM/view",
       "key": "exemplar_1_-_lights_and_music",
@@ -825,6 +947,18 @@
       }
     },
     {
+      "name": "Exemplar 2 - Dual Landscape Painting",
+      "url": "https://docs.google.com/document/d/1DXCfmdONjv-rnwGe6If2V-nudI1IHBPO-RsgvwMEH38/view",
+      "key": "exemplar_2_-_dual_landscape_painting",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_2_-_dual_landscape_painting"
+      }
+    },
+    {
       "name": "Exemplar 2 - Magic Unicorn",
       "url": "https://docs.google.com/document/d/13HfVzjOrDS95zGngC_qPmT1f5JgCyCCt_WwmJcUhU0Q/view",
       "key": "exemplar_2_-_magic_unicorn",
@@ -846,6 +980,18 @@
       },
       "seeding_key": {
         "resource.key": "exemplar_3_-_bird_survey"
+      }
+    },
+    {
+      "name": "Exemplar 3 - Monster Puppet",
+      "url": "https://docs.google.com/document/d/1sCprlRW21NWc9UlBwhzG_oumuaererhJcTbUYTFeav4/view",
+      "key": "exemplar_3_-_monster_puppet",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_3_-_monster_puppet"
       }
     },
     {
@@ -871,6 +1017,19 @@
       },
       "seeding_key": {
         "resource.key": "project_guide_-_human_device_interaction"
+      }
+    },
+    {
+      "name": "Project Guide - Interactive Art",
+      "url": "https://docs.google.com/document/d/1LOGlXauYbwVj3b1G3Hfm67-1Y_5sGmlcWHmr7J5CKcA/view",
+      "key": "project_guide_-_interactive_art",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "project_guide_-_interactive_art"
       }
     },
     {
@@ -910,6 +1069,19 @@
       },
       "seeding_key": {
         "resource.key": "rubric_-_on-the-go_app"
+      }
+    },
+    {
+      "name": "Student Rubric - Interactive Art",
+      "url": "https://docs.google.com/document/d/1nAFxmXua3FX0nWEOxHrEWbCNA6YFPAaNmboFp-QQUlk/view",
+      "key": "student_rubric_-_interactive_art",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "student_rubric_-_interactive_art"
       }
     }
   ],
@@ -972,6 +1144,36 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "rubric_-_human_device_interaction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "exemplar_1_-_city_silhouette"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "exemplar_2_-_dual_landscape_painting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "exemplar_3_-_monster_puppet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "project_guide_-_interactive_art"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "student_rubric_-_interactive_art"
       }
     }
   ],
