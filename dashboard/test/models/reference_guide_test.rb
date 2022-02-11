@@ -6,6 +6,19 @@ class ReferenceGuideTest < ActiveSupport::TestCase
     assert reference_guide.id
   end
 
+  test "do not allow invalid keys" do
+    create :reference_guide, key: 'valid.KEY_'
+    assert_raises ActiveRecord::RecordInvalid do
+      create :reference_guide, key: 'fgsfds.'
+    end
+    assert_raises ActiveRecord::RecordInvalid do
+      create :reference_guide, key: '.fgsfds'
+    end
+    assert_raises ActiveRecord::RecordInvalid do
+      create :reference_guide, key: '\\ $ % * & @'
+    end
+  end
+
   test "reference guides are unique by key in course version" do
     create :reference_guide, key: 'page', course_version_id: 1
     create :reference_guide, key: 'page', course_version_id: 2
