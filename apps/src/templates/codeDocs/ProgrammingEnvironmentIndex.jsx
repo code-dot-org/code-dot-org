@@ -4,15 +4,19 @@ import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
-function ProgrammingEnvironmentBox({programmingEnvironment}) {
+export function ProgrammingEnvironmentCard({programmingEnvironment}) {
   return (
-    <div style={styles.box}>
+    <div style={styles.card}>
       <div>
         {programmingEnvironment.imageUrl && (
           <img style={styles.image} src={programmingEnvironment.imageUrl} />
         )}
-        <h2>{programmingEnvironment.title}</h2>
-        <EnhancedSafeMarkdown markdown={programmingEnvironment.description} />
+        {programmingEnvironment.title && (
+          <h2>{programmingEnvironment.title}</h2>
+        )}
+        {programmingEnvironment.description && (
+          <EnhancedSafeMarkdown markdown={programmingEnvironment.description} />
+        )}
       </div>
       <Button
         __useDeprecatedTag
@@ -33,7 +37,7 @@ export default function ProgrammingEnvironmentIndex({programmingEnvironments}) {
       </div>
       <div style={styles.all}>
         {programmingEnvironments.map(env => (
-          <ProgrammingEnvironmentBox
+          <ProgrammingEnvironmentCard
             key={env.name}
             programmingEnvironment={env}
           />
@@ -43,16 +47,24 @@ export default function ProgrammingEnvironmentIndex({programmingEnvironments}) {
   );
 }
 
+const ProgrammingEnvironmentShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  descriotion: PropTypes.string,
+  imageUrl: PropTypes.string
+});
+
 ProgrammingEnvironmentIndex.propTypes = {
-  programmingEnvironments: PropTypes.arrayOf(PropTypes.object).isRequired
+  programmingEnvironments: PropTypes.arrayOf(ProgrammingEnvironmentShape)
+    .isRequired
 };
 
-ProgrammingEnvironmentBox.propTypes = {
-  programmingEnvironment: PropTypes.object.isRequired
+ProgrammingEnvironmentCard.propTypes = {
+  programmingEnvironment: ProgrammingEnvironmentShape
 };
 
 const styles = {
-  box: {
+  card: {
     borderStyle: 'solid',
     borderColor: 'black',
     borderWidth: 1,
