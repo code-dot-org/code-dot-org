@@ -102,12 +102,12 @@ def storage_id_cookie_name
 end
 
 def storage_id_for_user_id(user_id)
-  row = user_storage_ids_table.where(user_id: user_id).first
+  row = query_user_storage_ids_table({user_id: user_id})
   row[:id] if row
 end
 
 def user_id_for_storage_id(storage_id)
-  row = user_storage_ids_table.where(id: storage_id).first
+  row = query_user_storage_ids_table({id: storage_id})
   row[:user_id] if row
 end
 
@@ -125,17 +125,6 @@ def storage_id_for_current_user
   create_storage_id_for_user(user_id)
 end
 
-def create_storage_id_for_user(user_id)
-  # We don't have any existing storage id we can associate with this user, so create a new one
-  user_storage_ids_table.insert(user_id: user_id)
-rescue Sequel::UniqueConstraintViolation
-  # We lost a race against someone performing the same operation. The row
-  # we're looking for should now be in the database.
-  user_storage_id = storage_id_for_user_id(user_id)
-  raise "no user storage id on second try" unless user_storage_id
-  user_storage_id
-end
-
 # @return {number} storage_id for user
 def take_storage_id_ownership_from_cookie(user_id)
   # Take ownership of cookie storage, if it exists.
@@ -147,13 +136,13 @@ def take_storage_id_ownership_from_cookie(user_id)
 
   # Only take ownership if the storage id doesn't already have an owner - it shouldn't but
   # there is a race condition (addressed below)
-  rows_updated = user_storage_ids_table.where(id: storage_id, user_id: nil).update(user_id: user_id)
+  rows_updated = update_annoymous_user_storage_id(storage_id, user_id)
   return storage_id if rows_updated > 0
 
   # We couldn't claim the storage. The most likely cause is that another request (by this
   # user) beat us to the punch so we'll re-check to see if we own it. Otherwise the storage
   # id is either invalid or it belongs to another user (both addressed below)
-  return storage_id if user_storage_ids_table.where(id: storage_id, user_id: user_id).first
+  return storage_id if query_user_storage_ids_table({id: storage_id, user_id: user_id})
 end
 
 def storage_id_from_cookie
@@ -161,12 +150,8 @@ def storage_id_from_cookie
   return nil if encrypted.empty?
   storage_id = storage_decrypt_id(encrypted)
   return nil if storage_id == 0
-  return nil unless user_storage_ids_table.where(id: storage_id, user_id: nil).first
+  return nil unless query_user_storage_ids_table({id: storage_id, user_id: nil})
   storage_id
-end
-
-def user_storage_ids_table
-  PEGASUS_DB[:user_storage_ids]
 end
 
 def owns_channel?(encrypted_channel_id)
@@ -174,4 +159,28 @@ def owns_channel?(encrypted_channel_id)
   owner_storage_id == get_storage_id
 rescue ArgumentError, OpenSSL::Cipher::CipherError
   false
+end
+
+# All operations to the user_storage_ids table listed below
+def user_storage_ids_table
+  PEGASUS_DB[:user_storage_ids]
+end
+
+def query_user_storage_ids_table(query)
+  user_storage_ids_table.where(query).first
+end
+
+def update_annoymous_user_storage_id(storage_id, user_id)
+  user_storage_ids_table.where(id: storage_id, user_id: nil).update(user_id: user_id)
+end
+
+def create_storage_id_for_user(user_id)
+  # We don't have any existing storage id we can associate with this user, so create a new one
+  user_storage_ids_table.insert(user_id: user_id)
+rescue Sequel::UniqueConstraintViolation
+  # We lost a race against someone performing the same operation. The row
+  # we're looking for should now be in the database.
+  user_storage_id = storage_id_for_user_id(user_id)
+  raise "no user storage id on second try" unless user_storage_id
+  user_storage_id
 end
