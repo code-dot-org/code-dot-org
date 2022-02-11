@@ -144,11 +144,10 @@ Scenario: Teacher saves, re-opens, and submits an application
   And I press the first "button#save" element
   Then I wait until element "p" contains text "Your progress has been saved. Return to this page at any time to continue working on your application."
   And I see no difference for "Viewing teacher application after saving"
-  Then I sign out
 
   # Opening an application that's been started
+  And I reload the page
   Then I am on "http://studio.code.org/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
-  Then I sign in as "Severus"
   Then I wait until element "p" contains text "We found an application you started! Your saved responses have been loaded."
   And I see no difference for "Viewing previously-saved teacher application"
 
