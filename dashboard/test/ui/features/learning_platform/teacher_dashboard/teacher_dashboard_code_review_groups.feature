@@ -27,16 +27,3 @@ Background:
     When I click selector ".toggle-input"
     # We display a message with the number of days until code review groups expire when code review is enabled
     Then element "#uitest-code-review-groups-status-message" eventually contains text "Code review will be automatically disabled"
-
-  @eyes
-  Scenario: Code review groups eyes
-    Given I open my eyes to test "Code Review Groups"
-    When I create a new code review group for the section I saved
-    And I add the first student to the first code review group
-    And I click selector ".uitest-base-dialog-confirm"
-    And element ".uitest-base-dialog-footer" eventually contains text "Changes have been saved"
-    Then I see no difference for "saved code review group" using stitch mode "none"
-    When I click selector ".toggle-input"
-    And element "#uitest-code-review-groups-status-message" eventually contains text "Code review will be automatically disabled"
-    Then I see no difference for "enabled code review for section" using stitch mode "none"
-    And I close my eyes
