@@ -2,6 +2,7 @@
   "key": "checkTouching",
   "name": "checkTouching",
   "category": "Events",
+  "category_key": "events",
   "block_name": "gamelab_checkTouching",
   "syntax": "checkTouching"
 }

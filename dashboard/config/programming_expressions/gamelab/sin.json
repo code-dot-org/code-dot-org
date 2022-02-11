@@ -2,6 +2,7 @@
   "key": "sin",
   "name": "sin",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "angle"

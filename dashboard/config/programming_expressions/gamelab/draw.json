@@ -2,5 +2,6 @@
   "key": "draw",
   "name": "draw",
   "category": "World",
+  "category_key": "world",
   "syntax": "function draw() {}"
 }

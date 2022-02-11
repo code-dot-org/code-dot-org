@@ -2,5 +2,6 @@
   "key": "getSpeed",
   "name": "getSpeed",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "getSpeed"
 }

@@ -2,6 +2,7 @@
   "key": "timedLoop",
   "name": "timedLoop",
   "category": "Control",
+  "category_key": "control",
   "palette_params": [
     {
       "name": "ms"

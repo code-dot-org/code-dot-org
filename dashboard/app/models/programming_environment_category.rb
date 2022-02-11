@@ -17,6 +17,7 @@
 #
 class ProgrammingEnvironmentCategory < ApplicationRecord
   belongs_to :programming_environment
+  has_many :programming_expressions, dependent: :restrict_with_error
 
   KEY_CHAR_RE = /[a-z_]/
   KEY_RE = /\A#{KEY_CHAR_RE}+\Z/
@@ -31,6 +32,15 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
       key: key,
       name: name,
       color: color
+    }
+  end
+
+  def serialize_for_edit
+    {
+      key: key,
+      name: name,
+      color: color,
+      deletable: programming_expressions.count == 0
     }
   end
 

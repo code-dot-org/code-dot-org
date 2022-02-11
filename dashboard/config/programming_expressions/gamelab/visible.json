@@ -2,5 +2,6 @@
   "key": "visible",
   "name": "visible",
   "category": "Animations",
+  "category_key": "animations",
   "syntax": "visible"
 }
