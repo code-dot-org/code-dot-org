@@ -18,8 +18,11 @@
 #  index_reference_guides_on_course_version_id_and_parent_key  (course_version_id,parent_reference_guide_key)
 #
 class ReferenceGuide < ApplicationRecord
+  include CurriculumHelper
+
   belongs_to :course_version
   validates_uniqueness_of :key, scope: :course_version_id
+  validate :key_format
 
   def children
     ReferenceGuide.where(course_version_id: course_version_id, parent_reference_guide_key: key)
