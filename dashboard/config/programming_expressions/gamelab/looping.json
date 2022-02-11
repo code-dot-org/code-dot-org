@@ -2,5 +2,6 @@
   "key": "looping",
   "name": "looping",
   "category": "Animations",
+  "category_key": "animations",
   "syntax": "looping"
 }

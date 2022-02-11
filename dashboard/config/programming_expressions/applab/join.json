@@ -2,6 +2,7 @@
   "key": "join",
   "name": "join",
   "category": "Variables",
+  "category_key": "variables",
   "palette_params": [
     {
       "name": "separator"

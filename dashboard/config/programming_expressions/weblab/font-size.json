@@ -2,5 +2,6 @@
   "key": "font-size",
   "name": "font-size",
   "category": "CSS Properties",
+  "category_key": "css_properties",
   "syntax": "font-size: value;"
 }

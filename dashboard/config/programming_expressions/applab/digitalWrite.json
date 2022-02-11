@@ -2,6 +2,7 @@
   "key": "digitalWrite",
   "name": "digitalWrite",
   "category": "Maker",
+  "category_key": "maker",
   "palette_params": [
     {
       "name": "pin"

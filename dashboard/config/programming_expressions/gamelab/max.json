@@ -2,6 +2,7 @@
   "key": "max",
   "name": "max",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "n1"

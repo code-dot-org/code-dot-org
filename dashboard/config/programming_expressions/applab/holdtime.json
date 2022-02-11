@@ -2,5 +2,6 @@
   "key": "holdtime",
   "name": "holdtime",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "holdtime"
 }

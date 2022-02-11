@@ -2,6 +2,7 @@
   "key": "createLed",
   "name": "createLed",
   "category": "Maker",
+  "category_key": "maker",
   "palette_params": [
     {
       "name": "pin"

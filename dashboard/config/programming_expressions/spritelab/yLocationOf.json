@@ -2,6 +2,7 @@
   "key": "yLocationOf",
   "name": "yLocationOf",
   "category": "Sprites",
+  "category_key": "sprites",
   "block_name": "gamelab_yLocationOf",
   "syntax": "yLocationOf"
 }
