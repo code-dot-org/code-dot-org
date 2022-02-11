@@ -1885,10 +1885,10 @@
   resolved "https://registry.yarnpkg.com/@dsco_/common/-/common-1.1.0.tgz#2309bc19fe90323330b9b0000fc27f80475c5b67"
   integrity sha512-t+ZKe9Dg67Ap9mxzKtkdHOt95tVsJFtRLpUQcr/LEdPNcsojgqmc1L/nWMv/UbWv7I0GO3Kxd2Www/tLqE1IVg==
 
-"@dsco_/link@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@dsco_/link/-/link-1.1.0.tgz#580e7d1cb48d2df262ece2660e40dcc3acf8abdc"
-  integrity sha512-jwdceiJ5vDf54k1LcAVgUpFagtu2+4YDtg5JHLsZruGUXYHLrS6ajYSNeYMUU+uIqtSGYN9GmR98G1R7FFjG4Q==
+"@dsco_/link@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@dsco_/link/-/link-1.1.2.tgz#4dacabd8e9d798bdd71319d04b5e7fd97bea653d"
+  integrity sha512-JB21X/KHjMrVkRN46L5proQ2WIUOgeixjEuZoPrGp9xbDLlPJJxOJktgfn9tNo4QbRKmxaEXB3569BWiQ/KdHQ==
   dependencies:
     "@dsco_/common" "^1.1.0"
     classnames "^2.3.1"
