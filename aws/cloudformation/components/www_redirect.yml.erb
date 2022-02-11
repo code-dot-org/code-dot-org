@@ -9,7 +9,7 @@
     www_redirect_hosted_zone_id = www_redirect_hosted_zone.id.delete_prefix("/hostedzone/")
   -%>
 
-  <%=app%>DNS:
+  <%=app%>RedirectDNS:
     Type: AWS::Route53::RecordSetGroup
     Properties:
       HostedZoneId: <%=www_redirect_hosted_zone_id%>
