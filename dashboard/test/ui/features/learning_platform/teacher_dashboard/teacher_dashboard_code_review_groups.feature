@@ -10,28 +10,18 @@ Background:
   Given I create a student named "Hermione"
   And I join the section
   Given I sign in as "Dumbledore" and go home
-  And I open the code review groups management dialog
 
   Scenario: Create a code review group
-  Given I create a new code review group for the section I saved
+    Given I create a new code review group for the section I saved
     And I add the first student to the first code review group
-    Then element
+    Then element ".uitest-code-review-group:first-of-type" has text "Hermione"
     And I click selector ".uitest-base-dialog-confirm"
+    Then element ".uitest-base-dialog-footer" eventually contains text "Changes have been saved"
     And I click selector "#uitest-code-review-groups-toggle"
-  Scenario: Move students into code review group
-  Scenario: Save updates to groups
-
-  Scenario: Unassign all students from code review group
-  Scenario: Enable code review for section
-
-  SELECT
-  TABLE_NAME,
-  COLUMN_NAME,
-  CONSTRAINT_NAME,
-  REFERENCED_TABLE_NAME,
-  REFERENCED_COLUMN_NAME
-  FROM
-  INFORMATION_SCHEMA.KEY_COLUMN_USAGE
-  WHERE
-  REFERENCED_TABLE_SCHEMA = 'dashboard_test'
-  AND REFERENCED_TABLE_NAME = 'schools';
+    # need to fix this -- this selects toggle, which doesnt actually contain text
+    Then element ".fa.fa-toggle-on:first-of-type" eventually contains text "Code review will be automatically disabled"
+#  Scenario: Move students into code review group
+#  Scenario: Save updates to groups
+#
+#  Scenario: Unassign all students from code review group
+#  Scenario: Enable code review for section
