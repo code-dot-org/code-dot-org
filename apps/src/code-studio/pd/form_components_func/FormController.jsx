@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap';
 import {Pagination} from '@react-bootstrap/pagination';
+import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -64,6 +65,7 @@ const FormController = props => {
     apiEndpoint,
     applicationId = undefined,
     allowPartialSaving = false,
+    autoComputedFields = [],
     options,
     getInitialData = () => ({}),
     onInitialize = () => {},
@@ -88,9 +90,16 @@ const FormController = props => {
   }));
   const [submitting, setSubmitting] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [savedData, setSavedData] = useState(getInitialData());
   const [showSavedMessage, setShowSavedMessage] = useState(false);
   const [errors, setErrors] = useState([]);
   const previousErrors = usePrevious(errors);
+  const [hasUserChangedData, setHasUserChangedData] = useState(
+    !isEqual(
+      omit(data, autoComputedFields),
+      omit(savedData, autoComputedFields)
+    )
+  );
   const [errorMessages, setErrorMessages] = useState({});
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
@@ -111,20 +120,31 @@ const FormController = props => {
   }, []);
 
   useEffect(() => {
-    // this function needs to be recreated because it holds 'submitting' in its closure
+    if (
+      !isEqual(
+        omit(data, autoComputedFields),
+        omit(savedData, autoComputedFields)
+      )
+    ) {
+      setHasUserChangedData(true);
+    } else {
+      setHasUserChangedData(false);
+    }
+
+    const showWarningOnExit =
+      warnOnExit && !submitting && !saving && hasUserChangedData;
     const exitHandler = event => {
-      if (!submitting) {
+      if (showWarningOnExit) {
         event.preventDefault();
         event.returnValue = 'Are you sure? Your application may not be saved.';
       }
     };
-    if (warnOnExit) {
-      window.addEventListener('beforeunload', exitHandler);
-    }
+
+    window.addEventListener('beforeunload', exitHandler);
     return () => {
       window.removeEventListener('beforeunload', exitHandler);
     };
-  }, [warnOnExit, submitting]);
+  }, [warnOnExit, submitting, saving, data]);
 
   // on errors changed
   useEffect(() => {
@@ -348,7 +368,10 @@ const FormController = props => {
     const handleSuccessfulSave = data => {
       scrollToTop();
       setShowSavedMessage(true);
+      setShowDataWasLoadedMessage(false);
       setUpdatedApplicationId(data.id);
+      setSavedData(data.form_data);
+      setHasUserChangedData(false);
       setSaving(false);
       onSuccessfulSave(data);
     };
@@ -630,6 +653,7 @@ const styles = {
 FormController.propTypes = {
   apiEndpoint: PropTypes.string.isRequired,
   applicationId: PropTypes.number,
+  autoComputedFields: PropTypes.arrayOf(PropTypes.string),
   options: PropTypes.object.isRequired,
   requiredFields: PropTypes.arrayOf(PropTypes.string).isRequired,
   pageComponents: PropTypes.arrayOf(PropTypes.func),
