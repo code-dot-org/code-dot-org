@@ -2,6 +2,7 @@
   "key": "setDepthEach",
   "name": "setDepthEach",
   "category": "Groups",
+  "category_key": "groups",
   "palette_params": [
     {
       "name": "depth"

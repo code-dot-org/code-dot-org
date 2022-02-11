@@ -2,5 +2,6 @@
   "key": "notOperator",
   "name": "notOperator",
   "category": "Math",
+  "category_key": "math",
   "syntax": "!__"
 }

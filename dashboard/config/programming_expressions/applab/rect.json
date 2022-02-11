@@ -2,6 +2,7 @@
   "key": "rect",
   "name": "rect",
   "category": "Canvas",
+  "category_key": "canvas",
   "palette_params": [
     {
       "name": "x"

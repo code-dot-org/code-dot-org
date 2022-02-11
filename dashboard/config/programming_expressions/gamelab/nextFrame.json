@@ -2,5 +2,6 @@
   "key": "nextFrame",
   "name": "nextFrame",
   "category": "Animations",
+  "category_key": "animations",
   "syntax": "nextFrame"
 }

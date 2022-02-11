@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-01-04 18:41:54 UTC",
+    "serialized_at": "2022-02-11 19:54:15 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -40,25 +40,1142 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Mini-Project: On-The-Go App",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Project: Human Device Interaction",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Mini-Project: Interactive Art",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
+        "purpose": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "b052c205-04cc-459b-9617-23b6d3ef609e",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "0a90718a-ced0-4294-b9da-36d33df1702c",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "4f881f94-5be8-49a8-bae9-9a35e5161def",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "00e09dc0-8ae2-41c5-85c0-2f2882db3872",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Day 1"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00e09dc0-8ae2-41c5-85c0-2f2882db3872",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "ddb7ac61-17f9-4951-ab9e-a75acaacc9de",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ddb7ac61-17f9-4951-ab9e-a75acaacc9de",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "7925ea41-e564-42db-91cb-c40703d627a6",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7925ea41-e564-42db-91cb-c40703d627a6",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "6c3d17ca-d35d-46c0-b065-75a5c9b4be39",
+      "position": 4,
+      "properties": {
+        "duration": 45,
+        "name": "Day 4"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6c3d17ca-d35d-46c0-b065-75a5c9b4be39",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "15fdc7bc-c6a6-4c95-b6bc-be237a08b611",
+      "position": 5,
+      "properties": {
+        "name": "Day 5"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15fdc7bc-c6a6-4c95-b6bc-be237a08b611",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "56dc9448-0851-4c35-8ee9-1f907fed6b05",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "56dc9448-0851-4c35-8ee9-1f907fed6b05",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef",
+      "position": 2,
+      "properties": {
+        "duration": 80,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "8e6ef533-97df-4532-88e3-570e5e6e9fdc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8e6ef533-97df-4532-88e3-570e5e6e9fdc",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "0a9e26fc-6f86-44fe-8b7c-18b56ef13f20",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a9e26fc-6f86-44fe-8b7c-18b56ef13f20",
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c"
+      }
+    },
+    {
+      "key": "8db5d6f3-6042-4d59-a60d-54538d5f66b4",
+      "position": 2,
+      "properties": {
+        "description": "**Slides**: Present an overview of the project and the steps students will take to complete it."
+      },
+      "seeding_key": {
+        "activity_section.key": "8db5d6f3-6042-4d59-a60d-54538d5f66b4",
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c"
+      }
+    },
+    {
+      "key": "215c98cc-d07f-4e25-8024-a24eb7618e0b",
+      "position": 3,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "215c98cc-d07f-4e25-8024-a24eb7618e0b",
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c"
+      }
+    },
+    {
+      "key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1",
+      "position": 4,
+      "properties": {
+        "name": "Code Studio",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Viewing Exemplars:** The last level in this sequence includes 3 exemplar projects in the \"For Teachers Only\" section of the level. Because these project use the Circuit Playground, they need to be run in the Maker App on Windows and Mac computers. If you'd like to see these examples working with a circuit playground, we recommend visiting these levels and clicking the links within the Maker App rather than viewing them from the lesson plan."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1",
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c"
+      }
+    },
+    {
+      "key": "25522e21-1d74-4215-9246-cc505bf7e6d1",
+      "position": 5,
+      "properties": {
+        "description": "Allow students to walk around the room and interact with each other's devices. Celebrate all of the different ideas that students were able to implement with the same basic code.",
+        "name": "(Optional) Gallery Walk",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to formalize this process by having each student write down one positive quality of each project, or having students \"draw names\" to comment on one particular classmate's work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "25522e21-1d74-4215-9246-cc505bf7e6d1",
+        "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c"
+      }
+    },
+    {
+      "key": "70f6b1a8-e548-402e-83e3-62f27a07436c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "70f6b1a8-e548-402e-83e3-62f27a07436c",
+        "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def"
+      }
+    },
+    {
+      "key": "455deea9-d30f-447e-9dc7-54726fa2d52f",
+      "position": 1,
+      "properties": {
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "455deea9-d30f-447e-9dc7-54726fa2d52f",
+        "lesson_activity.key": "00e09dc0-8ae2-41c5-85c0-2f2882db3872"
+      }
+    },
+    {
+      "key": "eaf54249-fe83-492a-be8e-304bae3f44c7",
+      "position": 2,
+      "properties": {
+        "duration": "15",
+        "name": "Introduce the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "eaf54249-fe83-492a-be8e-304bae3f44c7",
+        "lesson_activity.key": "00e09dc0-8ae2-41c5-85c0-2f2882db3872"
+      }
+    },
+    {
+      "key": "9eb227de-e399-428d-b4e9-636080e69436",
+      "position": 3,
+      "properties": {
+        "duration": "20",
+        "name": "Build your Device"
+      },
+      "seeding_key": {
+        "activity_section.key": "9eb227de-e399-428d-b4e9-636080e69436",
+        "lesson_activity.key": "00e09dc0-8ae2-41c5-85c0-2f2882db3872"
+      }
+    },
+    {
+      "key": "12de6b93-5458-4ae3-8f80-cf0f9df1f283",
+      "position": 4,
+      "properties": {
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "12de6b93-5458-4ae3-8f80-cf0f9df1f283",
+        "lesson_activity.key": "00e09dc0-8ae2-41c5-85c0-2f2882db3872"
+      }
+    },
+    {
+      "key": "14342abd-6a74-4fda-bab7-0dce4bb53956",
+      "position": 1,
+      "properties": {
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "14342abd-6a74-4fda-bab7-0dce4bb53956",
+        "lesson_activity.key": "ddb7ac61-17f9-4951-ab9e-a75acaacc9de"
+      }
+    },
+    {
+      "key": "dfa4d8a9-39b3-4aed-a051-ada2eb58c0c3",
+      "position": 2,
+      "properties": {
+        "duration": "35",
+        "name": "Build Your Device"
+      },
+      "seeding_key": {
+        "activity_section.key": "dfa4d8a9-39b3-4aed-a051-ada2eb58c0c3",
+        "lesson_activity.key": "ddb7ac61-17f9-4951-ab9e-a75acaacc9de"
+      }
+    },
+    {
+      "key": "b68f7a09-980c-4881-9792-0c3d413f4124",
+      "position": 3,
+      "properties": {
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "b68f7a09-980c-4881-9792-0c3d413f4124",
+        "lesson_activity.key": "ddb7ac61-17f9-4951-ab9e-a75acaacc9de"
+      }
+    },
+    {
+      "key": "583a2e34-d748-4e90-b511-acb2c89d7296",
+      "position": 1,
+      "properties": {
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "583a2e34-d748-4e90-b511-acb2c89d7296",
+        "lesson_activity.key": "7925ea41-e564-42db-91cb-c40703d627a6"
+      }
+    },
+    {
+      "key": "3daa0ad9-cfef-4fbb-a106-1424ba5d8cb6",
+      "position": 2,
+      "properties": {
+        "duration": "10",
+        "name": "Complete Your Device"
+      },
+      "seeding_key": {
+        "activity_section.key": "3daa0ad9-cfef-4fbb-a106-1424ba5d8cb6",
+        "lesson_activity.key": "7925ea41-e564-42db-91cb-c40703d627a6"
+      }
+    },
+    {
+      "key": "aba47acf-2d33-4b83-b1ce-01f29aac14da",
+      "position": 3,
+      "properties": {
+        "duration": "25",
+        "name": "Start Coding",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Viewing Exemplars:** The last level in this sequence includes 3 exemplar projects in the \"For Teachers Only\" section of the level. Because these project use the Circuit Playground, they need to be run in the Maker App on Windows and Mac computers. If you'd like to see these examples working with a circuit playground, we recommend visiting these levels and clicking the links within the Maker App rather than viewing them from the lesson plan."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da",
+        "lesson_activity.key": "7925ea41-e564-42db-91cb-c40703d627a6"
+      }
+    },
+    {
+      "key": "d302bc32-b2a9-43bd-b8a4-641cb8c19e9d",
+      "position": 4,
+      "properties": {
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "d302bc32-b2a9-43bd-b8a4-641cb8c19e9d",
+        "lesson_activity.key": "7925ea41-e564-42db-91cb-c40703d627a6"
+      }
+    },
+    {
+      "key": "4ad88090-2e80-4a3f-95b5-ebdfd54e89ab",
+      "position": 1,
+      "properties": {
+        "duration": "5",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ad88090-2e80-4a3f-95b5-ebdfd54e89ab",
+        "lesson_activity.key": "6c3d17ca-d35d-46c0-b065-75a5c9b4be39"
+      }
+    },
+    {
+      "key": "ca7bc1f9-350f-46f7-9995-b5fd53f3bc5d",
+      "position": 2,
+      "properties": {
+        "duration": "35",
+        "name": "Coding and Testing"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca7bc1f9-350f-46f7-9995-b5fd53f3bc5d",
+        "lesson_activity.key": "6c3d17ca-d35d-46c0-b065-75a5c9b4be39"
+      }
+    },
+    {
+      "key": "1fc1794b-af0c-4c64-8d32-436bc790e0ac",
+      "position": 3,
+      "properties": {
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fc1794b-af0c-4c64-8d32-436bc790e0ac",
+        "lesson_activity.key": "6c3d17ca-d35d-46c0-b065-75a5c9b4be39"
+      }
+    },
+    {
+      "key": "ccd01ed4-b50c-4cdf-8173-f31c7c2deaec",
+      "position": 1,
+      "properties": {
+        "duration": "0",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "ccd01ed4-b50c-4cdf-8173-f31c7c2deaec",
+        "lesson_activity.key": "15fdc7bc-c6a6-4c95-b6bc-be237a08b611"
+      }
+    },
+    {
+      "key": "32e19db2-1431-4c96-a0cc-14905c7fd05e",
+      "position": 2,
+      "properties": {
+        "duration": "10",
+        "name": "Review Device"
+      },
+      "seeding_key": {
+        "activity_section.key": "32e19db2-1431-4c96-a0cc-14905c7fd05e",
+        "lesson_activity.key": "15fdc7bc-c6a6-4c95-b6bc-be237a08b611"
+      }
+    },
+    {
+      "key": "f8fdf66d-068a-4d14-a607-3f865c1effae",
+      "position": 3,
+      "properties": {
+        "duration": "30",
+        "name": "Demonstrations"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8fdf66d-068a-4d14-a607-3f865c1effae",
+        "lesson_activity.key": "15fdc7bc-c6a6-4c95-b6bc-be237a08b611"
+      }
+    },
+    {
+      "key": "5000c31b-514e-4487-85ff-2867801c772d",
+      "position": 4,
+      "properties": {
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "5000c31b-514e-4487-85ff-2867801c772d",
+        "lesson_activity.key": "15fdc7bc-c6a6-4c95-b6bc-be237a08b611"
+      }
+    },
+    {
+      "key": "49118001-a0ba-4136-841e-f1e76f05b9b6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "49118001-a0ba-4136-841e-f1e76f05b9b6",
+        "lesson_activity.key": "56dc9448-0851-4c35-8ee9-1f907fed6b05"
+      }
+    },
+    {
+      "key": "2468e920-7f26-4940-af45-ce6987c6a2be",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Lesson Timing:** This mini-project is designed to take at most 2 days to complete, mostly due to time it takes construct the physical materials that can be used by students in their project and the extra time it takes to manage these additional materials. In practice, this lesson could extend longer if students need more time to construct their devices or gather materials."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2468e920-7f26-4940-af45-ce6987c6a2be",
+        "lesson_activity.key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef"
+      }
+    },
+    {
+      "key": "b2d08749-3883-46a7-b99c-86a519b515b6",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.\n\n**Slides:** Present an overview of the project and the steps students will take to complete it.\n\n**Transition:** Send students to Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "b2d08749-3883-46a7-b99c-86a519b515b6",
+        "lesson_activity.key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef"
+      }
+    },
+    {
+      "key": "8eac32aa-4346-42aa-a744-a522e989e4a4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8eac32aa-4346-42aa-a744-a522e989e4a4",
+        "lesson_activity.key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Design_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - On The Go - Design_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
+      },
+      "level_keys": [
+        "CSD U6 - On The Go - Design_2022"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Events_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - On The Go - Events_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
+      },
+      "level_keys": [
+        "CSD U6 - On The Go - Events_2022"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Logic_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - On The Go - Logic_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
+      },
+      "level_keys": [
+        "CSD U6 - On The Go - Logic_2022"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - On The Go - Review_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - On The Go - Review_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
+      },
+      "level_keys": [
+        "CSD U6 - On The Go - Review_2022"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Design_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Human Device - Design_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
+      },
+      "level_keys": [
+        "CSD U6 - Human Device - Design_2022"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Events_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Human Device - Events_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
+      },
+      "level_keys": [
+        "CSD U6 - Human Device - Events_2022"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Logic_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Human Device - Logic_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
+      },
+      "level_keys": [
+        "CSD U6 - Human Device - Logic_2022"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Human Device - Review_2022"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Human Device - Review_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
+      },
+      "level_keys": [
+        "CSD U6 - Human Device - Review_2022"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - On The Go - Design_2022",
+        "script_level.level_keys": [
+          "CSD U6 - On The Go - Design_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - On The Go - Events_2022",
+        "script_level.level_keys": [
+          "CSD U6 - On The Go - Events_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - On The Go - Logic_2022",
+        "script_level.level_keys": [
+          "CSD U6 - On The Go - Logic_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - On The Go - Review_2022",
+        "script_level.level_keys": [
+          "CSD U6 - On The Go - Review_2022"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Human Device - Design_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Human Device - Design_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Human Device - Events_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Human Device - Events_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Human Device - Logic_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Human Device - Logic_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Human Device - Review_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Human Device - Review_2022"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "Exemplar 1 - City Silhouette",
+      "url": "https://docs.google.com/document/d/1uh66nCn4WxChNRU8rwmmBmTWPRCNepLFux-vinawm3Y/view",
+      "key": "exemplar_1_-_city_silhouette",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_1_-_city_silhouette"
+      }
+    },
+    {
+      "name": "Exemplar 1 - Lights and Music",
+      "url": "https://docs.google.com/document/d/1JGY-WC_C0yFcu0kn_vvc_0GyPCsTTXXpj0sqDPmtYlM/view",
+      "key": "exemplar_1_-_lights_and_music",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_1_-_lights_and_music"
+      }
+    },
+    {
+      "name": "Exemplar 1 - Loose Papers App",
+      "url": "https://docs.google.com/document/d/1wPwZJNHnVE9rxORwh2hdYQz4JgOUnKLxwEo5gTruGC0/view",
+      "key": "exemplar_1_-_loose_papers_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_1_-_loose_papers_app"
+      }
+    },
+    {
+      "name": "Exemplar 2 - Cats vs Dogs App",
+      "url": "https://docs.google.com/document/d/1YwosNn1Apef3mMpn8eYP10rI0G8AEyX3sKrP-zTDDvQ/view",
+      "key": "exemplar_2_-_cats_vs_dogs_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_2_-_cats_vs_dogs_app"
+      }
+    },
+    {
+      "name": "Exemplar 2 - Dual Landscape Painting",
+      "url": "https://docs.google.com/document/d/1DXCfmdONjv-rnwGe6If2V-nudI1IHBPO-RsgvwMEH38/view",
+      "key": "exemplar_2_-_dual_landscape_painting",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_2_-_dual_landscape_painting"
+      }
+    },
+    {
+      "name": "Exemplar 2 - Magic Unicorn",
+      "url": "https://docs.google.com/document/d/13HfVzjOrDS95zGngC_qPmT1f5JgCyCCt_WwmJcUhU0Q/view",
+      "key": "exemplar_2_-_magic_unicorn",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_2_-_magic_unicorn"
+      }
+    },
+    {
+      "name": "Exemplar 3 - Bird Survey",
+      "url": "https://docs.google.com/document/d/1jZE-PYVkKx8_gv7MAmzzP6vuOsX5XMDWohuz7ma7tB0/view",
+      "key": "exemplar_3_-_bird_survey",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_3_-_bird_survey"
+      }
+    },
+    {
+      "name": "Exemplar 3 - Monster Puppet",
+      "url": "https://docs.google.com/document/d/1sCprlRW21NWc9UlBwhzG_oumuaererhJcTbUYTFeav4/view",
+      "key": "exemplar_3_-_monster_puppet",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_3_-_monster_puppet"
+      }
+    },
+    {
+      "name": "Exemplar 3 - Red Light, Green Light",
+      "url": "https://docs.google.com/document/d/1bZaa_cBl2O0U0h_3AxbsTD83HZ7swlwZKAo7bWDG4AU/view",
+      "key": "exemplar_3_-_red_light_green_light",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "exemplar_3_-_red_light_green_light"
+      }
+    },
+    {
+      "name": "Project Guide - Human Device Interaction",
+      "url": "https://docs.google.com/document/d/1qCzlxKJQ4gdYDS2LufqLYugiFKYbs3O5v5q_jufBR70/edit",
+      "key": "project_guide_-_human_device_interaction",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "project_guide_-_human_device_interaction"
+      }
+    },
+    {
+      "name": "Project Guide - Interactive Art",
+      "url": "https://docs.google.com/document/d/1LOGlXauYbwVj3b1G3Hfm67-1Y_5sGmlcWHmr7J5CKcA/view",
+      "key": "project_guide_-_interactive_art",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "project_guide_-_interactive_art"
+      }
+    },
+    {
+      "name": "Project Guide - On-The-Go App",
+      "url": "https://docs.google.com/document/d/1cWvcddxBCTku-YAtHWreeoIJVD8v1_8CwlydofZ_Dlo/view",
+      "key": "project_guide_on-the-go_app",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "project_guide_on-the-go_app"
+      }
+    },
+    {
+      "name": "Rubric - Human Device Interaction",
+      "url": "https://docs.google.com/document/d/1GqR49vQTEirALh2c7pIDoGugJD3WqX-sEYygPQ2vlhQ/view",
+      "key": "rubric_-_human_device_interaction",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "rubric_-_human_device_interaction"
+      }
+    },
+    {
+      "name": "Rubric - On-The-Go App",
+      "url": "https://docs.google.com/document/d/11wbS2tB6eOzkyY0Q-JFqpgR14XaY7wZBKhlRHrBBVQI/view",
+      "key": "rubric_-_on-the-go_app",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "rubric_-_on-the-go_app"
+      }
+    },
+    {
+      "name": "Student Rubric - Interactive Art",
+      "url": "https://docs.google.com/document/d/1nAFxmXua3FX0nWEOxHrEWbCNA6YFPAaNmboFp-QQUlk/view",
+      "key": "student_rubric_-_interactive_art",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "student_rubric_-_interactive_art"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "exemplar_1_-_loose_papers_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "exemplar_2_-_cats_vs_dogs_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "exemplar_3_-_bird_survey"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "project_guide_on-the-go_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "rubric_-_on-the-go_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "exemplar_1_-_lights_and_music"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "exemplar_2_-_magic_unicorn"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "exemplar_3_-_red_light_green_light"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "project_guide_-_human_device_interaction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "rubric_-_human_device_interaction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "exemplar_1_-_city_silhouette"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "exemplar_2_-_dual_landscape_painting"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "exemplar_3_-_monster_puppet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "project_guide_-_interactive_art"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "student_rubric_-_interactive_art"
+      }
+    }
   ],
   "scripts_resources": [
 

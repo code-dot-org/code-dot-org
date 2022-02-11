@@ -2,6 +2,7 @@
   "key": "moveForward",
   "name": "moveForward",
   "category": "Turtle",
+  "category_key": "turtle",
   "palette_params": [
     {
       "name": "pixels"

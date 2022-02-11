@@ -2,6 +2,7 @@
   "key": "exp",
   "name": "exp",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "num"

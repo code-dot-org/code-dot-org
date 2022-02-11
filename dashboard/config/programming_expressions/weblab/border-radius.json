@@ -2,5 +2,6 @@
   "key": "border-radius",
   "name": "border-radius",
   "category": "CSS Properties",
+  "category_key": "css_properties",
   "syntax": "border-radius: value;"
 }

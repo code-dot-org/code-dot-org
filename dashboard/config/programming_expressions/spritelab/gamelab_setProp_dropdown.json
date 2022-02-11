@@ -2,6 +2,7 @@
   "key": "gamelab_setProp_dropdown",
   "name": "setProp_dropdown",
   "category": "Sprites",
+  "category_key": "sprites",
   "block_name": "gamelab_setProp_dropdown",
   "syntax": "setProp_dropdown"
 }

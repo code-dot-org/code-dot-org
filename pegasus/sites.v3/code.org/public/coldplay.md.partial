@@ -6,6 +6,8 @@ style_min: true
 
 <link href="/css/marketing.css" rel="stylesheet">
 
+{{coldplay_banner}}
+
 # Join the Coldplay Dance Party!
 
 Coldplay and Code.org believe in the power of computer science education for every student, in every classroom around the world. That's why we're teaming up to inspire students everywhere to code and dance - let's celebrate the magic of computer science and music! 
@@ -24,7 +26,11 @@ We can't wait to see and share what you create!
 4. Click "Finish" to get a share link to your project.
 5. For extra fun, make a video of yourself dancing along with your code!
 
-[<img src="/images/marketing/promo/hp_demo.gif" style="max-width: 50%">](#howtowin)
+[center]
+
+<img src="/images/marketing/promo/hp_demo.gif" style="max-width: 50%">
+
+[/center]
 
 ## Share your creations for Code.org and Coldplay to see!
 
@@ -33,17 +39,27 @@ We'd love to see what classrooms and students create - whether it's dance moves 
 ### Post on social media:
 [col-50]
 
-[<img src="/images/marketing/promo/entry_graphic2.gif" style="max-width: 50%">](#howtowin)
+[center]
+
+<img src="/images/marketing/promo/entry_graphic2.gif" style="max-width: 50%">
+
+[/center]
 
 [/col-50]
 
 [col-50]
 
-[<img src="/images/marketing/promo/codeplay.gif" style="max-width: 50%">](#howtowin)
+[center]
+
+<img src="/images/marketing/promo/codeplay.gif" style="max-width: 50%">
+
+[/center]
 
 [/col-50]
 
-<div style="clear: both"></div>
+[clearboth]
+
+[/clearboth]
 
 [bold-text]
 
@@ -72,7 +88,7 @@ In every city on the [tour](https://www.coldplay.com/tour/) we will pick two stu
 
 We'll be looking first and foremost for creativity and fun - code a "Higher Power" dance that really wows, and ideally pair it up with some actual dancing. For example, check out this [unfinished choreography made by a former Code.org engineer] (https://studio.code.org/projects/dance/S_vcQiglulAGJ0tkN4cv2g) - feel free to remix, change, and complete it. For extra fun, record a video of yourself and/or friends dancing to your creation! If you use TikTok, consider recording a duet format like this: 
 
-[<img src="/images/marketing/promo/tiktok_demo.gif" style="max-width: 50%">](#howtowin)
+<img src="/images/marketing/promo/tiktok_demo.gif" style="max-width: 50%">
 
 Grab attention with entries that get lots of likes, comments, or re-shares on social media - across Instagram, TikTok, Twitter, or Facebook.  And Coldplay and Code.org will share, favorite, or comment on especially awesome posts. 
 
@@ -93,13 +109,21 @@ When you're done with any of our activities, click "Finish" on the last level, a
 
 [col-50]
 
+[center]
+
 ![](/images/fill-420x345/share-button.png)
+
+[/center]
 
 [/col-50]
 
 [col-50]
 
+[center]
+
 {{challenge_video}}
+
+[/center]
 
 [/col-50]
 
