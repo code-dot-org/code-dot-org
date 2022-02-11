@@ -2,5 +2,6 @@
   "key": "ifElseBlock",
   "name": "ifElseBlock",
   "category": "Control",
+  "category_key": "control",
   "syntax": "if (__) {\n  __;\n} else {\n  __;\n}"
 }

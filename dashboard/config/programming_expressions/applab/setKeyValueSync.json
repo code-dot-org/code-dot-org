@@ -2,6 +2,7 @@
   "key": "setKeyValueSync",
   "name": "setKeyValueSync",
   "category": "Data",
+  "category_key": "data",
   "palette_params": [
     {
       "name": "key"

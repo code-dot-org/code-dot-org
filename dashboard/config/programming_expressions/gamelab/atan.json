@@ -2,6 +2,7 @@
   "key": "atan",
   "name": "atan",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "value"

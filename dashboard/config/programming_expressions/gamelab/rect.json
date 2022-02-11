@@ -2,6 +2,7 @@
   "key": "rect",
   "name": "rect",
   "category": "Drawing",
+  "category_key": "drawing",
   "palette_params": [
     {
       "name": "x"

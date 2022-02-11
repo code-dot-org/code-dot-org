@@ -2,5 +2,6 @@
   "key": "getUserId",
   "name": "getUserId",
   "category": "World",
+  "category_key": "world",
   "syntax": "getUserId"
 }
