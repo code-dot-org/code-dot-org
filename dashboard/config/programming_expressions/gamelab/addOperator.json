@@ -2,5 +2,6 @@
   "key": "addOperator",
   "name": "addOperator",
   "category": "Math",
+  "category_key": "math",
   "syntax": "__ + __"
 }

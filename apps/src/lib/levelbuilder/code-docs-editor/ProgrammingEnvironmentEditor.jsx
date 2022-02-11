@@ -164,6 +164,7 @@ export default function ProgrammingEnvironmentEditor({
           setList={list => updateProgrammingEnvironment('categories', list)}
           addButtonText="Add Category"
           renderItem={renderCategoryEditor}
+          checkItemDeletionAllowed={item => !!item.deletable}
         />
       </CollapsibleEditorSection>
       <SaveBar

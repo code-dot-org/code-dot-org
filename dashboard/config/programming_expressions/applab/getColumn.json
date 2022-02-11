@@ -2,6 +2,7 @@
   "key": "getColumn",
   "name": "getColumn",
   "category": "Data",
+  "category_key": "data",
   "palette_params": [
     {
       "name": "table"

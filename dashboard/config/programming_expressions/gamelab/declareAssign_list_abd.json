@@ -2,5 +2,6 @@
   "key": "declareAssign_list_abd",
   "name": "declareAssign_list_abd",
   "category": "Variables",
+  "category_key": "variables",
   "syntax": "var list = [\"a\", \"b\", \"d\"];"
 }

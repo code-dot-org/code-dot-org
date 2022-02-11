@@ -2,6 +2,7 @@
   "key": "console.log",
   "name": "console.log",
   "category": "Variables",
+  "category_key": "variables",
   "palette_params": [
     {
       "name": "message"

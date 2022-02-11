@@ -2,5 +2,6 @@
   "key": "rotation",
   "name": "rotation",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "rotation"
 }
