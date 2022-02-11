@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-21 22:04:29 UTC",
+    "serialized_at": "2022-01-29 01:01:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -597,6 +597,19 @@
       }
     },
     {
+      "key": "da318369-808a-4c23-9c22-4001115c7650",
+      "position": 5,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da318369-808a-4c23-9c22-4001115c7650",
+        "lesson.key": "Classes and Objects",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "2d6c541b-4d81-4034-8666-1a23622e5636",
       "position": 1,
       "properties": {
@@ -633,6 +646,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "d90e0962-245e-4c6b-8ba8-319ceff69f67",
+        "lesson.key": "Calling Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "3d12ac0b-99e6-46b7-add8-00ef6781774e",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d12ac0b-99e6-46b7-add8-00ef6781774e",
         "lesson.key": "Calling Methods",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -681,6 +707,19 @@
       }
     },
     {
+      "key": "1b38aeb7-5ce6-48c7-a23b-51797c609d6f",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1b38aeb7-5ce6-48c7-a23b-51797c609d6f",
+        "lesson.key": "Conditionals and Debugging",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "479a7459-5a12-4d0b-a02c-451e46783778",
       "position": 1,
       "properties": {
@@ -717,6 +756,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "367dced6-2eff-4eaa-84b2-1aac46a89647",
+        "lesson.key": "More with Objects",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "53d189fe-f520-4760-9bee-63d8f7d5e24e",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53d189fe-f520-4760-9bee-63d8f7d5e24e",
         "lesson.key": "More with Objects",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -765,6 +817,19 @@
       }
     },
     {
+      "key": "2073220f-7dff-4b76-841d-ca373982d604",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2073220f-7dff-4b76-841d-ca373982d604",
+        "lesson.key": "While Loops and Practice",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "fbce374a-c90b-4b94-9c91-ef5de3d55901",
       "position": 1,
       "properties": {
@@ -801,6 +866,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "66ef798b-eb4c-4b69-86b7-76779785eaa5",
+        "lesson.key": "More with Conditionals",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "774a2f8a-e060-4baa-81e0-cf09a32ab3e2",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "774a2f8a-e060-4baa-81e0-cf09a32ab3e2",
         "lesson.key": "More with Conditionals",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -849,6 +927,19 @@
       }
     },
     {
+      "key": "d1562120-f00d-4b4a-80be-ac1474af260a",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1562120-f00d-4b4a-80be-ac1474af260a",
+        "lesson.key": "Introduction to Code Reviews",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "02d45caa-738f-446a-8a77-7993ace39fa3",
       "position": 1,
       "properties": {
@@ -885,6 +976,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "79d32c34-fe4c-4cfa-824a-03b7232d810f",
+        "lesson.key": "Inheritance and Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "8eb15b91-ebb2-4f97-8c58-c3768a49555a",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8eb15b91-ebb2-4f97-8c58-c3768a49555a",
         "lesson.key": "Inheritance and Methods",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -933,6 +1037,19 @@
       }
     },
     {
+      "key": "477c54fc-f580-4379-87af-9309d33f488b",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "477c54fc-f580-4379-87af-9309d33f488b",
+        "lesson.key": "More Methods, More Features",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "6a5e20fe-6470-4168-9c10-41c2d1e84f55",
       "position": 1,
       "properties": {
@@ -969,6 +1086,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "5bb17ddf-af02-44c0-8a4e-2184d2c01719",
+        "lesson.key": "Painting Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "ce8515df-f2db-48c9-a070-b4de6d635127",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce8515df-f2db-48c9-a070-b4de6d635127",
         "lesson.key": "Painting Methods",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -1017,6 +1147,19 @@
       }
     },
     {
+      "key": "ef5864c4-c97e-4aa1-86e4-51378c4b268e",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef5864c4-c97e-4aa1-86e4-51378c4b268e",
+        "lesson.key": "SprayPainter",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "a9fadbfc-7e59-47f4-a024-e41b133dd6f9",
       "position": 1,
       "properties": {
@@ -1059,6 +1202,19 @@
       }
     },
     {
+      "key": "92fb1fd9-b913-45a2-8295-63c9f80ebde5",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "92fb1fd9-b913-45a2-8295-63c9f80ebde5",
+        "lesson.key": "StampPainter",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "5a05d74d-fa06-4bd8-8d89-90660048ed12",
       "position": 1,
       "properties": {
@@ -1095,6 +1251,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "4b75038a-ebb2-4f7a-b6ac-466f05a6148e",
+        "lesson.key": "Edge Cases",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "f1174c93-65a7-41be-bac4-5bc426ec760e",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f1174c93-65a7-41be-bac4-5bc426ec760e",
         "lesson.key": "Edge Cases",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -1965,6 +2134,17 @@
       }
     },
     {
+      "key": "412ca6e4-1d33-46bb-a617-b1a54fab55dd",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "412ca6e4-1d33-46bb-a617-b1a54fab55dd",
+        "lesson_activity.key": "da318369-808a-4c23-9c22-4001115c7650"
+      }
+    },
+    {
       "key": "93fbcbf6-c294-42ed-b72a-3effba6a93f4",
       "position": 1,
       "properties": {
@@ -2147,6 +2327,17 @@
       "seeding_key": {
         "activity_section.key": "a03c3303-6a88-40c3-bf9f-7b5d04fa0250",
         "lesson_activity.key": "d90e0962-245e-4c6b-8ba8-319ceff69f67"
+      }
+    },
+    {
+      "key": "37137cd3-27f3-4d57-977c-337f83538472",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.1\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "37137cd3-27f3-4d57-977c-337f83538472",
+        "lesson_activity.key": "3d12ac0b-99e6-46b7-add8-00ef6781774e"
       }
     },
     {
@@ -2414,6 +2605,17 @@
       }
     },
     {
+      "key": "45c5d397-1092-4f8f-9533-bca2b44bd0f4",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "45c5d397-1092-4f8f-9533-bca2b44bd0f4",
+        "lesson_activity.key": "1b38aeb7-5ce6-48c7-a23b-51797c609d6f"
+      }
+    },
+    {
       "key": "0cdc0b3e-bb0d-4941-96f1-e83b652f7fdd",
       "position": 1,
       "properties": {
@@ -2604,6 +2806,17 @@
       }
     },
     {
+      "key": "67257f31-1e7e-488e-b562-8b04a93fc5e6",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.2\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "67257f31-1e7e-488e-b562-8b04a93fc5e6",
+        "lesson_activity.key": "53d189fe-f520-4760-9bee-63d8f7d5e24e"
+      }
+    },
+    {
       "key": "a3f1dade-5c69-458f-b597-d337283abf5b",
       "position": 1,
       "properties": {
@@ -2767,6 +2980,17 @@
       }
     },
     {
+      "key": "602af9ab-0232-4d52-89c3-e0cf7dd5e118",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n* Topic Questions 9.4\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "602af9ab-0232-4d52-89c3-e0cf7dd5e118",
+        "lesson_activity.key": "2073220f-7dff-4b76-841d-ca373982d604"
+      }
+    },
+    {
       "key": "e2a35b76-10a3-46a0-96b8-aed529d93a8b",
       "position": 1,
       "properties": {
@@ -2881,6 +3105,17 @@
       "seeding_key": {
         "activity_section.key": "44ba2982-f49b-432c-bd58-45173ab7b3ed",
         "lesson_activity.key": "66ef798b-eb4c-4b69-86b7-76779785eaa5"
+      }
+    },
+    {
+      "key": "e2ebd46d-c8ce-44ff-a213-b074d7de24d0",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "e2ebd46d-c8ce-44ff-a213-b074d7de24d0",
+        "lesson_activity.key": "774a2f8a-e060-4baa-81e0-cf09a32ab3e2"
       }
     },
     {
@@ -3108,6 +3343,17 @@
       }
     },
     {
+      "key": "096a8f2f-08d8-43be-b715-27c04a32ffa7",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "096a8f2f-08d8-43be-b715-27c04a32ffa7",
+        "lesson_activity.key": "d1562120-f00d-4b4a-80be-ac1474af260a"
+      }
+    },
+    {
       "key": "2854f507-a0e3-4823-85a1-9f3afc002720",
       "position": 1,
       "properties": {
@@ -3193,10 +3439,33 @@
       }
     },
     {
-      "key": "98016b24-9e88-4f3c-a314-76c7f599e006",
+      "key": "7674786b-dde8-4c70-ad90-f0234059d932",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "7674786b-dde8-4c70-ad90-f0234059d932",
+        "lesson_activity.key": "c675bcb8-6e7e-4b93-8fb8-02c3890600d7"
+      }
+    },
+    {
+      "key": "f268971f-f5d0-4b29-916b-0965b5c1f0c5",
+      "position": 6,
+      "properties": {
+        "description": "When we write the `PainterPlus` class, we have to write a constructor that calls the superclass constructor. Even though the `PainterPlus` class will inherit all of the attributes and behaviors from the `Painter` class, it will not inherit the constructor. The `PainterPlus` constructor will then call the superclass constructor by using the keyword `super`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f268971f-f5d0-4b29-916b-0965b5c1f0c5",
+        "lesson_activity.key": "c675bcb8-6e7e-4b93-8fb8-02c3890600d7"
+      }
+    },
+    {
+      "key": "98016b24-9e88-4f3c-a314-76c7f599e006",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
         "progression_name": "Creating PainterPlus",
         "tips": [
           {
@@ -3212,11 +3481,12 @@
     },
     {
       "key": "c072ceac-1175-4715-8bb2-d695c87747dc",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? Remember that we want to add the `turnRight()` method. Let's find out how to write our own methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? A subclass is usually designed to have modified (overridden) or additional methods or instance variables. Remember that we want to add the `turnRight()` method. Let's find out how to write our own methods.",
         "duration": "15",
-        "name": "Writing New Methods"
+        "name": "Writing New Methods",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "c072ceac-1175-4715-8bb2-d695c87747dc",
@@ -3225,7 +3495,7 @@
     },
     {
       "key": "1d32cb07-512e-4c07-a8c2-ff739d3db96d",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Methods video.",
         "tips": [
@@ -3242,7 +3512,7 @@
     },
     {
       "key": "91723289-69ae-4c08-a676-09587a93228c",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the syntax for writing methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to write the `turnRight()` method.",
         "progression_name": "PainterPlus: turnRight()"
@@ -3254,7 +3524,7 @@
     },
     {
       "key": "6e82becc-aca1-45d5-8b09-067a12a01244",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Compare and contrast our solution using `Painter` with `turnLeft()` to our solution using `PainterPlus` with `turnRight()`.\n\n**Discussion Goal:** Students realize that the `turnRight()` method makes the code more efficient.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What do you think would happen if we tried to call our new `turnRight()` method on a `Painter` object instead of a `PainterPlus` object?\n\n**Discussion Goal:** Students make predictions about the code, including that potential errors they think will happen or they may think that the code will work as intended.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio. Students test their hypotheses about using a subclass's method on a superclass.",
         "progression_name": "Bug: Calling a Subclass's Method on a Superclass Object"
@@ -3266,7 +3536,7 @@
     },
     {
       "key": "9e09304c-83a8-49b8-a26c-11fc7b47b18f",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you called `turnRight()` on a `Painter` object?*\n\n**Discussion Goal:** Students realize that a `Painter` object cannot use the `turnRight()` method because it has not been defined in the `Painter` class. Students note that the only class that can use the `turnRight()` method is `PainterPlus`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall describing a strategy to identify and fix errors that occur when an object tries to use a method that is not available to them. "
       },
@@ -3298,6 +3568,17 @@
       "seeding_key": {
         "activity_section.key": "9888100d-11b4-4481-a472-3f86144f4dd0",
         "lesson_activity.key": "79d32c34-fe4c-4cfa-824a-03b7232d810f"
+      }
+    },
+    {
+      "key": "6af994b6-0ad9-4825-85fc-ffc713e57ccf",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "6af994b6-0ad9-4825-85fc-ffc713e57ccf",
+        "lesson_activity.key": "8eb15b91-ebb2-4f97-8c58-c3768a49555a"
       }
     },
     {
@@ -3484,6 +3765,17 @@
       }
     },
     {
+      "key": "acd66cde-f24f-491e-b867-867f6ad8300d",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "acd66cde-f24f-491e-b867-867f6ad8300d",
+        "lesson_activity.key": "477c54fc-f580-4379-87af-9309d33f488b"
+      }
+    },
+    {
       "key": "62924917-d1ce-48d3-83af-897ed85433bc",
       "position": 1,
       "properties": {
@@ -3613,6 +3905,17 @@
       }
     },
     {
+      "key": "21a5c5c5-6521-4392-a83d-6e2d28e52f52",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.1\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "21a5c5c5-6521-4392-a83d-6e2d28e52f52",
+        "lesson_activity.key": "ce8515df-f2db-48c9-a070-b4de6d635127"
+      }
+    },
+    {
       "key": "4c70391d-d87e-4632-b5c1-b78b0257336b",
       "position": 1,
       "properties": {
@@ -3737,6 +4040,17 @@
       }
     },
     {
+      "key": "fc30ac6b-1892-41d6-bffb-a821f69d2190",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "fc30ac6b-1892-41d6-bffb-a821f69d2190",
+        "lesson_activity.key": "ef5864c4-c97e-4aa1-86e4-51378c4b268e"
+      }
+    },
+    {
       "key": "679aee57-6c51-40af-ac11-7ee11743a8a7",
       "position": 1,
       "properties": {
@@ -3829,6 +4143,17 @@
       "seeding_key": {
         "activity_section.key": "428770d9-f7ac-4374-bac3-dceac2d4aa39",
         "lesson_activity.key": "cc134417-2986-46ce-bb1d-b64f43f5ff45"
+      }
+    },
+    {
+      "key": "3341ec87-9f41-4257-bc64-5008da9cd058",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "3341ec87-9f41-4257-bc64-5008da9cd058",
+        "lesson_activity.key": "92fb1fd9-b913-45a2-8295-63c9f80ebde5"
       }
     },
     {
@@ -4074,6 +4399,17 @@
       "seeding_key": {
         "activity_section.key": "c7ea62b1-6b8d-496b-956d-0a748974b5ec",
         "lesson_activity.key": "4b75038a-ebb2-4f7a-b6ac-466f05a6148e"
+      }
+    },
+    {
+      "key": "1b1e6d22-1dc1-4a3f-915e-384fc8170b7d",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "1b1e6d22-1dc1-4a3f-915e-384fc8170b7d",
+        "lesson_activity.key": "f1174c93-65a7-41be-bac4-5bc426ec760e"
       }
     },
     {

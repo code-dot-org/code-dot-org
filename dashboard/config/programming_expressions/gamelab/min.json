@@ -2,6 +2,7 @@
   "key": "min",
   "name": "min",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "n1"

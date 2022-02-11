@@ -2,6 +2,7 @@
   "key": "log",
   "name": "log",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "num"

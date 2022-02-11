@@ -276,6 +276,8 @@ Dashboard::Application.routes.draw do
     end
   end
 
+  resources :course_offerings, only: [:edit, :update], param: 'key'
+
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
 
@@ -325,7 +327,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_environments, only: [:edit, :update], param: 'name' do
+  resources :programming_environments, only: [:new, :create, :edit, :update], param: 'name' do
     resources :programming_expressions, param: 'programming_expression_key' do
       member do
         get :show, to: 'programming_expressions#show_by_keys'
@@ -399,6 +401,12 @@ Dashboard::Application.routes.draw do
 
     get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
+
+  get '/certificate_images/:filename', to: 'certificate_images#show'
+
+  get '/print_certificates/:encoded_params', to: 'print_certificates#show'
+
+  get '/certificates/:encoded_params', to: 'certificates#show'
 
   get '/beta', to: redirect('/')
 
@@ -922,4 +930,6 @@ Dashboard::Application.routes.draw do
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
   get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
+
+  get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
 end

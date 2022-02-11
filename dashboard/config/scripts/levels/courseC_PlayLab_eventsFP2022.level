@@ -58,11 +58,17 @@
     "mini_rubric": "false",
     "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \r\n\r\n* These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \r\n* Example solutions are available for this level which can be viewed by opening the teacher panel to the right.\r\n",
     "default_num_example_blocks": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:19.311+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_eventsFP_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_eventsFP_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:19.311+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_eventsFP_2021\\\"\"],\"cloned_from\":\"courseC_PlayLab_eventsFP_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <start_blocks>

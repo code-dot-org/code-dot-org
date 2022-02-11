@@ -2,5 +2,6 @@
   "key": "mouseDragged",
   "name": "mouseDragged",
   "category": "World",
+  "category_key": "world",
   "syntax": "function mouseDragged() {}"
 }
