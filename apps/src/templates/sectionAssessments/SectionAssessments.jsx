@@ -14,7 +14,6 @@ import {
   setStudentId,
   ASSESSMENT_FEEDBACK_OPTION_ID
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import {getStudentList} from '@cdo/apps/redux/sectionDataRedux';
 import {connect} from 'react-redux';
 import {h3Style} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
@@ -378,7 +377,7 @@ export default connect(
     totalStudentSubmissions: countSubmissionsForCurrentAssessment(state),
     exportableData: getExportableData(state),
     studentId: state.sectionAssessments.studentId,
-    studentList: getStudentList(state)
+    studentList: state.teacherSections.selectedStudents
   }),
   dispatch => ({
     setScriptId(scriptId) {
