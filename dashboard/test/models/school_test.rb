@@ -49,19 +49,7 @@ class SchoolTest < ActiveSupport::TestCase
   end
 
   test 'merge_from_csv in dry run mode with existing rows makes no database writes' do
-    # Clear tables with hard dependencies (ie, MySQL foreign keys)
-    # on the schools table.
-    Census::ApSchoolCode.delete_all
-    Census::IbSchoolCode.delete_all
-    Census::CensusOverride.delete_all
-    Census::CensusSummary.delete_all
-    Census::OtherCurriculumOffering.delete_all
-    Census::StateCsOffering.delete_all
-    SchoolInfo.delete_all
-    SchoolStatsByYear.delete_all
-    CircuitPlaygroundDiscountApplication.delete_all
-
-    School.delete_all
+    clear_schools_and_dependent_models
 
     # Populate school districts, since schools depends on them as a foreign key.
     SchoolDistrict.seed_all(stub_school_data: true, force: true)
@@ -312,5 +300,23 @@ class SchoolTest < ActiveSupport::TestCase
   test 'normalize_school_id works for 12-character ids with leading zeros missing' do
     normalized_id = School.normalize_school_id("12345678901")
     assert_equal "12345678901", normalized_id
+  end
+
+  private
+
+  def clear_schools_and_dependent_models
+    # Clear tables with hard dependencies (ie, MySQL foreign keys)
+    # on the schools table.
+    Census::ApSchoolCode.delete_all
+    Census::IbSchoolCode.delete_all
+    Census::CensusOverride.delete_all
+    Census::CensusSummary.delete_all
+    Census::OtherCurriculumOffering.delete_all
+    Census::StateCsOffering.delete_all
+    SchoolInfo.delete_all
+    SchoolStatsByYear.delete_all
+    CircuitPlaygroundDiscountApplication.delete_all
+
+    School.delete_all
   end
 end
