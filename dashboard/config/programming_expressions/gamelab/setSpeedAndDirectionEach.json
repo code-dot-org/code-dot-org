@@ -2,6 +2,7 @@
   "key": "setSpeedAndDirectionEach",
   "name": "setSpeedAndDirectionEach",
   "category": "Groups",
+  "category_key": "groups",
   "palette_params": [
     {
       "name": "speed"

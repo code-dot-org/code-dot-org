@@ -2,6 +2,7 @@
   "key": "setStrokeColor",
   "name": "setStrokeColor",
   "category": "Canvas",
+  "category_key": "canvas",
   "palette_params": [
     {
       "name": "color"

@@ -28314,7 +28314,15 @@ en:
           description: "Learn about sprites and variables by programming in Sprite Lab.  \n\n**Pilot 2022**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June 2022 only. Note that the final version of Course F (2022) will include additional lessons and may have other differences. CS Fundamentals (2022) will launch this summer.\n\nWe need your feedback, especially on the lessons marked **[New]**. If you are eager to start the new lessons, you can give students a basic introduction to Sprite Lab using our  [Hello World](https://code.org/helloworld) Hour of Code tutorial."
           student_description: "Learn about sprites and variables by programming in Sprite Lab. \n\n**Pilot 2022**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June 2022 only."
         csd6-pilot-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: 'Mini-Project: On-The-Go App'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Project: Human Device Interaction'
+            lesson-3:
+              name: 'Mini-Project: Interactive Art'
           lesson_groups: {}
           name: csd6-pilot-2022
           title: Physical Computing Pilot (2022)

@@ -2,6 +2,7 @@
   "key": "speed",
   "name": "speed",
   "category": "Turtle",
+  "category_key": "turtle",
   "palette_params": [
     {
       "name": "value"

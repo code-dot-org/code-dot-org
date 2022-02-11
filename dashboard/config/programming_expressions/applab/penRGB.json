@@ -2,6 +2,7 @@
   "key": "penRGB",
   "name": "penRGB",
   "category": "Turtle",
+  "category_key": "turtle",
   "palette_params": [
     {
       "name": "r"
