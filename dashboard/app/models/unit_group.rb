@@ -27,6 +27,7 @@ require 'cdo/shared_constants/curriculum/shared_course_constants'
 class UnitGroup < ApplicationRecord
   include SharedCourseConstants
   include Curriculum::CourseTypes
+  include Rails.application.routes.url_helpers
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
@@ -359,7 +360,6 @@ class UnitGroup < ApplicationRecord
   end
 
   def summarize(user = nil, for_edit: false)
-    puts edit_course_offering_path(course_version.course_offering.key)
     {
       name: name,
       id: id,
