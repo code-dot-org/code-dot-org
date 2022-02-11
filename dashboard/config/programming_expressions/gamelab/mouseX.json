@@ -2,5 +2,6 @@
   "key": "mouseX",
   "name": "mouseX",
   "category": "World",
+  "category_key": "world",
   "syntax": "mouseX"
 }

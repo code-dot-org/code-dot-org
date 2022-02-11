@@ -25,7 +25,11 @@ describe('ProgrammingExpressionEditor', () => {
     };
     defaultProps = {
       initialProgrammingExpression,
-      environmentCategories: ['Circuit', 'Variables', 'Canvas'],
+      environmentCategories: [
+        {key: 'circuit', name: 'Circuit'},
+        {key: 'variables', name: 'Variables'},
+        {key: 'canvas', name: 'Canvas'}
+      ],
       videoOptions: [
         {
           key: 'video1',

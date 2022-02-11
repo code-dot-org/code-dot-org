@@ -2,5 +2,6 @@
   "key": "immovable",
   "name": "immovable",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "immovable"
 }

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-09-21T15:21:59.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "CSA U5 Sustainable Concert Template",
@@ -8,13 +12,12 @@
     "hide_share_and_remix": "false",
     "submittable": "false",
     "csa_view_mode": "theater",
-    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tNbdileYNenivhpx3ry\nrDQT9Daw1I0D8TBKXZvFAkoAF9uR67efsjAD2GpVWN8oDIo=\n"
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tNbdileYNenivhpx3ry\nrDQT9Daw1I0D8TBKXZvFAkoAF9uR67efsjAD2GpVWN8oDIo=\n",
+    "reference_links": [
+      "https://docs.google.com/document/d/e/2PACX-1vSbu1JcuqFt8sFJWEUsd2dMmvRhzkNMD30gPiMpFYNZJEPEOzflNVGWqEL36VjpDKVcYY2NDyVi4gZl/pub"
+    ]
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-09-21T15:21:59.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-21 15:22:04 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 19:55:44 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 20:45:11 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 15:30:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-21 15:22:04 +0000\",\"changed\":[\"encrypted_examples\",\"csa_view_mode\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 19:55:44 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-13 20:45:11 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 15:30:00 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2022-01-12 15:21:09 +0000\",\"changed\":[\"encrypted_examples\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

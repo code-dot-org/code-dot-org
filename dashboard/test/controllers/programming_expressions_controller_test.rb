@@ -31,14 +31,16 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   test 'can update programming expression from params' do
     sign_in @levelbuilder
 
-    programming_expression = create :programming_expression
+    programming_expression = create :programming_expression, programming_environment: @programming_environment
+    category = create :programming_environment_category, programming_environment: @programming_environment
+
     File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{programming_expression.key}.json"}.once
     post :update, params: {
       id: programming_expression.id,
       key: programming_expression.key,
       name: 'new name',
       blockName: 'gamelab_location_picker',
-      category: 'world',
+      categoryKey: category.key,
       videoKey: 'video-key',
       imageUrl: 'image.code.org/foo',
       shortDescription: 'short description of code',
@@ -55,7 +57,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
     assert_equal 'new name', programming_expression.name
     assert_equal 'gamelab_location_picker', programming_expression.block_name
-    assert_equal 'world', programming_expression.category
+    assert_equal category, programming_expression.programming_environment_category
     assert_equal 'video-key', programming_expression.video_key
     assert_equal 'image.code.org/foo', programming_expression.image_url
     assert_equal 'short description of code', programming_expression.short_description

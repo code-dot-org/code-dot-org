@@ -7,6 +7,7 @@ import sectionStandardsProgress from './sectionStandardsProgressRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export default storybook => {
   const store = createStore(
@@ -14,8 +15,14 @@ export default storybook => {
       sectionStandardsProgress,
       sectionProgress,
       unitSelection,
-      sectionData
-    })
+      sectionData,
+      teacherSections
+    }),
+    {
+      teacherSections: {
+        selectedSectionId: 1
+      }
+    }
   );
 
   return storybook

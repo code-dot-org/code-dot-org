@@ -2,6 +2,7 @@
   "key": "setFrame",
   "name": "setFrame",
   "category": "Sprites",
+  "category_key": "sprites",
   "palette_params": [
     {
       "name": "frame"

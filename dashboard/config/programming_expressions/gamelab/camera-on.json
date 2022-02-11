@@ -2,5 +2,6 @@
   "key": "camera.on",
   "name": "camera.on",
   "category": "World",
+  "category_key": "world",
   "syntax": "camera.on"
 }

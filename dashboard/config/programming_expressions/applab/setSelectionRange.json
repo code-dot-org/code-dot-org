@@ -2,6 +2,7 @@
   "key": "setSelectionRange",
   "name": "setSelectionRange",
   "category": "Advanced",
+  "category_key": "advanced",
   "palette_params": [
     {
       "name": "id"

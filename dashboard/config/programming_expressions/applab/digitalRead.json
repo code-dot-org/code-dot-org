@@ -2,6 +2,7 @@
   "key": "digitalRead",
   "name": "digitalRead",
   "category": "Maker",
+  "category_key": "maker",
   "palette_params": [
     {
       "name": "pin"

@@ -2,5 +2,6 @@
   "key": "World.mouseY",
   "name": "World.mouseY",
   "category": "World",
+  "category_key": "world",
   "syntax": "World.mouseY"
 }
