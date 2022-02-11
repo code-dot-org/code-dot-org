@@ -62,7 +62,10 @@ function CodeReviewGroupsStatusToggle({
       </div>
 
       {isToggledOn && (
-        <p style={styles.enabledMessage}>
+        <p
+          style={styles.enabledMessage}
+          id="uitest-code-review-groups-status-message"
+        >
           {i18n.codeReviewAutoDisableMessage({daysLeft})}
         </p>
       )}
