@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-02-11 19:54:15 UTC",
+    "serialized_at": "2022-02-11 21:05:15 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -28,69 +28,435 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Chapter 1"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Chapter 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022"
       }
     }
   ],
   "lessons": [
     {
-      "key": "lesson-1",
-      "name": "Mini-Project: On-The-Go App",
+      "key": "Innovations in Computing",
+      "name": "Innovations in Computing",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
+      "properties": {
+        "assessment_opportunities": "1. **Identify computing innovations within a given field**\r\n\r\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\r\n\r\n2. **For a given device, articulate the likely inputs and outputs**\r\n\r\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\r\n\r\n3. **Suggest improvements to help a device better solve a specific problem**\r\n\r\n\tActivity Guide, page 2: The suggested improvements should relate to the purpose of the device and how it is used.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.",
+        "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be)\t\n* Print out a copy of the activity guide for each student",
+        "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
+        "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "The Circuit Playground",
+      "name": "The Circuit Playground",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "assessment_opportunities": "1. **Connect and troubleshoot external devices**\n\n\tAt the beginning of the online activity, students should connect the boards themselves, using the setup page to troubleshoot common problems.\n\n2. **Turn on and off an LED with code**\n\n\tCode Studio: See rubric on level 9.\n\n3. **Control the buzzer with code**\n\n\tCode Studio: see rubric on level 9.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.",
+        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\r\n* Prepare a board and USB cable for each pair of students",
+        "student_overview": "In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. "
+      },
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "Designing Screens with Code",
+      "name": "Designing Screens with Code",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "assessment_opportunities": "1. **Set the properties of UI elements using code**\n\n\tCode Studio: See rubric on bubble 3\n\n2. **Respond to user input using an event handler**\n\n\tCode Studio: See rubric on bubble 7\n\n3. **Write programs that change multiple elements on a single screen instead of changing screens**\n\n\tCode Studio: See rubric on bubble 12",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the [`setProperty()`(#fff176)](/docs/applab/setProperty/) block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using [`setProperty()`(#fff176)](/docs/applab/setProperty/).",
+        "purpose": "This lesson allows students some time to get back into programming with App Lab before introducing the Circuit Playground, but also introduces the useful concept of a _setter_. In Unit 4, students primarily used [`setScreen()`(#fff176)](/docs/applab/setScreen/) to make their apps respond to user interaction. While this is a simple and useful technique, it can lead to a lot of duplication of content across multiple screens. By using _setters_, and later _getters_, students can write apps that actually change the content on a single screen, by showing and hiding or changing the content or look of various elements.\r\n\r\nOnce students have learned about using getters and setters with UI elements, encourage them to think critically about when to use a separate screen in the design phase of an app. If screens are more alike than different, it might be more effective to just change the elements on screen in reaction to input instead of duplicating content across multiple screens. While students are only introduced to [`setProperty()`(#fff176)](/docs/applab/setProperty/) right now, they will later learn the partner command [`getProperty()`(#fff176)](/docs/applab/getProperty/).",
+        "student_overview": "In this lesson, you will start to build apps that allow for lots of user interaction and functionality ... even though they are just one screen!"
+      },
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "Board Events",
+      "name": "Board Events",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "assessment_opportunities": "1. **Attach an event handler to a hardware input**\n\n\tCode Studio: See rubric on bubble 3.\n\n2. **Choose the appropriate event for a given scenario**\n\n\tWrap Up: Students should describe different scenarios that would be more appropriate for different events.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.",
+        "purpose": "This lesson marks the transition from using the board solely as an output device to using it for both input and output. The [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block works much like [`onEvent()`(#fff176)](/docs/applab/onEvent/), with the most significant different being that the first parameter is a board object (a variable) while [`onEvent()`(#fff176)](/docs/applab/onEvent/) takes a UI element ID (a string).",
+        "student_overview": "In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input."
+      },
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Variables & If Statements",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Mini-Project: On-The-Go App",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "Arrays and Color LEDs",
+      "name": "Arrays and Color LEDs",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "assessment_opportunities": "1. **Access an element in an array using its index**\n\n\tCode Studio: See the rubric on bubble 6 and the quick check on bubble 7\n\n2. **Use the color LED array to individually control each color LED**\n\n\tCode Studio: See the rubric on bubble 14",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.",
+        "purpose": "Arrays are a common data structure in computer science, used to make storing and accessing information easier. The lesson prepares students to access items within an array, but doesn't yet cover creating and modifying arrays, which will be addressed in the following lesson. Students are also introduced to the ring of color LEDs, which are exposed as an array called [`colorLeds`(#f78183)](/docs/applab/colorLeds/). Students learn how to access and control each LED in the array individually, preparing them to access multiple LEDs though iteration later in the chapter.",
+        "student_overview": "In this lesson, you will learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground. "
+      },
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "Getting Properties",
+      "name": "Getting Properties",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "assessment_opportunities": "1. **Use getters to access the properties of elements in a system**\n\n\tCode Studio: see rubric on bubble 5",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson introduces students to the [`getProperty`(#fff176)](/docs/applab/getProperty/) block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use [`getProperty`(#fff176)](/docs/applab/getProperty/) and [`setProperty`(#fff176)](/docs/applab/setProperty/) together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.",
+        "purpose": "So far, students have only used the button press event to gather information from the App Lab screen.  Using [`getProperty`(#fff176)](/docs/applab/getProperty/) opens the students to gathering a wide range of information from the user.  Getting properties also allows students to create programs that don't rely on knowing an element's properties when the code is written, so their programs can be more dynamic and interactive.  These features will be important as students move toward making an interactive game in the next few lessons. ",
+        "student_overview": "In this lesson, you will learn how to access the properties of different elements with code. "
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Combining Inputs",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
       }
     },
     {
       "key": "lesson-2",
       "name": "Project: Human Device Interaction",
-      "absolute_position": 2,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
       }
     },
     {
       "key": "lesson-3",
       "name": "Mini-Project: Interactive Art",
-      "absolute_position": 3,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 11,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
         "purpose": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "Project - Prototype an Innovation",
+      "name": "Project - Prototype an Innovation",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals of this chapter. You may also choose to assign the post-project test through Code Studio.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. ",
+        "preparation": "* Collect materials for physical prototyping, eg.\r\n\t* Cardboard\r\n\t* Scissors\r\n\t* Tape\r\n\t* Glue\r\n\t* Foil\r\n* Print a copy of the project guide for each pair of students\r\n* Print a copy of the peer review sheet for each student\r\n* Print a copy of the rubric for each student",
+        "purpose": "This lesson is the culmination of Unit 6 and provides students an opportunity to build a Maker Toolkit project of their own from the ground up. This project is an opportunity to showcase technical skills, but they will also need to demonstrate collaboration, constructive peer feedback, and iterative problem solving as they encounter obstacles along the way. This project should be student-directed whenever possible, and provide an empowering and memorable conclusion to the final unit of CS Discoveries.",
+        "student_overview": "In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. "
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022"
       }
     }
   ],
   "lesson_activities": [
+    {
+      "key": "40d4bcd4-e880-44f3-b07a-9a8dc1de169a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40d4bcd4-e880-44f3-b07a-9a8dc1de169a",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "00f0936e-e547-4c2d-a302-28db820d839a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00f0936e-e547-4c2d-a302-28db820d839a",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "538425a8-20b6-40a8-9a65-12c5f3f81134",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "538425a8-20b6-40a8-9a65-12c5f3f81134",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "f01ffe5a-b708-486f-913e-e3ba55daf447",
+      "position": 4,
+      "properties": {
+        "name": "Extensions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f01ffe5a-b708-486f-913e-e3ba55daf447",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "fce72e67-057c-4d01-9815-58361ada3eb2",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fce72e67-057c-4d01-9815-58361ada3eb2",
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40",
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "c0db1493-4198-461b-b4d4-215c3a289b14",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c0db1493-4198-461b-b4d4-215c3a289b14",
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "9158136f-e6a4-4230-b61c-c2f8ce338819",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9158136f-e6a4-4230-b61c-c2f8ce338819",
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "8d2e4924-07ea-46be-813f-013a882670a6",
+      "position": 2,
+      "properties": {
+        "duration": 80,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8d2e4924-07ea-46be-813f-013a882670a6",
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "40c9c563-8c34-4d5b-9b3b-321b6e8408ad",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40c9c563-8c34-4d5b-9b3b-321b6e8408ad",
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "d7b94bf0-2398-48ec-bd25-7e491937e21a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d7b94bf0-2398-48ec-bd25-7e491937e21a",
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "b4fa511b-05a2-427b-a170-a6603b5dd5e0",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4fa511b-05a2-427b-a170-a6603b5dd5e0",
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "b8969547-3073-4309-a3f9-a35c0feb2ea5",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b8969547-3073-4309-a3f9-a35c0feb2ea5",
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
     {
       "key": "b052c205-04cc-459b-9617-23b6d3ef609e",
       "position": 1,
@@ -101,7 +467,7 @@
       "seeding_key": {
         "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e",
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
       }
     },
@@ -115,7 +481,7 @@
       "seeding_key": {
         "lesson_activity.key": "0a90718a-ced0-4294-b9da-36d33df1702c",
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
       }
     },
@@ -129,7 +495,91 @@
       "seeding_key": {
         "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def",
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "352c7436-33ee-4a5a-a348-0850fbe6e24c",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "352c7436-33ee-4a5a-a348-0850fbe6e24c",
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "11dd1cbf-5580-4a66-acb0-cf7b10f23a82",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11dd1cbf-5580-4a66-acb0-cf7b10f23a82",
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "fa8df1fd-8cef-4444-b4f1-4bea3ac2ed2a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa8df1fd-8cef-4444-b4f1-4bea3ac2ed2a",
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "ceb50804-b30f-4cc0-8340-8fb914aedf45",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ceb50804-b30f-4cc0-8340-8fb914aedf45",
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "07cb6906-c331-4b08-b7e9-92aace4d54cb",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07cb6906-c331-4b08-b7e9-92aace4d54cb",
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "2b4622da-0328-416e-b6da-950af22f7f33",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2b4622da-0328-416e-b6da-950af22f7f33",
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
       }
     },
@@ -143,7 +593,7 @@
       "seeding_key": {
         "lesson_activity.key": "00e09dc0-8ae2-41c5-85c0-2f2882db3872",
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
       }
     },
@@ -157,7 +607,7 @@
       "seeding_key": {
         "lesson_activity.key": "ddb7ac61-17f9-4951-ab9e-a75acaacc9de",
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
       }
     },
@@ -171,7 +621,7 @@
       "seeding_key": {
         "lesson_activity.key": "7925ea41-e564-42db-91cb-c40703d627a6",
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
       }
     },
@@ -185,7 +635,7 @@
       "seeding_key": {
         "lesson_activity.key": "6c3d17ca-d35d-46c0-b065-75a5c9b4be39",
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
       }
     },
@@ -198,7 +648,7 @@
       "seeding_key": {
         "lesson_activity.key": "15fdc7bc-c6a6-4c95-b6bc-be237a08b611",
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
       }
     },
@@ -212,7 +662,7 @@
       "seeding_key": {
         "lesson_activity.key": "56dc9448-0851-4c35-8ee9-1f907fed6b05",
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022"
       }
     },
@@ -226,7 +676,7 @@
       "seeding_key": {
         "lesson_activity.key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef",
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022"
       }
     },
@@ -240,12 +690,568 @@
       "seeding_key": {
         "lesson_activity.key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa",
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "0ef48d51-e379-45bf-a242-061631ecebc8",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ef48d51-e379-45bf-a242-061631ecebc8",
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "072a7e88-7c5b-46c2-bca4-eea46f455dc9",
+      "position": 2,
+      "properties": {
+        "duration": 210,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "072a7e88-7c5b-46c2-bca4-eea46f455dc9",
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "a8d91d04-87b3-4b87-a1cb-039bbeb1c286",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a8d91d04-87b3-4b87-a1cb-039bbeb1c286",
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "2098f0e4-356f-42d4-937f-1d46839d8879",
+      "position": 4,
+      "properties": {
+        "name": "Extensions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2098f0e4-356f-42d4-937f-1d46839d8879",
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022"
       }
     }
   ],
   "activity_sections": [
+    {
+      "key": "bc85e120-c4c2-428f-9a9b-101c4778e06d",
+      "position": 1,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This unit requires the Adafruit Circuit Playground.  You can read more about this microcontroller board at [https://code.org/circuitplayground](https://code.org/circuitplayground)\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bc85e120-c4c2-428f-9a9b-101c4778e06d",
+        "lesson_activity.key": "40d4bcd4-e880-44f3-b07a-9a8dc1de169a"
+      }
+    },
+    {
+      "key": "75b71dff-12ec-4b40-b895-a54dccf5a325",
+      "position": 2,
+      "properties": {
+        "description": "**Video:** Watch either [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be) as a class.",
+        "name": "Get Inspired\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "75b71dff-12ec-4b40-b895-a54dccf5a325",
+        "lesson_activity.key": "40d4bcd4-e880-44f3-b07a-9a8dc1de169a"
+      }
+    },
+    {
+      "key": "3b0125da-450e-4d20-afd8-d19e0be28644",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in groups of 3-4\r\n\r\n**Distribute:** Hand out copies of the activity guide",
+        "name": "Innovation Research\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b0125da-450e-4d20-afd8-d19e0be28644",
+        "lesson_activity.key": "00f0936e-e547-4c2d-a302-28db820d839a"
+      }
+    },
+    {
+      "key": "bad44b7e-4209-4073-a765-0230d2ee83fe",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** What is an innovation? What does it mean for something to be innovative?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "This should be a quick discussion. The primary goal is for the class to come to a common understanding of what it means for something to be innovative. That it's not enough for a product to look sleeker than the last version, but that innovation means to really do something better than it's been done before, or to do things that have _never_ been done before.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bad44b7e-4209-4073-a765-0230d2ee83fe",
+        "lesson_activity.key": "00f0936e-e547-4c2d-a302-28db820d839a"
+      }
+    },
+    {
+      "key": "bf3677c4-60d0-44ee-afb4-80e0d85a9c66",
+      "position": 3,
+      "properties": {
+        "description": "#### Computing Innovations\r\n\r\nDuring this activity student groups will research the recent technological innovations related to a chosen topic. Once they have identified a few interesting innovations, they will choose one to analyze in greater depths and report back to the class about.\r\n\r\n#### Innovation Research\r\n\r\n* **Introduce the topics**: Make sure that students understand the scope of each of the potential topics.\r\n\t* Wearable Technology (eg. clothing, jewelry, or accessories with built-in computers)\r\n\t* Health and Safety (eg. devices that treat disease, track your health, or protect users from danger)\r\n\t* Agriculture (eg. technology to improve the effectiveness, sustainability, or efficiency of farming)\r\n\t* Manufacturing (eg. advancements in rapid prototyping, industrial robotics, and the production of goods)\r\n\t* Art and Design (eg. interactive art or public installations)\r\n\t* Smart Home (eg. devices that allow you to interact with your thermostat, locks, or lights using computers)\r\n* **Explain the research task**: The goal of this research is twofold:\r\n\t* First, develop a deeper understanding of your chosen topic. How is computer technology changing this field, what are some of the problems that people are trying to solve with technology?\r\n    * Second, identify a handful of innovative devices within this topic. Students should focus on finding _hardware_ devices that demonstrate unique or novel _form factors_. That is to say, computers that don't _look_ like computers.\r\n* **Send to Code Studio for resource links**: On Code Studio we have compiled more detailed descriptions of the topics as well as couple of recommended sites to learn more about each topic. Use this as a jumping off point for student research."
+      },
+      "seeding_key": {
+        "activity_section.key": "bf3677c4-60d0-44ee-afb4-80e0d85a9c66",
+        "lesson_activity.key": "00f0936e-e547-4c2d-a302-28db820d839a"
+      }
+    },
+    {
+      "key": "20dc77ec-4b48-4c6a-913f-be5a9bf095a2",
+      "position": 4,
+      "properties": {
+        "progression_name": "Innovation Research",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Here are some recommended sites for students to start their research.  Although these sites are generally appropriate for school, the content within them changes frequently, so **we strongly suggest you check each site for inappropriate content before sharing it with students**.\n\n### Wearable Technology\n\n* [Warable.com](https://www.wareable.com/)\n\n### Health and Safety\n\n* [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)\n* [Medstartr](http://www.medstartr.com/)\n\n### Agriculture\n\n* [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)\n* [Farm Industry News](http://www.farmindustrynews.com/technology)\n\n### Manufacturing\n\n* [Industry Week](https://www.industryweek.com/technology-and-iiot)\n* [3D Printing](https://3dprinting.com/)\n\n### Art and Design\n\n* [ArtFab](http://artfab.art.cmu.edu/)\n* [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n### Smart Home\n\n* [CNet](https://www.cnet.com/smart-home/)\n* [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "20dc77ec-4b48-4c6a-913f-be5a9bf095a2",
+        "lesson_activity.key": "00f0936e-e547-4c2d-a302-28db820d839a"
+      }
+    },
+    {
+      "key": "31201ae2-81cd-4e37-a51a-df76d483671c",
+      "position": 5,
+      "properties": {
+        "description": "#### An Innovative Solution\r\n\r\nOnce groups have selected a specific innovative device, they can complete the second page of this activity guide, which asks them to do the following:\r\n\r\n* **What Problem Does It Solve?:** For some topics this may be more clear (for example healthcare devices typically have a very specific goal), but for others students may need to think more broadly about what they consider problems. More frivolous wearables or digital art installations may be more concerned with personal expression than solving a specific problem.\r\n* **What Is Innovative About It?:** Encourage students to refer back to the earlier discussion about innovation for this. It can also be useful to compare against other devices found during the research phase.\r\n* **How Do You Interact With It?:** Ask students to think back to the _Input, Output, Storage, Processing_ model that was introduced way back in Unit 1. The goal here is to identify specifically the Inputs and Outputs provided by a given device - the more specific these are, the more easily students will be able to connect elements of the Circuit Playground to these devices.\r\n* **How Could You Improve It?:** Feel free to make this as realistic or aspirational as you like. The goal here is just to get students thinking about how they might develop an innovation of their own by using an existing product as a jumping off point.\r\n\r\n\r\n\r\n\r\n**Share:** Give groups a minute each to share their findings. See the extension activities for alternate ways to share."
+      },
+      "seeding_key": {
+        "activity_section.key": "31201ae2-81cd-4e37-a51a-df76d483671c",
+        "lesson_activity.key": "00f0936e-e547-4c2d-a302-28db820d839a"
+      }
+    },
+    {
+      "key": "2ce41d99-ca7f-4d1c-a7ad-fa50ca224544",
+      "position": 1,
+      "properties": {
+        "description": "**Journal:** What was the most surprising, cool, or impressive thing that you found in your research? If you could develop an innovation of your own, what would it be?",
+        "name": "Journaling\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ce41d99-ca7f-4d1c-a7ad-fa50ca224544",
+        "lesson_activity.key": "538425a8-20b6-40a8-9a65-12c5f3f81134"
+      }
+    },
+    {
+      "key": "8e72be07-16bc-463b-a4c2-b9dab170f0f0",
+      "position": 1,
+      "properties": {
+        "description": "Ask groups to create a poster that shares the innovate device that they researched. Posters should include:\r\n\r\n* Who invented the device\r\n* What problem they were trying to solve\r\n* Why it is unique or innovative\r\n* How users interact with it (specifically, what Inputs does it take and how does it provide Output)\r\n\r\nKeep these posters up throughout the unit for students to refer back to as they start to develop physical computing devices of their own.",
+        "name": "Innovation Posters\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e72be07-16bc-463b-a4c2-b9dab170f0f0",
+        "lesson_activity.key": "f01ffe5a-b708-486f-913e-e3ba55daf447"
+      }
+    },
+    {
+      "key": "22ad3178-538f-43eb-b458-0114f3fcbdc0",
+      "position": 2,
+      "properties": {
+        "description": "Instead of (or in addition to) you posters, have students develop websites in Web Lab that include the same required content. Make sure that students include links to their source websites.",
+        "name": "Innovation Websites\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "22ad3178-538f-43eb-b458-0114f3fcbdc0",
+        "lesson_activity.key": "f01ffe5a-b708-486f-913e-e3ba55daf447"
+      }
+    },
+    {
+      "key": "19445472-4d6b-4b56-a426-30e589fdd402",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\r\n\r\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on the details. What do you think this board does (or could do) and why?\r\n\r\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point. As students go through this unit, they can refer back and refine this list.",
+        "name": "Board Inspection\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "19445472-4d6b-4b56-a426-30e589fdd402",
+        "lesson_activity.key": "fce72e67-057c-4d01-9815-58361ada3eb2"
+      }
+    },
+    {
+      "key": "af390bd2-e8eb-48f9-93dc-3d08b1515b3f",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Ask students to plug their boards in and head to [the Maker Toolkit setup page](//studio.code.org/maker/setup) to confirm that the software has been correctly configured.",
+        "name": "Connecting The Board",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Troubleshooting Board Issues:** Ensure that all students are able to set up their boards correctly.  If they have trouble, encourage them to work with peers to solve the problem with the help of the setup page.  Students should be able to read through the page and follow the instructions on their own.  If not, walk them through the process, but encourage them to troubleshoot their own boards in subsequent lessons."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "af390bd2-e8eb-48f9-93dc-3d08b1515b3f",
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40"
+      }
+    },
+    {
+      "key": "d6b0a1ab-d92e-4e69-ac82-e7cfc88b9394",
+      "position": 2,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6b0a1ab-d92e-4e69-ac82-e7cfc88b9394",
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40"
+      }
+    },
+    {
+      "key": "8ab91f3e-0a63-45b6-aa19-3ede1805835a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ab91f3e-0a63-45b6-aa19-3ede1805835a",
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40"
+      }
+    },
+    {
+      "key": "e7630405-12a6-4f82-970d-5250ed2bd855",
+      "position": 4,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7630405-12a6-4f82-970d-5250ed2bd855",
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40"
+      }
+    },
+    {
+      "key": "6ebfc8c5-534c-4409-b19b-07f378be9dbe",
+      "position": 5,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ebfc8c5-534c-4409-b19b-07f378be9dbe",
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40"
+      }
+    },
+    {
+      "key": "dbf4f34f-5fea-499c-95e6-149f8e24d9b9",
+      "position": 6,
+      "properties": {
+        "progression_name": "Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbf4f34f-5fea-499c-95e6-149f8e24d9b9",
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40"
+      }
+    },
+    {
+      "key": "1ff51b70-5e7c-46ce-8c19-32d067bfb7b5",
+      "position": 7,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ff51b70-5e7c-46ce-8c19-32d067bfb7b5",
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40"
+      }
+    },
+    {
+      "key": "83338fac-7797-4e31-bc95-087e17b9d888",
+      "position": 8,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "83338fac-7797-4e31-bc95-087e17b9d888",
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40"
+      }
+    },
+    {
+      "key": "c2fe9986-7813-4eb6-ae86-f2c8b8e82bab",
+      "position": 9,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2fe9986-7813-4eb6-ae86-f2c8b8e82bab",
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40"
+      }
+    },
+    {
+      "key": "c2527fbe-1b64-4740-98bb-eb2bb79e9f16",
+      "position": 10,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2527fbe-1b64-4740-98bb-eb2bb79e9f16",
+        "lesson_activity.key": "976c3bfa-2cb5-48a6-a6c8-ea292ca8fd40"
+      }
+    },
+    {
+      "key": "746a6a69-7986-4f6a-bd4f-b910c7dcd555",
+      "position": 1,
+      "properties": {
+        "description": "**Journal:** Ask students to reflect on their introduction to the Circuit Playground. What did they think it was at first inspection? How did those expectations change after having programmed on the board?",
+        "name": "What's in a Board\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "746a6a69-7986-4f6a-bd4f-b910c7dcd555",
+        "lesson_activity.key": "c0db1493-4198-461b-b4d4-215c3a289b14"
+      }
+    },
+    {
+      "key": "2b244041-0891-4b20-ab98-ed59caacb91c",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** Show students this example image\n\n<img alt=\"\" src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/diamond.png\" style=\"max-width: 200px;\">",
+        "name": "UI Element Properties Refresher"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b244041-0891-4b20-ab98-ed59caacb91c",
+        "lesson_activity.key": "9158136f-e6a4-4230-b61c-c2f8ce338819"
+      }
+    },
+    {
+      "key": "11670b4c-28f5-4cbf-a2a4-03bf62c642db",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** How would you describe to somebody else how to recreate this screen? What specific details would they need to know about each design element?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "The goal of this disucssion is to prime students to think about the _properties_ of various design elements, which they will learn to change with code later in this lesson. You might ask students to think back to a similar discussion we had in Unit 2 when trying to describe what a web page looks like, or to the properties of a sprite from Unit 3\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "11670b4c-28f5-4cbf-a2a4-03bf62c642db",
+        "lesson_activity.key": "9158136f-e6a4-4230-b61c-c2f8ce338819"
+      }
+    },
+    {
+      "key": "c6b75e38-9ee9-4297-a7ca-d925794299cf",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Head to Code Studio",
+        "name": "Designing with setProperty()\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6b75e38-9ee9-4297-a7ca-d925794299cf",
+        "lesson_activity.key": "8d2e4924-07ea-46be-813f-013a882670a6"
+      }
+    },
+    {
+      "key": "fd25eabf-0eb6-43b6-b687-d8e5aa48f26d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Setting Properties",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fd25eabf-0eb6-43b6-b687-d8e5aa48f26d",
+        "lesson_activity.key": "8d2e4924-07ea-46be-813f-013a882670a6"
+      }
+    },
+    {
+      "key": "009198ce-8a74-4c9f-bf89-927e9a935024",
+      "position": 3,
+      "properties": {
+        "progression_name": "Events and Properties",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "009198ce-8a74-4c9f-bf89-927e9a935024",
+        "lesson_activity.key": "8d2e4924-07ea-46be-813f-013a882670a6"
+      }
+    },
+    {
+      "key": "9e2ce838-da58-4c52-b293-8e55a2bd1428",
+      "position": 4,
+      "properties": {
+        "progression_name": "Emotion Machine Example"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e2ce838-da58-4c52-b293-8e55a2bd1428",
+        "lesson_activity.key": "8d2e4924-07ea-46be-813f-013a882670a6"
+      }
+    },
+    {
+      "key": "be2c3bc0-9848-476d-a4d9-da5fbe5039f7",
+      "position": 5,
+      "properties": {
+        "progression_name": "Building an App"
+      },
+      "seeding_key": {
+        "activity_section.key": "be2c3bc0-9848-476d-a4d9-da5fbe5039f7",
+        "lesson_activity.key": "8d2e4924-07ea-46be-813f-013a882670a6"
+      }
+    },
+    {
+      "key": "1ec1181f-740f-411e-87c3-502f86dfe256",
+      "position": 6,
+      "properties": {
+        "description": "**Share:** The final level in this lesson allows students to customize and submit an \"Emotion Machine\" app. If time, allow students to share their programs.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "You can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1ec1181f-740f-411e-87c3-502f86dfe256",
+        "lesson_activity.key": "8d2e4924-07ea-46be-813f-013a882670a6"
+      }
+    },
+    {
+      "key": "1040cb4f-d05b-4fbd-a01c-29d7f651b2b0",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** Think back to the app you prototyped in Unit 4. Knowing what you know about using [`setProperty()`(#fff176)](/docs/applab/setProperty/) to change UI elements, how might you change your app prototype?",
+        "name": "Reflecting on Unit 4\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "1040cb4f-d05b-4fbd-a01c-29d7f651b2b0",
+        "lesson_activity.key": "40c9c563-8c34-4d5b-9b3b-321b6e8408ad"
+      }
+    },
+    {
+      "key": "4b970304-e9b9-4937-a5c7-917a7b059ebd",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Have the class share the kinds of things they came up with. See if the class can come up with some broad types of features that weren't possible, or were cumbersome, to do with screens alone.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** This discussion is intended to clarify for students _why_ we are changing UI elements with code, and how it might actually allow them to solve problems that came up in Unit 4. From this point on students will need to make reasoned choices about when to use separate screens in a program and when to update elements with code.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4b970304-e9b9-4937-a5c7-917a7b059ebd",
+        "lesson_activity.key": "40c9c563-8c34-4d5b-9b3b-321b6e8408ad"
+      }
+    },
+    {
+      "key": "7cc52ce6-a194-42f6-a5ba-9a2183c70399",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.",
+        "name": "Board Inspection: Inputs\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "7cc52ce6-a194-42f6-a5ba-9a2183c70399",
+        "lesson_activity.key": "d7b94bf0-2398-48ec-bd25-7e491937e21a"
+      }
+    },
+    {
+      "key": "a574442a-cd85-4dd8-8f3d-92a9868423af",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio.",
+        "name": "Taking Input from the Board\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "a574442a-cd85-4dd8-8f3d-92a9868423af",
+        "lesson_activity.key": "b4fa511b-05a2-427b-a170-a6603b5dd5e0"
+      }
+    },
+    {
+      "key": "4abc1449-7c95-4c34-8de0-d7271035b820",
+      "position": 2,
+      "properties": {
+        "progression_name": "Board Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "4abc1449-7c95-4c34-8de0-d7271035b820",
+        "lesson_activity.key": "b4fa511b-05a2-427b-a170-a6603b5dd5e0"
+      }
+    },
+    {
+      "key": "d1716dfb-c06c-4f6f-8447-229e427a74d5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using the Switch"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1716dfb-c06c-4f6f-8447-229e427a74d5",
+        "lesson_activity.key": "b4fa511b-05a2-427b-a170-a6603b5dd5e0"
+      }
+    },
+    {
+      "key": "db222f3a-8847-4f58-b2c8-f683dc2fcc88",
+      "position": 4,
+      "properties": {
+        "progression_name": "The Buzzer"
+      },
+      "seeding_key": {
+        "activity_section.key": "db222f3a-8847-4f58-b2c8-f683dc2fcc88",
+        "lesson_activity.key": "b4fa511b-05a2-427b-a170-a6603b5dd5e0"
+      }
+    },
+    {
+      "key": "8b243f35-d643-4aec-8e11-2ec8bbd8c974",
+      "position": 5,
+      "properties": {
+        "progression_name": "Extra Challenge: Sound Board"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b243f35-d643-4aec-8e11-2ec8bbd8c974",
+        "lesson_activity.key": "b4fa511b-05a2-427b-a170-a6603b5dd5e0"
+      }
+    },
+    {
+      "key": "fd0da478-ab4e-44d1-9369-bbc99c31f214",
+      "position": 1,
+      "properties": {
+        "description": "**Journal 3-2-1:**\n\n1. What are three types of board events you have seen so far?\n2. Describe two different situations and how they would need two **different** events.\n3. What's one other event you haven't learned yet, but you think might exist?",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students should make reasonable choices for when one board event might be better than another.  You may want to have a short class discussion before or after this journal prompt to highlight the advanages and disadvantages of each event type. \r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fd0da478-ab4e-44d1-9369-bbc99c31f214",
+        "lesson_activity.key": "b8969547-3073-4309-a3f9-a35c0feb2ea5"
+      }
+    },
     {
       "key": "8e6ef533-97df-4532-88e3-570e5e6e9fdc",
       "position": 1,
@@ -333,6 +1339,307 @@
       "seeding_key": {
         "activity_section.key": "70f6b1a8-e548-402e-83e3-62f27a07436c",
         "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def"
+      }
+    },
+    {
+      "key": "d98ae0d9-e25d-4bbd-8106-cabc07d65b80",
+      "position": 1,
+      "properties": {
+        "description": "**Set Up:** Have students take out their journals. In their journals have students respond to the following prompt.",
+        "name": "Discussion: What is a List?\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "d98ae0d9-e25d-4bbd-8106-cabc07d65b80",
+        "lesson_activity.key": "352c7436-33ee-4a5a-a348-0850fbe6e24c"
+      }
+    },
+    {
+      "key": "e16ca61d-2552-4c7c-8c30-38a164983d24",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** What is a list?  What do you use lists for?",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "While the types of lists students come up with vary from class to class, the two main characteristics of lists that students should understand is that they usually are comprised of items of the same type (tasks to complete, names of people, song titles, grocery items, etc.) and that they have an order.  Some common types of lists include a to-do list, a class roster, a playlist, or a grocery list.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e16ca61d-2552-4c7c-8c30-38a164983d24",
+        "lesson_activity.key": "352c7436-33ee-4a5a-a348-0850fbe6e24c"
+      }
+    },
+    {
+      "key": "139845e8-57d5-46b4-ad5c-5369f8d5381d",
+      "position": 3,
+      "properties": {
+        "description": "**Discuss:** Once students have had time to write down their own thoughts, have them share out to the whole class. Work as a class to try to get an understanding of what a list is."
+      },
+      "seeding_key": {
+        "activity_section.key": "139845e8-57d5-46b4-ad5c-5369f8d5381d",
+        "lesson_activity.key": "352c7436-33ee-4a5a-a348-0850fbe6e24c"
+      }
+    },
+    {
+      "key": "ec9e39d3-87c1-4542-a15e-fbc6a45bf21a",
+      "position": 4,
+      "properties": {
+        "description": "When we program, we sometimes want to store lists of items.  In Javascript, we do this using an array.  An array is a collection of items that are stored in a particular order.  We're going to look at different ways to use arrays, and then see how they will help us to control more LEDs on the Circuit Playground.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ec9e39d3-87c1-4542-a15e-fbc6a45bf21a",
+        "lesson_activity.key": "352c7436-33ee-4a5a-a348-0850fbe6e24c"
+      }
+    },
+    {
+      "key": "26d16465-3725-486c-80f2-10d15ad720f3",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Head to Code Studio",
+        "name": "Arrays and Color LEDs\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "26d16465-3725-486c-80f2-10d15ad720f3",
+        "lesson_activity.key": "11dd1cbf-5580-4a66-acb0-cf7b10f23a82"
+      }
+    },
+    {
+      "key": "70ddcd0b-ee92-483a-b501-f7b2d6dc7b28",
+      "position": 2,
+      "properties": {
+        "description": "**Questions to Consider with Video:**\n- When might an array be more useful than a variable?\n- Why do you always need to assign an array to a variable?\n- How can you access the elements in your array?",
+        "progression_name": "Video: Introduction to Arrays",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goals:**\n\nThis is the first introduction to arrays, and students will have an opportunity to try them out in the lesson, so understanding why arrays are helpful and the general ways that can use them is more important than the particular syntax or commands in the video. Students should understand that arrays are intended to hold several pieces of information, usually all of the same type. Just like any other piece of information, it needs to be assigned to a variable for a programmer to find it again. Programmers can access each element of the array by its **index**, or its position number in the array. Students will have a chance to practice the exact syntax in the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "70ddcd0b-ee92-483a-b501-f7b2d6dc7b28",
+        "lesson_activity.key": "11dd1cbf-5580-4a66-acb0-cf7b10f23a82"
+      }
+    },
+    {
+      "key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148",
+      "position": 3,
+      "properties": {
+        "progression_name": "Introduction to Arrays",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Level 6:**\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148",
+        "lesson_activity.key": "11dd1cbf-5580-4a66-acb0-cf7b10f23a82"
+      }
+    },
+    {
+      "key": "92d33d1d-ed63-4825-90a9-7a07f39e94cd",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using Arrays"
+      },
+      "seeding_key": {
+        "activity_section.key": "92d33d1d-ed63-4825-90a9-7a07f39e94cd",
+        "lesson_activity.key": "11dd1cbf-5580-4a66-acb0-cf7b10f23a82"
+      }
+    },
+    {
+      "key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd",
+      "position": 5,
+      "properties": {
+        "progression_name": "Color LEDs"
+      },
+      "seeding_key": {
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd",
+        "lesson_activity.key": "11dd1cbf-5580-4a66-acb0-cf7b10f23a82"
+      }
+    },
+    {
+      "key": "551e5c81-430f-4463-9c0f-3f9a372aa345",
+      "position": 6,
+      "properties": {
+        "progression_name": "Light Show",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Level 14:**\nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "551e5c81-430f-4463-9c0f-3f9a372aa345",
+        "lesson_activity.key": "11dd1cbf-5580-4a66-acb0-cf7b10f23a82"
+      }
+    },
+    {
+      "key": "74e01f5e-6373-4e35-86fa-e4c776904eed",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge Levels"
+      },
+      "seeding_key": {
+        "activity_section.key": "74e01f5e-6373-4e35-86fa-e4c776904eed",
+        "lesson_activity.key": "11dd1cbf-5580-4a66-acb0-cf7b10f23a82"
+      }
+    },
+    {
+      "key": "3ffc33dd-1c9d-4539-b241-a5bbb6a86528",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** You have now seen both objects, such as the Sprite object, and arrays. How is an array different from the attributes of an object? When would you use an array? When would you use an object?",
+        "name": "Discussion: Objects Vs Arrays\r",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "Arrays are frequently used to collect items of the same type (a bunch of numbers, a bunch of strings, a bunch of button names, etc), but in JavaScript all list items need not be of the same type. You can create lists the include numbers, strings, objects, and even other lists.\r\n\r\nAn Object is a data structure that combines many values (such as numbers, strings, and even functions) that represent the attributes of that object (height, width, rotation, name) which are easier to keep track of if done in one place. The attributes can be of many different types but they all describe one object. \r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3ffc33dd-1c9d-4539-b241-a5bbb6a86528",
+        "lesson_activity.key": "fa8df1fd-8cef-4444-b4f1-4bea3ac2ed2a"
+      }
+    },
+    {
+      "key": "ca649f28-1875-4386-b059-5760d14f2228",
+      "position": 2,
+      "properties": {
+        "description": "You can either use this as an exit ticket or have a class discussion if you have time."
+      },
+      "seeding_key": {
+        "activity_section.key": "ca649f28-1875-4386-b059-5760d14f2228",
+        "lesson_activity.key": "fa8df1fd-8cef-4444-b4f1-4bea3ac2ed2a"
+      }
+    },
+    {
+      "key": "f358a8a8-c524-4e60-8fe2-221aac7a5810",
+      "position": 1,
+      "properties": {
+        "description": "**Review:** Ask students to think of the different types of information that they were able to get from the board in the last lesson (e.g. button presses, toggle state, etc.)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f358a8a8-c524-4e60-8fe2-221aac7a5810",
+        "lesson_activity.key": "ceb50804-b30f-4cc0-8340-8fb914aedf45"
+      }
+    },
+    {
+      "key": "15b051be-c729-4333-b1b6-bf4ff9bc56f2",
+      "position": 2,
+      "properties": {
+        "description": "So far we've seen lots of ways that we can get information from our Circuit Playground.  Today we're going to look at more ways that we can get information from the screen of our app.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "15b051be-c729-4333-b1b6-bf4ff9bc56f2",
+        "lesson_activity.key": "ceb50804-b30f-4cc0-8340-8fb914aedf45"
+      }
+    },
+    {
+      "key": "3de0d102-06bb-4b19-934e-052c5290b5fc",
+      "position": 1,
+      "properties": {
+        "description": "Send students to Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "3de0d102-06bb-4b19-934e-052c5290b5fc",
+        "lesson_activity.key": "07cb6906-c331-4b08-b7e9-92aace4d54cb"
+      }
+    },
+    {
+      "key": "fe109d4a-4477-4762-b171-133e516ac097",
+      "position": 2,
+      "properties": {
+        "progression_name": "Getting Properties",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Level 5** \nYou can use this level as a formative assessment for students. Click inside the level to view a rubric and leave feedback to your students\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097",
+        "lesson_activity.key": "07cb6906-c331-4b08-b7e9-92aace4d54cb"
+      }
+    },
+    {
+      "key": "77adb627-5691-4d85-96e7-23afc738dfb0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Sliders"
+      },
+      "seeding_key": {
+        "activity_section.key": "77adb627-5691-4d85-96e7-23afc738dfb0",
+        "lesson_activity.key": "07cb6906-c331-4b08-b7e9-92aace4d54cb"
+      }
+    },
+    {
+      "key": "e435ee8d-92b4-4806-97e7-2a67330813b6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Change"
+      },
+      "seeding_key": {
+        "activity_section.key": "e435ee8d-92b4-4806-97e7-2a67330813b6",
+        "lesson_activity.key": "07cb6906-c331-4b08-b7e9-92aace4d54cb"
+      }
+    },
+    {
+      "key": "eede50d7-a39a-4db6-8992-66eec0be2554",
+      "position": 5,
+      "properties": {
+        "progression_name": "Motorcycle"
+      },
+      "seeding_key": {
+        "activity_section.key": "eede50d7-a39a-4db6-8992-66eec0be2554",
+        "lesson_activity.key": "07cb6906-c331-4b08-b7e9-92aace4d54cb"
+      }
+    },
+    {
+      "key": "eab84246-7103-45fb-8c1a-23ab7fac31e6",
+      "position": 6,
+      "properties": {
+        "progression_name": "Extra Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "eab84246-7103-45fb-8c1a-23ab7fac31e6",
+        "lesson_activity.key": "07cb6906-c331-4b08-b7e9-92aace4d54cb"
+      }
+    },
+    {
+      "key": "de051f16-96a2-4796-a915-ce794a654f6d",
+      "position": 1,
+      "properties": {
+        "description": "**Journal Prompt:**  So far, you've seen several different types of input, some from the screen, and some from the circuit playground.  Choose one type of input and answer the following questions about it.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "For this prompt, you can \"jigsaw\" the answers by assigning different students or different groups each a type of input and answering questions on each type.  The different answers can then be combined for a class reference on input types.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "de051f16-96a2-4796-a915-ce794a654f6d",
+        "lesson_activity.key": "2b4622da-0328-416e-b6da-950af22f7f33"
+      }
+    },
+    {
+      "key": "bb29ff21-b4d1-43a7-b92e-236d8d03bcb4",
+      "position": 2,
+      "properties": {
+        "description": "1. What code do you need to get information from this input?\r\n2. What's one example of when you would want to use this input?\r\n3. What's an example of when you **wouldn't** want to use this input?"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb29ff21-b4d1-43a7-b92e-236d8d03bcb4",
+        "lesson_activity.key": "2b4622da-0328-416e-b6da-950af22f7f33"
       }
     },
     {
@@ -595,6 +1902,16 @@
       }
     },
     {
+      "key": "bee6fcc4-99fc-4da9-831a-083485da4d68",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bee6fcc4-99fc-4da9-831a-083485da4d68",
+        "lesson_activity.key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef"
+      }
+    },
+    {
       "key": "8eac32aa-4346-42aa-a744-a522e989e4a4",
       "position": 1,
       "properties": {
@@ -602,6 +1919,188 @@
       "seeding_key": {
         "activity_section.key": "8eac32aa-4346-42aa-a744-a522e989e4a4",
         "lesson_activity.key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa"
+      }
+    },
+    {
+      "key": "1e6c2cf9-cda8-44b8-865e-8b1468a3e799",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students into groups of 2-4 for this project. At your discretion you may choose to have students form larger groups or work independently.\n\n**Distribute:** Provide a copy of the project guide to each group. As a class, review the different steps of the project and where they appear in the project guide. \n\nDistribute the rubric or student checklist to each student. Have them look over this resource so that they know from the beginning what components of the project you will be looking for.",
+        "name": "Review Project Guide\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1e6c2cf9-cda8-44b8-865e-8b1468a3e799",
+        "lesson_activity.key": "0ef48d51-e379-45bf-a242-061631ecebc8"
+      }
+    },
+    {
+      "key": "ade30b59-d301-439c-9869-fb4496c2d1b8",
+      "position": 1,
+      "properties": {
+        "description": "**Brainstorm:** Students should spend the first 15-20 minutes brainstorming ideas for innovative devices built around the features of the Circuit Playground. Encourage students to review their prior work in this unit as well as the real world innovations they researched earlier for inspiration.",
+        "name": "Define - Scope Innovation\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "ade30b59-d301-439c-9869-fb4496c2d1b8",
+        "lesson_activity.key": "072a7e88-7c5b-46c2-bca4-eea46f455dc9"
+      }
+    },
+    {
+      "key": "66d58dce-a81d-4bcd-a091-4cd07a201456",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Make available any construction materials that students may need for building their prototypes. While the focus of this step isn't to build the actual prototype, having these materials available can help with the brainstorming process.\r\n\r\n**Circulate:** Once students have discussed their ideas for the project they should complete the project guide. While this should be a fairly familiar process, encourage students to make each component as clear and detailed as they can at this point. Planning ahead can help them identify issues in their plan before they'll need to make more significant changes to their code or physical device. Encourage students to use additional paper to sketch out screens for their app or additional views of their physical device.",
+        "name": "Prepare - Complete Project Guide\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "66d58dce-a81d-4bcd-a091-4cd07a201456",
+        "lesson_activity.key": "072a7e88-7c5b-46c2-bca4-eea46f455dc9"
+      }
+    },
+    {
+      "key": "861efd5a-ec48-4eb0-ac27-00a777e092ac",
+      "position": 3,
+      "properties": {
+        "description": "**Distribute:** Make available the physical prototyping materials (such as cardboard, tape, scissors, etc). Let students know that, just as we used paper prototypes to quickly test software ideas, hardware developers often used cheap materials such as cardboard and tape to quickly iterate on the design of physical devices. While not all student ideas may require a physically prototyped component, you should encourage students to consider how the shape and design (or form factor) or their innovation could impact its usability.  \r\n\r\n**Transition:** Depending on the nature of their innovations, students may need to spend some time building the physical components of their projects before moving online. When students are ready to program, they can transition to Code Studio. These levels provide some guidance on how students may go about implementing their projects, but are left quite open to allow for a broad range of ideas. If they wish, students can work in a different order than the one suggested in these levels.",
+        "name": "Try - Develop Prototypes\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "861efd5a-ec48-4eb0-ac27-00a777e092ac",
+        "lesson_activity.key": "072a7e88-7c5b-46c2-bca4-eea46f455dc9"
+      }
+    },
+    {
+      "key": "076bbd14-e4e2-48a4-9b7c-17fbd543d4f3",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "076bbd14-e4e2-48a4-9b7c-17fbd543d4f3",
+        "lesson_activity.key": "072a7e88-7c5b-46c2-bca4-eea46f455dc9"
+      }
+    },
+    {
+      "key": "800664f0-2b6d-4488-b4f4-9367951fea30",
+      "position": 5,
+      "properties": {
+        "description": "**Group:** Pair up groups to review each other's projects.",
+        "name": "Reflect - Peer Review\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you have the time for it, this can be a good opportunity to pull in the user testing process that students learned in Unit 4.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "800664f0-2b6d-4488-b4f4-9367951fea30",
+        "lesson_activity.key": "072a7e88-7c5b-46c2-bca4-eea46f455dc9"
+      }
+    },
+    {
+      "key": "b11852fc-b19c-4386-8c3c-1a33831ddb36",
+      "position": 6,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the peer review guide. Students should spend 15 minutes reviewing the other group's project and filling out the peer review guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "b11852fc-b19c-4386-8c3c-1a33831ddb36",
+        "lesson_activity.key": "072a7e88-7c5b-46c2-bca4-eea46f455dc9"
+      }
+    },
+    {
+      "key": "7b8c27d8-6999-4ef9-9385-f5acea42e815",
+      "position": 7,
+      "properties": {
+        "description": "**Circulate:** Students should complete the peer review guide's back side where they decide how to respond to the feedback they were given. They should then use that feedback to improve their game.",
+        "name": "Iterate - Revise Prototypes\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b8c27d8-6999-4ef9-9385-f5acea42e815",
+        "lesson_activity.key": "072a7e88-7c5b-46c2-bca4-eea46f455dc9"
+      }
+    },
+    {
+      "key": "a094ea30-4f34-4cba-86b7-062467d7918d",
+      "position": 1,
+      "properties": {
+        "description": "**Share:** Give students a chance to share their innovations, either within the class or to a broader audience. If you choose to let students do a more formal presentation of their projects the project guide provides students a set of components to include in their presentations including:",
+        "name": "Share\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Celebrate:** As this is the culminating project for the entire course, consider going big with this share out. Bring in parents and administrators, or even host a after school event to provide students with a real audience to share their accomplishments with.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a094ea30-4f34-4cba-86b7-062467d7918d",
+        "lesson_activity.key": "a8d91d04-87b3-4b87-a1cb-039bbeb1c286"
+      }
+    },
+    {
+      "key": "9802dee1-e434-455d-8717-55fff09ae737",
+      "position": 2,
+      "properties": {
+        "description": "* The original innovation they set out to build\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\n* A description of the most interesting or complex piece of code they wrote\n* A live demonstration of the actual innovation\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey."
+      },
+      "seeding_key": {
+        "activity_section.key": "9802dee1-e434-455d-8717-55fff09ae737",
+        "lesson_activity.key": "a8d91d04-87b3-4b87-a1cb-039bbeb1c286"
+      }
+    },
+    {
+      "key": "a0dbc38a-06ad-4f0a-8085-3b8e4bcd5b1a",
+      "position": 3,
+      "properties": {
+        "description": "If this is the last unit of CS Discoveries that you are teaching, also have students take the end-of-course survey. See the [CSD Instructions resource](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/edit?usp=sharing) for more information about the End-of-Course survey and how to assign and see the results. ",
+        "name": "End of Course Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0dbc38a-06ad-4f0a-8085-3b8e4bcd5b1a",
+        "lesson_activity.key": "a8d91d04-87b3-4b87-a1cb-039bbeb1c286"
+      }
+    },
+    {
+      "key": "c34b3060-1e52-44c4-b0ad-ce6248881f76",
+      "position": 1,
+      "properties": {
+        "description": "Record and edit a short video to pitch your innovation.",
+        "name": "Pitch Video\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "c34b3060-1e52-44c4-b0ad-ce6248881f76",
+        "lesson_activity.key": "2098f0e4-356f-42d4-937f-1d46839d8879"
+      }
+    },
+    {
+      "key": "cf41a439-c5ea-4c38-b503-62d0b82c8590",
+      "position": 2,
+      "properties": {
+        "description": "Using Web Lab, design a website to market your innovation.",
+        "name": "Marketing Website\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf41a439-c5ea-4c38-b503-62d0b82c8590",
+        "lesson_activity.key": "2098f0e4-356f-42d4-937f-1d46839d8879"
+      }
+    },
+    {
+      "key": "b10b3d72-cc0a-43fa-a046-a476dca257e9",
+      "position": 3,
+      "properties": {
+        "description": "Have students design a crowdfunding campaign (along the lines of Kickstarter or Indiegogo) for their innovations. This could include:\r\n\r\n* Design mockups for the final product\r\n* A rough cost analysis for production\r\n* A short pitch video",
+        "name": "Crowdfunding Campaign\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "b10b3d72-cc0a-43fa-a046-a476dca257e9",
+        "lesson_activity.key": "2098f0e4-356f-42d4-937f-1d46839d8879"
       }
     }
   ],
@@ -612,6 +2111,732 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Innovation Research"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 Innovation_2021"
+        ],
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "20dc77ec-4b48-4c6a-913f-be5a9bf095a2"
+      },
+      "level_keys": [
+        "CSDU6 Innovation_2021"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 Circuit Playground Test_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ab91f3e-0a63-45b6-aa19-3ede1805835a"
+      },
+      "level_keys": [
+        "CSDU6 Circuit Playground Test_2022"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - P_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "e7630405-12a6-4f82-970d-5250ed2bd855"
+      },
+      "level_keys": [
+        "CSD U6 - Board Outputs - P_2022"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - SB1_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "6ebfc8c5-534c-4409-b19b-07f378be9dbe"
+      },
+      "level_keys": [
+        "CSD U6 - Board Outputs - SB1_2022"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - SB2_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "6ebfc8c5-534c-4409-b19b-07f378be9dbe"
+      },
+      "level_keys": [
+        "CSD U6 - Board Outputs - SB2_2022"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - P2_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "dbf4f34f-5fea-499c-95e6-149f8e24d9b9"
+      },
+      "level_keys": [
+        "CSD U6 - Board Outputs - P2_2022"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - SB3_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "1ff51b70-5e7c-46ce-8c19-32d067bfb7b5"
+      },
+      "level_keys": [
+        "CSD U6 - Board Outputs - SB3_2022"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - SB4_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "1ff51b70-5e7c-46ce-8c19-32d067bfb7b5"
+      },
+      "level_keys": [
+        "CSD U6 - Board Outputs - SB4_2022"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - Prac_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "83338fac-7797-4e31-bc95-087e17b9d888"
+      },
+      "level_keys": [
+        "CSD U6 - Board Outputs - Prac_2022"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - A_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "c2fe9986-7813-4eb6-ae86-f2c8b8e82bab"
+      },
+      "level_keys": [
+        "CSD U6 - Board Outputs - A_2022"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - Chal_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "c2527fbe-1b64-4740-98bb-eb2bb79e9f16"
+      },
+      "level_keys": [
+        "CSD U6 - Board Outputs - Chal_2022"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty predict app_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fd25eabf-0eb6-43b6-b687-d8e5aa48f26d"
+      },
+      "level_keys": [
+        "CSD U6 setProperty predict app_2021"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty Text_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fd25eabf-0eb6-43b6-b687-d8e5aa48f26d"
+      },
+      "level_keys": [
+        "CSD U6 setProperty Text_2021"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Setting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fd25eabf-0eb6-43b6-b687-d8e5aa48f26d"
+      },
+      "level_keys": [
+        "CSD U6 setProperty xy_2021"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Events and Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy click_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "009198ce-8a74-4c9f-bf89-927e9a935024"
+      },
+      "level_keys": [
+        "CSD U6 setProperty xy click_2021"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Events and Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy random_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "009198ce-8a74-4c9f-bf89-927e9a935024"
+      },
+      "level_keys": [
+        "CSD U6 setProperty xy random_2021"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Events and Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty hidden_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "009198ce-8a74-4c9f-bf89-927e9a935024"
+      },
+      "level_keys": [
+        "CSD U6 setProperty hidden_2021"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Events and Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 setProperty hidden 2_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "009198ce-8a74-4c9f-bf89-927e9a935024"
+      },
+      "level_keys": [
+        "CSD U6 setProperty hidden 2_2021"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Emotion Machine Example"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emotion machine example_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "9e2ce838-da58-4c52-b293-8e55a2bd1428"
+      },
+      "level_keys": [
+        "CSD U6 emotion machine example_2021"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Building an App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 1_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "be2c3bc0-9848-476d-a4d9-da5fbe5039f7"
+      },
+      "level_keys": [
+        "CSD U6 emotion machine 1_2021"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Building an App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 2_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "be2c3bc0-9848-476d-a4d9-da5fbe5039f7"
+      },
+      "level_keys": [
+        "CSD U6 emotion machine 2_2021"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Building an App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 3_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "be2c3bc0-9848-476d-a4d9-da5fbe5039f7"
+      },
+      "level_keys": [
+        "CSD U6 emotion machine 3_2021"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Building an App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 4_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "be2c3bc0-9848-476d-a4d9-da5fbe5039f7"
+      },
+      "level_keys": [
+        "CSD U6 emotion machine 4_2021"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Board Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - button LED prediction_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "4abc1449-7c95-4c34-8de0-d7271035b820"
+      },
+      "level_keys": [
+        "CSDU6 - button LED prediction_2021"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Board Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - LED buttonL_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "4abc1449-7c95-4c34-8de0-d7271035b820"
+      },
+      "level_keys": [
+        "CSDU6 - LED buttonL_2021"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Board Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - LED toggle buttonL up_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "4abc1449-7c95-4c34-8de0-d7271035b820"
+      },
+      "level_keys": [
+        "CSDU6 - LED toggle buttonL up_2021"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using the Switch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - lightswitch toggleswitch_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "d1716dfb-c06c-4f6f-8447-229e427a74d5"
+      },
+      "level_keys": [
+        "CSDU6 - lightswitch toggleswitch_2021"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using the Switch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - toggle state LED prediction_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "d1716dfb-c06c-4f6f-8447-229e427a74d5"
+      },
+      "level_keys": [
+        "CSDU6 - toggle state LED prediction_2021"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Using the Switch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - toggleswitch state setProp_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "d1716dfb-c06c-4f6f-8447-229e427a74d5"
+      },
+      "level_keys": [
+        "CSDU6 - toggleswitch state setProp_2021"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Buzzer"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - buzzer intro_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "db222f3a-8847-4f58-b2c8-f683dc2fcc88"
+      },
+      "level_keys": [
+        "CSDU6 - buzzer intro_2021"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "The Buzzer"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - buzzer duration_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "db222f3a-8847-4f58-b2c8-f683dc2fcc88"
+      },
+      "level_keys": [
+        "CSDU6 - buzzer duration_2021"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "The Buzzer"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - buzzer duration buttons_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "db222f3a-8847-4f58-b2c8-f683dc2fcc88"
+      },
+      "level_keys": [
+        "CSDU6 - buzzer duration buttons_2021"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Extra Challenge: Sound Board"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 - board event challenge_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8b243f35-d643-4aec-8e11-2ec8bbd8c974"
+      },
+      "level_keys": [
+        "CSDU6 - board event challenge_2021"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSD U6 - On The Go - Design_2022"
         ]
@@ -622,7 +2847,7 @@
           "CSD U6 - On The Go - Design_2022"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
       },
@@ -631,7 +2856,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -646,7 +2871,7 @@
           "CSD U6 - On The Go - Events_2022"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
       },
@@ -655,7 +2880,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -670,7 +2895,7 @@
           "CSD U6 - On The Go - Logic_2022"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
       },
@@ -679,7 +2904,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
@@ -694,7 +2919,7 @@
           "CSD U6 - On The Go - Review_2022"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
       },
@@ -703,7 +2928,645 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Introduction to Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 arrays video_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "70ddcd0b-ee92-483a-b501-f7b2d6dc7b28"
+      },
+      "level_keys": [
+        "CSD U6 arrays video_2021"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 arrays select predict_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148"
+      },
+      "level_keys": [
+        "CSD U6 arrays select predict_2021"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 arrays select rainbow_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148"
+      },
+      "level_keys": [
+        "CSDU6 arrays select rainbow_2021"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 array select days_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148"
+      },
+      "level_keys": [
+        "CSDU6 array select days_2021"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 arrays select random_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148"
+      },
+      "level_keys": [
+        "CSDU6 arrays select random_2021"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Introduction to Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSDU6 arrays select variable_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148"
+      },
+      "level_keys": [
+        "CSDU6 arrays select variable_2021"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Using Arrays"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 array multi_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "92d33d1d-ed63-4825-90a9-7a07f39e94cd"
+      },
+      "level_keys": [
+        "CSD U6 array multi_2021"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Color LEDs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 colorLeds predict_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd"
+      },
+      "level_keys": [
+        "CSD U6 colorLeds predict_2021"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Color LEDs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 colorLED on_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd"
+      },
+      "level_keys": [
+        "CSD U6 colorLED on_2021"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Color LEDs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 LEDs color_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd"
+      },
+      "level_keys": [
+        "CSD U6 LEDs color_2021"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Color LEDs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 colorLeds debug_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd"
+      },
+      "level_keys": [
+        "CSD U6 colorLeds debug_2021"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 12,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Color LEDs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 colorLeds intensity_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd"
+      },
+      "level_keys": [
+        "CSD U6 colorLeds intensity_2021"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Light Show"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 colorLeds light pattern_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "551e5c81-430f-4463-9c0f-3f9a372aa345"
+      },
+      "level_keys": [
+        "CSD U6 colorLeds light pattern_2021"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Light Show"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 light pattern off_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "551e5c81-430f-4463-9c0f-3f9a372aa345"
+      },
+      "level_keys": [
+        "CSD U6 light pattern off_2021"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenge Levels"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 light pattern challenge_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "74e01f5e-6373-4e35-86fa-e4c776904eed"
+      },
+      "level_keys": [
+        "CSD U6 light pattern challenge_2021"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty Demo_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097"
+      },
+      "level_keys": [
+        "CSD U6 getProperty Demo_2021"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty input_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097"
+      },
+      "level_keys": [
+        "CSD U6 getProperty input_2021"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty dropdown_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097"
+      },
+      "level_keys": [
+        "CSD U6 getProperty dropdown_2021"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty board predict_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097"
+      },
+      "level_keys": [
+        "CSD U6 getProperty board predict_2021"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Getting Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getProperty buzzer_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097"
+      },
+      "level_keys": [
+        "CSD U6 getProperty buzzer_2021"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sliders"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 slider intro_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "77adb627-5691-4d85-96e7-23afc738dfb0"
+      },
+      "level_keys": [
+        "CSD U6 slider intro_2021"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Sliders"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 frequency_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "77adb627-5691-4d85-96e7-23afc738dfb0"
+      },
+      "level_keys": [
+        "CSD U6 frequency_2021"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Sliders"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 interval_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "77adb627-5691-4d85-96e7-23afc738dfb0"
+      },
+      "level_keys": [
+        "CSD U6 interval_2021"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Change"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 change_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "e435ee8d-92b4-4806-97e7-2a67330813b6"
+      },
+      "level_keys": [
+        "CSD U6 change_2021"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Change"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 get toggle_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "e435ee8d-92b4-4806-97e7-2a67330813b6"
+      },
+      "level_keys": [
+        "CSD U6 get toggle_2021"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Change"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 getters debug_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "e435ee8d-92b4-4806-97e7-2a67330813b6"
+      },
+      "level_keys": [
+        "CSD U6 getters debug_2021"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Motorcycle"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 move motorcycle_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "eede50d7-a39a-4db6-8992-66eec0be2554"
+      },
+      "level_keys": [
+        "CSD U6 move motorcycle_2021"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Motorcycle"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 design motorcycle_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "eede50d7-a39a-4db6-8992-66eec0be2554"
+      },
+      "level_keys": [
+        "CSD U6 design motorcycle_2021"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Extra Challenge"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 challenge motorcycle_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "eab84246-7103-45fb-8c1a-23ab7fac31e6"
+      },
+      "level_keys": [
+        "CSD U6 challenge motorcycle_2021"
+      ]
+    },
+    {
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -718,7 +3581,7 @@
           "CSD U6 - Human Device - Design_2022"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
       },
@@ -727,7 +3590,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -742,7 +3605,7 @@
           "CSD U6 - Human Device - Events_2022"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
       },
@@ -751,7 +3614,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -766,7 +3629,7 @@
           "CSD U6 - Human Device - Logic_2022"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
       },
@@ -775,7 +3638,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 4,
       "assessment": true,
@@ -790,16 +3653,559 @@
           "CSD U6 - Human Device - Review_2022"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
       },
       "level_keys": [
         "CSD U6 - Human Device - Review_2022"
       ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Interactive Art - Events_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "bee6fcc4-99fc-4da9-831a-083485da4d68"
+      },
+      "level_keys": [
+        "CSD U6 - Interactive Art - Events_2022"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Interactive Art - Logic_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "bee6fcc4-99fc-4da9-831a-083485da4d68"
+      },
+      "level_keys": [
+        "CSD U6 - Interactive Art - Logic_2022"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Interactive Art - Review_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "bee6fcc4-99fc-4da9-831a-083485da4d68"
+      },
+      "level_keys": [
+        "CSD U6 - Interactive Art - Review_2022"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Prototype Innovation - Design_2022"
+        ],
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "076bbd14-e4e2-48a4-9b7c-17fbd543d4f3"
+      },
+      "level_keys": [
+        "CSD U6 - Prototype Innovation - Design_2022"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Prototype Innovation - Events_2022"
+        ],
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "076bbd14-e4e2-48a4-9b7c-17fbd543d4f3"
+      },
+      "level_keys": [
+        "CSD U6 - Prototype Innovation - Events_2022"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Physical Innovations - Logic_2022"
+        ],
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "076bbd14-e4e2-48a4-9b7c-17fbd543d4f3"
+      },
+      "level_keys": [
+        "CSD U6 - Physical Innovations - Logic_2022"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Physical Innovations - Review_2022"
+        ],
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "076bbd14-e4e2-48a4-9b7c-17fbd543d4f3"
+      },
+      "level_keys": [
+        "CSD U6 - Physical Innovations - Review_2022"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 Innovation_2021",
+        "script_level.level_keys": [
+          "CSDU6 Innovation_2021"
+        ],
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "20dc77ec-4b48-4c6a-913f-be5a9bf095a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 Circuit Playground Test_2022",
+        "script_level.level_keys": [
+          "CSDU6 Circuit Playground Test_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ab91f3e-0a63-45b6-aa19-3ede1805835a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - P_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - P_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "e7630405-12a6-4f82-970d-5250ed2bd855"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - SB1_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - SB1_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "6ebfc8c5-534c-4409-b19b-07f378be9dbe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - SB2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - SB2_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "6ebfc8c5-534c-4409-b19b-07f378be9dbe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - P2_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - P2_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "dbf4f34f-5fea-499c-95e6-149f8e24d9b9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - SB3_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - SB3_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "1ff51b70-5e7c-46ce-8c19-32d067bfb7b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - SB4_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - SB4_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "1ff51b70-5e7c-46ce-8c19-32d067bfb7b5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - Prac_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - Prac_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "83338fac-7797-4e31-bc95-087e17b9d888"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - A_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - A_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "c2fe9986-7813-4eb6-ae86-f2c8b8e82bab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - Chal_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - Chal_2022"
+        ],
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "c2527fbe-1b64-4740-98bb-eb2bb79e9f16"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty predict app_2021",
+        "script_level.level_keys": [
+          "CSD U6 setProperty predict app_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fd25eabf-0eb6-43b6-b687-d8e5aa48f26d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty Text_2021",
+        "script_level.level_keys": [
+          "CSD U6 setProperty Text_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fd25eabf-0eb6-43b6-b687-d8e5aa48f26d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty xy_2021",
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fd25eabf-0eb6-43b6-b687-d8e5aa48f26d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty xy click_2021",
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy click_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "009198ce-8a74-4c9f-bf89-927e9a935024"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty xy random_2021",
+        "script_level.level_keys": [
+          "CSD U6 setProperty xy random_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "009198ce-8a74-4c9f-bf89-927e9a935024"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty hidden_2021",
+        "script_level.level_keys": [
+          "CSD U6 setProperty hidden_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "009198ce-8a74-4c9f-bf89-927e9a935024"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 setProperty hidden 2_2021",
+        "script_level.level_keys": [
+          "CSD U6 setProperty hidden 2_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "009198ce-8a74-4c9f-bf89-927e9a935024"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emotion machine example_2021",
+        "script_level.level_keys": [
+          "CSD U6 emotion machine example_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "9e2ce838-da58-4c52-b293-8e55a2bd1428"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emotion machine 1_2021",
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 1_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "be2c3bc0-9848-476d-a4d9-da5fbe5039f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emotion machine 2_2021",
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 2_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "be2c3bc0-9848-476d-a4d9-da5fbe5039f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emotion machine 3_2021",
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 3_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "be2c3bc0-9848-476d-a4d9-da5fbe5039f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 emotion machine 4_2021",
+        "script_level.level_keys": [
+          "CSD U6 emotion machine 4_2021"
+        ],
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "be2c3bc0-9848-476d-a4d9-da5fbe5039f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - button LED prediction_2021",
+        "script_level.level_keys": [
+          "CSDU6 - button LED prediction_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "4abc1449-7c95-4c34-8de0-d7271035b820"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - LED buttonL_2021",
+        "script_level.level_keys": [
+          "CSDU6 - LED buttonL_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "4abc1449-7c95-4c34-8de0-d7271035b820"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - LED toggle buttonL up_2021",
+        "script_level.level_keys": [
+          "CSDU6 - LED toggle buttonL up_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "4abc1449-7c95-4c34-8de0-d7271035b820"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - lightswitch toggleswitch_2021",
+        "script_level.level_keys": [
+          "CSDU6 - lightswitch toggleswitch_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "d1716dfb-c06c-4f6f-8447-229e427a74d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - toggle state LED prediction_2021",
+        "script_level.level_keys": [
+          "CSDU6 - toggle state LED prediction_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "d1716dfb-c06c-4f6f-8447-229e427a74d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - toggleswitch state setProp_2021",
+        "script_level.level_keys": [
+          "CSDU6 - toggleswitch state setProp_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "d1716dfb-c06c-4f6f-8447-229e427a74d5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - buzzer intro_2021",
+        "script_level.level_keys": [
+          "CSDU6 - buzzer intro_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "db222f3a-8847-4f58-b2c8-f683dc2fcc88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - buzzer duration_2021",
+        "script_level.level_keys": [
+          "CSDU6 - buzzer duration_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "db222f3a-8847-4f58-b2c8-f683dc2fcc88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - buzzer duration buttons_2021",
+        "script_level.level_keys": [
+          "CSDU6 - buzzer duration buttons_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "db222f3a-8847-4f58-b2c8-f683dc2fcc88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 - board event challenge_2021",
+        "script_level.level_keys": [
+          "CSDU6 - board event challenge_2021"
+        ],
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8b243f35-d643-4aec-8e11-2ec8bbd8c974"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "CSD U6 - On The Go - Design_2022",
@@ -807,7 +4213,7 @@
           "CSD U6 - On The Go - Design_2022"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
       }
@@ -819,7 +4225,7 @@
           "CSD U6 - On The Go - Events_2022"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
       }
@@ -831,7 +4237,7 @@
           "CSD U6 - On The Go - Logic_2022"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
       }
@@ -843,9 +4249,357 @@
           "CSD U6 - On The Go - Review_2022"
         ],
         "lesson.key": "lesson-1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "65541e3e-9b1b-4bf8-ab5a-b7f2431818e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 arrays video_2021",
+        "script_level.level_keys": [
+          "CSD U6 arrays video_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "70ddcd0b-ee92-483a-b501-f7b2d6dc7b28"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 arrays select predict_2021",
+        "script_level.level_keys": [
+          "CSD U6 arrays select predict_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 arrays select rainbow_2021",
+        "script_level.level_keys": [
+          "CSDU6 arrays select rainbow_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 array select days_2021",
+        "script_level.level_keys": [
+          "CSDU6 array select days_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 arrays select random_2021",
+        "script_level.level_keys": [
+          "CSDU6 arrays select random_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSDU6 arrays select variable_2021",
+        "script_level.level_keys": [
+          "CSDU6 arrays select variable_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "8ff3c88d-bdee-4a6e-8b51-7158b02c7148"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 array multi_2021",
+        "script_level.level_keys": [
+          "CSD U6 array multi_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "92d33d1d-ed63-4825-90a9-7a07f39e94cd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 colorLeds predict_2021",
+        "script_level.level_keys": [
+          "CSD U6 colorLeds predict_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 colorLED on_2021",
+        "script_level.level_keys": [
+          "CSD U6 colorLED on_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 LEDs color_2021",
+        "script_level.level_keys": [
+          "CSD U6 LEDs color_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 colorLeds debug_2021",
+        "script_level.level_keys": [
+          "CSD U6 colorLeds debug_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 colorLeds intensity_2021",
+        "script_level.level_keys": [
+          "CSD U6 colorLeds intensity_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "69c7b5d1-3361-4d16-913f-9cee4312d9dd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 colorLeds light pattern_2021",
+        "script_level.level_keys": [
+          "CSD U6 colorLeds light pattern_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "551e5c81-430f-4463-9c0f-3f9a372aa345"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 light pattern off_2021",
+        "script_level.level_keys": [
+          "CSD U6 light pattern off_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "551e5c81-430f-4463-9c0f-3f9a372aa345"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 light pattern challenge_2021",
+        "script_level.level_keys": [
+          "CSD U6 light pattern challenge_2021"
+        ],
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "74e01f5e-6373-4e35-86fa-e4c776904eed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty Demo_2021",
+        "script_level.level_keys": [
+          "CSD U6 getProperty Demo_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty input_2021",
+        "script_level.level_keys": [
+          "CSD U6 getProperty input_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty dropdown_2021",
+        "script_level.level_keys": [
+          "CSD U6 getProperty dropdown_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty board predict_2021",
+        "script_level.level_keys": [
+          "CSD U6 getProperty board predict_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getProperty buzzer_2021",
+        "script_level.level_keys": [
+          "CSD U6 getProperty buzzer_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "fe109d4a-4477-4762-b171-133e516ac097"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 slider intro_2021",
+        "script_level.level_keys": [
+          "CSD U6 slider intro_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "77adb627-5691-4d85-96e7-23afc738dfb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 frequency_2021",
+        "script_level.level_keys": [
+          "CSD U6 frequency_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "77adb627-5691-4d85-96e7-23afc738dfb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 interval_2021",
+        "script_level.level_keys": [
+          "CSD U6 interval_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "77adb627-5691-4d85-96e7-23afc738dfb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 change_2021",
+        "script_level.level_keys": [
+          "CSD U6 change_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "e435ee8d-92b4-4806-97e7-2a67330813b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 get toggle_2021",
+        "script_level.level_keys": [
+          "CSD U6 get toggle_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "e435ee8d-92b4-4806-97e7-2a67330813b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 getters debug_2021",
+        "script_level.level_keys": [
+          "CSD U6 getters debug_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "e435ee8d-92b4-4806-97e7-2a67330813b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 move motorcycle_2021",
+        "script_level.level_keys": [
+          "CSD U6 move motorcycle_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "eede50d7-a39a-4db6-8992-66eec0be2554"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 design motorcycle_2021",
+        "script_level.level_keys": [
+          "CSD U6 design motorcycle_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "eede50d7-a39a-4db6-8992-66eec0be2554"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 challenge motorcycle_2021",
+        "script_level.level_keys": [
+          "CSD U6 challenge motorcycle_2021"
+        ],
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "eab84246-7103-45fb-8c1a-23ab7fac31e6"
       }
     },
     {
@@ -855,7 +4609,7 @@
           "CSD U6 - Human Device - Design_2022"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
       }
@@ -867,7 +4621,7 @@
           "CSD U6 - Human Device - Events_2022"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
       }
@@ -879,7 +4633,7 @@
           "CSD U6 - Human Device - Logic_2022"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
       }
@@ -891,13 +4645,220 @@
           "CSD U6 - Human Device - Review_2022"
         ],
         "lesson.key": "lesson-2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022",
         "activity_section.key": "aba47acf-2d33-4b83-b1ce-01f29aac14da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Interactive Art - Events_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Interactive Art - Events_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "bee6fcc4-99fc-4da9-831a-083485da4d68"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Interactive Art - Logic_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Interactive Art - Logic_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "bee6fcc4-99fc-4da9-831a-083485da4d68"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Interactive Art - Review_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Interactive Art - Review_2022"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "bee6fcc4-99fc-4da9-831a-083485da4d68"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Prototype Innovation - Design_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Prototype Innovation - Design_2022"
+        ],
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "076bbd14-e4e2-48a4-9b7c-17fbd543d4f3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Prototype Innovation - Events_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Prototype Innovation - Events_2022"
+        ],
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "076bbd14-e4e2-48a4-9b7c-17fbd543d4f3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Physical Innovations - Logic_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Physical Innovations - Logic_2022"
+        ],
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "076bbd14-e4e2-48a4-9b7c-17fbd543d4f3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Physical Innovations - Review_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Physical Innovations - Review_2022"
+        ],
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "076bbd14-e4e2-48a4-9b7c-17fbd543d4f3"
       }
     }
   ],
   "resources": [
+    {
+      "name": "Arrays",
+      "url": "https://drive.google.com/file/d/1X8tTj4O9_XVn1LNPhs9LZGIXJVxB6yFX/view?usp=sharing",
+      "key": "arrays",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "arrays"
+      }
+    },
+    {
+      "name": "Board Events",
+      "url": "https://drive.google.com/file/d/1XvRUPOeqLcQonhk1Sq9FYkIv_DAwx6aR/view?usp=sharing",
+      "key": "board_events",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "board_events"
+      }
+    },
+    {
+      "name": "Circuit Playground",
+      "url": "https://drive.google.com/file/d/1OpB8lF3MQJIpiRm7hFo9ARx346-NpfNf/view?usp=sharing",
+      "key": "circuit_playground",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "circuit_playground"
+      }
+    },
+    {
+      "name": "Circuits and LEDs",
+      "url": "https://drive.google.com/file/d/1uRQsBQna07gfhhqlIz6mgX56fki8n_-d/view?usp=sharing",
+      "key": "circuits_and_leds",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "circuits_and_leds"
+      }
+    },
+    {
+      "name": "Color Lights",
+      "url": "https://drive.google.com/file/d/1EEZhq_8Ljs77kLQoriJj24frEkFfHIKZ/view?usp=sharing",
+      "key": "color_lights",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "color_lights"
+      }
+    },
+    {
+      "name": "Computer Science is Changing Everything",
+      "url": "https://youtu.be/1x54GqfL3UY",
+      "key": "computer_science_is_changing_everything",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "computer_science_is_changing_everything"
+      }
+    },
+    {
+      "name": "Computer Science Practices",
+      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
+      "key": "computer_science_practices",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Reflection"
+      },
+      "seeding_key": {
+        "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "name": "Computing Innovations",
+      "url": "https://docs.google.com/document/d/1-fvLAoZcGopplA-0bwCFrCRoPFYPCPgSeb2ablNteCg/edit",
+      "key": "computing_innovations",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "computing_innovations"
+      }
+    },
+    {
+      "name": "CSD Unit 6 - Physical Computing",
+      "url": "https://docs.google.com/presentation/d/1kP-ZflfE6KTH8DC71qVEnptEs_m4eirbgyYpHRammkE/copy",
+      "key": "csd_unit_6_-_physical_computing",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "name": "Designing Screens with Code",
+      "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
+      "key": "designing_screens_with_code",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "designing_screens_with_code"
+      }
+    },
     {
       "name": "Exemplar 1 - City Silhouette",
       "url": "https://docs.google.com/document/d/1uh66nCn4WxChNRU8rwmmBmTWPRCNepLFux-vinawm3Y/view",
@@ -1007,6 +4968,67 @@
       }
     },
     {
+      "name": "Introduction to Arrays",
+      "url": "https://youtu.be/seBDTeZmb-k",
+      "key": "introduction_to_arrays",
+      "properties": {
+        "audience": "Student",
+        "download_url": "http://videos.code.org/cs-discoveries/applab/applab_arrays.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_arrays"
+      }
+    },
+    {
+      "name": "Peer Review 1",
+      "url": "https://docs.google.com/document/d/1hCLS30HEvP3YNDdvCYRuWfBa5mao7msUIcY6iopaKbg",
+      "key": "peer_review_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_1"
+      }
+    },
+    {
+      "name": "Peer Review 2",
+      "url": "https://docs.google.com/document/d/1ZwH5a11o-P0w6cvCjhjNpGWiA655M3raz56M2PyyAn0",
+      "key": "peer_review_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "peer_review_2"
+      }
+    },
+    {
+      "name": "Physical Input",
+      "url": "https://drive.google.com/file/d/1TNz91ENBLt-SG1L0459YR9X5yLjQNuSc/view?usp=sharing",
+      "key": "physical_input",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "physical_input"
+      }
+    },
+    {
+      "name": "Physical Output",
+      "url": "https://drive.google.com/file/d/1LoSDj7s7Jv45DJnjxmAeLoZO-ex7HFAy/view?usp=sharing",
+      "key": "physical_output",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "physical_output"
+      }
+    },
+    {
       "name": "Project Guide - Human Device Interaction",
       "url": "https://docs.google.com/document/d/1qCzlxKJQ4gdYDS2LufqLYugiFKYbs3O5v5q_jufBR70/edit",
       "key": "project_guide_-_human_device_interaction",
@@ -1046,6 +5068,68 @@
       }
     },
     {
+      "name": "Prototype an Innovation",
+      "url": "https://docs.google.com/document/d/1ntDcMNR6vwir8PRNphj9Vo32uUGCK8UetSMTs9bdjzY/edit",
+      "key": "prototype_an_innovation",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_an_innovation"
+      }
+    },
+    {
+      "name": "Prototype an Innovation - Student Checklist",
+      "url": "https://docs.google.com/document/d/1PkarqOeVEuHi24QFVuYsEy3EY5WPmi3pbmKjOB161EM/edit",
+      "key": "prototype_an_innovation_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "prototype_an_innovation_-_student_checklist"
+      }
+    },
+    {
+      "name": "Prototype an Innovation",
+      "url": "https://docs.google.com/document/d/14fdmAmOJpOJw6KXielJAws1wf2AWEnSqQnZueUC6GvM/edit",
+      "key": "prototype_an_innovation_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Project Guide"
+      },
+      "seeding_key": {
+        "resource.key": "prototype_an_innovation_1"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
+      "key": "random_numbers",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Responding to User Input",
+      "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
+      "key": "responding_to_user_input",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
       "name": "Rubric - Human Device Interaction",
       "url": "https://docs.google.com/document/d/1GqR49vQTEirALh2c7pIDoGugJD3WqX-sEYygPQ2vlhQ/view",
       "key": "rubric_-_human_device_interaction",
@@ -1072,6 +5156,18 @@
       }
     },
     {
+      "name": "Sample Marked Rubrics",
+      "url": "https://docs.google.com/document/d/1DLFzMQSYnRei9JzBDl_c-Moz4AczcUGwU9dtxvyjagc/edit",
+      "key": "sample_marked_rubrics",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "sample_marked_rubrics"
+      }
+    },
+    {
       "name": "Student Rubric - Interactive Art",
       "url": "https://docs.google.com/document/d/1nAFxmXua3FX0nWEOxHrEWbCNA6YFPAaNmboFp-QQUlk/view",
       "key": "student_rubric_-_interactive_art",
@@ -1083,9 +5179,201 @@
       "seeding_key": {
         "resource.key": "student_rubric_-_interactive_art"
       }
+    },
+    {
+      "name": "Taking Input with getProperty",
+      "url": "https://drive.google.com/file/d/14JROXSF8nsce64Y1EjrbmzuANtCln1md/view?usp=sharing",
+      "key": "taking_input_with_getproperty",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "taking_input_with_getproperty"
+      }
+    },
+    {
+      "name": "The Internet of Things",
+      "url": "https://youtu.be/xQGsubJNbQw",
+      "key": "the_internet_of_things",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_of_things"
+      }
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "circuits_and_leds"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "color_lights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "resource.key": "introduction_to_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "board_events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "physical_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "resource.key": "physical_output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "designing_screens_with_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "resource.key": "responding_to_user_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "resource.key": "taking_input_with_getproperty"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computer_science_is_changing_everything"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "computing_innovations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "resource.key": "the_internet_of_things"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "csd_unit_6_-_physical_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "peer_review_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "peer_review_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "prototype_an_innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "prototype_an_innovation_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "prototype_an_innovation_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "resource.key": "sample_marked_rubrics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "resource.key": "circuit_playground"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -1184,19 +5472,587 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "array",
+      "word": "Array",
+      "definition": "A data structure in JavaScript used to represent a list.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "array"
+      }
+    },
+    {
+      "key": "innovation",
+      "word": "Innovation",
+      "definition": "A new or improved idea, device, product, etc, or the development thereof",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "innovation"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "vocabulary.key": "array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "vocabulary.key": "innovation"
+      }
+    }
   ],
   "lessons_programming_expressions": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "accessListItem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "blink"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "color"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "colorLeds"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "intensity"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "on"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "buttons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "isPressed"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "onBoardEvent"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "toggleSwitch"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "toggleSwitch.isOpen"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "setProperty"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "getProperty"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "buzzer.frequency"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "led.blink"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "led.off"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "led.on"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "led.pulse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "led.toggle"
+      }
+    }
   ],
   "objectives": [
-
+    {
+      "key": "0badaea1-84a4-4d23-8824-129e187332fe",
+      "properties": {
+        "description": "Use the color LED array to individually control each color LED"
+      },
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "objective.key": "0badaea1-84a4-4d23-8824-129e187332fe"
+      }
+    },
+    {
+      "key": "0ef1e018-ccdf-47dd-ada7-7d2ece99b140",
+      "properties": {
+        "description": "Write programs that change multiple elements on a single screen instead of changing screens"
+      },
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "objective.key": "0ef1e018-ccdf-47dd-ada7-7d2ece99b140"
+      }
+    },
+    {
+      "key": "1e403197-eaeb-405f-a621-f33c0ff5ec0c",
+      "properties": {
+        "description": "Control the buzzer with code"
+      },
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "objective.key": "1e403197-eaeb-405f-a621-f33c0ff5ec0c"
+      }
+    },
+    {
+      "key": "2d695ad9-beab-4bd4-b393-faa9dfaf3a63",
+      "properties": {
+        "description": "Suggest improvements to help a device better solve a specific problem"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "objective.key": "2d695ad9-beab-4bd4-b393-faa9dfaf3a63"
+      }
+    },
+    {
+      "key": "2f5c783c-53b3-40b3-a12b-cc6ee524da86",
+      "properties": {
+        "description": "Use getters to access the properties of elements in a system"
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "objective.key": "2f5c783c-53b3-40b3-a12b-cc6ee524da86"
+      }
+    },
+    {
+      "key": "56a34caf-3e62-4a75-8cb7-d71a028dcb8f",
+      "properties": {
+        "description": "Turn on and off an LED with code"
+      },
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "objective.key": "56a34caf-3e62-4a75-8cb7-d71a028dcb8f"
+      }
+    },
+    {
+      "key": "5e35725e-8a41-4f37-bfeb-6183fd774bce",
+      "properties": {
+        "description": "For a given device, articulate the likely inputs and outputs"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "objective.key": "5e35725e-8a41-4f37-bfeb-6183fd774bce"
+      }
+    },
+    {
+      "key": "67a1bce1-6731-4cd1-9ed1-8dd932f50104",
+      "properties": {
+        "description": "Identify computing innovations within a given field"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "objective.key": "67a1bce1-6731-4cd1-9ed1-8dd932f50104"
+      }
+    },
+    {
+      "key": "72b3b8a4-df9b-4d0d-bdca-0bea616f400a",
+      "properties": {
+        "description": "Attach an event handler to a hardware input"
+      },
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "objective.key": "72b3b8a4-df9b-4d0d-bdca-0bea616f400a"
+      }
+    },
+    {
+      "key": "7ba51e1e-b583-4e9b-88aa-4a579baf9bb1",
+      "properties": {
+        "description": "Choose the appropriate event for a given scenario"
+      },
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "objective.key": "7ba51e1e-b583-4e9b-88aa-4a579baf9bb1"
+      }
+    },
+    {
+      "key": "7e21b364-1703-4dac-9efa-502cfe2a586d",
+      "properties": {
+        "description": "Access an element in an array using its index"
+      },
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "objective.key": "7e21b364-1703-4dac-9efa-502cfe2a586d"
+      }
+    },
+    {
+      "key": "8d4505aa-cf82-4e29-a701-83422e40f0d1",
+      "properties": {
+        "description": "Connect and troubleshoot external devices"
+      },
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "objective.key": "8d4505aa-cf82-4e29-a701-83422e40f0d1"
+      }
+    },
+    {
+      "key": "aa45e0dd-283c-4e1e-ada1-e69c4db3d919",
+      "properties": {
+        "description": "Respond to user input using an event handler"
+      },
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "objective.key": "aa45e0dd-283c-4e1e-ada1-e69c4db3d919"
+      }
+    },
+    {
+      "key": "d06e3bd8-7ef1-423a-85fb-f8a8498d6f67",
+      "properties": {
+        "description": "Independently scope the features of a piece of software"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "objective.key": "d06e3bd8-7ef1-423a-85fb-f8a8498d6f67"
+      }
+    },
+    {
+      "key": "d24a1d11-cbea-418e-a848-619a2343055d",
+      "properties": {
+        "description": "Prototype a physical computing device"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "objective.key": "d24a1d11-cbea-418e-a848-619a2343055d"
+      }
+    },
+    {
+      "key": "e682a64b-7a28-45b2-8210-aeb0c1036c9b",
+      "properties": {
+        "description": "Implement a plan for developing a piece of software that integrates hardware inputs and outputs"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "objective.key": "e682a64b-7a28-45b2-8210-aeb0c1036c9b"
+      }
+    },
+    {
+      "key": "e7f4081b-7074-4c9e-869a-3f2aa001d90e",
+      "properties": {
+        "description": "Set the properties of UI elements using code"
+      },
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "objective.key": "e7f4081b-7074-4c9e-869a-3f2aa001d90e"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in Computing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Prototype an Innovation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-CS-03"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
