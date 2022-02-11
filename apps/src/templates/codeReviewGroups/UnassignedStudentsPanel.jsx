@@ -25,7 +25,10 @@ export default function UnassignedStudentsPanel({
           isHorizontal
         />
       </div>
-      <div style={styles.groupsContainer}>
+      <div
+        id="uitest-code-review-group-unassigned"
+        style={styles.groupsContainer}
+      >
         <StudentGroup
           droppableId={unassignedGroup.droppableId}
           members={unassignedGroup.members}
