@@ -20,7 +20,7 @@ Feature: Code Review Eyes
     And I create a new code review group for the section I saved
     And I add the first student to the first code review group
     And I click selector ".uitest-base-dialog-confirm"
-    And I click selector "#uitest-code-review-groups-toggle"
+    And I click selector ".toggle-input"
     # Visit Javalab level as student, and enable code review on the level
     Given I sign in as "Hermione"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
