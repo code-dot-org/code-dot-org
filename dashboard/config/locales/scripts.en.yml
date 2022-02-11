@@ -28327,7 +28327,45 @@ en:
               name: 'Mini-Project: Interactive Art'
               description_student: 
               description_teacher: 
-          lesson_groups: {}
+            Project - Prototype an Innovation:
+              name: Project - Prototype an Innovation
+              description_student: 'In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. '
+              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
+            Innovations in Computing:
+              name: Innovations in Computing
+              description_student: 'In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+
+'
+              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+            Designing Screens with Code:
+              name: Designing Screens with Code
+              description_student: In this lesson, you will start to build apps that allow for lots of user interaction and functionality ... even though they are just one screen!
+              description_teacher: In Unit 4 students learned a very simple approach to app development in App Lab that required a separate screen for most interactions. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the [`setProperty()`(#fff176)](/docs/applab/setProperty/) block. This command can be used to set the content and properties of various UI elements, allowing students to write programs that update information on a single screen, instead of manually creating duplicate screens. In this lesson students build up simple apps that only require a single screen, the content of which is changed using [`setProperty()`(#fff176)](/docs/applab/setProperty/).
+            The Circuit Playground:
+              name: The Circuit Playground
+              description_student: 'In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. '
+              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.
+            Board Events:
+              name: Board Events
+              description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
+              description_teacher: This lesson transitions students from consider the Circuit Playground as strictly an output device towards using it as a tool for both input and output. Starting with the hardware buttons and switch,sing the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.
+            Arrays and Color LEDs:
+              name: Arrays and Color LEDs
+              description_student: 'In this lesson, you will learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground. '
+              description_teacher: An array is an ordered collection of items, usually of the same type. In this lesson, students learn ways to access either a specific or random value from a list using its index.  They then learn how to access the colorLEDs array that controls the behavior of the color LEDs on the Circuit Playground.  Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
+            Getting Properties:
+              name: Getting Properties
+              description_student: 'In this lesson, you will learn how to access the properties of different elements with code. '
+              description_teacher: This lesson introduces students to the [`getProperty`(#fff176)](/docs/applab/getProperty/) block, which allows them to access the properties of different elements with code.  Students first practice using the block to determine what the user has input in various user interface elements. Students later use [`getProperty`(#fff176)](/docs/applab/getProperty/) and [`setProperty`(#fff176)](/docs/applab/setProperty/) together with the counter pattern to make elements move across the screen.  A new screen element, the slider, and a new event trigger, `onChange`, are also introduced.
+            lesson-9:
+              name: Variables & If Statements
+            lesson-10:
+              name: Combining Inputs
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
           name: csd6-pilot-2022
           title: Physical Computing Pilot (2022)
           description_audience: ''

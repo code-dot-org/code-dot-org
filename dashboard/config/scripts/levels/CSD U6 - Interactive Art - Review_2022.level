@@ -4,9 +4,9 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Add Sensors and Debugging\r\n\r\nAdd your events and sensors to your app. You can add some labels to your app in Design Mode to help debug your app and display the sensor values, but your final app doesn't need any design elements. Test your device and make sure the sensors are working properly and generating the correct data before adding more to your code.\r\n\r\nWhenever your finished, press Run and then Finish to continue to the next level",
+    "long_instructions": "# Review Your Device\r\n\r\nTake a moment to review your device. Double-check that it meets all the requirements in the rubric - [click here to see the rubric](https://docs.google.com/document/d/1nAFxmXua3FX0nWEOxHrEWbCNA6YFPAaNmboFp-QQUlk/edit). Make any changes or updates you think are necessary, or you may decide that the device is fine.\r\n\r\nWhenever your finished, press Run and then the purple Submit button to submit your project. Once you submit it, you won't be able to edit it.",
     "instructions_important": "false",
-    "submittable": "false",
+    "submittable": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -74,17 +74,15 @@
     "ai_enabled": "false",
     "project_template_level_name": "CSD U6 - Interactive Art - template_2022",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "encrypted_examples": "OpgJ+2/sVUCtnTBI/ylW6oChUx8Po0P1jIRQlJ9/uiIKyajlxSysNJ2FtfCT\nJ8yaJfRAisMInBYTB6Lfoj4hXjJkUvg1OqGAuAQJg5kFFNPx10Htg1XSJhRf\nNZo73ZzWLx6hCo5c28b0Ju/3urpxeI6v4QRRnGCdKQZ+L9/Rj34i1hH0/Nln\n2ZLraKv45hs8Xmy0G4DBAU2kTEonrssg3A==\n"
   },
   "game_id": 41,
   "published": true,
-  "created_at": "2022-02-11T19:57:37.000Z",
+  "created_at": "2022-02-11T20:06:57.000Z",
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-11T19:57:37.967+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Events_2022\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Events_2022\"},{\"changed_at\":\"2022-02-11 19:59:42 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 20:00:25 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 20:03:54 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-11T20:06:57.236+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Interactive Art - Logic_2022\\\"\"],\"cloned_from\":\"CSD U6 - Interactive Art - Logic_2022\"},{\"changed_at\":\"2022-02-11 20:07:35 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 20:07:54 +0000\",\"changed\":[\"submittable\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 22:06:38 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
