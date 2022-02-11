@@ -2,6 +2,7 @@
   "key": "codestudio_andOrOperator",
   "name": "logic_operation",
   "category": "Logic",
+  "category_key": "logic",
   "block_name": "logic_operation",
   "syntax": "logic_operation"
 }

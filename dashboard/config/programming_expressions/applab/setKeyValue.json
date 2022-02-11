@@ -2,6 +2,7 @@
   "key": "setKeyValue",
   "name": "setKeyValue",
   "category": "Data",
+  "category_key": "data",
   "palette_params": [
     {
       "name": "key"

@@ -2,6 +2,7 @@
   "key": "setAnimationEach",
   "name": "setAnimationEach",
   "category": "Groups",
+  "category_key": "groups",
   "palette_params": [
     {
       "name": "label"
