@@ -508,6 +508,7 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
+    'certificates/show': './src/sites/studio/pages/certificates/show.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
     'courses/index': './src/sites/studio/pages/courses/index.js',
