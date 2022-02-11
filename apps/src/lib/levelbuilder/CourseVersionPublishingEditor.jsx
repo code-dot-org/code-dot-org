@@ -267,13 +267,25 @@ export default class CourseVersionPublishingEditor extends Component {
           </label>
         )}
         {this.props.courseOfferingEditorLink && (
-          <Button
-            __useDeprecatedTag
-            color={Button.ButtonColor.gray}
-            href={this.props.courseOfferingEditorLink}
-            target="_blank"
-            text={'Edit Course Offering'}
-          />
+          <div style={styles.buttonAndHelpTip}>
+            <Button
+              __useDeprecatedTag
+              color={Button.ButtonColor.gray}
+              href={this.props.courseOfferingEditorLink}
+              target="_blank"
+              text={'Edit Course Offering'}
+            />
+            <HelpTip>
+              <p>
+                The course offering is the thing that groups all the different
+                course versions of a course together. For example for csd all
+                versions of csd (csd-2020, csd-2021, etc.) are all part of the
+                csd course offering. On the course offering edit page you can
+                change the display name for the course offering as well as its
+                location in the assignment dropdown.
+              </p>
+            </HelpTip>
+          </div>
         )}
       </div>
     );
@@ -308,5 +320,9 @@ const styles = {
   tableBorder: {
     border: '1px solid ' + color.white,
     padding: 5
+  },
+  buttonAndHelpTip: {
+    display: 'flex',
+    alignItems: 'center'
   }
 };
