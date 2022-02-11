@@ -2,5 +2,6 @@
   "key": "comment_Control",
   "name": "comment_Control",
   "category": "Control",
+  "category_key": "control",
   "syntax": "// Comment"
 }

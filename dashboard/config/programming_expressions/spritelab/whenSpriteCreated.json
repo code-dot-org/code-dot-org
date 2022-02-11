@@ -2,6 +2,7 @@
   "key": "whenSpriteCreated",
   "name": "whenSpriteCreated",
   "category": "Events",
+  "category_key": "events",
   "block_name": "gamelab_whenSpriteCreated",
   "syntax": "whenSpriteCreated"
 }

@@ -2,5 +2,6 @@
   "key": "tint",
   "name": "tint",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "tint"
 }

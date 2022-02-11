@@ -2,6 +2,7 @@
   "key": "codestudio_number",
   "name": "math_number",
   "category": "Math",
+  "category_key": "math",
   "block_name": "math_number",
   "syntax": "math_number"
 }

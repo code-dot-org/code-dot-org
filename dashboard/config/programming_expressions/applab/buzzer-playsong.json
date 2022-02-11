@@ -2,6 +2,7 @@
   "key": "buzzer.playSong",
   "name": "buzzer.playSong",
   "category": "Circuit",
+  "category_key": "circuit",
   "palette_params": [
     {
       "name": "notes"
