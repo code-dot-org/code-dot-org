@@ -6,6 +6,7 @@
     "properties": {
       "hideable_lessons": true,
       "is_migrated": true,
+      "pilot_experiment": "20-21-virtual-AYW-CSD",
       "student_detail_progress_view": true,
       "teacher_resources": [
         [
@@ -26,10 +27,10 @@
     "new_name": null,
     "family_name": "vpl-csd",
     "serialized_at": "2021-11-22 19:57:40 UTC",
-    "published_state": "stable",
+    "published_state": "pilot",
     "instruction_type": "teacher_led",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "vpl-csd-2021"
     }

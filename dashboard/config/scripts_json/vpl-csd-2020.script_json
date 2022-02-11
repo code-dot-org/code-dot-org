@@ -34,8 +34,8 @@
     "serialized_at": "2021-11-22 19:57:19 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "vpl-csd-2020"
     }
