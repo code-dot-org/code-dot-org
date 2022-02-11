@@ -137,12 +137,17 @@ class CourseVersion < ApplicationRecord
     end
   end
 
-  def recommended?(locale_code)
+  def recommended?(locale_code = 'en-us')
     return false unless stable?
     return true if course_offering.course_versions.length == 1
 
     family_name = course_offering.key
     latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Script.latest_stable_version(family_name, locale: locale_code)
+
+    puts family_name
+    puts locale_code
+    puts latest_stable_version.inspect
+    puts content_root.inspect
 
     latest_stable_version == content_root
   end
