@@ -17,8 +17,8 @@ class CertificatesController < ApplicationController
     announcement = Announcements.get_announcement_for_page('/certificates')
 
     @certificate_data = {
-      imageUrl: certificate_image_url(data['name'], data['course']),
-      printUrl: certificate_print_url(data['name'], data['course']),
+      imageUrl: certificate_image_url(data['name'], data['course'], data['sponsor']),
+      printUrl: certificate_print_url(data['name'], data['course'], data['sponsor']),
       announcement: announcement
     }
   end
