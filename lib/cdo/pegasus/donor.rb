@@ -34,6 +34,10 @@ class CdoDonor
     donor[:name_s]
   end
 
+  def self.valid_donor_name?(donor_name)
+    all_donors.any? {|donor| donor[:name_s] == donor_name}
+  end
+
   # @return [Array] a donor record and the random weight used to find that record
   def self.get_random_donor_by_twitter_weight
     weight = SecureRandom.random_number

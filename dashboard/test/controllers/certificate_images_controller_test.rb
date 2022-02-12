@@ -10,6 +10,21 @@ class CertificateImagesControllerTest < ActionController::TestCase
     assert_equal "max-age=0, private, must-revalidate, no-store", @response.headers["Cache-Control"]
   end
 
+  test 'can show certificate image given name and course and sponsor' do
+    data = {name: 'student', course: 'hourofcode', sponsor: 'Amazon'}
+    filename = Base64.urlsafe_encode64(data.to_json)
+    get :show, format: 'jpg', params: {filename: filename}
+    assert_response :success
+    assert_equal "max-age=0, private, must-revalidate, no-store", @response.headers["Cache-Control"]
+  end
+
+  test 'returns bad request given invalid sponsor name' do
+    data = {name: 'student', course: 'hourofcode', sponsor: 'bogus'}
+    filename = Base64.urlsafe_encode64(data.to_json)
+    get :show, format: 'jpg', params: {filename: filename}
+    assert_response :bad_request
+  end
+
   test 'can show certificate image given bogus course name' do
     data = {name: 'student', course: 'bogus'}
     filename = Base64.urlsafe_encode64(data.to_json)

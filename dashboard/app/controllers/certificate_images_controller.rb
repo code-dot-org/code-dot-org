@@ -17,8 +17,12 @@ class CertificateImagesController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
+    if data['sponsor'] && !CdoDonor.valid_donor_name?(data['sponsor'])
+      return render status: :bad_request, json: {message: 'invalid donor name'}
+    end
+
     begin
-      image = CertificateImage.create_course_certificate_image(data['name'], data['course'])
+      image = CertificateImage.create_course_certificate_image(data['name'], data['course'], data['sponsor'])
       image.format = format
       content_type = "image/#{format}"
       send_data image.to_blob, type: content_type

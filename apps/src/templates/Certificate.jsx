@@ -54,7 +54,8 @@ function Certificate(props) {
   const getEncodedParams = () => {
     const data = {
       name: studentName,
-      course: props.tutorial
+      course: props.tutorial,
+      sponsor: props.randomDonorName
     };
     return btoa(JSON.stringify(data));
   };
