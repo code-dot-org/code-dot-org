@@ -15,6 +15,6 @@ class PrintCertificatesController < ApplicationController
     end
 
     @student_name = data['name']
-    @certificate_image_url = certificate_image_url(data['name'], data['course'])
+    @certificate_image_url = certificate_image_url(data['name'], data['course'], data['sponsor'])
   end
 end
