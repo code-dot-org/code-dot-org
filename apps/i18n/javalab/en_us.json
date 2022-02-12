@@ -1,4 +1,5 @@
 {
+  "abortedTestResult": "{className} > {methodName} ABORTED",
   "addAComment": "Add a comment",
   "authorLabel": "author",
   "allFilesCompile": "All Files Compile!",
@@ -57,6 +58,8 @@
   "errorTheaterInvalidShape": "A shape needs to contain an even number of values to represent (x,y) coordinates, and must include at least 4 values.",
   "errorTheaterVideoTooLarge": "Your video is too large. Please decrease the number of frames in your video and try again.",
   "errorTheaterVideoTooLong": "Your video exceeded the maximum playback time. Please decrease the length of your video and try again.",
+  "exceptionThrown": "{exceptionName} was thrown",
+  "failedTestResult": "{className} > {methodName} FAILED",
   "feedbackBeginning": "This is the beginning of feedback for your project.",
   "feedbackBeginningPeer": "This is the beginning of feedback for {peerName}'s project.",
   "illegalMethodAccess": "You tried to access a method that is blocked by our security policy.\n{cause}",
@@ -104,6 +107,7 @@
   "saveToBackpack": "Save to Backpack",
   "sendingVideo": "Sending video. Total length: {totalTime} seconds.",
   "startingPainter": "Starting painter.",
+  "successfulTestResult": "{className} > {methodName} SUCCEEDED",
   "switchToDisplayTheme": "Switch to {displayTheme}",
   "timeoutWarning": "Warning: your project will stop running in 15 seconds.",
   "timeout": "Your project has stopped.",
