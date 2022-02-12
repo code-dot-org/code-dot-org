@@ -33,26 +33,10 @@ import sectionAssessments, {
   isCurrentScriptCSD,
   notStartedFakeTimestamp
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});
-
-  describe('setSection', () => {
-    it('resets all other state to initialState', () => {
-      const currentState = {
-        isLoading: true,
-        assessmentResponsesByScript: {
-          1: [{question: 'a question', puzzle: 2}]
-        }
-      };
-      const newSection = {id: 2, students: []};
-      const action = setSection(newSection);
-      const nextState = sectionAssessments(currentState, action);
-      assert.deepEqual(nextState, initialState);
-    });
-  });
 
   describe('setScript', () => {
     it('resets student filter to all students', () => {
@@ -1630,10 +1614,8 @@ describe('sectionAssessmentsRedux', () => {
       it('returns an empty object when no assessments in redux', () => {
         const result = getStudentsMCandMatchSummaryForCurrentAssessment({
           ...rootState,
-          sectionData: {
-            section: {
-              students: []
-            }
+          teacherSections: {
+            selectedStudents: []
           }
         });
         assert.deepEqual(result, []);
@@ -1643,15 +1625,13 @@ describe('sectionAssessmentsRedux', () => {
         const date = new Date();
         const stateWithAssessment = {
           ...rootState,
-          sectionData: {
-            section: {
-              students: [
-                {
-                  name: 'Issac',
-                  id: 99
-                }
-              ]
-            }
+          teacherSections: {
+            selectedStudents: [
+              {
+                name: 'Issac',
+                id: 99
+              }
+            ]
           },
           sectionAssessments: {
             ...rootState.sectionAssessments,
@@ -1706,15 +1686,13 @@ describe('sectionAssessmentsRedux', () => {
     it('returns summary data for specific student', () => {
       const stateWithAssessment = {
         ...rootState,
-        sectionData: {
-          section: {
-            students: [
-              {
-                name: 'Issac',
-                id: 99
-              }
-            ]
-          }
+        teacherSections: {
+          selectedStudents: [
+            {
+              name: 'Issac',
+              id: 99
+            }
+          ]
         },
         sectionAssessments: {
           ...rootState.sectionAssessments,

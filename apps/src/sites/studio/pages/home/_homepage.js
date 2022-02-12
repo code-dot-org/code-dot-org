@@ -81,8 +81,10 @@ function showHomepage() {
             announcement={announcement}
             hocLaunch={homepageData.hocLaunch}
             courses={homepageData.courses}
+            plCourses={homepageData.plCourses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
+            topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             isEnglish={isEnglish}
