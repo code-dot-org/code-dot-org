@@ -2,6 +2,7 @@
   "key": "pulse",
   "name": "pulse",
   "category": "Circuit",
+  "category_key": "circuit",
   "palette_params": [
     {
       "name": "interval"

@@ -2,6 +2,7 @@
   "key": "subjectSpritePointer",
   "name": "subjectSpritePointer",
   "category": "Events",
+  "category_key": "events",
   "block_name": "gamelab_subjectSpritePointer",
   "syntax": "subjectSpritePointer"
 }

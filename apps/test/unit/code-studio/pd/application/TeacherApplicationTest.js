@@ -2,7 +2,7 @@ import React from 'react';
 import {expect} from 'chai';
 import {mount, shallow} from 'enzyme';
 import sinon from 'sinon';
-import {isolateComponent} from 'isolate-components';
+import {isolateComponent} from 'isolate-react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
@@ -114,6 +114,7 @@ describe('TeacherApplication', () => {
       ).to.deep.equal({school: '16'});
     });
     it('has only saved form data and no school id if session storage has school info', () => {
+      // [MEG] TODO: Use FakeStorage instead
       window.sessionStorage.setItem(
         'TeacherApplication',
         JSON.stringify({data: {school: '25'}})
@@ -123,7 +124,7 @@ describe('TeacherApplication', () => {
         teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal(parsedData);
     });
-    it('does not include saved form data if partial saving is not allowed', () => {
+    it('includes saved form data even if partial saving is not allowed', () => {
       teacherApplication.mergeProps({
         savedFormData,
         schoolId,
@@ -132,6 +133,7 @@ describe('TeacherApplication', () => {
       expect(
         teacherApplication.findOne('FormController').props.getInitialData()
       ).to.deep.equal({
+        ...parsedData,
         school: schoolId
       });
     });

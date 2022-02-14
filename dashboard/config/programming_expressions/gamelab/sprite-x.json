@@ -2,5 +2,6 @@
   "key": "sprite.x",
   "name": "sprite.x",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "sprite.x"
 }

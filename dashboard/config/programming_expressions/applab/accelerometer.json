@@ -2,5 +2,6 @@
   "key": "accelerometer",
   "name": "accelerometer",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "accelerometer"
 }

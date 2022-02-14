@@ -1,12 +1,10 @@
 import React from 'react';
 import {assert} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
-import sinon from 'sinon';
 import {UnconnectedUnitOverview as UnitOverview} from '@cdo/apps/code-studio/components/progress/UnitOverview';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import * as utils from '@cdo/apps/code-studio/utils';
 
 const defaultProps = {
   excludeCsfColumnInLegend: true,
@@ -30,7 +28,8 @@ const defaultProps = {
   publishedState: 'beta',
   versions: [],
   redirectScriptUrl: null,
-  unitCalendarLessons: []
+  unitCalendarLessons: [],
+  completedLessonNumber: undefined
 };
 
 const setUp = (overrideProps = {}) => {
@@ -39,22 +38,14 @@ const setUp = (overrideProps = {}) => {
 };
 
 describe('UnitOverview', () => {
-  it('renders a EndOfLessonDialog if the completedLessonNumber url query param is present', () => {
-    sinon.stub(utils, 'queryParams').returns(3);
-
-    const wrapper = setUp();
+  it('renders a EndOfLessonDialog if completedLessonNumber prop is present', () => {
+    const wrapper = setUp({completedLessonNumber: '3'});
     assert.equal(wrapper.find('Connect(EndOfLessonDialog)').length, 1);
-
-    utils.queryParams.restore();
   });
 
-  it('does not render a EndOfLessonDialog if ', () => {
-    sinon.stub(utils, 'queryParams').returns(null);
-
+  it('does not render a EndOfLessonDialog if completedLessonNumber is empty', () => {
     const wrapper = setUp();
     assert.equal(wrapper.find('Connect(EndOfLessonDialog)').length, 0);
-
-    utils.queryParams.restore();
   });
 
   it('renders a UnversionedScriptRedirectDialog if showUnversionedRedirectWarning and not displaying dialog', () => {

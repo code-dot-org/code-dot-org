@@ -2,6 +2,7 @@
   "key": "clearInterval",
   "name": "clearInterval",
   "category": "Control",
+  "category_key": "control",
   "palette_params": [
     {
       "name": "__"

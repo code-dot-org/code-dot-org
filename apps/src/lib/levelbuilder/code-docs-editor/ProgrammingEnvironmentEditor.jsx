@@ -2,9 +2,11 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
+import OrderableList from './OrderableList';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import Button from '@cdo/apps/templates/Button';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
+import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -18,7 +20,35 @@ const useProgrammingEnvironment = initialProgrammingEnvironment => {
     setProgrammingEnvironment({...programmingEnvironment, [key]: value});
   };
 
-  return [programmingEnvironment, updateProgrammingEnvironment];
+  return [
+    programmingEnvironment,
+    updateProgrammingEnvironment,
+    setProgrammingEnvironment
+  ];
+};
+
+const renderCategoryEditor = (category, updateFunc) => {
+  return (
+    <div>
+      <label>
+        Name
+        <input
+          value={category.name || ''}
+          onChange={e => updateFunc('name', e.target.value)}
+          style={styles.textInput}
+        />
+      </label>
+      <label>
+        Color
+        <input
+          value={category.color || ''}
+          onChange={e => updateFunc('color', e.target.value)}
+          type="color"
+          style={styles.colorInput}
+        />
+      </label>
+    </div>
+  );
 };
 
 export default function ProgrammingEnvironmentEditor({
@@ -30,7 +60,8 @@ export default function ProgrammingEnvironmentEditor({
   } = initialProgrammingEnvironment;
   const [
     programmingEnvironment,
-    updateProgrammingEnvironment
+    updateProgrammingEnvironment,
+    setProgrammingEnvironment
   ] = useProgrammingEnvironment(remainingProgrammingEnvironment);
   const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
@@ -55,13 +86,18 @@ export default function ProgrammingEnvironmentEditor({
         if (response.ok) {
           setLastUpdated(Date.now());
           setError(null);
+          return response.json();
         } else {
-          setError(response.statusText);
+          throw new Error(error.statusText);
         }
+      })
+      .then(json => {
+        delete json.name;
+        setProgrammingEnvironment(json);
       })
       .catch(error => {
         setIsSaving(false);
-        setError(error.responseText);
+        setError(error);
       });
   };
 
@@ -122,6 +158,15 @@ export default function ProgrammingEnvironmentEditor({
         }
         features={{imageUpload: true}}
       />
+      <CollapsibleEditorSection title="Categories" collapsed>
+        <OrderableList
+          list={programmingEnvironment.categories || []}
+          setList={list => updateProgrammingEnvironment('categories', list)}
+          addButtonText="Add Category"
+          renderItem={renderCategoryEditor}
+          checkItemDeletionAllowed={item => !!item.deletable}
+        />
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
@@ -161,5 +206,15 @@ const styles = {
     borderRadius: 4,
     marginBottom: 0,
     marginLeft: 5
+  },
+  colorInput: {
+    width: '100%',
+    boxSizing: 'border-box',
+    padding: '4px 6px',
+    color: '#555',
+    border: `1px solid ${color.bootstrap_border_color}`,
+    borderRadius: 4,
+    marginBottom: 0,
+    height: 25
   }
 };

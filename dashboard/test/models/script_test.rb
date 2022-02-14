@@ -981,14 +981,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, versions.length
     assert_equal 'foo-2018', versions[0][:name]
     assert_equal 'foo-2017', versions[1][:name]
-
-    teacher = create(:teacher)
-    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-    versions = foo17.summarize(true, teacher)[:versions]
-    assert_equal 3, versions.length
-    assert_equal 'foo-2019', versions[0][:name]
-    assert_equal 'foo-2018', versions[1][:name]
-    assert_equal 'foo-2017', versions[2][:name]
   end
 
   test 'summarize includes show assign button' do
@@ -1067,14 +1059,53 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 42, unit.peer_reviews_to_complete
 
     course_unit = unit.plc_course_unit
+    unit_group = unit.plc_course_unit.plc_course.unit_group
     assert_equal 'PLC Test', course_unit.unit_name
     assert_equal 'PLC test fixture script', course_unit.unit_description
+
+    assert_equal 'plc_reviewer', unit_group.instructor_audience
+    assert_equal 'facilitator', unit_group.participant_audience
+    assert_equal 'teacher_led', unit_group.instruction_type
+    assert_equal 'beta', unit_group.published_state
 
     lm = unit.lessons.first.plc_learning_module
     assert_equal 'Sample Module', lm.name
     assert_equal 1, course_unit.plc_learning_modules.count
     assert_equal lm, course_unit.plc_learning_modules.first
     assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
+  end
+
+  test 'updating plc unit updates its unit group' do
+    Script.stubs(:unit_json_directory).returns(self.class.fixture_path)
+    unit = Script.seed_from_json_file('test-plc')
+
+    unit_group = unit.plc_course_unit.plc_course.unit_group
+
+    assert_equal 'plc_reviewer', unit_group.instructor_audience
+    assert_equal 'facilitator', unit_group.participant_audience
+    assert_equal 'teacher_led', unit_group.instruction_type
+    assert_equal 'beta', unit_group.published_state
+
+    unit.update!(instructor_audience: 'universal_instructor', participant_audience: 'teacher', instruction_type: 'self_paced', published_state: 'stable')
+
+    unit.reload
+    unit_group = unit.plc_course_unit.plc_course.unit_group
+
+    assert_equal 'universal_instructor', unit_group.instructor_audience
+    assert_equal 'teacher', unit_group.participant_audience
+    assert_equal 'self_paced', unit_group.instruction_type
+    assert_equal 'stable', unit_group.published_state
+  end
+
+  test 'generate plc objects will use defaults if script has null values' do
+    unit = create(:script, professional_learning_course: 'my-plc-course', published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil)
+
+    unit_group = unit.plc_course_unit.plc_course.unit_group
+
+    assert_equal 'plc_reviewer', unit_group.instructor_audience
+    assert_equal 'facilitator', unit_group.participant_audience
+    assert_equal 'teacher_led', unit_group.instruction_type
+    assert_equal 'beta', unit_group.published_state
   end
 
   test 'unit name format validation' do
@@ -1487,44 +1518,11 @@ class ScriptTest < ActiveSupport::TestCase
     refute has_unlaunched_unit?(units)
   end
 
-  test "self.valid_scripts: returns unlaunched units when user is an admin" do
+  test "self.valid_scripts: does not return unlaunched units when user is an admin" do
     admin = create(:admin)
 
     units = Script.valid_scripts(admin)
-    assert has_unlaunched_unit?(units)
-  end
-
-  test "self.valid_scripts: returns unlaunched units when user has hidden script access" do
-    teacher = create(:teacher)
-    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-
-    units = Script.valid_scripts(teacher)
-    assert has_unlaunched_unit?(units)
-  end
-
-  test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
-    Script.destroy_all
-    user = create(:user)
-    create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, name: 'original-unit')
-    alternate_unit = build(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, name: 'alternate-unit')
-
-    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Script.any_instance.stubs(:alternate_script).returns(alternate_unit)
-
-    units = Script.valid_scripts(user)
-    assert_equal [alternate_unit], units
-  end
-
-  test "self.valid_scripts: returns original unit if user has a course experiment with no alternate unit" do
-    Script.destroy_all
-    user = create(:user)
-    unit = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Script.any_instance.stubs(:alternate_script).returns(nil)
-
-    units = Script.valid_scripts(user)
-    assert_equal [unit], units
+    refute has_unlaunched_unit?(units)
   end
 
   test "self.valid_scripts: omits in-development units" do
@@ -2132,6 +2130,14 @@ class ScriptTest < ActiveSupport::TestCase
       refute_nil cloned_unit.get_course_version
     end
 
+    test 'clone raises exception if script name has already been taken' do
+      create :script, name: 'my-name'
+      raise = assert_raises do
+        @standalone_unit.clone_migrated_unit('my-name', version_year: '2022')
+      end
+      assert_equal 'Script name has already been taken', raise.message
+    end
+
     test 'clone raises exception if destination_unit_group does not have a course version' do
       versionless_unit_group = create :unit_group
       assert_nil versionless_unit_group.course_version
@@ -2148,6 +2154,46 @@ class ScriptTest < ActiveSupport::TestCase
         @standalone_unit.clone_migrated_unit('standalone-2022', family_name: 'standalone')
       end
     end
+  end
+
+  test 'should raise error if participant audience is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.participant_audience = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Participant audience must be set on the unit if its a standalone unit.'
+  end
+
+  test 'should raise error if instructor audience is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.instructor_audience = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Instructor audience must be set on the unit if its a standalone unit.'
+  end
+
+  test 'should raise error if published state is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.published_state = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Published state must be set on the unit if its a standalone unit.'
+  end
+
+  test 'should raise error if instruction type is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.instruction_type = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Instruction type must be set on the unit if its a standalone unit.'
   end
 
   private
