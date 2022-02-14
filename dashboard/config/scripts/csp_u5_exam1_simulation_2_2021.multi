@@ -4,8 +4,8 @@ editor_experiment ''
 
 wrong '`random(1,100) = 40`'
 wrong '`random(1,100) = 60`'
-wrong '`random(1,100) ← 40`'
-right '`random(1,100) ← 60`'
+wrong '`random(1,100) <= 40`'
+right '`random(1,100) <= 60`'
 
 
 markdown <<MARKDOWN
