@@ -113,6 +113,7 @@ class XhrProxyController < ApplicationController
     wikipedia.org
     worldclockapi.com
     worldtimeapi.org
+    xeno-canto.org
   ).freeze
 
   # How long the content is allowed to be cached

@@ -1,0 +1,78 @@
+---
+title: What's It Like to Take CS in College?
+video_player: true
+theme: responsive
+social:
+  "og:title": "What's It Like to Take CS in College?"
+  "og:description": "Get the inside scoop from undergraduate women pursuing computer science who are just ahead of you on their tech journey."
+  "twitter:title": "What's It Like to Take CS in College?"
+  "twitter:description": "Get the inside scoop from undergraduate women pursuing computer science who are just ahead of you on their tech journey."
+  "twitter:image": "/images/csjourneys/og-rtc.png"
+  "og:image": "/images/csjourneys/og-rtc.png"
+  "og:image:width": 1200
+  "og:image:height": 630
+---
+<a id="top"></a>
+<img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px; margin-top:50px"/>
+
+
+<div class="col-75" style="padding:25px; border-radius:15px; background-image: url('/images/fit-1000x300/csjourneys/rtc-banner2.png')">
+  <h1 style="margin-bottom:15px; margin-top:15px; color:black">What's it like to take CS in college?</h1>
+  <h2 style="margin-top:0; color:black">Monthly discussions for young women, by young women</h2>
+  <p style="color:black">Get the inside scoop from undergraduate women pursuing computer science who are just ahead of you on their tech journey, in this monthly discussion series from Code.org and Rewriting the Code.</p>
+</div>
+<div class="col-25" style="text-align:center; padding:10px; padding-left:15px; padding-right:15px; border-radius:15px">
+  <h3 style="margin-top:0"><strong>Presented by:</strong></h3>
+  <br>
+  <a href="https://rewritingthecode.org/" target="_blank">
+  <img src="/images/csjourneys/rtc-logo.png" style="width: 70%; margin-bottom: 12px" alt="Rewriting the Code logo">
+  </a>
+  <br>
+  <br>
+  <img src="/images/logo.svg" style="width: 25%" alt="Code.org logo">
+</div>
+
+<div style="clear: both; margin-bottom:40px"></div>
+
+<ul>
+    <li><a href="#upcoming">Upcoming discussions</a></li>
+    <li><a href="#past">Past discussions</a></li>
+</ul>    
+<br>
+
+<a id="upcoming"></a>
+
+<div class="col-100" style="padding:25px; background-color: #7665a0; border-radius:15px 15px 0 0">
+  <h2 style="margin-top:10px; margin-bottom:0; color:#ffffff">Day in the Life of a Woman College Student in CS</h2>
+</div>
+<div class="col-100" style="padding:25px; border: 1px solid #7665a0; border-radius:0 0 15px 15px; border-top:none">
+  <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, February 23rd at 8 pm EDT / 5 pm PDT</strong></h3>
+  <p>Get a glimpse into the day in the life of a CS major.</p>
+  <p><strong>Registration coming soon</strong></p> 
+  <p>Featuring:</p>
+  <ul>
+    <li>Catherine Hu, Sophomore at <a href="https://www.ucla.edu/" target="_blank">UCLA</a></li>
+    <li>Indigo Parlin, Sophomore at <a href="https://www.columbia.edu/" target="_blank">Columbia University</a></li>
+    <li>Pranavi Pratapa, Sophomore at <a href="https://umich.edu/" target="_blank">University of Michigan</a></li>
+    <li>Anna Quinlan, Junior at <a href="https://www.stanford.edu/" target="_blank">Stanford University</a></li>
+    <li>Cindy Wang, Sophomore at <a href="https://home.dartmouth.edu/" target="_blank">Dartmouth College</a></li>
+  </ul>
+  <br>
+  <a href="#top">Back to top</a>
+</div>
+<div style="clear:both"></div>
+
+<div style="clear: both; margin-bottom:40px"></div>
+
+<a id="past"></a>
+<h2>Past discussions</h2>
+
+<div class="col-40" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ rtc_panel1 }}
+</div>
+<div class="col-60" style="padding:-top:15px; padding-left: 10px">
+  <h3><strong>The Transition from High School to College</strong></h3>
+  <p>This first discussion is all about transitions! Learn how Computer Science 101 is different than taking CS in high school. Get the inside scoop on what lectures and projects are like, who to seek help from and when (TAs and office hours), and the importance of finding/building community.</p>
+</div>
+
+<div style="clear: both"></div>

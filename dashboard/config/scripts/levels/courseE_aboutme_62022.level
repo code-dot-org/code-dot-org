@@ -57,11 +57,17 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "instructions_icon": "rikki",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:38.505+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_6_2021\\\"\"],\"cloned_from\":\"courseE_aboutme_6_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:38.505+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_6_2021\\\"\"],\"cloned_from\":\"courseE_aboutme_6_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "events": 1
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

@@ -232,8 +232,8 @@ et:
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Minecraft on KoodiTund raames tagasi uhiuue
     tegevusega! Läbi teekond läbi Minecrafti programmeerides.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -952,6 +952,7 @@ et:
   footer_menu_support: Abi
   footer_menu_terms: Tingimused
   footer_menu_privacy: Privaatsuspoliitika
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: KOODI TUND
   learn_banner_blurb: Proovi 1-tunnist õpetust, mis sobib igas vanuses inimestele
     ja on enam kui 45 keeles. Liitu miljonite õpilaste ja õpetajatega rohkem kui 180
