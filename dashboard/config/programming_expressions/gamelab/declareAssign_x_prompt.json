@@ -1,7 +1,0 @@
-{
-  "key": "declareAssign_x_prompt",
-  "name": "declareAssign_x_prompt",
-  "category": "Variables",
-  "category_key": "variables",
-  "syntax": "var x = prompt(\"Enter a value\");"
-}
