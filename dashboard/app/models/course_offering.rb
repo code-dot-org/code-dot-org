@@ -72,6 +72,15 @@ class CourseOffering < ApplicationRecord
     end
   end
 
+  def localized_display_name
+    localized_name = I18n.t(
+      key,
+      scope: [:data, :course_offerings],
+      default: nil
+    )
+    localized_name || display_name
+  end
+
   def summarize_for_edit
     {
       key: key,
