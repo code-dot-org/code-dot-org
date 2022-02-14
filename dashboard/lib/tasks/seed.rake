@@ -208,7 +208,7 @@ namespace :seed do
 
   timed_task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2019 csa-pilot).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
