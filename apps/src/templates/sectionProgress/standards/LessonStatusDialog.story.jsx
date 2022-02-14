@@ -5,8 +5,9 @@ import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import sectionStandardsProgress from './sectionStandardsProgressRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 export default storybook => {
   const store = createStore(
@@ -14,6 +15,7 @@ export default storybook => {
       sectionStandardsProgress,
       sectionProgress,
       unitSelection,
+      sectionData,
       teacherSections
     }),
     {

@@ -3,7 +3,6 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import PropTypes from 'prop-types';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -26,8 +25,8 @@ const USER_EDITABLE_SECTION_PROPS = [
 /** @const {number} ID for a new section that has not been saved */
 const PENDING_NEW_SECTION_ID = -1;
 
-/** @const {number} -1 used to indicate no section selected */
-export const NO_SECTION = -1;
+/** @const {string} Empty string used to indicate no section selected */
+export const NO_SECTION = '';
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
@@ -538,7 +537,7 @@ const initialState = {
   assignmentFamilies: [],
   // Mapping from sectionId to section object
   sections: {},
-  // List of students in section currently being edited (see studentShape PropType)
+  // List of students in section currently being edited
   selectedStudents: [],
   sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
@@ -1379,13 +1378,3 @@ export function hiddenSectionIds(state) {
   state = getRoot(state);
   return state.sectionIds.filter(id => state.sections[id].hidden);
 }
-
-export const studentShape = PropTypes.shape({
-  sectionId: PropTypes.number,
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  sharingDisabled: PropTypes.bool,
-  totalLines: PropTypes.number,
-  secretPicturePath: PropTypes.string,
-  secretWords: PropTypes.string
-});

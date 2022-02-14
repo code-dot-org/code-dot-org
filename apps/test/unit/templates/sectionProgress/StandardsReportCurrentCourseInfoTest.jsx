@@ -8,7 +8,16 @@ describe('StandardsReportCurrentCourseInfo', () => {
 
   beforeEach(() => {
     DEFAULT_PROPS = {
-      sectionId: 6,
+      section: {
+        id: 6,
+        script: {
+          id: 1163,
+          name: 'express-2019',
+          project_sharing: true
+        },
+        students: [],
+        lessonExtras: false
+      },
       scriptFriendlyName: 'Express Course (2019)',
       scriptData: {
         id: 1163,
