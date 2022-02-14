@@ -7,12 +7,14 @@ import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps
 export default function CertificateShare(props) {
   const {announcement} = props;
   return (
-    <a href={props.printUrl}>
-      <img
-        src={props.imageUrl}
-        alt={i18n.certificateForCompletion()}
-        width="100%"
-      />
+    <div>
+      <a href={props.printUrl}>
+        <img
+          src={props.imageUrl}
+          alt={i18n.certificateForCompletion()}
+          width="100%"
+        />
+      </a>
       <TwoColumnActionBlock
         responsiveSize="lg"
         imageUrl={pegasus(announcement.image)}
@@ -26,7 +28,7 @@ export default function CertificateShare(props) {
           }
         ]}
       />
-    </a>
+    </div>
   );
 }
 
