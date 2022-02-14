@@ -372,7 +372,7 @@ const FormController = props => {
       setShowSavedMessage(true);
       setShowDataWasLoadedMessage(false);
       setUpdatedApplicationId(data.id);
-      setSavedData(data.form_data);
+      setSavedData(JSON.parse(data.form_data));
       setSaving(false);
       onSuccessfulSave(data);
     };
