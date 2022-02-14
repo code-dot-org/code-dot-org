@@ -4,9 +4,9 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Add Sensors and Debugging\r\n\r\nAdd your events and sensors to your app. You can add some labels to your app in Design Mode to help debug your app and display the sensor values, but your final app doesn't need any design elements. Test your device and make sure the sensors are working properly and generating the correct data before adding more to your code.\r\n\r\nWhenever your finished, press Run and then Finish to continue to the next level",
+    "long_instructions": "# Review Your App\r\n\r\nTake a moment to review your app. Double-check that it meets all the requirements in the rubric - [click here to see the rubric](). Make any changes or updates you think are necessary, or you may decide that the app is fine.\r\n\r\nWhenever your finished, press Run and then the purple Submit button to submit your project. Once you submit it, you won't be able to edit it.",
     "instructions_important": "false",
-    "submittable": "false",
+    "submittable": "true",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "true",
@@ -48,15 +48,6 @@
     "text_mode_at_start": "false",
     "encrypted": "false",
     "reference_links": [
-      "/docs/concepts/maker-toolkit/playing-notes/",
-      "/docs/concepts/maker-toolkit/analog-sensors/",
-      "/docs/concepts/maker-toolkit/data-and-change-events/",
-      "/docs/concepts/maker-toolkit/changing-sensor-scale/",
-      "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/accelerometer-events/",
-      "/docs/concepts/javascript/functions/",
-      "/docs/concepts/javascript/modifying-arrays/",
-      "/docs/concepts/javascript/arrays/",
       "/docs/concepts/app-lab/taking-input-with-getproperty/",
       "/docs/concepts/app-lab/changing-screens/",
       "/docs/concepts/app-lab/designing-screens-with-code/",
@@ -72,19 +63,17 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "project_template_level_name": "CSD U6 - Interactive Art - template_2022",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "project_template_level_name": "CSD U6 - Prototype Innovation Template_2022",
+    "encrypted_examples": "1HKlgXCoWM4yW4CcfCxZgbB5eeZ8iZwyVspN8EmdwPim1FfrP9oiKeZB8Ot2\nDMGhcBjLIjN3fHequEM22vJ3TVRShkQ8pfuBatieSPBIIlfclNFjSlhm1XBM\n0GLU4BjdpTY3uNPl6w5/L5m3mTREsKFh4c0ufxjasPd28xL0TzdmhvHraAEM\n4oSVzBNcMWZlZZjRpZOIRYLac0uvWl6UqQ==\n",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
-  "created_at": "2022-02-11T19:57:37.000Z",
+  "created_at": "2022-02-11T20:25:17.000Z",
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-11T19:57:37.967+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Events_2022\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Events_2022\"},{\"changed_at\":\"2022-02-11 19:59:42 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 20:00:25 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 20:03:54 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-11T20:25:17.919+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Review_2022\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Review_2022\"},{\"changed_at\":\"2022-02-11 20:25:25 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 20:26:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

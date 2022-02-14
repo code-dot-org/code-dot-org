@@ -10,7 +10,7 @@ function updateLog(){
   var index;
   for(var i=start;i<end;i++){
     if(window[Object.keys(window)[i]] != undefined){
-      if (typeof window[Object.keys(window)[i]] == "number" || typeof window[Object.keys(window)[i]] == "string") {
+      if (typeof window[Object.keys(window)[i]] == "number" || typeof window[Object.keys(window)[i]] == "string"|| typeof window[Object.keys(window)[i]] == "boolean") {
         varLog[Object.keys(window)[i]] = window[Object.keys(window)[i]];
       }
     }

@@ -26851,6 +26851,12 @@ en:
                 - Requires introducing functions and then functions with parameters.
                   - Will need to see about editing original functions video
                 - In current curriculum, functions with parameter levels are closely tied to music and accelerometer, so makes sense to include it here in unit progression
+            Circuits and Physical Prototypes:
+              name: Physical Outputs
+              description_student: 'In this lesson, you will wire simple circuits to create a physical prototype using low-cost and easily-found materials.
+
+'
+              description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
           lesson_groups:
             lessonGroup-3:
               display_name: Templates
@@ -28327,7 +28333,86 @@ en:
               name: 'Mini-Project: Interactive Art'
               description_student: 
               description_teacher: 
-          lesson_groups: {}
+            Project - Prototype an Innovation:
+              name: Project - Prototype an Innovation
+              description_student: 'In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. '
+              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
+            Innovations in Computing:
+              name: Innovations in Computing
+              description_student: 'In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+
+'
+              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+            Designing Screens with Code:
+              name: Updating Screen Elements
+              description_student: In this lesson, you will start to build apps that allow for lots of user interaction and functionality
+              description_teacher: 
+            The Circuit Playground:
+              name: The Circuit Playground
+              description_student: 'In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. '
+              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.
+            Board Events:
+              name: Board Events
+              description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
+              description_teacher: 
+            Arrays and Color LEDs:
+              name: Color LEDs
+              description_student: In this lesson, you will learn how to access and control the colored LEDs on the Circuit Playground.
+              description_teacher: 
+            Getting Properties:
+              name: Getting Screen Inputs
+              description_student: In this lesson, you will learn how to use design elements like textboxes or dropdowns to get user input from the screen
+              description_teacher: 
+            lesson-9:
+              name: Variables and If Statements
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Combining Inputs
+              description_student: 
+              description_teacher: 
+            Analog Input:
+              name: Board Sensors
+              description_student: 'In this lesson, you will get to explore the sensors on the Circuit Playground and write programs that respond to the environment.
+
+'
+              description_teacher: 
+            Accelerometer:
+              name: Accelerometer
+              description_student: 'In this lesson, you will explore the accelerometer and its capabilities. '
+              description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+            Making Music:
+              name: Making Music
+              description_student: 'In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. '
+              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, learn to play sequences of notes, forming simple songs.
+            Functions with Parameters:
+              name: Functions
+              description_student: 'In this lesson, you will create and call functions, then learn how to use parameters to make functions useful across many different situations
+
+'
+              description_teacher: 
+            Circuits and Physical Prototypes:
+              name: Physical Outputs and LEDs
+              description_student: 'In this lesson, you will learn to use wires to create devices with external LEDs and add code to control these lights.
+
+'
+              description_teacher: 
+            Project - Make a Game:
+              name: Project - Make a Game
+              description_student: In this lesson, you will take what you have learned through chapter one, and develop an app of your own design that uses the board to output information.
+              description_teacher: |+
+                For this project, students design and create a game that leverages the new inputs and outputs that are available to them. This project is purposefully left very open-ended to empower students to think broadly about how physical output might be useful in an app, while still giving them a chance to review the program development process and try out the new features available through the Circuit Playground.
+
+
+            Physical Outputs:
+              name: Physical Inputs and Buttons
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
           name: csd6-pilot-2022
           title: Physical Computing Pilot (2022)
           description_audience: ''
@@ -30802,6 +30887,18 @@ en:
               description_teacher: Students will pretend to flow through the internet while learning about connections, URLs, IP Addresses, and DNS in this **exploratory** lesson.
             lesson-4:
               name: Lots of Sprites
+            "[New] Lots of Sprites":
+              name: "[New] Lots of Sprites"
+              description_student: You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!
+              description_teacher: In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**
+            "[New] Counting with Variables":
+              name: "[New] Counting with Variables"
+              description_student: You will learn to use variables to make a counter or keep track of a score in a game.
+              description_teacher: In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**
+            "[New] Mini-Project: Collector Game":
+              name: "[New] Mini-Project: Collector Game"
+              description_student: Collect all the sprites! In this project, you will create a game that others can play.
+              description_teacher: In this **mini-project** lesson, students will create a customized "collector game", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -30816,7 +30913,18 @@ en:
             end_of_course_project:
               display_name: End of Course Project
           title: Course F (2022)
-          description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+          description: |-
+            We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+
+            ## Spring 2022 Open Preview
+            This new version of Course F includes three new lessons, and we need your feedback! The new lessons are:
+            * Lesson 9 - Lots of Sprites
+            * Lesson 10 - Counting with Variables
+            * Lesson 11 - Mini-Project: Collector Game
+
+            Please note that these new lessons may change between now and July 2022. We appreciate any feedback. Courses A-E of CS Fundamentals (2022) will launch in July 2022.
+
+            [Slide Decks FeedBack](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform)
           student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
@@ -31148,6 +31256,59 @@ en:
           lesson_groups: {}
           name: tess-test-csa
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa1-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
+            lesson-2:
+              name: Java Lab
+            lesson-3:
+              name: The Neighborhood
+            lesson-4:
+              name: Navigating and Painting
+            lesson-5:
+              name: One-Way Selection Statements
+            lesson-6:
+              name: PainterPlus
+            lesson-7:
+              name: Writing Methods
+            lesson-8:
+              name: Code Reviews
+            lesson-9:
+              name: Loops
+            lesson-10:
+              name: Two-Way Selection Statements
+            lesson-11:
+              name: Debugging Strategies
+            lesson-12:
+              name: Decomposition and Design
+            lesson-13:
+              name: PatternPainter
+            lesson-14:
+              name: BackgroundPainter
+            lesson-15:
+              name: Open Source Code
+            lesson-16:
+              name: Asphalt Art Project — Day 1
+            lesson-17:
+              name: Asphalt Art Project — Day 2
+            lesson-18:
+              name: Asphalt Art Project — Day 3
+            lesson-19:
+              name: FRQ Practice
+            lesson-20:
+              name: Unit 1 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa1-2022-exemplars
+          title: Unit 1 - Object-Oriented Programming [Exemplars]
           description_audience: ''
           description_short: ''
           description: ''
