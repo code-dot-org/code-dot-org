@@ -84,13 +84,15 @@ $(document).ready(function() {
     store.dispatch(setShowSharingColumn(true));
   }
 
+  // Default the scriptId to the script assigned to the section
+  const defaultScriptId = section.script ? section.script.id : null;
+  if (defaultScriptId) {
+    store.dispatch(setScriptId(defaultScriptId));
+  }
+
   store.dispatch(
     setValidScripts(validScripts, studentScriptIds, validCourses, section)
   );
-
-  // Default the scriptId to the script assigned to the section
-  const defaultScriptId = section.script ? section.script.id : null;
-  store.dispatch(setScriptId(defaultScriptId));
 
   ReactDOM.render(
     <Provider store={store}>
