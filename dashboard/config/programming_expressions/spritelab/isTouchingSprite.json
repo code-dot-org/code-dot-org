@@ -1,0 +1,8 @@
+{
+  "key": "isTouchingSprite",
+  "name": "isTouchingSprite",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "block_name": "gamelab_isTouchingSprite",
+  "syntax": "isTouchingSprite"
+}

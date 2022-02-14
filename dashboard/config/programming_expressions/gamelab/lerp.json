@@ -1,0 +1,18 @@
+{
+  "key": "lerp",
+  "name": "lerp",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "start"
+    },
+    {
+      "name": "stop"
+    },
+    {
+      "name": "amt"
+    }
+  ],
+  "syntax": "lerp(start, stop, amt)"
+}

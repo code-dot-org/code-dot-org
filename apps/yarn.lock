@@ -1600,10 +1600,10 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.2.tgz#4b117337a5a601613f2d38514aa50ba972362939"
 
-"@code-dot-org/dance-party@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.4.tgz#1bee70b0b1f392293b23719a9b257c142ba2e304"
-  integrity sha512-l9LEQRUiLNkIaWtK/rGOV1PHHorx5x/lliFTwEFlWMEJ00v4EZyf/+JdxSOrNmpBrCtAtEXXMIwKZ5gVFnQ/2w==
+"@code-dot-org/dance-party@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.5.tgz#0872991761e8f4458c73ba3b7f288b2e747af240"
+  integrity sha512-Wr4zQgSpBh/Pus0+91Cshl93efew051PfVM4BBzcf0hqNGMVGj8Pztgvtqew07AnMrjxBVDITSlLzCfhHmyBQw==
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"

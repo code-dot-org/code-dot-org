@@ -1,0 +1,12 @@
+{
+  "key": "radians",
+  "name": "radians",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "degrees"
+    }
+  ],
+  "syntax": "radians(degrees)"
+}

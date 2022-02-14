@@ -1,0 +1,12 @@
+{
+  "key": "tan",
+  "name": "tan",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "angle"
+    }
+  ],
+  "syntax": "tan(angle)"
+}

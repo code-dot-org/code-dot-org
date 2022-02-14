@@ -1,0 +1,7 @@
+{
+  "key": "frameChanged",
+  "name": "frameChanged",
+  "category": "Animations",
+  "category_key": "animations",
+  "syntax": "frameChanged"
+}
