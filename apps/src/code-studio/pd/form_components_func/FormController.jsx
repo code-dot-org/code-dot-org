@@ -371,7 +371,6 @@ const FormController = props => {
       setShowDataWasLoadedMessage(false);
       setUpdatedApplicationId(data.id);
       setSavedData(data.form_data);
-      setHasUserChangedData(false);
       setSaving(false);
       onSuccessfulSave(data);
     };
