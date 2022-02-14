@@ -1,6 +1,6 @@
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai';
 import {parseElement} from '@cdo/apps/xml';
-import {setupTestBlockly, getStudioAppSingleton} from '../util/testBlockly';
+import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 import blocksCommon from '@cdo/apps/blocksCommon';
 import blocks from '@cdo/apps/studio/blocks';
 import skins from '@cdo/apps/studio/skins';
