@@ -111,8 +111,9 @@ export default class TeacherSectionSelector extends Component {
             ))}
           <div style={styles.addNewSection}>
             <SmallChevronLink
-              href={`/home?${queryParams}`}
-              text={i18n.addNewSection()}
+              link={`/home?${queryParams}`}
+              linkText={i18n.addNewSection()}
+              isRtl={false}
             />
           </div>
         </PopUpMenu>
