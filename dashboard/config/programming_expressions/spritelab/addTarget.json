@@ -1,8 +1,0 @@
-{
-  "key": "addTarget",
-  "name": "addTarget",
-  "category": "Sprites",
-  "category_key": "sprites",
-  "block_name": "gamelab_addTarget",
-  "syntax": "addTarget"
-}
