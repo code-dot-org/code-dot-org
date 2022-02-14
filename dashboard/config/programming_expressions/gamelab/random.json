@@ -1,0 +1,15 @@
+{
+  "key": "random",
+  "name": "random",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "min"
+    },
+    {
+      "name": "max"
+    }
+  ],
+  "syntax": "random(min, max)"
+}

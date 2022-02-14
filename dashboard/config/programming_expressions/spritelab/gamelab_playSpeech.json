@@ -1,0 +1,8 @@
+{
+  "key": "gamelab_playSpeech",
+  "name": "playSpeech",
+  "category": "World",
+  "category_key": "world",
+  "block_name": "gamelab_playSpeech",
+  "syntax": "playSpeech"
+}

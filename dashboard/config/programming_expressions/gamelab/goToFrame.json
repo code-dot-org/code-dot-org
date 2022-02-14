@@ -1,0 +1,12 @@
+{
+  "key": "goToFrame",
+  "name": "goToFrame",
+  "category": "Animations",
+  "category_key": "animations",
+  "palette_params": [
+    {
+      "name": "frame"
+    }
+  ],
+  "syntax": "goToFrame(frame)"
+}
