@@ -14,7 +14,6 @@ class Homepage
     banners = @@announcements_data[:banners]
     banner_id_for_page = pages[page]
     return nil unless banner_id_for_page
-
     banner = banners[banner_id_for_page]
 
     # If the banner has an array of environments, then the current environment must be one of them.
@@ -27,6 +26,10 @@ class Homepage
   end
 
   def self.load_announcements
+    @@announcements_data = nil
+    @@load_error = false
+    @@loaded = true
+
     unless File.file?(@@json_path)
       @@load_error = true
       return
