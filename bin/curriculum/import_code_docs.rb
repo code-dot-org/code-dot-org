@@ -97,13 +97,14 @@ def main(options)
       end
       exp.examples = cb_exp['examples']
       exp.palette_params = cb_exp['parameters']
-      exp.save!
 
       category = exp.programming_environment.categories.find_by_name(cb_exp['category'])
       exp.programming_environment_category = category if category
       warn "#{exp.key} is in a non-existant category #{cb_exp['category']}" unless category
 
-      exp.serialize
+      exp.save!
+
+      exp.write_serialization
     end
   end
 end
