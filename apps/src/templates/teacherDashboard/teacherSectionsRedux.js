@@ -26,8 +26,8 @@ const USER_EDITABLE_SECTION_PROPS = [
 /** @const {number} ID for a new section that has not been saved */
 const PENDING_NEW_SECTION_ID = -1;
 
-/** @const {number} -1 used to indicate no section selected */
-export const NO_SECTION = -1;
+/** @const {string} empty string used to indicate no section selected */
+export const NO_SECTION = '';
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
