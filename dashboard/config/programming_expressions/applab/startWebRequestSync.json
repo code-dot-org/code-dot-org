@@ -1,0 +1,12 @@
+{
+  "key": "startWebRequestSync",
+  "name": "startWebRequestSync",
+  "category": "Data",
+  "category_key": "data",
+  "palette_params": [
+    {
+      "name": "url"
+    }
+  ],
+  "syntax": "startWebRequestSync(url)"
+}

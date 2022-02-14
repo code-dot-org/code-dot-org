@@ -1,0 +1,8 @@
+{
+  "key": "getAllSprites",
+  "name": "getAllSprites",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "block_name": "gamelab_getAllSprites",
+  "syntax": "getAllSprites"
+}

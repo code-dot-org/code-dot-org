@@ -27,6 +27,10 @@ class Homepage
   end
 
   def self.load_announcements
+    @@announcements_data = nil
+    @@load_error = false
+    @@loaded = true
+
     unless File.file?(@@json_path)
       @@load_error = true
       return

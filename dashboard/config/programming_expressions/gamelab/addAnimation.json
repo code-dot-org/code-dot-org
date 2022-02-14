@@ -1,0 +1,15 @@
+{
+  "key": "addAnimation",
+  "name": "addAnimation",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "palette_params": [
+    {
+      "name": "label"
+    },
+    {
+      "name": "animation"
+    }
+  ],
+  "syntax": "addAnimation(label, animation)"
+}
