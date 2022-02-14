@@ -1,0 +1,12 @@
+{
+  "key": "sqrt",
+  "name": "sqrt",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "num"
+    }
+  ],
+  "syntax": "sqrt(num)"
+}

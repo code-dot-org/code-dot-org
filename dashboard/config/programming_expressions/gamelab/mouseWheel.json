@@ -1,0 +1,7 @@
+{
+  "key": "mouseWheel",
+  "name": "mouseWheel",
+  "category": "World",
+  "category_key": "world",
+  "syntax": "function mouseWheel() {}"
+}

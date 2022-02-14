@@ -1,0 +1,7 @@
+{
+  "key": "accelerometer.sensitivity",
+  "name": "accelerometer.sensitivity",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "syntax": "accelerometer.sensitivity"
+}

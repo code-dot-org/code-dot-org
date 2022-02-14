@@ -1,0 +1,8 @@
+{
+  "key": "newSpritePointer",
+  "name": "newSpritePointer",
+  "category": "Events",
+  "category_key": "events",
+  "block_name": "gamelab_newSpritePointer",
+  "syntax": "newSpritePointer"
+}

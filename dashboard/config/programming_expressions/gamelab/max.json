@@ -1,0 +1,15 @@
+{
+  "key": "max",
+  "name": "max",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "n1"
+    },
+    {
+      "name": "n2"
+    }
+  ],
+  "syntax": "max(n1, n2)"
+}
