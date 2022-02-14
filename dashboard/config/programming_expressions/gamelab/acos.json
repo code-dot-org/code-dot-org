@@ -1,0 +1,12 @@
+{
+  "key": "acos",
+  "name": "acos",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "value"
+    }
+  ],
+  "syntax": "acos(value)"
+}

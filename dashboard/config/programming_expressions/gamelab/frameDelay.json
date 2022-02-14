@@ -1,0 +1,7 @@
+{
+  "key": "frameDelay",
+  "name": "frameDelay",
+  "category": "Animations",
+  "category_key": "animations",
+  "syntax": "frameDelay"
+}

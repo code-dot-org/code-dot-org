@@ -1,0 +1,18 @@
+{
+  "key": "constrain",
+  "name": "constrain",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "num"
+    },
+    {
+      "name": "low"
+    },
+    {
+      "name": "high"
+    }
+  ],
+  "syntax": "constrain(num, low, high)"
+}

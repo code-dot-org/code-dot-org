@@ -1,0 +1,7 @@
+{
+  "key": "getFrame",
+  "name": "getFrame",
+  "category": "Animations",
+  "category_key": "animations",
+  "syntax": "getFrame"
+}

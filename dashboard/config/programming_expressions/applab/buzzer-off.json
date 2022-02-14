@@ -1,0 +1,7 @@
+{
+  "key": "buzzer.off",
+  "name": "buzzer.off",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "syntax": "buzzer.off"
+}
