@@ -70,7 +70,7 @@ export const commands = {
     // Touch events include two distinct sprite ids.
     let idArray = [];
 
-    //Only check for values that are new this frame
+    // Only check for values that are new this frame.
     for (let i = this.previous.eventLogLength; i < this.eventLog.length; i++) {
       if (
         // Check for each event type that includes sprite ids (NOT time or key events).
@@ -125,11 +125,11 @@ export const commands = {
       this.currentFrame() * commands.calculateBarScale(this.validationTimes);
     drawUtils.validationBar(this.p5, barWidth, state, {});
 
-    //check criteria and update complete status
+    // Check all criteria and update the completion status of each.
     if (this.currentFrame() <= this.validationTimes.wait) {
       commands.checkAllCriteria(this.criteria);
     } else {
-      //If wait time is over, determine if student passes or fails
+      // If "wait time" is over, determine if student passes or fails.
       var results = {};
       if (state === 'fail') {
         console.log(this.criteria);
@@ -151,6 +151,8 @@ export const commands = {
     commands.updatePrevious.call(this);
   },
 
+  // In levels with events, we need to check if things happened over time.
+  // Store information about this frame for comparisons during the next frame.
   updatePrevious() {
     const spriteIds = this.getSpriteIdsInUse();
     this.previous.eventLogLength = this.eventLog.length;
@@ -171,6 +173,8 @@ export const commands = {
     }
   },
 
+  // If the student has not completed any criteria, they are "failing".
+  // This determines things like the current color of the validation timer bar below the play area.
   getPassState(criteria) {
     var state = 'pass';
     for (const criterion in criteria) {
@@ -195,6 +199,7 @@ export const commands = {
     }
   },
 
+  // Used at the end of a level. Find the first failed criteria and pass associated feedback.
   reportFailure(criteria) {
     let firstFailed = -1;
     for (const criterion in criteria) {
@@ -207,6 +212,7 @@ export const commands = {
     }
   },
 
+  // Used at the end of a level. If there are no failed criteria, pass the generic success feedback.
   reportSuccess(criteria) {
     let firstFailed = -1;
     for (const criterion in criteria) {
