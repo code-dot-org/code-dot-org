@@ -26,7 +26,16 @@ describe('StandardsReport', () => {
       setScriptId: scriptId => {
         DEFAULT_PROPS.scriptId = scriptId;
       },
-      sectionId: 6,
+      section: {
+        id: 6,
+        script: {
+          id: 1163,
+          name: 'express-2019',
+          project_sharing: true
+        },
+        students: [],
+        lessonExtras: false
+      },
       scriptData: {
         id: 1163,
         excludeCsfColumnInLegend: false,

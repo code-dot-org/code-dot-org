@@ -179,6 +179,13 @@ export const fakeLessonWithLevels = (overrideFields = {}, levelCount = 1) => {
   };
 };
 
+export const fakeSection = students => {
+  return {
+    id: randomNumberUpTo100(),
+    students
+  };
+};
+
 export const fakeStudents = studentCount => {
   return Array(studentCount)
     .fill()
@@ -257,9 +264,8 @@ export const fakeProgressTableReduxInitialState = (
       focusAreaLessonIds: [],
       professionalLearningCourse: false
     },
-    teacherSections: {
-      selectedSectionId: randomNumberUpTo100(),
-      selectedStudents: students
+    sectionData: {
+      section: fakeSection(students)
     },
     sectionProgress: {
       unitDataByUnit: {[scriptData.id]: scriptData},

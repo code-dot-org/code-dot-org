@@ -11,6 +11,7 @@ import {
   getSelectedScriptDescription,
   setScriptId
 } from '@cdo/apps/redux/unitSelectionRedux';
+import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import StandardsProgressTable from './StandardsProgressTable';
 import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {
@@ -33,7 +34,7 @@ class StandardsReport extends Component {
   static propTypes = {
     //redux
     scriptId: PropTypes.number,
-    sectionId: PropTypes.number.isRequired,
+    section: sectionDataPropType.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType,
     teacherName: PropTypes.string,
@@ -55,12 +56,12 @@ class StandardsReport extends Component {
     const scriptIdFromTD =
       window.opener.teacherDashboardStoreInformation.scriptId;
     this.props.setScriptId(scriptIdFromTD);
-    loadScriptProgress(scriptIdFromTD, this.props.sectionId);
+    loadScriptProgress(scriptIdFromTD, this.props.section.id);
   }
 
   getLinkToOverview() {
-    const {scriptData, sectionId} = this.props;
-    return scriptData ? `${scriptData.path}?section_id=${sectionId}` : null;
+    const {scriptData, section} = this.props;
+    return scriptData ? `${scriptData.path}?section_id=${section.id}` : null;
   }
 
   printReport = () => {
@@ -117,7 +118,7 @@ class StandardsReport extends Component {
                   {i18n.currentCourse()}
                 </h2>
                 <StandardsReportCurrentCourseInfo
-                  sectionId={this.props.sectionId}
+                  section={this.props.section}
                   scriptFriendlyName={this.props.scriptFriendlyName}
                   scriptData={this.props.scriptData}
                   unitDescription={this.props.unitDescription}
@@ -207,14 +208,14 @@ export const UnconnectedStandardsReport = StandardsReport;
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
-    sectionId: state.teacherSections.selectedSectionId,
+    section: state.sectionData.section,
     scriptData: getCurrentUnitData(state),
     scriptFriendlyName: getSelectedScriptFriendlyName(state),
     unitDescription: getSelectedScriptDescription(state),
-    numStudentsInSection: state.teacherSections.selectedStudents.length,
+    numStudentsInSection: state.sectionData.section.students.length,
     teacherComment: state.sectionStandardsProgress.teacherComment,
     teacherName: state.currentUser.userName,
-    sectionName: sectionName(state, state.teacherSections.selectedSectionId),
+    sectionName: sectionName(state, state.sectionData.section.id),
     numLessonsCompleted: getNumberLessonsCompleted(state),
     numLessonsInUnit: getNumberLessonsInScript(state),
     lessonsByStandard: lessonsByStandard(state)
