@@ -112,7 +112,6 @@ end
 def fetch(url)
   uri = URI(url)
   response = Net::HTTP.get_response(uri)
-  #raise "HTTP status #{response.code} fetching #{uri}" unless response.is_a? Net::HTTPSuccess
   unless response.is_a? Net::HTTPSuccess
     warn "Received non-success status #{response.code} fetching #{uri}"
     return nil
