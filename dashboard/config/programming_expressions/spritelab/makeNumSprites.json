@@ -1,8 +1,0 @@
-{
-  "key": "makeNumSprites",
-  "name": "makeNumSprites",
-  "category": "Sprites",
-  "category_key": "sprites",
-  "block_name": "gamelab_makeNumSprites",
-  "syntax": "makeNumSprites"
-}

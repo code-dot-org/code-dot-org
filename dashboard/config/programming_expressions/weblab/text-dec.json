@@ -1,7 +1,0 @@
-{
-  "key": "Text-Dec",
-  "name": "Text-Dec",
-  "category": "CSS Properties",
-  "category_key": "css_properties",
-  "syntax": "text-decoration: value;"
-}
