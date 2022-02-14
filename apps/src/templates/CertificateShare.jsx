@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {UnconnectedTwoColumnActionBlock as TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 
 export default function CertificateShare(props) {
   const {announcement} = props;
@@ -17,7 +17,6 @@ export default function CertificateShare(props) {
       </a>
       <TwoColumnActionBlock
         isRtl={false}
-        responsiveSize="lg"
         imageUrl={pegasus(announcement.image)}
         subHeading={announcement.title}
         description={announcement.body}
