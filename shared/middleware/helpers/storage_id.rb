@@ -102,12 +102,12 @@ def storage_id_cookie_name
 end
 
 def storage_id_for_user_id(user_id)
-  row = query_user_storage_ids_table({user_id: user_id})
+  row = get_user_storage_id({user_id: user_id})
   row[:id] if row
 end
 
 def user_id_for_storage_id(storage_id)
-  row = query_user_storage_ids_table({id: storage_id})
+  row = get_user_storage_id({id: storage_id})
   row[:user_id] if row
 end
 
@@ -142,7 +142,7 @@ def take_storage_id_ownership_from_cookie(user_id)
   # We couldn't claim the storage. The most likely cause is that another request (by this
   # user) beat us to the punch so we'll re-check to see if we own it. Otherwise the storage
   # id is either invalid or it belongs to another user (both addressed below)
-  return storage_id if query_user_storage_ids_table({id: storage_id, user_id: user_id})
+  return storage_id if get_user_storage_id({id: storage_id, user_id: user_id})
 end
 
 def storage_id_from_cookie
@@ -150,7 +150,7 @@ def storage_id_from_cookie
   return nil if encrypted.empty?
   storage_id = storage_decrypt_id(encrypted)
   return nil if storage_id == 0
-  return nil unless query_user_storage_ids_table({id: storage_id, user_id: nil})
+  return nil unless get_user_storage_id({id: storage_id, user_id: nil})
   storage_id
 end
 
@@ -166,8 +166,19 @@ def user_storage_ids_table
   PEGASUS_DB[:user_storage_ids]
 end
 
-def query_user_storage_ids_table(query)
+# Returns first user storage ID row matching query
+def get_user_storage_id(query)
   user_storage_ids_table.where(query).first
+end
+
+# Takes an array of user ids and returns an array of storage ids
+def get_storage_ids_for_users(user_ids)
+  user_storage_ids_table.where({user_id: user_ids}).pluck(:id)
+end
+
+# Takes an array of user ids and returns a mapping from user id to storage id
+def get_storage_ids_by_user_ids(user_ids)
+  user_storage_ids_table.where({user_id: user_ids}).select_hash(:user_id, :id)
 end
 
 def update_annoymous_user_storage_id(storage_id, user_id)
