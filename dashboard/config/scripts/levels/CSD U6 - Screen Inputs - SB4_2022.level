@@ -58,11 +58,9 @@
       "setProperty": null,
       "declareAssign_x": null
     },
+    "project_template_level_name": "CSD U6 - Screen Inputs - SB Sliders Template_2022",
     "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "CSD U6 - Screen Inputs - SB Sliders Template_2022"
+    "encrypted_examples": "laptkVuS8hSS+TClwbDg4J5KW+FswRGwmeMjjCzIt0lwSk8VqGLxLK9DeUg6\ndd/mZh6KHNWN1V1b1plJXXCZKw==\n"
   },
   "game_id": 41,
   "published": true,
@@ -70,7 +68,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-11-29T22:35:56.035+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - SB3_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - SB3_2022\"},{\"changed_at\":\"2021-11-29 22:41:12 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:42:29 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:48:10 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-11-29T22:35:56.035+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - SB3_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - SB3_2022\"},{\"changed_at\":\"2021-11-29 22:41:12 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:42:29 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-11-29 22:48:10 +0000\",\"changed\":[\"start_blocks\",\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 20:06:04 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

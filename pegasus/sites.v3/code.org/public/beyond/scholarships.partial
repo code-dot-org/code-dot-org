@@ -12,13 +12,13 @@ social:
   "twitter:description": "Explore potential opportunities to fund your CS education"
   "twitter:image": "/images/csjourneys/og-scholarships.jpg"
 ---
-<div class="col-100" style="padding:25px; border:1px solid #29458c; border-radius:15px">
-  <a class="linktag" id="afe" href="https://www.amazonfutureengineer.com/scholarship?utm_campaign=Code%20.org&utm_medium=Scholarship&utm_source=US" target="_blank">
-    <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/afe.png" alt="Amazon Future Engineer logo">
+<div class="col-100" style="padding:25px; border:1px solid #c69662; border-radius:15px">
+  <a class="linktag" id="nucamp_nit" href="https://www.nucamp.co/scholarships/nativesintech" target="_blank">
+    <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/natives-in-tech.png" alt="Natives in Tech logo">
   </a>
   <div style="width: 85%; float: left">
-    <a class="linktag" id="afe" href="https://www.amazonfutureengineer.com/scholarship?utm_campaign=Code%20.org&utm_medium=Scholarship&utm_source=US" target="_blank"><h3 style="margin-top:0; color:#29458c"><strong>Applications now open for Amazon Future Engineer scholarship!</strong></h3></a>
-    <p>$40,000 for college and a paid programming internship at Amazon for high school students from underserved and historically underrepresented backgrounds planning to major in CS. <a class="linktag" id="afe" href="https://www.amazonfutureengineer.com/scholarship?utm_campaign=Code%20.org&utm_medium=Scholarship&utm_source=US" target="_blank" style="color:#29458c">View details.</a></p>
+    <a class="linktag" id="nucamp_nit" href="https://www.nucamp.co/scholarships/nativesintech" target="_blank"><h3 style="margin-top:0; color:#c69662"><strong>Scholarship funds still available for tribal members to launch technology careers!</strong></h3></a>
+    <p>Thousands of dollars in funds are still available to any verified member of a federally recognized tribal nation at least 18 years old to attend one of four Nucamp computer science bootcamps. <a class="linktag" id="nucamp_nit" href="https://www.nucamp.co/scholarships/nativesintech" target="_blank" style="color:#c69662">View details</a>.</p>
   </div>
   <div style="clear:both"></div>
 </div>
@@ -26,7 +26,7 @@ social:
 <div style="clear:both; margin-bottom:20px"></div>
 
 <a id="top"></a>
-<h1><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/><br/>CS-focused scholarships</h1>
+<h1><a href="/csjourneys" target="_blank"><img src="/images/csjourneys/csjourneys.png" alt="CS Journeys" style="width:170px; max-width:100%;margin-bottom: 12px"/></a><br/>CS-focused scholarships</h1>
 <p>Scholarships can help you pay for school without taking out costly student loans. View the featured scholarships, and be sure to use one or more of the scholarship finders below to find other scholarships to apply for.</p>
 
 <ul>

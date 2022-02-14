@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Teacher Account Required to Use Course Beginning in February 2022",
+          "details": "If you are not already a verified teacher, click here to complete the form to become a verified teacher.",
+          "link": "https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -11,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-11 16:26:08 UTC",
+    "serialized_at": "2022-01-25 01:58:04 UTC",
     "published_state": "beta",
     "instruction_type": "self_paced",
     "instructor_audience": "universal_instructor",
@@ -635,6 +644,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1"
         ],
@@ -735,6 +745,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "instructor_in_training": true,
         "level_keys": [
           "SP-VPL-CSD-Mod5-ml-intro categorical-pizza-2021"
         ],
@@ -1185,6 +1196,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectExamples-AIML"
+        ],
         "progression": "Unit projects"
       },
       "bonus": false,

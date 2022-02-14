@@ -4,10 +4,10 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Updating Values with Data\r\n\r\nIn this program the goalie is trying to block the soccer ball. The ball will move automatically across the screen and the player should move when you tilt the board, but the code isn't finished.\r\n\r\n\r\n# Do This\r\n\r\n* Update the `playerY` variable to get the y position from the `player` element on the screen\r\n* Update the `pitch` variable with the orientation from the board\r\n* Update the player's y-position by adding together the `playerY` and `pitch` variables",
+    "long_instructions": "# Combining the Accelerometer and Counter Pattern\r\n\r\nYou can use the accelerometer with variables and the [counter pattern](https://studio.code.org/docs/concepts/app-lab/the-counter-pattern/) to move elements on the screen depending on how the circuit playground is tilted.\r\n\r\nIn this app the goalie is trying to block the soccer ball. The ball will move automatically across the screen using the counter pattern and the player should move when you tilt the board, but the code isn't finished.\r\n\r\n\r\n# Do This\r\n\r\n* Update the `playerY` variable using a [`getProperty(id, property)`(#fff176)](/docs/applab/getProperty/) block to get the `y` position from the `player` element on the screen ([**Show Me Where**](#triggercallout=playery))\r\n* Update the `pitch` variable using an [`accelerometer.getOrientation()`(#f78183)](/docs/applab/accelerometer.getOrientation/) block ([**Show Me Where**](#triggercallout=pitch))\r\n* Update the player's y-position by adding together the `playerY` and `pitch` variables ([**Show Me Where**](#triggercallout=adding))\r\n\r\n**Run Your Program!** You should be able to tilt the Circuit Playground to move the player on the screen! Make sure you used the correct `pitch` or `roll` to make sure the player moves when tilting back and forth rather than left and right!",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "var pitch;\r\nvar ballX;\r\nvar playerY;\r\nsetProperty(\"ball\", \"y\", randomNumber(50, 400));\r\nonBoardEvent(accelerometer, \"data\", function() {\r\n  //Move the ball across the screen\r\n  ballX = getProperty(\"ball\", \"x\");\r\n  ballX = ballX + 2;\r\n  setProperty(\"ball\", \"x\", ballX);\r\n  //Move the player up and down\r\n  pitch = __;\r\n  playerY = __;\r\n  setProperty(\"player\", \"y\", __);\r\n});\r\n",
+    "start_blocks": "var pitch;\r\nvar ballX;\r\nvar playerY;\r\nsetProperty(\"ball\", \"y\", randomNumber(50, 400));\r\nonBoardEvent(accelerometer, \"data\", function() {\r\n  //This section moves the ball across the screen\r\n  ballX = getProperty(\"ball\", \"x\");\r\n  ballX = ballX + 2;\r\n  setProperty(\"ball\", \"x\", ballX);\r\n  //This section moves the player up and down, but isn't finished\r\n  playerY = __;\r\n  pitch = __;\r\n  setProperty(\"player\", \"y\", __);\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -35,7 +35,7 @@
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "false",
+    "hide_design_mode": "true",
     "beginner_mode": "false",
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
@@ -45,40 +45,42 @@
     "makerlab_enabled": "true",
     "code_functions": {
       "accelerometer.getOrientation": null,
-      "onBoardEvent": null,
-      "setProperty": null,
-      "getProperty": null,
-      "subtractOperator": null,
-      "addOperator": null,
-      "multiplyOperator": null,
-      "divideOperator": null,
+      "onEvent": null,
       "declareAssign_x": null,
       "declareNoAssign_x": null,
       "assign_x": null,
-      "onEvent": null,
-      "randomNumber_min_max": null
+      "setProperty": null,
+      "getProperty": null,
+      "getText": null,
+      "setText": null,
+      "ifBlock": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null,
+      "randomNumber_min_max": null,
+      "onBoardEvent": null
     },
-    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(53, 147, 17);\" data-theme=\"classic\"><img data-canonical-image-url=\"icon://fa-child\" data-object-fit=\"contain\" id=\"player\" style=\"height: 100px; width: 100px; position: absolute; left: 20px; top: 135px; margin: 0px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-image-type=\"icon\"><img data-canonical-image-url=\"icon://fa-futbol-o\" data-object-fit=\"contain\" id=\"ball\" style=\"position: absolute; left: 210px; top: 165px; margin: 0px; width: 50px; height: 50px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-image-type=\"icon\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 30px; overflow: hidden; overflow-wrap: break-word; color: rgb(0, 0, 0); max-width: 320px; width: 140px; height: 55px; position: absolute; left: 90px; top: 0px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"score\"></label></div></div>",
-    "encrypted_examples": "sC21zBOxT1jRZWGIQSVQBk2tBJdh6wS/NqMFnmy4SZ+OLgzkACK1GohTQo18\n1wqwRKMUlF85kwuWeL9nPKZpKg==\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(53, 147, 17);\" data-theme=\"classic\"><img data-canonical-image-url=\"icon://fa-child\" data-object-fit=\"contain\" id=\"player\" style=\"height: 100px; width: 100px; position: absolute; left: 20px; top: 135px; margin: 0px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-image-type=\"icon\"><img data-canonical-image-url=\"icon://fa-futbol-o\" data-object-fit=\"contain\" id=\"ball\" style=\"position: absolute; left: 210px; top: 165px; margin: 0px; width: 50px; height: 50px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-image-type=\"icon\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 30px; overflow: hidden; overflow-wrap: break-word; color: rgb(0, 0, 0); max-width: 320px; width: 140px; height: 55px; position: absolute; left: 90px; top: 0px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"score\"></label></div></div>",
+    "encrypted_examples": [
+
+    ],
     "parent_level_id": 20566,
     "name_suffix": "_2021",
     "reference_links": [
+      "/docs/concepts/maker-toolkit/accelerometer-events/",
       "/docs/concepts/maker-toolkit/the-accelerometer/",
-      "/docs/concepts/maker-toolkit/accelerometer-events/"
+      "/docs/concepts/maker-toolkit/board-events/"
     ],
-    "map_reference": "/docs/concepts/app-lab/the-counter-pattern/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
-    "rubric_key_concept": "Use getters and setters to manipulate properties.",
-    "rubric_performance_level_1": "When the program is run, the ball moves smoothly to the left of the screen at a reasonable speed.",
-    "rubric_performance_level_2": "When the program is run, the ball moves across the screen.",
-    "rubric_performance_level_3": "The program accessed the ball's current position and used it to update the ball's \"x\" property, but errors in the program prevent the ball from moving across the screen.",
     "rubric_performance_level_4": "The ball's current position is not used to update its \"x\" property.",
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L12.PB - playery\",\r\n  \"callout_text\": \"Get the player's y position here!\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"playery\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"playerY =\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD U6L12.PB - pitch\",\r\n  \"callout_text\": \"Update the pitch variable here!\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"pitch\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"pitch =\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD U6L12.PB - adding\",\r\n  \"callout_text\": \"Update the y-position here!\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"adding\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"setProperty(\\\"player\\\", \\\"y\\\",\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]"
   },
   "game_id": 41,
   "published": true,
@@ -86,7 +88,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:47:45.731+00:00\",\"changed\":[\"cloned from \\\"CSD U6 goalie_2021\\\"\"],\"cloned_from\":\"CSD U6 goalie_2021\"},{\"changed_at\":\"2021-09-01 22:49:02 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 16:48:36 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 16:56:47 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 16:57:20 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:47:45.731+00:00\",\"changed\":[\"cloned from \\\"CSD U6 goalie_2021\\\"\"],\"cloned_from\":\"CSD U6 goalie_2021\"},{\"changed_at\":\"2021-09-01 22:49:02 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 16:48:36 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 16:56:47 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"code_functions\",\"encrypted_examples\",\"mini_rubric\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 16:57:20 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 17:16:38 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 17:22:07 +0000\",\"changed\":[\"long_instructions\",\"start_blocks\",\"hide_design_mode\",\"code_functions\",\"encrypted_examples\",\"reference_links\",\"map_reference\",\"rubric_key_concept\",\"rubric_performance_level_1\",\"rubric_performance_level_2\",\"rubric_performance_level_3\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 17:22:49 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 17:25:43 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 18:10:21 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 18:14:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 18:19:54 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

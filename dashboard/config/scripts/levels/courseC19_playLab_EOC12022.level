@@ -52,11 +52,16 @@
     "long_instructions": "It is amazing how much you have learned! Let's make a game step by step.\r\n\r\nUsing new blocks in your toolbox, choose a new background, then pick an actor to be in your game.",
     "name_suffix": "2022",
     "encrypted": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:35.153+00:00\",\"changed\":[\"cloned from \\\"courseC19_playLab_EOC1_2021\\\"\"],\"cloned_from\":\"courseC19_playLab_EOC1_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:09:35.153+00:00\",\"changed\":[\"cloned from \\\"courseC19_playLab_EOC1_2021\\\"\"],\"cloned_from\":\"courseC19_playLab_EOC1_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 1
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>
