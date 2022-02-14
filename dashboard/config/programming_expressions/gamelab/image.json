@@ -1,0 +1,36 @@
+{
+  "key": "image",
+  "name": "image",
+  "category": "Drawing",
+  "category_key": "drawing",
+  "palette_params": [
+    {
+      "name": "image"
+    },
+    {
+      "name": "srcX"
+    },
+    {
+      "name": "srcY"
+    },
+    {
+      "name": "srcW"
+    },
+    {
+      "name": "srcH"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "w"
+    },
+    {
+      "name": "h"
+    }
+  ],
+  "syntax": "image(image, srcX, srcY, srcW, srcH, x, y, w, h)"
+}

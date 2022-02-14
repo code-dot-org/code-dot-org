@@ -1,0 +1,7 @@
+{
+  "key": "keyIsPressed",
+  "name": "keyIsPressed",
+  "category": "World",
+  "category_key": "world",
+  "syntax": "keyIsPressed"
+}

@@ -1,0 +1,18 @@
+{
+  "key": "attractionPoint",
+  "name": "attractionPoint",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "palette_params": [
+    {
+      "name": "speed"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
+  ],
+  "syntax": "attractionPoint(speed, x, y)"
+}

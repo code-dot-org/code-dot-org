@@ -1,0 +1,7 @@
+{
+  "key": "getAnimationLabel",
+  "name": "getAnimationLabel",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "syntax": "getAnimationLabel"
+}

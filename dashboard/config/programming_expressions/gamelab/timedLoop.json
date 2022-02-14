@@ -1,0 +1,15 @@
+{
+  "key": "timedLoop",
+  "name": "timedLoop",
+  "category": "Control",
+  "category_key": "control",
+  "palette_params": [
+    {
+      "name": "ms"
+    },
+    {
+      "name": "callback"
+    }
+  ],
+  "syntax": "timedLoop(ms, callback)"
+}

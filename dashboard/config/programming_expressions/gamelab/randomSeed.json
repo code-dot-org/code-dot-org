@@ -1,0 +1,12 @@
+{
+  "key": "randomSeed",
+  "name": "randomSeed",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "seed"
+    }
+  ],
+  "syntax": "randomSeed(seed)"
+}

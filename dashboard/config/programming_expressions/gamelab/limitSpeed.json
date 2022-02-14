@@ -1,0 +1,12 @@
+{
+  "key": "limitSpeed",
+  "name": "limitSpeed",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "palette_params": [
+    {
+      "name": "max"
+    }
+  ],
+  "syntax": "limitSpeed(max)"
+}
