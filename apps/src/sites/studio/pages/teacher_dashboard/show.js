@@ -63,7 +63,6 @@ $(document).ready(function() {
     locales
   });
   const store = getStore();
-  // TODO: (madelynkasula) remove duplication in sectionData.setSection and teacherSections.setSections
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
