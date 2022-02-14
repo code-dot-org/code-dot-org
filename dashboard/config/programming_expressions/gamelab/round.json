@@ -1,0 +1,12 @@
+{
+  "key": "round",
+  "name": "round",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "num"
+    }
+  ],
+  "syntax": "round(num)"
+}

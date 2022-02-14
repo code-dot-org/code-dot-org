@@ -1,0 +1,8 @@
+{
+  "key": "ifVarEquals",
+  "name": "ifVarEquals",
+  "category": "Control",
+  "category_key": "control",
+  "block_name": "gamelab_ifVarEquals",
+  "syntax": "ifVarEquals"
+}
