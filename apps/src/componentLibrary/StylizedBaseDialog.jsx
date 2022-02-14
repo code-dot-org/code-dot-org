@@ -80,6 +80,7 @@ export default function StylizedBaseDialog(props) {
       onClick={props.handleCancellation || props.handleClose}
     />,
     <FooterButton
+      className="uitest-base-dialog-confirm"
       key="confirm"
       type={FooterButtonType.confirm}
       text={props.confirmationButtonText}

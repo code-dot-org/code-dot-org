@@ -15,6 +15,7 @@ export default function UnassignedStudentsPanel({
       <div style={styles.header}>
         <span style={styles.headerTitle}>{i18n.unassignedStudents()}</span>
         <JavalabButton
+          id="uitest-unassign-all-button"
           onClick={onUnassignAllClick}
           icon={<FontAwesome icon="times" className="fa" />}
           text={i18n.unassignAll()}

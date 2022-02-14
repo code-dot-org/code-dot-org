@@ -36,6 +36,25 @@ And /^I create a new section named "([^"]*)" assigned to "([^"]*)" version "([^"
   }
 end
 
+And /^I create a new section named "([^"]*)" assigned to "([^"]*)"$/ do |section_name, assignment_family|
+  individual_steps %Q{
+    When I see the section set up box
+    When I press the new section button
+    Then I should see the new section dialog
+    When I select email login
+    Then I wait to see "#uitest-section-name"
+    And I press keys "#{section_name}" for element "#uitest-section-name"
+    Then I wait to see "#uitest-assignment-family"
+    When I select the "#{assignment_family}" option in dropdown "uitest-assignment-family"
+  }
+
+  individual_steps %Q{
+    And I press the save button to create a new section
+    And I wait for the dialog to close
+    Then I should see the section table
+  }
+end
+
 And /^I create a new section with course "([^"]*)", version "([^"]*)"(?: and unit "([^"]*)")?$/ do |assignment_family, version_year, secondary|
   individual_steps %Q{
     When I see the section set up box
@@ -228,4 +247,24 @@ end
 
 Then /^I open the section action dropdown$/ do
   steps 'Then I click selector ".ui-test-section-dropdown" once I see it'
+end
+
+Then /^I add the first student to the first code review group$/ do
+  steps <<-STEPS
+    And I focus selector "#uitest-unassign-all-button"
+    And I press keys ":tab"
+    And I press keys ":space"
+    And I press keys ":arrow_right"
+    And I press keys ":space"
+  STEPS
+end
+
+Then /^I create a new code review group for the section I saved$/ do
+  steps <<-STEPS
+    And I navigate to teacher dashboard for the section I saved
+    And I click selector "#uitest-teacher-dashboard-nav a:contains(Manage Students)" once I see it
+    And I click selector "#uitest-code-review-groups-button" once I see it
+    And I wait for 2 seconds
+    And I click selector "#uitest-create-code-review-group" once I see it
+  STEPS
 end
