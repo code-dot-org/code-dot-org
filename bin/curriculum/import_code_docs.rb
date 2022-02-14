@@ -72,8 +72,8 @@ def main(options)
       url = "#{cb_url_prefix}/docs/export/block/#{env.name}/#{exp.key}.json?format=json"
       cb_exp_json = fetch(url)
 
-      if cb_exp_json.blank? && exp.lessons.count > 0
-        warn "Received non-success status for #{url}, which is in lessons"
+      if cb_exp_json.blank?
+        warn "Received non-success status for #{url}"
       end
 
       next if cb_exp_json.blank?
@@ -98,6 +98,11 @@ def main(options)
       exp.examples = cb_exp['examples']
       exp.palette_params = cb_exp['parameters']
       exp.save!
+
+      category = exp.programming_environment.categories.find_by_name(cb_exp['category'])
+      exp.programming_environment_category = category if category
+      warn "#{exp.key} is in a non-existant category #{cb_exp['category']}" unless category
+
       exp.serialize
     end
   end
