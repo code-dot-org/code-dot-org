@@ -7,7 +7,7 @@ import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColum
 export default function CertificateShare(props) {
   const {announcement} = props;
   return (
-    <div>
+    <div style={styles.wrapper}>
       <a href={props.printUrl}>
         <img
           src={props.imageUrl}
@@ -31,6 +31,15 @@ export default function CertificateShare(props) {
     </div>
   );
 }
+
+const styles = {
+  wrapper: {
+    with: '100%',
+    maxWidth: 980,
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  }
+};
 
 CertificateShare.propTypes = {
   imageUrl: PropTypes.string.isRequired,
