@@ -1,8 +1,0 @@
-{
-  "key": "clickedSpritePointer",
-  "name": "clickedSpritePointer",
-  "category": "Events",
-  "category_key": "events",
-  "block_name": "gamelab_clickedSpritePointer",
-  "syntax": "clickedSpritePointer"
-}
