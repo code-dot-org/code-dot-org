@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import styleConstants from '../styleConstants';
 
 export default function CertificateShare(props) {
   const {announcement} = props;
@@ -35,7 +36,7 @@ export default function CertificateShare(props) {
 const styles = {
   wrapper: {
     with: '100%',
-    maxWidth: 980,
+    maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
     marginRight: 'auto'
   }
