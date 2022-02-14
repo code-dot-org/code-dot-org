@@ -2,7 +2,6 @@ import {assert} from '../util/reconfiguredChai';
 var testUtils = require('../util/testUtils');
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
-var testCollectionUtils = require('./util/testCollectionUtils');
 var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
 import {TestResults} from '@cdo/apps/constants';
 import * as redux from '@cdo/apps/redux';
@@ -598,66 +597,6 @@ describe('getMissingBlocks_ tests', function() {
       });
     });
   }
-
-  function validateMissingBlocksFromLevelTest(
-    testCollection,
-    testData,
-    dataItem
-  ) {
-    var level = testCollectionUtils.getLevelFromCollection(
-      testCollection,
-      testData,
-      dataItem
-    );
-    assert(global.Blockly, 'Blockly is in global namespace');
-
-    var skinForTests;
-    if (testCollection.skinId) {
-      var appSkins = require('@cdo/apps/' + testCollection.app + '/skins');
-      skinForTests = appSkins.load(studioApp.assetUrl, testCollection.skinId);
-    } else {
-      skinForTests = {
-        assetUrl: function(str) {
-          return str;
-        }
-      };
-    }
-
-    var blockInstallOptions = {skin: skinForTests, isK1: false};
-    var blocksCommon = require('@cdo/apps/blocksCommon');
-    blocksCommon.install(Blockly, blockInstallOptions);
-    var blocks = require('@cdo/apps/' + testCollection.app + '/blocks');
-    assert(blocks);
-    blocks.install(Blockly, blockInstallOptions);
-    validateBlocks({
-      requiredBlocks: level.requiredBlocks,
-      numToFlag: 1,
-      userBlockXml: testData.xml,
-      expectedResult: testData.missingBlocks
-    });
-  }
-
-  describe('required blocks for specific levels', function() {
-    var collections = testCollectionUtils.getCollections();
-    collections.forEach(function(item) {
-      var testCollection = item.data;
-      var app = testCollection.app;
-
-      testCollection.tests.forEach(function(testData, index) {
-        var dataItem = require('./util/data')(app);
-
-        if (testData.missingBlocks) {
-          it('MissingBlocks: ' + testData.description, function() {
-            validateMissingBlocksFromLevelTest(
-              testCollection,
-              testData,
-              dataItem
-            );
-          });
-        }
-      });
-    });
-  });
 });
 
 describe('getCountableBlocks_', function() {
