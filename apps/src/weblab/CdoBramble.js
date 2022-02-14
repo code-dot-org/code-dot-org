@@ -38,6 +38,7 @@ export default class CdoBramble {
       redo: this.redo.bind(this),
       refreshPreview: this.refreshPreview.bind(this),
       resetFilesystem: this.resetFilesystem.bind(this),
+      startOver: this.startOver.bind(this),
       syncFiles: this.syncFiles.bind(this),
       undo: this.undo.bind(this),
       validateProjectChanged: this.validateProjectChanged.bind(this)
@@ -73,6 +74,7 @@ export default class CdoBramble {
 
       const currentFiles = this.api.getCurrentFileEntries();
       const currentVersionId = this.api.getCurrentFilesVersionId();
+
       if (currentFiles?.length <= 0 || !currentVersionId) {
         this.setupNewProject(this.api.getStartSources()?.files, callback);
       } else {
@@ -661,6 +663,46 @@ export default class CdoBramble {
 
   invokeAll(callbacks) {
     callbacks.forEach(callback => callback());
+  }
+
+  startOver(callback) {
+    // Get current filenames in project from bramble.
+    this.shell().ls(this.projectPath, (err, entries) => {
+      const currentFilenames = entries.map(entry => entry.path);
+      const starterFiles = this.api.getStartSources()?.files;
+
+      // Generate changes to simulate the way Bramble-triggered changes are tracked.
+      let simulatedChanges = [];
+      starterFiles.forEach(file => {
+        simulatedChanges.push({
+          operation: 'change',
+          file: file.name,
+          fileDataPath: this.prependProjectPath(file.name)
+        });
+      });
+      const starterFilenames = starterFiles.map(file => file.name);
+      currentFilenames.forEach(filename => {
+        if (!starterFilenames.includes(filename)) {
+          simulatedChanges.push({
+            operation: 'delete',
+            file: filename
+          });
+        }
+      });
+
+      this.deleteProject(() => {
+        this.createProjectRootDir(err => {
+          if (err) {
+            callback(err);
+            return;
+          }
+
+          this.recursivelyWriteSourceFiles(starterFiles, 0, () => {
+            this.recursivelySaveChangesToServer(simulatedChanges, 0, callback);
+          });
+        });
+      });
+    });
   }
 
   resetFilesystem(callback) {

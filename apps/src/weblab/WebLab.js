@@ -107,41 +107,7 @@ WebLab.prototype.init = function(config) {
   config.wireframeShare = true;
   config.noHowItWorks = true;
 
-  config.afterClearPuzzle = config => {
-    return new Promise((_, reject) => {
-      // Delete everything from the service and restart the initial sync
-      filesApi.deleteAll(
-        xhr => {
-          this.fileEntries = null;
-          firehoseClient.putRecord(
-            {
-              study: 'weblab_loading_investigation',
-              study_group: 'empty_manifest',
-              event: 'clear_puzzle_success',
-              project_id: getCurrentId(),
-              data_json: JSON.stringify({
-                responseText: xhr.responseText
-              })
-            },
-            {includeUserId: true}
-          );
-          // The project has been reset, reload() the page now - don't resolve
-          // the promise, because that will lead to a project.save() that we
-          // don't want or need in this scenario.
-          reload();
-          reject(
-            new Error(
-              'deleteAll succeeded, weblab handling reload to avoid saving'
-            )
-          );
-        },
-        xhr => {
-          console.warn(`WebLab: error deleteAll failed: ${xhr.status}`);
-          reject(new Error(xhr.status));
-        }
-      );
-    });
-  };
+  config.afterClearPuzzle = this.afterClearPuzzle.bind(this);
 
   config.getCodeAsync = this.getCodeAsync.bind(this);
 
@@ -284,6 +250,19 @@ WebLab.prototype.onMount = function(config) {
   });
 };
 
+WebLab.prototype.afterClearPuzzle = function() {
+  return new Promise((resolve, reject) => {
+    // TODO: Calling project.save(true) doesn't create a 2nd version in version history,
+    // which I assumed it should. Before we can ship this change, there should be before
+    // and after versions when a user starts over.
+    project.save(true).then(() => {
+      this.brambleHost.startOver(() => {
+        resolve();
+      });
+    });
+  });
+};
+
 WebLab.prototype.onToggleInspector = function() {
   if (this.brambleHost) {
     if (getStore().getState().inspectorOn) {
@@ -386,7 +365,7 @@ WebLab.prototype.prepareForRemix = function() {
   });
 };
 
-// Called by Bramble to get source files to initialize with
+// Called internally and by Bramble to get source files to initialize with
 WebLab.prototype.getStartSources = function() {
   return this.startSources;
 };
