@@ -93,9 +93,10 @@ class TeacherDashboardHeader extends React.Component {
     return (
       <div>
         <SmallChevronLink
-          href="/home#classroom-sections"
-          text={i18n.viewAllSections()}
-          iconBefore
+          link="/home#classroom-sections"
+          linkText={i18n.viewAllSections()}
+          isRtl={true}
+          chevronSide="left"
         />
         <this.lockedSectionNotification
           restrictSection={this.props.selectedSection.restrictSection}
