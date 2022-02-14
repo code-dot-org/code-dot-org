@@ -2,5 +2,6 @@
   "key": "stopTimedLoop",
   "name": "stopTimedLoop",
   "category": "Control",
+  "category_key": "control",
   "syntax": "stopTimedLoop"
 }

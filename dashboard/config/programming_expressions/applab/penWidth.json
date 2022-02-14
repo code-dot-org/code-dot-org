@@ -2,6 +2,7 @@
   "key": "penWidth",
   "name": "penWidth",
   "category": "Turtle",
+  "category_key": "turtle",
   "palette_params": [
     {
       "name": "width"

@@ -239,7 +239,7 @@ nl:
   hoc2018_tutorial_mchoc_description: Gebruik blokken code om Alex of Steve op avontuur
     te sturen door deze Minecraft wereld.
   codeorg_homepage_hoc2019_dance_heading: Probeer de nieuwe <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1016,6 +1016,7 @@ nl:
   footer_menu_support: Ondersteuning
   footer_menu_terms: Voorwaarden
   footer_menu_privacy: Privacybeleid
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: "'Hour of Code'-activiteiten"
   learn_banner_blurb: Probeer een één uur durende tutorial ontworpen voor alle leeftijden
     in meer dan 45 talen.  Vervoeg miljoenen studenten en leraren in meer dan 180

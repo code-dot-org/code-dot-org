@@ -49,11 +49,16 @@
     "bubble_choice_description": "Make all of the honey.",
     "show_type_hints": "false",
     "thumbnail_url": "https://images.code.org/b66a8729e49ee179a1d10188b4ba04ea-image-1615582199416.png",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:26.841+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_nestedLoops9_2021\\\"\"],\"cloned_from\":\"courseD_bee_nestedLoops9_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T19:47:26.841+00:00\",\"changed\":[\"cloned from \\\"courseD_bee_nestedLoops9_2021\\\"\"],\"cloned_from\":\"courseD_bee_nestedLoops9_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 5
+  }
 }]]></config>
   <blocks>
     <toolbox_blocks>

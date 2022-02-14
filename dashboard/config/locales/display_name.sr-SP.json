@@ -62,7 +62,16 @@
         "helloworld_animals_costumes": "Костими",
         "helloworld_emoji_costumes": "Костими",
         "helloworld_food_costumes": "Костими",
-        "helloworld_retro_costumes": "Костими"
+        "helloworld_retro_costumes": "Костими",
+        "CourseF_Oceans_Video_Machine_Learning": "Bидео: Mашинско учење",
+        "CourseF_Oceans_Video_Machine_Learning_2021": "Bидео: Mашинско учење",
+        "CourseF_Oceans_Video_Societal_Implications": "Bидео: друштвене импликације",
+        "CourseF_Oceans_Video_Societal_Implications_2021": "Bидео: друштвене импликације",
+        "CourseF_Oceans_Video_Training_Data": "Bидео: Tренирање података",
+        "CourseF_Oceans_Video_Training_Data_2021": "Bидео: Tренирање података",
+        "Oceans_Video_Machine_Learning": "Bидео: Mашинско учење",
+        "Oceans_Video_Societal_Implications": "Bидео: друштвене импликације",
+        "Oceans_Video_Training_Data": "Bидео: Tренирање података"
       }
     }
   }

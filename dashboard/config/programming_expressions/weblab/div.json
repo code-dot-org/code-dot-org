@@ -2,5 +2,6 @@
   "key": "div",
   "name": "div",
   "category": "HTML Tags",
+  "category_key": "html_tags",
   "syntax": "<div></div>"
 }

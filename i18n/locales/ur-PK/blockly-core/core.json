@@ -34,6 +34,7 @@
     "CONTROLS_FOREACH_INPUT_INLIST": "Fehrist mein",
     "CONTROLS_FOREACH_INPUT_ITEM": ".her aik cheez k liye",
     "CONTROLS_FOREACH_TOOLTIP": " Fehrist mein her cheez k liye, her variable ko '%1' ker daein aur phir kuch bayanaat (Statments) daein ",
+    "CONTROLS_FOR_INPUT_COUNTER": "for %1 from %2 to %3 count by %4",
     "CONTROLS_FOR_INPUT_FROM_TO_BY": "1% سے 2% تک 3%  کے فرق سے",
     "CONTROLS_FOR_INPUT_WITH": "شمار سے",
     "CONTROLS_FOR_TOOLTIP": "کیا متغیر %1 اقدار کےآغازی قیمت سے اختتامی قیمت تک لیتا ہے، جو مخصوص وقفوں کے حساب سے گنتا اور مخصوص رکاوٹ پیدا کرتا ہے۔",

@@ -5,16 +5,8 @@ import {UnconnectedProgressViewHeader as ProgressViewHeader} from '@cdo/apps/tem
 
 describe('ProgressViewHeader', () => {
   let DEFAULT_PROPS = {
-    section: {
-      id: 6,
-      script: {
-        id: 132,
-        name: 'csd1-2019',
-        project_sharing: true
-      },
-      students: [],
-      lessonExtras: false
-    },
+    scriptId: 132,
+    sectionId: 6,
     currentView: 'summary',
     scriptData: {
       id: 132,

@@ -2,6 +2,7 @@
   "key": "gamelab_location_picker",
   "name": "location_picker",
   "category": "Location",
+  "category_key": "location",
   "block_name": "gamelab_location_picker",
   "syntax": "location_picker"
 }

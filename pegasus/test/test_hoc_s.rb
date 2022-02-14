@@ -24,60 +24,60 @@ class HocI18nTest < Minitest::Test
   end
 
   def test_html_escaped
-    HOC_I18N['en']['test'] = "string with <strong>embedded html</strong>"
+    I18n.backend.store_translations 'en', {"test" => "string with <strong>embedded html</strong>"}
     resp = get('/hoc_s/generic')
     assert_equal 200, resp.status
     assert_match "<h1>string with &lt;strong&gt;embedded html&lt;/strong&gt;</h1>", resp.body
   end
 
   def test_interpolation
-    HOC_I18N['en']['test'] = "%{first}"
+    I18n.backend.store_translations 'en', {"test" => "%{first}"}
     resp = get('/hoc_s/interpolation')
     assert_equal 200, resp.status
     assert_match "<h1>primary</h1>", resp.body
 
-    HOC_I18N['en']['test'] = "%{first} %{second}"
+    I18n.backend.store_translations 'en', {"test" => "%{first} %{second}"}
     resp = get('/hoc_s/interpolation')
     assert_equal 200, resp.status
     assert_match "<h1>primary secondary</h1>", resp.body
 
-    HOC_I18N['en']['test'] = "%{first} %{second} %{first} again"
+    I18n.backend.store_translations 'en', {"test" => "%{first} %{second} %{first} again"}
     resp = get('/hoc_s/interpolation')
     assert_equal 200, resp.status
     assert_match "<h1>primary secondary primary again</h1>", resp.body
   end
 
   def test_markdown
-    HOC_I18N['en']['test'] = "string with **some** _basic_ formatting"
+    I18n.backend.store_translations 'en', {"test" => "string with **some** _basic_ formatting"}
     resp = get('/hoc_s/markdown')
     assert_equal 200, resp.status
     assert_match "<h1><p>string with <strong>some</strong> <em>basic</em> formatting</p>\n</h1>", resp.body
 
-    HOC_I18N['en']['test'] = "string with <strong>embedded html</strong>"
+    I18n.backend.store_translations 'en', {"test" => "string with <strong>embedded html</strong>"}
     resp = get('/hoc_s/markdown')
     assert_equal 200, resp.status
     assert_match "<h1><p>string with &lt;strong&gt;embedded html&lt;/strong&gt;</p>\n</h1>", resp.body
   end
 
   def test_interpolated_markdown
-    HOC_I18N['en']['test'] = "string with an [interpolated link](%{url})"
+    I18n.backend.store_translations 'en', {"test" => "string with an [interpolated link](%{url})"}
     resp = get('/hoc_s/interpolated_markdown')
     assert_equal 200, resp.status
     assert_match "<h1><p>string with an <a href=\"http://test.com\">interpolated link</a></p>\n</h1>", resp.body
   end
 
   def test_inline_markdown
-    HOC_I18N['en']['test'] = "basic string"
+    I18n.backend.store_translations 'en', {"test" => "basic string"}
     resp = get('/hoc_s/inline_markdown')
     assert_equal 200, resp.status
     assert_match "<h1>basic string</h1>", resp.body
 
-    HOC_I18N['en']['test'] = "string with\n\n- some\n- block\n\nmarkdown"
+    I18n.backend.store_translations 'en', {"test" => "string with\n\n- some\n- block\n\nmarkdown"}
     resp = get('/hoc_s/inline_markdown')
     assert_equal 200, resp.status
     assert_match "<h1>string withsome\nblock\nmarkdown</h1>", resp.body
 
-    HOC_I18N['en']['test'] = "string with <strong>embedded html</strong>"
+    I18n.backend.store_translations 'en', {"test" => "string with <strong>embedded html</strong>"}
     resp = get('/hoc_s/inline_markdown')
     assert_equal 200, resp.status
     assert_match "<h1>string with embedded html</h1>", resp.body

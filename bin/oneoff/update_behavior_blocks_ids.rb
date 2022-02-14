@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
+# DO NOT USE AS A REFERENCE. This misses certain behavioral
+# definition names due to a bug in BEHAVIORAL_DEFINITION_NAMES's
+# initialization. Use `update_behavior_blocks_ids3`.
+
 # Behavioral blocks with no id set have their id
 # set on the frontend as their text value. This causes
 # issues when viewing the levels in different languages.

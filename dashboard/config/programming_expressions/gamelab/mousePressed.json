@@ -2,5 +2,6 @@
   "key": "mousePressed",
   "name": "mousePressed",
   "category": "World",
+  "category_key": "world",
   "syntax": "function mousePressed() {}"
 }

@@ -2,5 +2,6 @@
   "key": "getDirection",
   "name": "getDirection",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "getDirection"
 }

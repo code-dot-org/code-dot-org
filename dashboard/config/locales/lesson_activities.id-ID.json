@@ -143,6 +143,12 @@
         "e746d53a-16b6-4748-98ce-e04ed834264b": {
           "name": "Penutupan"
         },
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Pemanasan"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Penutupan"
+        },
         "05180d31-d1ff-422e-8227-69f7d07884a6": {
           "name": "Pemanasan"
         },
@@ -2633,12 +2639,6 @@
         "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": "Penutupan"
         },
-        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
-          "name": "Pemanasan"
-        },
-        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
-          "name": "Penutupan"
-        },
         "df740e3c-7452-4001-b9d8-da71e3f78818": {
           "name": "Tingkat"
         },
@@ -2996,6 +2996,9 @@
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Penutupan"
         },
+        "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
           "name": "Pemanasan: Kata yang Sama. Makna Berbeda."
         },
@@ -3013,6 +3016,9 @@
         },
         "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
           "name": "Penutupan"
+        },
+        "385b01c4-de16-401f-bc49-71e637e93ccc": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "5750d053-1daa-409c-9b83-bc4306ba4aef": {
           "name": "Pemanasan"
@@ -3058,6 +3064,9 @@
         },
         "5c35a689-64d1-49a2-b19f-688ddf190d1e": {
           "name": "Penilaian"
+        },
+        "22f02104-4519-48dd-aa08-c532f9e080c9": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "8362c620-cea5-4a56-b0b4-74a606bf62da": {
           "name": "Pemanasan"
@@ -3146,6 +3155,9 @@
         "ec7e4b2d-6d77-4493-a10c-6f62f3280d58": {
           "name": "Penutupan"
         },
+        "e030be21-480d-40a2-8f97-574492b54aa2": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
           "name": "Pemanasan"
         },
@@ -3182,17 +3194,26 @@
         "1e93bc2c-4f03-4b43-8695-529bbfbe53dc": {
           "name": "Penutupan"
         },
+        "3ffb2700-4b4c-4deb-a009-856be4b850da": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
           "name": "Pemanasan"
         },
         "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
           "name": " Ringkasan"
         },
+        "352bcbca-fe70-41d4-8d38-7cfed390e991": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
           "name": "Pemanasan"
         },
         "ad9b2654-4506-4741-9f53-5699cb20615d": {
           "name": "Penutupan"
+        },
+        "3ed032b9-b27d-4c86-8aff-1e60ba90a038": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
           "name": "Pemanasan"
@@ -3211,6 +3232,9 @@
         },
         "d8fbee53-640e-4f66-ac46-024f36fd2f54": {
           "name": "Penilaian"
+        },
+        "e524c263-6ebc-47c9-9d43-3b738a99574b": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
           "name": "Pemanasan"
@@ -3245,6 +3269,9 @@
         "de46f4b1-acce-419e-9508-f9e6293b5ba8": {
           "name": "Penutupan"
         },
+        "620c06c7-711d-459f-9f67-af3d142eb29c": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
           "name": "Pemanasan"
         },
@@ -3265,6 +3292,9 @@
         },
         "785c0d5e-8bb0-4e62-b57f-636eb000c961": {
           "name": "Penutupan"
+        },
+        "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
           "name": "Pemanasan"
@@ -3287,6 +3317,9 @@
         "647827d3-b6a3-4697-9cb8-fec35c819d12": {
           "name": " Ringkasan"
         },
+        "92c5197c-d135-4891-9504-ba1393dd8ca6": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "6aab5f16-5596-4536-b404-f46152246d24": {
           "name": "Pemanasan"
         },
@@ -3299,6 +3332,9 @@
         "450f879a-a14d-4d47-93fd-2916bbf46caa": {
           "name": "Penutupan"
         },
+        "d532c41b-fba1-4122-8928-17ec3ef36315": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "e1843002-564c-4803-9eaa-44f48a8e4159": {
           "name": "Pemanasan"
         },
@@ -3307,6 +3343,9 @@
         },
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Pemanasan"
+        },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": "Aktivitas Penghubung - Event - Pilih Satu"
         },
         "75370025-0071-498b-8e43-3e57a3ce5a78": {
           "name": "Penutupan"
@@ -3353,6 +3392,9 @@
         "d582f103-5fb1-4236-80df-100080cc01b9": {
           "name": "Penutupan"
         },
+        "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
           "name": "Pemanasan"
         },
@@ -3362,6 +3404,9 @@
         "45bb8885-fab0-41c9-a10d-7a208e5c5bec": {
           "name": "Pemanasan"
         },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": "Aktivitas Penghubung "
+        },
         "8a35ec67-caeb-48fa-95bc-d2c3177f6cf9": {
           "name": "Penutupan"
         },
@@ -3370,6 +3415,9 @@
         },
         "5f64e89f-e102-47ee-b219-5e637db83913": {
           "name": "Penutupan"
+        },
+        "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "1c265744-1a1f-44f4-8380-7328759249ea": {
           "name": "Pemanasan"
@@ -3395,11 +3443,17 @@
         "92a24c72-3fd9-4843-b701-ebb3832e29e5": {
           "name": "Penutupan"
         },
+        "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "63075b82-d582-409b-afd8-a8967040c94c": {
           "name": "Pemanasan"
         },
         "533abcef-ea93-4b33-902c-7b70e22ffe31": {
           "name": "Penutupan"
+        },
+        "d96c9108-8707-4345-9f1a-5e69928ca31f": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "8d10f0a0-909f-482c-a17f-3477280c7375": {
           "name": "Pemanasan"
@@ -3416,6 +3470,9 @@
         "9b5aab20-f47d-48fd-aadc-eaba286d48b5": {
           "name": "Penutupan"
         },
+        "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
           "name": "Pemanasan"
         },
@@ -3430,6 +3487,9 @@
         },
         "d0de2b60-38a6-42fb-8d87-e63dc5e8b590": {
           "name": "Pemanasan"
+        },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Aktivitas Utama "
         },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Penutupan"
@@ -3464,6 +3524,9 @@
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Penutupan"
         },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Penilaian Opsional"
+        },
         "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
           "name": "Pemanasan"
         },
@@ -3482,6 +3545,9 @@
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Pemanasan"
         },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Aktivitas Penghubung - Pilih Satu"
+        },
         "7104b634-df9c-44bd-bc2d-fd226d3a1ee4": {
           "name": "Penutupan"
         },
@@ -3490,6 +3556,9 @@
         },
         "592a6eba-5e83-43f7-b622-1c58f47e3dea": {
           "name": "Penutupan"
+        },
+        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
           "name": "Pemanasan"
@@ -3518,11 +3587,17 @@
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Penutupan"
         },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Pemanasan"
+        },
         "9939da92-62ec-4a09-a7be-8e2dd4693cff": {
           "name": "Penutupan"
         },
         "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
           "name": "Penilaian"
+        },
+        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
           "name": "Pemanasan"
@@ -3560,6 +3635,9 @@
         "160b0f38-c5d3-4b28-b797-981888824dcf": {
           "name": "Penutupan"
         },
+        "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
           "name": "Pemanasan"
         },
@@ -3580,6 +3658,9 @@
         },
         "ab1fc6fb-495e-4ae1-9685-c0c64d5bfa06": {
           "name": "Penutupan"
+        },
+        "4366b898-b885-48ea-90a8-0316aa3c153f": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
           "name": "Pemanasan"
@@ -3605,6 +3686,9 @@
         "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
           "name": "Penutupan"
         },
+        "a75ec06d-15b5-41d1-895c-3b1c3c52276d": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "4e59783c-7761-4afe-9775-d8c51ca075d0": {
           "name": "Pemanasan"
         },
@@ -3622,6 +3706,9 @@
         },
         "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
           "name": "Penutupan"
+        },
+        "74cd46ac-1c89-437d-a630-a19c43b6ff41": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
           "name": "Pemanasan"
@@ -3851,6 +3938,9 @@
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Penutupan"
         },
+        "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "077242ad-8c8a-4b24-a139-a5e198abd405": {
           "name": "Pemanasan (Opsional)"
         },
@@ -3862,6 +3952,9 @@
         },
         "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
           "name": "Penutupan"
+        },
+        "dbad5d87-5c18-4c2a-a15a-6567124b4864": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
           "name": "Pemanasan"
@@ -3875,6 +3968,9 @@
         "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
           "name": "Penutupan"
         },
+        "388b4557-7534-453f-a760-847055923bc0": {
+          "name": "Kesempatan Lintas Kurikulum"
+        },
         "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
           "name": "Pemanasan"
         },
@@ -3883,6 +3979,9 @@
         },
         "a0d784ef-8d53-486a-ac4c-eba8617be681": {
           "name": "Penilaian"
+        },
+        "6c35971f-0c71-44c4-b6d7-9380216625a5": {
+          "name": "Kesempatan Lintas Kurikulum"
         },
         "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
           "name": "Pemanasan"
