@@ -4,7 +4,7 @@ class ProgrammingEnvironmentsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, except: [:index]
 
   def index
-    @programming_environments = ProgrammingEnvironment.all.map(&:summarize_for_index)
+    @programming_environments = ProgrammingEnvironment.all.order(:name).map(&:summarize_for_index)
   end
 
   def new
