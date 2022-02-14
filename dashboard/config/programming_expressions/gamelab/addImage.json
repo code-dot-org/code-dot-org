@@ -1,0 +1,15 @@
+{
+  "key": "addImage",
+  "name": "addImage",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "palette_params": [
+    {
+      "name": "label"
+    },
+    {
+      "name": "image"
+    }
+  ],
+  "syntax": "addImage(label, image)"
+}

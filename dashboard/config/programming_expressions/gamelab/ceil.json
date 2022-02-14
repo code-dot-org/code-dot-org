@@ -1,0 +1,12 @@
+{
+  "key": "ceil",
+  "name": "ceil",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "num"
+    }
+  ],
+  "syntax": "ceil(num)"
+}

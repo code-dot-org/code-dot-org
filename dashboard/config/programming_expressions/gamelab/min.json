@@ -1,0 +1,15 @@
+{
+  "key": "min",
+  "name": "min",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "n1"
+    },
+    {
+      "name": "n2"
+    }
+  ],
+  "syntax": "min(n1, n2)"
+}

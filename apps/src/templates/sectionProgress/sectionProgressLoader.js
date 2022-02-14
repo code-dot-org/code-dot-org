@@ -23,8 +23,7 @@ const NUM_STUDENTS_PER_PAGE = 50;
 
 export function loadScriptProgress(scriptId, sectionId) {
   const state = getStore().getState().sectionProgress;
-  const sectionData = getStore().getState().teacherSections.sections[sectionId];
-  const students = getStore().getState().teacherSections.selectedStudents;
+  const sectionData = getStore().getState().sectionData.section;
 
   // TODO: Save Standards data in a way that allows us
   // not to reload all data to get correct standards data
@@ -70,7 +69,9 @@ export function loadScriptProgress(scriptId, sectionId) {
       }
     });
 
-  const numPages = Math.ceil(students.length / NUM_STUDENTS_PER_PAGE);
+  // get the student data
+  const numStudents = sectionData.students.length;
+  const numPages = Math.ceil(numStudents / NUM_STUDENTS_PER_PAGE);
 
   const requests = _.range(1, numPages + 1).map(currentPage => {
     const url = `/dashboardapi/section_level_progress/${

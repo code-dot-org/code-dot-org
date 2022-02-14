@@ -1,0 +1,12 @@
+{
+  "key": "addToGroup",
+  "name": "addToGroup",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "palette_params": [
+    {
+      "name": "group"
+    }
+  ],
+  "syntax": "addToGroup(group)"
+}

@@ -1,0 +1,18 @@
+{
+  "key": "norm",
+  "name": "norm",
+  "category": "Math",
+  "category_key": "math",
+  "palette_params": [
+    {
+      "name": "value"
+    },
+    {
+      "name": "start"
+    },
+    {
+      "name": "stop"
+    }
+  ],
+  "syntax": "norm(value, start, stop)"
+}
