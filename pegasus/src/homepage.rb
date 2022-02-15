@@ -486,7 +486,7 @@ class Homepage
 
   def self.get_below_hero_announcement
     {
-      showing: true,
+      showing: false,
       text: "homepage_below_hero_announcement_text",
       link: "/privacy-may2018",
       link_text: "homepage_below_hero_announcement_link_text"
@@ -498,8 +498,7 @@ class Homepage
   end
 
   def self.show_professional_learning_banner(request)
-    teacher_application_mode = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
-    request.locale == "en-US" && %w(open closing-soon).include?(teacher_application_mode)
+    request.locale == "en-US"
   end
 
   def self.professional_learning_banner_header
