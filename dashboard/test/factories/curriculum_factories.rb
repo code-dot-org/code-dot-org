@@ -2,7 +2,7 @@ FactoryGirl.define do
   factory :reference_guide do
     association :course_version
 
-    key "ref_guide_key"
+    sequence(:key, 1) {|c| "bogus-reference-guide-#{c}"}
     display_name "Sample Reference Guide"
     content "Some markdown *text*"
 
