@@ -209,6 +209,17 @@ class ProgrammingExpression < ApplicationRecord
     }
   end
 
+  def serialize_for_environment_show
+    {
+      key: key,
+      name: name,
+      blockName: block_name,
+      color: get_color,
+      syntax: syntax,
+      link: documentation_path
+    }
+  end
+
   def get_blocks
     return unless block_name
     return unless programming_environment.block_pool_name

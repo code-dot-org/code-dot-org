@@ -41,6 +41,7 @@ export default function StyledCodeBlock({programmingExpression}) {
           <div
             id={`embedded-block-${programmingExpression.blockName}`}
             ref={blockRef}
+            style={{paddingBottom: 5}}
           />
         </a>
       </div>

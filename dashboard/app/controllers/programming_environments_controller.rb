@@ -50,6 +50,10 @@ class ProgrammingEnvironmentsController < ApplicationController
     end
   end
 
+  def show
+    @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
+  end
+
   private
 
   def programming_environment_params
