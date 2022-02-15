@@ -95,7 +95,10 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Pet Scene Creator",
+    "bubble_choice_description": "Use dropdowns to create different background and pet combinations",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L8/practice/A.png"
   },
   "game_id": 41,
   "published": true,
@@ -103,7 +106,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-18T23:55:39.731+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - A_2022\"},{\"changed_at\":\"2021-12-18 23:58:25 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"mini_rubric\",\"reference_links\",\"start_html\",\"start_blocks\",\"rubric_key_concept\",\"rubric_performance_level_1\",\"rubric_performance_level_2\",\"rubric_performance_level_3\",\"rubric_performance_level_4\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:56:23 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 17:03:25 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-18T23:55:39.731+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - A_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - A_2022\"},{\"changed_at\":\"2021-12-18 23:58:25 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"mini_rubric\",\"reference_links\",\"start_html\",\"start_blocks\",\"rubric_key_concept\",\"rubric_performance_level_1\",\"rubric_performance_level_2\",\"rubric_performance_level_3\",\"rubric_performance_level_4\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 16:56:23 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 17:03:25 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:14:18 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-02-14 19:41:02 UTC",
+    "serialized_at": "2022-02-15 17:36:42 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -265,6 +265,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**",
+        "preparation": "Play through the levels and review the **lesson slides**.",
         "purpose": "This lesson temporarily shifts away from variables and instead focuses on programming with groups of sprites. Later in the course, students will learn more about variables and simulations. The types of programs students create in this lesson will provide additional context for those lessons.",
         "student_overview": "You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!"
       },
@@ -816,6 +817,8 @@
       "key": "7cc9f72e-1e61-46ff-8a9c-7a5d7f5cbfb7",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "7cc9f72e-1e61-46ff-8a9c-7a5d7f5cbfb7",
@@ -828,6 +831,7 @@
       "key": "b948a904-f5ea-4a14-be87-95de3bbf1155",
       "position": 2,
       "properties": {
+        "duration": 30,
         "name": "Main Activity"
       },
       "seeding_key": {
@@ -841,6 +845,8 @@
       "key": "ae371449-807b-4b5c-b7ef-83eaf8ace27d",
       "position": 3,
       "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "ae371449-807b-4b5c-b7ef-83eaf8ace27d",
@@ -1598,7 +1604,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide",
-        "name": "Reflection"
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "5e1d361c-4925-48b4-b00a-d92b6d5e612d",
@@ -2346,8 +2352,7 @@
       "key": "25d96d98-657a-49e3-bb26-bae041d2f0db",
       "position": 2,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - Program Planning” slide\n\n\n",
-        "name": "Planning (10 mins)"
+        "description": "####Planning (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - Program Planning” slide\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "25d96d98-657a-49e3-bb26-bae041d2f0db",
@@ -2509,6 +2514,8 @@
       "key": "36663851-502d-4948-8c05-3edeec3749e9",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: \n* _How would you describe this interactive scene?_\n* _If you wanted to create this scene in Sprite Lab, what blocks of code would you need?_\n\n**Discussion goal**: Students should recognize parts of the scene that they already understand how to create, such as making sprites and giving them behaviors. They should also notice that many sprites are created all at once, and that each sprite responds to the user clicking it at a different time. This might invite discussion about new blocks of code that could be used here.\n",
+        "name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "36663851-502d-4948-8c05-3edeec3749e9",
@@ -2516,9 +2523,49 @@
       }
     },
     {
-      "key": "218893d6-9cb3-494b-b9b4-4c8b9ed94e8a",
+      "key": "fd10ad9b-173d-495f-8094-cc8ea6a93941",
+      "position": 2,
+      "properties": {
+        "description": "In this scene, we see multiple sprites that each begin spinning when the user clicks on them. We already know how to make sprites and give them a behavior. \n\nToday we’ll learn how to create a group of sprites with matching costumes and interact with each sprite separately. This will enable us to make busier animations and fun games.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fd10ad9b-173d-495f-8094-cc8ea6a93941",
+        "lesson_activity.key": "7cc9f72e-1e61-46ff-8a9c-7a5d7f5cbfb7"
+      }
+    },
+    {
+      "key": "10d4ab9e-1499-4d24-a18a-c4cceee79c1a",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The sample animation looks complicated because there are a lot of moving sprites. It is important to highlight that students will be learning ways to program scenes like this with a few new blocks of code.\n\nIt may be helpful to play through the levels ahead of time yourself, so that you understand how the new blocks are different from what students have seen before."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "10d4ab9e-1499-4d24-a18a-c4cceee79c1a",
+        "lesson_activity.key": "7cc9f72e-1e61-46ff-8a9c-7a5d7f5cbfb7"
+      }
+    },
+    {
+      "key": "d0cc8b9b-9429-4c68-9563-5dfff7a73f36",
       "position": 1,
       "properties": {
+        "name": "Lots of Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0cc8b9b-9429-4c68-9563-5dfff7a73f36",
+        "lesson_activity.key": "b948a904-f5ea-4a14-be87-95de3bbf1155"
+      }
+    },
+    {
+      "key": "218893d6-9cb3-494b-b9b4-4c8b9ed94e8a",
+      "position": 2,
+      "properties": {
+        "description": "####Prediction (3 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prediction” slide\n\n**Do This**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2528,8 +2575,9 @@
     },
     {
       "key": "87bb0e14-fa4f-4dd4-8c63-21538b407d64",
-      "position": 2,
+      "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lots of Sprites” video\n",
         "progression_name": "Video: Lots of Sprites"
       },
       "seeding_key": {
@@ -2539,8 +2587,9 @@
     },
     {
       "key": "ab01e263-286f-404b-b2e6-57051a41ec59",
-      "position": 3,
+      "position": 4,
       "properties": {
+        "description": "####Skill Building and Practice (17 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-8 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in.\n\nThese activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2550,8 +2599,9 @@
     },
     {
       "key": "d275cd25-a6a6-4e72-9031-0bfb07cdafdc",
-      "position": 4,
+      "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Practice (Choice)” slide\n",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2561,8 +2611,9 @@
     },
     {
       "key": "b96782c5-fb26-4407-82fd-a675aefa4140",
-      "position": 5,
+      "position": 6,
       "properties": {
+        "description": "####Free Play (10 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n**Transition**: Students should now skip to the final level in the lesson where they will be able to make their own project. Each choice here provides students with a different collection of sprite costumes to use. Students should pick one to start.\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2574,6 +2625,8 @@
       "key": "3664249c-12c0-4c71-9a3f-d955dd635d9f",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: How can you use sprites and events to make your program more complex?\n\n**Discussion goal**: Students should understand that opening up the event blocks (using the + sign) and dragging out the sprite block inside enables the program to change individual sprites one at a time when they are clicked by the user.  ",
+        "name": "Reflect"
       },
       "seeding_key": {
         "activity_section.key": "3664249c-12c0-4c71-9a3f-d955dd635d9f",
@@ -4816,6 +4869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_predict"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4838,6 +4894,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_video"
+        ],
         "progression": "Video: Lots of Sprites"
       },
       "bonus": false,
@@ -4860,6 +4919,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_make"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4882,6 +4944,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_size"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4904,6 +4969,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_say"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4926,6 +4994,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_costume"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4948,6 +5019,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_behaviors"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4970,6 +5044,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_touch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4992,6 +5069,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_practice"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5014,6 +5094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5036,6 +5119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -5058,6 +5144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5080,6 +5169,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5102,6 +5194,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_click"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5124,6 +5219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_explore"
+        ],
         "progression": "Exploration: Clicker Game"
       },
       "bonus": false,
@@ -5146,6 +5244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5168,6 +5269,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5190,6 +5294,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5212,6 +5319,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5234,6 +5344,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5256,6 +5369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_samples"
+        ],
         "progression": "Exploration: Sample Programs"
       },
       "bonus": false,
@@ -5278,6 +5394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_player_move"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5300,6 +5419,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_items"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5322,6 +5444,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_score_variable"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5344,6 +5469,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_remove"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5366,6 +5494,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_more_sprites"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5388,6 +5519,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_score"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5410,6 +5544,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_freeplay"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -8569,6 +8706,16 @@
       }
     },
     {
+      "key": "10d91803-fad0-40af-8d53-e08e5f260a1e",
+      "properties": {
+        "description": "Create Sprite Lab programs where sprites are created in groups, and controlled individually using events."
+      },
+      "seeding_key": {
+        "lesson.key": "[New] Lots of Sprites",
+        "objective.key": "10d91803-fad0-40af-8d53-e08e5f260a1e"
+      }
+    },
+    {
       "key": "1a527ad3-b417-46c3-b73d-52394d4c673b",
       "properties": {
         "description": "Use a computer simulation to collect data about a model"
@@ -9134,6 +9281,27 @@
         "lesson.key": "The Power of Words",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Lots of Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Lots of Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Lots of Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
       }
     }
   ],
