@@ -41,4 +41,18 @@ describe('CertificateShare', () => {
     const block = wrapper.find('Connect(UnconnectedTwoColumnActionBlock)');
     expect(block.prop('imageUrl')).to.equal('//code.org/announcement-image');
   });
+
+  it('renders no announcement without announcement prop', () => {
+    const props = {
+      ...defaultProps,
+      announcement: null
+    };
+    const wrapper = shallow(<CertificateShare {...props} />);
+
+    const printLink = wrapper.find('a');
+    expect(printLink.length).to.equal(1);
+
+    const block = wrapper.find('Connect(UnconnectedTwoColumnActionBlock)');
+    expect(block.length).to.equal(0);
+  });
 });
