@@ -96,11 +96,14 @@
       "/docs/concepts/maker-toolkit/board-events/",
       "/docs/concepts/maker-toolkit/data-and-change-events/"
     ],
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"volumeButton\" style=\"padding: 0px; margin: 0px; width: 275px; font-size: 23px; color: rgb(255, 255, 255); background-color: rgb(23, 0, 255); position: absolute; left: 20px; top: 5px; height: 30px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\">Volume Meter!</button></div></div>",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"volumeButton\" style=\"padding: 0px; margin: 0px; width: 275px; font-size: 23px; color: rgb(255, 255, 255); background-color: rgb(23, 0, 255); position: absolute; left: 20px; top: 5px; height: 30px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\">Volume Meter!</button></div></div>"
+    "display_name": "Volume Meter",
+    "bubble_choice_description": "Use the sound sensor to create an interactive volume meter that changes with the noise level",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L11/practice/D.png"
   },
   "game_id": 41,
   "published": true,
@@ -108,7 +111,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-19T18:28:43.325+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PC_2022\"},{\"changed_at\":\"2022-01-19 18:28:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 00:01:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 00:02:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-19T18:28:43.325+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PC_2022\"},{\"changed_at\":\"2022-01-19 18:28:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 00:01:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 00:02:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:26:36 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

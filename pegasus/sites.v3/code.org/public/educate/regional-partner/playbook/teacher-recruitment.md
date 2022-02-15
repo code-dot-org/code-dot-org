@@ -47,7 +47,7 @@ ________________
 
 ## Supporting Resources
 - [Fundraising opportunities](https://code.org/educate/regional-partner/playbook/funding)
-- [Professional Learning Program Brochure](https://drive.google.com/file/d/1BKb96SQx0H211XT1YrX0F5UDINtEHrxR/view)
+- [Professional Learning Program Brochure](https://code.org/files/programs/codeorg-program-brochure.pdf)
 - [CSA Professional Learning Overview](https://code.org/educate/csa-pl-1-pager.pdf)
 - [Teacher Application Process Doc](https://docs.google.com/document/d/1g_r3tBzdjRq5UI_xMnzWytqRPBvWJnsgBhXYSkSC5hw/edit) includes the teacher application questions and process FAQs
    - Teacher application [rubric](https://docs.google.com/document/d/19oolyeensn9oX8JAnIeT2M6HbNZQkZqlPhwcaIDx-Us/edit)
