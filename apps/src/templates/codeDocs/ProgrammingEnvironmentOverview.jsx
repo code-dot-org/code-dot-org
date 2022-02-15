@@ -1,6 +1,6 @@
-import React, {createRef, useEffect} from 'react';
-import ReactDOM from 'react-dom';
-import StyledCodeBlock from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
+import React from 'react';
+import PropTypes from 'prop-types';
+import CodeDocLink from '@cdo/apps/templates/codeDocs/CodeDocLink';
 
 function CategorySection({category}) {
   return (
@@ -17,7 +17,7 @@ function CategorySection({category}) {
       <ul>
         {category.programmingExpressions.map(expression => (
           <li key={expression.name}>
-            <StyledCodeBlock programmingExpression={expression} />
+            <CodeDocLink programmingExpression={expression} />
           </li>
         ))}
       </ul>
@@ -38,3 +38,11 @@ export default function ProgrammingEnvironmentOverview({
     </div>
   );
 }
+
+CategorySection.propTypes = {
+  category: PropTypes.object.isRequired
+};
+
+ProgrammingEnvironmentOverview.propTypes = {
+  programmingEnvironment: PropTypes.object.isRequired
+};
