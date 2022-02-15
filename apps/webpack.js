@@ -330,7 +330,6 @@ var karmaConfig = _.extend({}, baseConfig, {
       'process.env.NODE_ENV': JSON.stringify(
         envConstants.NODE_ENV || 'development'
       ),
-      LEVEL_TYPE: JSON.stringify(envConstants.LEVEL_TYPE),
       PISKEL_DEVELOPMENT_MODE: JSON.stringify(false)
     })
   ]
