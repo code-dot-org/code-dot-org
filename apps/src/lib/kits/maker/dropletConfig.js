@@ -168,7 +168,7 @@ const circuitPlaygroundBlocks = [
     parent: api,
     category: CIRCUIT_CATEGORY,
     paletteParams: ['component', 'event', 'callback'],
-    params: ['buttonL', '"down"', 'function(event) {\n  \n}'],
+    params: ['buttonL', '"down"', 'function() {\n  \n}'],
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(CP_COMPONENT_EVENTS),
