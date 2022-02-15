@@ -1,5 +1,5 @@
 import {assert} from '../util/reconfiguredChai';
-var tickWrapper = require('./../integration/util/tickWrapper');
+var tickWrapper = require('./../util/tickWrapper');
 
 function createFakeApp() {
   return {
