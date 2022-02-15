@@ -20,7 +20,6 @@
       "led.off": null,
       "led.toggle": null,
       "onBoardEvent": null,
-      "lightSensor.value": null,
       "equalityOperator": null,
       "greaterThanOperator": null,
       "greaterThanOrEqualOperator": null,
@@ -32,11 +31,8 @@
       "assign_x": null,
       "addOperator": null,
       "subtractOperator": null,
-      "updateRecord": null,
       "multiplyOperator": null,
-      "divideOperator": null,
-      "setNumber": null,
-      "buzzer.note": null
+      "divideOperator": null
     },
     "edit_code": true,
     "embed": "false",
@@ -94,7 +90,10 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Mini Piano",
+    "bubble_choice_description": "Create an app that uses 3 external buttons to play musical notes, like a mini piano",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L17/practice/B.png"
   },
   "game_id": 41,
   "published": true,
@@ -102,7 +101,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-09T23:07:42.675+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - PB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - PB_2022\"},{\"changed_at\":\"2022-02-09 23:09:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-09T23:07:42.675+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - PB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - PB_2022\"},{\"changed_at\":\"2022-02-09 23:09:14 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 20:44:49 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 20:48:20 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

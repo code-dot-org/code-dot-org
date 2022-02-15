@@ -73,7 +73,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# Color Changer\r\n\r\nCreate an app that uses 3 external buttons to change the background color of the screen.\r\n\r\n## Do This\r\n\r\n**Wiring Your Device:**\r\n- Make sure your Circuit Playground is unplugged from the computer\r\n- Connect 3 wires to pins `\"A4\"`, `\"A5\"`, and `\"A6\"`\r\n- Connect a wire to a `GND` pin\r\n- Plug your Circuit Playground back into the computer. You may need to rerun the Maker Setup\r\n\r\n**Coding Your Device:**\r\n- Use three [`createButton()`(#4dd0e1)](/docs/applab/createButton/) blocks for pins `\"A4\"`, `\"A5\"`, and `\"A6\"`.\r\n- Use three [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) blocks to detect when each of your buttons is `\"down\"`.\r\n- Inside each [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), use a [`setProperty()`(#fff176)](/docs/applab/setProperty/) block to change the background color of the app to a color of your choosing\r\n    \r\n**Run Your Code!** You should be able to use the ground wire to press each of the buttons, which will update the background color of your app!",
+    "long_instructions": "# Physical Input Challenge",
     "text_mode_at_start": "false",
     "parent_level_id": 20603,
     "name_suffix": "_2021",
@@ -86,22 +86,20 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "start_blocks": "//Create your button variables here\r\n\r\n\r\n//Add your onBoardEvents here\r\n",
+    "display_name": "Challenge D",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L17/challenge/D.png",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "display_name": "Color Changer",
-    "bubble_choice_description": "Create an app that uses 3 external buttons to change the background color of the screen.",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L17/practice/A.png"
+    ]
   },
   "game_id": 41,
   "published": true,
-  "created_at": "2022-02-09T23:04:03.000Z",
+  "created_at": "2022-02-15T20:49:47.000Z",
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-09T23:04:03.482+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - PA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - PA_2022\"},{\"changed_at\":\"2022-02-09 23:06:42 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_html\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 20:44:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 20:47:29 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 20:48:06 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-15T20:49:47.665+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - ChalC_2022\"},{\"changed_at\":\"2022-02-15 20:50:01 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
