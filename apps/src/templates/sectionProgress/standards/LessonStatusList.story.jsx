@@ -7,9 +7,8 @@ import {Provider} from 'react-redux';
 import sectionStandardsProgress from './sectionStandardsProgressRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import sectionData from '@cdo/apps/redux/sectionDataRedux';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 
 export default storybook => {
   const store = createStore(
@@ -17,13 +16,15 @@ export default storybook => {
       sectionProgress,
       sectionStandardsProgress,
       unitSelection,
-      sectionData,
       teacherSections,
       currentUser
     }),
     {
       teacherSections: {
-        selectedSectionId: 1
+        selectedSectionId: 11
+      },
+      unitSelection: {
+        scriptId: 1
       }
     }
   );
