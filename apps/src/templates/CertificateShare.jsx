@@ -18,7 +18,6 @@ export default function CertificateShare(props) {
         />
       </a>
       <TwoColumnActionBlock
-        isRtl={false}
         imageUrl={pegasus(announcement.image)}
         subHeading={announcement.title}
         description={announcement.body}
