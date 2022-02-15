@@ -240,6 +240,7 @@
     "@codemirror/state": "^0.19.2",
     "@codemirror/theme-one-dark": "^0.19.0",
     "@codemirror/view": "^0.19.9",
+    "@dsco_/link": "^1.1.2",
     "@microsoft/immersive-reader-sdk": "^1.1.0",
     "ace-builds": "^1.4.12",
     "blockly": "6.20210701.0",
