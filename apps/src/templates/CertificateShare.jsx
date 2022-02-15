@@ -16,18 +16,20 @@ export default function CertificateShare({announcement, printUrl, imageUrl}) {
           style={styles.certificate}
         />
       </a>
-      <TwoColumnActionBlock
-        imageUrl={pegasus(announcement.image)}
-        subHeading={announcement.title}
-        description={announcement.body}
-        buttons={[
-          {
-            id: announcement.buttonId,
-            url: announcement.buttonUrl,
-            text: announcement.buttonText
-          }
-        ]}
-      />
+      {announcement && (
+        <TwoColumnActionBlock
+          imageUrl={pegasus(announcement.image)}
+          subHeading={announcement.title}
+          description={announcement.body}
+          buttons={[
+            {
+              id: announcement.buttonId,
+              url: announcement.buttonUrl,
+              text: announcement.buttonText
+            }
+          ]}
+        />
+      )}
     </div>
   );
 }
@@ -47,5 +49,5 @@ const styles = {
 CertificateShare.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   printUrl: PropTypes.string.isRequired,
-  announcement: PropTypes.object.isRequired
+  announcement: PropTypes.object
 };
