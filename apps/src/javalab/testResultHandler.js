@@ -15,7 +15,8 @@ export function onTestResult(data, callback) {
     fileName,
     errorLine,
     isValidation,
-    exceptionName
+    exceptionName,
+    stackTrace
   } = data.detail && data.detail;
   const statusDetails = {className: className, methodName: methodName};
   switch (data.value) {
@@ -37,7 +38,10 @@ export function onTestResult(data, callback) {
       } else {
         message += getExceptionMessage(data, data.detail.type);
       }
-      if (!isValidation && fileName && errorLine) {
+
+      if (stackTrace) {
+        message += `\n${stackTrace}`;
+      } else if (!isValidation && fileName && errorLine) {
         message += ` (${fileName}:${errorLine})`;
       }
 
