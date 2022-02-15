@@ -10,6 +10,7 @@ import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('DetailViewContents', () => {
   allowConsoleWarnings();
@@ -257,6 +258,10 @@ describe('DetailViewContents', () => {
       });
 
       it('Has Reopen Application menu item', () => {
+        experiments.setEnabled(
+          experiments.TEACHER_APPLICATION_SAVING_REOPENING,
+          true
+        );
         const detailView = mountDetailView(applicationType, {
           isWorkshopAdmin: true
         });
@@ -270,6 +275,10 @@ describe('DetailViewContents', () => {
           .first();
 
         expect(deleteApplicationMenuitem).to.have.length(1);
+        experiments.setEnabled(
+          experiments.TEACHER_APPLICATION_SAVING_REOPENING,
+          false
+        );
       });
 
       it('Has Delete FiT Weekend Registration menu item if there is a FiT weekend registration', () => {
