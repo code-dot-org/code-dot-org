@@ -51,6 +51,7 @@ import PrincipalApprovalButtons from './principal_approval_buttons';
 import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
 import ChangeLog from './detail_view/change_log';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import experiments from '@cdo/apps/util/experiments';
 
 const NA = 'N/A';
 
@@ -585,12 +586,16 @@ export class DetailViewContents extends React.Component {
             <MenuItem onSelect={this.handleAdminEditClick}>
               (Admin) Edit Form Data
             </MenuItem>
-            <MenuItem
-              style={styles.delete}
-              onSelect={this.handleReopenApplicationClick}
-            >
-              Reopen Application
-            </MenuItem>
+            {experiments.isEnabled(
+              experiments.TEACHER_APPLICATION_SAVING_REOPENING
+            ) && (
+              <MenuItem
+                style={styles.delete}
+                onSelect={this.handleReopenApplicationClick}
+              >
+                Reopen Application
+              </MenuItem>
+            )}
             <MenuItem
               style={styles.delete}
               onSelect={this.handleDeleteApplicationClick}
