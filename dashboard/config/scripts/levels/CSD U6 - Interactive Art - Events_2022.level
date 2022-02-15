@@ -48,6 +48,15 @@
     "text_mode_at_start": "false",
     "encrypted": "false",
     "reference_links": [
+      "/docs/concepts/maker-toolkit/playing-notes/",
+      "/docs/concepts/maker-toolkit/analog-sensors/",
+      "/docs/concepts/maker-toolkit/data-and-change-events/",
+      "/docs/concepts/maker-toolkit/changing-sensor-scale/",
+      "/docs/concepts/maker-toolkit/the-accelerometer/",
+      "/docs/concepts/maker-toolkit/accelerometer-events/",
+      "/docs/concepts/javascript/functions/",
+      "/docs/concepts/javascript/modifying-arrays/",
+      "/docs/concepts/javascript/arrays/",
       "/docs/concepts/app-lab/taking-input-with-getproperty/",
       "/docs/concepts/app-lab/changing-screens/",
       "/docs/concepts/app-lab/designing-screens-with-code/",
@@ -63,7 +72,7 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "project_template_level_name": "CSD U6 - Human Device - template_2022",
+    "project_template_level_name": "CSD U6 - Interactive Art - template_2022",
     "preload_asset_list": null,
     "encrypted_examples": [
 
@@ -75,7 +84,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-11T19:57:37.967+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Events_2022\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Events_2022\"},{\"changed_at\":\"2022-02-11 19:59:42 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-11T19:57:37.967+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Events_2022\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Events_2022\"},{\"changed_at\":\"2022-02-11 19:59:42 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 20:00:25 +0000\",\"changed\":[\"project_template_level_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-11 20:03:54 +0000\",\"changed\":[\"reference_links\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

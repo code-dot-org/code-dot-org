@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import PropTypes from 'prop-types';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -537,7 +538,7 @@ const initialState = {
   assignmentFamilies: [],
   // Mapping from sectionId to section object
   sections: {},
-  // List of students in section currently being edited
+  // List of students in section currently being edited (see studentShape PropType)
   selectedStudents: [],
   sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
@@ -1378,3 +1379,13 @@ export function hiddenSectionIds(state) {
   state = getRoot(state);
   return state.sectionIds.filter(id => state.sections[id].hidden);
 }
+
+export const studentShape = PropTypes.shape({
+  sectionId: PropTypes.number,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  sharingDisabled: PropTypes.bool,
+  totalLines: PropTypes.number,
+  secretPicturePath: PropTypes.string,
+  secretWords: PropTypes.string
+});
