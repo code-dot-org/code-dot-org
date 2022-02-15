@@ -374,6 +374,36 @@ export class DetailViewContents extends React.Component {
     });
   };
 
+  handleReopenApplicationClick = () => {
+    this.setState({showReopenApplicationConfirmation: true});
+  };
+
+  handleReopenApplicationCancel = () => {
+    this.setState({showReopenApplicationConfirmation: false});
+  };
+
+  handleReopenApplicationConfirmed = () => {
+    $.ajax({
+      method: 'PUT',
+      url: `/api/v1/pd/applications/${this.props.applicationId}`,
+      contentType: 'application/json',
+      dataType: 'json',
+      data: JSON.stringify({status: 'incomplete'})
+    })
+      .done(() => {
+        this.setState({
+          reopened: true,
+          showReopenApplicationConfirmation: false
+        });
+      })
+      .fail(() => {
+        this.setState({
+          reopened: false,
+          showReopenApplicationConfirmation: false
+        });
+      });
+  };
+
   handleDeleteApplicationClick = () => {
     this.setState({showDeleteApplicationConfirmation: true});
   };
@@ -557,6 +587,12 @@ export class DetailViewContents extends React.Component {
             </MenuItem>
             <MenuItem
               style={styles.delete}
+              onSelect={this.handleReopenApplicationClick}
+            >
+              Reopen Application
+            </MenuItem>
+            <MenuItem
+              style={styles.delete}
               onSelect={this.handleDeleteApplicationClick}
             >
               Delete Application
@@ -653,6 +689,14 @@ export class DetailViewContents extends React.Component {
             headerText="Delete Application"
             bodyText="Are you sure you want to delete this application? You will not be able to undo this."
             okText="Delete"
+          />
+          <ConfirmationDialog
+            show={this.state.showReopenApplicationConfirmation}
+            onOk={this.handleReopenApplicationConfirmed}
+            onCancel={this.handleReopenApplicationCancel}
+            headerText="Reopen Teacher's Application"
+            bodyText="Reopening the application will allow the teacher to change their responses."
+            okText="Reopen"
           />
         </InputGroup.Button>
       </InputGroup>
@@ -1245,6 +1289,11 @@ export class DetailViewContents extends React.Component {
       const message = this.state.deleted
         ? 'This application has been deleted.'
         : 'This application could not be deleted.';
+      return <h4>{message}</h4>;
+    } else if (this.state.hasOwnProperty('reopened')) {
+      const message = this.state.reopened
+        ? 'This application has been reopened.'
+        : 'This application could not be reopened.';
       return <h4>{message}</h4>;
     }
     return (
