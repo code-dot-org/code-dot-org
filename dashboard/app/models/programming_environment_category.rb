@@ -45,6 +45,15 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
     }
   end
 
+  def summarize_for_environment_show
+    {
+      key: key,
+      name: name,
+      color: color,
+      programmingExpressions: programming_expressions.map(&:serialize_for_environment_show)
+    }
+  end
+
   def generate_key
     return key if key
     key = ProgrammingEnvironmentCategory.sanitize_key(name)
