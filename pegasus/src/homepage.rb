@@ -486,7 +486,7 @@ class Homepage
 
   def self.get_below_hero_announcement
     {
-      showing: false,
+      showing: true,
       text: "homepage_below_hero_announcement_text",
       link: "/privacy-may2018",
       link_text: "homepage_below_hero_announcement_link_text"
@@ -502,10 +502,15 @@ class Homepage
     request.locale == "en-US" && %w(open closing-soon).include?(teacher_application_mode)
   end
 
+  def self.professional_learning_banner_header
+    superhero_header = "Help students become superheroes!"
+    superhero_header
+  end
+
   def self.professional_learning_banner_text
     teacher_apps_closing_soon = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode) == "closing-soon"
     closing_soon_text = "2021 Professional Learning applications are closing soon! Sign up now."
-    sign_up_text = "Sign up for Professional Learning! Middle and High School applications now open."
+    sign_up_text = "Our Professional Learning program helps you teach computer science!"
     teacher_apps_closing_soon ? closing_soon_text : sign_up_text
   end
 
