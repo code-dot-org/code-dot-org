@@ -5,7 +5,7 @@ if(!validationProps){
 }
 
 function updateLog(){
-  var start = Object.keys(window).indexOf("executeDrawLoopAndCallbacks")+1;
+  var start = Object.keys(window).indexOf("studentVarToken")+1;
   var end = Object.keys(window).indexOf("__jsCB");
   var index;
   for(var i=start;i<end;i++){
