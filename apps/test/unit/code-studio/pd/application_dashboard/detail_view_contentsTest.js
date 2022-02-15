@@ -256,6 +256,22 @@ describe('DetailViewContents', () => {
         expect(deleteApplicationMenuitem).to.have.length(1);
       });
 
+      it('Has Reopen Application menu item', () => {
+        const detailView = mountDetailView(applicationType, {
+          isWorkshopAdmin: true
+        });
+        detailView
+          .find('button#admin-edit')
+          .first()
+          .simulate('click');
+        const deleteApplicationMenuitem = detailView
+          .find('.dropdown.open a')
+          .findWhere(a => a.text() === 'Reopen Application')
+          .first();
+
+        expect(deleteApplicationMenuitem).to.have.length(1);
+      });
+
       it('Has Delete FiT Weekend Registration menu item if there is a FiT weekend registration', () => {
         const overrides = {
           isWorkshopAdmin: true,
