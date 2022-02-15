@@ -167,7 +167,7 @@ class ProgrammingExpression < ApplicationRecord
     {
       id: id,
       category: category,
-      color: color,
+      color: get_color,
       key: key,
       name: name,
       syntax: syntax,
@@ -222,7 +222,7 @@ class ProgrammingExpression < ApplicationRecord
     {
       name: name,
       blockName: block_name,
-      color: color,
+      color: get_color,
       syntax: syntax,
       link: documentation_path
     }
