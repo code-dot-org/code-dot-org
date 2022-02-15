@@ -92,7 +92,10 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Change Colors with Toggle",
+    "bubble_choice_description": "Change the colors of the LEDs using the toggle switch",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L7/practice/A.png"
   },
   "game_id": 41,
   "published": true,
@@ -100,7 +103,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-28T16:53:40.326+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - PracA_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - PracA_2022\"},{\"changed_at\":\"2021-12-28 16:55:29 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 16:59:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:05:49 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-28T16:53:40.326+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - PracA_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - PracA_2022\"},{\"changed_at\":\"2021-12-28 16:55:29 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"reference_links\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 16:59:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:05:49 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:07:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
