@@ -95,7 +95,7 @@ class VideosController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_video
-    @video = Video.current_locale.find(params[:id])
+    @video = Video.find(params[:id])
   end
 
   def set_video_by_key
