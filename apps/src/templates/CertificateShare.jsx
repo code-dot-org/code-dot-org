@@ -5,13 +5,12 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {TwoColumnActionBlock} from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import styleConstants from '../styleConstants';
 
-export default function CertificateShare(props) {
-  const {announcement} = props;
+export default function CertificateShare({announcement, printUrl, imageUrl}) {
   return (
     <div style={styles.wrapper}>
-      <a href={props.printUrl}>
+      <a href={printUrl}>
         <img
-          src={props.imageUrl}
+          src={imageUrl}
           alt={i18n.certificateForCompletion()}
           width="100%"
           style={styles.certificate}

@@ -31,14 +31,7 @@ describe('CertificateShare', () => {
   });
 
   it('renders announcement image url relative to pegasus', () => {
-    const props = {...defaultProps};
-    const wrapper = shallow(
-      <CertificateShare
-        imageUrl={props.imageUrl}
-        printUrl={props.printUrl}
-        announcement={props.announcement}
-      />
-    );
+    const wrapper = shallow(<CertificateShare {...defaultProps} />);
 
     const printLink = wrapper.find('a');
     expect(printLink.prop('href')).to.equal('/certificate-print');
