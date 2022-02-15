@@ -89,14 +89,9 @@ It's also possible to run an individual test or subset of tests with:
 npm run test:unit -- --grep='TutorialExplorer'
 ```
 
-To run integration tests for a certain level type:
+To run integration tests:
 ```
-LEVEL_TYPE=applab npm run test:integration
-```
-
-You can also use the `--grep` flag with integration tests:
-```
-LEVEL_TYPE=applab npm run test:integration --grep=ec_data_blocks
+npm run test:integration
 ```
 
 ##### Rerun Tests Automatically #####
