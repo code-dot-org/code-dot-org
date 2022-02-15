@@ -1,7 +1,8 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "pl2022"
+    "/home": "pl2022",
+    "/certificates": "congrats-certificate-share"
   },
 
   "banners": {
@@ -12,7 +13,7 @@
       "buttonText": "Learn More",
       "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
       "buttonId": "pl2022-details"
-    },  
+    },
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
       "title": "Explore the wide world of computer science",
@@ -103,6 +104,14 @@
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/ai",
       "buttonId": "2020-ai"
+    },
+    "congrats-certificate-share": {
+      "image": "/images/teacherdashboard1.png",
+      "title": "Try an Hour of Code",
+      "body": "Anyone can learn!",
+      "buttonText": "Start",
+      "buttonUrl": "https://code.org/learn",
+      "buttonId": "congrats-certificate-share-button"
     }
   }
 }
