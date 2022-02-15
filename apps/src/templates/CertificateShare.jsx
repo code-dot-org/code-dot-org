@@ -14,6 +14,7 @@ export default function CertificateShare(props) {
           src={props.imageUrl}
           alt={i18n.certificateForCompletion()}
           width="100%"
+          style={styles.certificate}
         />
       </a>
       <TwoColumnActionBlock
@@ -39,6 +40,9 @@ const styles = {
     maxWidth: styleConstants['content-width'],
     marginLeft: 'auto',
     marginRight: 'auto'
+  },
+  certificate: {
+    marginBottom: 20
   }
 };
 
