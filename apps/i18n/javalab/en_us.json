@@ -58,7 +58,7 @@
   "errorTheaterInvalidShape": "A shape needs to contain an even number of values to represent (x,y) coordinates, and must include at least 4 values.",
   "errorTheaterVideoTooLarge": "Your video is too large. Please decrease the number of frames in your video and try again.",
   "errorTheaterVideoTooLong": "Your video exceeded the maximum playback time. Please decrease the length of your video and try again.",
-  "exceptionThrown": "{exceptionName} was thrown",
+  "exceptionThrown": "[EXCEPTION] {exceptionName} was thrown",
   "failedTestResult": "{className} > {methodName} FAILED",
   "feedbackBeginning": "This is the beginning of feedback for your project.",
   "feedbackBeginningPeer": "This is the beginning of feedback for {peerName}'s project.",
