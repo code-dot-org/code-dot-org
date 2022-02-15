@@ -44,6 +44,5 @@ module.exports = {
   CIRCLE_TEST_REPORTS: process.env.CIRCLE_TEST_REPORTS,
   BROWSER: process.env.BROWSER,
   // If set, will turn on react hot loader and run the webpack dev server
-  HOT: !!process.env.HOT,
-  LEVEL_TYPE: process.env.LEVEL_TYPE
+  HOT: !!process.env.HOT
 };
