@@ -94,6 +94,7 @@ class UnitEditor extends React.Component {
     initialCourseVersionId: PropTypes.number,
     initialUseLegacyLessonPlans: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
+    courseOfferingEditorLink: PropTypes.string,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -753,6 +754,9 @@ class UnitEditor extends React.Component {
                     preventCourseVersionChange={
                       this.state.savedVersionYear !== '' ||
                       this.state.savedFamilyName !== ''
+                    }
+                    courseOfferingEditorLink={
+                      this.props.courseOfferingEditorLink
                     }
                   />
                 </div>
