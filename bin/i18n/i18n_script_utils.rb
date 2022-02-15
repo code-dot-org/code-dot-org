@@ -39,6 +39,16 @@ CROWDIN_PROJECTS = {
   }
 }
 
+CROWDIN_TEST_PROJECTS = {
+  "codeorg-testing": {
+    config_file: File.join(File.dirname(__FILE__), "codeorg-testing_crowdin.yml"),
+    identity_file: File.join(File.dirname(__FILE__), "codeorg-testing_credentials.yml"),
+    identity_file_v2: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
+    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_etags.json"),
+    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-testing_files_to_sync_out.json")
+  }
+}
+
 class I18nScriptUtils
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
