@@ -89,17 +89,23 @@
       "/docs/concepts/maker-toolkit/board-events/"
     ],
     "callout_json": "[]",
-    "start_blocks": "//This button turns the LEDs on and makes the buzzer start buzzing\nonEvent(\"onButton\", \"click\", function( ) {\n  \n});\n//This button turns the LEDs off and makes the buzzer stop buzzing\nonEvent(\"offButton\", \"click\", function( ) {\n  \n});\n\n",
+    "start_blocks": "//This button turns the LEDs on and makes the buzzer start buzzing\r\nonEvent(\"onButton\", \"click\", function( ) {\r\n  \r\n});\r\n//This button turns the LEDs off and makes the buzzer stop buzzing\r\nonEvent(\"offButton\", \"click\", function( ) {\r\n  \r\n});\r\n\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"onButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 90px; width: 100px; background-color: rgb(0, 186, 255); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 30px; position: absolute; left: 110px; top: 110px;\">ON</button><button id=\"offButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 90px; width: 100px; background-color: rgb(0, 186, 255); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 30px; position: absolute; left: 110px; top: 240px;\">OFF</button></div></div>",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Alarm Clock",
+    "bubble_choice_description": "Create an app that simulates an alarm clock using LEDs and the buzzer",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L7/practice/C.png"
   },
   "game_id": 41,
+  "published": true,
   "created_at": "2021-12-28T16:56:10.000Z",
   "level_num": "custom",
   "user_id": 1,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-28T16:56:10.612+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracB_2022\"},{\"changed_at\":\"2021-12-28 16:56:14 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:00:13 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:19:40 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-21 05:20:38 +0000\",\"changed\":[],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-28T16:56:10.612+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracB_2022\"},{\"changed_at\":\"2021-12-28 16:56:14 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:00:13 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-28 17:19:40 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-21 05:20:38 +0000\",\"changed\":[],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-02-15 17:08:11 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
