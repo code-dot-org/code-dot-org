@@ -105,7 +105,7 @@ def main(options)
     updated_reference_guide_count += 1
 
     # find a unique key based on the end of the slug
-    # if there are duplicates, append _N where N is a number that makes it unique
+    # if there are duplicates, append -N where N is a number that makes it unique
     key_base = guide['slug'].rpartition('/').last
     unique_key = key_base
     iteration = 2

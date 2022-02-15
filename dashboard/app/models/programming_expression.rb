@@ -28,7 +28,7 @@ class ProgrammingExpression < ApplicationRecord
   has_many :lessons_programming_expressions
 
   validates_uniqueness_of :key, scope: :programming_environment_id, case_sensitive: false
-  validate :key_format
+  validate :validate_key_format
 
   serialized_attrs %w(
     color
