@@ -1,5 +1,5 @@
 module CurriculumHelper
-  def key_format
+  def validate_key_format
     if key.blank?
       errors.add(:base, 'Key must not be blank')
       return false
