@@ -37,6 +37,7 @@ class ProgrammingEnvironmentCategory < ApplicationRecord
 
   def serialize_for_edit
     {
+      id: id,
       key: key,
       name: name,
       color: color,
