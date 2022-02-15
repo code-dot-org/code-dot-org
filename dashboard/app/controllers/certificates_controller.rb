@@ -13,7 +13,9 @@ class CertificatesController < ApplicationController
       return render status: :bad_request, json: {message: 'invalid base64'}
     end
 
-    @certificate_image_url = certificate_image_url(data['name'], data['course'])
-    @certificate_print_url = certificate_print_url(data['name'], data['course'])
+    @certificate_data = {
+      imageUrl: certificate_image_url(data['name'], data['course']),
+      printUrl: certificate_print_url(data['name'], data['course'])
+    }
   end
 end

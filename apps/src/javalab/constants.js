@@ -185,3 +185,14 @@ export const ExecutionType = {
   // Compile and run tests
   TEST: 'TEST'
 };
+
+export const UserTestResultSignalType = {
+  TEST_STATUS: 'TEST_STATUS',
+  STATUS_DETAILS: 'STATUS_DETAILS'
+};
+
+export const TestStatus = {
+  SUCCESSFUL: 'SUCCESSFUL',
+  FAILED: 'FAILED',
+  ABORTED: 'ABORTED'
+};
