@@ -5,7 +5,7 @@
 
   .homepage-professional-learning-banner
     %a.linktag#pl-2019{href: "/educate/professional-learning/middle-high"}
-      .nonphone.col-80.tablet-feature
+      .homepage-pd-banner-desktop.col-80.desktop-feature
         .banner
           %img{src: "/images/homepage/superhero-banner.png"}
         .left.col-80.animateSlideInFromLeft
@@ -14,12 +14,19 @@
         .right.col-20
           %button
             Learn More
-      .phone.phone-feature
+      .homepage-pd-banner-tablet.col-80.tablet-restrictive-feature
         .banner
           %img{src: "/images/homepage/superhero-banner-half.png"}
-        .header= header_text
-        .text= text
-        %button
-          Learn More
+          .text-button-wrapper
+            .header= header_text
+            .text= text
+            %button
+              Learn More
+      .homepage-pd-banner-phone.phone-feature
+        .text-button-wrapper
+          .header= header_text
+          .text= text
+          %button
+            Learn More
 
     .clear
