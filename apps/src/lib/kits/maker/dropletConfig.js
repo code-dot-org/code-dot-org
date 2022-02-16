@@ -6,7 +6,8 @@ import {
   N_COLOR_LEDS,
   CP_BUTTON_VARS,
   CP_COMPONENT_EVENTS,
-  SONG_CHARGE
+  SONG_CHARGE,
+  SONG_SINGLE_NOTE
 } from './boards/circuitPlayground/PlaygroundConstants';
 
 import {
@@ -30,9 +31,7 @@ const colorPixelVariables = _.range(N_COLOR_LEDS).map(
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
 function stringifySong(song) {
-  return (
-    '[\n' + song.map(note => `  ${JSON.stringify(note)}`).join(',\n') + '\n]'
-  );
+  return '[' + song.map(note => `${JSON.stringify(note)}`).join(',') + ']';
 }
 config.stringifySong = stringifySong;
 
@@ -303,14 +302,14 @@ const circuitPlaygroundBlocks = [
     func: 'buzzer.playNotes',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['notes', 'tempo'],
-    params: ['[]', 120],
+    params: [stringifySong(SONG_SINGLE_NOTE), 120],
     paramButtons: {minArgs: 1, maxArgs: 2}
   },
   {
     func: 'buzzer.playSong',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['notes', 'tempo'],
-    params: ['[[__, __]]', 120],
+    params: [`[${stringifySong(SONG_CHARGE[0])}]`, 120],
     paramButtons: {minArgs: 1, maxArgs: 2}
   },
   {
