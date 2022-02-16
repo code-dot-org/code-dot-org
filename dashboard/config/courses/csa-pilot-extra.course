@@ -4,13 +4,14 @@
     "csa7-pilot-extra",
     "csa8-pilot-extra"
   ],
-  "published_state": "in_development",
+  "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csa-pilot-extra",
     "has_numbered_units": true,
+    "pilot_experiment": "csa-pilot-extra",
     "version_year": "unversioned"
   },
   "resources": [

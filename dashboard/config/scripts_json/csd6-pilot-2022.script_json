@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-02-15 20:51:04 UTC",
+    "serialized_at": "2022-02-16 19:01:33 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -84,7 +84,7 @@
       "properties": {
         "assessment_opportunities": "1. **Connect and troubleshoot external devices**\n\n\tAt the beginning of the online activity, students should connect the boards themselves, using the setup page to troubleshoot common problems.\n\n2. **Turn on and off an LED with code**\n\n\tCode Studio: See rubric on level 9.\n\n3. **Control the buzzer with code**\n\n\tCode Studio: see rubric on level 9.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.",
+        "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.\n\n**Question of the Day:** What outputs can I control on the circuit playground?",
         "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\r\n* Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. "
       },
@@ -102,7 +102,10 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "1. **Set the properties of UI elements using code**\n\n\tCode Studio: See the rubric on the assessment level\n\n1. **Change text on the screen using code**\n\n\tCode Studio: See the rubric on the assessment level\n\n1. **Respond to user input using event handlers**\n\n\tCode Studio: See the rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen\n\n**Question of the Day:** How can you update design elements of an app?",
+        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices to avoid distractions",
         "student_overview": "In this lesson, you will start to build apps that allow for lots of user interaction and functionality"
       },
       "seeding_key": {
@@ -119,7 +122,10 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "1. **Use a board event handler to control buttons on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use a board event handler to control the toggle switch on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
+        "preparation": "- Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input."
       },
       "seeding_key": {
@@ -136,6 +142,10 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "1. **Use variables to store information when creating apps**\n\n\tCode Studio: Levels 3-4, and see rubric on the assessment level\n\n1. **Use the counter pattern to update variables when creating apps**\n\n\tCode Studio: Levels 6-7, and see rubric on the assessment level\n\n1. **Use if-statements to make decisions when creating apps**\n\n\tCode Studio: Levels 10-11, and see rubric on the assessment level",
+        "overview": "In this lesson, students are introduced to variables, the counter pattern, and if-statements. Students will use these concepts in the context of programming the circuit playground and creating more complex input/output behaviors, such as counting the number of button presses before having the circuit playground make a noise. The concepts in this lesson are used to make more complex and fulfilling apps in future lessons, and students may need to refer back to the videos and examples in this lesson as they continue to master these concepts.\n\n**Question of the Day:** How can I create more complex programs that keep track of information and make decisions?",
+        "preparation": "- Prepare a board and USB cable for each pair of students",
+        "student_overview": "Learn to make more complex programs that keep track of information and make decisions, using variables and if-statements."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -168,7 +178,10 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "1. **Use the color LED block to individually control each color LED**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, students learn how to use the 10 color LEDs on the Circuit Playground. Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.\n\n**Question of the Day:** How can you use the colored LEDs in an app?",
+        "preparation": "- Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will learn how to access and control the colored LEDs on the Circuit Playground."
       },
       "seeding_key": {
@@ -185,7 +198,10 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment_opportunities": "1. **Design apps using the text input, dropdown, and slider design elements**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use getProperty and getText to access user input on the screen**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use user input to update elements on the screen using code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students learn to use several new design elements - text inputs, dropdowns, and sliders - so they can get user input from the screen of their apps. This lesson also introduces students to the getProperty and getText blocks, which allow them to access their user input in their code. Students first practice using these tools to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new event trigger, change, is also introduced to represent when a dropdown or slider changes values.\n\n**Question of the Day:** How can we use the app screen for user input?",
+        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices.",
         "student_overview": "In this lesson, you will learn how to use design elements like textboxes or dropdowns to get user input from the screen"
       },
       "seeding_key": {
@@ -196,12 +212,16 @@
     },
     {
       "key": "lesson-10",
-      "name": "Combining Inputs",
+      "name": "Combining Inputs and Outputs",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "assessment_opportunities": "1. **Use inputs from app design elements to update screen elements or produce output on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use inputs from the circuit playground to update screen elements or produce output on the circuit playground**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use variables and if-statements for complex user interaction**\n\n\tCode Studio: see rubric on the assessment level",
+        "overview": "In this lesson, students combine inputs and outputs across both the circuit playground and the app screen. For example, students may use dropdowns or sliders to make the LEDs on the circuit playground change. Or, students may use the buttons on the circuit playground to update elements on the screen. This lesson also extends how students use variables and if-statements to make more complex decisions based on user input. There are no new coding commands or circuit playground features in this lesson, but students are combining many elements from previous lessons in new ways.\n\n**Question of the Day:** How can I use inputs and outputs from both the circuit playground and the app screen?",
+        "preparation": "- Prepare a board and USB cable for each pair of students\n- (Optional) consider preparing external reference materials from previous lessons for students, such as a Word Wall or Reference Packet, that students can access.",
+        "student_overview": "Combine inputs and outputs from the screen and Circuit Playground to make complex apps"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -232,9 +252,11 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "assessment_opportunities": "1. **Develop programs that respond to sensor input**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Scale a range of numbers to meet a specific need**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "preparation": "* Consider having some flashlights or other light sources on hand for testing the light sensor",
-        "student_overview": "In this lesson, you will get to explore the sensors on the Circuit Playground and write programs that respond to the environment.\n"
+        "overview": "In this lesson, students explore how the three sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all or may interact without actually realizing they are doing so.\n\n**Question of the Day:** How can I use sensors to detect changes in the environment?",
+        "preparation": "- Prepare a board and USB cable for each pair of students\n* Consider having some flashlights or other light sources on hand for testing the light sensor",
+        "student_overview": "Explore the sensors on the Circuit Playground and write programs that respond to the environment.\n"
       },
       "seeding_key": {
         "lesson.key": "Analog Input",
@@ -426,6 +448,19 @@
       }
     },
     {
+      "key": "6af69b5a-a3c8-4704-aa46-1852fa375df4",
+      "position": 5,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6af69b5a-a3c8-4704-aa46-1852fa375df4",
+        "lesson.key": "Innovations in Computing",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
       "key": "fce72e67-057c-4d01-9815-58361ada3eb2",
       "position": 1,
       "properties": {
@@ -462,6 +497,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c0db1493-4198-461b-b4d4-215c3a289b14",
+        "lesson.key": "The Circuit Playground",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "5ecd44d6-c50a-4ad7-9f60-712c6e84cf48",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5ecd44d6-c50a-4ad7-9f60-712c6e84cf48",
         "lesson.key": "The Circuit Playground",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
@@ -510,6 +558,19 @@
       }
     },
     {
+      "key": "594e8f91-8d4b-4a62-a05b-c3c2d4bb79de",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "594e8f91-8d4b-4a62-a05b-c3c2d4bb79de",
+        "lesson.key": "Designing Screens with Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
       "key": "d7b94bf0-2398-48ec-bd25-7e491937e21a",
       "position": 1,
       "properties": {
@@ -546,6 +607,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "b8969547-3073-4309-a3f9-a35c0feb2ea5",
+        "lesson.key": "Board Events",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "ad79ab38-2f67-4a37-9f89-370ac148a4f7",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad79ab38-2f67-4a37-9f89-370ac148a4f7",
         "lesson.key": "Board Events",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
@@ -594,6 +668,19 @@
       }
     },
     {
+      "key": "858c8a81-aaa8-48ef-a418-cbee3909d24a",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "858c8a81-aaa8-48ef-a418-cbee3909d24a",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
       "key": "b052c205-04cc-459b-9617-23b6d3ef609e",
       "position": 1,
       "properties": {
@@ -630,6 +717,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "1f5e85b5-13c0-4292-8fe7-677fe2667e63",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f5e85b5-13c0-4292-8fe7-677fe2667e63",
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
@@ -678,6 +778,19 @@
       }
     },
     {
+      "key": "fe671013-7a02-435d-a8f5-66ba8311de72",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe671013-7a02-435d-a8f5-66ba8311de72",
+        "lesson.key": "Arrays and Color LEDs",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
       "key": "ceb50804-b30f-4cc0-8340-8fb914aedf45",
       "position": 1,
       "properties": {
@@ -720,6 +833,19 @@
       }
     },
     {
+      "key": "69c0c83d-0b82-46fd-bc49-eab7d4d32270",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69c0c83d-0b82-46fd-bc49-eab7d4d32270",
+        "lesson.key": "Getting Properties",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
       "key": "7a7c347d-b5c6-40cf-9ea7-399bdb1b8819",
       "position": 1,
       "properties": {
@@ -756,6 +882,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "64909da1-06b4-4f03-85db-122cd4f2bcc6",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "d4f6a3f6-5ce3-4330-9299-494c32ef2747",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d4f6a3f6-5ce3-4330-9299-494c32ef2747",
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csd6-pilot-2022"
@@ -831,6 +970,19 @@
       }
     },
     {
+      "key": "edc47211-7154-493f-9c68-81dfae54b2e0",
+      "position": 6,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "edc47211-7154-493f-9c68-81dfae54b2e0",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
       "key": "ff7938c3-c01d-4e1b-a715-7385ad673052",
       "position": 1,
       "properties": {
@@ -867,6 +1019,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "d1ae4eb6-bdc3-4f03-8809-dee0016c1b59",
+        "lesson.key": "Analog Input",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "2e5cef1a-d1fa-454c-8238-5c4a226620c8",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2e5cef1a-d1fa-454c-8238-5c4a226620c8",
         "lesson.key": "Analog Input",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022"
@@ -915,6 +1080,19 @@
       }
     },
     {
+      "key": "ec5bc35f-c399-4603-9db4-bdf41bab94c7",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec5bc35f-c399-4603-9db4-bdf41bab94c7",
+        "lesson.key": "Accelerometer",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
       "key": "a104c1e4-e2e1-4ec6-b4ad-0b0c7b1a8daa",
       "position": 1,
       "properties": {
@@ -951,6 +1129,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f37fecbe-8940-4341-9712-378d424ddd7d",
+        "lesson.key": "Making Music",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "018f5947-9fd6-4d60-96b0-cfd77a5157f1",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "018f5947-9fd6-4d60-96b0-cfd77a5157f1",
         "lesson.key": "Making Music",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022"
@@ -999,6 +1190,19 @@
       }
     },
     {
+      "key": "feb13bbf-17e4-4268-81a6-845a31514039",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "feb13bbf-17e4-4268-81a6-845a31514039",
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
       "key": "56dc9448-0851-4c35-8ee9-1f907fed6b05",
       "position": 1,
       "properties": {
@@ -1035,6 +1239,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "ef1c1f49-6991-4317-951e-7bb906b3c56d",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef1c1f49-6991-4317-951e-7bb906b3c56d",
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022"
@@ -1083,6 +1300,19 @@
       }
     },
     {
+      "key": "a2644ea3-2e1b-483d-a701-fd94d8759975",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a2644ea3-2e1b-483d-a701-fd94d8759975",
+        "lesson.key": "Circuits and Physical Prototypes",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
       "key": "1d268e38-5529-4871-99cb-7352ada1d122",
       "position": 1,
       "properties": {
@@ -1119,6 +1349,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "5763fc01-f43c-4b63-bf26-ec9adf75bdc6",
+        "lesson.key": "Physical Outputs",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "241ec43b-fc95-4af2-9262-112acd57dd1e",
+      "position": 4,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "241ec43b-fc95-4af2-9262-112acd57dd1e",
         "lesson.key": "Physical Outputs",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022"
@@ -1174,6 +1417,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "2098f0e4-356f-42d4-937f-1d46839d8879",
+        "lesson.key": "Project - Prototype an Innovation",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6-pilot-2022"
+      }
+    },
+    {
+      "key": "c61bef84-8da8-4f30-b92b-b3c3cd6f4c2b",
+      "position": 5,
+      "properties": {
+        "name": "Lesson Feedback"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c61bef84-8da8-4f30-b92b-b3c3cd6f4c2b",
         "lesson.key": "Project - Prototype an Innovation",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022"
@@ -1311,6 +1567,17 @@
       "seeding_key": {
         "activity_section.key": "22ad3178-538f-43eb-b458-0114f3fcbdc0",
         "lesson_activity.key": "f01ffe5a-b708-486f-913e-e3ba55daf447"
+      }
+    },
+    {
+      "key": "1dff4548-1070-447e-ab1d-4b4f6000b32b",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "1dff4548-1070-447e-ab1d-4b4f6000b32b",
+        "lesson_activity.key": "6af69b5a-a3c8-4704-aa46-1852fa375df4"
       }
     },
     {
@@ -1455,6 +1722,17 @@
       }
     },
     {
+      "key": "a391efa7-b0fe-4d99-a9d4-e706e6e077d6",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a391efa7-b0fe-4d99-a9d4-e706e6e077d6",
+        "lesson_activity.key": "5ecd44d6-c50a-4ad7-9f60-712c6e84cf48"
+      }
+    },
+    {
       "key": "2b244041-0891-4b20-ab98-ed59caacb91c",
       "position": 1,
       "properties": {
@@ -1588,6 +1866,17 @@
       }
     },
     {
+      "key": "fc8fc486-6a9a-4e89-a204-267e541e860b",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc8fc486-6a9a-4e89-a204-267e541e860b",
+        "lesson_activity.key": "594e8f91-8d4b-4a62-a05b-c3c2d4bb79de"
+      }
+    },
+    {
       "key": "7cc52ce6-a194-42f6-a5ba-9a2183c70399",
       "position": 1,
       "properties": {
@@ -1686,6 +1975,17 @@
       "seeding_key": {
         "activity_section.key": "45192ed5-e94f-4220-a3c6-4160dd6089d0",
         "lesson_activity.key": "b8969547-3073-4309-a3f9-a35c0feb2ea5"
+      }
+    },
+    {
+      "key": "8ea4f7b1-bcf7-4162-bd02-d18fecdadec5",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ea4f7b1-bcf7-4162-bd02-d18fecdadec5",
+        "lesson_activity.key": "ad79ab38-2f67-4a37-9f89-370ac148a4f7"
       }
     },
     {
@@ -1854,6 +2154,17 @@
       }
     },
     {
+      "key": "eb7be78c-9441-4144-be47-6d3052fb0110",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb7be78c-9441-4144-be47-6d3052fb0110",
+        "lesson_activity.key": "858c8a81-aaa8-48ef-a418-cbee3909d24a"
+      }
+    },
+    {
       "key": "8e6ef533-97df-4532-88e3-570e5e6e9fdc",
       "position": 1,
       "properties": {
@@ -1940,6 +2251,17 @@
       "seeding_key": {
         "activity_section.key": "70f6b1a8-e548-402e-83e3-62f27a07436c",
         "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def"
+      }
+    },
+    {
+      "key": "3e28353f-97a2-4f82-8df3-e28986b233e5",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Project**](https://docs.google.com/forms/d/e/1FAIpQLSfin4Rf6upATKCSQd6qsN-ppzsG_3zc7BQfraMtEk9IoxiO8A/viewform)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e28353f-97a2-4f82-8df3-e28986b233e5",
+        "lesson_activity.key": "1f5e85b5-13c0-4292-8fe7-677fe2667e63"
       }
     },
     {
@@ -2075,6 +2397,17 @@
       }
     },
     {
+      "key": "3f5dfda5-3823-474c-90ce-f88d52c4d64e",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3f5dfda5-3823-474c-90ce-f88d52c4d64e",
+        "lesson_activity.key": "fe671013-7a02-435d-a8f5-66ba8311de72"
+      }
+    },
+    {
       "key": "f358a8a8-c524-4e60-8fe2-221aac7a5810",
       "position": 1,
       "properties": {
@@ -2178,6 +2511,17 @@
       "seeding_key": {
         "activity_section.key": "bb29ff21-b4d1-43a7-b92e-236d8d03bcb4",
         "lesson_activity.key": "2b4622da-0328-416e-b6da-950af22f7f33"
+      }
+    },
+    {
+      "key": "fda86ddf-7fb4-425d-b751-45fc72bf3488",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "fda86ddf-7fb4-425d-b751-45fc72bf3488",
+        "lesson_activity.key": "69c0c83d-0b82-46fd-bc49-eab7d4d32270"
       }
     },
     {
@@ -2288,6 +2632,17 @@
       "seeding_key": {
         "activity_section.key": "db6ec548-1209-4211-84cf-c8b3cf901c9b",
         "lesson_activity.key": "64909da1-06b4-4f03-85db-122cd4f2bcc6"
+      }
+    },
+    {
+      "key": "f682de11-5c34-454c-962a-5b590f374a8c",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f682de11-5c34-454c-962a-5b590f374a8c",
+        "lesson_activity.key": "d4f6a3f6-5ce3-4330-9299-494c32ef2747"
       }
     },
     {
@@ -2513,6 +2868,17 @@
       }
     },
     {
+      "key": "69994393-f7ce-4412-92d0-9003a94ea33f",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Project**](https://docs.google.com/forms/d/e/1FAIpQLSfin4Rf6upATKCSQd6qsN-ppzsG_3zc7BQfraMtEk9IoxiO8A/viewform)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "69994393-f7ce-4412-92d0-9003a94ea33f",
+        "lesson_activity.key": "edc47211-7154-493f-9c68-81dfae54b2e0"
+      }
+    },
+    {
       "key": "b9ab4fcd-bf1a-4fb0-97fe-9f3b3dbc388c",
       "position": 1,
       "properties": {
@@ -2635,6 +3001,17 @@
       }
     },
     {
+      "key": "61c7e4f1-7988-44c8-adf0-b6be8113ddaf",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "61c7e4f1-7988-44c8-adf0-b6be8113ddaf",
+        "lesson_activity.key": "2e5cef1a-d1fa-454c-8238-5c4a226620c8"
+      }
+    },
+    {
       "key": "ac25b4b6-6b3b-4db8-80d4-62f5a2a4bf5b",
       "position": 1,
       "properties": {
@@ -2743,6 +3120,17 @@
       "seeding_key": {
         "activity_section.key": "6d436fb1-d9c3-406f-8124-b9294c1e22eb",
         "lesson_activity.key": "259d678e-307a-43af-abdf-6d99edea7b12"
+      }
+    },
+    {
+      "key": "2f36f9a3-ebd8-4eef-877c-a7cbb9f0afe2",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f36f9a3-ebd8-4eef-877c-a7cbb9f0afe2",
+        "lesson_activity.key": "ec5bc35f-c399-4603-9db4-bdf41bab94c7"
       }
     },
     {
@@ -2891,6 +3279,17 @@
       }
     },
     {
+      "key": "fdbb7c45-6be6-4e22-b24a-bc4e096bc5d0",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "fdbb7c45-6be6-4e22-b24a-bc4e096bc5d0",
+        "lesson_activity.key": "018f5947-9fd6-4d60-96b0-cfd77a5157f1"
+      }
+    },
+    {
       "key": "0ee160ce-3f7e-4b1e-8b60-5fdec08c5eee",
       "position": 1,
       "properties": {
@@ -3023,6 +3422,17 @@
       }
     },
     {
+      "key": "acdcb98d-1a2a-42b9-9c58-ef6a29e33a78",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "acdcb98d-1a2a-42b9-9c58-ef6a29e33a78",
+        "lesson_activity.key": "feb13bbf-17e4-4268-81a6-845a31514039"
+      }
+    },
+    {
       "key": "49118001-a0ba-4136-841e-f1e76f05b9b6",
       "position": 1,
       "properties": {
@@ -3077,6 +3487,17 @@
       "seeding_key": {
         "activity_section.key": "8eac32aa-4346-42aa-a744-a522e989e4a4",
         "lesson_activity.key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa"
+      }
+    },
+    {
+      "key": "46135b27-396a-434b-825a-c18eff318261",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Project**](https://docs.google.com/forms/d/e/1FAIpQLSfin4Rf6upATKCSQd6qsN-ppzsG_3zc7BQfraMtEk9IoxiO8A/viewform)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "46135b27-396a-434b-825a-c18eff318261",
+        "lesson_activity.key": "ef1c1f49-6991-4317-951e-7bb906b3c56d"
       }
     },
     {
@@ -3201,6 +3622,17 @@
       }
     },
     {
+      "key": "221f3897-ab51-4b45-a8c6-5a89ef90a0f1",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "221f3897-ab51-4b45-a8c6-5a89ef90a0f1",
+        "lesson_activity.key": "a2644ea3-2e1b-483d-a701-fd94d8759975"
+      }
+    },
+    {
       "key": "865feea9-b961-4c87-bbfd-1fe59096959d",
       "position": 1,
       "properties": {
@@ -3319,6 +3751,17 @@
       "seeding_key": {
         "activity_section.key": "d55a589d-1e36-45a9-b165-992c94a28a7e",
         "lesson_activity.key": "5763fc01-f43c-4b63-bf26-ec9adf75bdc6"
+      }
+    },
+    {
+      "key": "a24982e3-400c-4e08-b0dc-5bdb83737152",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSfROQdamfLnHVn11tsjHsGPElKhC5LzDfHFEqhaj0igtsqHAA/viewform?usp=sf_link)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "a24982e3-400c-4e08-b0dc-5bdb83737152",
+        "lesson_activity.key": "241ec43b-fc95-4af2-9262-112acd57dd1e"
       }
     },
     {
@@ -3501,6 +3944,17 @@
       "seeding_key": {
         "activity_section.key": "b10b3d72-cc0a-43fa-a046-a476dca257e9",
         "lesson_activity.key": "2098f0e4-356f-42d4-937f-1d46839d8879"
+      }
+    },
+    {
+      "key": "4dec0564-17c1-4a0e-85a2-763ad1740f44",
+      "position": 1,
+      "properties": {
+        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLScLFkt7rtQSeHB3AtYpYuENtiwl3kRD1qg8J02bxS0ow5l42A/viewform?usp=sf_link)\n- [**Submit General Feedback on the Project**](https://docs.google.com/forms/d/e/1FAIpQLSfin4Rf6upATKCSQd6qsN-ppzsG_3zc7BQfraMtEk9IoxiO8A/viewform)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/csd-unit-6-pilot/442)"
+      },
+      "seeding_key": {
+        "activity_section.key": "4dec0564-17c1-4a0e-85a2-763ad1740f44",
+        "lesson_activity.key": "c61bef84-8da8-4f30-b92b-b3c3cd6f4c2b"
       }
     }
   ],
@@ -6700,6 +7154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - Chal_2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6897,6 +7354,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - Chal_2022"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -8734,7 +9194,7 @@
       "url": "https://drive.google.com/file/d/11XwNv2922DAvixhreVXgfxnTS9SHa8ds/view?usp=sharing",
       "key": "analog_sensors",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -8782,7 +9242,7 @@
       "url": "https://drive.google.com/file/d/1jGo7RH3_BiZwBBXNaOCVco-okqRRkSdC/view?usp=sharing",
       "key": "changing_sensor_scale",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -8842,7 +9302,7 @@
       "url": "https://drive.google.com/file/d/1EEZhq_8Ljs77kLQoriJj24frEkFfHIKZ/view?usp=sharing",
       "key": "color_lights",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -8850,7 +9310,7 @@
       }
     },
     {
-      "name": "Combining Inputs",
+      "name": "Combining Inputs and Outputs",
       "url": "https://docs.google.com/presentation/d/1f58TYu50EZKmVmQi8Qvtz1bm66gXicFBhdF0-Ct5u3k/copy",
       "key": "combining_inputs",
       "properties": {
@@ -8892,7 +9352,7 @@
       "url": "https://drive.google.com/file/d/1t7EKjtcgISbHz_REmaCrcgPb_lArGkUJ/view?usp=sharing",
       "key": "date_and_change_events",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -8904,7 +9364,7 @@
       "url": "https://drive.google.com/file/d/1Jpoij-Rp7SE5-lySX8J2x7vgADErzBt3/view?usp=sharing",
       "key": "designing_screens_with_code",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -9041,6 +9501,30 @@
       },
       "seeding_key": {
         "resource.key": "getting_screen_inputs"
+      }
+    },
+    {
+      "name": "If Statements",
+      "url": "https://drive.google.com/file/d/1dCxskfbG66EVJfdzp0cNaNxw9MxX79KF/view?usp=sharing",
+      "key": "if_statements",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "if_statements"
+      }
+    },
+    {
+      "name": "If Statements",
+      "url": "https://youtu.be/0oG3Wck2fRU",
+      "key": "if_statements_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "if_statements_1"
       }
     },
     {
@@ -9293,7 +9777,7 @@
       "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
       "key": "random_numbers",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -9305,7 +9789,7 @@
       "url": "https://drive.google.com/file/d/1zTyBx7l2RiRLcB9AjRZZ314PL6kvY_-D/view?usp=sharing",
       "key": "responding_to_user_input",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -9400,6 +9884,30 @@
       }
     },
     {
+      "name": "The Counter Pattern",
+      "url": "https://youtu.be/2Bn0ipWnWcA",
+      "key": "the_counter_pattern",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_counter_pattern"
+      }
+    },
+    {
+      "name": "The Counter Pattern",
+      "url": "https://drive.google.com/file/d/1xh7EKGrGSdAAk-wP39LVxydu3-haj5k_/view?usp=sharing",
+      "key": "the_counter_pattern_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "the_counter_pattern_1"
+      }
+    },
+    {
       "name": "The Internet of Things",
       "url": "https://youtu.be/xQGsubJNbQw",
       "key": "the_internet_of_things",
@@ -9421,6 +9929,30 @@
       },
       "seeding_key": {
         "resource.key": "updating_screen_elements"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://drive.google.com/file/d/1sZpmFctaVP3RCT1Ojx0wcZ2CUyQhKzKv/view?usp=sharing",
+      "key": "variables",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "variables"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://youtu.be/UG7Q1Sr0_F0",
+      "key": "variables_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "variables_1"
       }
     },
     {
@@ -9794,6 +10326,42 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
+        "resource.key": "if_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "if_statements_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "the_counter_pattern"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "the_counter_pattern_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "variables_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "variables_and_if_statements"
       }
     }
@@ -9948,6 +10516,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "pulse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "toggle"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Board Events",
         "programming_environment.name": "applab",
         "programming_expression.key": "buttons"
@@ -9993,6 +10575,20 @@
         "lesson.key": "Circuits and Physical Prototypes",
         "programming_environment.name": "applab",
         "programming_expression.key": "pinMode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "setProperty"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "setText"
       }
     },
     {
@@ -10099,9 +10695,61 @@
         "programming_environment.name": "applab",
         "programming_expression.key": "led.toggle"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "assign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "declareAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "equalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "greaterThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "ifBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "lessThanOperator"
+      }
     }
   ],
   "objectives": [
+    {
+      "key": "01285493-c011-48b4-919a-5e422553bada",
+      "properties": {
+        "description": "Develop programs that respond to sensor input"
+      },
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "objective.key": "01285493-c011-48b4-919a-5e422553bada"
+      }
+    },
     {
       "key": "1e403197-eaeb-405f-a621-f33c0ff5ec0c",
       "properties": {
@@ -10120,6 +10768,56 @@
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "objective.key": "2d695ad9-beab-4bd4-b393-faa9dfaf3a63"
+      }
+    },
+    {
+      "key": "2e546612-af0c-45fb-9e7e-8a942a1b905e",
+      "properties": {
+        "description": "Respond to user input using event handlers"
+      },
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "objective.key": "2e546612-af0c-45fb-9e7e-8a942a1b905e"
+      }
+    },
+    {
+      "key": "37c67c19-2fbd-4fac-8093-c003b21abf72",
+      "properties": {
+        "description": "Use user input to update elements on the screen using code"
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "objective.key": "37c67c19-2fbd-4fac-8093-c003b21abf72"
+      }
+    },
+    {
+      "key": "3b70e42c-34cf-47a5-a10b-de690531f69d",
+      "properties": {
+        "description": "Design apps using the text input, dropdown, and slider design elements"
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "objective.key": "3b70e42c-34cf-47a5-a10b-de690531f69d"
+      }
+    },
+    {
+      "key": "402e5e37-fbb4-46bc-9bd3-c18627f77064",
+      "properties": {
+        "description": "Use a board event handler to control buttons on the circuit playground"
+      },
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "objective.key": "402e5e37-fbb4-46bc-9bd3-c18627f77064"
+      }
+    },
+    {
+      "key": "53bffe34-1c63-40bb-b5e6-84de7b50fec0",
+      "properties": {
+        "description": "Use the color LED block to individually control each color LED"
+      },
+      "seeding_key": {
+        "lesson.key": "Arrays and Color LEDs",
+        "objective.key": "53bffe34-1c63-40bb-b5e6-84de7b50fec0"
       }
     },
     {
@@ -10153,6 +10851,36 @@
       }
     },
     {
+      "key": "72473130-22c2-4440-854d-075eff9cca71",
+      "properties": {
+        "description": "Change text on the screen using code"
+      },
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "objective.key": "72473130-22c2-4440-854d-075eff9cca71"
+      }
+    },
+    {
+      "key": "7a5ad671-a522-4f35-a48e-57c1916e8737",
+      "properties": {
+        "description": "Use if-statements to make decisions when creating apps"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "7a5ad671-a522-4f35-a48e-57c1916e8737"
+      }
+    },
+    {
+      "key": "85b1a5c8-d472-4fe5-ae26-6a71056ab4fa",
+      "properties": {
+        "description": "Use variables and if-statements for complex user interaction"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "85b1a5c8-d472-4fe5-ae26-6a71056ab4fa"
+      }
+    },
+    {
       "key": "8d4505aa-cf82-4e29-a701-83422e40f0d1",
       "properties": {
         "description": "Connect and troubleshoot external devices"
@@ -10160,6 +10888,36 @@
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
         "objective.key": "8d4505aa-cf82-4e29-a701-83422e40f0d1"
+      }
+    },
+    {
+      "key": "a940f53f-55aa-455e-aa27-8499fba4500b",
+      "properties": {
+        "description": "Use inputs from app design elements to update screen elements or produce output on the circuit playground"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "a940f53f-55aa-455e-aa27-8499fba4500b"
+      }
+    },
+    {
+      "key": "ac504766-769a-4b5c-a4ad-9f54291ac18c",
+      "properties": {
+        "description": "Use getProperty and getText to access user input on the screen"
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Properties",
+        "objective.key": "ac504766-769a-4b5c-a4ad-9f54291ac18c"
+      }
+    },
+    {
+      "key": "bac6de6a-3ce5-4f6d-bdce-8391e78ada83",
+      "properties": {
+        "description": "Use a board event handler to control the toggle switch on the circuit playground"
+      },
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "objective.key": "bac6de6a-3ce5-4f6d-bdce-8391e78ada83"
       }
     },
     {
@@ -10183,6 +10941,26 @@
       }
     },
     {
+      "key": "dc0e8957-4488-4935-8e81-8e43560411a9",
+      "properties": {
+        "description": "Use variables to store information when creating apps"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "dc0e8957-4488-4935-8e81-8e43560411a9"
+      }
+    },
+    {
+      "key": "dcf0f2d9-571a-42d0-99e1-102fce1ae3f2",
+      "properties": {
+        "description": "Use inputs from the circuit playground to update screen elements or produce output on the circuit playground"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "dcf0f2d9-571a-42d0-99e1-102fce1ae3f2"
+      }
+    },
+    {
       "key": "e682a64b-7a28-45b2-8210-aeb0c1036c9b",
       "properties": {
         "description": "Implement a plan for developing a piece of software that integrates hardware inputs and outputs"
@@ -10190,6 +10968,36 @@
       "seeding_key": {
         "lesson.key": "Project - Prototype an Innovation",
         "objective.key": "e682a64b-7a28-45b2-8210-aeb0c1036c9b"
+      }
+    },
+    {
+      "key": "ee5c4f35-ec02-479b-aace-9389e2288e9d",
+      "properties": {
+        "description": "Scale a range of numbers to meet a specific need"
+      },
+      "seeding_key": {
+        "lesson.key": "Analog Input",
+        "objective.key": "ee5c4f35-ec02-479b-aace-9389e2288e9d"
+      }
+    },
+    {
+      "key": "f19c43b5-5eb7-4f01-9301-25940eec8eb7",
+      "properties": {
+        "description": "Set the properties of UI elements using code"
+      },
+      "seeding_key": {
+        "lesson.key": "Designing Screens with Code",
+        "objective.key": "f19c43b5-5eb7-4f01-9301-25940eec8eb7"
+      }
+    },
+    {
+      "key": "f46c4011-4f23-4937-b8b4-e43aceacebe7",
+      "properties": {
+        "description": "Use the counter pattern to update variables when creating apps"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "f46c4011-4f23-4937-b8b4-e43aceacebe7"
       }
     }
   ],
