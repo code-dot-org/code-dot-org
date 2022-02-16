@@ -9,8 +9,8 @@ module CertificatesHelper
   end
 
   def certificate_image_url(name, course, sponsor)
-    return code_org_url('/images/hour_of_code_certificate.jpg') unless course
-    return code_org_url("/images/#{CertificateImage.certificate_template_for(course)}") unless name
+    return CDO.code_org_url('/images/hour_of_code_certificate.jpg') unless course
+    return CDO.code_org_url("/images/#{CertificateImage.certificate_template_for(course)}") unless name
     encoded = encode_params(name, course, sponsor)
     "/certificate_images/#{encoded}.jpg"
   end
