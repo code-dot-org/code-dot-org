@@ -659,17 +659,6 @@ class StorageApps
   end
 end
 
-# Mock get_storage_id to generate random IDs. Seed with current user so that a user maintains
-# the same id
-def get_storage_id
-  return storage_id_for_user_id(current_user.id) if current_user
-  Random.new.rand(1_000_000)
-end
-
-def storage_id_for_user_id(user_id)
-  Random.new(user_id.to_i).rand(1_000_000)
-end
-
 def json_response
   JSON.parse @response.body
 end
