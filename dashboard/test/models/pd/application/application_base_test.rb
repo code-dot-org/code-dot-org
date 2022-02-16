@@ -45,6 +45,13 @@ module Pd::Application
       assert application.sanitize_status_timestamp_change_log[0].value?('incomplete')
     end
 
+    test 'status is removed from form_data after status is set' do
+      application = create TEACHER_APPLICATION_FACTORY, form_data: {status: 'incomplete'}.to_json
+
+      assert application.incomplete?
+      assert_nil application.form_data_hash['status']
+    end
+
     test 'can update status' do
       application = create FACILITATOR_APPLICATION_FACTORY
       assert application.unreviewed?
