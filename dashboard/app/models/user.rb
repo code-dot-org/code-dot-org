@@ -2347,7 +2347,7 @@ class User < ApplicationRecord
   # Note: Known that this duplicates some logic in storage_id_for_user_id, but
   # that method is globally stubbed in tests :cry: and therefore not very helpful.
   def user_storage_id
-    @user_storage_id ||= PEGASUS_DB[:user_storage_ids].where(user_id: id).first&.[](:id)
+    @user_storage_id ||= storage_id_for_user_id(id)
   end
 
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
