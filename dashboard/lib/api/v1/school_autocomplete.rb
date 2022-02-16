@@ -12,7 +12,7 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
       terms = get_query_terms query
       match_terms = []
       terms.each do |term|
-        match_terms.push ActiveRecord::Base.sanitize_sql_for_order(Arel.sql("CASE when (MATCH(name, city) AGAINST(? IN BOOLEAN MODE) OR zip = ?) THEN 1 ELSE 0 END"), term, term)
+        match_terms.push ActiveRecord::Base.sanitize_sql_for_order(Arel.sql("CASE when (MATCH(name, city) AGAINST(? IN BOOLEAN MODE) OR zip = ?) THEN 1 ELSE 0 END", term, term))
       end
       matches = match_terms.join ' + '
       rows = rows.
@@ -25,8 +25,8 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
       query = format_query(query)
       return [] if query.length < MIN_WORD_LENGTH + 2
       rows = rows.
-        where(Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)"), query).
-        order(ActiveRecord::Base.sanitize_sql_for_order(Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name"), query))
+        where(Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", query)).
+        order(ActiveRecord::Base.sanitize_sql_for_order(Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name", query)))
     end
 
     return rows.map do |row|
