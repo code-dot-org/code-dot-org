@@ -28346,37 +28346,61 @@ en:
             Designing Screens with Code:
               name: Updating Screen Elements
               description_student: In this lesson, you will start to build apps that allow for lots of user interaction and functionality
-              description_teacher: 
+              description_teacher: |-
+                Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen
+
+                **Question of the Day:** How can you update design elements of an app?
             The Circuit Playground:
               name: The Circuit Playground
               description_student: 'In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. '
-              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.
+              description_teacher: |-
+                In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.
+
+                **Question of the Day:** What outputs can I control on the circuit playground?
             Board Events:
               name: Board Events
               description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
-              description_teacher: 
+              description_teacher: |-
+                This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use `onBoardEvent()`, analogously to `onEvent()`, in order to take input from their Circuit Playgrounds.
+
+                **Question of the Day:** How can the user interact with the circuit playground for input?
             Arrays and Color LEDs:
               name: Color LEDs
               description_student: In this lesson, you will learn how to access and control the colored LEDs on the Circuit Playground.
-              description_teacher: 
+              description_teacher: |-
+                In this lesson, students learn how to use the 10 color LEDs on the Circuit Playground. Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.
+
+                **Question of the Day:** How can you use the colored LEDs in an app?
             Getting Properties:
               name: Getting Screen Inputs
               description_student: In this lesson, you will learn how to use design elements like textboxes or dropdowns to get user input from the screen
-              description_teacher: 
+              description_teacher: |-
+                Students learn to use several new design elements - text inputs, dropdowns, and sliders - so they can get user input from the screen of their apps. This lesson also introduces students to the getProperty and getText blocks, which allow them to access their user input in their code. Students first practice using these tools to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new event trigger, change, is also introduced to represent when a dropdown or slider changes values.
+
+                **Question of the Day:** How can we use the app screen for user input?
             lesson-9:
               name: Variables and If Statements
-              description_student: 
-              description_teacher: 
+              description_student: Learn to make more complex programs that keep track of information and make decisions, using variables and if-statements.
+              description_teacher: |-
+                In this lesson, students are introduced to variables, the counter pattern, and if-statements. Students will use these concepts in the context of programming the circuit playground and creating more complex input/output behaviors, such as counting the number of button presses before having the circuit playground make a noise. The concepts in this lesson are used to make more complex and fulfilling apps in future lessons, and students may need to refer back to the videos and examples in this lesson as they continue to master these concepts.
+
+                **Question of the Day:** How can I create more complex programs that keep track of information and make decisions?
             lesson-10:
-              name: Combining Inputs
-              description_student: 
-              description_teacher: 
+              name: Combining Inputs and Outputs
+              description_student: Combine inputs and outputs from the screen and Circuit Playground to make complex apps
+              description_teacher: |-
+                In this lesson, students combine inputs and outputs across both the circuit playground and the app screen. For example, students may use dropdowns or sliders to make the LEDs on the circuit playground change. Or, students may use the buttons on the circuit playground to update elements on the screen. This lesson also extends how students use variables and if-statements to make more complex decisions based on user input. There are no new coding commands or circuit playground features in this lesson, but students are combining many elements from previous lessons in new ways.
+
+                **Question of the Day:** How can I use inputs and outputs from both the circuit playground and the app screen?
             Analog Input:
               name: Board Sensors
-              description_student: 'In this lesson, you will get to explore the sensors on the Circuit Playground and write programs that respond to the environment.
+              description_student: 'Explore the sensors on the Circuit Playground and write programs that respond to the environment.
 
 '
-              description_teacher: 
+              description_teacher: |-
+                In this lesson, students explore how the three sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all or may interact without actually realizing they are doing so.
+
+                **Question of the Day:** How can I use sensors to detect changes in the environment?
             Accelerometer:
               name: Accelerometer
               description_student: 'In this lesson, you will explore the accelerometer and its capabilities. '
@@ -31712,3 +31736,16 @@ en:
           student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
           description_short: ''
           description_audience: ''
+        csa-backpack-2022:
+          lessons:
+            lesson-1:
+              name: PainterPlus
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csa-backpack-2022
+          title: CSA Backpack Versions ['22-'23]
+          description_audience: ''
+          description_short: ''
+          description: Versions of classes students have in their **Backpack** throughout the course.
+          student_description: ''

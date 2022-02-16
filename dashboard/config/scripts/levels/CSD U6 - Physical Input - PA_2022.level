@@ -20,7 +20,6 @@
       "led.off": null,
       "led.toggle": null,
       "onBoardEvent": null,
-      "lightSensor.value": null,
       "equalityOperator": null,
       "greaterThanOperator": null,
       "greaterThanOrEqualOperator": null,
@@ -32,7 +31,6 @@
       "assign_x": null,
       "addOperator": null,
       "subtractOperator": null,
-      "updateRecord": null,
       "multiplyOperator": null,
       "divideOperator": null
     },
@@ -89,16 +87,22 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 28px; padding: 2px 15px; width: 195px; height: 35px; position: absolute; left: 60px; top: 70px; text-align: center;\" id=\"titleLabel\">Score</label><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 28px; padding: 2px 15px; width: 195px; height: 35px; position: absolute; left: 60px; top: 130px; text-align: center;\" id=\"scoreLabel\">0</label></div></div>",
-    "start_blocks": "var score = 0;\n//Create your button variables here\n\n\n//Add your onBoardEvents here\n",
-    "preload_asset_list": null
+    "start_blocks": "var score = 0;\r\n//Create your button variables here\r\n\r\n\r\n//Add your onBoardEvents here\r\n",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Whack-A-Mole",
+    "bubble_choice_description": "Create an app that simulates a whack-a-mole game, where you press 3 external buttons to earn points",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L17/practice/C.png"
   },
   "game_id": 41,
+  "published": true,
   "created_at": "2022-02-09T22:36:47.000Z",
   "level_num": "custom",
   "user_id": 1,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-09T22:36:46.986+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB Template_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB Template_2022\"},{\"changed_at\":\"2022-02-09 22:37:55 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 22:44:36 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"long_instructions\",\"text_mode_at_start\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 22:55:33 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 22:56:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 22:58:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 22:59:57 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-09T22:36:46.986+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Input - SB Template_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Input - SB Template_2022\"},{\"changed_at\":\"2022-02-09 22:37:55 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 22:44:36 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"long_instructions\",\"text_mode_at_start\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 22:55:33 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 22:56:33 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 22:58:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 22:59:57 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 20:45:18 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 20:48:25 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

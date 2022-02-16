@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-01-06T20:22:37.000Z",
-  "level_num": "custom",
-  "user_id": 833,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -52,12 +48,15 @@
     "hide_pause_button": "true",
     "validation_code": "//This level requires zValidationHelperFunctions\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar eventLog = getEventLog();\r\n\r\nif (!validationProps.successCriteria) {\r\n  setSuccessCriteria({\r\n    starterSprite: checkOneSprite(spriteIds),\r\n    clickedSprite: false,\r\n    spriteClickCausesSpeech: false\r\n  });\r\n}\r\n\r\nif (!validationProps.vars) {\r\n  validationProps.vars = {\r\n    delay : 0,\r\n    numSpritesSpoken : 0,\r\n    eventLogLength : 0,\r\n    clickedSprite : -1\r\n  };\r\n}\r\n\r\n//checkForUnclickedSprites(spriteIds, eventLog);\r\n\r\nvar newId = getClickedSpriteIdCausedSpeech(eventLog, validationProps.vars.eventLogLength);\r\nif (newId == -2) {\r\n  validationProps.successCriteria.clickedSprite = true;\r\n} else if (newId >= 0) {\r\n  validationProps.successCriteria.clickedSprite = true;\r\n  if (newId != validationProps.vars.clickedSprite) {\r\n    validationProps.vars.clickedSprite = newId;\r\n    validationProps.vars.numSpritesSpoken++;\r\n    validationProps.vars.delay = World.frameCount;\r\n  }\r\n}\r\n\r\nvalidationProps.vars.eventLogLength = eventLog.length;\r\n\r\nvalidationProps.successCriteria.spriteClickCausesSpeech = validationProps.vars.numSpritesSpoken>=1;\r\n\r\n// Logic\r\nsetSuccessTime(validationProps.successCriteria);\r\n\r\nif (!validationProps.successCriteria.starterSprite) {\r\n  drawProgressBar(\"earlyFail\");\r\n} else {\r\n  determineAndDrawProgressBar(validationProps.successTime, validationProps.vars.delay);\r\n}\r\n\r\nif (World.frameCount > EARLY_FAIL_TIME) {\r\n  if (!validationProps.successCriteria.starterSprite) {\r\n    levelFailure(3, \"noSprites\");\r\n  }\r\n}\r\n\r\nif (World.frameCount-validationProps.vars.delay > WAIT_TIME) {\r\n  if (!validationProps.successCriteria.clickedSprite) {\r\n    // fail\r\n    levelFailure(3, \"singleSpriteNotClicked\");\r\n  } else if (validationProps.vars.numSpritesSpoken >= 1) {\r\n    // pass\r\n    levelFailure(0, \"genericSuccess\");\r\n  } else {\r\n    // fail\r\n    levelFailure(3, \"clickButNoSay\");\r\n  }\r\n}",
     "instructions_icon": "rikki",
-    "preload_asset_list": null,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-01-06T20:22:37.000Z",
+  "level_num": "custom",
+  "user_id": 833,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:37.741+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_3_2021\\\"\"],\"cloned_from\":\"courseE_aboutme_3_2021\"},{\"changed_at\":\"2022-01-24 18:41:26 +0000\",\"changed\":[\"solution_blocks\",\"helper_libraries\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 18:49:07 +0000\",\"changed\":[\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 18:59:21 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 18:59:54 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 19:38:18 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:37.741+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_3_2021\\\"\"],\"cloned_from\":\"courseE_aboutme_3_2021\"},{\"changed_at\":\"2022-01-24 18:41:26 +0000\",\"changed\":[\"solution_blocks\",\"helper_libraries\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 18:49:07 +0000\",\"changed\":[\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 18:59:21 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 18:59:54 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 19:38:18 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-16 19:12:49 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "debugging": 1,
