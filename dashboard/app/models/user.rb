@@ -1253,6 +1253,34 @@ class User < ApplicationRecord
       first
   end
 
+  # Similar to User#last_attempt_for_any but returns data for a set of users
+  # in a single query. The return value is a hash of user_id to a UserLevel.
+  # A user_id with no UserLevel matching the given criteria is omitted from
+  # the returned hash.
+  def self.batched_last_attempt_for_any(user_ids, script_id, level_ids)
+    UserLevel.
+      where({user_id: user_ids, script_id: script_id, level_id: level_ids}).
+      order('updated_at DESC').
+      each_with_object({}) do |user_level, hash|
+        # add this user_level to the hash only if it's the first one for this user
+        user_id = user_level.user_id
+        hash[user_id] = user_level unless hash.include?(user_id)
+      end
+  end
+
+  # Returns progress data corresponding to the given users, script, and levels.
+  # The return value is a hash from user_id to array of UserLevel objects sorted
+  # in descending order by updated_at. A user_id with no UserLevel matching the
+  # given criteria is omitted from the returned hash. The associated LevelSource
+  # data for each UserLevel is also prefetched to prevent n+1 query issues.
+  def self.progress_for_users(user_ids, script_id, level_ids)
+    UserLevel.
+      includes(:level_source).
+      where({user_id: user_ids, script_id: script_id, level_id: level_ids}).
+      order('updated_at DESC').
+      group_by(&:user_id)
+  end
+
   # Is the provided script_level hidden, on account of the section(s) that this
   # user is enrolled in
   def script_level_hidden?(script_level)
