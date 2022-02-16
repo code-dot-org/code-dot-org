@@ -10,6 +10,7 @@ module CertificatesHelper
 
   def certificate_image_url(name, course, sponsor)
     return '/images/hour_of_code_certificate.jpg' unless course
+    return CertificateImage.certificate_template_for(course) unless name
     encoded = encode_params(name, course, sponsor)
     "/certificate_images/#{encoded}.jpg"
   end
