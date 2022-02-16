@@ -70,10 +70,6 @@ class HomeController < ApplicationController
     render 'home/index'
   end
 
-  def certificate_link_test
-    render 'certificate_link_test', formats: [:html]
-  end
-
   # This static page combines TOS and Privacy partials all in one page
   # for easy printing.
   def terms_and_privacy
