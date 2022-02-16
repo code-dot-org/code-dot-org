@@ -5,7 +5,6 @@ class CertificatesController < ApplicationController
 
   # GET /certificates/:encoded_params
   def show
-    prevent_caching
     view_options(full_width: true, responsive_content: true)
 
     begin
