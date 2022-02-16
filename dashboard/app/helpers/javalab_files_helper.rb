@@ -3,10 +3,9 @@ module JavalabFilesHelper
   # Get all files related to the project at the given channel id as a hash. The hash is in the format
   # below. All values are StringIO.
   # {
-  #   "main.json": <main source file for a project>
+  #   "sources": {"main.json": <main source file for a project>, "grid.txt": <serialized maze if it exists>},
   #   "assets": {"asset_name_1": <asset_value>, ...}
   #   "validation": <all validation code for a project, in json format>
-  #   "maze": <serialized maze if it exists>
   # }
   # If the channel doesn't have validation and/or a maze, those fields will not be present.
   def self.get_project_files(channel_id)
