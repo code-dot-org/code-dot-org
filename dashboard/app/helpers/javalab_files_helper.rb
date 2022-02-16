@@ -16,9 +16,14 @@ module JavalabFilesHelper
     source_data = SourceBucket.new.get(channel_id, "main.json")
     # Note: we can call .string on this value (and all other values for files) to get the raw string.
     all_files["main.json"] = source_data[:body]
-    # get starter assets
+    # get level assets
     assets = {}
     asset_bucket = AssetBucket.new
+    asset_list = asset_bucket.list(channel_id)
+    asset_list.each do |asset|
+      assets[asset[:filename]] = asset_bucket.get(channel_id, asset[:filename])[:body]
+    end
+    # get starter assets
     channel = ChannelToken.where(storage_app_id: storage_app_id, storage_id: storage_id).first
     level = Level.cache_find(channel.level_id)
     if level
@@ -28,11 +33,6 @@ module JavalabFilesHelper
         asset = starter_asset_bucket.object(filename)
         assets[friendly_name] = asset.get.body
       end
-    end
-    # get level assets
-    asset_list = asset_bucket.list(channel_id)
-    asset_list.each do |asset|
-      assets[asset[:filename]] = asset_bucket.get(channel_id, asset[:filename])[:body]
     end
     all_files["assets"] = assets
     # get validation code
