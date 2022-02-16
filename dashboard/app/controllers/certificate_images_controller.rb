@@ -4,7 +4,7 @@ class CertificateImagesController < ApplicationController
   # GET /certificate_images/filename.jpg
   # filename includes three encoded params:
   #   name - student name (required)
-  #   course - the name of the script (optional)
+  #   course - course name (optional)
   #   sponsor - donor name (required)
   def show
     filename = params[:filename]

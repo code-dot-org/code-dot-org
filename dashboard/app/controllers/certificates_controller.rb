@@ -4,6 +4,10 @@ class CertificatesController < ApplicationController
   include CertificatesHelper
 
   # GET /certificates/:encoded_params
+  # encoded_params includes:
+  #   name - student name (optional)
+  #   course - course name (optional)
+  #   sponsor - donor name (optional)
   def show
     view_options(full_width: true, responsive_content: true)
 
