@@ -171,7 +171,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
                 level_result[:student_result] = student_answer
                 level_result[:status] = ""
               when Multi
-                answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes_array
+                answer_indexes = Script.cache_find_level(level.id).correct_answer_indexes_array
                 student_result = student_answer.split(",").map(&:to_i).sort
                 level_result[:student_result] = student_result
 
