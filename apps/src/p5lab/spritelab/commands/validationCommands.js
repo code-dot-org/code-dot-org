@@ -621,16 +621,12 @@ export const commands = {
         result = true;
       }
     }
-    console.log(`event: ${result}`);
     return result;
   },
 
   // Returns true text was printed this frame.
   printedText() {
-    let result = this.previous.printLogLength > this.printLog.length;
-    console.log(
-      `print: ${this.previous.printLogLength} to ${this.printLog.length}`
-    );
+    let result = this.previous.printLogLength < this.printLog.length;
     return result;
   },
 
