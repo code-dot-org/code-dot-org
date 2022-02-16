@@ -247,6 +247,43 @@ export const commands = {
     return result;
   },
 
+  // Return true if any sprite was speaking.
+  anySpriteSpeaking() {
+    const spriteIds = this.getSpriteIdsInUse();
+    let result = false;
+    for (let i = 0; i < spriteIds.length; i++) {
+      if (this.getLastSpeechBubbleForSpriteId(spriteIds[i])) {
+        result = true;
+      }
+    }
+    return result;
+  },
+
+  // Return true if any sprite's speech include values from a given object.
+  anySpeechIncludesValues(object) {
+    const spriteIds = this.getSpriteIdsInUse();
+    let result = false;
+    for (let i = 0; i < spriteIds.length; i++) {
+      Object.values(object).forEach(value => {
+        let speechText = this.getLastSpeechBubbleForSpriteId(spriteIds[i])
+          ?.text;
+        let type = typeof speechText;
+        switch (type) {
+          case 'string':
+            console.log(typeof speechText);
+            result = speechText.includes(value);
+            break;
+          case 'number':
+            result = speechText === value;
+            break;
+          default:
+            break;
+        }
+      });
+    }
+    return result;
+  },
+
   // Return true if exactly one sprite began speaking.
   singleSpriteSpeaks() {
     const spriteIds = this.getSpriteIdsInUse();
@@ -570,6 +607,35 @@ export const commands = {
       }
     }
 
+    return result;
+  },
+
+  // Returns true if a time event was logged this frame.
+  atTimeEventFound() {
+    let result = false;
+
+    //Only check for values that are new this frame
+    for (let i = this.previous.eventLogLength; i < this.eventLog.length; i++) {
+      if (this.eventLog[i].includes('atTime: ')) {
+        result = true;
+      }
+    }
+
+    return result;
+  },
+
+  getStudentVars() {
+    return this.studentVars;
+  },
+
+  updateVariableLog(object) {
+    this.studentVars = object;
+  },
+
+  // Returns true if the student set a variable to any number, string, or boolean.
+  variableCreated() {
+    let result = this.studentVars.length >= 1;
+    //console.log(this.studentVars);
     return result;
   }
 };
