@@ -1253,21 +1253,6 @@ class User < ApplicationRecord
       first
   end
 
-  # Similar to User#last_attempt_for_any but returns data for a set of users
-  # in a single query. The return value is a hash of user_id to a UserLevel.
-  # A user_id with no UserLevel matching the given criteria is omitted from
-  # the returned hash.
-  def self.batched_last_attempt_for_any(user_ids, script_id, level_ids)
-    UserLevel.
-      where({user_id: user_ids, script_id: script_id, level_id: level_ids}).
-      order('updated_at DESC').
-      each_with_object({}) do |user_level, hash|
-        # add this user_level to the hash only if it's the first one for this user
-        user_id = user_level.user_id
-        hash[user_id] = user_level unless hash.include?(user_id)
-      end
-  end
-
   # Returns progress data corresponding to the given users, script, and levels.
   # The return value is a hash from user_id to array of UserLevel objects sorted
   # in descending order by updated_at. A user_id with no UserLevel matching the
