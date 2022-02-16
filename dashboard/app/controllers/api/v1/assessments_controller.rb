@@ -89,21 +89,15 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       responses_by_level_group = {}
 
       assessment_script_levels.each do |script_level|
-        # Get the UserLevel for the last attempt.  This approach does not check
-        # for the script and so it'll find the student's attempt at this level for
-        # any script in which they have encountered that level.
-        last_attempt = student.last_attempt_for_any(script_level.levels)
+        last_attempt = student.last_attempt_for_any(script_level.levels, script_id: @script.id)
+        next unless last_attempt
 
-        # Get the LevelGroup itself.
-        level_group = last_attempt.try(:level) || script_level.oldest_active_level
-
-        # Get the response which will be stringified JSON.
-        response = last_attempt.try(:level_source).try(:data)
-
-        next unless response
-
-        # Parse the response string into an object.
-        response_parsed = JSON.parse(response)
+        level_group = last_attempt.level
+        sublevel_ids = level_group.all_child_levels.pluck(:id)
+        student_answers_by_level_id = UserLevel.includes(:level_source).
+          where({user_id: student.id, script_id: @script.id, level_id: sublevel_ids}).
+          map {|user_level| [user_level.level_id, user_level.level_source&.data]}.  # [key, value] in returned hash
+          to_h
 
         # Summarize some key data.
         multi_count = 0
@@ -121,7 +115,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
             match_count += 1
           end
 
-          level_response = response_parsed[level.id.to_s]
+          student_answer = student_answers_by_level_id[level.id]
 
           level_result = {}
 
@@ -134,15 +128,14 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
             level_result[:type] = "Match"
           end
 
-          if level_response
+          if student_answer
             case level
             when TextMatch, FreeResponse
-              student_result = level_response["result"]
-              level_result[:student_result] = student_result
+              level_result[:student_result] = student_answer
               level_result[:status] = ""
             when Multi
               answer_indexes = Multi.find_by_id(level.id).correct_answer_indexes_array
-              student_result = level_response["result"].split(",").map(&:to_i).sort
+              student_result = student_answer.split(",").map(&:to_i).sort
               level_result[:student_result] = student_result
 
               if student_result == [-1]
@@ -156,7 +149,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
                 level_result[:status] = "incorrect"
               end
             when Match
-              student_result = level_response["result"].split(",", -1)
+              student_result = student_answer.split(",", -1)
               # If a student did not answer some of the matching question we will record that as nil
               student_result = student_result.map do |result|
                 result.empty? ? nil : result.to_i
