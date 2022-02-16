@@ -9,7 +9,8 @@ import {
   sectionsNameAndId
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-const NO_SELECTED_SECTION_VALUE = '';
+// Exported for unit testing
+export const NO_SELECTED_SECTION_VALUE = '';
 
 function SectionSelector({
   style,
