@@ -12,10 +12,23 @@ module JavalabFilesHelper
   def self.get_project_files(channel_id)
     storage_id, storage_app_id = storage_decrypt_channel_id(channel_id)
     all_files = {}
-    # get sources file
+    sources = {}
+    # get main.json
     source_data = SourceBucket.new.get(channel_id, "main.json")
     # Note: we can call .string on this value (and all other values for files) to get the raw string.
-    all_files["main.json"] = source_data[:body]
+    sources["main.json"] = source_data[:body]
+
+    # get maze file
+    channel = ChannelToken.where(storage_app_id: storage_app_id, storage_id: storage_id).first
+    level = Level.cache_find(channel.level_id)
+    if level
+      serialized_maze = level.try(:get_serialized_maze)
+      if serialized_maze
+        sources["grid.txt"] = StringIO.new(serialized_maze.to_s)
+      end
+    end
+    all_files["sources"] = sources
+
     # get level assets
     assets = {}
     asset_bucket = AssetBucket.new
@@ -23,9 +36,8 @@ module JavalabFilesHelper
     asset_list.each do |asset|
       assets[asset[:filename]] = asset_bucket.get(channel_id, asset[:filename])[:body]
     end
+
     # get starter assets
-    channel = ChannelToken.where(storage_app_id: storage_app_id, storage_id: storage_id).first
-    level = Level.cache_find(channel.level_id)
     if level
       starter_asset_bucket = Aws::S3::Bucket.new(LevelStarterAssetsController::S3_BUCKET)
       (level&.project_template_level&.starter_assets || level.starter_assets || []).map do |friendly_name, uuid_name|
@@ -35,15 +47,12 @@ module JavalabFilesHelper
       end
     end
     all_files["assets"] = assets
+
     # get validation code
     if level.respond_to?(:validation) && level.validation
       all_files["validation"] = StringIO.new(level.validation.to_json)
     end
-    # get maze file
-    serialized_maze = level.try(:get_serialized_maze)
-    if serialized_maze
-      all_files["maze"] = StringIO.new(serialized_maze.to_s)
-    end
+
     return all_files
   end
 end
