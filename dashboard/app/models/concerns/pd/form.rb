@@ -70,7 +70,7 @@ module Pd::Form
     hash = sanitize_and_trim_form_data_hash
 
     # No validation is required if the application is still in progress
-    return if hash && hash[:status] == 'incomplete'
+    return if status == 'incomplete'
 
     self.class.required_fields.each do |key|
       add_key_error(key) unless hash.key?(key)
