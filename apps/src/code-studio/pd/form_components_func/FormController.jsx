@@ -294,12 +294,13 @@ const FormController = props => {
    *
    * @returns {Object}
    */
-  const serializeFormData = formData => {
+  const serializeFormData = (formData, status) => {
     if (!formData) {
       throw new Error(`formData cannot be undefined`);
     }
     return {
       form_data: formData,
+      status: status,
       ...serializeAdditionalData()
     };
   };
@@ -318,16 +319,13 @@ const FormController = props => {
   };
 
   const makeRequest = applicationStatus => {
-    const dataWithStatus = {...data, status: applicationStatus};
-    setData(dataWithStatus);
-
     const ajaxRequest = (method, endpoint) =>
       $.ajax({
         method: method,
         url: endpoint,
         contentType: 'application/json',
         dataType: 'json',
-        data: JSON.stringify(serializeFormData(dataWithStatus))
+        data: JSON.stringify(serializeFormData(data, applicationStatus))
       });
 
     return updatedApplicationId
