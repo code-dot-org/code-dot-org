@@ -239,16 +239,6 @@ class CertificateImage
     end
   end
 
-  # generate a url for a certificate image, given options:
-  #   name: student name
-  #   course: course name
-  #   course_title: course title
-  #   sponsor: (optional)
-  def self.certificate_image_url(opts = {})
-    encoded = Base64.urlsafe_encode64(JSON.pretty_generate(opts))
-    "http://#{CDO.canonical_hostname('code.org')}/v2/hoc/certificate/#{encoded}.jpg"
-  end
-
   def self.tutorial_codes
     @@tutorial_codes ||= PEGASUS_DB[:tutorials].all.map {|t| t[:code]}
   end
