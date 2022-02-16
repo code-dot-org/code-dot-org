@@ -7,8 +7,6 @@ class CertificateImagesController < ApplicationController
   #   course - the name of the script (optional)
   #   sponsor - donor name (required)
   def show
-    prevent_caching
-
     filename = params[:filename]
     format = params[:format]
     unless ['jpg', 'jpeg', 'png'].include?(format)

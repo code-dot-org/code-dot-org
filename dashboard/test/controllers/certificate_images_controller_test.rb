@@ -7,7 +7,6 @@ class CertificateImagesControllerTest < ActionController::TestCase
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'jpg', params: {filename: filename}
     assert_response :success
-    assert_equal "max-age=0, private, must-revalidate, no-store", @response.headers["Cache-Control"]
   end
 
   test 'returns bad request without student name' do
