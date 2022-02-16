@@ -17,6 +17,8 @@ silenced = [
   /Uniqueness validator will no longer enforce case sensitive comparison in Rails 6.1/,
   /The asset ".*" is not present in the asset pipeline.Falling back to an asset that may be in the public folder./,
   /NOT conditions will no longer behave as NOR in Rails 6.1. To continue using NOR conditions, NOT each condition individually/,
+  /Rails 6.1 will return Content-Type header without modification/,
+  /update_attributes!? is deprecated and will be removed from Rails 6.1/,
 ]
 
 silenced_expr = Regexp.new(silenced.join('|'))
