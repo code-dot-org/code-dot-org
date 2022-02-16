@@ -28323,16 +28323,19 @@ en:
           lessons:
             lesson-1:
               name: 'Mini-Project: On-The-Go App'
-              description_student: 
-              description_teacher: 
+              description_student: Create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected
+              description_teacher: |-
+                In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.
+
+                **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data>
             lesson-2:
               name: 'Project: Human Device Interaction'
               description_student: 
               description_teacher: 
             lesson-3:
               name: 'Mini-Project: Interactive Art'
-              description_student: 
-              description_teacher: 
+              description_student: Create a piece of interactive artwork using a Circuit Playground and physical materials
+              description_teacher: In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.
             Project - Prototype an Innovation:
               name: Project - Prototype an Innovation
               description_student: 'In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. '
@@ -28404,23 +28407,32 @@ en:
             Accelerometer:
               name: Accelerometer
               description_student: 'In this lesson, you will explore the accelerometer and its capabilities. '
-              description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+              description_teacher: |-
+                In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+
+                **Question of the Day:** How can I use the accelerometer to create apps?
             Making Music:
               name: Making Music
               description_student: 'In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. '
-              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, learn to play sequences of notes, forming simple songs.
+              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.
             Functions with Parameters:
               name: Functions
-              description_student: 'In this lesson, you will create and call functions, then learn how to use parameters to make functions useful across many different situations
+              description_student: 'In this lesson, you will learn how to create and call functions, then learn how to use parameters to make functions useful across many different situations
 
 '
-              description_teacher: 
+              description_teacher: |-
+                This lesson introduces students to functions as way to organize and group repeated blocks of code together, such as changing all of the LEDs to red or blue. Then, students learn how to use parameters in their functions as a way to generalize behaviors to work for different contexts - for example, changing all the LEDs to a certain color rather than always changing them red or blue. Students will use these concepts in future lessons, and it may be necessary to return to this lesson to reference the resources and videos.
+
+                **Question of the Day:** How can I use functions to organize and simplify my code?
             Circuits and Physical Prototypes:
               name: Physical Outputs and LEDs
               description_student: 'In this lesson, you will learn to use wires to create devices with external LEDs and add code to control these lights.
 
 '
-              description_teacher: 
+              description_teacher: |-
+                In this lesson, students learn how to attach external LEDs to their circuit playground and use code to light up these LEDs. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.
+
+                **Question of the Day:** How can I use external LEDs to create physical prototypes?
             Project - Make a Game:
               name: Project - Make a Game
               description_student: In this lesson, you will take what you have learned through chapter one, and develop an app of your own design that uses the board to output information.
@@ -28430,8 +28442,11 @@ en:
 
             Physical Outputs:
               name: Physical Inputs and Buttons
-              description_student: 
-              description_teacher: 
+              description_student: Learn how to connect external wires to create input events when the wires touch, simulating a button press
+              description_teacher: |-
+                In this lesson, students learn how to connect external wires to create input events when the wires touch, simulating a button press. Students learn to use code to recognize these external button events to make changes to their app. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.
+
+                **Question of the Day:** How can I use external buttons to create physical prototypes?
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1
