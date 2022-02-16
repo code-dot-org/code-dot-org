@@ -728,7 +728,7 @@ class Lesson < ApplicationRecord
     lessons = Lesson.eager_load(script: :course_version).
       where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
       where(key: key).
-      order("scripts.properties -> '$.version_year'", 'scripts.name')
+      order(Arel.sql("scripts.properties -> '$.version_year'", 'scripts.name'))
     lessons - [self]
   end
 

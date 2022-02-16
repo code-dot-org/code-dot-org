@@ -12,13 +12,12 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
       terms = get_query_terms query
       match_terms = []
       terms.each do |term|
-        # sanitize_sql_for_order won't be a public method until Rails 5.2
-        match_terms.push ActiveRecord::Base.send(:sanitize_sql_for_order, ["CASE when (MATCH(name, city) AGAINST(? IN BOOLEAN MODE) OR zip = ?) THEN 1 ELSE 0 END", term, term])
+        match_terms.push ActiveRecord::Base.sanitize_sql_for_order(Arel.sql("CASE when (MATCH(name, city) AGAINST(? IN BOOLEAN MODE) OR zip = ?) THEN 1 ELSE 0 END"), term, term)
       end
       matches = match_terms.join ' + '
       rows = rows.
         where("MATCH(name, city) AGAINST(? IN BOOLEAN MODE)", terms.join(' ')).
-        order("(#{matches}) DESC, state, city, name")
+        order(Arel.sql("(#{matches}) DESC, state, city, name"))
     elsif search_by_zip?((query = query.strip))
       query = "#{query[0, 5]}%"
       rows = rows.where("zip LIKE ?", query)
@@ -26,9 +25,8 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
       query = format_query(query)
       return [] if query.length < MIN_WORD_LENGTH + 2
       rows = rows.
-        where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", query).
-        # sanitize_sql_for_order won't be a public method until Rails 5.2
-        order(ActiveRecord::Base.send(:sanitize_sql_for_order, ["MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name", query]))
+        where(Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)"), query).
+        order(ActiveRecord::Base.sanitize_sql_for_order(Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name"), query))
     end
 
     return rows.map do |row|

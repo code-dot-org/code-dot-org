@@ -173,7 +173,7 @@ class RegionalPartner < ApplicationRecord
       end
 
     # prefer match by zip code when multiple partners cover the same state
-    return find_by_region_query.order('pd_regional_partner_mappings.zip_code IS NOT NULL DESC').first
+    return find_by_region_query.order(Arel.sql('pd_regional_partner_mappings.zip_code IS NOT NULL DESC')).first
   end
 
   # Find a Regional Partner that services a particular ZIP.

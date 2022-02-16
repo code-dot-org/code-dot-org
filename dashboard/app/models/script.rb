@@ -601,7 +601,7 @@ class Script < ApplicationRecord
   end
 
   def self.get_family_without_cache(family_name)
-    Script.where(family_name: family_name).order("properties -> '$.version_year' DESC")
+    Script.where(family_name: family_name).order(Arel.sql("properties -> '$.version_year' DESC"))
   end
 
   # Returns all units within a family from the Rails cache.
@@ -765,7 +765,7 @@ class Script < ApplicationRecord
       # select only units in the same family.
       where(family_name: family_name).
       # order by version year descending.
-      order("properties -> '$.version_year' DESC")&.
+      order(Arel.sql("properties -> '$.version_year' DESC"))&.
       first
   end
 
