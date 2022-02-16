@@ -86,28 +86,22 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
       student_ids = student_batch.pluck(:id)
 
       # Get data from the database for each script_level for the entire batch
-      # of students. batch_data will eventually have this structure:
+      # of students. progress_data will have this structure:
       # {
       #   script_level_id: {
-      #     "level_group_data": {
-      #       student_id: <UserLevel>
-      #     },
-      #     "sublevels_data": {
-      #       student_id: [<UserLevel>]
-      #     }
-      #   }
+      #     student_id: [<UserLevel>]
+      #   },
       # }
-      batch_data = {}
+      progress_data = {}
       assessment_script_levels.each do |script_level|
-        # each level in script_level should be a LevelGroup which represents an
-        # assessment
-        level_group_ids = script_level.levels.pluck(:id)
-        sublevel_ids = script_level.levels.map {|level| level.all_child_levels.pluck(:id)}.flatten
+        # each level in script_level here is a LevelGroup representing the assessment
+        level_groups = script_level.levels
+        level_group_ids = level_groups.pluck(:id)
+        sublevel_ids = level_groups.map {|level_group| level_group.all_child_levels.pluck(:id)}.flatten
 
-        batch_data[script_level.id] = {
-          level_group_data: User.batched_last_attempt_for_any(student_ids, script_id, level_group_ids),
-          sublevels_data: User.progress_for_users(student_ids, script_id, sublevel_ids)
-        }
+        # retrieve the UserLevels for the level group and sublevels all in one shot
+        progress_data[script_level.id] =
+          User.progress_for_users(student_ids, script_id, level_group_ids + sublevel_ids)
       end
 
       student_batch.each do |student|
@@ -118,10 +112,19 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
         responses_by_level_group = {}
 
         assessment_script_levels.each do |script_level|
-          # Get the progress data for this assessment / student from batch_data
-          level_group_progress = batch_data[script_level.id][:level_group_data][student.id]
-          sublevels_progress = batch_data[script_level.id][:sublevels_data][student.id]
+          # Get the progress data for this assessment / student from batch_data;
+          # student_progress is an array of UserLevel objects
+          student_progress = progress_data[script_level.id][student.id]
+          next unless student_progress
 
+          # Find the UserLevel that represents overall progress of the level_group.
+          # This logic is analogous to User#last_attempt_for_any.
+          level_group_ids = script_level.levels.pluck(:id)
+          level_group_progress = student_progress.find do |user_level|
+            user_level.user_id == student.id &&
+              user_level.script_id == script_id &&
+              level_group_ids.include?(user_level.level_id)
+          end
           next unless level_group_progress
 
           level_group = level_group_progress.level
@@ -142,14 +145,14 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
               match_count += 1
             end
 
-            # Find the UserLevel that corresponds to this level.  Note that the
-            # first two checks should always be true by this point and we're
-            # including the checks just for extra safety.
-            student_answer = sublevels_progress && sublevels_progress.find do |user_level|
+            # Find the UserLevel that corresponds to this level. This may be nil
+            # if the student skipped a question.
+            level_progress = student_progress.find do |user_level|
               user_level.user_id == student.id &&
-              user_level.script_id == script_id &&
-              user_level.level_id == level.id
-            end.level_source.data
+                user_level.script_id == script_id &&
+                user_level.level_id == level.id
+            end
+            student_answer = level_progress&.level_source&.data
 
             level_result = {}
 
