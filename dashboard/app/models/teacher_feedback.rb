@@ -96,7 +96,7 @@ class TeacherFeedback < ApplicationRecord
     find(
       where(
         query
-      ).group([:student_id, :level_id]).pluck('MAX(teacher_feedbacks.id)')
+      ).group([:student_id, :level_id]).pluck(Arel.sql('MAX(teacher_feedbacks.id)'))
     )
   end
 

@@ -229,12 +229,14 @@ class Pd::Workshop < ApplicationRecord
   # Orders by the workshop state, in order: Not Started, In Progress, Ended
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_state(desc: false)
-    order(%Q(
-      CASE
-        WHEN started_at IS NULL THEN "#{STATE_NOT_STARTED}"
-        WHEN ended_at IS NULL THEN "#{STATE_IN_PROGRESS}"
-        ELSE "#{STATE_ENDED}"
-      END #{desc ? ' DESC' : ''})
+    order(
+      Arel.sql(%Q(
+        CASE
+          WHEN started_at IS NULL THEN "#{STATE_NOT_STARTED}"
+          WHEN ended_at IS NULL THEN "#{STATE_IN_PROGRESS}"
+          ELSE "#{STATE_ENDED}"
+        END #{desc ? ' DESC' : ''})
+      )
     )
   end
 
