@@ -6,8 +6,7 @@ import {
   N_COLOR_LEDS,
   CP_BUTTON_VARS,
   CP_COMPONENT_EVENTS,
-  SONG_CHARGE,
-  SONG_1D
+  SONG_CHARGE
 } from './boards/circuitPlayground/PlaygroundConstants';
 
 import {
@@ -304,14 +303,14 @@ const circuitPlaygroundBlocks = [
     func: 'buzzer.playNotes',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['notes', 'tempo'],
-    params: [stringifySong(SONG_1D), 120],
+    params: ['[]', 120],
     paramButtons: {minArgs: 1, maxArgs: 2}
   },
   {
     func: 'buzzer.playSong',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['notes', 'tempo'],
-    params: [stringifySong(SONG_CHARGE), 120],
+    params: ['[[__, __]]', 120],
     paramButtons: {minArgs: 1, maxArgs: 2}
   },
   {
