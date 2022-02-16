@@ -195,3 +195,8 @@ rescue Sequel::UniqueConstraintViolation
   raise "no user storage id on second try" unless user_storage_id
   user_storage_id
 end
+
+# Used in tests only
+def delete_storage_id_for_user(user_id)
+  user_storage_ids_table.where(user_id: user_id).delete
+end
