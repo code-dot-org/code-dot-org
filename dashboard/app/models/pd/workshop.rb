@@ -215,6 +215,9 @@ class Pd::Workshop < ApplicationRecord
   def self.order_by_scheduled_start(desc: false)
     joins(:sessions).
       group_by_id.
+      # This SQL string is not at risk for injection vulnerabilites because
+      # it's not injesting arbitrary strings, but programmatically constructing
+      # a string from hardcoded values, so it's safe to wrap in Arel.sql
       order(Arel.sql('DATE(MIN(pd_sessions.start))' + (desc ? ' DESC' : '')))
   end
 
@@ -223,6 +226,9 @@ class Pd::Workshop < ApplicationRecord
   def self.order_by_enrollment_count(desc: false)
     left_outer_joins(:enrollments).
       group_by_id.
+      # This SQL string is not at risk for injection vulnerabilites because
+      # it's not injesting arbitrary strings, but programmatically constructing
+      # a string from hardcoded values, so it's safe to wrap in Arel.sql
       order(Arel.sql('COUNT(pd_enrollments.id)' + (desc ? ' DESC' : '')))
   end
 
@@ -230,6 +236,9 @@ class Pd::Workshop < ApplicationRecord
   # @param :desc [Boolean] optional - when true, sort descending
   def self.order_by_state(desc: false)
     order(
+      # This SQL string is not at risk for injection vulnerabilites because it
+      # exclusively uses hardcoded values rather than user-provided ones, so
+      # it's safe to wrap in Arel.sql
       Arel.sql(%Q(
         CASE
           WHEN started_at IS NULL THEN "#{STATE_NOT_STARTED}"

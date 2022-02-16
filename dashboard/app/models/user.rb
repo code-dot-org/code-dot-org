@@ -437,6 +437,8 @@ class User < ApplicationRecord
   before_create :update_default_share_setting
 
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
+  # This SQL string is not at risk for injection vulnerabilites because it's
+  # just a hardcoded string, so it's safe to wrap in Arel.sql
   has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
   has_many :scripts, through: :user_scripts, source: :script
 
