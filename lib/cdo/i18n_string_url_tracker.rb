@@ -61,10 +61,11 @@ class I18nStringUrlTracker
   # @param url [String] The url which required the translation of the given string_key.
   # @param source [String] Context about where the string lives e.g. 'ruby', 'maze', 'turtle', etc
   # @param string_key [String] The key used to locate the desired string.
-  # @param scope [Array] Array of strings representing the hierarchy leading up to the string_key.
+  # @param scope [Array|String] Array of strings representing the hierarchy leading up to the string_key. OR
+  #                             String with values separated by the separator value.
   # @param separator [String] The separator string used by I18n to concatenate the string_key hierarchy
   #        into a single normalized string.
-  def log(url, source, string_key, scope = nil, separator = nil)
+  def log(url, source, string_key, scope = [], separator = I18n.default_separator)
     # Return if DCDO flag is unset, or we get incomplete info
     return unless DCDO.get(I18N_STRING_TRACKING_DCDO_KEY, false)
     return unless string_key && url && source
@@ -73,9 +74,7 @@ class I18nStringUrlTracker
     return unless allowed(url)
     url = normalize_url(url)
 
-    # Scope could come in as empty or a normalized string, so make sure it's an array
-    separator ||= I18n.default_separator
-    scope = [] if scope.nil? || scope.empty?
+    # Scope could come in as a normalized string, so make sure it's an array
     scope = scope.split(separator) if scope.is_a? String
 
     # We use -> as the separator in the normalized_key for ease of searching in Crowdin, and to prevent keys
@@ -86,7 +85,7 @@ class I18nStringUrlTracker
     logged_url = CGI.unescape(url)
 
     # Stringify all items in the scope array so we can JSON stringify and parse it.
-    stringified_scope = scope.map(&:to_s).to_s
+    stringified_scope = scope&.map(&:to_s).to_s
     add_to_buffer(normalized_key, logged_url, source, string_key.to_s, stringified_scope, separator)
   end
 
@@ -104,7 +103,7 @@ class I18nStringUrlTracker
       buffer_values = [source, string_key, scope, separator]
 
       if buffer_normalized_key.add?(buffer_values)
-        buffer_values_size = buffer_values.reduce(0) {|sum, s| sum + s.bytesize}
+        buffer_values_size = buffer_values.reduce(0) {|sum, s| sum + (s ? s.bytesize : 0)}
         @buffer_size += buffer_values_size
       end
     end
