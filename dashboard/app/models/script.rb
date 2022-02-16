@@ -601,6 +601,8 @@ class Script < ApplicationRecord
   end
 
   def self.get_family_without_cache(family_name)
+    # This SQL string is not at risk for injection vulnerabilites because it's
+    # just a hardcoded string, so it's safe to wrap in Arel.sql
     Script.where(family_name: family_name).order(Arel.sql("properties -> '$.version_year' DESC"))
   end
 
@@ -765,6 +767,8 @@ class Script < ApplicationRecord
       # select only units in the same family.
       where(family_name: family_name).
       # order by version year descending.
+      # This SQL string is not at risk for injection vulnerabilites because
+      # it's just a hardcoded string, so it's safe to wrap in Arel.sql
       order(Arel.sql("properties -> '$.version_year' DESC"))&.
       first
   end
