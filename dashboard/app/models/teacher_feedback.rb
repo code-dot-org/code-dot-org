@@ -106,7 +106,7 @@ class TeacherFeedback < ApplicationRecord
     where(id: joins(:student_sections).
         where('sections.user_id = teacher_id').
         group([:teacher_id, :student_id, :level_id]).
-        pluck('MAX(teacher_feedbacks.id)')
+        pluck(Arel.sql('MAX(teacher_feedbacks.id)'))
   )
   end
 
