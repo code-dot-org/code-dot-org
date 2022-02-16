@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-02-16 19:01:33 UTC",
+    "serialized_at": "2022-02-16 23:17:11 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -162,7 +162,9 @@
       "relative_position": 6,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
-        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas."
+        "overview": "In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data>",
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.",
+        "student_overview": "Create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -272,8 +274,10 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "assessment_opportunities": "1. **Use accelerometer orientation (pitch and roll) when creating apps**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use the data event to continually update an element's properties.**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.",
+        "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.\n\n**Question of the Day:** How can I use the accelerometer to create apps?",
+        "preparation": "* Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will explore the accelerometer and its capabilities. "
       },
       "seeding_key": {
@@ -290,8 +294,10 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "assessment_opportunities": "1. **Use the buzzer to produce individual notes or sequences of notes**\n\n\tCode Studio: see rubric on the assessment level\n\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, learn to play sequences of notes, forming simple songs.",
+        "overview": "In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.",
+        "preparation": "* Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. "
       },
       "seeding_key": {
@@ -308,8 +314,11 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "assessment_opportunities": "1. **Use functions to organize repeated blocks of code**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use functions to organize repeated blocks of code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "student_overview": "In this lesson, you will create and call functions, then learn how to use parameters to make functions useful across many different situations\n"
+        "overview": "This lesson introduces students to functions as way to organize and group repeated blocks of code together, such as changing all of the LEDs to red or blue. Then, students learn how to use parameters in their functions as a way to generalize behaviors to work for different contexts - for example, changing all the LEDs to a certain color rather than always changing them red or blue. Students will use these concepts in future lessons, and it may be necessary to return to this lesson to reference the resources and videos.\n\n**Question of the Day:** How can I use functions to organize and simplify my code?",
+        "preparation": "* Prepare a board and USB cable for each pair of students",
+        "student_overview": "In this lesson, you will learn how to create and call functions, then learn how to use parameters to make functions useful across many different situations\n"
       },
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
@@ -326,7 +335,9 @@
       "relative_position": 15,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
-        "purpose": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas."
+        "overview": "In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.",
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.",
+        "student_overview": "Create a piece of interactive artwork using a Circuit Playground and physical materials"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -342,7 +353,9 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
+        "assessment_opportunities": "1. **Create and debug a circuit with an LED**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Create prototype devices that control an LED with code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, students learn how to attach external LEDs to their circuit playground and use code to light up these LEDs. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.\n\n**Question of the Day:** How can I use external LEDs to create physical prototypes?",
         "preparation": "* Prepare circuit wiring materials, such as:\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\n\t* LEDs (included in Circuit Playground classroom kit)\n\t* Other conductive material (wire, paper clips, foil, etc)\n\t* (optional) Buttons or switches",
         "student_overview": "In this lesson, you will learn to use wires to create devices with external LEDs and add code to control these lights.\n"
       },
@@ -360,8 +373,11 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
+        "assessment_opportunities": "1. **Create and debug a circuit with a button**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Create prototype devices that use an external button for input**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "preparation": "* Prepare circuit wiring materials, such as:\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\n\t* LEDs (included in Circuit Playground classroom kit)\n\t* Other conductive material (wire, paper clips, foil, etc)\n\t* (optional) Buttons or switches"
+        "overview": "In this lesson, students learn how to connect external wires to create input events when the wires touch, simulating a button press. Students learn to use code to recognize these external button events to make changes to their app. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.\n\n**Question of the Day:** How can I use external buttons to create physical prototypes?",
+        "preparation": "* Prepare circuit wiring materials, such as:\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\n\t* LEDs (included in Circuit Playground classroom kit)\n\t* Other conductive material (wire, paper clips, foil, etc)\n\t* (optional) Buttons or switches",
+        "student_overview": "Learn how to connect external wires to create input events when the wires touch, simulating a button press"
       },
       "seeding_key": {
         "lesson.key": "Physical Outputs",
@@ -2168,9 +2184,62 @@
       "key": "8e6ef533-97df-4532-88e3-570e5e6e9fdc",
       "position": 1,
       "properties": {
+        "description": "**Prompt:** Think about a time when you've needed to collect data when moving around in the world, or when data is being collected about you. How was that data collected? What happened to that data?",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "8e6ef533-97df-4532-88e3-570e5e6e9fdc",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "21e25e28-35a8-49cf-b5a6-4c497edc9fb5",
+      "position": 2,
+      "properties": {
+        "description": "**Circulate:** Hopefully students may think of ways their phones or other devices collect data about them, such as a pedometer or when a car keeps track of how many miles someone has driven. Students may also think of situations where data is collected about them, such as when they are captured on video or when they use a credit card."
+      },
+      "seeding_key": {
+        "activity_section.key": "21e25e28-35a8-49cf-b5a6-4c497edc9fb5",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "ddc41a9a-c01d-4fa2-9edc-910933e76eb4",
+      "position": 3,
+      "properties": {
+        "description": "**Share Out:** Have students share their responses with a partner, then share out as a class"
+      },
+      "seeding_key": {
+        "activity_section.key": "ddc41a9a-c01d-4fa2-9edc-910933e76eb4",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "7205a2aa-5c81-46cf-8493-bf1145c942b6",
+      "position": 4,
+      "properties": {
+        "description": "**Discussion Goal:** As students share answers, highlight that there is usually a device that does the data collecting, and then there is a separate service that analyzes or makes decisions about that data. For example, a watch may collect heart rate data, and then an app on your phone tells you how many calories you burned."
+      },
+      "seeding_key": {
+        "activity_section.key": "7205a2aa-5c81-46cf-8493-bf1145c942b6",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "8f6e22e4-9a9c-45ec-8bbc-d27e34d6c473",
+      "position": 5,
+      "properties": {
+        "description": "Today, we're going to complete a project where we design an app that uses the circuit playground to collect data, and then uses an app to make a decision or recommendation based on that data.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Example App:** You may decide to show one of the exemplar apps as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8f6e22e4-9a9c-45ec-8bbc-d27e34d6c473",
         "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
       }
     },
@@ -2247,9 +2316,22 @@
       "key": "70f6b1a8-e548-402e-83e3-62f27a07436c",
       "position": 1,
       "properties": {
+        "description": "**Prompt:** What was your favorite part of the app you created? What is something you wish you had time to improve?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "70f6b1a8-e548-402e-83e3-62f27a07436c",
+        "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def"
+      }
+    },
+    {
+      "key": "127038fc-0ac4-44b9-93d7-1f3ed4e0b64f",
+      "position": 2,
+      "properties": {
+        "description": "You may decide to have students share these with a partner, or you may decide to have students keep their responses private. Either way, the goal of the prompt is to have students reflect on the apps they've created and celebrate what went well and acknowledge what could be improved for next time."
+      },
+      "seeding_key": {
+        "activity_section.key": "127038fc-0ac4-44b9-93d7-1f3ed4e0b64f",
         "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def"
       }
     },
@@ -9182,7 +9264,7 @@
       "url": "https://drive.google.com/file/d/1nxKyWBb_zuIrAJ9hSFc6t3vsa1tJkeKF/view?usp=sharing",
       "key": "accelerometer_events",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -9266,7 +9348,7 @@
       "url": "https://drive.google.com/file/d/12z50tIYpRJ2LFUlpYJYcKQ6I_qMk6g5p/view?usp=sharing",
       "key": "circuits_and_buttons",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -9864,7 +9946,7 @@
       "url": "https://drive.google.com/file/d/1L7NhIsMI70GpuA5_gsF-M8VfJPY6Ld3Q/view?usp=sharing",
       "key": "the_accelerometer",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10374,6 +10456,16 @@
   ],
   "vocabularies": [
     {
+      "key": "circuit",
+      "word": "Circuit",
+      "definition": "A device that provides a path for an electric current to flow, often modifying that current. In computers, circuits allow for simple logical and mathematical operations using electricity.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "circuit"
+      }
+    },
+    {
       "key": "innovation",
       "word": "Innovation",
       "definition": "A new or improved idea, device, product, etc, or the development thereof",
@@ -10398,6 +10490,12 @@
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
+        "vocabulary.key": "circuit"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
         "vocabulary.key": "prototype"
       }
     },
@@ -10409,6 +10507,13 @@
     }
   ],
   "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "accelerometer"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Accelerometer",
@@ -10649,6 +10754,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Making Music",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "buzzer.playSong"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Physical Outputs",
         "programming_environment.name": "applab",
         "programming_expression.key": "createButton"
@@ -10748,6 +10860,16 @@
       "seeding_key": {
         "lesson.key": "Analog Input",
         "objective.key": "01285493-c011-48b4-919a-5e422553bada"
+      }
+    },
+    {
+      "key": "0fa0987c-8e82-45fc-9dc3-dccea2009ebd",
+      "properties": {
+        "description": "Use accelerometer orientation (pitch and roll) when creating apps"
+      },
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "objective.key": "0fa0987c-8e82-45fc-9dc3-dccea2009ebd"
       }
     },
     {
@@ -10861,6 +10983,16 @@
       }
     },
     {
+      "key": "7586c430-2120-4bb4-a61c-12eba9c1214d",
+      "properties": {
+        "description": "Use the data event to continually update an element's properties."
+      },
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "objective.key": "7586c430-2120-4bb4-a61c-12eba9c1214d"
+      }
+    },
+    {
       "key": "7a5ad671-a522-4f35-a48e-57c1916e8737",
       "properties": {
         "description": "Use if-statements to make decisions when creating apps"
@@ -10868,6 +11000,16 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "objective.key": "7a5ad671-a522-4f35-a48e-57c1916e8737"
+      }
+    },
+    {
+      "key": "7b6e4fc8-0396-43ef-a0a3-7e020291f63c",
+      "properties": {
+        "description": "Use functions to organize repeated blocks of code"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "objective.key": "7b6e4fc8-0396-43ef-a0a3-7e020291f63c"
       }
     },
     {
@@ -10888,6 +11030,26 @@
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
         "objective.key": "8d4505aa-cf82-4e29-a701-83422e40f0d1"
+      }
+    },
+    {
+      "key": "9152d764-2dae-4cca-b233-9b9aa20b1b58",
+      "properties": {
+        "description": "Create and debug a circuit with a button"
+      },
+      "seeding_key": {
+        "lesson.key": "Physical Outputs",
+        "objective.key": "9152d764-2dae-4cca-b233-9b9aa20b1b58"
+      }
+    },
+    {
+      "key": "9a806adb-8f2b-4e66-973c-35b3a4dc6173",
+      "properties": {
+        "description": "Create prototype devices that control an LED with code"
+      },
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "objective.key": "9a806adb-8f2b-4e66-973c-35b3a4dc6173"
       }
     },
     {
@@ -10918,6 +11080,16 @@
       "seeding_key": {
         "lesson.key": "Board Events",
         "objective.key": "bac6de6a-3ce5-4f6d-bdce-8391e78ada83"
+      }
+    },
+    {
+      "key": "bd69f565-0f90-4d12-998a-35fbe2b01c9b",
+      "properties": {
+        "description": "Create prototype devices that use an external button for input"
+      },
+      "seeding_key": {
+        "lesson.key": "Physical Outputs",
+        "objective.key": "bd69f565-0f90-4d12-998a-35fbe2b01c9b"
       }
     },
     {
@@ -10958,6 +11130,36 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "objective.key": "dcf0f2d9-571a-42d0-99e1-102fce1ae3f2"
+      }
+    },
+    {
+      "key": "df49dd5f-e80e-429f-8ef4-dc3c45d02f40",
+      "properties": {
+        "description": "Create and debug a circuit with an LED"
+      },
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "objective.key": "df49dd5f-e80e-429f-8ef4-dc3c45d02f40"
+      }
+    },
+    {
+      "key": "e3680984-9821-47de-89af-6116166572b7",
+      "properties": {
+        "description": "Use parameters to generalize the purpose of a function"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "objective.key": "e3680984-9821-47de-89af-6116166572b7"
+      }
+    },
+    {
+      "key": "e578330a-fed2-48c8-b59d-d43e5fb6d2ba",
+      "properties": {
+        "description": "Use the buzzer to produce individual notes or sequences of notes"
+      },
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "objective.key": "e578330a-fed2-48c8-b59d-d43e5fb6d2ba"
       }
     },
     {
