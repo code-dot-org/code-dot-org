@@ -626,7 +626,8 @@ export const commands = {
 
   // Returns true text was printed this frame.
   printedText() {
-    let result = this.previous.printLogLength < this.printLog.length;
+    const previousPrintLogLength = this.previous.printLogLength || 0;
+    let result = previousPrintLogLength < this.printLog.length;
     return result;
   },
 
