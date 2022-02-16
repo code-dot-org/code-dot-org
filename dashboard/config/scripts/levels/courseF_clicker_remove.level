@@ -66,11 +66,11 @@
   },
   "game_id": 64,
   "published": true,
-  "created_at": "2022-01-28T19:23:16.000Z",
+  "created_at": "2022-02-16T19:37:58.000Z",
   "level_num": "custom",
   "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-13T21:10:23.865+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_variable\\\"\"],\"cloned_from\":\"courseF_clicker_variable\"},{\"changed_at\":\"2022-01-13 21:14:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"long_instructions\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 21:32:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-15 15:00:17 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":3,\"changed_by_email\":\"mike@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-13T21:10:23.865+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_variable\\\"\"],\"cloned_from\":\"courseF_clicker_variable\"},{\"changed_at\":\"2022-01-13 21:14:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"long_instructions\",\"validation_code\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 21:32:19 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-16 16:39:17 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

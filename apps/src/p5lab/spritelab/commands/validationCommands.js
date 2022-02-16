@@ -156,6 +156,7 @@ export const commands = {
   updatePrevious() {
     const spriteIds = this.getSpriteIdsInUse();
     this.previous.eventLogLength = this.eventLog.length;
+    this.previous.printLogLength = this.printLog.length || 0;
     this.previous.sprites = [];
     for (let i = 0; i < spriteIds.length; i++) {
       let spriteId = spriteIds[i];
@@ -270,7 +271,6 @@ export const commands = {
         let type = typeof speechText;
         switch (type) {
           case 'string':
-            console.log(typeof speechText);
             result = speechText.includes(value);
             break;
           case 'number':
@@ -615,27 +615,28 @@ export const commands = {
     let result = false;
 
     //Only check for values that are new this frame
+
     for (let i = this.previous.eventLogLength; i < this.eventLog.length; i++) {
       if (this.eventLog[i].includes('atTime: ')) {
         result = true;
       }
     }
-
+    console.log(`event: ${result}`);
     return result;
   },
 
-  getStudentVars() {
-    return this.studentVars;
-  },
-
-  updateVariableLog(object) {
-    this.studentVars = object;
+  // Returns true text was printed this frame.
+  printedText() {
+    let result = this.previous.printLogLength > this.printLog.length;
+    console.log(
+      `print: ${this.previous.printLogLength} to ${this.printLog.length}`
+    );
+    return result;
   },
 
   // Returns true if the student set a variable to any number, string, or boolean.
   variableCreated() {
     let result = this.studentVars.length >= 1;
-    //console.log(this.studentVars);
     return result;
   }
 };
