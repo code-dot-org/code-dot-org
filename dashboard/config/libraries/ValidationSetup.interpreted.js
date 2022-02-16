@@ -7,11 +7,9 @@ function levelSuccess(testResult) {
 }
 
 function levelFailure(testResult, msg) {
-
   validationState = 'failed';
   validationResult = testResult;
   validationMessage = msg;
-
 }
 
 var validationProps = {};

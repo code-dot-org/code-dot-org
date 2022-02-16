@@ -30,6 +30,7 @@ function updateLog(){
     }
   }
 
+
   varWatchers(varLog);
 
   if(validationProps){//is Sprite Lab
@@ -39,6 +40,7 @@ function updateLog(){
     detectVarChange();
     validationProps.previous.varLog=JSON.parse(JSON.stringify(varLog));
   }
+
 }
 */
 
@@ -51,7 +53,7 @@ function varWatchers(varLog){
   }
 }
 
-function drawWatcher(label, value, index, x, y){
+function drawWwatcher(label, value, index, x, y){
   if(!value&&value!=0&&value!=''){
     value = 'undefined';
   }
@@ -96,3 +98,5 @@ function checkLogForChanges(){
   }
   return false;
 }
+
+other.push(updateLog);
