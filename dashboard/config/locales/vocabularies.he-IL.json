@@ -175,6 +175,27 @@
         },
         "define/coursee/2021": {
           "word": "הגדר"
+        },
+        "debugging/csd/2021": {
+          "word": "מציאת טעויות"
+        },
+        "variable/csd/2021": {
+          "word": "משתנה"
+        },
+        "sprite/csd/2021": {
+          "word": "ספרייט"
+        },
+        "conditionals/csd/2021": {
+          "word": "תנאים"
+        },
+        "abstraction/csd/2021": {
+          "word": "הפשטה"
+        },
+        "function/csd/2021": {
+          "word": "פונקציה"
+        },
+        "copyright/csd/2021": {
+          "word": "זכויות יוצרים"
         }
       }
     }
