@@ -1005,6 +1005,17 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       sharingInput.select();
       sharingInput.setSelectionRange(0, 9999);
     });
+    var sharingInputCopyButton = sharingDiv.querySelector(
+      '#sharing-input-copy-button'
+    );
+    dom.addClickTouchEvent(sharingInputCopyButton, function() {
+      navigator.clipboard.writeText(options.shareLink).then(
+        function() {
+          sharingInputCopyButton.className = 'sharing-input-copy-button-shared';
+        },
+        function() {}
+      );
+    });
   }
 
   var sharingFacebook = sharingDiv.querySelector('#sharing-facebook');
