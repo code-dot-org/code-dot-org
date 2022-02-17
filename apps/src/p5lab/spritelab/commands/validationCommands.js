@@ -64,7 +64,7 @@ export const commands = {
     };
   },
 
-  // Gets an array of ids for any sprite that has an associated event triggered this frame.
+  // Gets an array of ids for any sprite that has an associated event logged this frame.
   getEventSpriteIds() {
     // We want to store any ids that are included in events logged this frame.
     // Touch events include two distinct sprite ids.
@@ -98,7 +98,14 @@ export const commands = {
     return idArray;
   },
 
-  // Used in levels (typically first frame only) to create an ordered list of success criteria
+  // addCriteria() is used in levels (typically first frame only) to create
+  // an ordered list of success criteria. Validation is essentially an ordered
+  // list of one or more "criteria", each consisting of a predicate function and
+  // a feedback message key. The predicate functions run each tick, and if true,
+  // mark the criteria as completed. At the end of the program, if all the
+  // criteria are complete, the student passes the level. If any criteria are
+  // not complete, the student sees the feedback message corresponding to the
+  // first unmet criteria.
   addCriteria(predicate, feedback) {
     if (typeof predicate === 'function' && typeof feedback === 'string') {
       this.criteria.push(new criteria(predicate, feedback));
@@ -107,13 +114,13 @@ export const commands = {
 
   // Used in levels to override default validation timing.
   setEarlyTime(frames) {
-    this.validationTimes.early = frames;
+    this.validationFrames.early = frames;
   },
   setWaitTime(frames) {
-    this.validationTimes.wait = frames;
+    this.validationFrames.wait = frames;
   },
   setDelayTime(frames) {
-    this.validationTimes.delay = frames;
+    this.validationFrames.delay = frames;
   },
 
   // Used in levels (typically every frame) to validate based on all criteria
@@ -122,11 +129,11 @@ export const commands = {
     const state = commands.getPassState(this.criteria);
 
     const barWidth =
-      this.currentFrame() * commands.calculateBarScale(this.validationTimes);
+      this.currentFrame() * commands.calculateBarScale(this.validationFrames);
     drawUtils.validationBar(this.p5, barWidth, state, {});
 
     // Check all criteria and update the completion status of each.
-    if (this.currentFrame() <= this.validationTimes.wait) {
+    if (this.currentFrame() <= this.validationFrames.wait) {
       commands.checkAllCriteria(this.criteria);
     } else {
       // If "wait time" is over, determine if student passes or fails.
@@ -139,7 +146,7 @@ export const commands = {
         };
       } else if (
         this.currentFrame() >=
-        this.validationTimes.wait + this.validationTimes.delay
+        this.validationFrames.wait + this.validationFrames.delay
       ) {
         results = {
           state: 'succeeded',
@@ -186,8 +193,8 @@ export const commands = {
     return state;
   },
 
-  calculateBarScale(validationTimes) {
-    return 400 / (validationTimes.wait + validationTimes.delay);
+  calculateBarScale(validationFrames) {
+    return 400 / (validationFrames.wait + validationFrames.delay);
   },
 
   checkAllCriteria(criteria) {
