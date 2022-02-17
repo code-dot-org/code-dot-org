@@ -52,7 +52,7 @@ Přidejte se k nám a probádejte umělou inteligenci v nové řadě videí, cvi
 <p>AI a strojové učení je zhruba pětitýdenní výukový modul, který je možné probírat jako <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >samostatný modul</a> or as an optional <a href="https://studio.code.org/s/csd7-2021">unit in CS Discoveries</a>. Zaměřuje se na etiku AI, zkoumá otázky zkreslení a prochází a vysvětluje základní koncepty</p><p>Protože strojové učení závisí na velkých souborech dat, jsou součástí nové jednotky skutečné datové soubory ze zdravotní péče, demografie a dalších oborů, které zapojují studenty a zkoumají otázky jako „Jaké problémy nám může strojové učení pomáhat řešit?“ „Jak může umělá inteligence pomoci společnosti?“ „Komu je umělá inteligence prospěšná?“ „Komu škodí?“ „Koho se týká?“ „Koho se netýká?“  </p>
 <p>V popředí těchto diskusí budou etické úvahy a jejich součástí je mnoho diskusních témat a lekcí o dopadech těchto technologií. To pomůže studentům získat ucelené a uvědomělé pochopení těchto technologií a naučit se technické základy jejich principu.</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>Prozkoumat modul</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 
