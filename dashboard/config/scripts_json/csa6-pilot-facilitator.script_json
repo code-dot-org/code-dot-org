@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-14 14:27:27 UTC",
+    "serialized_at": "2022-02-16 21:18:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1194,22 +1194,11 @@
   ],
   "activity_sections": [
     {
-      "key": "04c00c2d-270a-423d-b1a7-0a8714845551",
+      "key": "db5811bf-6b66-441f-a3b2-bc15232bf958",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Dr. Seuss Book Written by A.I. video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students notice that the story closely follows the same format as popular Dr. Seuss stories and may also note that the story does not consistently rhyme. Students may wonder how they might write a program to generate a story based on a line of text entered.",
-        "name": "Stories Written by A.I."
-      },
-      "seeding_key": {
-        "activity_section.key": "04c00c2d-270a-423d-b1a7-0a8714845551",
-        "lesson_activity.key": "83645ffe-bbbc-4c34-80a4-08be31585c84"
-      }
-    },
-    {
-      "key": "db5811bf-6b66-441f-a3b2-bc15232bf958",
-      "position": 2,
-      "properties": {
         "description": "You have learned a lot about Java throughout the year, much of which we can use to create a simple version of a program that can produce something like this story.",
+        "name": "Stories Written by A.I.",
         "remarks": true
       },
       "seeding_key": {
@@ -1219,15 +1208,9 @@
     },
     {
       "key": "bfccb2f4-92f9-4be5-989d-aa232f4fd2e5",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you create a program that generated a story like this?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for creating a similar program, such as searching for words with specific characteristics and using conditionals and iteration. Students note that they need to know how to work with `String`s to find some of these characteristics and might even suggest needing a way to search for words in an existing dictionary file.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The program used to produce the story in the video is more complex than what students would typically create in this course. Help students identify simple aspects that they could implement, such as finding words by characteristics such as using conditionals and iteration to check for syllables, length, positive or negative connotations, or other characteristics."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you create a program that generates a story?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for creating a similar program, such as searching for words with specific characteristics and using conditionals and iteration. Students note that they need to know how to work with `String`s to find some of these characteristics and might even suggest needing a way to search for words in an existing dictionary file."
       },
       "seeding_key": {
         "activity_section.key": "bfccb2f4-92f9-4be5-989d-aa232f4fd2e5",
@@ -2109,7 +2092,7 @@
       "key": "e02df4a3-638b-4726-a93a-12e0cb1f3cf1",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define the `length()` method and discuss the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `teamList1.length()` return?*\n* *How many characters will `teamList3.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `teamList1` and 17 for `teamList3`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to complete Levels 4, 5, and 6 on Code Studio. On Level 4, students debug a program that produces an `ArrayIndexOutofBoundsExceptio`n. On Level 5, students use the `length()` and `set()` methods to modify an existing `ArrayList`. Students do a code review with a partner on Level 5 to receive feedback and improve their work before moving on to complete a Check for Understanding on Level 6.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define the `length()` method and discuss the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `atlanta.length()` return?*\n* *How many characters will `tennessee.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 15 for `atlanta` and 16 for `tennessee`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to complete Levels 4, 5, and 6 on Code Studio. On Level 4, students debug a program that produces an `ArrayIndexOutofBoundsExceptio`n. On Level 5, students use the `length()` and `set()` methods to modify an existing `ArrayList`. Students do a code review with a partner on Level 5 to receive feedback and improve their work before moving on to complete a Check for Understanding on Level 6.",
         "progression_name": "Changing Values in an ArrayList"
       },
       "seeding_key": {
@@ -6442,18 +6425,6 @@
       }
     },
     {
-      "name": "Dr. Seuss Book Written by A.I.",
-      "url": "https://youtu.be/DckBBDU6V4k",
-      "key": "dr_seuss_book_written_by_a_i_",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "dr_seuss_book_written_by_a_i_"
-      }
-    },
-    {
       "name": "FRQ Scoring Guide",
       "url": "https://docs.google.com/document/d/1Z3bc2oSUQPe5Y3bCOTgnc_NkRqSn3S6uyLhZO8yuA8M/edit",
       "key": "frq_scoring_guide_4",
@@ -6795,12 +6766,6 @@
       "seeding_key": {
         "lesson.key": "Documenting Program Code",
         "resource.key": "_key_u6l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Documenting Program Code",
-        "resource.key": "dr_seuss_book_written_by_a_i_"
       }
     },
     {
