@@ -27151,6 +27151,14 @@ pt:
               name: Protótipos
             lesson-19:
               name: Projeto
+            Circuits and Physical Prototypes:
+              description_teacher: Na preparação para o projeto final deste capítulo,
+                os alunos aprenderão como desenvolver um protótipo de um objeto físico
+                que inclua um Circuito Playground. Usando um guia de planejamento
+                de projeto modelado, os alunos aprenderão como conectar alguns circuitos
+                simples e criar protótipos que possam comunicar o design pretendido
+                de um produto, usando materiais baratos e facilmente encontrados,
+                como papelão e fita adesiva.
           lesson_groups:
             lessonGroup-3:
               display_name: Modelos
@@ -27183,6 +27191,11 @@ pt:
               display_name: Projeto
             lessonGroup-4:
               display_name: Demonstrações e recursos
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: Testando clone CSA
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -28140,6 +28153,12 @@ pt:
                 Além dos comportamentos, hoje os alunos incorporam a entrada do usuário
                 como eventos para criar uma "festa de dança alienígena".
           lesson_groups:
+            lessonGroup-5:
+              display_name: Variáveis do Curso F (obsoletas)
+            lessonGroup-6:
+              display_name: Curso F para ciclos (obsoleto)
+            lessonGroup-7:
+              display_name: Fadas do Curso E (obsoletas)
             lessonGroup-8:
               display_name: Hora do Código
         csa7-exemplars:
@@ -28185,6 +28204,46 @@ pt:
               display_name: Sprite
             lessonGroup-3:
               display_name: variáveis
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: 'Neste projeto final do curso, os alunos se unem
+                para desenvolver e testar um protótipo para um dispositivo de computação
+                inovador baseado no parque de diversões do circuito. Usando as entradas
+                e saídas disponíveis no quadro, os grupos criarão programas que permitem
+                interações interessantes e exclusivas do usuário. '
+            Innovations in Computing:
+              name: Inovações em Computação
+              description_teacher: Para iniciar a unidade final deste curso, os alunos
+                farão algumas pesquisas sobre inovações interessantes na computação.
+                Esta lição irá expor os alunos a uma variedade mais ampla de fatores
+                de forma de computação (aparência de um computador) e campos afetados
+                pela computação. Posteriormente nesta unidade, os alunos analisarão
+                os dispositivos que encontraram nesta lição à medida que desenvolvem
+                seus próprios dispositivos físicos de computação.
+            The Circuit Playground:
+              name: O parque de diversões do circuito
+            Board Events:
+              name: Eventos de borda
+            Arrays and Color LEDs:
+              name: LEDs Coloridos
+            lesson-10:
+              name: Combinação de entradas
+            Accelerometer:
+              name: Acelerômetro
+              description_teacher: Nesta lição, os alunos explorarão o acelerômetro
+                e seus recursos. Eles se familiarizarão com seus eventos e propriedades,
+                além de criarem vários programas utilizando o acelerômetro semelhante
+                aos que provavelmente encontraram em aplicativos do mundo real.
+            Making Music:
+              name: Fazendo Música
+            Functions with Parameters:
+              name: funções
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -28737,6 +28796,7 @@ pt:
           description_short: 'Uma introdução à ciência da computação: combina o melhor
             do nosso currículo do ensino fundamental para alunos mais velhos.'
           description_audience: 9-18 anos de idade
+          name: express-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -30012,6 +30072,11 @@ pt:
                 acessíveis para aplicativos hipotéticos. '
             'Hello World: Food':
               name: Olá Mundo
+              description_student: Nesta lição, você vai aprender a criar e animar
+                fadas e torná-las interativas utilizando eventos.
+              description_teacher: Nesta lição de  \*_desenvolvimento de habilidades_,
+                os aprendizes vão aprender a criar e animar fadas e torná-las interativas
+                utilizando eventos.
           lesson_groups:
             csf_sprites:
               display_name: Sprite
@@ -30313,6 +30378,8 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -30339,3 +30406,94 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: laços
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Dia de Avaliação
+            lesson-10:
+              key: lição 10
+            lesson-6:
+              key: lição 6
+            lesson-7:
+              key: lição 7
+            lesson-8:
+              key: lição 8
+            lesson-9:
+              key: lição 9
+            lesson-11:
+              key: lição 11
+            lesson-12:
+              key: lição 12
+            lesson-13:
+              key: lição 13
+            lesson-14:
+              key: lição 14
+            lesson-15:
+              key: lição 15
+            lesson-1:
+              key: lição 1
+            lesson-2:
+              key: lição 2
+            lesson-3:
+              key: lição 3
+            lesson-4:
+              key: lição 4
+            lesson-5:
+              key: lição 5
+              name: Dia de Avaliação
+            lesson-16:
+              key: lição 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Dia de Avaliação
+            lesson-1:
+              key: lição 1
+            lesson-2:
+              key: lição 2
+            lesson-3:
+              key: lição 3
+            lesson-4:
+              key: lição 4
+            lesson-5:
+              key: lição 5
+            lesson-10:
+              key: lição 10
+            lesson-6:
+              key: lição 6
+            lesson-7:
+              key: lição 7
+            lesson-8:
+              key: lição 8
+            lesson-9:
+              key: lição 9
+            lesson-11:
+              key: lição 11
+            lesson-12:
+              key: lição 12
+            lesson-13:
+              key: lição 13
+            lesson-14:
+              key: lição 14
+            lesson-15:
+              key: lição 15
+              name: Dia de Avaliação
+            lesson-16:
+              key: lição 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+            lessonGroup-5:
+              display_name: Área restrita
