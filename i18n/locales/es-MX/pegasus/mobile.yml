@@ -375,6 +375,7 @@
   homepage_donors_donate: "Dona"
   homepage_below_hero_announcement_text: "Nos importa su privacidad y estamos realizando algunas actualizaciones de nuestra política de privacidad, efectiva el 25 de mayo."
   homepage_below_hero_announcement_link_text: "Aprende más"
+  homepage_higher_power_body: "Al crear con la Fiesta de Baile, tendrás la oportunidad de ver a la banda en vivo."
   contact_form_topic_student: "Soy estudiante"
   contact_form_topic_parent: "Soy padre/madre"
   contact_form_topic_teacher: "Soy docente/educador"
@@ -1714,6 +1715,8 @@
   hoc2018_dance_video2: "Fiesta de baile - Eventos"
   hoc2018_dance_video3: "Fiesta de baile - Propiedades"
   hoc2018_dance_video4: "Fiesta de baile - Felicitaciones"
+  dance_box_higher_power_line_1: "¡Programa una coreografía con la nueva canción de Coldplay, \"Higher Power\", y  gana la oportunidad de verlos en vivo!"
+  dance_box_higher_power_line_2: "Entra a <a href=\"%{path}\">code.org/coldplay</a> para saber más"
   page_not_found_title: "No se encontró la página"
   page_not_found_header: '404: no se encontró la página'
   page_not_found_description: "La página que buscas no existe en esta dirección. Comprueba la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio."

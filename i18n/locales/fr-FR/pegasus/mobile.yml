@@ -371,6 +371,7 @@
   homepage_donors_donate: "Faire un don"
   homepage_below_hero_announcement_text: "La protection de votre vie privée est l'une de nos priorités et nous faisons réguliérement des mises à jour de notre politique de confidentialité, appliquée depuis le 25 Mai."
   homepage_below_hero_announcement_link_text: "En savoir plus"
+  homepage_higher_power_body: "Code une danse au son de \"Higher Power\" de Coldplay et tu pourrais avoir l'occasion de voir le groupe en concert!"
   contact_form_topic_student: "Je suis un élève"
   contact_form_topic_parent: "Je suis un parent"
   contact_form_topic_teacher: "Je suis enseignant/éducateur"
@@ -1672,6 +1673,8 @@
   hoc2018_dance_video2: "Soirée Dansante – Les Événements"
   hoc2018_dance_video3: "Soirée Dansante – Les Propriétés"
   hoc2018_dance_video4: "Soirée Dansante - Félicitations"
+  dance_box_higher_power_line_1: "Codez une danse au son de \"Higher Power\" de Coldplay et vous pourriez avoir l'occasion de voir le groupe en live!"
+  dance_box_higher_power_line_2: "Visitez <a href=\"%{path}\">code.org/coldplay</a> pour plus d'infos"
   page_not_found_title: "Page Introuvable"
   page_not_found_header: '404 : Page Introuvable'
   page_not_found_description: "La page recherchée n'existe pas à cette adresse. Vérifie l'adresse du site internet et réessaie. Sinon, retourne sur la page d'accueil."
@@ -1765,3 +1768,4 @@
   ai_try_activity: "Essayez l'activité"
   outbreak_tile_title: "Épidémie"
   outbreak_tile_subtitle: "Un virus a infecté Monster Town ! Codez un simulateur d'épidémie et faites des prédictions sur ce qui arrivera aux voisins de Monster Town."
+  footer_cookie_notice: " Utilisation de cookies"
