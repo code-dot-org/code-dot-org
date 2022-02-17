@@ -320,6 +320,8 @@ ms:
               name: Peta-peta Gembira
         afterschool1:
           description_audience: Umur 7-13 tahun
+        cspunit4draft:
+          description_short: Data
         ScienceP3OLPT2:
           lessons:
             Wrap-Up:
@@ -410,6 +412,8 @@ ms:
           lessons:
             Exploring Apps:
               name: Meneroka Aplikasi
+        CSDU5-Draft:
+          description_short: Data
         CSF_Secret_Sample_Story:
           description_audience: Umur 8-18 tahun+
         MikeTest:
@@ -2610,6 +2614,8 @@ ms:
               display_name: Tingkatkan
             csf_variables:
               display_name: Pembolehubah
+            csf_data:
+              display_name: Data
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -3123,6 +3129,8 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+            csf_data:
+              display_name: Data
             end_of_course_project:
               display_name: Akhir Projek Kursus
           lessons:
@@ -3997,6 +4005,8 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+            csf_data:
+              display_name: Data
             end_of_course_project:
               display_name: Akhir Projek Kursus
           lessons:
@@ -4290,6 +4300,8 @@ ms:
               display_name: Tingkatkan
             csf_variables:
               display_name: Pembolehubah
+            csf_data:
+              display_name: Data
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -4535,6 +4547,8 @@ ms:
               name: Penyahpepijatan
         jess-test-script:
           lessons:
+            Tools:
+              name: Alatan
             Debugging:
               name: Penyahpepijatan
         csp5-virtual:
@@ -4579,6 +4593,22 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: Pelajaran
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: Pelajaran
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: Pelajaran
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: Pelajaran
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -4930,6 +4960,8 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+            csf_data:
+              display_name: Data
             end_of_course_project:
               display_name: Akhir Projek Kursus
           name: kursusc-2021
@@ -5691,6 +5723,10 @@ ms:
             Computer Science Fundamentals:
               key: Asas Sains Komputer
               name: Asas Sains Komputer
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: Komuniti Guru
         self-paced-pl-csd5-2021:
           lessons:
             lesson-4:
@@ -5717,6 +5753,10 @@ ms:
               name: Mengubah Suai Data Objek
             lesson-10:
               name: Memaparkan Maklumat Objek
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sumber
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -5737,11 +5777,15 @@ ms:
               name: Gambaran Keseluruhan
         csa-u6-dev:
           lessons:
+            lesson-12:
+              name: Alatan
             lesson-17:
               name: Konsol
             lesson-18:
               name: Widget
           lesson_groups:
+            lessonGroup-2:
+              display_name: Pelajaran
             lessonGroup-4:
               display_name: Demo dan Sumber
         csa-self-paced-pl:
@@ -6159,9 +6203,18 @@ ms:
           lessons:
             lesson-2:
               name: Widget
+            lesson-3:
+              name: Alatan
           lesson_groups:
+            lessonGroup-2:
+              display_name: Pelajaran
             lessonGroup-4:
               display_name: Demo dan Sumber
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: Menguji Klon CSA
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -6218,6 +6271,8 @@ ms:
           lessons:
             lesson-1:
               name: Widget
+            lesson-2:
+              name: Alatan
           lesson_groups:
             lessonGroup-2:
               display_name: Demo dan Sumber
@@ -6502,6 +6557,10 @@ ms:
               description_student: Bantu Laurel, pemburu harta karun, mengira dan menambah langkah untuk mengumpul permata!
               description_teacher: "Pelajaran ini membina aktiviti terdahulu yang melibatkan mengira dan mewakili penambahan. Mengira dengan Laurel menyokong pelajar di tadika dan gred satu dengan latihan mengira dan menambah sambil mereka menggunakan gelung untuk membantu Laurel, pemburu harta karun, mengumpul permata merentasi grid mez. Mereka menggunakan satu siri perintah pengekodan untuk membimbing Laurel merentasi grid untuk mengumpulkan permata, menggunakan blok \"Ulang\" yang memerlukan mereka mengira berapa banyak langkah yang perlu diambil oleh Laurel- kemudian mewakili nombor itu menggunakan angka yang betul dalam blok kod.\n\n#### Kemahiran Prasyarat\n\nPelajaran ini tidak bertujuan untuk memperkenalkan pelajar kepada nombor, mengira atau menambah. Pelajar harus mengikuti pelajaran ini dengan beberapa pengetahuan dan kemahiran terdahulu untuk dapat:\n\n-   mengenal dan mengira nombor hingga 10 menggunakan imej, jari atau manipulatif.\n-   tambah objek, imej, jari atau manipulatif sehingga jumlah 10."
           title: Mengira dengan Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Pelajaran
         csa6-exemplars:
           lessons:
             lesson-11:
@@ -6542,6 +6601,12 @@ ms:
               name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
               description_student: Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas.
           lesson_groups:
+            lessonGroup-5:
+              display_name: Pembolehubah Kursus F (Ditamatkan)
+            lessonGroup-6:
+              display_name: Kursus F Untuk Gelung (Ditamatkan)
+            lessonGroup-7:
+              display_name: Kursus E Sprite (Dihentikan)
             lessonGroup-8:
               display_name: Hour of Code
         csf-2022-pilot:
@@ -6581,6 +6646,17 @@ ms:
               display_name: Pembolehubah
             lessonGroup-4:
               display_name: Akhir Projek Kursus
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: Menggabungkan Input
+            Functions with Parameters:
+              name: Fungsi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bab 1
+            lessonGroup-3:
+              display_name: Bab 2
         csa7-pilot-facilitator:
           lessons:
             Java Lab:
@@ -6919,6 +6995,7 @@ ms:
           student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
           description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
           description_audience: 'Umur: 9-18 tahun'
+          name: ekspres-2022
         csp2-2022:
           lessons:
             Packets:
@@ -7148,6 +7225,8 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+            csf_data:
+              display_name: Data
             end_of_course_project:
               display_name: Akhir Projek Kursus
           title: Kursus C (2021)
@@ -7384,6 +7463,8 @@ ms:
               name: Mereka Bentuk untuk Aksesibiliti
             'Hello World: Food':
               name: Helo Dunia
+              description_student: Dalam pelajaran ini, anda akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara.
           lesson_groups:
             csf_sprites:
               display_name: Jin
@@ -7587,6 +7668,8 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -7599,3 +7682,89 @@ ms:
               name: Inspirasi Projek
             lesson-19:
               name: Penyahpepijatan
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: Gelung
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: pelajaran-10
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+            lesson-8:
+              key: pelajaran-8
+            lesson-9:
+              key: pelajaran-9
+            lesson-11:
+              key: pelajaran-11
+            lesson-12:
+              key: pelajaran-12
+            lesson-13:
+              key: pelajaran-13
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+            lesson-1:
+              key: pelajaran-1
+            lesson-2:
+              key: pelajaran-2
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+            lesson-5:
+              key: pelajaran-5
+            lesson-16:
+              key: pelajaran-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: pelajaran-1
+            lesson-2:
+              key: pelajaran-2
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+            lesson-5:
+              key: pelajaran-5
+            lesson-10:
+              key: pelajaran-10
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+            lesson-8:
+              key: pelajaran-8
+            lesson-9:
+              key: pelajaran-9
+            lesson-11:
+              key: pelajaran-11
+            lesson-12:
+              key: pelajaran-12
+            lesson-13:
+              key: pelajaran-13
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+            lesson-16:
+              key: pelajaran-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
