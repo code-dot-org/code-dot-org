@@ -776,6 +776,17 @@ class SourcesTest < FilesApiTestBase
     delete_all_source_versions(MAIN_JSON)
   end
 
+  def test_sources_with_nested_hash
+    filename = MAIN_JSON
+    file_data = '{ "source": { "MyClass.java": "…code…" } }'
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    delete_all_source_versions(filename)
+  end
+
   private
 
   def assert_restores_main_json_with_animation_version(version_value)

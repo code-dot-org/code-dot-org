@@ -410,7 +410,7 @@ class FilesApi < Sinatra::Base
       source = body_json["source"]
       html = body_json["html"]
 
-      source_is_valid = source && source.force_encoding("UTF-8").valid_encoding?
+      source_is_valid = source && has_valid_encoding?(source)
       html_is_valid = html ? source.force_encoding("UTF-8").valid_encoding? : true # HTML only exists for AppLab projects
 
       return bad_request unless source_is_valid && html_is_valid
@@ -440,6 +440,23 @@ class FilesApi < Sinatra::Base
       versionId: response.version_id,
       timestamp: Time.now # for logging purposes
     }.to_json
+  end
+
+  def has_valid_encoding?(source)
+    if source.is_a?(String)
+      return source.force_encoding("UTF-8").valid_encoding?
+    end
+
+    # Some labs types have a source that is a hash, for example Java Lab
+    if source.is_a?(Hash)
+      source.each_key do |key|
+        return false unless source[key].force_encoding("UTF-8").valid_encoding?
+      end
+      return true
+    end
+
+    # If source is an unexpected type, return false to trigger a bad_request response
+    return false
   end
 
   #
