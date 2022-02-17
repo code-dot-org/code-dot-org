@@ -60,7 +60,8 @@ export default class JavabuilderConnection {
         options: this.options,
         executionType: this.executionType,
         useDashboardSources: true,
-        miniAppType: this.miniAppType
+        miniAppType: this.miniAppType,
+        uploadZip: window.location.search.indexOf('uploadZip=true') > -1
       }
     })
       .done(result => this.establishWebsocketConnection(result.token))
