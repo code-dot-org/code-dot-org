@@ -26688,6 +26688,12 @@ en:
                 - Requires introducing functions and then functions with parameters.
                   - Will need to see about editing original functions video
                 - In current curriculum, functions with parameter levels are closely tied to music and accelerometer, so makes sense to include it here in unit progression
+            Circuits and Physical Prototypes:
+              name: Physical Outputs
+              description_student: 'In this lesson, you will wire simple circuits to create a physical prototype using low-cost and easily-found materials.
+
+'
+              description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
           lesson_groups:
             lessonGroup-3:
               display_name: Templates
@@ -28057,8 +28063,99 @@ en:
           description: "Learn about sprites and variables by programming in Sprite Lab.  \n\n**Pilot 2022**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June 2022 only. Note that the final version of Course F (2022) will include additional lessons and may have other differences. CS Fundamentals (2022) will launch this summer.\n\nWe need your feedback, especially on the lessons marked **[New]**. If you are eager to start the new lessons, you can give students a basic introduction to Sprite Lab using our  [Hello World][0] Hour of Code tutorial."
           student_description: "Learn about sprites and variables by programming in Sprite Lab. \n\n**Pilot 2022**: Thank you for trying out these new lessons. We appreciate any feedback. This pilot course will be available until June 2022 only."
         csd6-pilot-2022:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: 'Mini-Project: On-The-Go App'
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: 'Project: Human Device Interaction'
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: 'Mini-Project: Interactive Art'
+              description_student: 
+              description_teacher: 
+            Project - Prototype an Innovation:
+              name: Project - Prototype an Innovation
+              description_student: 'In this final project, you will be challenged to develop and test a prototype for a device that interacts with the physical world through various types of input and output and allows for interesting and unique user interactions. '
+              description_teacher: 'In this final project for the course, students team to develop and test a prototype for an innovative computing device based on the Circuit Playground. Using the inputs and outputs available on the board, groups will create programs that allow for interesting and unique user interactions. '
+            Innovations in Computing:
+              name: Innovations in Computing
+              description_student: 'In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
+
+'
+              description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+            Designing Screens with Code:
+              name: Updating Screen Elements
+              description_student: In this lesson, you will start to build apps that allow for lots of user interaction and functionality
+              description_teacher: 
+            The Circuit Playground:
+              name: The Circuit Playground
+              description_student: 'In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. '
+              description_teacher: In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.
+            Board Events:
+              name: Board Events
+              description_student: In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input.
+              description_teacher: 
+            Arrays and Color LEDs:
+              name: Color LEDs
+              description_student: In this lesson, you will learn how to access and control the colored LEDs on the Circuit Playground.
+              description_teacher: 
+            Getting Properties:
+              name: Getting Screen Inputs
+              description_student: In this lesson, you will learn how to use design elements like textboxes or dropdowns to get user input from the screen
+              description_teacher: 
+            lesson-9:
+              name: Variables and If Statements
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: Combining Inputs
+              description_student: 
+              description_teacher: 
+            Analog Input:
+              name: Board Sensors
+              description_student: 'In this lesson, you will get to explore the sensors on the Circuit Playground and write programs that respond to the environment.
+
+'
+              description_teacher: 
+            Accelerometer:
+              name: Accelerometer
+              description_student: 'In this lesson, you will explore the accelerometer and its capabilities. '
+              description_teacher: In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.
+            Making Music:
+              name: Making Music
+              description_student: 'In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. '
+              description_teacher: In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, learn to play sequences of notes, forming simple songs.
+            Functions with Parameters:
+              name: Functions
+              description_student: 'In this lesson, you will create and call functions, then learn how to use parameters to make functions useful across many different situations
+
+'
+              description_teacher: 
+            Circuits and Physical Prototypes:
+              name: Physical Outputs and LEDs
+              description_student: 'In this lesson, you will learn to use wires to create devices with external LEDs and add code to control these lights.
+
+'
+              description_teacher: 
+            Project - Make a Game:
+              name: Project - Make a Game
+              description_student: In this lesson, you will take what you have learned through chapter one, and develop an app of your own design that uses the board to output information.
+              description_teacher: |+
+                For this project, students design and create a game that leverages the new inputs and outputs that are available to them. This project is purposefully left very open-ended to empower students to think broadly about how physical output might be useful in an app, while still giving them a chance to review the program development process and try out the new features available through the Circuit Playground.
+
+
+            Physical Outputs:
+              name: Physical Inputs and Buttons
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
           name: csd6-pilot-2022
           title: Physical Computing Pilot (2022)
           description_audience: ''
@@ -29632,6 +29729,7 @@ en:
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
+          name: coursec-2022
         csp6-2022:
           lessons:
             Algorithms Solve Problems:
@@ -30519,6 +30617,18 @@ en:
               description_teacher: Students will pretend to flow through the internet while learning about connections, URLs, IP Addresses, and DNS in this **exploratory** lesson.
             lesson-4:
               name: Lots of Sprites
+            "[New] Lots of Sprites":
+              name: "[New] Lots of Sprites"
+              description_student: You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!
+              description_teacher: In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**
+            "[New] Counting with Variables":
+              name: "[New] Counting with Variables"
+              description_student: You will learn to use variables to make a counter or keep track of a score in a game.
+              description_teacher: In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**
+            "[New] Mini-Project: Collector Game":
+              name: "[New] Mini-Project: Collector Game"
+              description_student: Collect all the sprites! In this project, you will create a game that others can play.
+              description_teacher: In this **mini-project** lesson, students will create a customized "collector game", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -30533,7 +30643,7 @@ en:
             end_of_course_project:
               display_name: End of Course Project
           title: Course F (2022)
-          description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+          description: "We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.\n\n## Spring 2022 Open Preview\n\nThis new version of Course F includes three new lessons, and we need your feedback! The new lessons are:\n\n-   Lesson 9 - Lots of Sprites - [give feedback][0]\n-   Lesson 10 - Counting with Variables - [give feedback][1]\n-   Lesson 11 - Mini-Project: Collector Game - [give feedback][2]\n\nPlease note that these new lessons may change between now and July 2022. We appreciate any feedback. Courses A-E of CS Fundamentals (2022) will launch in July 2022.\n\nWe have also added a full slide deck covering all lessons in Course F. We welcome your [feedback][3] on the lesson slides as well!"
           student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
@@ -30860,3 +30970,464 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        tess-test-csa:
+          lessons: {}
+          lesson_groups: {}
+          name: tess-test-csa
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa1-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Welcome to CSA
+            lesson-2:
+              name: Java Lab
+            lesson-3:
+              name: The Neighborhood
+            lesson-4:
+              name: Navigating and Painting
+            lesson-5:
+              name: One-Way Selection Statements
+            lesson-6:
+              name: PainterPlus
+            lesson-7:
+              name: Writing Methods
+            lesson-8:
+              name: Code Reviews
+            lesson-9:
+              name: Loops
+            lesson-10:
+              name: Two-Way Selection Statements
+            lesson-11:
+              name: Debugging Strategies
+            lesson-12:
+              name: Decomposition and Design
+            lesson-13:
+              name: PatternPainter
+            lesson-14:
+              name: BackgroundPainter
+            lesson-15:
+              name: Open Source Code
+            lesson-16:
+              name: Asphalt Art Project — Day 1
+            lesson-17:
+              name: Asphalt Art Project — Day 2
+            lesson-18:
+              name: Asphalt Art Project — Day 3
+            lesson-19:
+              name: FRQ Practice
+            lesson-20:
+              name: Unit 1 Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa1-2022-exemplars
+          title: Unit 1 - Object-Oriented Programming [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pltess:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: course
+          name: pltess
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pltess2:
+          lessons: {}
+          lesson_groups: {}
+        self-paced-pl-csa1-2022:
+          lessons:
+            lesson-1:
+              name: Welcome to Code.org
+            lesson-2:
+              name: Welcome to "Teaching CSA"
+          lesson_groups: {}
+          name: self-paced-pl-csa1-2022
+          title: 'Unit 1 - Module 1: Welcome'
+          description_audience: ''
+          description_short: ''
+          description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n\n-   Get an introduction to Code.org and CS Principles.\n-   Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
+          student_description: ''
+        self-paced-pl-csa2-2022:
+          lessons: {}
+          lesson_groups: {}
+        self-paced-pl-csa3-2022:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-csa3-2022
+          title: Support for text-based programming
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa7-pilot-extra:
+          lessons:
+            Writing Methods to Satisfy Conditions:
+              name: Writing Methods to Satisfy Conditions
+              description_student: Your favorite content creator has recruited you to create a title sequence to use on all of their content! The Title Sequence Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
+              description_teacher: Students review writing methods to satisfy conditions and learn about procedural abstraction and method decomposition. Students are then introduced to the Title Sequence Project and evaluate requirements and examples to identify questions and key features.
+            Exploring Method Components and Functionality:
+              name: Exploring Method Components and Functionality
+              description_student: You revisit the components of a method signature and review the relationship between actual and formal parameters. You differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. You then plan the tasks you need to complete for your Title Sequence Project.
+              description_teacher: Students revisit the components of a method signature and review the relationship between actual and formal parameters. Students differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. Students then plan the tasks they need to complete for their Title Sequence Project.
+            Using Object References as Parameters:
+              name: Using Object References as Parameters
+              description_student: You revisit passing primitives and object references as parameters to identify similarities and differences between each. You determine the output of code segments and the impact on objects from using object references as parameters. You then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
+              description_teacher: Students revisit passing primitives and object references as parameters to identify similarities and differences between each. Students determine the output of code segments and the impact on objects from using object references as parameters. Students then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
+            Overloading Methods:
+              name: Overloading Methods
+              description_student: You revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. You then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning your initial plans for your Title Sequence Project.
+              description_teacher: Students revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. Students then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning their initial plans for their Title Sequence Project.
+            Accessing Object Behavior:
+              name: Accessing Object Behavior
+              description_student: You revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. You explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
+              description_teacher: Students revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. Students explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
+            Overriding Methods:
+              name: Overriding Methods
+              description_student: You have overridden methods in the `Object` class in previous lessons and worked with class hierarchies that implemented overridden methods. You explore writing and calling overridden methods in custom classes, then learn to use sentinel values to improve your ability to work with user input in your programs.
+              description_teacher: Students have overridden methods in the `Object` class in previous lessons and worked with class hierarchies that implemented overridden methods. Students explore writing and calling overridden methods in custom classes, then learn to use sentinel values to improve their ability to work with user input in their programs.
+            Exploring Recursive Methods:
+              name: Exploring Recursive Methods
+              description_student: You explore recursive methods through an unplugged activity of your choosing and practice tracing code with recursive methods. You then work through the tasks on your Project Planning Board to continue development on your Title Sequence Project.
+              description_teacher: Students explore recursive methods through an unplugged activity of their choosing and practice tracing code with recursive methods. Students then work through the tasks on their Project Planning Board to continue development on their Title Sequence Project.
+            Comparing Recursive and Iterative Solutions:
+              name: Comparing Recursive and Iterative Solutions
+              description_student: Sometimes it's easier to write a method iteratively, and other times a recursive method is best! You examine problems and algorithms to identify their base cases and recursive cases. You differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
+              description_teacher: Students examine problems and algorithms to identify their base cases and recursive cases. Students differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
+            Writing Recursive Methods:
+              name: Writing Recursive Methods
+              description_student: You compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. You then participate in a peer review to give and receive feedback on your Title Sequence Project progress.
+              description_teacher: Students compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. Students then participate in a peer review to give and receive feedback on their Title Sequence Project progress.
+            Maximizing System Reliability:
+              name: Maximizing System Reliability
+              description_student: You explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. You identify strategies to test system reliability and recognize your role as a software engineer in developing and maintaining functioning software.
+              description_teacher: Students explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. Students identify strategies to test system reliability and recognize their role as software engineers in developing and maintaining functioning software.
+            Title Sequence Project - Day 1:
+              name: Title Sequence Project - Day 1
+              description_student: You continue to develop your Title Sequence Project to create a title sequence for a show to promote your favorite content creator using images and drawings to create animations and effects. You first self-assess your work to evaluate your progress in completing project requirements, then conduct acceptance testing to determine which of your user stories are complete. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Title Sequence Project to create a title sequence for a show to promote their favorite content creator using images and drawings to create animations and effects. Students first self-assess their work to evaluate their progress in completing project requirements, then conduct acceptance testing to determine which of their user stories are complete. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+            Title Sequence Project - Day 2:
+              name: Title Sequence Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Title Sequence Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Title Sequence Projects.
+            Title Sequence Project - Day 3:
+              name: Title Sequence Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Title Sequence Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Title Sequence Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+            FRQ Day:
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You are responsible for pacing yourself and applying the three-step process of annotating the question, writing pseudocode, then writing your Java code. You then complete a post-FRQ to identify any areas where you could use more practice.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students then complete a post-FRQ survey to debrief on their testing experience and identify any gaps in their knowledge.
+            Assessment Day:
+              name: Assessment Day
+              description_student: In this unit, you practiced software design and development using the skills and programming constructs you have learned throughout the course to develop a title sequence for your favorite content creator. You used decomposition strategies and object-oriented programming principles to plan and implement your ideas while ensuring your project met specific requirements. You explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, you considered the need for maximizing system reliability as you analyzed open-source code. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students practiced software design and development using the skills and programming constructs they have learned throughout the course to develop a title sequence for their favorite content creator. Students used decomposition strategies and object-oriented programming principles to plan and implement their ideas while ensuring their projects met specific requirements. Students explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, students considered the need for maximizing system reliability as they analyzed open-source code. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            Unit 7 Pilot Survey:
+              name: Unit 7 Pilot Survey
+              description_student: 
+              description_teacher: 
+            Java Lab:
+              name: Java Lab
+              description_student: ''
+              description_teacher: ''
+              key: Java Lab
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: ''
+              description_teacher: ''
+              key: The Neighborhood
+            The Theater:
+              name: The Theater
+              description_student: ''
+              description_teacher: ''
+              key: The Theater
+            The Playground:
+              name: The Playground
+              description_student: ''
+              description_teacher: ''
+              key: The Playground
+            lesson-10:
+              key: lesson-10
+              name: Writing Methods to Satisfy Conditions
+              description_student: Your favorite content creator has recruited you to create a title sequence to use on all of their content! The Title Sequence Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
+              description_teacher: Students review writing methods to satisfy conditions and learn about procedural abstraction and method decomposition. Students are then introduced to the Title Sequence Project and evaluate requirements and examples to identify questions and key features.
+            lesson-6:
+              key: lesson-6
+              name: Exploring Method Components and Functionality
+              description_student: You revisit the components of a method signature and review the relationship between actual and formal parameters. You differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. You then plan the tasks you need to complete for your Title Sequence Project.
+              description_teacher: Students revisit the components of a method signature and review the relationship between actual and formal parameters. Students differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. Students then plan the tasks they need to complete for their Title Sequence Project.
+            lesson-7:
+              key: lesson-7
+              name: Using Object References as Parameters
+              description_student: You revisit passing primitives and object references as parameters to identify similarities and differences between each. You determine the output of code segments and the impact on objects from using object references as parameters. You then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
+              description_teacher: Students revisit passing primitives and object references as parameters to identify similarities and differences between each. Students determine the output of code segments and the impact on objects from using object references as parameters. Students then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
+            lesson-8:
+              key: lesson-8
+              name: Overloading Methods
+              description_student: You revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. You then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning your initial plans for your Title Sequence Project.
+              description_teacher: Students revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. Students then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning their initial plans for their Title Sequence Project.
+            lesson-9:
+              key: lesson-9
+              name: Accessing Object Behavior
+              description_student: You revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. You explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
+              description_teacher: Students revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. Students explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
+            lesson-11:
+              key: lesson-11
+              name: Overriding Methods
+              description_student: You have overridden methods in the `Object` class in previous lessons and worked with class hierarchies that implemented overridden methods. You explore writing and calling overridden methods in custom classes, then learn to use sentinel values to improve your ability to work with user input in your programs.
+              description_teacher: Students have overridden methods in the `Object` class in previous lessons and worked with class hierarchies that implemented overridden methods. Students explore writing and calling overridden methods in custom classes, then learn to use sentinel values to improve their ability to work with user input in their programs.
+            lesson-12:
+              key: lesson-12
+              name: Exploring Recursive Methods
+              description_student: You explore recursive methods through an unplugged activity of your choosing and practice tracing code with recursive methods. You then work through the tasks on your Project Planning Board to continue development on your Title Sequence Project.
+              description_teacher: Students explore recursive methods through an unplugged activity of their choosing and practice tracing code with recursive methods. Students then work through the tasks on their Project Planning Board to continue development on their Title Sequence Project.
+            lesson-13:
+              key: lesson-13
+              name: Comparing Recursive and Iterative Solutions
+              description_student: Sometimes it's easier to write a method iteratively, and other times a recursive method is best! You examine problems and algorithms to identify their base cases and recursive cases. You differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
+              description_teacher: Students examine problems and algorithms to identify their base cases and recursive cases. Students differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
+            lesson-14:
+              key: lesson-14
+              name: Writing Recursive Methods
+              description_student: You compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. You then participate in a peer review to give and receive feedback on your Title Sequence Project progress.
+              description_teacher: Students compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. Students then participate in a peer review to give and receive feedback on their Title Sequence Project progress.
+            lesson-15:
+              key: lesson-15
+              name: Maximizing System Reliability
+              description_student: You explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. You identify strategies to test system reliability and recognize your role as a software engineer in developing and maintaining functioning software.
+              description_teacher: Students explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. Students identify strategies to test system reliability and recognize their role as software engineers in developing and maintaining functioning software.
+            lesson-1:
+              key: lesson-1
+              name: Title Sequence Project - Day 1
+              description_student: You continue to develop your Title Sequence Project to create a title sequence for a show to promote your favorite content creator using images and drawings to create animations and effects. You first self-assess your work to evaluate your progress in completing project requirements, then conduct acceptance testing to determine which of your user stories are complete. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Title Sequence Project to create a title sequence for a show to promote their favorite content creator using images and drawings to create animations and effects. Students first self-assess their work to evaluate their progress in completing project requirements, then conduct acceptance testing to determine which of their user stories are complete. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+            lesson-2:
+              key: lesson-2
+              name: Title Sequence Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Title Sequence Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Title Sequence Projects.
+            lesson-3:
+              key: lesson-3
+              name: Title Sequence Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Title Sequence Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Title Sequence Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+            lesson-4:
+              key: lesson-4
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You are responsible for pacing yourself and applying the three-step process of annotating the question, writing pseudocode, then writing your Java code. You then complete a post-FRQ to identify any areas where you could use more practice.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students then complete a post-FRQ survey to debrief on their testing experience and identify any gaps in their knowledge.
+            lesson-5:
+              key: lesson-5
+              name: Assessment Day
+              description_student: In this unit, you practiced software design and development using the skills and programming constructs you have learned throughout the course to develop a title sequence for your favorite content creator. You used decomposition strategies and object-oriented programming principles to plan and implement your ideas while ensuring your project met specific requirements. You explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, you considered the need for maximizing system reliability as you analyzed open-source code. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students practiced software design and development using the skills and programming constructs they have learned throughout the course to develop a title sequence for their favorite content creator. Students used decomposition strategies and object-oriented programming principles to plan and implement their ideas while ensuring their projects met specific requirements. Students explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, students considered the need for maximizing system reliability as they analyzed open-source code. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            lesson-16:
+              key: lesson-16
+              name: Unit 7 Pilot Survey
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
+          title: Expanding Software Design
+          description: In this unit, students practice software design and development using the skills and programming constructs they have learned to develop a title sequence for their favorite content creator. Students use decomposition strategies and object-oriented principles to plan and implement their ideas while ensuring their projects meet specified requirements. Students explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, students consider the need for maximizing system reliability as they explore bugs and issues in existing programs.
+          student_description: In this unit, you practice software design and development using the skills and programming constructs you have learned to develop a title sequence for your favorite content creator. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your projects meet specified requirements. You explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.
+          description_short: ''
+          description_audience: ''
+        csa8-pilot-extra:
+          lessons:
+            Planning a Project:
+              name: Planning a Project
+              description_student: You have been asked to design and develop a game for everyone in your community to play. The Inclusive Playground Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
+              description_teacher: Students explore game design and learn about principles game designers use to create inclusive games. Students are introduced to the Inclusive Playground Project and evaluate requirements and examples to identify questions and key features.
+            Searching for Data:
+              name: Searching for Data
+              description_student: You have used searching in standard algorithms to find a target element in a list. In this lesson, you explore the linear search algorithm's best, average, and worst cases using execution counts.
+              description_teacher: Students have used searching in standard algorithms to find a target element in a list. In this lesson, students explore the linear search algorithm's best, average, and worst cases using execution counts.
+            Implementing the Binary Search:
+              name: Implementing the Binary Search
+              description_student: You discover a better searching algorithm that can perform more efficiently if the list is already sorted. You trace code for a binary search to evaluate its efficiency and compare it to the linear search. You apply the binary search algorithm to solve problems in a variety of scenarios.
+              description_teacher: Students discover a better searching algorithm that can perform more efficiently if the list is already sorted. Students trace code for a binary search to evaluate its efficiency and compare it to the linear search. Students apply the binary search algorithm to solve problems in a variety of scenarios.
+            Implementing a Recursive Binary Search:
+              name: Implementing a Recursive Binary Search
+              description_student: Like many of the algorithms you have written, binary search can be implemented recursively. In this lesson, you explore implementing the binary search recursively and apply it to solve different problems.
+              description_teacher: Students review the binary search algorithm and explore implementing the algorithm recursively. Students apply the recursive binary search algorithm to solve problems that contain different data types, data structures, and problem constraints.
+            Implementing the Selection Sort:
+              name: Implementing the Selection Sort
+              description_student: You explore the selection sort algorithm to organize elements in a list correctly. You trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+              description_teacher: Students explore the selection sort algorithm to organize elements in a list correctly. Students trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+            Implementing the Insertion Sort:
+              name: Implementing the Insertion Sort
+              description_student: You explore the selection sort algorithm to organize elements in a list correctly. You trace the algorithm to understand its functionality and determine its efficiency using execution counts. You differentiate between the selection sort and insertion sort algorithms by comparing their efficiencies.
+              description_teacher: Students explore the insertion sort algorithm to organize elements in a list correctly. Students trace the algorithm to understand its functionality and determine its efficiency using execution counts. Students differentiate between the selection sort and insertion sort algorithms by comparing their efficiencies.
+            Implementing the Merge Sort:
+              name: Implementing the Merge Sort
+              description_student: You explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach. You identify the components of the algorithm and learn about helper functions. You trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+              description_teacher: Students explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach. Students identify the components of the algorithm and learn about helper functions. Students trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+            Expanding Standard Algorithms:
+              name: Expanding Standard Algorithms
+              description_student: The algorithms you have learned about in the course can also be implemented in games to control bots, game functionality, and interact with the user. You implement standard, searching, and sorting algorithms in games and consider how you might incorporate these algorithms in your Inclusive Playground project.
+              description_teacher: Students discover that the algorithms they have learned about in the course can also be implemented in games to control bots, game functionality, and to interact with the user. Students implement standard, searching, and sorting algorithms in games and consider how they might incorporate these algorithms in their Inclusive Playground project.
+            Traversing Multiple Lists:
+              name: Traversing Multiple Lists
+              description_student: You explore traversing multiple lists simultaneously by creating algorithms and tracing code involving multiple lists. You identify scenarios where multiple lists might be needed and consider how multiple lists might be used and traversed in games.
+              description_teacher: Students explore traversing multiple lists at the same time by creating algorithms and tracing code involving multiple lists. Students identify scenarios where multiple lists might be needed and consider how multiple lists might be used and traversed in games.
+            Defending Privacy and Security:
+              name: Defending Privacy and Security
+              description_student: You explore privacy and security issues and consider your role as a software engineer as you identify strategies for protecting personal privacy and security when developing programs. You apply these strategies to secure an open-source program.
+              description_teacher: Students explore privacy and security issues and consider their role as software engineers as they identify strategies for protecting personal privacy and security when developing programs. Students apply these strategies to secure an open-source program.
+            Inclusive Playground Project - Day 1:
+              name: Inclusive Playground Project - Day 1
+              description_student: You continue to develop your Inclusive Playground Project to create a game for your community that incorporates object-oriented design principles. You first self-assess your work to evaluate your progress in completing project requirements, then conduct acceptance testing to determine which of your user stories are complete. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Inclusive Playground Project to create a game for their community that incorporates object-oriented design principles. Students first self-assess their work to evaluate their progress in completing project requirements, then conduct acceptance testing to determine which of their user stories are complete. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+            Inclusive Playground Project - Day 2:
+              name: Inclusive Playground Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Inclusive Playground Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Inclusive Playground Projects.
+            Inclusive Playground Project - Day 3:
+              name: Inclusive Playground Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Inclusive Playground Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Inclusive Playground Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+            FRQ Day:
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
+            Assessment Day:
+              name: Assessment Day
+              description_student: In this unit, you implemented searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. You analyzed the efficiency of searching and sorting algorithms and expanded the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you applied your knowledge and programming skills to develop a game that incorporated object-oriented design and efficiency. You wrapped up the unit and course considering the privacy and security of their programs and users. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students implemented searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. Students analyzed the efficiency of searching and sorting algorithms and expanded the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students applied their knowledge and programming skills to develop a game that incorporated object-oriented design and efficiency. Students wrapped up the unit and course considering the privacy and security of their programs and users. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            Unit 8 Pilot Survey:
+              name: Unit 8 Pilot Survey
+              description_student: 
+              description_teacher: 
+            Java Lab:
+              name: Java Lab
+              description_student: ''
+              description_teacher: ''
+              key: Java Lab
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: ''
+              description_teacher: ''
+              key: The Neighborhood
+            The Theater:
+              name: The Theater
+              description_student: ''
+              description_teacher: ''
+              key: The Theater
+            The Playground:
+              name: The Playground
+              description_student: ''
+              description_teacher: ''
+              key: The Playground
+            lesson-1:
+              key: lesson-1
+              name: Planning a Project
+              description_student: You have been asked to design and develop a game for everyone in your community to play. The Inclusive Playground Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
+              description_teacher: Students explore game design and learn about principles game designers use to create inclusive games. Students are introduced to the Inclusive Playground Project and evaluate requirements and examples to identify questions and key features.
+            lesson-2:
+              key: lesson-2
+              name: Searching for Data
+              description_student: You have used searching in standard algorithms to find a target element in a list. In this lesson, you explore the linear search algorithm's best, average, and worst cases using execution counts.
+              description_teacher: Students have used searching in standard algorithms to find a target element in a list. In this lesson, students explore the linear search algorithm's best, average, and worst cases using execution counts.
+            lesson-3:
+              key: lesson-3
+              name: Implementing the Binary Search
+              description_student: You discover a better searching algorithm that can perform more efficiently if the list is already sorted. You trace code for a binary search to evaluate its efficiency and compare it to the linear search. You apply the binary search algorithm to solve problems in a variety of scenarios.
+              description_teacher: Students discover a better searching algorithm that can perform more efficiently if the list is already sorted. Students trace code for a binary search to evaluate its efficiency and compare it to the linear search. Students apply the binary search algorithm to solve problems in a variety of scenarios.
+            lesson-4:
+              key: lesson-4
+              name: Implementing a Recursive Binary Search
+              description_student: Like many of the algorithms you have written, binary search can be implemented recursively. In this lesson, you explore implementing the binary search recursively and apply it to solve different problems.
+              description_teacher: Students review the binary search algorithm and explore implementing the algorithm recursively. Students apply the recursive binary search algorithm to solve problems that contain different data types, data structures, and problem constraints.
+            lesson-5:
+              key: lesson-5
+              name: Implementing the Selection Sort
+              description_student: You explore the selection sort algorithm to organize elements in a list correctly. You trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+              description_teacher: Students explore the selection sort algorithm to organize elements in a list correctly. Students trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+            lesson-10:
+              key: lesson-10
+              name: Implementing the Insertion Sort
+              description_student: You explore the selection sort algorithm to organize elements in a list correctly. You trace the algorithm to understand its functionality and determine its efficiency using execution counts. You differentiate between the selection sort and insertion sort algorithms by comparing their efficiencies.
+              description_teacher: Students explore the insertion sort algorithm to organize elements in a list correctly. Students trace the algorithm to understand its functionality and determine its efficiency using execution counts. Students differentiate between the selection sort and insertion sort algorithms by comparing their efficiencies.
+            lesson-6:
+              key: lesson-6
+              name: Implementing the Merge Sort
+              description_student: You explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach. You identify the components of the algorithm and learn about helper functions. You trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+              description_teacher: Students explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach. Students identify the components of the algorithm and learn about helper functions. Students trace the algorithm to understand its functionality and determine its efficiency using execution counts.
+            lesson-7:
+              key: lesson-7
+              name: Expanding Standard Algorithms
+              description_student: The algorithms you have learned about in the course can also be implemented in games to control bots, game functionality, and interact with the user. You implement standard, searching, and sorting algorithms in games and consider how you might incorporate these algorithms in your Inclusive Playground project.
+              description_teacher: Students discover that the algorithms they have learned about in the course can also be implemented in games to control bots, game functionality, and to interact with the user. Students implement standard, searching, and sorting algorithms in games and consider how they might incorporate these algorithms in their Inclusive Playground project.
+            lesson-8:
+              key: lesson-8
+              name: Traversing Multiple Lists
+              description_student: You explore traversing multiple lists simultaneously by creating algorithms and tracing code involving multiple lists. You identify scenarios where multiple lists might be needed and consider how multiple lists might be used and traversed in games.
+              description_teacher: Students explore traversing multiple lists at the same time by creating algorithms and tracing code involving multiple lists. Students identify scenarios where multiple lists might be needed and consider how multiple lists might be used and traversed in games.
+            lesson-9:
+              key: lesson-9
+              name: Defending Privacy and Security
+              description_student: You explore privacy and security issues and consider your role as a software engineer as you identify strategies for protecting personal privacy and security when developing programs. You apply these strategies to secure an open-source program.
+              description_teacher: Students explore privacy and security issues and consider their role as software engineers as they identify strategies for protecting personal privacy and security when developing programs. Students apply these strategies to secure an open-source program.
+            lesson-11:
+              key: lesson-11
+              name: Inclusive Playground Project - Day 1
+              description_student: You continue to develop your Inclusive Playground Project to create a game for your community that incorporates object-oriented design principles. You first self-assess your work to evaluate your progress in completing project requirements, then conduct acceptance testing to determine which of your user stories are complete. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Inclusive Playground Project to create a game for their community that incorporates object-oriented design principles. Students first self-assess their work to evaluate their progress in completing project requirements, then conduct acceptance testing to determine which of their user stories are complete. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+            lesson-12:
+              key: lesson-12
+              name: Inclusive Playground Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Inclusive Playground Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Inclusive Playground Projects.
+            lesson-13:
+              key: lesson-13
+              name: Inclusive Playground Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Inclusive Playground Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Inclusive Playground Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+            lesson-14:
+              key: lesson-14
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
+            lesson-15:
+              key: lesson-15
+              name: Assessment Day
+              description_student: In this unit, you implemented searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. You analyzed the efficiency of searching and sorting algorithms and expanded the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you applied your knowledge and programming skills to develop a game that incorporated object-oriented design and efficiency. You wrapped up the unit and course considering the privacy and security of their programs and users. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students implemented searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. Students analyzed the efficiency of searching and sorting algorithms and expanded the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students applied their knowledge and programming skills to develop a game that incorporated object-oriented design and efficiency. Students wrapped up the unit and course considering the privacy and security of their programs and users. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            lesson-16:
+              key: lesson-16
+              name: Unit 8 Pilot Survey
+              description_student: ''
+              description_teacher: ''
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
+          title: Giving Objects Life
+          description: In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
+          student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
+          description_short: ''
+          description_audience: ''
