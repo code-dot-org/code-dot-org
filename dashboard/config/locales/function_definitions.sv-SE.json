@@ -10,6 +10,9 @@
         "2-3 Artist 3.4": {
           "draw a circle": {
             "name": "rita en circel"
+          },
+          "draw a car": {
+            "name": "Rita en bil"
           }
         },
         "2-3 Artist 7": {
@@ -25,10 +28,23 @@
             "parameters": {
               "width": "bredd",
               "height": "höjd"
-            }
+            },
+            "name": "rita en kvadrat"
           },
           "draw a circle": {
             "name": "rita en circel"
+          },
+          "jump to controller top left": {
+            "name": "hoppa till handkontrollen högst upp till vänster"
+          },
+          "jump to middle": {
+            "name": "hoppa till mitten"
+          },
+          "draw a button": {
+            "name": "rita en knapp"
+          },
+          "draw cord": {
+            "name": "rita en sladd"
           }
         },
         "2-3 Artist Functions 11": {
@@ -79,6 +95,9 @@
         "4-5 Artist 7": {
           "draw a circle": {
             "name": "rita en circel"
+          },
+          "draw a car": {
+            "name": "Rita en bil"
           }
         },
         "Course 4 Bee Params 8": {
@@ -777,21 +796,33 @@
         "courseE_artist_functions8": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8a_2018": {
@@ -821,31 +852,49 @@
         "courseE_artist_functions8b_2018": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8b_2019": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8b_2020": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8c_2018": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8c_2019": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8c_2020": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions9": {
@@ -1541,6 +1590,9 @@
         "courseE_artist_functions8_2021": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -1554,11 +1606,17 @@
         "courseE_artist_functions8b_2021": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
             "name": "gör någonting"
+          },
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         },
         "courseE_artist_functions9_2021": {
@@ -2000,6 +2058,92 @@
             "parameters": {
               "binary": "binära"
             }
+          }
+        },
+        "2-3 Artist 12": {
+          "details": {
+            "name": "detaljer"
+          },
+          "draw eyebrow": {
+            "name": "rita ögonbryn"
+          },
+          "draw pupil": {
+            "name": "rita en pupil"
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw left leg": {
+            "name": "rita vänster ben"
+          },
+          "draw right leg": {
+            "name": "rita höger ben"
+          },
+          "draw body and arms": {
+            "name": "rita kropp och armar"
+          },
+          "draw a head": {
+            "name": "rita ett huvud"
+          }
+        },
+        "2-3 Artist Debugging 6": {
+          "draw right leg": {
+            "name": "rita höger ben"
+          },
+          "draw sitting stick figure": {
+            "name": "Rita en streckgubbe"
+          },
+          "draw head": {
+            "name": "rita ett huvud"
+          },
+          "draw arms": {
+            "name": "rita armar"
+          },
+          "jump to neck": {
+            "name": "hoppa till nacken"
+          },
+          "draw left leg": {
+            "name": "rita vänster ben"
+          }
+        },
+        "2-3 Artist Debugging 7": {
+          "draw O": {
+            "name": "Rita O"
+          },
+          "draw D": {
+            "name": "Rita D"
+          },
+          "draw E": {
+            "name": "Rita E"
+          }
+        },
+        "Robot Doodle": {
+          "draw head": {
+            "name": "rita ett huvud"
+          }
+        },
+        "Robot Doodle_2018": {
+          "draw head": {
+            "name": "rita ett huvud"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw square": {
+            "name": "rita en kvadrat"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw square": {
+            "name": "rita en kvadrat"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw square": {
+            "name": "rita en kvadrat"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "rita en kvadrat"
           }
         }
       }
