@@ -7117,25 +7117,6 @@ fr-FR:
           ***
           ## Étape 4 : Commencez à enseigner !
           Tout ce qu'il faut, c'est une leçon pour introduire des concepts informatiques dans votre classe. Une fois que vous voyez l'enthousiasme de vos élèves pour l'informatique, allez plus loin avec des plans de cours quotidiens pour guider vos élèves, des activités hors ligne que vous pouvez faire sans ordinateur et des forums pour vous connecter à d'autres enseignants.
-      OPD-K5 CS Courses_dani:
-        markdown: |-
-          # Planification > Se lancer sur Code.org
-
-
-          ## Étape 1 : Choisissez un cours
-          Tous nos cours - des pré-lecteurs aux lycéens - sont répertoriés dans notre **[catalogue de cours](https://studio.code.org/courses)**. Pour trouver les leçons CS Fundamentals avec lesquelles vous vous êtes entraîné, rendez-vous sur notre **[page élémentaire](https://code.org/educate/curriculum/elementary-school)** et faites défiler jusqu'à la section "Cours" . Tous nos cours sont disponibles sans frais. Discutez avec des collègues de votre école pour déterminer comment le programme du cours peut être intégré à une variété de matières.
-          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
-          ***
-          ## Étape 2 : Configurez votre section de classe
-          Configurez une section salle de classe pour afficher les progrès de votre élève, imprimer des cartes de connexion pour vos élèves, gérer leurs comptes et imprimer des certificats qu'ils peuvent rapporter à la maison à la fin du cours. Cliquez sur ce lien pour **[regarder une brève vidéo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)** qui montre comment pour mettre en place votre premier cours d'informatique sur Code.org. Vous pouvez également trouver les étapes dans **[cet article d'assistance](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.
-          ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
-          ***
-          ## Étape 3 : Attribuez le cours à votre section
-          Cliquez sur le cours que vous enseignez - vous devriez voir un écran qui ressemble à celui ci-dessous. Vous pouvez ensuite cliquer sur « Attribuer un cours » et attribuer ce cours à l'une de vos sections.
-          ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
-          ***
-          ## Étape 4 : Commencez à enseigner !
-          Tout ce qu'il faut, c'est une leçon pour introduire des concepts informatiques dans votre classe. Une fois que vous voyez l'enthousiasme de vos élèves pour l'informatique, allez plus loin avec des plans de cours quotidiens pour guider vos élèves, des activités hors ligne que vous pouvez faire sans ordinateur et des forums pour vous connecter à d'autres enseignants.
       OPD-K5 CS Tips:
         markdown: |-
           # Démarrage > Navigation dans ce cours en ligne
@@ -8231,43 +8212,6 @@ fr-FR:
           > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuter dans les forums >></button></a>
 
           Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour passer à l'étape suivante.
-      OPD-K5 Stage5Go_dani:
-        markdown: |-
-          # Conditions > Leçons hors ligne
-
-
-          **1. Revoir le plan de leçon "[Conditions avec cartes](https://curriculum.code.org/csf-18/coursed/13/)" du cours D :**
-          <br/>
-          Le cours D est destiné aux élèves de CE2. Cette même leçon apparaît également dans les cours E et F. Les conditions ne sont pas couvertes dans les cours A, B ou C.
-          <br/><br/>
-
-          **2. Regardez la vidéo de l'élève : Conditions avec cartes**
-          <br/>
-          Il s'agit d'une vidéo que vous montreriez à vos élèves pour les aider à introduire le concept de condition et à lancer la leçon hors ligne.
-          [![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41 PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)
-          <br/>
-          [Vous ne voyez pas la vidéo ? Cliquez ici](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
-
-          <br/><br/>
-          **3. Regardez un enseignant modéliser cette leçon : « Conditions avec des cartes »**
-          <br/>
-          Cette vidéo est destinée à vous aider en tant qu'enseignant, si vous recherchez des conseils sur la façon d'exécuter cette leçon.
-
-
-          [![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37 PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)
-
-          [Vous ne voyez pas la vidéo ? Cliquez ici](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)
-
-          <br/><br/>
-
-          ---
-
-          > ## Réfléchir
-          > Comment expliqueriez-vous la notion de condition à vos élèves ? Partagez vos réflexions dans [notre forum](http://forum.code.org/t/teaching-conditionals/406/1).
-
-          > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank" rel="noopener noreferrer"><button class="plc">Discuter dans les forums >></button></a>
-
-          Après avoir commenté dans le forum, revenez ici et cliquez ci-dessous pour passer à l'étape suivante.
       OPD-K5 Stage5Review:
         markdown: |-
           # Conditionnels > Réflexion
@@ -8749,53 +8693,7 @@ fr-FR:
           Vous trouverez une capture d'écran du tableau de bord d'enseignant ci-dessous. Vous devrez vous connecter à votre compte d'enseignant Code.org pour le voir - une fois connecté, il devrait s'agir de l'écran par défaut que vous voyez sur le site Web Code.org. Si vous n'avez pas de compte enseignant, vous pouvez **[en créer un ici](https://studio.code.org/users/sign_up)**.
 
           ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
-      OPD-K5 Stage9Start_dani:
-        markdown: |-
-          # Planification > Explorer les ressources pour les enseignants
-
-          Tout au long des étapes 4 à 8, vous avez examiné certaines des ressources d'apprentissage « hors ligne » et en ligne disponibles pour CS Fundamentals, car elles s'alignaient sur les concepts informatiques que vous appreniez.
-
-          Maintenant que vous comprenez comment coder et comment enseigner l'informatique, il est temps de commencer à planifier votre enseignement. À ce stade, nous visiterons d'autres zones de la plate-forme Code.org et le **[Teacher Dashboard](http://studio.code.org/)**.
-
-          En terminant l'étape 10, vous :
-
-          - Explorez les ressources disponibles pour les enseignants
-          - Explorez Code.org **[Tableau de bord de l'enseignant](http://studio.code.org/)**
-          - Prévoyez comment vous pourriez intégrer l'informatique dans votre pratique
-
-          ***
-
-          Vous trouverez une capture d'écran du tableau de bord d'enseignant ci-dessous. Vous devrez vous connecter à votre compte d'enseignant Code.org pour le voir - une fois connecté, il devrait s'agir de l'écran par défaut que vous voyez sur le site Web Code.org. Si vous n'avez pas de compte enseignant, vous pouvez **[en créer un ici](https://studio.code.org/users/sign_up)**.
-
-          ![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)
       OPD-K5 Using CS:
-        markdown: "# Planification > Préparation d'un cours Code Studio\n\nJetons
-          un coup d'œil à la façon dont Code Studio fonctionne pour vous et vos élèves
-          dans une salle de classe.\n\n## Étape 1 : Choisissez un cours\nConsultez
-          notre [page de l'école primaire](https://code.org/educate/curriculum/elementary-school)
-          et trouvez les plans de cours et les cours complets de nos leçons CS Fundamentals
-          A-F. Ou, si vous êtes intéressé par nos cours de collège ou de lycée vous,\n,
-          vous trouverez des cours pour tous les niveaux scolaires - des pré-lecteurs
-          aux seniors du secondaire, et tout le monde entre les deux. Tous nos cours
-          sont disponibles sans frais. Discutez avec des collègues de votre école
-          pour déterminer comment le programme du cours peut être intégré à une variété
-          de matières.\n \n## Étape 2 : Configurez votre section de classe\nConfigurez
-          une section salle de classe pour afficher les progrès de votre élève, imprimer
-          des cartes de connexion pour vos élèves, gérer leurs comptes et imprimer
-          des certificats qu'ils peuvent rapporter à la maison à la fin du cours.
-          Cliquez sur ce lien pour [regarder une brève vidéo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
-          montre comment configurer votre premier cours d'informatique sur Code.org.
-          Vous pouvez également trouver les étapes dans [cet article d'assistance](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\n##
-          Étape 3 : Attribuez le cours à votre section\nCliquez sur le cours que vous
-          enseignez - vous devriez voir un écran qui ressemble à celui ci-dessous.
-          Vous pouvez ensuite cliquer sur « Attribuer un cours » et attribuer ce cours
-          à l'une de vos sections.\n\n## Étape 4 : Commencez à enseigner !\nTout ce
-          qu'il faut, c'est une leçon pour introduire des concepts informatiques dans
-          votre classe. Une fois que vous voyez l'enthousiasme de vos élèves pour
-          l'informatique, allez plus loin avec des plans de cours quotidiens pour
-          guider vos élèves, des activités hors ligne que vous pouvez faire sans ordinateur
-          et des forums pour vous connecter à d'autres enseignants."
-      OPD-K5 Using CS_dani:
         markdown: "# Planification > Préparation d'un cours Code Studio\n\nJetons
           un coup d'œil à la façon dont Code Studio fonctionne pour vous et vos élèves
           dans une salle de classe.\n\n## Étape 1 : Choisissez un cours\nConsultez
@@ -9068,3 +8966,143 @@ fr-FR:
           En complétant cette brève étape, vous allez :
 
           - Vous préparer à "maîtriser les bases" de l'informatique en passant en revue la suite du cours
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Propriétés du sprite
+      CSD Games variables practice_2021:
+        display_name: Les Variables Pratiquer
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Regardez le code ci-dessous et prédisez comment les en-têtes seront
+          affichés. Choisissez parmi l'une des options sur la droite.
+        title: Vérification rapide sur les titres
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Styliser le texte avec CSS
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Ajouter des images
+      CSD U2 Image practice_pilot_2021:
+        display_name: Ajouter des images
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: description ici
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: titre
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: description ici
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: S'entraîner
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: description ici
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: description ici
+      CSD U6 LED create intro_2021:
+        content1: description ici
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: description ici
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
+        questions:
+        - text: Lis le code et prédit ce à quoi l'application va ressembler lorsqu'elle
+            sera lancée.
+        title: Faites une prévision
+      CSD games cake challenge choice_2021:
+        display_name: Défis
+      CSD games functions practice choice_2021:
+        display_name: Les Fonctions Pratique
+      CSD games platform challenge choice_2021:
+        display_name: Défis
+      CSD web conditionals practice choice_2021:
+        display_name: Les Conditions Pratique
+      CSD web draw loop practice choice_2021:
+        display_name: S'entraîner
+      CSD web movement practice choice_2021:
+        display_name: S'entraîner
+      CSD web text practice choice_2021:
+        display_name: S'entraîner
