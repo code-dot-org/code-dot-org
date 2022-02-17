@@ -1238,7 +1238,7 @@ class User < ApplicationRecord
   def last_attempt(level, script = nil)
     query = UserLevel.where(user_id: id, level_id: level.id)
     query = query.where(script_id: script.id) unless script.nil?
-    query.order('updated_at DESC').first
+    query.order(updated_at: :desc).first
   end
 
   # Returns the most recent (via updated_at) user_level for any of the specified
@@ -1251,7 +1251,7 @@ class User < ApplicationRecord
     }
     conditions[:script_id] = script_id unless script_id.nil?
     UserLevel.where(conditions).
-      order('updated_at DESC').
+      order(updated_at: :desc).
       first
   end
 
