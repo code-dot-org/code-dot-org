@@ -1,0 +1,9 @@
+{
+  "key": "test-serialization",
+  "course_version_key": "2022",
+  "course_offering_key": "csp",
+  "parent_reference_guide_key": null,
+  "display_name": "Test Serialization",
+  "content": "There is some content here that is being serialized.\r\n",
+  "position": 0
+}

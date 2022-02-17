@@ -40,9 +40,16 @@ ________________
 
 <a id="local"></a>
 
+### Computer Science A
+
+Code.org's newest professional learning program launches in 2022-23 and is available in most regions! You'll find need-to-know information incorporated in the most robust workshop, funding, and supplies resources as it's available. 
+
+- <a href="https://docs.google.com/document/d/1x9GKwRxGtXIefRtUFjN2ZjFN6TQMUQl0KIjoBVrRB9Y/edit" target=_blank>CSA FAQ for Regional Partners</a> 
+
+
 ### Summer Workshop Specific
 
-Updated guidance for hosting 2020 Summer Workshops is now available!
+Updated guidance for hosting 2022 Summer Workshops is now available!
 
 - <a href="https://docs.google.com/document/d/1IETwhJmN1lVNo85wQ9d9fxgGxs5KlV7ZDhMj0Toq3eI/edit#" target=_blank>2022 Summer Workshop Process Doc</a> 
 - [Sample Logistics Questions for Registration](https://docs.google.com/document/d/1PPnxnoWYim-8qWqOEdwHi0fadx2y-Hc2PWd4QWKd3p8/edit?ts=5c5dc1e6#heading=h.9xw1ckl4l6ru)
