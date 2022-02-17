@@ -127,6 +127,24 @@
         },
         "define/coursee/2021": {
           "word": "Definiraj"
+        },
+        "debugging/csd/2021": {
+          "word": "Odpravljanje napak"
+        },
+        "variable/csd/2021": {
+          "word": "Spremenljivka"
+        },
+        "conditionals/csd/2021": {
+          "word": "Pogoji"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstrakcija"
+        },
+        "function/csd/2021": {
+          "word": "Funkcija"
+        },
+        "copyright/csd/2021": {
+          "word": "Avtorska pravice"
         }
       }
     }
