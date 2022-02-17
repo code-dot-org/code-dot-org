@@ -826,6 +826,58 @@
         "try/coursee/2021": {
           "word": "Prova",
           "definition": "Cerca di mettere in atto il tuo piano"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
+          "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
+        },
+        "user_interface/csd/2021": {
+          "word": "Interfaccia Utente"
+        },
+        "bug/csd/2021": {
+          "word": "Bug (errore)",
+          "definition": "Parte di un programma che non funziona correttamente."
+        },
+        "for_loop/csd/2021": {
+          "word": "Cicli con contatore",
+          "definition": "Un’istruzione di ripetizione (ciclo) basata su una variabile contatore, caratterizzata da un valore iniziale, un valore finale ed un “passo” (la quantità di cui viene incrementata o decrementata ad ogni ripetizione)."
+        },
+        "debugging/csd/2021": {
+          "word": "Correzione errori (debugging)",
+          "definition": "Individuazione e risoluzione di problemi in un algoritmo o in un programma."
+        },
+        "program/csd/2021": {
+          "word": "Programma",
+          "definition": "Un algoritmo che è stato tradotto in un linguaggio che può essere interpretato ed eseguito da una macchina."
+        },
+        "variable/csd/2021": {
+          "word": "Variabile",
+          "definition": "Un nome per un valore che può cambiare."
+        },
+        "sprite/csd/2021": {
+          "word": "Personaggio"
+        },
+        "condition/csd/2021": {
+          "word": "Condizione"
+        },
+        "conditionals/csd/2021": {
+          "word": "Istruzioni condizionali"
+        },
+        "abstraction/csd/2021": {
+          "word": "Astrazione"
+        },
+        "function/csd/2021": {
+          "word": "Funzione"
+        },
+        "input/csd/2021": {
+          "word": "Input"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Orme digitali"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright",
+          "definition": "il diritto legale esclusivo di stampare, pubblicare, eseguire, filmare o registrare materiale letterario, artistico o musicale e di autorizzare altri a fare lo stesso"
         }
       }
     }
