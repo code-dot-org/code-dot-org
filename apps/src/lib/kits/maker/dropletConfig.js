@@ -31,7 +31,7 @@ const colorPixelVariables = _.range(N_COLOR_LEDS).map(
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
 function stringifySong(song) {
-  return '[' + song.map(note => `${JSON.stringify(note)}`).join(',') + ']';
+  return '[' + song.map(note => `${JSON.stringify(note)}`).join(', ') + ']';
 }
 config.stringifySong = stringifySong;
 
