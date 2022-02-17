@@ -8164,6 +8164,12 @@ is:
               display_name: Breytur
             lessonGroup-4:
               display_name: Lokaverkefni námskeiðs
+        csd6-pilot-2022:
+          lessons:
+            Making Music:
+              name: Lagasmíð
+            Functions with Parameters:
+              name: Föll
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -8580,6 +8586,21 @@ is:
           lessons:
             lesson-2:
               name: 5.  eining - Mat
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Lykkjur
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald
