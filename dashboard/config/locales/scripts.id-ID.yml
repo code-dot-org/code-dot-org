@@ -29012,6 +29012,14 @@ id:
               name: Prototipe
             lesson-19:
               name: Proyek
+            Circuits and Physical Prototypes:
+              description_teacher: Sebagai persiapan untuk proyek terakhir bab ini,
+                murid akan mempelajari cara mengembangkan prototipe objek fisik yang
+                meliputi Circuit Playground. Dengan menggunakan panduan perencanaan
+                proyek bermodel, murid akan mempelajari cara menghubungkan beberapa
+                sirkuit sederhana dan membuat prototipe yang dapat mengomunikasikan
+                desain produk yang dikehendaki, dengan menggunakan bahan yang murah
+                dan mudah dicari, seperti kertas karton dan lakban.
           lesson_groups:
             lessonGroup-3:
               display_name: Templat
@@ -29041,6 +29049,11 @@ id:
               display_name: Proyek
             lessonGroup-4:
               display_name: Demo dan Sumber Daya
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: Mengetes Klon CSA
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -29896,6 +29909,12 @@ id:
                 Selain perilaku, hari ini murid akan memasukkan input pengguna sebagai
                 event untuk membuat "pesta dansa alien".
           lesson_groups:
+            lessonGroup-5:
+              display_name: Variabel Kursus F (Ditolak)
+            lessonGroup-6:
+              display_name: Kursus F Untuk Loops (Ditolak)
+            lessonGroup-7:
+              display_name: Kursus E Sprite (Ditolak)
             lessonGroup-8:
               display_name: Jam kode
         csa7-exemplars:
@@ -29950,6 +29969,47 @@ id:
               display_name: variabel
             lessonGroup-4:
               display_name: Proyek Akhir Kursus
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: 'Dalam proyek terakhir untuk kursus ini, murid
+                membentuk tim untuk mengembangkan dan menguji sebuah prototipe perangkat
+                komputasi inovatif berdasarkan Circuit Playground. Dengan menggunakan
+                input dan output yang tersedia di papan, grup-grup murid akan membuat
+                program yang memudahkan interaksi pengguna yang menarik dan unik. '
+            Innovations in Computing:
+              name: Inovasi dalam Komputasi
+              description_teacher: Untuk memulai unit terakhir kursus ini, murid akan
+                melakukan penelitian tentang beberapa inovasi menarik di dunia komputasi.
+                Pelajaran ini akan menyingkap beraneka ragam faktor bentuk komputasi
+                (tampilan fisik komputer) dan bidang yang terdampak oleh komputasi
+                kepada murid. Dalam unit ini selanjutnya, murid akan melihat kembali
+                perangkat yang mereka jumpai dalam pelajaran ini pada saat mereka
+                mengembangkan perangkat komputasi fisik mereka sendiri.
+            The Circuit Playground:
+              name: Sirkuit Bermain Anak
+            Board Events:
+              name: Event Papan
+            Arrays and Color LEDs:
+              name: LED Berwarna
+            lesson-10:
+              name: Menggabungkan Input
+            Accelerometer:
+              name: Akselerometer
+              description_teacher: Dalam pelajaran ini, murid akan mengeksplorasi
+                akselerometer dan kemampuannya. Mereka akan mengakrabi event dan propertinya,
+                serta membuat berbagai program dengan memanfaatkan akselerometer yang
+                mirip dengan akselerometer yang kemungkinan akan mereka jumpai dalam
+                aplikasi dunia nyata.
+            Making Music:
+              name: Membuat musik
+            Functions with Parameters:
+              name: fungsi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapter 1
+            lessonGroup-3:
+              display_name: Chapter 2
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -30548,6 +30608,7 @@ id:
           description_short: 'Pengenalan ilmu komputer: menggabungkan kurikulum terbaik
             sekolah dasar bagi murid yang lebih tua usianya.'
           description_audience: 'Usia: 9-18'
+          name: express-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -31873,6 +31934,12 @@ id:
                 dan desain solusi yang mudah diakses untuk aplikasi hipotetis. '
             'Hello World: Food':
               name: Halo Dunia
+              description_student: Dalam pelajaran ini, Anda akan belajar cara membuat
+                dan menganimasikan sprite dan membuatnya interaktif dengan menggunakan
+                event.
+              description_teacher: Dalam pelajaran **skill-building** ini, siswa akan
+                belajar cara membuat dan menganimasikan sprite dan membuatnya interaktif
+                dengan menggunakan event.
           lesson_groups:
             csf_sprites:
               display_name: Sprites
@@ -32199,6 +32266,8 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -32225,3 +32294,94 @@ id:
           lesson_groups:
             lessonGroup-2:
               display_name: Konten
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Loop
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+            lesson-10:
+              key: pelajaran ke-10
+            lesson-6:
+              key: pelajaran ke-6
+            lesson-7:
+              key: pelajaran ke-7
+            lesson-8:
+              key: pelajaran ke- 8
+            lesson-9:
+              key: pelajaran ke-9
+            lesson-11:
+              key: pelajaran ke-11
+            lesson-12:
+              key: pelajaran ke-12
+            lesson-13:
+              key: pelajaran ke-13
+            lesson-14:
+              key: pelajaran ke-14
+            lesson-15:
+              key: pelajaran ke-15
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-5:
+              key: pelajaran ke-5
+              name: Hari Penilaian
+            lesson-16:
+              key: pelajaran ke-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Hari Penilaian
+            lesson-1:
+              key: pelajaran ke-1
+            lesson-2:
+              key: pelajaran ke-2
+            lesson-3:
+              key: pelajaran ke- 3
+            lesson-4:
+              key: pelajaran ke- 4
+            lesson-5:
+              key: pelajaran ke-5
+            lesson-10:
+              key: pelajaran ke-10
+            lesson-6:
+              key: pelajaran ke-6
+            lesson-7:
+              key: pelajaran ke-7
+            lesson-8:
+              key: pelajaran ke- 8
+            lesson-9:
+              key: pelajaran ke-9
+            lesson-11:
+              key: pelajaran ke-11
+            lesson-12:
+              key: pelajaran ke-12
+            lesson-13:
+              key: pelajaran ke-13
+            lesson-14:
+              key: pelajaran ke-14
+            lesson-15:
+              key: pelajaran ke-15
+              name: Hari Penilaian
+            lesson-16:
+              key: pelajaran ke-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten
+            lessonGroup-5:
+              display_name: Sandbox
