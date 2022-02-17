@@ -1,0 +1,235 @@
+{
+  "script": {
+    "name": "csa-backpack-2022",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2022-02-17 14:07:04 UTC",
+    "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "csa-backpack-2022"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "PainterPlus",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "6fa65fd9-aca9-49fe-bda7-434ab437900a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 1 Lesson 7"
+      },
+      "seeding_key": {
+        "activity_section.key": "6fa65fd9-aca9-49fe-bda7-434ab437900a",
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
+    },
+    {
+      "key": "170662e2-2ba3-4d85-9f3e-448d651b6c7e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit 1 Lesson 9"
+      },
+      "seeding_key": {
+        "activity_section.key": "170662e2-2ba3-4d85-9f3e-448d651b6c7e",
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
+    },
+    {
+      "key": "91172788-2650-44ac-8479-a6cdee7ab106",
+      "position": 3,
+      "properties": {
+        "progression_name": "Unit 1 Lesson 10"
+      },
+      "seeding_key": {
+        "activity_section.key": "91172788-2650-44ac-8479-a6cdee7ab106",
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 1 Lesson 7"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L7 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "6fa65fd9-aca9-49fe-bda7-434ab437900a"
+      },
+      "level_keys": [
+        "CSA U1L7 PainterPlus"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 1 Lesson 9"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L9 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "170662e2-2ba3-4d85-9f3e-448d651b6c7e"
+      },
+      "level_keys": [
+        "CSA U1L9 PainterPlus"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 1 Lesson 10"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L10 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "91172788-2650-44ac-8479-a6cdee7ab106"
+      },
+      "level_keys": [
+        "CSA U1L10 PainterPlus"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L7 PainterPlus",
+        "script_level.level_keys": [
+          "CSA U1L7 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "6fa65fd9-aca9-49fe-bda7-434ab437900a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L9 PainterPlus",
+        "script_level.level_keys": [
+          "CSA U1L9 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "170662e2-2ba3-4d85-9f3e-448d651b6c7e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L10 PainterPlus",
+        "script_level.level_keys": [
+          "CSA U1L10 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "91172788-2650-44ac-8479-a6cdee7ab106"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

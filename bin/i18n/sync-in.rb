@@ -487,6 +487,7 @@ def localize_markdown_content
     ai.md.partial
     athome.md.partial
     break.md.partial
+    coldplay.md.partial
     csforgood.md
     curriculum/unplugged.md.partial
     educate/csc.md.partial

@@ -85,7 +85,7 @@
     "parent_level_id": 20562,
     "name_suffix": "_2021",
     "text_mode_at_start": "false",
-    "long_instructions": "# Number Scrubbing Game\r\n\r\nThis app simulates a game where you try to match a number with a randomly generated target number. You can tilt the circuit playground left and right to adjust your number, trying to get it as close to the target number as possible. Once it's close enough, pressing the right button on the circuit playground will lock in your number.\r\n\r\nThe game has already been started, but the code that updates your number based on the circuit playground is missing. We'll need to use variables and the Counter Pattern to update our number and update the screen\r\n\r\n## Do This\r\n- Inside the [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), use a [`variable`(#BB77C7)](/docs/applab/declareAssign_x/) to determine the `roll` of the circuit playground\r\n- Add the roll to the `yourNumber` variable using the Counter Pattern\r\n- Use [`setText()`(#fff176)](/docs/applab/setText/) to update the `yourNumberLabel`\r\n\r\n**Run Your Code!** You should be able to tilt the circuit playground left and right and see your number update on the screen. Once it's close to the target number, press the right circuit playground button and see how close you were!",
+    "long_instructions": "# Number Tilting Game\r\n\r\nThis app simulates a game where you try to match a number with a randomly generated target number. You can tilt the circuit playground left and right to adjust your number, trying to get it as close to the target number as possible. Once it's close enough, pressing the right button on the circuit playground will lock in your number.\r\n\r\nThe game has already been started, but the code that updates your number based on the circuit playground is missing. We'll need to use variables and the Counter Pattern to update our number and update the screen\r\n\r\n## Do This\r\n- Inside the [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), use a [`variable`(#BB77C7)](/docs/applab/declareAssign_x/) to determine the `roll` of the circuit playground\r\n- Add the roll to the `yourNumber` variable using the Counter Pattern\r\n- Use [`setText()`(#fff176)](/docs/applab/setText/) to update the `yourNumberLabel`\r\n\r\n**Run Your Code!** You should be able to tilt the circuit playground left and right and see your number update on the screen. Once it's close to the target number, press the right circuit playground button and see how close you were!",
     "reference_links": [
       "/docs/concepts/maker-toolkit/accelerometer-events/",
       "/docs/concepts/maker-toolkit/the-accelerometer/",
@@ -101,7 +101,10 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Number Tilting Game",
+    "bubble_choice_description": "Tilt the circuit playground to get as close as you can to a target number",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L12/practice/D.png"
   },
   "game_id": 41,
   "published": true,
@@ -109,7 +112,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-19T18:50:25.645+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PE_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PE_2022\"},{\"changed_at\":\"2022-01-19 18:57:37 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 21:14:21 +0000\",\"changed\":[],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2022-02-04 21:14:58 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2022-02-04 21:17:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2022-02-04 21:28:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-19T18:50:25.645+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PE_2022\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PE_2022\"},{\"changed_at\":\"2022-01-19 18:57:37 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-04 21:14:21 +0000\",\"changed\":[],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2022-02-04 21:14:58 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2022-02-04 21:17:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2022-02-04 21:28:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":1198,\"changed_by_email\":\"dan@code.org\"},{\"changed_at\":\"2022-02-15 17:49:27 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
