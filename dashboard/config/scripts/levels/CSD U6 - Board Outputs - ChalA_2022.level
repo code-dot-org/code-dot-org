@@ -69,7 +69,9 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Challenge A",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L2/challenge/A.png"
   },
   "game_id": 41,
   "published": true,
@@ -77,7 +79,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T02:56:36.669+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracF_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracF_2022\"},{\"changed_at\":\"2021-12-16 02:56:43 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T02:56:36.669+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracF_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracF_2022\"},{\"changed_at\":\"2021-12-16 02:56:43 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:44:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

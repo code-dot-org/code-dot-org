@@ -77,16 +77,22 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
-    "start_blocks": "//Add your variable and createLed here using pin \"A6\"\n\nonBoardEvent(lightSensor, \"data\", function() {\n  //Check if the lightSensor is < 200\n  //If it is: turn on the LED\n  \n  //Check if the lightSensor is > 200\n  //If it is: turn off the LED\n  \n});\n",
-    "preload_asset_list": null
+    "start_blocks": "//Add your variable and createLed here using pin \"A6\"\r\n\r\nonBoardEvent(lightSensor, \"data\", function() {\r\n  //Check if the lightSensor is < 200\r\n  //If it is: turn on the LED\r\n  \r\n  //Check if the lightSensor is > 200\r\n  //If it is: turn off the LED\r\n  \r\n});\r\n",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "display_name": "LEDs and Sensors",
+    "bubble_choice_description": "Simulate a night light by using the light sensor to turn on or off an external LED",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L16/practice/C.png"
   },
   "game_id": 41,
+  "published": true,
   "created_at": "2022-02-09T00:42:14.000Z",
   "level_num": "custom",
   "user_id": 1,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-09T00:42:14.900+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - PB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - PB_2022\"},{\"changed_at\":\"2022-02-09 00:55:03 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 00:56:50 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-09T00:42:14.900+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - PB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - PB_2022\"},{\"changed_at\":\"2022-02-09 00:55:03 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 00:56:50 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 20:28:28 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

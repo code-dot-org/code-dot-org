@@ -57,6 +57,15 @@ module Api::V1::Pd
       @markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
     end
 
+    # Manually reload application between tests, to work around an unusual bug
+    # here with the interaction of three things:
+    #   1. Rails 6
+    #   2. composite_primary_keys
+    #   3. SetupAllAndTeardownAll
+    teardown do
+      @csp_facilitator_application.reload
+    end
+
     test_redirect_to_sign_in_for :index
     test_redirect_to_sign_in_for :show, params: -> {@test_show_params}
     test_redirect_to_sign_in_for :update, params: -> {@test_update_params}
