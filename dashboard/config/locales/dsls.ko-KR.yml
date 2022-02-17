@@ -5809,3 +5809,140 @@ ko-KR:
           ## 리소스
 
           * [변수에 대한 소개](https://youtu.be/G41G_PEWFjE) - 비디오 ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: 스프라이트 속성
+      CSD Games variables practice_2021:
+        display_name: 변수 연습
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        markdown: |
+          <pre>
+          &lt;h3&gt; 달걀 &lt;/h3&gt;
+          &lt;h1&gt; 베이컨 &lt;/h1&gt;
+          &lt;h6&gt; 와플 &lt;/h6&gt;
+          </pre>
+      CSD U2 CSS practice_pilot_2021:
+        display_name: CSS로 텍스트 스타일링
+      CSD U2 Image challenge_pilot_2021:
+        display_name: 이미지 추가
+      CSD U2 Image practice_pilot_2021:
+        display_name: 이미지 추가
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: 설명 입력
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: 제목화면 주제
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: 설명 입력
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: 연습
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: 설명 입력
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: 설명 입력
+      CSD U6 LED create intro_2021:
+        content1: 설명 입력
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: 설명 입력
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD games cake challenge choice_2021:
+        display_name: 도전
+      CSD games functions practice choice_2021:
+        display_name: 함수 연습
+      CSD games platform challenge choice_2021:
+        display_name: 도전
+      CSD web conditionals practice choice_2021:
+        display_name: 조건 연습
+      CSD web draw loop practice choice_2021:
+        display_name: 연습
+      CSD web movement practice choice_2021:
+        display_name: 연습
+      CSD web text practice choice_2021:
+        display_name: 연습
+      csd-pre-survey-levelgroup_21_22:
+        title: CS 발견 학생 과정 전 설문 조사

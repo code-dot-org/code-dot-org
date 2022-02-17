@@ -23684,6 +23684,11 @@ ko:
               display_name: 프로젝트
             lessonGroup-4:
               display_name: 데모 및 리소스
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: CSA 복제 테스트
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -24344,6 +24349,12 @@ ko:
               description_teacher: 이 레슨은 학생들이 인터랙티브 애니메이션과 게임을 만들 수 있는 플랫폼인 스프라이트
                 랩으로 구성됩니다. 행동 외에, 오늘 학생들은 사용자 인풋을 이벤트로서 통합하여 "외계인 댄스 파티"를 만들 것입니다.
           lesson_groups:
+            lessonGroup-5:
+              display_name: 과정 F 변수 (사용되지 않음)
+            lessonGroup-6:
+              display_name: 과정 F 루프용 (사용되지 않음)
+            lessonGroup-7:
+              display_name: 과정 E 스프라이트 (사용되지 않음)
             lessonGroup-8:
               display_name: Hour of Code
           description_short: 내부
@@ -24395,6 +24406,36 @@ ko:
             lessonGroup-4:
               display_name: 과정말 프로젝트
           title: CS 기초 2021 파일럿
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: '이 과정의 마지막 프로젝트에서 학생들은 팀을 이뤄 써킷 플레이그라운드에 기반을 둔
+                혁신적인 컴퓨팅 기기를 위한 프로토타입을 개발하고 테스트합니다. 보드 상에서 사용 가능한 인풋과 아웃풋을 사용하여 그룹은
+                흥미롭고 독특한 사용자 인터페이스를 허용하는 프로그램을 만들 것입니다. '
+            Innovations in Computing:
+              description_teacher: 이 과정의 최종 단원을 시작하기 위해, 학생들은 컴퓨팅에 흥미로운 혁신을 가져다 줄
+                몇 가지 리서치를 할 것입니다. 이 레슨은 학생들을 더 넓은 다양한 컴퓨팅 형태 요소 (컴퓨터가 어떻게 보이는지)와 컴퓨팅에
+                의해 영향을 받는 분야에 노출시킬 것입니다. 이 단원의 뒷부분에서, 학생들은 자신의 물리적 컴퓨팅 기기를 개발하며 이
+                레슨에서 접하게 된 여러 기기를 되돌아 볼 것입니다.
+            The Circuit Playground:
+              name: 써킷 플레이그라운드
+            Board Events:
+              name: 보드 이벤트
+            Arrays and Color LEDs:
+              name: 컬러 LED
+            lesson-10:
+              name: 입력 결합
+            Accelerometer:
+              name: 가속도 센서
+              description_teacher: 이 레슨에서 학생들은 가속도 센서와 그것의 능력에 대해 탐구할 것입니다. 이벤트와 속성에
+                익숙해 질 것이며 또한 실생활 애플리케이션에서 봤던 것과 유사한 가속도 센서를 활용하여 복수의 프로그램을 만들 것입니다.
+            Functions with Parameters:
+              name: 함수
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 챕터 1
+            lessonGroup-3:
+              display_name: 챕터 2
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -24864,6 +24905,7 @@ ko:
             만드세요.
           description_short: '컴퓨터 과학 소개: 고학년 학생을 위해 초등학교 커리큘럼 중 최고의 커리큘럼을 결합합니다.'
           description_audience: '나이: 9-18'
+          name: 익스프레스-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -26019,6 +26061,10 @@ ko:
                 접근 가능성과 공감의 가치에 관해 배울 것입니다.  '
             'Hello World: Food':
               name: 헬로우 월드
+              description_student: 이번 수업에서는,  스프라이트를 만들고 애니메이션화한 다음 이벤트를 사용하여 인터랙티브하게
+                만드는 방법을 배우게 됩니다.
+              description_teacher: '이번 **실력 향상** 수업에서는,  스프라이트를 만들고 애니메이션화한 다음 이벤트를
+                사용하여 인터랙티브하게 만드는 방법을 배우게 됩니다. '
           lesson_groups:
             csf_sprites:
               display_name: 스프라이트
@@ -26303,6 +26349,8 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -26329,3 +26377,102 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java 연구소
+            lesson-9:
+              name: 반복
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: 평가일
+            Java Lab:
+              name: Java 연구소
+              key: Java 연구소
+            lesson-10:
+              key: 레슨--10
+            lesson-6:
+              key: 레슨--6
+            lesson-7:
+              key: 레슨--7
+            lesson-8:
+              key: 레슨-8
+            lesson-9:
+              key: 레슨--9
+            lesson-11:
+              key: 레슨-11
+            lesson-12:
+              key: 레슨 12
+            lesson-13:
+              key: 레슨--13
+            lesson-14:
+              key: 레슨--14
+            lesson-15:
+              key: 레슨--15
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+            lesson-4:
+              key: 레슨-4
+            lesson-5:
+              key: 레슨--5
+              name: 평가일
+            lesson-16:
+              key: 레슨--16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: 평가일
+            Java Lab:
+              name: Java 연구소
+              key: Java 연구소
+            lesson-1:
+              key: 레슨-1
+            lesson-2:
+              key: 레슨--2
+            lesson-3:
+              key: 레슨--3
+            lesson-4:
+              key: 레슨-4
+            lesson-5:
+              key: 레슨--5
+            lesson-10:
+              key: 레슨--10
+            lesson-6:
+              key: 레슨--6
+            lesson-7:
+              key: 레슨--7
+            lesson-8:
+              key: 레슨-8
+            lesson-9:
+              key: 레슨--9
+            lesson-11:
+              key: 레슨-11
+            lesson-12:
+              key: 레슨 12
+            lesson-13:
+              key: 레슨--13
+            lesson-14:
+              key: 레슨--14
+            lesson-15:
+              key: 레슨--15
+              name: 평가일
+            lesson-16:
+              key: 레슨--16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+            lessonGroup-5:
+              display_name: 샌드박스
