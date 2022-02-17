@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-14 14:27:12 UTC",
+    "serialized_at": "2022-02-16 20:16:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1076,20 +1076,8 @@
   ],
   "activity_sections": [
     {
-      "key": "4350de08-9e14-4d0c-a3bc-ed54603dd890",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Dr. Seuss Book Written by A.I. video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students notice that the story closely follows the same format as popular Dr. Seuss stories and may also note that the story does not consistently rhyme. Students may wonder how they might write a program to generate a story based on a line of text entered.",
-        "name": "Stories Written by A.I."
-      },
-      "seeding_key": {
-        "activity_section.key": "4350de08-9e14-4d0c-a3bc-ed54603dd890",
-        "lesson_activity.key": "2331fd78-407b-41a8-a2b8-4c13e296e27d"
-      }
-    },
-    {
       "key": "0b15b241-c5a7-45f4-b49f-9a7863e9803d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "You have learned a lot about Java throughout the year, much of which we can use to create a simple version of a program that can produce something like this story.",
         "remarks": true
@@ -1101,15 +1089,9 @@
     },
     {
       "key": "33315e67-d0fd-456c-a7f0-9f3c0785ce3c",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you create a program that generated a story like this?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for creating a similar program, such as searching for words with specific characteristics and using conditionals and iteration. Students note that they need to know how to work with `String`s to find some of these characteristics and might even suggest needing a way to search for words in an existing dictionary file.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The program used to produce the story in the video is more complex than what students would typically create in this course. Help students identify simple aspects that they could implement, such as finding words by characteristics such as using conditionals and iteration to check for syllables, length, positive or negative connotations, or other characteristics."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you create a program that generates a story?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for creating a similar program, such as searching for words with specific characteristics and using conditionals and iteration. Students note that they need to know how to work with `String`s to find some of these characteristics and might even suggest needing a way to search for words in an existing dictionary file."
       },
       "seeding_key": {
         "activity_section.key": "33315e67-d0fd-456c-a7f0-9f3c0785ce3c",
@@ -6168,18 +6150,6 @@
       }
     },
     {
-      "name": "Dr. Seuss Book Written by A.I.",
-      "url": "https://youtu.be/DckBBDU6V4k",
-      "key": "dr_seuss_book_written_by_a_i_",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "dr_seuss_book_written_by_a_i_"
-      }
-    },
-    {
       "name": "FRQ Scoring Guide",
       "url": "https://docs.google.com/document/d/1Z3bc2oSUQPe5Y3bCOTgnc_NkRqSn3S6uyLhZO8yuA8M/edit",
       "key": "frq_scoring_guide_4",
@@ -6497,12 +6467,6 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "_key_u6l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "resource.key": "dr_seuss_book_written_by_a_i_"
       }
     },
     {
