@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import CodeDocLink from '@cdo/apps/templates/codeDocs/CodeDocLink';
 
-function CategorySection({category}) {
+export function CategorySection({category}) {
   return (
     <div>
       <h3
@@ -16,7 +17,7 @@ function CategorySection({category}) {
       </h3>
       <ul>
         {category.programmingExpressions.map(expression => (
-          <li key={expression.name}>
+          <li key={expression.key}>
             <CodeDocLink programmingExpression={expression} />
           </li>
         ))}
@@ -30,8 +31,10 @@ export default function ProgrammingEnvironmentOverview({
 }) {
   return (
     <div>
-      <h1>{programmingEnvironment.title}</h1>
-      <div>{programmingEnvironment.description}</div>
+      {programmingEnvironment.title && <h1>{programmingEnvironment.title}</h1>}
+      {programmingEnvironment.description && (
+        <EnhancedSafeMarkdown markdown={programmingEnvironment.description} />
+      )}
       {programmingEnvironment.categories.map(category => (
         <CategorySection key={category.key} category={category} />
       ))}
@@ -39,10 +42,21 @@ export default function ProgrammingEnvironmentOverview({
   );
 }
 
+const categoryShape = PropTypes.shape({
+  key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
+  programmingExpressions: PropTypes.arrayOf(PropTypes.object)
+});
+
 CategorySection.propTypes = {
-  category: PropTypes.object.isRequired
+  category: categoryShape.isRequired
 };
 
 ProgrammingEnvironmentOverview.propTypes = {
-  programmingEnvironment: PropTypes.object.isRequired
+  programmingEnvironment: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    categories: PropTypes.arrayOf(categoryShape)
+  }).isRequired
 };
