@@ -17280,6 +17280,8 @@ uz:
               name: Accelerometer
             lesson-19:
               name: Loyiha
+            Circuits and Physical Prototypes:
+              description_teacher: Ushbu bobning yakuniy loyihasiga tayyorgarlik jarayonida o‘quvchilar sxema maydonchasini o‘z ichiga olgan jismoniy obyektning prototipini ishlab chiqishni o‘rganadilar. Modellashtirilgan loyihani rejalashtirish bo‘yicha qo‘llanma yordamida o‘quvchilar karton va yopishqoq lenta kabi arzon va osongina topiladigan materiallardan foydalanib, bir nechta oddiy sxemalarni qanday simga ulashni va mahsulotning mo‘ljallangan dizayni bilan tanishadigan prototiplarni yaratishni o‘rganadilar.
         csa-u7-dev:
           lessons:
             lesson-2:
@@ -17439,6 +17441,24 @@ uz:
             lessonGroup-4:
               display_name: End of Course Project
           title: Kompyuter fanlari asoslari 2019-2020 (Pilot)
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: Kursning ushbu yakuniy loyihasida o‘quvchilar jamoasi sxema maydonchasi asosida innovatsion hisoblash moslamasining prototipini ishlab chiqish va sinovdan o‘tkazadilar. Doskada mavjud bo‘lgan kirish va chiqishlardan foydalangan holda, guruhlar foydalanuvchilarning qiziqarli va o‘ziga xos o‘zaro ta'sirini ta'minlaydigan dasturlarni yaratadilar.
+            Innovations in Computing:
+              name: Innovations in Computing
+              description_teacher: Ushbu kursning yakuniy bo'limini boshlash uchun talabalar hisoblashdagi qiziqarli yangiliklar bo'yicha bir necha tadqiqotlar olib boradilar. Ushbu dars o'quvchilarga turli xil hisoblash shakllari omillari (kompyuter qanday ko'rinishini) va hisoblash ta'sirida bo'lgan sohalarni ochib beradi. Keyinchalik ushbu bo'limda talabalar o'zlarining jismoniy hisoblash moslamalarini ishlab chiqishda ushbu darsda duch kelgan qurilmalarni qayta ko'rib chiqadilar.\*
+            The Circuit Playground:
+              name: The Circuit Playground
+            Board Events:
+              name: Board Events
+            Arrays and Color LEDs:
+              name: LED ranglar
+            Accelerometer:
+              name: Accelerometer
+              description_teacher: Ushbu darsda o‘quvchilar akselerometr va uning imkoniyatlarini o‘rganadilar. Ular uning voqealari va xususiyatlari bilan tanishadilar, shuningdek, ular hayotdagi dasturlarda uchratgan bo‘lishi mumkin bo‘lgan akselerometrdan foydalangan holda bir nechta dasturlarni yaratadilar.
+            Functions with Parameters:
+              name: Funksiyalar
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -18722,6 +18742,31 @@ uz:
           lessons:
             lesson-2:
               name: Unit 5. Baholash
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Sikllar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Baholash kuni
+            lesson-5:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Baholash kuni
+            lesson-15:
+              name: Baholash kuni
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
