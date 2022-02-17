@@ -13277,6 +13277,17 @@ ro:
               display_name: Variabile
             lessonGroup-4:
               display_name: Proiect de final de curs
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: Se Combină Intrările
+            Functions with Parameters:
+              name: Funcţii
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolul 1
+            lessonGroup-3:
+              display_name: Capirolul 2
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -15001,3 +15012,96 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Laboratorul Java
+            lesson-9:
+              name: Bucle
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Laboratorul Java
+              key: Laboratorul Java
+            lesson-10:
+              key: lecția-10
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-16:
+              key: lecția-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Laboratorul Java
+              key: Laboratorul Java
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-10:
+              key: lecția-10
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-16:
+              key: lecția-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
