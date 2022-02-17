@@ -22,7 +22,8 @@
           "jump": {
             "parameters": {
               "height": "उंची"
-            }
+            },
+            "name": "जंप"
           }
         },
         "Course 4 Play Lab Params 4": {
@@ -90,7 +91,8 @@
           "jump": {
             "parameters": {
               "height": "उंची"
-            }
+            },
+            "name": "जंप"
           }
         },
         "New Artist Project": {
@@ -104,7 +106,8 @@
           "jump": {
             "parameters": {
               "height": "उंची"
-            }
+            },
+            "name": "जंप"
           }
         },
         "course3_artist_functions_challenge1": {
@@ -423,6 +426,11 @@
           "draw a pinwheel": {
             "parameters": {
               "repeat": "पुन्हा करा"
+            }
+          },
+          "draw a spiral edge": {
+            "parameters": {
+              "min": "किमान"
             }
           }
         },
@@ -1114,6 +1122,63 @@
         "Standalone_Artist_9": {
           "my function": {
             "name": "माझे फंक्शन"
+          }
+        },
+        "2-3 Artist 11": {
+          "x": {
+            "name": "x"
+          }
+        },
+        "Course 4 Play Lab Params 1": {
+          "jump": {
+            "name": "जंप"
+          }
+        },
+        "Course 4 Play Lab Params 2": {
+          "jump": {
+            "name": "जंप"
+          }
+        },
+        "courseC_artist_prog3": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2018": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2019": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseC_artist_prog3_2020": {
+          "draw flame": {
+            "parameters": {
+              "x": "x"
+            }
+          }
+        },
+        "courseF_artist_fwp7": {
+          "draw a spiral edge": {
+            "parameters": {
+              "min": "किमान"
+            }
+          }
+        },
+        "courseF_artist_fwp8": {
+          "draw a spiral edge": {
+            "parameters": {
+              "min": "किमान"
+            }
           }
         }
       }
