@@ -89,7 +89,9 @@
         "courseD_bee_nestedLoops8_2021": "Recolle todo o néctar de cada flor\ne produce mel en cada colmea. Usa un bucle aniñado. ",
         "courseD_maze_nestedLoops4_2021": "Lévame até o xirasol!",
         "courseF_bee2": "Vostede consegue usar un bucle para recoller todo o néctar?",
-        "courseF_bee_for_challenge2_2021": "Resolve este desafío usando o menor número\nde bloques posíbel."
+        "courseF_bee_for_challenge2_2021": "Resolve este desafío usando o menor número\nde bloques posíbel.",
+        "CSD U2 HTML Adding Paragraphs_2021": "# Agrega texto ao corpo\n\nCando inicies calquera proxecto do Laboratorio Web, automaticamente engadirá etiquetas `DOCTYPE>`, `<html>`, `<head>` e `<body>` ao seu proxecto. Cando engadas contido aos teus proxectos, terás que facelo entre as etiquetas `<body>` e `</body>` porque debería ser parte do corpo da túa páxina web.\n\n# Fai isto\n\n-   Escribe tres oracións separadas sobre calquera tema que che guste dentro das etiquetas do corpo da túa páxina web.\n-   Preme «Actualizar e gardar» se non ves os cambios na área de vista previa.\n-   Compara o teu traballo co dun compañeiro. Asegúrate de colocar o código no mesmo lugar.",
+        "CSDU2 - Type Anything_2021": "<img src=\"https://images.code.org/12ffe6980a25a3664eabe69be487a921-image-1485384422334.jpg\" style=\"width:400px; float:right\">\n\n# Benvido ao Laboratorio Web!\n\nA plataforma na que estás chámase Laboratorio Web. Hai tres partes principais da pantalla no Laboratorio Web.\n\n# Fai isto\n\n-   Tenta escribir algo no espazo de traballo.\n-   Preme<img src=\"https://images.code.org/678619085e37ea6ce904ac8abd0df2f2-image-1493226906609.14.45 AM.png\" style=\"width:150px\">"
       }
     }
   }
