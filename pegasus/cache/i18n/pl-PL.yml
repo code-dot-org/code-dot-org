@@ -2545,6 +2545,9 @@ pl-PL:
   hoc2018_dance_video2: Potańcówka - Zdarzenia
   hoc2018_dance_video3: Potańcówka - Właściwości
   hoc2018_dance_video4: Potańcówka - Gratulacje
+  dance_box_higher_power_line_1: Zakoduj taniec do „Higher Power” Coldplay, a będziesz
+    miał szansę zobaczyć zespół na żywo!
+  dance_box_higher_power_line_2: Więcej informacji znajdziesz na <a href="%{path}">code.org/coldplay</a>.
   page_not_found_title: Strona nie została znaleziona
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_description: Strona, której szukasz, nie istnieje pod tym adresem.
