@@ -151,6 +151,30 @@
         },
         "define/coursee/2021": {
           "word": "Määritä"
+        },
+        "debugging/csd/2021": {
+          "word": "Virheen etsintä"
+        },
+        "variable/csd/2021": {
+          "word": "Muuttuja"
+        },
+        "condition/csd/2021": {
+          "word": "Ehtolause"
+        },
+        "conditionals/csd/2021": {
+          "word": "Ehtolausekkeet"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktio"
+        },
+        "function/csd/2021": {
+          "word": "Funktio"
+        },
+        "input/csd/2021": {
+          "word": "Syöte"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }
