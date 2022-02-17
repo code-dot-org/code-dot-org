@@ -346,6 +346,8 @@ tr:
       provider_managed_section: Bu bölüm, bir başka sağlayıcı tarafından yönetilmektedir
         ve katılım sağlanamaz. Lütfen öğretmeninden seni %{provider} üzerinden eklemesini
         iste  ve bu bölümü yeniden senkronize et.
+      not_participant_type: Bölüm için katılımcı türünü karşılamadığınız için sizi
+        %{section_code} bölümüne ekleyemedik.
     mail:
       student_disassociated:
         subject: 'Code.org bildirim: %{student_name} artık senin öğrencin değil.'
@@ -650,6 +652,8 @@ tr:
       onları başka yere taşıyamazsınız.
     third_party_login: Öğrencileri, üçüncü taraf bir uygulama ile senkronize edilen
       bir bölüme taşıyamazsınız.
+    not_correct_participant_type: Yeni bölümde katılımcı olma izinleri olmadığı için
+      bu kullanıcıları taşıyamazsınız.
   share:
     title: Code Studio'da Öğrenin
     description: Herkes bilgisayar bilimi öğrenebilir. Kod kullanarak oyunlar, uygulamalar
@@ -711,6 +715,7 @@ tr:
     make_my_own_app: Kendi programımı yap
     how_it_works: Nasıl çalışır
     try_hour_of_code: Kodlama Saati'ni Deneyin!
+    cookie_notice: Çerez Bildirimi
   reference_area:
     title: Yardım ister misiniz?
     subtitle: Bu videolara ve ipuçlarına bakın
