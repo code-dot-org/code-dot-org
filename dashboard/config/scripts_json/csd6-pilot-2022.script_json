@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-02-16 19:01:33 UTC",
+    "serialized_at": "2022-02-17 14:40:37 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -63,7 +63,7 @@
       "properties": {
         "assessment_opportunities": "1. **Identify computing innovations within a given field**\r\n\r\n\tActivity Guide, page 2: The description of the device, its purpose, and the type of innovation should clearly demonstrate what it does and why it is innovative.\r\n\r\n2. **For a given device, articulate the likely inputs and outputs**\r\n\r\n\tActivity Guide, page 2: The description of the user interaction should identify multiple possible inputs and outputs for the device.\r\n\r\n3. **Suggest improvements to help a device better solve a specific problem**\r\n\r\n\tActivity Guide, page 2: The suggested improvements should relate to the purpose of the device and how it is used.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.",
+        "overview": "To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.\n\n**Question of the Day:** What is a computing innovation?",
         "preparation": "* Review the resource pages linked in Code Studio\n* Cue up [The Internet of Things - Video](https://www.youtube.com/watch?v=xQGsubJNbQw&feature=youtu.be) or [Computer Science is Changing Everything - Video](https://www.youtube.com/watch?v=1x54GqfL3UY&feature=youtu.be)\t\n* Print out a copy of the activity guide for each student",
         "purpose": "This lesson will lay the groundwork for students' understanding of how their Circuit Board could be used to model an innovative computing device. The goal is to get them thinking about how computers can be embedded into just about anything, and to start considering the potential impacts of such applications.",
         "student_overview": "In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.\n"
@@ -162,7 +162,9 @@
       "relative_position": 6,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
-        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas."
+        "overview": "In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data>",
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.",
+        "student_overview": "Create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -237,6 +239,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -272,8 +275,10 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "assessment_opportunities": "1. **Use accelerometer orientation (pitch and roll) when creating apps**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use the data event to continually update an element's properties.**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.",
+        "overview": "In this lesson, students will explore the accelerometer and its capabilities. They’ll become familiar with its events and properties, as well as create multiple programs utilizing the accelerometer similar to those they’ve likely come across in real world applications.\n\n**Question of the Day:** How can I use the accelerometer to create apps?",
+        "preparation": "* Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will explore the accelerometer and its capabilities. "
       },
       "seeding_key": {
@@ -290,8 +295,10 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "assessment_opportunities": "1. **Use the buzzer to produce individual notes or sequences of notes**\n\n\tCode Studio: see rubric on the assessment level\n\n",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes.  Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together.  Once students are able to play notes on the buzzer, learn to play sequences of notes, forming simple songs.",
+        "overview": "In this lesson students will use the buzzer to its full extent by producing sounds, notes, and songs with the buzzer. Students start with a short review of the buzzer's frequency and duration parameters, then move on to the concept of notes. Notes allow students to constrain themselves to frequencies that are used in Western music and provide a layer of abstraction that helps them to understand which frequencies might sound good together. Once students are able to play notes on the buzzer, they use arrays to hold and play sequences of notes, forming simple songs.\n\n**Question of the Day:** How can I use the buzzer to play musical notes or songs?",
+        "preparation": "* Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will use the Circuit Playground’s buzzer feature to its full extent by producing sounds, notes, and songs. "
       },
       "seeding_key": {
@@ -308,8 +315,11 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "assessment_opportunities": "1. **Use functions to organize repeated blocks of code**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Use functions to organize repeated blocks of code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "student_overview": "In this lesson, you will create and call functions, then learn how to use parameters to make functions useful across many different situations\n"
+        "overview": "This lesson introduces students to functions as way to organize and group repeated blocks of code together, such as changing all of the LEDs to red or blue. Then, students learn how to use parameters in their functions as a way to generalize behaviors to work for different contexts - for example, changing all the LEDs to a certain color rather than always changing them red or blue. Students will use these concepts in future lessons, and it may be necessary to return to this lesson to reference the resources and videos.\n\n**Question of the Day:** How can I use functions to organize and simplify my code?",
+        "preparation": "* Prepare a board and USB cable for each pair of students",
+        "student_overview": "In this lesson, you will learn how to create and call functions, then learn how to use parameters to make functions useful across many different situations\n"
       },
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
@@ -326,7 +336,9 @@
       "relative_position": 15,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
-        "purpose": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas."
+        "overview": "In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.",
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)",
+        "student_overview": "Create a piece of interactive artwork using a Circuit Playground and physical materials"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -342,7 +354,9 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
+        "assessment_opportunities": "1. **Create and debug a circuit with an LED**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Create prototype devices that control an LED with code**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this lesson, students learn how to attach external LEDs to their circuit playground and use code to light up these LEDs. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.\n\n**Question of the Day:** How can I use external LEDs to create physical prototypes?",
         "preparation": "* Prepare circuit wiring materials, such as:\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\n\t* LEDs (included in Circuit Playground classroom kit)\n\t* Other conductive material (wire, paper clips, foil, etc)\n\t* (optional) Buttons or switches",
         "student_overview": "In this lesson, you will learn to use wires to create devices with external LEDs and add code to control these lights.\n"
       },
@@ -360,8 +374,11 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
+        "assessment_opportunities": "1. **Create and debug a circuit with a button**\n\n\tCode Studio: see rubric on the assessment level\n\n1. **Create prototype devices that use an external button for input**\n\n\tCode Studio: see rubric on the assessment level",
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "preparation": "* Prepare circuit wiring materials, such as:\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\n\t* LEDs (included in Circuit Playground classroom kit)\n\t* Other conductive material (wire, paper clips, foil, etc)\n\t* (optional) Buttons or switches"
+        "overview": "In this lesson, students learn how to connect external wires to create input events when the wires touch, simulating a button press. Students learn to use code to recognize these external button events to make changes to their app. This allows students to create more flexible devices that mimic real-world products. This lesson requires several external materials, as well as safety protocols to ensure students don’t accidentally damage their circuit playground.\n\n**Question of the Day:** How can I use external buttons to create physical prototypes?",
+        "preparation": "* Prepare circuit wiring materials, such as:\n\t* Alligator clip wires (included in Circuit Playground classroom kit)\n\t* LEDs (included in Circuit Playground classroom kit)\n\t* Other conductive material (wire, paper clips, foil, etc)\n\t* (optional) Buttons or switches",
+        "student_overview": "Learn how to connect external wires to create input events when the wires touch, simulating a button press"
       },
       "seeding_key": {
         "lesson.key": "Physical Outputs",
@@ -1584,7 +1601,7 @@
       "key": "19445472-4d6b-4b56-a426-30e589fdd402",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\r\n\r\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on the details. What do you think this board does (or could do) and why?\r\n\r\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point. As students go through this unit, they can refer back and refine this list.",
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on the details. What do you think this board does (or could do) and why?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point. As students go through this unit, they can refer back and refine this list.\n",
         "name": "Board Inspection\r"
       },
       "seeding_key": {
@@ -1836,7 +1853,7 @@
       "key": "1040cb4f-d05b-4fbd-a01c-29d7f651b2b0",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Prompt:** Imagine you were creating an app and needed to represent an “error” to the user. Thinking about today’s lesson and yesterday’s lesson, how could we show an “error” to the user on both the screen and circuit playground?"
       },
       "seeding_key": {
         "activity_section.key": "1040cb4f-d05b-4fbd-a01c-29d7f651b2b0",
@@ -1847,7 +1864,7 @@
       "key": "4b970304-e9b9-4937-a5c7-917a7b059ebd",
       "position": 2,
       "properties": {
-        "description": "**Discuss:**"
+        "description": "**Share Out:** Have students share with a partner, then with the class"
       },
       "seeding_key": {
         "activity_section.key": "4b970304-e9b9-4937-a5c7-917a7b059ebd",
@@ -1858,10 +1875,20 @@
       "key": "3bee82dd-0c5c-402f-9546-a4ffcae4f269",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Discussion Goal:** Students should brainstorm a variety of options they can use to represent an error to users. For example:\n- Changing the text or background color red\n- Having the circuit playground buzz\n- Having the red LED on the circuit playground light up\n- Changing the text on the screen to say “Error!”\n"
       },
       "seeding_key": {
         "activity_section.key": "3bee82dd-0c5c-402f-9546-a4ffcae4f269",
+        "lesson_activity.key": "40c9c563-8c34-4d5b-9b3b-321b6e8408ad"
+      }
+    },
+    {
+      "key": "8b51a823-2320-462d-be02-1579aac5684e",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8b51a823-2320-462d-be02-1579aac5684e",
         "lesson_activity.key": "40c9c563-8c34-4d5b-9b3b-321b6e8408ad"
       }
     },
@@ -1880,7 +1907,7 @@
       "key": "7cc52ce6-a194-42f6-a5ba-9a2183c70399",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.",
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n**Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the circuit playground. Students may also notice the small slider in the middle of the circuit playground that toggles back and forth. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the outer ring of the circuit playground, or they may notice the eye / ear / temperature icons on the circuit playground for the different sensors. Both of these are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.\n",
         "name": "Board Inspection: Inputs\r"
       },
       "seeding_key": {
@@ -1970,7 +1997,7 @@
       "key": "45192ed5-e94f-4220-a3c6-4160dd6089d0",
       "position": 2,
       "properties": {
-        "description": "Students should make reasonable choices for when one board event might be better than another.  You may want to have a short class discussion before or after this journal prompt to highlight the advantages and disadvantages of each event type. "
+        "description": "**Discussion Goal:** Students should make reasonable choices for when one board event might be better than another.  You may want to have a short class discussion before or after this journal prompt to highlight the advantages and disadvantages of each event type. "
       },
       "seeding_key": {
         "activity_section.key": "45192ed5-e94f-4220-a3c6-4160dd6089d0",
@@ -1992,7 +2019,7 @@
       "key": "2b1850f2-dd00-44dd-ac3f-fdb0cf9e35c3",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in."
       },
       "seeding_key": {
         "activity_section.key": "2b1850f2-dd00-44dd-ac3f-fdb0cf9e35c3",
@@ -2003,7 +2030,13 @@
       "key": "ec0e5950-ec4e-410b-a8a4-76b83a5d8af8",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Transition to Code Studio:** Have students get started in Code Studio right away",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Starting Right Away:** This lesson is packed with new content and includes several videos that help introduce students to these new ideas. In the interest of giving students the most amount of time to practice these new concepts, we recommend jumping straight into Code Studio and starting the lesson there."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ec0e5950-ec4e-410b-a8a4-76b83a5d8af8",
@@ -2135,21 +2168,17 @@
       "key": "ba28eb94-a00e-40bc-a7bb-f885e483dfdc",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Prompt**: \n1. What was a moment from today where you felt successful?\n2. What is a question or point of confusion you still have from today?\n\nHave students write their responses in their journal. They can also share one of their responses with you as they leave for the day, or you can check their journals later.",
+        "name": "Journal",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Formative Assessment:** There are a lot of places in this lesson where students may get lost or confused and not feel comfortable speaking up, especially if other students in the class have prior experience with variables and if-statements. Use this prompt as a way to determine if you need to check in with students at a later lesson, or revisit a concept from today. This is especially true if students have varied levels of experience with programming before this unit."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ba28eb94-a00e-40bc-a7bb-f885e483dfdc",
-        "lesson_activity.key": "a31afbb8-689a-423a-97fe-84f0f960cba6"
-      }
-    },
-    {
-      "key": "303d4598-9049-4d28-817a-68548dafd1ab",
-      "position": 2,
-      "properties": {
-        "description": "**Discussion Goal:**"
-      },
-      "seeding_key": {
-        "activity_section.key": "303d4598-9049-4d28-817a-68548dafd1ab",
         "lesson_activity.key": "a31afbb8-689a-423a-97fe-84f0f960cba6"
       }
     },
@@ -2168,9 +2197,62 @@
       "key": "8e6ef533-97df-4532-88e3-570e5e6e9fdc",
       "position": 1,
       "properties": {
+        "description": "**Prompt:** Think about a time when you've needed to collect data when moving around in the world, or when data is being collected about you. How was that data collected? What happened to that data?",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "8e6ef533-97df-4532-88e3-570e5e6e9fdc",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "21e25e28-35a8-49cf-b5a6-4c497edc9fb5",
+      "position": 2,
+      "properties": {
+        "description": "**Circulate:** Hopefully students may think of ways their phones or other devices collect data about them, such as a pedometer or when a car keeps track of how many miles someone has driven. Students may also think of situations where data is collected about them, such as when they are captured on video or when they use a credit card."
+      },
+      "seeding_key": {
+        "activity_section.key": "21e25e28-35a8-49cf-b5a6-4c497edc9fb5",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "ddc41a9a-c01d-4fa2-9edc-910933e76eb4",
+      "position": 3,
+      "properties": {
+        "description": "**Share Out:** Have students share their responses with a partner, then share out as a class"
+      },
+      "seeding_key": {
+        "activity_section.key": "ddc41a9a-c01d-4fa2-9edc-910933e76eb4",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "7205a2aa-5c81-46cf-8493-bf1145c942b6",
+      "position": 4,
+      "properties": {
+        "description": "**Discussion Goal:** As students share answers, highlight that there is usually a device that does the data collecting, and then there is a separate service that analyzes or makes decisions about that data. For example, a watch may collect heart rate data, and then an app on your phone tells you how many calories you burned."
+      },
+      "seeding_key": {
+        "activity_section.key": "7205a2aa-5c81-46cf-8493-bf1145c942b6",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "8f6e22e4-9a9c-45ec-8bbc-d27e34d6c473",
+      "position": 5,
+      "properties": {
+        "description": "Today, we're going to complete a project where we design an app that uses the circuit playground to collect data, and then uses an app to make a decision or recommendation based on that data.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Example App:** You may decide to show one of the exemplar apps as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8f6e22e4-9a9c-45ec-8bbc-d27e34d6c473",
         "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
       }
     },
@@ -2247,9 +2329,22 @@
       "key": "70f6b1a8-e548-402e-83e3-62f27a07436c",
       "position": 1,
       "properties": {
+        "description": "**Prompt:** What was your favorite part of the app you created? What is something you wish you had time to improve?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "70f6b1a8-e548-402e-83e3-62f27a07436c",
+        "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def"
+      }
+    },
+    {
+      "key": "127038fc-0ac4-44b9-93d7-1f3ed4e0b64f",
+      "position": 2,
+      "properties": {
+        "description": "You may decide to have students share these with a partner, or you may decide to have students keep their responses private. Either way, the goal of the prompt is to have students reflect on the apps they've created and celebrate what went well and acknowledge what could be improved for next time."
+      },
+      "seeding_key": {
+        "activity_section.key": "127038fc-0ac4-44b9-93d7-1f3ed4e0b64f",
         "lesson_activity.key": "4f881f94-5be8-49a8-bae9-9a35e5161def"
       }
     },
@@ -2265,21 +2360,11 @@
       }
     },
     {
-      "key": "d98ae0d9-e25d-4bbd-8106-cabc07d65b80",
+      "key": "e16ca61d-2552-4c7c-8c30-38a164983d24",
       "position": 1,
       "properties": {
-        "description": "**Set Up:** Have students take out their journals. In their journals have students respond to the following prompt."
-      },
-      "seeding_key": {
-        "activity_section.key": "d98ae0d9-e25d-4bbd-8106-cabc07d65b80",
-        "lesson_activity.key": "352c7436-33ee-4a5a-a348-0850fbe6e24c"
-      }
-    },
-    {
-      "key": "e16ca61d-2552-4c7c-8c30-38a164983d24",
-      "position": 2,
-      "properties": {
-        "description": "**Prompt:** What is a list?  What do you use lists for?"
+        "description": "**Prompt:** What is a list?  What do you use lists for?",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "e16ca61d-2552-4c7c-8c30-38a164983d24",
@@ -2288,9 +2373,9 @@
     },
     {
       "key": "bd4dc2f7-f573-44c2-a13b-88dd7caaa60d",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "**Discussion Goal:** While the types of lists students come up with vary from class to class, the two main characteristics of lists that students should understand is that they usually are comprised of items of the same type (tasks to complete, names of people, song titles, grocery items, etc.) and that they have an order.  Some common types of lists include a to-do list, a class roster, a playlist, or a grocery list."
+        "description": "**Share Out:** Once students have had time to write down their own thoughts, have them share out with the whole class. Work as a class to try to get an understanding of what a list is. "
       },
       "seeding_key": {
         "activity_section.key": "bd4dc2f7-f573-44c2-a13b-88dd7caaa60d",
@@ -2299,12 +2384,24 @@
     },
     {
       "key": "139845e8-57d5-46b4-ad5c-5369f8d5381d",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "description": "**Discuss:** Once students have had time to write down their own thoughts, have them share out to the whole class. Work as a class to try to get an understanding of what a list is."
+        "description": "**Discussion Goal:** While the types of lists students come up with vary from class to class, the two main characteristics of lists that students should understand is that they usually are comprised of items of the same type (tasks to complete, names of people, song titles, grocery items, etc.) and that they have an order.  Some common types of lists include a to-do list, a class roster, a playlist, or a grocery list."
       },
       "seeding_key": {
         "activity_section.key": "139845e8-57d5-46b4-ad5c-5369f8d5381d",
+        "lesson_activity.key": "352c7436-33ee-4a5a-a348-0850fbe6e24c"
+      }
+    },
+    {
+      "key": "abad575c-e2c4-4fd6-a26d-cf0f2230ec9d",
+      "position": 4,
+      "properties": {
+        "description": "Lists are useful in programming too when we want to access the same type of item in a certain order. For example, the small colored LEDs in a ring around the center of your circuit playground can be represented as a list of LEDs, with a starting LED and an ending LED. Today we’re going to learn how to program these LEDs, and we’ll use a list to access each individual LED.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "abad575c-e2c4-4fd6-a26d-cf0f2230ec9d",
         "lesson_activity.key": "352c7436-33ee-4a5a-a348-0850fbe6e24c"
       }
     },
@@ -2323,7 +2420,13 @@
       "key": "c5a41139-998b-462d-9729-6296f354ba39",
       "position": 2,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Predict",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**List Terminology:** A list in javascript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c5a41139-998b-462d-9729-6296f354ba39",
@@ -2378,7 +2481,8 @@
       "key": "3ffc33dd-1c9d-4539-b241-a5bbb6a86528",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Prompt:** LEDs are used as output in many devices that we use every day. Try to think of at least one device that uses an LED and describe how it helps make the device more usable or communicates with the user.",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "3ffc33dd-1c9d-4539-b241-a5bbb6a86528",
@@ -2389,7 +2493,7 @@
       "key": "ca649f28-1875-4386-b059-5760d14f2228",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Discussion Goal:** Students should make connections between today’s lesson and devices they use outside of class. Some examples may include:\n- A washing or drying machine that lights up to indicate when clothes are finished\n- A credit card machine that uses different colored LEDs to indicate how a transaction is processing\n- Any device that uses a red light to indicate an error\n- Devices that turn on an LED when in the dark to make the device easier to use\n"
       },
       "seeding_key": {
         "activity_section.key": "ca649f28-1875-4386-b059-5760d14f2228",
@@ -2411,7 +2515,8 @@
       "key": "f358a8a8-c524-4e60-8fe2-221aac7a5810",
       "position": 1,
       "properties": {
-        "description": "**Review:** Ask students to think of the different types of information that they were able to get from the board in the last lesson (e.g. button presses, toggle state, etc.)"
+        "description": "**Prompt:** \n1) What are all the ways we can get input from the user on a circuit playground?\n2) What are some ways you’ve seen where you can get input from the user in an app?",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "f358a8a8-c524-4e60-8fe2-221aac7a5810",
@@ -2422,11 +2527,33 @@
       "key": "15b051be-c729-4333-b1b6-bf4ff9bc56f2",
       "position": 2,
       "properties": {
-        "description": "So far we've seen lots of ways that we can get information from our Circuit Playground.  Today we're going to look at more ways that we can get information from the screen of our app.",
-        "remarks": true
+        "description": "**Share Out:** Have students share their responses with a neighbor, then lead a full-class discussion."
       },
       "seeding_key": {
         "activity_section.key": "15b051be-c729-4333-b1b6-bf4ff9bc56f2",
+        "lesson_activity.key": "ceb50804-b30f-4cc0-8340-8fb914aedf45"
+      }
+    },
+    {
+      "key": "ebc9a32b-3b06-4700-9bf9-01028a70ef59",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students should recall that they can use button presses and the toggle switch to get input from the user on the circuit playground. For apps, they may bring up text inputs or dropdowns or buttons. They may also bring up checkboxes or sliders as other forms of inputs."
+      },
+      "seeding_key": {
+        "activity_section.key": "ebc9a32b-3b06-4700-9bf9-01028a70ef59",
+        "lesson_activity.key": "ceb50804-b30f-4cc0-8340-8fb914aedf45"
+      }
+    },
+    {
+      "key": "6ab87d14-98ca-45f2-ac27-de7969f76875",
+      "position": 4,
+      "properties": {
+        "description": "So far we've only explored how to use the Circuit Playground for user input. Today we're going to look at more ways that we can get information from the screen of our app.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6ab87d14-98ca-45f2-ac27-de7969f76875",
         "lesson_activity.key": "ceb50804-b30f-4cc0-8340-8fb914aedf45"
       }
     },
@@ -2489,13 +2616,7 @@
       "key": "de051f16-96a2-4796-a915-ce794a654f6d",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**  So far, you've seen several different types of input, some from the screen, and some from the circuit playground.  Choose one type of input and answer the following questions about it.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "For this prompt, you can \"jigsaw\" the answers by assigning different students or different groups each a type of input and answering questions on each type.  The different answers can then be combined for a class reference on input types.\r\n"
-          }
-        ]
+        "description": "**Prompt:**  So far, you've seen several different types of input, some from the screen, and some from the circuit playground.  Choose one type of input and answer the following questions about it."
       },
       "seeding_key": {
         "activity_section.key": "de051f16-96a2-4796-a915-ce794a654f6d",
@@ -2514,6 +2635,17 @@
       }
     },
     {
+      "key": "b6be734b-d15b-4c43-99aa-8b8e2a0d7c7e",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** For this prompt, you can \"jigsaw\" the answers by assigning different students or different groups each a type of input and answering questions on each type.  The different answers can then be combined for a class reference on input types."
+      },
+      "seeding_key": {
+        "activity_section.key": "b6be734b-d15b-4c43-99aa-8b8e2a0d7c7e",
+        "lesson_activity.key": "2b4622da-0328-416e-b6da-950af22f7f33"
+      }
+    },
+    {
       "key": "fda86ddf-7fb4-425d-b751-45fc72bf3488",
       "position": 1,
       "properties": {
@@ -2528,7 +2660,7 @@
       "key": "f4482d41-6397-4e6f-b5c7-5ece3cee7a14",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in."
       },
       "seeding_key": {
         "activity_section.key": "f4482d41-6397-4e6f-b5c7-5ece3cee7a14",
@@ -2539,10 +2671,66 @@
       "key": "10233e4a-2ab2-4a53-bfff-3480063669e4",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Prompt:** Create a chart like the one below. Write down all the design elements or circuit playground components that go in each box"
       },
       "seeding_key": {
         "activity_section.key": "10233e4a-2ab2-4a53-bfff-3480063669e4",
+        "lesson_activity.key": "7a7c347d-b5c6-40cf-9ea7-399bdb1b8819"
+      }
+    },
+    {
+      "key": "276e5034-2ce4-42ff-9d75-b23d8ca774c8",
+      "position": 3,
+      "properties": {
+        "description": "\n\n![](https://images.code.org/f5d91424ac0f0fda534a0fbdadaa5d6a-empty-chart.png)"
+      },
+      "seeding_key": {
+        "activity_section.key": "276e5034-2ce4-42ff-9d75-b23d8ca774c8",
+        "lesson_activity.key": "7a7c347d-b5c6-40cf-9ea7-399bdb1b8819"
+      }
+    },
+    {
+      "key": "4c0a5446-c27b-43cc-9b56-765159fdff5e",
+      "position": 4,
+      "properties": {
+        "description": "**Share:** Have students share with a neighbor, then with the whole class. As students share, fill in the chart in the front of the room"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c0a5446-c27b-43cc-9b56-765159fdff5e",
+        "lesson_activity.key": "7a7c347d-b5c6-40cf-9ea7-399bdb1b8819"
+      }
+    },
+    {
+      "key": "747c3fc7-48ee-4d7b-a103-4236ae5e0861",
+      "position": 5,
+      "properties": {
+        "description": "**Discussion Goal:** This prompt synthesizes the different inputs and outputs students have been learning about throughout the unit so far. A complete list is given in the picture below (click to enlarge). Help students uncover each item in the chart."
+      },
+      "seeding_key": {
+        "activity_section.key": "747c3fc7-48ee-4d7b-a103-4236ae5e0861",
+        "lesson_activity.key": "7a7c347d-b5c6-40cf-9ea7-399bdb1b8819"
+      }
+    },
+    {
+      "key": "3e2d048d-4a6c-447d-86f7-936973bab2f8",
+      "position": 6,
+      "properties": {
+        "description": "![expandable](https://images.code.org/d55b4a1be9a39bd1aa670e485e018b8a-completed-chart.png)"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e2d048d-4a6c-447d-86f7-936973bab2f8",
+        "lesson_activity.key": "7a7c347d-b5c6-40cf-9ea7-399bdb1b8819"
+      }
+    },
+    {
+      "key": "8e59ff9f-eb39-48bb-a8d2-6e2ce398ebee",
+      "position": 7,
+      "properties": {
+        "description": "We’ve seen a lot of different ways to get input from the user, and a lot of choices for how we can display output to the user. In today’s lesson, we’re going to see how we can combine these different forms of input and output to make more complex apps.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8e59ff9f-eb39-48bb-a8d2-6e2ce398ebee",
         "lesson_activity.key": "7a7c347d-b5c6-40cf-9ea7-399bdb1b8819"
       }
     },
@@ -2616,7 +2804,7 @@
       "key": "992bbf68-15df-4812-940b-5089a66a87e7",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Prompt:** What’s an example of a device you’ve seen that combines inputs and outputs between an app and a device? For example, you might press buttons on a device and then something changes on the app."
       },
       "seeding_key": {
         "activity_section.key": "992bbf68-15df-4812-940b-5089a66a87e7",
@@ -2627,7 +2815,7 @@
       "key": "db6ec548-1209-4211-84cf-c8b3cf901c9b",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Discussion Goal:** This prompt foreshadows the project introduced tomorrow, where students develop their own projects that explore human/device interaction. Students may think of examples where they enter information on a keypad or controller and something changes on a screen. Or, students may think of examples where they press buttons on a touchscreen and something physically happens with a device, such as complex vending machines that select items based on screen inputs."
       },
       "seeding_key": {
         "activity_section.key": "db6ec548-1209-4211-84cf-c8b3cf901c9b",
@@ -2649,6 +2837,7 @@
       "key": "455deea9-d30f-447e-9dc7-54726fa2d52f",
       "position": 1,
       "properties": {
+        "description": "**Prompt:** What's an example of when someone has used an app to control a physical device of some kind? For example, using an app to automatically unlock or lock a car door.\n\n**Share Out:** Have students discuss with their neighbors, then lead a full class discussion\n\n**Discussion Goal:** Hopefully students will have a wide variety of experiences. Some examples might include:\n- Using an app to control a thermostat\n- Using an app to control a vacuum robot\n- Using an app to control a security camera\n- Using an app to turn on and off a light or change its color",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -2658,9 +2847,28 @@
       }
     },
     {
-      "key": "eaf54249-fe83-492a-be8e-304bae3f44c7",
+      "key": "913c9cb1-0bec-48df-be6c-5dba6d99d90d",
       "position": 2,
       "properties": {
+        "description": "Today we're going to start a project where you will be building a **prototype** of a similar device. A prototype is an early version of a larger product that you make to perform tests and verify it works as expected. Our prototypes are like \"early versions\" of many of the devices mentioned during the discussion.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Example App:** You may decide to show one of the exemplar apps and videos as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "913c9cb1-0bec-48df-be6c-5dba6d99d90d",
+        "lesson_activity.key": "00e09dc0-8ae2-41c5-85c0-2f2882db3872"
+      }
+    },
+    {
+      "key": "eaf54249-fe83-492a-be8e-304bae3f44c7",
+      "position": 3,
+      "properties": {
+        "description": "**Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.\n\n**Slides**: Present an overview of the project and the steps students will take to complete it.",
         "duration": "15",
         "name": "Introduce the Project"
       },
@@ -2671,10 +2879,11 @@
     },
     {
       "key": "9eb227de-e399-428d-b4e9-636080e69436",
-      "position": 3,
+      "position": 4,
       "properties": {
+        "description": "**Project Guide:** Have students begin filling out the project guide, planning their app and sketching what their device will look like. Check in with students during this step to help brainstorm ideas and ensure students are completing the project guide correctly.\n\n**Distribute:** As students finish their project guide, allow students to access the construction materials you've collected, such as paper and cardboard and any other supplies. ",
         "duration": "20",
-        "name": "Build your Device"
+        "name": "Sketching Your Device"
       },
       "seeding_key": {
         "activity_section.key": "9eb227de-e399-428d-b4e9-636080e69436",
@@ -2683,8 +2892,9 @@
     },
     {
       "key": "12de6b93-5458-4ae3-8f80-cf0f9df1f283",
-      "position": 4,
+      "position": 5,
       "properties": {
+        "description": "**Collect:** Collect Project Guides and look over them for any issues that could cause problems for students in the next portion of the lesson. Students may also use the time before the next lesson to brainstorm additional app ideas.",
         "duration": "5",
         "name": "Wrap Up"
       },
@@ -2697,8 +2907,15 @@
       "key": "14342abd-6a74-4fda-bab7-0dce4bb53956",
       "position": 1,
       "properties": {
+        "description": "**Distribute:** Re-distribute the Project Guides from yesterday. If you have any feedback for students, make time to talk to them individually. Otherwise, students can jump straight into the next step for their project.",
         "duration": "5",
-        "name": "Warm Up"
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Storage Space:** By the end of this lesson, students will have a variety of materials in different stages of completion. Be sure to plan ahead on how you would like students to store these items in your classroom so they can continue working across multiple days."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "14342abd-6a74-4fda-bab7-0dce4bb53956",
@@ -2709,7 +2926,8 @@
       "key": "dfa4d8a9-39b3-4aed-a051-ada2eb58c0c3",
       "position": 2,
       "properties": {
-        "duration": "35",
+        "description": "**Distribute:** Allow students to access the construction materials you've collected, such as paper and cardboard and any other supplies. \n\nStudents will spend most of the class period building their physical devices and testing how it will integrate with the circuit playground.",
+        "duration": "30",
         "name": "Build Your Device"
       },
       "seeding_key": {
@@ -2721,7 +2939,8 @@
       "key": "b68f7a09-980c-4881-9792-0c3d413f4124",
       "position": 3,
       "properties": {
-        "duration": "5",
+        "description": "**Collect:** Provide a space for students to store their projects. You may want to provide extra time for students to organize their materials, store them safely, then clean up their workspace.\n\nYou can look over the devices and make any notes of students you may want to check in with tomorrow.",
+        "duration": "10",
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -2733,6 +2952,7 @@
       "key": "583a2e34-d748-4e90-b511-acb2c89d7296",
       "position": 1,
       "properties": {
+        "description": "**Distribute:** Allow students to collect their devices again and begin working. Allow students to access the construction materials you've collected, such as paper and cardboard and any other supplies. ",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -2745,8 +2965,15 @@
       "key": "3daa0ad9-cfef-4fbb-a106-1424ba5d8cb6",
       "position": 2,
       "properties": {
+        "description": "**Circulate:** Check in with students as they begin finishing up their devices. As they get closer, they can transition to Code Studio and begin coding.",
         "duration": "10",
-        "name": "Complete Your Device"
+        "name": "Complete Your Device",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Helping Students Move On:** Some students may struggle finding a good stopping point in their project - if left to their own devices, they would continue perfecting every last detail of their project and never get to the coding. If this happens, remind students that by definition a **prototype** is an early draft of the product, not the final product. Prototypes are designed to be slightly messy so they can be iterated on quickly, and they will never be perfect. Once they're built enough to test out the larger idea, students can move on to the coding stage."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3daa0ad9-cfef-4fbb-a106-1424ba5d8cb6",
@@ -2757,6 +2984,7 @@
       "key": "aba47acf-2d33-4b83-b1ce-01f29aac14da",
       "position": 3,
       "properties": {
+        "description": "**Transition:** Send students to Code Studio to begin coding their devices.",
         "duration": "25",
         "name": "Start Coding",
         "tips": [
@@ -2775,6 +3003,7 @@
       "key": "d302bc32-b2a9-43bd-b8a4-641cb8c19e9d",
       "position": 4,
       "properties": {
+        "description": "**Collect:** Provide a space for students to store their projects. You may want to provide extra time for students to organize their materials, store them safely, then clean up their workspace.\n\nYou can look over students code within Code Studio to see how much progress they are making and decide if there are any students worth checking in with tomorrow.",
         "duration": "5",
         "name": "Wrap Up"
       },
@@ -2787,6 +3016,7 @@
       "key": "4ad88090-2e80-4a3f-95b5-ebdfd54e89ab",
       "position": 1,
       "properties": {
+        "description": "**Distribute:** Allow students to collect their devices again and begin working. You may decide to limit access to additional construction supplies, since students should be focusing on coding their devices at this point.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -2799,6 +3029,7 @@
       "key": "ca7bc1f9-350f-46f7-9995-b5fd53f3bc5d",
       "position": 2,
       "properties": {
+        "description": "**Transition:** Send students to Code Studio to continue coding their devices. They should be testing their devices and making changes to their prototype if necessary.",
         "duration": "35",
         "name": "Coding and Testing"
       },
@@ -2811,8 +3042,15 @@
       "key": "1fc1794b-af0c-4c64-8d32-436bc790e0ac",
       "position": 3,
       "properties": {
+        "description": "**Collect:** Provide a space for students to store their projects. You may want to provide extra time for students to organize their materials, store them safely, then clean up their workspace.",
         "duration": "5",
-        "name": "Wrap Up"
+        "name": "Wrap Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Demonstrations:** Tomorrow's lesson provides space for students to celebrate and demonstrate their projects. We provide a few options for how this can look, but the format for these demonstrations is left open-ended for you to decide the best way for student to share their projects. Be sure to make a decision on how students will present their work, and consider any additional planning students may need to make before tomorrow in order to be successful."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1fc1794b-af0c-4c64-8d32-436bc790e0ac",
@@ -2823,6 +3061,7 @@
       "key": "ccd01ed4-b50c-4cdf-8173-f31c7c2deaec",
       "position": 1,
       "properties": {
+        "description": "**Distribute:** Allow students to collect their devices again",
         "duration": "0",
         "name": "Warm Up"
       },
@@ -2835,6 +3074,7 @@
       "key": "32e19db2-1431-4c96-a0cc-14905c7fd05e",
       "position": 2,
       "properties": {
+        "description": "**Review:** Students should ensure their devices work as expected in preparation for presenting their work to other students.",
         "duration": "10",
         "name": "Review Device"
       },
@@ -2847,6 +3087,7 @@
       "key": "f8fdf66d-068a-4d14-a607-3f865c1effae",
       "position": 3,
       "properties": {
+        "description": "Provide space for students to demonstrate what they've built to other students. Some options include:\n\n- **Gallery Walk:** Allow students to circulate and interact with the devices each have built\n- **Presentation Pitch:** Have students opt-in to presenting their device as if they are pitching it to investors. Students could prepare additional materials such as a short slide deck\n- **Digital Video Gallery:** Have students record videos of themselves using the devices. Students may decide to construct their video like a commercial, emphasizing how the device can help solve a problem.",
         "duration": "30",
         "name": "Demonstrations"
       },
@@ -2859,8 +3100,10 @@
       "key": "5000c31b-514e-4487-85ff-2867801c772d",
       "position": 4,
       "properties": {
+        "description": "**Collect:** Have students submit their prototypes and submit their apps in App Lab. \n\n**Reflect:** Have students complete a quick 5-question survey in Code Studio. You will be able to view the anonymized results in the teacher dashboard.",
         "duration": "5",
-        "name": "Wrap Up"
+        "name": "Wrap Up",
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "5000c31b-514e-4487-85ff-2867801c772d",
@@ -2882,7 +3125,7 @@
       "key": "b9ab4fcd-bf1a-4fb0-97fe-9f3b3dbc388c",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** How would you quantify each of your five senses (touch, taste, sight, smell, and hearing). Think back to the previous unit and the various ways you came up with to encode data for a computer."
+        "description": "**Distribute:** Pass out Circuit Playgrounds to each pair of students "
       },
       "seeding_key": {
         "activity_section.key": "b9ab4fcd-bf1a-4fb0-97fe-9f3b3dbc388c",
@@ -2893,10 +3136,44 @@
       "key": "aa103762-741f-4711-b25e-ad8022854279",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:** The goal here is to get students thinking about how an natural (or analog) value can be converted into a computable format. Encourage students to consider what the upper and lower bounds of each value might be (for example, is there a minimum or maximum amount of sound?)."
+        "description": "**Prompt:** Humans have 5 senses - touch, taste, sight, smell, and hearing. Which of these senses do you think the Circuit Playground has? Are there any that you think the Circuit Playground has that we don’t?\n\nAs students consider this question, encourage them to look at the markings on the Circuit Playground for clues (for example: there are eye and ear icons on the circuit playground that can give clues)\n"
       },
       "seeding_key": {
         "activity_section.key": "aa103762-741f-4711-b25e-ad8022854279",
+        "lesson_activity.key": "ff7938c3-c01d-4e1b-a715-7385ad673052"
+      }
+    },
+    {
+      "key": "6a2c9456-6251-4757-aa5d-352ba8b02851",
+      "position": 3,
+      "properties": {
+        "description": "**Share Out:** Have students share with a neighbor, then lead a full-class discussion. Take notes at the front of the room."
+      },
+      "seeding_key": {
+        "activity_section.key": "6a2c9456-6251-4757-aa5d-352ba8b02851",
+        "lesson_activity.key": "ff7938c3-c01d-4e1b-a715-7385ad673052"
+      }
+    },
+    {
+      "key": "1a6b25e4-1a51-4fa5-bd6f-efc4e413d051",
+      "position": 4,
+      "properties": {
+        "description": "**Discussion Goal:** Using the markings on the circuit playground, students may predict that there are visual and auditory sensors, but they might not be able to describe exactly what they do - for example, does the visual sensor “see” objects, or detect distance, or detect colors, or detect light? Students may also predict that there is a temperature sensor based on the thermometer icon on the circuit playground. Students may also predict sensors that the circuit playground does not have, like humidity or heart-beat sensors, but it’s fine to list them for now as part of the brainstorm discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "1a6b25e4-1a51-4fa5-bd6f-efc4e413d051",
+        "lesson_activity.key": "ff7938c3-c01d-4e1b-a715-7385ad673052"
+      }
+    },
+    {
+      "key": "c4b2c81c-cd46-4c69-8511-cb90b88102af",
+      "position": 5,
+      "properties": {
+        "description": "Today we’re going to learn about the different sensors that the Circuit Playground has and how they can be used for input.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c4b2c81c-cd46-4c69-8511-cb90b88102af",
         "lesson_activity.key": "ff7938c3-c01d-4e1b-a715-7385ad673052"
       }
     },
@@ -2992,11 +3269,22 @@
       "key": "25ee24a6-7921-4a60-8f23-688d21f13441",
       "position": 1,
       "properties": {
-        "description": "**Journal:** Considering all of the computing devices that you interact with on a regular basis, identify as many potential analog sensors as you can. Where do your computing devices take a continuously changing signal and convert it into digital data?",
+        "description": "**Journal:** Considering all of the computing devices that you interact with on a regular basis, identify as many potential sensors as you can. Where do your computing devices take a continuously changing input and convert it into digital data?",
         "name": "Sensors All Around\r"
       },
       "seeding_key": {
         "activity_section.key": "25ee24a6-7921-4a60-8f23-688d21f13441",
+        "lesson_activity.key": "d1ae4eb6-bdc3-4f03-8809-dee0016c1b59"
+      }
+    },
+    {
+      "key": "8113be72-849e-4f92-a30c-1954264325b9",
+      "position": 2,
+      "properties": {
+        "description": "**Discussion Goal:** Students may repeat ideas from the warm-up discussion, but encourage them to make connections to other real-world devices. Emphasize that they can think of situations where devices must account for a range of values like we saw with these sensors."
+      },
+      "seeding_key": {
+        "activity_section.key": "8113be72-849e-4f92-a30c-1954264325b9",
         "lesson_activity.key": "d1ae4eb6-bdc3-4f03-8809-dee0016c1b59"
       }
     },
@@ -3015,7 +3303,7 @@
       "key": "ac25b4b6-6b3b-4db8-80d4-62f5a2a4bf5b",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Prompt:** Have you ever tried to walk across a raised narrow platform, one foot in front of the other? How do you keep your balance and avoid falling over?"
       },
       "seeding_key": {
         "activity_section.key": "ac25b4b6-6b3b-4db8-80d4-62f5a2a4bf5b",
@@ -3026,10 +3314,33 @@
       "key": "0ba3b554-570f-45ff-8859-80a6b42410fc",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Share Out:** Have students share with a partner, then share as a full group"
       },
       "seeding_key": {
         "activity_section.key": "0ba3b554-570f-45ff-8859-80a6b42410fc",
+        "lesson_activity.key": "50fd07ea-3de1-458e-a06a-a3eadbd746e6"
+      }
+    },
+    {
+      "key": "a5d93b2c-f0b6-4041-9064-fbc77fd8f7b0",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Guide the discussion towards understanding our sense of balance - how we can detect when we’re about to fall, and the strategies we use to avoid falling (like keeping our arms out). Emphasize that, in some ways, our “sense of balance” is like another one of our senses, similar to the discussion yesterday"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5d93b2c-f0b6-4041-9064-fbc77fd8f7b0",
+        "lesson_activity.key": "50fd07ea-3de1-458e-a06a-a3eadbd746e6"
+      }
+    },
+    {
+      "key": "2e75ea0c-79e5-4ec5-b4f9-ac5cd168777c",
+      "position": 4,
+      "properties": {
+        "description": "Humans can detect when we’re off-balance, and we can make adjustments to stay balanced. Our Circuit Playground can also detect when it’s off balance and tilted, so that it can try and correct itself. It uses a sensor called an **accelerometer** to detect its position and keep track of how tilted or off-balance it is. Other devices, like automated drones or robotic vacuums, use an accelerometer to level themselves so they can move automatically without falling over.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2e75ea0c-79e5-4ec5-b4f9-ac5cd168777c",
         "lesson_activity.key": "50fd07ea-3de1-458e-a06a-a3eadbd746e6"
       }
     },
@@ -3115,7 +3426,7 @@
       "key": "6d436fb1-d9c3-406f-8124-b9294c1e22eb",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:** Students should think of several applications for the accelerometer,  explaining how knowing the pitch and roll could be useful."
+        "description": "**Discussion Goal:** Students should think of several applications for the accelerometer,  explaining how knowing the pitch and roll could be useful. Their responses may be similar to the examples in the warm-up, like autonomous vehicles, but encourage students to think beyond those uses."
       },
       "seeding_key": {
         "activity_section.key": "6d436fb1-d9c3-406f-8124-b9294c1e22eb",
@@ -3137,7 +3448,7 @@
       "key": "59627a03-b98b-472b-a2a1-e85bd59afac1",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Prompt:** We've been using the buzzer to make sounds, but those buzzes didn't always sound too great.  What do you think you need to make real music on the buzzer?"
       },
       "seeding_key": {
         "activity_section.key": "59627a03-b98b-472b-a2a1-e85bd59afac1",
@@ -3148,7 +3459,7 @@
       "key": "6d7e65c4-c5ba-40c1-a49b-a3726f90b859",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Discussion Goal:** Students may come up with many different ideas, but there are two aspects of this problem that should be highlighted before students move on to the activity.  First, specifying frequencies is not the best way to indicate musical notes, since music only uses certain tones and most other frequencies are considered “out of tune”. Second, students will need a way to string sounds, or notes, together to make a song rather then using individual `buzzer.frequency()` blocks."
       },
       "seeding_key": {
         "activity_section.key": "6d7e65c4-c5ba-40c1-a49b-a3726f90b859",
@@ -3259,7 +3570,7 @@
       "key": "1e3fd919-8473-4db5-acc7-eb101b143d56",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**",
+        "description": "**Prompt:** How are the arrays we use for songs similar to the array we use for `colorLEDs`? How are the arrays different?",
         "name": "Journal \r"
       },
       "seeding_key": {
@@ -3271,10 +3582,21 @@
       "key": "1d9ecb39-4f99-4292-a356-0c2de83a51bb",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Share**  After giving students time to reflect in their own journals, have them share with a partner or in small groups."
       },
       "seeding_key": {
         "activity_section.key": "1d9ecb39-4f99-4292-a356-0c2de83a51bb",
+        "lesson_activity.key": "f37fecbe-8940-4341-9712-378d424ddd7d"
+      }
+    },
+    {
+      "key": "aceee0f6-b048-48f7-af1c-4e69fdfd0122",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students should note that both situations are representing a list of items, so arrays make the most sense. Students may notice any of the following differences:\n- We can access each LED individually if we want to with an array, but with songs it’s better to access the entire list together to play them in sequence\n- There are always 10 LEDs, but the number of notes in a song can grow or shrink\n- When playing a song with tempo, we can have arrays within arrays. This doesn’t happen with the LEDs\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "aceee0f6-b048-48f7-af1c-4e69fdfd0122",
         "lesson_activity.key": "f37fecbe-8940-4341-9712-378d424ddd7d"
       }
     },
@@ -3293,7 +3615,7 @@
       "key": "0ee160ce-3f7e-4b1e-8b60-5fdec08c5eee",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Distribute:** Pass out a board and USB cable to each pair of students."
       },
       "seeding_key": {
         "activity_section.key": "0ee160ce-3f7e-4b1e-8b60-5fdec08c5eee",
@@ -3304,7 +3626,13 @@
       "key": "39c8247f-de2b-4a30-85f5-6a302877b818",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Transition to Code Studio:** Have students get started in Code Studio right away",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Starting Right Away:** This lesson is packed with new content and includes several videos that help introduce students to these new ideas. In the interest of giving students the most amount of time to practice these new concepts, we recommend jumping straight into Code Studio and starting the lesson there."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "39c8247f-de2b-4a30-85f5-6a302877b818",
@@ -3414,7 +3742,7 @@
       "key": "7767d79f-c7bc-4469-bfba-40d6462f1204",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**  Think back to some of the programs that you have made before.  What are two times that you could have used functions with parameters?  What would the parameter be? "
+        "description": "Think back to some of the programs that you have made before.  What is one time that you could have used functions with parameters?  What would the parameter be?  How should the function's behavior change when the parameter changes?"
       },
       "seeding_key": {
         "activity_section.key": "7767d79f-c7bc-4469-bfba-40d6462f1204",
@@ -3436,9 +3764,62 @@
       "key": "49118001-a0ba-4136-841e-f1e76f05b9b6",
       "position": 1,
       "properties": {
+        "description": "**Prompt:** Answer the following questions about this video:\n1) How is the user interacting with the artwork and electronic devices?\n2) How are the electronic devices improving the piece of artwork?",
+        "name": "Journal"
       },
       "seeding_key": {
         "activity_section.key": "49118001-a0ba-4136-841e-f1e76f05b9b6",
+        "lesson_activity.key": "56dc9448-0851-4c35-8ee9-1f907fed6b05"
+      }
+    },
+    {
+      "key": "278c4a81-49de-4185-a4a7-89f8b1745bcd",
+      "position": 2,
+      "properties": {
+        "description": "**Video:** Show the video [Pu Gong Ying Tu (Dandelion Painting)](https://www.youtube.com/watch?v=C1-pdgGn0SI) by artist Jie Qi"
+      },
+      "seeding_key": {
+        "activity_section.key": "278c4a81-49de-4185-a4a7-89f8b1745bcd",
+        "lesson_activity.key": "56dc9448-0851-4c35-8ee9-1f907fed6b05"
+      }
+    },
+    {
+      "key": "afadc431-09d2-4f82-a8e3-2d51213f5d14",
+      "position": 3,
+      "properties": {
+        "description": "**Share Out:** Have students share their ideas with the class"
+      },
+      "seeding_key": {
+        "activity_section.key": "afadc431-09d2-4f82-a8e3-2d51213f5d14",
+        "lesson_activity.key": "56dc9448-0851-4c35-8ee9-1f907fed6b05"
+      }
+    },
+    {
+      "key": "c957ae3d-b931-469d-a846-8106c84a3eff",
+      "position": 4,
+      "properties": {
+        "description": "**Discussion Goal:** Students should notice that the user interacts with the artwork by blowing on the painting. Students may describe this interaction as using a sensor to detect changes in temperature or sound. Students should also comment on how the LEDs from the devices improve the artwork by adding to the design of the flowers. Students may make connections to other artwork they have seen, especially paintings that use LEDs as part of the design."
+      },
+      "seeding_key": {
+        "activity_section.key": "c957ae3d-b931-469d-a846-8106c84a3eff",
+        "lesson_activity.key": "56dc9448-0851-4c35-8ee9-1f907fed6b05"
+      }
+    },
+    {
+      "key": "2924d563-01b8-4dbf-8160-948172bb9a4f",
+      "position": 5,
+      "properties": {
+        "description": "Today, we're going to make our own interactive art. We will use physical materials to build a piece of artwork of your choosing, and use the sensors on the circuit playground to detect input from the user and react. Your device won't use a screen at all except to help debug - the user will only interact with your physical device.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Example App:** You may decide to show one of the exemplar apps as an example of what students can create. This can help spark ideas, and give students a model of what to work towards when making their own devices.\n\n**Other Examples:** Interactive art experiences can be found in live shows, museum exhibits, or specialized artistic displays. You may decide to show some other examples to students, such as:\n- [Otherworld](https://otherworldohio.com/), an immersive art installation\n- [Meow Wolf](https://meowwolf.com/), an interactive artist community\n- [iLuminate](https://www.youtube.com/channel/UCPP56EmLKcMhG4Cron9tYKg), a dance troupe that uses electronics in time with their dances"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2924d563-01b8-4dbf-8160-948172bb9a4f",
         "lesson_activity.key": "56dc9448-0851-4c35-8ee9-1f907fed6b05"
       }
     },
@@ -3480,12 +3861,37 @@
       }
     },
     {
+      "key": "f8d53ff6-729b-4706-8d55-08a9782359f4",
+      "position": 4,
+      "properties": {
+        "description": "Allow students to walk around the room and interact with each other's devices. Celebrate all of the different ideas that students were able to implement with the same basic code.",
+        "name": "(Optional) Gallery Walk"
+      },
+      "seeding_key": {
+        "activity_section.key": "f8d53ff6-729b-4706-8d55-08a9782359f4",
+        "lesson_activity.key": "f842c086-4fd7-4c74-b9da-cdd7037ccaef"
+      }
+    },
+    {
       "key": "8eac32aa-4346-42aa-a744-a522e989e4a4",
       "position": 1,
       "properties": {
+        "description": "**Prompt:** What was your favorite part of the app you created? What is something you wish you had time to improve?",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "8eac32aa-4346-42aa-a744-a522e989e4a4",
+        "lesson_activity.key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa"
+      }
+    },
+    {
+      "key": "fea0ee7f-496e-4cf0-8994-a7b42411fded",
+      "position": 2,
+      "properties": {
+        "description": "You may decide to have students share these with a partner, or you may decide to have students keep their responses private. Either way, the goal of the prompt is to have students reflect on the apps they've created and celebrate what went well and acknowledge what could be improved for next time."
+      },
+      "seeding_key": {
+        "activity_section.key": "fea0ee7f-496e-4cf0-8994-a7b42411fded",
         "lesson_activity.key": "fdfe06d6-c4e6-44bb-b7b2-5345f4d4f3aa"
       }
     },
@@ -3504,7 +3910,7 @@
       "key": "6b340634-c75f-4591-8181-c68c194e2c6a",
       "position": 1,
       "properties": {
-        "description": "**Prompt:** "
+        "description": "**Prompt:** If you could create any kind of computational device, what would it be? What would it do? How would people interact with it?"
       },
       "seeding_key": {
         "activity_section.key": "6b340634-c75f-4591-8181-c68c194e2c6a",
@@ -3515,10 +3921,33 @@
       "key": "f0e71aca-2eea-4d9f-a5d0-75699c91727d",
       "position": 2,
       "properties": {
-        "description": "**Share Out:** After a few minutes of thinking time, have students share their ideas.\n\n**Discussion Goal:**"
+        "description": "**Share:** After a few minutes of thinking time, have students share their ideas. Keep track of ideas at the front of the room."
       },
       "seeding_key": {
         "activity_section.key": "f0e71aca-2eea-4d9f-a5d0-75699c91727d",
+        "lesson_activity.key": "b616d108-6a90-4af8-a4be-071b4b2ed642"
+      }
+    },
+    {
+      "key": "574d8588-2f82-4a83-b799-c2d196474db0",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students will have a wide variety of ideas. As they share, emphasize the components of their ideas that involve the Circuit Playground or an app, which are two things we already know how to use. However, many student ideas will probably involve some sort of external component that’s disconnected from the rest of the circuit playground - for example, additional lights or buttons in different places on the device. Keep track of when students mention these types of components in their device."
+      },
+      "seeding_key": {
+        "activity_section.key": "574d8588-2f82-4a83-b799-c2d196474db0",
+        "lesson_activity.key": "b616d108-6a90-4af8-a4be-071b4b2ed642"
+      }
+    },
+    {
+      "key": "0a10d323-4a4c-4ce9-8c6c-4001af256890",
+      "position": 4,
+      "properties": {
+        "description": "This is a great list of devices, and one thing I notice is how many of them involve needing something more than what the Circuit Playground offers. For the next few days, we’re going to learn how to connect external components to the circuit playground so we can prototype devices like this and add additional features. Today, we’ll learn how to add additional LEDs to our devices using wires and electricity.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0a10d323-4a4c-4ce9-8c6c-4001af256890",
         "lesson_activity.key": "b616d108-6a90-4af8-a4be-071b4b2ed642"
       }
     },
@@ -3603,7 +4032,7 @@
       "key": "8423d26a-cb1f-4f6b-9676-a520c1c3333b",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Prompt:** What’s a new type of device you can create now that you know how to wire up external LEDs that you wouldn’t have been able to create before this lesson?"
       },
       "seeding_key": {
         "activity_section.key": "8423d26a-cb1f-4f6b-9676-a520c1c3333b",
@@ -3614,7 +4043,7 @@
       "key": "2252b281-96cb-4344-9616-9eb40d7389b9",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Discussion Goal:** Students should have a variety of answers - as students explain their answers, listen for the places where an external component is useful in the device. There is no single correct answer to this prompt - instead, encourage students to listen to the ideas of their peers to hear different types of devices others are thinking about. This can be helpful for the end of unit project when students need to come up with their own device to prototype and develop."
       },
       "seeding_key": {
         "activity_section.key": "2252b281-96cb-4344-9616-9eb40d7389b9",
@@ -3636,7 +4065,7 @@
       "key": "865feea9-b961-4c87-bbfd-1fe59096959d",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Prompt:** Yesterday we used electricity to create a circuit to light up an LED. Today, we’re going to explore how to use electricity to represent a button press that we can use for input. What do you think that circuit will look like? What materials do you think we’ll need?"
       },
       "seeding_key": {
         "activity_section.key": "865feea9-b961-4c87-bbfd-1fe59096959d",
@@ -3647,21 +4076,10 @@
       "key": "673f93f7-e05d-4a43-930c-2f43c183ced4",
       "position": 2,
       "properties": {
-        "description": "**Share Out:**"
+        "description": "**Discussion Goal:** This discussion asks students to make connections between the electrical knowledge they developed in the last lesson and make connections to today’s lesson. Students might suggest that they will need to connect wires to one of the pins and a GND pin in order to represent the flow of electricity. They may be less sure about what happens in between those two pins, and may suggest different materials that we will need. Keep track of their responses, but don’t validate any responses as correct or incorrect yet. Instead, students will discover how buttons work in the first level in Code Studio"
       },
       "seeding_key": {
         "activity_section.key": "673f93f7-e05d-4a43-930c-2f43c183ced4",
-        "lesson_activity.key": "1d268e38-5529-4871-99cb-7352ada1d122"
-      }
-    },
-    {
-      "key": "5f21d9b8-764b-415b-a07a-03f23235573a",
-      "position": 3,
-      "properties": {
-        "description": "**Discussion Goal:**"
-      },
-      "seeding_key": {
-        "activity_section.key": "5f21d9b8-764b-415b-a07a-03f23235573a",
         "lesson_activity.key": "1d268e38-5529-4871-99cb-7352ada1d122"
       }
     },
@@ -3735,7 +4153,7 @@
       "key": "ca77166c-d278-4926-9c28-dd6961e71412",
       "position": 1,
       "properties": {
-        "description": "**Prompt:**"
+        "description": "**Prompt:** Think back to the list of devices you wish you could develop and how people would use it. Using what we’ve learned in the last few lessons, describe with more details how you could start to create a device like that. How would you connect the wires? What external components would you use?"
       },
       "seeding_key": {
         "activity_section.key": "ca77166c-d278-4926-9c28-dd6961e71412",
@@ -3746,7 +4164,7 @@
       "key": "d55a589d-1e36-45a9-b165-992c94a28a7e",
       "position": 2,
       "properties": {
-        "description": "**Discussion Goal:**"
+        "description": "**Discussion Goal:** This prompt asks students to remember their responses to the warm-up from the previous lesson. Based on what they’ve learned, students can hopefully describe their devices in more detail, explaining how they would use wires and LEDs to create the effects they’re imagining. Encourage students to share their ideas with each other, which will help prepare students for the project in the next lesson."
       },
       "seeding_key": {
         "activity_section.key": "d55a589d-1e36-45a9-b165-992c94a28a7e",
@@ -5803,6 +6221,28 @@
     },
     {
       "chapter": 75,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "5000c31b-514e-4487-85ff-2867801c772d"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot"
+      ]
+    },
+    {
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5827,7 +6267,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5852,7 +6292,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5877,7 +6317,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5902,7 +6342,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5927,7 +6367,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5952,7 +6392,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5977,7 +6417,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6002,7 +6442,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -6027,7 +6467,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6052,7 +6492,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6077,7 +6517,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6102,7 +6542,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6127,7 +6567,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6152,7 +6592,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6177,7 +6617,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -6202,7 +6642,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6227,7 +6667,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6252,7 +6692,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6277,7 +6717,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6302,7 +6742,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6327,7 +6767,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6352,7 +6792,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6377,7 +6817,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6402,7 +6842,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6427,7 +6867,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6452,7 +6892,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6477,7 +6917,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -6502,7 +6942,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -6527,7 +6967,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 11,
       "activity_section_position": 1,
       "assessment": true,
@@ -6552,7 +6992,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -6577,7 +7017,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6602,7 +7042,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6627,7 +7067,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6652,7 +7092,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6677,7 +7117,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -6702,7 +7142,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -6727,7 +7167,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6752,7 +7192,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6777,7 +7217,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6802,7 +7242,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -6827,7 +7267,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -6852,7 +7292,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -6877,7 +7317,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -6902,7 +7342,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6926,7 +7366,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6950,7 +7390,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -6974,7 +7414,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6999,7 +7439,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7024,7 +7464,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7049,7 +7489,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7074,7 +7514,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7099,7 +7539,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7124,7 +7564,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7149,7 +7589,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7174,7 +7614,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7199,7 +7639,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7224,7 +7664,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7249,7 +7689,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7274,7 +7714,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7299,7 +7739,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7324,7 +7764,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7349,7 +7789,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 138,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7374,7 +7814,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 139,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7398,7 +7838,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 140,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7422,7 +7862,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 141,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7446,7 +7886,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 142,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8361,6 +8801,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csd6-pilot-2022",
+        "activity_section.key": "5000c31b-514e-4487-85ff-2867801c772d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U6 - Sensors - P_2022",
         "script_level.level_keys": [
           "CSD U6 - Sensors - P_2022"
@@ -9182,7 +9634,7 @@
       "url": "https://drive.google.com/file/d/1nxKyWBb_zuIrAJ9hSFc6t3vsa1tJkeKF/view?usp=sharing",
       "key": "accelerometer_events",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -9266,7 +9718,7 @@
       "url": "https://drive.google.com/file/d/12z50tIYpRJ2LFUlpYJYcKQ6I_qMk6g5p/view?usp=sharing",
       "key": "circuits_and_buttons",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -9492,6 +9944,29 @@
       }
     },
     {
+      "name": "Functions",
+      "url": "https://youtu.be/NBwlNBE9Fl0",
+      "key": "functions_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "functions_1"
+      }
+    },
+    {
+      "name": "Functions with Parameters",
+      "url": "https://youtu.be/5UMKeMPCa7E",
+      "key": "functions_with_parameters",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "functions_with_parameters"
+      }
+    },
+    {
       "name": "Getting Screen Inputs",
       "url": "https://docs.google.com/presentation/d/1DLjFJeLH1tPvdBU1d7dCSomA-U5D-TZSN9sOCHtrL2c/copy",
       "key": "getting_screen_inputs",
@@ -9537,6 +10012,18 @@
       },
       "seeding_key": {
         "resource.key": "innovations_in_computing"
+      }
+    },
+    {
+      "name": "Introduction to Arrays",
+      "url": "https://youtu.be/seBDTeZmb-k",
+      "key": "introduction_to_arrays_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_arrays_1"
       }
     },
     {
@@ -9864,7 +10351,7 @@
       "url": "https://drive.google.com/file/d/1L7NhIsMI70GpuA5_gsF-M8VfJPY6Ld3Q/view?usp=sharing",
       "key": "the_accelerometer",
       "properties": {
-        "audience": "Teacher",
+        "audience": "Student",
         "type": "Resource"
       },
       "seeding_key": {
@@ -10085,6 +10572,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "resource.key": "functions_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Getting Properties",
         "resource.key": "getting_screen_inputs"
       }
@@ -10117,6 +10616,12 @@
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "resource.key": "the_internet_of_things"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "resource.key": "introduction_to_arrays_1"
       }
     },
     {
@@ -10374,6 +10879,16 @@
   ],
   "vocabularies": [
     {
+      "key": "circuit",
+      "word": "Circuit",
+      "definition": "A device that provides a path for an electric current to flow, often modifying that current. In computers, circuits allow for simple logical and mathematical operations using electricity.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "circuit"
+      }
+    },
+    {
       "key": "innovation",
       "word": "Innovation",
       "definition": "A new or improved idea, device, product, etc, or the development thereof",
@@ -10398,6 +10913,12 @@
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
+        "vocabulary.key": "circuit"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
         "vocabulary.key": "prototype"
       }
     },
@@ -10406,9 +10927,22 @@
         "lesson.key": "Innovations in Computing",
         "vocabulary.key": "innovation"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "prototype"
+      }
     }
   ],
   "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "accelerometer"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Accelerometer",
@@ -10649,6 +11183,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Making Music",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "buzzer.playSong"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Physical Outputs",
         "programming_environment.name": "applab",
         "programming_expression.key": "createButton"
@@ -10748,6 +11289,16 @@
       "seeding_key": {
         "lesson.key": "Analog Input",
         "objective.key": "01285493-c011-48b4-919a-5e422553bada"
+      }
+    },
+    {
+      "key": "0fa0987c-8e82-45fc-9dc3-dccea2009ebd",
+      "properties": {
+        "description": "Use accelerometer orientation (pitch and roll) when creating apps"
+      },
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "objective.key": "0fa0987c-8e82-45fc-9dc3-dccea2009ebd"
       }
     },
     {
@@ -10861,6 +11412,16 @@
       }
     },
     {
+      "key": "7586c430-2120-4bb4-a61c-12eba9c1214d",
+      "properties": {
+        "description": "Use the data event to continually update an element's properties."
+      },
+      "seeding_key": {
+        "lesson.key": "Accelerometer",
+        "objective.key": "7586c430-2120-4bb4-a61c-12eba9c1214d"
+      }
+    },
+    {
       "key": "7a5ad671-a522-4f35-a48e-57c1916e8737",
       "properties": {
         "description": "Use if-statements to make decisions when creating apps"
@@ -10868,6 +11429,16 @@
       "seeding_key": {
         "lesson.key": "lesson-9",
         "objective.key": "7a5ad671-a522-4f35-a48e-57c1916e8737"
+      }
+    },
+    {
+      "key": "7b6e4fc8-0396-43ef-a0a3-7e020291f63c",
+      "properties": {
+        "description": "Use functions to organize repeated blocks of code"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "objective.key": "7b6e4fc8-0396-43ef-a0a3-7e020291f63c"
       }
     },
     {
@@ -10888,6 +11459,26 @@
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
         "objective.key": "8d4505aa-cf82-4e29-a701-83422e40f0d1"
+      }
+    },
+    {
+      "key": "9152d764-2dae-4cca-b233-9b9aa20b1b58",
+      "properties": {
+        "description": "Create and debug a circuit with a button"
+      },
+      "seeding_key": {
+        "lesson.key": "Physical Outputs",
+        "objective.key": "9152d764-2dae-4cca-b233-9b9aa20b1b58"
+      }
+    },
+    {
+      "key": "9a806adb-8f2b-4e66-973c-35b3a4dc6173",
+      "properties": {
+        "description": "Create prototype devices that control an LED with code"
+      },
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "objective.key": "9a806adb-8f2b-4e66-973c-35b3a4dc6173"
       }
     },
     {
@@ -10918,6 +11509,16 @@
       "seeding_key": {
         "lesson.key": "Board Events",
         "objective.key": "bac6de6a-3ce5-4f6d-bdce-8391e78ada83"
+      }
+    },
+    {
+      "key": "bd69f565-0f90-4d12-998a-35fbe2b01c9b",
+      "properties": {
+        "description": "Create prototype devices that use an external button for input"
+      },
+      "seeding_key": {
+        "lesson.key": "Physical Outputs",
+        "objective.key": "bd69f565-0f90-4d12-998a-35fbe2b01c9b"
       }
     },
     {
@@ -10958,6 +11559,36 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "objective.key": "dcf0f2d9-571a-42d0-99e1-102fce1ae3f2"
+      }
+    },
+    {
+      "key": "df49dd5f-e80e-429f-8ef4-dc3c45d02f40",
+      "properties": {
+        "description": "Create and debug a circuit with an LED"
+      },
+      "seeding_key": {
+        "lesson.key": "Circuits and Physical Prototypes",
+        "objective.key": "df49dd5f-e80e-429f-8ef4-dc3c45d02f40"
+      }
+    },
+    {
+      "key": "e3680984-9821-47de-89af-6116166572b7",
+      "properties": {
+        "description": "Use parameters to generalize the purpose of a function"
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "objective.key": "e3680984-9821-47de-89af-6116166572b7"
+      }
+    },
+    {
+      "key": "e578330a-fed2-48c8-b59d-d43e5fb6d2ba",
+      "properties": {
+        "description": "Use the buzzer to produce individual notes or sequences of notes"
+      },
+      "seeding_key": {
+        "lesson.key": "Making Music",
+        "objective.key": "e578330a-fed2-48c8-b59d-d43e5fb6d2ba"
       }
     },
     {
