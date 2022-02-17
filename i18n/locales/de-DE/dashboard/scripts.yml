@@ -18741,6 +18741,8 @@ de:
             lesson-19:
               name: Projekt
             lesson-20: {}
+            Circuits and Physical Prototypes:
+              description_teacher: Bei der Vorbereitung des Abschlussprojekts zu diesem Kapitel lernen die SchülerInnen, wie man einen Prototyp eines physischen Objekts entwickelt, das einen Circuit Playground enthält. Anhand eines modellierten Leitfadens zur Projektplanung lernen die SchülerInnen, wie man ein paar einfache Schaltkreise verdrahtet und Prototypen baut, die das beabsichtigte Design eines Produkts vermitteln können, wobei billige und leicht verfügbare Materialien wie Karton und Klebeband verwendet werden.
           lesson_groups:
             lessonGroup-3:
               display_name: Vorlagen
@@ -19322,7 +19324,42 @@ de:
               display_name: Variablen
             lessonGroup-4:
               display_name: Projekt am Ende des Kurses
-        csd6-pilot-2022: {}
+        csd6-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            Project - Prototype an Innovation:
+              description_teacher: In diesem Abschlussprojekt für den Kurs entwickeln und testen die SchülerInnen gemeinsam einen Prototyp für ein innovatives Computergerät, das auf dem Circuit Playground basiert. Unter Verwendung der auf der Platine verfügbaren In- und Outputs werden sie in Gruppenarbeit Programme erstellen, die interessante und einzigartige Benutzerinteraktionen ermöglichen.
+            Innovations in Computing:
+              name: Innovationen in der Datenverarbeitung
+              description_teacher: Zum Auftakt der letzten Lerneinheit dieses Kurses werden die SchülerInnen einige Untersuchungen zu interessanten Innovationen im Bereich der Informatik durchführen. In dieser Lektion werden die SchülerInnen mit einer größeren Vielfalt von Formfaktoren für Computer (wie ein Computer aussieht) und Bereichen konfrontiert, die von Computern beeinflusst werden. Später in dieser Lektion werden die SchülerInnen sich noch einmal mit Geräten auseinandersetzen, die sie in dieser Lektion kennengelernt haben, während sie ihre eigenen physischen Computergeräte entwickeln.
+            Designing Screens with Code: {}
+            The Circuit Playground:
+              name: Der Circuit Playground
+            Board Events:
+              name: Platinen-Ereignisse
+            Arrays and Color LEDs:
+              name: Farbige LEDs
+            Getting Properties: {}
+            lesson-9: {}
+            lesson-10:
+              name: Kombinieren von Eingaben
+            Analog Input: {}
+            Accelerometer:
+              name: Beschleunigungssensor
+              description_teacher: In dieser Lektion werden die SchülerInnen den Beschleunigungsmesser und seine Möglichkeiten erkunden. Sie machen sich mit seinen Ereignissen und Eigenschaften vertraut und erstellen mehrere Programme unter Verwendung des Beschleunigungsmessers, die denen ähneln, die sie wahrscheinlich schon in realen Apps gesehen haben.
+            Making Music:
+              name: Musik machen
+            Functions with Parameters:
+              name: Funktionen
+            Circuits and Physical Prototypes: {}
+            Physical Outputs: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kapitel 1
+            lessonGroup-3:
+              display_name: Kapitel 2
         csa8-exemplars:
           lessons:
             lesson-1: {}
@@ -20876,3 +20913,117 @@ de:
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
+        tess-test-csa: {}
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java-Labor
+            lesson-9:
+              name: Schleifen
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+        pltess: {}
+        self-paced-pl-csa1-2022:
+          lessons:
+            lesson-1:
+              name: Willkommen bei Code.org
+        self-paced-pl-csa3-2022: {}
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            Unit 7 Pilot Survey: {}
+            Java Lab:
+              name: Java-Labor
+              key: Java-Labor
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-10:
+              key: Lektion-10
+            lesson-6:
+              key: Lektion-6
+            lesson-7:
+              key: Lektion-7
+            lesson-8:
+              key: Lektion-8
+            lesson-9:
+              key: Lektion-9
+            lesson-11:
+              key: Lektion-11
+            lesson-12:
+              key: Lektion 12
+            lesson-13:
+              key: Lektion 13
+            lesson-14:
+              key: Lektion-14
+            lesson-15:
+              key: Lektion-15
+            lesson-1:
+              key: Lektion-1
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+            lesson-4:
+              key: Lektion-4
+            lesson-5:
+              key: Lektion-5
+              name: Prüfungstag
+            lesson-16:
+              key: Lektion-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Prüfungstag
+            Unit 8 Pilot Survey: {}
+            Java Lab:
+              name: Java-Labor
+              key: Java-Labor
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-1:
+              key: Lektion-1
+            lesson-2:
+              key: Lektion-2
+            lesson-3:
+              key: Lektion-3
+            lesson-4:
+              key: Lektion-4
+            lesson-5:
+              key: Lektion-5
+            lesson-10:
+              key: Lektion-10
+            lesson-6:
+              key: Lektion-6
+            lesson-7:
+              key: Lektion-7
+            lesson-8:
+              key: Lektion-8
+            lesson-9:
+              key: Lektion-9
+            lesson-11:
+              key: Lektion-11
+            lesson-12:
+              key: Lektion 12
+            lesson-13:
+              key: Lektion 13
+            lesson-14:
+              key: Lektion-14
+            lesson-15:
+              key: Lektion-15
+              name: Prüfungstag
+            lesson-16:
+              key: Lektion-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt
+            lessonGroup-5:
+              display_name: Sandbox
