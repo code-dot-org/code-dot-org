@@ -277,6 +277,72 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "An chaoi a n-oibríonn ríomhairí: Crua-earraí agus Bogearraí"
+        },
+        "functions_2/csd/2021": {
+          "name": "Feidhmeanna"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Lúba \"Do Gach\""
+        },
+        "for_loops/csd/2021": {
+          "name": "Lúba \"Do Gach\""
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "An chaoi a n-oibríonn ríomhairí: Ciorcaid agus Loighic"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Físeán: Meaisínfhoghlaim"
+        },
+        "variables_1/csd/2021": {
+          "name": "Athróga"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "An Cluaisín Beochana"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Sprideanna"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Airíonna na Spride"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Sloinn Boole"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Ráitis Choinníollacha"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Ráitis \"má/i ngach cás eile\""
+        },
+        "velocity_1/csd/2021": {
+          "name": "Treoluas"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Treoluas"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Feidhmeanna"
+        },
+        "functions_1/csd/2021": {
+          "name": "Feidhmeanna"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "lists/csd/2021": {
+          "name": "Liostaí"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Buntús CSS - Cuid a haon"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Buntús CSS - Cuid a dó"
         }
       }
     }
