@@ -3269,6 +3269,12 @@ bs:
           lesson_groups:
             lessonGroup-3:
               display_name: Varijable
+        csd6-pilot-2022:
+          lessons:
+            Making Music:
+              name: Pravljenje muzike
+            Functions with Parameters:
+              name: Funkcije
         coursea-2022:
           lessons:
             Learn to Drag and Drop:
@@ -3440,3 +3446,7 @@ bs:
               name: Otklanjanje pogrešaka
             lesson-19:
               name: Otklanjanje pogrešaka
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Petlje
