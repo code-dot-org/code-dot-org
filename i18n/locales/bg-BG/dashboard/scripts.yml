@@ -4347,6 +4347,10 @@ bg:
               display_name: Спрайт
             lessonGroup-3:
               display_name: Променливи
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Функции
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -4557,6 +4561,31 @@ bg:
             lessonGroup-2:
               display_name: Съдържание
         csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java (Джава) Практически Урок
+            lesson-9:
+              name: Повторения
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
