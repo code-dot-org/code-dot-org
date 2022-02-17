@@ -124,6 +124,7 @@ class ShareAllowedDialog extends React.Component {
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
+      this.setState({hasBeenCopied: false});
     }
   }
 
