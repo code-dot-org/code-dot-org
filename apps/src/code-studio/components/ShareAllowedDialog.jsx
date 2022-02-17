@@ -102,7 +102,8 @@ class ShareAllowedDialog extends React.Component {
     exportError: null,
     isTwitterAvailable: false,
     isFacebookAvailable: false,
-    replayVideoUnavailable: false
+    replayVideoUnavailable: false,
+    hasBeenCopied: false
   };
 
   componentDidMount() {
@@ -170,6 +171,16 @@ class ShareAllowedDialog extends React.Component {
 
   unpublish = () => {
     this.props.onUnpublish(this.props.channelId);
+  };
+
+  // Copy to clipboard.
+  copy = () => {
+    navigator.clipboard.writeText(this.props.shareUrl).then(
+      () => {
+        this.setState({hasBeenCopied: true});
+      },
+      () => {}
+    );
   };
 
   render() {
@@ -295,8 +306,20 @@ class ShareAllowedDialog extends React.Component {
                       onClick={select}
                       readOnly
                       value={this.props.shareUrl}
-                      style={{cursor: 'copy', width: 500}}
+                      style={{cursor: 'copy', width: 450}}
                     />
+                    <button
+                      type="button"
+                      id="share-dialog-copy-button"
+                      style={
+                        this.state.hasBeenCopied
+                          ? styles.copyButtonLight
+                          : styles.copyButton
+                      }
+                      onClick={wrapShareClick(this.copy.bind(this), 'copy')}
+                    >
+                      <i className="fa fa-clipboard" style={{fontSize: 14}} />
+                    </button>
                   </div>
                 </div>
                 <div className="social-buttons">
@@ -492,6 +515,40 @@ const styles = {
     marginLeft: 0,
     marginRight: 8,
     verticalAlign: 'top'
+  },
+  copyButton: {
+    backgroundColor: color.purple,
+    borderWidth: 0,
+    color: color.white,
+    fontSize: 'larger',
+    paddingTop: 5,
+    paddingBottom: 12.5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 8,
+    marginRight: 8,
+    verticalAlign: 'top',
+    width: 30,
+    height: 30
+  },
+  copyButtonLight: {
+    backgroundColor: color.light_purple,
+    borderWidth: 0,
+    color: color.white,
+    fontSize: 'larger',
+    paddingTop: 5,
+    paddingBottom: 12.5,
+    paddingLeft: 10,
+    paddingRight: 10,
+    marginTop: 0,
+    marginBottom: 0,
+    marginLeft: 8,
+    marginRight: 8,
+    verticalAlign: 'top',
+    width: 30,
+    height: 30
   },
   thumbnail: {
     float: 'left',
