@@ -2807,6 +2807,10 @@ da:
               display_name: figure
             lessonGroup-3:
               display_name: Variabler
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funktioner
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2968,3 +2972,7 @@ da:
               name: Fejlfinding
             lesson-19:
               name: Fejlfinding
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Løkker
