@@ -5408,6 +5408,17 @@ ta:
           lesson_groups:
             lessonGroup-3:
               display_name: மாறிலிகள்
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: உள்ளீடுகளை இணைத்தல்
+            Functions with Parameters:
+              name: செயல்பாடுகள்
+          lesson_groups:
+            lessonGroup-2:
+              display_name: அத்தியாயம் 1
+            lessonGroup-3:
+              display_name: அத்தியாயம் 2
         csa7-pilot-facilitator:
           lessons:
             Java Lab:
@@ -6420,3 +6431,89 @@ ta:
               name: திட்டப்பணிக்கான உத்வேகம்
             lesson-19:
               name: பிழைத்திருத்தம்
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: ஜாவா லேப்
+            lesson-9:
+              name: சுழற்சிகள்
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: ஜாவா லேப்
+              key: ஜாவா லேப்
+            lesson-10:
+              key: பாடம்-10
+            lesson-6:
+              key: பாடம்-6
+            lesson-7:
+              key: பாடம்-7
+            lesson-8:
+              key: பாடம்-8
+            lesson-9:
+              key: பாடம்-9
+            lesson-11:
+              key: பாடம்-11
+            lesson-12:
+              key: பாடம்-12
+            lesson-13:
+              key: பாடம்-13
+            lesson-14:
+              key: பாடம்-14
+            lesson-15:
+              key: பாடம்-15
+            lesson-1:
+              key: பாடம் 1
+            lesson-2:
+              key: பாடம்-2
+            lesson-3:
+              key: பாடம்-3
+            lesson-4:
+              key: பாடம்-4
+            lesson-5:
+              key: பாடம்-5
+            lesson-16:
+              key: பாடம்-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: சாண்ட்பாக்ஸ்
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: ஜாவா லேப்
+              key: ஜாவா லேப்
+            lesson-1:
+              key: பாடம் 1
+            lesson-2:
+              key: பாடம்-2
+            lesson-3:
+              key: பாடம்-3
+            lesson-4:
+              key: பாடம்-4
+            lesson-5:
+              key: பாடம்-5
+            lesson-10:
+              key: பாடம்-10
+            lesson-6:
+              key: பாடம்-6
+            lesson-7:
+              key: பாடம்-7
+            lesson-8:
+              key: பாடம்-8
+            lesson-9:
+              key: பாடம்-9
+            lesson-11:
+              key: பாடம்-11
+            lesson-12:
+              key: பாடம்-12
+            lesson-13:
+              key: பாடம்-13
+            lesson-14:
+              key: பாடம்-14
+            lesson-15:
+              key: பாடம்-15
+            lesson-16:
+              key: பாடம்-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: சாண்ட்பாக்ஸ்
