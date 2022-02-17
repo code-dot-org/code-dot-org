@@ -17244,6 +17244,8 @@ hi:
               name: प्रोटोटाइपिंग
             lesson-19:
               name: प्रोजेक्ट
+            Circuits and Physical Prototypes:
+              description_teacher: इस अध्याय के लिए अंतिम प्रोजेक्ट की तैयारी में, छात्र सीखेंगे कि ऐसी भौतिक वस्तु का प्रतिमान कैसे विकसित करना है, जिसमें Circuit Playground शामिल हो। मॉडल्ड प्रोजेक्ट नियोजन गाइड का उपयोग करते हुए, छात्र सीखेंगे कि कुछ साधारण सर्किटों में तार कैसे लगानी है और प्रतिमान बनाना सीखेंगे, जो कार्डबोर्ड और डक्ट टेप सुलभ व आसानी से मिलने वाली सामग्रियों का उपयोग करते हुए, उत्पाद के ऐच्छिक डिज़ाइन का संचार कर सकते हैं।
           lesson_groups:
             lessonGroup-3:
               display_name: टेम्पलेट्स
@@ -17733,6 +17735,33 @@ hi:
               display_name: स्प्राइट्स
             lessonGroup-3:
               display_name: चर
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: 'कोर्स के लिए इस अंतिम प्रोजेक्ट में, छात्र Circuit Playground पर आधारित प्रगतिशील कंप्यूटिंग डिवाइस विकसित करने और उसके लिए प्रतिमान का परीक्षण करने के लिए टीम बनाते हैं। बोर्ड पर इनपुट्स और आउटपुट्स का उपयोग करते हुए, समूह ऐसे प्रोग्राम बनाएंगे, जो रोचक और बेजोड़ उपयोगकर्ता अंतःक्रियाओं की अनुमति देते हैं। '
+            Innovations in Computing:
+              name: कंप्यूटिंग में अन्वेषण
+              description_teacher: इस कोर्स की अंतिम इकाई की शुरुआत करने के लिए, छात्र कंप्यूटिंग में रोचक अन्वेषणों पर थोड़ा शोध करेंगे। यह पाठ छात्रों के सम्मुख कंप्यूटिंग प्रकार कारकों (कंप्यूटर कैसा दिखाई देता है) और उन क्षेत्रों के व्यापक प्रकारों को प्रकट करेगा, जो कंप्यूटिंग द्वारा प्रभावित हैं। इस इकाई में बाद में छात्र उन डिवाइसों पर वापस नज़र डालेंगे, जिनसे इस पाठ में उनका सामना हो, जब वे अपनी खुद की भौतिक कंप्यूटिंग डिवाइसें विकसित करेंगे।
+            The Circuit Playground:
+              name: Circuit Playgrounds
+            Board Events:
+              name: बोर्ड इवेंट्स
+            Arrays and Color LEDs:
+              name: रंगीन LED
+            lesson-10:
+              name: इनपुट को जोड़ना
+            Accelerometer:
+              name: त्वरणमापी
+              description_teacher: इस पाठ में, छात्र त्वरणमापी और इसकी क्षमताओं की पड़ताल करेंगे। वे इसकी इवेंट्स और विशेषताओं से परिचित होंगे, साथ ही वास्तविक दुनिया के ऐप्लिकेशन्स में संभवतया समझे गए प्रोग्रामों के समान ही त्वरणमापी का उपयोग करते हुए कई प्रोग्राम बनाएंगे।
+            Making Music:
+              name: संगीत बनाना
+            Functions with Parameters:
+              name: कार्य
+          lesson_groups:
+            lessonGroup-2:
+              display_name: अध्याय 1
+            lessonGroup-3:
+              display_name: अध्याय 2
         csa7-pilot-facilitator:
           lessons:
             Java Lab:
@@ -19112,3 +19141,89 @@ hi:
           lessons:
             lesson-2:
               name: इकाई 5 मूल्यांकन
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: फंदे
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: पाठ - 10
+            lesson-6:
+              key: पाठ - 6
+            lesson-7:
+              key: पाठ - 7
+            lesson-8:
+              key: पाठ - 8
+            lesson-9:
+              key: पाठ - 9
+            lesson-11:
+              key: पाठ - 11
+            lesson-12:
+              key: पाठ - 12
+            lesson-13:
+              key: पाठ - 13
+            lesson-14:
+              key: पाठ - 14
+            lesson-15:
+              key: पाठ - 15
+            lesson-1:
+              key: पाठ - 1
+            lesson-2:
+              key: पाठ - 2
+            lesson-3:
+              key: पाठ - 3
+            lesson-4:
+              key: पाठ - 4
+            lesson-5:
+              key: पाठ - 5
+            lesson-16:
+              key: पाठ - 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सैंडबॉक्स
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: पाठ - 1
+            lesson-2:
+              key: पाठ - 2
+            lesson-3:
+              key: पाठ - 3
+            lesson-4:
+              key: पाठ - 4
+            lesson-5:
+              key: पाठ - 5
+            lesson-10:
+              key: पाठ - 10
+            lesson-6:
+              key: पाठ - 6
+            lesson-7:
+              key: पाठ - 7
+            lesson-8:
+              key: पाठ - 8
+            lesson-9:
+              key: पाठ - 9
+            lesson-11:
+              key: पाठ - 11
+            lesson-12:
+              key: पाठ - 12
+            lesson-13:
+              key: पाठ - 13
+            lesson-14:
+              key: पाठ - 14
+            lesson-15:
+              key: पाठ - 15
+            lesson-16:
+              key: पाठ - 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: सैंडबॉक्स
