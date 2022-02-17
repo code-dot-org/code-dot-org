@@ -1,4 +1,5 @@
 {
+  "abortedTestResult": "crwdns2866644:0{className}crwdnd2866644:0{methodName}crwdne2866644:0",
   "addAComment": "crwdns2688818:0crwdne2688818:0",
   "authorLabel": "crwdns2693043:0crwdne2693043:0",
   "allFilesCompile": "crwdns2588320:0crwdne2588320:0",
@@ -57,6 +58,8 @@
   "errorTheaterInvalidShape": "crwdns2691067:0crwdne2691067:0",
   "errorTheaterVideoTooLarge": "crwdns2862411:0crwdne2862411:0",
   "errorTheaterVideoTooLong": "crwdns2862413:0crwdne2862413:0",
+  "exceptionThrown": "crwdns2866646:0[EXCEPTION]crwdnd2866646:0{exceptionName}crwdne2866646:0",
+  "failedTestResult": "crwdns2866648:0{className}crwdnd2866648:0{methodName}crwdne2866648:0",
   "feedbackBeginning": "crwdns2691069:0crwdne2691069:0",
   "feedbackBeginningPeer": "crwdns2691223:0{peerName}crwdne2691223:0",
   "illegalMethodAccess": "crwdns2547486:0{cause}crwdne2547486:0",
@@ -104,6 +107,7 @@
   "saveToBackpack": "crwdns2690789:0crwdne2690789:0",
   "sendingVideo": "crwdns2859009:0{totalTime}crwdne2859009:0",
   "startingPainter": "crwdns2691095:0crwdne2691095:0",
+  "successfulTestResult": "crwdns2866650:0{className}crwdnd2866650:0{methodName}crwdne2866650:0",
   "switchToDisplayTheme": "crwdns2862423:0{displayTheme}crwdne2862423:0",
   "timeoutWarning": "crwdns2713539:0crwdne2713539:0",
   "timeout": "crwdns2713541:0crwdne2713541:0",

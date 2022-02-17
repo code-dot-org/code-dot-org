@@ -1,6 +1,12 @@
 {
   "backgroundSpace": "स्पेस",
+  "catActions": "कृती",
+  "catControl": "लूप्स",
   "catEvents": "ईव्हेंट्स",
+  "catLogic": "लॉजिक",
+  "catMath": "गणित",
+  "catText": "टेक्स्ट",
+  "catVariables": "व्हेरीएबल्स",
   "continue": "सुरू ठेवा",
   "dropletBlock_playSound_description": "निवडलेला आवाज प्ले करा.",
   "elseCode": "किंवा",
