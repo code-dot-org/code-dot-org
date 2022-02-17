@@ -123,11 +123,16 @@ export const commands = {
     this.validationFrames.delay = frames;
   },
 
-  // Used in levels (typically every frame) to validate based on all criteria
-  validate() {
+  // updateValidation() is used in levels, typically running every frame.=
+  // This function updates the completion status of each added criteria,
+  // updates the pass/fail status of the level, and use this information
+  // to update UX elements, such a progress bars.
+  updateValidation() {
     // Get the current (ie. previous frame) pass/fail state prior to validation
     const state = commands.getPassState(this.criteria);
 
+    // Calculate the size of the current progress bar as it fills to the right
+    // across the screen.
     const barWidth =
       this.currentFrame() * commands.calculateBarScale(this.validationFrames);
     drawUtils.validationBar(this.p5, barWidth, state, {});
@@ -155,6 +160,8 @@ export const commands = {
       }
       return results;
     }
+    // For programs where students work with events, we need to store
+    // some state information so we can compare with the previous frame.
     commands.updatePrevious.call(this);
   },
 

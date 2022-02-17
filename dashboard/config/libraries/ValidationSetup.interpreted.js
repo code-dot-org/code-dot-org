@@ -15,7 +15,7 @@ function levelFailure(testResult, msg) {
 var validationProps = {};
 
 function check() {
-  var results = validate();
+  var results = updateValidation();
   if (results) {
     if (results.state === "failed") {
       levelFailure(3, results.feedback);
