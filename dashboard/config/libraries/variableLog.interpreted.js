@@ -2,12 +2,17 @@ var studentVarToken = false;
 var varLog = buildVariableLog();
 var previousVarLog;
 
+// Create an array of objects representing within the variables that have been
+// declared or updated within the Blockly environment. All Blockly variables
+// are global, and we would like to find a more efficient way to find just
+// those used by the student.
 function buildVariableLog() {
   var varLog = {};
   var start = Object.keys(window).indexOf("studentVarToken") + 1;
   var end = Object.keys(window).length;
   var index;
   for (var i = start; i < end; i++) {
+    // Blockly functions and behaviors should be excluded. 
     if (
       typeof window[Object.keys(window)[i]] == "number" ||
       typeof window[Object.keys(window)[i]] == "string" ||
@@ -19,6 +24,8 @@ function buildVariableLog() {
   return varLog;
 }
 
+// Draw a set of on-screen watchers, ie. show each student variable name
+// and it's value, in a drawn element on the canvas. (Prototype)
 function varWatchers(varLog) {
   for (var key in varLog) {
     var index = Object.keys(varLog).indexOf(key);
@@ -28,7 +35,7 @@ function varWatchers(varLog) {
   }
 }
 
-function drawWwatcher(label, value, index, x, y) {
+function drawWatcher(label, value, index, x, y) {
   if (!value && value != 0 && value != "") {
     value = "undefined";
   }
