@@ -4051,6 +4051,10 @@ he:
               display_name: דמויות
             lessonGroup-3:
               display_name: משתנים
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: פונקציות
         coursea-2022:
           lessons:
             Happy Maps:
@@ -4312,3 +4316,7 @@ he:
               name: מציאת טעויות
             lesson-19:
               name: מציאת טעויות
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: חזרות
