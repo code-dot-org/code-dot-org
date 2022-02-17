@@ -265,6 +265,69 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Dokumentasjon i Sprite-lab"
+        },
+        "design_mode/csd/2021": {
+          "name": "Utformingsmodus"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Utformingsmodus"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Lærarforum"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Hvordan datamaskiner virker: Maskinvare & programvare"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funksjonar"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For-løkker"
+        },
+        "for_loops/csd/2021": {
+          "name": "For-løkker"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Hvordan datamaskiner virker: Kretser og logikk"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Maskinlæring"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variablar"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Animasjonsfanen"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Sprites"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Eigenskapar ved Sprite"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Fart"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Fart"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funksjonar"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funksjonar"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Lærarforum"
+        },
+        "lists/csd/2021": {
+          "name": "Lister"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Introduksjon til CSS - Del 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Introduksjon til CSS - Del 2"
         }
       }
     }
