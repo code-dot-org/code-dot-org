@@ -296,6 +296,7 @@ zh-TW:
       provider_managed_section: "這個學習小組是由另一位提供者管理的，你無法加入。請詢問你的老師是否能透過 %{provider} 將你加入，並重新同步他們的學習小組。"
       restricted_section: "我們不能將你加入至課程 %{section_code} ，因為課程已經鎖起來了。請向你的老師尋求幫助。"
       full_section: "我們不能將你加入至課程 %{section_code}，因為已經有 %{section_capacity} 個學生在裡面了。請向你的老師尋求幫助。"
+      not_participant_type: "我們無法將您添加到%{section_code}部分，因為您不滿足該部分的參與者類型。"
     mail:
       student_disassociated:
         subject: "Code.org 通知： %{student_name} 已不再是你的學生。"
@@ -555,6 +556,7 @@ zh-TW:
     all_students_must_be_in_current_section: "所有的學生都必須在你的學習小組中。"
     already_enrolled_in_new_section: "你無法移動這些學生，因為這個教師已經把他們放到另一個學習小組了。"
     third_party_login: "你不可將學生移動到與第三方工具同步的學習小組。"
+    not_correct_participant_type: "您無法移動這些用戶，因為他們沒有成為新部分的參與者的許可權。"
   share:
     title: "在 Code Studio 上學習"
     description: "任何人都可以學習計算機科學，用程式來建立遊戲、應用程式及藝術作品。"
@@ -596,6 +598,7 @@ zh-TW:
     how_it_works: '它是如何運作的（檢視程式碼）'
     try_hour_of_code: '試試「一小時玩程式」！'
     store: '商店'
+    cookie_notice: 'Cookie通知'
   reference_area:
     title: '需要幫忙？'
     subtitle: '看看這些影片和提示'

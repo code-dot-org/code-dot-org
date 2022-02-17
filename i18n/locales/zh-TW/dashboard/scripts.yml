@@ -18378,6 +18378,8 @@ zh-TW:
               name: 原型設計
             lesson-19:
               name: 專案
+            Circuits and Physical Prototypes:
+              description_teacher: 為了準備這一章的期末專案，學生會學習怎樣開發包含 Circuit Playground 的實物原型。學生會使用範例專案計畫指南，學習怎樣編寫一些簡單電路和製作原型，從而可使用便宜且容易找到的材料（例如紙板與膠帶）展現出預期產品的設計。
           lesson_groups:
             lessonGroup-3:
               display_name: 範本
@@ -18407,6 +18409,11 @@ zh-TW:
               display_name: 專案
             lessonGroup-4:
               display_name: 演示和資源
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: 測試CSA克隆
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -18839,6 +18846,12 @@ zh-TW:
               description_student: 製作可與同學分享的互動專案。
               description_teacher: 本課堂會介紹 Sprite Lab，這是一個工作平台，讓學生可在這裡製作自己的互動式動畫和遊戲。除了「行為」外，學生今天會結合做為「事件」的使用者輸入，以製成「外星人舞蹈派對」。
           lesson_groups:
+            lessonGroup-5:
+              display_name: 課程F-變數（已棄用）
+            lessonGroup-6:
+              display_name: 課程F-For循環（已棄用）
+            lessonGroup-7:
+              display_name: 課程E-精靈圖（已棄用）
             lessonGroup-8:
               display_name: 一小時玩程式
         csa7-exemplars:
@@ -18873,6 +18886,33 @@ zh-TW:
               display_name: 變數
             lessonGroup-4:
               display_name: 課程結束專案
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: 在課程的這個期末專案中，學生會以團隊方式開發並測試一款創新運算裝置的原型，這個原型以 Circuit Playground 為基礎。各小組會使用電路板上可用的輸入與輸出來製作程式，讓程式可與使用者進行有趣且獨一無二的互動。
+            Innovations in Computing:
+              name: 運算上的創新
+              description_teacher: 在這個本課程的最後一個單元中，學生首先會做一些研究，瞭解電腦運算的有趣創新成果。本課堂會讓學生瞭解更多電腦運算的形式（電腦的外觀看起來怎樣），以及受電腦運算影響的範疇。在本單元的後期，學生會在開發自己的運算裝置時，回顧本課堂中看到的裝置。
+            The Circuit Playground:
+              name: 電路（Circuit ）遊樂場
+            Board Events:
+              name: 電路板事件
+            Arrays and Color LEDs:
+              name: 彩色顯示器
+            lesson-10:
+              name: 組合輸入
+            Accelerometer:
+              name: 加速計
+              description_teacher: 在本課堂中，學生會學習加速計和它的功能。他們會熟習事件與屬性，並製作多個利用加速計的程式，這些程式和現實世界中可能遇到過的程式相似。
+            Making Music:
+              name: 製作音樂
+            Functions with Parameters:
+              name: 函式
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 第1章
+            lessonGroup-3:
+              display_name: 第2章
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -19249,6 +19289,7 @@ zh-TW:
               display_name: 課程結束專案
           description_short: 電腦科學簡介：結合我們最優秀的國小課程內容，供年齡較大的學生學習。
           description_audience: 年齡 9-18
+          name: express-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -20119,6 +20160,8 @@ zh-TW:
               description_teacher: 在本課堂中，學生會瞭解無障礙使用與同理心的價值所在，途徑為一起思考並設計無障礙解決方案，用於假想的應用程式中。
             'Hello World: Food':
               name: 你好世界
+              description_student: 在這個課程中，你將學習創建和動畫化精靈圖，並使用事件使它們互動。
+              description_teacher: 在這個**技能建設**課程中，你將學習創建和動畫化精靈圖，並使用事件使它們互動。
           lesson_groups:
             csf_sprites:
               display_name: 角色
@@ -20327,6 +20370,8 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -20353,3 +20398,102 @@ zh-TW:
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java 實驗室
+            lesson-9:
+              name: 迴圈
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+            lesson-10:
+              key: 第10課
+            lesson-6:
+              key: 第6課
+            lesson-7:
+              key: 第7課
+            lesson-8:
+              key: 第8課
+            lesson-9:
+              key: 第9課
+            lesson-11:
+              key: 第11課
+            lesson-12:
+              key: 第12課
+            lesson-13:
+              key: 第13課
+            lesson-14:
+              key: 第14課
+            lesson-15:
+              key: 第15課
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+            lesson-4:
+              key: 第4課
+            lesson-5:
+              key: 第5課
+              name: 評估日
+            lesson-16:
+              key: 第16課
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: 評估日
+            Java Lab:
+              name: Java 實驗室
+              key: Java 實驗室
+            lesson-1:
+              key: 第1課
+            lesson-2:
+              key: 第2課
+            lesson-3:
+              key: 第3課
+            lesson-4:
+              key: 第4課
+            lesson-5:
+              key: 第5課
+            lesson-10:
+              key: 第10課
+            lesson-6:
+              key: 第6課
+            lesson-7:
+              key: 第7課
+            lesson-8:
+              key: 第8課
+            lesson-9:
+              key: 第9課
+            lesson-11:
+              key: 第11課
+            lesson-12:
+              key: 第12課
+            lesson-13:
+              key: 第13課
+            lesson-14:
+              key: 第14課
+            lesson-15:
+              key: 第15課
+              name: 評估日
+            lesson-16:
+              key: 第16課
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+            lessonGroup-5:
+              display_name: 沙盒
