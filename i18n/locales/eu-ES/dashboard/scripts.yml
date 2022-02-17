@@ -2545,6 +2545,10 @@ eu:
           lesson_groups:
             lessonGroup-3:
               display_name: Aldagaiak
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funtzioak
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2692,3 +2696,7 @@ eu:
               name: Arazketa
             lesson-19:
               name: Arazketa
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Itzuliak
