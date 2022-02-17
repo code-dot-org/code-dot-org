@@ -1,6 +1,6 @@
 var studentVarToken = false;
 var varLog = buildVariableLog();
-var previousVarLog; // = JSON.parse(JSON.stringify(varLog));
+var previousVarLog;
 
 function buildVariableLog() {
   var varLog = {};
@@ -18,33 +18,6 @@ function buildVariableLog() {
   }
   return varLog;
 }
-
-/*
-function updateLog(){
-  var start = Object.keys(window).indexOf("studentVarToken")+1;
-  var end = Object.keys(window).indexOf("__jsCB");
-  var index;
-  for(var i=start;i<end;i++){
-    if(window[Object.keys(window)[i]] != undefined){
-      if (typeof window[Object.keys(window)[i]] == "number" || typeof window[Object.keys(window)[i]] == "string"|| typeof window[Object.keys(window)[i]] == "boolean") {
-        varLog[Object.keys(window)[i]] = window[Object.keys(window)[i]];
-      }
-    }
-  }
-
-
-  varWatchers(varLog);
-
-  if(validationProps){//is Sprite Lab
-    if(!validationProps.previous){
-      validationProps.previous = {};
-    }
-    detectVarChange();
-    validationProps.previous.varLog=JSON.parse(JSON.stringify(varLog));
-  }
-
-}
-*/
 
 function varWatchers(varLog) {
   for (var key in varLog) {
