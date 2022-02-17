@@ -18496,6 +18496,8 @@ fil:
           lessons:
             new stage:
               name: bagong yugto
+            Tools:
+              name: Mga Kagamitan
             Debugging:
               name: Pagdedebug
         csd2-virtual:
@@ -21032,6 +21034,8 @@ fil:
               name: Buod
         csa-u6-dev:
           lessons:
+            lesson-12:
+              name: Mga Kagamitan
             lesson-17:
               name: Console
             lesson-18:
@@ -21471,6 +21475,15 @@ fil:
               name: Mga Pisikal na Input
             lesson-18:
               name: Prototyping
+            Circuits and Physical Prototypes:
+              description_teacher: Sa paghahanda para sa huling proyekto ng kabanatang
+                ito, ang mga estudyante ay matututo kung paano gumawa ng isang prototype
+                ng isang pisikal na bagay na naglalakip sa Circuit Playground. Gamit
+                ang gabay sa pagplano ng na-model na proyekto, ang mga estudyante
+                ay matututo kung paano mag-wire ng iilang mga simpleng circuit at
+                para bumuo ng mga prototype na maaaring magpakita sa sinadyang disenyo
+                ng isang produkto, gamit ang mura at madaling mahanap na mga materyales
+                gaya ng cardboard at duct tape.
           lesson_groups:
             lessonGroup-3:
               display_name: Mga Template
@@ -21493,6 +21506,8 @@ fil:
           lessons:
             lesson-2:
               name: Mga Widget
+            lesson-3:
+              name: Mga Kagamitan
           lesson_groups:
             lessonGroup-2:
               display_name: Mga Aralin
@@ -21557,6 +21572,8 @@ fil:
           lessons:
             lesson-1:
               name: Mga Widget
+            lesson-2:
+              name: Mga Kagamitan
           lesson_groups:
             lessonGroup-2:
               display_name: Mga Demo at Mapagkukunan
@@ -21911,6 +21928,48 @@ fil:
               display_name: Mga Sprites
             lessonGroup-3:
               display_name: Mga variable
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: 'Sa huling proyektong ito para sa kurso, ang mga
+                estudyante ay maggrupo-grupo para makagawa at makasubok ng isang prototype
+                para sa isang malikhain na computing na kagamitan na nakabase sa Circuit
+                na Playground. Gamit ang mga input at mga output na nasa board, ang
+                mga grupo ay lilikha ng mga programa na nagbibigay-daan para sa isang
+                mas kawili-wili at pambihirang mga pakikipag-ugnayan sa mga gumagamit. '
+            Innovations in Computing:
+              name: Mga Pagbabago sa Pag-Compute
+              description_teacher: Para simulan ang huling yunit ng kursong ito, ang
+                mga estudyante ay gagawa ng isang pananaliksik sa kawili-wiling makabagong
+                likha sa pag-compute. Ang araling ito ay magpapakita sa mga estudyante
+                sa iba-bang mga mas malawak na kaibahan ng mga maaaring makakaapekto
+                sa mga anyo ng pag-compute (ano ang hitsura ng kompyuter) at ang mga
+                puwang na makakaapekto sa pag-compute. Mamaya sa yunit na ito, ang
+                mga estudyante ay titingin pabalik sa mga kagawamitan na kanilang
+                natagpuan sa araling ito habang sila ay gumagawa ng sarili nilang
+                pisikal na mga pag-compute na mga kagamitan.
+            The Circuit Playground:
+              name: Ang Circuit na Playground
+            Board Events:
+              name: Mga Pangyayari sa Board
+            lesson-10:
+              name: Pinagsasama-sama ang mga Input
+            Accelerometer:
+              name: Accelerometer
+              description_teacher: Sa araling ito, ang mga estudyante ay tutuklas
+                sa accelerometer at sa mga kakayahan nito. Sila ay magiging kabisado
+                sa mga pangyayari nito at mga katangian, pati na rin ang paglikha
+                ng maraming mga programa na gumagamit sa accelerometer katulad sa
+                mga natagpuan mo na sigurong mga aplikasyon sa tunay na mundo.
+            Making Music:
+              name: Paglikha ng Musika
+            Functions with Parameters:
+              name: Mga function
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kabanata 1
+            lessonGroup-3:
+              display_name: Kabanata 2
         csa7-pilot-facilitator:
           lessons:
             Java Lab:
@@ -22771,3 +22830,89 @@ fil:
           lessons:
             lesson-2:
               name: Yunit 5 Pagtatasa
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: Mga loop
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: aralin-10
+            lesson-6:
+              key: aralin-6
+            lesson-7:
+              key: aralin-7
+            lesson-8:
+              key: aralin-8
+            lesson-9:
+              key: aralin-9
+            lesson-11:
+              key: aralin-11
+            lesson-12:
+              key: aralin-12
+            lesson-13:
+              key: aralin-13
+            lesson-14:
+              key: aralin-14
+            lesson-15:
+              key: aralin-15
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+            lesson-3:
+              key: aralin-3
+            lesson-4:
+              key: aralin-4
+            lesson-5:
+              key: aralin-5
+            lesson-16:
+              key: aralin-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kahon ng buhangin
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: aralin-1
+            lesson-2:
+              key: aralin-2
+            lesson-3:
+              key: aralin-3
+            lesson-4:
+              key: aralin-4
+            lesson-5:
+              key: aralin-5
+            lesson-10:
+              key: aralin-10
+            lesson-6:
+              key: aralin-6
+            lesson-7:
+              key: aralin-7
+            lesson-8:
+              key: aralin-8
+            lesson-9:
+              key: aralin-9
+            lesson-11:
+              key: aralin-11
+            lesson-12:
+              key: aralin-12
+            lesson-13:
+              key: aralin-13
+            lesson-14:
+              key: aralin-14
+            lesson-15:
+              key: aralin-15
+            lesson-16:
+              key: aralin-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Kahon ng buhangin
