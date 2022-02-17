@@ -160,14 +160,15 @@ export const commands = {
       }
       return results;
     }
-    // For programs where students work with events, we need to store
-    // some state information so we can compare with the previous frame.
-    commands.updatePrevious.call(this);
+    // For programs where students work with events, we need to make comparisons
+    // between the current state and the state during the previous frame. After all
+    // validation checks are complete, we store the current state in this.previous
+    // so that those comparisons can be made next time updateValidation() occurs.
+    commands.storeStateAsPrevious.call(this);
   },
 
-  // In levels with events, we need to check if things happened over time.
   // Store information about this frame for comparisons during the next frame.
-  updatePrevious() {
+  storeStateAsPrevious() {
     const spriteIds = this.getSpriteIdsInUse();
     this.previous.eventLogLength = this.eventLog.length;
     this.previous.printLogLength = this.printLog.length || 0;
