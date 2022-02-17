@@ -24,14 +24,14 @@ zh-CN:
     \
     ##《编程一小时》\
     \
-    ###%{num}参与 #Try an
+    ###%{num}人参与 #Try an
   anybody_can_learn: 任何人都可以学习。
   learn_now: 现在开始学习
   petition_message: 任何学校的任何学生都应有机会学习计算机科学
   petition_sign_message: '如果同意，签名并像其他 #人一样加入邮件列表。'
-  petition_sign_message_num: 如果同意，签名并像其他 %{num} 人一样加入邮件列表。
+  petition_sign_message_num: 如果同意，请签名并像另外%{num}人一起加入邮件列表。
   petition_join_others: '加入另外 # 人'
-  petition_join_others_num: 与 %{num} 人一样加入
+  petition_join_others_num: 与 %{num} 人一起加入
   name: 姓名
   email: 电子邮件
   zipcode: 邮政编码或国家
@@ -168,7 +168,7 @@ zh-CN:
     以外 </a> '
   get_a_certificate_message_after: 请通过单击以下载或打印证书。现在，请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过
     <a href='/learn/beyond'>《一小时以外编程》</a>查看更多的选择。
-  get_a_certificate_message_after_markdown: 点击以打印或下载认证书。现在继续学校我们[其他课程](http://studio.code.org)，或获得更多在[学多于一小时]选项(/learn/beyond)。
+  get_a_certificate_message_after_markdown: 点击以打印或下载认证书。现在继续学校我们[其他课程](http://studio.code.org)，或在[一小时之外](/learn/beyond)查看更多选择。
   thanks_for_submitting: 感谢提交！
   if_you_enjoyed: 如果你喜欢这个课程，让你的朋友也试一试！我们想要全世界都来学习。
   personalize_certificate: 个性化你的证书
@@ -182,7 +182,7 @@ zh-CN:
   enter_certificate_names: 输入最多 30 个名字，**每行一个**。会生成可打印的个性化 %{script_name} 证书。
   share_achievement: 分享你的成绩
   beyond_hour_message: 请继续参与我们 <a href='http://studio.code.org'>其他课程</a>，或通过 <a href='/learn/beyond'>一小时以外的编程</a>查看更多的选择。
-  beyond_hour_message_markdown: 继续我们的[其他课程](http://studio.code.org)，或查看更多选项[学习超过一小时]（/Learn/beyond）。
+  beyond_hour_message_markdown: 继续我们的[其他课程](http://studio.code.org)，或查看更多选项[一小时之外](/Learn/beyond)。
   leaderboards_for_hoc: 编程一小时的排行榜。
   support_url: http://support.code.org/
   country: 国家
@@ -258,8 +258,8 @@ zh-CN:
   stats_student: '"我知道这是一个<b>千载难逢</b> 的机会。"——马里亚纳.阿尔泽特，五年级学生'
   stats_michael: "“我<b>从来没有</b>见到我的学生们抱有如此大的学习热情。”——弗兰克. 马丁内斯，教师"
   stats_nina_markdown: "“每一天学生们都如此 ——100%的参与。”——尼娜・尼科尔斯・佩里，老师"
-  stats_student_markdown: "“我认识到这是一个 **千载难逢** 的机会。”——马里亚纳・阿尔泽特，五年级学生"
-  stats_michael_markdown: "“我从 **不曾** 见到我的学生们抱有如此大的学习热情。”——弗兰克・马丁内斯，教师。"
+  stats_student_markdown: "“我认识到这是一个**千载难逢**的机会。”——马里亚纳・阿尔泽特，五年级学生"
+  stats_michael_markdown: "“我**从不曾**见到我的学生们抱有如此大的学习热情。”——弗兰克・马丁内斯，教师。"
   studiobar_title: 探索 <a href='http://studio.code.org'>Code.org 的课程</a>
   studiobar_title_nolink: 探索 Code.org 的课程
   studiobar_elementary_title: 初级课程
@@ -397,6 +397,7 @@ zh-CN:
   homepage_donors_donate: 捐赠
   homepage_below_hero_announcement_text: 我们尊重您的隐私，为此我们对隐私政策进行了一些更新，并将从 5 月 25 日起生效。
   homepage_below_hero_announcement_link_text: 了解详情
+  homepage_higher_power_body: 与舞蹈派对一起创作，获得观看乐队现场表演的机会。
   contact_form_topic_student: 我是学生
   contact_form_topic_parent: 我是家长
   contact_form_topic_teacher: 我的老师或教育家
@@ -554,8 +555,8 @@ zh-CN:
   volunteer_engineer_submission_intro_recruit: '这些教师希望有<span style="font-family: ''Gotham
     7r'', sans-serif;"> 热衷于计算机科学教育的人士</span> 能在课堂上提供帮助，或者能够通过讲述计算机科学能够实现的诸多功能、可能性（也可以通过视频聊天的方式讨论）<span
     style="font-family: ''Gotham 7r'', sans-serif;">激发</span>他们学生的热情。'
-  volunteer_engineer_submission_intro_recruit_markdown: 教师们希望有 **热衷于计算机科学教育** 的人士能在课堂上提供帮助，或者能够通过讲述计算机科学能够实现的诸多功能、可能性（也可以通过视频聊天的方式讨论）
-    **激发** 学生的热情。
+  volunteer_engineer_submission_intro_recruit_markdown: 教师们希望有**热衷于计算机科学教育**的人士能在课堂上提供帮助，或者能够通过讲述计算机科学能够实现的诸多功能、可能性（也可以通过视频聊天的方式讨论）
+    **激发**学生的热情。
   volunteer_engineer_submission_intro_guide: 进一步了解<a href="%{volunteer_guide}">志愿者项目</a>。
   volunteer_engineer_submission_intro_guide_markdown: 更多了解我们的[志愿者计划](%{volunteer_guide})。
   volunteer_engineer_submission_intro_signup: 如果您是计算机科学专业的学生或软件专家，请输入以下信息。必须18岁以上才能申请成为志愿者。注意，填写的所有信息都会在<a
@@ -1634,8 +1635,8 @@ zh-CN:
   hoc_overview_title: 来自 Code.org 的编程一小时活动
   hoc_overview_subtitle: <a href="https://hourofcode.com">编程一小时</a>是一个全球性的活动，在全球 180
     多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试有 500 多个、支持45种语言的编程一小时教程。
-  hoc_overview_subtitle_markdown: 编程一小时(https://hourofcode.com) 是一个全球性的活动，在全球 180
-    多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试有 500+、支持45种语言的编程一小时教程。
+  hoc_overview_subtitle_markdown: "[编程一小时](https://hourofcode.com)是一个全球性的活动，在全球 180
+    多个国家有数千万学生参与了这个活动。无论你是谁，身处何方，都可以举办编程一小时活动，或者尝试支持45种语言的500+多个编程一小时课程。"
   hoc_overview_partner_activities_title: 更多合作伙伴的活动
   hoc_overview_partner_activities_body: 编程一小时由 code. org 和合作伙伴联合开发，网站提供 500 多项计算机科学活动，适合所有年龄与经验水平。
   hoc_overview_partner_activities_link: 查看活动
@@ -1795,16 +1796,15 @@ zh-CN:
   page_not_available_description: 很抱歉，您请求的页面在此地址已不可用。如果您仍然需要访问，请发送电子邮件到[support@code.org](%{support_email_link})。
   page_not_available_button: 返回主页
   hoc2020_mc_available_code_org: 在Code.org可用
-  hoc2020_mc_available_mee: 在《我的世界》可用：教育版
-  hoc2020_mc_mee_title: Minecraft两个村庄的故事
-  hoc2020_mc_mee_description: 新的“Minecraft编程一小时教程”现在可以在Minecraft:教育版在Windows、Mac、Chromebook和iPad中使用。学习编码的基础知识，探索多样性和融入您的学生！免费获取资源，包括课程计划、视频、计算机科学课程、公平课程和教师培训。
-  hoc2021_mc_mee_title: 我的世界 timCraft
-  hoc2021_mc_mee_description: 时光倒流，学习编码！新的《我的世界编程一小时》教程现已在我的世界：适用于 Windows、Mac、Chromebook
-    和 iPad 的教育版中提供。开始使用免费的教育工作者资源、培训和视频。
+  hoc2020_mc_available_mee: 在《我的世界：教育版》可用
+  hoc2020_mc_mee_title: Minecraft中两个村庄的故事
+  hoc2020_mc_mee_description: 新的“Minecraft编程一小时课程”现在可以在Windows、Mac、Chromebook和iPad上的Minecraft：教育版中使用。学习编程的基础知识、探索多样性、融入您的学生！免费获取资源，包括课程计划、视频、计算机科学课程、公平课程和教师培训。
+  hoc2021_mc_mee_title: 我的世界 TimeCraft
+  hoc2021_mc_mee_description: 新的“Minecraft编程一小时课程”现在可以在Windows、Mac、Chromebook和iPad上的Minecraft：教育版中使用。开始使用免费的教育工作者资源、培训和视频。
   hoc2021_mc_mee_villages_title: 两个村庄的故事
   hoc2021_mc_mee_villages_description: 在 Minecraft：教育版中学习编程基础知识，与学生一起探索多样性和包容性。
-  hoc2021_mc_mee_ai_title: 人工智能为好
-  hoc2021_mc_mee_ai_description: 与学生一起探索 AI，并在 Minecraft：教育版中学习编码。
+  hoc2021_mc_mee_ai_title: 人工智能为行善
+  hoc2021_mc_mee_ai_description: 与学生一起探索 AI，并在 Minecraft：教育版中学习编程。
   footer_powered_by_aws: 由亚马逊网络服务
   footer_built_on_github: 在微软的GitHub上构建
   codebytes_skinny_banner_title: 加入我们12月7-11日的CodeBytes直播迷你课程！
@@ -1872,3 +1872,4 @@ zh-CN:
   outbreak_tile_title: 疫情爆发
   outbreak_tile_subtitle: 有病毒感染了怪物城！编写一个爆发模拟器，并预测怪物城的邻居会发生什么。
   outbreak_tile_alt: 模拟病毒如何通过一群紫色怪物传播。
+  footer_cookie_notice: Cookie通知
