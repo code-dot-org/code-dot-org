@@ -1,3 +1,6 @@
+import {APP_HEIGHT} from './constants';
+import * as colors from '@cdo/apps/util/color';
+
 /**
  * A set of P5 helpers for drawing.
  */
@@ -130,16 +133,16 @@ export function validationBar(
   p5,
   width,
   state,
-  {x = 0, y = 390, height = 10} = {}
+  {x = 0, y = APP_HEIGHT - 10, height = 10} = {}
 ) {
   let color = 'black';
   switch (state) {
     case 'fail':
-      color = 'rgb(118,102,160)';
+      color = colors.purple;
       break;
     case 'pass':
     case 'bonus':
-      color = 'rgb(0,173,188)';
+      color = colors.teal;
       break;
   }
   p5.push();
