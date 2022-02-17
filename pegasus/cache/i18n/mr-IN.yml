@@ -112,8 +112,11 @@ mr-IN:
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook_placeholder: https://www.facebook.com/your_name
   volunteer_engineer_submission_field_description: वर्णन
+  volunteer_engineer_submission_field_email_preference_privacy: "(आमचे गोपनीयता धोरण
+    पाहा)"
   volunteer_engineer_submission_field_email_preference_yes: होय
   volunteer_engineer_submission_field_email_preference_no: नाही
+  dashboard_action_cancel: रद्द करा
   dashboard_action_delete_yes: होय
   dashboard_action_delete_no: नाही
   dashboard_navigation_section_community: सहाय्य
@@ -128,6 +131,7 @@ mr-IN:
   starwars_name: 'स्टार वॉर्स: कोड वापरून एक आकाशगंगा तयार करा'
   codeorg_name: क्लासिक मेझ
   codeintl_name: क्लासिक मेझ
+  blockly_name: ब्लॉकली
   hourofcode_name: क्लासिक मेझ
   infinity_name: इन्फीनिटी प्ले लॅब
   artist_name: आर्टीस्ट
@@ -306,6 +310,7 @@ mr-IN:
   kidsruby_beyond_gradelevel: वय वर्षे 12+
   w3schools_beyond_gradelevel: वय वर्षे 12+
   mozilla_beyond_gradelevel: वय वर्षे 12+
+  header_my_dashboard: माझा डॅशबोर्ड
   header_course_catalog: अभ्यासक्रमाचा कॅटलॉग
   header_project_gallery: प्रकल्प
   header_educate_hoc: अवर ऑफ कोड
@@ -466,6 +471,7 @@ mr-IN:
     मूलभूत गोष्टी शिका आणि तुमच्या विद्यार्थ्यांबरोबर विविधता आणि सर्वसमावेशकतेचा
     अनुभव घ्या! धड्याचा प्लॅन, व्हिडीओज, संगणक शास्त्राचा अभ्यासक्रम, समानतेचे धडे
     आणि शिक्षक प्रशिक्षणे यासह मोफत स्रोतांना प्रवेश मिळवा.'
+  codebytes_skinny_banner_english_only: फक्त-इंग्रजी
   footer_privacy_policy: गोपनीयता धोरण
   footer_about: या बद्दल
   footer_support: सहाय्य
