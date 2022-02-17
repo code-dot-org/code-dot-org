@@ -1,10 +1,14 @@
 - if Homepage.show_professional_learning_banner(request)
   = inline_css 'homepage_below_hero_pd_banner.css'
-  - text = Homepage.professional_learning_banner_text()
-  - header_text = Homepage.professional_learning_banner_header()
+  - header_text = 'Help students become superheroes!'
+
+  - if audience_text == 'you'
+    - text = 'Our Professional Learning program helps you teach computer science!'
+  - else
+    - text = 'Our Professional Learning program helps educators teach computer science!'
 
   .homepage-professional-learning-banner
-    %a.linktag#pl-2019{href: "/educate/professional-learning/middle-high"}
+    %a.linktag#pl-2019{href: link_address}
       .homepage-pd-banner-desktop.col-80.desktop-feature
         .banner
           %img{src: "/images/homepage/superhero-banner.png"}
@@ -13,7 +17,7 @@
           .text= text
         .right.col-20
           %button
-            Learn More
+            #{button_label}
       .homepage-pd-banner-tablet.col-80.tablet-restrictive-feature
         .banner
           %img{src: "/images/homepage/superhero-banner-half.png"}
@@ -21,12 +25,12 @@
             .header= header_text
             .text= text
             %button
-              Learn More
+              #{button_label}
       .homepage-pd-banner-phone.phone-feature
         .text-button-wrapper
           .header= header_text
           .text= text
           %button
-            Learn More
+            #{button_label}
 
     .clear
