@@ -1,5 +1,6 @@
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import * as utils from '@cdo/apps/p5lab/utils';
+import {APP_WIDTH} from '../constants';
 
 export const commands = {
   getCriteria() {
@@ -102,7 +103,7 @@ export const commands = {
   // an ordered list of success criteria. Validation is essentially an ordered
   // list of one or more "criteria", each consisting of a predicate function and
   // a feedback message key. The predicate functions run each tick, and if true,
-  // mark the criteria as completed. At the end of the program, if all the
+  // the criteria is marked as completed. At the end of the program, if all the
   // criteria are complete, the student passes the level. If any criteria are
   // not complete, the student sees the feedback message corresponding to the
   // first unmet criteria.
@@ -202,9 +203,17 @@ export const commands = {
   },
 
   calculateBarScale(validationFrames) {
-    return 400 / (validationFrames.wait + validationFrames.delay);
+    return APP_WIDTH / (validationFrames.wait + validationFrames.delay);
   },
 
+  // checkAllCriteria() is used in levels, typically occuring once per frame
+  // as part of updateValidation(). Validation is essentially an ordered
+  // list of one or more "criteria", each consisting of a predicate function and
+  // a feedback message key. The predicate functions run each tick, and if true,
+  // the criteria is marked as completed. At the end of the program, if all the
+  // criteria are complete, the student passes the level. If any criteria are
+  // not complete, the student sees the feedback message corresponding to the
+  // first unmet criteria.
   checkAllCriteria(criteria) {
     for (const criterion in criteria) {
       if (!criteria[criterion].complete) {
@@ -652,6 +661,22 @@ export const commands = {
     return result;
   }
 };
+
+/**
+ * Validation is essentially an ordered list of one or more "criteria", each
+ * consisting of a predicate function and a feedback message key. The predicate
+ * functions run each tick, and if true, the criteria is marked as completed.
+ * At the end of the program, if all the criteria are complete, the student
+ * passes the level. If any criteria are not complete, the student sees the
+ * feedback messagecorresponding to the first unmet criteria.
+ *
+ * Properties of a criteria object:
+ * @property {function} predicate - The function that determines if the student
+ * is passing the criteria.
+ * @property {string} feedback - A translatable string key (see /apps/i18n/spritelab/en_us.js)
+ * @property {boolean} complete - Set to true once the predicate passes successfully.
+ * Criteria are only checked until marked complete.
+ */
 class criteria {
   constructor(predicate, feedback) {
     this.predicate = predicate;
