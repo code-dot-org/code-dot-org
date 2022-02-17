@@ -5506,3 +5506,230 @@ az-AZ:
           * kursda təkmilləşdirmələr edin
 
           CS Discoveries-i daha da yaxşılaşdırmaq üçün vaxt ayırdığınız üçün təşəkkür edirik!
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Sprite Xüsusiyyətləri
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Aşağıdakı koda bax və başlığın necə görünəcəyini təxmin et. Sağdakı
+          seçimlərdən birini seç.
+        markdown: |-
+          <pre>
+          &lt;h3&gt; Yumurta &lt;/h3&gt;
+          &lt;h1&gt; Donuz Bastırması &lt;/h1&gt;
+          &lt;h6&gt; Vafli &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Səviyyə növləri:** Tələbələrdən HTML başlıqlarının veb-səhifədə necə göstəriləcəyini seçməyi xahiş edən bu çox seçimli sual. Siz həmin səviyyəyə keçməklə və sağ tərəfdən Müəllim Panelini çıxarmaqla hansı tələbələrin suala düzgün cavab verdiyini görə bilərsiniz. Suala uğurla cavab verən şagirdlərdə yaşıl bir baloncuk olacaq. Şagirdlərin düzgün cavab vermək istədikləri qədər şansı var, buna görə də təxmin etmək və yoxlamaq da düzgün cavaba səbəb ola bilər.
+          <div class="clear"></div>
+        title: Başlıqları sürətli yoxlayın
+      CSD Physical Computing Post-Project Test_2021:
+        title: Layihədən sonrakı Fiziki Hesablama Testi
+      CSD U1 Test_2021:
+        title: 'Kompüterlər və Problemin Həlli Layihə Sonrası Test '
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Şəkillər əlavə etmək
+      CSD U2 Image practice_pilot_2021:
+        display_name: Şəkillər əlavə etmək
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - text: 'Faylın adında boşluq (space) var '
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: Burada təsvir edin
+        teacher_markdown: |-
+          # Planlaşdırma Nəzarəti
+
+          Qalan səviyyələrdə davam etmələrinə icazə verməzdən əvvəl tələbə planlarını yoxlayın.
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        content1: 'Boolean ifadəsini ingiliscə təsvirə uyğunlaşdırın.
+
+'
+        questions:
+        - text: 'Köpək spritinin fırlanması pişik spritinin fırlanmasından azdır?
+
+'
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - text: |-
+            doğru
+            yanlış
+            doğru
+        - text: |-
+            0
+            200
+            100
+        - text: |-
+            doğru
+            xəta
+            doğru
+        - text: |-
+            yanlış
+            doğru
+            yanlış
+        questions:
+        - text: Bu proqram ilə konsolda hansı nəticə çap olunacaq?
+        title: başlıq
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: Burada təsvir edin
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
+        questions:
+        - text: 'Proqramı oxuyun və bu animasiyalardan hansının canlanacağını təxmin
+            edin. '
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png,300px
+        - text: https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png
+        - text: https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png
+        - text: https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png
+        content1: Kodu istehsal edəcəyi şəkilə uyğunlaşdırın.
+        questions:
+        - text: https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png
+        - text: https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png
+        - text: https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png
+        - text: https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png
+      CSD U3 drawing practice choice_2021:
+        display_name: Praktika
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: Burada təsvir edin
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: Burada təsvir edin
+      CSD U6 LED create intro_2021:
+        content1: Burada təsvir edin
+        markdown: |-
+          # LED Proqramları
+
+          Son səviyyədə siz ekranda müxtəlif düymələrlə LED-i idarə etmək üçün tətbiq yaratdınız. Növbəti iki səviyyədə siz bir neçə başqa tətbiq nümunəsini görəcəksiniz, sonra özünüzün birini yaratmaq şansınız olacaq.
+
+          Nümunələrə baxarkən, sizin və komanda yoldaşınızla yaratmaq istədiyiniz tətbiq üçün hansı kodun faydalı ola biləcəyini düşünün.
+      CSD U6 array multi_2021:
+        answers:
+        - text: https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png,200px
+        - text: https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png,200px
+        - text: https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png,200px
+        - text: https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png,200px
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)"
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: Burada təsvir edin
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+        questions:
+        - text: 'Kodu oxuyun və bu proqram işləyərkən necə görünəcəyini təxmin edin. '
+        title: Proqnoz verin
+      CSD games cake challenge choice_2021:
+        display_name: Əngəllər
+      CSD games platform challenge choice_2021:
+        display_name: Əngəllər
+      CSD web draw loop practice choice_2021:
+        display_name: Praktika
+      CSD web movement practice choice_2021:
+        display_name: Praktika
+      CSD web text practice choice_2021:
+        display_name: Praktika
+      CSDU6 Innovation_2021:
+        markdown: |-
+          # İnnovasiya Araşdırması
+
+          Baxmaq üçün aşağıdakı mövzulardan birini seçin. Siz kateqoriyanızla əlaqəli ən son innovativ hesablama cihazları haqqında məlumat tapmaq istəyə bilərsiniz.
+
+          ## Geyinilə bilən texnologiya
+          Geyinilə bilən texnologiya istifadəçi tərəfindən geyinilmək üçün nəzərdə tutulmuş istənilən hesablama formasını əhatə edir, istər geyimə daxil edilmiş olsun, istərsə də aksessuar kimi. Ağıllı addımölçənlər kimi bir çox geyilə bilən qurğular sağlamlıq və təhlükəsizliklə bir qədər üst-üstə düşür, çünki cihaz həm taxıla bilər, həm də şəxsi sağlamlığınızı yaxşılaşdırmaq üçün nəzərdə tutulub.
+
+          ## Sağlamlıq və təhlükəsizlik
+          Geniş mövzuya həm istehlakçı texnologiyası (sağlamlığınızı və ya təhlükəsizliyinizi yaxşılaşdırmaq üçün istifadə edə biləcəyiniz şeylər), həm də peşəkar texnologiya (həkim və ya digər peşəkarın istifadə edə biləcəyi avadanlıq) daxildir.
+
+          ## Kənd təsərrüfatı
+          Kənd təsərrüfatı açıq mövzu olmaya bilər, lakin texnoloji yeniliklər bizim əkinçiliklə bağlı yanaşmamıza böyük təsir göstərib. Buraya kompüterlərin mövcud təsərrüfat avadanlığına daxil edilməsi, məhsulların monitorinqi üçün sensorlar və robotların istifadəsi, səmərəliliyi və davamlılığı artırmaq üçün məlumatların təhlili daxildir.
+
+          ## İstehsalat
+          Sürətli prototipləşdirmə, sənaye robotikası və avtomatlaşdırma sahəsindəki irəliləyişlər malların necə istehsal olunduğuna böyük təsir göstərmişdir. İstər münasib qiymətə kiçik miqyaslı istehsalı (3D printerlər və lazer kəsicilər kimi) təmin edən texnologiya, istərsə də kompüterlərin zavod işlərinə inteqrasiyası olsun, burada araşdırmaq üçün çoxlu maraqlı sahələr var.
+
+          ## İncəsənət və dizayn
+          Bədii ifadə ilə hesablamanın kəsişməsi təsirli və gözlənilməz nəticələr verə bilər. İncəsənət və dizaynla əlaqəli kommersiya məhsullarını tapma ehtimalınız az olsa da, hər cür hesablama cihazlarından yaradıcı və ifadəli şəkildə istifadə edən çoxlu sayda evdə hazırlanmış əsərlər tapacaqsınız.
+
+          ## Ağıllı Ev
+          Ehtiyaclarınızı anlayan və hətta gözləyən bir evin xəyalı hər zamankindən daha yaxındır. İstər açıq şəkildə səs əmrləri ilə idarə olunsun, istərsə də dəyişən şərtlərə nəzarət etmək və onlara cavab vermək üçün sensorlardan istifadə etməklə, ağıllı ev cihazları evin ətrafında istənilən sayda gündəlik və ya təkrarlanan tapşırıqların öhdəsindən gəlir.
+
+
+          # Araşdırma Mülahizələri
+
+          Mövzunuzla bağlı cihazları araşdırarkən aşağıdakı mülahizələri nəzərə alın:
+
+          * Proqram təminatında avadanlıq əsaslı həllər üzərində fokuslanmaq
+          * Köhnə xəbərlər üzərində son yeniliklərə diqqət yetirin
+          * Sizi maraqlandıran şeyləri izləyin
+
+          Hər bir mövzu üçün sadalanan tövsiyə olunan saytlara əlavə olaraq, hələ tam istifadə olunmamış məhsulları görmək üçün müxtəlif kraudfandinq veb saytlarına (məsələn, Kickstarter və Indiegogo) baxmağı düşünün.
+      csd-pre-survey-levelgroup_21_22:
+        title: CS Kəşfləri Tələbə Kurs Öncəsi Anket
