@@ -184,6 +184,33 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Guia d'implementació"
+        },
+        "design_mode/csd/2021": {
+          "name": "Mode de disseny"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Mode de disseny"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funcions"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Per bucles"
+        },
+        "for_loops/csd/2021": {
+          "name": "Per bucles"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variables"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funcions"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funcions"
+        },
+        "lists/csd/2021": {
+          "name": "Llistes"
         }
       }
     }
