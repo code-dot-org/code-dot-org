@@ -18897,6 +18897,8 @@ ar:
               name: النموذج الأولي
             lesson-19:
               name: مشروع
+            Circuits and Physical Prototypes:
+              description_teacher: استعدادًا للمشروع النهائي لهذا الفصل، سيتعلم الطلاب كيفية تطوير نموذج أولي لجسم مادي يتضمن لوحة ضوئية دائرية. باستخدام دليل تخطيط المشروع النموذجي، سيتعلم الطلاب كيفية توصيل دائرتين بسيطتين وبناء نماذج أولية يمكنها توصيل التصميم المقصود للمنتج، باستخدام مواد رخيصة ويسهل العثور عليها مثل الورق المقوى والشريط اللاصق.
           lesson_groups:
             lessonGroup-3:
               display_name: القوالب
@@ -18926,6 +18928,11 @@ ar:
               display_name: مشروع
             lessonGroup-4:
               display_name: العروض التوضيحية والموارد
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: اختبار CSA Clone
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -19357,6 +19364,12 @@ ar:
               description_student: صمم مشروعًا تفاعليًا يمكنك مشاركته مع زملائك.
               description_teacher: سيستخدم الطلاب الأحداث لجعل النقوش المتحركة تتحرك حول الشاشة بناءً على مدخلات المستخدم في درس \*\* بناء المهارات \*\* هذا.
           lesson_groups:
+            lessonGroup-5:
+              display_name: الدورة F المتغيرات (مهملة)
+            lessonGroup-6:
+              display_name: الدورة F للحلقات (مهملة)
+            lessonGroup-7:
+              display_name: الدورة E الكائنات (مهملة)
             lessonGroup-8:
               display_name: ساعة البرمجة
         csa7-exemplars:
@@ -19390,6 +19403,34 @@ ar:
               display_name: النقوش المتحركة
             lessonGroup-3:
               display_name: المتغيرات
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              name: 'المشروع: إعداد نموذج أولي لابتكار'
+              description_teacher: في هذا المشروع النهائي للدورة، يتعاون الطلاب على تطوير واختبار نموذج أولي لجهاز حاسوبي مبتكر يعتمد على لوحة الأضواء الدائرية. باستخدام المدخلات والمخرجات المتاحة على اللوحة، ستقوم المجموعات بإنشاء برامج تسمح بتفاعلات المستخدم المثيرة للاهتمام والفريدة.
+            Innovations in Computing:
+              name: ابتكارات في الحوسبة
+              description_teacher: لبدء الوحدة النهائية لهذه الدورة، سيقوم الطلاب بإجراء بعض الأبحاث حول الابتكارات المثيرة للاهتمام في الحوسبة. سيعرّض هذا الدرس الطلاب لمجموعة متنوعة من عوامل شكل الحوسبة (كيف يبدو جهاز الكمبيوتر) والمجالات التي تتأثر بالحوسبة. في وقت لاحق من هذه الوحدة، سوف ينظر الطلاب إلى الوراء على الأجهزة التي واجهوها في هذا الدرس أثناء تطويرهم لأجهزة الحوسبة المادية الخاصة بهم.
+            The Circuit Playground:
+              name: لوحة الأضواء الدائرية
+            Board Events:
+              name: أحداث اللوحة
+            lesson-10:
+              name: الجمع بين المدخلات
+            Accelerometer:
+              name: مقياس التسارع
+              description_teacher: في هذا الدرس، سوف يستكشف الطلاب مقياس التسارع وقدراته. سيصبحون على دراية بأحداثه وخصائصه، بالإضافة إلى إنشاء برامج متعددة باستخدام مقياس التسارع المماثل لتلك التي من المحتمل أن تصادفها في تطبيقات العالم الحقيقي.
+            Making Music:
+              name: إنشاء موسيقى
+            Functions with Parameters:
+              name: دوال
+            Project - Make a Game:
+              name: 'المشروع: تصميم لعبة'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: الفصل الأول
+            lessonGroup-3:
+              display_name: الفصل الثاني
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -19775,6 +19816,7 @@ ar:
           student_description: تعلم علوم الكمبيوتر من خلال تجربة الدروس أدناه بالسرعة التي تناسبك! تعلم كيفية إنشاء برامج الكمبيوتر، وتطوير مهارات حل المشكلات، وشق طريقك مارًا بمجموعة من التحديات الممتعة! أنشئ ألعابًا ومشاريع إبداعية لمشاركتها مع الأصدقاء والعائلة والمعلمين.
           description_short: 'مقدمة عن علم الحاسوب: تجمع بين أفضل مناهجنا الابتدائية للطلاب الأكبر سنًا.'
           description_audience: 'تتراوح الأعمار بين: 9-18'
+          name: express-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -20768,6 +20810,8 @@ ar:
               description_teacher: في هذا الدرس، سيتعرف الطلاب على إمكانية الوصول وقيمة تقمص الشخصية من خلال العصف الذهني وتصميم حلول يمكن الوصول إليها في تطبيقات افتراضية.
             'Hello World: Food':
               name: مرحبًا أيها العالم
+              description_student: في هذا الدرس ستتعلم إنشاء الكائنات المتحركة وتحريكها وجعلها تفاعلية باستخدام الأحداث.
+              description_teacher: في درس **بناء المهارات** هذا، سيتعلم الطلاب كيفية إنشاء الكائنات المتحركة وتحريكها وجعلها تفاعلية باستخدام الأحداث.
           lesson_groups:
             csf_sprites:
               display_name: النقوش المتحركة
@@ -20971,6 +21015,8 @@ ar:
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -20997,3 +21043,106 @@ ar:
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: مختبر Java
+            lesson-9:
+              name: الحلقات
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        self-paced-pl-csa1-2022:
+          lessons:
+            lesson-1:
+              name: مرحبا بكم في Code.org
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: يوم التقييم
+            Java Lab:
+              name: مختبر Java
+              key: مختبر Java
+            lesson-10:
+              key: الدرس 10
+            lesson-6:
+              key: الدرس 6
+            lesson-7:
+              key: الدرس 7
+            lesson-8:
+              key: الدرس 8
+            lesson-9:
+              key: الدرس 9
+            lesson-11:
+              key: الدرس 11
+            lesson-12:
+              key: الدرس 12
+            lesson-13:
+              key: الدرس 13
+            lesson-14:
+              key: الدرس 14
+            lesson-15:
+              key: الدرس 15
+            lesson-1:
+              key: الدرس 1
+            lesson-2:
+              key: الدرس 2
+            lesson-3:
+              key: الدرس 3
+            lesson-4:
+              key: الدرس 4
+            lesson-5:
+              key: الدرس 5
+              name: يوم التقييم
+            lesson-16:
+              key: الدرس 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-5:
+              display_name: صندوق الاختبارات
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: يوم التقييم
+            Java Lab:
+              name: مختبر Java
+              key: مختبر Java
+            lesson-1:
+              key: الدرس 1
+            lesson-2:
+              key: الدرس 2
+            lesson-3:
+              key: الدرس 3
+            lesson-4:
+              key: الدرس 4
+            lesson-5:
+              key: الدرس 5
+            lesson-10:
+              key: الدرس 10
+            lesson-6:
+              key: الدرس 6
+            lesson-7:
+              key: الدرس 7
+            lesson-8:
+              key: الدرس 8
+            lesson-9:
+              key: الدرس 9
+            lesson-11:
+              key: الدرس 11
+            lesson-12:
+              key: الدرس 12
+            lesson-13:
+              key: الدرس 13
+            lesson-14:
+              key: الدرس 14
+            lesson-15:
+              key: الدرس 15
+              name: يوم التقييم
+            lesson-16:
+              key: الدرس 16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+            lessonGroup-5:
+              display_name: صندوق الاختبارات
