@@ -2661,6 +2661,10 @@ fa:
           lesson_groups:
             lessonGroup-3:
               display_name: متغیرها
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: توابع
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2814,3 +2818,7 @@ fa:
               name: اشکال‌زدایی
             lesson-19:
               name: اشکال‌زدایی
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: حلقه‌ها
