@@ -8293,6 +8293,11 @@ th:
               display_name: โปรเจกต์
             lessonGroup-4:
               display_name: ตัวอย่างและแหล่งข้อมูล
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: การทดสอบ CSA Clone
+          name: testest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -8953,6 +8958,12 @@ th:
               name: ปาร์ตี้เต้นรำมนุษย์ต่างดาวไปกับสไปรท์แลป
               description_student: สร้างโปรเจกต์แบบโต้ตอบที่นำมาแชร์กับเพื่อน ๆ ในห้องเรียนได้
           lesson_groups:
+            lessonGroup-5:
+              display_name: หลักสูตร ตัวแปร F (เลิกใช้แล้ว)
+            lessonGroup-6:
+              display_name: หลักสูตร F สำหรับลูป (เลิกใช้แล้ว)
+            lessonGroup-7:
+              display_name: หลักสูตร E สไปรท์ (เลิกใช้แล้ว)
             lessonGroup-8:
               display_name: ช่วงเวลาของ Code
         csf-2022-pilot:
@@ -8971,6 +8982,17 @@ th:
               display_name: ตัวแปร
             lessonGroup-4:
               display_name: โปรเจกต์ปิดท้ายหลักสูตร
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: การผสานข้อมูลที่ป้อนเข้าด้วยกัน
+            Functions with Parameters:
+              name: ฟังก์ชัน
+          lesson_groups:
+            lessonGroup-2:
+              display_name: ตอนที่ 1
+            lessonGroup-3:
+              display_name: ตอนที่ 2
         csa7-pilot-facilitator:
           lessons:
             Java Lab:
@@ -9323,6 +9345,7 @@ th:
               display_name: โปรเจกต์ปิดท้ายหลักสูตร
           description_short: 'รายละเอียดเบื้องต้นของวิทยาการคอมพิวเตอร์: การผสมผสานหลักสูตรในระดับประถมศึกษาของเราเพื่อเด็กโต'
           description_audience: 'อายุ: 9-18 ปี'
+          name: ด่วน-2022
         csp1-2022:
           lesson_groups:
             cspSurvey:
@@ -9843,6 +9866,10 @@ th:
               name: การออกแบบสำหรับการช่วยการเข้าถึง
             'Hello World: Food':
               name: Hello World
+              description_student: ในบทเรียนนี้ คุณจะได้เรียนรู้การสร้างและการทำให้สไปรท์เคลื่อนไหว
+                และการทำให้มีการโต้ตอบกันโดยใช้เหตุการณ์
+              description_teacher: ในบทเรียน **สร้างทักษะ** นี้ นักเรียนจะได้เรียนรู้การสร้างและการทำให้สไปรท์เคลื่อนไหว
+                และการทำให้มีการโต้ตอบกันโดยใช้เหตุการณ์
           lesson_groups:
             csf_digcit:
               display_name: พลเมืองดิจิทัล
@@ -10018,6 +10045,8 @@ th:
               display_name: ลูป
             csf_events:
               display_name: เหตุการณ์
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -10030,3 +10059,89 @@ th:
               name: แรงบันดาลใจของโปรเจกต์
             lesson-19:
               name: การแก้ไขจุดบกพร่อง
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: จาวาแลป
+            lesson-9:
+              name: ลูป
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: จาวาแลป
+              key: จาวาแลป
+            lesson-10:
+              key: บทที่ 10
+            lesson-6:
+              key: บทที่ 6
+            lesson-7:
+              key: บทที่ 7
+            lesson-8:
+              key: บทที่ 8
+            lesson-9:
+              key: บทที่ 9
+            lesson-11:
+              key: บทที่ 11
+            lesson-12:
+              key: บทที่ 12
+            lesson-13:
+              key: บทที่ 13
+            lesson-14:
+              key: บทที่ 14
+            lesson-15:
+              key: บทที่ 15
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+            lesson-3:
+              key: บทที่ 3
+            lesson-4:
+              key: บทที่ 4
+            lesson-5:
+              key: บทที่ 5
+            lesson-16:
+              key: บทที่ 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แซนด์บ็อกซ์
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: จาวาแลป
+              key: จาวาแลป
+            lesson-1:
+              key: บทที่ 1
+            lesson-2:
+              key: บทที่ 2
+            lesson-3:
+              key: บทที่ 3
+            lesson-4:
+              key: บทที่ 4
+            lesson-5:
+              key: บทที่ 5
+            lesson-10:
+              key: บทที่ 10
+            lesson-6:
+              key: บทที่ 6
+            lesson-7:
+              key: บทที่ 7
+            lesson-8:
+              key: บทที่ 8
+            lesson-9:
+              key: บทที่ 9
+            lesson-11:
+              key: บทที่ 11
+            lesson-12:
+              key: บทที่ 12
+            lesson-13:
+              key: บทที่ 13
+            lesson-14:
+              key: บทที่ 14
+            lesson-15:
+              key: บทที่ 15
+            lesson-16:
+              key: บทที่ 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: แซนด์บ็อกซ์
