@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-02-17 19:33:28 UTC",
+    "serialized_at": "2022-02-17 21:56:21 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2667,7 +2667,7 @@
       "key": "c5e4d792-61de-487c-8180-4d0973363903",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What makes an activity a game?_\n\n**Discussion goal**: Students should understand that games usually involve players, score(s), a win or lose condition, and different outcomes. Each time a user plays through a game they might have a different outcome or score.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n\n**Discuss**: _Which of the following types of information change over time?_ \n* _Your first name_\n* _Your birthday_\n* _Your height_\n* _Your age_\n* _The temperature outside_\n* _The answer to 2+2_\n* _The capital of our country_\n* _Today’s date_\n* _The score in a game_\n\n**Do This**: Have students discuss which information would change over time and which would not. Some items might generate a larger discussion. For example, it is possible to change your first name or use a nickname. Also, over time, your height will stop changing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _When is it useful to change what is stored in a variable?_\n\n**Discussion goal**: Students should understand that they can create a variable that stores information that either stays the same or changes over time. In a game with points, a variable is responsible for keeping track of a user’s score throughout the game. Typically, this variable starts out being set to 0 and increases by 1 for every point that the user scores. The final score is reported at the end by printing out the variable. \n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2676,10 +2676,49 @@
       }
     },
     {
-      "key": "c91796e2-8558-4486-8d83-76f6a881365e",
+      "key": "f506d2b8-de59-4958-add1-3df80f630f6b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Do this**: Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts.\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The goal of this discussion activity is to get students thinking about storing and modifying information using a variable. Students may recall that in previous lessons they would store information, like a word, by entering it into a prompt. In the next activities, students will learn a new way to store information as well as how to modify that information as a program runs. They should discuss when it would be necessary to change or update a variable over time. \n\nFor the discussion, decide beforehand what strategy will work best for your classroom. Some ideas include: using a T-chart, discussing in pairs or as a class.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f506d2b8-de59-4958-add1-3df80f630f6b",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "9d1483fd-ea40-45e8-a1a4-d9dd3a0184fd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Count Variable” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d1483fd-ea40-45e8-a1a4-d9dd3a0184fd",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "f023d139-427c-42d0-b23d-0ac9934cedcf",
+      "position": 4,
+      "properties": {
+        "description": "The value stored in a variable can change over time.\n\nWhen we start, our count variable is set to 0. After a few seconds, it increases by 1.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f023d139-427c-42d0-b23d-0ac9934cedcf",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "c91796e2-8558-4486-8d83-76f6a881365e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Variables Review\" slide\n\n**Do this**: Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts.\n\n\n",
         "name": "Review"
       },
       "seeding_key": {
@@ -2689,9 +2728,9 @@
     },
     {
       "key": "aab517d0-b612-48d3-a65b-57cb99fc48c7",
-      "position": 3,
+      "position": 6,
       "properties": {
-        "description": "When a user enters information into a prompt, the computer stores it with a variable. The prompt can also trigger an event. If the code uses a variable, the computer will look for a matching label to find the stored information.\n\nHow do you think variables could be useful to someone who wants to make a game? What information would we want to keep track of using variables?\n",
+        "description": "When a user enters information into a prompt, the computer stores it with a variable. The prompt can also trigger an event. If the code uses a variable, the computer will look for a matching label to find the stored information.",
         "remarks": true
       },
       "seeding_key": {
@@ -2701,7 +2740,7 @@
     },
     {
       "key": "4a134255-6472-4d5d-a9fb-651c811b41a3",
-      "position": 4,
+      "position": 7,
       "properties": {
         "tips": [
           {
