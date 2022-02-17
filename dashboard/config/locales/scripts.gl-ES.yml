@@ -2525,6 +2525,10 @@ gl:
           lesson_groups:
             lessonGroup-3:
               display_name: Variables
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funcións
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2661,3 +2665,7 @@ gl:
           lessons:
             lesson-12:
               name: Condicionais
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Bucles
