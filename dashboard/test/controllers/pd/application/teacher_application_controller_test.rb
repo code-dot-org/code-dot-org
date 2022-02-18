@@ -46,6 +46,20 @@ module Pd::Application
       assert_equal application.form_data, JSON.parse(@script_data.dig(:props)).dig('savedFormData')
     end
 
+    test 'teachers with a reopened application have an application id and saved form data' do
+      application = create :pd_teacher_application, form_data_hash: (
+        build :pd_teacher_application_hash, :reopened
+      )
+      sign_in application.user
+      get :new
+      assert_response :success
+      assert_template :new
+
+      @script_data = assigns(:script_data)
+      assert_equal application.id, JSON.parse(@script_data.dig(:props)).dig('applicationId')
+      assert_equal application.form_data, JSON.parse(@script_data.dig(:props)).dig('savedFormData')
+    end
+
     test 'teachers without an application have no id nor form data' do
       sign_in create :teacher
       get :new
