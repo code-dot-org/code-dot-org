@@ -12,9 +12,11 @@ export default function CategoryNavigation({initialIsOpen, category}) {
         marginBottom: 5,
         width: 150
       }}
-      onClick={() => setIsOpen(!isOpen)}
     >
-      <span style={{padding: '5px 10px', display: 'block'}}>
+      <span
+        style={{padding: '5px 10px', display: 'block'}}
+        onClick={() => setIsOpen(!isOpen)}
+      >
         {category.name}
       </span>
       {isOpen && (
