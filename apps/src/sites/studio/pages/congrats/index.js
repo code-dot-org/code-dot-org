@@ -18,6 +18,7 @@ $(document).ready(function() {
   const language = congratsData.language;
   const under13 = congratsData.under_13;
   const randomDonorTwitter = congratsData.random_donor_twitter;
+  const randomDonorName = congratsData.random_donor_name;
   // Allows us to conditionally hide the promotional card for the Dance Party
   // Extras tutorial if we have problems during Hour of Code.
   const hideDancePartyFollowUp = congratsData.hide_dance_followup;
@@ -44,6 +45,7 @@ $(document).ready(function() {
         language={language}
         MCShareLink={mcShareLink}
         randomDonorTwitter={randomDonorTwitter}
+        randomDonorName={randomDonorName}
         hideDancePartyFollowUp={hideDancePartyFollowUp}
         showStudioCertificate={showStudioCertificate}
       />
