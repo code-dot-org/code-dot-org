@@ -1141,7 +1141,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
 
-    user_storage_id = storage_id_for_user_id(@student.id)
+    user_storage_id = fake_storage_id_for_user_id(@student.id)
 
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1173,7 +1173,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'loads level in view only if viewing own work, channel backed level and version param is present' do
     sign_in @teacher
 
-    user_storage_id = storage_id_for_user_id(@teacher.id)
+    user_storage_id = fake_storage_id_for_user_id(@teacher.id)
 
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1202,7 +1202,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test 'loads level not in readonly if viewing own work, level is channel backed and version param is empty' do
     sign_in @teacher
 
-    user_storage_id = storage_id_for_user_id(@teacher.id)
+    user_storage_id = fake_storage_id_for_user_id(@teacher.id)
 
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1233,7 +1233,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
 
-    user_storage_id = storage_id_for_user_id(@student.id)
+    user_storage_id = fake_storage_id_for_user_id(@student.id)
 
     script = create :script
     lesson_group = create(:lesson_group, script: script)
@@ -1266,7 +1266,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     sign_in @teacher
 
     other_student = create :student
-    user_storage_id = storage_id_for_user_id(other_student.id)
+    user_storage_id = fake_storage_id_for_user_id(other_student.id)
 
     fake_last_attempt = 'STUDENT_LAST_ATTEMPT_SOURCE'
 
