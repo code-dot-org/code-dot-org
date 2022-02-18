@@ -146,10 +146,11 @@ const FormController = props => {
     return () => {
       window.removeEventListener('beforeunload', exitHandler);
     };
-  }, [hasUserChangedData, submitting, saving]);
+  }, [hasUserChangedData, submitting, saving, warnOnExit]);
 
   // on errors changed
   useEffect(() => {
+    ``;
     // If we got new errors, navigate to the first page containing errors
     if (previousErrors.length === 0 && errors.length > 0) {
       for (let i = 0; i < pageComponents.length; i++) {
