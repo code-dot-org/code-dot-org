@@ -61,24 +61,23 @@ InvalidPagesSummary.propTypes = {
 const FormController = props => {
   const {
     pageComponents,
-    requiredFields = [],
+    requiredFields,
     apiEndpoint,
-    applicationId = undefined,
-    allowPartialSaving = false,
-    autoComputedFields = [],
+    applicationId,
+    allowPartialSaving,
+    autoComputedFields,
     options,
-    getInitialData = () => ({}),
-    onInitialize = () => {},
-    onSetPage = () => {},
-    onSuccessfulSubmit = () => {},
-    onSuccessfulSave = () => {},
-    savedStatus = undefined,
-    serializeAdditionalData = () => ({}),
-    sessionStorageKey = null,
-    submitButtonText = defaultSubmitButtonText,
+    getInitialData,
+    onInitialize,
+    onSetPage,
+    onSuccessfulSubmit,
+    onSuccessfulSave,
+    serializeAdditionalData,
+    sessionStorageKey,
+    submitButtonText,
     getPageProps: getAdditionalPageProps = () => ({}),
-    validateOnSubmitOnly = false,
-    warnOnExit = false
+    validateOnSubmitOnly,
+    warnOnExit
   } = props;
 
   // We use functions here as the initial value so that these values are only calculated once
@@ -671,6 +670,23 @@ FormController.propTypes = {
   submitButtonText: PropTypes.string,
   validateOnSubmitOnly: PropTypes.bool,
   warnOnExit: PropTypes.bool
+};
+
+FormController.defaultProps = {
+  requiredFields: [],
+  applicationId: undefined,
+  allowPartialSaving: false,
+  autoComputedFields: [''],
+  getInitialData: () => {},
+  onInitialize: () => {},
+  onSetPage: () => {},
+  onSuccessfulSubmit: () => {},
+  onSuccessfulSave: () => {},
+  serializeAdditionalData: () => {},
+  sessionStorageKey: null,
+  submitButtonText: defaultSubmitButtonText,
+  validateOnSubmitOnly: false,
+  warnOnExit: false
 };
 
 export default FormController;
