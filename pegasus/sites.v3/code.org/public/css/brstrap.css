@@ -65,6 +65,7 @@
   .col-60 { width: 60%; float:left; }
   .col-63 { width: 63%; float:left; }
   .col-66 { width: 66%; float:left; }
+  .col-66-center { width: 66%; margin: 0 auto; }
   .col-75 { width: 75%; float:left; }
   .col-80 { width: 80%; float:left; }
   .col-95 { width: 95%; float:left; }

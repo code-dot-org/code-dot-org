@@ -31,7 +31,8 @@ describe('CourseVersionPublishedStateSelector', () => {
       families: ['family1', 'family2', 'family3'],
       versionYearOptions: ['1990', '1991', '1992'],
       initialPublishedState: PublishedState.beta,
-      publishedState: PublishedState.beta
+      publishedState: PublishedState.beta,
+      courseOfferingEditorLink: null
     };
   });
 
@@ -292,5 +293,29 @@ describe('CourseVersionPublishedStateSelector', () => {
       .instance()
       .handleNewFamilyNameChange({target: {value: 'new-family'}});
     expect(wrapper.find('.familyNameSelector').props().disabled).to.be.true;
+  });
+
+  it('displays course offering editor button when courseOfferingEditorLink', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        courseOfferingEditorLink={'/link/link'}
+      />
+    );
+    expect(wrapper.find('Button').length).to.equal(1);
+    expect(wrapper.find('Button').props().text).to.equal(
+      'Edit Course Offering'
+    );
+    expect(wrapper.find('Button').props().href).to.equal('/link/link');
+  });
+
+  it('does not display course offering editor button when courseOfferingEditorLink is null', () => {
+    const wrapper = shallow(
+      <CourseVersionPublishingEditor
+        {...defaultProps}
+        courseOfferingEditorLink={null}
+      />
+    );
+    expect(wrapper.find('Button').length).to.equal(0);
   });
 });

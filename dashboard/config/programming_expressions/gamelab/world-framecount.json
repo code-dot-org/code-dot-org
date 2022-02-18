@@ -2,5 +2,6 @@
   "key": "World.frameCount",
   "name": "World.frameCount",
   "category": "World",
+  "category_key": "world",
   "syntax": "World.frameCount"
 }

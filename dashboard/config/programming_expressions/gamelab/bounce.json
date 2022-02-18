@@ -2,6 +2,7 @@
   "key": "bounce",
   "name": "bounce",
   "category": "Sprites",
+  "category_key": "sprites",
   "palette_params": [
     {
       "name": "target"

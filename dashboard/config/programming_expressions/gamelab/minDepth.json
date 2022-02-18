@@ -2,5 +2,6 @@
   "key": "minDepth",
   "name": "minDepth",
   "category": "Groups",
+  "category_key": "groups",
   "syntax": "minDepth"
 }

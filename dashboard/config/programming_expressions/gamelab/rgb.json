@@ -2,6 +2,7 @@
   "key": "rgb",
   "name": "rgb",
   "category": "Drawing",
+  "category_key": "drawing",
   "palette_params": [
     {
       "name": "r"

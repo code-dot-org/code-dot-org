@@ -2,6 +2,7 @@
   "key": "clearTimeout",
   "name": "clearTimeout",
   "category": "Control",
+  "category_key": "control",
   "palette_params": [
     {
       "name": "__"
