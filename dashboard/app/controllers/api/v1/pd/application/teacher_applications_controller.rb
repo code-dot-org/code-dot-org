@@ -13,16 +13,10 @@ module Api::V1::Pd::Application
 
     # PATCH /api/v1/pd/application/teacher/<applicationId>
     def update
-      form_data_hash = params.try(:[], :form_data)
-      if form_data_hash
-        form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
-        @application.form_data_hash = JSON.parse(form_data_json)
-      end
+      form_data_hash = params.try(:[], :form_data) || {}
+      form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
 
-      status = params.try(:[], :status)
-      if status
-        @application.status = status
-      end
+      @application.form_data_hash = JSON.parse(form_data_json)
 
       if @application.save
         render json: @application, status: :ok
