@@ -270,8 +270,7 @@ export default class SetupChecklist extends Component {
   render() {
     const linuxPermissionError =
       isLinux() &&
-      this.state.caughtError &&
-      this.state.caughtError.message.includes('Permission denied');
+      this.state.caughtError?.message?.includes('Permission denied');
 
     return (
       <div>
