@@ -95,7 +95,8 @@ export default class MicroBitBoard extends EventEmitter {
   checkExpectedFirmware() {
     return Promise.resolve()
       .then(() => this.openSerialPort())
-      .then(serialPort => this.boardClient_.connectBoard(serialPort));
+      .then(serialPort => this.boardClient_.connectBoard(serialPort))
+      .catch(err => Promise.reject(err));
   }
 
   /**
