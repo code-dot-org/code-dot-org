@@ -26,10 +26,11 @@ export default class CoreLibrary {
     this.soundLog = [];
     this.criteria = [];
     this.previous = {};
-    this.validationTimes = {
-      early: 30,
-      wait: 150,
-      delay: 0
+    this.validationFrames = {
+      delay: 90,
+      fail: 150,
+      pass: 90,
+      successFrame: 0
     };
 
     this.commands = {

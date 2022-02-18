@@ -1,6 +1,6 @@
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import * as utils from '@cdo/apps/p5lab/utils';
-import {APP_WIDTH} from '../constants';
+import {APP_WIDTH} from '../../constants';
 
 export const commands = {
   getCriteria() {
@@ -118,10 +118,38 @@ export const commands = {
     this.validationFrames.early = frames;
   },
   setWaitTime(frames) {
-    this.validationFrames.wait = frames;
+    this.validationFrames.fail = frames;
+  },
+  setFailTime(frames) {
+    this.validationFrames.fail = frames;
   },
   setDelayTime(frames) {
-    this.validationFrames.delay = frames;
+    this.validationFrames.pass = frames;
+  },
+  getFailTime() {
+    return this.validationFrames.fail;
+  },
+  getPassTime() {
+    return this.validationFrames.pass;
+  },
+  getDelayTime() {
+    return this.validationFrames.delay;
+  },
+
+  checkAndSetSuccessTime(state) {
+    if (!this.validationFrames.successFrame && state === 'pass') {
+      this.validationFrames.successFrame = this.currentFrame();
+      this.validationFrames.pass =
+        this.validationFrames.delay + this.currentFrame();
+    }
+  },
+
+  // Delay the pass time if the student is interacting with the app.
+  delayEndInActiveApp() {
+    if (this.previous.eventLogLength < this.eventLog.length) {
+      this.validationFrames.pass =
+        this.validationFrames.delay + this.currentFrame();
+    }
   },
 
   // updateValidation() is used in levels, typically running every frame.=
@@ -132,35 +160,35 @@ export const commands = {
     // Get the current (ie. previous frame) pass/fail state prior to validation
     const state = commands.getPassState(this.criteria);
 
+    // Check all criteria and update the completion status of each.
+    commands.checkAllCriteria(this.criteria);
+    commands.checkAndSetSuccessTime.call(this, state);
     // Calculate the size of the current progress bar as it fills to the right
     // across the screen.
     const barWidth =
-      this.currentFrame() * commands.calculateBarScale(this.validationFrames);
+      (this.currentFrame() - this.validationFrames.successFrame) *
+      commands.calculateBarScale.call(this, state);
     drawUtils.validationBar(this.p5, barWidth, state, {});
-
-    // Check all criteria and update the completion status of each.
-    if (this.currentFrame() <= this.validationFrames.wait) {
-      commands.checkAllCriteria(this.criteria);
-    } else {
-      // If "wait time" is over, determine if student passes or fails.
-      var results = {};
-      if (state === 'fail') {
-        console.log(this.criteria);
-        results = {
-          state: 'failed',
-          feedback: commands.reportFailure(this.criteria)
-        };
-      } else if (
-        this.currentFrame() >=
-        this.validationFrames.wait + this.validationFrames.delay
-      ) {
-        results = {
-          state: 'succeeded',
-          feedback: commands.reportSuccess(this.criteria)
-        };
-      }
-      return results;
+    switch (state) {
+      case 'fail':
+        if (this.currentFrame() > this.validationFrames.fail) {
+          // End the level.
+          return {
+            state: 'failed',
+            feedback: commands.reportFailure(this.criteria)
+          };
+        }
+        break;
+      case 'pass':
+        if (this.currentFrame() > this.validationFrames.pass) {
+          return {
+            state: 'succeeded',
+            feedback: commands.reportSuccess(this.criteria)
+          };
+        }
+        break;
     }
+
     // For programs where students work with events, we need to make comparisons
     // between the current state and the state during the previous frame. After all
     // validation checks are complete, we store the current state in this.previous
@@ -202,8 +230,22 @@ export const commands = {
     return state;
   },
 
-  calculateBarScale(validationFrames) {
-    return APP_WIDTH / (validationFrames.wait + validationFrames.delay);
+  calculateBarScale(state) {
+    let scale = APP_WIDTH;
+    switch (state) {
+      case 'pass':
+        scale =
+          APP_WIDTH /
+          (this.validationFrames.pass - this.validationFrames.successFrame);
+        break;
+      case 'fail':
+        scale = APP_WIDTH / this.validationFrames.fail;
+        break;
+      default:
+        scale = APP_WIDTH;
+        break;
+    }
+    return scale;
   },
 
   // checkAllCriteria() is used in levels, typically occuring once per frame
@@ -385,6 +427,18 @@ export const commands = {
     return this.getAnimationsInUse().length >= count;
   },
 
+  // Returns true new sprites were created this frame.
+  newSpriteCreated() {
+    let result = false;
+    const spriteIds = this.getSpriteIdsInUse();
+    const prevSpriteIds = this.previous.sprites;
+    console.log(spriteIds);
+    console.log(prevSpriteIds);
+    console.log(spriteIds.filter(id => !prevSpriteIds.includes(id)));
+    result = spriteIds.filter(id => !prevSpriteIds.includes(id)).length >= 1;
+    return result;
+  },
+
   // Returns true if any sprite has a tint
   anySpriteHasTint() {
     const spriteIds = this.getSpriteIdsInUse();
@@ -532,6 +586,50 @@ export const commands = {
           : this.previous.sprites.find(sprite => sprite.id === spriteIds[i])
               .behaviors;
       if (!utils.arrayEquals(currentBehaviors, previousBehaviors)) {
+        result = true;
+      }
+    }
+    return result;
+  },
+
+  // Special function for lesson: Mini-Project: Collector Game
+  // Returns true if any sprite has one of: ['moving_with_arrow_keys', 'driving_with_arrow_keys', 'draggable'].
+  interactiveBehaviorFound() {
+    const spriteIds = this.getSpriteIdsInUse();
+    let result = false;
+    for (let i = 0; i < spriteIds.length; i++) {
+      const currentBehaviors = this.getBehaviorsForSpriteId(i);
+      if (
+        currentBehaviors.some(behavior =>
+          [
+            'moving_with_arrow_keys',
+            'driving_with_arrow_keys',
+            'draggable'
+          ].includes(behavior)
+        )
+      ) {
+        result = true;
+      }
+    }
+    return result;
+  },
+
+  // Special function for lesson: Mini-Project: Collector Game
+  // Returns true if any sprite has one of the "non-interactive" behaviors.
+  itemBehaviorFound() {
+    const spriteIds = this.getSpriteIdsInUse();
+    let result = false;
+    for (let i = 0; i < spriteIds.length; i++) {
+      const currentBehaviors = this.getBehaviorsForSpriteId(i);
+      if (
+        currentBehaviors.some(behavior =>
+          [
+            'moving_with_arrow_keys',
+            'driving_with_arrow_keys',
+            'draggable'
+          ].includes(behavior)
+        )
+      ) {
         result = true;
       }
     }
