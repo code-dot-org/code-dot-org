@@ -75,7 +75,7 @@ const FormController = props => {
     serializeAdditionalData,
     sessionStorageKey,
     submitButtonText,
-    getPageProps: getAdditionalPageProps,
+    getPageProps: getAdditionalPageProps = () => ({}),
     validateOnSubmitOnly,
     warnOnExit
   } = props;
@@ -685,7 +685,6 @@ FormController.defaultProps = {
   serializeAdditionalData: () => {},
   sessionStorageKey: null,
   submitButtonText: defaultSubmitButtonText,
-  getAdditionalPageProps: () => {},
   validateOnSubmitOnly: false,
   warnOnExit: false
 };
