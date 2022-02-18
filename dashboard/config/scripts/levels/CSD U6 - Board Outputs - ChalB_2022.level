@@ -51,7 +51,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "palette_category_at_start": "Circuit",
-    "long_instructions": "# Board Output Challenge",
+    "long_instructions": "# Secret Images\r\n\r\nThis app has several images embedded on the screen. Choose one of them to be your secret image, then add code so that when the user mouses over the image, the LED will light up. This app mimics an \"I Spy\" childrens app.\r\n\r\n## Do This\r\n- Choose an image to be your secret image. Using the existing `onEvent` as an example, add a new `onEvent` that detects when the use moves their mouse over your secret image.\r\n- Inside the `onEvent`, add code so the red LED lights up\r\n\r\n**Run Your Code!** You should be able to move the mouse around the screen, and the LED will light up only when it hovers over your secret image.",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
     "name_suffix": "_2021",
@@ -66,12 +66,22 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
+    "display_name": "Challenge B",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L2/challenge/B.png",
+    "starter_assets": {
+      "Kitchen.png": "e2cdf6ca-060f-4285-8d1f-8b83953425b1.png",
+      "Apple.png": "247141dd-98fb-434b-8382-d73e3e7d7084.png",
+      "Avocado.png": "c974dae8-e195-4a92-a94c-e0d1eb621f2f.png",
+      "Breadloaf.png": "0d0f3c1b-073c-4e96-bcaa-951dc6f5ba2f.png",
+      "Hamburger.png": "ddd53e61-e3b5-4d47-be53-51d9fee922d3.png",
+      "Popcorn.png": "da77b519-57f6-4be2-ae7f-7dc6a66690f8.png"
+    },
+    "start_blocks": "onEvent(\"backgroundImage\", \"mousemove\", function( ) {\r\n  led.off();\r\n});\r\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255); background-size: 320px 450px; background-image: url(&quot;https://levelbuilder-studio.code.org/blockly/media/1x1.gif&quot;);\" data-canonical-image-url=\"\" data-image-type=\"default\"><img src=\"/level_starter_assets/CSD U6 - Board Outputs - ChalB_2022/Kitchen.png\" data-canonical-image-url=\"image://Kitchen.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"backgroundImage\" style=\"height: 450px; width: 320px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 0px; top: 0px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - Board Outputs - ChalB_2022/Apple.png?t=1645134413000\" data-canonical-image-url=\"image://Apple.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"secret1\" style=\"height: 40px; width: 30px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 0px; top: 205px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - Board Outputs - ChalB_2022/Avocado.png?t=1645134416000\" data-canonical-image-url=\"image://Avocado.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"secret3\" style=\"height: 35px; width: 35px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 255px; top: 205px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - Board Outputs - ChalB_2022/Breadloaf.png?t=1645134418000\" data-canonical-image-url=\"image://Breadloaf.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"secret2\" style=\"height: 35px; width: 35px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 75px; top: 210px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - Board Outputs - ChalB_2022/Hamburger.png?t=1645134420000\" data-canonical-image-url=\"image://Hamburger.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"secret5\" style=\"height: 35px; width: 35px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 250px; top: 140px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - Board Outputs - ChalB_2022/Popcorn.png?t=1645134423000\" data-canonical-image-url=\"image://Popcorn.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"secret4\" style=\"height: 35px; width: 35px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 10px; top: 140px; margin: 0px;\"></div></div>",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "display_name": "Challenge B",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L2/challenge/B.png"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -79,7 +89,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T02:57:23.954+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - ChalA_2022\"},{\"changed_at\":\"2021-12-16 02:57:27 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:44:18 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T02:57:23.954+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - ChalA_2022\"},{\"changed_at\":\"2021-12-16 02:57:27 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:44:18 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-17 21:48:14 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-17 21:48:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-17 22:13:12 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-17 22:15:48 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

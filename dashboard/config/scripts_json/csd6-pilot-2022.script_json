@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csd6-pilot",
-    "serialized_at": "2022-02-17 14:40:37 UTC",
+    "serialized_at": "2022-02-18 19:23:35 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -162,7 +162,7 @@
       "relative_position": 6,
       "properties": {
         "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of learning goals.",
-        "overview": "In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data>",
+        "overview": "In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
         "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.",
         "student_overview": "Create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected"
       },
@@ -1610,6 +1610,40 @@
       }
     },
     {
+      "key": "e9bc49e1-2089-48f5-b989-34efc09c28bf",
+      "position": 2,
+      "properties": {
+        "description": "These devices are called Circuit Playgrounds. Throughout this unit, we're going to learn how to add code to control these devices. Today we're going to focus on the **outputs** of this device, which is the information a computer or device gives to users.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e9bc49e1-2089-48f5-b989-34efc09c28bf",
+        "lesson_activity.key": "fce72e67-057c-4d01-9815-58361ada3eb2"
+      }
+    },
+    {
+      "key": "bf006cd9-0b28-444b-b551-e3413cb99d25",
+      "position": 3,
+      "properties": {
+        "description": "**Vocabulary:**\n- **Output**: the information computers give to users, devices, or other computers"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf006cd9-0b28-444b-b551-e3413cb99d25",
+        "lesson_activity.key": "fce72e67-057c-4d01-9815-58361ada3eb2"
+      }
+    },
+    {
+      "key": "06de9c7f-cc1f-4f70-971b-2828010742d2",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day:** What outputs can I control on the circuit playground?"
+      },
+      "seeding_key": {
+        "activity_section.key": "06de9c7f-cc1f-4f70-971b-2828010742d2",
+        "lesson_activity.key": "fce72e67-057c-4d01-9815-58361ada3eb2"
+      }
+    },
+    {
       "key": "af390bd2-e8eb-48f9-93dc-3d08b1515b3f",
       "position": 1,
       "properties": {
@@ -1916,6 +1950,29 @@
       }
     },
     {
+      "key": "ba231d73-1b4d-4d75-bb98-d66a55a41020",
+      "position": 2,
+      "properties": {
+        "description": "So far, we've only learned how to control the **output** from the Circuit Playground. Today, we'll learn how to use the **inputs** on the Circuit Playground, like the buttons and toggle switch. Inputs are how the device gets information from the user.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ba231d73-1b4d-4d75-bb98-d66a55a41020",
+        "lesson_activity.key": "d7b94bf0-2398-48ec-bd25-7e491937e21a"
+      }
+    },
+    {
+      "key": "d009eb1c-013a-42f9-af62-917d4a8cf7bd",
+      "position": 3,
+      "properties": {
+        "description": "**Vocabulary:**\n\n- **Input:** the information computers get from users, devices, or other computers"
+      },
+      "seeding_key": {
+        "activity_section.key": "d009eb1c-013a-42f9-af62-917d4a8cf7bd",
+        "lesson_activity.key": "d7b94bf0-2398-48ec-bd25-7e491937e21a"
+      }
+    },
+    {
       "key": "72a2b033-9ed8-4ade-bb9d-b91050904977",
       "position": 1,
       "properties": {
@@ -1930,7 +1987,7 @@
       "key": "a26639ff-28e7-4af2-ad91-7714f96c5907",
       "position": 2,
       "properties": {
-        "progression_name": "Practice"
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "a26639ff-28e7-4af2-ad91-7714f96c5907",
@@ -2253,6 +2310,17 @@
       },
       "seeding_key": {
         "activity_section.key": "8f6e22e4-9a9c-45ec-8bbc-d27e34d6c473",
+        "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
+      }
+    },
+    {
+      "key": "5c0315d9-4f2f-48fd-8dcc-063bbb0a244c",
+      "position": 6,
+      "properties": {
+        "description": "**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c0315d9-4f2f-48fd-8dcc-063bbb0a244c",
         "lesson_activity.key": "b052c205-04cc-459b-9617-23b6d3ef609e"
       }
     },
@@ -2865,8 +2933,19 @@
       }
     },
     {
-      "key": "eaf54249-fe83-492a-be8e-304bae3f44c7",
+      "key": "8ae30f6e-fbe4-453f-8bf0-f9e9e80b2865",
       "position": 3,
+      "properties": {
+        "description": "**Vocabulary:**\n- **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ae30f6e-fbe4-453f-8bf0-f9e9e80b2865",
+        "lesson_activity.key": "00e09dc0-8ae2-41c5-85c0-2f2882db3872"
+      }
+    },
+    {
+      "key": "eaf54249-fe83-492a-be8e-304bae3f44c7",
+      "position": 4,
       "properties": {
         "description": "**Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.\n\n**Slides**: Present an overview of the project and the steps students will take to complete it.",
         "duration": "15",
@@ -2879,7 +2958,7 @@
     },
     {
       "key": "9eb227de-e399-428d-b4e9-636080e69436",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "**Project Guide:** Have students begin filling out the project guide, planning their app and sketching what their device will look like. Check in with students during this step to help brainstorm ideas and ensure students are completing the project guide correctly.\n\n**Distribute:** As students finish their project guide, allow students to access the construction materials you've collected, such as paper and cardboard and any other supplies. ",
         "duration": "20",
@@ -2892,7 +2971,7 @@
     },
     {
       "key": "12de6b93-5458-4ae3-8f80-cf0f9df1f283",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Collect:** Collect Project Guides and look over them for any issues that could cause problems for students in the next portion of the lesson. Students may also use the time before the next lesson to brainstorm additional app ideas.",
         "duration": "5",
@@ -3178,6 +3257,17 @@
       }
     },
     {
+      "key": "efb5301f-8df6-4567-9133-332fb09e78e7",
+      "position": 6,
+      "properties": {
+        "description": "**Question of the Day:** How can I use sensors to detect changes in the environment?"
+      },
+      "seeding_key": {
+        "activity_section.key": "efb5301f-8df6-4567-9133-332fb09e78e7",
+        "lesson_activity.key": "ff7938c3-c01d-4e1b-a715-7385ad673052"
+      }
+    },
+    {
       "key": "e09b2bd8-d97b-4f0d-8dca-a11c7d662755",
       "position": 1,
       "properties": {
@@ -3269,7 +3359,7 @@
       "key": "25ee24a6-7921-4a60-8f23-688d21f13441",
       "position": 1,
       "properties": {
-        "description": "**Journal:** Considering all of the computing devices that you interact with on a regular basis, identify as many potential sensors as you can. Where do your computing devices take a continuously changing input and convert it into digital data?",
+        "description": "**Journal:** Considering all of the computing devices that you interact with on a regular basis, write down as many potential sensors as you can. What type of sensor do you think you interact with the most?",
         "name": "Sensors All Around\r"
       },
       "seeding_key": {
@@ -3776,7 +3866,13 @@
       "key": "278c4a81-49de-4185-a4a7-89f8b1745bcd",
       "position": 2,
       "properties": {
-        "description": "**Video:** Show the video [Pu Gong Ying Tu (Dandelion Painting)](https://www.youtube.com/watch?v=C1-pdgGn0SI) by artist Jie Qi"
+        "description": "**Video:** Show the video [Pu Gong Ying Tu (Dandelion Painting)](https://www.youtube.com/watch?v=C1-pdgGn0SI) by artist Jie Qi",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Dive Deeper:** If you would like to explore this piece of artwork and the art of Ji Qie more, [click here to explore the artists website](http://technolojie.com/pu-gong-ying-tu-dandelion-painting/). You may decide to explore this with your students as a full class, or offer it as an independent exploration if you choose."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "278c4a81-49de-4185-a4a7-89f8b1745bcd",
@@ -4098,7 +4194,7 @@
       "key": "79c05d0b-4aa9-464b-a159-8242a4bc7485",
       "position": 2,
       "properties": {
-        "progression_name": "Predict"
+        "progression_name": "Setup"
       },
       "seeding_key": {
         "activity_section.key": "79c05d0b-4aa9-464b-a159-8242a4bc7485",
@@ -4886,7 +4982,7 @@
         "level_keys": [
           "CSD U6 - Board Inputs - P_2022"
         ],
-        "progression": "Practice"
+        "progression": "Predict"
       },
       "bonus": false,
       "seeding_key": {
@@ -6225,6 +6321,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -7619,15 +7718,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U6 - Physical Input - P_2022"
-        ],
-        "progression": "Predict"
+        "progression": "Setup"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U6 - Physical Input - P_2022"
+          "CSD U6 - Physical Input - SB1_2022"
         ],
         "lesson.key": "Physical Outputs",
         "lesson_group.key": "lessonGroup-3",
@@ -7635,38 +7731,13 @@
         "activity_section.key": "79c05d0b-4aa9-464b-a159-8242a4bc7485"
       },
       "level_keys": [
-        "CSD U6 - Physical Input - P_2022"
+        "CSD U6 - Physical Input - SB1_2022"
       ]
     },
     {
       "chapter": 132,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSD U6 - Physical Input - SB1_2022"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSD U6 - Physical Input - SB1_2022"
-        ],
-        "lesson.key": "Physical Outputs",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-pilot-2022",
-        "activity_section.key": "0669a8ff-c32a-41c4-a2a3-ef5196d3a469"
-      },
-      "level_keys": [
-        "CSD U6 - Physical Input - SB1_2022"
-      ]
-    },
-    {
-      "chapter": 133,
-      "position": 3,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -7689,9 +7760,9 @@
       ]
     },
     {
-      "chapter": 134,
-      "position": 4,
-      "activity_section_position": 3,
+      "chapter": 133,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -7714,9 +7785,9 @@
       ]
     },
     {
-      "chapter": 135,
-      "position": 5,
-      "activity_section_position": 4,
+      "chapter": 134,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -7739,8 +7810,8 @@
       ]
     },
     {
-      "chapter": 136,
-      "position": 6,
+      "chapter": 135,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7764,8 +7835,8 @@
       ]
     },
     {
-      "chapter": 137,
-      "position": 7,
+      "chapter": 136,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -7789,8 +7860,8 @@
       ]
     },
     {
-      "chapter": 138,
-      "position": 8,
+      "chapter": 137,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -7814,7 +7885,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7838,7 +7909,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 139,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7862,7 +7933,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 140,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7886,7 +7957,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 141,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -9473,18 +9544,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U6 - Physical Input - P_2022",
-        "script_level.level_keys": [
-          "CSD U6 - Physical Input - P_2022"
-        ],
-        "lesson.key": "Physical Outputs",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd6-pilot-2022",
-        "activity_section.key": "79c05d0b-4aa9-464b-a159-8242a4bc7485"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSD U6 - Physical Input - SB1_2022",
         "script_level.level_keys": [
           "CSD U6 - Physical Input - SB1_2022"
@@ -9492,7 +9551,7 @@
         "lesson.key": "Physical Outputs",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6-pilot-2022",
-        "activity_section.key": "0669a8ff-c32a-41c4-a2a3-ef5196d3a469"
+        "activity_section.key": "79c05d0b-4aa9-464b-a159-8242a4bc7485"
       }
     },
     {
@@ -10899,6 +10958,26 @@
       }
     },
     {
+      "key": "input",
+      "word": "Input",
+      "definition": "the information computers get from users, devices, or other computers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "key": "output",
+      "word": "Output",
+      "definition": "the information computers give to users, devices, or other computers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "output"
+      }
+    },
+    {
       "key": "prototype",
       "word": "Prototype",
       "definition": "A first or early model of a product that allows you to test assumptions before developing a final version.",
@@ -10910,6 +10989,12 @@
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Board Events",
+        "vocabulary.key": "input"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Circuits and Physical Prototypes",
@@ -10926,6 +11011,12 @@
       "seeding_key": {
         "lesson.key": "Innovations in Computing",
         "vocabulary.key": "innovation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Circuit Playground",
+        "vocabulary.key": "output"
       }
     },
     {

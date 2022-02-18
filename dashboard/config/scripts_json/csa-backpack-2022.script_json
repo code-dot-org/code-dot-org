@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-17 14:07:04 UTC",
+    "serialized_at": "2022-02-18 16:29:13 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -94,6 +94,50 @@
         "activity_section.key": "91172788-2650-44ac-8479-a6cdee7ab106",
         "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
       }
+    },
+    {
+      "key": "e1235533-04db-4a46-a5af-ceef2b63c677",
+      "position": 4,
+      "properties": {
+        "progression_name": "Unit 1 Lesson 11"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1235533-04db-4a46-a5af-ceef2b63c677",
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
+    },
+    {
+      "key": "69739e3e-f53e-45dd-a897-d3c39e746ade",
+      "position": 5,
+      "properties": {
+        "progression_name": "Unit 1 Lesson 12"
+      },
+      "seeding_key": {
+        "activity_section.key": "69739e3e-f53e-45dd-a897-d3c39e746ade",
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
+    },
+    {
+      "key": "c331d96c-bac1-4a9f-9a48-76935ee9682d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Unit 1 Lesson 13"
+      },
+      "seeding_key": {
+        "activity_section.key": "c331d96c-bac1-4a9f-9a48-76935ee9682d",
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
+    },
+    {
+      "key": "7b54923a-b024-4b0f-8ce4-1c21534a5345",
+      "position": 7,
+      "properties": {
+        "progression_name": "Unit 1 Lesson 14"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b54923a-b024-4b0f-8ce4-1c21534a5345",
+        "lesson_activity.key": "058b2e63-6fb1-4a4e-b46d-e6bb8e20cb20"
+      }
     }
   ],
   "script_levels": [
@@ -103,6 +147,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7 PainterPlus"
+        ],
         "progression": "Unit 1 Lesson 7"
       },
       "bonus": false,
@@ -125,6 +172,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9 PainterPlus"
+        ],
         "progression": "Unit 1 Lesson 9"
       },
       "bonus": false,
@@ -147,6 +197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10 PainterPlus"
+        ],
         "progression": "Unit 1 Lesson 10"
       },
       "bonus": false,
@@ -161,6 +214,94 @@
       },
       "level_keys": [
         "CSA U1L10 PainterPlus"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 1 Lesson 11"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L11 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "e1235533-04db-4a46-a5af-ceef2b63c677"
+      },
+      "level_keys": [
+        "CSA U1L11 PainterPlus"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 1 Lesson 12"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L12 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "69739e3e-f53e-45dd-a897-d3c39e746ade"
+      },
+      "level_keys": [
+        "CSA U1L12 PainterPlus"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 1 Lesson 13"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L13 PainterPlus and PatternPainter"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "c331d96c-bac1-4a9f-9a48-76935ee9682d"
+      },
+      "level_keys": [
+        "CSA U1L13 PainterPlus and PatternPainter"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 1 Lesson 14"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L14 BackgroundPainter"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "7b54923a-b024-4b0f-8ce4-1c21534a5345"
+      },
+      "level_keys": [
+        "CSA U1L14 BackgroundPainter"
       ]
     }
   ],
@@ -199,6 +340,54 @@
         "lesson_group.key": "",
         "script.name": "csa-backpack-2022",
         "activity_section.key": "91172788-2650-44ac-8479-a6cdee7ab106"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L11 PainterPlus",
+        "script_level.level_keys": [
+          "CSA U1L11 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "e1235533-04db-4a46-a5af-ceef2b63c677"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L12 PainterPlus",
+        "script_level.level_keys": [
+          "CSA U1L12 PainterPlus"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "69739e3e-f53e-45dd-a897-d3c39e746ade"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L13 PainterPlus and PatternPainter",
+        "script_level.level_keys": [
+          "CSA U1L13 PainterPlus and PatternPainter"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "c331d96c-bac1-4a9f-9a48-76935ee9682d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L14 BackgroundPainter",
+        "script_level.level_keys": [
+          "CSA U1L14 BackgroundPainter"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "csa-backpack-2022",
+        "activity_section.key": "7b54923a-b024-4b0f-8ce4-1c21534a5345"
       }
     }
   ],
