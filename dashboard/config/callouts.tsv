@@ -1,4 +1,4 @@
-Name	script_id	level_num	game_name	localization_key	element_id	qtip_config
+Name	script_name	level_num	game_name	localization_key	element_id	qtip_config
 Drag Blocks 20	20-hour	2_2	Maze	drag_blocks	[block-id='1']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
 Drag Blocks HoC	Hour of Code	2_2	Maze	drag_blocks	[block-id='1']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
 Run 20	20-hour	2_2	Maze	run	#runButton
