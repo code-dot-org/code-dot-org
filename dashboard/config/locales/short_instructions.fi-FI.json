@@ -411,7 +411,25 @@
         "MC HOC 2016 New Walk": "Tutkitaan maailmaa! Liiku nuolien avulla ja paina välilyöntiä tai napauta pelilautaa käyttääksesi esineitä. Käytä ovea päästäksesi sisälle taloon.",
         "MC HOC 2016 SCORE LEVEL": "Jotkut pelit laskevat pisteitä. Pelaa hippaa näiden Rautajättien kanssa ja käytä \"lisää 1 tulokseen\" -komentoa antaaksesi itsellesi pisteen aina kun saat yhden niistä kiinni. Sinun pitää saada viisi pistettä voittaaksesi!",
         "MC HOC 2016 Village Test": "Voi ei! Zombit ovat saaneet sinut ansaan talon sisälle! Koodaa Rautajätti ajamaan zombeja takaa ja hyökkämään niiden kimppuun!",
-        "New Artist Project": "Piirrä jotain mahtavaa! Koodisi tallentuu projektina joten voit palata sen pariin milloin tahansa."
+        "New Artist Project": "Piirrä jotain mahtavaa! Koodisi tallentuu projektina joten voit palata sen pariin milloin tahansa.",
+        "Standalone_Artist_1": "Tervetuloa Taiteilijaan! Yritetään ensiksi tehdä yksinkertainen neliö käyttämällä \"käänny oikealle\" -lohkoa ja \"liiku eteenpäin\" -lohkoa. Jokaisen sivun tulisi olla 100 pikseliä pitkä.",
+        "Standalone_Artist_2": "Piirrä vinoneliö 120 ja 60 asteen kulmilla ja 150 pikseliä pitkillä sivuilla.",
+        "Standalone_Artist_3": "Pystytkö piirtämään kuusikulmion 100 pikselin sivuilla ja 60 asteen käännöksillä?",
+        "Standalone_Artist_4": "Sinulla on uusi lohko kokeiltavaksi, silmukka. Se toistaa joukon käskyjä. Mitä tapahtuu jos teet nämä komennot silmukassa 6 kertaa?",
+        "Standalone_Artist_5": "Kuinka monta kertaa sinun täytyy toistaa tämä vinoneliö silmukassa piirtääksesi kukan?",
+        "Standalone_Artist_5.5": "Huomaa kuinka yksinkertaistimme vinoneliön koodia muuttamalla sen silmukaksi. Voit toistaa koko komentosarjan 12 kertaa piirtääksesi kukan. Vinkki: Sinun täytyy kääntyä 30 astetta vinoneliösilmukan jälkeen jotta et piirrä uudelleen samaa kohtaa.",
+        "Standalone_Artist_6": "Toista tämä kuusikolmion koodi kuusi kertaa luodaksesi halutun suunnitelman. Kuinka monta astettta sinun tulee kääntyä jokaisella kerralla? Vinkki: jaa ympyrässä olevien asteiden määrä toistojen lukumäärällä.",
+        "Standalone_Artist_7": "Funktio on toinen ohjelmointityökalu joka auttaa vähentämään koodin toistamista. Tämä funktio piirtää kukan, joten voit käyttää sitä milloin vain piirtääksesi kukan. Käytä funktiota ja uuttaa \"hyppää\" -lohkoa piirtääksesi nämä kukat. Vinkki: kukat ovat 150 pikseliä erillään toisistaan.",
+        "Standalone_Artist_8": "Tässä on funktio nimeltä \"piirrä muoto\", jonka koodasimme kuusikulmion piirtämiseen. Suorita koodi nähdäksesi mitä se tekee ja kokeile funktiota nähdäksesi mitä se tekee. Saatko sen piirtämään neliöistä, kolmioista tai kahdeksankulmioista koostuvia kuvioita?",
+        "Standalone_Artist_9": "Nyt voit tehdä juuri sellaisen kuvan kuin haluat! Sinulla on käytössäsi jopa tyhjä funktio, jonka voit laittaa tekemään mitä ikinä haluat!",
+        "iceage_hello1": "Auta Sidiä sanomaan \"Moi!\" siirtämällä \"hahmo 1 sanoo\" lohko työtilaan ja yhdistämällä sen \"suorittaessa\" tapahtuman alle.",
+        "iceage_hello2": "Auta Manua ja Sidiä tervehtimään toisiaan käyttämällä \"hahmo \\_\\_\\_ sanoo\" lohkoa kahdesti.",
+        "iceage_move_to_actor": "Yhdistä lohko \"kun hahmo koskee\" tapahtumaan soittaaksesi äänen kun Diego löytää Manun.",
+        "iceage_move_to_flag": "Jyrsis etsii tammenterhoaan! Voitko auttaa häntä liikkumaan viimeiset 200 kuvapistettä?",
+        "scrat 16": "Pähkinöitä! Käytä \"jos\" lohkoa viedäksesi minut sinne pienimmällä määrällä lohkoja.",
+        "scrat 17": "Ok, tehdäänpä se vielä uudestaan harjoituksen vuoksi – tämä on melko samanlainen, mutta varo seinää!",
+        "scrat 18": "\"Jos - muuten\" -lohkot tarkistavat jonkin ehdon, ja tekevät sitten ainoastaan jomman kumman toiminnoista. Kokeile käyttää tätä uutta lohkoa saadaksesi minut tammenterhon luo.",
+        "scrat 20": "Osaatko ratkaista tämän vaikeamman sokkelon lisäämällä vain kolme uutta lohkoa? Jos teet sen oikein, voin kävellä mutkittelevan polun riippumatta sen pituudesta. Kiirehdi! Jää sulaa jo!"
       }
     }
   }

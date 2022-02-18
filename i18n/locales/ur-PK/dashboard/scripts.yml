@@ -1974,6 +1974,15 @@ ur:
           lesson_groups:
             lessonGroup-3:
               display_name: متغیرات
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: ان پٹس کو ملانا
+          lesson_groups:
+            lessonGroup-2:
+              display_name: باب 1
+            lessonGroup-3:
+              display_name: باب 2
         csa7-pilot-facilitator:
           lessons:
             Java Lab:
@@ -2193,3 +2202,89 @@ ur:
               name: شرائط
             lesson-17:
               name: پروجیکٹ انسپائریشن
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: جاوا لیب
+            lesson-9:
+              name: لوپس
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: جاوا لیب
+              key: جاوا لیب
+            lesson-10:
+              key: سبق 10
+            lesson-6:
+              key: سبق 6
+            lesson-7:
+              key: سبق 7
+            lesson-8:
+              key: سبق 8
+            lesson-9:
+              key: سبق 9
+            lesson-11:
+              key: سبق 11
+            lesson-12:
+              key: سبق 12
+            lesson-13:
+              key: سبق 13
+            lesson-14:
+              key: سبق 14
+            lesson-15:
+              key: سبق 15
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+            lesson-4:
+              key: سبق 4
+            lesson-5:
+              key: سبق 5
+            lesson-16:
+              key: سبق 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: جاوا لیب
+              key: جاوا لیب
+            lesson-1:
+              key: سبق 1
+            lesson-2:
+              key: سبق 2
+            lesson-3:
+              key: سبق 3
+            lesson-4:
+              key: سبق 4
+            lesson-5:
+              key: سبق 5
+            lesson-10:
+              key: سبق 10
+            lesson-6:
+              key: سبق 6
+            lesson-7:
+              key: سبق 7
+            lesson-8:
+              key: سبق 8
+            lesson-9:
+              key: سبق 9
+            lesson-11:
+              key: سبق 11
+            lesson-12:
+              key: سبق 12
+            lesson-13:
+              key: سبق 13
+            lesson-14:
+              key: سبق 14
+            lesson-15:
+              key: سبق 15
+            lesson-16:
+              key: سبق 16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: سینڈباکس

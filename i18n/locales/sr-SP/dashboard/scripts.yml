@@ -2301,6 +2301,10 @@ sr:
           lesson_groups:
             lessonGroup-3:
               display_name: Променљиве
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Функције
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2437,3 +2441,7 @@ sr:
               name: Отклањање грешака
             lesson-19:
               name: Отклањање грешака
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Петље

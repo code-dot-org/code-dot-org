@@ -1803,6 +1803,10 @@ bn:
           lesson_groups:
             lessonGroup-3:
               display_name: চলকগুলো
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: ফাংশনগুলি
         coursea-2022:
           lessons:
             Happy Maps:
@@ -1921,3 +1925,7 @@ bn:
           lessons:
             lesson-12:
               name: শর্তযুক্ত
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: চক্র

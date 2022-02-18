@@ -5026,7 +5026,22 @@ he:
               display_name: דמויות
             lessonGroup-3:
               display_name: משתנים
-        csd6-pilot-2022: {}
+        csd6-pilot-2022:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            Designing Screens with Code: {}
+            Board Events: {}
+            Arrays and Color LEDs: {}
+            Getting Properties: {}
+            lesson-9: {}
+            lesson-10: {}
+            Analog Input: {}
+            Functions with Parameters:
+              name: פונקציות
+            Circuits and Physical Prototypes: {}
+            Physical Outputs: {}
         csa8-exemplars:
           lessons:
             lesson-1: {}
@@ -5348,3 +5363,27 @@ he:
             lesson-20: {}
         csa4-2022: {}
         csa5-2022: {}
+        tess-test-csa: {}
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: חזרות
+        pltess: {}
+        self-paced-pl-csa1-2022: {}
+        self-paced-pl-csa3-2022: {}
+        csa7-pilot-extra:
+          lessons:
+            Unit 7 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa8-pilot-extra:
+          lessons:
+            Unit 8 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}

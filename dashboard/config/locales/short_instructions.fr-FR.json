@@ -3705,7 +3705,14 @@
         "Pixelation 4x4 Empty": "La largeur et la hauteur sont maintenant codées dans les données de pixels. Savez-vous comment ajuster ces dimensions ?",
         "Pixelation Bee": "Cette image plus grande, représentant une abeille, code la couleur avec 12 bits par pixel, mais la visualisation en hexadécimal permet de voir plus facilement la couleur de chaque pixel. Si vous passez en mode binaire, alors là, cela fait beaucoup de bits. Voici autre chose d'incroyable à essayer : faites glisser les bits par pixel jusqu'à 24 bits par pixel. Qu'est-ce qu'il se passe ? Pouvez-vous expliquer ce comportement ?",
         "Pixelation Flappy": "Voici une image plus grande à 9 bits par pixel. Avec 9 bits par pixel, vous pouvez exprimer 512 couleurs différentes. Cliquez pour voir l'image suivante qui est encore plus sophistiquée, mais plus facile à comprendre.",
-        "Vigenere": "Test"
+        "Vigenere": "Test",
+        "CSD U3 Boolean Modify_2021": "Modifier le code pour que toutes les commandes console.log affichent true",
+        "CSD U3 Keypress Boolean_2021": "Modifier le code pour que toutes les commandes console.log affichent true",
+        "CSD U5 black white images pixelation 2_2021": "Dessine un visage de smiley (clique ici pour voir l'image)",
+        "CSD U5 black white images pixelation 4_2021": "Ajoute des sourcils au visage du smiley (clique ici pour voir l'image)",
+        "CSD U5 black white images pixelation 5_2021": "Dessine ce que tu veux",
+        "CSD games conditionals bowl_2021": "Modifier le code pour que toutes les commandes console.log affichent true",
+        "CSD games conditionals practice spaceship_2021": "Modifier le code pour que toutes les commandes console.log affichent true"
       }
     }
   }

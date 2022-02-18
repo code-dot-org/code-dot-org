@@ -2701,6 +2701,10 @@ km:
           lesson_groups:
             lessonGroup-3:
               display_name: អ​ថេរ
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: អនុ​គមន៍
         coursea-2022:
           lessons:
             Learn to Drag and Drop:
@@ -2975,3 +2979,7 @@ km:
               name: លក្ខខណ្ឌ
             lesson-14:
               name: លក្ខខណ្ឌនៅក្នុង Minecraft
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: រង្វិល​ជុំ

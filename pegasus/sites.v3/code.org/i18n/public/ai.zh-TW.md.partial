@@ -52,7 +52,7 @@ social:
 <p>人工智慧和機器學習課程模組大約時長為五周，可以作為<a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >獨立模組</a>或作為<a href="https://studio.code.org/s/csd7-2021">電腦科學探索</a>的一個選修單元來教授。 該模組側重於人工智慧倫理、偏見問題研究，及基本概念的探索和闡述。</p><p>由於機器學習依賴于大量的資料，因此新單元中涵蓋有關醫療保健、人口統計等現實生活的資料集，讓學生們在探索一系列問題時積極參與，此類問題諸如「機器學習可以幫助解決哪些難題？」 「人工智慧如何協助社會？」 「誰可以從人工智慧中受益？」 「誰會受到不利影響」 「誰參與其中？」 「誰會被遺漏？」  </p>
 <p>道德考量將是這些討論的重心，這些科技所產生的的影響將是頻繁討論的要點及課程重點。 這將有助於學生在學習技術原理時，對這些科技產生全面、周密的理解。</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>探索模組</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 

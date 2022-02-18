@@ -2159,6 +2159,10 @@ ky:
           lesson_groups:
             lessonGroup-3:
               display_name: Өзгөрмөлөр
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Функциялар
         coursea-2022:
           lessons:
             Ocean Scene with Loops:
@@ -2376,3 +2380,7 @@ ky:
           lessons:
             lesson-12:
               name: Шартуулар
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Циклдер

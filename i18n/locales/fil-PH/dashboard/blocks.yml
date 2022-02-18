@@ -439,6 +439,26 @@ fil:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': mga Alien
             '"BEAR"': mga Oso
@@ -1235,6 +1255,7 @@ fil:
             "'sound://category_animals/bear.mp3'": oso
             "'sound://category_animals/cat.mp3'": pusa
             "'sound://category_animals/cow.mp3'": baka
+            "'sound://category_animals/pig.mp3'": baboy
             "'sound://category_animals/sheep.mp3'": tupa
             "'sound://category_animals/goat.mp3'": kambing
             "'sound://category_animals/chicken.mp3'": manok
@@ -1246,6 +1267,7 @@ fil:
             "'sound://category_animals/dog.mp3'": aso
             "'sound://category_animals/tiger.mp3'": tigre
             "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": alpa
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": mag-tap
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": tonal hit
             "'sound://category_transition/trippy_robotic_transition.mp3'": robotic na transisyon
@@ -1315,6 +1337,7 @@ fil:
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': entablado
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': mga bituin
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': araw at bahaghari
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': pagbuhos ng sikat ng araw
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': palaruan ng tennis
@@ -1724,6 +1747,7 @@ fil:
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': mga puno ng pino
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': soccer field
             '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': entablado
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': subway
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': araw at bahaghari
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': pagbuhos ng sikat ng araw
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': palaruan ng tennis
@@ -1941,10 +1965,14 @@ fil:
         text: ipakita ang text
       Poetry_startBehavior:
         text: Ang tiyanak {ANIMATION_NAME} ay nagsisimula sa {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': lumalangoy
       Poetry_stopBehavior:
         text: huminto ang tiyanak {ANIMATION_NAME} sa {BEHAVIOR}
         options:
           BEHAVIOR:
+            '"swimming_left_and_right"': lumalangoy
             '"all"': "--lahat ng ugali--"
       Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"

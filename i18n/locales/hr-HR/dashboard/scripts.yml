@@ -2572,6 +2572,10 @@ hr:
               display_name: Likovi
             lessonGroup-3:
               display_name: Varijable
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funkcije
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2729,3 +2733,7 @@ hr:
               name: Otklanjanje pogriješaka
             lesson-19:
               name: Otklanjanje pogriješaka
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Petlje

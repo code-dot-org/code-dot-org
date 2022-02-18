@@ -130,6 +130,69 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "designing_screens_with_code/csd/2021": {
+          "name": "ការរចនា​អេក្រង់​ជាមួយ​កូដ"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "លេខចៃដន្យ"
+        },
+        "functions_2/csd/2021": {
+          "name": "អនុ​គមន៍"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "វីដេអូ៖ ម៉ាស៊ីនចេះរៀន"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "គំនូរគូរជារាង"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "គំនូរគូរជារាង"
+        },
+        "shapes_and_parameters_-_map_level/csd/2021": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "shapes_and_parameters/csd/2021": {
+          "name": "រូបរាងនិងប៉ារ៉ាម៉ែត្រ"
+        },
+        "naming_variables/csd/2021": {
+          "name": "ការដាក់ឈ្មោះអថេរ"
+        },
+        "variables_1/csd/2021": {
+          "name": "អ​ថេរ"
+        },
+        "random_numbers/csd/2021": {
+          "name": "លេខចៃដន្យ"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "លក្ខណៈសម្បត្តិនៃ sprite"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "ការគូររង្វិលជុំដដែលៗ"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "collision_detection/csd/2021": {
+          "name": "ការរកឃើញការប៉ះទង្គិច"
+        },
+        "velocity_and_the_counter_pattern_-_map_level_pdf_/csd/2021": {
+          "name": "ល្បឿននិងលំនាំរាប់"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "អនុ​គមន៍"
+        },
+        "functions_1/csd/2021": {
+          "name": "អនុ​គមន៍"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "lists/csd/2021": {
+          "name": "បញ្ជី"
         }
       }
     }

@@ -7889,30 +7889,6 @@ it-IT:
           > <a href="http://support.code.org" target="blank"><button class="plc">Get help >></button></a>
 
           Dopo aver commentato nel forum, torna qui e clicca il pulsante sottostante per accedere alla prossima lezione.
-      OPD-K5 CS Courses_dani:
-        markdown: "# Gestione della classe > Come iniziare in Code.org\n\n\n## Passo
-          1 - Seleziona un corso\nTutti i corsi proposti da Code.org sono elencati
-          nella sezione **[corsi](https://studio.code.org/courses)**. I corsi A-F
-          di Fondamenti di informatica per la scuola primaria con cui hai fatto pratica
-          in questo corso per insegnanti li trovi subito dopo i corsi rapidi (che
-          possono a loro volta essere utili in situazioni particolari). Tutti i nostri
-          corsi sono gratuiti. Confrontati con i tuoi colleghi a scuola per decidere
-          come questi corsi possano essere integrati con le altre materie d'insegnamento.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          Passo 2 - Crea la tua classe\nCrea una nuova classe per controllare i progressi
-          dei tuoi alunni, stampare le loro credenziali di accesso, gestire le utenze
-          e stampare i certificati che gli alunni porteranno a casa al termine del
-          corso. **[In questa pagina](https://programmailfuturo.it/chi/iscrizione-per-insegnanti)**
-          trovi le istruzioni dettagliate per creare la tua classe, incluso un [video](https://youtu.be/JjLoKLs7NRg)
-          che presenta in dettaglio tutte le funzioni disponibili.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          Passo 3 - Assegna un corso alla tua classe\nClicca sul corso che hai intenzione
-          di insegnare alla tua classe -- dovresti quindi vedere una schermata simile
-          a quella qui sotto. Clicca quindi sul pulsante \"Assegna alla classe\".\n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Step 4 - Inizia ad insegnare! \nBasterà una singola lezione per introdurre
-          i primi concetti di informatica nella tua classe. Quando vedrai l'entusiasmo
-          dei tuoi alunni per l'informatica, proseguirai con la pianificazione giornaliera
-          delle lezioni per guidarli nell'apprendimento e lo svolgimento delle attività
-          tradizionali che potrai fare senza uso di computer. Utilizza i forum di
-          Code.org e Programma il Futuro per unirti agli altri insegnanti.\n\n"
       OPD-K5 CS Tips_dani:
         markdown: |-
           # Per cominciare > Esplorando questo corso online
@@ -8509,33 +8485,6 @@ it-IT:
           > **Come si svolge questa lezione** - Nei livelli che seguono presenteremo una lezione tradizionale ed una serie di esercizi tratti dal Corso C (adatti per la 2ª primaria) che trattano il concetto di "istruzione di ripetizione" (ciclo). Per completare gli esercizi dovrai scrivere del codice utilizzando la programmazione a blocchi. La lezione terminerà poi con un momento di riflessione. Prevedi di impiegare tra 20 e 45 minuti per terminare questa lezione.
 
           Pronti? Partiamo!
-      OPD-K5 Stage5Go_dani:
-        markdown: "# Istruzioni condizionali > Lezione tradizionale\n\n**1. Guarda
-          la struttura della lezione \"[Istruzioni condizionali con le carte da gioco](https://curriculum.code.org/csf-18/coursed/13/)\"
-          del corso D**\n<br/>\nIl corso D è indicato per gli alunni della classe
-          3ª primaria. La medesima lezione è presente anche nei corsi E ed F. Mentre,
-          nei corsi A, B e C le istruzioni condizionali non vengono trattate.\n<br/><br/>\n\n**2.
-          Guarda il video per gli alunni - Istruzioni condizionali con le carte da
-          gioco**\n<br/>\nPotresti far vedere ai tuoi alunni questo video che ti aiuta
-          ad introdurre il concetto di istruzione condizionale ed iniziare la relativa
-          attività tradizionale. \n[![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37
-          PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)\n<br/>\n[Non riesci
-          a vedere il video? Clicca qui](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)\n\n<br/><br/>\n**3.
-          Guarda il video per l'insegnante su come proporre la lezione tradizionale
-          \"Istruzioni condizionali con le carte da gioco\"**\n<br/>\nQuesto video
-          è fatto per fornire spunti agli insegnanti su come impostare la lezione.\n\n[![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41
-          PM.png)](https://www.youtube.com/watch?v=2m2Rn9VxHfU)\n\n[Non riesci a vedere
-          il video? Clicca qui](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)\n\n<br/><br/>\n\n---\n\n>
-          ## Riflessioni\n> Come spiegheresti il concetto di istruzione condizionale
-          ai tuoi alunni? [Condividi i tuoi pensieri nel forum di Programma il Futuro](https://programmailfuturo.it/forum/corso-online-per-l-insegnamento).\n\n>
-          <a href=\"https://programmailfuturo.it/forum/corso-online-per-l-insegnamento\"
-          target=\"blank\"><button class=\"plc\">Confrontiamoci nel forum di Programma
-          il Futuro>></button></a>\n\nOppure, se sai l'inglese...\n\n> ## Reflect\n>
-          How would you explain the concept of conditionals to your students? [Share
-          your thoughts in our forum](http://forum.code.org/t/teaching-conditionals/406/1).\n\n>
-          <a href=\"http://forum.code.org/t/teaching-conditionals/406/1\" target=\"blank\"><button
-          class=\"plc\">Discuss in the forums >></button></a>\n\nDopo che hai commentato
-          nel forum, torna qui e clicca sul pulsante sottostante per proseguire."
       OPD-K5 Stage5Review_dani:
         markdown: |-
           # Cicli > Riflessioni
@@ -8748,49 +8697,6 @@ it-IT:
           - riflettere su ciò che hai imparato;
           - pensare ai prossimi passi da compiere per proseguire il tuo apprendimento;
           - connetterti con una comunità di insegnanti interessati all'insegnamento dell'informatica.
-      OPD-K5 Stage9Start_dani:
-        markdown: "# Gestione della classe > Esploriamo le risorse per gli insegnanti\n\nDalla
-          lezione 4 alla lezione 8 hai avuto modo di prendere visione di alcune lezioni
-          tradizionali e risorse online disponibili per i corsi di \"Fondamenti di
-          informatica\" relative ai concetti di informatica che stai imparando.\nOra
-          che hai un'idea di cosa sia la programmazione informatica ed anche di come
-          si possa insegnare questa materia, è giunto il momento di pianificare il
-          tuo insegnamento. In questa lezione visiteremo altre aree della piattaforma
-          di Code.org ed il **[Pannello di controllo dell'insegnante](http://studio.code.org/)**.
-          \n\nAl termine della lezione 10, avrai:\n\n- scoperto altre risorse disponibili
-          per gli insegnanti,\n- imparato ad utilizzare il **[Pannello di controllo
-          dell'insegnante](http://studio.code.org/)** di Code.org,\n- riflettuto su
-          come integrare l'informatica nelle tue pratiche di insegnamento.\n\n***\n\nQui
-          sotto puoi vedere come si presenta il pannello di controllo dell'insegnante.
-          Per arrivarci devi fare login in Code.org con la tua utenza da insegnante
-          -- sarà la tua schermata predefinita quando accederai a questo sito. Se
-          non hai un'utenza da insegnante, puoi **[richiederla qui](https://studio.code.org/users/sign_up)**.
-          Se sei un'insegnante italiano, ti consigliamo di partire dal [sito di Programma
-          il Futuro](https://programmailfuturo.it).\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
-      OPD-K5 Using CS_dani:
-        markdown: "# Gestione della classe > Preparati per una lezione in Code Studio\n\nVediamo
-          come puoi gestire la tua classe durante una lezione in Code Studio.\n\n##
-          Passo 1: Seleziona un corso\nControlla la pagina con il [catalogo di tutti
-          i corsi disponibili in Code Studio](https://studio.code.org/courses) dove
-          trovi tutti i corsi di Fondamenti di informatica con i relativi piani di
-          lavoro delle lezioni. Più in basso nella pagina, trovi anche corsi per la
-          scuola secondaria, questi però non sono ancora tradotti in italiano. Tutti
-          i nostri corsi sono gratuiti. Confrontati con i tuoi colleghi a scuola per
-          decidere come questi corsi possano essere integrati con le altre materie
-          d'insegnamento.\n \n## Step 2: Crea la tua classe\nCrea una nuova classe
-          per controllare i progressi dei tuoi alunni, stampare le loro credenziali
-          di accesso, gestire le utenze e stampare i certificati che gli alunni porteranno
-          a casa al termine del corso. **[In questa pagina](https://programmailfuturo.it/chi/iscrizione-per-insegnanti)**
-          trovi le istruzioni dettagliate per creare la tua classe, incluso un [video](https://youtu.be/JjLoKLs7NRg)
-          che presenta in dettaglio tutte le funzioni disponibili.\n\n## Step 3: Assegna
-          un corso alla tua classe\nScegli il corso che hai intenzione di insegnare
-          alla tua classe e clicca quindi sul pulsante \"Assegna alla classe\".\n\n##
-          Step 4: Inizia ad insegnare! \nBasterà una singola lezione per introdurre
-          i primi concetti di informatica nella tua classe. Quando vedrai l'entusiasmo
-          dei tuoi alunni per l'informatica, proseguirai con la pianificazione giornaliera
-          delle lezioni per guidarli nell'apprendimento e lo svolgimento delle attività
-          tradizionali che potrai fare senza uso di computer. Utilizza i forum di
-          Code.org e Programma il Futuro per unirti agli altri insegnanti.\n\n"
       OPD-K5 Vocabulary_dani:
         markdown: |-
           # Fondamenti di informatica > Parole chiave
@@ -9881,3 +9787,164 @@ it-IT:
           supporta funzionalità di mappatura. Se gli studenti desiderano sviluppare
           un' applicazione di mappatura, dovranno trovare o creare un' immagine statica
           di una mappa da utilizzare nella loro app.\n"
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
+          Scegli da una delle opzioni a destra.
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipi di livello:** Questa domanda a scelta multipla chiede agli studenti di scegliere come visualizzare le intestazioni HTML su una pagina web. Puoi vedere quali studenti hanno risposto correttamente alla domanda andando a quel livello e richiamando il riquadro Insegnante dal lato destro.  Gli studenti che hanno risposto correttamente alla domanda avranno una bolla verde.  Gli studenti hanno tutte le possibilità che vogliono per rispondere correttamente, quindi indovinare e controllare può anche portare ad una risposta corretta.
+
+          <div class="clear"></div>
+      CSD Interactive Animations and Games Post-Project Test_pilot_2021:
+        title: Animazioni Interattive e Test Post-Progetto dei Giochi
+      CSD Physical Computing Post-Project Test_2021:
+        title: Test Post-Progetto di Informatica Fisica
+      CSD U1 Test_2021:
+        title: Computer e Risoluzione di Problemi - Verifica finale
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Aggiungere Immagini
+      CSD U2 Image practice_pilot_2021:
+        display_name: Aggiungere Immagini
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        content1: Abbina il codice HTML buggato con la descrizione del suo bug.
+        questions:
+        - text: L'attributo 'src' è scritto in modo scorretto.
+        - text: Gli attributi 'src' 'alt' sono invertiti
+        - text: L'estensione file (.jpg) è mancante dall'indirizzo immagine
+        - text: L'indirizzo immagine non è dato come attributo 'src'
+        - text: C'è uno spazio nel nome del file
+        teacher_markdown: Sebbene questa lezione possa essere utilizzata per valutare
+          la comprensione da parte degli studenti della sintassi del tag `<img>`,
+          il suo scopo principale è quello di rendere gli studenti consapevoli dei
+          tipi più comuni di bug che possono incontrare quando aggiungono immagini
+          alle pagine web.
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: descrizione qui
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Abbina l'espressione booleana alla descrizione in inglese.
+        questions:
+        - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
+            gatto?
+        - text: La rotazione del personaggio cane x è minore di quella del personaggio
+            gatto x?
+        - {}
+        - {}
+        - {}
+        title: 'Abbinamento: Comparazione Operatori'
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: titolo
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: descrizione qui
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Pratica
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: descrizione qui
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: descrizione qui
+      CSD U5 test_2021:
+        title: Test Post-Progetto su Dati e Società
+      CSD U6 LED create intro_2021:
+        content1: descrizione qui
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: descrizione qui
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Fai una previsione
+      CSD User Centered Design Post-Project Test_2021:
+        title: 'Design Centrato dell''Utente: Test Post-Progetto'
+      CSD Web Development Post-Project Test_pilot_2021:
+        title: Testo Post-Progetto di Sviluppo Web
+      CSD games cake challenge choice_2021:
+        display_name: Sfide
+      CSD games platform challenge choice_2021:
+        display_name: Sfide
+      CSD web draw loop practice choice_2021:
+        display_name: Pratica
+      CSD web movement practice choice_2021:
+        display_name: Pratica
+      CSD web text practice choice_2021:
+        display_name: Pratica
+      csd-pre-survey-levelgroup_21_22:
+        title: Alla Scoperta dell'Informatica - Indagine preliminare
