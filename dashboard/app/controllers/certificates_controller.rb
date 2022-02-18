@@ -4,8 +4,11 @@ class CertificatesController < ApplicationController
   include CertificatesHelper
 
   # GET /certificates/:encoded_params
+  # encoded_params includes:
+  #   name - student name (optional)
+  #   course - course name (optional)
+  #   donor - donor name (optional)
   def show
-    prevent_caching
     view_options(full_width: true, responsive_content: true)
 
     begin
@@ -17,8 +20,8 @@ class CertificatesController < ApplicationController
     announcement = Announcements.get_announcement_for_page('/certificates')
 
     @certificate_data = {
-      imageUrl: certificate_image_url(data['name'], data['course']),
-      printUrl: certificate_print_url(data['name'], data['course']),
+      imageUrl: certificate_image_url(data['name'], data['course'], data['donor']),
+      printUrl: certificate_print_url(data['name'], data['course'], data['donor']),
       announcement: announcement
     }
   end
