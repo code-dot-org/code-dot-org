@@ -129,3 +129,8 @@ checkForUnsupportedBrowsersOnLoad();
 initHamburger();
 initSigninState(userType);
 initResponsive();
+
+// Register the offline service worker.
+if ('serviceWorker' in navigator && window.OFFLINE_SERVICE_WORKER_PATH) {
+  navigator.serviceWorker.register(window.OFFLINE_SERVICE_WORKER_PATH);
+};

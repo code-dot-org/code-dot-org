@@ -4,6 +4,7 @@ var path = require('path');
 var fs = require('fs');
 var _ = require('lodash');
 var webpackConfig = require('./webpack');
+var offlineWebpackConfig = require('./webpackOffline.config');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 var {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
@@ -1050,6 +1051,8 @@ describe('entry tests', () => {
       watch: false
     }),
 
+    buildOffline: offlineWebpackConfig,
+
     uglify: createConfig({
       minify: true,
       watch: false
@@ -1267,6 +1270,7 @@ describe('entry tests', () => {
     // exist in our repo. Skip minification in development environment.
     envConstants.DEV ? 'noop' : 'uglify:lib',
     envConstants.DEV ? 'webpack:build' : 'webpack:uglify',
+    'webpack:buildOffline',
     'notify:js-build',
     'postbuild',
     envConstants.DEV ? 'noop' : 'newer:copy:unhash'

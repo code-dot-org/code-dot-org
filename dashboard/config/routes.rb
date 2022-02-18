@@ -930,4 +930,5 @@ Dashboard::Application.routes.draw do
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
   get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
+  # get 'offline-service-worker.js', load_file(webpack_asset_path('offline-service-worker'))
 end

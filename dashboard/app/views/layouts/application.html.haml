@@ -9,6 +9,8 @@
         var _jipt = [];
         _jipt.push(['project', 'codeorg']);
       %script{type: "text/javascript", src: "//cdn.crowdin.com/jipt/jipt.js"}
+    :javascript
+      window.OFFLINE_SERVICE_WORKER_PATH = "#{webpack_asset_path('js/offline-service-worker.js', true)}"
     - appname = Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]"
     - title = @page_title ? "#{@page_title} - #{appname}" : appname
     %title= title

@@ -7,8 +7,13 @@ class AssetHelper
     "#{CDO.root_dir}/dashboard/public/blockly/js/manifest.json"
   end
 
+  def offline_webpack_manifest_path
+    "#{CDO.root_dir}/dashboard/public/blockly/js/offline-manifest.json"
+  end
+
   def webpack_manifest
     @webpack_manifest ||= JSON.parse(File.read(webpack_manifest_path))
+    @webpack_manifest.merge!(JSON.parse(File.read(offline_webpack_manifest_path)))
   end
 
   #
@@ -32,9 +37,10 @@ class AssetHelper
   # unit tests which need this method to return a value without raising must
   # stub the CDO object in order to ensure that the webpack manifest is skipped.
   #
-  def webpack_asset_path(asset)
+  def webpack_asset_path(asset, force_use_manifest = false)
     using_prebuilt_apps = !CDO.use_my_apps
-    use_manifest = CDO.optimize_webpack_assets || using_prebuilt_apps
+    #TODO Ask Dave about this.
+    use_manifest = force_use_manifest || CDO.optimize_webpack_assets || using_prebuilt_apps
     return "/assets/#{asset}" unless use_manifest
     path = webpack_manifest[asset]
     raise "Invalid webpack asset name: '#{asset}'" unless path
@@ -42,6 +48,6 @@ class AssetHelper
   end
 end
 
-def webpack_asset_path(asset)
-  AssetHelper.instance.webpack_asset_path(asset)
+def webpack_asset_path(asset, force_use_manifest = false)
+  AssetHelper.instance.webpack_asset_path(asset, force_use_manifest)
 end
