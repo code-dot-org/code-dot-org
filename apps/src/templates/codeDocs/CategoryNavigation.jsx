@@ -1,24 +1,27 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import CodeDocLink from './CodeDocLink';
 
-export default function CategoryNavigation({
-  name,
-  initialIsOpen,
-  color,
-  links
-}) {
+export default function CategoryNavigation({initialIsOpen, category}) {
   const [isOpen, setIsOpen] = useState(initialIsOpen || false);
   return (
     <div
-      style={{backgroundColor: color, borderLeftColor: color}}
+      style={{
+        backgroundColor: category.color,
+        borderLeftColor: category.color,
+        marginBottom: 5,
+        width: 150
+      }}
       onClick={() => setIsOpen(!isOpen)}
     >
-      {name}
+      <span style={{padding: '5px 10px', display: 'block'}}>
+        {category.name}
+      </span>
       {isOpen && (
         <ul style={styles.list}>
-          {links.map(link => (
-            <li key={link.name} style={styles.codeLink}>
-              <a href={link.href}>{link.name}</a>
+          {category.programmingExpressions.map(exp => (
+            <li key={exp.name} style={styles.codeLink}>
+              <CodeDocLink programmingExpression={exp} />
             </li>
           ))}
         </ul>
@@ -28,15 +31,8 @@ export default function CategoryNavigation({
 }
 
 CategoryNavigation.propTypes = {
-  name: PropTypes.string.isRequired,
   initialIsOpen: PropTypes.bool,
-  color: PropTypes.string.isRequired,
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired
-    })
-  )
+  category: PropTypes.object
 };
 
 const styles = {
@@ -45,6 +41,7 @@ const styles = {
     paddingLeft: 4
   },
   list: {
-    listStyleType: 'none'
+    listStyleType: 'none',
+    marginLeft: 10
   }
 };

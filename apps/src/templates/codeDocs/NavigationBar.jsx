@@ -1,44 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CategoryNavigation from './CategoryNavigation';
 
-export default function NavigationBar() {
+export default function NavigationBar({categoriesForNavigation}) {
   return (
     <div style={styles.header}>
-      <CategoryNavigation
-        name="Canvas"
-        initialIsOpen
-        color="#F78183"
-        links={[
-          {
-            name: 'createCanvas',
-            href: 'https://curriculum.code.org/docs/applab/createCanvas/'
-          },
-          {
-            name: 'getRed',
-            href: 'https://curriculum.code.org/docs/applab/getRed/'
-          }
-        ]}
-      />
-      <CategoryNavigation
-        name="Turtle"
-        initialIsOpen={false}
-        color="#4DD0E1"
-        links={[
-          {name: 'move', href: 'https://curriculum.code.org/docs/applab/move/'},
-          {
-            name: 'penUp',
-            href: 'https://curriculum.code.org/docs/applab/penUp/'
-          }
-        ]}
-      />
+      {categoriesForNavigation.map(category => (
+        <CategoryNavigation key={category.key} category={category} />
+      ))}
     </div>
   );
 }
 
+NavigationBar.propTypes = {
+  categoriesForNavigation: PropTypes.arrayOf(PropTypes.object).isRequired
+};
+
 const styles = {
   header: {
-    position: 'absolute',
-    width: 200,
-    left: 0
+    paddingRight: 5,
+    minWidth: 150
   }
 };

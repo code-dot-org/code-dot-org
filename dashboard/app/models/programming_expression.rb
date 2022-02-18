@@ -141,7 +141,7 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def documentation_path
-    "/docs/#{programming_environment.name}/#{key}/"
+    "/programming_environments/#{programming_environment.name}/programming_expressions/#{key}/"
   end
 
   def summarize_for_lesson_edit
