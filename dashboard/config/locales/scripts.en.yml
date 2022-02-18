@@ -1299,12 +1299,12 @@ en:
               name: AI Lab
             Java Lab:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-47:
               name: Example CSP Assessment
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           student_description: All the level types for UI testing. Please sign in to test applab levels (By design, applab levels only work if signed in. Normally, we make people sign in, but this is only enforceable for a whole script and would be annoying to do for this script).
           name: allthethings
         algebraPD2b:
@@ -4027,7 +4027,7 @@ en:
               description_student: In this lesson the class develops a preliminary definition of a computer. After brainstorming the possible definitions for a computer, the class works in groups to sort pictures into “is a computer” or “is not a computer” on poster paper and explain their motivations for choosing some of the most difficult categorizations.  The teacher then introduces a definition of the computer and allows groups to revise their posters according to the new definition.
               description_teacher: 'In this lesson students develop a preliminary definition of a computer. To begin the lesson, the class will brainstorm possible definitions for a computer and place the results of this brainstorm on the board. Next, students will work in groups to sort pictures into “is a computer” or “is not a computer” on poster paper. Groups will place their posters around the room and briefly explain their motivations for choosing some of their most difficult categorizations.  The teacher will then introduce a definition of the computer and allow students to revise their posters according to the new definition.
 
-'
+                '
             Representing Information:
               name: Representing Information
             Processing with Bits:
@@ -4702,8 +4702,8 @@ en:
               name: Functions in Bee
             Functions in Farmer:
               name: Functions in Farmer
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Determine the Concept in Bee:
               name: Determine the Concept in Bee
             Build a Play Lab Game:
@@ -7853,8 +7853,8 @@ en:
               name: CSD pre-survey 21-22
             lesson-20:
               name: CSP post-survey 2021
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           student_description: ''
           name: allthesurveys
         k1hoc2017:
@@ -8046,8 +8046,8 @@ en:
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
               name: Loops in Artist
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Nested Loops:
               name: Nested Loops
             Nested Loops with Frozen:
@@ -14725,8 +14725,8 @@ en:
           lessons:
             Game Lab Bugs:
               name: Game Lab Bugs
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Immovable Crab:
               name: Immovable Crab
           student_description: ''
@@ -16181,12 +16181,12 @@ en:
               description_teacher: "**Question of the Day:  How can we use feedback to make our websites better?**\r\n\r\nThis lesson focuses on the value of peer feedback.  Students first reflect on what they are proud of, and what they would like feedback on.  Teams then work with peers to get that feedback though a structured process that includes the project rubric criteria.  Afterwards, students decide how they would like to respond to the feedback and put the finishing touches on their sites.  After a final review of the rubric, they reflect on their process. To cap off the unit, they will share their projects and also a overview of the process they took to get to that final design.\r\n"
             Post-Project Test:
               name: Post-Project Test
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             CS Discoveries Post Course survey:
               name: CS Discoveries Post Course survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             'Mini-Project: HTML Web Page':
               name: 'Mini-Project: HTML Web Page'
               description_student: "**Question of the Day: How can I use HTML to express a personal value?**\r\n\r\nIn this lesson, the class creates personal web page on a topic of their choice.  The lesson starts with a review of HTML tags.  Next, the class designs web pages, identifying the tags needed to implement them, and creates the pages in Web Lab."
@@ -19046,8 +19046,8 @@ en:
               name: 'Mini-Project: User Input Programs'
             lesson-4:
               name: Debugging Prototypes
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Groups of Sprites
             lesson-6:
@@ -19132,8 +19132,8 @@ en:
             CS Discoveries Pre-survey:
               key: CS Discoveries Pre-survey
               name: CS Discoveries Pre-survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Intro to Problem Solving:
               key: Intro to Problem Solving
               name: Intro to Problem Solving
@@ -19189,8 +19189,8 @@ en:
             Post-Project Test:
               key: Post-Project Test
               name: Post-Project Test
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Intro to Problem Solving - Newspaper Table (Alternate Lesson 1):
               key: Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)
               name: Intro to Problem Solving - Newspaper Table (Alternate Lesson 1)
@@ -19401,17 +19401,17 @@ en:
             Post-Project Test:
               key: Post-Project Test
               name: Post-Project Test
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             CS Discoveries Post Course survey:
               key: CS Discoveries Post Course survey
               name: CS Discoveries Post Course survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-1:
               name: CS Discoveries Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             csd2_1v2:
               display_name: 'Chapter 1: Creating Webpages'
@@ -19617,17 +19617,17 @@ en:
             Post-Project Test:
               key: Post-Project Test
               name: Post-Project Test
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             CS Discoveries Post Course survey:
               key: CS Discoveries Post Course survey
               name: CS Discoveries Post Course survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-1:
               name: CS Discoveries Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             csd3_1:
               display_name: 'Chapter 1: Images and Animations'
@@ -19762,13 +19762,13 @@ en:
             Post-Project Test:
               key: Post-Project Test
               name: Post-Project Test
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             CS Discoveries Post Course survey:
               key: CS Discoveries Post Course survey
               name: CS Discoveries Post Course survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             User-Centered Design 1:
               name: User Centered Design   Define and Prepare
               description_student: "**Question of the Day: How can we design for people other than ourselves?**\n\nIn this lesson, you will use the design process to come up with ideas for smart clothing. "
@@ -19807,8 +19807,8 @@ en:
               name: Build a Paper Prototype
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             csd4_1:
               display_name: 'Chapter 1: User Centered Design'
@@ -19953,21 +19953,21 @@ en:
             Post-Project Test:
               key: Post-Project Test
               name: Post-Project Test
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             CS Discoveries Post Course survey:
               key: CS Discoveries Post Course survey
               name: CS Discoveries Post Course survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Data and Machine Learning:
               name: Data and Machine Learning
               description_student: "**Question of the Day: How can machines \"learn\"?**\n\nIn this lesson, you get to work with Artificial Intelligence and learn about Machine Learning. "
               description_teacher: "**Question of the Day: How can machines \"learn\"?**\r\n\r\nIn this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'
@@ -20009,7 +20009,7 @@ en:
               name: Innovations in Computing
               description_student: 'In this lesson, you will explore a wide variety of new and innovative computing platforms while expanding your understanding of what a computer can be.
 
-'
+                '
               description_teacher: To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
             Designing Screens with Code:
               key: Designing Screens with Code
@@ -20026,7 +20026,7 @@ en:
               name: Input Unplugged
               description_student: 'In this lesson, you will eperience two different ways that an app can collect input from a user, while learning more about the event-driven programming model used in App Lab.
 
-'
+                '
               description_teacher: In preparation for delving deeper into programming with App Lab, students will explore how a handful of different programs written in both Game Lab and App Lab handle taking input from the user. After comparing and contrasting the approaches they saw in the example apps, students group up to act out the two different models for input (conditionals in an infinite loop and asynchronous events) to gain a better understanding of how they work.
             Board Events:
               key: Board Events
@@ -20043,7 +20043,7 @@ en:
               name: Analog Input
               description_student: 'In this lesson, you will get to explore the analog inputs on the Circuit Playground, writing programs that respond to the environment through sensors.
 
-'
+                '
               description_teacher: In this lesson, students explore how the three analog sensors (sound, light, and temperature) can be used to write programs that respond to changes in the environment. The use of these sensors marks a transition in terms of how users interact with a program. By using sensors as an input, the user of an app doesn't have to directly interact with it at all, or may interact without actually realizing they are doing so.
             The Program Design Process:
               key: The Program Design Process
@@ -20083,14 +20083,14 @@ en:
               name: Functions with Parameters
               description_student: 'In this lesson, you will create and call functions with parameters, use for loops to iterate over an array, and finally use what you have learned to create a star catching game.
 
-'
+                '
               description_teacher: The lesson starts with a quick review of parameters, in the context of App Lab blocks that they students have seen recently.  Students then look at examples of parameters within user-created functions in App Lab and create and call functions with parameters for themselves, using them to control multiple elements on a screen.  Afterwards, students use for loops to iterate over an array, passing each element into a function.  Last, students use what they have learned to create a star catching game.
             Circuits and Physical Prototypes:
               key: Circuits and Physical Prototypes
               name: Circuits and Physical Prototypes
               description_student: 'In this lesson, you will wire simple circuits to create a physical prototype using low-cost and easily-found materials.
 
-'
+                '
               description_teacher: In preparation for this chapter's final project, students will learn how to develop a prototype of a physical object that includes a Circuit Playground. Using a modelled project planning guide, students will learn how to wire a couple of simple circuits and to build prototypes that can communicate the intended design of a product, using cheap and easily found materials such as cardboard and duct tape.
             'Project: Prototype an Innovation':
               key: 'Project: Prototype an Innovation'
@@ -20100,17 +20100,17 @@ en:
             Post-Project Test:
               key: Post-Project Test
               name: Post-Project Test
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             CS Discoveries Post Course survey:
               key: CS Discoveries Post Course survey
               name: CS Discoveries Post Course survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             csd6_1:
               display_name: 'Chapter 1: Programming with Hardware'
@@ -20139,8 +20139,8 @@ en:
             CS Principles Pre-survey:
               key: CS Principles Pre-survey
               name: CS Principles Pre-survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Welcome to CSP:
               key: Welcome to CSP
               name: Welcome to CSP
@@ -20600,8 +20600,8 @@ en:
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
             lesson-1:
               name: CS Principles Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             csp_lists:
               display_name: Lists
@@ -20692,8 +20692,8 @@ en:
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
             lesson-1:
               name: CS Principles Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             csp_unit6_2020:
               display_name: Algorithms
@@ -20792,8 +20792,8 @@ en:
               description_teacher: 'Students complete a multiple choice assessment which covers the unit topics. '
             lesson-1:
               name: CS Principles Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameters and Return Values
@@ -20831,8 +20831,8 @@ en:
               description_teacher: 'This lesson is designed to introduce the nuances of the Create PT, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they''re scored. '
             lesson-1:
               name: CS Principles Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Create PT
@@ -20841,7 +20841,7 @@ en:
           name: csp8-2021
           student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
 
-'
+            '
         csp9-2021:
           title: Data ('21-'22)
           description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
@@ -20899,8 +20899,8 @@ en:
               description_teacher: In this lesson, students will practice cropping images to uncover the bias underlying the Twitter cropping algorithm. Then, students will read and watch a video about the discovery of this biased algorithm. Finally, students will discuss ways to recognize and reduce bias along with analyzing Twitter's response to the allegations of bias in their cropping algorithm.
             lesson-1:
               name: CS Principles Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Unit 9: Data'
@@ -20987,8 +20987,8 @@ en:
               description_teacher: Students complete a multiple choice assessment which covers the unit topics.
             lesson-1:
               name: CS Principles Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             csp_unit10_2020:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
@@ -20998,7 +20998,7 @@ en:
           name: csp10-2021
           student_description: 'In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
 
-'
+            '
         coursea-2021:
           title: Course A (2021)
           description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
@@ -21256,7 +21256,7 @@ en:
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
               description_teacher: 'This **mini-project** lesson builds on the understanding of loops from previous lessons. Students will create unique artwork with the Artist.
 
-'
+                '
             'Events: The Big Event':
               key: 'Events: The Big Event'
               name: The Big Event
@@ -21503,7 +21503,7 @@ en:
               description_student: Creating an interactive poster, but think carefully about what information is safe to share online.
               description_teacher: 'Students will apply their understanding of sharing personal and private information on the web by creating an interactive poster in this **mini-project**.
 
-'
+                '
             Digital Sharing:
               key: Digital Sharing
               name: Digital Sharing
@@ -21703,7 +21703,7 @@ en:
               description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
               description_teacher: 'In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.
 
-'
+                '
             lesson-7:
               name: Making Sprites
               description_student: |2-
@@ -21966,12 +21966,12 @@ en:
             Programming in with Angry Birds:
               key: Programming in with Angry Birds
               name: Programming with Angry Birds
-              description_student: 
+              description_student:
               description_teacher: In this **skill-building** lesson, students will continue to develop sequential algorithms.
             Programming with Rey and BB-8:
               key: Programming with Rey and BB-8
               name: Programming with Rey and BB-8
-              description_student: 
+              description_student:
               description_teacher: In this **skill-building** lesson, students will use their newfound programming skills in more complicated ways to navigate a tricky course with BB-8.
             Programming in Harvester:
               key: Programming in Harvester
@@ -21986,7 +21986,7 @@ en:
             Loops with Laurel:
               key: Loops with Laurel
               name: Loops with Laurel
-              description_student: 
+              description_student:
               description_teacher: In this lesson, students continue learning the concept of loops. Here, Laurel the Adventurer uses loops to collect treasure in open cave spaces. A new `get treasure` block is introduced to help her on her journey.
             Ocean Scene with Loops:
               key: Ocean Scene with Loops
@@ -22317,8 +22317,8 @@ en:
           lessons:
             new lesson:
               name: lesson display name
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: new lesson 1
           lesson_groups:
@@ -22483,7 +22483,7 @@ en:
               description_student: You explore how The Neighborhood works and learn some of the key components of the Java programming language. You meet the `Painter` and make changes to the code to learn what the `Painter` can do.
               description_teacher: 'Students access the Java Lab on Code Studio to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.
 
-'
+                '
             lesson-3:
               name: Calling Methods
               description_student: Now that you have met the `Painter`, you learn about some of the methods that the `Painter` has to move and work with paint in The Neighborhood. You practice calling these methods to solve problems while learning the importance of case-sensitivity and semicolons in Java.
@@ -22521,7 +22521,7 @@ en:
               description_student: In this lesson, you continue to expand your `PainterPlus` class, this time adding methods to move and paint horizontal, vertical, and diagonal lines. You also participate in a code review to provide and receive feedback for improving code.
               description_teacher: 'Students continue to expand the `PainterPlus class`, this time adding four new methods that allow the `PainterPlus` to move and paint horizontal, vertical, and diagonal lines. Students use pseudocode to write the methods, then implement them in the `PainterPlus` class in Java. Through the code review, students critique their methods and consider when it is appropriate to use methods they have written in the past by calling them in their new methods.
 
-'
+                '
             lesson-12:
               name: SprayPainter
               description_student: 'Your `PainterPlus` has several ways to move around and interact with The Neighborhood. You extend `PainterPlus` to develop a new type of `Painter` called `SprayPainter` with a `sprayPaint()` method. With the `SprayPainter`, you create a mural in The Neighborhood. '
@@ -22542,7 +22542,7 @@ en:
               name: Asphalt Art Project - Day 1
               description_student: 'For this project, you create asphalt art in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create asphalt art that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and build your program. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.
 
-'
+                '
               description_teacher: For this project, students use the skills they have developed throughout this unit to create asphalt art in The Neighborhood using the classes they have developed and extended. Students choose a theme or concept for their asphalt art representing something they are interested in or meaningful to them. Students consider how they plan to use existing classes to create their asphalt art. After brainstorming and planning, students develop their programs to create their designs.
             lesson-17:
               name: Asphalt Art Project - Day 2
@@ -22562,20 +22562,20 @@ en:
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             lesson-21:
               name: Unit 1 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-24:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-22:
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-23:
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22592,7 +22592,7 @@ en:
           description_short: ''
           description: 'Believing in one''s own software engineering identity develops confidence and perseverance. This lesson introduces the core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.
 
-'
+            '
           student_description: ''
         csa2-pilot:
           lessons:
@@ -22658,20 +22658,20 @@ en:
               description_teacher: In this unit, students developed an understanding of data encapsulation and object-oriented design decisions to build a program to meet the needs of the Project Mercury Pastries food truck. Students created objects with appropriate instance variables based on program needs while exploring data types, variables, and expressions to work with object data. Students also implemented accessor, mutator, and `toString` methods to retrieve, modify, and output object data. Throughout the unit, students used the `Scanner` class to obtain user input to expand the interactivity of their programs. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-1:
               name: Unit 2 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-16:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-17:
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-18:
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lesson group:
               display_name: Content
@@ -22757,20 +22757,20 @@ en:
               description_teacher: In this unit, students worked with one-dimensional arrays to store primitive values and object references in The Theater. Students represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-16:
               name: Unit 3 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-17:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-18:
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-19:
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22857,24 +22857,24 @@ en:
               description_teacher: In this unit, students expanded the expressions used in conditionals and iteration to use relational and logical operators. Students used casting operators and `Math` class methods to write and evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. Students developed an understanding of De Morgan's Laws and writing truth tables. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-16:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-17:
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-18:
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-19:
               name: The Playground
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-20:
               name: Unit 4 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22954,24 +22954,24 @@ en:
               description_teacher: In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             Java Lab:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Neighborhood:
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Theater:
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Playground:
               name: The Playground
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-16:
               name: Unit 5 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22991,20 +22991,20 @@ en:
           lessons:
             Java Lab:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Neighborhood:
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Theater:
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Playground:
               name: The Playground
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-1:
               name: Documenting Program Code
               description_student: The projects you have developed throughout the course have inspired a lot of creativity in the community! A Neighborhood Lit Fest will be held to showcase creative stories, scripts, song lyrics, letters, and poems. The Neighborhood Lit Fest Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation.
@@ -23067,8 +23067,8 @@ en:
               description_teacher: In this unit, students used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identified and documented preconditions and postconditions of objects and methods. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-16:
               name: Unit 6 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -23088,20 +23088,20 @@ en:
           lessons:
             Java Lab:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Neighborhood:
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Theater:
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Playground:
               name: The Playground
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Exploring Method Components and Functionality
               description_student: You revisit the components of a method signature and review the relationship between actual and formal parameters. You differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. You then plan the tasks you need to complete for your Title Sequence Project.
@@ -23164,8 +23164,8 @@ en:
               description_teacher: In this unit, students practiced software design and development using the skills and programming constructs they have learned throughout the course to develop a title sequence for their favorite content creator. Students used decomposition strategies and object-oriented programming principles to plan and implement their ideas while ensuring their projects met specific requirements. Students explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, students considered the need for maximizing system reliability as they analyzed open-source code. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-16:
               name: Unit 7 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -23185,20 +23185,20 @@ en:
           lessons:
             Java Lab:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Neighborhood:
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Theater:
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Playground:
               name: The Playground
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-1:
               name: Planning a Project
               description_student: You have been asked to design and develop a game for everyone in your community to play. The Inclusive Playground Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
@@ -23261,8 +23261,8 @@ en:
               description_teacher: In this unit, students implemented searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. Students analyzed the efficiency of searching and sorting algorithms and expanded the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students applied their knowledge and programming skills to develop a game that incorporated object-oriented design and efficiency. Students wrapped up the unit and course considering the privacy and security of their programs and users. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-16:
               name: Unit 8 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -23454,20 +23454,20 @@ en:
               description_teacher: Teacher overview of the lesson
             lesson-2:
               name: Second Lesson
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Third Lesson
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Printable Lesson Plans
-              description_student: 
+              description_student:
               description_teacher: This lesson should contain examples of all the kinds of content that we want to be able to print, to confirm that changes made to that content don't end up working weird when printed. Things like collapsible or interactable stuff in particular is a good candidate for this page.
             lesson-5:
               name: Level Details Dialog Examples
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Lesson Group 1
@@ -23751,8 +23751,8 @@ en:
                 **Question of the Day**:  How can I import data into AI Lab to train a machine learning model?
             lesson-1:
               name: Post-Unit Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           name: aiml-2021
           title: AI and Machine Learning Module
           description_audience: ''
@@ -23934,12 +23934,12 @@ en:
               name: Post-Unit Survey
             Post-Unit Survey:
               name: Post-Unit Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             CS Discoveries Post-Course Survey:
               name: CS Discoveries Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1 - Understanding Machine Learning
@@ -24189,12 +24189,12 @@ en:
               name: Accessing and Using Lesson Plans
             lesson-4:
               name: Welcome
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Navigating Code.org
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Overview of CS Discoveries
             lesson-7:
@@ -24363,8 +24363,8 @@ en:
           lessons:
             lesson-1:
               name: 'Lesson 1: Problem Solving and Computing'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Introduction to AI and machine learning
               description_student: |-
@@ -24441,7 +24441,7 @@ en:
                 **Suggested time:** 20 minutes
             lesson-7:
               name: AI and Machine Learning
-              description_student: 
+              description_student:
               description_teacher: 'Students learn how machine learning can be used to solve problems by preparing data, training a machine model, the testing the model for accuracy and bias. Students use Code.org''s AI Lab environment to train machine learning models, then import their models into App Lab to create apps that solve problems. '
           lesson_groups:
             lessonGroup-2:
@@ -24477,28 +24477,28 @@ en:
           lessons:
             lesson-1:
               name: Preparing to Teach Problem Solving and Computing
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: 'Introduction to AI and machine learning '
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: 'Train a machine learning model '
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Consider real world implications
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: 'Unit wrap up '
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Create machine learning apps
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Unit 6
             lesson-8:
@@ -24904,8 +24904,8 @@ en:
           lessons:
             lesson-1:
               name: Story Board
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: poster-draft
           title: Story Board (V1 - Control)
@@ -24917,8 +24917,8 @@ en:
           lessons:
             lesson-1:
               name: Mood Study - HoC Activity
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: poembot
           title: Poembot
@@ -24937,84 +24937,84 @@ en:
           lessons:
             lesson-1:
               name: Welcome to CSA
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Classes and Objects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Using Commands
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Conditionals and Debugging
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: More with Objects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: While Loops and Practice
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: More with Conditionals
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Introduction to Code Reviews
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Inheritance and Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-10:
               name: More Methods, More Features
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-11:
               name: Painting Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               name: Spray Painter
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: StampPainter
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: Edge Cases
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-15:
               name: Software Engineering Wrap Up
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-16:
               name: Asphalt Art Project - Day 1
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-17:
               name: Asphalt Art Project - Day 2
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-18:
               name: Asphalt Art Project - Day 3
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-19:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-20:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -25029,64 +25029,64 @@ en:
           lessons:
             lesson-1:
               name: Defining Attributes
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Using Variables
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Writing Constructors
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Adding Multiple Constructors
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Manipulating Variables and Object Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Minimizing Errors in Initialization
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Writing Constructors for Hierarchies
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Accessing Object Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Modifying Object Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-10:
               name: Displaying Object Information
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-11:
               name: 'Project: The Neighborhood Store Management - Day 1'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               name: 'Project: The Neighborhood Store Management - Day 2'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: 'Project: The Neighborhood Store Management - Day 3'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-15:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -25147,8 +25147,8 @@ en:
               name: 'U2L1: Defining Attributes'
             lesson-24:
               name: 'U2L2: Using Variables'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-25:
               name: 'U2L3: Writing Constructors'
             lesson-26:
@@ -25287,64 +25287,64 @@ en:
           lessons:
             lesson-1:
               name: Creating Arrays
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Accessing and Modifying Elements
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Traversing Arrays with for Loops
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Traversing Arrays with while Loops
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Storing Objects into Arrays
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Traversing Arrays with Enhanced for Loops
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Using Static Variables and Constants
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Answering Questions with Arrays
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Solving Problems with Arrays
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-10:
               name: Manipulating Elements in an Array
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-11:
               name: Concert in The Theater Project - Day 1
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               name: Concert in The Theater Project - Day 2
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: Concert in The Theater Project - Day 3
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-15:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -25359,12 +25359,12 @@ en:
           lessons:
             lesson-1:
               name: AI Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: AI Lab Resources
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Test
           lesson_groups: {}
@@ -25378,8 +25378,8 @@ en:
           lessons:
             lesson-1:
               name: Story Board
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: poster-experiment
           title: Story Board (V1 - Experiment)
@@ -25390,8 +25390,8 @@ en:
           lessons:
             lesson-1:
               name: Lesson1
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Lesson 2
           lesson_groups: {}
@@ -25412,8 +25412,8 @@ en:
           lessons:
             lesson-1:
               name: Story Board - A
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: sb-pt-cont
           title: Story Board (playtest control)
@@ -25424,8 +25424,8 @@ en:
           lessons:
             lesson-1:
               name: Story Board - B
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: sb-pt-exp
           title: Story Board (playtest experiment)
@@ -25436,8 +25436,8 @@ en:
           lessons:
             lesson-1:
               name: Story Board
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: dc-standalone
           title: Story Board (DC Standalone)
@@ -25451,8 +25451,8 @@ en:
           lessons:
             lesson-1:
               name: Story Board - Character Development
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: sb-chardev-v1
           title: Story Board Character Development
@@ -25463,12 +25463,12 @@ en:
           lessons:
             lesson-1:
               name: 'Stage 1: Increase Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Stage 1
@@ -25484,12 +25484,12 @@ en:
           lessons:
             lesson-1:
               name: 'Stage 1: Increase Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: dlp21-csp-mod1
           title: 2021 CS Principles Deeper Learning Module 1 for Workshop 1
@@ -25517,12 +25517,12 @@ en:
           lessons:
             lesson-1:
               name: 'Stage 1: Increase Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: dlp21-csd-mod1
           title: 2021 CS Discoveries Deeper Learning Module 1 for Workshop 1
@@ -25533,12 +25533,12 @@ en:
           lessons:
             lesson-1:
               name: 'Stage 1: Increase Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: dlp21-csd-mod2
           title: 2021 CS Discoveries Deeper Learning Module 2 for Workshop 2
@@ -25550,12 +25550,12 @@ en:
           lessons:
             lesson-1:
               name: 'Stage 1: Increase Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: dlp21-csd-mod3
           title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
@@ -25567,12 +25567,12 @@ en:
           lessons:
             lesson-1:
               name: 'Stage 1: Increase Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: dlp21-csd-mod4
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
@@ -25584,12 +25584,12 @@ en:
           lessons:
             lesson-1:
               name: 'Stage 1: Increase Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: dlp21-csp-mod2
           title: 2021 CS Principles Deeper Learning Module 2 for Workshop 2
@@ -25601,12 +25601,12 @@ en:
           lessons:
             lesson-1:
               name: 'Stage 1: Increase Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: 'Stage 2: Demonstrate Understanding'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: dlp21-csp-mod3
           title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
@@ -25626,8 +25626,8 @@ en:
           lessons:
             lesson-1:
               name: Overview
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: dlp21-csd-overview
           title: CS Discoveries Deeper Learning Overview
@@ -25638,8 +25638,8 @@ en:
           lessons:
             lesson-1:
               name: Overview
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: dlp21-csp-overview
           title: 2021 CS Principles Deeper Learning Overview
@@ -25650,56 +25650,56 @@ en:
           lessons:
             lesson-1:
               name: Documenting Program Code
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Exploring Integer and Double Objects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Using ArrayLists to Store Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Working with ArrayList Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Storing Objects in an ArrayList
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Removing Data from an ArrayList
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Using String Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Comparing Strings
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-10:
               name: Solving Problems with Strings
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Solving Problems with ArrayLists
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-11:
               name: Code Poetry Project
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               name: Tools
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: Examples
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: Neighborhood 16x16
             lesson-15:
@@ -25710,8 +25710,8 @@ en:
               name: Console
             lesson-18:
               name: Widgets
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-19:
               name: Comparing Strings
             lesson-20:
@@ -25736,8 +25736,8 @@ en:
           lessons:
             lesson-1:
               name: Hello, world!
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: hello-world-draft
           title: '"Hello, World!"'
@@ -25749,7 +25749,7 @@ en:
           lessons:
             Navigating the Code.org learning platform:
               name: " Navigating Code.org learning platform"
-              description_student: 
+              description_student:
               description_teacher: |-
                 **You will learn how to:**
 
@@ -25758,7 +25758,7 @@ en:
                 **Suggested time:** 30 minutes
             Navigating lesson plans and resources:
               name: Navigating lesson plans and resources
-              description_student: 
+              description_student:
               description_teacher: |-
                 **You will learn how to:**
 
@@ -25767,7 +25767,7 @@ en:
                 **Suggested time:** 30 minutes
             Navigating support:
               name: Navigating support
-              description_student: 
+              description_student:
               description_teacher: "**You will learn how to:**\n\n* Access support while teaching CS Discoveries. \n\n**Suggested time:** 15 minutes"
             lesson-4:
               key: lesson-4
@@ -25814,7 +25814,7 @@ en:
               description_student: You explore how The Neighborhood works and learn some of the key components of the Java programming language. You meet the `Painter` and make changes to the code to learn what the `Painter` can do.
               description_teacher: 'Students access the Java Lab on Code Studio to explore The Neighborhood and are introduced to the `Painter` class. Students examine starter code and make simple modifications to achieve different outcomes with a `Painter` object and practice creating a `Painter` object to identify the relationship between a class and an object.
 
-'
+                '
             Calling Methods:
               name: Calling Methods
               description_student: Now that you have met the `Painter`, you learn about some of the methods that the `Painter` has to move and work with paint in The Neighborhood. You practice calling these methods to solve problems while learning the importance of case-sensitivity and semicolons in Java.
@@ -25852,7 +25852,7 @@ en:
               description_student: In this lesson, you continue to expand your `PainterPlus` class, this time adding methods to move and paint horizontal, vertical, and diagonal lines. You also participate in a code review to provide and receive feedback for improving code.
               description_teacher: 'Students continue to expand the `PainterPlus class`, this time adding four new methods that allow the `PainterPlus` to move and paint horizontal, vertical, and diagonal lines. Students use pseudocode to write the methods, then implement them in the `PainterPlus` class in Java. Through the code review, students critique their methods and consider when it is appropriate to use methods they have written in the past by calling them in their new methods.
 
-'
+                '
             SprayPainter:
               name: SprayPainter
               description_student: 'Your `PainterPlus` has several ways to move around and interact with The Neighborhood. You extend `PainterPlus` to develop a new type of `Painter` called `SprayPainter` with a `sprayPaint()` method. With the `SprayPainter`, you create a mural in The Neighborhood. '
@@ -25873,7 +25873,7 @@ en:
               name: Asphalt Art Project - Day 1
               description_student: 'For this project, you create asphalt art in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create asphalt art that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and build your program. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.
 
-'
+                '
               description_teacher: For this project, students use the skills they have developed throughout this unit to create asphalt art in The Neighborhood using the classes they have developed and extended. Students choose a theme or concept for their asphalt art representing something they are interested in or meaningful to them. Students consider how they plan to use existing classes to create their asphalt art. After brainstorming and planning, students develop their programs to create their designs.
             Asphalt Art Project - Day 2:
               name: Asphalt Art Project - Day 2
@@ -25893,23 +25893,23 @@ en:
               description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
             Unit 1 Pilot Survey:
               name: Unit 1 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-1:
               key: lesson-1
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               key: lesson-2
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               key: lesson-3
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               key: lesson-4
               name: Conditionals and Debugging
@@ -25951,7 +25951,7 @@ en:
               description_student: In this lesson, you continue to expand your `PainterPlus` class, this time adding methods to move and paint horizontal, vertical, and diagonal lines. You also participate in a code review to provide and receive feedback for improving code.
               description_teacher: 'Students continue to expand the `PainterPlus class`, this time adding four new methods that allow the `PainterPlus` to move and paint horizontal, vertical, and diagonal lines. Students use pseudocode to write the methods, then implement them in the `PainterPlus` class in Java. Through the code review, students critique their methods and consider when it is appropriate to use methods they have written in the past by calling them in their new methods.
 
-'
+                '
             lesson-12:
               key: lesson-12
               name: SprayPainter
@@ -25977,7 +25977,7 @@ en:
               name: Asphalt Art Project - Day 1
               description_student: 'For this project, you create asphalt art in The Neighborhood using the classes you have developed and extended in this unit. You explore creative expression using computer programs by applying the concepts you have learned to create asphalt art that represents something meaningful and interesting to you. You explore being a software engineer as you brainstorm and plan your project and build your program. You strengthen your software development skills and processes when participating in a code review to give and use feedback as you develop your program.
 
-'
+                '
               description_teacher: For this project, students use the skills they have developed throughout this unit to create asphalt art in The Neighborhood using the classes they have developed and extended. Students choose a theme or concept for their asphalt art representing something they are interested in or meaningful to them. Students consider how they plan to use existing classes to create their asphalt art. After brainstorming and planning, students develop their programs to create their designs.
             lesson-17:
               key: lesson-17
@@ -26016,7 +26016,7 @@ en:
           title: Object Oriented Programming
           description: 'Believing in one''s own software engineering identity develops confidence and perseverance. This lesson introduces the core values of software engineering and explores common perceptions students may have. Students reflect on how they already practice many of these values to discover their own software engineering identity.
 
-'
+            '
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -26085,8 +26085,8 @@ en:
               description_teacher: In this unit, students developed an understanding of data encapsulation and object-oriented design decisions to build a program to meet the needs of the Project Mercury Pastries food truck. Students created objects with appropriate instance variables based on program needs while exploring data types, variables, and expressions to work with object data. Students also implemented accessor, mutator, and `toString` methods to retrieve, modify, and output object data. Throughout the unit, students used the `Scanner` class to obtain user input to expand the interactivity of their programs. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             Unit 2 Pilot Survey:
               name: Unit 2 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             new lesson:
               key: new lesson
               name: Defining Attributes
@@ -26095,13 +26095,13 @@ en:
             lesson-2:
               key: lesson-2
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               key: lesson-3
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               key: lesson-4
               name: Adding Multiple Constructors
@@ -26165,8 +26165,8 @@ en:
             lesson-1:
               key: lesson-1
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lesson group:
               display_name: Content
@@ -26263,23 +26263,23 @@ en:
               description_teacher: In this unit, students worked with one-dimensional arrays to store primitive values and object references in The Theater. Students represented constants using the keyword `final` and data that needs to be shared between objects as static variables. While working with one-dimensional arrays, students used conditionals and iteration to search for values that meet specific criteria or to perform manipulations to create audio and visual effects. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             Unit 3 Pilot Survey:
               name: Unit 3 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-1:
               key: lesson-1
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               key: lesson-2
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               key: lesson-3
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               key: lesson-4
               name: Traversing Arrays with while Loops
@@ -26448,23 +26448,23 @@ en:
             lesson-1:
               key: lesson-1
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               key: lesson-3
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               key: lesson-4
               name: The Playground
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               key: lesson-5
               name: Unit 4 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               key: lesson-6
               name: Adding Randomness to a Program
@@ -26498,8 +26498,8 @@ en:
             lesson-2:
               key: lesson-2
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               key: lesson-12
               name: Neighborhood Block Party Project - Day 2
@@ -26609,8 +26609,8 @@ en:
             lesson-1:
               key: lesson-1
               name: Unit 5 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               key: lesson-2
               name: Traversing a 2D Array by Rows
@@ -26683,20 +26683,20 @@ en:
               description_teacher: ''
             Java Lab:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Neighborhood:
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Theater:
               name: The Theater
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             The Playground:
               name: The Playground
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -26725,8 +26725,8 @@ en:
           lessons:
             lesson-1:
               name: Moods & Attitudes
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: poetry-hoc
           title: Poetry HoC
@@ -26738,30 +26738,30 @@ en:
           lessons:
             lesson-1:
               name: Template
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Innovations in Computing
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Board Outputs (LED Buzzer)
-              description_student: 
+              description_student:
               description_teacher: |-
                 - Use the buzzer on the circuit playground
                 - Use the led on the circuit playground
                 - NO variables; NO if statements; NO screen elements
             lesson-4:
               name: App Lab Outputs (setProperty)
-              description_student: 
+              description_student:
               description_teacher: "- Use setProperty() to change elements on the screen\n  - Focus on colors and x/y positions using random numbers\n- Use setText() to change text on screen \n- NO circuit playground; NO if statements; NO variables"
             lesson-5:
               name: Sensors
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Board Inputs (Button Toggle)
-              description_student: 
+              description_student:
               description_teacher: |-
                 - use buttons to change elements on screen
                 - use toggle switch to change elements on screen
@@ -26769,7 +26769,7 @@ en:
                 - NO if statements; NO variables; OK screen outputs
             lesson-7:
               name: Variables + If-Statements
-              description_student: 
+              description_student:
               description_teacher: |-
                 - use variables + counter pattern to update elements on screen
                   - example: count number of times a button is pressed
@@ -26778,11 +26778,11 @@ en:
                   - for example: play buzzer after a certain number of clicks
             lesson-8:
               name: 'Mini-Project: On The Go Apps'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Color LEDs
-              description_student: 
+              description_student:
               description_teacher: |-
                 - use screen events to change color LEDs in circuit playground
                 - use on(), off(), pulse(), toggle(), and blink() LED functions
@@ -26791,7 +26791,7 @@ en:
                   - Only need concept of counting from 0 and concept of position mapping (ie: [0] maps to a specific LED on the CP; [5] maps to a different LED on the CP)
             lesson-10:
               name: App Lab Inputs (getProperty, getText) (Dropdowns Inputs Sliders?)
-              description_student: 
+              description_student:
               description_teacher: |-
                 Only in App Lab - No Circuit Playground (yet).
 
@@ -26805,7 +26805,7 @@ en:
                 In tomorrow's lesson, include motorcycle game where you can press on CP and have something change on screen.
             lesson-11:
               name: Combining Inputs
-              description_student: 
+              description_student:
               description_teacher: |-
                 - Use dropdowns and sliders to update aspects of the circuit playground
                 - Have CP inputs update screen elements using getProperty() and setProperty()
@@ -26814,39 +26814,39 @@ en:
                 **NOTE TO SELF: These levels should use the color LEDs instead of the regular LED.** In original curriculum, we only had access to led and buzzer. But now, we have color LEDs, so lets use those here too
             lesson-12:
               name: 'Project: Maker'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: Accelerometer
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: Music + Arrays
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-15:
               name: 'Mini Project: Sensors'
-              description_student: 
+              description_student:
               description_teacher: Based off Dan's sensor projects - blow out candles, light theramin, volume meter
             lesson-17:
               name: Physical Outputs (LEDs)
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-16:
               name: Physical Inputs
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-18:
               name: Prototyping
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-19:
               name: Project
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-20:
               name: Functions + Functions w/Parameters
-              description_student: 
+              description_student:
               description_teacher: |-
                 - Requires introducing functions and then functions with parameters.
                   - Will need to see about editing original functions video
@@ -26881,60 +26881,60 @@ en:
           lessons:
             lesson-1:
               name: Writing Methods to Satisfy Conditions
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Title Sequence Project
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Widgets
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Tools
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Examples
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Exploring Method Components and Functionality
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Using Object References as Parameters
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Overloading Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Accessing Object Behavior
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-10:
               name: Overriding Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-11:
               name: Exploring Recursive Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               name: Comparing Recursive and Iterative Solutions
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: Writing Recursive Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: Maximizing System Reliability
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Lessons
@@ -26963,8 +26963,8 @@ en:
           lessons:
             lesson-1:
               name: Hello World
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: hello-world-animals
           title: 'Hello World: Animals'
@@ -26976,8 +26976,8 @@ en:
           lessons:
             lesson-1:
               name: Hello World
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: hello-world-emoji
           title: 'Hello World: Emoji'
@@ -26989,8 +26989,8 @@ en:
           lessons:
             lesson-1:
               name: Hello World
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: hello-world-retro
           title: 'Hello World: Retro'
@@ -27002,8 +27002,8 @@ en:
           lessons:
             lesson-1:
               name: Hello World
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: hello-world-batman
           title: Hello World
@@ -27015,72 +27015,72 @@ en:
           lessons:
             new lesson:
               name: Using Existing Libraries to Add Capabilities
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-1:
               name: Using Existing Libraries to Add Capabilities
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Solving Problems with the Math Class
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Treating Data as a Different Type
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Comparing Values to Make Decisions
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Adding Randomness to a Program
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Comparing Object References and Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Providing an Alternate Path of Execution
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Testing Multiple Conditions
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Using Logical Operators
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-10:
               name: Applying De Morgan's Laws to Boolean Expressions
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-11:
               name: Neighborhood Block Party Project - Day 1
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               name: Neighborhood Block Party Project - Day 2
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: Neighborhood Block Party Project - Day 3
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-15:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-16:
               name: Comparing Object References and Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lesson group:
               display_name: Content
@@ -27130,8 +27130,8 @@ en:
           lessons:
             lesson-1:
               name: Poetry Scratch Paper
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: csc-things
           title: 'CSC Brain Dump '
@@ -27143,8 +27143,8 @@ en:
           lessons:
             lesson-1:
               name: Poetry HoC v2
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: poetry-hoc2
           title: Poetry HoC v2
@@ -27156,8 +27156,8 @@ en:
           lessons:
             lesson-1:
               name: Mood Study
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: poetry-hoc3
           title: Poetry HoC v3
@@ -27169,8 +27169,8 @@ en:
           lessons:
             lesson-1:
               name: Sprite Effect Challenge
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: spritelab-effects-challenge
           title: Sprite Effect Challenge
@@ -27182,16 +27182,16 @@ en:
           lessons:
             lesson-1:
               name: Widgets
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Tools
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Examples
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Demos and Resources
@@ -27237,7 +27237,7 @@ en:
               description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
               description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
 
-'
+                '
             lesson-6:
               name: Poetry Circle
               description_student: 'Share your new poem apps with your friends! '
@@ -27259,7 +27259,7 @@ en:
               name: Spelling Bee
               description_student: 'Help the bee spell new words!
 
-'
+                '
               description_teacher: |
                 This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
 
@@ -27295,7 +27295,7 @@ en:
               name: Exploring Box Plots and Histograms
               description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
 
-'
+                '
               description_teacher: |
                 This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
 
@@ -27341,64 +27341,64 @@ en:
           lessons:
             lesson-1:
               name: Creating Tables of Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Traversing a 2D Array by Rows
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Traversing a 2D Array by Columns
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Using Enhanced for Loops
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Evaluating 2D Arrays
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Applying Standard Algorithms
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Shifting Elements
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Finding Duplicates
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Searching for Elements
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-10:
               name: A Sustainable Neighborhood Project - Day 1
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-11:
               name: A Sustainable Neighborhood Project - Day 2
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               name: A Sustainable Neighborhood Project - Day 3
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-15:
               name: Reversing Elements
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -27414,36 +27414,36 @@ en:
           lessons:
             lesson-1:
               name: Unit 1 Projects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Unit 2 Projects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Unit 3 Projects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Unit 4 Projects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Unit 5 Projects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Unit 6 Projects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Unit 7 Projects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Unit 8 Projects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: csa-examples-21
           title: CSA Unit Project Examples [2021-2022]
@@ -27455,8 +27455,8 @@ en:
           lessons:
             lesson-1:
               name: Post-Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: csd-post-survey-2021
           title: CS Discoveries Post-Course Survey
@@ -27587,8 +27587,8 @@ en:
             lesson-1:
               key: lesson-1
               name: Unit 6 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               key: lesson-2
               name: Exploring Integer and Double Objects
@@ -27743,7 +27743,7 @@ en:
               description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
               description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
 
-'
+                '
             Responding to Words:
               name: Responding to Words
               description_student: Make the app respond to what the user chooses in exciting new ways.
@@ -27784,7 +27784,7 @@ en:
               description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
               description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
 
-'
+                '
             lesson-7:
               key: lesson-7
               name: Responding to Words
@@ -27880,7 +27880,7 @@ en:
               name: Spelling With Bee
               description_student: 'Help the bee spell new words!
 
-'
+                '
               description_teacher: |
                 This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
 
@@ -27895,7 +27895,7 @@ en:
               name: Spelling Bee
               description_student: 'Help the bee spell new words!
 
-'
+                '
               description_teacher: |
                 This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
 
@@ -27918,7 +27918,7 @@ en:
               name: Data Visualization
               description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
 
-'
+                '
               description_teacher: |
                 This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
 
@@ -27938,7 +27938,7 @@ en:
               name: Exploring Box Plots and Histograms
               description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
 
-'
+                '
               description_teacher: |
                 This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
 
@@ -27996,8 +27996,8 @@ en:
           lessons:
             lesson-1:
               name: Lesson
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: hello-world-gabrielle-validation
           title: ''
@@ -28009,64 +28009,64 @@ en:
           lessons:
             lesson-1:
               name: Documenting Program Code
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Exploring Integer and Double Objects
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Using ArrayLists to Store Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Working with ArrayList Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Storing Objects in an ArrayList
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Removing Data from an ArrayList
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Using String Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Comparing Strings
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Solving Problems with Strings
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-10:
               name: Solving Problems with ArrayLists
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-11:
               name: Neighborhood Lit Fest Project - Day 1
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               name: Neighborhood Lit Fest Project - Day 2
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: Neighborhood Lit Fest Project - Day 3
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-15:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -28084,22 +28084,22 @@ en:
               name: Counting with Variables
             lesson-2:
               name: Lots of Sprites
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: 'Mini-Project: Collector Game'
             lesson-4:
               name: Outbreak Simulator
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: 'Mini-Project: About Me'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Toolboxes
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Drawing with Loops:
               name: Drawing with Loops
               description_student: In this lesson, **loops** make it easy to make cool images with Artist!
@@ -28165,64 +28165,64 @@ en:
           lessons:
             lesson-1:
               name: Writing Methods to Satisfy Conditions
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Exploring Method Components and Functionality
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Using Object References as Parameters
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Overloading Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Accessing Object Behavior
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Overriding Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Exploring Recursive Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Comparing Recursive and Iterative Solutions
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Writing Recursive Methods
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-10:
               name: Maximizing System Reliability
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-11:
               name: Title Sequence Project - Day 1
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               name: Title Sequence Project - Day 2
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: Title Sequence Project - Day 3
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-15:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -28238,22 +28238,22 @@ en:
           lessons:
             lesson-1:
               name: Lots of Sprites
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Counting with Variables
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: 'Mini-Project: Collector Game'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Introducing Sprite Lab:
               name: Introducing Sprite Lab
               description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
               description_teacher: 'In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.
 
-'
+                '
             Making Sprites:
               name: Making Sprites
               description_student: |2-
@@ -28326,64 +28326,64 @@ en:
           lessons:
             lesson-1:
               name: Planning a Project
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-2:
               name: Searching for Data
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-3:
               name: Implementing the Binary Search
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-4:
               name: Implementing a Recursive Binary Search
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-5:
               name: Implementing the Selection Sort
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-6:
               name: Implementing the Insertion Sort
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               name: Implementing the Merge Sort
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-8:
               name: Expanding Standard Algorithms
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-9:
               name: Traversing Multiple Lists
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-10:
               name: Defending Privacy and Security
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-11:
               name: Inclusive Playground Project - Day 1
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-12:
               name: Inclusive Playground Project - Day 2
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-13:
               name: Inclusive Playground Project - Day 3
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-14:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-15:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -28399,12 +28399,12 @@ en:
           lessons:
             Instructor In Training Levels:
               name: Instructor In Training Levels
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Dani Test Lesson 2:
               name: Instructor in Training LevelGroup
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: alltheselfpacedplthings
           title: All the Self Paced PL Things
@@ -28476,8 +28476,8 @@ en:
               description_teacher: In this unit, students practiced software design and development using the skills and programming constructs they have learned throughout the course to develop a title sequence for their favorite content creator. Students used decomposition strategies and object-oriented programming principles to plan and implement their ideas while ensuring their projects met specific requirements. Students explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, students considered the need for maximizing system reliability as they analyzed open-source code. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             Unit 7 Pilot Survey:
               name: Unit 7 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Java Lab:
               name: Java Lab
               description_student: ''
@@ -28657,8 +28657,8 @@ en:
               description_teacher: In this unit, students implemented searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and ArrayLists. Students analyzed the efficiency of searching and sorting algorithms and expanded the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students applied their knowledge and programming skills to develop a game that incorporated object-oriented design and efficiency. Students wrapped up the unit and course considering the privacy and security of their programs and users. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             Unit 8 Pilot Survey:
               name: Unit 8 Pilot Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             Java Lab:
               name: Java Lab
               description_student: ''
@@ -29800,7 +29800,7 @@ en:
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
               description_teacher: 'This **mini-project** lesson builds on the understanding of loops from previous lessons. Students will create unique artwork with the Artist.
 
-'
+                '
             The Big Event:
               name: The Big Event
               description_student: 'Play a fun game to learn about events. '
@@ -29864,7 +29864,7 @@ en:
               description_student: In this lesson, loops make it easy to make even cooler images with Artist!
               description_teacher: 'This **mini-project** lesson builds on the understanding of loops from previous lessons. Students will create unique artwork with the Artist.
 
-'
+                '
             'Events: The Big Event':
               key: 'Events: The Big Event'
               name: The Big Event
@@ -30068,7 +30068,7 @@ en:
           description: "In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.\r\n\r\n"
           student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
 
-'
+            '
           description_short: Practice and complete the Create Performance Task (PT).
           description_audience: ''
         csp9-2022:
@@ -30270,7 +30270,7 @@ en:
           description: "In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a \"school of the future\" conference in which you and a team make a proposal for how best to improve school life with computing innovations.\n\n"
           student_description: 'In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
 
-'
+            '
           description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
           description_audience: ''
         coursed-2022:
@@ -30455,7 +30455,7 @@ en:
               description_student: Creating an interactive poster, but think carefully about what information is safe to share online.
               description_teacher: 'Students will apply their understanding of sharing personal and private information on the web by creating an interactive poster in this **mini-project**.
 
-'
+                '
             Digital Sharing:
               name: Digital Sharing
               description_student: 'In this lesson, you''ll learn about the challenges and benefits of ownership and copyright. '
@@ -30534,7 +30534,7 @@ en:
               description_student: Creating an interactive poster, but think carefully about what information is safe to share online.
               description_teacher: 'Students will apply their understanding of sharing personal and private information on the web by creating an interactive poster in this **mini-project**.
 
-'
+                '
             Programming and Loops with the Artist:
               key: Programming and Loops with the Artist
               name: Drawing with Loops
@@ -30609,7 +30609,7 @@ en:
               description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
               description_teacher: 'In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.
 
-'
+                '
             Making Sprites:
               name: Making Sprites
               description_student: |2-
@@ -30699,8 +30699,8 @@ en:
             lesson-6:
               key: lesson-6
               name: 'Mini-Project: Collector Game'
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             lesson-7:
               key: lesson-7
               name: Making Sprites
@@ -30776,8 +30776,8 @@ en:
             lesson-5:
               key: lesson-5
               name: Counting with Variables
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
             AI for Oceans:
               key: AI for Oceans
               name: AI For Oceans
@@ -30813,8 +30813,8 @@ en:
           lessons:
             lesson-1:
               name: Course Survey
-              description_student: 
-              description_teacher: 
+              description_student:
+              description_teacher:
           lesson_groups: {}
           name: csp-post-survey-2021
           title: CS Principles Post-Course Survey
@@ -31002,83 +31002,83 @@ en:
           lessons:
             lesson-1:
               name: Surprising Stories about Plants and Animals
-              description_student: 
+              description_student:
               description_teacher: "Click on this [link](https://docs.google.com/document/d/12292vESffMcgzn28nmHA0rnGGrAFLpeom95biRzrr_4/edit?usp=sharing) to access this lesson plan.  \n\n\n"
             lesson-2:
               name: When Species Invade
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1nbF4PA6umDiANTi9w63-x46O7fbxpTVXEf3bqN6yiyc/edit?usp=sharing) to access the lesson plan. '
             lesson-3:
               name: Big Goldfish, Little Pond
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. '
             lesson-4:
               name: Swimming into Sprite Lab
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1DdepCOwf9BVtZNzSwNiXkeRdvEYLrPlCoPZC-sPchCU/edit?usp=sharing) the access the lesson plan. '
             lesson-5:
               name: Analyzing the Impact
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1KspaLQjmbXYKwEQC2vOIGLUdom2tcI0kauUk-0bdZJ4/edit?usp=sharing) to access the lesson plan. '
             lesson-6:
               name: Local Invasive Species
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1W3PqmcDpPJ5QElP7U_mKPy43ZwGb_ZI3bpRvWN-yitQ/edit?usp=sharing) to access the lesson plan. '
             lesson-7:
               name: 'Algorithms: Watch Me Dance'
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1on1rXrs7yBKxjdycxqxG716MW7eQcfTk9-JPdOnEKAM/edit?usp=sharing) to access the lesson plan. '
             lesson-8:
               name: SciComm and Me
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1njAzvHI3gS_aSoR2IM8Eeekw4bI6kADxvY2s_96SZCM/edit?usp=sharing) to access the lesson plan. '
             lesson-9:
               name: Communicating with Comics
-              description_student: 
+              description_student:
               description_teacher: Click on this [link](https://docs.google.com/document/d/1C_WWNg9ACiLpSBNXFwCKzDb4ftyb71we7RTJYV_-CQA/edit?usp=sharing) to access the lesson plan.
             lesson-10:
               name: Pet Debate
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1Hxx0MESA13SNsA4mvRhZoZ-XeScezGg3DmAz8DO6p1A/edit?usp=sharing) to access the lesson plan. '
             lesson-11:
               name: Responding to Conditions
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1s4pklUxcmnDIjigMXWK-hrBgvuIDRBfEjzEqDAGzx7E/edit?usp=sharing) to access the lesson plan. '
             lesson-12:
               name: Conditionals
-              description_student: 
+              description_student:
               description_teacher: Click on this [link](https://docs.google.com/document/d/1yp9BOEYibCekx80fizqTcEksKqaRxQPMW0HQY7gNc3k/edit?usp=sharing) to access the lesson plan.
             lesson-13:
               name: Exploring Solutions for the Burmese Python
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1sft21ez0yI20e0D-n8MNZDmeOQyIR9PhsQU31yzG3I0/edit?usp=sharing) to access the lesson plan. '
             lesson-14:
               name: Conditionals in Minecraft
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1o0Ki_9yC2l2S8spL-EUjdEy0xqgP-Y717qoeSBoIEk8/edit?usp=sharing) to access the lesson plan. '
             lesson-15:
               name: Exploring Solutions for Invasive Species
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1amEfZ4QMfa765k_2sz4hcsyn-IVBzZv3cT6CAGDu0Ek/edit?usp=sharing) to access the lesson plan. '
             lesson-16:
               name: Debugging
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1vLHsUsDrWU1g8Z7neMcqX1NtmQCc7or95lWO6p3oBGw/edit?usp=sharing) to access the lesson plan. '
             lesson-17:
               name: Project Inspiration
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1vDetbOM1qCAIkdpa8WiRSGaUorbe7cPvV3WEFpyg0SE/edit?usp=sharing) to access the lesson plan. '
             lesson-18:
               name: Making It Work
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1kGekxHbE9VmCTW01flUiq-OvpN1qdb-CsVziQUfcugU/edit?usp=sharing) to access the lesson plan. '
             lesson-19:
               name: Debugging
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1W2uDdHo8-ZQoX-Gs7izAz8CAIUcBZnB8gqrqHqLtD2E/edit?usp=sharing) to access the lesson plan. '
             lesson-20:
               name: Sharing Projects
-              description_student: 
+              description_student:
               description_teacher: 'Click on this [link](https://docs.google.com/document/d/1rxzUyQA3jJzjEUTDvCwYtFK_dYgLgqot0LlpGydK68Q/edit?usp=sharing) to access the lesson plan. '
           lesson_groups:
             lessonGroup-2:
@@ -31136,6 +31136,15 @@ en:
           lesson_groups: {}
           name: tess-test-csa
           title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ui-test-csa-family-script:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-csa-family-script
+          title: UI Test CSA Family Script
           description_audience: ''
           description_short: ''
           description: ''
