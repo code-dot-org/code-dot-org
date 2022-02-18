@@ -5,7 +5,7 @@ class CertificateImagesController < ApplicationController
   # filename includes three encoded params:
   #   name - student name (required)
   #   course - course name (optional)
-  #   sponsor - donor name (required)
+  #   donor - donor name (required)
   def show
     filename = params[:filename]
     format = params[:format]
@@ -22,11 +22,11 @@ class CertificateImagesController < ApplicationController
     return render status: :bad_request, json: {message: 'student name is required'} unless data['name']
 
     # ensure we do not select a random donor below, since doing so would make this page uncacheable.
-    return render status: :bad_request, json: {message: 'donor name is required'} unless data['sponsor']
-    return render status: :bad_request, json: {message: 'invalid donor name'} unless CdoDonor.valid_donor_name?(data['sponsor'])
+    return render status: :bad_request, json: {message: 'donor name is required'} unless data['donor']
+    return render status: :bad_request, json: {message: 'invalid donor name'} unless CdoDonor.valid_donor_name?(data['donor'])
 
     begin
-      image = CertificateImage.create_course_certificate_image(data['name'], data['course'], data['sponsor'])
+      image = CertificateImage.create_course_certificate_image(data['name'], data['course'], data['donor'])
       image.format = format
       content_type = "image/#{format}"
       send_data image.to_blob, type: content_type

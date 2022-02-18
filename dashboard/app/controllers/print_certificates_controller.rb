@@ -7,7 +7,7 @@ class PrintCertificatesController < ApplicationController
   # encoded_params includes:
   #   name - student name (optional)
   #   course - course name (optional)
-  #   sponsor - donor name (optional)
+  #   donor - donor name (optional)
   def show
     view_options(no_header: true, no_footer: true, white_background: true, full_width: true)
 
@@ -18,6 +18,6 @@ class PrintCertificatesController < ApplicationController
     end
 
     @student_name = data['name']
-    @certificate_image_url = certificate_image_url(data['name'], data['course'], data['sponsor'])
+    @certificate_image_url = certificate_image_url(data['name'], data['course'], data['donor'])
   end
 end
