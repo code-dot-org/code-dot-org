@@ -147,7 +147,8 @@ module ProjectsList
       section_users = section.students + [section.user]
 
       [].tap do |projects_list_data|
-        user_storage_id_list = get_storage_ids_for_users(section_users.pluck(:id))
+        user_storage_ids = get_storage_ids_by_user_ids(section_users.pluck(:id))
+        user_storage_id_list = user_storage_ids.keys
         PEGASUS_DB[:storage_apps].
           where(storage_id: user_storage_id_list, state: 'active').
           where(project_type: project_types).
