@@ -2,15 +2,15 @@ require 'test_helper'
 require 'base64'
 
 class CertificateImagesControllerTest < ActionController::TestCase
-  test 'can show certificate image given name and course and sponsor' do
-    data = {name: 'student', course: 'hourofcode', sponsor: 'Amazon'}
+  test 'can show certificate image given name and course and donor' do
+    data = {name: 'student', course: 'hourofcode', donor: 'Amazon'}
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'jpg', params: {filename: filename}
     assert_response :success
   end
 
   test 'returns bad request without student name' do
-    data = {course: 'hourofcode', sponsor: 'Amazon'}
+    data = {course: 'hourofcode', donor: 'Amazon'}
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'jpg', params: {filename: filename}
     assert_response :bad_request
@@ -25,8 +25,8 @@ class CertificateImagesControllerTest < ActionController::TestCase
     assert_includes response.body, 'donor name is required'
   end
 
-  test 'returns bad request given invalid sponsor name' do
-    data = {name: 'student', course: 'hourofcode', sponsor: 'bogus'}
+  test 'returns bad request given invalid donor name' do
+    data = {name: 'student', course: 'hourofcode', donor: 'bogus'}
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'jpg', params: {filename: filename}
     assert_response :bad_request
@@ -34,14 +34,14 @@ class CertificateImagesControllerTest < ActionController::TestCase
   end
 
   test 'can show certificate image given bogus course name' do
-    data = {name: 'student', course: 'bogus', sponsor: 'Amazon'}
+    data = {name: 'student', course: 'bogus', donor: 'Amazon'}
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'jpg', params: {filename: filename}
     assert_response :success
   end
 
   test 'returns bad request given invalid format' do
-    data = {name: 'student', course: 'hourofcode', sponsor: 'Amazon'}
+    data = {name: 'student', course: 'hourofcode', donor: 'Amazon'}
     filename = Base64.urlsafe_encode64(data.to_json)
     get :show, format: 'bogus', params: {filename: filename}
     assert_response :bad_request
