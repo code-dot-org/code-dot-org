@@ -28329,7 +28329,7 @@ en:
               description_teacher: |-
                 In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.
 
-                **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data>
+                **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?
             lesson-2:
               name: 'Project: Human Device Interaction'
               description_student: 
@@ -30994,33 +30994,59 @@ en:
             lesson-1:
               name: Welcome to CSA
             lesson-2:
-              name: Exploring The Neighborhood
+              name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-3:
-              name: Working with the Painter
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
             lesson-4:
               name: Navigating and Painting
             lesson-5:
-              name: Making Decisions
+              name: One-Way Selection Statements
+              description_student: 
+              description_teacher: 
             lesson-6:
-              name: Creating Types of Painters
+              name: PainterPlus
+              description_student: 
+              description_teacher: 
             lesson-7:
-              name: Improving Programs with Code Reviews
+              name: Writing Methods
+              description_student: 
+              description_teacher: 
             lesson-8:
-              name: Repeating Instructions
+              name: Code Reviews
+              description_student: 
+              description_teacher: 
             lesson-9:
-              name: Expanding Decisions
+              name: Loops
+              description_student: 
+              description_teacher: 
             lesson-10:
-              name: Debugging with the Painter
+              name: Two-Way Selection Statements
+              description_student: 
+              description_teacher: 
             lesson-11:
-              name: Adding New Capabilities
+              name: Debugging Strategies
+              description_student: 
+              description_teacher: 
             lesson-12:
-              name: Creating a StampPainter
+              name: Decomposition and Design
+              description_student: 
+              description_teacher: 
             lesson-13:
-              name: Expanding the StampPainter
+              name: PatternPainter
+              description_student: 
+              description_teacher: 
             lesson-14:
-              name: Creating a BackgroundPainter
+              name: BackgroundPainter
+              description_student: 
+              description_teacher: 
             lesson-15:
-              name: Becoming Software Engineers
+              name: Open Source Code
+              description_student: 
+              description_teacher: 
             lesson-16:
               name: Asphalt Art Project – Day 1
             lesson-17:
@@ -31039,9 +31065,9 @@ en:
           name: csa1-2022
           title: Object-Oriented Programming ('22-'23)
           description_audience: ''
-          description_short: ''
-          description: ''
-          student_description: ''
+          description_short: Students learn fundamental Java concepts, discover their identity as software engineers, and use debugging strategies and code reviews to improve their programming skills.
+          description: This unit exposes students to object-oriented programming principles as they explore The Neighborhood. Students learn fundamental Java concepts as they navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of their programs. Students practice predicting the outcome of program code and use their `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While students work with the `Painter`, they practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, students learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, students discover their identity as software engineers and use debugging strategies and code reviews to improve their programming skills.
+          student_description: This unit exposes you to object-oriented programming principles as you explore The Neighborhood. You learn fundamental Java concepts as you navigate and interact with The Neighborhood with `Painter` objects and create new types of `Painter`s to expand the capabilities of your programs. You practice predicting the outcome of program code and use your `Painter` objects with conditional statements, `while` loops, and Boolean expressions to navigate mazes and create drawings. While you work with the `Painter`, you practice identifying syntax and logic errors to explain why code segments will not compile or work as intended. Additionally, you learn to document program code using comments to describe the behavior of specific code segments. Throughout this unit, you discover your identity as a software engineer and use debugging strategies and code reviews to improve your programming skills.
         pre-express-2022:
           lessons:
             Learn to Drag and Drop:
