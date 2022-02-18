@@ -3,11 +3,11 @@ require 'test_helper'
 class ProjectsListTest < ActionController::TestCase
   setup do
     @student = create :student
-    @storage_id = storage_id_for_user_id(@student.id)
-    @channel_id = storage_encrypt_channel_id(@storage_id, 123)
+    @storage_id = fake_storage_id_for_user_id(@student.id)
+    stub_storage_id_for_user_id(@student.id)
 
     @teacher = create :teacher
-    @teacher_storage_id = storage_id_for_user_id(@teacher.id)
+    stub_storage_id_for_user_id(@teacher.id)
 
     student_project_value = {
       name: 'Bobs App',
