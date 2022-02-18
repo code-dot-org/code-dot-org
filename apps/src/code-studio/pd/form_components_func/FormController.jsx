@@ -676,7 +676,7 @@ FormController.defaultProps = {
   requiredFields: [],
   applicationId: undefined,
   allowPartialSaving: false,
-  autoComputedFields: [''],
+  autoComputedFields: [],
   getInitialData: () => {},
   onInitialize: () => {},
   onSetPage: () => {},
