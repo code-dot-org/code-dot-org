@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-02-17 21:56:21 UTC",
+    "serialized_at": "2022-02-18 18:27:54 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -898,12 +898,42 @@
       }
     },
     {
-      "key": "6e345c96-b614-472a-b02f-e347c3183fdb",
+      "key": "c9e5fa80-ef6c-41c9-8798-e8bdebf471fa",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9e5fa80-ef6c-41c9-8798-e8bdebf471fa",
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "6e345c96-b614-472a-b02f-e347c3183fdb",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb",
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a",
         "lesson.key": "[New] Mini-Project: Collector Game",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2022"
@@ -2826,9 +2856,46 @@
       }
     },
     {
-      "key": "d085ff3f-4837-49cc-b1d2-9daccbe5ef8c",
+      "key": "ae85a4b4-3a05-4058-9db5-a278b3770e9c",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What makes an activity a game?_\n \n**Discussion Goal**: Students should understand that games usually involve players, score(s), a win or lose condition, and different outcomes. Each time a user plays through a game they might have a different outcome or score.\n",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae85a4b4-3a05-4058-9db5-a278b3770e9c",
+        "lesson_activity.key": "c9e5fa80-ef6c-41c9-8798-e8bdebf471fa"
+      }
+    },
+    {
+      "key": "07ece36d-6d0a-4434-b2ca-0ac04fece727",
+      "position": 1,
+      "properties": {
+        "description": "####Exploration (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Exploration” slide\n\n**Goal**: Today, students will be creating their own interactive collector game in Sprite Lab! They'll begin by exploring a few examples. Then, after a quick introduction on customizing sprite behavior and keeping track of the score, students will work on designing their own game.\n",
+        "name": "Mini-Project: Collector Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "07ece36d-6d0a-4434-b2ca-0ac04fece727",
+        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb"
+      }
+    },
+    {
+      "key": "75a7273c-9d6d-432d-b327-998f2cbee9d3",
+      "position": 2,
+      "properties": {
+        "description": "Now it is time to explore some projects on your own. For each project, think about:\n\n* What do all of these projects have in common?\n* How are they different from each other?\n* What do you notice about the code in each project?\n\nWhen you finish exploring, click “Finish” and move on to the next level.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "75a7273c-9d6d-432d-b327-998f2cbee9d3",
+        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb"
+      }
+    },
+    {
+      "key": "d085ff3f-4837-49cc-b1d2-9daccbe5ef8c",
+      "position": 3,
+      "properties": {
+        "description": "**Transition**: Move students to their computers.\n\n**Do This**: Before students start the mini-project, have them explore the example projects in level 1. When they are ready to start planning their own program they can press  \"Finish\" and continue on.\n",
         "progression_name": "Exploration: Sample Programs"
       },
       "seeding_key": {
@@ -2838,8 +2905,9 @@
     },
     {
       "key": "ab31f766-71c9-4683-8bea-942b7ed7b348",
-      "position": 2,
+      "position": 4,
       "properties": {
+        "description": "####Mini-Project (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-8 - Mini-Project: Collector Game” slide\n\n**Do This**: Encourage students to follow the instructions for each level. In the last level they can add whatever they like to their code. For example, they can change the background at the end of the game or add sounds.\n",
         "progression_name": "Mini-Project: Collector Game"
       },
       "seeding_key": {
@@ -2848,14 +2916,27 @@
       }
     },
     {
-      "key": "018c8526-a41e-4ef6-b2f2-3cb1bb69e436",
-      "position": 3,
+      "key": "cb0cc4cb-9c49-42e5-b71d-0366bb59a367",
+      "position": 1,
       "properties": {
-        "progression_name": "Free Play"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Showcase” slide\n\n**Do This**: To celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n**Public Demo**: Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement.\n\n**Pair Playtesting**: Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting.\n\n**Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and play/test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
+        "name": "Showcase"
       },
       "seeding_key": {
-        "activity_section.key": "018c8526-a41e-4ef6-b2f2-3cb1bb69e436",
-        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb"
+        "activity_section.key": "cb0cc4cb-9c49-42e5-b71d-0366bb59a367",
+        "lesson_activity.key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a"
+      }
+    },
+    {
+      "key": "02e2d47e-c813-4001-85de-436d5aaf788c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you like about the games that your classmates made? What surprised you?_\n\n",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "02e2d47e-c813-4001-85de-436d5aaf788c",
+        "lesson_activity.key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a"
       }
     },
     {
