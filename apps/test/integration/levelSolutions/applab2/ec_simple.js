@@ -1,4 +1,4 @@
-import {testApplabConsoleOutput} from '../../util/levelTestTypes';
+import {testApplabConsoleOutput} from '../../util/levelTestHelpers';
 import {TestResults} from '@cdo/apps/constants';
 
 module.exports = {
