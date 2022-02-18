@@ -71,6 +71,10 @@ cron:
 - dashboard.ib_school_codes
 - dashboard.ap_school_codes
 - dashboard.census_submissions_school_infos
+- dashboard.standards
+- dashboard.stages_standards
+- dashboard.standard_categories
+- dashboard.frameworks
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:
