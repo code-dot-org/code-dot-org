@@ -994,10 +994,10 @@ class ApiControllerTest < ActionController::TestCase
 
   test "user_app_options should return existing channel if one exists" do
     sign_in @student_1
-    stub_get_storage_id(@student_1.id)
-    stub_storage_id_for_user_id(@student_1.id)
+    storage_id = fake_storage_id_for_user_id(@student_1.id)
+    ApiController.any_instance.stubs(:get_storage_id).returns(storage_id)
 
-    channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: fake_storage_id_for_user_id(@student_1.id)
+    channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id
     expected_channel = channel_token.channel
 
     get :user_app_options, params: {
