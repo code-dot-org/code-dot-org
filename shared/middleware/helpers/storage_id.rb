@@ -171,11 +171,6 @@ def get_user_storage_id(query)
   user_storage_ids_table.where(query).first
 end
 
-# Takes an array of user ids and returns an array of storage ids
-def get_storage_ids_for_users(user_ids)
-  user_storage_ids_table.where({user_id: user_ids}).pluck(:id)
-end
-
 # Takes an array of user ids and returns a mapping from user id to storage id
 def get_storage_ids_by_user_ids(user_ids)
   user_storage_ids_table.where({user_id: user_ids}).select_hash(:user_id, :id)
