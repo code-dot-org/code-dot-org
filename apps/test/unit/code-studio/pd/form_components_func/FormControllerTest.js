@@ -180,6 +180,7 @@ describe('FormController', () => {
     });
 
     describe('Saving', () => {
+      // [MEG] TODO: Refactor this to use savedStatus instead of form_data
       it('Overrides application status as incomplete to data', () => {
         const testData = {
           field1: 'value 1',
@@ -192,7 +193,7 @@ describe('FormController', () => {
         );
         form.findAll('Button')[1].props.onClick();
 
-        expect(getData(DummyPage1)).to.eql({...testData, status: 'incomplete'});
+        expect(getData(DummyPage1)).to.eql({...testData});
       });
 
       it('Disables the save button during save', () => {
@@ -375,6 +376,7 @@ describe('FormController', () => {
           expect(form.findOne('#submit').props.disabled).to.be.false;
         });
 
+        // [MEG] TODO: Refactor this to use savedStatus instead of form_data
         it('Overrides application status as unreviewed on submit', () => {
           const testData = {
             field1: 'value 1',
@@ -389,8 +391,7 @@ describe('FormController', () => {
           triggerSubmit();
 
           expect(getData(DummyPage3)).to.eql({
-            ...testData,
-            status: 'unreviewed'
+            ...testData
           });
         });
 
