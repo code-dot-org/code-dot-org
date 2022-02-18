@@ -813,6 +813,10 @@ FactoryGirl.define do
       status 'incomplete'
     end
 
+    trait :reopened do
+      status 'reopened'
+    end
+
     trait :with_no_school do
       school(-1)
     end
