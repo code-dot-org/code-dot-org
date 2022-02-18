@@ -1,4 +1,4 @@
-self.addEventListener('install', (e) => {
-  let hello = 'HI' + Math.random();
-  console.log('[Service Worker] Install', hello);
-});
+import {OfflineServiceWorker} from './offlineServiceWorkerImpl';
+const impl = new OfflineServiceWorker();
+
+self.addEventListener('install', impl.install);

@@ -931,6 +931,6 @@ Dashboard::Application.routes.draw do
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
   get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
 
-  # get 'offline-service-worker.js', load_file(webpack_asset_path('offline-service-worker'))
+  get '/offline-service-worker.js', action: :offline_service_worker, controller: :offline
   get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
 end

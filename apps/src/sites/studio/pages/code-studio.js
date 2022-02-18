@@ -132,5 +132,7 @@ initResponsive();
 
 // Register the offline service worker.
 if ('serviceWorker' in navigator && window.OFFLINE_SERVICE_WORKER_PATH) {
+  console.log("Before service worker register");
   navigator.serviceWorker.register(window.OFFLINE_SERVICE_WORKER_PATH);
+  console.log("After service worker register");
 };

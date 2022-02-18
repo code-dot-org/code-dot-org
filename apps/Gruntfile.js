@@ -1277,6 +1277,8 @@ describe('entry tests', () => {
     envConstants.DEV ? 'noop' : 'newer:copy:unhash'
   ]);
 
+  grunt.registerTask('buildOffline', ['webpack:buildOffline']);
+
   grunt.registerTask('rebuild', ['clean', 'build']);
 
   grunt.registerTask('preconcat', [
