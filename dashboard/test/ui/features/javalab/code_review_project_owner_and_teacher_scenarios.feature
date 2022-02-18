@@ -14,7 +14,7 @@ Background:
   # Create a section
   Given I create a levelbuilder named "Dumbledore"
   And I sign in as "Dumbledore" and go home
-  And I create a new section named "CSA Section" assigned to "CSA Pilot"
+  And I create a new section named "CSA Section" assigned to "UI Test CSA Family Script"
   And I save the section url
   And I save the section id from row 0 of the section table
   Given I create a student named "Hermione"
@@ -23,7 +23,6 @@ Background:
   # Save the group, and enable code review for the section.
   Given I sign in as "Dumbledore" and go home
   And I create a new code review group for the section I saved
-  And I add the first student to the first code review group
   And I add the first student to the first code review group
   And I click selector ".uitest-base-dialog-confirm"
   And I click selector ".toggle-input"

@@ -69,7 +69,8 @@ namespace :seed do
     'ui-test-script-in-course-2017',
     'ui-test-script-in-course-2019',
     'ui-test-versioned-script-2017',
-    'ui-test-versioned-script-2019'
+    'ui-test-versioned-script-2019',
+    'ui-test-csa-family-script'
   ].map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + [
     '20-hour',
@@ -97,15 +98,6 @@ namespace :seed do
     'coursec-2019',
     'coursee-2019',
     'coursea-2020',
-    'csa1-pilot',
-    'csa2-pilot',
-    'csa3-pilot',
-    'csa4-pilot',
-    'csa5-pilot',
-    'csa6-pilot',
-    'csa7-pilot',
-    'csa8-pilot',
-    'csa9-pilot',
     'csp1-2017',
     'csp2-2017',
     'csp3-2017',
@@ -217,7 +209,7 @@ namespace :seed do
 
   timed_task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2019 csa-pilot).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2019).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
