@@ -138,11 +138,11 @@ export function validationBar(
   let color = 'black';
   switch (state) {
     case 'fail':
-      color = colors.purple;
+      color = colors.red;
       break;
     case 'pass':
     case 'bonus':
-      color = colors.teal;
+      color = colors.realgreen;
       break;
   }
   p5.push();

@@ -1,5 +1,4 @@
 var studentVarToken = false;
-var varLog = buildVariableLog();
 var previousVarLog;
 
 // Create an array of objects representing within the variables that have been
@@ -7,6 +6,7 @@ var previousVarLog;
 // are global, and we would like to find a more efficient way to find just
 // those used by the student.
 function buildVariableLog() {
+  text("Building variable log...",0,15);
   var varLog = {};
   var start = Object.keys(window).indexOf("studentVarToken") + 1;
   var end = Object.keys(window).length;
@@ -24,6 +24,32 @@ function buildVariableLog() {
   return varLog;
 }
 
+function detectVariableLogChange() {
+  var result = false;
+  if(varLog && previousVarLog){
+    for (var property in varLog) {
+      if (varLog[property] !== previousVarLog[property]) {
+        //window[Object.keys(window)[Object.keys(window).indexOf(property)]]
+        result = true;
+      }
+    }
+  }
+  return result;
+}
+
+function updateVariableLog() {
+  for (var property in varLog) {
+    if (varLog[property] !== window[Object.keys(window)[Object.keys(window).indexOf(property)]]) {
+      varLog[property] = window[Object.keys(window)[Object.keys(window).indexOf(property)]];
+    }
+  }
+}
+
+function storeVariableLogforPrevious() {
+  previousVarLog = JSON.parse(JSON.stringify(varLog));
+}
+
+
 // Draw a set of on-screen watchers, ie. show each student variable name
 // and it's value, in a drawn element on the canvas. (Prototype)
 function varWatchers(varLog) {
@@ -31,7 +57,7 @@ function varWatchers(varLog) {
     var index = Object.keys(varLog).indexOf(key);
     var x = 5;
     var y = 32;
-    drawWatcher(key, varLog[key], index, x, y);
+    drawWatcher(key, varLog[key], iqndex, x, y);
   }
 }
 
@@ -70,25 +96,15 @@ function drawWatcher(label, value, index, x, y) {
   text(value, valueX, textY);
 }
 
-function checkLogLength() {
-  return buildVariableLog().length > 0;
-}
-
-function checkLogForChanges() {
-  varLog = buildVariableLog();
-  if (!previousVarLog) {
-    previousVarLog = {
-      varLog: varLog,
-      frame: World.frameCount,
-    };
-  }
-  if (previousVarLog) {
-    if (JSON.stringify(previousVarLog.varLog) != JSON.stringify(varLog)) {
-      if (World.frameCount > previousVarLog.frame) {
-        previousVarLog = JSON.parse(JSON.stringify(varLog));
-      }
-      return true;
+function check() {
+  updateVariableLog();
+  var results = updateValidation();
+  if (results) {
+    if (results.state === "failed") {
+      levelFailure(3, results.feedback);
+    } else if (results.state === "succeeded") {
+      levelFailure(0, results.feedback);
     }
   }
-  return false;
+  storeVariableLogforPrevious();
 }
