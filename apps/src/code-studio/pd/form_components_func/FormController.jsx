@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react';
 import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap';
 import {Pagination} from '@react-bootstrap/pagination';
-import {isEqual, omit} from 'lodash';
 import i18n from '@cdo/locale';
 import usePrevious from '@cdo/apps/util/usePrevious';
 
@@ -94,12 +93,7 @@ const FormController = props => {
   const [showSavedMessage, setShowSavedMessage] = useState(false);
   const [errors, setErrors] = useState([]);
   const previousErrors = usePrevious(errors);
-  const [hasUserChangedData, setHasUserChangedData] = useState(
-    !isEqual(
-      omit(data, autoComputedFields),
-      omit(savedData, autoComputedFields)
-    )
-  );
+  const [hasUserChangedData, setHasUserChangedData] = useState();
   const [errorMessages, setErrorMessages] = useState({});
   const [errorHeader, setErrorHeader] = useState(null);
   const [globalError, setGlobalError] = useState(false);
@@ -120,17 +114,8 @@ const FormController = props => {
   }, []);
 
   useEffect(() => {
-    if (
-      !isEqual(
-        omit(data, autoComputedFields),
-        omit(savedData, autoComputedFields)
-      )
-    ) {
-      setHasUserChangedData(true);
-    } else {
-      setHasUserChangedData(false);
-    }
-  }, [autoComputedFields, data]);
+    setHasUserChangedData(true);
+  }, [autoComputedFields, data, savedData]);
 
   useEffect(() => {
     const showWarningOnExit =
