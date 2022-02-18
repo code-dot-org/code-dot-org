@@ -2,5 +2,6 @@
   "key": "frameDidChange",
   "name": "frameDidChange",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "frameDidChange"
 }

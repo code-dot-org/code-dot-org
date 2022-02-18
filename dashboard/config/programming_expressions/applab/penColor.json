@@ -2,6 +2,7 @@
   "key": "penColor",
   "name": "penColor",
   "category": "Turtle",
+  "category_key": "turtle",
   "palette_params": [
     {
       "name": "color"

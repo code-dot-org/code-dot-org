@@ -27,27 +27,27 @@ class Homepage
   end
 
   def self.load_announcements
-    # Reloads JSON file with announcement data on each page load
-    # in non-production environments
-    unless (@@load_error || @@loaded) && rack_env?(:production)
-      unless File.file?(@@json_path)
-        @@load_error = true
-        return
-      end
-      begin
-        @@announcements_data = JSON.parse(
-          IO.read(@@json_path),
-          symbolize_names: true,
-          object_class: HashWithIndifferentAccess
-        )
-        unless validate_announcements_data(@@announcements_data)
-          @@load_error = true
-        end
-      rescue JSON::ParserError
-        @@load_error = true
-      end
-      @@loaded = true
+    @@announcements_data = nil
+    @@load_error = false
+    @@loaded = true
+
+    unless File.file?(@@json_path)
+      @@load_error = true
+      return
     end
+    begin
+      @@announcements_data = JSON.parse(
+        IO.read(@@json_path),
+        symbolize_names: true,
+        object_class: HashWithIndifferentAccess
+      )
+      unless validate_announcements_data(@@announcements_data)
+        @@load_error = true
+      end
+    rescue JSON::ParserError
+      @@load_error = true
+    end
+    @@loaded = true
   end
 
   def self.validate_announcements_data(announcements_data)

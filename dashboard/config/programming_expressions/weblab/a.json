@@ -2,5 +2,6 @@
   "key": "A",
   "name": "A",
   "category": "HTML Tags",
+  "category_key": "html_tags",
   "syntax": "<a></a>"
 }

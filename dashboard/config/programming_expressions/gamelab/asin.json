@@ -2,6 +2,7 @@
   "key": "asin",
   "name": "asin",
   "category": "Math",
+  "category_key": "math",
   "palette_params": [
     {
       "name": "value"

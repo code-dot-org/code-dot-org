@@ -2,6 +2,7 @@
   "key": "line",
   "name": "line",
   "category": "Drawing",
+  "category_key": "drawing",
   "palette_params": [
     {
       "name": "x1"

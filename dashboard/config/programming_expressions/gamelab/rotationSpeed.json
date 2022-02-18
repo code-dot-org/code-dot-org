@@ -2,5 +2,6 @@
   "key": "rotationSpeed",
   "name": "rotationSpeed",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "rotationSpeed"
 }

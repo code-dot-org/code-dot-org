@@ -59,9 +59,7 @@ module Pd::Application
     # Set the status only if (a) the application is new, or (b) the applicant updates form_data.
     # Avoid setting the status when an RP or admin changes the application status, which only happens
     # from the application dashboard, not from changing form_data.
-    before_validation -> {self.status = (sanitize_form_data_hash && sanitize_form_data_hash[:status] || :unreviewed)},
-      if: -> {form_data_changed? || new_record?}
-
+    before_validation :set_status
     validate :status_is_valid_for_application_type
     validates_presence_of :type
     validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
@@ -72,6 +70,7 @@ module Pd::Application
     # An application either has an "incomplete" or "unreviewed" state when created.
     # After creation, an RP or admin can change the status to "accepted," which triggers update_accepted_data.
     before_save :update_accepted_date, if: :status_changed?
+    before_save :remove_status_from_form_data
 
     before_create :generate_application_guid, if: -> {application_guid.blank?}
     after_destroy :delete_unsent_email
@@ -89,6 +88,17 @@ module Pd::Application
       csp
       csa
     ).index_by(&:to_sym).freeze
+
+    def set_status
+      return unless new_record? || (sanitize_form_data_hash && sanitize_form_data_hash[:status])
+      self.status = 'unreviewed' if new_record?
+      self.status = sanitize_form_data_hash[:status] if sanitize_form_data_hash && sanitize_form_data_hash[:status]
+    end
+
+    def remove_status_from_form_data
+      return unless form_data_hash && form_data_hash["status"]
+      self.form_data = form_data_hash.except("status").to_json
+    end
 
     def set_type_and_year
       # Override in derived classes and set to valid values.

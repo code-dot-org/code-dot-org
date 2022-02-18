@@ -2,6 +2,7 @@
   "key": "createSprite",
   "name": "var sprite = createSprite",
   "category": "Sprites",
+  "category_key": "sprites",
   "palette_params": [
     {
       "name": "x"
