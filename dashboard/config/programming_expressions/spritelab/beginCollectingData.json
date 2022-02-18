@@ -2,6 +2,7 @@
   "key": "beginCollectingData",
   "name": "beginCollectingData",
   "category": "Math",
+  "category_key": "math",
   "block_name": "gamelab_beginCollectingData",
   "syntax": "beginCollectingData"
 }

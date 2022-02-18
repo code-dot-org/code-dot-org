@@ -2,5 +2,6 @@
   "key": "World.seconds",
   "name": "World.seconds",
   "category": "World",
+  "category_key": "world",
   "syntax": "World.seconds"
 }

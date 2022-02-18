@@ -2,6 +2,7 @@
   "key": "analogWrite",
   "name": "analogWrite",
   "category": "Maker",
+  "category_key": "maker",
   "palette_params": [
     {
       "name": "pin"

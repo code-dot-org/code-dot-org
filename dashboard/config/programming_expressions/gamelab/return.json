@@ -2,5 +2,6 @@
   "key": "return",
   "name": "return",
   "category": "Functions",
+  "category_key": "functions",
   "syntax": "return __;"
 }

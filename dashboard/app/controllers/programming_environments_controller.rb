@@ -3,6 +3,19 @@ class ProgrammingEnvironmentsController < ApplicationController
 
   before_action :require_levelbuilder_mode_or_test_env
 
+  def new
+  end
+
+  def create
+    programming_environment = ProgrammingEnvironment.create(name: params[:name])
+    if programming_environment.save
+      programming_environment.write_serialization
+      redirect_to edit_programming_environment_url(programming_environment.name)
+    else
+      render(status: :not_acceptable, json: programming_environment.errors)
+    end
+  end
+
   def edit
     @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
     return render :not_found unless @programming_environment

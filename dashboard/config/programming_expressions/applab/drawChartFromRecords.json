@@ -2,6 +2,7 @@
   "key": "drawChartFromRecords",
   "name": "drawChartFromRecords",
   "category": "Data",
+  "category_key": "data",
   "palette_params": [
     {
       "name": "chartId"

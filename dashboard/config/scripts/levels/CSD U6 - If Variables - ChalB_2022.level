@@ -89,7 +89,9 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Challenge B",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L5/challenge/B.png"
   },
   "game_id": 41,
   "published": true,
@@ -97,7 +99,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-18T23:52:23.125+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalA_2022\"},{\"changed_at\":\"2021-12-18 23:52:25 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-18T23:52:23.125+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - ChalA_2022\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - ChalA_2022\"},{\"changed_at\":\"2021-12-18 23:52:25 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:04:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

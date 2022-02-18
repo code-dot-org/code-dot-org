@@ -2,5 +2,6 @@
   "key": "length",
   "name": "length",
   "category": "Variables",
+  "category_key": "variables",
   "syntax": "length"
 }

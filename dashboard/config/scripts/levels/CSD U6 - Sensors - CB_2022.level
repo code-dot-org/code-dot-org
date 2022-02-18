@@ -176,7 +176,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# TODO\r\n-Simplify this so only 1 level\r\n\r\n<hr />\r\n\r\n# Displaying Sensor Readings in Color\r\n\r\nIn the earlier prediction level you saw how the `setScale()` method can convert the full range of sensor readings (0-1023) into a range that can be used for RGB values (0-255). Let's build on that idea to make an app that can communicate the current value of all three analog sensors with a single color.\r\n\r\n# Do This\r\n\r\nTo start, we just need to set the sensor scales correctly - don't worry about actually setting the color of the background yet.\r\n\r\n* Using the `sensor.setScale()` block, set each of light and sound sensors to the right scale for an RGB color channel.\r\n* Create a variable for each of the three colors and assign each one to the value of a different sensor.\r\n* Use `console.log()` to test that your variables are in the correct range.\r\n\r\n_Hint: Order matters. You need to set the scale of a sensor before checking its value_\r\n\r\n_Hint: Remember that the temperature sensor can be read in both Celsius and Fahrenheit - either way it should already give you a value that's within the necessary range for RGB_",
+    "long_instructions": "# Sensor Challenge Level\r\n\r\n<!-- \r\n# TODO\r\n-Simplify this so only 1 level\r\n\r\n<hr />\r\n\r\n# Displaying Sensor Readings in Color\r\n\r\nIn the earlier prediction level you saw how the `setScale()` method can convert the full range of sensor readings (0-1023) into a range that can be used for RGB values (0-255). Let's build on that idea to make an app that can communicate the current value of all three analog sensors with a single color.\r\n\r\n# Do This\r\n\r\nTo start, we just need to set the sensor scales correctly - don't worry about actually setting the color of the background yet.\r\n\r\n* Using the `sensor.setScale()` block, set each of light and sound sensors to the right scale for an RGB color channel.\r\n* Create a variable for each of the three colors and assign each one to the value of a different sensor.\r\n* Use `console.log()` to test that your variables are in the correct range.\r\n\r\n_Hint: Order matters. You need to set the scale of a sensor before checking its value_\r\n\r\n_Hint: Remember that the temperature sensor can be read in both Celsius and Fahrenheit - either way it should already give you a value that's within the necessary range for RGB_\r\n-->",
     "instructions_important": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
@@ -225,11 +225,13 @@
     ],
     "map_reference": "/docs/concepts/maker-toolkit/changing-sensor-scale/",
     "mini_rubric": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null,
+    "display_name": "Challenge B",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L11/challenge/B.png"
   },
   "game_id": 41,
   "published": true,
@@ -237,7 +239,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:30:54.849+00:00\",\"changed\":[\"cloned from \\\"CSD U6 analog rbg 1_2021\\\"\"],\"cloned_from\":\"CSD U6 analog rbg 1_2021\"},{\"changed_at\":\"2021-09-01 22:31:30 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:30:54.849+00:00\",\"changed\":[\"cloned from \\\"CSD U6 analog rbg 1_2021\\\"\"],\"cloned_from\":\"CSD U6 analog rbg 1_2021\"},{\"changed_at\":\"2021-09-01 22:31:30 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:43:05 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

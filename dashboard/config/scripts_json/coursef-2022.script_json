@@ -4,12 +4,22 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Attention teachers!",
+          "details": "We need your feedback! Please look for the survey links on this course page and let us know what you think.",
+          "link": "",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
+      "pilot_experiment": "csf-2022-pilot",
       "project_widget_types": [
         "playlab",
         "artist"
@@ -19,8 +29,8 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-02-08 19:38:33 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-02-18 18:27:54 UTC",
+    "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -247,46 +257,56 @@
       }
     },
     {
-      "key": "lesson-4",
-      "name": "Lots of Sprites",
+      "key": "[New] Lots of Sprites",
+      "name": "[New] Lots of Sprites",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**",
+        "preparation": "Play through the levels and review the **lesson slides**.",
+        "purpose": "This lesson temporarily shifts away from variables and instead focuses on programming with groups of sprites. Later in the course, students will learn more about variables and simulations. The types of programs students create in this lesson will provide additional context for those lessons.",
+        "student_overview": "You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!"
       },
       "seeding_key": {
-        "lesson.key": "lesson-4",
+        "lesson.key": "[New] Lots of Sprites",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2022"
       }
     },
     {
-      "key": "lesson-5",
-      "name": "Counting with Variables",
+      "key": "[New] Counting with Variables",
+      "name": "[New] Counting with Variables",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**",
+        "purpose": "In previous lessons, students learn to use variables to store data that can be retrieved later. In this lesson, students will begin learning to modify the data stored in a variable. This key understanding of how variables work will also enable them to create more advanced projects.",
+        "student_overview": "You will learn to use variables to make a counter or keep track of a score in a game."
       },
       "seeding_key": {
-        "lesson.key": "lesson-5",
+        "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2022"
       }
     },
     {
-      "key": "lesson-6",
-      "name": "Mini-Project: Collector Game",
+      "key": "[New] Mini-Project: Collector Game",
+      "name": "[New] Mini-Project: Collector Game",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "In this **mini-project** lesson, students will create a customized \"collector game\", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**",
+        "purpose": "This project is designed to allow students to apply their new knowledge of variables in a fun way. By understanding how to modify the value stored in a variable, students can create a game that automatically keeps the score based on the player's actions.",
+        "student_overview": "Collect all the sprites! In this project, you will create a game that others can play."
       },
       "seeding_key": {
-        "lesson.key": "lesson-6",
+        "lesson.key": "[New] Mini-Project: Collector Game",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2022"
       }
@@ -794,25 +814,127 @@
       }
     },
     {
-      "key": "d9fe8a58-c480-4fc3-b96a-59d44fe2c264",
+      "key": "7cc9f72e-1e61-46ff-8a9c-7a5d7f5cbfb7",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "d9fe8a58-c480-4fc3-b96a-59d44fe2c264",
-        "lesson.key": "lesson-5",
+        "lesson_activity.key": "7cc9f72e-1e61-46ff-8a9c-7a5d7f5cbfb7",
+        "lesson.key": "[New] Lots of Sprites",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2022"
       }
     },
     {
-      "key": "cac6bf53-22f9-41f3-b5d0-f94b96a09828",
-      "position": 1,
+      "key": "b948a904-f5ea-4a14-be87-95de3bbf1155",
+      "position": 2,
       "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "cac6bf53-22f9-41f3-b5d0-f94b96a09828",
-        "lesson.key": "lesson-6",
+        "lesson_activity.key": "b948a904-f5ea-4a14-be87-95de3bbf1155",
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "ae371449-807b-4b5c-b7ef-83eaf8ace27d",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae371449-807b-4b5c-b7ef-83eaf8ace27d",
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "515517b1-f722-4cec-82e5-63f2f1deb09f",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f",
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "1d2f1ca3-a065-4baa-8070-a831ee933ef3",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d2f1ca3-a065-4baa-8070-a831ee933ef3",
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "edf172bf-7b74-4b79-b915-f36b1b6cbb8b",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "edf172bf-7b74-4b79-b915-f36b1b6cbb8b",
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "c9e5fa80-ef6c-41c9-8798-e8bdebf471fa",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9e5fa80-ef6c-41c9-8798-e8bdebf471fa",
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "6e345c96-b614-472a-b02f-e347c3183fdb",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb",
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a",
+        "lesson.key": "[New] Mini-Project: Collector Game",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2022"
       }
@@ -1542,7 +1664,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide",
-        "name": "Reflection"
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "5e1d361c-4925-48b4-b00a-d92b6d5e612d",
@@ -2290,8 +2412,7 @@
       "key": "25d96d98-657a-49e3-bb26-bae041d2f0db",
       "position": 2,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - Program Planning” slide\n\n\n",
-        "name": "Planning (10 mins)"
+        "description": "####Planning (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - Program Planning” slide\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "25d96d98-657a-49e3-bb26-bae041d2f0db",
@@ -2450,23 +2571,372 @@
       }
     },
     {
-      "key": "1b86cc88-c629-4610-9458-3a11e64bd2b4",
+      "key": "36663851-502d-4948-8c05-3edeec3749e9",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: \n* _How would you describe this interactive scene?_\n* _If you wanted to create this scene in Sprite Lab, what blocks of code would you need?_\n\n**Discussion goal**: Students should recognize parts of the scene that they already understand how to create, such as making sprites and giving them behaviors. They should also notice that many sprites are created all at once, and that each sprite responds to the user clicking it at a different time. This might invite discussion about new blocks of code that could be used here.\n",
+        "name": "Introduction"
       },
       "seeding_key": {
-        "activity_section.key": "1b86cc88-c629-4610-9458-3a11e64bd2b4",
-        "lesson_activity.key": "d9fe8a58-c480-4fc3-b96a-59d44fe2c264"
+        "activity_section.key": "36663851-502d-4948-8c05-3edeec3749e9",
+        "lesson_activity.key": "7cc9f72e-1e61-46ff-8a9c-7a5d7f5cbfb7"
       }
     },
     {
-      "key": "1327f3c0-3810-4088-8da5-1f4eb2353357",
-      "position": 1,
+      "key": "fd10ad9b-173d-495f-8094-cc8ea6a93941",
+      "position": 2,
       "properties": {
+        "description": "In this scene, we see multiple sprites that each begin spinning when the user clicks on them. We already know how to make sprites and give them a behavior. \n\nToday we’ll learn how to create a group of sprites with matching costumes and interact with each sprite separately. This will enable us to make busier animations and fun games.\n",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "1327f3c0-3810-4088-8da5-1f4eb2353357",
-        "lesson_activity.key": "cac6bf53-22f9-41f3-b5d0-f94b96a09828"
+        "activity_section.key": "fd10ad9b-173d-495f-8094-cc8ea6a93941",
+        "lesson_activity.key": "7cc9f72e-1e61-46ff-8a9c-7a5d7f5cbfb7"
+      }
+    },
+    {
+      "key": "10d4ab9e-1499-4d24-a18a-c4cceee79c1a",
+      "position": 3,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The sample animation looks complicated because there are a lot of moving sprites. It is important to highlight that students will be learning ways to program scenes like this with a few new blocks of code.\n\nIt may be helpful to play through the levels ahead of time yourself, so that you understand how the new blocks are different from what students have seen before."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "10d4ab9e-1499-4d24-a18a-c4cceee79c1a",
+        "lesson_activity.key": "7cc9f72e-1e61-46ff-8a9c-7a5d7f5cbfb7"
+      }
+    },
+    {
+      "key": "d0cc8b9b-9429-4c68-9563-5dfff7a73f36",
+      "position": 1,
+      "properties": {
+        "name": "Lots of Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0cc8b9b-9429-4c68-9563-5dfff7a73f36",
+        "lesson_activity.key": "b948a904-f5ea-4a14-be87-95de3bbf1155"
+      }
+    },
+    {
+      "key": "218893d6-9cb3-494b-b9b4-4c8b9ed94e8a",
+      "position": 2,
+      "properties": {
+        "description": "####Prediction (3 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prediction” slide\n\n**Do This**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "218893d6-9cb3-494b-b9b4-4c8b9ed94e8a",
+        "lesson_activity.key": "b948a904-f5ea-4a14-be87-95de3bbf1155"
+      }
+    },
+    {
+      "key": "87bb0e14-fa4f-4dd4-8c63-21538b407d64",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lots of Sprites” video\n",
+        "progression_name": "Video: Lots of Sprites"
+      },
+      "seeding_key": {
+        "activity_section.key": "87bb0e14-fa4f-4dd4-8c63-21538b407d64",
+        "lesson_activity.key": "b948a904-f5ea-4a14-be87-95de3bbf1155"
+      }
+    },
+    {
+      "key": "ab01e263-286f-404b-b2e6-57051a41ec59",
+      "position": 4,
+      "properties": {
+        "description": "####Skill Building and Practice (17 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-8 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in.\n\nThese activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59",
+        "lesson_activity.key": "b948a904-f5ea-4a14-be87-95de3bbf1155"
+      }
+    },
+    {
+      "key": "d275cd25-a6a6-4e72-9031-0bfb07cdafdc",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Practice (Choice)” slide\n",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "d275cd25-a6a6-4e72-9031-0bfb07cdafdc",
+        "lesson_activity.key": "b948a904-f5ea-4a14-be87-95de3bbf1155"
+      }
+    },
+    {
+      "key": "b96782c5-fb26-4407-82fd-a675aefa4140",
+      "position": 6,
+      "properties": {
+        "description": "####Free Play (10 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n**Transition**: Students should now skip to the final level in the lesson where they will be able to make their own project. Each choice here provides students with a different collection of sprite costumes to use. Students should pick one to start.\n",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "b96782c5-fb26-4407-82fd-a675aefa4140",
+        "lesson_activity.key": "b948a904-f5ea-4a14-be87-95de3bbf1155"
+      }
+    },
+    {
+      "key": "3664249c-12c0-4c71-9a3f-d955dd635d9f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: How can you use sprites and events to make your program more complex?\n\n**Discussion goal**: Students should understand that opening up the event blocks (using the + sign) and dragging out the sprite block inside enables the program to change individual sprites one at a time when they are clicked by the user.  ",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "3664249c-12c0-4c71-9a3f-d955dd635d9f",
+        "lesson_activity.key": "ae371449-807b-4b5c-b7ef-83eaf8ace27d"
+      }
+    },
+    {
+      "key": "c5e4d792-61de-487c-8180-4d0973363903",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n\n**Discuss**: _Which of the following types of information change over time?_ \n* _Your first name_\n* _Your birthday_\n* _Your height_\n* _Your age_\n* _The temperature outside_\n* _The answer to 2+2_\n* _The capital of our country_\n* _Today’s date_\n* _The score in a game_\n\n**Do This**: Have students discuss which information would change over time and which would not. Some items might generate a larger discussion. For example, it is possible to change your first name or use a nickname. Also, over time, your height will stop changing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _When is it useful to change what is stored in a variable?_\n\n**Discussion goal**: Students should understand that they can create a variable that stores information that either stays the same or changes over time. In a game with points, a variable is responsible for keeping track of a user’s score throughout the game. Typically, this variable starts out being set to 0 and increases by 1 for every point that the user scores. The final score is reported at the end by printing out the variable. \n",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5e4d792-61de-487c-8180-4d0973363903",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "f506d2b8-de59-4958-add1-3df80f630f6b",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The goal of this discussion activity is to get students thinking about storing and modifying information using a variable. Students may recall that in previous lessons they would store information, like a word, by entering it into a prompt. In the next activities, students will learn a new way to store information as well as how to modify that information as a program runs. They should discuss when it would be necessary to change or update a variable over time. \n\nFor the discussion, decide beforehand what strategy will work best for your classroom. Some ideas include: using a T-chart, discussing in pairs or as a class.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f506d2b8-de59-4958-add1-3df80f630f6b",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "9d1483fd-ea40-45e8-a1a4-d9dd3a0184fd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Count Variable” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d1483fd-ea40-45e8-a1a4-d9dd3a0184fd",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "f023d139-427c-42d0-b23d-0ac9934cedcf",
+      "position": 4,
+      "properties": {
+        "description": "The value stored in a variable can change over time.\n\nWhen we start, our count variable is set to 0. After a few seconds, it increases by 1.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f023d139-427c-42d0-b23d-0ac9934cedcf",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "c91796e2-8558-4486-8d83-76f6a881365e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Variables Review\" slide\n\n**Do this**: Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts.\n\n\n",
+        "name": "Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "c91796e2-8558-4486-8d83-76f6a881365e",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "aab517d0-b612-48d3-a65b-57cb99fc48c7",
+      "position": 6,
+      "properties": {
+        "description": "When a user enters information into a prompt, the computer stores it with a variable. The prompt can also trigger an event. If the code uses a variable, the computer will look for a matching label to find the stored information.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aab517d0-b612-48d3-a65b-57cb99fc48c7",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "4a134255-6472-4d5d-a9fb-651c811b41a3",
+      "position": 7,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students shouldn’t be expected to know how variables will be used in this new context right away, so it’s okay to frame these questions as things to consider while they work. \n\nAs students move through the levels in this lesson, they will learn how to set a variable to store a number, then change that number over time. Knowing how to modify a variable’s value is the key to tracking something that changes, like the score in a game.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4a134255-6472-4d5d-a9fb-651c811b41a3",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "117c524f-d1d4-4338-9587-282426f120f9",
+      "position": 1,
+      "properties": {
+        "name": "Counting with Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "117c524f-d1d4-4338-9587-282426f120f9",
+        "lesson_activity.key": "1d2f1ca3-a065-4baa-8070-a831ee933ef3"
+      }
+    },
+    {
+      "key": "c549218b-369e-483a-9b9d-54008fb2d8e0",
+      "position": 2,
+      "properties": {
+        "description": "####Prediction (3 minutes)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prediction” slide\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "c549218b-369e-483a-9b9d-54008fb2d8e0",
+        "lesson_activity.key": "1d2f1ca3-a065-4baa-8070-a831ee933ef3"
+      }
+    },
+    {
+      "key": "de504c45-412e-400e-9d31-d183772d3091",
+      "position": 3,
+      "properties": {
+        "description": "####Skill Building and Exploration (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-4 - Skill Building” slide\n\n**Transition**: Move students to their computers. Encourage students to follow the instructions for each level.\n \n",
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "de504c45-412e-400e-9d31-d183772d3091",
+        "lesson_activity.key": "1d2f1ca3-a065-4baa-8070-a831ee933ef3"
+      }
+    },
+    {
+      "key": "4b01438c-ac8b-45cd-9e43-a7fa0dedc8b8",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Exploration” slide",
+        "progression_name": "Exploration: Clicker Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b01438c-ac8b-45cd-9e43-a7fa0dedc8b8",
+        "lesson_activity.key": "1d2f1ca3-a065-4baa-8070-a831ee933ef3"
+      }
+    },
+    {
+      "key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38",
+      "position": 5,
+      "properties": {
+        "description": "####Mini-Project (17 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-10 - Clicker Game” slide\n",
+        "progression_name": "Mini-Project: Clicker Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38",
+        "lesson_activity.key": "1d2f1ca3-a065-4baa-8070-a831ee933ef3"
+      }
+    },
+    {
+      "key": "4354cd8c-16a2-41c5-a5b9-5790001209b6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How did you use variables in your game?_\n\n**Discussion goal**: Students should understand that the variables in their game stored a value that changed over time. A variable’s value can set directly in the code, modified as a user interacts with an app, or input directly such as with a prompt.",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "4354cd8c-16a2-41c5-a5b9-5790001209b6",
+        "lesson_activity.key": "edf172bf-7b74-4b79-b915-f36b1b6cbb8b"
+      }
+    },
+    {
+      "key": "ae85a4b4-3a05-4058-9db5-a278b3770e9c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What makes an activity a game?_\n \n**Discussion Goal**: Students should understand that games usually involve players, score(s), a win or lose condition, and different outcomes. Each time a user plays through a game they might have a different outcome or score.\n",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae85a4b4-3a05-4058-9db5-a278b3770e9c",
+        "lesson_activity.key": "c9e5fa80-ef6c-41c9-8798-e8bdebf471fa"
+      }
+    },
+    {
+      "key": "07ece36d-6d0a-4434-b2ca-0ac04fece727",
+      "position": 1,
+      "properties": {
+        "description": "####Exploration (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Exploration” slide\n\n**Goal**: Today, students will be creating their own interactive collector game in Sprite Lab! They'll begin by exploring a few examples. Then, after a quick introduction on customizing sprite behavior and keeping track of the score, students will work on designing their own game.\n",
+        "name": "Mini-Project: Collector Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "07ece36d-6d0a-4434-b2ca-0ac04fece727",
+        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb"
+      }
+    },
+    {
+      "key": "75a7273c-9d6d-432d-b327-998f2cbee9d3",
+      "position": 2,
+      "properties": {
+        "description": "Now it is time to explore some projects on your own. For each project, think about:\n\n* What do all of these projects have in common?\n* How are they different from each other?\n* What do you notice about the code in each project?\n\nWhen you finish exploring, click “Finish” and move on to the next level.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "75a7273c-9d6d-432d-b327-998f2cbee9d3",
+        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb"
+      }
+    },
+    {
+      "key": "d085ff3f-4837-49cc-b1d2-9daccbe5ef8c",
+      "position": 3,
+      "properties": {
+        "description": "**Transition**: Move students to their computers.\n\n**Do This**: Before students start the mini-project, have them explore the example projects in level 1. When they are ready to start planning their own program they can press  \"Finish\" and continue on.\n",
+        "progression_name": "Exploration: Sample Programs"
+      },
+      "seeding_key": {
+        "activity_section.key": "d085ff3f-4837-49cc-b1d2-9daccbe5ef8c",
+        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb"
+      }
+    },
+    {
+      "key": "ab31f766-71c9-4683-8bea-942b7ed7b348",
+      "position": 4,
+      "properties": {
+        "description": "####Mini-Project (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-8 - Mini-Project: Collector Game” slide\n\n**Do This**: Encourage students to follow the instructions for each level. In the last level they can add whatever they like to their code. For example, they can change the background at the end of the game or add sounds.\n",
+        "progression_name": "Mini-Project: Collector Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348",
+        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb"
+      }
+    },
+    {
+      "key": "cb0cc4cb-9c49-42e5-b71d-0366bb59a367",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Showcase” slide\n\n**Do This**: To celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n**Public Demo**: Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement.\n\n**Pair Playtesting**: Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting.\n\n**Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and play/test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
+        "name": "Showcase"
+      },
+      "seeding_key": {
+        "activity_section.key": "cb0cc4cb-9c49-42e5-b71d-0366bb59a367",
+        "lesson_activity.key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a"
+      }
+    },
+    {
+      "key": "02e2d47e-c813-4001-85de-436d5aaf788c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you like about the games that your classmates made? What surprised you?_\n\n",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "02e2d47e-c813-4001-85de-436d5aaf788c",
+        "lesson_activity.key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a"
       }
     },
     {
@@ -4629,6 +5099,706 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "courseF_groups_predict"
+        ],
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_predict"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "218893d6-9cb3-494b-b9b4-4c8b9ed94e8a"
+      },
+      "level_keys": [
+        "courseF_groups_predict"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_video"
+        ],
+        "progression": "Video: Lots of Sprites"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_video"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "87bb0e14-fa4f-4dd4-8c63-21538b407d64"
+      },
+      "level_keys": [
+        "courseF_groups_video"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_make"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_make"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      },
+      "level_keys": [
+        "courseF_groups_make"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_size"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_size"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      },
+      "level_keys": [
+        "courseF_groups_size"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_say"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_say"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      },
+      "level_keys": [
+        "courseF_groups_say"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_costume"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_costume"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      },
+      "level_keys": [
+        "courseF_groups_costume"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_behaviors"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_behaviors"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      },
+      "level_keys": [
+        "courseF_groups_behaviors"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_touch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_touch"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      },
+      "level_keys": [
+        "courseF_groups_touch"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_practice"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_practice"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "d275cd25-a6a6-4e72-9031-0bfb07cdafdc"
+      },
+      "level_keys": [
+        "courseF_groups_practice"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_groups_freeplay"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_groups_freeplay"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "b96782c5-fb26-4407-82fd-a675aefa4140"
+      },
+      "level_keys": [
+        "courseF_groups_freeplay"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables2_predict"
+        ],
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_predict"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "c549218b-369e-483a-9b9d-54008fb2d8e0"
+      },
+      "level_keys": [
+        "courseF_variables2_predict"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables2_set"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_set"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "de504c45-412e-400e-9d31-d183772d3091"
+      },
+      "level_keys": [
+        "courseF_variables2_set"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables2_change"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_change"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "de504c45-412e-400e-9d31-d183772d3091"
+      },
+      "level_keys": [
+        "courseF_variables2_change"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables2_click"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_click"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "de504c45-412e-400e-9d31-d183772d3091"
+      },
+      "level_keys": [
+        "courseF_variables2_click"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_explore"
+        ],
+        "progression": "Exploration: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_explore"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "4b01438c-ac8b-45cd-9e43-a7fa0dedc8b8"
+      },
+      "level_keys": [
+        "courseF_clicker_explore"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites"
+        ],
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_sprites"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38"
+      },
+      "level_keys": [
+        "courseF_clicker_sprites"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_remove"
+        ],
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_remove"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38"
+      },
+      "level_keys": [
+        "courseF_clicker_remove"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_variable"
+        ],
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_variable"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38"
+      },
+      "level_keys": [
+        "courseF_clicker_variable"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_score"
+        ],
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_score"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38"
+      },
+      "level_keys": [
+        "courseF_clicker_score"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_finish"
+        ],
+        "progression": "Mini-Project: Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_finish"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38"
+      },
+      "level_keys": [
+        "courseF_clicker_finish"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_collector_samples"
+        ],
+        "progression": "Exploration: Sample Programs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_samples"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "d085ff3f-4837-49cc-b1d2-9daccbe5ef8c"
+      },
+      "level_keys": [
+        "courseF_collector_samples"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_collector_player_move"
+        ],
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_player_move"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      },
+      "level_keys": [
+        "courseF_collector_player_move"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_collector_items"
+        ],
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_items"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      },
+      "level_keys": [
+        "courseF_collector_items"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_collector_score_variable"
+        ],
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_score_variable"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      },
+      "level_keys": [
+        "courseF_collector_score_variable"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_collector_remove"
+        ],
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_remove"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      },
+      "level_keys": [
+        "courseF_collector_remove"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_collector_more_sprites"
+        ],
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_more_sprites"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      },
+      "level_keys": [
+        "courseF_collector_more_sprites"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_collector_score"
+        ],
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_score"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      },
+      "level_keys": [
+        "courseF_collector_score"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_collector_freeplay"
+        ],
+        "progression": "Mini-Project: Collector Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_collector_freeplay"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      },
+      "level_keys": [
+        "courseF_collector_freeplay"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "simstarter2022"
         ],
         "progression": "Run a simulation"
@@ -4648,7 +5818,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4673,7 +5843,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4698,7 +5868,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4723,7 +5893,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4748,7 +5918,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4773,7 +5943,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4798,7 +5968,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4823,7 +5993,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 79,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4848,7 +6018,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 80,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4873,7 +6043,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 81,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4898,7 +6068,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 82,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4923,7 +6093,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 83,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4948,7 +6118,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 84,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -4973,7 +6143,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 85,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -4998,7 +6168,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 86,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -5023,7 +6193,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 87,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -5048,7 +6218,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 88,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5073,7 +6243,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 89,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5098,7 +6268,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 90,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5123,7 +6293,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 91,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5148,7 +6318,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 92,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5173,7 +6343,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 93,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5198,7 +6368,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 94,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5223,7 +6393,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 95,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5248,7 +6418,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5273,7 +6443,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5298,7 +6468,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5830,6 +7000,342 @@
     },
     {
       "seeding_key": {
+        "level.key": "courseF_groups_predict",
+        "script_level.level_keys": [
+          "courseF_groups_predict"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "218893d6-9cb3-494b-b9b4-4c8b9ed94e8a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_video",
+        "script_level.level_keys": [
+          "courseF_groups_video"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "87bb0e14-fa4f-4dd4-8c63-21538b407d64"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_make",
+        "script_level.level_keys": [
+          "courseF_groups_make"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_size",
+        "script_level.level_keys": [
+          "courseF_groups_size"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_say",
+        "script_level.level_keys": [
+          "courseF_groups_say"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_costume",
+        "script_level.level_keys": [
+          "courseF_groups_costume"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_behaviors",
+        "script_level.level_keys": [
+          "courseF_groups_behaviors"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_touch",
+        "script_level.level_keys": [
+          "courseF_groups_touch"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab01e263-286f-404b-b2e6-57051a41ec59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_practice",
+        "script_level.level_keys": [
+          "courseF_groups_practice"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "d275cd25-a6a6-4e72-9031-0bfb07cdafdc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_groups_freeplay",
+        "script_level.level_keys": [
+          "courseF_groups_freeplay"
+        ],
+        "lesson.key": "[New] Lots of Sprites",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "b96782c5-fb26-4407-82fd-a675aefa4140"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_predict",
+        "script_level.level_keys": [
+          "courseF_variables2_predict"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "c549218b-369e-483a-9b9d-54008fb2d8e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_set",
+        "script_level.level_keys": [
+          "courseF_variables2_set"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "de504c45-412e-400e-9d31-d183772d3091"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_change",
+        "script_level.level_keys": [
+          "courseF_variables2_change"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "de504c45-412e-400e-9d31-d183772d3091"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_click",
+        "script_level.level_keys": [
+          "courseF_variables2_click"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "de504c45-412e-400e-9d31-d183772d3091"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_explore",
+        "script_level.level_keys": [
+          "courseF_clicker_explore"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "4b01438c-ac8b-45cd-9e43-a7fa0dedc8b8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_sprites",
+        "script_level.level_keys": [
+          "courseF_clicker_sprites"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_remove",
+        "script_level.level_keys": [
+          "courseF_clicker_remove"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_variable",
+        "script_level.level_keys": [
+          "courseF_clicker_variable"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_score",
+        "script_level.level_keys": [
+          "courseF_clicker_score"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_finish",
+        "script_level.level_keys": [
+          "courseF_clicker_finish"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "0f7c02f6-4e91-4d71-8788-70c64d7a8e38"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_samples",
+        "script_level.level_keys": [
+          "courseF_collector_samples"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "d085ff3f-4837-49cc-b1d2-9daccbe5ef8c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_player_move",
+        "script_level.level_keys": [
+          "courseF_collector_player_move"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_items",
+        "script_level.level_keys": [
+          "courseF_collector_items"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_score_variable",
+        "script_level.level_keys": [
+          "courseF_collector_score_variable"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_remove",
+        "script_level.level_keys": [
+          "courseF_collector_remove"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_more_sprites",
+        "script_level.level_keys": [
+          "courseF_collector_more_sprites"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_score",
+        "script_level.level_keys": [
+          "courseF_collector_score"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_collector_freeplay",
+        "script_level.level_keys": [
+          "courseF_collector_freeplay"
+        ],
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022",
+        "activity_section.key": "ab31f766-71c9-4683-8bea-942b7ed7b348"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "simstarter2022",
         "script_level.level_keys": [
           "simstarter2022"
@@ -6167,18 +7673,6 @@
   ],
   "resources": [
     {
-      "name": "2021 Change Log",
-      "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
-      "key": "2021_change_log",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "2021_change_log"
-      }
-    },
-    {
       "name": "AI: Impact on Society",
       "url": "https://youtu.be/ng4c1g3COfs",
       "key": "ai_impact_on_society",
@@ -6218,6 +7712,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/coursef-2022/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/coursef-2022/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/coursef-2022/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Blank Space Stories",
       "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview",
       "key": "blank_space_stories",
@@ -6251,18 +7778,6 @@
       },
       "seeding_key": {
         "resource.key": "common_core_and_ngss_guidance"
-      }
-    },
-    {
-      "name": "Course Vocabulary\t",
-      "url": "https://studio.code.org/s/coursef-2021/vocab",
-      "key": "course_vocabulary",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "course_vocabulary"
       }
     },
     {
@@ -6300,30 +7815,6 @@
       },
       "seeding_key": {
         "resource.key": "csf_-_course_f_-_slides_2022-2023"
-      }
-    },
-    {
-      "name": "CSTA Standards Mapping",
-      "url": "https://studio.code.org/s/coursef-2021/standards",
-      "key": "csta_standards_mapping",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping"
-      }
-    },
-    {
-      "name": "Curriculum Guide",
-      "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview\t",
-      "key": "curriculum_guide",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "curriculum_guide"
       }
     },
     {
@@ -6451,11 +7942,9 @@
     },
     {
       "name": "Lesson Type Guide",
-      "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
+      "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/preview",
       "key": "lesson_type_guide",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "lesson_type_guide"
@@ -6633,11 +8122,9 @@
     },
     {
       "name": "Virtual Lesson Modifications",
-      "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit",
+      "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/preview",
       "key": "virtual_lesson_modifications",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_lesson_modifications"
@@ -6890,12 +8377,42 @@
         "lesson.key": "The Power of Words",
         "resource.key": "the_power_of_words_words_can_hurt"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Counting with Variables",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Lots of Sprites",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "resource.key": "csf_-_course_f_-_slides_2022-2023"
+      }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "2021_change_log",
+        "resource.key": "all_resources",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "coursef-2022"
       }
     },
@@ -6907,25 +8424,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "course_vocabulary",
-        "script.name": "coursef-2022"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "cross-curricular_extension_activities",
-        "script.name": "coursef-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csta_standards_mapping",
-        "script.name": "coursef-2022"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "curriculum_guide",
         "script.name": "coursef-2022"
       }
     },
@@ -7433,6 +8932,16 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "objective.key": "0e59780d-f288-4687-af73-c38f1dcc847d"
+      }
+    },
+    {
+      "key": "10d91803-fad0-40af-8d53-e08e5f260a1e",
+      "properties": {
+        "description": "Create Sprite Lab programs where sprites are created in groups, and controlled individually using events."
+      },
+      "seeding_key": {
+        "lesson.key": "[New] Lots of Sprites",
+        "objective.key": "10d91803-fad0-40af-8d53-e08e5f260a1e"
       }
     },
     {
@@ -8001,6 +9510,41 @@
         "lesson.key": "The Power of Words",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Counting with Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Counting with Variables",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Lots of Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Lots of Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "[New] Lots of Sprites",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
       }
     }
   ],

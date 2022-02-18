@@ -2,6 +2,7 @@
   "key": "setTintEach",
   "name": "setTintEach",
   "category": "Groups",
+  "category_key": "groups",
   "palette_params": [
     {
       "name": "color"

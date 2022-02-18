@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-11 14:08:36 UTC",
+    "serialized_at": "2022-02-18 15:23:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -68,7 +68,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Exploring The Neighborhood",
+      "name": "Java Lab",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -83,7 +83,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "Working with the Painter",
+      "name": "The Neighborhood",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -113,7 +113,7 @@
     },
     {
       "key": "lesson-5",
-      "name": "Making Decisions",
+      "name": "One-Way Selection Statements",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -128,7 +128,7 @@
     },
     {
       "key": "lesson-6",
-      "name": "Creating Types of Painters",
+      "name": "PainterPlus",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -143,7 +143,7 @@
     },
     {
       "key": "lesson-7",
-      "name": "Improving Programs with Code Reviews",
+      "name": "Writing Methods",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -158,7 +158,7 @@
     },
     {
       "key": "lesson-8",
-      "name": "Repeating Instructions",
+      "name": "Code Reviews",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -173,7 +173,7 @@
     },
     {
       "key": "lesson-9",
-      "name": "Expanding Decisions",
+      "name": "Loops",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -188,7 +188,7 @@
     },
     {
       "key": "lesson-10",
-      "name": "Debugging with the Painter",
+      "name": "Two-Way Selection Statements",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -203,7 +203,7 @@
     },
     {
       "key": "lesson-11",
-      "name": "Adding New Capabilities",
+      "name": "Debugging Strategies",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -218,7 +218,7 @@
     },
     {
       "key": "lesson-12",
-      "name": "Creating a StampPainter",
+      "name": "Decomposition and Design",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -233,7 +233,7 @@
     },
     {
       "key": "lesson-13",
-      "name": "Expanding the StampPainter",
+      "name": "PatternPainter",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -248,7 +248,7 @@
     },
     {
       "key": "lesson-14",
-      "name": "Creating a BackgroundPainter",
+      "name": "BackgroundPainter",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -263,7 +263,7 @@
     },
     {
       "key": "lesson-15",
-      "name": "Becoming Software Engineers",
+      "name": "Open Source Code",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -353,10 +353,294 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "092d06aa-b759-4bda-8154-262f034408c6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "092d06aa-b759-4bda-8154-262f034408c6",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "d34aefe6-2e15-4344-8dcd-2555785f3404",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d34aefe6-2e15-4344-8dcd-2555785f3404",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "11185587-d5cf-4e61-882a-c0bc80c5b281",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11185587-d5cf-4e61-882a-c0bc80c5b281",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "8938f95e-b1bd-40bc-a208-b670c104fc3c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8938f95e-b1bd-40bc-a208-b670c104fc3c",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "f95c7c19-3e8f-42c0-891f-2885ea289c02",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f95c7c19-3e8f-42c0-891f-2885ea289c02",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "d4c26511-02cf-4a03-b43f-0f76812593a0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d4c26511-02cf-4a03-b43f-0f76812593a0",
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "9f7cdd2d-ab79-45bb-8e39-c76da613fe95",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f7cdd2d-ab79-45bb-8e39-c76da613fe95",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "bba03f9f-ba4b-4ea5-8498-2ec3dd4d8414",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bba03f9f-ba4b-4ea5-8498-2ec3dd4d8414",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "103a2998-0e80-40bf-ac2c-fd73d7d19b7a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "103a2998-0e80-40bf-ac2c-fd73d7d19b7a",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "85ca39ca-e6ef-4bc0-9d7f-e8c2bb470136",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85ca39ca-e6ef-4bc0-9d7f-e8c2bb470136",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "9f5762ca-9ad8-4a61-a351-720c4ff26847",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f5762ca-9ad8-4a61-a351-720c4ff26847",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "59bb678b-0325-483a-8049-e6042bd80d87",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59bb678b-0325-483a-8049-e6042bd80d87",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    },
+    {
+      "key": "18fdcd0d-3549-4cd6-9e3a-eaaeb0999063",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18fdcd0d-3549-4cd6-9e3a-eaaeb0999063",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "974352dc-2541-4b67-b54b-5046331b160d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "974352dc-2541-4b67-b54b-5046331b160d",
+        "lesson_activity.key": "092d06aa-b759-4bda-8154-262f034408c6"
+      }
+    },
+    {
+      "key": "d0e079ac-83d2-41b6-9080-d0b4b8422980",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d0e079ac-83d2-41b6-9080-d0b4b8422980",
+        "lesson_activity.key": "d34aefe6-2e15-4344-8dcd-2555785f3404"
+      }
+    },
+    {
+      "key": "44c26430-d338-42d6-9c47-5c7c9b2f520f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "44c26430-d338-42d6-9c47-5c7c9b2f520f",
+        "lesson_activity.key": "11185587-d5cf-4e61-882a-c0bc80c5b281"
+      }
+    },
+    {
+      "key": "707eb040-8797-4f81-9c7d-5763f5e16b68",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "707eb040-8797-4f81-9c7d-5763f5e16b68",
+        "lesson_activity.key": "8938f95e-b1bd-40bc-a208-b670c104fc3c"
+      }
+    },
+    {
+      "key": "9cd72d16-74c1-49af-a65d-e4292048a5dc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9cd72d16-74c1-49af-a65d-e4292048a5dc",
+        "lesson_activity.key": "f95c7c19-3e8f-42c0-891f-2885ea289c02"
+      }
+    },
+    {
+      "key": "b2d0770c-d6be-43b2-b914-fe7acaf1cf89",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b2d0770c-d6be-43b2-b914-fe7acaf1cf89",
+        "lesson_activity.key": "d4c26511-02cf-4a03-b43f-0f76812593a0"
+      }
+    },
+    {
+      "key": "f88d49b9-a107-4cfe-91ff-dfef78249758",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f88d49b9-a107-4cfe-91ff-dfef78249758",
+        "lesson_activity.key": "9f7cdd2d-ab79-45bb-8e39-c76da613fe95"
+      }
+    },
+    {
+      "key": "d56c321d-2294-4985-a903-587927a7e262",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d56c321d-2294-4985-a903-587927a7e262",
+        "lesson_activity.key": "bba03f9f-ba4b-4ea5-8498-2ec3dd4d8414"
+      }
+    },
+    {
+      "key": "b50e780b-e549-4fa8-aca0-1e56fc9441b2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b50e780b-e549-4fa8-aca0-1e56fc9441b2",
+        "lesson_activity.key": "103a2998-0e80-40bf-ac2c-fd73d7d19b7a"
+      }
+    },
+    {
+      "key": "4251bfa2-b46e-4aa4-891a-6261edc50e56",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4251bfa2-b46e-4aa4-891a-6261edc50e56",
+        "lesson_activity.key": "85ca39ca-e6ef-4bc0-9d7f-e8c2bb470136"
+      }
+    },
+    {
+      "key": "22a1470a-064f-4118-9234-9cb72c0c45e5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "22a1470a-064f-4118-9234-9cb72c0c45e5",
+        "lesson_activity.key": "9f5762ca-9ad8-4a61-a351-720c4ff26847"
+      }
+    },
+    {
+      "key": "62281876-1d3b-40a2-aa79-ab411b713a10",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "62281876-1d3b-40a2-aa79-ab411b713a10",
+        "lesson_activity.key": "59bb678b-0325-483a-8049-e6042bd80d87"
+      }
+    },
+    {
+      "key": "787c85dc-7bee-43b0-97f2-d24e490cad49",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "787c85dc-7bee-43b0-97f2-d24e490cad49",
+        "lesson_activity.key": "18fdcd0d-3549-4cd6-9e3a-eaaeb0999063"
+      }
+    }
   ],
   "script_levels": [
 
@@ -365,13 +649,29 @@
 
   ],
   "resources": [
-
+    {
+      "name": "Unit 1 Overview",
+      "url": "https://docs.google.com/document/d/1ZsMvmmr2M0SjaFJ66JI6ft2q_beLUs6MO2UX0EcP-ZY/edit?usp=sharing",
+      "key": "unit_1_overview",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_overview"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_overview",
+        "script.name": "csa1-2022"
+      }
+    }
   ],
   "scripts_student_resources": [
 

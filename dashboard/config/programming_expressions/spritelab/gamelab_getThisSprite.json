@@ -2,6 +2,7 @@
   "key": "gamelab_getThisSprite",
   "name": "getThisSprite",
   "category": "Sprites",
+  "category_key": "sprites",
   "block_name": "gamelab_getThisSprite",
   "syntax": "getThisSprite"
 }
