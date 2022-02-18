@@ -497,10 +497,6 @@ class Homepage
     false
   end
 
-  def self.show_professional_learning_banner(request)
-    request.locale == "en-US"
-  end
-
   def self.professional_learning_banner_text
     teacher_apps_closing_soon = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode) == "closing-soon"
     closing_soon_text = "2021 Professional Learning applications are closing soon! Sign up now."

@@ -1,11 +1,7 @@
-- if Homepage.show_professional_learning_banner(request)
-  = inline_css 'homepage_below_hero_pd_banner.css'
+- if request.locale == "en-US"
+  = inline_css 'professional_learning_marketing_banner.css'
   - header_text = 'Help students become superheroes!'
-
-  - if audience_text == 'you'
-    - text = 'Our Professional Learning program helps you teach computer science!'
-  - else
-    - text = 'Our Professional Learning program helps educators teach computer science!'
+  - text = "Our Professional Learning program helps #{audience_text} teach computer science!"
 
   .homepage-professional-learning-banner
     %a.linktag#pl-2019{href: link_address}
