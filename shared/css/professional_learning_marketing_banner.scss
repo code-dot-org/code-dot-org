@@ -43,7 +43,7 @@ $dark_blue_background_colour: #0d4172;
     font-size: 14px;
   }
 
-  .homepage-pd-banner-desktop {
+  .professional-learning-banner-desktop {
     background-color: $gold_background_colour;
     height: 97px;
     margin: 0 auto;
@@ -54,15 +54,15 @@ $dark_blue_background_colour: #0d4172;
       text-align: center;
       margin: 0 auto;
       float: right;
+      height: 100%;
 
       img {
         width: 600px;
+        height: 100%;
       }
     }
 
     .left {
-      float: left;
-      height: 87px;
       position: absolute;
       width: 50%;
 
@@ -84,9 +84,7 @@ $dark_blue_background_colour: #0d4172;
     }
 
     .right {
-      float: left;
       padding-top: 26px;
-      height: 87px;
       text-align: center;
       position: absolute;
       width: 50%;
@@ -98,7 +96,7 @@ $dark_blue_background_colour: #0d4172;
     }
   }
 
-  .homepage-pd-banner-tablet {
+  .professional-learning-banner-tablet {
     margin: 0 auto;
     position: relative;
     width: 100%;
@@ -139,7 +137,7 @@ $dark_blue_background_colour: #0d4172;
     }
   }
 
-  .homepage-pd-banner-phone {
+  .professional-learning-banner-phone {
     text-align: center;
     position: relative;
     width: 100%;
