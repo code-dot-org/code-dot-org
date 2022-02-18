@@ -130,7 +130,7 @@ const FormController = props => {
     } else {
       setHasUserChangedData(false);
     }
-  }, [autoComputedFields, data, savedData]);
+  }, [data]);
 
   useEffect(() => {
     const showWarningOnExit =
@@ -146,7 +146,7 @@ const FormController = props => {
     return () => {
       window.removeEventListener('beforeunload', exitHandler);
     };
-  }, [hasUserChangedData, submitting, saving, warnOnExit]);
+  }, [hasUserChangedData, submitting, saving]);
 
   // on errors changed
   useEffect(() => {
