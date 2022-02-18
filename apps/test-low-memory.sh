@@ -55,7 +55,7 @@ npm run lint
 (PORT=9876 ${GRUNT_CMD} unitTest && ${CODECOV} -cF unit)
 (PORT=9877 $GRUNT_CMD storybookTest && ${CODECOV} -cF storybook)
 (PORT=9879 LEVEL_TYPE='turtle' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
-(PORT=9880 LEVEL_TYPE='maze|calc|eval|flappy' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
+(PORT=9880 LEVEL_TYPE='maze|calc|eval' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
 (PORT=9881 LEVEL_TYPE='gamelab' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
 (PORT=9882 LEVEL_TYPE='craft' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
 (PORT=9883 LEVEL_TYPE='applab1' $GRUNT_CMD karma:integration && ${CODECOV} -cF integration)
