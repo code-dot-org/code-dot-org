@@ -57,3 +57,31 @@ Scenario: Oceans uncustomized dashboard certificate pages
   When I press the first "#certificate-share a" element to load a new page
   And I wait until current URL contains "/print_certificates/"
   Then I wait to see an image "/images/oceans_hoc_certificate.png"
+
+@eyes
+Scenario: congrats certificate pages
+  Given I am on "http://studio.code.org/congrats?enableExperiments=studioCertificate"
+  And I wait until element "#uitest-certificate" is visible
+  And I open my eyes to test "congrats certificate pages"
+
+  When I am on "http://code.org/api/hour/finish/flappy"
+  And I wait until current URL contains "/congrats"
+  And I wait to see element with ID "uitest-certificate"
+  And I see no difference for "uncustomized flappy certificate"
+
+  When I type "Robo Coder" into "#name"
+  And I press "button:contains(Submit)" using jQuery
+  And I wait to see element with ID "uitest-thanks"
+  And I see no difference for "customized flappy certificate"
+
+  When I am on "http://code.org/api/hour/finish/oceans"
+  And I wait until current URL contains "/congrats"
+  And I wait to see element with ID "uitest-certificate"
+  And I see no difference for "uncustomized oceans certificate"
+
+  When I type "Robo Coder" into "#name"
+  And I press "button:contains(Submit)" using jQuery
+  And I wait to see element with ID "uitest-thanks"
+  And I see no difference for "customized oceans certificate"
+
+  And I close my eyes
