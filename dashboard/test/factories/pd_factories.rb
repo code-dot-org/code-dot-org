@@ -809,6 +809,10 @@ FactoryGirl.define do
       school_type 'Public school'
     end
 
+    trait :incomplete do
+      status 'incomplete'
+    end
+
     trait :with_no_school do
       school(-1)
     end

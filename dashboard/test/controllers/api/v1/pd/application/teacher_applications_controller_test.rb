@@ -123,7 +123,7 @@ module Api::V1::Pd::Application
 
     test 'can submit an empty form if application is incomplete' do
       sign_in @applicant
-      put :create, params: {status: 'incomplete'}
+      put :create, params: {form_data: {status: 'incomplete'}}
 
       assert_equal 'incomplete', TEACHER_APPLICATION_CLASS.last.status
       assert_response :created
@@ -134,7 +134,7 @@ module Api::V1::Pd::Application
       Pd::Application::TeacherApplication.expects(:queue_email).never
 
       sign_in @applicant
-      put :create, params: {status: 'incomplete'}
+      put :create, params: {form_data: {status: 'incomplete'}}
       assert_response :created
     end
 
@@ -144,8 +144,7 @@ module Api::V1::Pd::Application
       original_data = application.form_data_hash
       original_school_info = @applicant.school_info
 
-      # Keep cs_total_course_hours because it is calculated on create or update
-      put :update, params: {id: application.id, status: 'incomplete', form_data: {"cs_total_course_hours": 80}}
+      put :update, params: {id: application.id, form_data: {status: 'incomplete'}}
       application.reload
       refute_equal original_data, application.form_data_hash
       assert_nil application.course
