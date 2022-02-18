@@ -189,6 +189,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    * @return {Promise}
    */
   destroy() {
+    console.log('In CircuitPlaygroundBoard#destroy()');
     this.dynamicComponents_.forEach(component => {
       // For now, these are _always_ Leds.  Complain if they're not.
       if (component instanceof Led) {
@@ -223,6 +224,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
     delete Playground.hasRegisteredSysexResponse;
 
     return new Promise(resolve => {
+      console.log('in promise');
       // It can take a moment for the reset() command to reach the board, so defer
       // closing the serialport for a moment.
       setTimeout(() => {
@@ -233,6 +235,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
+          console.log('serial port closed');
           this.logWithFirehose('serial-port-closed');
         }
         this.serialPort_ = null;
