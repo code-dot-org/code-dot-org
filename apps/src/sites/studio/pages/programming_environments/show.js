@@ -22,5 +22,4 @@ $(document).ready(() => {
     />,
     document.getElementById('container')
   );
-  console.log(programmingEnvironment);
 });
