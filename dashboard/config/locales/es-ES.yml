@@ -416,12 +416,12 @@ es:
       professional_learning: Aprendizaje Profesional
       documentation: Documentacion
       tutorials: Tutoriales
-      app_lab_documentation: Documentación del Laboratorio de aplicaciones
-      app_lab_tutorials: Tutoriales del Laboratorio de aplicaciones
-      game_lab_documentation: Documentación del Laboratorio de juegos
-      game_lab_tutorials: Tutoriales del Laboratorio de juegos
-      sprite_lab_documentation: Documentación del Laboratorio de sprites
-      sprite_lab_tutorials: Tutoriales del Laboratorio de sprites
+      app_lab_documentation: Documentación del Laboratorio de Aplicaciones
+      app_lab_tutorials: Tutoriales del Laboratorio de Aplicaciones
+      game_lab_documentation: Documentación del Laboratorio de Juegos
+      game_lab_tutorials: Tutoriales del Laboratorio de Juegos
+      sprite_lab_documentation: Documentación del Laboratorio de Sprites
+      sprite_lab_tutorials: Tutoriales del Laboratorio de Sprites
       web_lab_documentation: Documentación del Laboratorio Web
       educate_overview: Resumen del docente
       educate_elementary: Escuela primaria
@@ -474,13 +474,13 @@ es:
       basketball: Baloncesto
       bounce: Rebotar
       calc: Calc
-      dance: Fiesta de baile
+      dance: Fiesta de Baile
       eval: Eval
       flappy: Flappy
       frozen: Frozen
       gamelab: Laboratorio de Juegos
       gamelab_jr: Game Lab ( beta)
-      gumball: Gumball
+      gumball: El Maravilloso Mundo de Gumball
       iceage: La Era de Hielo
       infinity: Infinito
       makerlab: Herramientas de Maker
@@ -495,7 +495,7 @@ es:
       poetry_hoc: Arte del Poema
       scratch: Scratch
       sports: Deportes
-      spritelab: Laboratorio de sprites
+      spritelab: Laboratorio de Sprites
       starwars: Star Wars
       starwarsblocks: La guerra de las galaxias (bloques)
       starwarsblocks_hour: La guerra de las galaxias (bloques)
@@ -834,9 +834,9 @@ es:
       audience: Desde 13 años
       cta: Aprende cómo
     dance:
-      title: Fiesta de baile
+      title: Fiesta de Baile
     dance-2019:
-      title: Fiesta de baile
+      title: Fiesta de Baile
     hoc:
       title: Laberinto clásico
       body: Prueba los fundamentos de la Ciencia de la Computación. Millones lo han
@@ -867,7 +867,7 @@ es:
       audience: Desde 13 años
       cta: Aprende cómo
     hoc-encryption:
-      title: Cifrado simple
+      title: Encriptación Simple
       body: Los estudiantes aprenderán técnicas para crear y revelar mensajes cifrados.
     weblab:
       title: Laboratorio web (beta)
@@ -901,7 +901,7 @@ es:
       title: Deportes
       body: Elige entre un partido de baloncesto o una combinación de deportes.
     text-compression:
-      title: Compresión de texto
+      title: Compresión de Texto
       body: En esta lección, los estudiantes usarán el Widget de Comprensión de Textos
         para comprimir texto mediante el reemplazo de patrones con símbolos.
     unplugged:
@@ -1426,10 +1426,10 @@ es:
       que se guarden las cookies en tu computadora o dispositivo.
     more_information: Mira la política de privacidad de Code.org.
     accept: De acuerdo
-  page_not_found_title: No se encontró la página
-  page_not_found_header: '404: no se encontró la página'
+  page_not_found_title: Página no encontrada
+  page_not_found_header: '404: Página no encontrada'
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba
-    la dirección web y vuelve a enviarla, o regresa a nuestra página de inicio.
+    la dirección web y vuelve a enviarla. O, regresa a nuestra página de inicio.
   page_not_found_button: Volver a la página de inicio
   copy: Copiar
   confirm: Confirmar
