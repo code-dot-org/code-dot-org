@@ -1,5 +1,7 @@
 "kn-IN":
   hour_of_code: "ಅವರ್ ಆಫ್‌ ಕೋಡ್"
+  'yes': 'ಹೌದು'
+  'no': 'ಇಲ್ಲ'
   computer_science_edweek: "ಗಣಕ ಯಂತ್ರ ವಿಜ್ಞಾನ ಶಿಕ್ಷಣ ವಾರ"
   anybody_can_learn: "ಯಾರಾದರೂ ಕಲಿಯಬಹುದು."
   learn_now: "ಈಗ ಕಲಿಯಿರಿ"
@@ -18,6 +20,7 @@
   hoc2014_host: "ಇದು ಹೋಸ್ಟ್"
   hoc2014_everyone: "ಪ್ರತಿಯೊಬ್ಬರೂ"
   hoc2014_whatishoc: "ಕೋಡ್ ಗಂಟೆ ಏನು?"
+  csedweek_map_search_reset: "ಮರುಹೊಂದಿಸಿ"
   cded_try_it: "ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ"
   california_heading: "ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಕಲಿಸಲು ನಿಮ್ಮ ಶಾಲೆಗೆ ಕೇಳಿ"
   california_text: "ಯಾವುದೇ ಶಿಕ್ಷಕ ನಮ್ಮ ಒದಗಿಸುತ್ತವೆ <a href='http://studio.code.org/'>ಉಚಿತ ಶಿಕ್ಷಣ</a>. ಯಾವುದೇ ಪ್ರಾಥಮಿಕ ಶಾಲೆಯ <a href='http://code.org/educate/k5'>ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಕಲಿಸಬಹುದು</a>. ನಮ್ಮೊಂದಿಗೆ <a href='http://code.org/educate/districts'>ಪಾಲುದಾರರಿಗೆ ಪ್ರೌ schools ಶಾಲೆಗಳನ್ನು ಕೇಳಿ."
@@ -115,6 +118,7 @@
   homepage_action_text_girlvideo: "ಹುಡುಗಿಯನ್ನು ಸ್ಫೂರ್ತಿಗೊಳಿಸಿ"
   homepage_signpetition_dropdown_text: "ನಾನು ಒಪ್ಪುತ್ತೇನೆ"
   homepage_slot_text_title_hoc: "ಅವರ್ ಆಫ್‌ ಕೋಡ್"
+  homepage_slot_text_link_hoc: "ಅವರ್ ಆಫ್ ಕೋಡ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ"
   homepage_slot_text_title_students: "ವಿದ್ಯಾರ್ಥಿಗಳು"
   homepage_slot_text_link_middle: "ಮಧ್ಯಮ ಶಾಲೆ"
   homepage_slot_text_link_high: "ಹೈಸ್ಕೂಲ್"
@@ -160,6 +164,7 @@
   starwars_javascript_title: "ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌"
   starwars_javascript_description: "ಡ್ರ್ಯಾಗ್-ಡ್ರಾಪ್ ಬ್ಲಾಕ್‌ಗಳು ಮತ್ತು ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌ ಬಳಸಿ."
   starwars_javascript_specs: "ಇಂಗ್ಲಿಷ್ ಮಾತ್ರ | ಆಧುನಿಕ ಬ್ರೌಸರ್‌ಗಳು | ವಯಸ್ಸು 11+"
+  starwars_blocks_title: "ಬ್ಲಾಕ್‌ಗಳು"
   starwars_blocks_description: "ಡ್ರ್ಯಾಗ್-ಡ್ರಾಪ್ ಬ್ಲಾಕ್‌ಗಳು ಬಳಸಿ."
   starwars_blocks_specs: "ಹಲವು ಭಾಷೆಗಳು | ಆಧುನಿಕ ಬ್ರೌಸರ್‌ಗಳು, ಸ್ಮಾರ್ಟ್‌ಫೋನ್‌ಗಳು, ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು | ವಯಸ್ಸು 6 -106"
   mc_name: "ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅವರ್‌ ಆಫ್‌ ಕೋಡ್"
@@ -195,6 +200,8 @@
   volunteer_engineer_submission_field_name: "ಹೆಸರು"
   volunteer_engineer_submission_field_description: "ವಿವರಣೆ"
   volunteer_engineer_submission_field_email_preference_privacy: "(ನಮ್ಮ ಗೌಪ್ಯತೆ ನೀತಿಯನ್ನು ನೋಡಿ)"
+  volunteer_engineer_submission_field_email_preference_yes: 'ಹೌದು'
+  volunteer_engineer_submission_field_email_preference_no: 'ಇಲ್ಲ'
   volunteer_engineer_submission_submit: "ಸಲ್ಲಿಸಿ"
   volunteer_engineer_submission_commitment_uncertain: "ಅನಿಶ್ಚಿತ"
   volunteer_engineer_submission_commitment_one_hr_per_week: "ವಾರಕ್ಕೆ 1 ಗಂಟೆ"
@@ -227,7 +234,10 @@
   dashboard_landing_available_courses: "ನಿಮಗೆ ಮತ್ತು ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಪ್ರಸ್ತುತ ಲಭ್ಯವಿರುವ ಕೋರ್ಸ್ಗಳು ಇಲ್ಲಿವೆ."
   dashboard_course_ecs: "ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ ಎಕ್ಸ್ಪ್ಲೋರಿಂಗ್"
   dashboard_landing_loading: "ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ..."
+  dashboard_action_cancel: "ರದ್ದುಮಾಡಿ"
   dashboard_action_delete: "ಅಳಿಸಿ"
+  dashboard_action_delete_yes: 'ಹೌದು'
+  dashboard_action_delete_no: 'ಇಲ್ಲ'
   dashboard_action_confirm: "ಅಳಿಸಿ?"
   dashboard_action_done: "ಮುಗಿದಿದೆ"
   dashboard_navigation_home_page: "ಶಿಕ್ಷಕರ ಮುಖಪುಟದಲ್ಲಿ"
@@ -448,9 +458,15 @@
   w3schools_beyond_gradelevel: "ವಯಸ್ಸು 12+"
   mozilla_beyond_gradelevel: "ವಯಸ್ಸು 12+"
   processing_beyond_gradelevel: "ಹೈಸ್ಕೂಲ್"
+  flappy_shortcode: "ಫ್ಲಾಪ್"
+  header_my_dashboard: "ನನ್ನ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್"
+  header_professional_learning: "ವೃತ್ತಿಪರ ಕಲಿಕೆ"
   header_educate_hoc: "ಅವರ್ ಆಫ್‌ ಕೋಡ್"
   user_header_artist: 'ಆರ್ಟಿಸ್ಟ್'
   user_header_dance: "ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ"
+  user_header_flappy: "ಫ್ಲಾಪಿ"
+  user_header_view_my_projects: "ನನ್ನ ಯೋಜನೆಗಳನ್ನು ವೀಕ್ಷಿಸಿ"
+  view_all_sections: "ಎಲ್ಲಾ ವಿಭಾಗಗಳು"
   applab_tile_subtitle: "ಬ್ಲಾಕ್ ಆಧರಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಬಳಸಿ ಜಾವಾಸ್ಕ್ರಿಪ್ಟ್‌ನಲ್ಲಿ ನಿಮ್ಮದೇ ಆಪ್ ರಚಿಸಿ. ಅಥವಾ ಪಠ್ಯ ಆಧರಿತ ಪ್ರೋಗ್ರಾಮಿಂಗ್‌ನೊಂದಿಗೆ ಮುಂದಿನ ಹಂತದಲ್ಲಿ ನಿಮ್ಮ ಕೌಶಲಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಿ. (ಇಂಗ್ಲಿಷ್‌ ಮಾತ್ರ)"
   applab_tile_start_tutorial: "ಪ್ರಾರಂಭಿಸಿ"
   applab_tile_teacher_guide: "ಟೀಚರ್ ಗೈಡ್ ನೋಡಿ"
@@ -470,6 +486,7 @@
   hoc2018_mc_start: "ಪ್ರಾರಂಭಿಸಿ"
   hoc2018_mc_no_internet: "ನಿಮ್ಮಲ್ಲಿ ಇಂಟರ್ನೆಟ್ ಇಲ್ಲವೇ?"
   hoc2018_mc_download_adventurer: "ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅಡ್ವೆಂಚರರ್‌ನ ಆಫ್‌ಲೈನ್ ಆವೃತ್ತಿಯನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಿ."
+  hoc2018_mc_educators_box2_button: "ಡೌನ್‌ಲೋಡ್"
   hoc2018_mc_educators_box3_title: "ಉಚಿತ ವಿದ್ಯಾರ್ಥಿ ವರ್ಕ್‌ಶಾಪ್‌ಗೆ ಹಾಜರಾಗಿ"
   hoc2018_mc_educators_box3_desc: "ಉಚಿತ ಅವರ್ ಆಫ್‌ ಕೋಡ್ ವರ್ಕ್‌ಶಾಪ್‌ಗಾಗಿ ನಿಮ್ಮ ಪ್ರದೇಶದಲ್ಲಿನಮೈಕ್ರೋಸಾಫ್ಟ್‌ ಸ್ಟೋರ್‌ಗೆ ಭೇಟಿ ನೀಡಿ. ಎಲ್ಲ ಕೌಶಲ ಮಟ್ಟಗಳು, ಆರು ಮತ್ತು ಹೆಚ್ಚಿನ ವಯಸ್ಸಿನ ಭಾಗೀದಾರರಿಗೆ."
   hoc2018_mc_educators_box3_button: "ವರ್ಕ್‌ಶಾಪ್‌ ಕಂಡುಕೊಳ್ಳಿ"
@@ -489,6 +506,9 @@
   hoc2018_mc_video_title_my_name_is_aracely: "ನನ್ನ ಹೆಸರು ಅರ್ಸೆಲಿ"
   hoc2018_mc_homepage_try_it: "ಇದನ್ನು ಪ್ರಯತ್ನಿಸಿ"
   hoc2018_mc_teacher_guide: "ಟೀಚರ್ ಗೈಡ್ ನೋಡಿ"
+  hoc2018_mc_minecraft_education: "Minecraft ಶಿಕ್ಷಣ"
+  hoc2018_mc_continue_learning: "Minecraft ನೊಂದಿಗೆ ಕಲಿಯುವುದನ್ನು ಮುಂದುವರಿಸಿ."
+  hoc2018_mc_go_to_mc_education: "ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಶಿಕ್ಷಣಕ್ಕೆ ಹೋಗಿ"
   hoc2018_dance_party_main_heading: "ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ"
   hoc2018_dance_party_subheading: "ಡ್ಯಾನ್ಸ್‌ ಪಾರ್ಟಿ ಟ್ರಾನ್ಸ್‌ಲೇಟ್‌ ಮಾಡಲು ಸಹಾಯ ಮಾಡಿ"
   hoc2018_dance_party_box_title: "ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ"
@@ -529,6 +549,7 @@
   hoc2021_mc_mee_villages_description: 'ಕೋಡಿಂಗ್ ಮೂಲಭೂತ ಅಂಶಗಳನ್ನು ಕಲಿಯಿರಿ ಮತ್ತು ಮೈನ್‌ಕ್ರಾಫ್ಟ್: ಶಿಕ್ಷಣ ಆವೃತ್ತಿಯಲ್ಲಿ ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ವೈವಿಧ್ಯತೆ ಮತ್ತು ಒಳಗೊಳ್ಳುವಿಕೆಗಳನ್ನು ಅರಿತುಕೊಳ್ಳಿ.'
   hoc2021_mc_mee_ai_title: "ಎಐ ಫಾರ್ ಗುಡ್"
   hoc2021_mc_mee_ai_description: 'ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಎಐ ಅನ್ನು ಅರಿತುಕೊಳ್ಳಿ ಮತ್ತು ಮೈನ್‌ಕ್ರಾಫ್ಟ್: ಶಿಕ್ಷಣ ಆವೃತ್ತಿಯಲ್ಲಿ ಕೋಡ್ ಮಾಡಲು ಕಲಿಯಿರಿ.'
+  codebytes_skinny_banner_english_only: "ಇಂಗ್ಲಿಷ್-ಮಾತ್ರ"
   footer_support: "ಬೆಂಬಲ"
   ai_for_oceans_lesson_plan: "ಪಠ್ಯ ಯೋಜನೆ"
   ai_for_oceans_tile_description: "ಕಸವನ್ನು ಗುರುತಿಸಲು ತರಬೇತಿ ನೀಡುವ ಮೂಲಕ ಸಮುದ್ರವನ್ನು ಸ್ವಚ್ಛಗೊಳಿಸಲು ಎಐಗೆ ಸಹಾಯ ಮಾಡಿ! ತರಬೇತಿ ಡೇಟಾ ಮತ್ತು ಬಯಾಸ್ ಬಗ್ಗೆ ಮತ್ತು ವಿಶ್ವದ ಸಮಸ್ಯೆಗಳನ್ನು ಎಐ ಹೇಗೆ ಪರಿಹರಿಸಬಹುದು ಎಂಬ ಬಗ್ಗೆ ಕಲಿಯಿರಿ. ನೋಡಿ"
