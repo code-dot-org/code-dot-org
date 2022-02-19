@@ -381,6 +381,26 @@ mr:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': एलियन
             '"BEAR"': अस्वल
@@ -775,6 +795,8 @@ mr:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -819,6 +841,8 @@ mr:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -985,6 +1009,8 @@ mr:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} कडा स्पर्श करत आहे"
@@ -1026,6 +1052,8 @@ mr:
             '"u"': u
             '"v"': v
             '"w"': w
+            '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_locationAt:
         text: 'स्थान x: {X} y: {Y}'
@@ -1111,6 +1139,7 @@ mr:
             "'sound://category_animals/bear.mp3'": अस्वल
             "'sound://category_animals/pig.mp3'": डुक्कर
             "'sound://category_animals/goat.mp3'": बकरी
+            "'sound://category_animals/rooster.mp3'": कोंबडा
             "'sound://category_animals/elephant.mp3'": हत्ती
             "'sound://category_animals/dolphin.mp3'": डॉल्फिन
             "'sound://category_nature/thunderstorm_1.mp3'": थंडरस्टॉर्म
@@ -1130,6 +1159,7 @@ mr:
             "'sound://category_retro/retro_game_ui_select_6.mp3'": निवडा
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": क्वर्की
               बास
+            "'sound://category_digital/jump_7.mp3'": जंप
       gamelab_playSpeech:
         text: भाषण प्ले करा {SOUND}
       gamelab_playerBehaviors:
@@ -1571,6 +1601,15 @@ mr:
         text: जेव्हा {SPRITE} क्लिक केले जाते
       Mikelab_whenKeyPressed:
         text: जेव्हा {KEY} दाबली जाते
+        options:
+          KEY:
+            '"a"': A
+            '"d"': D
+      Mikelab_whenKeyReleased:
+        options:
+          KEY:
+            '"a"': A
+            '"d"': D
       Mikelab_whenYesNoClicked:
         options:
           KEY:
@@ -1609,6 +1648,7 @@ mr:
             '"iceCream"': आईसक्रीम
             '"leaves"': पाने
             '"stars"': तारे
+            '"waves"': लाटा
       Poetry_addLine:
         text: ओळ जोडा {LINE}
       Poetry_animateText:
@@ -1636,6 +1676,7 @@ mr:
             '"sound://category_nature/steady_campfire_loop.mp3"': कॅम्प फायर (शेकोटी)
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': जंगल
             '"sound://category_background/ocean_waves.mp3"': महासागर
+            '"sound://category_background/rainforest_ambient_sound.mp3"': पर्जन्यवन
             '"sound://category_background/wavering_wind.mp3"': झोपाळू
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': संथ
       Poetry_playSound:
@@ -1645,6 +1686,7 @@ mr:
             '"sound://category_bell/long_bell_notification.mp3"': घंटा
             '"sound://category_digital/boing_2.mp3"': बोइंग
             '"sound://category_pop/bubble_pop_cluster_2.mp3"': बुडबुडा
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': जंप
             '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': प्रकाश
             '"sound://category_background/typewriter.mp3"': टायपरायटर
       Poetry_setAuthor:
