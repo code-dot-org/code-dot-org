@@ -875,6 +875,55 @@
         "try/coursee/2021": {
           "word": "Încercare",
           "definition": "O acțiune întreprinsă pentru a face ceva"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Învățare Automată",
+          "definition": "Cum recunosc computerele tiparele și iau decizii fără a fi programate în mod explicit"
+        },
+        "bug/csd/2021": {
+          "word": "Bug (eroare)",
+          "definition": "O parte a unui program care nu funcționează corect."
+        },
+        "for_loop/csd/2021": {
+          "word": "Buclă for",
+          "definition": "Bucle care au un început, un sfârșit și un pas (interval de pas) prestabilite."
+        },
+        "debugging/csd/2021": {
+          "word": "Corectare erori",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
+        },
+        "program/csd/2021": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "variable/csd/2021": {
+          "word": "Variabilă",
+          "definition": "O etichetă pentru un fragment de informație utilizat într-un program."
+        },
+        "sprite/csd/2021": {
+          "word": "Spiriduș"
+        },
+        "condition/csd/2021": {
+          "word": "Condiție"
+        },
+        "conditionals/csd/2021": {
+          "word": "Condiţionale"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstractizare"
+        },
+        "function/csd/2021": {
+          "word": "Funcţie"
+        },
+        "input/csd/2021": {
+          "word": "Intrare"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Amprenta digitală"
+        },
+        "copyright/csd/2021": {
+          "word": "Drept de autor",
+          "definition": "dreptul legal exclusiv de a tipări, publica, interpreta, filma sau înregistra opere literare, artistice sau muzicale și de a autoriza pe alții să facă acest lucru"
         }
       }
     }
