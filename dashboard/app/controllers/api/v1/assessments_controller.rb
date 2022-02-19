@@ -117,8 +117,10 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
           student_progress = progress_data[script_level.id][student.id]
           next unless student_progress
 
-          # Find the UserLevel that represents overall progress of the level_group.
+          # Find the UserLevel that represents overall progress of the LevelGroup.
           # This logic is analogous to User#last_attempt_for_any.
+          # Note: we intentionally no longer use the aggregated answers stored on
+          # this UserLevel, see LP-1926 for details.
           level_group_ids = script_level.levels.pluck(:id)
           level_group_progress = student_progress.find do |user_level|
             user_level.user_id == student.id &&
