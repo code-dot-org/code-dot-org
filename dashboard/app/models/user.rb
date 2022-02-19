@@ -2343,9 +2343,6 @@ class User < ApplicationRecord
       update(state: 'active', updated_at: Time.now)
   end
 
-  # Gets the user's user_storage_id from the pegasus database, if it's available.
-  # Note: Known that this duplicates some logic in storage_id_for_user_id, but
-  # that method is globally stubbed in tests :cry: and therefore not very helpful.
   def user_storage_id
     @user_storage_id ||= storage_id_for_user_id(id)
   end
