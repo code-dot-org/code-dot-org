@@ -1219,6 +1219,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "Omawiać proces projektowania i sposób, w jaki pomógł ukształtować ukończony projekt końcowy."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Szkolić się i testować model nauki maszynowej."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "Zastanawiać się w jaki sposób ludzkie uprzedzenia odgrywają rolę w nauce maszynowej."
         }
       }
     }

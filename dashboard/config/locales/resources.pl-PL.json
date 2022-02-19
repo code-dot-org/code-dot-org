@@ -1339,6 +1339,383 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Modyfikacje wirtualnej lekcji ",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "introduction_to_machine_learning/csd/2021": {
+          "name": "Wprowadzenie do uczenia maszynowego"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "innovations_in_ai/csd/2021": {
+          "name": "Innowacje w AI"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "Widząc AI"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Wprowadzenie do AI Lab"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Wprowadzenie do AI Lab"
+        },
+        "training_and_testing_in_ai_lab/csd/2021": {
+          "name": "Szkolenie i testowanie w AI Lab "
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: Dane treningowe i skłonność",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "model_cards_in_ai_lab/csd/2021": {
+          "name": "Karty modeli w AI Lab"
+        },
+        "numerical_models/csd/2021": {
+          "name": "KNN bez komputera"
+        },
+        "ai_code_of_ethics/csd/2021": {
+          "name": "Kodeks etyczny AI "
+        },
+        "issue_statements/csd/2021": {
+          "name": "Zaplanuj aplikację uczenia maszynowego"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Projektowanie zbierania danych"
+        },
+        "survey_data_in_ai_lab/csd/2021": {
+          "name": "Model treningowy na podstawie dobrych danych "
+        },
+        "troubleshooting_models/csd/2021": {
+          "name": "Model treningowy na podstawie złych danych "
+        },
+        "creating_an_app/csd/2021": {
+          "name": "Utwórz aplikację"
+        },
+        "design_an_ai_app/csd/2021": {
+          "name": "Utwórz aplikację „AI dla dobra społecznego”"
+        },
+        "design_an_ai_app_1/csd/2021": {
+          "name": "Utwórz aplikację „AI dla dobra społecznego”"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "Prototypy na papierze"
+        },
+        "market-research/csd/2021": {
+          "name": "Badania rynku"
+        },
+        "market_research/csd/2021": {
+          "name": "Badania rynku"
+        },
+        "design_mode/csd/2021": {
+          "name": "Tryb projektowania"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Tryb projektowania"
+        },
+        "bugs-and-features-planning/csd/2021": {
+          "name": "Błędy i właściwości"
+        },
+        "bugs_and_features/csd/2021": {
+          "name": "Błędy i właściwości"
+        },
+        "updating-your-prototype/csd/2021": {
+          "name": "Aktualizacja Twojego prototypu"
+        },
+        "app-presentation/csd/2021": {
+          "name": "Prezentacja aplikacji"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "Prezentacja aplikacji"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Forum Nauczycieli"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Losowe liczby"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Jak działają komputery: sprzęt i oprogramowanie"
+        },
+        "board_events/csd/2021": {
+          "name": "Zdarzenia na tablicy"
+        },
+        "physical_input/csd/2021": {
+          "name": "Wejście fizyczne"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funkcje"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Wprowadzenie do tablic"
+        },
+        "arrays/csd/2021": {
+          "name": "Tablice"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Granie z nut"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Pętle dla (for)"
+        },
+        "for_loops/csd/2021": {
+          "name": "Pętle dla (for)"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Akcelerometr Zdarzeń"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Jak działają komputery: układy i logika"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Reprezentowanie informacji"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Reprezentacja liczb"
+        },
+        "keeping-data-secret-exemplar-2019/csd/2021": {
+          "name": "Zachowywanie danych w tajemnicy"
+        },
+        "structuring_data/csd/2021": {
+          "name": "Strukturyzacja danych"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "Interpretacja danych"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "Interpretacja danych"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "Interpretacja danych"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "Podejmowanie decyzji na podstawie danych"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "Automatyzacja decyzji dotyczących danych"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "Automatyzacja decyzji dotyczących danych"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "Automatyzacja decyzji dotyczących danych"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "Dane w świecie rzeczywistym"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "Dane w świecie rzeczywistym"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Wideo: uczenie maszynowe",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "make_a_recommendation_-_student_checklist/csd/2021": {
+          "url": "https://docs.google.com/document/d/1E_k-oOdK8c7CuN1TcR5GWomeAGXvXfafgzLHda1w6J4/edit"
+        },
+        "sample_marked_rubrics_3/csd/2021": {
+          "url": "https://docs.google.com/document/d/1fbImuYWBio4mkmFMWWGBolyEWihxFPlvtxgxGhRokIc/edit"
+        },
+        "all_resources_5/csd/2021": {
+          "url": "/s/csd5-2021/resources"
+        },
+        "all_standards_5/csd/2021": {
+          "url": "/s/csd5-2021/standards"
+        },
+        "all_vocabulary_5/csd/2021": {
+          "url": "/s/csd5-2021/vocab"
+        },
+        "variables_1/csd/2021": {
+          "name": "Zmienne"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Losowe liczby"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Karta Animacji"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Duszki"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Właściwości duszka"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Ruch duszka"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Wyrażenia logiczne"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Instrukcje warunkowe"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "Instrukcje If/Else"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Prędkość"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Prędkość"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Wykrywanie kolizji"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Wykrywanie kolizji"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Suwak boczny"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Suwak boczny"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "Gra Flyer"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Gra Flyer"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funkcje"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funkcje"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Forum Nauczycieli"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Czym jest komputer?"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Wejście i Wyjście",
+          "url": "https://docs.google.com/document/d/1y6JJOsmZh0zwXpP4qCQoPFhQiLXGi4NJnnQoLnHAkPc/edit?usp=sharing"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Wejście i Wyjście",
+          "url": "https://docs.google.com/document/d/1Wf9oUuRi5iNb2cVrn1F8kbDDys0CcAcN-m4ZLpXohmY"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Aplikacje i rozwiązywanie problemów"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Aplikacje i rozwiązywanie problemów"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Aplikacje i rozwiązywanie problemów"
+        },
+        "csd_unit_2_-_web_development/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1rg7Lf6ahVruRMzmYnZuXZZqLUgqK5ahp53tCIPtl8wc/copy"
+        },
+        "html_tags/csd/2021": {
+          "name": "Tagi HTML",
+          "url": "https://drive.google.com/file/d/1Eh3mxDIgNE1guUs_sCB4SBR_hHMBMs26/view"
+        },
+        "intro_to_web_lab_part_2/csd/2021": {
+          "url": "https://youtu.be/Hjl6gbg9kmk"
+        },
+        "video_intro_to_web_lab_part_1/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=itx0RYOnoBs"
+        },
+        "video_pair_programming/csd/2021": {
+          "name": "Film: Programowanie parami",
+          "url": "https://youtu.be/q7d_JtyCq1A"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Nagłówki i akapity",
+          "url": "https://drive.google.com/file/d/1ei99hpoE35ohPQKQPsQHUF-W3pdpeoQ3/view"
+        },
+        "video_debugging/csd/2021": {
+          "url": "https://youtu.be/auv10y-dN4s"
+        },
+        "project-guide-html-project-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1KAf-fnnle9kn1wuqaFEApKSKi0klSnVVFzNOBftSIas/view"
+        },
+        "html-web-page-1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1__6xm9Bpb8c4lw21YH_Nbu-N1Tx7XoBzFnWw0gB9xKM/edit"
+        },
+        "mini-project-html-page/csd/2021": {
+          "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy"
+        },
+        "html-web-page/csd/2021": {
+          "url": "https://docs.google.com/document/d/1IFhjs4IjCM-mKs28FxJTDTADPS4XTa30aoQR1pG1570/"
+        },
+        "html-page/csd/2021": {
+          "url": "https://docs.google.com/document/d/1PJlbQlD7Ke9Alb82ci37BbDxJZqC4iUL6XozVoCWJPg"
+        },
+        "formatting_html/csd/2021": {
+          "name": "Formatowanie HTML",
+          "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view"
+        },
+        "lists/csd/2021": {
+          "name": "Listy",
+          "url": "https://drive.google.com/file/d/16QGQA0SxY0R5HzaOnuiId2ER-OGAl9Al/view"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Cyfrowy ślad",
+          "url": "https://docs.google.com/presentation/d/1nkdM4cDDgzbYSOR9w6vS7QFE1C450-9Kgt1G6G7e7pI/copy"
+        },
+        "social-sleuth-exemplar-2020/csd/2021": {
+          "name": "Społeczny detektyw",
+          "url": "https://docs.google.com/document/d/1FX4Js8yX867G4feEbRuWxCdDD2R33f-oHfm5sBD2rnw/edit"
+        },
+        "social-sleuth/csd/2021": {
+          "name": "Społeczny detektyw",
+          "url": "https://docs.google.com/document/d/1ZVXQlNMB6uwEI-eEWI2E3T8CtyqItlM5N44HcgY_zrE/view"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Wprowadzenie do CSS - Część 1",
+          "url": "https://www.youtube.com/watch?v=EP9QMdoXvXE"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Wprowadzenie do CSS - Część 2",
+          "url": "https://youtu.be/VgBVKlpLqsE"
+        },
+        "style_sheets/csd/2021": {
+          "url": "https://drive.google.com/file/d/1va-Va15QP2jyuRnmBRYUQg0ZkQk8PETj/view"
+        },
+        "text_properties/csd/2021": {
+          "url": "https://drive.google.com/file/d/1NoseEakxt9yOSuPbpnLgUu9-_Yso3EOB/view?usp=sharing"
+        },
+        "project-guide-your-personal-style-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/14Zlx1BC-QxW01D0vk_C5JTB77PCK80OatVFv1hcClZw/view"
+        },
+        "peer-review-your-personal-style-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1y_uZjW57RlPgqvO8qjfVbGTVrTehSNGxUfaQXtPZLv0/view"
+        },
+        "your-personal-style-1-2-3/csd/2021": {
+          "url": "https://docs.google.com/document/d/1znQdx7gLR3CcKYNnq0TJFPw3lpvfvzxIFa9-gZ_6twQ/edit"
+        },
+        "your-personal-style-1/csd/2021": {
+          "url": "https://docs.google.com/document/d/1Wp_EdUOlhiEw4BQJBRwOidqcgBnJChHUTWOhZclOnBE"
+        },
+        "your-personal-style/csd/2021": {
+          "url": "https://docs.google.com/document/d/1vQBq4Aa0IYuQlKD_HgSawYgVwm-QKgO-UHGglzp_bTI/edit"
+        },
+        "licensing-your-work-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1Fx-NsWsvtGJf4uMM4OuOAE3LCj1bFypoVcRahdpkre0/edit?usp=sharing"
+        },
+        "licensing-your-work-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1p0krn2ViHQcp2lPfwiqxbnn3e3ukXVnsmsPao4KaDgE/"
+        },
+        "creative-commons-video/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=srVPLrmlBJY"
+        },
+        "images_in_html/csd/2021": {
+          "name": "Obrazy w HTML"
+        },
+        "publishing_your_website/csd/2021": {
+          "name": "Publikowanie Twojej witryny "
+        },
+        "websites-for-a-purpose-2020/csd/2021": {
+          "name": "Strony internetowe dla określonego celu"
+        },
+        "websites-for-a-purpose/csd/2021": {
+          "name": "Strony internetowe dla określonego celu"
+        },
+        "classes/csd/2021": {
+          "name": "Klasy"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Odnośniki"
         }
       }
     }
