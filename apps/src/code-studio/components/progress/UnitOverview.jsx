@@ -207,5 +207,5 @@ export default connect((state, ownProps) => ({
   scriptName: state.progress.scriptName,
   viewAs: state.viewAs,
   hiddenLessonState: state.hiddenLesson,
-  selectedSectionId: parseInt(state.teacherSections.selectedSectionId)
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(UnconnectedUnitOverview);
