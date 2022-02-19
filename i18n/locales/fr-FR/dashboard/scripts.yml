@@ -17897,6 +17897,8 @@ fr:
               name: Création de prototypes
             lesson-19:
               name: Projet
+            Circuits and Physical Prototypes:
+              description_teacher: Pour préparer le projet final de ce chapitre, les élèves vont appendre à développer un prototype d'objet physique à base du Circuit Playground. En utilisant un guide de gestion de projet prêt à l'emploi, les élèves vont voir comment brancher quelques circuits simples et construire un prototype pour démontrer l'usage d'un objet, le tout réalisé avec des matériaux bon marché et facile à trouver comme du carton et du ruban adhésif.
           lesson_groups:
             lessonGroup-3:
               display_name: Modèles 
@@ -17926,6 +17928,11 @@ fr:
               display_name: Projet
             lessonGroup-4:
               display_name: Démos et ressources
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: Test du clone CSA
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -18357,6 +18364,12 @@ fr:
               description_student: Crée un projet interactif qui peut être partagé avec tes camarades de classe.
               description_teacher: Cette leçon présente le Labo des Sprites, une plate-forme où les élèves peuvent créer leurs propres animations et jeux interactifs. Aujourd'hui, en plus des comportements, les étudiants intégreront les entrées de l'utilisateur en tant qu'événements pour créer une « soirée dansante extraterrestre ».
           lesson_groups:
+            lessonGroup-5:
+              display_name: Cours F sur les variables (Obsolète )
+            lessonGroup-6:
+              display_name: Cours F Sur les boucles (Obsolète )
+            lessonGroup-7:
+              display_name: Cours E sur les Sprites (Obsolète)
             lessonGroup-8:
               display_name: Heure de Code
           description_short: Interne
@@ -18408,6 +18421,33 @@ fr:
               display_name: variables
             lessonGroup-4:
               display_name: Fin du projet.
+        csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              description_teacher: 'Pour le projet final de ce cours, les élèves forment des groupes pour développer et tester un prototype innovant basé sur le Circuit Playground. En utilisant les entrées et les sorties disponibles sur le circuit, les groupes vont créer des programmes qui permettent des interactions intéressantes et uniques avec l''utilisateur. '
+            Innovations in Computing:
+              name: Innovations en informatique
+              description_teacher: Pour démarrer le dernière partie de ce module, les élèves vont rechercher quelques innovations intéressantes en informatique. Cette leçon montrera aux élèves une grande variété dans la forme des ordinateurs et les activités impactées par l'informatique. Plus tard dans le module, les étudiants pourront comparer le résultat de leur recherche avec leur propre expérimentation sur un microcontrôleur.
+            The Circuit Playground:
+              name: Le Circuit Playground
+            Board Events:
+              name: Évènements en provenance du circuit
+            Arrays and Color LEDs:
+              name: Couleurs des LED
+            lesson-10:
+              name: Combinaison des saisies
+            Accelerometer:
+              name: Accéléromètre
+              description_teacher: Dans cette leçon, vous allez découvrir l'accéléromètre et ses capacités. Vous apprendrez ses évènements et ses propriétés, et vous créerez plusieurs programmes utilisant l'accéléromètre identique à celle des applications réelles.
+            Making Music:
+              name: Créer de la Musique
+            Functions with Parameters:
+              name: fonctions
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Chapitre 1
+            lessonGroup-3:
+              display_name: Chapitre 2
         csa8-exemplars:
           lessons:
             lesson-15:
@@ -18808,6 +18848,7 @@ fr:
               display_name: Fin du projet.
           description_short: 'Une introduction à l''informatique : elle combine le meilleur de notre programme pour l''école primaire à destination des élèves plus âgés.'
           description_audience: 'Âges : de 9 à 18 ans'
+          name: express-2022
         csp1-2022:
           lessons:
             CS Principles Pre-survey:
@@ -19673,6 +19714,8 @@ fr:
               description_teacher: 'Dans cette leçon, les élèves en apprendront davantage sur l''accessibilité et la valeur de l''empathie, grâce à un remue-méninges et à la conception de solutions accessibles pour des applications hypothétiques. '
             'Hello World: Food':
               name: Bonjour tout le monde !
+              description_student: Dans le présent cours, vous apprendrez à créer et à animer des sprites et à les rendre interactifs grâce aux événements.
+              description_teacher: 'Dans ce cours **de renforcement des compétences**, les participants apprendront à créer et à animer des sprites et à les rendre interactifs grâce aux événements. '
           lesson_groups:
             csf_sprites:
               display_name: Les Lutins
@@ -19855,6 +19898,11 @@ fr:
         csp-post-survey-2021:
           title: CS PrincipPrincipleses Enquête Post-Cours
         csa1-2022:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: boucles
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -19911,6 +19959,8 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -19937,3 +19987,102 @@ fr:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: boucles
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+        csa7-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: leçon n°10
+            lesson-6:
+              key: leçon n°6
+            lesson-7:
+              key: leçon n°7
+            lesson-8:
+              key: leçon n° 8
+            lesson-9:
+              key: leçon n°9
+            lesson-11:
+              key: leçon n°11
+            lesson-12:
+              key: leçon n°12
+            lesson-13:
+              key: leçon n°13
+            lesson-14:
+              key: leçon n°14
+            lesson-15:
+              key: leçon n°15
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3
+            lesson-4:
+              key: leçon n°4
+            lesson-5:
+              key: leçon n°5
+              name: Journée d'Évaluation
+            lesson-16:
+              key: leçon n°16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Le jeu Sandbox
+        csa8-pilot-extra:
+          lessons:
+            Assessment Day:
+              name: Journée d'Évaluation
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: leçon n° 1
+            lesson-2:
+              key: leçon n°2
+            lesson-3:
+              key: leçon n°3
+            lesson-4:
+              key: leçon n°4
+            lesson-5:
+              key: leçon n°5
+            lesson-10:
+              key: leçon n°10
+            lesson-6:
+              key: leçon n°6
+            lesson-7:
+              key: leçon n°7
+            lesson-8:
+              key: leçon n° 8
+            lesson-9:
+              key: leçon n°9
+            lesson-11:
+              key: leçon n°11
+            lesson-12:
+              key: leçon n°12
+            lesson-13:
+              key: leçon n°13
+            lesson-14:
+              key: leçon n°14
+            lesson-15:
+              key: leçon n°15
+              name: Journée d'Évaluation
+            lesson-16:
+              key: leçon n°16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenu
+            lessonGroup-5:
+              display_name: Le jeu Sandbox
