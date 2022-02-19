@@ -85,7 +85,7 @@ class AccountPurgerTest < ActiveSupport::TestCase
     test_name = 'Boaty McBoatface'
 
     refute_equal test_name, @student.name
-    assert_empty storage_id_for_user_id(@student.id)
+    assert_nil storage_id_for_user_id(@student.id)
 
     # Perform Dashboard (Activerecord) and Pegasus DB operations as
     # a side effect, then raise, and prove the changes weren't saved
@@ -104,7 +104,7 @@ class AccountPurgerTest < ActiveSupport::TestCase
     @student.reload
 
     assert stub_code_ran
-    assert_empty storage_id_for_user_id(@student.id)
+    assert_nil storage_id_for_user_id(@student.id)
     refute_equal test_name, @student.name
   end
 end
