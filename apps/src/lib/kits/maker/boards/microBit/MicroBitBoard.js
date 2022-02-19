@@ -1,7 +1,6 @@
 /** @file Board controller for BBC micro:bit */
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
-  createMicroBitComponents,
   cleanupMicroBitComponents,
   enableMicroBitComponents,
   componentConstructors
@@ -96,22 +95,16 @@ export default class MicroBitBoard extends EventEmitter {
     return Promise.resolve()
       .then(() => this.openSerialPort())
       .then(serialPort => this.boardClient_.connectBoard(serialPort))
+      .then(() => {
+        if (
+          this.boardClient_.firmwareVersion.includes('micro:bit Firmata 1.1')
+        ) {
+          return Promise.resolve();
+        } else {
+          return Promise.reject('Incorrect firmware detected');
+        }
+      })
       .catch(err => Promise.reject(err));
-  }
-
-  /**
-   * Initialize a set of component controllers.
-   * Exposed as a separate step here for the sake of the setup page; generally
-   * it'd be better to just call connect(), above.
-   * @throws {Error} if called before connecting to firmware
-   */
-  initializeComponents() {
-    return createMicroBitComponents(this.boardClient_).then(components => {
-      this.prewiredComponents_ = {
-        board: this.boardClient_,
-        ...components
-      };
-    });
   }
 
   /**
