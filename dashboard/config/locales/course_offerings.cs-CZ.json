@@ -1,0 +1,51 @@
+{
+  "cs-CZ": {
+    "data": {
+      "course_offerings": {
+        "coursea": "Kurz A",
+        "courseb": "Kurz B",
+        "coursec": "Kurz C",
+        "coursed": "Kurz D",
+        "coursee": "Kurz E",
+        "coursef": "Kurz F",
+        "express": "Rychlý kurz",
+        "csd": "Objevování informatiky",
+        "csp": "Principy informatiky",
+        "20-hour": "Zrychlený úvodní kurz informatiky",
+        "flappy": "Flappy",
+        "jigsaw": "Skládačka",
+        "algebra": "Informatika v algebře",
+        "applab-intro": "Úvod do App Lab",
+        "aquatic": "Minecraft: Vodní plavba",
+        "artist": "Umělec",
+        "basketball": "Vyberte si svůj tým a vytvořte basketbalovou hru",
+        "course1": "Kurz 1",
+        "course2": "Kurz 2",
+        "course3": "Kurz 3",
+        "course4": "Kurz 4",
+        "dance-2019": "Taneční večírek (2019)",
+        "dance-extras-2019": "Tančete dále (2019)",
+        "dance-extras": "Tančete dále (2018)",
+        "dance": "Taneční večírek (2018)",
+        "frozen": "Kóduj s Annou a Elsou",
+        "gumball": "Gumball Play Lab",
+        "hourofcode": "Klasické bludiště",
+        "iceage": "Doba ledová Play Lab",
+        "infinity": "Disney Infinity Play Lab",
+        "mc": "Hodina kódu s Minecraftem",
+        "minecraft": "Hodina kódu Minecraft Designer",
+        "oceans": "AI pomáhá oceánům",
+        "outbreak": "Simulátor epidemie",
+        "playlab": "Play Lab",
+        "sports": "Naprogramuj svoji vlastní sportovní hru",
+        "text-compression": "Komprese textu",
+        "csa-self-paced-pl": "Co nabízí Code.org pro učitele pilotního projektu CSA",
+        "counting-csc": "Počítání s Laurel",
+        "explore-data-1": "Zkoumání krabicových grafů a histogramů",
+        "outbreak-csc": "Epidemie",
+        "poem-art": "Básnické umění",
+        "edit-code": "Upravit kód"
+      }
+    }
+  }
+}

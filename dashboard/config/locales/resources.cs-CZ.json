@@ -1289,6 +1289,91 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Modifikace virtuální lekce",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "Umělá inteligence vidění"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "Umělá inteligence: školící data a podjatost",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "design_mode/csd/2021": {
+          "name": "Dizajnový mód"
+        },
+        "design_mode_elements/csd/2021": {
+          "name": "Prvky dizajnového módu"
+        },
+        "intro_to_design_mode/csd/2021": {
+          "name": "Úvod do dizajnového módu"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Dizajnový mód"
+        },
+        "design_mode_elements_1/csd/2021": {
+          "name": "Prvky dizajnového módu"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Fórum učitelů"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Náhodná čísla"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Jak fungují počítače: Hardware a software"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funkce"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Cykly \"For\""
+        },
+        "for_loops/csd/2021": {
+          "name": "Cykly \"For\""
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Jak fungují počítače: Obvody a logika"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Strojové učení"
+        },
+        "drawing-shapes-exemplar-2020/csd/2021": {
+          "name": "Kreslení tvarů"
+        },
+        "drawing_shapes/csd/2021": {
+          "name": "Kreslení tvarů"
+        },
+        "variables_1/csd/2021": {
+          "name": "Proměnné"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Náhodná čísla"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Postavy"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Rychlost"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Rychlost"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funkce"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funkce"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Fórum učitelů"
+        },
+        "lists/csd/2021": {
+          "name": "Seznamy"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Úvod do CSS - část 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Úvod do CSS - část 2"
         }
       }
     }
