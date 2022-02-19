@@ -2673,7 +2673,8 @@
           "storyboard_behavior_example": "ಗಮನಿಸಿ:\\_ ಸ್ಪ್ರೈಟ್‌ಗೆ ವರ್ತನೆಯನ್ನು ನೀಡಲು, 'ಬಲಕ್ಕೆ ಸ್ಪಿನ್ ಮಾಡುವುದು' ರೀತಿಯ ಹಸಿರು ವರ್ತನೆ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದರ ಜೊತೆಗೆ 'ಸ್ಪ್ರೈಟ್ ಆರಂಭವಾಗುತ್ತದೆ' ಬ್ಲಾಕ್ ಅನ್ನು ನೀವು ಬಳಸಬೇಕು.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_animals_click": {
-          "hw_no_changes": "ಈ ಹಂತದಲ್ಲಿ ನೀವು ಯಾವುದೇ ಕೋಡ್ ಬದಲಾವಣೆ ಮಾಡಬೇಕಿಲ್ಲ."
+          "hw_no_changes": "ಈ ಹಂತದಲ್ಲಿ ನೀವು ಯಾವುದೇ ಕೋಡ್ ಬದಲಾವಣೆ ಮಾಡಬೇಕಿಲ್ಲ.",
+          "hw_click_sprites": "ಪ್ರೋಗ್ರಾಂ ಚಾಲನೆಯಲ್ಲಿರುವಾಗ ಸ್ಪ್ರೈಟ್‌ಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "helloworld_animals_costumes": {
           "hello_world_costumes": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅಡಿಯಲ್ಲಿ 'ಕಾಸ್ಟ್ಯೂಮ್ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ ಸಂಪರ್ಕಿಸಲು ಪ್ರಯತ್ನಿಸಿ.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -2701,7 +2702,8 @@
           "storyboard_behavior_example": "ಗಮನಿಸಿ:\\_ ಸ್ಪ್ರೈಟ್‌ಗೆ ವರ್ತನೆಯನ್ನು ನೀಡಲು, 'ಬಲಕ್ಕೆ ಸ್ಪಿನ್ ಮಾಡುವುದು' ರೀತಿಯ ಹಸಿರು ವರ್ತನೆ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದರ ಜೊತೆಗೆ 'ಸ್ಪ್ರೈಟ್ ಆರಂಭವಾಗುತ್ತದೆ' ಬ್ಲಾಕ್ ಅನ್ನು ನೀವು ಬಳಸಬೇಕು.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_emoji_click": {
-          "hw_no_changes": "ಈ ಹಂತದಲ್ಲಿ ನೀವು ಯಾವುದೇ ಕೋಡ್ ಬದಲಾವಣೆ ಮಾಡಬೇಕಿಲ್ಲ."
+          "hw_no_changes": "ಈ ಹಂತದಲ್ಲಿ ನೀವು ಯಾವುದೇ ಕೋಡ್ ಬದಲಾವಣೆ ಮಾಡಬೇಕಿಲ್ಲ.",
+          "hw_click_sprites": "ಪ್ರೋಗ್ರಾಂ ಚಾಲನೆಯಲ್ಲಿರುವಾಗ ಸ್ಪ್ರೈಟ್‌ಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "helloworld_emoji_costumes": {
           "hello_world_costumes": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅಡಿಯಲ್ಲಿ 'ಕಾಸ್ಟ್ಯೂಮ್ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ ಸಂಪರ್ಕಿಸಲು ಪ್ರಯತ್ನಿಸಿ.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -2729,7 +2731,8 @@
           "storyboard_behavior_example": "ಗಮನಿಸಿ:\\_ ಸ್ಪ್ರೈಟ್‌ಗೆ ವರ್ತನೆಯನ್ನು ನೀಡಲು, 'ಬಲಕ್ಕೆ ಸ್ಪಿನ್ ಮಾಡುವುದು' ರೀತಿಯ ಹಸಿರು ವರ್ತನೆ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದರ ಜೊತೆಗೆ 'ಸ್ಪ್ರೈಟ್ ಆರಂಭವಾಗುತ್ತದೆ' ಬ್ಲಾಕ್ ಅನ್ನು ನೀವು ಬಳಸಬೇಕು.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_click": {
-          "hw_no_changes": "ಈ ಹಂತದಲ್ಲಿ ನೀವು ಯಾವುದೇ ಕೋಡ್ ಬದಲಾವಣೆ ಮಾಡಬೇಕಿಲ್ಲ."
+          "hw_no_changes": "ಈ ಹಂತದಲ್ಲಿ ನೀವು ಯಾವುದೇ ಕೋಡ್ ಬದಲಾವಣೆ ಮಾಡಬೇಕಿಲ್ಲ.",
+          "hw_click_sprites": "ಪ್ರೋಗ್ರಾಂ ಚಾಲನೆಯಲ್ಲಿರುವಾಗ ಸ್ಪ್ರೈಟ್‌ಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "helloworld_food_costumes": {
           "hello_world_costumes": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅಡಿಯಲ್ಲಿ 'ಕಾಸ್ಟ್ಯೂಮ್ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ ಸಂಪರ್ಕಿಸಲು ಪ್ರಯತ್ನಿಸಿ.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -2757,7 +2760,8 @@
           "storyboard_behavior_example": "ಗಮನಿಸಿ:\\_ ಸ್ಪ್ರೈಟ್‌ಗೆ ವರ್ತನೆಯನ್ನು ನೀಡಲು, 'ಬಲಕ್ಕೆ ಸ್ಪಿನ್ ಮಾಡುವುದು' ರೀತಿಯ ಹಸಿರು ವರ್ತನೆ ಬ್ಲಾಕ್‌ಗಳಲ್ಲಿ ಒಂದರ ಜೊತೆಗೆ 'ಸ್ಪ್ರೈಟ್ ಆರಂಭವಾಗುತ್ತದೆ' ಬ್ಲಾಕ್ ಅನ್ನು ನೀವು ಬಳಸಬೇಕು.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_retro_click": {
-          "hw_no_changes": "ಈ ಹಂತದಲ್ಲಿ ನೀವು ಯಾವುದೇ ಕೋಡ್ ಬದಲಾವಣೆ ಮಾಡಬೇಕಿಲ್ಲ."
+          "hw_no_changes": "ಈ ಹಂತದಲ್ಲಿ ನೀವು ಯಾವುದೇ ಕೋಡ್ ಬದಲಾವಣೆ ಮಾಡಬೇಕಿಲ್ಲ.",
+          "hw_click_sprites": "ಪ್ರೋಗ್ರಾಂ ಚಾಲನೆಯಲ್ಲಿರುವಾಗ ಸ್ಪ್ರೈಟ್‌ಗಳ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ."
         },
         "helloworld_retro_costumes": {
           "hello_world_costumes": "'ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ' ಈವೆಂಟ್ ಬ್ಲಾಕ್ ಅಡಿಯಲ್ಲಿ 'ಕಾಸ್ಟ್ಯೂಮ್ ಬದಲಿಸಿ' ಬ್ಲಾಕ್‌ ಸಂಪರ್ಕಿಸಲು ಪ್ರಯತ್ನಿಸಿ.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -2800,6 +2804,56 @@
         },
         "poetry_hoc_spriteSizes": {
           "size hint": "ಈ ಬ್ಲಾಕ್ ಹುಡುಕಿ ಮತ್ತು '150' ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\nಸಂಖ್ಯೆ '25' ಆದಾಗ ಏನಾಗುತ್ತದೆ? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
+        },
+        "iceage_click_hello": {
+          "iceage_click_hello_a": "ಈ ಒಗಟು ಪೂರ್ಣಗೊಳಿಸಲು `ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ` ಈವೆಂಟ್‌ಗೆ ಒಂದು ಅಥವಾ ಹೆಚ್ಚಿನ `ನಟ 1 ಸೇ` ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಿ."
+        },
+        "iceage_free_play": {
+          "iceage_free_play_a": "ನೀವು ಸಿಡ್ ಮತ್ತು ಮನ್ನಿ ಐಸ್ ಕ್ರಿಸ್ಟಲ್ ಫೈಟ್ ಮಾಡಬಹುದೇ?",
+          "iceage_free_play_b": "ಅಜ್ಜಿ ಡಿಯಾಗೋವನ್ನು ಬೆನ್ನಟ್ಟುವಂತೆ ಮಾಡಿ. ಅವಳು ಅವನನ್ನು ಹಿಡಿದರೆ ಗೆಲುವಿನಂತೆ ಆಟವನ್ನು ಕೊನೆಗೊಳಿಸಿ.",
+          "iceage_free_play_c": "ನೀವು ಡಿಯಾಗೋದಲ್ಲಿ ಸಿಡ್ ಸ್ನೋಫ್ಲೇಕ್‌ಗಳನ್ನು ಎಸೆಯಲು ಮತ್ತು ಡಿಯಾಗೋ ಪ್ರತಿ ಬಾರಿ ಹಿಟ್‌ಗಳನ್ನು ದೊಡ್ಡದಾಗಿಸಿಕೊಳ್ಳಬಹುದೇ? ಡಿಯಾಗೋ 5 ಬಾರಿ ಹೊಡೆದರೆ ಪಂದ್ಯವನ್ನು ಗೆಲುವಿನಂತೆ ಕೊನೆಗೊಳಿಸಿ."
+        },
+        "iceage_hello1": {
+          "iceage_hello1_a": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನೀವು ಕೇವಲ ಒಂದು ಬ್ಲಾಕ್ ಅನ್ನು ಸೇರಿಸುವ ಅಗತ್ಯವಿದೆ. ಟೂಲ್‌ಬಾರ್‌ನಿಂದ `ಸೇ` ಬ್ಲಾಕ್ ಔಟ್ ಅನ್ನು ಎಳೆಯಿರಿ ಮತ್ತು ಈಗಾಗಲೇ ಕಾರ್ಯಸ್ಥಳದಲ್ಲಿರುವ `ವೆನ್ ರನ್` ಈವೆಂಟ್ ಬ್ಲಾಕ್‌ಗೆ ಸಂಪರ್ಕಪಡಿಸಿ. ಮುಂದೆ, \"ಹಲೋ!\" ಎಂದು ಟೈಪ್ ಮಾಡಿ. ಒಳಗೆ."
+        },
+        "iceage_hello2": {
+          "iceage_hello2_a": "ಈ ಒಗಟನ್ನು ಪರಿಹರಿಸಲು, ನೀವು `ನಟ 1 ಸೇ` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು ಸಿದ್ ಏನನ್ನಾದರೂ ಹೇಳಬೇಕು. ನೀವು ಮನ್ನಿಯನ್ನು `ನಟ 2 ಸೇ` ಬ್ಲಾಕ್‌ನೊಂದಿಗೆ ಏನನ್ನಾದರೂ ಹೇಳಬೇಕು."
+        },
+        "iceage_move_events": {
+          "iceage_move_events_a": "ಪ್ರತಿಯೊಂದು `when ___ arrow` ಈವೆಂಟ್‌ಗಳು ಈ ಪಝಲ್ ಅನ್ನು ಪರಿಹರಿಸಲು ವಿಭಿನ್ನವಾದ `move actor 1` ಕಮಾಂಡ್ ಅನ್ನು ಅದರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಬೇಕಾಗುತ್ತದೆ."
+        },
+        "iceage_move_events_dani": {
+          "iceage_move_events_a": "ಪ್ರತಿಯೊಂದು `when ___ arrow` ಈವೆಂಟ್‌ಗಳು ಈ ಪಝಲ್ ಅನ್ನು ಪರಿಹರಿಸಲು ವಿಭಿನ್ನವಾದ `move actor 1` ಕಮಾಂಡ್ ಅನ್ನು ಅದರೊಂದಿಗೆ ಸಂಪರ್ಕಿಸಬೇಕಾಗುತ್ತದೆ."
+        },
+        "iceage_move_to_actor": {
+          "iceage_move_to_actor_a": "ಈ ಒಗಟುಗಾಗಿ, ನೀವು ಡಿಯಾಗೋವನ್ನು 200 ಪಿಕ್ಸೆಲ್‌ಗಳಷ್ಟು ಕೆಳಕ್ಕೆ ಸರಿಸಬಹುದು ಅಥವಾ ಮ್ಯಾನಿಯನ್ನು 200 ಪಿಕ್ಸೆಲ್‌ಗಳಷ್ಟು ಮೇಲಕ್ಕೆ ಸರಿಸಬಹುದು.",
+          "iceage_move_to_actor_b": "ಈ ಸವಾಲನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು `ಪ್ಲೇ ___ ಸೌಂಡ್` ಬ್ಲಾಕ್ ಅನ್ನು `ಆಕ್ಟರ್ 1 ಟಚ್ ಆಕ್ಟರ್ 2` ಈವೆಂಟ್‌ಗೆ ಸಂಪರ್ಕಿಸಿ."
+        },
+        "iceage_move_to_flag": {
+          "iceage_hello3_a": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು \\`ಆಕ್ಟರ್ 1 ಅನ್ನು 200 ಪಿಕ್ಸೆಲ್‌ಗಳಿಂದ ಬಲಕ್ಕೆ ಸರಿಸಿ' ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಿ."
+        },
+        "iceage_repeat": {
+          "iceage_repeat_a": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು `ನಟರನ್ನು 1 ಎಡಕ್ಕೆ ಸರಿಸಿ' ಮತ್ತು`ಆಕ್ಟರ್ 1 ಬಲಕ್ಕೆ ಸರಿಸಿ' ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಿ."
+        },
+        "iceage_sound_and_points": {
+          "iceage_sound_and_points_a": "`ನಟ 2 ಅನ್ನು ನಟ 1 ಸ್ಪರ್ಶಿಸಿದಾಗ` ಈವೆಂಟ್‌ನ ಕೆಳಗೆ ನೀವು ಎರಡು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸುವ ಅಗತ್ಯವಿದೆ.",
+          "iceage_sound_and_points_b": "ಈ ಹಂತವನ್ನು ದಾಟಲು ನಿಮಗೆ `ಸ್ಕೋರ್ ಎ ಪಾಯಿಂಟ್` ಬ್ಲಾಕ್ ಮತ್ತು 'ಪ್ಲೇ \\_\\_\\_\\_ ಸೌಂಡ್\\` ಬ್ಲಾಕ್ ಎರಡೂ ಅಗತ್ಯವಿದೆ."
+        },
+        "iceage_sound_and_points_dani": {
+          "iceage_sound_and_points_a": "`ನಟ 2 ಅನ್ನು ನಟ 1 ಸ್ಪರ್ಶಿಸಿದಾಗ` ಈವೆಂಟ್‌ನ ಕೆಳಗೆ ನೀವು ಎರಡು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸುವ ಅಗತ್ಯವಿದೆ.",
+          "iceage_sound_and_points_b": "ಈ ಹಂತವನ್ನು ದಾಟಲು ನಿಮಗೆ `ಸ್ಕೋರ್ ಎ ಪಾಯಿಂಟ್` ಬ್ಲಾಕ್ ಮತ್ತು 'ಪ್ಲೇ \\_\\_\\_\\_ ಸೌಂಡ್\\` ಬ್ಲಾಕ್ ಎರಡೂ ಅಗತ್ಯವಿದೆ."
+        },
+        "iceage_throw_hearts": {
+          "iceage_throw_hearts_a": "ನೀವು ಯಾವಾಗ ಅಜ್ಜಿಯ ಮೇಲೆ ಹೃದಯವನ್ನು ಎಸೆಯಲು ಬಯಸುತ್ತೀರಿ? ಬಾಣವನ್ನು ಒತ್ತಿದಾಗ? ನೀವು ಸಿದ್ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ? ನೀವು ಅಜ್ಜಿಯ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿದಾಗ? ಆಯ್ಕೆ ನಿಮ್ಮದು!",
+          "iceage_throw_hearts_b": "ಅಜ್ಜಿಯು ಹೃದಯವನ್ನು ಪಡೆದಾಗ ಸಂತೋಷವಾಗಿರಲು, ನೀವು `ಆಕ್ಟರ್ 2 ಅವರು ಉತ್ಕ್ಷೇಪಕವನ್ನು ಸ್ಪರ್ಶಿಸಿದಾಗ~ ಈವೆಂಟ್‌ನ ಕೆಳಗೆ`ಆಕ್ಟರ್ 2 ಮೂಡ್ ಟು ಹ್ಯಾಪಿ~ ಬ್ಲಾಕ್ ಅನ್ನು ಸಂಪರ್ಕಿಸುವ ಅಗತ್ಯವಿದೆ."
+        },
+        "iceage_warn_ice_age": {
+          "iceage_warn_ice_age_a": "ಈ ಒಗಟು ಎಲ್ಲಿ ಇರಬೇಕೋ ಅಲ್ಲಿ ಪಡೆಯಲು ನೀವು ಎರಡು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಸೇರಿಸಬೇಕು.",
+          "iceage_warn_ice_age_b": "ಪ್ರೋಗ್ರಾಂ ಪ್ರಾರಂಭವಾದ ತಕ್ಷಣ ಸಂಭವಿಸುವಂತೆ ಮಾಡಲು \\`ವೆನ್ ರನ್' ಈವೆಂಟ್‌ನ ಕೆಳಗೆ ಎರಡೂ ಹೊಸ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಿ."
+        },
+        "iceage_warn_ice_age_dani": {
+          "iceage_warn_ice_age_a": "ಈ ಒಗಟು ಎಲ್ಲಿ ಇರಬೇಕೋ ಅಲ್ಲಿ ಪಡೆಯಲು ನೀವು ಎರಡು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಸೇರಿಸಬೇಕು.",
+          "iceage_warn_ice_age_b": "ಪ್ರೋಗ್ರಾಂ ಪ್ರಾರಂಭವಾದ ತಕ್ಷಣ ಸಂಭವಿಸುವಂತೆ ಮಾಡಲು \\`ವೆನ್ ರನ್' ಈವೆಂಟ್‌ನ ಕೆಳಗೆ ಎರಡೂ ಹೊಸ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಿ."
         }
       }
     }
