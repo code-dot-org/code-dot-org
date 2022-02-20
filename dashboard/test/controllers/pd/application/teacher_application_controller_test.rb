@@ -49,8 +49,8 @@ module Pd::Application
 
     test 'teachers with a reopened application have an application id and saved form data' do
       application = create :pd_teacher_application, form_data_hash: (
-        build :pd_teacher_application_hash, :reopened
-      )
+        build :pd_teacher_application_hash
+      ), status: 'reopened'
       sign_in application.user
       get :new
       assert_response :success
