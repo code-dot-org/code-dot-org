@@ -10,6 +10,7 @@ import sinon from 'sinon';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
+import experiments from '@cdo/apps/util/experiments';
 
 describe('DetailViewContents', () => {
   allowConsoleWarnings();
@@ -19,10 +20,18 @@ describe('DetailViewContents', () => {
   let server;
   before(() => {
     server = sinon.fakeServer.create();
+    experiments.setEnabled(
+      experiments.TEACHER_APPLICATION_SAVING_REOPENING,
+      true
+    );
   });
 
   after(() => {
     server.restore();
+    experiments.setEnabled(
+      experiments.TEACHER_APPLICATION_SAVING_REOPENING,
+      false
+    );
   });
 
   let context;
@@ -81,7 +90,7 @@ describe('DetailViewContents', () => {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      viewType: 'facilitator',
+      viewType: 'teacher',
       isWorkshopAdmin: false
     };
 
@@ -488,7 +497,7 @@ describe('DetailViewContents', () => {
       });
     });
 
-    it('does not appends auto email text if set to false', () => {
+    it('does not append auto email text if set to false', () => {
       detailView = mountDetailView('Teacher', {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
