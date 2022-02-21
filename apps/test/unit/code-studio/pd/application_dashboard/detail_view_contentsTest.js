@@ -90,7 +90,7 @@ describe('DetailViewContents', () => {
       canLock: true,
       applicationId: '1',
       applicationData: defaultApplicationData,
-      viewType: 'teacher',
+      viewType: defaultApplicationData.application_type.toLowerCase(),
       isWorkshopAdmin: false
     };
 
@@ -359,7 +359,7 @@ describe('DetailViewContents', () => {
 
   describe('Regional Partner View', () => {
     it('has delete button', () => {
-      const detailView = mountDetailView(applicationType, {
+      const detailView = mountDetailView('Teacher', {
         isWorkshopAdmin: false
       });
       const deleteButton = detailView.find('button#delete');
