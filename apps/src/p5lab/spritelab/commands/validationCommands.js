@@ -173,6 +173,7 @@ export const commands = {
       case 'fail':
         if (this.currentFrame() > this.validationFrames.fail) {
           // End the level.
+          console.log(this.criteria);
           return {
             state: 'failed',
             feedback: commands.reportFailure(this.criteria)
@@ -428,14 +429,15 @@ export const commands = {
   },
 
   // Returns true new sprites were created this frame.
-  newSpriteCreated() {
+  // A minimum number of new sprites can be specified, but this is optional.
+  newSpriteCreated(n = 1) {
     let result = false;
     const spriteIds = this.getSpriteIdsInUse();
-    const prevSpriteIds = this.previous.sprites;
-    console.log(spriteIds);
-    console.log(prevSpriteIds);
-    console.log(spriteIds.filter(id => !prevSpriteIds.includes(id)));
-    result = spriteIds.filter(id => !prevSpriteIds.includes(id)).length >= 1;
+    const prevSpriteIds =
+      this.previous.sprites === undefined
+        ? spriteIds
+        : this.previous.sprites.map(sprite => sprite.id);
+    result = spriteIds.filter(id => !prevSpriteIds.includes(id)).length >= n;
     return result;
   },
 
