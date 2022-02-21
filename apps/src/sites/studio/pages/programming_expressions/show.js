@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import PageContainer from '@cdo/apps/templates/codeDocs/PageContainer';
+import ProgrammingExpressionOverview from '@cdo/apps/templates/codeDocs/ProgrammingExpressionOverview';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -27,10 +28,13 @@ $(document).ready(() => {
     <Provider store={store}>
       <>
         <PageContainer
-          programmingExpression={programmingExpression}
           programmingEnvironmentTitle={programmingEnvironmentTitle}
           categoriesForNavigation={categoriesForNavigation}
-        />
+        >
+          <ProgrammingExpressionOverview
+            programmingExpression={programmingExpression}
+          />
+        </PageContainer>
         <ExpandableImageDialog />
       </>
     </Provider>,
