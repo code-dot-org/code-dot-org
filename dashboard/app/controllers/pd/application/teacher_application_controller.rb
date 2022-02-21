@@ -22,8 +22,9 @@ module Pd::Application
         where(application_year: @year).
         find_by(user: current_user)
       if @application
-        return render :submitted if @application.status != 'incomplete'
+        return render :submitted unless @application.status == 'incomplete' || @application.status == 'reopened'
         @application_id = @application.try(:id)
+        @saved_status = @application.try(:status)
         @form_data = @application.try(:form_data)
       end
 
@@ -36,6 +37,7 @@ module Pd::Application
           userId: current_user.id,
           schoolId: current_user.school_info&.school&.id,
           applicationId: @application_id,
+          savedStatus: @saved_status,
           savedFormData: @form_data
         }.to_json
       }

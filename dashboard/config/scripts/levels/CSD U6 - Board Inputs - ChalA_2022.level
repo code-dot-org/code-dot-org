@@ -54,7 +54,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# Board Inputs Challenge",
+    "long_instructions": "# Random Movement\r\n\r\nCreate an app that randomizes the location of the smiley face on the screen:\r\n- Pressing the left button on the circuit playground moves the smiley face to a new random `x` coordinate\r\n- Pressing the right button on the circuit playground moves the smiley face to a new random `y` coordinate\r\n\r\n## Do This\r\n- Create two board events to detect when the left and right buttons are pressed\r\n- When the left button is pressed: use the `getProperty` and `randomNumber` blocks to move the smiley to a random `x` coordinate\r\n- When the right button is pressed: use the `getProperty` and `randomNumber` blocks to move the smiley to a random `y` coordinate",
     "parent_level_id": 20595,
     "name_suffix": "_2021",
     "mini_rubric": "false",
@@ -70,10 +70,14 @@
       "/docs/concepts/maker-toolkit/board-events/"
     ],
     "palette_category_at_start": "Circuit",
+    "display_name": "Random Movement",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L4/challenge/A.png",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img data-canonical-image-url=\"icon://fa-smile-o\" data-image-type=\"icon\" data-object-fit=\"contain\" id=\"emoji\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 110px; top: 170px; margin: 0px;\"></div></div>",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "bubble_choice_description": "Use the buttons on the circuit playground to move an image randomly on the screen"
   },
   "game_id": 41,
   "published": true,
@@ -81,7 +85,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T03:11:26.808+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracF_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracF_2022\"},{\"changed_at\":\"2021-12-16 03:11:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T03:11:26.808+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracF_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracF_2022\"},{\"changed_at\":\"2021-12-16 03:11:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:02:59 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-18 11:06:57 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-18 11:09:07 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-18 11:10:02 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

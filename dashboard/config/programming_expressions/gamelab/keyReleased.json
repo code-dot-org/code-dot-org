@@ -1,6 +1,0 @@
-{
-  "key": "keyReleased",
-  "name": "keyReleased",
-  "category": "World",
-  "syntax": "function keyReleased() {}"
-}

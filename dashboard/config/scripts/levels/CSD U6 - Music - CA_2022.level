@@ -6,10 +6,6 @@
       "onBoardEvent": null,
       "buzzer.note": null,
       "buzzer.frequency": null,
-      "declareAssign_list_abd": null,
-      "mathRandom": null,
-      "listLength": null,
-      "subtractOperator": null,
       "buzzer.play": null,
       "buzzer.stop": null
     },
@@ -17,7 +13,7 @@
     "embed": "false",
     "long_instructions": "# Stopping the Music\r\n\r\nSometimes you need to be able to stop the music when you want, like in the code below. Duration wasn't specified so now the note plays continuously. Luckily, the `buzzer.stop()` method is here to save your ears.\r\n\r\n# Do this\r\n\r\n* Find a way to get the note to stop playing with `buzzer.stop()`.\r\n* Celebrate your win over the endless note!",
     "instructions_important": "false",
-    "start_blocks": "onBoardEvent(buttonL, \"down\", function(event) {\r\n  buzzer.note(\"A4\");\r\n});\r\n//Your code here",
+    "start_blocks": "onBoardEvent(buttonL, \"down\", function() {\r\n  buzzer.note(\"A4\");\r\n});\r\n//Your code here",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -48,7 +44,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "hide_view_data_button": "false",
+    "hide_view_data_button": "true",
     "show_debug_watch": "false",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
@@ -59,16 +55,16 @@
     "name_suffix": "_2021",
     "show_type_hints": "false",
     "thumbnail_url": "https://images.code.org/535e1d1998dd01db539be7922a14af85-image-1528757528519.27.28 PM.png",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -76,7 +72,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:54:22.694+00:00\",\"changed\":[\"cloned from \\\"CSDU6 buzzer.stop_2021\\\"\"],\"cloned_from\":\"CSDU6 buzzer.stop_2021\"},{\"changed_at\":\"2021-09-01 22:54:42 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:54:22.694+00:00\",\"changed\":[\"cloned from \\\"CSDU6 buzzer.stop_2021\\\"\"],\"cloned_from\":\"CSDU6 buzzer.stop_2021\"},{\"changed_at\":\"2021-09-01 22:54:42 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 20:14:06 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_view_data_button\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -12,7 +12,7 @@ export default class ProgressLessonContent extends React.Component {
     description: PropTypes.string,
     levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
     disabled: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string
+    selectedSectionId: PropTypes.number
   };
 
   render() {

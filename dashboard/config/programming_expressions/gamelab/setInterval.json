@@ -2,6 +2,7 @@
   "key": "setInterval",
   "name": "setInterval",
   "category": "Control",
+  "category_key": "control",
   "palette_params": [
     {
       "name": "callback"

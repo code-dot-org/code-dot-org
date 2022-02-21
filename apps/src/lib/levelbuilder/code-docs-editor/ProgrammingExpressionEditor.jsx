@@ -186,9 +186,9 @@ export default function ProgrammingExpressionEditor({
         <label>
           Category
           <select
-            value={programmingExpression.category}
+            value={programmingExpression.categoryKey}
             onChange={e =>
-              updateProgrammingExpression('category', e.target.value)
+              updateProgrammingExpression('categoryKey', e.target.value)
             }
             style={styles.selectInput}
           >
@@ -196,8 +196,8 @@ export default function ProgrammingExpressionEditor({
               (None)
             </option>
             {environmentCategories.map(category => (
-              <option key={category} value={category}>
-                {category}
+              <option key={category.key} value={category.key}>
+                {category.name}
               </option>
             ))}
           </select>
@@ -285,7 +285,7 @@ const programmingExpressionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  category: PropTypes.string,
+  categoryKey: PropTypes.string,
   shortDescription: PropTypes.string,
   externalDocumentation: PropTypes.string,
   content: PropTypes.string,
@@ -298,7 +298,7 @@ const programmingExpressionShape = PropTypes.shape({
 
 ProgrammingExpressionEditor.propTypes = {
   initialProgrammingExpression: programmingExpressionShape.isRequired,
-  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  environmentCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
   videoOptions: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 

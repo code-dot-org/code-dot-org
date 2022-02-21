@@ -31,6 +31,12 @@ social:
 <a id="recordings"></a>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney12 }}
+  <h3><strong>Exploring the World of Virtual Reality</strong></h3>
+  <p>How can virtual reality experiences reinvent how people work, play, and communicate?  Find out as we talk to a technical program manager at Meta Quest.</p>
+</div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney11 }}
   <h3><strong>Behind the scenes at Code.org</strong></h3>
   <p>Hear about the career path that led a non-computer science major to become a Product Manager at Code.org and how she creates fun tools used in classrooms around the world.</p>
@@ -42,13 +48,13 @@ social:
   <p>Hear about the career path that led two software engineers to Spotify and how each plays a different role in helping to bring music to our lives.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney3 }}
   <h3><strong>Building models of the universe</strong></h3>
   <p>Hear from NASA scientists Kim Arcand and Rutu Das about their career journeys and how they use data science to build 3D models of the universe.</p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/09veMf1354wOxNcJxSMPqmGgf6qh3vTdvIaSGHTpeyik4_59etRQXEIuPbAQwSzKiYAIMkXpqSRGHO_L.ym6IZsLcInwcxQAG" target="_blank">
@@ -64,13 +70,13 @@ social:
   <p>Learn how Eva Moscat and Anna Elzer are helping build software for robots and designing learning experiences that inspire the next generation of technologists.</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney8 }}
   <h3><strong>Using Roblox to empower students</strong></h3>
   <p>Learn how Roblox designer Genevieve Johnson uses the platform to empower students to pursue careers as entrepreneurs, engineers, and designers.</p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney9 }}
@@ -84,6 +90,8 @@ social:
   <p>Learn about how solutions architect Olawale Oladehin is helping to build the Internet of Things - and hosting Twitch streams!</p>
 </div>
 
+<div style="clear: both"></div>
+
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   <a href="https://code.zoom.us/rec/play/kIvRYVMSbjTlS0R135aJipNeBxbg6Vv1taAVDeVb3IVoBXwRMZuQjhuRFa-VNSg5Wy8UVJF4fcZ15BFV.p4zxH_sHQW5GLwBU" target="_blank">
     <img src="/images/csjourneys/ilm-yt.png" style="max-width:100%" alt="Making Star Wars click to view">
@@ -91,8 +99,6 @@ social:
   <p>Hear how Cristiane Maia and Ini Oladosu use technology to help make movies and TV shows, including the many worlds of Star Wars.</p>
   <p><i>Due to legal constraints, we are only able to offer this recording on demand on Zoom. You will need to register using your name and email address to access.</i></p>
 </div>
-
-<div style="clear: both"></div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney4 }}

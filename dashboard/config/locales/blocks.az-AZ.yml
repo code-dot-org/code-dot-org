@@ -50,7 +50,7 @@ az:
             '"measures"': Ölçülər
             '"seconds"': saniyələr
       Dancelab_changeColorBy:
-        text: "[variables] bu [variables] dəyiş"
+        text: change {COLOR} {METHOD} by {AMOUNT}
         options:
           METHOD:
             '"hue"': Rəng
@@ -1324,7 +1324,9 @@ az:
       gamelab_whileUpArrow:
         text: yuxarı ox basılarkən
       gamelab_withPercentChance:
-        text: əgər, ehtimal
+        text: |-
+          if {NUM}% chance
+          {STATEMENT}
       gamelab_withPercentChanceDropdown:
         options:
           NUM:

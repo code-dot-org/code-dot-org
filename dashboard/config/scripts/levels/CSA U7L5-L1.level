@@ -20,18 +20,16 @@
         "isVisible": true
       }
     },
-    "contained_level_names": [
-      "CSA U7L5-L1 Predict"
-    ],
     "encrypted_examples": [
 
-    ]
+    ],
+    "long_instructions": "##Scenario 1\r\nExplore this example to see what happens when a class defines a `private` method and other classes attempt to access it. Take notes on what happens after you change the method access modifier from `public` to `private`.\r\n\r\n1. Predict the output of this program and what you think will happen if `hasAccess()` is changed to `private`.\r\n\r\n2. Run the program to see if the `public` method `hasAccess()` in `ClassX` is accessible to `ClassY`.\r\n\r\n3. In `ClassX.java`, change the method `hasAccess()` from `public` to `private`.\r\n\r\n4. Run the program again to see what happens when `ClassY` attempts to access the `private` method `hasAccess()` in `ClassX`."
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-12-05T20:32:13.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "audit_log": "[{\"changed_at\":\"2021-12-05 20:32:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 20:34:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 20:35:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-05 20:32:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 20:34:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-05 20:35:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-16 19:01:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-16 19:02:41 +0000\",\"changed\":[\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -128,11 +128,20 @@ class CourseOffering < ApplicationRecord
   def summarize_for_assignment_dropdown(user, locale_code)
     {
       id: id,
-      display_name: display_name,
+      display_name: localized_display_name,
       category: category,
       is_featured: is_featured?,
       course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
     }
+  end
+
+  def localized_display_name
+    localized_name = I18n.t(
+      key,
+      scope: [:data, :course_offerings],
+      default: nil
+    )
+    localized_name || display_name
   end
 
   def summarize_for_edit

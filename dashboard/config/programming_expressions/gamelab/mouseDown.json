@@ -2,6 +2,7 @@
   "key": "mouseDown",
   "name": "mouseDown",
   "category": "World",
+  "category_key": "world",
   "palette_params": [
     {
       "name": "button"

@@ -20,7 +20,7 @@ class Callout < ApplicationRecord
   CSV_HEADERS = {
     element_id: 'element_id',
     localization_key: 'localization_key',
-    script_id: 'script_id',
+    script_name: 'script_name',
     level_num: 'level_num',
     game_name: 'game_name',
     qtip_config: 'qtip_config'
@@ -39,20 +39,15 @@ class Callout < ApplicationRecord
   end
 
   def self.first_or_create_from_tsv_row!(row_data)
-    id_or_name = row_data[CSV_HEADERS[:script_id]]
+    name = row_data[CSV_HEADERS[:script_name]]
 
-    unless id_or_name.to_i != 0
-      script_record = Script.where({'name' => id_or_name})
-      id_or_name = script_record.first && script_record.first.id
-    end
-
-    unless id_or_name
-      puts "Error finding id_or_name: #{id_or_name}"
+    unless name
+      puts "Error finding name: #{name}"
       return nil
     end
 
     script_level_search_conditions = {
-      'scripts.id' => id_or_name,
+      'scripts.name' => name,
       'levels.level_num' => row_data[CSV_HEADERS[:level_num]],
       'games.name' => row_data[CSV_HEADERS[:game_name]]
     }

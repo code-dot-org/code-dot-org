@@ -1,7 +1,0 @@
-{
-  "key": "startFollowing",
-  "name": "startFollowing",
-  "category": "Experimental",
-  "block_name": "gamelab_startFollowing",
-  "syntax": "startFollowing"
-}

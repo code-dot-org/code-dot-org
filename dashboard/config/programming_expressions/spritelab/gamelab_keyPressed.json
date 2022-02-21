@@ -2,6 +2,7 @@
   "key": "gamelab_keyPressed",
   "name": "keyPressed",
   "category": "Events",
+  "category_key": "events",
   "block_name": "gamelab_keyPressed",
   "syntax": "keyPressed"
 }

@@ -1,0 +1,12 @@
+name 'CSA U1L3-L2_2022'
+title 'Check for Understanding'
+
+wrong 'wrong answer'
+right 'right answer'
+wrong 'wrong answer'
+wrong 'wrong answer'
+wrong 'wrong answer'
+
+markdown <<MARKDOWN
+Which of the following are attributes and behaviors that a `Student`(#e7e8ea) object might have?
+MARKDOWN

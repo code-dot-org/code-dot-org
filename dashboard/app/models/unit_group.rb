@@ -28,6 +28,7 @@ class UnitGroup < ApplicationRecord
   include SharedCourseConstants
   include Curriculum::CourseTypes
   include Curriculum::AssignableCourse
+  include Rails.application.routes.url_helpers
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
@@ -390,7 +391,8 @@ class UnitGroup < ApplicationRecord
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
-      course_path: link
+      course_path: link,
+      course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
     }
   end
 
