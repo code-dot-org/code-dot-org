@@ -70,21 +70,20 @@
       "/docs/concepts/maker-toolkit/board-events/"
     ],
     "palette_category_at_start": "Circuit",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "display_name": "LED Blinker",
     "bubble_choice_description": "Create an app that simulates a blinker on a car or bicycle",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L4/practice/C.png"
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L4/practice/C.png",
+    "start_blocks": "//Add code for two onBoardEvent() blocks for the toggleSwitch\r\n//Add code so the close event will make the LED blink every 500 miliseconds\r\n\r\n\r\n\r\n//Add code so the open event will stop the LED from blinking\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "preload_asset_list": null
   },
   "game_id": 41,
-  "published": true,
   "created_at": "2021-12-16T03:10:41.000Z",
   "level_num": "custom",
   "user_id": 1,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T03:10:41.611+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracB_2022\"},{\"changed_at\":\"2021-12-16 03:10:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 22:32:35 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:00:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T03:10:41.611+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracB_2022\"},{\"changed_at\":\"2021-12-16 03:10:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 22:32:35 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:00:44 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-21 07:25:31 +0000\",\"changed\":[],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
   <blocks/>
 </Applab>
