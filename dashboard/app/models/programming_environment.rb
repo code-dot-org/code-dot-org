@@ -86,6 +86,14 @@ class ProgrammingEnvironment < ApplicationRecord
     }
   end
 
+  def summarize_for_show
+    {
+      title: title,
+      description: description,
+      categories: categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+    }
+  end
+
   def summarize_for_index
     {
       name: name,
