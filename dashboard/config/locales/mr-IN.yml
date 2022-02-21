@@ -14,6 +14,8 @@ mr:
     title_student: संगणक विज्ञान शिकुया
   unplugged_activity: 'अनप्लग्ड कृती '
   continue: सुरू ठेवा
+  auth:
+    clever: क्लेव्हर
   signup_form:
     user_type: तुम्ही विद्यार्थी आहात का शिक्षक?
     user_type_button: खात्याचा प्रकार अपडेट करा
@@ -48,6 +50,10 @@ mr:
     submit: साइन इन करा
   signinsection:
     login: साइन इन करा
+  section:
+    type:
+      google_classroom: गुगल क्लासरूम
+      clever: क्लेव्हर
   follower:
     already_exists: तुम्ही आधीच %{section_name} या विभागात सहभागी झाला आहात.
     error:
@@ -69,6 +75,7 @@ mr:
       project_gallery: प्रकल्प
       help_support: सहाय्य आणि मदत
       report_bug: समस्या रिपोर्ट करा
+      professional_learning: व्यावसायिक अध्ययन
       educate_hoc: अवर ऑफ कोड
       about: या बद्दल
       legal_privacy: गोपनीयता धोरण
@@ -89,6 +96,7 @@ mr:
       starwars: स्टार वॉर्स
       starwarsblocks: स्टार वॉर्स (ब्लॉक्स)
       starwarsblocks_hour: स्टार वॉर्स (ब्लॉक्स)
+      weblab: वेब लॅब
   teacher:
     panel:
       student: विध्यार्थी
@@ -203,7 +211,9 @@ mr:
   view_teacher_guide: शिक्षक मार्गदर्शक पहा
   pd:
     form_labels:
+      school_city: शाळेचे शहर
       school_city_district: शाळा शहर/जिल्हा
+      colombian_school_city: शाळेचे शहर
     form_entries:
       subjects:
         cs: संगणक विज्ञान

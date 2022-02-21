@@ -151,6 +151,8 @@ mr:
               name: आर्टीस्ट
             Text Compression:
               name: टेक्स्ट कॉम्प्रेशन
+            Web Lab:
+              name: वेब लॅब
         cspfacilitator:
           lessons:
             Text Compression Lesson:
@@ -593,6 +595,8 @@ mr:
           lessons:
             Lists:
               name: याद्या
+            Map:
+              name: नकाशा
         coursee-ramp:
           lessons:
             Conditionals:
@@ -5081,6 +5085,8 @@ mr:
               name: कंडीशनल्स
             lesson-16:
               name: डीबगिंग
+            lesson-17:
+              name: प्रोजेक्टसाठी प्रेरणा
             lesson-19:
               name: डीबगिंग
         csa1-2022-exemplars:
