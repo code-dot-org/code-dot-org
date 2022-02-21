@@ -520,6 +520,8 @@ describe('entry tests', () => {
     'lessons/show': './src/sites/studio/pages/lessons/show.js',
     'lessons/student_lesson_plan':
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
+    'programming_environments/index':
+      './src/sites/studio/pages/programming_environments/index.js',
     'programming_environments/show':
       './src/sites/studio/pages/programming_environments/show.js',
     'programming_expressions/show':

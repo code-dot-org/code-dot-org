@@ -64,7 +64,7 @@ MiniView.propTypes = {
   hasGroups: PropTypes.bool.isRequired,
   scriptName: PropTypes.string.isRequired,
   hasFullProgress: PropTypes.bool.isRequired,
-  selectedSectionId: PropTypes.string
+  selectedSectionId: PropTypes.number
 };
 
 const styles = {
@@ -85,5 +85,5 @@ export default connect(state => ({
   scriptName: state.progress.scriptName,
   hasFullProgress: state.progress.hasFullProgress,
   hasGroups: hasGroups(state.progress),
-  selectedSectionId: state.teacherSections.selectedSectionId.toString()
+  selectedSectionId: state.teacherSections.selectedSectionId
 }))(MiniView);
