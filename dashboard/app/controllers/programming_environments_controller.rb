@@ -68,6 +68,7 @@ class ProgrammingEnvironmentsController < ApplicationController
       :description,
       :editor_type,
       :image_url,
+      :project_url,
       categories: [:id, :name, :color]
     )
     transformed_params
