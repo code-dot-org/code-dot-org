@@ -11264,19 +11264,19 @@ es-ES:
 
           > ¡Eso es todo! Siéntete libre de volver a este nivel en cualquier momento si necesitas una actualización sobre cómo funciona esta plataforma.
       OPD-K5 Celebrate_dani:
-        markdown: |
-          # Pasos siguientes > ¡Celebra!
+        markdown: |-
+          Próximos Pasos > ¡Celebración!
 
-          Felicitaciones por completar este curso en línea de desarrollo profesional. Si has completado todos los niveles en esta capacitación, puedes descargar e imprimir un certificado de logro ahora completando los siguientes pasos:
+          Enhorabuena por haber completado este curso de desarrollo profesional en línea. Siempre que hayas completado todos los niveles de esta formación, puedes descargar e imprimir ahora un certificado de aprovechamiento completando los siguientes pasos:
 
-          1. Visita [este enlace] (https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
-          2. Ingresa tu nombre en el campo/cuadro de entrada.
-          3. Haz clic en Imprimir certificados.
-          4. Haz clic derecho en la imagen del certificado y elige "Guardar imagen como..." para que puedas descargarlo en tu computadora.
+          1. Visita [este enlace](https://code.org/certificates?course=Teaching%20Computer%20Science%20Fundamentals).
+          2. Introduce tu nombre en el campo/casilla de entrada.
+          3. Pulsa en Imprimir Certificados.
+          4. Pulsa con el botón derecho del ratón sobre la imagen del certificado y elige "Guardar imagen como..." para poder descargarlo en tu ordenador.
 
-          Y no lo olvides... ¡puedes regresar a este curso en línea en cualquier momento para revisar tu aprendizaje, acceder a enlaces o recursos, o simplemente refrescar tu memoria!
+          Y no lo olvides... ¡puedes volver a este curso en línea en cualquier momento para repasar lo aprendido, acceder a enlaces o recursos, o simplemente refrescar la memoria!
 
-          ¡Gracias por tu participación! ¡Estamos ansiosos por escuchar cómo implementas informática y Code Studio en tu salón de clases!
+          ¡Gracias por tu participación! ¡Estamos deseando saber cómo aplicas la Informática y Code Studio en tu aula!
       OPD-K5 CongratsFinal_dani:
         markdown: |
           # ¡Felicitaciones!
@@ -11517,13 +11517,13 @@ es-ES:
           sumergiéndote más profundamente en la Etapa 1.\n"
       OPD-K5 PostSurvey_dani:
         markdown: |+
-          # Primeros pasos: realiza la encuesta posterior
+          # Para empezar - Realiza la encuesta final
 
-          ¡Gracias por utilizar el curso de desarrollo profesional en línea de Enseñanza de los Fundamentos de las Ciencias de la Computación!
+          ¡Muchas gracias por utilizar el curso de desarrollo profesional en línea Enseñanza de los Fundamentos de la Informática!
 
-          Ya sea que hayas terminado o no todo el curso, queremos escuchar tus comentarios. ¡Envía esta breve encuesta para ayudarnos a mejorar el curso en el futuro!
+          Tanto si has terminado el curso como si no, queremos conocer tu opinión. ¡Por favor, envía esta breve encuesta para ayudarnos a mejorar el curso en el futuro!
 
-          <a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/90557778075168?user_id=<user_id/>"> Realiza la encuesta posterior</a>
+          <a class="btn btn-large btn-primary submitButton" href="https://form.jotform.com/90557778075168?user_id=<user_id/>"> Realiza la encuesta final</a>
 
       OPD-K5 PreSurvey_dani:
         markdown: |+
@@ -12666,6 +12666,39 @@ es-ES:
           Además de los sitios recomendados para cada tema, considera la posibilidad de mirar hacia los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) para ver los productos que aún no han salido al mercado.
 
 
+        teacher_markdown: |+
+          A continuación, se muestran algunos sitios recomendados para que los estudiantes comiencen su investigación.  Aunque estos sitios son generalmente apropiados para la escuela, el contenido dentro de ellos cambia con frecuencia, por lo que **sugerimos encarecidamente que compruebes cada sitio para ver si hay contenido inapropiado antes de compartirlo con los estudiantes**.
+
+          ### Tecnología Portable
+
+          * [Warable.com](https://www.wareable.com/)
+
+          ### Salud y Seguridad
+
+          * [Sanidad Moderna](http://www.modernhealthcare.com/section/medical-devices)
+          * [Medstartr](http://www.medstartr.com/)
+
+          ### Agricultura
+
+          * [Instituto Nacional de Alimentación y Agricultura](https://nifa.usda.gov/topic/agriculture-technology)
+          * [Noticias del Sector Agrícola](http://www.farmindustrynews.com/technology)
+
+          ### Fabricación
+
+          * [Semana de la Industria](https://www.industryweek.com/technology-and-iiot)
+          * [Impresión 3D](https://3dprinting.com/)
+
+          ### Arte y Diseño
+
+          * [ArtFab](http://artfab.art.cmu.edu/)
+          * [Tutoriales](http://www.instructables.com/tag/type-id/category-technology/)
+
+          ### Casa Inteligente
+
+          * [CNet](https://www.cnet.com/smart-home/)
+          * [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)
+
+
       Design a Screen for your App_2021:
         markdown: |-
           #Montaje de la aplicación
@@ -12717,3 +12750,92 @@ es-ES:
         title: "¡Encuesta rápida de CS Discoveries!"
       csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
         title: "¡Encuesta rápida de CS Discoveries!"
+      OPD-K5 CS Courses_dani:
+        markdown: "#Planificación > Empezar en Code.org\n\n\n## Paso 1: Elige un curso\nTodos
+          nuestros cursos, desde los de preescolar hasta los de secundaria, aparecen
+          en nuestro **[catálogo de cursos](https://studio.code.org/courses)**. Para
+          encontrar las lecciones de Fundamentos de Informática que has estado practicando,
+          ve a nuestra **[página de primaria](https://code.org/educate/curriculum/elementary-school)**
+          y desplázate hacia abajo hasta la sección \"Cursos\". Todos nuestros cursos
+          están disponibles sin coste alguno. Habla con los colegas de tu escuela
+          para determinar cómo se puede integrar el plan de estudios del curso con
+          una variedad de asignaturas.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
+          Paso 2: Configura tu sección de aula\nConfigura una sección del aula para
+          ver el progreso de tus alumnos, imprimir tarjetas de acceso para tus alumnos,
+          gestionar sus cuentas e imprimir certificados que puedan llevar a casa cuando
+          terminen el curso. Pulsa en este enlace para **[ver un breve vídeo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
+          que muestra cómo configurar tu primera clase de informática en Code.org.
+          También puedes encontrar los pasos en **[este artículo de apoyo](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
+          Paso 3: Asigna el curso a tu sección\nPulsa en el curso que estás impartiendo
+          (deberías ver una pantalla parecida a la de abajo). A continuación, puedes
+          hacer clic en \"Asignar curso\" para asignarlo a una de tus secciones. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
+          Paso 4: ¡Empieza a enseñar! \nTodo lo que necesitas es una lección para
+          llevar los conceptos de la informática a tu clase. Una vez que veas el entusiasmo
+          de tus alumnos por la informática, ve más allá con planes de estudio diarios
+          para guiar a tus alumnos, actividades sin conexión que puedes hacer sin
+          ordenador y foros para conectar con otros profesores.\n\n\n\n\n\n\n"
+      OPD-K5 Stage5Go_dani:
+        markdown: "# Condicionales > Lecciones sin Conexión\n\n\n**1. Repasar \"[Condicionales
+          con Cartas](https://curriculum.code.org/csf-18/coursed/13/)\" Plan de la
+          lección del curso D:** \n<br/>\nEl curso D está destinado a los alumnos
+          del tercer grado. Esta misma lección aparece también en los cursos E y F.
+          Las condicionales no se tratan en los cursos A, B o C.\n<br/><br/>\n\n**2.
+          Ver el vídeo del alumno: Condicionales con Cartas**\n<br/>\nEste es un vídeo
+          que puedes mostrar a tus alumnos para ayudarles a introducir el concepto
+          de condicionales y dar comienzo a la lección sin conexión.\n[![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41
+          PM.png)](https://www.youtube.com/watch?v=2m2Rn9VxHfU)\n<br/>\n[¿No puedes
+          ver el vídeo? Haz clic aquí](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)\n\n<br/><br/>\n**3.
+          Observa cómo un profesor explica esta lección: \"Condicionales con Cartas\"**.\n<br/>\nEste
+          vídeo pretende ser un apoyo para tí, como profesor, si estás buscando ideas
+          sobre cómo impartir esta lección. \n\n\n[![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37
+          PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)\n\n[¿No puedes ver
+          el vídeo? Haz clic aquí](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)\n\n<br/><br/>\n\n---\n\n>
+          ## Reflexiona\n> ¿Cómo explicarías el concepto de condicional a tus alumnos?
+          Comparte tus ideas en [nuestro foro](http://forum.code.org/t/teaching-conditionals/406/1).\n\n>
+          <a href=\"http://forum.code.org/t/teaching-conditionals/406/1\" target=\"blank\"
+          rel=\"noopener noreferrer\"><button class=\"plc\">Comentar en los foros
+          >></button></a>\n\nDespués de comentar en el foro, vuelve aquí y haz clic
+          abajo para pasar a la siguiente fase.\n"
+      OPD-K5 Stage9Start_dani:
+        markdown: "Planificación > Exploración de los Recursos del Profesorado\n\nA
+          lo largo de las Etapas 4-8, echaste un vistazo a algunos de los recursos
+          de aprendizaje \"sin conexión\" y en línea disponibles para Fundamentos
+          de Informática, ya que se alineaban con los conceptos de la informática
+          que estabas aprendiendo. \n\nAhora que ya sabes cómo codificar y cómo enseñar
+          Informática, es el momento de empezar a planificar tu enseñanza. En esta
+          etapa, recorreremos otras áreas de la plataforma de Code.org y el **[Panel
+          del Profesor](http://studio.code.org/)**. \n\nAl completar la Etapa 10,
+          podrás:\n\n- Explorar los recursos disponibles para los profesores\n- Explorar
+          el **[Panel del Profesor](http://studio.code.org/)** de Code.org\n- Planificar
+          cómo podrías integrar la Informática en tu centro.\n\n***\n\nA continuación
+          se muestra una captura de pantalla del panel de control para profesores.
+          Deberás iniciar sesión en tu cuenta de profesor de Code.org para poder verlo;
+          una vez que hayas iniciado sesión, debería aparecer la pantalla por defecto
+          que ves en el sitio web de Code.org. Si no tienes una cuenta de profesor,
+          puedes **[registrarte aquí para obtener una](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
+      OPD-K5 Using CS_dani:
+        markdown: "# Planificación > Preparación de una lección de Code Studio\n\nVeamos
+          cómo funciona Code Studio para tí y tus alumnos en un entorno de clase.\n\n##
+          Paso 1: Elige un curso\nConsulta nuestra [página de escuela primaria](https://code.org/educate/curriculum/elementary-school)
+          y encuentra los planes de estudio y los cursos completos de nuestras lecciones
+          de Fundamentos de Informática A-F. O bien, si estás interesado en nuestros
+          cursos de secundaria o bachillerato, \nencontrarás cursos para todos los
+          niveles, desde preescolares hasta estudiantes de último año de secundaria,
+          y todos los demás. Todos nuestros cursos son gratuitos. Habla con los colegas
+          de tu escuela para determinar cómo se puede integrar el plan de estudios
+          del curso con una variedad de asignaturas. \n \n## Paso 2: Configura tu
+          sección de aula\nConfigura una sección de aula para ver el progreso de tus
+          alumnos, imprimir tarjetas de acceso para tus alumnos, gestionar sus cuentas
+          e imprimir certificados que puedan llevar a casa cuando terminen el curso.
+          Haz clic en este enlace para [ver un breve vídeo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
+          que muestra cómo configurar tu primera clase de informática en Code.org.
+          También puedes encontrar los pasos en [este artículo de apoyo](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\n##
+          Paso 3: Asigna el curso a tu sección\nHaz clic en el curso que estás enseñando
+          (deberías ver una pantalla como la que se muestra abajo). A continuación,
+          puedes hacer clic en \"Asignar curso\" para asignar ese curso a una de tus
+          secciones. \n\n## Paso 4: ¡Empieza a enseñar! \nTodo lo que necesitas es
+          una lección para llevar los conceptos de la informática a tu clase. Una
+          vez que veas el entusiasmo de tus alumnos por la informática, ve más allá
+          con planes de lecciones diarias para guiar a tus alumnos, actividades sin
+          conexión que puedes hacer sin ordenador y foros para conectar con otros
+          profesores.\n\n\n\n"
