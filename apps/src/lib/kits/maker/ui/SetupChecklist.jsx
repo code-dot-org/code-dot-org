@@ -114,14 +114,23 @@ export default class SetupChecklist extends Component {
       )
 
       // Can we initialize components successfully?
-      .then(() =>
-        this.detectStep(STATUS_BOARD_COMPONENTS, () =>
-          setupChecker.detectComponentsInitialize()
-        )
-      )
+      .then(() => {
+        if (this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT) {
+          return this.detectStep(STATUS_BOARD_COMPONENTS, () =>
+            setupChecker.detectComponentsInitialize()
+          );
+        }
+        return Promise.resolve();
+      })
 
       // Everything looks good, let's par-tay!
-      .then(() => this.thumb(STATUS_BOARD_COMPONENTS))
+      .then(() =>
+        this.thumb(
+          this.state.boardTypeDetected === BOARD_TYPE.MICROBIT
+            ? STATUS_BOARD_CONNECT
+            : STATUS_BOARD_COMPONENTS
+        )
+      )
       .then(() => setupChecker.celebrate())
       .then(() => this.succeed(STATUS_BOARD_COMPONENTS))
       .then(() => trackEvent('MakerSetup', 'ConnectionSuccess'))
@@ -324,15 +333,17 @@ export default class SetupChecklist extends Component {
             {!linuxPermissionError && this.installFirmwareSketch()}
             {this.contactSupport()}
           </ValidationStep>
-          <ValidationStep
-            stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
-            stepName={i18n.validationStepBoardComponentsUsable()}
-          >
-            {applabI18n.makerSetupVerifyComponents()}
-            <br />
-            {this.installFirmwareSketch()}
-            {this.contactSupport()}
-          </ValidationStep>
+          {this.state.boardTypeDetected !== BOARD_TYPE.MICROBIT && (
+            <ValidationStep
+              stepStatus={this.state[STATUS_BOARD_COMPONENTS]}
+              stepName={i18n.validationStepBoardComponentsUsable()}
+            >
+              {applabI18n.makerSetupVerifyComponents()}
+              <br />
+              {this.installFirmwareSketch()}
+              {this.contactSupport()}
+            </ValidationStep>
+          )}
         </div>
         <div>
           <h2>{i18n.support()}</h2>
