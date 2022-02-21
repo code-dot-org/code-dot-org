@@ -358,6 +358,16 @@ describe('DetailViewContents', () => {
         expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
         expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
       });
+
+      it(`cannot make status incomplete from dropdown in ${applicationType}`, () => {
+        const detailView = mountDetailView(applicationType);
+        expect(
+          detailView
+            .find('#DetailViewHeader select')
+            .find('option')
+            .find('[value="incomplete"]')
+        ).to.have.lengthOf(0);
+      });
     });
   }
 
