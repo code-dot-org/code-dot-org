@@ -10,13 +10,14 @@ class ChannelTokenTest < ActiveSupport::TestCase
     @level = create :level
     create :script_level, script: @script, levels: [@level]
     @fake_ip = '127.0.0.1'
+    @storage_id = fake_storage_id_for_user_id(nil)
   end
 
   test 'find_or_create_channel_token sets storage_id and storage_app_id' do
     channel_token = ChannelToken.find_or_create_channel_token(
       @level,
       @fake_ip,
-      get_storage_id,
+      @storage_id,
       @script.id
     )
 
@@ -27,13 +28,12 @@ class ChannelTokenTest < ActiveSupport::TestCase
 
   test 'find_or_create_channel_token returns the channel_token if one exists' do
     level = create :level
-    storage_id = get_storage_id
-    expected_channel_token = create :channel_token, level: level, storage_id: storage_id
+    expected_channel_token = create :channel_token, level: level, storage_id: @storage_id
 
     channel_token = ChannelToken.find_or_create_channel_token(
       level,
       @fake_ip,
-      storage_id,
+      @storage_id,
       @script.id
     )
 
@@ -41,14 +41,13 @@ class ChannelTokenTest < ActiveSupport::TestCase
   end
 
   test 'find_or_create_channel_token returns a channel_token for the script_id if one exists' do
-    storage_id = get_storage_id
-    create :channel_token, level: @level, storage_id: storage_id, script_id: nil
-    expected_channel_token = create :channel_token, level: @level, storage_id: storage_id, script_id: @script.id
+    create :channel_token, level: @level, storage_id: @storage_id, script_id: nil
+    expected_channel_token = create :channel_token, level: @level, storage_id: @storage_id, script_id: @script.id
 
     channel_token = ChannelToken.find_or_create_channel_token(
       @level,
       @fake_ip,
-      storage_id,
+      @storage_id,
       @script.id
     )
 
@@ -60,7 +59,7 @@ class ChannelTokenTest < ActiveSupport::TestCase
     channel_token = ChannelToken.find_or_create_channel_token(
       level,
       @fake_ip,
-      get_storage_id,
+      @storage_id,
       @script.id
     )
 

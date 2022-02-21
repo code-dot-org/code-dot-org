@@ -2,5 +2,6 @@
   "key": "intensity",
   "name": "intensity",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "intensity"
 }

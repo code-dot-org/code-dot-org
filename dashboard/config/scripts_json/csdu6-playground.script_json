@@ -5,14 +5,16 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
+      "is_course": true,
       "is_maker_unit": true,
       "is_migrated": true,
       "show_calendar": true,
+      "version_year": "2022",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2022-02-09 19:05:50 UTC",
+    "family_name": "csd-playground",
+    "serialized_at": "2022-02-14 17:34:16 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1726,7 +1728,8 @@
       "key": "0201b1e4-16ad-4b16-8685-52ec4bfa56e0",
       "position": 4,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "0201b1e4-16ad-4b16-8685-52ec4bfa56e0",
@@ -1784,7 +1787,8 @@
       "key": "fd295258-7af1-4665-a924-fc5f0923c2f6",
       "position": 3,
       "properties": {
-        "name": "Practice"
+        "name": "Practice",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "fd295258-7af1-4665-a924-fc5f0923c2f6",
@@ -1878,7 +1882,7 @@
       "key": "a5422e27-415a-40b3-8367-9f6c8612ba65",
       "position": 1,
       "properties": {
-        "description": "[`color(color)`(#f78183)](/docs/applab/color/)\n\n[`getProperty(id, property)`(#fff176)](/docs/applab/getProperty/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`onEvent()`(#fff176)](/docs/applab/onEvent/)\n\n[`setProperty()`(#fff176)](/docs/applab/setProperty/)\n\n[`setText()`(#fff176)](/docs/applab/setText/)\n\n[`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/)\n\n[`led.blink(interval)`(#f78183)](/docs/applab/led.blink/)\n\n[`var x = __;`(#BB77C7)](/docs/applab/declareAssign_x/)\n\n[`if statement`(#64B5F6)](/docs/applab/ifBlock/)\n\n[`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/)\n\n[`==`(#FFB74D)](/docs/applab/equalityOperator/)\n\n[`soundSensor.value`(#f78183)](/docs/applab/soundSensor.value/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`soundSensor`(#f78183)](/docs/applab/soundSensor/)\n\n[`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/)\n\n[`tempSensor.F`(#f78183)](/docs/applab/tempSensor.F/)\n\n[`buzzer.note(note, duration)`(#f78183)](/docs/applab/buzzer.note/)\n\n[`buzzer.playNotes(notes, tempo)`(#f78183)](/docs/applab/buzzer.playNotes/)\n\n[`myFunction()`(#68D995)](/docs/applab/callMyFunction/)\n\n[`myFunction(n)`(#68D995)](/docs/applab/callMyFunction_n/)",
+        "description": "[`color(color)`(#f78183)](/docs/applab/color/)\n\n[`getProperty(id, property)`(#fff176)](/docs/applab/getProperty/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`onEvent()`(#fff176)](/docs/applab/onEvent/)\n\n[`setProperty()`(#fff176)](/docs/applab/setProperty/)\n\n[`setText()`(#fff176)](/docs/applab/setText/)\n\n[`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/)\n\n[`led.blink(interval)`(#f78183)](/docs/applab/led.blink/)\n\n[`var x = __;`(#BB77C7)](/docs/applab/declareAssign_x/)\n\n[`if statement`(#64B5F6)](/docs/applab/ifBlock/)\n\n[`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/)\n\n[`==`(#FFB74D)](/docs/applab/equalityOperator/)\n\n[`soundSensor.value`(#f78183)](/docs/applab/soundSensor.value/)\n\n[`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/)\n\n[`soundSensor`(#f78183)](/docs/applab/soundSensor/)\n\n[`soundSensor.setScale()`(#f78183)](/docs/applab/soundSensor.setScale/)\n\n[`tempSensor.F`(#f78183)](/docs/applab/tempSensor.F/)\n\n[`buzzer.note(note, duration)`(#f78183)](/docs/applab/buzzer.note/)\n\n[`buzzer.playNotes(notes, tempo)`(#f78183)](/docs/applab/buzzer.playNotes/)\n\n[`myFunction()`(#68D995)](/docs/applab/callMyFunction/)\n\n[`myFunction(n)`(#68D995)](/docs/applab/callMyFunction_n/)\n\n[`createButton()`(#4dd0e1)](/docs/applab/createButton/)",
         "progression_name": "App Lab Template"
       },
       "seeding_key": {
@@ -5114,6 +5118,31 @@
       "chapter": 129,
       "position": 6,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - Prac_2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Physical Output - Prac_2022"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "0201b1e4-16ad-4b16-8685-52ec4bfa56e0"
+      },
+      "level_keys": [
+        "CSD U6 - Physical Output - Prac_2022"
+      ]
+    },
+    {
+      "chapter": 130,
+      "position": 7,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -5136,7 +5165,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5161,7 +5190,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5186,11 +5215,14 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB2_2022"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5208,8 +5240,83 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB3_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Physical Input - SB3_2022"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "df9a9565-879e-49cd-ab93-6400628d52e2"
+      },
+      "level_keys": [
+        "CSD U6 - Physical Input - SB3_2022"
+      ]
+    },
+    {
+      "chapter": 135,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - SB4_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Physical Input - SB4_2022"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "df9a9565-879e-49cd-ab93-6400628d52e2"
+      },
+      "level_keys": [
+        "CSD U6 - Physical Input - SB4_2022"
+      ]
+    },
+    {
+      "chapter": 136,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - Prac_2022"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Physical Input - Prac_2022"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "fd295258-7af1-4665-a924-fc5f0923c2f6"
+      },
+      "level_keys": [
+        "CSD U6 - Physical Input - Prac_2022"
+      ]
+    },
+    {
+      "chapter": 137,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5233,7 +5340,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5258,7 +5365,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 139,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5283,7 +5390,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 140,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6847,6 +6954,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSD U6 - Physical Output - Prac_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Physical Output - Prac_2022"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "0201b1e4-16ad-4b16-8685-52ec4bfa56e0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSD U6 - Physical Output - A_2022",
         "script_level.level_keys": [
           "CSD U6 - Physical Output - A_2022"
@@ -6891,6 +7010,42 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csdu6-playground",
         "activity_section.key": "df9a9565-879e-49cd-ab93-6400628d52e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Physical Input - SB3_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Physical Input - SB3_2022"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "df9a9565-879e-49cd-ab93-6400628d52e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Physical Input - SB4_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Physical Input - SB4_2022"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "df9a9565-879e-49cd-ab93-6400628d52e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Physical Input - Prac_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Physical Input - Prac_2022"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "fd295258-7af1-4665-a924-fc5f0923c2f6"
       }
     },
     {

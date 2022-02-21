@@ -2,5 +2,6 @@
   "key": "border-left",
   "name": "border-left",
   "category": "CSS Properties",
+  "category_key": "css_properties",
   "syntax": "border-left: border-width border-style border-color;"
 }

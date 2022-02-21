@@ -2,6 +2,7 @@
   "key": "stopSound",
   "name": "stopSound",
   "category": "UI controls",
+  "category_key": "ui_controls",
   "palette_params": [
     {
       "name": "url"

@@ -2,6 +2,7 @@
   "key": "keyWentUp",
   "name": "keyWentUp",
   "category": "World",
+  "category_key": "world",
   "palette_params": [
     {
       "name": "code"

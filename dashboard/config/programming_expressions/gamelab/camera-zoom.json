@@ -2,5 +2,6 @@
   "key": "camera.zoom",
   "name": "camera.zoom",
   "category": "World",
+  "category_key": "world",
   "syntax": "camera.zoom"
 }
