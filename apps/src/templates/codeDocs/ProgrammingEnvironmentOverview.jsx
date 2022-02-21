@@ -10,7 +10,8 @@ export function CategorySection({category}) {
         style={{
           paddingLeft: 15,
           color: 'black',
-          backgroundColor: category.color
+          backgroundColor: category.color,
+          width: '100%'
         }}
       >
         {category.name}
@@ -18,7 +19,7 @@ export function CategorySection({category}) {
       <ul>
         {category.programmingExpressions.map(expression => (
           <li key={expression.key}>
-            <CodeDocLink programmingExpression={expression} />
+            <CodeDocLink programmingExpression={expression} showBlocks />
           </li>
         ))}
       </ul>

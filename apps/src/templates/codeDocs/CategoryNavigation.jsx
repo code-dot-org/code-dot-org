@@ -23,7 +23,7 @@ export default function CategoryNavigation({initialIsOpen, category}) {
         <ul style={styles.list}>
           {category.programmingExpressions.map(exp => (
             <li key={exp.name} style={styles.codeLink}>
-              <CodeDocLink programmingExpression={exp} />
+              <CodeDocLink programmingExpression={exp} showBlocks={false} />
             </li>
           ))}
         </ul>

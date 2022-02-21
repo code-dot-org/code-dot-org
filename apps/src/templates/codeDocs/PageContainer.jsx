@@ -10,7 +10,7 @@ export default function PageContainer({
   return (
     <div>
       <h1>{programmingEnvironmentTitle}</h1>
-      <div style={{display: 'flex', gap: 10}}>
+      <div style={{display: 'flex', gap: 10, width: '100%'}}>
         <NavigationBar categoriesForNavigation={categoriesForNavigation} />
         {children}
       </div>
