@@ -737,7 +737,7 @@ class Script < ApplicationRecord
     # All users can see the latest unit version in English and in their locale.
     return true if is_latest
 
-    # Restrictions only apply to students and logged out users.
+    # Restrictions only apply to participants and logged out users.
     return false if user.nil?
     return true if can_be_instructor?(user)
 
