@@ -9,27 +9,33 @@ class TeacherApplicationHelperTest < ActionView::TestCase
   end
 
   setup_all do
-    # Right now, the status of a newly created application is set to 'unreviewed' in application_base.
-    # This will need to change when we allow partial teacher applications to be saved.
-    # [MEG] TODO: Can refactor these to avoid an update! call once we change how we set status
-    @applicant_with_incomplete_app = create :teacher
-    @incomplete_application = create TEACHER_APPLICATION_FACTORY, user: @applicant_with_incomplete_app
-    @incomplete_application.update!(status: 'incomplete')
+    @user_with_two_incomplete_apps = create :teacher
+    @incomplete_application = create TEACHER_APPLICATION_FACTORY, user: @user_with_two_incomplete_apps, status: 'incomplete'
+    create TEACHER_APPLICATION_FACTORY, user: @user_with_two_incomplete_apps, status: 'incomplete', application_year: '2018-2019'
 
-    @applicant_with_unreviewed_app = create :teacher
-    @unreviewed_application = create TEACHER_APPLICATION_FACTORY, user: @applicant_with_unreviewed_app
+    @user_with_reopened_app = create :teacher
+    @reopened_application = create TEACHER_APPLICATION_FACTORY, user: @user_with_reopened_app, status: 'reopened'
 
-    @teacher_with_not_current_app = create :teacher
-    create TEACHER_APPLICATION_FACTORY, user: @teacher_with_not_current_app, application_year: '2018-2019'
+    @user_with_outdated_incomplete = create :teacher
+    @not_current_incomplete_app = create TEACHER_APPLICATION_FACTORY,
+      user: @user_with_outdated_incomplete,
+      status: 'incomplete',
+      application_year: '2018-2019'
+
+    @user_with_outdated_reopened = create :teacher
+    @not_current_reopened_app = create TEACHER_APPLICATION_FACTORY,
+      user: @user_with_outdated_reopened,
+      status: 'reopened',
+      application_year: '2018-2019'
   end
 
   test 'current application returns user\'s application from this year' do
-    sign_in @applicant_with_unreviewed_app
-    assert_equal @unreviewed_application.id, current_application.id
+    sign_in @user_with_two_incomplete_apps
+    assert_equal @incomplete_application.id, current_application.id
   end
 
   test 'current application returns nil if user has no application from this year' do
-    sign_in @teacher_with_not_current_app
+    sign_in @teacher_with_not_current_incomplete_app
     assert_nil current_application
   end
 
@@ -38,22 +44,46 @@ class TeacherApplicationHelperTest < ActionView::TestCase
       {
         expected_output: true,
         condition_message: 'application exists and is incomplete',
-        user: @applicant_with_incomplete_app
+        user: @user_with_two_incomplete_apps
       },
       {
         expected_output: false,
-        condition_message: 'application exists and is unreviewed',
-        user: @applicant_with_unreviewed_app
+        condition_message: 'application exists and is reopened',
+        user: @user_with_reopened_app
       },
       {
         expected_output: false,
         condition_message: 'application is in a different year',
-        user: @teacher_with_not_current_app
+        user: @user_with_outdated_incomplete
       }
     ].each do |expected_output:, user:, condition_message:|
       sign_in user
       assert has_incomplete_application?, "expected true when #{condition_message}" if expected_output
       refute has_incomplete_application?, "expected false when #{condition_message}" unless expected_output
+    end
+  end
+
+  test "has_reopened_application" do
+    [
+      {
+        expected_output: true,
+        condition_message: 'application exists and is reopened',
+        user: @user_with_reopened_app
+      },
+      {
+        expected_output: false,
+        condition_message: 'application exists and is incomplete',
+        user: @user_with_two_incomplete_apps
+      },
+      {
+        expected_output: false,
+        condition_message: 'application is in a different year',
+        user: @user_with_outdated_reopened
+      }
+    ].each do |expected_output:, user:, condition_message:|
+      sign_in user
+      assert has_reopened_application?, "expected true when #{condition_message}" if expected_output
+      refute has_reopened_application?, "expected false when #{condition_message}" unless expected_output
     end
   end
 end
