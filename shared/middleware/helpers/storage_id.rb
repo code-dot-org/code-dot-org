@@ -176,6 +176,11 @@ def get_storage_ids_by_user_ids(user_ids)
   user_storage_ids_table.where({user_id: user_ids}).select_hash(:user_id, :id)
 end
 
+# Takes an array of user ids and returns a mapping from storage id to user id
+def get_user_ids_by_storage_ids(user_ids)
+  user_storage_ids_table.where({user_id: user_ids}).select_hash(:id, :user_id)
+end
+
 def update_annoymous_user_storage_id(storage_id, user_id)
   user_storage_ids_table.where(id: storage_id, user_id: nil).update(user_id: user_id)
 end
