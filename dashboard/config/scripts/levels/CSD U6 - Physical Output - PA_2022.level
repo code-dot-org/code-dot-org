@@ -71,16 +71,22 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"onButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 85px; width: 110px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 30px; position: absolute; left: 110px; top: 30px;\">On</button><button id=\"blinkButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 85px; width: 110px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 30px; position: absolute; left: 110px; top: 160px;\">Blink</button><button id=\"offButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 85px; width: 110px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 30px; position: absolute; left: 110px; top: 290px;\">Off</button></div></div>",
-    "start_blocks": "//Add your variable and createLed here using pin \"A4\"\n\nonEvent(\"onButton\", \"click\", function() {\n  //Turn on the LED\n  \n});\nonEvent(\"blinkButton\", \"click\", function() {\n  //Blink the LED\n  \n});\nonEvent(\"offButton\", \"click\", function() {\n  //Turn off the LED \n  \n});",
-    "preload_asset_list": null
+    "start_blocks": "//Add your variable and createLed here using pin \"A4\"\r\n\r\nonEvent(\"onButton\", \"click\", function() {\r\n  //Turn on the LED\r\n  \r\n});\r\nonEvent(\"blinkButton\", \"click\", function() {\r\n  //Blink the LED\r\n  \r\n});\r\nonEvent(\"offButton\", \"click\", function() {\r\n  //Turn off the LED \r\n  \r\n});",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Buttons and LEDs",
+    "bubble_choice_description": "Use the buttons on the app to control an external LED",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L16/practice/A.png"
   },
   "game_id": 41,
+  "published": true,
   "created_at": "2022-02-08T23:43:05.000Z",
   "level_num": "custom",
   "user_id": 1,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-08T23:43:05.627+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - SB2.2_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - SB2.2_2022\"},{\"changed_at\":\"2022-02-08 23:45:27 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_design_mode\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-08 23:57:43 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-08 23:59:39 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 00:05:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 00:09:44 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-08T23:43:05.627+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - SB2.2_2022\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - SB2.2_2022\"},{\"changed_at\":\"2022-02-08 23:45:27 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"hide_design_mode\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-08 23:57:43 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-08 23:59:39 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 00:05:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-09 00:09:44 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 20:27:09 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

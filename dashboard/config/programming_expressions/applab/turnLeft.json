@@ -2,6 +2,7 @@
   "key": "turnLeft",
   "name": "turnLeft",
   "category": "Turtle",
+  "category_key": "turtle",
   "palette_params": [
     {
       "name": "angle"

@@ -5,16 +5,19 @@ if(!validationProps){
 }
 
 function updateLog(){
-  var start = Object.keys(window).indexOf("playSoundOptions")+1;
-  var end = Object.keys(window).indexOf("math_random_int");
+  var start = Object.keys(window).indexOf("studentVarToken")+1;
+  var end = Object.keys(window).indexOf("__jsCB");
   var index;
   for(var i=start;i<end;i++){
     if(window[Object.keys(window)[i]] != undefined){
-      varLog[Object.keys(window)[i]] = window[Object.keys(window)[i]];
+      if (typeof window[Object.keys(window)[i]] == "number" || typeof window[Object.keys(window)[i]] == "string"|| typeof window[Object.keys(window)[i]] == "boolean") {
+        varLog[Object.keys(window)[i]] = window[Object.keys(window)[i]];
+      }
     }
   }
+
   varWatchers(varLog);
-  
+
   if(validationProps){//is Sprite Lab
     if(!validationProps.previous){
       validationProps.previous = {};
@@ -22,7 +25,7 @@ function updateLog(){
     detectVarChange();
     validationProps.previous.varLog=JSON.parse(JSON.stringify(varLog));
   }
-  
+
 }
 
 function varWatchers(varLog){

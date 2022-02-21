@@ -2,5 +2,6 @@
   "key": "scale",
   "name": "scale",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "scale"
 }

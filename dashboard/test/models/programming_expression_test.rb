@@ -53,8 +53,8 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
 
   test "can serialize and seed programming expression" do
     programming_environment = create :programming_environment
-    exp = create :programming_expression, key: 'myExp', category: 'World', examples: 'myexamples', palette_params: 'some parameters', programming_environment_id: programming_environment.id
-    exp.color = ProgrammingExpression.get_category_color('World')
+    category = create :programming_environment_category, programming_environment: programming_environment, name: 'World', color: '#ABCDEF'
+    exp = create :programming_expression, key: 'myExp', category: 'World', examples: 'myexamples', palette_params: 'some parameters', programming_environment_id: programming_environment.id, programming_environment_category_id: category.id
     serialization = exp.serialize
     previous_exp = exp.freeze
     exp.destroy!
@@ -64,5 +64,6 @@ class ProgrammingExpressionTest < ActiveSupport::TestCase
     new_exp_name = ProgrammingExpression.seed_record("config/programming_expressions/#{programming_environment.name}/file.json")
     new_exp = ProgrammingExpression.find_by_name(new_exp_name)
     assert_equal previous_exp.attributes.except('id', 'created_at', 'updated_at'), new_exp.attributes.except('id', 'created_at', 'updated_at')
+    assert_equal category, new_exp.programming_environment_category
   end
 end

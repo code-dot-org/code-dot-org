@@ -2,5 +2,6 @@
   "key": "mathPow",
   "name": "mathPow",
   "category": "Math",
+  "category_key": "math",
   "syntax": "Math.pow(__, __)"
 }

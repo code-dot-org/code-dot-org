@@ -2,6 +2,7 @@
   "key": "getImageData",
   "name": "getImageData",
   "category": "Canvas",
+  "category_key": "canvas",
   "palette_params": [
     {
       "name": "x"

@@ -2,6 +2,7 @@
   "key": "codestudio_setVariable",
   "name": "variables_set",
   "category": "Variables",
+  "category_key": "variables",
   "block_name": "variables_set",
   "syntax": "variables_set"
 }

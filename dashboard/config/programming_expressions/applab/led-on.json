@@ -2,5 +2,6 @@
   "key": "led.on",
   "name": "led.on",
   "category": "Circuit",
+  "category_key": "circuit",
   "syntax": "led.on"
 }
