@@ -255,6 +255,7 @@
   "censusRequiredSelect": "Requerido. Por favor selecciona una opción.",
   "censusTextBased": "Programación basada en texto en un lenguaje como Java, JavaScript, Python, C ++, etc. (Excluyendo HTML o CSS)",
   "censusWebDesign": "Diseño web usando HTML o CSS",
+  "certificateForCompletion": "Certificado de Realización de una Hora del Código",
   "challengeLevelIntro": "¡Los desafíos de rompecabezas son lecciones diseñadas para desarrollar tu cerebro! ¡Haz lo mejor que puedas!",
   "challengeLevelPassTitle": "¡Lo hiciste!",
   "challengeLevelPassText": "Sin embargo, podrías haber terminado con solo {idealBlocks, plural, one {1 bloque} other {# bloques}}. ¿Crees poder mejorar tu programa?",

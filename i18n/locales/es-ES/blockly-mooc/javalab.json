@@ -1,4 +1,5 @@
 {
+  "abortedTestResult": "{className} > {methodName} ABORTADO",
   "addAComment": "Añade un comentario",
   "authorLabel": "autor",
   "allFilesCompile": "¡Todos los archivos se compilaron!",
@@ -57,6 +58,8 @@
   "errorTheaterInvalidShape": "Una forma debe contener un número par de valores para representar las coordenadas (x, y) e incluir al menos 4 valores.",
   "errorTheaterVideoTooLarge": "Tu vídeo es demasiado grande. Por favor, disminuye el número de fotogramas del video e inténtalo de nuevo.",
   "errorTheaterVideoTooLong": "Tu vídeo ha superado el tiempo máximo de reproducción. Por favor, reduce la duración del vídeo e inténtalo de nuevo.",
+  "exceptionThrown": "[EXCEPTION] {exceptionName} fué lanzada",
+  "failedTestResult": "{className} > {methodName} FALLADO",
   "feedbackBeginning": "Este es el comienzo de los comentarios para tu proyecto.",
   "feedbackBeginningPeer": "Este es el comienzo de la evaluación para tu proyecto {peerName}",
   "illegalMethodAccess": "Has intentado acceder a un método que está bloqueado por nuestra política de seguridad.\n{cause}",
@@ -104,6 +107,7 @@
   "saveToBackpack": "Guardar en Mochila",
   "sendingVideo": "Enviando vídeo. Longitud total: {totalTime} segundos.",
   "startingPainter": "Pintor principiante.",
+  "successfulTestResult": "{className} > {methodName} SATISFACTORIO",
   "switchToDisplayTheme": "Cambiar a {displayTheme}",
   "timeoutWarning": "Advertencia: tu proyecto dejará de funcionar en 15 segundos.",
   "timeout": "Tu proyecto se ha detenido.",
