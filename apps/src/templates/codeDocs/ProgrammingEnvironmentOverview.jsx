@@ -31,7 +31,6 @@ export default function ProgrammingEnvironmentOverview({
 }) {
   return (
     <div>
-      {programmingEnvironment.title && <h1>{programmingEnvironment.title}</h1>}
       {programmingEnvironment.description && (
         <EnhancedSafeMarkdown markdown={programmingEnvironment.description} />
       )}
