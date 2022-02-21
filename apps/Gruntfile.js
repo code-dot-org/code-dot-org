@@ -522,6 +522,8 @@ describe('entry tests', () => {
       './src/sites/studio/pages/lessons/student_lesson_plan.js',
     'programming_environments/index':
       './src/sites/studio/pages/programming_environments/index.js',
+    'programming_environments/show':
+      './src/sites/studio/pages/programming_environments/show.js',
     'programming_expressions/show':
       './src/sites/studio/pages/programming_expressions/show.js',
     'devise/registrations/_finish_sign_up':
