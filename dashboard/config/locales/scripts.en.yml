@@ -23281,14 +23281,76 @@ en:
           description: In this unit, students implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. Students analyze the efficiency of searching and sorting algorithms and expand the standard algorithms they have developed throughout the course to solve more complex problems. Throughout the unit, students apply their knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. Students wrap up the unit and course considering the privacy and security of their programs and users.
           student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
         csa9-pilot:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: The AP CSA Exam
+              description_student: You did it! You have completed the content for the course, and now it is time to prepare for the AP CSA Exam. In the process, you identify and answer questions you may have about the exam. You explore test-testing strategies and study resources that you can use to prepare for the exam.
+              description_teacher: Students learn about the structure and expectations of the AP CSA Exam. In the process, students identify and answer questions about the exam. Students explore test-taking strategies and study resources that they can use to prepare for the exam.
+            lesson-2:
+              name: MCQ Pre-Assessment
+              description_student: To identify your current strengths and weaknesses on the multiple-choice portion of the AP CSA Exam, you take a Multiple-Choice Pre-Assessment on AP Classroom. Best of luck!
+              description_teacher: Students complete a Multiple-Choice Pre-Assessment on AP Classroom.
+            lesson-3:
+              name: MCQ Study Plan
+              description_student: You review your results from the multiple-choice pre-assessment to create a study plan.
+              description_teacher: Students review their results from the multiple-choice pre-assessment to create a study plan.
+            lesson-4:
+              name: MCQ Practice – Day 1
+              description_student: Now it's time to practice! You identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.
+              description_teacher: Students identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.
+            lesson-5:
+              name: MCQ Practice – Day 2
+            lesson-6:
+              name: FRQ Pre-Assessment
+              description_student: To identify your current strengths and weaknesses on the FRQ portion of the AP CSA Exam, you take an FRQ Pre-Assessment. Best of luck!
+              description_teacher: 'Students complete an FRQ Pre-Assessment. '
+            lesson-7:
+              name: FRQ Study Plan
+              description_student: You review your results from the FRQ pre-assessment to create a study plan.
+              description_teacher: Students review their results from the FRQ pre-assessment to create a study plan.
+            lesson-8:
+              name: FRQ Practice – Day 1
+              description_student: You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam.
+              description_teacher: Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.
+            lesson-9:
+              name: FRQ Practice – Day 2
+              description_student: You identify strategies for approaching FRQs on the AP CSA Exam.
+              description_teacher: Students identify strategies for approaching FRQs on the AP CSA Exam.
+            lesson-10:
+              name: Mock MCQ Exam – Day 1
+              description_student: You complete the first half of a mock AP CSA multiple-choice exam. Best of luck!
+              description_teacher: Students complete the first half of a mock AP CSA multiple-choice exam.
+            lesson-11:
+              name: Mock MCQ Exam – Day 2
+              description_student: You complete the second half of a mock AP CSA multiple-choice exam. Best of luck!
+              description_teacher: Students complete the second half of a mock AP CSA multiple-choice exam.
+            lesson-12:
+              name: Mock MCQ Exam – Day 3
+              description_student: You review your results on the MCQ Mock Exam and update your study plans.
+              description_teacher: Students review their results on the MCQ Mock Exam and update their study plans.
+            lesson-13:
+              name: Mock FRQ Exam – Day 1
+              description_student: You complete the first half of a mock AP CSA free response exam. Best of luck!
+              description_teacher: Students complete the first half of a mock AP CSA free response exam.
+            lesson-14:
+              name: Mock FRQ Exam – Day 2
+              description_student: You complete the second half of a mock AP CSA free response exam. Best of luck!
+              description_teacher: Students complete the second half of a mock AP CSA free response exam.
+            lesson-15:
+              name: Mock FRQ Exam – Day 3
+              description_student: You review your results on the FRQ Mock Exam and update your study plans.
+              description_teacher: Students review their results on the FRQ Mock Exam and update their study plans.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Review and Practice
+            lessonGroup-3:
+              display_name: Mock Exams
           name: csa9-pilot
-          title: ''
+          title: AP Exam Review and Practice
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: This unit prepares students for the AP CSA Exam by reviewing concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
+          student_description: This unit prepares you for the AP CSA Exam by reviewing concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
         k5-onlinepd-2021:
           title: Teaching Computer Science Fundamentals ('21-'22)
           description: "Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! \n"
@@ -30993,70 +31055,198 @@ en:
           lessons:
             lesson-1:
               name: Welcome to CSA
+              description_student: |-
+                **What does software engineering mean to me?**
+
+                Believing in one's own software engineering identity develops confidence and perseverance. In this lesson, you are introduced to key characteristics and skills of software engineers and explore common perceptions. You have many of the same characteristics and skills as software engineers, which you realize as you discover your software engineering identity.
+              description_teacher: |-
+                **What does software engineering mean to me?**
+
+                Believing in one's own software engineering identity develops confidence and perseverance. In this lesson, students are introduced to key characteristics and skills of software engineers and explore common perceptions. Students realize that they have many of the same characteristics and skills as software engineers and discover their software engineering identity.
             lesson-2:
               name: Java Lab
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **What are some of the primary components of a Java program?**
+
+                In this lesson, you are introduced to the Java Lab programming environment to navigate Java source code files and identify correct Java syntax. You experiment with the structure of a Java program to identify syntax rules of the Java programming language. While experimenting with Java syntax, you explore The Neighborhood and how the `Painter` can perform a task when given a set of instructions.
+              description_teacher: |-
+                **What are some of the primary components of a Java program?**
+
+                Students are introduced to the Java Lab programming environment to navigate Java source code files and identify correct Java syntax. Students experiment with the structure of a Java program to identify syntax rules of the Java programming language. While experimenting with Java syntax, students explore The Neighborhood and how the `Painter` can perform a task when given a set of instructions.
             lesson-3:
               name: The Neighborhood
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **What is object-oriented programming?**
+
+                In this lesson, you explore the structure of The Neighborhood to identify the structure of the grid and potential obstacles. You learn that classes are blueprints that define the attributes and behaviors that an object can have and analyze the `Painter` class to identify these components. You then practice creating `Painter` objects using the `new` keyword and determining the current state of the objects.
+              description_teacher: |-
+                **What is object-oriented programming?**
+
+                Students explore the structure of The Neighborhood to identify the organization of the grid and potential obstacles. Students learn that classes are blueprints that define the attributes and behaviors that an object can have and analyze the `Painter` class to identify these components. Students then practice creating `Painter` objects using the `new` keyword and determining the current state of the objects.
             lesson-4:
               name: Navigating and Painting
+              description_student: |-
+                **What is a method?**
+
+                The `Painter` class has behaviors, or methods, to navigate and paint The Neighborhood. In this lesson, you learn the syntax for calling methods in Java to call methods from the `Painter` class and practice debugging syntax errors.
+              description_teacher: |-
+                **What is a method?**
+
+                Students learn the syntax for calling methods in Java to practice navigating and painting The Neighborhood. Students call `void` methods from the `Painter` class and practice debugging syntax errors.
             lesson-5:
               name: One-Way Selection Statements
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **How can I specify alternate outcomes based on the current state of the `Painter`?**
+
+                So far, you have written statements that execute in the order written. In this lesson, you learn to use conditional statements, or `if` statements, in your programs to make decisions based on the current state of a `Painter` object. The `Painter` class has methods that tell you whether a `Painter` object is on paint, is on a paint bucket, or can move in a specific direction, which you can use with `if` statements to make decisions based on the results of these method calls. As the complexity of your programs increases, you identify debugging strategies to find and correct syntax and logic errors.
+              description_teacher: |-
+                **How can I specify alternate outcomes based on the current state of the `Painter`?**
+
+                Students incorporate `if` statements into their programs to make decisions based on the current state of a `Painter` object. Students learn about methods that return `boolean` values and how to execute a specific block of code based on the method call result. As the complexity of their programs increases, students identify debugging strategies to find and correct syntax and logic errors.
             lesson-6:
               name: PainterPlus
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **Why would I use inheritance?**
+
+                The `Painter` class has several methods for navigating and painting The Neighborhood, but it also has limitations. In this lesson, you consider the need for designing specialized types of classes and learn about inheritance to create a new type of `Painter`. You learn how to create this new type of `Painter` with the same attributes and behaviors as the `Painter` class to add new behaviors to expand its capabilities.
+              description_teacher: |-
+                **Why would I use inheritance?**
+
+                Students consider designing specialized types of classes and use inheritance to create the `PainterPlus` class. Students learn to create a new class and write a constructor that calls the superclass constructor using the `super` keyword. Students realize that while the `PainterPlus` class can perform the same behaviors as the `Painter` class, they can add new behaviors to expand its capabilities.
             lesson-7:
               name: Writing Methods
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **How do I write a new method in a subclass?**
+
+                A `PainterPlus` object can do everything a `Painter` object can. In this lesson, you write and use a new `void` method in the `PainterPlus` class to expand its capabilities. You first learn about the accessibility of new behaviors between superclasses and subclasses to identify situations when to write new methods in the superclass or the subclass. In the process, you discover that methods written in a subclass are not accessible in the superclass.
+              description_teacher: |-
+                **How do I write a new method in a subclass?**
+
+                Students learn to write and use a new `void` method in the `PainterPlus` class to expand its capabilities. Students first consider the accessibility of new behaviors between superclasses and subclasses to identify situations when to write new methods in the superclass or the subclass. In the process, students discover that methods written in a subclass are not accessible in the superclass.
             lesson-8:
               name: Code Reviews
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **How do software engineers obtain feedback from peers?**
+
+                Software engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. In this lesson, you identify the importance of commenting and program structure to improve readability. You learn about code reviews and practice giving and receiving feedback.
+              description_teacher: |-
+                **How do software engineers obtain feedback from peers?**
+
+                Software engineers use code reviews to develop code that is easy for others to read, maintain, and modify over time. Students identify the importance of commenting and program structure to improve readability. Students learn about code reviews and practice giving and receiving feedback.
             lesson-9:
               name: Loops
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **How can I repeat a set of instructions based on the state of an object?**
+
+                You have used selection statements to execute a block of code if the condition is `true`. In this lesson, you are introduced to iteration using `while` loops to repeat a block of code as long as the condition is `true`. You combine `while` loops with methods that return information about the state of a `PainterPlus` object to implement a new method in the `PainterPlus` class. You practice developing algorithms using selection statements and iteration and implementing your algorithms in Java.
+              description_teacher: |-
+                **How can I repeat a set of instructions based on the state of an object?**
+
+                Students are introduced to iteration using `while` loops to repeat instructions as long as a condition is `true`. Students combine `while` loops with methods that return information about the state of an object to implement a new method in an existing class. Students practice developing algorithms using selection statements and iteration and implementing them in Java.
             lesson-10:
               name: Two-Way Selection Statements
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **How can two-way selection statements and the NOT ( `!` ) logical operator improve my algorithms?**
+
+                You have used `if` statements to execute specific instructions based on if the condition is `true`. In this lesson, you expand your knowledge of selection statements and `Boolean` expressions to use two-way selection statements and the NOT ( `!` ) logical operator. You practice using these to check the state of an object and executing a specific set of instructions based on the result.
+              description_teacher: |-
+                **How can two-way selection statements and the NOT ( `!` ) logical operator improve my algorithms?**
+
+                Students expand their knowledge of selection statements and `Boolean` expressions using two-way selection statements and the NOT ( `!` ) logical operator. Students practice using these to check the state of an object and executing a specific set of instructions based on the result.
             lesson-11:
               name: Debugging Strategies
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **How can the console be used as a debugging tool?**
+
+                Software engineers use various tools and techniques to find and fix errors. In this lesson, you learn to print information to the console as a debugging tool to identify logic errors in your programs. You expand your `PainterPlus` class to implement a new method that displays information about the state of a `PainterPlus` object and use this method within other methods to troubleshoot errors.
+              description_teacher: |-
+                **How can the console be used as a debugging tool?**
+
+                Students learn to print information to the console as a debugging tool to identify logic errors in their programs. Students expand an existing subclass to implement a new method that displays information about the state of an object and use this method within other methods to troubleshoot errors.
             lesson-12:
               name: Decomposition and Design
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **How do I decide what new methods to write in a program?**
+
+                You have learned how to write pseudocode to plan algorithms. In this lesson, you are introduced to decomposition and top-down design to deconstruct problems into smaller tasks and develop algorithms for these tasks. You analyze decomposition examples and identify the importance of writing clear and specific pseudocode. You write and translate algorithms into methods and consider potential edge cases to improve your programs.
+              description_teacher: |-
+                **How do I decide what new methods to write in a program?**
+
+                Students are introduced to decomposition and top-down design to deconstruct problems into smaller tasks and develop algorithms for these tasks. Students analyze decomposition examples and identify the importance of writing clear and specific pseudocode. Students write and translate algorithms into methods and consider potential edge cases to improve their programs.
             lesson-13:
               name: PatternPainter
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **What other subclasses could I create?**
+
+                Now that you know how to create new types of `Painter`s, plan algorithms, and write good code, you can create additional types of `Painter`s with special behaviors. In this lesson, you write a new subclass that extends `PainterPlus` and practice decomposition to develop algorithms. You translate algorithms to write methods in your new subclass.
+              description_teacher: |-
+                **What other subclasses could I create?**
+
+                Students write a new subclass and practice decomposition to develop algorithms. Students translate algorithms to write methods in their new subclass.
             lesson-14:
               name: BackgroundPainter
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**
+
+                In Java, a superclass can have multiple subclasses. In this lesson, you write an additional new subclass that extends `PainterPlus` and practice using decomposition to develop algorithms. You translate algorithms to write methods in your new subclass and create multiple objects in your program.
+              description_teacher: |-
+                **How can I apply what I have learned about object-oriented programming and software engineering to expand my programs?**
+
+                Students write an additional new subclass and practice using decomposition o develop algorithms. Students translate algorithms to write methods in their new subclass and create multiple objects in their program.
             lesson-15:
               name: Open Source Code
-              description_student: 
-              description_teacher: 
+              description_student: |-
+                **How have I grown as a software engineer?**
+
+                You have made a lot of progress in becoming a software engineer! In this lesson, you examine open source code and connect real-world applications and the concepts you have learned in this unit. You review the characteristics of software engineers and reflect on how you demonstrate these characteristics while planning and implementing solutions.
+              description_teacher: |-
+                **How have I grown as a software engineer?**
+
+                Students examine open source code and connect real-world applications and the concepts they have learned in this unit. Students review the characteristics of software engineers and reflect on how they demonstrate these characteristics while planning and implementing solutions.
             lesson-16:
               name: Asphalt Art Project – Day 1
+              description_student: |-
+                **What do I want to represent using programming and art?**
+
+                For this project, you use the skills you have developed to create asphalt art in The Neighborhood. You choose a theme or concept for your asphalt art that represents something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your design.
+              description_teacher: |-
+                ​​**What do I want to represent using programming and art?**
+
+                For this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.
             lesson-17:
               name: Asphalt Art Project – Day 2
+              description_student: |-
+                **How will I implement my plans to create my program?**
+
+                You have now designed a new class to create your asphalt art. In this lesson, you decide which classes and methods you have developed throughout the unit and your new class to create your design. You also reinforce your software development skills and processes by participating in a code review to give and use feedback.
+              description_teacher: |-
+                **How will I implement my plans to create my program?**
+
+                Students have designed a new class to create their asphalt art. In this lesson, students decide which classes and methods they have developed  throughout the unit to use and their new class to create their design. Students reinforce software development skills and processes by participating in a code review to give and use feedback.
             lesson-18:
               name: Asphalt Art Project – Day 3
+              description_student: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                You participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success.
+              description_teacher: |-
+                **How is my growth as a software engineer reflected in my project?**
+
+                Students participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems they encountered. Students consider this feedback at this as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.
             lesson-19:
               name: FRQ Practice
+              description_student: |-
+                **How will I use what I know about classes and objects to answer a Free Response Question?**
+
+                You are asked to develop solutions to Free Response Questions (FRQs) on the AP CSA Exam. You learn about the structure of an FRQ and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. You use annotation strategies to identify the key components of the problem and validate your solutions using Scoring Guidelines.
+              description_teacher: |-
+                **How will I use what I know about classes and objects to answer a Free Response Question?**
+
+                Students are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.
             lesson-20:
               name: Unit 1 Assessment
+              description_student: Congratulations, you completed your first unit! Assess your progress through the Unit 1 Assessment.
+              description_teacher: Students complete a multiple-choice assessment that covers the unit topics.
           lesson_groups:
             lessonGroup-2:
               display_name: Content
