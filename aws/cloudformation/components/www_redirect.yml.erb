@@ -27,6 +27,7 @@
   <%-
     # Convert something like "autoscale-prod.code.org" to "AutoscaleProdCodeOrg"
     logical_id = domain_name.titleize.gsub(/[^a-zA-Z0-9]/, "")
+    alarm_topic = rack_env?(:production) ? "CDO-Urgent" : "CDO-WorkdayUrgent"
   -%>
   
   <%=app%><%=logical_id%>HealthCheck:
@@ -53,7 +54,7 @@
       Threshold: '1'
       Statistic: Average
       AlarmActions:
-      - arn:aws:sns:us-east-1:475661607190:CDO-Urgent
+      - arn:aws:sns:us-east-1:475661607190:<%=alarm_topic%>
 <%- end -%>
 
   <%=app%>RedirectDistribution:
