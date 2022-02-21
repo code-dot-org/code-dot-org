@@ -12,8 +12,19 @@ $dark_blue_background_colour: #0d4172;
   }
 }
 
-.animateSlideInFromLeft {
-  animation: 2s ease-out 0s 1 slideInFromLeft;
+.homepage-professional-learning-banner.animate-text {
+
+  .left {
+    animation: 2s ease-out 0s 1 slideInFromLeft;
+  }
+
+  .header {
+    animation: fadein 2s;
+  }
+
+  .text {
+    animation: fadein 2s;
+  }
 }
 
 .homepage-professional-learning-banner {
@@ -34,12 +45,10 @@ $dark_blue_background_colour: #0d4172;
   }
 
   .header {
-    animation: fadein 2s;
     font-size: 18px;
   }
 
   .text {
-    animation: fadein 2s;
     font-size: 14px;
   }
 
@@ -74,19 +83,18 @@ $dark_blue_background_colour: #0d4172;
 
       .text {
         color: black;
-        line-height: 1;
+        line-height: 1.3;
         position: relative;
         left: 30px;
         width: calc(100% - 150px);
       }
     }
 
-    .right {
+    .right-button {
       padding-top: 30px;
       text-align: center;
       position: absolute;
-      width: 50%;
-      margin-left: 65%;
+      right: 100px;
 
       button {
         margin-top: 0px;

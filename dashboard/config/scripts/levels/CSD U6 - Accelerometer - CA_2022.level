@@ -186,7 +186,7 @@
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\r\n  var pitch = accelerometer.getOrientation(\"pitch\");\r\n  if (buttonL.isPressed) {\r\n    var purpleBugY = getProperty(\"purpleBug\", \"y\");\r\n    setProperty(\"purpleBug\", \"y\", purpleBugY + pitch);\r\n  }\r\n  if (buttonR.isPressed) {\r\n    \r\n  }\r\n});\r\n",
+    "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\n  var pitch = accelerometer.getOrientation(\"pitch\");\n  if (buttonL.isPressed) {\n    var purpleBugY = getProperty(\"purpleBug\", \"y\");\n    setProperty(\"purpleBug\", \"y\", purpleBugY + pitch);\n  }\n  if (buttonR.isPressed) {\n    //Add code so te orange bug will move when the red button is pressed\n    \n  }\n});\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -216,7 +216,7 @@
     "design_mode_at_start": "false",
     "hide_design_mode": "false",
     "beginner_mode": "false",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(203, 235, 244);\" data-theme=\"classic\">\r\n    <img data-canonical-image-url=\"icon://fa-bug\" data-object-fit=\"contain\" id=\"purpleBug\" style=\"height: 30px; width: 30px; position: absolute; left: 75px; top: 225px; margin: 0px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-icon-color=\"#dd0bd5\" data-image-type=\"icon\">\r\n    <img data-canonical-image-url=\"icon://fa-bug\" data-object-fit=\"contain\" id=\"orangeBug\" style=\"height: 30px; width: 85px; position: absolute; margin: 0px; left: 185px; top: 225px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-icon-color=\"#f59904\" data-image-type=\"icon\">\r\n  </div></div>",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(203, 235, 244);\" data-theme=\"classic\">\n    <img data-canonical-image-url=\"icon://fa-bug\" data-object-fit=\"contain\" id=\"purpleBug\" style=\"height: 30px; width: 30px; position: absolute; left: 75px; top: 225px; margin: 0px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-icon-color=\"#dd0bd5\" data-image-type=\"icon\">\n    <img data-canonical-image-url=\"icon://fa-bug\" data-object-fit=\"contain\" id=\"orangeBug\" style=\"height: 30px; width: 85px; position: absolute; margin: 0px; left: 185px; top: 225px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-icon-color=\"#f59904\" data-image-type=\"icon\">\n  </div></div>",
     "hide_view_data_button": "false",
     "show_debug_watch": "false",
     "expand_debugger": "false",
@@ -232,21 +232,18 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ],
     "display_name": "Orange and Purple Bugs",
     "bubble_choice_description": "Use the circuit playground buttons and the accelerometer to move each bug",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L12/challenge/A.png"
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L12/challenge/A.png",
+    "preload_asset_list": null
   },
   "game_id": 41,
-  "published": true,
   "created_at": "2021-09-02T00:05:06.000Z",
   "level_num": "custom",
   "user_id": 324,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-02T00:05:06.011+00:00\",\"changed\":[\"cloned from \\\"CSD U6 params predict_2021\\\"\"],\"cloned_from\":\"CSD U6 params predict_2021\"},{\"changed_at\":\"2021-09-02 00:06:01 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-02 00:07:33 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:53:49 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"validation_enabled\",\"start_html\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-02T00:05:06.011+00:00\",\"changed\":[\"cloned from \\\"CSD U6 params predict_2021\\\"\"],\"cloned_from\":\"CSD U6 params predict_2021\"},{\"changed_at\":\"2021-09-02 00:06:01 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-02 00:07:33 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:53:49 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"validation_enabled\",\"start_html\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-21 04:55:39 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
   <blocks/>
 </Applab>
