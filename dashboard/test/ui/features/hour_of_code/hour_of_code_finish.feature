@@ -32,11 +32,11 @@ Scenario: Flappy customized dashboard certificate pages
   And I wait to see element with ID "uitest-thanks"
   Then I wait to see an image "/certificate_images/"
 
-  When I press the first "#uitest-certificate a" element to load a new page
+  When I press the first "#uitest-certificate img" element to load a new page
   And I wait until current URL contains "/certificates/"
   Then I wait to see an image "/certificate_images/"
 
-  When I press the first "#certificate-share a" element to load a new page
+  When I press the first "#certificate-share img" element to load a new page
   And I wait until current URL contains "/print_certificates/"
   Then I wait to see an image "/certificate_images/"
 
