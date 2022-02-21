@@ -82,7 +82,24 @@ class ProgrammingEnvironment < ApplicationRecord
       imageUrl: image_url,
       description: description,
       editorType: editor_type,
-      categories: categories
+      categories: categories.map(&:serialize_for_edit)
+    }
+  end
+
+  def summarize_for_show
+    {
+      title: title,
+      description: description,
+      categories: categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+    }
+  end
+
+  def summarize_for_index
+    {
+      name: name,
+      title: title,
+      imageUrl: image_url,
+      description: description
     }
   end
 end

@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {reload} from '@cdo/apps/utils';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import PropTypes from 'prop-types';
 
 /**
  * @const {string[]} The only properties that can be updated by the user
@@ -25,8 +26,8 @@ const USER_EDITABLE_SECTION_PROPS = [
 /** @const {number} ID for a new section that has not been saved */
 const PENDING_NEW_SECTION_ID = -1;
 
-/** @const {string} Empty string used to indicate no section selected */
-export const NO_SECTION = '';
+/** @const {null} null used to indicate no section selected */
+export const NO_SECTION = null;
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider = {
@@ -537,7 +538,7 @@ const initialState = {
   assignmentFamilies: [],
   // Mapping from sectionId to section object
   sections: {},
-  // List of students in section currently being edited
+  // List of students in section currently being edited (see studentShape PropType)
   selectedStudents: [],
   sectionsAreLoaded: false,
   // We can edit exactly one section at a time.
@@ -730,12 +731,13 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === SET_STUDENT_SECTION) {
-    const students = action.students.map(student =>
+    const students = action.students || [];
+    const selectedStudents = students.map(student =>
       studentFromServerStudent(student, action.sectionId)
     );
     return {
       ...state,
-      selectedStudents: students
+      selectedStudents
     };
   }
 
@@ -783,13 +785,20 @@ export default function teacherSections(state = initialState, action) {
   }
 
   if (action.type === SELECT_SECTION) {
-    let sectionId = action.sectionId;
+    let sectionId;
+    if (action.sectionId) {
+      sectionId = parseInt(action.sectionId);
+    } else {
+      sectionId = NO_SECTION;
+    }
+
     if (
       sectionId !== NO_SECTION &&
       !state.sectionIds.includes(parseInt(sectionId, 10))
     ) {
       sectionId = NO_SECTION;
     }
+
     return {
       ...state,
       selectedSectionId: sectionId
@@ -1377,3 +1386,13 @@ export function hiddenSectionIds(state) {
   state = getRoot(state);
   return state.sectionIds.filter(id => state.sections[id].hidden);
 }
+
+export const studentShape = PropTypes.shape({
+  sectionId: PropTypes.number,
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  sharingDisabled: PropTypes.bool,
+  totalLines: PropTypes.number,
+  secretPicturePath: PropTypes.string,
+  secretWords: PropTypes.string
+});

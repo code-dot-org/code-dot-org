@@ -2,6 +2,7 @@
   "key": "blink",
   "name": "blink",
   "category": "Circuit",
+  "category_key": "circuit",
   "palette_params": [
     {
       "name": "interval"

@@ -30,6 +30,7 @@ export default function Congrats(props) {
     under13,
     language,
     randomDonorTwitter,
+    randomDonorName,
     hideDancePartyFollowUp,
     showStudioCertificate
   } = props;
@@ -42,6 +43,7 @@ export default function Congrats(props) {
         tutorial={tutorial}
         certificateId={certificateId}
         randomDonorTwitter={randomDonorTwitter}
+        randomDonorName={randomDonorName}
         under13={under13}
         showStudioCertificate={showStudioCertificate}
       />
@@ -67,6 +69,7 @@ Congrats.propTypes = {
   under13: PropTypes.bool,
   language: PropTypes.string.isRequired,
   randomDonorTwitter: PropTypes.string,
+  randomDonorName: PropTypes.string,
   hideDancePartyFollowUp: PropTypes.bool,
   showStudioCertificate: PropTypes.bool
 };

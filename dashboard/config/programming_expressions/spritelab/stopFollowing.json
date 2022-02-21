@@ -1,7 +1,0 @@
-{
-  "key": "stopFollowing",
-  "name": "stopFollowing",
-  "category": "Experimental",
-  "block_name": "gamelab_stopFollowing",
-  "syntax": "stopFollowing"
-}

@@ -1,6 +1,0 @@
-{
-  "key": "mouseWheel",
-  "name": "mouseWheel",
-  "category": "World",
-  "syntax": "function mouseWheel() {}"
-}

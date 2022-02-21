@@ -2,5 +2,6 @@
   "key": "penUp",
   "name": "penUp",
   "category": "Turtle",
+  "category_key": "turtle",
   "syntax": "penUp"
 }

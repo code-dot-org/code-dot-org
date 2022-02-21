@@ -2,5 +2,6 @@
   "key": "mouseDidMove",
   "name": "mouseDidMove",
   "category": "World",
+  "category_key": "world",
   "syntax": "mouseDidMove"
 }

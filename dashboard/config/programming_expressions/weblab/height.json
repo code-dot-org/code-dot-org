@@ -2,5 +2,6 @@
   "key": "height",
   "name": "height",
   "category": "CSS Properties",
+  "category_key": "css_properties",
   "syntax": "height: value;"
 }

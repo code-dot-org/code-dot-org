@@ -2,6 +2,7 @@
   "key": "getValue",
   "name": "getValue",
   "category": "Variables",
+  "category_key": "variables",
   "palette_params": [
     {
       "name": "object"

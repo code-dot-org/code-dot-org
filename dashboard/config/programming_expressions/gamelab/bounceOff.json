@@ -2,6 +2,7 @@
   "key": "bounceOff",
   "name": "bounceOff",
   "category": "Sprites",
+  "category_key": "sprites",
   "palette_params": [
     {
       "name": "target"
