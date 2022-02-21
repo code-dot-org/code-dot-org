@@ -256,6 +256,7 @@
           ]
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
+          "name": "Assistance générale",
           "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme](https://youtu.be/vgkahOzFH2Q) pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
@@ -319,15 +320,63 @@
         "e180cd18-ae1a-4a5f-b893-22359586ffe8": {
           "description": "Aujourd'hui, nous allons faire quelque chose de vraiment créatif. Comment préférez-vous exprimer votre créativité ?"
         },
+        "ce2578c2-46c6-40c2-8ceb-d05fe1737802": {
+          "description": "Poussez vos élèves à dire comment eux expriment leur créativité, tel qu'à travers l'art, la danse, la musique ou l'écriture. "
+        },
         "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
           "tips": [
-            null
+            "Si vous ne vous y connaissez pas trop en programmation, vous pouvez toujours présenter l'Heure de Codec'est de montrer l'une de [nos vidéos qui inspire](https://hourofcode.com/promote/resources#videos). Choisissez-en une que vos élèves trouveront inspirante et partagez-la maintenant. Pour les élèves de niveau intermédiaire, nous suggérons [L'Heure de Code est là](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
+        "e51e34df-5370-43a4-bae5-14d2ba49a932": {
+          "description": "Expliquez qu'aujourd'hui, vous allez être créatifs avec votre « code », chose qui signifie tout simplement : une série de consigne que peut comprendre un ordinateur. Tout comme choisir une couleur de peinture à utiliser ou les types de mots avec lesquels vous écrivez peut montrer comment vous vous exprimez, choisir le code que vous écrivez et comment les gens peuvent intéragir avec, cela peut aussi être l'occasion d'exprimer sa créativité !\n\n**Levez-vous et dansez :** Annoncez à la classe qu'aujourd'hui, vous allez voir comment danse et codage peuvent être conjugués de manière créative. Demandez à vos élèves de flosser, de dabber, ou de faire d'autres mouvements qu'ils ont inventés d'eux-mêmes pendant 10 secondes pour mettre l'ambiance. Vous pouvez mettre une chanson de cette [Playlist Spotify (pour tous les âges)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw) pour vous aider à commencer. \n\nN'oubliez pas de filmer vos élèves en train de bouger leur code ! \n\n![](https://curriculum.code.org/media/uploads/girls-flossing.2018-11-01-16_13_52_9Ot0bvX.gif)"
+        },
+        "3d2ec9d2-ed62-4db0-99ca-ddf8e012d75a": {
+          "name": "Filtrer la musique",
+          "description": "Ce tutoriel comprend des chansons d'artistes pop. Pour avoir un avant-goût de la liste des chansons dans ce tutoriel, consultez cette [Playlist Spotify (pour tous les âges)](https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw). Nous utilisons des versions sans paroles vulgaires pour les élèves d'en dessous de 13 ans."
+        },
+        "ddf59331-16dc-488f-8170-6d12869fbb9f": {
+          "name": "Assistance générale",
+          "description": "**Assistance générale :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves à bien suivre le tutoriel. Voici quelques conseils qui devraient aider vos élèves quel que soit leur niveau \n\n-   **Collaborez avec vos voisins:** Incitez-les à demander conseil à leur voisin lorsqu'ils se retrouvent coincés. Étant donné que ce tutoriel comprend des vidéos et que les élèves porteront peut-être un casque, il peut être facile pour eux « d'entrer dans une bulle ». Permettez-leur de briser ces barrières en les faisant travailler ensemble quand ils semblent avoir besoin d'aide. En fonction de l'âge et des capacités de vos élèves, vous pouvez envisager de diviser votre classe en binômes pour finir le tutoriel avec [la programmation en binôme](https://youtu.be/vgkahOzFH2Q). \n-   **Lisez les consignes :** Les consignes contiennent généralement des conseils utiles pour vous aider à finir le niveau. Avant de compléter un niveau pour un élève, vérifiez qu’il ait bien regardé l’image cible et lu tout le texte. \n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Coincé ? Cherchez des indices :** Chaque niveau comprend un indice avec des détails supplémentaires pour faciliter la réussite du niveau. Si les élèves essaient de résoudre les énigmes le plus rapidement possible, ils risquent de constater qu'ils doivent quand même attendre un certain temps pour que tout le code soit lu avant de pouvoir continuer. De nombreux niveaux contiennent un deuxième indice avec des suggestions de moyens pour devenir encore plus créatif en rallongeant la tâche. \n-   **Avancez et revenez :** Parfois, revenir à un niveau difficile peut en apporter plus aux élèves. Tous les niveaux sont indépendants les uns des autres, bien qu'ils reposent dans une certaine mesure sur les concepts présentés avant. \n-   **Prenez votre temps et essayez des choses.** Même si les deux premiers niveaux indiquent exactement aux élèves ce qu'ils doivent faire pour réussir, ils devraient quand même se sentir libres de tester leurs propres idées."
+        },
+        "4dee8e28-b791-4791-ae95-8276c0da6331": {
+          "description": "##### Niveau 1\n\n-   Faites glisser le bloc « créer un nouveau » rouge de la boîte à outils à gauche vers l'espace de travail à droite. Connectez-le à l'intérieur du bloc « installation ».\n-   Vous venez d'écrire votre premier programme. Assurez-vous d'appuyer sur Exécuter pour voir ce qui se passe. Vous devriez entendre de la musique et voir un personnage commencer à se déplacer dans la zone d'affichage. "
+        },
         "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "description": "#### Niveau 2\n\n-   Les blocs verts sont des blocs d'événements. Ces blocs introduisent une nouvelle séquence de code et n'ont pas besoin d'être connectés à l'intérieur du bloc « configuration ». \n-   En connectant le bloc violet en dessous du bloc vert événement, vous devriez voir le personnage effectuer un pas de danse après le nombre de mesures que vous indiquez. ",
           "tips": [
             "À ce stade de la leçon, vous remarquerez peut-être que les instructions sont moins normatives. Encouragez les élèves à faire preuve de créativité et à explorer les nouveaux blocs qui sont introduits. À partir de ce moment, le code de l'élève n'est **pas vérifié pour l'exactitude** afin d'encourager l'expérimentation au lieu de résoudre une tâche précise."
           ]
+        },
+        "07b80de8-0e4b-442f-925b-28fcf2ad8760": {
+          "description": "#### Niveau 3\n\n-   Faites bien apparaitre un deuxième bloc événement vert. Vous devriez avoir un bloc « 4 mesures » et un bloc « après 6 mesures » sur votre plan de travail. Les deux devraient avoir un bloc violet connecté en dessous."
+        },
+        "81305b4b-d9a7-4ba2-b809-3ce383c146ab": {
+          "description": "#### Niveau 4\n\n-   Faites glisser le bloc « définir un effet d'arrière-plan ». \n-   Ce bloc peut être connecté à l'intérieur de la zone « configuration », sous un bloc événement, ou même les deux !"
+        },
+        "d4133014-cbc7-4f93-aa86-7d54ab8652fe": {
+          "description": "### Niveau 5\n\n-   Avec le bon code, vous devriez voir le danseur faire le tour d'un mouvement différent toutes les deux mesures. \n-   Assurez-vous qu'il y a bien un bloc violet « faire indéfiniment » connecté à l'intérieur du bloc « toutes les 2 mesures ». \n    \\-Assurez-vous que le bloc « faire indéfiniment » soit bien défini sur (Suivant), (Précédent) ou (Aléatoire). Sinon, le danseur continuera simplement à répéter le mouvement défini. "
+        },
+        "d164ed5b-5d98-4dd5-a9bf-e53c8c6ac675": {
+          "description": "#### Niveau 6\n\n-   Faites attention à ne pas insérer le bloc rouge « faire un nouveau » dans le bloc « toutes les 2 mesures ». Cela obligera votre programme à créer plusieurs danseurs identiques au même endroit."
+        },
+        "200f7860-0f52-4bb6-b546-e4fa9701dad4": {
+          "description": "#### Niveau 7\n\n-   Beaucoup d'élèves sauront bien que l’on peut donner l'impression qu'un objet est plus éloigné en le dessinant plus petit. Dans ce niveau, vous allez créer cet effet en réduisant la taille des deux danseurs sur les côtés. \n-   Il est important de s’assurer que le bloc « configuration » bleu sarcelle soit placé quelque part dans le programme _une fois_ que le danseur a été créé. Pour résoudre ce casse-tête, placez un bloc « configurer backup_dancer2 à 50 » quelque part en dessous du bloc « créer un nouveau robot appelé backup_dancer2 »."
+        },
+        "0311d3fc-6b80-4bb1-ab32-34a35ec4f4ba": {
+          "description": "#### Niveau 8\n\n-   Comme pour le niveau précédent, veillez à n’utiliser le bloc « définir teinte sur (couleur) » qu’après avoir créé le danseur dans votre programme. Le placer, par exemple, comme première étape dans la zone « configuration » de votre programme n'aura aucun effet."
+        },
+        "cc4443ec-6def-485c-8824-393650850b8f": {
+          "description": "#### Niveau 9\n\n-   L’informatique permet de faire ressortir les informations d’entrée de manière intéressante. Dans ce niveau, les élèves découvrent comment mettre à jour automatiquement les propriétés d'un danseur en fonction du son réel de la musique."
+        },
+        "27cd3252-fb06-4b7b-9633-751d95810c95": {
+          "description": "#### Niveau 10 à 11\n\n-   Ces niveaux permettent de rendre la danse interactive. Essayez le nouvel événement « quand on appuie dessus » pour que les danseurs répondent lorsqu’on appuie sur les touches. \n-   Vous pouvez utiliser les flèches du clavier de votre ordinateur ou cliquer sur les boutons orange situés sous la zone d'affichage. \n-   Veuillez noter que le **code qu'écrivent les élèves dans ces niveaux n'est pas contrôlé.** Cela signifie qu'ils pourront toujours terminer et passer au prochain niveau, même s'ils ne font par de changements au programme. Incitez vos élèves à déterminer d'eux-mêmes si le code correspond à leurs attentes avant de poursuivre."
+        },
+        "767f8d69-82af-43d0-a4d7-7f3bd7438424": {
+          "description": "#### Niveau 12\n\n-   Les six premiers blocs de cette boîte à outils semblent familiers, mais fonctionnent tous différemment. Au lieu de créer ou de contrôler un seul danseur, ils travaillent avec des groupes de danseurs.\n-   Comme les niveaux précédents, **le code n'est pas vérifié ici.** Libre aux élèves de tester différentes façons de travailler les groupes selon ce qu'ils trouvent intéressants. "
+        },
+        "7dcf383e-a583-4aa0-99f2-102652fbbb67": {
+          "description": "#### Niveau 13\n\n-   Ce dernier niveau est très libre. Le tutoriel lui-même est conçu pour donner aux élèves suffisamment de temps pour continuer à travailler sur leur propre danse. \n-   **Incitez le partage :** Si les élèves ont un mobile avec du forfait, ils peuvent rapidement envoyer un lien vers leurs projets à leur propre téléphone ou à un ami. Si la charte de votre école le permet, incitez-les à le faire sur place. \n-   **Incitez la créativité :** La créativité est importante tout au long de ce cours, mais d'autant plus ici qu'autre part !"
         },
         "f78380b1-0666-40a6-ac50-7adf09cda880": {
           "description": "-   Faites une invite à plusieurs réponses telles que \"Qu'est-ce que vous aimez le plus aimé dans l'activité d'aujourd'hui ?\" ou « Quel est le lien entre la créativité et l'informatique ? » "
@@ -349,6 +398,7 @@
           ]
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
+          "name": "Assistance générale",
           "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme](https://youtu.be/vgkahOzFH2Q) pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
@@ -444,6 +494,7 @@
           ]
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
+          "name": "Assistance générale",
           "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme](https://youtu.be/vgkahOzFH2Q) pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
@@ -555,6 +606,7 @@
           ]
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
+          "name": "Assistance générale",
           "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme](https://youtu.be/vgkahOzFH2Q) pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
@@ -715,6 +767,15 @@
         "1f9abc1c-6217-4fb4-a348-e0293042dc7a": {
           "name": "Installer la scène"
         },
+        "25621525-b6e8-47f3-bd9b-e574fc307993": {
+          "description": "Poussez vos élèves à dire comment eux expriment leur créativité, tel qu'à travers l'art, la danse, la musique ou l'écriture. "
+        },
+        "8c86b05c-3d26-4b91-b5a1-dca6c7fd5800": {
+          "name": "Filtrer la musique"
+        },
+        "faf90391-c01a-42d3-b79c-0becac0a50d2": {
+          "name": "Assistance générale"
+        },
         "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
           "tips": [
             "À ce stade de la leçon, vous remarquerez peut-être que les instructions sont moins normatives. Encouragez les élèves à faire preuve de créativité et à explorer les nouveaux blocs qui sont introduits. À partir de ce moment, le code de l'élève n'est **pas vérifié pour l'exactitude** afin d'encourager l'expérimentation au lieu de résoudre une tâche précise."
@@ -765,10 +826,23 @@
         "54fd242d-dc0f-4a52-b6d6-bfd8f396bc85": {
           "description": "Aujourd'hui, nous allons faire quelque chose de vraiment créatif. Comment préférez-vous exprimer votre créativité ?"
         },
+        "a88ec05c-98e3-425a-a066-4cbbf37e4af6": {
+          "description": "Poussez vos élèves à dire comment eux expriment leur créativité, tel qu'à travers l'art, la danse, la musique ou l'écriture. "
+        },
         "e1243ccf-be45-4f8e-a138-54953ea12f92": {
           "tips": [
-            null
+            "Si vous ne vous y connaissez pas trop en programmation, vous pouvez toujours présenter l'Heure de Codec'est de montrer l'une de [nos vidéos qui inspire](https://hourofcode.com/promote/resources#videos). Choisissez-en une que vos élèves trouveront inspirante et partagez-la maintenant. Pour les élèves de niveau intermédiaire, nous suggérons [L'Heure de Code est là](https://youtu.be/FC5FbmsH4fw)."
           ]
+        },
+        "5442c2d2-c29f-4455-a3aa-bb02b59f0bbe": {
+          "name": "Filtrer la musique"
+        },
+        "6c36cec6-95a3-4b8e-87d1-d9f01bc99638": {
+          "name": "Assistance générale",
+          "description": "**Assistance générale :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves à bien suivre le tutoriel. Voici quelques conseils qui devraient aider vos élèves quel que soit leur niveau \n\n-   **Collaborez avec vos voisins:** Incitez-les à demander conseil à leur voisin lorsqu'ils se retrouvent coincés. Étant donné que ce tutoriel comprend des vidéos et que les élèves porteront peut-être un casque, il peut être facile pour eux « d'entrer dans une bulle ». Permettez-leur de briser ces barrières en les faisant travailler ensemble quand ils semblent avoir besoin d'aide. En fonction de l'âge et des capacités de vos élèves, vous pouvez envisager de diviser votre classe en binômes pour finir le tutoriel avec [la programmation en binôme](https://youtu.be/vgkahOzFH2Q). \n-   **Lisez les consignes :** Les consignes contiennent généralement des conseils utiles pour vous aider à finir le niveau. Avant de compléter un niveau pour un élève, vérifiez qu’il ait bien regardé l’image cible et lu tout le texte. \n-   ![](https://curriculum.code.org/media/uploads/hint.png)**Coincé ? Cherchez des indices :** Chaque niveau comprend un indice avec des détails supplémentaires pour faciliter la réussite du niveau. Si les élèves essaient de résoudre les énigmes le plus rapidement possible, ils risquent de constater qu'ils doivent quand même attendre un certain temps pour que tout le code soit lu avant de pouvoir continuer. De nombreux niveaux contiennent un deuxième indice avec des suggestions de moyens pour devenir encore plus créatif en rallongeant la tâche. \n-   **Avancez et revenez :** Parfois, revenir à un niveau difficile peut en apporter plus aux élèves. Tous les niveaux sont indépendants les uns des autres, bien qu'ils reposent dans une certaine mesure sur les concepts présentés avant. \n-   **Prenez votre temps et essayez des choses.** Même si les deux premiers niveaux indiquent exactement aux élèves ce qu'ils doivent faire pour réussir, ils devraient quand même se sentir libres de tester leurs propres idées."
+        },
+        "d737dd0e-b1aa-47df-b9a2-620d324f9c10": {
+          "description": "##### Niveau 1\n\n-   Faites glisser le bloc « créer un nouveau » rouge de la boîte à outils à gauche vers l'espace de travail à droite. Connectez-le à l'intérieur du bloc « installation ».\n-   Vous venez d'écrire votre premier programme. Assurez-vous d'appuyer sur Exécuter pour voir ce qui se passe. Vous devriez entendre de la musique et voir un personnage commencer à se déplacer dans la zone d'affichage. "
         },
         "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
           "tips": [
@@ -834,6 +908,7 @@
           ]
         },
         "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "name": "Assistance générale",
           "description": "Voici quelques conseils qui devraient aider les élèves quel que soit leur niveau d'apprentissage.\n\n-   Collaborez avec vos camarades : encouragez les élèves à demander de l'aide à leurs camarades lorsqu'ils sont bloqués. En fonction de l'âge et des capacités de vos apprenants, vous pouvez envisager de diviser officiellement votre classe en binômes  en utilisant la [programmation en binôme][0] pour suivre le tutoriel.  \n\n-   Lisez les instructions :\\*\\* Les instructions fournissent généralement des conseils utiles sur la façon de terminer chaque module. Avant de donner la réponse aux apprenants, assurez-vous qu'ils ont vraiment compris les instructions, les conseils, les vidéos et le code de démarrage.  \n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height : 35px ;\"> **Les conseils ? Cherchez les indices:** Chaque module comprend un indice qui contient des conseils pour réussir un niveau, notamment les blocs de code à essayer. \n\n-   Prenez votre temps et expérimentez : les instructions indiquent généralement aux élèves ce qu'ils doivent faire, mais ils doivent aussi se sentir libres d'essayer leurs propres idées."
         },
         "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
@@ -1978,7 +2053,7 @@
           "progression_name": "S'entraîner"
         },
         "4ab2263d-bf26-4d37-bc0e-88278310cfa7": {
-          "progression_name": "La Moissonneuse"
+          "progression_name": "L'Agricultrice"
         },
         "027a43ed-b9d6-48af-acb0-40514f563a5a": {
           "progression_name": "S'entraîner"
@@ -2206,7 +2281,7 @@
           "progression_name": "Prédiction"
         },
         "502e09e6-3af3-43cb-ae96-e44507f1250c": {
-          "progression_name": "La Moissonneuse"
+          "progression_name": "L'Agricultrice"
         },
         "95928265-96cb-467e-9d34-0e1bbe203c3c": {
           "progression_name": "S'entraîner"
@@ -2541,7 +2616,7 @@
           "progression_name": "Activité libre"
         },
         "0b309aa0-00ca-47e2-9f46-288d25694b0d": {
-          "progression_name": "La Moissonneuse"
+          "progression_name": "L'Agricultrice"
         },
         "52c49228-8221-4b46-9f42-81a5f1abf27f": {
           "progression_name": "S'entraîner"
@@ -2689,7 +2764,7 @@
           "progression_name": "S'entraîner"
         },
         "b4cf29ee-8a4e-48ff-b637-302f650a2ede": {
-          "progression_name": "La Moissonneuse"
+          "progression_name": "L'Agricultrice"
         },
         "4bde879a-5158-461f-9d04-3000cc8992a2": {
           "progression_name": "S'entraîner"
@@ -5612,8 +5687,8 @@
           "description": "#### Débogage, persévérance et frustration\n\n**Discutez :** Préparez les élèves aux exercices en ligne d'aujourd'hui en leur demandant ce qu'ils feraient s'ils pensaient qu'il y avait un bogue dans leur code. Plus précisément, que se demanderaient-ils ?\n\n-   Est-ce que tout était correct dans la première étape ?\n-   Et la seconde ? Troisième?\n-   Où mon programme s'est-il mal passé ?\n-   Qu'est-ce que ça veut dire ?\n\n**Invite** : **Le débogage** peut être frustrant ! Mais la persévérance peut nous aider à nous en sortir. Que pouvons-nous faire pour persévérer malgré la frustration ?\n\nExemples de réponses :\n\n-   Compter jusqu'à 10\n-   Respirer profondément\n-   Reporter les bugs que nous avons trouvés\n-   Parler à un camarade des bugs\n-   Demander de l'aide\n\n**Transition :** Dites à vos élèves que la frustration fait partie du codage. Tout le monde a des bugs ! Ce n'est pas grave s'ils pensent qu'ils ont un bogue mais qu'ils ne peuvent pas le trouver ou le corriger tout de suite. L'utilisation de stratégies comme celles énumérées ci-dessus peut les aider à persévérer malgré la frustration et à résoudre n'importe quel problème !"
         },
         "478f0185-2792-46bb-8d0d-e88788ebb722": {
-          "name": "La Programmation avec la Moissonneuse",
-          "description": "À ce stade, les élèves devraient déjà être familiarisés avec l'environnement de programmation. Certaines nouvelles choses à surveiller dans cette leçon sont la confusion au sujet du processus de débogage ou le fait de ne pas se souvenir d'utiliser le bloc « pick corn » lorsque la moissonneuse atteint le maïs."
+          "name": "La Programmation avec l'Agricultrice",
+          "description": "À ce stade, les élèves devraient déjà être familiarisés avec l'environnement de programmation. Certaines nouvelles choses à surveiller dans cette leçon sont la confusion au sujet du processus de débogage ou le fait de ne pas se souvenir d'utiliser le bloc « pick corn » lorsque l'Agricultrice atteint le maïs."
         },
         "78aa2079-ec2a-438a-90cd-fc04c7fd1a89": {
           "tips": [
@@ -5624,7 +5699,7 @@
           "description": "**Circulez :** Lors des activités en ligne, le rôle de l'enseignant est avant tout celui d'encourager et de soutenir. En plus des idées énumérées dans la dernière leçon, en voici d'autres sur la façon de procéder :\n\n-   Rappelez aux élèves d'utiliser le processus de débogage avant de vous appeler.\n-   Demandez-leur de décrire le problème qu'ils voient. Qu'est-ce que c'est censé faire ? Qu'est ce que ça fait ? Qu'est-ce que ça veut dire ?\n-   Rappelez aux élèves frustrés que la frustration est une étape sur la voie de l'apprentissage et que la persévérance sera payante.\n-   Si un élève est toujours bloqué après tout cela, posez des questions suggestives pour l'amener à repérer une erreur par lui-même.\n\n**Transition :** Demandez aux élèves de prendre leur journal de réflexion et de revoir le cours tout seuls."
         },
         "0f52c6dc-5602-4905-a924-f7756676f53f": {
-          "progression_name": " La Moissonneuse"
+          "progression_name": "Video: l'Agricultrice"
         },
         "a54a5ab7-02a5-461d-bdc2-49c946a369d7": {
           "progression_name": "Renforcement Des Compétences"
@@ -5702,7 +5777,7 @@
           "description": "Tirez sur les puzzles en ligne et choisissez un puzzle à faire devant la classe. Nous recommandons le casse-tête 7. Demandez aux élèves d'écrire un programme pour résoudre le casse-tête sur papier. Demandez-leur d'encercler les morceaux répétés et d'étiqueter avec le nombre de répétitions, de la même manière qu'ils l'ont fait dans « Getting Loopy ». "
         },
         "11be2bd6-803f-4a86-9f3c-f366fbcbea4b": {
-          "name": "Les Boucles avec la Moissonneuse",
+          "name": "Les Boucles avec l'Agricultrice",
           "description": "Au fur et à mesure que les élèves résolvent les énigmes, voyez s'ils peuvent déterminer combien de blocs ils utilisent avec une boucle par rapport à sans boucle. "
         },
         "297c2fd4-5c7e-4e3a-961a-844203b345e4": {
@@ -6765,7 +6840,7 @@
         },
         "61416522-3272-4f4f-9fa9-6ab21de140ad": {
           "name": "Récolter des Cultures avec des Boucles",
-          "progression_name": " La Moissonneuse"
+          "progression_name": "Video: l'Agricultrice"
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
           "description": "Lorsque les élèves utilisent des boucles pour répéter une action (comme la récolte de citrouilles), encouragez-les à réfléchir aux mouvements avant et après cette action. Pourront-on aussi les mettre dans la boucle ?",
@@ -6788,10 +6863,10 @@
           "description": "**Invites :**\n\n-   De quoi parlait la leçon d'aujourd'hui ?\n-   Qu'en avez-vous pensé ?\n-   Donnez deux exemples d'utilisation de boucles dans votre code.\n-   Qu'est-ce qu'un agriculteur pourrait récolter d'autre ? Dessinez le bloc de code dont vous auriez besoin pour récolter cet élément. "
         },
         "d5490110-1fb8-44ca-8e62-8b0c4e3b6dbe": {
-          "description": "Utilisez ces activités pour que vos élèves apprennent mieux. On peut les utiliser en dehors des activités de classe ou autre.\n\n\\*\\* Fournitures pour la récolte \\*\\*\n\n-   Laisser les élèves faire des piles de fournitures scolaires sur leur bureau (crayons, gommes, etc.)\n-   Demandez à leurs camarades comment un moissonneur marcherait de tas en tas, en récoltant chaque groupe d'articles tout au long du chemin.\n-   Montrez ces programmes au reste de la classe."
+          "description": "Utilisez ces activités pour que vos élèves apprennent mieux. On peut les utiliser en dehors des activités de classe ou autre.\n\n\\*\\* Fournitures pour la récolte \\*\\*\n\n-   Laisser les élèves faire des piles de fournitures scolaires sur leur bureau (crayons, gommes, etc.)\n-   Demandez à leurs camarades comment une agricultrice marcherait de tas en tas, en récoltant chaque groupe d'articles tout au long du chemin.\n-   Montrez ces programmes au reste de la classe."
         },
         "4f77bfdb-350b-4792-aa46-c2667c56e48b": {
-          "description": "### Ferme des Moissonneurs (60-75 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informatique + Anglais Langue Arts + Mathématiques + Sciences**\n\n[\\*\\* Harvester's Farm\\*\\*](https://docs.google.com/document/d/1EgX8toSxV0gB-n2XTQVckeNhnYzsP7iYiO1H0vNGMKM/edit#heading=h.oa0z8i3xy1ys) est une activité facultative alignée sur Common Core ELA, Common Core Math et Next Generation Science Standards, rédigée par notre communauté d'enseignants. Les élèves utiliseront les organisateurs graphiques fournis pour classer et décrire les éléments de Harvester's Farm. Les organisateurs graphiques serviront de composante de pré-écriture pendant que les élèves rédigent ensuite un texte informatif/explicatif pour informer les lecteurs sur ce que fait la moissonneuse sur sa ferme.\n\n_Normes abordées :_\n\n-   **CCSS.ELA-LITERACY.W.2.2 :** Rédigez des textes informatifs/explicatifs dans lesquels ils introduisent un sujet, utilisent des faits et des définitions pour développer des points et fournissent une déclaration ou une section de conclusion.\n\n-   **CCSS.ELA-LITERACY.W.2.5 :** Avec les conseils et le soutien d'adultes et de camarades, concentrez-vous sur un sujet et renforcez l'écriture au besoin en révisant et en éditant.\n\n-   **CCSS.MATH.CONTENT.2.OA.B.2 :** Additionnez et soustrayez couramment dans les 20 % en utilisant des stratégies mentales.\n\n-   **NGSS.2-PS1-1 :** Planifier et mener une enquête pour décrire et classer différents types de matériaux en fonction de leurs propriétés observables. "
+          "description": "### Ferme de l'Agricultrice (60-75 minutes)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Informatique + Anglais Langue Arts + Mathématiques + Sciences**\n\n[\\*\\*Ferme de l'Agricultrice\\*\\*](https://docs.google.com/document/d/1EgX8toSxV0gB-n2XTQVckeNhnYzsP7iYiO1H0vNGMKM/edit#heading=h.oa0z8i3xy1ys) est une activité facultative alignée sur Common Core ELA, Common Core Math et Next Generation Science Standards, rédigée par notre communauté d'enseignants. Les élèves utiliseront les organisateurs graphiques fournis pour classer et décrire les éléments de Harvester's Farm. Les organisateurs graphiques serviront de composante de pré-écriture pendant que les élèves rédigent ensuite un texte informatif/explicatif pour informer les lecteurs sur ce que fait la moissonneuse sur sa ferme.\n\n_Normes abordées :_\n\n-   **CCSS.ELA-LITERACY.W.2.2 :** Rédigez des textes informatifs/explicatifs dans lesquels ils introduisent un sujet, utilisent des faits et des définitions pour développer des points et fournissent une déclaration ou une section de conclusion.\n\n-   **CCSS.ELA-LITERACY.W.2.5 :** Avec les conseils et le soutien d'adultes et de camarades, concentrez-vous sur un sujet et renforcez l'écriture au besoin en révisant et en éditant.\n\n-   **CCSS.MATH.CONTENT.2.OA.B.2 :** Additionnez et soustrayez couramment dans les 20 % en utilisant des stratégies mentales.\n\n-   **NGSS.2-PS1-1 :** Planifier et mener une enquête pour décrire et classer différents types de matériaux en fonction de leurs propriétés observables. "
         },
         "aaae9aa4-7847-4f45-be5e-96f454d2e343": {
           "name": "Introduction",
@@ -8401,8 +8476,8 @@
           "name": "Introduction"
         },
         "cbe7cad1-610d-4da8-9af6-fceb37bdeeed": {
-          "name": "Les Fonctions avec la Moissonneuse",
-          "progression_name": "La Moissonneuse"
+          "name": "Les Fonctions avec l'Agricultrice",
+          "progression_name": "L'Agricultrice"
         },
         "d505ce63-802f-4f28-bc12-8274cd540d14": {
           "progression_name": "S'entraîner"
@@ -12995,7 +13070,7 @@
           "progression_name": "S'entraîner"
         },
         "259004b6-d013-48a6-8adb-4da6e8a13e6d": {
-          "progression_name": "La Moissonneuse"
+          "progression_name": "L'Agricultrice"
         },
         "e0c060eb-1f06-4f1d-a91e-edd961631883": {
           "progression_name": "S'entraîner"
@@ -13244,7 +13319,7 @@
           "progression_name": "Prédiction"
         },
         "68c477cb-6e9a-41d1-9f7e-2b3b84a95f52": {
-          "progression_name": "La Moissonneuse"
+          "progression_name": "L'Agricultrice"
         },
         "86188817-4050-4ffc-8321-67eb22cc7438": {
           "progression_name": "S'entraîner"
@@ -13366,7 +13441,7 @@
           "progression_name": "S'entraîner"
         },
         "e12c3ee1-8c2e-4727-8133-d6dbf630f64d": {
-          "progression_name": "La Moissonneuse"
+          "progression_name": "L'Agricultrice"
         },
         "fe170410-de6e-4d52-8cd2-62ceb9a8b808": {
           "progression_name": "S'entraîner"
@@ -13562,7 +13637,7 @@
           "progression_name": "Activité libre"
         },
         "f62b5dfa-a6d0-4152-9486-204c989f79d6": {
-          "progression_name": "La Moissonneuse"
+          "progression_name": "L'Agricultrice"
         },
         "8c92f401-dd45-4021-a38f-b410d49f7195": {
           "progression_name": "S'entraîner"

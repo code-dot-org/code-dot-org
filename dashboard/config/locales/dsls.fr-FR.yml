@@ -3554,7 +3554,7 @@ fr-FR:
             options avant de répondre!'
       courseD_multi_farmer_condLoops9_predict1:
         answers:
-        - text: Le moissonneur ramassera toutes les plantes.
+        - text: L'Agricultrice ramassera toutes les plantes.
           feedback: Incorrect. Il n'y a pas de code pour ramasser la citrouille.
         - text: Le cueilleur ne ramassera aucune des plantes avec le chemin qu'il
             prend.
@@ -3565,8 +3565,8 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
-          feedback: Le code verra le moissonneur répéter le motif des marches d'escalier
-            et ramasser autant de salades et plantes qu'il croise. Il ne ramassera
+          feedback: Le code verra l'agricultrice répéter le motif des marches d'escalier
+            et ramasser autant de salades et plantes qu'il croise. Elle ne ramassera
             pas la citrouille.
         markdown: Les germes, dans cette énigme, seront soit du maïs ou de la laitue.   <
           br / >
@@ -3575,14 +3575,14 @@ fr-FR:
             sur "Démarrer"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
-        - text: Le moissonneur ramassera toutes les plantes.
+        - text: L'Agricultrice ramassera toutes les plantes.
           feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
-        - text: La moissonneuse ne ramassera aucune des cultures sur le chemin qu'elle
+        - text: L'Agricultrice ne ramassera aucune des cultures sur le chemin qu'elle
             prend.
           feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
             d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
             ramassera pas la citrouille.
-        - text: La moissonneuse ramassera toutes les cultures, sauf la citrouille.
+        - text: L'Agricultrice ramassera toutes les cultures, sauf la citrouille.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
@@ -3596,14 +3596,14 @@ fr-FR:
             sur "Démarrer"?
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
-        - text: Le moissonneur ramassera toutes les plantes.
+        - text: L'Agricultrice ramassera toutes les plantes.
           feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
-        - text: La moissonneuse ne ramassera aucune des cultures sur le chemin qu'elle
+        - text: L'Agricultrice ne ramassera aucune des cultures sur le chemin qu'elle
             prend.
           feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
             d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
             ramassera pas la citrouille.
-        - text: La moissonneuse ramassera toutes les cultures, sauf la citrouille.
+        - text: L'Agricultrice ramassera toutes les cultures, sauf la citrouille.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
@@ -3617,14 +3617,14 @@ fr-FR:
             sur "Démarrer"?
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
-        - text: Le moissonneur ramassera toutes les plantes.
+        - text: L'Agricultrice ramassera toutes les plantes.
           feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
-        - text: La moissonneuse ne ramassera aucune des cultures sur le chemin qu'elle
+        - text: L'Agricultrice ne ramassera aucune des cultures sur le chemin qu'elle
             prend.
           feedback: Incorrect. Le code verra le cueilleur répéter le modèle des marches
             d'escalier et ramasser autant de laitues et plantes qu'il croise. Il ne
             ramassera pas la citrouille.
-        - text: La moissonneuse ramassera toutes les cultures, sauf la citrouille.
+        - text: L'Agricultrice ramassera toutes les cultures, sauf la citrouille.
           correct: true
           feedback: Correct!
         - text: Je ne sais pas.
@@ -4007,12 +4007,12 @@ fr-FR:
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: La fermière ramassera 2 citrouilles.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
         - text: La fermière ramassera toutes les citrouilles.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
@@ -4020,7 +4020,7 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
@@ -4030,12 +4030,12 @@ fr-FR:
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: La fermière ramassera 2 citrouilles.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
         - text: La fermière ramassera toutes les citrouilles.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
@@ -4043,7 +4043,7 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
@@ -4053,12 +4053,12 @@ fr-FR:
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
         - text: La fermière ramassera 2 citrouilles.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
         - text: La fermière ramassera toutes les citrouilles.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
@@ -4066,7 +4066,7 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
@@ -5721,14 +5721,14 @@ fr-FR:
             produira-t-elle lorsque tu cliqueras sur "Démarrer"?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
-        - text: Le moissonneur ramassera toutes les plantes.
+        - text: L'Agricultrice ramassera toutes les plantes.
           feedback: Incorrect. Il n'y a pas de code, ici, pour ramasser la citrouille.
-        - text: La moissonneuse ne ramassera aucune des cultures sur le chemin qu'elle
+        - text: L'Agricultrice ne ramassera aucune des cultures sur le chemin qu'elle
             prend.
           feedback: Incorrect. Le code verra la moissoneuse répéter le modèle des
             marches d'escalier et ramasser autant de laitues et plantes qu'elle en
             voit. Elle ne ramassera pas la citrouille.
-        - text: La moissonneuse ramassera toutes les cultures, sauf la citrouille.
+        - text: L'Agricultrice ramassera toutes les cultures, sauf la citrouille.
           correct: true
           feedback: Correct!
         - text: La moissoneuse ne ramassera que la citrouille.
@@ -5837,12 +5837,12 @@ fr-FR:
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La fermière ramassera 2 citrouilles.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
         - text: La fermière ramassera toutes les citrouilles.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
@@ -5850,7 +5850,7 @@ fr-FR:
           correct: true
           feedback: Correct!
         - text: La fermière va ramasser le maïs.
-          feedback: 'Incorrect. La moissonneuse avance jusqu''au bout du chemin, puis
+          feedback: 'Incorrect. l''Agricultrice avance jusqu''au bout du chemin, puis
             se retourne et recule jusqu''à ce qu''elle ramasse la laitue.
 
 '
