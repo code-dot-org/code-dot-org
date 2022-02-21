@@ -857,6 +857,10 @@
           "word": "Pętla \"dla\"",
           "definition": "Pętle, posiadające określony z góry początek, koniec oraz przyrost (interwał kroku)."
         },
+        "parameter/csd/2021": {
+          "word": "Parametr",
+          "definition": "Dodatkowa informacja podana do funkcji, aby dostosować ją do konkretnej potrzeby"
+        },
         "debugging/csd/2021": {
           "word": "Debugowanie",
           "definition": "Wynajdywanie i naprawianie problemów w algorytmie lub programie."
@@ -868,6 +872,9 @@
         "variable/csd/2021": {
           "word": "Zmienna",
           "definition": "Etykieta informacji użyta w programie."
+        },
+        "property/csd/2021": {
+          "word": "Właściwość"
         },
         "sprite/csd/2021": {
           "word": "Duszek"

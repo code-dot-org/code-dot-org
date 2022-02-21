@@ -1395,6 +1395,9 @@
         "design_an_ai_app_1/csd/2021": {
           "name": "Utwórz aplikację „AI dla dobra społecznego”"
         },
+        "computer-science-practices/csd/2021": {
+          "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit"
+        },
         "paper-prototypes/csd/2021": {
           "name": "Prototypy na papierze"
         },
@@ -1522,38 +1525,134 @@
         "all_vocabulary_5/csd/2021": {
           "url": "/s/csd5-2021/vocab"
         },
+        "drawing_in_game_lab_-_part_1/csd/2021": {
+          "url": "https://youtu.be/PXn9gKiKKFo"
+        },
+        "drawing_in_game_lab_-_part_2/csd/2021": {
+          "url": "https://youtu.be/QLabeWhw_O0"
+        },
+        "drawing_shapes/csd/2021": {
+          "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing"
+        },
+        "shapes_and_parameters_-_map_level/csd/2021": {
+          "url": "https://studio.code.org/docs/concepts/game-lab/shapes-and-parameters/"
+        },
+        "shapes_and_parameters/csd/2021": {
+          "url": "https://drive.google.com/file/d/1uEZ_gMcXJOCd41k6uTKlxsVVWEVrFikj/view?usp=sharing"
+        },
+        "introduction-to-variables/csd/2021": {
+          "url": "https://youtu.be/UG7Q1Sr0_F0"
+        },
+        "naming_variables/csd/2021": {
+          "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view"
+        },
         "variables_1/csd/2021": {
-          "name": "Zmienne"
+          "name": "Zmienne",
+          "url": "https://drive.google.com/file/d/1SRUFCpI8bvsX4pRECNUl0R2ZBrA0TocN/view"
         },
         "random_numbers/csd/2021": {
           "name": "Losowe liczby"
         },
+        "introduction_to_sprites/csd/2021": {
+          "url": "https://youtu.be/aUHzpGt9nso"
+        },
         "the_animation_tab/csd/2021": {
-          "name": "Karta Animacji"
+          "name": "Karta Animacji",
+          "url": "https://youtu.be/DQPruYTJ0Fk"
+        },
+        "animation_tab/csd/2021": {
+          "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view"
         },
         "sprites_1/csd/2021": {
-          "name": "Duszki"
+          "name": "Duszki",
+          "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view"
         },
         "sprite_properties/csd/2021": {
           "name": "Właściwości duszka"
         },
+        "mini-project-captioned-scenes-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1zC5eycqT-4oHrNjzyPncscHfwh-T6TZEQEtQ2lOpp6o/edit"
+        },
+        "captioned-scenes/csd/2021": {
+          "url": "https://docs.google.com/document/d/1nnknkBeMA8SkIyvVcffbOKV_i5xQmLPGRMwJxORuVwQ/edit"
+        },
+        "sprite-scene-planning/csd/2021": {
+          "url": "https://docs.google.com/document/d/10TvBlmIsCVtf4encEutlYmzU30voTyE1L3PNXQQFobw/edit"
+        },
+        "random-dot-flipbook/csd/2021": {
+          "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit"
+        },
+        "random-sprite-flipbook/csd/2021": {
+          "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit"
+        },
+        "youtube-flipbook/csd/2021": {
+          "url": "https://youtu.be/hol0p29cd8o"
+        },
+        "introduction_to_the_draw_loop/csd/2021": {
+          "url": "https://youtu.be/G6QJeuHhqCM"
+        },
+        "the_draw_loop/csd/2021": {
+          "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing"
+        },
         "animating-sprites/csd/2021": {
-          "name": "Ruch duszka"
+          "name": "Ruch duszka",
+          "url": "https://youtu.be/G666sFzAg5g"
+        },
+        "the_counter_pattern/csd/2021": {
+          "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing"
+        },
+        "animated-scene-planning-exemplar-2020/csd/2021": {
+          "name": "Planowanie animowanej sceny",
+          "url": "https://docs.google.com/document/d/109GkaCj5HIBSELJ9SN2aLKSmnA3M2uo-yBiuua9DGkc/edit?usp=sharing"
+        },
+        "animated-scene-1/csd/2021": {
+          "name": "Animowana scena",
+          "url": "https://docs.google.com/document/d/10pk8PAdaLzSAnmMvvCP8pYsYWXv6UyxzxN1k9M9ThpE/edit"
+        },
+        "animated-scene/csd/2021": {
+          "name": "Animowana scena",
+          "url": "https://docs.google.com/document/d/1vYDwIgLOLPH4ymHusLyTo4Ydn5OEOCJ4rf5ZbQ9rrOQ/edit"
         },
         "boolean_expressions/csd/2021": {
-          "name": "Wyrażenia logiczne"
+          "name": "Wyrażenia logiczne",
+          "url": "https://youtu.be/_j9nvYKaOVE"
         },
         "conditional_statements/csd/2021": {
-          "name": "Instrukcje warunkowe"
+          "name": "Instrukcje warunkowe",
+          "url": "https://youtu.be/TuLIK7DcPWs"
+        },
+        "booleans_and_comparison_operators/csd/2021": {
+          "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing"
+        },
+        "if_statements/csd/2021": {
+          "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing"
+        },
+        "if-else_statements_-_map_level_pdf_/csd/2021": {
+          "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing"
         },
         "if_else_statements/csd/2021": {
-          "name": "Instrukcje If/Else"
+          "name": "Instrukcje If/Else",
+          "url": "https://youtu.be/6m6FFUJsOzo"
+        },
+        "interactive-card-exemplar-2020/csd/2021": {
+          "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/"
+        },
+        "interactive-card-marked-rubrics/csd/2021": {
+          "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view"
+        },
+        "interactive-card-project-guide-2019/csd/2021": {
+          "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/"
+        },
+        "interactive-card-1-2-3-4/csd/2021": {
+          "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/"
         },
         "velocity_1/csd/2021": {
-          "name": "Prędkość"
+          "name": "Prędkość",
+          "url": "https://youtu.be/zcP94yMYqrI"
         },
         "velocity_2/csd/2021": {
-          "name": "Prędkość"
+          "name": "Prędkość",
+          "url": "https://drive.google.com/file/d/10n2QcpY__sDlycr09Xar6o-2iDAb0P49/view?usp=sharing"
         },
         "collision-detection-exemplar-2020/csd/2021": {
           "name": "Wykrywanie kolizji"

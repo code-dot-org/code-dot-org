@@ -9603,6 +9603,7 @@
           "description": "Jeśli Twoi uczniowie czują się swobodnie z koncepcjami kodowania, spróbuj skłonić ich do tworzenia swoich projektów w innej platformie, takiej jak [Scratch](https://scratch.mit.edu/) lub [Alice](http://www.alice.org/index.php)."
         },
         "1d222524-316a-4988-b206-b1f948cfbee7": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
@@ -9625,6 +9626,9 @@
         "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
           "name": "Refleksja"
         },
+        "1c3edfdb-7f19-4a9e-ac61-3e57dbaeddf0": {
+          "name": "Dziennik"
+        },
         "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
           "tips": [
             null
@@ -9646,14 +9650,21 @@
           ]
         },
         "8791201e-af87-456b-8f93-1c4cb8c10099": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
+        },
+        "7f167e37-0d33-4983-bd63-a5c51984f818": {
+          "name": "Dziennik"
         },
         "6ca0b1c3-d106-4e70-bdf5-ee0ed4f7dad6": {
           "tips": [
             null
           ]
+        },
+        "1ff2a858-92a9-4175-9625-5f94526dac1c": {
+          "name": "Dziennik"
         },
         "48b299c7-bdd4-453e-aa47-d9d2c7622ee8": {
           "tips": [
@@ -9669,6 +9680,12 @@
           "tips": [
             null
           ]
+        },
+        "1fb18042-bbe6-4e8d-89e3-070a0154f66e": {
+          "name": "Dziennik"
+        },
+        "4a6f20d9-93fe-4b85-baf5-0605c1fd4774": {
+          "name": "Dziennik"
         },
         "ec6a94fb-4529-40b5-bee7-42c5d06822e1": {
           "tips": [
@@ -9694,6 +9711,12 @@
           "tips": [
             null
           ]
+        },
+        "d27e9e80-d500-4611-8dad-a4bad04f1273": {
+          "name": "Dziennik"
+        },
+        "9911d79f-8812-4c66-b610-66e91d854548": {
+          "name": "Dziennik"
         },
         "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
           "tips": [
@@ -9735,6 +9758,12 @@
             null
           ]
         },
+        "6c43539f-8ba5-43e6-93fa-9bc34d0e4d75": {
+          "name": "Dziennik"
+        },
+        "181e84e3-430b-4c20-9e48-fffad8c5bab2": {
+          "name": "Dziennik"
+        },
         "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
           "tips": [
             null
@@ -9771,11 +9800,13 @@
           ]
         },
         "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
         },
         "79f35dc1-bf5e-47ca-b1eb-b726b15859a8": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
@@ -9801,9 +9832,13 @@
           ]
         },
         "db8f4d62-af34-4871-993d-281cacf5ff29": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
+        },
+        "a78fb652-de9d-4d40-9024-8e6c4d15ee18": {
+          "name": "Dziennik "
         },
         "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
           "name": "Karty modeli w AI Lab",
@@ -9820,6 +9855,12 @@
           "tips": [
             null
           ]
+        },
+        "fab00d1e-0bf0-4f6c-866f-388441b6505d": {
+          "name": "Dziennik "
+        },
+        "3227657f-0bd2-4f06-970c-445432836588": {
+          "name": "Dziennik "
         },
         "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
           "tips": [
@@ -9846,6 +9887,9 @@
             null
           ]
         },
+        "5c385108-484c-44cb-b688-858fc00e41df": {
+          "progression_name": "Dodawanie nowych ekranów"
+        },
         "209eff96-d559-411e-b8cf-bd6a84923473": {
           "tips": [
             null
@@ -9865,6 +9909,12 @@
         },
         "61bfa751-8587-4118-84e1-b3870975fad4": {
           "progression_name": "Wyzwanie"
+        },
+        "5dc1d0a7-a3a8-4e26-8ddd-3133d70c5f9f": {
+          "name": "Dziennik"
+        },
+        "557e0ccc-ca5d-4da8-a653-04055517a185": {
+          "name": "Dziennik"
         },
         "b39acb79-1fad-4acd-b3e4-789f32636f46": {
           "tips": [
@@ -9886,6 +9936,12 @@
             null
           ]
         },
+        "cf7fec91-b8c2-4b68-8e78-f10c536c2d3f": {
+          "name": "Dziennik"
+        },
+        "bcdd8b8e-db28-42f7-9ddf-d24579e170d5": {
+          "name": "Dziennik "
+        },
         "221c0911-a3eb-4409-be91-e665b43e3fc9": {
           "tips": [
             null
@@ -9902,10 +9958,25 @@
             null
           ]
         },
+        "b45bc335-aa90-474a-a72e-d53cd598287f": {
+          "name": "Dziennik"
+        },
+        "9382a280-a542-46a5-932f-9f2258bbb2eb": {
+          "name": "Dziennik"
+        },
         "4e10be5f-60ad-4bae-913d-7a157e519447": {
           "tips": [
             null
           ]
+        },
+        "85a0ec6f-c1c7-46f6-8e4f-f805984133dc": {
+          "name": "Dziennik"
+        },
+        "edd27907-d992-46f6-a9d6-71f7cb7098b9": {
+          "name": "Dziennik"
+        },
+        "27fb858f-74be-466d-8261-26a610837a03": {
+          "name": "Dziennik"
         },
         "c5595f82-fa56-4a48-a7f6-65b97947a7e9": {
           "tips": [
@@ -9926,6 +9997,9 @@
           "name": "Refleksja",
           "progression_name": "Refleksja"
         },
+        "4ed9befe-cfcb-4d9b-ab09-0eab8239853f": {
+          "name": "Dziennik"
+        },
         "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
           "tips": [
             null
@@ -9940,6 +10014,12 @@
           "tips": [
             null
           ]
+        },
+        "d7e29a9c-d566-4556-983d-cd31736f67e8": {
+          "name": "Dziennik"
+        },
+        "d87d6a30-1929-4ec3-baae-5b3457330c9c": {
+          "name": "Dziennik"
         },
         "c0c1d052-3e33-4066-a541-356b552d5ec7": {
           "tips": [
@@ -9981,6 +10061,9 @@
             null
           ]
         },
+        "57e61086-a30b-47d8-ad65-af83a970d437": {
+          "name": "Dziennik"
+        },
         "0644a5d2-d3ae-4dea-8777-47a522955b21": {
           "tips": [
             null
@@ -9995,6 +10078,15 @@
           "tips": [
             null
           ]
+        },
+        "a8ff2adf-b2f8-4f4f-95e0-b5359f05d5a1": {
+          "name": "Dziennik"
+        },
+        "c4594eb3-a313-4824-a608-4558d7783967": {
+          "name": "Dziennik"
+        },
+        "f2a40f03-0400-4522-b5d6-8349034c6ebb": {
+          "progression_name": "Dodaj powitalny ekran"
         },
         "1b28522d-bf63-4f09-94a2-a80833819a38": {
           "tips": [
@@ -10074,6 +10166,9 @@
           ],
           "progression_name": "Instrukcje do ankiety końcowej"
         },
+        "bffb7609-21c3-4e03-b16a-e4753c421cbc": {
+          "name": "Dziennik"
+        },
         "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
           "tips": [
             null
@@ -10098,6 +10193,12 @@
           "tips": [
             null
           ]
+        },
+        "ac33d632-f30f-4def-b290-37aa318342ca": {
+          "name": "Dziennik"
+        },
+        "5becca11-20b8-4141-9617-ef7c518a3d99": {
+          "name": "Dziennik"
         },
         "aed2c64f-4f98-4bf6-adf7-f7cd80ab941a": {
           "tips": [
@@ -10143,10 +10244,16 @@
             null
           ]
         },
+        "32060f67-52fc-496b-9178-29bbcd0a854e": {
+          "name": "Dziennik"
+        },
         "0e79724e-4dc4-491d-ac17-f4839c30ce19": {
           "tips": [
             null
           ]
+        },
+        "77645736-2519-4d27-b58f-460674b37ac3": {
+          "name": "Dziennik"
         },
         "ef056da0-16f9-479a-95ea-42f70ae6a9aa": {
           "tips": [
@@ -10165,9 +10272,13 @@
           "name": "Przemyśl"
         },
         "8f2a96ab-2fe4-4799-bf45-5d850c830f97": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
+        },
+        "9cdb66ed-0a11-469c-86c7-516372ae3eca": {
+          "name": "Dziennik"
         },
         "8a310d03-4c27-4b18-b8f7-994c23971fdd": {
           "tips": [
@@ -10198,9 +10309,13 @@
           ]
         },
         "18ddafa9-e84c-403f-a417-d4516a1ae6a7": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
+        },
+        "d4051ea3-89a9-4721-812c-0eaff899cb06": {
+          "name": "Dziennik"
         },
         "c5dbb48d-d120-4560-b671-bd507f1685b0": {
           "tips": [
@@ -10217,10 +10332,16 @@
             null
           ]
         },
+        "6c56c6d8-505f-450b-af78-6589752885e9": {
+          "name": "Dziennik"
+        },
         "4a408d6d-8d2f-481e-aafe-e5d81da03a43": {
           "tips": [
             null
           ]
+        },
+        "6c9f71c2-38be-428f-88e2-c7b16c1f4b47": {
+          "name": "Dziennik"
         },
         "3fef28ad-87b4-4154-b80f-12b358f2e031": {
           "tips": [
@@ -10237,10 +10358,16 @@
             null
           ]
         },
+        "b1a23a75-eac2-45e6-aeb9-dc86a259ee94": {
+          "name": "Dziennik"
+        },
         "47fe69d8-300c-488d-94ac-616b6fb2fbb8": {
           "tips": [
             null
           ]
+        },
+        "950c4c2b-2dea-43a3-bf2f-b3ce9ba2b710": {
+          "name": "Dziennik"
         },
         "37a98989-bd44-40e0-8606-da8c32dde749": {
           "tips": [
@@ -10287,6 +10414,9 @@
             null
           ]
         },
+        "3f6409bb-cc17-4e85-8567-bd8e0fdd0e53": {
+          "name": "Dziennik"
+        },
         "a97b7f87-b7d9-4a8d-a68e-35cd489345e2": {
           "tips": [
             null
@@ -10297,6 +10427,9 @@
         },
         "b13161da-36da-4c66-a533-ee18c77cc807": {
           "name": "Patrząc w przyszłość"
+        },
+        "74abfed4-1d5e-46f2-ac52-727f18e332ee": {
+          "name": "Dziennik"
         },
         "86647112-ffd2-4c41-84b4-1ea040590a32": {
           "tips": [
@@ -10333,10 +10466,16 @@
             null
           ]
         },
+        "7ca08821-712e-460c-abe0-f55fcbd00be7": {
+          "name": "Dziennik"
+        },
         "99a48707-5d94-418b-a63e-120ef2178c88": {
           "tips": [
             null
           ]
+        },
+        "d605e701-6f3b-4741-bc41-65c4045ec132": {
+          "name": "Dziennik"
         },
         "61333e8c-4c43-4cb8-8a5f-56153ff20170": {
           "tips": [
@@ -10358,10 +10497,16 @@
             null
           ]
         },
+        "676729d1-867d-48fd-b7c8-4c2a1530cbce": {
+          "name": "Dziennik"
+        },
         "43484e40-619c-44a7-97e1-2612ae402193": {
           "tips": [
             null
           ]
+        },
+        "892ffdca-d923-46c2-8040-6a951d995301": {
+          "name": "Dziennik"
         },
         "d7947c4f-5f7c-4011-a004-6fb9cc228706": {
           "tips": [
@@ -10378,10 +10523,16 @@
             null
           ]
         },
+        "c8cdff99-2d0f-425f-a6bf-1bb532626320": {
+          "name": "Dziennik"
+        },
         "4aec71fb-6cbe-4811-ab72-128f739c84a7": {
           "tips": [
             null
           ]
+        },
+        "08454e57-f59f-4c27-b0db-eca09ff97edf": {
+          "name": "Dziennik"
         },
         "580b0187-b553-4031-b073-fa6790bd6f48": {
           "tips": [
@@ -10408,6 +10559,9 @@
             null
           ]
         },
+        "66638787-9770-450a-8bcc-f30821a49742": {
+          "name": "Dziennik"
+        },
         "bcbc8736-9513-438c-b118-87470fc5f545": {
           "tips": [
             null
@@ -10423,10 +10577,16 @@
             null
           ]
         },
+        "c9ee08ae-95af-4d56-94c0-a855a029bd5d": {
+          "name": "Dziennik"
+        },
         "52705132-ae81-4c78-8704-9ffd36b9e5cb": {
           "tips": [
             null
           ]
+        },
+        "ab1eda38-c903-473b-9548-006095f627b6": {
+          "name": "Dziennik"
         },
         "9ac26727-d92c-474f-8a18-271e7f494132": {
           "tips": [
@@ -10468,10 +10628,16 @@
           ],
           "progression_name": "Projekt aplikacji: Projekt ekranu "
         },
+        "4f1b507e-f956-4c2a-bff2-59ac9952efa4": {
+          "name": "Dziennik"
+        },
         "311288e0-9ddf-4681-a8f2-31ae7d196423": {
           "tips": [
             null
           ]
+        },
+        "faeadd09-075d-484e-a6ae-9ac553e4b0bc": {
+          "name": "Dziennik"
         },
         "045c4fbc-83bd-4cce-a007-ed7ed6ac48bf": {
           "tips": [
@@ -10495,10 +10661,16 @@
             null
           ]
         },
+        "d82e5878-50f2-42ee-9cb1-067c2d895b73": {
+          "name": "Dziennik"
+        },
         "ff9510f7-5db2-48e7-906e-2289e52db678": {
           "tips": [
             null
           ]
+        },
+        "81a95d07-b352-4a95-984a-66003cc6db35": {
+          "name": "Dziennik"
         },
         "75d3dcbc-e41c-4063-b598-facb3bdc9bcb": {
           "tips": [
@@ -10517,6 +10689,9 @@
           "tips": [
             null
           ]
+        },
+        "90141481-474e-4636-a38f-6ddf0f343559": {
+          "name": "Dziennik"
         },
         "66a0329e-9fa3-4294-ba1a-ac918f0e8408": {
           "tips": [
@@ -10538,10 +10713,16 @@
             null
           ]
         },
+        "5284db9f-3ea1-4dd4-84ed-7ee322b0d302": {
+          "name": "Dziennik"
+        },
         "ba1c96c9-ff95-432b-8d22-5138a319f4b4": {
           "tips": [
             null
           ]
+        },
+        "4d4e5546-072a-436d-b65b-51d1d4909294": {
+          "name": "Dziennik"
         },
         "f7bad8f1-8f27-48a7-bd98-70d03a7ddf81": {
           "tips": [
@@ -10568,10 +10749,16 @@
             null
           ]
         },
+        "29e7bdae-0e2f-4440-9401-e3fe76c10785": {
+          "name": "Dziennik"
+        },
         "b25121aa-b946-4bea-9fdd-6a874ffb4bd7": {
           "tips": [
             null
           ]
+        },
+        "17f71bbe-d207-4d5d-9a13-3090748a85f2": {
+          "name": "Dziennik"
         },
         "8b41cd86-ab6d-4cc1-b24f-70a9534ba318": {
           "tips": [
@@ -10585,6 +10772,12 @@
           "tips": [
             null
           ]
+        },
+        "2954cf31-f0c3-43f2-a132-9e0b0b6e88c5": {
+          "name": "Dziennik"
+        },
+        "e5200699-b4cc-41b9-b945-df5223effafd": {
+          "name": "Dziennik"
         },
         "a96b40dd-a27b-4fc0-8c1e-db5584a87c4e": {
           "tips": [
@@ -10866,6 +11059,7 @@
           "progression_name": "Dodatkowe"
         },
         "eb895db7-aeb1-4efe-9eb8-c314cd7a2621": {
+          "name": "Dziennik ",
           "tips": [
             null
           ]
@@ -10895,6 +11089,9 @@
           ],
           "progression_name": "Pętle 'dla' i kolorowe LEDy"
         },
+        "020265fb-ab0b-4d77-8cf9-30fb0228a37b": {
+          "name": "Dziennik"
+        },
         "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
           "tips": [
             null
@@ -10910,6 +11107,7 @@
           "progression_name": "Akcelerometr Zdarzeń"
         },
         "83dadfe8-ec04-4986-9e4b-8fcb301bce51": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
@@ -11011,6 +11209,9 @@
           ],
           "progression_name": "Instrukcje do ankiety końcowej"
         },
+        "a8a0cd51-12b0-4c58-8d16-b4b4778d2719": {
+          "name": "Dziennik"
+        },
         "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
           "tips": [
             null
@@ -11037,9 +11238,13 @@
           ]
         },
         "cc06e6ea-b748-4c9d-b201-ccb10cd77cf6": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
+        },
+        "71a4871e-99e0-48c7-8dbc-e651828553d8": {
+          "name": "Dziennik"
         },
         "cbce24b3-baeb-42f3-978b-e4262e9e38b7": {
           "tips": [
@@ -11055,6 +11260,9 @@
           "tips": [
             null
           ]
+        },
+        "1ab47faa-8f31-4cdf-8fab-39b193dee663": {
+          "name": "Dziennik"
         },
         "604675cc-016d-4706-ad48-32d1547d7a74": {
           "tips": [
@@ -11085,12 +11293,16 @@
             null
           ]
         },
+        "d49613fe-8fcf-4801-a656-6bd752db7c1b": {
+          "name": "Dziennik"
+        },
         "143b040a-8c9e-4653-92d4-f58ea9ffef72": {
           "tips": [
             null
           ]
         },
         "85c49ae4-5b52-40ad-96eb-424f02d8539e": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
@@ -11120,6 +11332,9 @@
             null
           ]
         },
+        "f5e577d7-b133-493e-995f-76c9ef44de1d": {
+          "name": "Dziennik"
+        },
         "5ab922e3-8512-4c62-83c7-e17aa282377d": {
           "tips": [
             null
@@ -11145,6 +11360,12 @@
             null
           ]
         },
+        "8df6cc07-f2c4-499d-87e8-6ffe1c84ebd0": {
+          "name": "Dziennik"
+        },
+        "b5f6e7d0-04f2-4175-897c-236e80570d9e": {
+          "name": "Dziennik"
+        },
         "95c12363-142c-4e82-bed6-76541ed021c4": {
           "tips": [
             null
@@ -11165,10 +11386,16 @@
             null
           ]
         },
+        "cc154748-5e22-45df-9986-66cabc550f17": {
+          "name": "Dziennik"
+        },
         "112b54ac-5751-4635-8275-23e6acc5947c": {
           "tips": [
             null
           ]
+        },
+        "a4878e11-13db-48d2-907c-c08afff5a2f1": {
+          "name": "Dziennik"
         },
         "1fcec88e-f931-4ece-95d2-966a9ce0d0eb": {
           "tips": [
@@ -11220,6 +11447,9 @@
         "7080a972-d63e-4299-8260-f1df2f234857": {
           "name": "Przemyśl"
         },
+        "08bb2602-af7f-4afc-91ee-cc1b81b67264": {
+          "name": "Dziennik"
+        },
         "cb6b53c4-832b-4488-b7d8-e235460c633c": {
           "tips": [
             null
@@ -11244,6 +11474,12 @@
           "tips": [
             null
           ]
+        },
+        "197e10c6-aca0-4198-8c55-08b02638a517": {
+          "name": "Dziennik"
+        },
+        "21d25224-74a0-4aeb-9fdf-edbb7db6a111": {
+          "name": "Dziennik"
         },
         "b65a936d-eb48-4c6f-a0bf-751bb0829269": {
           "tips": [
@@ -11271,9 +11507,13 @@
           ]
         },
         "46bfc542-d2d8-4124-a4cd-d7e53fff618e": {
+          "name": "Dziennik ",
           "tips": [
             null
           ]
+        },
+        "ff83c374-628a-4388-8d39-29a2a7030ab9": {
+          "name": "Dziennik"
         },
         "501ce03f-e483-4e6d-bbc8-dc26c9a3a265": {
           "tips": [
@@ -11300,12 +11540,16 @@
             null
           ]
         },
+        "8848bff8-2f99-42e1-b248-8c56fea22e1f": {
+          "name": "Dziennik"
+        },
         "400536e8-3e68-4e2e-a1cb-15abe6e78255": {
           "tips": [
             null
           ]
         },
         "1fd332bf-4d3a-4fb3-8585-11aa036c87ff": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
@@ -11319,6 +11563,9 @@
           "tips": [
             null
           ]
+        },
+        "1d97d183-068b-4f5a-b823-e6b47f686a81": {
+          "name": "Dziennik"
         },
         "e4a6519f-4954-49e6-8914-83043cd945d7": {
           "tips": [
@@ -11348,12 +11595,16 @@
         "1f315b3a-9470-42be-95de-4b2327b9a338": {
           "name": "Refleksja"
         },
+        "cab8946a-af60-4101-9f3b-a6ea464f6601": {
+          "name": "Dziennik"
+        },
         "85bda82c-51d9-4b18-a377-4ecd142855c0": {
           "tips": [
             null
           ]
         },
         "8ff48983-ab23-42db-8ad0-d0d690bafad5": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
@@ -11366,7 +11617,8 @@
         "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "AI dla oceanów: ryby kontra nie ryby"
         },
         "914c565c-fb6d-490c-a14a-b289ac56d720": {
           "tips": [
@@ -11378,15 +11630,22 @@
             null
           ]
         },
+        "0644d195-c0b2-4557-9f2c-116b259fe74a": {
+          "progression_name": "AI dla oceanów: rodzaje ryb"
+        },
         "92b13324-8ae5-4796-9071-694683704daa": {
           "tips": [
             null
           ]
         },
         "7c5c8f29-ab7a-4891-b135-182f4222a591": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
+        },
+        "7833e351-1d81-480d-bf06-6c70c8374072": {
+          "name": "Dziennik"
         },
         "375e017e-8620-4d95-a1f5-89fda22729ac": {
           "tips": [
@@ -11503,10 +11762,19 @@
             null
           ]
         },
+        "267a9bc0-eca4-43ff-9a91-64c0b389089c": {
+          "description": "1.  [\\`ellipse()\\`(#4dd0e1)](/docs/gamelab/ellipse/)\n2.  [\\`rect()\\`(#4dd0e1)](/docs/gamelab/rect/)"
+        },
+        "97278350-36a0-4119-8163-a2cc0d7defa8": {
+          "name": "Kształty różnych rozmiarów"
+        },
         "11f4055c-bcd6-4b74-8f9a-5d69502955f2": {
           "tips": [
             null
           ]
+        },
+        "4835b1ef-9adb-4122-a243-7a8c5f994638": {
+          "name": "Programowanie z parametrami"
         },
         "4c1fe47c-e862-4d73-9a70-66843600aa20": {
           "progression_name": "Budowanie umiejętności"
@@ -11526,6 +11794,9 @@
           ],
           "progression_name": "Wyzwania"
         },
+        "0e7890f7-6b15-4d74-9d06-39410d94914b": {
+          "name": "Dziennik"
+        },
         "5485407f-b2b9-433e-86a4-6da5afa523f5": {
           "tips": [
             null
@@ -11535,6 +11806,9 @@
           "tips": [
             null
           ]
+        },
+        "bf59eb2b-defb-469f-b80f-f6583ba14219": {
+          "name": "Programowanie ze zmiennymi"
         },
         "6638d677-a241-4922-bc90-a10daceb1787": {
           "progression_name": "Przewidywanie"
@@ -11641,6 +11915,9 @@
           ],
           "progression_name": "Wyzwania"
         },
+        "7fe0e935-1853-4c68-a62c-332e86840c6d": {
+          "name": "Dziennik"
+        },
         "5989291d-e9d4-4f14-bdf6-399b69b96cec": {
           "tips": [
             null
@@ -11669,6 +11946,9 @@
             null
           ]
         },
+        "bc610d8b-c45e-48e4-a5de-63a7f8bf5a3b": {
+          "name": "Dziennik"
+        },
         "de715c3f-0860-4e19-acb1-ebcb230a19a8": {
           "progression_name": "Przewidywanie"
         },
@@ -11687,6 +11967,9 @@
         "06559d3f-7ebd-4356-a06d-c16cdeaebde5": {
           "progression_name": "Wyzwania"
         },
+        "d437ce8a-62d4-422b-9626-0f7ef6f4603f": {
+          "name": "Dziennik "
+        },
         "7e2e7a3e-fd91-4ab5-8b46-f8ae96c91169": {
           "tips": [
             null
@@ -11700,10 +11983,19 @@
             null
           ]
         },
+        "853974f1-7e3b-4403-a475-5af28d960115": {
+          "progression_name": "Dodaj duszki"
+        },
+        "c0fc532b-e6eb-4858-af5b-5032cd917616": {
+          "progression_name": "Dodaj tekst"
+        },
         "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
           "tips": [
             null
           ]
+        },
+        "4638c8d2-4376-4673-979e-66a86d260573": {
+          "name": "Dziennik"
         },
         "760b0216-8c5d-4954-ac35-fd42c527ac66": {
           "tips": [
@@ -11785,6 +12077,9 @@
         "23d183b4-c898-41d3-b5c7-de7336534cd5": {
           "progression_name": "Wyzwania"
         },
+        "a8fccbf5-3042-489e-97eb-19fb589b606d": {
+          "name": "Dziennik"
+        },
         "06cad4ef-4d60-42e4-829c-02fd3364c31e": {
           "tips": [
             null
@@ -11798,10 +12093,19 @@
             null
           ]
         },
+        "68f06aee-a50d-4b3e-9323-16f4812eb23a": {
+          "progression_name": "Dodaj duszki"
+        },
+        "6e3a6230-12e7-4b7f-90a7-ec8574647b3b": {
+          "progression_name": "Dodaj tekst"
+        },
         "fa1f1ad4-aadd-49d1-9138-887450893813": {
           "tips": [
             null
           ]
+        },
+        "8ad6136f-ee41-4b14-8866-2d4d8b0d9779": {
+          "name": "Dziennik"
         },
         "f54152bb-4d02-459d-beea-ceeb422be02a": {
           "tips": [
@@ -11926,6 +12230,9 @@
             null
           ]
         },
+        "e4ea6961-efa2-4cc3-806d-a32d96885abf": {
+          "name": "Dziennik"
+        },
         "09884749-ea7e-4df2-94f7-f73308052d81": {
           "tips": [
             null
@@ -11988,6 +12295,7 @@
           "progression_name": "Wyzwania"
         },
         "864f7c7f-a19d-4470-8d53-52e790f5e783": {
+          "name": "Dziennik",
           "tips": [
             null
           ]
@@ -12193,6 +12501,9 @@
         "3732107f-02cf-4117-941b-725824574e50": {
           "progression_name": "Wyzwania"
         },
+        "193dc0bf-c474-4454-bb43-8a430a12634d": {
+          "name": "Dziennik"
+        },
         "7e64a6bf-73b9-4cd3-be58-402b3da57768": {
           "tips": [
             null
@@ -12216,6 +12527,9 @@
         },
         "d1ae9072-39e7-4cd7-81eb-6434e0b2e39d": {
           "name": "Udostępnij"
+        },
+        "a151ee83-294e-43ad-83ec-6047931fc83d": {
+          "name": "Dziennik"
         },
         "2d58346e-e123-4477-8995-fefc448b3fe3": {
           "name": "Przemyśl",
@@ -12340,6 +12654,7 @@
           ]
         },
         "e623c176-d684-43c0-ad4b-9f33a3acc00f": {
+          "name": "Dziennik",
           "tips": [
             null,
             null
@@ -12427,6 +12742,9 @@
           "tips": [
             null
           ]
+        },
+        "2d4d1c53-92af-4087-b1e7-964f95e3c3da": {
+          "name": "Dziennik"
         },
         "40b16a1c-add1-445a-81de-c281c495fe6f": {
           "tips": [
@@ -12771,15 +13089,24 @@
         "499a4b6c-eccd-4c51-a6db-17c2c9a0801a": {
           "progression_name": "Wyzwania"
         },
+        "86e13822-ef3f-4ec1-981a-e8b90ef192ab": {
+          "name": "Dziennik"
+        },
         "1db390c3-2d64-4581-a038-c4dd0f7226ee": {
           "tips": [
             null
           ]
         },
+        "ec9d873f-eb15-42ae-b9cd-a291ddaca6e2": {
+          "name": "Dziennik"
+        },
         "016877a1-d391-46b7-998e-fbe9a7c12703": {
           "tips": [
             null
           ]
+        },
+        "a167e87b-c7c9-4adc-a70d-c49dcb309bc8": {
+          "name": "Dziennik"
         },
         "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
           "tips": [
@@ -12860,6 +13187,9 @@
             null
           ]
         },
+        "5572ccc6-7ab9-4dca-a02c-8ecd22e87705": {
+          "name": "Dziennik"
+        },
         "4662cf38-bec5-4f63-9f2d-237617407f0f": {
           "tips": [
             null
@@ -12870,8 +13200,14 @@
             null
           ]
         },
+        "5c1f865c-e956-43d3-aac9-e6cf1a18c1b9": {
+          "progression_name": "Dodaj styl do swojej strony"
+        },
         "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
           "name": "Wzajemne opinie"
+        },
+        "3656d6a8-efb7-4950-97ee-4415833d7ec8": {
+          "name": "Dziennik"
         },
         "8c10515f-4ba5-4629-b5e0-e44975336298": {
           "tips": [
@@ -13127,6 +13463,9 @@
             null
           ]
         },
+        "01a5973e-7096-468e-b640-899767928b23": {
+          "name": "Dziennik"
+        },
         "c986ac31-a9e4-4fbb-8203-f8dd207cfed9": {
           "tips": [
             null
@@ -13153,6 +13492,9 @@
         "5aa91065-3f4e-409f-9f3e-14bd98649ef5": {
           "progression_name": "Wyzwania"
         },
+        "d2c208eb-49ed-4b4b-9a5f-5d51bda3d3f4": {
+          "name": "Dziennik"
+        },
         "ada4d5c1-50ee-446a-85c6-d61dd4d3221f": {
           "tips": [
             null
@@ -13165,6 +13507,9 @@
           "tips": [
             null
           ]
+        },
+        "06b391d9-3723-444d-9c93-882c4f22a1ad": {
+          "name": "Dziennik"
         },
         "754d0467-6e5e-45c8-8692-2fab52c45548": {
           "tips": [
@@ -13191,10 +13536,14 @@
         "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Dodawanie stron"
         },
         "76186510-9804-44d1-8371-4aa2895fc16d": {
           "progression_name": "Wyzwania"
+        },
+        "37b960c3-650e-4d91-9561-fea00f3a39c7": {
+          "name": "Dziennik"
         },
         "c881299c-2798-4137-ac19-ba5e05d59340": {
           "tips": [
@@ -13213,6 +13562,9 @@
           "tips": [
             null
           ]
+        },
+        "61b38059-437b-4b5b-a71d-e94ff04f6ae6": {
+          "progression_name": "Dodaj Styl"
         },
         "35722166-2159-4038-8c7e-7a6cc0580812": {
           "tips": [

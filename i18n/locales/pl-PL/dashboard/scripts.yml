@@ -21708,6 +21708,8 @@ pl:
               name: "[New] Wiele duszków"
             Counting with Variables:
               name: "[New] Liczenie ze zmiennymi"
+            'Mini-Project: Collector Game':
+              name: "[New] Mini-projekt: Gra kolekcjonera"
             Simulating Experiments:
               name: Symulowanie eksperymentów
               description_student: Uruchom symulacje na komputerze i eksperymentuj zmieniając wartości zmiennych.
@@ -23520,6 +23522,8 @@ pl:
               name: "[New] Wiele duszków"
             "[New] Counting with Variables":
               name: "[New] Liczenie ze zmiennymi"
+            "[New] Mini-Project: Collector Game":
+              name: "[New] Mini-projekt: Gra kolekcjonera"
           lesson_groups:
             ramp_up:
               display_name: Duszki
@@ -23532,13 +23536,19 @@ pl:
             end_of_course_project:
               display_name: Koniec projektu kursu
           title: Kurs F (2022)
+          description: "Stworzyliśmy Kurs F dla uczniów piątej klasy. Kurs rozpoczyna się od przyjrzenia się, w jaki sposób użytkownicy dokonują wyboru w aplikacjach, z których korzystają. Następnie uczniowie uczą się tworzyć różne aplikacje w Sprite Lab, które również oferują użytkownikowi wybór. Na późniejszych lekcjach kursu uczniowie poznają zmienne w różnych kontekstach. W trakcie tego kursu, mają większą autonomię i większy wybór. Pod koniec kursu uczniowie utworzą interaktywne projekty, którymi będą mogli dzielić się z przyjaciółmi i rodziną.\n\n## Wiosna 2022 Otwarty przegląd\n\nTa nowa wersja Kursu F zawiera trzy nowe lekcje i potrzebujemy Twojej opinii! Nowe lekcje to:\n\n-   Lekcja 9 - Dużo duszków - [przekaż opinię](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform)\n-   Lekcja 10 – Liczenie ze zmiennymi – [przekaż opinię](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform)\n-   Lekcja 11 - Mini-projekt: Gra kolekcjonera - [przekaż opinię](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform)\n\nZauważ, że te nowe lekcje mogą ulec zmianie od teraz do lipca 2022. Dziękujemy za wszelkie uwagi. Kursy A-E z Podstaw informatyki (2022) rozpoczną się w lipcu 2022.\n\nDodaliśmy również pełny zestaw slajdów obejmujący wszystkie lekcje w Kursie F. Czekamy również na Twoją [opinię](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform) na temat tych slajdów! "
+          student_description: Naucz się kodować z duszkami i zmiennymi, oraz omów wpływ komputerów i internetu na społeczeństwo. Pod koniec tego kursu zaprojektuj i stwórz projekt, którym możesz podzielić się z przyjaciółmi i rodziną.
           description_short: Poznaj wszystkie pojęcia z podstaw informatyki i stwórz własne dzieło sztuki, historyjkę lub grę.
           description_audience: W wieku 9-13
           name: coursef-2022
         csp-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Ankieta kursu
           name: csd-post-survey-2021
           title: Zasady informatyki Ankieta po kursie
           description: Ta jednostka zawiera ankietę po kursie Zasady Informatyki
+          student_description: Ta jednostka zawiera ankietę dotyczącą kursu Zasady Informatyki. Twój nauczyciel poinformuje Cię, kiedy masz wypełnić tę ankietę.
         csa1-2022:
           lessons:
             lesson-2:
@@ -23548,21 +23558,27 @@ pl:
             lesson-4:
               name: Nawigacja i malowanie
             lesson-5:
-              name: Podejmowanie decyzji
+              name: Jednokierunkowe instrukcje wyboru
             lesson-6:
-              name: Tworzenie typów malarzy
+              name: Malarz Plus
             lesson-7:
               name: Ulepszanie programów z pomocą recenzji kodu
             lesson-8:
-              name: Powtarzanie instrukcji
+              name: Przegląd kodu
             lesson-9:
               name: Poszerzanie decyzji
             lesson-10:
-              name: Debugowanie z malarzem
+              name: Dwukierunkowe instrukcje wyboru
             lesson-11:
-              name: Dodawanie nowych możliwości
+              name: Strategie debugowania
+            lesson-12:
+              name: Dekompozycja i projektowanie
+            lesson-13:
+              name: Malarz wzorów
+            lesson-14:
+              name: Malarz tła
             lesson-15:
-              name: Stawanie się inżynierem oprogramowania
+              name: Otwarty kod źródłowy
             lesson-16:
               name: Asfaltowy projekt artystyczny – Dzień 1
             lesson-17:
@@ -23625,6 +23641,12 @@ pl:
           name: pre-express-2022
         csa2-2022:
           lessons:
+            lesson-1:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 1
+            lesson-2:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 2
+            lesson-3:
+              name: Projekt zarządzania sąsiedzkim sklepem - dzień 3
             lesson-4:
               name: Praktyka FRQ
             lesson-5:
@@ -23635,6 +23657,7 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
           name: csa2-2022
+          title: Struktura i projekt klas ('22-'23)
         csa3-2022:
           lessons:
             lesson-1:
@@ -23647,6 +23670,7 @@ pl:
             lessonGroup-3:
               display_name: Pokaż, co wiesz
           name: csa3-2022
+          title: Tabkice i algorytmy ('22-'23)
         tessplayground:
           lessons:
             Conditionals and Debugging:
@@ -23813,6 +23837,7 @@ pl:
           title: 'Jednostka 1 - Moduł 1: Powitanie'
         self-paced-pl-csa3-2022:
           name: self-paced-pl-csa3-2022
+          title: Wsparcie przy programowaniu tekstowym
         csa7-pilot-extra:
           lessons:
             Writing Methods to Satisfy Conditions:
@@ -23968,6 +23993,7 @@ pl:
               display_name: Pokaż, co wiesz
             lessonGroup-5:
               display_name: Piaskownica
+          name: csa7-pilot-extra
         csa8-pilot-extra:
           lessons:
             Planning a Project:
@@ -24091,4 +24117,7 @@ pl:
         csa-backpack-2022:
           lessons:
             lesson-1:
-              name: Tworzenie typów malarzy
+              name: Malarz Plus
+          name: csa-backpack-2022
+          title: Wersje CSA w plecakach [22-23]
+          description: Wersje zajęć, które uczniowie mają w swoich **Plecakach** przez cały kurs.
