@@ -81,6 +81,10 @@ describe('DetailViewContents', () => {
     school_stats: {}
   };
 
+  // Nobody is able to set an application status to incomplete from detail view
+  const getApplicationStatusesWithoutIncomplete = (type, addAutoEmail = true) =>
+    _.omit(getApplicationStatuses(type, addAutoEmail), ['incomplete']);
+
   const mountDetailView = (applicationType, overrides = {}) => {
     const defaultApplicationData = {
       ...DEFAULT_APPLICATION_DATA,
@@ -146,7 +150,7 @@ describe('DetailViewContents', () => {
       // lock button is disabled for all statuses except "finalized"
       // statuses in the constant are an object {value: label}
       Object.keys(
-        getApplicationStatuses(applicationType.toLowerCase())
+        getApplicationStatusesWithoutIncomplete(applicationType.toLowerCase())
       ).forEach(status => {
         const statusIsFinal = ApplicationFinalStatuses.includes(status);
         detailView
@@ -455,7 +459,7 @@ describe('DetailViewContents', () => {
     }
 
     for (const applicationStatus of _.difference(
-      Object.keys(getApplicationStatuses('teacher')),
+      Object.keys(getApplicationStatusesWithoutIncomplete('teacher')),
       ScholarshipStatusRequiredStatuses
     )) {
       it(`is not required to set application status to ${applicationStatus}`, () => {
@@ -488,7 +492,7 @@ describe('DetailViewContents', () => {
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
-        getApplicationStatuses('teacher', true)
+        getApplicationStatusesWithoutIncomplete('teacher', true)
       );
       var i = 0;
       options.forEach(option => {
@@ -509,7 +513,7 @@ describe('DetailViewContents', () => {
       });
       let options = detailView.find('#DetailViewHeader select').find('option');
       let applicationStatuses = Object.values(
-        getApplicationStatuses('teacher', false)
+        getApplicationStatusesWithoutIncomplete('teacher', false)
       );
       var i = 0;
       options.forEach(option => {
