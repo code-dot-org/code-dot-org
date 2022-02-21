@@ -29,6 +29,8 @@ const defaultProps = {
   disabled: false
 };
 
+const fakeSectionId = 123456;
+
 /**
  * Helper function to retrieve the underlying `BasicBubble` of a rendered
  * bubble with the provided status and props.
@@ -336,30 +338,36 @@ describe('ProgressBubble', () => {
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
       const wrapper = mount(
-        <ProgressBubble {...defaultProps} selectedSectionId="12345" />
+        <ProgressBubble {...defaultProps} selectedSectionId={fakeSectionId} />
       );
-      assert.include(wrapper.find('a').prop('href'), 'section_id=12345');
+      assert.include(
+        wrapper.find('a').prop('href'),
+        `section_id=${fakeSectionId}`
+      );
     });
 
     it('includes the user_id in the queryparams if selectedStudentId is present', () => {
       const wrapper = mount(
         <ProgressBubble
           {...defaultProps}
-          selectedSectionId="12345"
+          selectedSectionId={fakeSectionId}
           selectedStudentId="207"
         />
       );
-      assert.include(wrapper.find('a').prop('href'), 'section_id=12345');
+      assert.include(
+        wrapper.find('a').prop('href'),
+        `section_id=${fakeSectionId}`
+      );
       assert.include(wrapper.find('a').prop('href'), 'user_id=207');
     });
 
     it('preserves the queryparams of the current location', () => {
       sinon
         .stub(utils, 'currentLocation')
-        .returns({search: 'section_id=212&user_id=559'});
+        .returns({search: `section_id=${fakeSectionId}&user_id=559`});
       const wrapper = mount(<ProgressBubble {...defaultProps} />);
       const href = wrapper.find('a').prop('href');
-      assert.include(href, 'section_id=212');
+      assert.include(href, `section_id=${fakeSectionId}`);
       assert.include(href, 'user_id=559');
       utils.currentLocation.restore();
     });
@@ -369,11 +377,11 @@ describe('ProgressBubble', () => {
         .stub(utils, 'currentLocation')
         .returns({search: 'section_id=212&user_id=559'});
       const wrapper = mount(
-        <ProgressBubble {...defaultProps} selectedSectionId="12345" />
+        <ProgressBubble {...defaultProps} selectedSectionId={fakeSectionId} />
       );
       const href = wrapper.find('a').prop('href');
       assert.notInclude(href, 'section_id=212');
-      assert.include(href, 'section_id=12345');
+      assert.include(href, `section_id=${fakeSectionId}`);
       assert.include(href, 'user_id=559');
       utils.currentLocation.restore();
     });

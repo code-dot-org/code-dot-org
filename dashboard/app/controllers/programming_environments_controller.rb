@@ -1,7 +1,11 @@
 class ProgrammingEnvironmentsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index]
+
+  def index
+    @programming_environments = ProgrammingEnvironment.all.order(:name).map(&:summarize_for_index)
+  end
 
   def new
   end
@@ -48,6 +52,11 @@ class ProgrammingEnvironmentsController < ApplicationController
     rescue ActiveRecord::RecordInvalid => e
       render(status: :not_acceptable, plain: e.message)
     end
+  end
+
+  def show
+    @programming_environment = ProgrammingEnvironment.find_by_name(params[:name])
+    return render :not_found unless @programming_environment
   end
 
   private
