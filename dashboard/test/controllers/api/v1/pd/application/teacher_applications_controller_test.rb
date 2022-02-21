@@ -17,6 +17,9 @@ module Api::V1::Pd::Application
       @program_manager = create :program_manager
       @partner = @program_manager.regional_partners.first
       @application = create TEACHER_APPLICATION_FACTORY, regional_partner: @partner
+      @incomplete_application = create :pd_teacher_application, form_data_hash: (
+        build :pd_teacher_application_hash, :incomplete
+      )
     end
 
     setup do
@@ -33,10 +36,38 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
-    # [MEG] TODO: Add different kinds of users, teachers can't access an application they don't own
     test_redirect_to_sign_in_for :update, params: -> {{id: @application.id}}
     test_user_gets_response_for :update, user: :student, params: -> {{id: @application.id}}, response: :forbidden
-    test_user_gets_response_for :update, user: :teacher, params: -> {{id: @application.id}}, response: :forbidden
+
+    test_user_gets_response_for :update,
+      name: 'a teacher cannot update an application they do not own',
+      user: :teacher,
+      params: -> {{id: @application.id}},
+      response: :forbidden
+
+    test_user_gets_response_for :update,
+      name: 'a teacher can update an application they own',
+      user:  -> {User.find_by(id: @application.user_id)},
+      params: -> {{id: @application.id}},
+      response: :success
+
+    test_user_gets_response_for :update,
+      name: 'program managers can update completed applications they own',
+      user:  -> {@program_manager},
+      params: -> {{id: @application.id}},
+      response: :success
+
+    test_user_gets_response_for :update,
+      name: 'program managers cannot update incomplete applications they own',
+      user:  -> {@program_manager},
+      params: -> {{id: @incomplete_application.id}},
+      response: :forbidden
+
+    test_user_gets_response_for :update,
+      name: 'a workshop admin can update applications they own',
+      user:  :workshop_admin,
+      params: -> {{id: @incomplete_application.id}},
+      response: :success
 
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
