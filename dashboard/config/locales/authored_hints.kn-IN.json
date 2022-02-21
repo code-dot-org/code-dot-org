@@ -2133,14 +2133,14 @@
           "courseD_bee_nestedLoops1_c": "ನೀವು ಹೂವಿನೊಂದಿಗೆ ಚೌಕದಲ್ಲಿರುವಾಗ ಒಮ್ಮೆ `ಮಕರಂದ ಪಡೆಯಿರಿ` ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸಲು ಮರೆಯದಿರಿ."
         },
         "courseD_bee_nestedLoops2_2021": {
-          "courseD_bee_nestedLoops2_a": "ಈ ಒಗಟನ್ನು ಪರಿಹರಿಸಲು, ನೀವು ಒಂದು \\`ಪುನರಾವರ್ತನೆ' ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ನೆಸ್ಟ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ.",
+          "courseD_bee_nestedLoops2_a": "ಈ ಒಗಟನ್ನು ಪರಿಹರಿಸಲು, ನೀವು ಒಂದು `ಪುನರಾವರ್ತನೆ' ಲೂಪ್ ಅನ್ನು ಇನ್ನೊಂದರೊಳಗೆ ನೆಸ್ಟ್ ಮಾಡಬೇಕಾಗುತ್ತದೆ.",
           "courseD_bee_nestedLoops2_b": "ಕುಣಿಕೆಗಳನ್ನು ಎಲ್ಲಿ ಹಾಕಬೇಕೆಂದು ಲೆಕ್ಕಾಚಾರ ಮಾಡಲು ಸಾಧ್ಯವಿಲ್ಲವೇ? ಕಾಗದದ ಮೇಲೆ ಕೋಡ್ ಅನ್ನು ಹಂತ-ಹಂತವಾಗಿ ಬರೆಯಲು ಪ್ರಯತ್ನಿಸಿ ಮತ್ತು ಮಾದರಿಯನ್ನು ನೋಡಿ.",
           "courseD_bee_nestedLoops2_c": "ನೀವು ಲೂಪ್ನೊಳಗೆ ಒಂದಕ್ಕಿಂತ ಹೆಚ್ಚು ಬ್ಲಾಕ್ಗಳನ್ನು ಹಾಕಬಹುದು ಎಂಬುದನ್ನು ನೆನಪಿಡಿ."
         },
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "ನೀವು ಇನ್ನೊಂದು `ರಿಪೀಟ್` ನ ಒಳಗೆ `ಮಕರಂದವನ್ನು ಪಡೆಯಿರಿ` ಅನ್ನು ಪುನರಾವರ್ತಿಸಬೇಕಾಗುತ್ತದೆ, ಅದು ಅದರ ಒಳಗೆ `ಮುಂದಕ್ಕೆ ಚಲಿಸು` ಬ್ಲಾಕ್ ಅನ್ನು ಹೊಂದಿದೆ.",
           "courseD_bee_nestedLoops7_b": "ಈ ಒಗಟು ಪರಿಹರಿಸಲು ನೀವು ಲಭ್ಯವಿರುವ ಎಲ್ಲಾ ಮೂರು `ಪುನರಾವರ್ತಿತ` ಬ್ಲಾಕ್‌ಗಳನ್ನು ಬಳಸಬೇಕಾಗುತ್ತದೆ.",
-          "courseD_bee_nestedLoops7_c": "ನಿಮ್ಮ ಬ್ಲಾಕ್‌ಗಳನ್ನು ಮೂರು ಆಳದಲ್ಲಿ ನೆಸ್ಟ್ ಮಾಡಿ, ಈ ರೀತಿ:\n\n-   ಪುನರಾವರ್ತಿಸಿ 4\n    -   ಪುನರಾವರ್ತಿಸಿ 3\n        -   ಪುನರಾವರ್ತಿಸಿ 12\n            -   ಮಕರಂದ ಪಡೆಯಿರಿ\n        -   ಮುಂದೆ ಸಾಗು\n    -   ಬಲಕ್ಕೆ ತಿರುಗು"
+          "courseD_bee_nestedLoops7_c": "Nest your blocks three deep, like this:\n\n- repeat 4\n   - repeat 3\n      - repeat 12\n          - get nectar\n      - move forward\n   - turn right\n"
         },
         "courseD_bounce_events10s_2021": {
           "courseD_bounce_events10s_a": "ನಿಮ್ಮ ಕೋಡ್‌ನಲ್ಲಿ ನೀವು ಈ ಎರಡೂ ಈವೆಂಟ್‌ಗಳನ್ನು ಹೊಂದಿರಬೇಕು:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
@@ -2573,7 +2573,7 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "ನೀವು ತೆಗೆದುಕೊಳ್ಳಬೇಕಾದ ಕ್ರಮಗಳ ಸಂಖ್ಯೆ ಮತ್ತು ಸಂಗ್ರಹಿಸಬೇಕಾದ ಅಮೃತಗಳ ನಡುವಿನ ಮಾದರಿಯನ್ನು ನೀವು ಕಂಡುಹಿಡಿಯಬಹುದೇ?",
           "courseF_bee_for10_b": "ಹೂವುಗಳ ಮೊದಲ ಸೆಟ್ ಒಟ್ಟು **14 ಹೂವುಗಳನ್ನು** ಹೊಂದಿದೆ. ಈ ಮೊದಲ ಸೆಟ್‌ಗೆ ಹೋಗಲು, ಜೇನುನೊಣವು **7 ಚೌಕಗಳನ್ನು** (ಅಥವಾ 14 ಚೌಕಗಳನ್ನು 2 ರಿಂದ ಭಾಗಿಸಿ.) ಮುಂದಿನ ಸೆಟ್‌ನಲ್ಲಿ ಎಷ್ಟು ಹೂವುಗಳಿವೆ ಮತ್ತು ಅಲ್ಲಿಗೆ ಹೋಗಲು ಜೇನುನೊಣ ಎಷ್ಟು ಚೌಕಗಳನ್ನು ಪ್ರಯಾಣಿಸಬೇಕು?",
-          "courseF_bee_for10_c": "ಒಗಟಿನಲ್ಲಿ, ಮೊದಲ ಗುಂಪಿನ ಹೂವುಗಳು **14** ಹೂವುಗಳನ್ನು ಹೊಂದಿದೆ, ಎರಡನೇ ಸೆಟ್ನಲ್ಲಿ **10** ಹೂವುಗಳಿವೆ, ಮೂರನೇ ಸೆಟ್ನಲ್ಲಿ **6** ಹೂವುಗಳಿವೆ, ಮತ್ತು ನಾಲ್ಕನೇ ಸೆಟ್ನಲ್ಲಿ **2** ಹೂವುಗಳಿವೆ.\n\nಈ ರೇಖಾಚಿತ್ರದಲ್ಲಿ, **7** ಕೆಂಪು ಚೌಕಗಳು, **5** ಕಿತ್ತಳೆ ಚೌಕಗಳು, **3** ಹಸಿರು ಚೌಕಗಳು ಮತ್ತು **1** ನೀಲಿ ಬ್ಲಾಕ್ ಇವೆ ಎಂಬುದನ್ನು ಗಮನಿಸಿ.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nಸಂಖ್ಯೆಗಳು ಹೇಗೆ ಸಂಬಂಧಿಸಿವೆ?",
+          "courseF_bee_for10_c": "ಒಗಟಿನಲ್ಲಿ, ಮೊದಲ ಗುಂಪಿನ ಹೂವುಗಳು **14** ಹೂವುಗಳನ್ನು ಹೊಂದಿದೆ, ಎರಡನೇ ಸೆಟ್ನಲ್ಲಿ **10** ಹೂವುಗಳಿವೆ, ಮೂರನೇ ಸೆಟ್ನಲ್ಲಿ **6** ಹೂವುಗಳಿವೆ, ಮತ್ತು ನಾಲ್ಕನೇ ಸೆಟ್ನಲ್ಲಿ **2** ಹೂವುಗಳಿವೆ.\n\nಈ ರೇಖಾಚಿತ್ರದಲ್ಲಿ, **7** ಕೆಂಪು ಚೌಕಗಳು, **5** ಕಿತ್ತಳೆ ಚೌಕಗಳು, **3** ಹಸಿರು ಚೌಕಗಳು ಮತ್ತು **1** ನೀಲಿ ಬ್ಲಾಕ್ ಇವೆ ಎಂಬುದನ್ನು ಗಮನಿಸಿ.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\nಸಂಖ್ಯೆಗಳು ಹೇಗೆ ಸಂಬಂಧಿಸಿವೆ?",
           "courseF_bee_for10_d": "ನೀವು 2 ಪುನರಾವರ್ತನೆಗಳನ್ನು ಹೊಂದಿರಬೇಕು, ಒಬ್ಬರು ಗಣಿತದ ಬ್ಲಾಕ್ ಅನ್ನು ಬಳಸುತ್ತಾರೆ."
         },
         "courseF_bee_for11_2021": {
@@ -2592,7 +2592,7 @@
           "courseF_bee_for4_c": "ಸಾಕಷ್ಟು ಮಕರಂದವನ್ನು ಪಡೆಯಲು ನಿಮ್ಮ ನೆಸ್ಟೆಡ್ `ರಿಪೀಟ್` ಲೂಪ್‌ನೊಳಗೆ `ಕೌಂಟರ್` ವೇರಿಯೇಬಲ್ ಅನ್ನು ಬಳಸುವುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ!"
         },
         "courseF_bee_for5_2021": {
-          "courseF_bee_for5_a": "ಈ ಸಮಯದಲ್ಲಿ, ನಿಮ್ಮ `ಮೂವ್ ಫಾರ್ವರ್ಡ್~ ಬ್ಲಾಕ್ ಮತ್ತು ನಿಮ್ಮ`ಗೆಟ್ ನೆಕ್ಟರ್~ ಬ್ಲಾಕ್ ಪ್ರತ್ಯೇಕ `ರಿಪೀಟ್` ಲೂಪ್‌ಗಳಲ್ಲಿ ಇರಬೇಕಾಗುತ್ತದೆ, ಇವೆರಡೂ ಒಂದೇ `ಫಾರ್` ಲೂಪ್‌ನಲ್ಲಿ ಇರುತ್ತವೆ.",
+          "courseF_bee_for5_a": "ಈ ಸಮಯದಲ್ಲಿ, ನಿಮ್ಮ `ಮೂವ್ ಫಾರ್ವರ್ಡ್~ ಬ್ಲಾಕ್ ಮತ್ತು ನಿಮ್ಮ `ಗೆಟ್ ನೆಕ್ಟರ್~ ಬ್ಲಾಕ್ ಪ್ರತ್ಯೇಕ `ರಿಪೀಟ್` ಲೂಪ್‌ಗಳಲ್ಲಿ ಇರಬೇಕಾಗುತ್ತದೆ, ಇವೆರಡೂ ಒಂದೇ `ಫಾರ್` ಲೂಪ್‌ನಲ್ಲಿ ಇರುತ್ತವೆ.",
           "courseF_bee_for5_b": "ಪ್ರತಿ ಲೂಪ್‌ನಲ್ಲಿ `ಕೌಂಟರ್` ವೇರಿಯೇಬಲ್ ಅನ್ನು ಬಳಸಿ ಆದ್ದರಿಂದ ಜೇನುನೊಣವು ಪ್ರತಿ ಹೂವಿನ ನಡುವೆ ವಿಭಿನ್ನ ಅಂತರವನ್ನು ಚಲಿಸುತ್ತದೆ.",
           "courseF_bee_for5_c": "ತಪ್ಪು ಮಾಡಲು ಹಿಂಜರಿಯದಿರಿ! ನೀವು ಇನ್ನೂ ಒಗಟುಗಳನ್ನು ಪರಿಹರಿಸಿದ್ದೀರಿ ಎಂದು ನೀವು ಭಾವಿಸದಿದ್ದರೂ ಸಹ, ಏನಾಗುತ್ತದೆ ಎಂಬುದನ್ನು ನೋಡಲು ಬ್ಲಾಕ್‌ಗಳನ್ನು ಸೇರಿಸಲು ಮತ್ತು ಕೋಡ್ ಅನ್ನು ರನ್ ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ."
         },
@@ -2609,7 +2609,7 @@
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "ನಿಮ್ಮ ಲೂಪ್ ಎಣಿಸುತ್ತಿದ್ದರೆ, ಪ್ರತಿ ಬಾರಿ ನಿಮ್ಮ ಕೌಂಟರ್ ವೇರಿಯೇಬಲ್‌ಗೆ ಹೆಚ್ಚಳವನ್ನು ಸೇರಿಸಲಾಗುತ್ತದೆ.\n\nಮುಂದಿನ ಪ್ರಮಾಣದ ಅಮೃತವನ್ನು ಪಡೆಯಲು ನೀವು ಪ್ರತಿ ಸಂಖ್ಯೆಗೆ ಏನು ಸೇರಿಸಬೇಕು?",
           "courseF_bee_for8_b": "ಈ ಒಗಟಿನಲ್ಲಿ, ನೀವು ಹೂವುಗಳನ್ನು ಪಡೆಯಲು ಮೆಟ್ಟಿಲು ಹಂತದ ಮಾದರಿಯಲ್ಲಿ ಚಲಿಸಬೇಕಾಗುತ್ತದೆ.",
-          "courseF_bee_for8_c": "ನಿಮ್ಮ ಲೂಪ್ ಕೆಲವು ಹೆಚ್ಚಳದೊಂದಿಗೆ _3 ರಿಂದ 15_ ವರೆಗೆ ಎಣಿಕೆಯಾಗುತ್ತದೆ. ಏನದು?"
+          "courseF_bee_for8_c": "ನಿಮ್ಮ ಲೂಪ್ ಕೆಲವು ಹೆಚ್ಚಳದೊಂದಿಗೆ *3 ರಿಂದ 15* ವರೆಗೆ ಎಣಿಕೆಯಾಗುತ್ತದೆ. ಏನದು?"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "ಕೌಂಟರ್ ವೇರಿಯೇಬಲ್ನೊಂದಿಗೆ ಕೆಲವು ಗಣಿತವನ್ನು ಮಾಡಲು ಪ್ರಯತ್ನಿಸಿ.\n\nನೀವು ಸಂಗ್ರಹಿಸಬೇಕಾದ ಮಕರಂದದ ಪ್ರಮಾಣವನ್ನು ಸಮನಾಗಿಸಲು ಪ್ರತಿ ಹೂವಿನಲ್ಲಿರುವ ಕೌಂಟರ್‌ಗೆ ನೀವು ಏನು ಮಾಡಬೇಕು?",
@@ -2641,7 +2641,7 @@
           "behavior_list": "\"ಪೂರ್ವಕ್ಕೆ ಚಲಿಸುವುದು ಮತ್ತು ಲೂಪ್ ಮಾಡುವುದು\", \"ಬಲಕ್ಕೆ ತಿರುಗುವುದು\" ಮತ್ತು \"ಅಲೆದಾಡುವುದು\" ಮುಂತಾದ ನಡವಳಿಕೆಗಳನ್ನು ಬಳಸಲು ಪ್ರಯತ್ನಿಸಿ."
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "`ಉತ್ತರಿಸಿದಾಗ` ಬ್ಲಾಕ್‌ನಲ್ಲಿ ವೇರಿಯೇಬಲ್‌ನ ಲೇಬಲ್ ಅನ್ನು ಬದಲಾಯಿಸಲು ಪ್ರಯತ್ನಿಸಿ. ಬಹು ಪ್ರಾಂಪ್ಟ್‌ಗಳು ಇರುವುದರಿಂದ, ಉತ್ತರಿಸಲಾಗುವ _ಕೊನೆಯ_ ಪ್ರಾಂಪ್ಟ್‌ಗಾಗಿ ಲೇಬಲ್ ಅನ್ನು ಬಳಸಿ.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "`ಉತ್ತರಿಸಿದಾಗ` ಬ್ಲಾಕ್‌ನಲ್ಲಿ ವೇರಿಯೇಬಲ್‌ನ ಲೇಬಲ್ ಅನ್ನು ಬದಲಾಯಿಸಲು ಪ್ರಯತ್ನಿಸಿ. ಬಹು ಪ್ರಾಂಪ್ಟ್‌ಗಳು ಇರುವುದರಿಂದ, ಉತ್ತರಿಸಲಾಗುವ *ಕೊನೆಯ* ಪ್ರಾಂಪ್ಟ್‌ಗಾಗಿ ಲೇಬಲ್ ಅನ್ನು ಬಳಸಿ.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_text_concat": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
