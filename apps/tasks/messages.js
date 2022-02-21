@@ -21,6 +21,18 @@ module.exports = function(grunt) {
           }
         });
         var finalData = Object.assign(englishData, localeData);
+        // Process each individual key so we can quickly identify why string is having an issue.
+        Object.keys(finalData).forEach(function(key) {
+          try {
+            process(locale, namespace, finalData[key]);
+          } catch (e) {
+            if (locale !== 'in_tl') {
+              // in_tl is a pseudolanguage locale we don't fully support yet so we will ignore it.
+              let errorMsg = `Error processing ${key} in localization file ${src}: ${e}`;
+              throw new Error(errorMsg);
+            }
+          }
+        });
         try {
           var formatted = process(locale, namespace, finalData);
           grunt.file.write(filePair.dest, formatted);
