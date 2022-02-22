@@ -1,8 +1,0 @@
-{
-  "key": "pointInDirection",
-  "name": "pointInDirection",
-  "category": "Sprites",
-  "category_key": "sprites",
-  "block_name": "gamelab_pointInDirection",
-  "syntax": "pointInDirection"
-}
