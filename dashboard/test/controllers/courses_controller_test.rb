@@ -26,6 +26,10 @@ class CoursesControllerTest < ActionController::TestCase
     @pl_unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     create :unit_group_unit, unit_group: @pl_unit_group_migrated, script: @migrated_pl_unit, position: 1
     @migrated_pl_unit.reload
+
+    @unmigrated_unit = create :script, is_migrated: false, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @unit_group_unmigrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    create :unit_group_unit, unit_group: @unit_group_unmigrated, script: @unmigrated_unit, position: 1
   end
 
   setup do
@@ -34,10 +38,6 @@ class CoursesControllerTest < ActionController::TestCase
     @migrated_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     @unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_unit, position: 1
-
-    @unmigrated_unit = create :script, is_migrated: false, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    @unit_group_unmigrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    create :unit_group_unit, unit_group: @unit_group_unmigrated, script: @unmigrated_unit, position: 1
 
     # stub writes so that we dont actually make updates to filesystem
     File.stubs(:write)
