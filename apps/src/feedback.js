@@ -230,8 +230,10 @@ FeedbackUtils.prototype.displayFeedback = function(
     project.saveIfSourcesChanged();
   }
 
-  let onHidden;
-  onHidden = function() {
+  // onHidden is called when the dialog is closed: only do something extra
+  // if there are hints for missing blocks. hideButDontContinue may change
+  // according to later events
+  let onHidden = function() {
     if (
       !continueButton ||
       (feedbackDialog && feedbackDialog.hideButDontContinue)
