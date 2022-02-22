@@ -23300,6 +23300,8 @@ en:
               description_teacher: Students identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.
             lesson-5:
               name: MCQ Practice – Day 2
+              description_student: You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam.
+              description_teacher: Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.
             lesson-6:
               name: FRQ Pre-Assessment
               description_student: To identify your current strengths and weaknesses on the FRQ portion of the AP CSA Exam, you take an FRQ Pre-Assessment. Best of luck!
@@ -28990,13 +28992,77 @@ en:
           description_audience: ''
           name: csa8-pilot-facilitator
         csa9-pilot-facilitator:
-          title: ''
-          description: ''
-          student_description: ''
+          title: AP Exam Review and Practice
+          description: This unit prepares students for the AP CSA Exam by reviewing concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
+          student_description: This unit prepares you for the AP CSA Exam by reviewing concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
           description_short: ''
           description_audience: ''
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            The AP CSA Exam:
+              name: The AP CSA Exam
+              description_student: You did it! You have completed the content for the course, and now it is time to prepare for the AP CSA Exam. In the process, you identify and answer questions you may have about the exam. You explore test-testing strategies and study resources that you can use to prepare for the exam.
+              description_teacher: Students learn about the structure and expectations of the AP CSA Exam. In the process, students identify and answer questions about the exam. Students explore test-taking strategies and study resources that they can use to prepare for the exam.
+            MCQ Pre-Assessment:
+              name: MCQ Pre-Assessment
+              description_student: To identify your current strengths and weaknesses on the multiple-choice portion of the AP CSA Exam, you take a Multiple-Choice Pre-Assessment on AP Classroom. Best of luck!
+              description_teacher: Students complete a Multiple-Choice Pre-Assessment on AP Classroom.
+            MCQ Study Plan:
+              name: MCQ Study Plan
+              description_student: You review your results from the multiple-choice pre-assessment to create a study plan.
+              description_teacher: Students review their results from the multiple-choice pre-assessment to create a study plan.
+            MCQ Practice – Day 1:
+              name: MCQ Practice – Day 1
+              description_student: Now it's time to practice! You identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.
+              description_teacher: Students identify the different types of multiple-choice questions on the AP CSA Exam and strategies for approaching each type.
+            MCQ Practice – Day 2:
+              name: MCQ Practice – Day 2
+              description_student: You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam.
+              description_teacher: Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.
+            FRQ Pre-Assessment:
+              name: FRQ Pre-Assessment
+              description_student: To identify your current strengths and weaknesses on the FRQ portion of the AP CSA Exam, you take an FRQ Pre-Assessment. Best of luck!
+              description_teacher: 'Students complete an FRQ Pre-Assessment. '
+            FRQ Study Plan:
+              name: FRQ Study Plan
+              description_student: You review your results from the FRQ pre-assessment to create a study plan.
+              description_teacher: Students review their results from the FRQ pre-assessment to create a study plan.
+            FRQ Practice – Day 1:
+              name: FRQ Practice – Day 1
+              description_student: You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam.
+              description_teacher: Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.
+            FRQ Practice – Day 2:
+              name: FRQ Practice – Day 2
+              description_student: You identify strategies for approaching FRQs on the AP CSA Exam.
+              description_teacher: Students identify strategies for approaching FRQs on the AP CSA Exam.
+            Mock MCQ Exam – Day 1:
+              name: Mock MCQ Exam – Day 1
+              description_student: You complete the first half of a mock AP CSA multiple-choice exam. Best of luck!
+              description_teacher: Students complete the first half of a mock AP CSA multiple-choice exam.
+            Mock MCQ Exam – Day 2:
+              name: Mock MCQ Exam – Day 2
+              description_student: You complete the second half of a mock AP CSA multiple-choice exam. Best of luck!
+              description_teacher: Students complete the second half of a mock AP CSA multiple-choice exam.
+            Mock MCQ Exam – Day 3:
+              name: Mock MCQ Exam – Day 3
+              description_student: You review your results on the MCQ Mock Exam and update your study plans.
+              description_teacher: Students review their results on the MCQ Mock Exam and update their study plans.
+            Mock FRQ Exam – Day 1:
+              name: Mock FRQ Exam – Day 1
+              description_student: You complete the first half of a mock AP CSA free response exam. Best of luck!
+              description_teacher: Students complete the first half of a mock AP CSA free response exam.
+            Mock FRQ Exam – Day 2:
+              name: Mock FRQ Exam – Day 2
+              description_student: You complete the second half of a mock AP CSA free response exam. Best of luck!
+              description_teacher: Students complete the second half of a mock AP CSA free response exam.
+            Mock FRQ Exam – Day 3:
+              name: Mock FRQ Exam – Day 3
+              description_student: You review your results on the FRQ Mock Exam and update your study plans.
+              description_teacher: Students review their results on the FRQ Mock Exam and update their study plans.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Review and Practice
+            lessonGroup-3:
+              display_name: Mock Exams
           name: csa9-pilot-facilitator
         coursea-2022:
           lessons:
