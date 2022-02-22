@@ -14,16 +14,16 @@ class TeacherApplicationHelperTest < ActionView::TestCase
     create TEACHER_APPLICATION_FACTORY, user: @user_with_two_incomplete_apps, status: 'incomplete', application_year: '2018-2019'
 
     @user_with_reopened_app = create :teacher
-    @reopened_application = create TEACHER_APPLICATION_FACTORY, user: @user_with_reopened_app, status: 'reopened'
+    create TEACHER_APPLICATION_FACTORY, user: @user_with_reopened_app, status: 'reopened'
 
     @user_with_outdated_incomplete = create :teacher
-    @not_current_incomplete_app = create TEACHER_APPLICATION_FACTORY,
+    create TEACHER_APPLICATION_FACTORY,
       user: @user_with_outdated_incomplete,
       status: 'incomplete',
       application_year: '2018-2019'
 
     @user_with_outdated_reopened = create :teacher
-    @not_current_reopened_app = create TEACHER_APPLICATION_FACTORY,
+    create TEACHER_APPLICATION_FACTORY,
       user: @user_with_outdated_reopened,
       status: 'reopened',
       application_year: '2018-2019'
@@ -35,7 +35,7 @@ class TeacherApplicationHelperTest < ActionView::TestCase
   end
 
   test 'current application returns nil if user has no application from this year' do
-    sign_in @teacher_with_not_current_incomplete_app
+    sign_in @user_with_outdated_incomplete
     assert_nil current_application
   end
 
