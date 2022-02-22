@@ -1,18 +1,18 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "pl2022",
+    "/home": "superhero",
     "/certificates": "congrats-certificate-share"
   },
 
   "banners": {
-    "pl2022": {
-      "image": "/images/marketing/pl-dash-jan.png",
-      "title": "Join Code.org's Professional Learning Program",
-      "body": "Our highly supportive program is designed to prepare any educator to teach computer science. Scholarships to attend free are available in many regions!",
+    "superhero": {
+      "image": "/images/marketing/superhero_teacherdash.png",
+      "title": "Help your students become superheroes!",
+      "body": "Add to your teaching toolbox with Code.org’s Professional Learning Program. More than 90% of attendees would recommend our program to another teacher!",
       "buttonText": "Learn More",
-      "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
-      "buttonId": "pl2022-details"
+      "buttonUrl": "https://code.org/educate/professional-learning/",
+      "buttonId": "superhero-pl-details"
     },
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

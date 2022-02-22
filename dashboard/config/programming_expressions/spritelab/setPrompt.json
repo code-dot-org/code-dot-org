@@ -1,8 +1,0 @@
-{
-  "key": "setPrompt",
-  "name": "setPrompt",
-  "category": "World",
-  "category_key": "world",
-  "block_name": "gamelab_setPrompt",
-  "syntax": "setPrompt"
-}
