@@ -699,8 +699,8 @@ class Script < ApplicationRecord
   def redirect_to_unit_url(user, locale: nil)
     # No redirect unless unit belongs to a family.
     return nil unless family_name
-    # Only redirect students.
-    return nil unless user && user.student?
+    # Only redirect participants.
+    return nil unless user && can_be_participant?(user)
     return nil unless has_other_versions?
     # No redirect unless user is allowed to view this unit version and they are not already assigned to this unit
     # or the course it belongs to.

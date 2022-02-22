@@ -207,6 +207,13 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/#{@coursez_2018.name}?redirect_warning=true"
   end
 
+  test "show: do not redirect from older version to latest stable version in family for someone who can not be participant or instructor" do
+    sign_in create(:student)
+    get :show, params: {id: @pl_coursez_2017.name}
+    assert_response :success
+    assert response.body.include? "You don&#39;t have access to this unit."
+  end
+
   test "show: redirect from older version to latest stable version in family for participant" do
     sign_in create(:teacher)
     get :show, params: {id: @pl_coursez_2017.name}
