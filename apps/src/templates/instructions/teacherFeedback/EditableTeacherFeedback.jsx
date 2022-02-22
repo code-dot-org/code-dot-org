@@ -36,7 +36,7 @@ export class EditableTeacherFeedback extends Component {
     token: PropTypes.string,
     //Provided by Redux
     verifiedInstructor: PropTypes.bool,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.number,
     updateUserProgress: PropTypes.func.isRequired,
     canHaveFeedbackReviewState: PropTypes.bool
   };
@@ -294,8 +294,7 @@ export default connect(
   state => ({
     verifiedInstructor:
       state.verifiedInstructor && state.verifiedInstructor.isVerified,
-    selectedSectionId:
-      state.teacherSections && state.teacherSections.selectedSectionId,
+    selectedSectionId: state.teacherSections?.selectedSectionId,
     canHaveFeedbackReviewState:
       state.pageConstants && state.pageConstants.canHaveFeedbackReviewState
   }),

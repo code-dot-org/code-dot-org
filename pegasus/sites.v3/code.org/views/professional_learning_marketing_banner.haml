@@ -1,0 +1,33 @@
+- if request.locale == "en-US"
+  = inline_css 'professional_learning_marketing_banner.css'
+  - header_text = 'Help students become superheroes!'
+  - text = "Our Professional Learning program helps #{audience_text} teach computer science!"
+  - should_animate ||= false
+
+  .homepage-professional-learning-banner{class: should_animate ? 'animate-text' : ''}
+    %a.linktag#pl-2019{href: link_address}
+      .professional-learning-banner-desktop.col-80.desktop-feature
+        .banner
+          %img{src: "/images/homepage/superhero-banner.png"}
+        .left
+          .header= header_text
+          .text= text
+        .right-button
+          %button
+            #{button_label}
+      .professional-learning-banner-tablet.col-80.tablet-restrictive-feature
+        .banner
+          %img{src: "/images/homepage/superhero-banner-half.png"}
+          .text-button-wrapper
+            .header= header_text
+            .text= text
+            %button
+              #{button_label}
+      .professional-learning-banner-phone.phone-feature
+        .text-button-wrapper
+          .header= header_text
+          .text= text
+          %button
+            #{button_label}
+
+    .clear

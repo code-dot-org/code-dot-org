@@ -1,7 +1,0 @@
-{
-  "key": "mathIncrement",
-  "name": "mathIncrement",
-  "category": "Math",
-  "category_key": "math",
-  "syntax": "__++"
-}
