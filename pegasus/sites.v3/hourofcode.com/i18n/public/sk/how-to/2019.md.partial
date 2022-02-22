@@ -1,5 +1,5 @@
 ---
-title: Príručka - Ako na to
+title: Organizačný návod
 layout: wide
 nav: how_to_nav
 ---
@@ -55,7 +55,7 @@ Keď svoje [podujatie Hodiny kódu zaregistrujete](/), budete dostávať užito�
 
 Pred podujatím sa so žiakmi podeľte o [inšpiratívne videá](/promote/resources), ktoré ukazujú rozmanitých ľudí a tvorivé spôsoby, ako sa dá informatika využiť. Alebo si do triedy zaobstarajte inšpiratívne plagáty! Žiaci budú ochotnejší zapojiť sa do učenia informatiky, keď budú vidieť, že ju propagujú im podobní ľudia.
 
-{{ nové_propagačné_plagáty }}
+{{ promote_new_posters }}
 
 Získajte viac informácií o plagátoch, videách, nálepkách a ďalších spôsoboch, [ako plánované podujatie spropagovať](/promote/resources#posters) vo vašej komunite.
 
@@ -74,18 +74,18 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 - Vysvetlite, ako technológie ovplyvňujú naše životy. Uveďte príklady, ktoré pochopia chlapci aj dievčatá (záchrana životov, pomáhanie ľuďom, spájanie ľudí atď.).
 - Spolu s triedou spravte zoznam vecí z bežného života, ktoré využívajú počítačový kód.
-- See tips for getting girls interested in computer science [here]({{ urls/girls }}).
+- [Na tomto odkaze]({{ urls/girls }}) nájdete tipy, ako zatraktívniť informatiku pre dievčatá.
 
 
 ## 6. Get Coding!
 
 Nasmerujte žiakov na aktivitu
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Write the tutorial link on a whiteboard. Nájdete ho na stránke s [informáciami k vybranej aktivite]({{ urls/learn }}), kde je uvedený pod počtom účastníkov.
 
 Ak budú mať žiaci nejaké ťažkosti, môžete im odpovedať nasledovne:
 
-- “I don’t know. Let’s figure this out together.”
+- „Neviem. Skúsme na to prísť spoločne.“
 - „Technológie nefungujú vždy tak, ako by sme práve chceli.“
 - „Učiť sa programovať je ako učiť sa nový jazyk – človek ním nedokáže hneď hovoriť plynulo.“
 
@@ -107,7 +107,7 @@ Ak budú mať žiaci nejaké ťažkosti, môžete im odpovedať nasledovne:
 - Vytlačte pre svojich žiakov [certifikáty]({{ urls/certificates }}).
 - Vytlačte pre žiakov [nálepky s textom „I did the Hour of Code!“]({{ urls/promote_stickers }}) (Mám za sebou Hodinu kódu!).
 - Objednajte pre svoju školu [špeciálne tričká s potlačou](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more).
-- Share photos and videos of your Hour of Code event on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Share photos and videos of your Hour of Code event on social media. Použite hashtagy #HodinaKodu a #HourOfCode, ako aj označenie @codeorg, aby sme vaše úspechy mohli ukázať aj my!
 
 ----
 
@@ -118,6 +118,6 @@ Ak budú mať žiaci nejaké ťažkosti, môžete im odpovedať nasledovne:
 
 ## Čo nasleduje po Hodine kódu?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Informatika sa Hodinou kódu nekončí! Naše učebné materiály neustále k dispozícii on‑line, a to úplne zadarmo. [Learn how](/beyond) to bring CS to your school and students.
 
 {{ signup_button }}

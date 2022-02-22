@@ -599,9 +599,13 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
-    const statuses = getApplicationStatuses(
-      this.props.viewType,
-      this.props.applicationData.update_emails_sent_by_system
+    // Nobody is able to set an application status to incomplete from detail view
+    const statuses = _.omit(
+      getApplicationStatuses(
+        this.props.viewType,
+        this.props.applicationData.update_emails_sent_by_system
+      ),
+      ['incomplete']
     );
     const selectControl = (
       <div>
