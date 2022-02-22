@@ -116,7 +116,7 @@ class ScriptLevelsController < ApplicationController
 
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
-    authorize! :read, @script_level, params.slice(:login_required)
+    return render :forbidden unless can?(:read, @script_level, {login_required: params.slice(:login_required)})
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
