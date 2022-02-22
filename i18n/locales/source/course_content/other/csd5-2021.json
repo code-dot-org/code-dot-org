@@ -1,0 +1,91 @@
+{
+  "https://studio.code.org/s/csd5-2021/lessons/4/levels/1": {
+    "display_name": "Black and White Pixelation Widget",
+    "short_instructions": "Complete the X shape by typing 0s and 1s",
+    "long_instructions": "# Do This\n\nComplete the \"X\" shape by typing 0s and 1s. You can always click \"Readable Format\" if you want to clean up your work."
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/4/levels/2": {
+    "display_name": "Black and White Pixelation Widget",
+    "short_instructions": "Draw a smiley face (click here to see image)",
+    "long_instructions": "# Do This\n\nUse the pixelation widget to draw a smiley face\n\n[][0]"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/4/levels/3": {
+    "display_name": "Black and White Pixelation Widget",
+    "short_instructions": "Change the width and height sliders to find the image (click here to see more)",
+    "long_instructions": "# Do This\n\nThe width and height sliders are set incorrectly for this image so it doesn't look like anything. Change them until you find the image.\n\n[][0]"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/4/levels/4": {
+    "display_name": "Black and White Pixelation Widget",
+    "short_instructions": "Add eyebrows to the smiley face (click here to see the image)",
+    "long_instructions": "# Do This\n\nAdd eyebrows to this smiley face. Remember to use the \"Readable Format\" if you get stuck.\n\n[][0]"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/4/levels/5": {
+    "display_name": "Black and White Pixelation Widget",
+    "short_instructions": "Draw anything you like",
+    "long_instructions": "# Do This\n\nNow it's your turn. Draw anything you want in the pixelation widget. Feel free to change the width and height of your image if you wish."
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/5/levels/1": {
+    "long_instructions": "# Binary Widget\n\nThis widget helps you to calculate 6-bit binary numbers. Use this to help answer the questions on your activity guide in this lesson."
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/5/levels/2": {
+    "display_name": "Binary and Data",
+    "long_instructions": "## Questions to Consider\n\n-   Why are all the types of data on the computer stored as numbers?\n-   If everything is stored as a number, how do you think the computer tell the difference between numbers, letters, images, and sound?",
+    "teacher_markdown": "## Discussion Goals\n\nTh goal of this discussion is to have the students think more deeply about the purpose of binary.  For the first question, they may want to return to their ASCII character sheets and see how the computer would interpret the same binary sequence as a number.  For their image representation, they may wonder whether it is even useful to interpret the binary sequences as numbers.  In the end, the purpose of defining all data as numbers is less about the \"reality\" of what the ones and zeros represent, and more about how binary is traditionally interpreted.\n\nFor the second question, allow students to think of different ways that the computer would distinguish between different types of data.  While it's not necessary for students to come up with any specific answer, challenge them on any ways that involve human interpretation of context, such as knowing that a name is most likely text and an age is most likely a number.  Assure them that they will look at the problem again in a couple of lessons."
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/6/levels/1": {
+    "long_instructions": "# 8-Bit Binary Numbers\n\nUse this widget to help decode 8-bit binary numbers"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/8/levels/1": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/10/levels/1": {
+    "long_instructions": "# Pizza Party\n\nThe pizza party data has been put into an app for you, and the answers from another class have been added.  Because this is an app, we can automate the creation of the bar chart from the given data."
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/14/levels/1": {
+    "display_name": "How Netflix Uses Data",
+    "long_instructions": "Watch this video to learn how this problem is solved by Netflix. As you watch think about what data is being collected and where it's coming from.",
+    "teacher_markdown": "Check that students have answered the first two \"Web Pix\" questions on their activity guide before showing this video.  After the video, they should answer the third question: How does Netflix solve the problem of collecting information about users and videos to make the best recommendation it can for each user?\n\n_You can hide the \"For Teachers Only\" box in Code Studio by clicking the Teacher Panel on the right side of the page and choosing the \"View as Student\" option._"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/14/levels/2": {
+    "display_name": "How Waze Uses Data",
+    "long_instructions": "Watch this video to learn how this problem is solved by Waze. As you watch think about what data is being collected and where it's coming from.",
+    "teacher_markdown": "Check that students have answered the first two \"Routz\" questions on their activity guide before showing this video. After the video, they should answer the third question: How does Waze solve the problem of improving its data to give better directions?"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/14/levels/3": {
+    "display_name": "How Amazon Uses Data",
+    "long_instructions": "Watch this video to learn how this problem is solved by Amazon. As you watch think about what data is being collected and where it's coming from.",
+    "teacher_markdown": "Check that students have answered the first two \"Nyle\" questions on their activity guide before showing this video. After the video, they should answer the third question: How does Amazon solve the problem of advertising products only to those people who are likely to buy them?"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/15/levels/1": {
+    "display_name": "Video: Machine Learning"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/15/levels/5": {
+    "display_name": "Video: Training Data"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/15/levels/8": {
+    "display_name": "Video: Societal Implications"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/16/levels/1": {
+    "display_name": "Sample App",
+    "long_instructions": "# Sample App\n\nHere is an example of an app that uses data to help the user solve a problem.  With a partner, play through the app a few times to see how it works.\n\nDiscuss the following questions with your partner:\n\n-   What choice does the app help the user to make? \n-   What data does it use to make that recommendation?\n-   How do you think the creators of the app decided on the algorithm that they use to make the choice?",
+    "teacher_markdown": "Students can see and remix the code to this app at the following URL:\n\n[https://studio.code.org/projects/applab/Xb03UxRLDJ8BnVIMEhb3iTL1MG1HErh1Xy5Fl5IyqdA/view][0]"
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/16/levels/2": {
+    "dsls": {
+      "title": "CS Discoveries Rapid Survey!"
+    }
+  },
+  "https://studio.code.org/s/csd5-2021/lockable/1/levels/1": {
+    "dsls": {
+      "title": "Data and Society Post-Project Test"
+    }
+  },
+  "https://studio.code.org/s/csd5-2021/lessons/17/levels/1": {
+    "dsls": {
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Discoveries even better!\n\n<a class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey-2021/lockable/1/levels/1/page/1\" target=\"top\">Click here to complete the CS Discoveries Post-Course Survey</a>\n\n(opens in a new tab)\n\n<br>\n\n\n\n\n\n",
+      "teacher_markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students.\n\n\n"
+    }
+  }
+}
