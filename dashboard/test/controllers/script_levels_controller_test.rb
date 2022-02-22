@@ -58,6 +58,15 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     @pilot_teacher = create :teacher, pilot_experiment: 'pilot-experiment'
     pilot_section = create :section, user: @pilot_teacher, script: pilot_script
     @pilot_student = create(:follower, section: pilot_section).student_user
+
+    pilot_pl_script = create(:script, pilot_experiment: 'pl-pilot-experiment')
+    pilot_pl_lesson_group = create(:lesson_group, script: pilot_pl_script)
+    pilot_pl_lesson = create(:lesson, script: pilot_pl_script, lesson_group: pilot_pl_lesson_group)
+    @pilot_pl_script_level = create :script_level, script: pilot_pl_script, lesson: pilot_pl_lesson
+    @pilot_instructor = create :facilitator, pilot_experiment: 'pl-pilot-experiment'
+    pilot_pl_section = create :section, user: @pilot_instructor, script: pilot_pl_script
+    @pilot_participant = create :teacher
+    create(:follower, section: pilot_pl_section, student_user: @pilot_participant)
   end
 
   setup do
@@ -626,6 +635,34 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       script_id: courseg_2017.name,
       lesson_position: courseg_2017_lesson_1.relative_position,
       id: courseg_2017_lesson_1_script_level.position,
+      no_redirect: "true"
+    }
+    assert_response :ok
+  end
+
+  test "show: redirect to latest assigned script version in family for participant if one exists" do
+    sign_in @student
+
+    pl_courseg_2017 = create :script, name: 'pl-courseg-2017', family_name: 'pl-courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 'pl-courseg-2018', family_name: 'pl-courseg', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    create :script, name: 'pl-courseg-2019', family_name: 'pl-courseg', version_year: '2019'
+
+    pl_courseg_2017_lesson_group_1 = create :lesson_group, script: pl_courseg_2017
+    pl_courseg_2017_lesson_1 = create :lesson, script: pl_courseg_2017, lesson_group: pl_courseg_2017_lesson_group_1, name: 'PL Course G Lesson 1', absolute_position: 1, relative_position: '1'
+    pl_courseg_2017_lesson_1_script_level = create :script_level, script: pl_courseg_2017, lesson: pl_courseg_2017_lesson_1, position: 1
+
+    get :show, params: {
+      script_id: pl_courseg_2017.name,
+      lesson_position: pl_courseg_2017_lesson_1.relative_position,
+      id: pl_courseg_2017_lesson_1_script_level.position,
+    }
+    assert_redirected_to '/s/pl-courseg-2018?redirect_warning=true'
+
+    # Does not redirect if no_redirect query param is provided.
+    get :show, params: {
+      script_id: pl_courseg_2017.name,
+      lesson_position: pl_courseg_2017_lesson_1.relative_position,
+      id: pl_courseg_2017_lesson_1_script_level.position,
       no_redirect: "true"
     }
     assert_response :ok
@@ -2064,16 +2101,32 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     name: 'student cannot view pilot script level'
 
   test_user_gets_response_for :show, response: :forbidden, user: :teacher,
+                              params: -> {script_level_params(@pilot_pl_script_level)},
+                              name: 'participant cannot view pilot script level'
+
+  test_user_gets_response_for :show, response: :forbidden, user: :teacher,
     params: -> {script_level_params(@pilot_script_level)},
     name: 'teacher without pilot access cannot view pilot script level'
+
+  test_user_gets_response_for :show, response: :forbidden, user: :facilitator,
+                              params: -> {script_level_params(@pilot_script_level)},
+                              name: 'instructor without pilot access cannot view pilot script level'
 
   test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
     params: -> {script_level_params(@pilot_script_level)},
     name: 'pilot teacher can view pilot script level'
 
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_instructor},
+                              params: -> {script_level_params(@pilot_pl_script_level)},
+                              name: 'pilot instructor can view pilot script level'
+
   test_user_gets_response_for :show, response: :success, user: -> {@pilot_student},
     params: -> {script_level_params(@pilot_script_level)},
     name: 'pilot student can view pilot script level'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_participant},
+                              params: -> {script_level_params(@pilot_pl_script_level)},
+                              name: 'pilot participant can view pilot script level'
 
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
     params: -> {script_level_params(@pilot_script_level)},
