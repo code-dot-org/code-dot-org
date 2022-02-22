@@ -59,19 +59,20 @@
     "hint_prompt_attempts_threshold": "1",
     "display_name": "Blast Off!",
     "bubble_choice_description": "Make the sprites move when they are clicked.",
+    "thumbnail_url": "https://images.code.org/371f4ba22b3a2b81d63da7059d84590a-image-1641824534552.2022-01-10 09_21_44.gif",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "thumbnail_url": "https://images.code.org/371f4ba22b3a2b81d63da7059d84590a-image-1641824534552.2022-01-10 09_21_44.gif"
+    "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function(){\r\n    return anySpriteClicked();\r\n  }, 'spritelabFeedbackClickSprites');\r\n  addCriteria(function() {\r\n    return clickEventFound();\r\n  }, 'clickButNoEvent');\r\n  addCriteria(function(){\r\n    return anyPropChanged('x')||anyPropChanged('y');\r\n  }, 'debugMovement');\r\n  addCriteria(function(){\r\n    return anyBehaviorChanged()&&clickEventFound();\r\n  }, 'changeSpriteBehaviorsWhenClicked');\r\n  addCriteria(function(){\r\n    return onlyEventSpritesBehaviorChanged();\r\n  }, 'moveOnlyClickedSpriteWithBehavior');\r\n}\r\n\r\ncheck();\r\n"
   },
   "game_id": 64,
   "published": true,
-  "created_at": "2022-01-10T14:06:01.000Z",
+  "created_at": "2022-02-16T19:37:58.000Z",
   "level_num": "custom",
   "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-10T14:06:01.205+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_remove\\\"\"],\"cloned_from\":\"courseF_groups_remove\"},{\"changed_at\":\"2022-01-10 14:10:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"short_instructions\",\"long_instructions\",\"start_animations\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-10 14:12:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-10 14:20:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-10 14:22:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-10 15:19:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-10 15:20:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-10T14:06:01.205+00:00\",\"changed\":[\"cloned from \\\"courseF_groups_remove\\\"\"],\"cloned_from\":\"courseF_groups_remove\"},{\"changed_at\":\"2022-01-10 14:10:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"short_instructions\",\"long_instructions\",\"start_animations\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-10 14:12:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-10 14:20:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-10 14:22:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-10 15:19:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-10 15:20:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"thumbnail_url\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-16 15:49:19 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
