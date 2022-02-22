@@ -34,6 +34,7 @@ import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import clientState from '@cdo/apps/code-studio/clientState';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -1009,12 +1010,9 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       '#sharing-input-copy-button'
     );
     dom.addClickTouchEvent(sharingInputCopyButton, function() {
-      navigator.clipboard.writeText(options.shareLink).then(
-        function() {
-          sharingInputCopyButton.className = 'sharing-input-copy-button-shared';
-        },
-        function() {}
-      );
+      copyToClipboard(options.shareLink, () => {
+        sharingInputCopyButton.className = 'sharing-input-copy-button-shared';
+      });
     });
   }
 
