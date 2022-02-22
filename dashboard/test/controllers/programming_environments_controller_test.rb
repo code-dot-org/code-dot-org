@@ -21,6 +21,24 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_equal programming_environment.name, edit_data['name']
   end
 
+  test 'data is passed down to show page' do
+    sign_in @levelbuilder
+
+    programming_environment = create :programming_environment
+    category = create :programming_environment_category, programming_environment: programming_environment
+    create :programming_environment_category, programming_environment: programming_environment
+    create :programming_expression, programming_environment: programming_environment, programming_environment_category: category
+
+    get :show, params: {name: programming_environment.name}
+    assert_response :ok
+
+    show_data = css_select('script[data-programmingenvironment]').first.attribute('data-programmingenvironment').to_s
+    assert_equal programming_environment.summarize_for_show.to_json, show_data
+
+    nav_data = css_select('script[data-categoriesfornavigation]').first.attribute('data-categoriesfornavigation').to_s
+    assert_equal 1, JSON.parse(nav_data).length
+  end
+
   test 'returns not_found if editing a non-existant programming environment' do
     sign_in @levelbuilder
 

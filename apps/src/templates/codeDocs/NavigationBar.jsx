@@ -22,7 +22,7 @@ export function CategoryNavigation({initialIsOpen, category}) {
       {isOpen && (
         <ul style={styles.list}>
           {category.programmingExpressions.map(exp => (
-            <li key={exp.name} style={styles.codeLink}>
+            <li key={exp.key} style={styles.codeLink}>
               <CodeDocLink programmingExpression={exp} showBlocks={false} />
             </li>
           ))}
@@ -32,9 +32,15 @@ export function CategoryNavigation({initialIsOpen, category}) {
   );
 }
 
+const categoryShape = PropTypes.shape({
+  key: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  programmingExpressions: PropTypes.arrayOf(PropTypes.object)
+});
+
 CategoryNavigation.propTypes = {
   initialIsOpen: PropTypes.bool,
-  category: PropTypes.object
+  category: categoryShape.isRequired
 };
 
 export default function NavigationBar({categoriesForNavigation}) {
@@ -48,7 +54,7 @@ export default function NavigationBar({categoriesForNavigation}) {
 }
 
 NavigationBar.propTypes = {
-  categoriesForNavigation: PropTypes.arrayOf(PropTypes.object).isRequired
+  categoriesForNavigation: PropTypes.arrayOf(categoryShape).isRequired
 };
 
 const styles = {
