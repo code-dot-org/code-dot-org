@@ -9,45 +9,31 @@ import {expect} from 'chai';
 import sinon from 'sinon';
 
 describe('Summary', () => {
+  const dataWithoutIncompleteApps = {
+    unreviewed: {locked: 0, total: 0},
+    reopened: {locked: 0, total: 0},
+    pending: {locked: 0, total: 0},
+    waitlisted: {locked: 0, total: 0},
+    declined: {locked: 0, total: 0},
+    accepted_not_notified: {locked: 0, total: 0},
+    accepted_notified_by_partner: {locked: 0, total: 0},
+    accepted_no_cost_registration: {locked: 0, total: 0},
+    registration_sent: {locked: 0, total: 0},
+    paid: {locked: 0, total: 0}
+  };
+
   const data = {
     csd_teachers: {
-      unreviewed: {locked: 0, total: 2},
-      incomplete: {locked: 0, total: 0},
-      reopened: {locked: 0, total: 0},
-      pending: {locked: 0, total: 0},
-      waitlisted: {locked: 0, total: 0},
-      declined: {locked: 0, total: 0},
-      accepted_not_notified: {locked: 0, total: 0},
-      accepted_notified_by_partner: {locked: 0, total: 0},
-      accepted_no_cost_registration: {locked: 0, total: 0},
-      registration_sent: {locked: 0, total: 0},
-      paid: {locked: 0, total: 0}
+      ...dataWithoutIncompleteApps,
+      incomplete: {locked: 0, total: 0}
     },
     csp_teachers: {
-      unreviewed: {locked: 0, total: 2},
-      incomplete: {locked: 0, total: 0},
-      reopened: {locked: 0, total: 0},
-      pending: {locked: 0, total: 0},
-      waitlisted: {locked: 0, total: 0},
-      declined: {locked: 0, total: 0},
-      accepted_not_notified: {locked: 0, total: 0},
-      accepted_notified_by_partner: {locked: 0, total: 0},
-      accepted_no_cost_registration: {locked: 0, total: 0},
-      registration_sent: {locked: 0, total: 0},
-      paid: {locked: 0, total: 0}
+      ...dataWithoutIncompleteApps,
+      incomplete: {locked: 0, total: 0}
     },
     csa_teachers: {
-      unreviewed: {locked: 0, total: 2},
-      incomplete: {locked: 0, total: 0},
-      reopened: {locked: 0, total: 0},
-      pending: {locked: 0, total: 0},
-      waitlisted: {locked: 0, total: 0},
-      declined: {locked: 0, total: 0},
-      accepted_not_notified: {locked: 0, total: 0},
-      accepted_notified_by_partner: {locked: 0, total: 0},
-      accepted_no_cost_registration: {locked: 0, total: 0},
-      registration_sent: {locked: 0, total: 0},
-      paid: {locked: 0, total: 0}
+      ...dataWithoutIncompleteApps,
+      incomplete: {locked: 0, total: 0}
     }
   };
 
@@ -96,40 +82,13 @@ describe('Summary', () => {
   it('removeIncompleteApplications strips incomplete applications from data', () => {
     expect(removeIncompleteApplications(data)).to.deep.equal({
       csd_teachers: {
-        unreviewed: {locked: 0, total: 2},
-        reopened: {locked: 0, total: 0},
-        pending: {locked: 0, total: 0},
-        waitlisted: {locked: 0, total: 0},
-        declined: {locked: 0, total: 0},
-        accepted_not_notified: {locked: 0, total: 0},
-        accepted_notified_by_partner: {locked: 0, total: 0},
-        accepted_no_cost_registration: {locked: 0, total: 0},
-        registration_sent: {locked: 0, total: 0},
-        paid: {locked: 0, total: 0}
+        ...dataWithoutIncompleteApps
       },
       csp_teachers: {
-        unreviewed: {locked: 0, total: 2},
-        reopened: {locked: 0, total: 0},
-        pending: {locked: 0, total: 0},
-        waitlisted: {locked: 0, total: 0},
-        declined: {locked: 0, total: 0},
-        accepted_not_notified: {locked: 0, total: 0},
-        accepted_notified_by_partner: {locked: 0, total: 0},
-        accepted_no_cost_registration: {locked: 0, total: 0},
-        registration_sent: {locked: 0, total: 0},
-        paid: {locked: 0, total: 0}
+        ...dataWithoutIncompleteApps
       },
       csa_teachers: {
-        unreviewed: {locked: 0, total: 2},
-        reopened: {locked: 0, total: 0},
-        pending: {locked: 0, total: 0},
-        waitlisted: {locked: 0, total: 0},
-        declined: {locked: 0, total: 0},
-        accepted_not_notified: {locked: 0, total: 0},
-        accepted_notified_by_partner: {locked: 0, total: 0},
-        accepted_no_cost_registration: {locked: 0, total: 0},
-        registration_sent: {locked: 0, total: 0},
-        paid: {locked: 0, total: 0}
+        ...dataWithoutIncompleteApps
       }
     });
   });
