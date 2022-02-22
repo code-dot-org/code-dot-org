@@ -280,7 +280,6 @@ class Ability
         true
       end
     end
-
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
       if script.in_development?
