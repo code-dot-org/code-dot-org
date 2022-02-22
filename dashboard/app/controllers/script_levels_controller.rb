@@ -20,6 +20,7 @@ class ScriptLevelsController < ApplicationController
   before_action :disable_session_for_cached_pages
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
+  authorize_resource except: [:next, :hidden_lesson_ids, :lesson_extras, :reset, :toggle_hidden]
 
   def disable_session_for_cached_pages
     if ScriptLevelsController.cachable_request?(request)
@@ -116,7 +117,7 @@ class ScriptLevelsController < ApplicationController
 
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
-    return render :forbidden unless can?(:read, @script_level, {login_required: params.slice(:login_required)})
+    authorize! :read, @script_level, params.slice(:login_required)
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
