@@ -110,7 +110,7 @@ export function multilineText(
   x,
   y,
   size,
-  {color = 'black', horizontalAlign = 'left', verticalAlign = 'top'} = {}
+  {color = colors.black, horizontalAlign = 'left', verticalAlign = 'top'} = {}
 ) {
   p5.push();
   p5.textSize(size);
@@ -135,7 +135,7 @@ export function validationBar(
   state,
   {x = 0, y = APP_HEIGHT - 10, height = 10} = {}
 ) {
-  let color = 'black';
+  let color = colors.black;
   switch (state) {
     case 'fail':
       color = colors.red;

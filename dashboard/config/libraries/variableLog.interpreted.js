@@ -1,3 +1,6 @@
+/* This file is only executed within JSInterpreter */
+/* This library supports validation of Sprite Lab projects that use variables.*/
+
 var studentVarToken = false;
 var previousVarLog;
 
@@ -6,30 +9,31 @@ var previousVarLog;
 // are global, and we would like to find a more efficient way to find just
 // those used by the student.
 function buildVariableLog() {
-  text("Building variable log...",0,15);
   var varLog = {};
-  var start = Object.keys(window).indexOf("studentVarToken") + 1;
-  var end = Object.keys(window).length;
+  var windowKeys = Object.keys(window);
+  var start = windowKeys.indexOf("studentVarToken") + 1;
+  var end = windowKeys.length;
   var index;
   for (var i = start; i < end; i++) {
-    // Blockly functions and behaviors should be excluded. 
-    if (
-      typeof window[Object.keys(window)[i]] == "number" ||
-      typeof window[Object.keys(window)[i]] == "string" ||
-      typeof window[Object.keys(window)[i]] == "boolean"
-    ) {
-      varLog[Object.keys(window)[i]] = window[Object.keys(window)[i]];
+    var currentKey = windowKeys[i];
+    var currentValue = window[currentKey];
+    // Blockly functions and behaviors should be excluded.
+    var valueTypes = ["number", "string", "boolean"];
+    // ES5 doesn't support .includes or we'd use that here.
+    if (valueTypes.indexOf(typeof currentValue) > -1) {
+      varLog[windowKeys[i]] = currentValue;
     }
   }
   return varLog;
 }
 
+// Returns true if any student-created variable was updated.
+// This function can run multiple times per frame.
 function detectVariableLogChange() {
   var result = false;
-  if(varLog && previousVarLog){
+  if (varLog && previousVarLog) {
     for (var property in varLog) {
       if (varLog[property] !== previousVarLog[property]) {
-        //window[Object.keys(window)[Object.keys(window).indexOf(property)]]
         result = true;
       }
     }
@@ -37,65 +41,7 @@ function detectVariableLogChange() {
   return result;
 }
 
-function updateVariableLog() {
-  for (var property in varLog) {
-    if (varLog[property] !== window[Object.keys(window)[Object.keys(window).indexOf(property)]]) {
-      varLog[property] = window[Object.keys(window)[Object.keys(window).indexOf(property)]];
-    }
-  }
-}
-
-function storeVariableLogforPrevious() {
-  previousVarLog = JSON.parse(JSON.stringify(varLog));
-}
-
-
-// Draw a set of on-screen watchers, ie. show each student variable name
-// and it's value, in a drawn element on the canvas. (Prototype)
-function varWatchers(varLog) {
-  for (var key in varLog) {
-    var index = Object.keys(varLog).indexOf(key);
-    var x = 5;
-    var y = 32;
-    drawWatcher(key, varLog[key], iqndex, x, y);
-  }
-}
-
-function drawWatcher(label, value, index, x, y) {
-  if (!value && value != 0 && value != "") {
-    value = "undefined";
-  }
-  var fontSize = 15;
-  textSize(fontSize);
-  textAlign(LEFT, CENTER);
-  var labelX = x + 5;
-  var valueX = x + 15 + textWidth(label);
-  var textY = y + (index + 0.5) * fontSize * 2;
-  stroke("#c6cacd");
-  fill("#e7e8ea");
-  rect(
-    x,
-    y + index * fontSize * 2,
-    textWidth(label) + textWidth(value) + 25,
-    fontSize * 2,
-    fontSize / 2
-  );
-  noStroke();
-  fill("#5b6770");
-  text(label, labelX, textY);
-  fill("#ffa400");
-  rect(
-    valueX - 5,
-    y + (index + 0.125) * fontSize * 2,
-    textWidth(value) + 10,
-    fontSize * 1.5,
-    fontSize / 1.5
-  );
-  noStroke();
-  fill("white");
-  text(value, valueX, textY);
-}
-
+// Replaces check() found in ValidationSetup interpreted library.
 function check() {
   updateVariableLog();
   var results = updateValidation();
@@ -108,3 +54,18 @@ function check() {
   }
   storeVariableLogforPrevious();
 }
+
+// Updates the variable log. This function should run once per frame.
+function updateVariableLog() {
+  if (varLog) {
+    for (var property in varLog) {
+      varLog[property] = window[property];
+    }
+  }
+}
+
+// Perform a deep copy for comparisons during the next frame.
+function storeVariableLogforPrevious() {
+  previousVarLog = JSON.parse(JSON.stringify(varLog));
+}
+
