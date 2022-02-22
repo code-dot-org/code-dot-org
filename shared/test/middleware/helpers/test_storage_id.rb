@@ -51,7 +51,7 @@ class StorageIdTest < Minitest::Test
     mock_table.stubs(:where).with({user_id: table_user_id}).returns(mock_rows).twice
     mock_table.stubs(:insert).with({user_id: table_user_id}).raises(Sequel::UniqueConstraintViolation).once
 
-    PEGASUS_DB.stubs(:[]).with(:user_storage_ids).returns(mock_table)
+    stubs(:user_storage_ids_table).returns(mock_table)
 
     assert_equal table_storage_id, storage_id_for_current_user
   end
