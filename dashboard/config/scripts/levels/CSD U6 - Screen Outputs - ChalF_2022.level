@@ -6,11 +6,18 @@
       "setProperty": null,
       "setText": null,
       "onEvent": null,
-      "randomNumber_min_max": null
+      "randomNumber_min_max": null,
+      "playSound": null,
+      "playSpeech": null,
+      "showElement": null,
+      "hideElement": null,
+      "rgb": null,
+      "setScreen": null,
+      "open": null
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Screen Outputs Challenge",
+    "long_instructions": "# Local Business App\r\n\r\nCreate an app that changes elements on the screen and could be used to promote a local business. For example, you could find information and images about a business on their website and create an app that displays different information based on the buttons you click.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -62,12 +69,13 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
+    "display_name": "Local Business App",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L3/challenge/F.png",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "display_name": "Challenge F",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L3/challenge/F.png"
+    "bubble_choice_description": "Create an app prototype that could be used to promote a local business"
   },
   "game_id": 41,
   "published": true,
@@ -75,7 +83,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T03:05:14.508+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - ChalE_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - ChalE_2022\"},{\"changed_at\":\"2021-12-16 03:05:16 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:58:05 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:58:10 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T03:05:14.508+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - ChalE_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - ChalE_2022\"},{\"changed_at\":\"2021-12-16 03:05:16 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:58:05 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:58:10 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-22 22:17:13 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

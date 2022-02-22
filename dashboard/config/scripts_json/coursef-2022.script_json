@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-02-22 19:48:14 UTC",
+    "serialized_at": "2022-02-22 22:11:03 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6473,15 +6473,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_EOC2022"
-        ],
         "progression": "Create your project"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_EOC2022"
+          "CourseF_Project_SpriteLab2022"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
@@ -6489,7 +6486,7 @@
         "activity_section.key": "2c1a7a91-4783-46d4-88e9-09a2b4cf3a52"
       },
       "level_keys": [
-        "courseF_EOC2022"
+        "CourseF_Project_SpriteLab2022"
       ]
     }
   ],
@@ -7660,9 +7657,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_EOC2022",
+        "level.key": "CourseF_Project_SpriteLab2022",
         "script_level.level_keys": [
-          "courseF_EOC2022"
+          "CourseF_Project_SpriteLab2022"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
