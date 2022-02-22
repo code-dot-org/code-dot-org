@@ -191,7 +191,7 @@ export const UnconnectedTeacherHomepage = ({
         {showReturnToReopenedTeacherApplication && (
           <BorderedCallToAction
             headingText="Return to Your Application"
-            descriptionText="Your Regional Partner has requested updates to your Professional Learning Application. Return and finish your application."
+            descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
             buttonText="Return to Application"
             buttonColor={Button.ButtonColor.orange}
             buttonUrl="/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
