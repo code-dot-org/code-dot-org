@@ -154,8 +154,8 @@ export const commands = {
 
   // updateValidation() is used in levels, typically running every frame.=
   // This function updates the completion status of each added criteria,
-  // updates the pass/fail status of the level, and use this information
-  // to update UX elements, such a progress bars.
+  // updates the pass/fail status of the level, and uses this information
+  // to update UX elements, such as progress bars.
   updateValidation() {
     // Get the current (ie. previous frame) pass/fail state prior to validation
     const state = commands.getPassState(this.criteria);
@@ -171,8 +171,12 @@ export const commands = {
     drawUtils.validationBar(this.p5, barWidth, state, {});
     switch (state) {
       case 'fail':
+        // End the level.
         if (this.currentFrame() > this.validationFrames.fail) {
-          // End the level.
+          // If a user fails a level, we currently console.log the criteria object.
+          // As this is a new feature, it might be helpful to be able to get this
+          // information from users should they run into any bugs.
+          // To-do: Remove this statement once the feature is stable.
           console.log(this.criteria);
           return {
             state: 'failed',
@@ -267,7 +271,7 @@ export const commands = {
     }
   },
 
-  // Used at the end of a level. Find the first failed criteria and pass associated feedback.
+  // Used at the end of a level. Find the first failed criteria and return associated feedback.
   reportFailure(criteria) {
     let firstFailed = -1;
     for (const criterion in criteria) {
@@ -280,7 +284,7 @@ export const commands = {
     }
   },
 
-  // Used at the end of a level. If there are no failed criteria, pass the generic success feedback.
+  // Used at the end of a level. If there are no failed criteria, return the generic success feedback.
   reportSuccess(criteria) {
     let firstFailed = -1;
     for (const criterion in criteria) {
