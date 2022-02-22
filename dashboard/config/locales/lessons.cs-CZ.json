@@ -768,6 +768,9 @@
           "preparation": "-   Věnujte čas vytvoření vlastního projektu v laboratoři Umělce i laboratoři sprajtů. Seznamte se s možnostmi a omezeními jednotlivých nástrojů.\n-   Upravte **\\*rubriku** tak, aby odpovídala cílům vaší třídy, a vytiskněte kopii pro každého studenta.\n-   Upravte **\\*pracovní list pro návrh projektu** tak, aby vyhovoval vaší třídě, a vytiskněte jeden balíček pro každého studenta.",
           "purpose": "Studenti mohou být připraveni vrhnout se rovnou na sestavování svých projektů, ale tato lekce jim pomůže zformulovat jejich nápady do plánů. Tato struktura udrží snílky při zemi a osvětlí cestu těm, kteří se cítí být ponecháni ve tmě. Poskytněte studentům dostatek času na sestavení a revizi jejich projektů. Pokusy a omyly, které jsou nevyhnutelně součástí této lekce, je naučí řešení problémů a vytrvalosti.",
           "student_overview": "Takto velké projekty potřebují čas a spoustu plánování. Najděte inspiraci, vyviňte plán a rozpoutejte svou tvořivost!"
+        },
+        "csd7-2021/Similarity Models": {
+          "overview": "V této lekci se studenti zapojí do offline aktivity spočívající v simulaci epidemie zombies. Studenti musí pomocí údajů ze sousedního města předpovědět, které části města budou mít nejméně zombies. Studenti budou používat stupňů shody a průměrů k vytváření předpovědí počtu zombies na určitém konkrétním místě. Pak budou studenti zachráněni a bude jim dána příležitost porovnat své předpovědi se skutečnými počty, aby mohli diskutovat o tom, jak pro číselné údaje a kategorické údaje bývá přesnost odlišná.\n\n**Otázka dne:** Jak se počítače naučí dělat předpovědi na základě číselných údajů?"
         }
       }
     }

@@ -160,6 +160,36 @@
         },
         "define/coursee/2021": {
           "word": "Тодорхойлох"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Машины сургалт"
+        },
+        "debugging/csd/2021": {
+          "word": "Алдааг засах"
+        },
+        "variable/csd/2021": {
+          "word": "Хувьсагч"
+        },
+        "conditionals/csd/2021": {
+          "word": "Нөхцлүүд"
+        },
+        "abstraction/csd/2021": {
+          "word": "Хийсвэрлэл"
+        },
+        "function/csd/2021": {
+          "word": "Функц"
+        },
+        "input/csd/2021": {
+          "word": "Оролт"
+        },
+        "processing/csd/2021": {
+          "word": "Боловсруулалт"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Дижитал ул мөр"
+        },
+        "copyright/csd/2021": {
+          "word": "Зохиогчийн эрх"
         }
       }
     }

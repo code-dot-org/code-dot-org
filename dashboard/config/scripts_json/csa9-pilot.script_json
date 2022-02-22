@@ -15,8 +15,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-20 16:38:22 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-02-22 13:44:38 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -131,6 +131,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "Students reflect on their study plan and identify their highest priority areas for improvement. Students use a choice board of study strategies to practice for the AP CSA Exam.",
+        "preparation": "* Create a digital copy of the MCQ Choice Board and make it accessible to students\n* Gather several index cards\n* Assign MCQ Progress Checks on AP Classroom (If you have already used these, create your own quizzes with the Question Bank.)",
+        "student_overview": "You reflect on your student plan and identify your highest priority areas for improvement. You use a choice board of study strategies to practice for the AP CSA Exam."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -455,6 +458,61 @@
       "seeding_key": {
         "lesson_activity.key": "f95d4dcc-e348-40d6-b45f-f32a90e9e07e",
         "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa9-pilot"
+      }
+    },
+    {
+      "key": "10768cf1-c9d9-4920-b6e2-53f921dd7b51",
+      "position": 1,
+      "properties": {
+        "name": "Choice Board: Mini-Lessons Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "10768cf1-c9d9-4920-b6e2-53f921dd7b51",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa9-pilot"
+      }
+    },
+    {
+      "key": "0d7d1229-14ab-434b-b33b-40033a85591f",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0d7d1229-14ab-434b-b33b-40033a85591f",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa9-pilot"
+      }
+    },
+    {
+      "key": "fc429820-7d6f-40af-90b9-48410b04d51c",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fc429820-7d6f-40af-90b9-48410b04d51c",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa9-pilot"
+      }
+    },
+    {
+      "key": "c40b5b61-9ba2-44aa-9046-e5e9033da71b",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c40b5b61-9ba2-44aa-9046-e5e9033da71b",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa9-pilot"
       }
@@ -1355,6 +1413,176 @@
       }
     },
     {
+      "key": "ed5937e3-b8d5-4a0e-a80d-f93cdcf5144d",
+      "position": 1,
+      "properties": {
+        "description": "* If you notice concepts that need reteaching (for example, many students missed similar questions), offer mini-lessons as an additional choice on the MCQ Choice Board.\n* Use student data to select one or two topics on which you could lead short mini-lessons.\n* Mini-lessons can be facilitated as a small group discussion about missed questions or a complete reteach with additional questions for students to try.\n* You can facilitate one 10 minute mini-lesson at the beginning of the activity, then facilitate a second mini-lesson before bringing the class back together for the wrap up."
+      },
+      "seeding_key": {
+        "activity_section.key": "ed5937e3-b8d5-4a0e-a80d-f93cdcf5144d",
+        "lesson_activity.key": "10768cf1-c9d9-4920-b6e2-53f921dd7b51"
+      }
+    },
+    {
+      "key": "4a785dc1-cf25-4ed5-a22c-77c4a6f15902",
+      "position": 1,
+      "properties": {
+        "description": "We have covered a LOT of vocabulary this year. While there are no vocabulary multiple-choice questions, if you do not understand the vocabulary used in a question, it is much less likely that you will answer it correctly.",
+        "name": "Vocabulary Self-Test",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4a785dc1-cf25-4ed5-a22c-77c4a6f15902",
+        "lesson_activity.key": "0d7d1229-14ab-434b-b33b-40033a85591f"
+      }
+    },
+    {
+      "key": "20b6c296-3136-490f-9fe0-b4512a5e3850",
+      "position": 2,
+      "properties": {
+        "description": "**Distribute:** Give each student several index cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to set up their self-test vocabulary flashcards."
+      },
+      "seeding_key": {
+        "activity_section.key": "20b6c296-3136-490f-9fe0-b4512a5e3850",
+        "lesson_activity.key": "0d7d1229-14ab-434b-b33b-40033a85591f"
+      }
+    },
+    {
+      "key": "09160592-a159-4358-9421-bc7c29f940b7",
+      "position": 3,
+      "properties": {
+        "description": "There is a right and a wrong way to use flashcards! Successful learning comes from the work that your brain does while trying to recall something - not from reading the answer on the back of the card. Don't turn the card over if you don't know the definition as soon as you see a word. Challenge yourself to try to recall at least a portion of the definition, make connections to other ideas that are similar, or even jot down ideas that relate before turning it over.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "09160592-a159-4358-9421-bc7c29f940b7",
+        "lesson_activity.key": "0d7d1229-14ab-434b-b33b-40033a85591f"
+      }
+    },
+    {
+      "key": "959b1eea-3022-4db0-92f8-777ec074a2a2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-test using their vocabulary flashcards."
+      },
+      "seeding_key": {
+        "activity_section.key": "959b1eea-3022-4db0-92f8-777ec074a2a2",
+        "lesson_activity.key": "0d7d1229-14ab-434b-b33b-40033a85591f"
+      }
+    },
+    {
+      "key": "b514a115-92e3-4108-82a3-ab8462ac7c96",
+      "position": 5,
+      "properties": {
+        "description": "Self-testing is also most effective when done intermittently to let your brain think about something else and then return to an idea, strengthening the neural pathways to that concept. We will be using these flashcards multiple times throughout the class period.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Avoid asking students to write the words they feel they know least or are most unsure about. Doing so increases the stakes of finding words and may extend the length of the activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b514a115-92e3-4108-82a3-ab8462ac7c96",
+        "lesson_activity.key": "0d7d1229-14ab-434b-b33b-40033a85591f"
+      }
+    },
+    {
+      "key": "6773cfe6-8b34-4fcc-b006-9f13ffd79d92",
+      "position": 1,
+      "properties": {
+        "description": "Today, our goal is to study and review topics on the multiple-choice section of the exam. We will begin by identifying what those topics are.",
+        "name": "Study Skills Choice Board",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6773cfe6-8b34-4fcc-b006-9f13ffd79d92",
+        "lesson_activity.key": "fc429820-7d6f-40af-90b9-48410b04d51c"
+      }
+    },
+    {
+      "key": "8640f586-4aea-4f32-ae76-0376f5902b00",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to look at their study plan to identify topics they want to review. Students should identify their 1-3 highest priority topics and list them on a sticky note to help plan their tasks for the day."
+      },
+      "seeding_key": {
+        "activity_section.key": "8640f586-4aea-4f32-ae76-0376f5902b00",
+        "lesson_activity.key": "fc429820-7d6f-40af-90b9-48410b04d51c"
+      }
+    },
+    {
+      "key": "bbdcfb8f-43de-4133-9b35-3b2fb22bf313",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the activity and six study strategies options. Answer any general questions about the task. Students should attempt to complete two activities, using the study strategy to reinforce their learning about one of the topics from the study plan that they'd like to revisit. Some students may use one strategy to review multiple topics or take the entire period to complete one choice.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Flashcards\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Video Script\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Topic Cheat Sheet\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Design Your Own Multiple-Choice Questions\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> AP Classroom Multiple- Choice Practice\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Code.org Videos + Notecatcher\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> AP Classroom Videos + Notecatcher\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Participate in a Mini-Lesson\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Concept Diagram",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While the lesson suggests that all students complete at least two activities, this may not be the best fit for all students. To differentiate this lesson, consider giving your students or a group of students different tasks:\n* Complete one of the items in the choice board\n* Work on an item for a set time, then encourage students to transition to another option. If students find their current style to be a successful way of learning, encourage students to use it when studying for the exam at home.\n\nSome of these study strategies may take longer than others. The lesson suggests students engage with two strategies, but an active engagement with content is more important than the number of items they engage with. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bbdcfb8f-43de-4133-9b35-3b2fb22bf313",
+        "lesson_activity.key": "fc429820-7d6f-40af-90b9-48410b04d51c"
+      }
+    },
+    {
+      "key": "073c8013-ea6d-48ce-9b7b-044c50a66e9d",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a digital copy of the MCQ Choice Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose a strategy and follow the directions on the choice board.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to self-test using their vocabulary cards when they reach a good pausing point.\n\nThis lesson requires students to be self-directed and to use their time wisely. Consider asking students to vocalize how they intend to use their time or write it down on a sticky note."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "073c8013-ea6d-48ce-9b7b-044c50a66e9d",
+        "lesson_activity.key": "fc429820-7d6f-40af-90b9-48410b04d51c"
+      }
+    },
+    {
+      "key": "10a9f943-0e77-4281-8f89-1bf5937acf85",
+      "position": 1,
+      "properties": {
+        "description": "Let's revisit our study guide and identify the most important content for you to review.",
+        "name": "Study Plan Reflection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "10a9f943-0e77-4281-8f89-1bf5937acf85",
+        "lesson_activity.key": "c40b5b61-9ba2-44aa-9046-e5e9033da71b"
+      }
+    },
+    {
+      "key": "266fcfb6-3777-49ef-bed4-a226570da288",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
+      },
+      "seeding_key": {
+        "activity_section.key": "266fcfb6-3777-49ef-bed4-a226570da288",
+        "lesson_activity.key": "c40b5b61-9ba2-44aa-9046-e5e9033da71b"
+      }
+    },
+    {
+      "key": "ce4c35c8-535b-4cf6-9cf0-dc04f36c9668",
+      "position": 3,
+      "properties": {
+        "description": "You should continue using these resources on your own as you prepare for the AP CSA exam. Today’s choice board provides several strategies you may not have gotten a chance to use in class but are useful in your continued exam preparations.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ce4c35c8-535b-4cf6-9cf0-dc04f36c9668",
+        "lesson_activity.key": "c40b5b61-9ba2-44aa-9046-e5e9033da71b"
+      }
+    },
+    {
       "key": "2ce4208a-41a1-49fb-bda4-7d96feb05acd",
       "position": 1,
       "properties": {
@@ -1624,7 +1852,7 @@
       "key": "eac4434a-4be0-4720-b86e-7df86adc0d12",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate updating the mastery tracker on the Study Plan. Students add another indicator to the mastery tracker key on the front page of their Study Plan, update their mastery ratings for the subjects that they targeted this lesson, and cross out any subtopics that they no longer need to review. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
       },
       "seeding_key": {
         "activity_section.key": "eac4434a-4be0-4720-b86e-7df86adc0d12",
@@ -1737,7 +1965,7 @@
       "key": "5d0ff24c-9807-4b45-b473-32fd89d971db",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate updating the mastery tracker on the Study Plan. Students add another indicator to the mastery tracker key on the front page of their Study Plan, update their mastery ratings for the subjects that they targeted this lesson, and cross out any subtopics that they no longer need to review. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
       },
       "seeding_key": {
         "activity_section.key": "5d0ff24c-9807-4b45-b473-32fd89d971db",
@@ -2489,6 +2717,17 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa9-pilot/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
       "name": "AP Classroom: Authoring New FRQs",
       "url": "https://apclassroom.clickhelp.co/articles/#!ap-classroom-user-guide-for-teachers-publication/tcb-qb-creating-new-frqs",
       "key": "ap_classroom_authoring_new_frqs",
@@ -2702,6 +2941,18 @@
       },
       "seeding_key": {
         "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "name": "MCQ Choice Board",
+      "url": "https://docs.google.com/presentation/d/1fsgQ-jJpSqAXK6L4dESzVsSEN7dQsIMYzALXlCHMKiY/edit#slide=id.p",
+      "key": "mcq_choice_board",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "mcq_choice_board"
       }
     },
     {
@@ -2990,6 +3241,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "mcq_choice_board"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_9_presentation"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "ap_classroom_authoring_new_frqs"
       }
@@ -3074,7 +3337,12 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "csa9-pilot"
+      }
+    }
   ],
   "scripts_student_resources": [
 

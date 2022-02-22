@@ -199,6 +199,27 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Іске асыру туралы нұсқаулық"
+        },
+        "functions_2/csd/2021": {
+          "name": "Функциялар"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For ілмектері"
+        },
+        "for_loops/csd/2021": {
+          "name": "For ілмектері"
+        },
+        "variables_1/csd/2021": {
+          "name": "Айнымалылар"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Функциялар"
+        },
+        "functions_1/csd/2021": {
+          "name": "Функциялар"
+        },
+        "lists/csd/2021": {
+          "name": "Тізімдер"
         }
       }
     }

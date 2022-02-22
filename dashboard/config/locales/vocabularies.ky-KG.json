@@ -52,6 +52,18 @@
         },
         "define/coursee/2021": {
           "word": "Аныктоо"
+        },
+        "variable/csd/2021": {
+          "word": "Өзгөрмө"
+        },
+        "conditionals/csd/2021": {
+          "word": "Шартуулар"
+        },
+        "abstraction/csd/2021": {
+          "word": "Абстракция"
+        },
+        "function/csd/2021": {
+          "word": "Функция"
         }
       }
     }
