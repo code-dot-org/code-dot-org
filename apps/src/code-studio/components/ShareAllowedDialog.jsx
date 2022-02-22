@@ -22,6 +22,8 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
 import DCDO from '@cdo/apps/dcdo';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -176,11 +178,8 @@ class ShareAllowedDialog extends React.Component {
 
   // Copy to clipboard.
   copy = () => {
-    navigator.clipboard.writeText(this.props.shareUrl).then(
-      () => {
-        this.setState({hasBeenCopied: true});
-      },
-      () => {}
+    copyToClipboard(this.props.shareUrl, () =>
+      this.setState({hasBeenCopied: true})
     );
   };
 
@@ -312,14 +311,13 @@ class ShareAllowedDialog extends React.Component {
                     <button
                       type="button"
                       id="share-dialog-copy-button"
-                      style={
-                        this.state.hasBeenCopied
-                          ? styles.copyButtonLight
-                          : styles.copyButton
-                      }
-                      onClick={wrapShareClick(this.copy.bind(this), 'copy')}
+                      style={{
+                        ...styles.copyButton,
+                        ...(this.state.hasBeenCopied && styles.copyButtonLight)
+                      }}
+                      onClick={wrapShareClick(this.copy, 'copy')}
                     >
-                      <i className="fa fa-clipboard" style={{fontSize: 14}} />
+                      <FontAwesome icon="clipboard" style={{fontSize: 14}} />
                     </button>
                   </div>
                 </div>
@@ -328,11 +326,11 @@ class ShareAllowedDialog extends React.Component {
                     id="sharing-phone"
                     href=""
                     onClick={wrapShareClick(
-                      this.showSendToPhone.bind(this),
+                      this.showSendToPhone,
                       'send-to-phone'
                     )}
                   >
-                    <i className="fa fa-mobile-phone" style={{fontSize: 36}} />
+                    <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
                     <span>{i18n.sendToPhone()}</span>
                   </a>
                   {canPublish && !isPublished && (
@@ -342,10 +340,7 @@ class ShareAllowedDialog extends React.Component {
                       style={
                         hasThumbnail ? styles.button : styles.buttonDisabled
                       }
-                      onClick={wrapShareClick(
-                        this.publish.bind(this),
-                        'publish'
-                      )}
+                      onClick={wrapShareClick(this.publish, 'publish')}
                       disabled={!hasThumbnail}
                       className="no-mc"
                     >
@@ -368,11 +363,8 @@ class ShareAllowedDialog extends React.Component {
                     onError={this.replayVideoNotFound}
                   />
                   {canPrint && hasThumbnail && (
-                    <a
-                      href="#"
-                      onClick={wrapShareClick(this.print.bind(this), 'print')}
-                    >
-                      <i className="fa fa-print" style={{fontSize: 26}} />
+                    <a href="#" onClick={wrapShareClick(this.print, 'print')}>
+                      <FontAwesome icon="print" style={{fontSize: 26}} />
                       <span>{i18n.print()}</span>
                     </a>
                   )}
@@ -389,7 +381,7 @@ class ShareAllowedDialog extends React.Component {
                             'facebook'
                           )}
                         >
-                          <i className="fa fa-facebook" />
+                          <FontAwesome icon="facebook" />
                         </a>
                       )}
                       {this.state.isTwitterAvailable && (
@@ -402,7 +394,7 @@ class ShareAllowedDialog extends React.Component {
                             'twitter'
                           )}
                         >
-                          <i className="fa fa-twitter" />
+                          <FontAwesome icon="twitter" />
                         </a>
                       )}
                     </span>
@@ -535,21 +527,7 @@ const styles = {
     height: 30
   },
   copyButtonLight: {
-    backgroundColor: color.light_purple,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
-    paddingTop: 5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginBottom: 0,
-    marginLeft: 8,
-    marginRight: 8,
-    verticalAlign: 'top',
-    width: 30,
-    height: 30
+    backgroundColor: color.light_purple
   },
   thumbnail: {
     float: 'left',
