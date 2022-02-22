@@ -24,12 +24,14 @@ $(document).ready(() => {
     'programmingEnvironmentTitle'
   );
   const categoriesForNavigation = getScriptData('categoriesForNavigation');
+  const currentCategoryKey = getScriptData('currentCategoryKey');
   ReactDOM.render(
     <Provider store={store}>
       <>
         <PageContainer
           programmingEnvironmentTitle={programmingEnvironmentTitle}
           categoriesForNavigation={categoriesForNavigation}
+          currentCategoryKey={currentCategoryKey}
         >
           <ProgrammingExpressionOverview
             programmingExpression={programmingExpression}

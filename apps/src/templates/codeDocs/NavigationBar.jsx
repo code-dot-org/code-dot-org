@@ -43,18 +43,28 @@ CategoryNavigation.propTypes = {
   category: categoryShape.isRequired
 };
 
-export default function NavigationBar({categoriesForNavigation}) {
+export default function NavigationBar({
+  categoriesForNavigation,
+  currentCategoryKey
+}) {
   return (
     <div style={styles.header}>
       {categoriesForNavigation.map(category => (
-        <CategoryNavigation key={category.key} category={category} />
+        <CategoryNavigation
+          key={category.key}
+          category={category}
+          initialIsOpen={
+            currentCategoryKey && category.key === currentCategoryKey
+          }
+        />
       ))}
     </div>
   );
 }
 
 NavigationBar.propTypes = {
-  categoriesForNavigation: PropTypes.arrayOf(categoryShape).isRequired
+  categoriesForNavigation: PropTypes.arrayOf(categoryShape).isRequired,
+  currentCategoryKey: PropTypes.string
 };
 
 const styles = {
