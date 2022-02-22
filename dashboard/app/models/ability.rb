@@ -289,16 +289,9 @@ class Ability
       end
     end
 
-    can :read, ScriptLevel do |script_level, params|
+    can :read, ScriptLevel do |script_level|
       script = script_level.script
-      if can?(:read, script)
-        # login is required if this script always requires it or if request
-        # params were passed to authorize! and includes login_required=true
-        login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
-        user.persisted? || !login_required
-      else
-        false
-      end
+      can?(:read, script)
     end
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
