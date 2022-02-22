@@ -40,6 +40,7 @@
         },
         "dance/Dance Party": {
           "overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique.",
+          "preparation": "### Une semaine avant votre Heure de Code\n\n-   Consultez le [Guide Enseignant Une Heure de Code](http://hourofcode.com/resources/how-to/) et les [Meilleures Pratiques des enseignants pour réussir](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) afin de commencer à planifier votre événement Heure de Code. \n-   [Inscrivez-vous pour déclarer votre événement Heure de Code](http://hourofcode.com) si vous souhaitez obtenir du soutien en salle de classe, des posters à prix réduit ou participer au concours de robotique (États-Unis uniquement).\n-   Passez en revue et faites vous-même le tutoriel en ligne : [Dance Party](https://studio.code.org/s/dance/lessons/1/levels/1) \n-   Assurez-vous de l'essayer vous-même avant de demander à vos élèves de le faire. Vérifiez votre technologie et décidez si vous avez besoin de résoudre un problème avant votre Heure de Code.\n-   Passez en revue le plan de cours supplémentaire [\"Le Grand Dance Party\"](studio.code.org/s/dance-unplugged/lessons/1) pour voir si vous souhaitez enseigner ce cours en amont de votre Heure de Code.\n\n### Un jour avant l'Heure de Code\n\n-   Chaque élève qui termine l'activité à droit à un [certificat](http://code.org/certificates). Imprimez-en un pour tout le monde à l’avance afin de vous faciliter la tâche à la fin de votre Heure de Code.\n-   (facultatif) Poussez vos élèves à apporter des écouteurs à utiliser pendant l'activité.",
           "purpose": "Cette leçon présente les concepts principaux de CS relatifs au codage et à la programmation d'événements (utilisation de blocs).",
           "student_overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique."
         },
@@ -270,10 +271,10 @@
           "student_overview": "Crée des programmes pour aider l'Angry Bird à se déplacer à travers le labyrinthe."
         },
         "courseb-2021/Programming in Harvester": {
-          "overview": "Les élèves appliqueront les concepts de programmation qu'ils ont appris à l'environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d'algorithme séquentiel et commenceront à utiliser le processus de débogage. ",
+          "overview": "Les élèves appliqueront les concepts de programmation qu'ils ont appris à l'environnement de l'Agricultrice. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d'algorithme séquentiel et commenceront à utiliser le processus de débogage. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de débogage et continueront à développer leurs compétences en programmation.",
-          "student_overview": "Aide la Moissonneuse à ramasser les légumes le long d'un chemin."
+          "student_overview": "Aide l'Agricultrice à ramasser les légumes le long d'un chemin."
         },
         "courseb-2021/Loops: Getting Loopy": {
           "overview": "Du fait que nous commençons à écrire des programmes plus longs et plus intéressants, notre code contient souvent beaucoup de répétitions. Dans cette leçon, les élèves apprendront comment les boucles peuvent être utilisés pour communiquer plus facilement les instructions qui ont beaucoup de répétitions, en observant les motifs répétés de mouvement dans une danse.",
@@ -285,7 +286,7 @@
           "overview": "En s'appuyant sur le concept de répéter les instructions de « Tourner en Rond », les élèves utiliseront des boucles pour ramasser le maïs plus efficacement sur Code.org.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   (Facultatif) Si vous ne l'avez pas déjà fait, imprimez et découpez des blocs de **\\*Manipulatifs** pour vous préparer à l'une des activités de transition de cette leçon. ",
           "purpose": "Dans cette leçon, les élèves en apprendront davantage sur les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les puzzles Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les modèles qui doivent être bouclés. ",
-          "student_overview": "Aide la Moissonneuse à ramasser encore plus, en utilisant des boucles !"
+          "student_overview": "Aide l'Agricultrice à ramasser encore plus, en utilisant des boucles !"
         },
         "courseb-2021/Loops in Collector": {
           "overview": "Dans cette leçon, les élèves continuent d'apprendre le concept de boucles. Ici, Laurel L'Aventurière utilise des boucles pour collecter des trésors dans les espaces ouverts des grottes. Un nouveau  bloc `collecte le trésor` est introduit pour l'aider dans son voyage.",
@@ -450,10 +451,10 @@
           "student_overview": "Aide BB-8 à travers des labyrinthes en utilisant des boucles ! "
         },
         "coursec-2021/Loops in Harvester": {
-          "overview": "Les élèves font de nouvelles boucles pour que la moissonneuse récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**. ",
+          "overview": "Les élèves font de nouvelles boucles pour que l'agricultrice récolte plusieurs légumes poussant en gros bouquets dans cette leçon de **renforcement des compétences**. ",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre groupe scolaire.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves utiliseront des boucles pour répéter des actions telles que la récolte de citrouilles. De nouveaux modèles émergeront et ils pourront utiliser leur créativité et leur raisonnement logique pour déterminer quel code doit être répété et combien de fois. ",
-          "student_overview": "Utilisons des boucles pour aider la Moissonneuse à ramasser des légumes !"
+          "student_overview": "Utilisons des boucles pour aider l'Agricultrice à ramasser des légumes !"
         },
         "coursec-2021/Sticker Art with Loops": {
           "overview": "Cette leçon **mini-projet** s'appuie sur la compréhension des boucles des leçons précédentes. Les élèves créeront des œuvres d'art uniques avec l'Artiste.",
@@ -721,7 +722,7 @@
           "student_overview": "Fais des dessins complexes plus facilement avec les fonctions !"
         },
         "express-2021/Functions with Harvester": {
-          "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants dans l'Artiste et à naviguer dans les labyrinthes dans l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures dans la Moissonneuse. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
+          "overview": "Les étudiants se sont entraînés à créer des dessins impressionnants avec l'Artiste et à naviguer dans les labyrinthes avec l'Abeille mais, aujourd'hui, ils vont utiliser des fonctions pour récolter les cultures avec l'Agricultrice. Cette leçon poussera les élèves à utiliser les fonctions de nouvelles façons, en les combinant avec des boucles `tant que` et des déclarations `si / sinon`.",
           "student_overview": "Les fonctions te permettront d'économiser beaucoup de travail lorsque tu aideras la Fermière à récolter !"
         },
         "express-2021/lesson-4": {
@@ -891,6 +892,39 @@
           "overview": "Les quatre leçons suivantes offrent aux étudiants l'occasion de mettre leurs compétences en codage à profit dans un projet de synthèse. Ce projet les aidera, chacun, à acquérir de l'expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Durant cette expérience, conçue pour durer plusieurs leçons ou plusieurs semaines, les élèves passeront du temps à explorer la réflexion en groupes, à en apprendre davantage sur le processus de conception, à construire et à présenter leur travail final. Dans la phase d'exploration, les étudiants seront en mesure de voir des exemples préconstruits de projets, à la fois dans Artiste et le Labo du Jeu, pour s’inspirer. Ensuite, les élèves apprendront le processus de conception et comment le mettre en œuvre dans leurs propres projets. Ils auront alors l'opportunité de créer leur propre projet, soit dans Artiste soit dans le Labo du Jeu (c'est probablement la plus longue phase du projet). Enfin, les étudiants pourront présenter leur travail achevé à leurs pairs.",
           "purpose": "Les élèves sont peut-être prêts à se lancer directement dans la construction de leurs projets, mais cette leçon les aidera à transformer leurs idées en plans. Cette structure gardera les rêveurs ancrés et éclairera le chemin pour ceux qui se sentent perdus. Donnez-leur suffisamment de temps pour construire et réviser leurs projets. Les essais et erreurs inévitablement impliqués dans cette leçon enseigneront la résolution de problèmes et la persévérance. ",
           "student_overview": "Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !"
+        },
+        "csd7-2021/Similarity Models": {
+          "overview": "Dans cette leçon, les élèves participent à une activité « déconnectée » simulant une épidémie de zombies. Ils doivent prédire quelles parties de la ville auront le moins de zombies en exploitant les données d’une ville voisine. À l’aide des degrés de similitude et des moyennes, ils pourront faire des prédictions sur le nombre de zombies à un endroit particulier. Ensuite, les ils devront comparer leurs prédictions aux chiffres réels afin d’observer et de définir ensemble comment évolue le niveau de précision entre données numériques et données catégorielles.\n\n\\*\\*La question du jour : \\*\\* Comment les ordinateurs apprennent-ils à faire des prédictions avec des données numériques ?"
+        },
+        "csd6-2021/The Circuit Playground": {
+          "overview": "Dans cette leçon, les élèves vont avoir la possibilité d'écrire leur premier programme utilisant le Circuit Playground. Après avoir étudier le circuit visuellement et formuler des hypothèses sur ses différentes fonctions, les élèves se connectent et apprennent à écrire des applications qui contrôlent une LED. En utilisant les écrans d'App Lab avec le Circuit Playground, les élèves vont pouvoir commencer à utiliser le circuit comme un appareil de sortie, tout en bénéficiant de App Lab pour les entrées utilisateurs."
+        },
+        "csd6-2021/Input Unplugged": {
+          "overview": "Pour préparer leur immersion dans la programmation avec App Lab, les élèves vont explorer quelques programmes dans Game Lab et App Lab montrant les différentes manières d'obtenir une entrée de l'utilisateur. Après avoir comparer les différentes approches des exemples, les groupes d'élèves joueront avec des deux modèles différents (conditions dans une boucle infinie et évènements asynchrones) pour obtenir une meilleure compréhension de leurs fonctionnements."
+        },
+        "csd6-2021/Analog Input": {
+          "overview": "Dans cette leçon, les élèves découvrent comment les trois capteurs analogiques (son, lumière et température) peuvent être utiliser pour écrire des programmes qui réagissent aux changements d'environnement. L'utilisation de ces capteurs marque une transition dans la façon dont l'utilisateur interagit avec le programme. En utilisant les capteurs comme une entrée, l'utilisateur de l'application n'a plus besoin d'interagir directement avec elle, ou même il peut interagir avec sans s'en rendre compte."
+        },
+        "csd6-2021/The Program Design Process": {
+          "overview": "Dans cette leçon, vous allez apprendre comment une méthode pour créer des programmes de votre invention. Cette méthode est basée sur un guide de projet où les points suivants sont abordés avant de commencer à programmer: dessiner sur papier les écrans de l'application, identifier les éléments du Circuit Playground à utiliser, définir les variables, et décrire les évènements. Cette méthode est identique à la méthode de création de jeu utilisée dans l'unité 3. Dans cette leçon, vous commencez en jouant à un genre de tir à la corde où le code est caché. Discutez entre vous des composants utilisés sur le circuit, des évènements et des variables nécessaires pour refaire ce programme. Une fois les discussions terminées, comparez avec la solution décrite sur le guide de projet. Parcourez ensuite le guide. A la fin de la leçon, vous pouvez améliorez le programme."
+        },
+        "csd6-2021/Arrays and Color LEDs": {
+          "overview": "Un tableau est une collection ordonnée d'élément, habituellement du même type. Dans cette leçon, les élèves apprennent comment accéder à une valeur spécifique ou à n'importe quelle valeur du tableau par son index. Ils verront ensuite comment accéder au tableau colorLEDs qui contrôle le comportement des LEDs colorées sur le Circuit Playground. Les élèves changeront la couleur et l'intensité de chaque LED, et utiliseront leurs connaissances pour programmer des motifs lumineux sur leur Circuit Playground."
+        },
+        "csd6-2021/Arrays and For Loops": {
+          "overview": "L'utilisation d'une boucle _pour_ pour parcourir tous les éléments d'un tableau est une construction très utile dans la plupart des langages de programmation. Dans cette leçon, les élèves apprennent les bases pour répéter du code en utilisant la boucle _pour_, et les combinent avec leur connaissance des tableaux pour écrire des programmes qui traitent tous les éléments du tableau. Les élèves utilisent des boucles _pour_ pour accéder aux éléments un par un sans écrire de code pour chaque élément. A la fin de la leçon, les élèves appliqueront cette structure sur la liste `colorLed` pour créer une application qui change toutes les LEDs chaque fois que l'on appuie sur un bouton."
+        },
+        "csd6-2021/Accelerometer": {
+          "overview": "Dans cette leçon, vous allez découvrir l'accéléromètre et ses capacités. Vous apprendrez ses évènements et ses propriétés, et vous créerez plusieurs programmes utilisant l'accéléromètre identique à celle des applications réelles."
+        },
+        "csd6-2021/Functions with Parameters": {
+          "overview": "Cette leçon commence par un rappel rapide des paramètres, dans le contexte des blocs App Lab, vu récemment. Dans un deuxième temps, nous verrons des exemples de paramètres dans des fonctions créées par l'utilisateur, puis nous passerons à la création de fonctions avec paramètres et comment les utiliser pour contrôler de multiples éléments à l'écran. Ensuite, nous utiliserons des boucles for pour parcourir un tableau, et passer chaque élément à une fonction. Enfin, nous utiliserons les connaissances acquises pour créer un jeu attrape-étoile."
+        },
+        "csd6-2021/Circuits and Physical Prototypes": {
+          "overview": "Pour préparer le projet final de ce chapitre, les élèves vont appendre à développer un prototype d'objet physique à base du Circuit Playground. En utilisant un guide de gestion de projet prêt à l'emploi, les élèves vont voir comment brancher quelques circuits simples et construire un prototype pour démontrer l'usage d'un objet, le tout réalisé avec des matériaux bon marché et facile à trouver comme du carton et du ruban adhésif."
+        },
+        "csd6-2021/Project: Prototype an Innovation": {
+          "overview": "Pour le projet final de ce cours, les élèves forment des groupes pour développer et tester un prototype innovant basé sur le Circuit Playground. En utilisant les entrées et les sorties disponibles sur le circuit, les groupes vont créer des programmes qui permettent des interactions intéressantes et uniques avec l'utilisateur. "
         }
       }
     }

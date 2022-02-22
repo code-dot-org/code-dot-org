@@ -41,9 +41,9 @@ export class SummaryTable extends React.Component {
     };
     const categoryRows = Object.keys(this.props.data).map((status, i) => {
       // [MEG] TODO: Eliminate this check once experiment is complete
-      // Don't show an application of "incomplete" status if there is no experiment
+      // Don't show an application of "incomplete" or "reopened" unless experiment is on
       if (
-        status !== 'incomplete' ||
+        (status !== 'incomplete' && status !== 'reopened') ||
         experiments.isEnabled(experiments.TEACHER_APPLICATION_SAVING_REOPENING)
       ) {
         const statusData = this.props.data[status];

@@ -5,7 +5,6 @@ import unitSelection, {
   getSelectedScriptName,
   getSelectedScriptDescription
 } from '@cdo/apps/redux/unitSelectionRedux';
-import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
 const fakeValidScripts = [
   {
@@ -45,24 +44,6 @@ const fakeValidScripts = [
     description: 'CSF Spanish Course'
   }
 ];
-
-const fakeSectionData = {
-  id: 123,
-  students: [
-    {
-      id: 1,
-      name: 'studentb'
-    },
-    {
-      id: 2,
-      name: 'studenta'
-    }
-  ],
-  script: {
-    id: 300,
-    name: 'csp2'
-  }
-};
 
 const fakeValidCourses = [
   {
@@ -129,24 +110,6 @@ describe('unitSelectionRedux', () => {
       const action = setScriptId(130);
       const nextState = unitSelection(initialState, action);
       assert.deepEqual(nextState.scriptId, 130);
-    });
-  });
-
-  describe('setSection', () => {
-    it('sets the section data and assigned scriptId', () => {
-      const action = setSection(fakeSectionData);
-      const nextState = unitSelection(initialState, action);
-      assert.deepEqual(nextState.scriptId, 300);
-    });
-
-    it('sets the section data with no default scriptId', () => {
-      const sectionDataWithNoScript = {
-        ...fakeSectionData,
-        script: null
-      };
-      const action = setSection(sectionDataWithNoScript);
-      const nextState = unitSelection(initialState, action);
-      assert.deepEqual(nextState.scriptId, null);
     });
   });
 

@@ -64,6 +64,21 @@
         },
         "define/coursee/2021": {
           "word": "پێناسە بکە"
+        },
+        "variable/csd/2021": {
+          "word": "گۆڕاو"
+        },
+        "conditionals/csd/2021": {
+          "word": "مەرجیەکان"
+        },
+        "abstraction/csd/2021": {
+          "word": "پوختە"
+        },
+        "function/csd/2021": {
+          "word": "فرمان"
+        },
+        "input/csd/2021": {
+          "word": "داخڵکردن"
         }
       }
     }

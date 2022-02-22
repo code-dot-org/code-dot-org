@@ -24,6 +24,14 @@ export default class CoreLibrary {
     this.eventLog = [];
     this.speechBubbles = [];
     this.soundLog = [];
+    this.criteria = [];
+    this.previous = {};
+    this.validationFrames = {
+      delay: 90,
+      fail: 150,
+      pass: 90,
+      successFrame: 0
+    };
 
     this.commands = {
       executeDrawLoopAndCallbacks() {

@@ -730,7 +730,14 @@
         "iceage_sound_and_points_dani": "Iată codul tău de la ultimul puzzle, precum și codul de mutare la stânga și la dreapta a lui Granny.\nPoți să termini programul pentru a face astfel încât să poți **reda un sunet** și să **înscrii un punct** atunci când Sid și Granny se ciocnesc?\nApasă „Aleargă” pentru a juca jocul.",
         "iceage_throw_hearts": "Sid dorește să îi spună bunicii lui, Granny, că el o iubește.\n\nFolosește comanda `actor___ aruncă` pentru ca Sid (actorul 1) să arunce inimi în Granny (actor 2!)\nStabilește dispoziția lui Granny pe fericire atunci când este atinsă de inimi.",
         "iceage_warn_ice_age": "Toți trebuie să se miște mai repede, deoarece se apropie o furtună de gheață!\nSchimbă scena pe un fundal înghețat și setează viteza lui Sid (actorul 1) la rapid.\nApasă „Aleargă” și mută-l pe Sid către Diego ca să îl încălzească.",
-        "iceage_warn_ice_age_dani": "Toți trebuie să se miște mai repede, deoarece se apropie o furtună de gheață!\nSchimbă scena pe un fundal înghețat și setează viteza lui Sid (actorul 1) la rapid.\nApasă „Aleargă” și mută-l pe Sid către Diego ca să îl încălzească."
+        "iceage_warn_ice_age_dani": "Toți trebuie să se miște mai repede, deoarece se apropie o furtună de gheață!\nSchimbă scena pe un fundal înghețat și setează viteza lui Sid (actorul 1) la rapid.\nApasă „Aleargă” și mută-l pe Sid către Diego ca să îl încălzească.",
+        "CSD U5 black white images pixelation 2_2021": "# Aplicație practică\n\nFolosește widget-ul de pixelare pentru a desena o față zâmbitoare\n\n![](<https://images.code.org/3e81e7e5c95a63173242552de2e9c094-image-1491425592286.52.47 PM.png>)",
+        "CSD U5 black white images pixelation 3_2021": "# Aplicație practică\n\nCursoarele de lungime și lățime sunt setate incorect, astfel încât imaginea nu e vizibilă. Ajustează-le până găsești imaginea.\n\n![](<https://images.code.org/c2abe82051e700f22ce613e407e71536-image-1491426050751.00.17 PM.png>)",
+        "CSD U5 black white images pixelation 4_2021": "# Aplicație practică\n\nAdaugă sprâncene acestei fețe zâmbitoare. Nu uita să folosești opțiunea \"Readable Format\" (format lizibil) dacă te-ai blocat. \n\n![](<https://images.code.org/269725fa3d9d6857912fe4a20464a830-image-1491427249017.18.37 PM.png>)",
+        "CSD U5 black white images pixelation 5_2021": "# Aplicație practică\n\nAcum e rândul tău. Desenează ce vrei tu in widget-ul de pixelare. Daca vrei, poți schimba lungimea și lățimea imaginii.",
+        "CSD U5 black white images pixelation_2021": "# Aplicație practică\n\nCompletează imaginea în forma literei \"X\" tastând numai caracterele 0 sau 1. Dacă vrei să ștergi caractere nedorite, utilizează opțiunea \"Readable Format\" (\"format lizibil\").",
+        "CSD U6 iter predict bubbles_2021": "![](https://images.code.org/e5a08f29a9c4e306de5553dafca9fb5d-image-1467913845542.gif)",
+        "Intro to Web Lab - Part 1_2021": "## Întrebare de luat în considerare:\n\n-   Care sunt părțile diverse ale Web Lab, și pentru ce sunt folosite?"
       }
     }
   }

@@ -1,0 +1,48 @@
+{
+  "ro-RO": {
+    "data": {
+      "course_offerings": {
+        "coursea": "Curs A",
+        "courseb": "Curs B",
+        "coursec": "Curs C",
+        "coursed": "Curs D",
+        "coursee": "Curs E",
+        "coursef": "Curs F",
+        "express": "Curs Expres",
+        "csd": "Descoperiri în știința calculatoarelor",
+        "csp": "Principiile științei calculatoarelor",
+        "20-hour": "Introducere accelerată a cursului de informatică",
+        "flappy": "Codul Flappy",
+        "jigsaw": "Puzzle",
+        "algebra": "Informatică în Algebră",
+        "aquatic": "Minecraft: Voiaj Acvatic",
+        "artist": "Artist",
+        "basketball": "Realizeaza un joc de baschet",
+        "course1": "Curs 1",
+        "course2": "Cursul 2",
+        "course3": "Cursul 3",
+        "course4": "Curs 4",
+        "frozen": "Programati cu Anna și Elsa",
+        "gumball": "Laboratorul Joaca Gumball",
+        "hourofcode": "Labirint Clasic",
+        "iceage": "Laboratorul Joaca Ice Age",
+        "infinity": "Laborator de joacă Disney Infinity",
+        "mc": "Ora de Programare Minecraft",
+        "minecraft": "Minecraft Designer Hour of Code",
+        "outbreak": "Simulator Epidemie",
+        "pixelation": "Pixelare",
+        "playlab": "Laborator de Joacă",
+        "sports": "Propgrameaza propriul joc sport",
+        "starwars": "Star Wars: Programarea unei galaxii",
+        "starwarsblocks": "Star Wars: Programarea unei galaxii",
+        "text-compression": "Comprimare de text",
+        "csa-self-paced-pl": "Navighează Code.org pentru Profesorii CSA Pilot",
+        "counting-csc": "Numără cu Laurel",
+        "explore-data-1": "Cutia de Explorare Parcele și Histograme",
+        "outbreak-csc": "Epidemie",
+        "poem-art": "Arta Poeziei",
+        "edit-code": "Editează Codul"
+      }
+    }
+  }
+}

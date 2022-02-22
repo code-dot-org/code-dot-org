@@ -1,0 +1,32 @@
+{
+  "ca-ES": {
+    "data": {
+      "course_offerings": {
+        "coursea": "Curs A",
+        "courseb": "Curs B",
+        "coursec": "Curs C",
+        "coursed": "Curs D",
+        "coursee": "Curs E",
+        "coursef": "Curs F",
+        "express": "Curs exprés",
+        "pre-express": "Prelector exprés",
+        "20-hour": "Curs introductori de 20 hores",
+        "flappy": "Codi Flappy",
+        "jigsaw": "Puzzle",
+        "algebra": "Informàtica en àlgebra",
+        "aquatic": "Minecraft: Viatge aquàtic",
+        "artist": "Artista",
+        "course1": "Curs 1",
+        "course2": "Curs 2",
+        "course3": "Curs 3",
+        "course4": "Curs 4",
+        "frozen": "Codi amb Anna i Elsa",
+        "hourofcode": "Laberint clàssic",
+        "infinity": "Disney infinit Play Lab",
+        "mc": "Hora del Codi de Minecraft",
+        "playlab": "Play Lab",
+        "edit-code": "Edita el codi"
+      }
+    }
+  }
+}
