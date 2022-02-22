@@ -312,6 +312,7 @@ class ShareAllowedDialog extends React.Component {
                       type="button"
                       id="share-dialog-copy-button"
                       style={{
+                        ...styles.button,
                         ...styles.copyButton,
                         ...(this.state.hasBeenCopied && styles.copyButtonLight)
                       }}
@@ -510,19 +511,8 @@ const styles = {
     verticalAlign: 'top'
   },
   copyButton: {
-    backgroundColor: color.purple,
-    borderWidth: 0,
-    color: color.white,
-    fontSize: 'larger',
     paddingTop: 5,
-    paddingBottom: 12.5,
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginTop: 0,
-    marginBottom: 0,
     marginLeft: 8,
-    marginRight: 8,
-    verticalAlign: 'top',
     width: 30,
     height: 30
   },
