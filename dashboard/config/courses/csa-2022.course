@@ -7,7 +7,7 @@
     "csa4-2022",
     "csa5-2022"
   ],
-  "published_state": "in_development",
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

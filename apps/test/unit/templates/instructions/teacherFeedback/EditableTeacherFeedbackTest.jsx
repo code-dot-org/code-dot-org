@@ -18,7 +18,7 @@ const DEFAULT_PROPS = {
   teacher: 5,
   latestFeedback: null,
   verifiedInstructor: true,
-  selectedSectionId: '789',
+  selectedSectionId: 789,
   canHaveFeedbackReviewState: true,
   updateUserProgress: () => {}
 };
