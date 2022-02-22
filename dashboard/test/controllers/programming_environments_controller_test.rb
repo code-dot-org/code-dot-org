@@ -39,7 +39,8 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
       name: programming_environment.name,
       title: 'title',
       description: 'description',
-      editorType: 'blockly'
+      editorType: 'blockly',
+      projectUrl: '/p/project'
     }
     assert_response :ok
 
@@ -47,6 +48,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     assert_equal 'title', programming_environment.title
     assert_equal 'description', programming_environment.description
     assert_equal 'blockly', programming_environment.editor_type
+    assert_equal '/p/project', programming_environment.project_url
   end
 
   test 'can update programming expression categories from params' do
