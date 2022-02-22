@@ -59,7 +59,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     pilot_section = create :section, user: @pilot_teacher, script: pilot_script
     @pilot_student = create(:follower, section: pilot_section).student_user
 
-    pilot_pl_script = create(:script, pilot_experiment: 'pl-pilot-experiment')
+    pilot_pl_script = create(:script, pilot_experiment: 'pl-pilot-experiment', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     pilot_pl_lesson_group = create(:lesson_group, script: pilot_pl_script)
     pilot_pl_lesson = create(:lesson, script: pilot_pl_script, lesson_group: pilot_pl_lesson_group)
     @pilot_pl_script_level = create :script_level, script: pilot_pl_script, lesson: pilot_pl_lesson
@@ -67,6 +67,11 @@ class ScriptLevelsControllerTest < ActionController::TestCase
     pilot_pl_section = create :section, user: @pilot_instructor, script: pilot_pl_script
     @pilot_participant = create :teacher
     create(:follower, section: pilot_pl_section, student_user: @pilot_participant)
+
+    pl_script = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_lesson_group = create(:lesson_group, script: pl_script)
+    pl_lesson = create(:lesson, script: pl_script, lesson_group: pl_lesson_group)
+    @pl_script_level = create :script_level, script: pl_script, lesson: pl_lesson
   end
 
   setup do
@@ -2147,4 +2152,20 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
                               params: -> {script_level_params(@in_development_script_level)},
                               name: 'levelbuilder can view in_development script level'
+
+  test_user_gets_response_for :show, response: :redirect, user: nil,
+                              params: -> {script_level_params(@pl_script_level)},
+                              name: 'signed out user cannot view pl script level'
+
+  test_user_gets_response_for :show, response: :forbidden, user: :student,
+                              params: -> {script_level_params(@pl_script_level)},
+                              name: 'student cannot view pl script level'
+
+  test_user_gets_response_for :show, response: :success, user: :teacher,
+                              params: -> {script_level_params(@pl_script_level)},
+                              name: 'teacher can view pl script level'
+
+  test_user_gets_response_for :show, response: :success, user: :levelbuilder,
+                              params: -> {script_level_params(@pl_script_level)},
+                              name: 'levelbuilder can view pl script level'
 end
