@@ -1,4 +1,8 @@
-export default function copyToClipboard(str, onSuccess, onFailure) {
+export default function copyToClipboard(
+  str,
+  onSuccess = null,
+  onFailure = null
+) {
   if (navigator.clipboard && window.isSecureContext) {
     // Modern technique.
     navigator.clipboard.writeText(str).then(onSuccess, onFailure);
