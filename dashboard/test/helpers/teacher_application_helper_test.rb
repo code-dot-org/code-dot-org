@@ -58,8 +58,7 @@ class TeacherApplicationHelperTest < ActionView::TestCase
       }
     ].each do |expected_output:, user:, condition_message:|
       sign_in user
-      assert has_incomplete_application?, "expected true when #{condition_message}" if expected_output
-      refute has_incomplete_application?, "expected false when #{condition_message}" unless expected_output
+      assert_equal expected_output, has_incomplete_application?, "expected #{expected_output} when #{condition_message}"
     end
   end
 
@@ -82,8 +81,7 @@ class TeacherApplicationHelperTest < ActionView::TestCase
       }
     ].each do |expected_output:, user:, condition_message:|
       sign_in user
-      assert has_reopened_application?, "expected true when #{condition_message}" if expected_output
-      refute has_reopened_application?, "expected false when #{condition_message}" unless expected_output
+      assert_equal expected_output, has_reopened_application?, "expected #{expected_output} when #{condition_message}"
     end
   end
 end
