@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NavigationBar from './NavigationBar';
+import i18n from '@cdo/locale';
 
 export default function PageContainer({
   children,
@@ -9,7 +10,11 @@ export default function PageContainer({
 }) {
   return (
     <div>
-      <h1>{programmingEnvironmentTitle}</h1>
+      <h1>
+        {i18n.programmingEnvironmentDocumentation({
+          programmingEnvironmentTitle
+        })}
+      </h1>
       <div style={{display: 'flex', gap: 10, width: '100%'}}>
         <NavigationBar categoriesForNavigation={categoriesForNavigation} />
         {children}

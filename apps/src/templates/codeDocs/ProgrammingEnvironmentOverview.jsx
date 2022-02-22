@@ -10,8 +10,7 @@ export function CategorySection({category}) {
         style={{
           paddingLeft: 15,
           color: 'black',
-          backgroundColor: category.color,
-          width: '100%'
+          backgroundColor: category.color
         }}
       >
         {category.name}
@@ -31,7 +30,7 @@ export default function ProgrammingEnvironmentOverview({
   programmingEnvironment
 }) {
   return (
-    <div>
+    <div style={{width: '100%'}}>
       {programmingEnvironment.description && (
         <EnhancedSafeMarkdown markdown={programmingEnvironment.description} />
       )}
