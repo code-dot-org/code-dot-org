@@ -3,10 +3,8 @@ require 'test_helper'
 class CoursesControllerTest < ActionController::TestCase
   self.use_transactional_test_case = true
 
-  setup do
+  setup_all do
     @teacher = create :teacher
-    sign_in @teacher
-
     @levelbuilder = create :levelbuilder
 
     @in_development_unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
@@ -24,14 +22,18 @@ class CoursesControllerTest < ActionController::TestCase
 
     @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
 
-    @migrated_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    @unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
-    create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_unit, position: 1
-
     @migrated_pl_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     @pl_unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     create :unit_group_unit, unit_group: @pl_unit_group_migrated, script: @migrated_pl_unit, position: 1
     @migrated_pl_unit.reload
+  end
+
+  setup do
+    sign_in @teacher
+
+    @migrated_unit = create :script, is_migrated: true, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    @unit_group_migrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
+    create :unit_group_unit, unit_group: @unit_group_migrated, script: @migrated_unit, position: 1
 
     @unmigrated_unit = create :script, is_migrated: false, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     @unit_group_unmigrated = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta
