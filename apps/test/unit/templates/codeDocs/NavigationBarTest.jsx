@@ -21,6 +21,23 @@ describe('NavigationBar', () => {
       wrapper.find('CategoryNavigation').map(cn => cn.props().category.name)
     ).to.eql(['World', 'Sprites', 'Locations']);
   });
+
+  it('calculates initialIsOpen for categories', () => {
+    const wrapper = shallow(
+      <NavigationBar
+        categoriesForNavigation={[
+          {key: 'world', name: 'World', programmingExpressions: []},
+          {key: 'sprites', name: 'Sprites', programmingExpressions: []},
+          {key: 'locations', name: 'Locations', programmingExpressions: []}
+        ]}
+        currentCategoryKey="sprites"
+      />
+    );
+    expect(wrapper.find('CategoryNavigation').length).to.equal(3);
+    expect(
+      wrapper.find('CategoryNavigation').map(cn => cn.props().initialIsOpen)
+    ).to.eql([false, true, false]);
+  });
 });
 
 describe('CategoryNavigation', () => {

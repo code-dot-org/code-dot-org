@@ -6,7 +6,8 @@ import i18n from '@cdo/locale';
 export default function PageContainer({
   children,
   categoriesForNavigation,
-  programmingEnvironmentTitle
+  programmingEnvironmentTitle,
+  currentCategoryKey
 }) {
   return (
     <div>
@@ -16,7 +17,10 @@ export default function PageContainer({
         })}
       </h1>
       <div style={{display: 'flex', gap: 10, width: '100%'}}>
-        <NavigationBar categoriesForNavigation={categoriesForNavigation} />
+        <NavigationBar
+          categoriesForNavigation={categoriesForNavigation}
+          currentCategoryKey={currentCategoryKey}
+        />
         {children}
       </div>
     </div>
@@ -26,5 +30,6 @@ export default function PageContainer({
 PageContainer.propTypes = {
   children: PropTypes.node.isRequired,
   categoriesForNavigation: PropTypes.arrayOf(PropTypes.object).isRequired,
-  programmingEnvironmentTitle: PropTypes.string.isRequired
+  programmingEnvironmentTitle: PropTypes.string.isRequired,
+  currentCategoryKey: PropTypes.string
 };
