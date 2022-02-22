@@ -748,6 +748,48 @@
         "try/coursee/2021": {
           "word": "Cuba",
           "definition": "Percubaan melakukan sesuatu"
+        },
+        "machine_learning/csd/2021": {
+          "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
+        },
+        "bug/csd/2021": {
+          "word": "Pepijat",
+          "definition": "Sebahagian daripada atur cara tidak berfungsi dengan betul."
+        },
+        "for_loop/csd/2021": {
+          "word": "Gelung Untuk",
+          "definition": "Gelung yang mempunyai permulaan, akhir dan kenaikan yang telah ditentukan terlebih dahulu (selang langkah)."
+        },
+        "debugging/csd/2021": {
+          "word": "Penyahpepijatan",
+          "definition": "Mencari dan membaiki masalah dalam algoritma atau atur cara."
+        },
+        "program/csd/2021": {
+          "word": "Atur Cara",
+          "definition": "Algoritma yang telah dikodkan kepada sesuatu yang boleh dijalankan oleh mesin."
+        },
+        "variable/csd/2021": {
+          "word": "Pemboleh ubah",
+          "definition": "Label untuk maklumat yang digunakan dalam atur cara."
+        },
+        "sprite/csd/2021": {
+          "word": "Peperi"
+        },
+        "conditionals/csd/2021": {
+          "word": "Bersyarat"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksi"
+        },
+        "function/csd/2021": {
+          "word": "Fungsi"
+        },
+        "input/csd/2021": {
+          "word": "Input"
+        },
+        "copyright/csd/2021": {
+          "word": "Hak Cipta",
+          "definition": "hak undang-undang eksklusif untuk mencetak, menerbitkan, membuat persembahan, membuat filem, atau merakamkan bahan kesusasteraan, seni, atau muzik dan membenarkan yang lain melakukan perkara yang sama"
         }
       }
     }

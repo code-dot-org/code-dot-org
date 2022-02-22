@@ -145,6 +145,24 @@
         },
         "define/coursee/2021": {
           "word": "परिभाषित गर्नुहोस्"
+        },
+        "debugging/csd/2021": {
+          "word": "Debugging"
+        },
+        "variable/csd/2021": {
+          "word": "Variable"
+        },
+        "conditionals/csd/2021": {
+          "word": "Conditionals"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraction"
+        },
+        "function/csd/2021": {
+          "word": "Function"
+        },
+        "copyright/csd/2021": {
+          "word": "प्रतिलिपि अधिकार"
         }
       }
     }

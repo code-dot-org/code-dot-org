@@ -7,7 +7,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -61,7 +61,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -121,7 +121,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -145,7 +145,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -302,7 +302,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -330,7 +330,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -440,8 +440,28 @@ es:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -571,7 +591,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -645,7 +665,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -681,7 +701,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -708,7 +728,7 @@ es:
         options:
           THIS:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -725,7 +745,7 @@ es:
         options:
           THIS:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -750,7 +770,7 @@ es:
         options:
           THIS:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -785,7 +805,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -830,7 +850,7 @@ es:
         options:
           GROUP:
             sprites: todo
-            '"ALIEN"': extraterrestres
+            '"ALIEN"': alienígenas
             '"BEAR"': osos
             '"CAT"': gatos
             '"DOG"': perros
@@ -1257,15 +1277,15 @@ es:
             "'sound://category_background/ocean_waves.mp3'": olas
             "'sound://category_nature/south_carolina_beach_ripple.mp3'": olas en la
               playa
-            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Burbuja
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": burbuja
             "'sound://category_animals/bear.mp3'": oso
             "'sound://category_animals/cat.mp3'": gato
             "'sound://category_animals/cow.mp3'": vaca
             "'sound://category_animals/pig.mp3'": cerdo
             "'sound://category_animals/sheep.mp3'": oveja
-            "'sound://category_animals/goat.mp3'": Cabra
+            "'sound://category_animals/goat.mp3'": cabra
             "'sound://category_animals/chicken.mp3'": pollo
-            "'sound://category_animals/rooster.mp3'": rejilla
+            "'sound://category_animals/rooster.mp3'": gallo
             "'sound://category_animals/elephant.mp3'": elefante
             "'sound://category_animals/dolphin.mp3'": delfín
             "'sound://category_nature/thunderstorm_1.mp3'": tormenta de truenos
@@ -1283,7 +1303,7 @@ es:
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": nave alienígena
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": hechizo
               magico
-            "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccione
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": seleccionar
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bajo peculiar
             "'sound://category_digital/jump_7.mp3'": salta
       gamelab_playSpeech:
@@ -1416,13 +1436,14 @@ es:
             '"width"': ancho
             '"height"': altura
       gamelab_setSpeed_dropdown:
+        text: ajustar {SPRITE} a velocidad {SIZE}
         options:
           SIZE:
-            '1': extra slow
+            '1': extra lenta
             '3': lento
             '5': normal
             '7': rápido
-            '9': extra fast
+            '9': extra rápida
       gamelab_setTint:
         text: cambiar color de {THIS} a {COLOR}
       gamelab_setupScoreboard:

@@ -294,6 +294,7 @@ id:
       provider_managed_section: "Bagian ini dikelola oleh penyedia yang lain dan tidak dapat digabungkan. Mintalah guru Anda untuk menambahkan Anda melalui %{provider} dan sinkronkan bagian mereka."
       restricted_section: "Kami tidak bisa menambahkan anda ke bagian %{section_code} karena ini terkunci.Silahkan kontak guru anda untuk bantuan."
       full_section: "Kami tidak bisa nenambahkan anda %{section_code} karena sudah ada siswa %{section_capacity} didalamnya. Silahkan kontak guru anda untuk bantuan."
+      not_participant_type: "Kami tidak dapat menambahkan Anda ke bagian %{section_code} karena Anda tidak memenuhi tipe peserta untuk bagian ini."
     mail:
       student_disassociated:
         subject: "Pemberitahuan Code.org : %{student_name} tidak lagi terdaftar sebagai siswa Anda."
@@ -553,6 +554,7 @@ id:
     all_students_must_be_in_current_section: "Seluruh murid saat ini harus terdaftar di bagian Anda."
     already_enrolled_in_new_section: "Anda tidak dapat memindahkan para murid ini karena mereka sudah dalam bagian baru."
     third_party_login: "Anda tidak bisa memindahkan murid ke bagian yang disinkronkan dengan alat pihak ketiga."
+    not_correct_participant_type: "Anda tidak dapat memindahkan pengguna ini karena mereka tidak memiliki izin untuk menjadi peserta dalam bagian baru."
   share:
     title: "Belajar di Code Studio"
     description: "Siapa pun bisa belajar ilmu komputer. Membuat permainan, aplikasi dan seni dengan kode."
@@ -594,6 +596,7 @@ id:
     how_it_works: 'Cara Kerjanya (Lihat Code)'
     try_hour_of_code: 'Cobalah Hour of Code!'
     store: 'Toko'
+    cookie_notice: 'Informasi Cookie'
   reference_area:
     title: 'Perlu bantuan?'
     subtitle: 'Lihat video ini dan tips lainnya'

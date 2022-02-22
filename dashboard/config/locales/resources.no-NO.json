@@ -265,6 +265,66 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Animerte figurer lab dokumentasjon"
+        },
+        "design_mode/csd/2021": {
+          "name": "Utformingsmodus"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Utformingsmodus"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Lærer-Forum"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Hvordan datamaskiner virker: Maskinvare & programvare"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funksjoner"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For-løkker"
+        },
+        "for_loops/csd/2021": {
+          "name": "For-løkker"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Hvordan datamaskiner virker: Kretser og logikk"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Maskiner lærer"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variabler"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Animasjons-lab"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Figuregenskaper"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Hastighet"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Hastighet"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funksjoner"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funksjoner"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Lærer-Forum"
+        },
+        "lists/csd/2021": {
+          "name": "Lister"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Introduksjon til programmering - Del 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Introduksjon til programmering - Del 2"
         }
       }
     }

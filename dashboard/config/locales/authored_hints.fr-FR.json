@@ -1872,7 +1872,7 @@
         },
         "courseA_harvester_seq1": {
           "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand le moissonneur le trouve !\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "Le moissonneur devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "l'Agricultrice devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq10": {
           "courseA_harvester_seq10_a": "Tu es bloqué ? Essaie d’abord d’écrire les étapes sur une feuille de papier.",
@@ -1900,7 +1900,7 @@
         },
         "courseA_harvester_seq1_2019": {
           "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand le moissonneur le trouve !\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
-          "courseA_harvester_seq1_b": "Le moissonneur devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n<block type=\"maze_moveEast\"/>\n</xml>"
+          "courseA_harvester_seq1_b": "l'Agricultrice devra se déplacer à l’Est trois fois pour atteindre le maïs. Utilise ce bloc :\n\n<xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
         },
         "courseA_harvester_seq1_2020": {
           "courseA_harvester_seq1_a": "Utilise ce bloc pour récolter le maïs quand le moissonneur le trouve !\n\n<xml>\n<block type=\"harvester_corn\"/>\n</xml>",
@@ -1943,12 +1943,12 @@
           "courseA_harvester_seq4_b": "Tu auras besoin de cinq blocs `Déplacer vers l’Est` et un bloc `Récolter maïs` :\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_seq5": {
-          "courseA_harvester_seq5_a": "Quel bloc déplace le moissonneur dans le mauvais sens ?",
+          "courseA_harvester_seq5_a": "Quel bloc déplace l'agricultrice dans le mauvais sens ?",
           "courseA_harvester_seq5_b": "Tu dois enlever un bloc.",
           "courseA_harvester_seq5_c": "Jette ce bloc à la poubelle !\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
         "courseA_harvester_seq5_2019": {
-          "courseA_harvester_seq5_a": "Quel bloc déplace le moissonneur dans le mauvais sens ?",
+          "courseA_harvester_seq5_a": "Quel bloc déplace l'agricultrice dans le mauvais sens ?",
           "courseA_harvester_seq5_b": "Tu dois enlever un bloc.",
           "courseA_harvester_seq5_c": "Jette ce bloc à la poubelle !\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
         },
@@ -6210,11 +6210,11 @@
         },
         "courseD_farmer_condLoops7": {
           "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus facile pour se rendre à toutes les cultures est encore une spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Essaie d’utiliser ˋquand chemin continue\\` pour que la moissonneuse avance d’un nombre correct de pas."
+          "courseD_farmer_condLoops7_b": "Essaie d’utiliser ˋquand chemin continue\\` pour que l'Agricultrice avance d’un nombre correct de pas."
         },
         "courseD_farmer_condLoops7_2018": {
           "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus facile pour se rendre à toutes les cultures est encore une spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",
-          "courseD_farmer_condLoops7_b": "Essaie d’utiliser ˋquand chemin continue\\` pour que la moissonneuse avance d’un nombre correct de pas."
+          "courseD_farmer_condLoops7_b": "Essaie d’utiliser ˋquand chemin continue\\` pour que l'Agricultrice avance d’un nombre correct de pas."
         },
         "courseD_farmer_condLoops7_2019": {
           "courseD_farmer_condLoops7_a": "Tu remarqueras que le chemin le plus facile pour se rendre à toutes les cultures est encore une spirale.\n\n![](https://images.code.org/ba8b8c624f21ade9ac823b045085c435-image-1479364378437.png)",

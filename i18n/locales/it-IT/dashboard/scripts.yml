@@ -9637,6 +9637,11 @@ it:
               display_name: Progetto
             lessonGroup-4:
               display_name: Dimostrazioni e risorse
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: Testing CSA Clone
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -10042,6 +10047,12 @@ it:
             Alien Dance Party with Sprite Lab:
               name: La festa degli alieni con il Laboratorio dei personaggi
           lesson_groups:
+            lessonGroup-5:
+              display_name: Varibili del Corso F (Deprecato)
+            lessonGroup-6:
+              display_name: Corso F per i Loop (Deprecato)
+            lessonGroup-7:
+              display_name: Corso E Personaggi (Deprecato)
             lessonGroup-8:
               display_name: L'Ora del Codice
         csa7-exemplars:
@@ -10067,6 +10078,19 @@ it:
               display_name: Variabili
             lessonGroup-4:
               display_name: Progetto di fine corso
+        csd6-pilot-2022:
+          lessons:
+            Arrays and Color LEDs:
+              name: LED colorati
+            lesson-10:
+              name: Combinazione degli input
+            Functions with Parameters:
+              name: Funzioni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolo 1
+            lessonGroup-3:
+              display_name: Capitolo 2
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -10370,6 +10394,7 @@ it:
               display_name: Progetto di fine corso
           description_short: 'Introduzione all''informatica: mette a disposizione di studenti più grandi, il meglio del nostro curriculum per la scuola primaria.'
           description_audience: Da 9 a 18 anni
+          name: corso rapido 2022
         csp1-2022:
           lessons:
             Binary Numbers:
@@ -10799,6 +10824,8 @@ it:
               key: lezione-1
             'Hello World: Food':
               name: Ciao Mondo
+              description_student: In questa lezione, imparerai a creare e animare personaggi e a renderli interattivi utilizzando gli eventi.
+              description_teacher: 'In questa lezione **per creare abilità**, gli studenti impareranno a creare e animare personaggi e a renderli interattivi utilizzando gli eventi. '
           lesson_groups:
             csf_sprites:
               display_name: Personaggi
@@ -10924,6 +10951,9 @@ it:
           description_short: Impara tutti i concetti dei corsi di fondamenti di informatica e crea disegni, storie o giochi interattivi.
           description_audience: Da 9 a 13 anni
         csa1-2022:
+          lessons:
+            lesson-9:
+              name: Cicli
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -10977,6 +11007,8 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+        tessplayground:
+          name: tessplayground
         cs4all-invasive-species:
           lessons:
             lesson-12:
@@ -10997,3 +11029,88 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Cicli
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa7-pilot-extra:
+          lessons:
+            lesson-10:
+              key: lezione-10
+            lesson-6:
+              key: lezione-6
+            lesson-7:
+              key: lezione-7
+            lesson-8:
+              key: lezione-8
+            lesson-9:
+              key: lezione-9
+            lesson-11:
+              key: lezione-11
+            lesson-12:
+              key: lezione-12
+            lesson-13:
+              key: lezione-13
+            lesson-14:
+              key: lezione-14
+            lesson-15:
+              key: lezione-16
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+            lesson-4:
+              key: lezione-4
+            lesson-5:
+              key: lezione-5
+            lesson-16:
+              key: lezione-15
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-extra:
+          lessons:
+            lesson-1:
+              key: lezione-1
+            lesson-2:
+              key: lezione-2
+            lesson-3:
+              key: lezione-3
+            lesson-4:
+              key: lezione-4
+            lesson-5:
+              key: lezione-5
+            lesson-10:
+              key: lezione-10
+            lesson-6:
+              key: lezione-6
+            lesson-7:
+              key: lezione-7
+            lesson-8:
+              key: lezione-8
+            lesson-9:
+              key: lezione-9
+            lesson-11:
+              key: lezione-11
+            lesson-12:
+              key: lezione-12
+            lesson-13:
+              key: lezione-13
+            lesson-14:
+              key: lezione-14
+            lesson-15:
+              key: lezione-16
+            lesson-16:
+              key: lezione-15
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+            lessonGroup-5:
+              display_name: Sandbox

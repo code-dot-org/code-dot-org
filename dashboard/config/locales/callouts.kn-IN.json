@@ -690,6 +690,15 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "ಹೊಸ ಬ್ಲಾಕ್!",
           "poetry_remove_sprite": "ಹೊಸ ಬ್ಲಾಕ್!"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "ಪರದೆಯು ಹಸಿರು ಬಣ್ಣಕ್ಕೆ ತಿರುಗಿದೆಯೇ? ಹಾಗಿದ್ದಲ್ಲಿ, 'ಮುಕ್ತಾಯ' ಒತ್ತಿರಿ. ಇಲ್ಲದಿದ್ದರೆ, 'ರೀಸೆಟ್' ಅನ್ನು ಒತ್ತಿರಿ, ನಿಮ್ಮ ಕೋಡ್ ಅನ್ನು ಬದಲಾಯಿಸಿ ಮತ್ತು ಮತ್ತೆ 'ರನ್' ಒತ್ತಿರಿ."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "ನೀವು ಈಗ ವಿನ್ಯಾಸ ಮೋಡ್‌ನಲ್ಲಿರುವಿರಿ."
+        },
+        "frozen line": {
+          "run": "ನಿಮ್ಮ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಪ್ರಯತ್ನಿಸಲು \"ರನ್\" ಒತ್ತಿರಿ"
         }
       }
     }

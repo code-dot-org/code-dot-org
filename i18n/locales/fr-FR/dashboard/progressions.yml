@@ -18,6 +18,7 @@ fr:
       Artist Intro with JR Hildebrande: Intro Artiste avec JR Hildebrande
       Artist Project: Projet d’Artiste
       'Artist: Variables': 'Artiste: Variables'
+      Assessment: Évaluation
       Attribution: Attribution
       Back and Forth: Va et viens
       Basic Conditionals: Conditions de base
@@ -134,6 +135,7 @@ fr:
       'Exploration: For Loops': 'Exploration: Boucles « Pour »'
       'Exploration: Sample Apps': ' Exemples d''Aplications'
       Explore HTML: Explorer le HTML
+      Extra: Supplémentaire
       Finish a Screen: Terminer l'écran
       Finish the Prototype: Terminer le prototype
       Finishing Functions: Terminer les fonctions
@@ -279,6 +281,7 @@ fr:
       Sprite Interactions Review: Révision des interactions de sprite
       Sprite Lab Example Project: "Exemple de Projet du Labo des Lutins\n"
       Sprite Lab Project: Projet Labo du Lutin
+      Sprite Movement: Le Déplacement du Lutin
       Sprite Properties: Propriétés du sprite
       Sprite Scenes: Scènes de sprites
       Sprite Velocity: Vélocité des sprites
@@ -287,7 +290,7 @@ fr:
       The Accelerometer: L’accéléromètre
       The Animation Tab: L’onglet Animation
       The Draw Loop: La Boucle Dessiner
-      The Harvester: La Moissonneuse
+      The Harvester: L'Agricultrice
       Tour of Design Mode: Visite du mode création
       Using the Grid: Utiliser la grille
       Using the Repeat Block: Utiliser le Bloc Répéter
@@ -369,7 +372,7 @@ fr:
       'Video: The Artist in Code Studio': 'Vidéo : L''artiste dans Code Studio '
       'Video: The Big Event - Unplugged Activity': 'Vidéo : Le grand événement – Activité hors ligne'
       'Video: The Collector': 'Vidéo : Le collectionneur '
-      'Video: The Harvester': ' La Moissonneuse'
+      'Video: The Harvester': 'Video: l''Agricultrice'
       'Video: Training Data & Bias': 'Vidéo : Données de formation et préférences'
       'Video: Unplugged Variables in Envelopes': 'Vidéo : Variables débranchées dans les enveloppes '
       'Video: Using the Repeat Block': ' Utiliser le Bloc Répéter'

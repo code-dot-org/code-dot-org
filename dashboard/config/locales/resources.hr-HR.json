@@ -242,6 +242,48 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Dokumentacija za Lab likova"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "Uvod u AI laboratorij"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "Uvod u AI laboratorij"
+        },
+        "design_mode/csd/2021": {
+          "name": "Dizajnerski način"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Dizajnerski način"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funkcije"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Petlja brojača"
+        },
+        "for_loops/csd/2021": {
+          "name": "Petlja brojača"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Strojno učenje"
+        },
+        "variables_1/csd/2021": {
+          "name": "Varijable"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Likovi"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funkcije"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funkcije"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Što je računalo?"
+        },
+        "lists/csd/2021": {
+          "name": "Liste"
         }
       }
     }
