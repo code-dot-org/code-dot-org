@@ -1,6 +1,6 @@
 {
   "pages": {
-    "/projects": "home-learning-2020",
+    "/projects": "coldplay",
     "/home": "superhero",
     "/certificates": "congrats-certificate-share"
   },
@@ -112,6 +112,14 @@
       "buttonText": "Start",
       "buttonUrl": "https://code.org/learn",
       "buttonId": "congrats-certificate-share-button"
+    },
+    "coldplay": {
+      "image": "/images/marketing/coldplay_minibanner.png",
+      "title": "Code and dance with Coldplay",
+      "body": "Use Dance Party to create something awesome! Share it online and Coldplay might spotlight your project on social media. You could even get to see the band live! Let's see what you create!",
+      "buttonText": "Try it",
+      "buttonUrl": "https://code.org/coldplay",
+      "buttonId": "coldplay"
     }
   }
 }
