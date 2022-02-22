@@ -501,6 +501,51 @@
         "try/coursee/2021": {
           "word": "Deneyin",
           "definition": "Bir şey yapma girişimi"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Makine Öğrenimi"
+        },
+        "user_interface/csd/2021": {
+          "word": "Kullanıcı Arayüzü"
+        },
+        "bug/csd/2021": {
+          "word": "Hata",
+          "definition": "Bir programın düzgün çalışmayan kısmı."
+        },
+        "for_loop/csd/2021": {
+          "word": "İçin Döngüsü",
+          "definition": "Önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip döngüler."
+        },
+        "debugging/csd/2021": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "variable/csd/2021": {
+          "word": "Değişken",
+          "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
+        },
+        "sprite/csd/2021": {
+          "word": "Hareketli nesne"
+        },
+        "conditionals/csd/2021": {
+          "word": "Koşullar"
+        },
+        "abstraction/csd/2021": {
+          "word": "Soyutlama"
+        },
+        "function/csd/2021": {
+          "word": "Fonksiyon"
+        },
+        "input/csd/2021": {
+          "word": "Girdi"
+        },
+        "processing/csd/2021": {
+          "word": "İşleme"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Dijital Ayak İzi"
+        },
+        "copyright/csd/2021": {
+          "word": "Telif Hakkı"
         }
       }
     }

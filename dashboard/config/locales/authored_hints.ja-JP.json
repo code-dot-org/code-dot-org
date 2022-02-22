@@ -9947,7 +9947,7 @@
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "`前に すすむ`くり返しの中に、 `花のミツをとる`のくり返しを入れます。",
           "courseD_bee_nestedLoops7_b": "`くりかえし`は、3つ使います。",
-          "courseD_bee_nestedLoops7_c": "こんなふうに3つの入れ子にしよう\n\n-   くりかえし 4回\n    -   くりかえし 3回\n        -   くりかえし 12回\n            -   花のミツをとる\n        -   前に すすむ\n    -   右に 曲がる"
+          "courseD_bee_nestedLoops7_c": "次のように、ブロックを三重の入れ子にしましょう。\n\n- くりかえす 4\n    - くりかえす 3\n       - くりかえす 12\n           - ミツを集める\n       - 前に進む\n    - 右に曲がる"
         },
         "courseD_bounce_events10s_2021": {
           "courseD_bounce_events10s_a": "2つのイベントを書く必要があります。\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
@@ -10402,7 +10402,7 @@
           "courseF_bee_for10_a": "花までの距離とミツの量の関係はわかるかな？",
           "courseF_bee_for10_b": "1つ目の花には、**14個**ミツがあります、花までの距離は、**7** (14を2で割った値) です。次のミツの数はいくつで、花までの距離は？",
           "courseF_bee_for10_d": "くり返しは2つ使って、片方には計算ブロックを使います。",
-          "courseF_bee_for10_c": "1つ目の花のミツは**14**、2つ目は**10**、3つ目が**6**で、最後が**2**です。\n\n移動する距離は、赤いブロック**7つ** 、オレンジのブロック**5つ**、緑のブロックが**3つ**、最後は青が**1つ** です。 \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n数の関係はどうなっているかな？"
+          "courseF_bee_for10_c": "パズルでは、最初の花のセットには** 14 **輪の花、2番目のセットには** 10 **輪の花、3番目のセットには** 6 **輪の花、4番目のセットには** 2 *輪の花が用意されています。\n\nこの絵では、** 7 **つの赤い四角、** 5 **つのオレンジ色の四角、** 3 **つの緑の四角、** 1 **つの青い四角があります。\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\nこれらの数字はどのように関係していますか？"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "ミツを集めるには、 ‘くりかえし’のなかにブロックを2つ入れます。"
@@ -10434,7 +10434,7 @@
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "インクリメントに指定した値だけ、カウンターが変わっていきます。\n\nミツの量と同じにするには、どうすればいいかな？",
           "courseF_bee_for8_b": "すべての花に行くには、階段のパターンを使います。",
-          "courseF_bee_for8_c": "くり返しは3から15までにしますが、インクリメントはいくつにすればいい？"
+          "courseF_bee_for8_c": "くり返しを*3から15まで*にすると、インクリメントはいくつにすれば良いですか？"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "変数を使って計算しよう。\n\n花までの距離とミツの量の関係はどうなっているかな？",
@@ -10471,7 +10471,7 @@
           "step2": "次のブロックでスプライトのサイズを変更します: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>。\n\nこれは、ツールボックスの**アクション**カテゴリにあります。"
         },
         "courseF_sprites_clouds": {
-          "behavior_list": "「東に動かしてループ」、「右に回す」、「あちこちに動かす」といった動きを使ってみましょう。"
+          "behavior_list": "「東に動かしてループ」、「右に回す」、「あちこちに動かす」などの動きを使ってみましょう。"
         },
         "courseF_variables_card_finish": {
           "card_idea2": "イベントで「スプライト開始」ブロックと一緒に「スプライト停止」ブロックを使うと、ある動きから別の動きに変えられます。\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">名前</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"ロボット_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">左に回す</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"ロボット_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">右に回す</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
@@ -10490,10 +10490,10 @@
           "card_idea3": "ユーザーがキーを押すとき、または一定の時間が過ぎた後に、他のことを引き起こすことにより、プログラムをインタラクティブにすることができます。\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when（とき）\"</title>\n    <title name=\"KEY\">\"上\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"スケール\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"ロボット_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "15と12はいくつちがう？\\\n9と12は？\n\nパターンは見つかった？"
+          "courseF_bee_for11_a": "12は15よりどれくらい小さいですか？\n9は12よりどれくらい小さいですか？\n\nパターンが分かりましたか？"
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "このブロックも使いましょう。\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "このブロックも必要です。\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">「スケール」</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key": {
           "changePropBlock": "このブロックも使いましょう。\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
@@ -10529,7 +10529,7 @@
           "courseF_bee_variables_4_2021_1": "変数に1を足す代わりに、毎回、2を足しましょう。"
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "「応答されたとき」ブロックの変数のラベルを変更してみましょう。複数のプロンプトがあるので、応答のあった最後のプロンプトのラベルを使用します。\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "「応答されたとき」ブロックの変数のラベルを変えてみましょう。 複数のプロンプトがあるので、応答があった*最後の*プロンプトのラベルを使用します。\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>\n"
         },
         "helloworld_animals_backgrounds": {
           "hello_world_background": "「クリックした時」イベントブロックの下にある「背景を設定」ブロックを接続すると、背景を変えることができます。\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"

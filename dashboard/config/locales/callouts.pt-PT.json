@@ -2249,6 +2249,218 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Novo bloco!",
           "poetry_remove_sprite": "Novo bloco!"
+        },
+        "CSD U3 - conditionals - transition_2021": {
+          "CSD_U3_L8_S6_C1": "Coloque a declaração de log do console aqui"
+        },
+        "CSD U3 Boolean Predict_2021": {
+          "": "Este programa irá imprimir um resultado aqui"
+        },
+        "CSD U3 Sprites anitab 1_2021": {
+          "anicallout": "Clique aqui para abrir a aba Animação"
+        },
+        "CSD U3 Sprites intro sprites_2021": {
+          "": "Use este bloco para criar um sprite"
+        },
+        "CSD U3 Sprites text_2021": {
+          "": "Use este bloco para adicionar texto na tela"
+        },
+        "CSD U3 UP_ARROW_2021": {
+          "": "Adicione uma declaração if e coloque seu código de movimento dentro dela"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Clique aqui para visualizar a grade."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Altera o número aqui"
+        },
+        "CSD U3 abstraction accelerateX_2021": {
+          "CSD_U3_L11_S6_C1": "Adicione seu código aqui."
+        },
+        "CSD U3 abstraction accelerateY_2021": {
+          "CSD_U3_L11_S7_C1": "Adicione seu código aqui."
+        },
+        "CSD U3 abstraction jump_2021": {
+          "CSD_U3_L11_S17_C1": "Olhe a condição 'if'",
+          "CSD_U3_L11_S17_C2": "Mande o sapo de volta para cá"
+        },
+        "CSD U3 abstraction jumping_2021": {
+          "CSD_U3_L13_S8_C1": "Defina a velocidade aqui"
+        },
+        "CSD U3 abstraction looping_2021": {
+          "CSD_U3_L11_S17_C1": "Olhe a condição 'if'"
+        },
+        "CSD U3 abstraction rotation control_2021": {
+          "CSD_U3_L11_S5_C1": "Olhe este código."
+        },
+        "CSD U3 abstraction rotation_2021": {
+          "CSD_U3_L11_S4_C1": "Use o bloco velocidade de rotação aqui"
+        },
+        "CSD U3 abstraction tumbleweed_2021": {
+          "CSD_U3_L11_S17_C1": "Olhe a condição 'if'"
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "CSD_U3_L11_S5_C1": "Olhe este código."
+        },
+        "CSD U3 abstraction velocityX if-statements_2021": {
+          "CSD_U3_L11_S5_C1": "Olhe este código."
+        },
+        "CSD U3 abstraction velocityX_2021": {
+          "CSD_U3_L11_S4_C1": "Adicione seu bloco aqui."
+        },
+        "CSD U3 abstraction velocityY control_2021": {
+          "CSD_U3_L11_S5_C1": "Olhe este código."
+        },
+        "CSD U3 abstraction velocityY_2021": {
+          "CSD_U3_L11_S5_C1": "Adicione seu bloco aqui."
+        },
+        "CSD U3 collisions isTouching intro_2021": {
+          "CSD_U3_L12_S2_C1": "Adicione seu bloco aqui."
+        },
+        "CSD U3 collisions try blocks_2021": {
+          "CSD_U3_L13_S6_C1": "Modifique este bloco."
+        },
+        "CSD U3 collisions types2_2021": {
+          "CSD_U3_L13_S6_C1": "Adicione seu código aqui."
+        },
+        "CSD U3 collisions types3_2021": {
+          "CSD_U3_L13_S6_C1": "Adicione seu código aqui."
+        },
+        "CSD U3 collisions types4_2021": {
+          "CSD_U3_L13_S6_C1": "Adicione seu código aqui."
+        },
+        "CSD U3 collisions types_2021": {
+          "CSD_U3_L13_S6_C1": "Adicione seu código aqui."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 game backgrounds_2021": {
+          "CSD_U3_S18_L4_C1": "Este bloco chama sua função.",
+          "CSD_U3_L18_S4_C2": "Área de Funções"
+        },
+        "CSD U3 game variables_2021": {
+          "CSD_U3_S18_L3_C1": "Este bloco cria uma nova variável.",
+          "CSD_U3_L18_S3_C2": "Área de Variáveis"
+        },
+        "CSD U3 keydown conditional_2021": {
+          "": "Adicione seu bloco dentro desta declaração if"
+        },
+        "CSD U3 platform background1_2021": {
+          "CSD_U3_L16_S3_C1": "a função que desenha o plano de fundo",
+          "CSD_U3_L16_S3_C2": "o código que chama a função",
+          "CSD_U3_L16_S3_C3": "Mude esta função."
+        },
+        "CSD U3 platform platform1_2021": {
+          "CSD_U3_S17_L8_C1": "Este bloco cria um novo sprite."
+        },
+        "CSD U3 platform scoreboard_2021": {
+          "CSD_U3_L17_S7_C1": "A pontuação é impressa aqui."
+        },
+        "CSD U3 platform variable1_2021": {
+          "callout": "Este bloco cria uma variável."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Aqui estão o código",
+          "CSD_U3_rect_c2": "Arraste o bloco para a área de código."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Adicione seu código aqui"
+        },
+        "CSD U6 getProperty input_2021": {
+          "CSD_U6L06P03": "Adicione seu bloco aqui."
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "O que esta linha faz?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Defina startGame aqui"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Definir o movePlayer() aqui"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Verifique se o jogador ganhou"
+        },
+        "CSD games sidescroll background_2021": {
+          "CSD_U3_L11_S17_C1": "Olhe a condição 'if'"
+        },
+        "CSD games velocity bee_2021": {
+          "CSD_U3_L11_S5_C1": "Olhe este código."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Altera o número aqui"
+        },
+        "CSD web text size_2021": {
+          "": "Use este bloco para adicionar texto na tela"
         }
       }
     }

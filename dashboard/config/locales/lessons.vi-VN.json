@@ -830,6 +830,9 @@
           "preparation": "-   Dành thời gian thực hiện dự án của riêng bạn với cả Họa sĩ và Sprite Lab. Hãy làm quen với các tính năng và hạn chế của từng công cụ.\n-   Sửa **\\*phiếu tự đánh giá** sao cho phù hợp với mục tiêu lớp học và in bản sao cho mỗi học sinh.\n-   Sửa **\\*bảng thiết kế dự án** để phù hợp với lớp học và in một gói cho mỗi học sinh.",
           "purpose": "Học sinh có thể sẵn sàng bắt tay ngay vào việc xây dựng các dự án của mình, nhưng bài học này sẽ giúp hình thành các ý tưởng của họ thành các kế hoạch. Cấu trúc này sẽ giúp những người hay mơ mộng suy nghĩ thực tế hơn và định hướng cho những người đang cảm thấy hoang mang. Hãy cho học sinh nhiều thời gian để tạo và sửa dự án của mình. Thử nghiệm và không thể tránh khỏi sai sót trong bài học này sẽ dạy học sinh cách giải quyết vấn đề cũng như sự kiên trì.",
           "student_overview": "Những dự án lớn tầm cỡ này cần nhiều thời gian và lên kế hoạch kỹ càng. Hãy tìm nguồn cảm hứng, lập kế hoạch và thỏa sức sáng tạo!"
+        },
+        "csd7-2021/Similarity Models": {
+          "overview": "Trong bài học này, học sinh sẽ tham gia hoạt động không sử dụng thiết bị điện tử để mô phỏng một đợt bùng phát thây ma. Học sinh sẽ phải dự đoán khu vực nào của thị trấn có ít thây ma nhất bằng cách sử dụng dữ liệu từ thị trấn lân cận. Học sinh sẽ sử dụng mức độ tương đồng và bình quân để đưa ra dự đoán về số lượng thây ma tại một địa điểm cụ thể. Sau đó, học sinh sẽ được giải đáp và so sánh dự đoán của mình với các con số thực tế nhằm thảo luận về độ chính xác của số liệu chênh lệch như thế nào so với dữ liệu phân loại.\n\n**Câu hỏi trong ngày:** Làm cách nào để máy tính học cách đưa ra dự đoán bằng số liệu?"
         }
       }
     }

@@ -210,6 +210,51 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Implementations Guide"
+        },
+        "design_mode/csd/2021": {
+          "name": "Växla till designläge"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Växla till designläge"
+        },
+        "functions_2/csd/2021": {
+          "name": "funktioner"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "'För' loopar"
+        },
+        "for_loops/csd/2021": {
+          "name": "'För' loopar"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "Automatisera databeslut"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "Automatisera databeslut"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "Automatisera databeslut"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: maskininlärning"
+        },
+        "variables_1/csd/2021": {
+          "name": "variabler"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "funktioner"
+        },
+        "functions_1/csd/2021": {
+          "name": "funktioner"
+        },
+        "lists/csd/2021": {
+          "name": "Listor"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Intro till CSS - Del 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Intro till CSS - Del 2"
         }
       }
     }

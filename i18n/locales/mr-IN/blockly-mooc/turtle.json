@@ -1,5 +1,11 @@
 {
+  "catControl": "लूप्स",
+  "catMath": "गणित",
+  "catTurtle": "कृती",
+  "catVariables": "व्हेरीएबल्स",
+  "catLogic": "लॉजिक",
   "heightParameter": "उंची",
+  "jump": "जंप",
   "left": "डावा",
   "right": "उजवा",
   "sizeParameter": "आकार"

@@ -4,29 +4,29 @@ title: Ukážkový článok napísaný na podporu Týždňa informatiky a Hodiny
 
 {{ signup_button }}
 
-# Write an op-ed in support of Computer Science Education Week
+# Napíšte článok na podporu Týždňa informatiky
 
-### Below is a sample op-ed supportive of Computer Science Education Week–and its goals–that can be used by state and local legislators, business leaders, and more.
+### Nižšie nájdete príklad článku, ktorý vyjadruje podporu Týždňu informatiky a jeho cieľom. Vzorový článok môžu využiť zákonodarcovia na štátnej aj lokálnej úrovni, podnikatelia a ďalší.
 
-### Visit [advocacy.code.org]({{ urls/advocacy }}) to find state specific information about computer science.
+### Na stránke [advocacy.code.org]({{ urls/advocacy }}) nájdete informácie o výučbe informatiky v rôznych štátoch [zatiaľ iba pre USA].
 
 * * *
 
-#### Titulok: Programovanie… Kde sú pracovné miesta
+#### Titulok: Najviac voľných pracovných miest je v IT
 
-#### [NAME] a [Pouvažujte nad spoluautorstvom školiteľa, riaditeľa alebo miestneho podnikateľa]
+#### AutorI: [VAŠE MENO] a [PRÍPADNÝ SPOLUAUTOR – PEDAGÓG, RIADITEĽ ALEBO MIESTNY PODNIKATEĽ]
 
-Počítače sú všade. Sú v našich vreckách. Sú na našich stenách. Sú v našich autách. Sú kritickou súčasťou našej infraštruktúry, od energetických sietí cez semafóry až po vnútorné štruktúry finančných trhov. A všetky tieto počítače majú jednu spoločnú vec. Softvér im hovorí, čo majú robiť.
+Počítače sú všade. Máme ich vo vreckách. Máme ich na stenách. Máme ich v autách. Sú nevyhnutnou súčasťou našej infraštruktúry, od elektrických sietí cez semafory až po naše finančné trhy. A všetky tieto počítače spája jedna vec. Pri svojom fungovaní sa spoliehajú na softvér.
 
-Ale kto konkrétne napíše tento softvér?
+Ale kto tento softvér napíše?
 
-Berúc do úvahy, ako rýchlo sa náš svet transformuje vďaka technológiám, by ste mohli očakávať, že počet študentov informatiky na základných a stredných školách je na historickom maxime. Opak je však pravdou. Ešte menej študentov informatiku študuje a ešte menej učiteľov ju vyučuje než pred 10 rokmi.
+Vzhľadom na to, ako rýchlo sa náš svet vďaka technológiám mení, by sme mohli očakávať, že na základných a stredných školách sa dnes učí informatiku viac žiakov než kedykoľvek predtým. Opak je však pravdou. Pre väčšinu škôl a učiteľov informatika stále nie je ťažiskovým predmetom.
 
-V čase, keď dopyt po skúsených programátoroch je na maxime, vychádza zo škôl menej a menej IT špecialistov. Even in this time of high unemployment, thousands of jobs, many of them right here in **[INSERT STATE/CITY]**, are going unfilled for lack of enough individuals with the right skill sets.
+V čase, keď je dopyt po skúsených programátoroch na historickom maxime, zo škôl vychádza čoraz menej odborníkov na informačné technológie. Dokonca aj pri súčasnej zvýšenej nezamestnanosti zostáva množstvo pracovných pozícií v **[VLOŽTE KRAJ/MESTO]** neobsadených, keďže nemáme dostatok kandidátov s požadovanými zručnosťami.
 
-Prečo sa tak deje? A ako k tomu môžeme pristupovať?
+Prečo sa to deje? A ako to môžeme vyriešiť?
 
-Tento problém začína už na základných a stredných školách. Veľké množstvo škôl neponúka dostatočný počet hodín informatiky a hodín programovania. Vlani v **[OKRES, KRAJ, ŠTÁT]** len **[NUMBER]** študentov maturovalo z informatiky. To je len **[%]** zo všetkých študentov, ktorí daný rok maturovali. Jednoducho nerobíme dostatok pre prípravu alebo motiváciu našich študentov, aby sa zaujímali o tieto dobre platené a perspektívne pozície.
+Tento problém začína už na základných a stredných školách. Väčšina škôl neponúka dostatočnú hodinovú dotáciu informatiky a programovania. V **[MESTO/OKRES/KRAJ/ŠTÁT]** minulý rok z informatiky maturovalo iba **[NUMBER]** stredoškolákov. To je len **[XX %]** zo všetkých žiakov, ktorí daný rok maturovali. Jednoducho nerobíme dosť pre prípravu a motiváciu našich študentov, aby sa o tieto dobre platené a perspektívne pozície zaujímali.
 
 Vo viacerých mestách na Slovensku majú IT firmy silné zastúpenie, ale to sa môže zmeniť, ak nezmeníme prístup.
 
@@ -34,14 +34,14 @@ Musíme niečo zmeniť.
 
 **[VOLITEĽNÉ PRE VYBRANÉ ŠKOLY]**
 
-Jednou z pozitívnych zmien môže byť akceptovanie hodín informatiky ako alternatívy k matematike alebo vedným odborom vrátane maturity. Na **[VLOŽTE NÁZOV ŠKOLY]** je informatika voliteľná. Pri dnešných požiadavkách na štúdium si však mnohí študenti nemôžu dovoliť maturovať z informatiky. A práve táto zmena môže mať veľký vplyv. V krajinách, kde sa informatika ráta do kreditov je účasť na kurzoch informatiky o 50% vyššia s výrazne vyšším zastúpením žien a minorít než v krajinách, kde je informatika samostatným predmetom.
+Pozitívnou zmenou by mohlo byť, keby sa informatika začala považovať za ťažiskový predmet a zvýšila sa jej hodinová dotácia. Na **[VLOŽTE NÁZOV ŠKOLY]** je informatika voliteľným predmetom. Pri dnešnom dôraze na iné predmety si však mnohí žiaci nemôžu dovoliť maturovať z informatiky. A práve táto zmena by mohla mať veľký vplyv. Ak by bola informatika ťažiskovým predmetom a nebola by len voliteľným kurzom určeným pre ľudí, ktorí sú vopred rozhodnutí, že ju budú študovať na vysokej škole, dokázala by zaujať aj oveľa viac dievčat a detí z marginalizovaných skupín.
 
-Mali by sme takisto pracovať s mladými žiakmi a vzbudiť v nich záujem o informatiku a programovanie. Naše deti by nemali vedieť len to, ako používať aplikácie a hrať hry, ale mali by vedieť, ako sa vytvárajú. Deti sa môžu naučiť základy programovania už v druhom ročníku základnej školy.
+Mali by sme so žiakmi pracovať a vzbudiť v nich záujem o informatiku a programovanie už od mladého veku. Naše deti by vedieť nielen len to, ako používať aplikácie a hrať hry, ale mali by vedieť, ako sa vytvárajú. Deti sú schopné naučiť sa základy programovania už v druhom ročníku základnej školy.
 
-Musíme prijať viac učiteľov informatiky a podporiť ich profesionálny rast a rozvoj. V dnešnej dobe existuje veľa online zdrojov, ktoré môžu učiteľom pomôcť v prístupe k najnovším technológiám pre ich študentov.
+Musíme prijať viac učiteľov informatiky a podporiť ich profesionálny rast a rozvoj. V dnešnej dobe existuje veľa online zdrojov, ktoré učiteľom pomôžu držať krok s najnovšími technológiami.
 
-V budúcnosti sa očakávajú tisíce nových pracovných miest v vedecko-technologických firmách na Slovensku. Veľká časť bude priamo v IT alebo počítačových technológiách. A informatika je čím ďalej tým viac základnou znalosťou pre 21. storočie. Kto však obsadí tieto pracovné miesta, ak naše deti nemajú možnosť získať požadované znalosti?
+V blízkej budúcnosti na Slovensku vzniknú desaťtisíce nových pracovných miest vo vedecko-technických odvetviach. Veľká časť z nich vznikne priamo odvetví informačných a počítačových technológií. Čím ďalej, tým viac platí, že informatika je pre prácu v 21. storočí nevyhnutnosťou. Kto však tieto pracovné miesta obsadí, ak naše deti nemajú možnosť získať požadované znalosti?
 
-This week, {{ campaign_date/full }}, is Computer Science Education Week. Na školách naprieč **[STATE]** sa naši študenti zúčastnia v národnej Hodine Kódu, demistifikujú informatiku a veríme, že sa začnú zaujímať o informatiku vo väčšom rozsahu. Ja sa k ním takisto pridám a pozývam aj Vás. Každý by sa mal naučiť programovať. Visit https://hourofcode.com/{{ country }} to learn more and get started. A podporte naše úsilie priniesť informatiku na viac škôl v **[STATE]**.
+Tento týždeň – {{ campaign_date/full }} – je Týždňom informatiky. Na školách naprieč **[STATE]** sa naši žiaci zúčastnia Hodiny kódu, ktorej cieľom je demystifikovať programovanie a motivovať žiakov k tomu, aby sa o informatiku začali zaujímať viac. Pridám sa k nim aj ja a rovnako pozývam aj Vás. Každý by sa mal naučiť programovať. Viac sa dozviete na https://hourofcode.com/{{ country }}. A podporte naše úsilie priniesť informatiku na viac škôl na Slovensku.
 
 {{ signup_button }}

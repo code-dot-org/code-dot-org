@@ -202,6 +202,36 @@
         },
         "define/coursee/2021": {
           "word": "Skilgreina"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Vélarnám"
+        },
+        "debugging/csd/2021": {
+          "word": "Villuleit"
+        },
+        "variable/csd/2021": {
+          "word": "Breyta"
+        },
+        "sprite/csd/2021": {
+          "word": "Kviki"
+        },
+        "conditionals/csd/2021": {
+          "word": "Skilyrði"
+        },
+        "abstraction/csd/2021": {
+          "word": "Útdráttur"
+        },
+        "function/csd/2021": {
+          "word": "Aðgerð"
+        },
+        "input/csd/2021": {
+          "word": "Inntak"
+        },
+        "processing/csd/2021": {
+          "word": "Vinnsla"
+        },
+        "copyright/csd/2021": {
+          "word": "Höfundarréttur"
         }
       }
     }

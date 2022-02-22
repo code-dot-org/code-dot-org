@@ -6596,3 +6596,145 @@ tr-TR:
           ## Kaynaklar
 
           * [Değişkenlere Giriş](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Nesne özellikleri
+      CSD Games variables practice_2021:
+        display_name: Değişkenleri Uygulama
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Aşağıdaki koda bak ve başlıkların nasıl görüntüleneceğini tahmin
+          et. Sağdaki seçeneklerden birini seç.
+        title: Hızlı Başlık Taraması
+      CSD U2 CSS practice_pilot_2021:
+        display_name: CSS ile Metin Biçimlendirme
+      CSD U2 Image challenge_pilot_2021:
+        display_name: 'Görüntü Ekleme '
+      CSD U2 Image practice_pilot_2021:
+        display_name: 'Görüntü Ekleme '
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: açıklama buraya
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: başlık
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: açıklama buraya
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Egzersizler
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: açıklama buraya
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: açıklama buraya
+      CSD U6 LED create intro_2021:
+        content1: açıklama buraya
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: açıklama buraya
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD games cake challenge choice_2021:
+        display_name: Meydan okuma
+      CSD games functions practice choice_2021:
+        display_name: Fonksiyonları Uygulama
+      CSD games platform challenge choice_2021:
+        display_name: Meydan okuma
+      CSD web conditionals practice choice_2021:
+        display_name: 'Koşulları Uygulama
+
+'
+      CSD web draw loop practice choice_2021:
+        display_name: Egzersizler
+      CSD web movement practice choice_2021:
+        display_name: Egzersizler
+      CSD web text practice choice_2021:
+        display_name: Egzersizler
+      csd-pre-survey-levelgroup_21_22:
+        title: CS Keşifleri Öğrenci Ön Ders Değerlendirmesi

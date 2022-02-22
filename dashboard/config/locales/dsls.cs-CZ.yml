@@ -3402,28 +3402,6 @@ cs-CZ:
           zaznamenáte nadšení pro počítačovou vědu, přikročte dále k zavedení denních
           plánů lekcí, které budou pro Vaše studenty vodítkem, offline aktivit, které
           můžete dělat bez počítače a fór na kontakt s ostatními učiteli.\n"
-      OPD-K5 CS Courses_dani:
-        markdown: "# Plánování > Začínáme na Code.org\n\n\n## Krok 1: Vyberte si kurz\nVšechny
-          naše kurzy -- od předškoláků po vysokoškoláky -- jsou uvedeny v našem **[katalogu
-          kurzů](https://studio.code.org/courses)**. Jestliže chcete najít lekce základů
-          počítačových věd, které jste praktikovali, jděte na naši **[základní stránku](https://code.org/educate/curriculum/elementary-school)**
-          a přesuňte se dolů do části „Kurzy“. Všechny naše kurzy jsou bezplatné.
-          Chatujte s kolegy ve své škole a určete, jak lze osnovy kurzu integrovat
-          do množství různých předmětů.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          Krok 2: Založte si svou třídní sekci\nZaložte si třídní sekci, abyste mohli
-          sledovat, jaký pokrok studenti udělali, tisknout svým studentům přihlašovací
-          karty, vést jim účty a tisknout certifikáty, které si po skončení kurzu
-          mohou vzít domů. Kliknutím na tento odkaz můžete **[sledovat stručné video,](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          které Vám ukáže, jak založit Vaši první třídu počítačových věd na Code.org.
-          Tyto kroky najdete také v **[tomto článku podpory](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          Krok 3: Přidělte kurz své sekci\nKlikněte do kurzu, který vyučujete -- měla
-          by se Vám zobrazit obrazovka podobná níže uvedené. Pak můžete kliknout na
-          „Přidělit kurz“ a přidělit ten kurz jedné z Vašich sekcí. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Krok 4: Zahajte výuku! \nVše, co potřebujete k uvedení koncepcí počítačové
-          vědy do Vaší třídy, je jedna jediná lekce. Až u svých studentů zaznamenáte
-          nadšení pro počítačovou vědu, přikročte dále k zavedení denních plánů lekcí,
-          které budou pro Vaše studenty vodítkem, offline aktivit, které můžete dělat
-          bez počítače a fór na kontakt s ostatními učiteli.\n"
       RelayProgramming-Unplugged_2021:
         markdown: |
           # Štafetové programování
@@ -4382,3 +4360,106 @@ cs-CZ:
         content1: sem uveďte popis
       csf_putting_a_stop_to_online_meanness:
         content1: sem uveďte popis
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: sem uveďte popis
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: název
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: sem uveďte popis
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: sem uveďte popis
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: sem uveďte popis
+      CSD U6 LED create intro_2021:
+        content1: sem uveďte popis
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: sem uveďte popis
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}

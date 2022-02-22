@@ -4,7 +4,10 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "CSF",
+      "is_course": true,
+      "is_migrated": true,
+      "version_year": "2022"
     },
     "new_name": null,
     "family_name": "drafting",
@@ -51,6 +54,42 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lessonGroup-7",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Course E Sprites (Deprecated)"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Course F Variables (Deprecated)"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 6,
+      "properties": {
+        "display_name": "Course F For Loops (Deprecated)"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "2022drafting"
       }
     }
@@ -145,6 +184,188 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "2022drafting"
       }
+    },
+    {
+      "key": "Follow the Algorithm",
+      "name": "Follow the Algorithm",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **context-setting** lesson, students will play a game intended to get them thinking about sequential instructions.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "This lesson is designed to prepare students to think about one of the core programming concepts in Sprite Lab, behaviors. ",
+        "student_overview": "Play a game and think about what commands are needed to get the right result.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "Alien Dance Party with Sprite Lab",
+      "name": "Alien Dance Party with Sprite Lab",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "Students will use events to make sprites move around the screen based on user input in this **skill-building** lesson.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "This lesson offers a great introduction to events in programming and even gives students a chance to show creativity! At the end of the lesson, students will be presented with the opportunity to share their projects.",
+        "student_overview": "Create an interactive project that can be shared with classmates."
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "Drawing with Loops",
+      "name": "Drawing with Loops",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This **skill-building** lesson shifts the focus from Sprite Lab to the Artist, a new tool that students will explore throughout the remainder of the course.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "Students will practice using loops, a concept that will be revisited throughout upcoming lessons.",
+        "student_overview": "In this lesson, **loops** make it easy to make cool images with Artist!"
+      },
+      "seeding_key": {
+        "lesson.key": "Drawing with Loops",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "Using Variables with the Artist",
+      "name": "Using Variables with the Artist",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "Variables are essentially placeholders for values that might be unknown at the time that you run your program or for values that can change during the execution of a program. These are vital to creating dynamic code because they allow your program to change and grow based on any number of potential modifications.  This stage reinforces the use of variables, using the most basic capabilities of setting and using them.",
+        "student_overview": "In this lesson, you'll make drawings using variables that change as the program runs."
+      },
+      "seeding_key": {
+        "lesson.key": "Using Variables with the Artist",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "Programming with the Bee",
+      "name": "Programming with the Bee",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **skill-building** lesson, students will be encouraged to figure out how minor changes in loops will affect their program.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "This lesson introduces (or reviews) how Bee puzzles work and introduces students to _nested loops_. The next lesson will return to variables.",
+        "student_overview": "This lesson will teach you what happens when you place a loop inside another loop."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with the Bee",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "Variables with the Bee",
+      "name": "Variables with the Bee",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "This lesson will illustrate how code with changing values can be helpful and prepare students to understand how \"for\" loops work in upcoming lessons.",
+        "student_overview": "This bee loves variables!"
+      },
+      "seeding_key": {
+        "lesson.key": "Variables with the Bee",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "For Loop Fun",
+      "name": "For Loop Fun",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **skill-building** lesson, students will use loops with a powerful, new structure.",
+        "preparation": "- Watch the ***video**.\n- Print one ***worksheet** per group.\n- Print one ***assessment** for each student.\n- Make sure every student has a reflection journal.",
+        "purpose": "At this point, students have become masters of loops. Today, they will learn about another loop commonly used in programming. The \"for\" loop repeats commands a certain number of times, but also keeps track of the values it is iterating over. For example, a \"for\" loop that begins at 4, ends with 8, and has a step value of 1 will repeat 4 times, but the values 4, 5, 6, and 7 will also be captured for use elsewhere. Using this structure with variables can create some pretty fantastic programs. Today, students will simply be learning the basics of a \"for\" loop before diving into programming with them next time!",
+        "student_overview": "You're going to have loads of fun learning about \"for\" loops!",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "For Loops with Bee",
+      "name": "For Loops with Bee",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. ",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "Today's concept, for loops, are a very important topic in computer science. Not only are they widely used, the process of learning for loops enhances the learning of other important concepts (such as variables and parameters.) Students will have plenty of practice critically thinking through problems by determining the starting, ending, and stepping values for each for loop. This concept uses plenty of math as well, so feel free to pair it with a math lesson for an even deeper learning experience.",
+        "student_overview": "In these puzzles you will be guiding a bee to nectar and honey using for loops!"
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "For Loops with Artist",
+      "name": "For Loops with Artist",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
+        "purpose": "Creativity and critical thinking come together beautifully in this lesson. Students will continue their practice with for loops and variables while they create jaw-dropping images. This lesson inspires a creative mind while teaching core concepts to computer science.",
+        "student_overview": "Get ready to make your next masterpiece. Here you will be using for loops to make some jaw-dropping pictures."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
+      }
     }
   ],
   "lesson_activities": [
@@ -195,505 +416,428 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "2022drafting"
       }
-    }
-  ],
-  "activity_sections": [
+    },
     {
-      "key": "3b105187-4168-4644-b260-917998ac9d70",
+      "key": "f45993bc-3c54-4146-8c8a-4905ef47794c",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70",
-        "lesson_activity.key": "2393409f-eb9d-486f-8884-256b8df1479b"
+        "lesson_activity.key": "f45993bc-3c54-4146-8c8a-4905ef47794c",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
       }
     },
     {
-      "key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3",
-        "lesson_activity.key": "4e565ab1-f5dd-4aaa-afb6-86fd6b98fc50"
-      }
-    },
-    {
-      "key": "d2886912-b67a-4d8a-b7c1-4dccdff53319",
-      "position": 1,
-      "properties": {
-        "progression_name": "Welcome to Monster Town"
-      },
-      "seeding_key": {
-        "activity_section.key": "d2886912-b67a-4d8a-b7c1-4dccdff53319",
-        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
-      }
-    },
-    {
-      "key": "0914ca0f-8f95-4341-b847-2174931e4110",
+      "key": "e1d710f8-d723-43c9-914f-3b2d1db30326",
       "position": 2,
       "properties": {
-        "progression_name": "Video: Outbreak Simulator: Introduction"
+        "duration": 20,
+        "name": "Main Activity"
       },
       "seeding_key": {
-        "activity_section.key": "0914ca0f-8f95-4341-b847-2174931e4110",
-        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+        "lesson_activity.key": "e1d710f8-d723-43c9-914f-3b2d1db30326",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
       }
     },
     {
-      "key": "cb99705e-ec73-49f8-a5d0-58c30df5fc08",
+      "key": "f28d541b-51c8-4a9d-b4d1-76b29ad3a95c",
       "position": 3,
       "properties": {
-        "progression_name": "Skill Building"
       },
       "seeding_key": {
-        "activity_section.key": "cb99705e-ec73-49f8-a5d0-58c30df5fc08",
-        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+        "lesson_activity.key": "f28d541b-51c8-4a9d-b4d1-76b29ad3a95c",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
       }
     },
     {
-      "key": "72d32770-edd9-4b94-8821-4fe6cc327a43",
+      "key": "85c4e04a-2743-4869-bd7d-b74b33b46eb8",
       "position": 4,
       "properties": {
-        "progression_name": "Video: Outbreak Simulator: Events"
+        "duration": 15,
+        "name": "Wrap Up"
       },
       "seeding_key": {
-        "activity_section.key": "72d32770-edd9-4b94-8821-4fe6cc327a43",
-        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+        "lesson_activity.key": "85c4e04a-2743-4869-bd7d-b74b33b46eb8",
+        "lesson.key": "Follow the Algorithm",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
       }
     },
     {
-      "key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8",
+      "key": "50428f43-1938-4c3e-b6d9-449314d89cad",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "50428f43-1938-4c3e-b6d9-449314d89cad",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "a1f261e3-967a-46f8-83e8-0a563714b4ea",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a1f261e3-967a-46f8-83e8-0a563714b4ea",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "c574080c-205c-4c45-ad45-c630fc0fca69",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c574080c-205c-4c45-ad45-c630fc0fca69",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "57313d12-32e5-4303-ae44-5e919b659fa5",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "57313d12-32e5-4303-ae44-5e919b659fa5",
+        "lesson.key": "Drawing with Loops",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "25f883fe-32e7-461e-89fd-e554c484d6b6",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "25f883fe-32e7-461e-89fd-e554c484d6b6",
+        "lesson.key": "Drawing with Loops",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "dfec449c-799b-480b-8d43-db51674b9e32",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dfec449c-799b-480b-8d43-db51674b9e32",
+        "lesson.key": "Drawing with Loops",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "9cd711fa-d628-404c-b944-885150f2c7db",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9cd711fa-d628-404c-b944-885150f2c7db",
+        "lesson.key": "Using Variables with the Artist",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "ddd82f05-8506-4fc8-8e25-d792447c7ae8",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ddd82f05-8506-4fc8-8e25-d792447c7ae8",
+        "lesson.key": "Using Variables with the Artist",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "54d47d6b-e6a2-47d4-ab9a-62db9d0ad0a9",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54d47d6b-e6a2-47d4-ab9a-62db9d0ad0a9",
+        "lesson.key": "Using Variables with the Artist",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "43dc7495-a186-4c6b-9745-46793131bbc6",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "43dc7495-a186-4c6b-9745-46793131bbc6",
+        "lesson.key": "Programming with the Bee",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "1654980f-cd12-4705-9b35-617c19090d24",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1654980f-cd12-4705-9b35-617c19090d24",
+        "lesson.key": "Programming with the Bee",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "0d52c5c1-82e2-418d-bd69-df568b8791e4",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0d52c5c1-82e2-418d-bd69-df568b8791e4",
+        "lesson.key": "Programming with the Bee",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "746cfc17-f52f-49b2-9ed0-1b5c59d9c3f9",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "746cfc17-f52f-49b2-9ed0-1b5c59d9c3f9",
+        "lesson.key": "Variables with the Bee",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "d6fce79e-9138-4f91-b847-5f0af8f80e26",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d6fce79e-9138-4f91-b847-5f0af8f80e26",
+        "lesson.key": "Variables with the Bee",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "05768efa-5f44-4aab-bf0e-a80108147359",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "05768efa-5f44-4aab-bf0e-a80108147359",
+        "lesson.key": "Variables with the Bee",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "c8556a8a-c600-4b89-862b-ab44fa971610",
+      "position": 1,
+      "properties": {
+        "duration": 20,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8556a8a-c600-4b89-862b-ab44fa971610",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "f6ba6218-f11d-45d1-a2b9-78e3af7b8de8",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6ba6218-f11d-45d1-a2b9-78e3af7b8de8",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "ad1d5164-6131-4f23-847a-5a74abbe9a54",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad1d5164-6131-4f23-847a-5a74abbe9a54",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "209a0cfb-0151-46e0-9136-014e02150ecc",
+      "position": 4,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "209a0cfb-0151-46e0-9136-014e02150ecc",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
+      }
+    },
+    {
+      "key": "35dd2753-90f3-4554-9418-2c4dd953db97",
       "position": 5,
       "properties": {
-        "progression_name": "Skill Building"
+        "duration": 5,
+        "name": "Assessment"
       },
       "seeding_key": {
-        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8",
-        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+        "lesson_activity.key": "35dd2753-90f3-4554-9418-2c4dd953db97",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
       }
     },
     {
-      "key": "dd9d0faa-6645-41bd-b037-8f6e5927a219",
+      "key": "53a408bb-22ac-4838-bcd6-b03f49648b47",
       "position": 6,
       "properties": {
-        "progression_name": "Video: Outbreak Simulator: Thinking Like a Scientist"
+        "name": "Extended Learning"
       },
       "seeding_key": {
-        "activity_section.key": "dd9d0faa-6645-41bd-b037-8f6e5927a219",
-        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+        "lesson_activity.key": "53a408bb-22ac-4838-bcd6-b03f49648b47",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
       }
     },
     {
-      "key": "51c9125d-612c-4b55-94c1-7af80d6ce2a3",
+      "key": "c61d7cfe-205c-4908-ab00-9afc813ce61f",
       "position": 7,
       "properties": {
-        "progression_name": "Learning from Simulations"
+        "name": "Cross-Curricular Opportunity"
       },
       "seeding_key": {
-        "activity_section.key": "51c9125d-612c-4b55-94c1-7af80d6ce2a3",
-        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
+        "lesson_activity.key": "c61d7cfe-205c-4908-ab00-9afc813ce61f",
+        "lesson.key": "For Loop Fun",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
       }
     },
     {
-      "key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5",
-      "position": 8,
-      "properties": {
-        "progression_name": "Mini-Project: Outbreak Simulator"
-      },
-      "seeding_key": {
-        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5",
-        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
-      }
-    },
-    {
-      "key": "7095919b-3c5a-4bb2-b2c5-f392d4dc23fd",
-      "position": 9,
-      "properties": {
-        "progression_name": "Video: Outbreak Simulator: Outro"
-      },
-      "seeding_key": {
-        "activity_section.key": "7095919b-3c5a-4bb2-b2c5-f392d4dc23fd",
-        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
-      }
-    },
-    {
-      "key": "be3f2de5-056c-4906-a8e9-983a8e26b58f",
-      "position": 10,
-      "properties": {
-        "progression_name": "Mini-Project: Outbreak Simulator"
-      },
-      "seeding_key": {
-        "activity_section.key": "be3f2de5-056c-4906-a8e9-983a8e26b58f",
-        "lesson_activity.key": "136ae399-3f3e-4118-ad19-d6a15e960239"
-      }
-    },
-    {
-      "key": "af400d86-48f3-4199-bdde-56c04092548c",
+      "key": "d3b9fd5f-c65a-4c1c-99d7-01023599cab4",
       "position": 1,
       "properties": {
+        "duration": 15,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c",
-        "lesson_activity.key": "87023f1f-9ae6-46c2-9352-5885717b69bd"
+        "lesson_activity.key": "d3b9fd5f-c65a-4c1c-99d7-01023599cab4",
+        "lesson.key": "For Loops with Bee",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
       }
-    }
-  ],
-  "script_levels": [
-    {
-      "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_groups_predict"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_predict"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      },
-      "level_keys": [
-        "courseF_groups_predict"
-      ]
     },
     {
-      "chapter": 2,
+      "key": "72c90719-63db-4d8f-9e64-0c660498378a",
       "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_groups_video"
-        ]
+        "duration": 15,
+        "name": "Bridging Activity - Choose One"
       },
-      "bonus": false,
       "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_video"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      },
-      "level_keys": [
-        "courseF_groups_video"
-      ]
+        "lesson_activity.key": "72c90719-63db-4d8f-9e64-0c660498378a",
+        "lesson.key": "For Loops with Bee",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
+      }
     },
     {
-      "chapter": 3,
+      "key": "c614966a-5081-4651-9afc-bdcf9da99ac4",
       "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
       "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
-      "bonus": false,
       "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_make"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      },
-      "level_keys": [
-        "courseF_groups_make"
-      ]
+        "lesson_activity.key": "c614966a-5081-4651-9afc-bdcf9da99ac4",
+        "lesson.key": "For Loops with Bee",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
+      }
     },
     {
-      "chapter": 4,
+      "key": "11173d04-612d-4c85-b95b-906800076fc1",
       "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_groups_size"
-        ]
+        "duration": 15,
+        "name": "Wrap Up"
       },
-      "bonus": false,
       "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_size"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      },
-      "level_keys": [
-        "courseF_groups_size"
-      ]
+        "lesson_activity.key": "11173d04-612d-4c85-b95b-906800076fc1",
+        "lesson.key": "For Loops with Bee",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "2022drafting"
+      }
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_say"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      },
-      "level_keys": [
-        "courseF_groups_say"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_costume"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      },
-      "level_keys": [
-        "courseF_groups_costume"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_behaviors"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      },
-      "level_keys": [
-        "courseF_groups_behaviors"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_touch"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      },
-      "level_keys": [
-        "courseF_groups_touch"
-      ]
-    },
-    {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_practice"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      },
-      "level_keys": [
-        "courseF_groups_practice"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_groups_freeplay"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      },
-      "level_keys": [
-        "courseF_groups_freeplay"
-      ]
-    },
-    {
-      "chapter": 11,
+      "key": "e3d9c0aa-82fc-4f93-b693-48167c1fc123",
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseE_aboutme_1_2021_say"
-        ]
+        "duration": 15,
+        "name": "Warm Up"
       },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_aboutme_1_2021_say"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3"
-      },
-      "level_keys": [
-        "courseE_aboutme_1_2021_say"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_aboutme_3_2021_saytest"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_aboutme_3_2021_saytest"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3"
-      },
-      "level_keys": [
-        "courseE_aboutme_3_2021_saytest"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_outbreak_story"
-        ],
-        "progression": "Welcome to Monster Town"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak_story"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "d2886912-b67a-4d8a-b7c1-4dccdff53319"
-      },
-      "level_keys": [
-        "CourseF_outbreak_story"
-      ]
-    },
-    {
-      "chapter": 14,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_outbreak_intro_video"
-        ],
-        "progression": "Video: Outbreak Simulator: Introduction"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_outbreak_intro_video"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "0914ca0f-8f95-4341-b847-2174931e4110"
-      },
-      "level_keys": [
-        "courseF_outbreak_intro_video"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_outbreak1"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak1"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "cb99705e-ec73-49f8-a5d0-58c30df5fc08"
-      },
-      "level_keys": [
-        "CourseF_outbreak1"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_outbreak_events_video"
-        ],
-        "progression": "Video: Outbreak Simulator: Events"
-      },
-      "bonus": false,
       "seeding_key": {
         "lesson_activity.key": "e3d9c0aa-82fc-4f93-b693-48167c1fc123",
         "lesson.key": "For Loops with Artist",
@@ -5054,648 +5198,393 @@
       "definition": "A label for a piece of information used in a program.",
       "properties": {
       },
-      "level_keys": [
-        "CourseF_outbreak2"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_outbreak3"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
       "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak3"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
-      },
-      "level_keys": [
-        "CourseF_outbreak3"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 7,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_outbreak4"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak4"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
-      },
-      "level_keys": [
-        "CourseF_outbreak4"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_outbreak_scientist_video"
-        ],
-        "progression": "Video: Outbreak Simulator: Thinking Like a Scientist"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_outbreak_scientist_video"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "dd9d0faa-6645-41bd-b037-8f6e5927a219"
-      },
-      "level_keys": [
-        "courseF_outbreak_scientist_video"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_outbreak_story2"
-        ],
-        "progression": "Learning from Simulations"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak_story2"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "51c9125d-612c-4b55-94c1-7af80d6ce2a3"
-      },
-      "level_keys": [
-        "CourseF_outbreak_story2"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_outbreak5"
-        ],
-        "progression": "Mini-Project: Outbreak Simulator"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak5"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
-      },
-      "level_keys": [
-        "CourseF_outbreak5"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 11,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_outbreak6"
-        ],
-        "progression": "Mini-Project: Outbreak Simulator"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak6"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
-      },
-      "level_keys": [
-        "CourseF_outbreak6"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 12,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_outbreak7"
-        ],
-        "progression": "Mini-Project: Outbreak Simulator"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak7"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
-      },
-      "level_keys": [
-        "CourseF_outbreak7"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseF_outbreak_outro_video"
-        ],
-        "progression": "Video: Outbreak Simulator: Outro"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseF_outbreak_outro_video"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "7095919b-3c5a-4bb2-b2c5-f392d4dc23fd"
-      },
-      "level_keys": [
-        "courseF_outbreak_outro_video"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 14,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_outbreak8"
-        ],
-        "progression": "Mini-Project: Outbreak Simulator"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_outbreak8"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "be3f2de5-056c-4906-a8e9-983a8e26b58f"
-      },
-      "level_keys": [
-        "CourseF_outbreak8"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_Toolbox_SpriteLab_2022"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_Toolbox_SpriteLab_2022"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "2022drafting",
-        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
-      },
-      "level_keys": [
-        "CourseF_Toolbox_SpriteLab_2022"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CourseF_Starter_SpriteLab_2022"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CourseF_Starter_SpriteLab_2022"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "2022drafting",
-        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
-      },
-      "level_keys": [
-        "CourseF_Starter_SpriteLab_2022"
-      ]
-    }
-  ],
-  "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_predict",
-        "script_level.level_keys": [
-          "courseF_groups_predict"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_video",
-        "script_level.level_keys": [
-          "courseF_groups_video"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_make",
-        "script_level.level_keys": [
-          "courseF_groups_make"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_size",
-        "script_level.level_keys": [
-          "courseF_groups_size"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_say",
-        "script_level.level_keys": [
-          "courseF_groups_say"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_costume",
-        "script_level.level_keys": [
-          "courseF_groups_costume"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_behaviors",
-        "script_level.level_keys": [
-          "courseF_groups_behaviors"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_touch",
-        "script_level.level_keys": [
-          "courseF_groups_touch"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_practice",
-        "script_level.level_keys": [
-          "courseF_groups_practice"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_groups_freeplay",
-        "script_level.level_keys": [
-          "courseF_groups_freeplay"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "2022drafting",
-        "activity_section.key": "3b105187-4168-4644-b260-917998ac9d70"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_aboutme_1_2021_say",
-        "script_level.level_keys": [
-          "courseE_aboutme_1_2021_say"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_aboutme_3_2021_saytest",
-        "script_level.level_keys": [
-          "courseE_aboutme_3_2021_saytest"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "96a813ea-cb0a-4f0b-99a4-3f23ef8986e3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak_story",
-        "script_level.level_keys": [
-          "CourseF_outbreak_story"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "d2886912-b67a-4d8a-b7c1-4dccdff53319"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_outbreak_intro_video",
-        "script_level.level_keys": [
-          "courseF_outbreak_intro_video"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "0914ca0f-8f95-4341-b847-2174931e4110"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak1",
-        "script_level.level_keys": [
-          "CourseF_outbreak1"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "cb99705e-ec73-49f8-a5d0-58c30df5fc08"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_outbreak_events_video",
-        "script_level.level_keys": [
-          "courseF_outbreak_events_video"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "72d32770-edd9-4b94-8821-4fe6cc327a43"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak2",
-        "script_level.level_keys": [
-          "CourseF_outbreak2"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak3",
-        "script_level.level_keys": [
-          "CourseF_outbreak3"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak4",
-        "script_level.level_keys": [
-          "CourseF_outbreak4"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "702d8966-9a7b-47cf-bd86-4f3e2c92f3a8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_outbreak_scientist_video",
-        "script_level.level_keys": [
-          "courseF_outbreak_scientist_video"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "dd9d0faa-6645-41bd-b037-8f6e5927a219"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak_story2",
-        "script_level.level_keys": [
-          "CourseF_outbreak_story2"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "51c9125d-612c-4b55-94c1-7af80d6ce2a3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak5",
-        "script_level.level_keys": [
-          "CourseF_outbreak5"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak6",
-        "script_level.level_keys": [
-          "CourseF_outbreak6"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak7",
-        "script_level.level_keys": [
-          "CourseF_outbreak7"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "4d1c1389-8a79-4bfc-ab97-d52b15dceba5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseF_outbreak_outro_video",
-        "script_level.level_keys": [
-          "courseF_outbreak_outro_video"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "7095919b-3c5a-4bb2-b2c5-f392d4dc23fd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_outbreak8",
-        "script_level.level_keys": [
-          "CourseF_outbreak8"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "2022drafting",
-        "activity_section.key": "be3f2de5-056c-4906-a8e9-983a8e26b58f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_Toolbox_SpriteLab_2022",
-        "script_level.level_keys": [
-          "CourseF_Toolbox_SpriteLab_2022"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "2022drafting",
-        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CourseF_Starter_SpriteLab_2022",
-        "script_level.level_keys": [
-          "CourseF_Starter_SpriteLab_2022"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "2022drafting",
-        "activity_section.key": "af400d86-48f3-4199-bdde-56c04092548c"
+        "vocabulary.key": "variable"
       }
     }
-  ],
-  "resources": [
-
-  ],
-  "lessons_resources": [
-
-  ],
-  "scripts_resources": [
-
-  ],
-  "scripts_student_resources": [
-
-  ],
-  "vocabularies": [
-
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing with Loops",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing with Loops",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with the Bee",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with the Bee",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables with the Artist",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables with the Bee",
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "068d1d24-257b-4f99-bbb5-a73bd347bdf9",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with the Bee",
+        "objective.key": "068d1d24-257b-4f99-bbb5-a73bd347bdf9"
+      }
+    },
+    {
+      "key": "21ac488e-5f5f-4481-9f96-689df43f4df3",
+      "properties": {
+        "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "objective.key": "21ac488e-5f5f-4481-9f96-689df43f4df3"
+      }
+    },
+    {
+      "key": "221ef69c-2768-4c46-bfd8-3aea291a3856",
+      "properties": {
+        "description": "Differentiate between commands that need to be repeated in loops and commands that should be used on their own."
+      },
+      "seeding_key": {
+        "lesson.key": "Drawing with Loops",
+        "objective.key": "221ef69c-2768-4c46-bfd8-3aea291a3856"
+      }
+    },
+    {
+      "key": "2578e207-e130-4cf9-8957-f5cc099e7b28",
+      "properties": {
+        "description": "Determine starting value, stopping value, and stepping value for a \"for loop\"."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "objective.key": "2578e207-e130-4cf9-8957-f5cc099e7b28"
+      }
+    },
+    {
+      "key": "35e82897-60fc-4e30-9b76-ef0184cbdb53",
+      "properties": {
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Drawing with Loops",
+        "objective.key": "35e82897-60fc-4e30-9b76-ef0184cbdb53"
+      }
+    },
+    {
+      "key": "36e1d875-47f8-445d-a73a-024903d1defc",
+      "properties": {
+        "description": "Assign values to existing variables."
+      },
+      "seeding_key": {
+        "lesson.key": "Using Variables with the Artist",
+        "objective.key": "36e1d875-47f8-445d-a73a-024903d1defc"
+      }
+    },
+    {
+      "key": "3c7006d5-658c-4c6d-9ab3-eaea139876c2",
+      "properties": {
+        "description": "Determine starting value, stopping value, and stepping value for a for loop."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "objective.key": "3c7006d5-658c-4c6d-9ab3-eaea139876c2"
+      }
+    },
+    {
+      "key": "67b77a52-92ba-42c9-b61a-3948270ac20f",
+      "properties": {
+        "description": "Identify areas where they can use variables to modify quantities during runtime. "
+      },
+      "seeding_key": {
+        "lesson.key": "Variables with the Bee",
+        "objective.key": "67b77a52-92ba-42c9-b61a-3948270ac20f"
+      }
+    },
+    {
+      "key": "70689531-ba88-47e4-bb5c-5c0975192f3f",
+      "properties": {
+        "description": "Break complex tasks into smaller repeatable sections."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with the Bee",
+        "objective.key": "70689531-ba88-47e4-bb5c-5c0975192f3f"
+      }
+    },
+    {
+      "key": "744dd8cf-9177-41a2-aeb0-2c766327eead",
+      "properties": {
+        "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "objective.key": "744dd8cf-9177-41a2-aeb0-2c766327eead"
+      }
+    },
+    {
+      "key": "7ebcec69-6bf1-4cb6-b1e6-854e2f199d35",
+      "properties": {
+        "description": "Illustrate the counter values hit each time through a \"for loop\" during runtime."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "objective.key": "7ebcec69-6bf1-4cb6-b1e6-854e2f199d35"
+      }
+    },
+    {
+      "key": "7f31b8f7-1654-47c4-b4b0-78602c4f4be0",
+      "properties": {
+        "description": "Recognize large repeated patterns as made from smaller repeated patterns."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming with the Bee",
+        "objective.key": "7f31b8f7-1654-47c4-b4b0-78602c4f4be0"
+      }
+    },
+    {
+      "key": "8096f186-7901-47a2-ba4b-afe3eb50fb6c",
+      "properties": {
+        "description": "Create an interactive animation using sprites, behaviors, and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "objective.key": "8096f186-7901-47a2-ba4b-afe3eb50fb6c"
+      }
+    },
+    {
+      "key": "8c29137b-048a-4848-8e1c-33086cbb5a01",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "objective.key": "8c29137b-048a-4848-8e1c-33086cbb5a01"
+      }
+    },
+    {
+      "key": "a8678c73-d1d0-4762-97c4-f44199ca12bc",
+      "properties": {
+        "description": "Utilize variables in place of repetitive values inside of a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Using Variables with the Artist",
+        "objective.key": "a8678c73-d1d0-4762-97c4-f44199ca12bc"
+      }
+    },
+    {
+      "key": "ca76fc9e-7b93-41fb-968e-9c267c51caeb",
+      "properties": {
+        "description": "Use for loops to change loop several times with different values."
+      },
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "objective.key": "ca76fc9e-7b93-41fb-968e-9c267c51caeb"
+      }
+    },
+    {
+      "key": "f0e4d7fe-e464-4936-936b-6c303823fdb8",
+      "properties": {
+        "description": "begin to make connections about a new way to write programs"
+      },
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "objective.key": "f0e4d7fe-e464-4936-936b-6c303823fdb8"
+      }
+    },
+    {
+      "key": "f17cf923-e2e7-482c-a546-4783bcdb75c5",
+      "properties": {
+        "description": "Examine code to find places where variables can be substituted for specific values."
+      },
+      "seeding_key": {
+        "lesson.key": "Variables with the Bee",
+        "objective.key": "f17cf923-e2e7-482c-a546-4783bcdb75c5"
+      }
+    },
+    {
+      "key": "f7401f9a-4f0d-469c-8db0-b3d15cd616ec",
+      "properties": {
+        "description": "Use variables to change values inside of a loop."
+      },
+      "seeding_key": {
+        "lesson.key": "Using Variables with the Artist",
+        "objective.key": "f7401f9a-4f0d-469c-8db0-b3d15cd616ec"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Drawing with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Follow the Algorithm",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loop Fun",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "For Loops with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with the Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with the Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with the Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables with the Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables with the Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables with the Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables with the Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

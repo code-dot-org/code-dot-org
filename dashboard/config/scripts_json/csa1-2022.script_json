@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-19 16:53:55 UTC",
+    "serialized_at": "2022-02-21 20:27:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -361,6 +361,7 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
+        "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems they encountered. Students consider this feedback at this as they finalize development in this lesson. Students share their final projects with their peers to celebrate their successes.",
         "preparation": "* Gather several sticky notes for each student",
         "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou participated in a code review at the end of the previous lesson to give and receive feedback to identify areas of improvement and fixes for problems you encountered. Consider this feedback as you finalize development in this lesson. You then share your final project with your peers to celebrate your success."
@@ -470,6 +471,7 @@
       "key": "1ad725fe-8e78-4cb3-84a2-d0a8116deb61",
       "position": 2,
       "properties": {
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
