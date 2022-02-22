@@ -2894,7 +2894,7 @@
           "progression_name": "Aperçu de la leçon"
         },
         "832dbd27-6b24-4512-9ab3-2e932bb1c988": {
-          "progression_name": "Vidéo : Introduction à la boucle draw"
+          "progression_name": "Vidéo : Introduction à la boucle dessine"
         },
         "4088b01c-c76d-4836-bfc1-7b0d3ce2fe68": {
           "progression_name": "La Boucle Dessiner"
@@ -3045,6 +3045,9 @@
         },
         "36340995-7f3c-4c0c-8cc9-25a4e255eff8": {
           "progression_name": "Aperçu de la leçon"
+        },
+        "aa9bbdfe-d05e-444f-bffc-dc450fee84cb": {
+          "progression_name": "Vidéo: Les Fonctions"
         },
         "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
           "progression_name": "fonctions"
@@ -5353,7 +5356,8 @@
           "description": "**Soutien général :** En tant qu'enseignant, votre rôle consiste principalement à aider les élèves tout au long du didacticiel. Voici quelques conseils qui devraient les aider, quel que soit le niveau sur lequel ils travaillent.\n\n-   **Collaborer avec les voisins :** Encouragez les élèves à se renseigner auprès d'un voisin pour discuter de ce qu'ils vivent. Étant donné que ce didacticiel comprend des vidéos et que les étudiants peuvent mettre des écouteurs, il risquent de « se mettre dans une bulle ». Aidez à briser ces barrières en les faisant travailler deux par deux.\n-   **Lire les instructions :** les instructions fournissent généralement des informations utiles sur ce qu'il se passe dans les coulisses.\n-   **Revenez en arrière et essayez différentes choses :** S'ils finissent vite, encouragez-les à revenir à « Plus d'entraînement ». Dans la dernière partie de l'activité, ils pourront également revenir en arrière et choisir un \"Nouveau mot\". Plus il y a de données d'entraînement, plus le modèle d'apprentissage automatique sera précis et cohérent. Ils peuvent également apprendre en entraînant délibérément leur modèle de manière incorrecte ou en ne l'entraînant pas du tout. ",
           "tips": [
             "Cette leçon ne dira pas aux étudiants s'ils ont terminé le niveau correctement. Il est possible de sauter rapidement les différentes parties de l'activité. Encouragez les élèves à regarder les vidéos, à lire les instructions et à essayer différentes choses en cours de route. À tout moment, ils pourront partager leurs découvertes avec vous ou un camarade de classe. "
-          ]
+          ],
+          "progression_name": "Vidéo : IA : Qu'est-ce que l'apprentissage automatique ? "
         },
         "fa4c81ae-8830-49d8-9de9-e5f80a38dac8": {
           "description": "### Entraînement de l'IA\n\nLes élèves peuvent parcourir les trois premiers niveaux seuls ou avec un camarade. Pour programmer l'IA, utilisez les boutons pour étiqueter une image comme « poisson » ou « pas de poisson ». Chaque image et étiquette fait partie des données utilisées pour entraîner l'IA. toute seule. Une fois formée, l'A.I. tentera d'étiqueter 100 nouvelles images toute seule, puis présentera une sélection qui, selon elle, a la plus grande probabilité d'être un \"poisson\" en fonction de sa formation. Les élèves qui étiquettent systématiquement les choses correctement devraient voir un océan plein de différents types de créatures marines, sans beaucoup (ou aucun) autre objet. ",
@@ -8418,7 +8422,8 @@
           "name": "Les Fonctions dans Minecraft",
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vidéo : Minecraft - L'agent"
         },
         "b891b55a-2a7e-486c-ba28-957df49ac0e6": {
           "progression_name": "Renforcement Des Compétences"
@@ -8512,7 +8517,8 @@
           "description": "#### Vidéo (5 minutes)\n\nMettez la vidéo en classe. ",
           "tips": [
             "Tout comme lorsque les élèves écrivent ou communiquent verbalement, il est important de définir des attentes sur l'utilisation appropriée des mots dans cette activité. Les élèves doivent comprendre qu'ils sont responsables du code qu'ils écrivent, y compris de tout texte qui s'affiche à l'écran. Le texte doit être respectueux et sûr. Ils peuvent s'entraîner à ne pas partager d'informations personnelles dans leurs programmes, surtout s'ils souhaitent les partager avec d'autres.\nNotez que les informations saisies dans une invite Sprite Lab ne sont pas enregistrées à long terme. Les mots et messages tapés par les utilisateurs de ces applications disparaissent une fois l'application réinitialisée. "
-          ]
+          ],
+          "progression_name": "Vidéo : Texte et invites "
         },
         "7f90ece3-2607-4a59-a5fa-e70566aaafc9": {
           "description": "#### Développement des compétences et pratique (20 minutes)\n\n**Transition :** Demandez aux élèves de se déplacer vers leur ordinateur et de se connecter. Ces activités conviennent à l'apprentissage indépendant ou à la programmation en binôme.\n\nLes étudiants doivent terminer les niveaux de renforcement des compétences, puis passer le temps qu'il leur reste à choisir parmi les diverses activités de mise en pratique. ",
@@ -11146,7 +11152,8 @@
         "7d58d643-efce-44e7-a3e4-7b3492c72250": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vidéo : Qu'est-ce que l'apprentissage automatique ?"
         },
         "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
           "tips": [
@@ -11526,7 +11533,7 @@
           "tips": [
             null
           ],
-          "progression_name": "Vidéo : Introduction à la boucle draw"
+          "progression_name": "Vidéo : Introduction à la boucle dessine"
         },
         "09ba5105-6934-4a31-9684-3e62192e7542": {
           "progression_name": "Exploration"
@@ -11925,7 +11932,8 @@
         "52d53651-705c-47ec-a68f-d014f3499a99": {
           "tips": [
             null
-          ]
+          ],
+          "progression_name": "Vidéo: Les Fonctions"
         },
         "085e06bd-a991-42ec-b8e2-2e27712cf7dd": {
           "tips": [

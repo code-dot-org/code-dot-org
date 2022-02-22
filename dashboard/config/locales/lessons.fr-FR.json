@@ -4,6 +4,7 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique.",
+          "preparation": "-   Passez en revue et complétez vous-même le tutoriel en ligne : [Soirée Dansante](https://studio.code.org/s/dance-extras/lessons/1/levels/1) \n-   Veillez à l'essayer avant de demander à vos élèves de le compléter. Assurez-vous que votre matériel informatique est bien compatible et voyez s'il y a un problème à résoudre avant votre Heure de Code.",
           "purpose": "Cette leçon présente les concepts principaux de CS relatifs au codage et à la programmation d'événements (utilisation de blocs).",
           "student_overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique."
         },
