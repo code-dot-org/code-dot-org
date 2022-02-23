@@ -97,6 +97,37 @@ module.exports = {
       expect: '9'
     }),
 
+    // These exercise all of the blocks in Turtle category
+    // It does not validate that they behave correctly, just that we don't end
+    // up with any errors
+    testApplabConsoleOutput({
+      testName: 'Turtle',
+      source: `
+        moveForward(25);
+        moveBackward(25);
+        move(25, 25);
+        moveTo(0, 0);
+        dot(5);
+        turnRight(90);
+        turnLeft(90);
+        turnTo(0);
+        arcRight(90, 25);
+        arcLeft(90, 25);
+        getX();
+        getY();
+        getDirection();
+        penUp();
+        penDown();
+        penWidth(3);
+        penColor("red");
+        penRGB(120, 180, 200);
+        show();
+        hide();
+        speed(50);
+      `,
+      expect: ''
+    }),
+
     // These exercise some simple use cases for the list blocks:
     // insertItem, appendItem, and removeItem
     testApplabConsoleOutput({
