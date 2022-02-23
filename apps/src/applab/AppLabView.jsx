@@ -25,6 +25,7 @@ class AppLabView extends React.Component {
     screenIds: PropTypes.arrayOf(PropTypes.string).isRequired,
     onScreenCreate: PropTypes.func.isRequired,
     onMount: PropTypes.func.isRequired,
+    onUnmount: PropTypes.func.isRequired,
 
     // Provided by redux
     hasDataMode: PropTypes.bool.isRequired,
@@ -40,6 +41,10 @@ class AppLabView extends React.Component {
 
   componentDidMount() {
     this.props.onMount();
+  }
+
+  componentWillUnmount() {
+    this.props.onUnmount();
   }
 
   render() {

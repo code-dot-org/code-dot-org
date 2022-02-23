@@ -620,6 +620,11 @@ Applab.init = function(config) {
     delete config.onAttempt;
   }
 
+  var onUnmount = function() {
+    console.log('in onUnmount');
+    makerToolkit.disconnect();
+  }.bind(this);
+
   var onMount = function() {
     studioApp().init(config);
 
@@ -780,7 +785,8 @@ Applab.init = function(config) {
   );
 
   Applab.reactInitialProps_ = {
-    onMount: onMount
+    onMount: onMount,
+    onUnmount: onUnmount
   };
 
   Applab.reactMountPoint_ = document.getElementById(config.containerId);
