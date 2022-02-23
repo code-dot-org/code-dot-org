@@ -123,36 +123,34 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
           # this UserLevel, see LP-1926 for details.
           level_group_ids = script_level.levels.pluck(:id)
           level_group_progress = student_progress.find do |user_level|
-            user_level.user_id == student.id &&
-              user_level.script_id == script_id &&
-              level_group_ids.include?(user_level.level_id)
+            level_group_ids.include?(user_level.level_id)
           end
           next unless level_group_progress
 
           level_group = level_group_progress.level
 
           # Summarize some key data.
-          multi_count = 0
-          multi_count_correct = 0
-          match_count = 0
-          match_count_correct = 0
+          stats = {
+            multi_count: 0,
+            multi_count_correct: 0,
+            match_count: 0,
+            match_count_correct: 0
+          }
 
           # And construct a listing of all the individual levels and their results.
           level_results = []
 
           level_group.levels.each do |level|
             if level.is_a? Multi
-              multi_count += 1
+              stats[:multi_count] += 1
             elsif level.is_a? Match
-              match_count += 1
+              stats[:match_count] += 1
             end
 
             # Find the UserLevel that corresponds to this level. This may be nil
             # if the student skipped a question.
             level_progress = student_progress.find do |user_level|
-              user_level.user_id == student.id &&
-                user_level.script_id == script_id &&
-                user_level.level_id == level.id
+              user_level.level_id == level.id
             end
             student_answer = level_progress&.level_source&.data
 
@@ -182,7 +180,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
                   level_result[:status] = "unsubmitted"
                 # Deep comparison of arrays of indexes
                 elsif student_result.present? && student_result - answer_indexes == [] && answer_indexes.length == student_result.length
-                  multi_count_correct += 1
+                  stats[:multi_count_correct] += 1
                   level_result[:status] = "correct"
                 else
                   level_result[:status] = "incorrect"
@@ -207,7 +205,7 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
                   end
                 end
                 if number_correct == student_result.length
-                  match_count_correct += 1
+                  stats[:match_count_correct] += 1
                 end
                 level_result[:status] = option_status
               end
@@ -226,10 +224,10 @@ class Api::V1::AssessmentsController < Api::V1::JsonApiController
             puzzle: script_level.position,
             question: level_group.properties["title"],
             url: build_script_level_url(script_level, section_id: @section.id, user_id: student.id),
-            multi_correct: multi_count_correct,
-            multi_count: multi_count,
-            match_correct: match_count_correct,
-            match_count: match_count,
+            multi_correct: stats[:multi_count_correct],
+            multi_count: stats[:multi_count],
+            match_correct: stats[:match_count_correct],
+            match_count: stats[:match_count],
             submitted: submitted,
             timestamp: timestamp,
             level_results: level_results
