@@ -1,7 +1,8 @@
 import {expect} from 'chai';
 import {
   dataByStatus,
-  removeIncompleteAppsFromSummaryView
+  removeIncompleteAppsFromSummaryView,
+  removeIncompleteAppsFromQuickView
 } from '@cdo/apps/code-studio/pd/application_dashboard/applicationDashboardHelper';
 
 describe('applicationDashboardHelpers', () => {
@@ -35,6 +36,33 @@ describe('applicationDashboardHelpers', () => {
           ...dataByStatus
         }
       });
+    });
+  });
+  describe('removeIncompleteAppsFromQuickView', () => {
+    it('removes incomplete applications', () => {
+      const incompleteApplication = {
+        applicant_name: 'Harry',
+        id: 16,
+        status: 'incomplete'
+      };
+
+      const applications = [
+        incompleteApplication,
+        {
+          applicant_name: 'Severus',
+          id: 30,
+          status: 'unreviewed'
+        },
+        {
+          applicant_name: 'Jenny',
+          id: 13,
+          status: 'withdrawn'
+        }
+      ];
+
+      expect(removeIncompleteAppsFromQuickView(applications)).to.deep.equal(
+        applications.slice(1)
+      );
     });
   });
 });
