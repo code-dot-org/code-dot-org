@@ -1024,6 +1024,8 @@ en:
   no_course_access_teacher: "You don't have access to this course. If you believe you should have access to this course, please write to support@code.org so that we can fix the situation."
   no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
   no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
+  no_level_access_student: "You don't have access to this level. Please ask your teacher which level you should be on."
+  no_level_access_teacher: "You don't have access to this level. If you believe you should have access to this level, please write to support@code.org so that we can fix the situation."
   return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'

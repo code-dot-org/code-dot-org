@@ -432,7 +432,7 @@
   "createStandardsReportSuggestion": "**ಸಲಹೆಗಳು.**",
   "createStandardsReportSuggestion1": "ನಿಮ್ಮ ವರ್ಗ ಏನು ಕೆಲಸ ಮಾಡುತ್ತಿದೆ ಎಂಬುದನ್ನು ವಿವರಿಸಿ",
   "createStandardsReportSuggestion2": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಪಾಠಗಳು [ಇತರ ವಿಷಯಗಳು ಅಥವಾ ಮಾನದಂಡಗಳಿಗೆ] ಹೇಗೆ ಸಂಬಂಧಿಸಿವೆ ಎಂಬುದನ್ನು ವಿವರಿಸಿ",
-  "createStandardsReportSuggestion2Link": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಪಾಠಗಳು [ಇತರ ವಿಷಯಗಳು ಅಥವಾ ಮಾನದಂಡಗಳಿಗೆ] ಹೇಗೆ ಸಂಬಂಧಿಸಿವೆ ಎಂಬುದನ್ನು ವಿವರಿಸಿ({standardsOverviewLink})",
+  "createStandardsReportSuggestion2Link": "ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದ ಪಾಠಗಳು [ಇತರ ವಿಷಯಗಳು ಅಥವಾ ಮಾನದಂಡಗಳಿಗೆ]({standardsOverviewLink}) ಹೇಗೆ ಸಂಬಂಧಿಸಿವೆ ಎಂಬುದನ್ನು ವಿವರಿಸಿ",
   "createStandardsReportSuggestion4": "[ವಿದ್ಯಾರ್ಥಿ ಯೋಜನೆಗೆ ಲಿಂಕ್ ಸೇರಿಸಿ]({projectsLink})",
   "createTableHeader": "ವಿವಿಧ ಕ್ಷೇತ್ರಗಳಿಗೆ ಬಹು ಕಾಲಮ್‌ಗಳೊಂದಿಗೆ ಡೇಟಾದ ಸಾಲುಗಳನ್ನು ಸಂಗ್ರಹಿಸಲು ಡೇಟಾ ಕೋಷ್ಟಕಗಳನ್ನು ರಚಿಸಿ.",
   "crossTab": "ಕ್ರಾಸ್ ಟ್ಯಾಬ್",
