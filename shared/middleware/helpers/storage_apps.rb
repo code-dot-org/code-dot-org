@@ -123,6 +123,10 @@ class StorageApps
     )
   end
 
+  def get_active_projects
+    StorageApps.table.where(storage_id: @storage_id, state: 'active')
+  end
+
   # Returns an array of all ids for storage apps with storage id = @storage_id
   def get_all_storage_ids
     StorageApps.table.
@@ -372,6 +376,11 @@ class StorageApps
     _, storage_app_id = storage_decrypt_channel_id(channel_id)
     project_info = StorageApps.table.where(id: storage_app_id).first
     project_info[:abuse_score]
+  end
+
+  # Returns storage apps with id in ids
+  def self.get_by_ids(ids)
+    StorageApps.table.where(id: ids)
   end
 
   def self.table
