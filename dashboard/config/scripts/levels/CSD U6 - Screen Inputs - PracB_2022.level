@@ -89,7 +89,10 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Digital Menu",
+    "bubble_choice_description": "Create an app that lets you customize a digital cafe menu",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L8/practice/B.png"
   },
   "game_id": 41,
   "published": true,
@@ -97,7 +100,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-18T23:59:04.816+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - PracA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - PracA_2022\"},{\"changed_at\":\"2021-12-18 23:59:08 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 17:21:34 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 17:22:12 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 17:22:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 17:26:17 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 18:10:18 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 18:12:57 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 19:21:56 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 19:24:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-18T23:59:04.816+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Inputs - PracA_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Inputs - PracA_2022\"},{\"changed_at\":\"2021-12-18 23:59:08 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 17:21:34 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 17:22:12 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 17:22:43 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 17:26:17 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 18:10:18 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 18:12:57 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 19:21:56 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-01-11 19:24:26 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:14:36 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

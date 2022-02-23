@@ -1033,6 +1033,7 @@
           "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
+          "name": "व्हेरीएबल्स",
           "url": "https://youtu.be/DI7DprN4FtE"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
@@ -1255,6 +1256,26 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "व्हर्च्युअल धड्या मध्ये सुधारणा ",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "AI पाहणे"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: डेटा ट्रेनिंग करणे आणि पूर्वग्रह",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "व्हिडिओ: मशीन अभ्यास",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "variables_1/csd/2021": {
+          "name": "व्हेरीएबल्स"
+        },
+        "lists/csd/2021": {
+          "name": "याद्या"
         }
       }
     }

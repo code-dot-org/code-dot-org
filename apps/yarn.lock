@@ -1600,10 +1600,10 @@
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@code-dot-org/craft/-/craft-0.2.2.tgz#4b117337a5a601613f2d38514aa50ba972362939"
 
-"@code-dot-org/dance-party@1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.4.tgz#1bee70b0b1f392293b23719a9b257c142ba2e304"
-  integrity sha512-l9LEQRUiLNkIaWtK/rGOV1PHHorx5x/lliFTwEFlWMEJ00v4EZyf/+JdxSOrNmpBrCtAtEXXMIwKZ5gVFnQ/2w==
+"@code-dot-org/dance-party@1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/dance-party/-/dance-party-1.0.5.tgz#0872991761e8f4458c73ba3b7f288b2e747af240"
+  integrity sha512-Wr4zQgSpBh/Pus0+91Cshl93efew051PfVM4BBzcf0hqNGMVGj8Pztgvtqew07AnMrjxBVDITSlLzCfhHmyBQw==
 
 "@code-dot-org/johnny-five@0.11.1-cdo.2":
   version "0.11.1-cdo.2"
@@ -1879,6 +1879,20 @@
     "@codemirror/text" "^0.19.0"
     style-mod "^4.0.0"
     w3c-keyname "^2.2.4"
+
+"@dsco_/common@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@dsco_/common/-/common-1.1.0.tgz#2309bc19fe90323330b9b0000fc27f80475c5b67"
+  integrity sha512-t+ZKe9Dg67Ap9mxzKtkdHOt95tVsJFtRLpUQcr/LEdPNcsojgqmc1L/nWMv/UbWv7I0GO3Kxd2Www/tLqE1IVg==
+
+"@dsco_/link@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@dsco_/link/-/link-1.1.2.tgz#4dacabd8e9d798bdd71319d04b5e7fd97bea653d"
+  integrity sha512-JB21X/KHjMrVkRN46L5proQ2WIUOgeixjEuZoPrGp9xbDLlPJJxOJktgfn9tNo4QbRKmxaEXB3569BWiQ/KdHQ==
+  dependencies:
+    "@dsco_/common" "^1.1.0"
+    classnames "^2.3.1"
+    prop-types "^15.8.1"
 
 "@emotion/cache@^0.8.8":
   version "0.8.8"
@@ -4605,6 +4619,11 @@ classnames@^2.2.3, classnames@^2.2.4:
 classnames@^2.2.5:
   version "2.2.5"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.5.tgz#fb3801d453467649ef3603c7d61a02bd129bde6d"
+
+classnames@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 clean-css@4.2.x:
   version "4.2.1"
@@ -12366,6 +12385,15 @@ prop-types@^15.7.2:
     object-assign "^4.1.1"
     react-is "^16.8.1"
 
+prop-types@^15.8.1:
+  version "15.8.1"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
+  dependencies:
+    loose-envify "^1.4.0"
+    object-assign "^4.1.1"
+    react-is "^16.13.1"
+
 property-information@^4.0.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/property-information/-/property-information-4.2.0.tgz#f0e66e07cbd6fed31d96844d958d153ad3eb486e"
@@ -15977,9 +16005,9 @@ url-loader@^1.1.2:
     schema-utils "^1.0.0"
 
 url-parse@^1.1.8, url-parse@^1.4.3:
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.4.tgz#e4f645a7e2a0852cc8a66b14b292a3e9a11a97fd"
-  integrity sha512-ITeAByWWoqutFClc/lRZnFplgXgEZr3WJ6XngMM/N9DMIm4K8zXPCZ1Jdu0rERwO84w1WC5wkle2ubwTA4NTBg==
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.9.tgz#05ff26484a0b5e4040ac64dcee4177223d74675e"
+  integrity sha512-HpOvhKBvre8wYez+QhHcYiVvVmeF6DVnuSOOPhe3cTum3BnqHhvKaZm8FU5yTiOu/Jut2ZpB2rA/SbBA1JIGlQ==
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"

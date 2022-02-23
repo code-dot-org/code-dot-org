@@ -175,6 +175,39 @@
         },
         "define/coursee/2021": {
           "word": "განსაზღვრეთ"
+        },
+        "debugging/csd/2021": {
+          "word": "გამართვა"
+        },
+        "variable/csd/2021": {
+          "word": "ცვლადი"
+        },
+        "sprite/csd/2021": {
+          "word": "სპრაიტი"
+        },
+        "condition/csd/2021": {
+          "word": "პირობა"
+        },
+        "conditionals/csd/2021": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "abstraction/csd/2021": {
+          "word": "აბსტრაქცია"
+        },
+        "function/csd/2021": {
+          "word": "ფუნქცია"
+        },
+        "input/csd/2021": {
+          "word": "შემომავალი ინფორმაცია"
+        },
+        "processing/csd/2021": {
+          "word": "დამუშავება"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "ციფრული ნაკვალევი"
+        },
+        "copyright/csd/2021": {
+          "word": "საავტორო უფლება"
         }
       }
     }

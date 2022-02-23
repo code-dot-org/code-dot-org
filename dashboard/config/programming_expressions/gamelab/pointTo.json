@@ -2,6 +2,7 @@
   "key": "pointTo",
   "name": "pointTo",
   "category": "Sprites",
+  "category_key": "sprites",
   "palette_params": [
     {
       "name": "x"

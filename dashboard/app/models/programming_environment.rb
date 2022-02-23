@@ -32,6 +32,7 @@ class ProgrammingEnvironment < ApplicationRecord
     title
     description
     image_url
+    project_url
   )
 
   def self.properties_from_file(content)
@@ -80,9 +81,28 @@ class ProgrammingEnvironment < ApplicationRecord
       name: name,
       title: title,
       imageUrl: image_url,
+      projectUrl: project_url,
       description: description,
       editorType: editor_type,
-      categories: categories
+      categories: categories.map(&:serialize_for_edit)
+    }
+  end
+
+  def summarize_for_show
+    {
+      title: title,
+      description: description,
+      projectUrl: project_url,
+      categories: categories.select {|c| c.programming_expressions.count > 0}.map(&:summarize_for_environment_show)
+    }
+  end
+
+  def summarize_for_index
+    {
+      name: name,
+      title: title,
+      imageUrl: image_url,
+      description: description
     }
   end
 end

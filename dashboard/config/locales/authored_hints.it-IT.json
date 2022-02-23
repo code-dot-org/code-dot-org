@@ -10558,11 +10558,11 @@
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "Riesci a trovare una relazione tra il numero di passi che l'ape fa per arrivare al fiore ed il numero di dosi di nettare che deve raccogliere?",
           "courseF_bee_for10_b": "Il primo fiore ha un totale di **14 dosi** di nettare. Per arrivare a questo primo fiore, l'ape deve ronzare verso il basso per **7 caselle** (ovvero 14 diviso 2). Quante dosi di nettare ci sono nel fiore successivo? e quante caselle dovrà percorrere l'ape per arrivarci?",
-          "courseF_bee_for10_c": "In questo esercizio, il primo fiore ha **14** dosi di nettare, il secondo ha **10** dosi, il terzo ne ha **6** e il quarto **2**.\n\nIn questo percorso, ci sono **7** caselle rosse, **5** arancioni, **3** verdi e **1** blu.\n\n![blockly block](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nChe collegamento c'è tra questi numeri?",
+          "courseF_bee_for10_c": "In questo esercizio, il primo fiore ha **14** dosi di nettare, il secondo ha **10** dosi, il terzo ne ha **6** e il quarto **2**.\n\nIn questo percorso, ci sono **7** caselle rosse, **5** arancioni, **3** verdi e **1** blu.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\nChe collegamento c'è tra questi numeri?",
           "courseF_bee_for10_d": "Devi usare 2 blocchi `ripeti ... volte` e uno di questi deve usare un blocco con operazioni matematiche."
         },
         "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "Di quanto 12 è inferiore a 15?\\\nDi quanto 9 è inferiore a 12?\n\nRiesci a individuare lo schema?"
+          "courseF_bee_for11_a": "Di quanto 12 è inferiore a 15?  \nDi quanto 9 è inferiore a 12?\n\nRiesci a individuare lo schema?"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "Hai bisogno di due blocchi nel ciclo `ripeti ... volte` per raccogliere tutto il nettare."
@@ -10594,7 +10594,7 @@
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "Se il tuo ciclo sta contando in avanti, l'incremento viene aggiunto alla variabile `counter` (_contatore_) ad ogni iterazione del ciclo (cioè ogni volta che vengono eseguite le istruzioni presenti nel ciclo). \n\nQuanto bisogna aggiungere ad ogni numero per ottenere il prossimo quantitativo di nettare?",
           "courseF_bee_for8_b": "In questo esercizio, ti dovrai muovere seguendo uno schema a scalinata per raccogliere i fiori.",
-          "courseF_bee_for8_c": "Il tuo ciclo dovrà contare _da 3 a 15_ con un certo passo. Quale?"
+          "courseF_bee_for8_c": "Il tuo ciclo dovrà contare *da 3 a 15* con un certo passo. Quale?"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "Prova ad usare nel _ciclo con contatore_ un valore della variabile `counter` (_contatore_) che viene modificato con un blocco matematico man mano che ti sposti e raccogli il nettare.",
@@ -10646,13 +10646,13 @@
           "courseF_bee_variables_4_2021_1": "Invece di aggiungere 1 alla variabile, aggiungi 2 ogni volta."
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "Avrai bisogno anche di questo blocco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "Avrai bisogno anche di questo blocco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"ridimensiona\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creatura_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_events_key": {
           "changePropBlock": "Avrai bisogno anche di questo blocco:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "Prova a cambaire l'etichett della variabile nel blocco \"quando si risponde\". Poiché ci sono molti progetti, usa l'etichetta per _l'ultimo_comando a cui viene data una risposta."
+          "when_answered_var": "Prova a cambiare l'etichetta della variabile nel blocco \"quando c'è una risposta\". Poiché ci sono molti comandi, usa l'etichetta per il comando che riceverà la risposta per *ultimo*.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_variables_card_finish": {
           "card_idea1": "Puoi aggiungere un secondo (terzo o quarto) comando collegando un nuovo blocco comandi con una variabile diversa al tuo primo evento \"quando c'è una risposta\".\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">nome</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">cosa desideri ricevere per il tuo compleanno?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">regalo</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",

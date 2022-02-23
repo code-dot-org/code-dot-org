@@ -89,6 +89,12 @@ class CoursesController < ApplicationController
   def edit
     # We don't support an edit experience for plc courses
     raise ActiveRecord::ReadOnlyRecord if @unit_group.try(:plc_course)
+    @unit_group_data = {
+      course_summary: @unit_group.summarize(@current_user, for_edit: true),
+      script_names: Script.all.map(&:name),
+      course_families: UnitGroup.family_names,
+      version_year_options: UnitGroup.get_version_year_options
+    }
     render 'edit', locals: {unit_group: @unit_group}
   end
 
@@ -173,11 +179,8 @@ class CoursesController < ApplicationController
   end
 
   def render_no_access
-    if @unit_group.pilot?
-      authenticate_user!
-      unless @unit_group.has_pilot_access?(current_user)
-        return render :no_access
-      end
+    if current_user && !current_user.admin? && !can?(:read, @unit_group)
+      render :no_access
     end
   end
 

@@ -6280,6 +6280,17 @@ hu:
               display_name: változók
             lessonGroup-4:
               display_name: Kurzus Projekt vége
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: Bemenetek kombinálása
+            Functions with Parameters:
+              name: funkciók
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -6667,6 +6678,9 @@ hu:
           description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját,
             és hozzon létre saját művészetét, történetét vagy
         csa1-2022:
+          lessons:
+            lesson-9:
+              name: hurkok
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
@@ -6706,3 +6720,88 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: hurkok
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-pilot-extra:
+          lessons:
+            lesson-10:
+              key: 10. lecke
+            lesson-6:
+              key: 6.  lecke
+            lesson-7:
+              key: 7.  lecke
+            lesson-8:
+              key: 8.  lecke
+            lesson-9:
+              key: 9.  lecke
+            lesson-11:
+              key: 11. lecke
+            lesson-12:
+              key: 12. lecke
+            lesson-13:
+              key: 13. lecke
+            lesson-14:
+              key: 14. lecke
+            lesson-15:
+              key: 15. lecke
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-4:
+              key: 4.  lecke
+            lesson-5:
+              key: 5.  lecke
+            lesson-16:
+              key: 16. lecke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa8-pilot-extra:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-4:
+              key: 4.  lecke
+            lesson-5:
+              key: 5.  lecke
+            lesson-10:
+              key: 10. lecke
+            lesson-6:
+              key: 6.  lecke
+            lesson-7:
+              key: 7.  lecke
+            lesson-8:
+              key: 8.  lecke
+            lesson-9:
+              key: 9.  lecke
+            lesson-11:
+              key: 11. lecke
+            lesson-12:
+              key: 12. lecke
+            lesson-13:
+              key: 13. lecke
+            lesson-14:
+              key: 14. lecke
+            lesson-15:
+              key: 15. lecke
+            lesson-16:
+              key: 16. lecke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó

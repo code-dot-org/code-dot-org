@@ -100,11 +100,19 @@ class CourseOffering < ApplicationRecord
     assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
   end
 
+  def self.assignable_student_course_offerings(user)
+    assignable_course_offerings(user).select {|aco| !aco.pl_course?}
+  end
+
+  def self.assignable_student_course_offerings_info(user, locale_code = 'en-us')
+    assignable_student_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
+  end
+
   def self.assignable_pl_course_offerings(user)
     assignable_course_offerings(user).select(&:pl_course?)
   end
 
-  def self.assignable_pl_course_offerings_info(user, locale_code = nil)
+  def self.assignable_pl_course_offerings_info(user, locale_code = 'en-us')
     assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
   end
 
@@ -120,11 +128,20 @@ class CourseOffering < ApplicationRecord
   def summarize_for_assignment_dropdown(user, locale_code)
     {
       id: id,
-      display_name: display_name,
+      display_name: localized_display_name,
       category: category,
       is_featured: is_featured?,
       course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
     }
+  end
+
+  def localized_display_name
+    localized_name = I18n.t(
+      key,
+      scope: [:data, :course_offerings],
+      default: nil
+    )
+    localized_name || display_name
   end
 
   def summarize_for_edit

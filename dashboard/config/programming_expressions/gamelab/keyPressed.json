@@ -1,6 +1,0 @@
-{
-  "key": "keyPressed",
-  "name": "keyPressed",
-  "category": "World",
-  "syntax": "function keyPressed() {}"
-}

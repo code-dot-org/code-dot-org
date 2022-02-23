@@ -2,5 +2,6 @@
   "key": "alpha",
   "name": "alpha",
   "category": "Sprites",
+  "category_key": "sprites",
   "syntax": "alpha"
 }

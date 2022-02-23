@@ -1,1 +1,14 @@
---- {}
+---
+kn:
+  data:
+    parameter_names:
+      actor: ನಟ
+      counter: ಕೌಂಟರ್
+      height: ಎತ್ತರ
+      honey: ಜೇನುತುಪ್ಪ
+      left: ಎಡಕ್ಕೆ
+      length: ಉದ್ದ
+      min: ನಿಮಿಷ
+      points: ಪಾಯಿಂಟ್‌ಗಳು
+      size: ಗಾತ್ರ
+      speed: ವೇಗ

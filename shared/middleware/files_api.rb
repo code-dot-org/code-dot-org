@@ -388,7 +388,11 @@ class FilesApi < Sinatra::Base
     end
 
     # Block libraries with PII/profanity from being published.
-    if endpoint == 'libraries'
+    #
+    # Javalab's "backpack" feature uses libraries to allow students to share code
+    # between their own projects -- skip this check for .java files, since in this use case
+    # the files are only being used by a single user.
+    if endpoint == 'libraries' && file_type != '.java'
       begin
         share_failure = ShareFiltering.find_failure(body, request.locale)
       rescue OpenURI::HTTPError => e

@@ -2,7 +2,7 @@
 #
 #   code.org/
 #   code.org/challenge
-#   code.org/challenge-new
+#   code.org/coldplay
 #   code.org/dance
 #   code.org/minecraft
 #   code.org/oceans
@@ -42,6 +42,7 @@ def get_social_metadata_for_page(request)
     codeorg2020_social: {path: "/shared/images/social-media/codeorg2020_social.png", width: 1200, height: 630},
     hoc_2020_social: {path: "/shared/images/social-media/hoc2020_social.png", width: 1200, height: 630},
     hoc_cse_social: {path: "/shared/images/social-media/hoc_cse_social.png", width: 1200, height: 630},
+    coldplay: {path: "/shared/images/social-media/coldplay_social.png", width: 1920, height: 1080},
   }
 
   # Important:
@@ -79,11 +80,11 @@ def get_social_metadata_for_page(request)
         image: images[:celeb_challenge]
       }
     },
-    "challenge-new" => {
+    "coldplay" => {
       "default" => {
-        title: "Join the Band Dance Party",
-        description: "Win tickets to see Band!",
-        image: images[:hoc_student_challenge_new]
+        title: hoc_s(:social_coldplay_title),
+        description: hoc_s(:social_coldplay_desc),
+        image: images[:coldplay]
       }
     },
     "minecraft" => {
@@ -147,8 +148,8 @@ def get_social_metadata_for_page(request)
 
   if request.path == "/challenge" && request.site == "code.org"
     page = "challenge"
-  elsif request.path == "/challenge-new" && request.site == "code.org"
-    page = "challenge-new"
+  elsif request.path == "/coldplay" && request.site == "code.org"
+    page = "coldplay"
   elsif request.path == "/minecraft" && request.site == "code.org"
     page = "minecraft"
   elsif request.path == "/dance" && request.site == "code.org"

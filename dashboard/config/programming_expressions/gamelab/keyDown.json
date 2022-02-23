@@ -2,6 +2,7 @@
   "key": "keyDown",
   "name": "keyDown",
   "category": "World",
+  "category_key": "world",
   "palette_params": [
     {
       "name": "code"

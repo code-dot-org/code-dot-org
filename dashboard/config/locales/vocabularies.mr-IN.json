@@ -35,6 +35,9 @@
           "word": "फंक्शन",
           "definition": "कोडचा एक भाग ज्याला आपण परत परत सहजपणे कॉल करू शकता"
         },
+        "code/poem-art/2021": {
+          "word": "कोड"
+        },
         "event/poem-art/2021": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
@@ -69,6 +72,9 @@
         },
         "program/iceage/unversioned": {
           "word": "प्रोग्रॅम"
+        },
+        "code/artist/unversioned": {
+          "word": "कोड"
         },
         "debugging/artist/unversioned": {
           "word": "डीबगिंग",
@@ -106,6 +112,7 @@
           "definition": "स्टेटमेंट जे फक्त काही विशिष्ट अटींनुसार चालतात."
         },
         "loops/aquatic/unversioned": {
+          "word": "लूप्स",
           "definition": "पुन्हा पुन्हा काहीतरी करण्याची क्रिया"
         },
         "debugging/starwars/unversioned": {
@@ -146,6 +153,9 @@
         "event/sports/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
+        },
+        "code/sports/unversioned": {
+          "word": "कोड"
         },
         "debugging/sports/unversioned": {
           "word": "डीबगिंग",
@@ -189,6 +199,9 @@
         "machine_learning/oceans/unversioned": {
           "word": "मशीन लर्निंग"
         },
+        "code/poem-art/unversioned": {
+          "word": "कोड"
+        },
         "event/poem-art/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
@@ -205,6 +218,7 @@
           "definition": "सॉफ्टवेअर आणि हार्डवेअरसह एखादी वस्तू वापरणारी एखादी व्यक्ती."
         },
         "behavior/coursef/2021": {
+          "word": "वर्तणूक",
           "definition": "एखादी क्रिया जी स्प्राइटला थांबवायला सांगितली जात नाही तोपर्यंत ती सतत करत असते."
         },
         "program/coursef/2021": {
@@ -520,6 +534,7 @@
           "definition": "प्रोग्राम तयार करण्याची कला"
         },
         "behavior/express/2021": {
+          "word": "वर्तणूक",
           "definition": "एखादी क्रिया जी स्प्राइटला थांबवायला सांगितली जात नाही तोपर्यंत ती सतत करत असते."
         },
         "sprite/express/2021": {
@@ -644,6 +659,7 @@
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "behavior/coursee/2021": {
+          "word": "वर्तणूक",
           "definition": "एखादी क्रिया जी स्प्राइटला थांबवायला सांगितली जात नाही तोपर्यंत ती सतत करत असते."
         },
         "algorithm/coursee/2021": {
@@ -700,6 +716,44 @@
         "try/coursee/2021": {
           "word": "प्रयत्न ",
           "definition": "काहीतरी करण्याचा प्रयत्न करा "
+        },
+        "machine_learning/csd/2021": {
+          "word": "मशीन लर्निंग"
+        },
+        "bug/csd/2021": {
+          "word": "बग",
+          "definition": "प्रोग्रामचा एक भाग जो योग्यरितीने कार्य करत नाही."
+        },
+        "for_loop/csd/2021": {
+          "word": "लूप साठी",
+          "definition": "लूप ज्यांची पूर्वनिर्धारित सुरुवात, शेवट आणि वाढ (स्टेप इंटरव्हल) असते."
+        },
+        "debugging/csd/2021": {
+          "word": "डीबगिंग",
+          "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
+        },
+        "program/csd/2021": {
+          "word": "प्रोग्रॅम"
+        },
+        "variable/csd/2021": {
+          "word": "व्हेरीएबल",
+          "definition": "प्रोग्राममध्ये वापरलेल्या माहितीच्या भागासाठी लेबल."
+        },
+        "sprite/csd/2021": {
+          "word": "स्प्राईट"
+        },
+        "condition/csd/2021": {
+          "word": "अट"
+        },
+        "conditionals/csd/2021": {
+          "word": "कंडीशनल्स "
+        },
+        "function/csd/2021": {
+          "word": "फंक्शन"
+        },
+        "copyright/csd/2021": {
+          "word": "कॉपीराइट",
+          "definition": "साहित्यिक, कलात्मक किंवा संगीत साहित्य प्रिंट करण्याचा, प्रकाशित करण्याचा, सादर करण्याचा, चित्रपट करण्याचा किंवा रेकॉर्ड करण्याचा आणि इतरांना तसे करण्यास अधिकृत करण्याचा अनन्य कायदेशीर अधिकार"
         }
       }
     }

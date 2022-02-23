@@ -2,5 +2,6 @@
   "key": "clear",
   "name": "clear",
   "category": "Groups",
+  "category_key": "groups",
   "syntax": "clear"
 }

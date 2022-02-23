@@ -374,6 +374,7 @@
   homepage_donors_donate: "Spenden"
   homepage_below_hero_announcement_text: "Der Schutz deiner Daten ist uns wichtig, weshalb wir unsere Datenschutzerklärung mit Wirkung zum 25. Mai aktualisieren."
   homepage_below_hero_announcement_link_text: "Mehr erfahren"
+  homepage_higher_power_body: "Programmiere einen Tanz zu „Higher Power“ Coldplay, dann kannst du die Band vielleicht live erleben!"
   contact_form_topic_student: "Ich bin ein Schüler"
   contact_form_topic_parent: "Ich bin ein Elternteil"
   contact_form_topic_teacher: "Ich bin Lehrer/Pädagoge"
@@ -1686,6 +1687,8 @@
   hoc2018_dance_video2: "Tanzparty - Ereignisse"
   hoc2018_dance_video3: "Tanzparty - Eigenschaften"
   hoc2018_dance_video4: "Tanzparty - Glückwünsche"
+  dance_box_higher_power_line_1: "Programmiere einen Tanz zu „Higher Power“ Coldplay, dann kannst du die Band vielleicht live erleben!"
+  dance_box_higher_power_line_2: "Besuche <a href=\"%{path}\">code.org/coldplay</a> und erfahre mehr darüber"
   page_not_found_title: "Seite nicht gefunden"
   page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: "Die Seite die Sie suchen gibt es nicht unter dieser Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen Sie zurück zu unserer Webseite."

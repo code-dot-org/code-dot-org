@@ -881,6 +881,250 @@
         "try/coursee/2021": {
           "word": "crwdns2710215:0crwdne2710215:0",
           "definition": "crwdns2710217:0crwdne2710217:0"
+        },
+        "machine_learning/csd/2021": {
+          "word": "crwdns2875130:0crwdne2875130:0",
+          "definition": "crwdns2875132:0crwdne2875132:0"
+        },
+        "features/csd/2021": {
+          "word": "crwdns2875244:0crwdne2875244:0",
+          "definition": "crwdns2875246:0crwdne2875246:0"
+        },
+        "label/csd/2021": {
+          "word": "crwdns2875248:0crwdne2875248:0",
+          "definition": "crwdns2875250:0crwdne2875250:0"
+        },
+        "model/csd/2021": {
+          "word": "crwdns2875252:0crwdne2875252:0",
+          "definition": "crwdns2875254:0crwdne2875254:0"
+        },
+        "supervised_learning/csd/2021": {
+          "word": "crwdns2875256:0crwdne2875256:0",
+          "definition": "crwdns2875258:0crwdne2875258:0"
+        },
+        "training/csd/2021": {
+          "word": "crwdns2875260:0crwdne2875260:0",
+          "definition": "crwdns2875262:0crwdne2875262:0"
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "crwdns2875264:0crwdne2875264:0",
+          "definition": "crwdns2875266:0crwdne2875266:0"
+        },
+        "categorical_data/csd/2021": {
+          "word": "crwdns2875566:0crwdne2875566:0",
+          "definition": "crwdns2875568:0crwdne2875568:0"
+        },
+        "classification/csd/2021": {
+          "word": "crwdns2875570:0crwdne2875570:0",
+          "definition": "crwdns2875572:0crwdne2875572:0"
+        },
+        "bias/csd/2021": {
+          "word": "crwdns2875920:0crwdne2875920:0",
+          "definition": "crwdns2875922:0crwdne2875922:0"
+        },
+        "numerical_data/csd/2021": {
+          "word": "crwdns2876356:0crwdne2876356:0",
+          "definition": "crwdns2876358:0crwdne2876358:0"
+        },
+        "ethics/csd/2021": {
+          "word": "crwdns2876506:0crwdne2876506:0",
+          "definition": "crwdns2876508:0crwdne2876508:0"
+        },
+        "usability/csd/2021": {
+          "word": "crwdns2870386:0crwdne2870386:0",
+          "definition": "crwdns2870388:0crwdne2870388:0"
+        },
+        "prototype/csd/2021": {
+          "word": "crwdns2873528:0crwdne2873528:0",
+          "definition": "crwdns2873534:0crwdne2873534:0"
+        },
+        "user_interface/csd/2021": {
+          "word": "crwdns2870660:0crwdne2870660:0",
+          "definition": "crwdns2870662:0crwdne2870662:0"
+        },
+        "bug/csd/2021": {
+          "word": "crwdns2868312:0crwdne2868312:0",
+          "definition": "crwdns2868314:0crwdne2868314:0"
+        },
+        "feature/csd/2021": {
+          "word": "crwdns2871850:0crwdne2871850:0",
+          "definition": "crwdns2871852:0crwdne2871852:0"
+        },
+        "analog/csd/2021": {
+          "word": "crwdns2872546:0crwdne2872546:0",
+          "definition": "crwdns2872548:0crwdne2872548:0"
+        },
+        "digital/csd/2021": {
+          "word": "crwdns2872550:0crwdne2872550:0",
+          "definition": "crwdns2872552:0crwdne2872552:0"
+        },
+        "array/csd/2021": {
+          "word": "crwdns2873066:0crwdne2873066:0",
+          "definition": "crwdns2873072:0crwdne2873072:0"
+        },
+        "for_loop/csd/2021": {
+          "word": "crwdns2873076:0crwdne2873076:0",
+          "definition": "crwdns2873080:0crwdne2873080:0"
+        },
+        "parameter/csd/2021": {
+          "word": "crwdns2868394:0crwdne2868394:0",
+          "definition": "crwdns2868396:0crwdne2868396:0"
+        },
+        "circuit/csd/2021": {
+          "word": "crwdns2873538:0crwdne2873538:0",
+          "definition": "crwdns2873542:0crwdne2873542:0"
+        },
+        "decode/csd/2021": {
+          "word": "crwdns2878060:0crwdne2878060:0",
+          "definition": "crwdns2878062:0crwdne2878062:0"
+        },
+        "encode/csd/2021": {
+          "word": "crwdns2878064:0crwdne2878064:0",
+          "definition": "crwdns2878066:0crwdne2878066:0"
+        },
+        "binary_system/csd/2021": {
+          "word": "crwdns2878138:0crwdne2878138:0",
+          "definition": "crwdns2878140:0crwdne2878140:0"
+        },
+        "ascii/csd/2021": {
+          "word": "crwdns2878142:0crwdne2878142:0",
+          "definition": "crwdns2878144:0crwdne2878144:0"
+        },
+        "bit/csd/2021": {
+          "word": "crwdns2878146:0crwdne2878146:0",
+          "definition": "crwdns2878148:0crwdne2878148:0"
+        },
+        "pixel/csd/2021": {
+          "word": "crwdns2878226:0crwdne2878226:0",
+          "definition": "crwdns2878228:0crwdne2878228:0"
+        },
+        "decrypt/csd/2021": {
+          "word": "crwdns2878486:0crwdne2878486:0",
+          "definition": "crwdns2878488:0crwdne2878488:0"
+        },
+        "encrypt/csd/2021": {
+          "word": "crwdns2878490:0crwdne2878490:0",
+          "definition": "crwdns2878492:0crwdne2878492:0"
+        },
+        "debugging/csd/2021": {
+          "word": "crwdns2868316:0crwdne2868316:0",
+          "definition": "crwdns2868318:0crwdne2868318:0"
+        },
+        "program/csd/2021": {
+          "word": "crwdns2868320:0crwdne2868320:0",
+          "definition": "crwdns2868322:0crwdne2868322:0"
+        },
+        "variable/csd/2021": {
+          "word": "crwdns2868482:0crwdne2868482:0",
+          "definition": "crwdns2868484:0crwdne2868484:0"
+        },
+        "property/csd/2021": {
+          "word": "crwdns2868718:0crwdne2868718:0",
+          "definition": "crwdns2868720:0crwdne2868720:0"
+        },
+        "sprite/csd/2021": {
+          "word": "crwdns2868658:0crwdne2868658:0",
+          "definition": "crwdns2868660:0crwdne2868660:0"
+        },
+        "dot_notation/csd/2021": {
+          "word": "crwdns2868662:0crwdne2868662:0",
+          "definition": "crwdns2868664:0crwdne2868664:0"
+        },
+        "condition/csd/2021": {
+          "word": "crwdns2869186:0crwdne2869186:0",
+          "definition": "crwdns2869188:0crwdne2869188:0"
+        },
+        "conditionals/csd/2021": {
+          "word": "crwdns2869326:0crwdne2869326:0",
+          "definition": "crwdns2869328:0crwdne2869328:0"
+        },
+        "boolean_expression/csd/2021": {
+          "word": "crwdns2869194:0crwdne2869194:0",
+          "definition": "crwdns2869196:0crwdne2869196:0"
+        },
+        "abstraction/csd/2021": {
+          "word": "crwdns2869810:0crwdne2869810:0",
+          "definition": "crwdns2869812:0crwdne2869812:0"
+        },
+        "function/csd/2021": {
+          "word": "crwdns2869952:0crwdne2869952:0",
+          "definition": "crwdns2869954:0crwdne2869954:0"
+        },
+        "computer/csd/2021": {
+          "word": "crwdns2881622:0crwdne2881622:0",
+          "definition": "crwdns2881624:0crwdne2881624:0"
+        },
+        "input/csd/2021": {
+          "word": "crwdns2881722:0crwdne2881722:0",
+          "definition": "crwdns2881724:0crwdne2881724:0"
+        },
+        "output/csd/2021": {
+          "word": "crwdns2881726:0crwdne2881726:0",
+          "definition": "crwdns2881728:0crwdne2881728:0"
+        },
+        "processing/csd/2021": {
+          "word": "crwdns2881846:0crwdne2881846:0",
+          "definition": "crwdns2881848:0crwdne2881848:0"
+        },
+        "storage/csd/2021": {
+          "word": "crwdns2881966:0crwdne2881966:0",
+          "definition": "crwdns2881968:0crwdne2881968:0"
+        },
+        "html/csd/2021": {
+          "word": "crwdns2879462:0crwdne2879462:0",
+          "definition": "crwdns2879464:0crwdne2879464:0"
+        },
+        "html_element/csd/2021": {
+          "word": "crwdns2879466:0crwdne2879466:0",
+          "definition": "crwdns2879468:0crwdne2879468:0"
+        },
+        "html_tag/csd/2021": {
+          "word": "crwdns2879470:0crwdne2879470:0",
+          "definition": "crwdns2879472:0crwdne2879472:0"
+        },
+        "website_content/csd/2021": {
+          "word": "crwdns2879474:0crwdne2879474:0",
+          "definition": "crwdns2879476:0crwdne2879476:0"
+        },
+        "website_structure/csd/2021": {
+          "word": "crwdns2879478:0crwdne2879478:0",
+          "definition": "crwdns2879480:0crwdne2879480:0"
+        },
+        "heading/csd/2021": {
+          "word": "crwdns2879594:0crwdne2879594:0",
+          "definition": "crwdns2879596:0crwdne2879596:0"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "crwdns2879776:0crwdne2879776:0",
+          "definition": "crwdns2879778:0crwdne2879778:0"
+        },
+        "css/csd/2021": {
+          "word": "crwdns2879894:0crwdne2879894:0",
+          "definition": "crwdns2879896:0crwdne2879896:0"
+        },
+        "css_selector/csd/2021": {
+          "word": "crwdns2879898:0crwdne2879898:0",
+          "definition": "crwdns2879900:0crwdne2879900:0"
+        },
+        "copyright/csd/2021": {
+          "word": "crwdns2880090:0crwdne2880090:0",
+          "definition": "crwdns2880092:0crwdne2880092:0"
+        },
+        "relevant/csd/2021": {
+          "word": "crwdns2880776:0crwdne2880776:0",
+          "definition": "crwdns2880778:0crwdne2880778:0"
+        },
+        "trustworthy/csd/2021": {
+          "word": "crwdns2880780:0crwdne2880780:0",
+          "definition": "crwdns2880782:0crwdne2880782:0"
+        },
+        "search_engine/csd/2021": {
+          "word": "crwdns2880784:0crwdne2880784:0",
+          "definition": "crwdns2880786:0crwdne2880786:0"
+        },
+        "css_class/csd/2021": {
+          "word": "crwdns2880848:0crwdne2880848:0",
+          "definition": "crwdns2880850:0crwdne2880850:0"
         }
       }
     }

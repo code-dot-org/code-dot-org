@@ -11,8 +11,11 @@
     <div><%= options.appStrings.sharingText %></div>
   <% } %>
 
-  <div>
+  <div id="sharing-input-container">
     <input type="text" id="sharing-input" value=<%= options.shareLink %> readonly>
+    <button id="sharing-input-copy-button">
+      <i class="fa fa-clipboard fa-lg"></i>
+    </button>
   </div>
   <div class='social-buttons'>
     <% if (options.facebookUrl) { -%>

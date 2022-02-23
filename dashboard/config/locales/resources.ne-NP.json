@@ -199,6 +199,30 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Implementation Guide"
+        },
+        "functions_2/csd/2021": {
+          "name": "Functions"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For Loops"
+        },
+        "for_loops/csd/2021": {
+          "name": "For Loops"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "भिडियोः Machine Learning"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variables"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Functions"
+        },
+        "functions_1/csd/2021": {
+          "name": "Functions"
+        },
+        "lists/csd/2021": {
+          "name": "Lists"
         }
       }
     }

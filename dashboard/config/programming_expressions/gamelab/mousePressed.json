@@ -1,6 +1,0 @@
-{
-  "key": "mousePressed",
-  "name": "mousePressed",
-  "category": "World",
-  "syntax": "function mousePressed() {}"
-}

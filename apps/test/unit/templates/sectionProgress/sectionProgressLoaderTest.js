@@ -246,7 +246,9 @@ describe('sectionProgressLoader.loadScript', () => {
             unitDataByUnit: [true],
             currentView: 0
           },
-          sectionData: {}
+          teacherSections: {
+            sections: {}
+          }
         };
       }
     });
@@ -278,6 +280,7 @@ describe('sectionProgressLoader.loadScript', () => {
     });
 
     it('refreshes the data if data already exists', () => {
+      const selectedSectionId = 5;
       addDataByUnitStub = sinon.stub(sectionProgress, 'addDataByUnit');
       reduxStub.returns({
         getState: () => {
@@ -287,10 +290,12 @@ describe('sectionProgressLoader.loadScript', () => {
               unitDataByUnit: [true],
               currentView: 0
             },
-            sectionData: {
-              section: {
-                students: ['student']
-              }
+            teacherSections: {
+              selectedSectionId: selectedSectionId,
+              sections: {
+                [selectedSectionId]: {}
+              },
+              selectedStudents: [{id: 1}]
             }
           };
         },
@@ -302,7 +307,7 @@ describe('sectionProgressLoader.loadScript', () => {
         })
       });
 
-      loadScriptProgress(0, 0);
+      loadScriptProgress(0, selectedSectionId);
       expect(startLoadingProgressStub).to.have.not.been.called;
       expect(startRefreshingProgressStub).to.have.been.calledOnce;
       expect(addDataByUnitStub).to.have.been.calledOnce;
@@ -311,6 +316,7 @@ describe('sectionProgressLoader.loadScript', () => {
     });
 
     it('handles multiple pages of data', () => {
+      const selectedSectionId = 5;
       reduxStub.returns({
         getState: () => {
           return {
@@ -320,10 +326,12 @@ describe('sectionProgressLoader.loadScript', () => {
               unitDataByUnit: [],
               currentView: 0
             },
-            sectionData: {
-              section: {
-                students: new Array(60)
-              }
+            teacherSections: {
+              selectedSectionId: selectedSectionId,
+              sections: {
+                [selectedSectionId]: {}
+              },
+              selectedStudents: new Array(60)
             }
           };
         },
@@ -347,12 +355,13 @@ describe('sectionProgressLoader.loadScript', () => {
           then: sinon.stub().callsArgWith(0, secondServerProgressResponse)
         })
       });
-      loadScriptProgress(123, 0);
+      loadScriptProgress(123, selectedSectionId);
       expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
       progressHelpers.processedLevel.restore();
     });
 
     describe('the first time', () => {
+      const selectedSectionId = 5;
       let lessonExtras = true;
       beforeEach(() => {
         reduxStub.returns({
@@ -363,11 +372,14 @@ describe('sectionProgressLoader.loadScript', () => {
                 unitDataByUnit: [],
                 currentView: 0
               },
-              sectionData: {
-                section: {
-                  students: ['student'],
-                  lessonExtras: lessonExtras
-                }
+              teacherSections: {
+                selectedSectionId: selectedSectionId,
+                sections: {
+                  [selectedSectionId]: {
+                    lessonExtras: lessonExtras
+                  }
+                },
+                selectedStudents: [{id: 1}]
               }
             };
           },
@@ -383,7 +395,7 @@ describe('sectionProgressLoader.loadScript', () => {
           })
         });
 
-        loadScriptProgress(0, 0);
+        loadScriptProgress(0, selectedSectionId);
         expect(startLoadingProgressStub).to.have.been.calledOnce;
         expect(startRefreshingProgressStub).to.have.not.been.called;
         expect(addDataByUnitStub).to.have.been.calledOnce;
@@ -428,7 +440,7 @@ describe('sectionProgressLoader.loadScript', () => {
             then: sinon.stub().callsArgWith(0, {})
           })
         });
-        loadScriptProgress(0, 0);
+        loadScriptProgress(0, selectedSectionId);
         expect(addDataByUnitStub).to.have.been.calledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });
@@ -446,7 +458,7 @@ describe('sectionProgressLoader.loadScript', () => {
             then: sinon.stub().callsArgWith(0, serverProgressResponse)
           })
         });
-        loadScriptProgress(123, 0);
+        loadScriptProgress(123, selectedSectionId);
         expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });
@@ -469,7 +481,7 @@ describe('sectionProgressLoader.loadScript', () => {
             then: sinon.stub().callsArgWith(0, serverProgressResponse)
           })
         });
-        loadScriptProgress(123, 0);
+        loadScriptProgress(123, selectedSectionId);
         expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });
@@ -497,7 +509,7 @@ describe('sectionProgressLoader.loadScript', () => {
             then: sinon.stub().callsArgWith(0, serverProgressResponse)
           })
         });
-        loadScriptProgress(123, 0);
+        loadScriptProgress(123, selectedSectionId);
         expect(addDataByUnitStub).to.have.been.calledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });

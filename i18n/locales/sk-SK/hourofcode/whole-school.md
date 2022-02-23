@@ -4,6 +4,6 @@ title: Účasť celej školy
 
 {{ signup_button }}
 
-# Get your whole school to participate
+# Zapojte do Hodiny kódu celú školu
 
-Information about getting whole schools to participate in the Hour of Code will go here.
+Tu pribudnú informácie o tom, ako do Hodiny kódu zapojiť celú školu.
