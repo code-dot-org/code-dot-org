@@ -18,15 +18,6 @@
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
-    "announcements": [
-      {
-        "notice": "Panel Today: A Day in the Life of a Woman College Student in CS",
-        "details": "Join us tonight at 8pm EDT as college women share their experiences as computer science majors. We will discuss classes to take in HS to be prepared for college courses, what classes are like, navigating impostor syndrome and anything you would like to discuss! ",
-        "link": "https://bit.ly/3v9qFAw",
-        "type": "bullhorn",
-        "visibility": "Teacher and student"
-      }
-    ],
     "family_name": "csp",
     "has_numbered_units": true,
     "version_year": "2021"
