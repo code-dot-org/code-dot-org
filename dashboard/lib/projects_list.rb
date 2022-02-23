@@ -33,7 +33,7 @@ module ProjectsList
     def fetch_personal_projects(user_id)
       personal_projects_list = []
       storage_id = storage_id_for_user_id(user_id)
-      PEGASUS_DB[:storage_apps].where(storage_id: storage_id, state: 'active').each do |project|
+      StorageApps.new(storage_id).get_active_projects.each do |project|
         channel_id = storage_encrypt_channel_id(storage_id, project[:id])
         project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
@@ -73,7 +73,7 @@ module ProjectsList
         student_storage_ids = get_storage_ids_by_user_ids(section_students.pluck(:id))
         section_students.each do |student|
           next unless student_storage_id = student_storage_ids[student.id]
-          PEGASUS_DB[:storage_apps].where(storage_id: student_storage_id, state: 'active').each do |project|
+          StorageApps.new(student_storage_id).get_active_projects.each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
             channel_id = storage_encrypt_channel_id(student_storage_id, project[:id])
@@ -185,7 +185,8 @@ module ProjectsList
       return [] if project_ids.nil_or_empty?
 
       updated_library_channels = []
-      PEGASUS_DB[:storage_apps].where(id: project_ids).each do |project|
+
+      StorageApps.get_by_ids(project_ids).each do |project|
         library = libraries.find {|lib| lib['project_id'] == project[:id]}
         project_value = JSON.parse(project[:value])
         next unless library && project_value['latestLibraryVersion']
