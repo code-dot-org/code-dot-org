@@ -78,20 +78,20 @@
     "map_reference": "/docs/concepts/maker-toolkit/physical-input/",
     "mini_rubric": "false",
     "encrypted": "false",
-    "preload_asset_list": null,
-    "start_blocks": "// Set the speed of the motorcycle\r\nvar mspeed = 10;\r\n\r\n// Move the motorcycle up when the left button is clicked\r\nonBoardEvent( buttonL, \"press\", function() {\r\n  var y = getProperty(\"motorcycle\", \"y\");\r\n  setProperty(\"motorcycle\", \"y\", y - mspeed);\r\n});\r\n\r\n// Move the motorcycle down when right button is clicked\r\n",
-    "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair clip-content\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><img data-canonical-image-url=\"icon://fa-motorcycle\" id=\"motorcycle\" style=\"height: 100px; width: 100px; position: absolute; top: 175px; margin: 0px; left: 105px;\" data-icon-color=\"#ff0000\"></div></div>",
+    "start_blocks": "// Set the speed of the motorcycle\nvar mspeed = 10;\n\n// Move the motorcycle up when the left button is clicked\nonBoardEvent( buttonL, \"press\", function() {\n  var y = getProperty(\"motorcycle\", \"y\");\n  setProperty(\"motorcycle\", \"y\", y - mspeed);\n});\n\n//Add code to program the right button to make the motorcycle go down\n// Move the motorcycle down when right button is clicked\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><img data-canonical-image-url=\"icon://fa-motorcycle\" id=\"motorcycle\" style=\"height: 100px; width: 100px; position: absolute; top: 175px; margin: 0px; left: 105px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px;\" data-icon-color=\"#ff0000\" data-image-type=\"icon\"></div></div>",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 41,
-  "published": true,
   "created_at": "2021-08-31T21:16:13.000Z",
   "level_num": "custom",
   "user_id": 1,
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T21:16:13.143+00:00\",\"changed\":[\"cloned from \\\"CSD U6 move motorcycle_2021\\\"\"],\"cloned_from\":\"CSD U6 move motorcycle_2021\"},{\"changed_at\":\"2021-08-31 21:17:23 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-08-31 21:18:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T21:16:13.143+00:00\",\"changed\":[\"cloned from \\\"CSD U6 move motorcycle_2021\\\"\"],\"cloned_from\":\"CSD U6 move motorcycle_2021\"},{\"changed_at\":\"2021-08-31 21:17:23 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-08-31 21:18:09 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-21 06:10:44 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
   <blocks/>
 </Applab>
