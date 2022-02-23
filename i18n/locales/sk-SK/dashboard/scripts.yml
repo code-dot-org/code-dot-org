@@ -217,7 +217,7 @@ sk:
             Artist Binary:
               name: Binárny Umelec
             'Artist: For Loops':
-              name: 'Umelec: Cykly "for"'
+              name: 'Umelec: Cykly "pre"'
             'Artist: Functions':
               name: 'Umelec: Funkcie'
             'Artist: Functions with Parameters':
@@ -225,7 +225,7 @@ sk:
             'Artist: Variables':
               name: 'Umelec: Premenné'
             'Bee: For Loops':
-              name: 'Včela: Cykly "for"'
+              name: 'Včela: Cykly "pre"'
             'Bee: Functions with Parameters':
               name: 'Včela: Funkcie s parametrami'
             Extreme Challenge - Comprehensive:
@@ -233,13 +233,13 @@ sk:
             Maze and Bee:
               name: Bludisko a včela
             'Play Lab: For Loops':
-              name: 'Play Lab: Cykly "for"'
+              name: 'Play Lab: Cykly "pre"'
             'Play Lab: Functions with Parameters':
               name: 'Play Lab: Funkcie s parametrami'
             'Play Lab: Variables':
               name: 'Play Lab: Premenné'
             Super Challenge - For Loops:
-              name: Super výzva - Cykly "for"
+              name: Super výzva - Cykly "pre"
             Super Challenge - Functions and Parameters:
               name: Super výzva - funkcie a parametre
             Super Challenge - Variables:
@@ -286,7 +286,7 @@ sk:
             Binary:
               name: Binárny
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             Functions and Functions with Parameters:
               name: Funkcie a funkcie s parametrami
             Intro:
@@ -1659,13 +1659,13 @@ sk:
           description_audience: Vek 10-110
           lessons:
             'Artist: For Loops':
-              name: 'Umelec: Cykly "for"'
+              name: 'Umelec: Cykly "pre"'
             'Artist: Functions with Parameters':
               name: 'Umelec: Funkcie s parametrami'
             'Artist: Variables':
               name: 'Umelec: Premenné'
             'Bee: For Loops':
-              name: 'Včela: Cykly "for"'
+              name: 'Včela: Cykly "pre"'
             'Bee: Functions with Parameters':
               name: 'Včela: Funkcie s parametrami'
             Digital Citizenship:
@@ -1929,7 +1929,7 @@ sk:
             Events:
               name: Udalosti
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             Functions:
               name: Funkcie
             Functions with Parameters:
@@ -2308,9 +2308,9 @@ sk:
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             'Functions with Parameters: Songwriting with Parameters':
               name: 'Funkcie s parametrami: Písanie pesničiek s parametrami'
             Functions with Parameters in Artist:
@@ -2477,7 +2477,7 @@ sk:
             Lists:
               name: Zoznamy
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             Map:
               name: Mapa
             Arrays:
@@ -2535,7 +2535,7 @@ sk:
             Lists:
               name: Zoznamy
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             Arrays:
               name: Rady
             Functions with Parameters:
@@ -2958,9 +2958,9 @@ sk:
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Conditionals and Functions in Bee:
@@ -3076,9 +3076,9 @@ sk:
             For Loop Fun:
               name: 'Cykly "for": Zábava s cyklami "for"'
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
               description_student: Priprav sa na tvoje ďalsie majstrovské dielo. Budeš používať "pre" cykly. Všetkým z tvojich obrázkov padne sánka.
               description_teacher: V tejto lekcii, s pomocou Umelca, študenti pokračujú v precvičovaní cyklov. V úlohách skombinujú premenné, cykly a cykly "for" na to, aby vytvorili komplexné kresby. Lekcia končí voľným cvičením na vytvorenie vlastnej kresby.
             Songwriting with Parameters:
@@ -3270,9 +3270,9 @@ sk:
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions in Bee:
@@ -3551,9 +3551,9 @@ sk:
             'For Loops: For Loop Fun':
               name: 'Cykly "for": Zábava s cyklami "for"'
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             'Functions: Songwriting with Parameters':
               name: 'Funkcie: Písanie pesničiek s parametrami'
             Functions in Bee:
@@ -3679,9 +3679,9 @@ sk:
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions in Bee:
@@ -3888,9 +3888,9 @@ sk:
             For Loop Fun:
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             Songwriting with Parameters:
               name: Písanie pesničiek s parametrami
             Functions in Bee:
@@ -3917,7 +3917,7 @@ sk:
             Lists:
               name: Zoznamy
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
         csd3-1819draft:
           lesson_groups:
             csd3_1:
@@ -5120,7 +5120,7 @@ sk:
             csf_data:
               display_name: Dáta
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -5488,7 +5488,7 @@ sk:
             csf_variables:
               display_name: Premenné
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_sprites:
               display_name: Objekt "sprite"
           lessons:
@@ -6822,7 +6822,7 @@ sk:
             Variables:
               name: Premenné
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             End-of-course projects:
               name: Záverečné projekty
             End of Course projects:
@@ -7732,7 +7732,7 @@ sk:
             csf_data:
               display_name: Dáta
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_sprites:
               display_name: Objekt "sprite"
             end_of_course_project:
@@ -7818,7 +7818,7 @@ sk:
             csf_variables:
               display_name: Premenné
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_sprites:
               display_name: Objekt "sprite"
             end_of_course_project:
@@ -7859,9 +7859,9 @@ sk:
             Functions in Artist:
               name: Funkcie s Umelcom
             For Loops in Bee:
-              name: Cykly "for" s včelou
+              name: Cykly "pre" s včelou
             For Loops in Artist:
-              name: Cykly "for" s Umelcom
+              name: Cykly "pre" s Umelcom
             Alien Dance Party with Sprite Lab:
               name: Mimozemská tanečná párty so Sprite Labom
             Virtual Pet with Sprite Lab:
@@ -8102,7 +8102,7 @@ sk:
             Variables:
               name: Premenné
             For Loops:
-              name: Cykly "For"
+              name: Cykly "Pre"
             Sprite Lab:
               name: Sprite Lab
           lesson_groups:
@@ -9134,12 +9134,12 @@ sk:
               key: Zábava s cyklami "for"
               name: Zábava s cyklami "for"
             For Loops in Bee:
-              key: Cykly "for" s včelou
+              key: Cykly "pre" s včelou
               name: Cykly "for" s včelou
               description_student: V týchto úlohách pomôžeš včele zbierať nektár a vyrábať med pomocou cyklov „for“!
               description_teacher: Táto lekcia zameraná na **budovanie zručností** sa zameriava na cykly a používanie riadiacej premennej na riešenie zložitejších úloh.
             For Loops in Artist:
-              key: Cykly "for" s Umelcom
+              key: Cykly "pre" s Umelcom
               name: Cykly "for" s Umelcom
               description_student: Priprav sa na tvoje ďalšie majstrovské dielo. Budeš používať cykly „pre“. Všetkým z tvojich obrázkov padne sánka.
               description_teacher: V tejto lekcii zameranej na **budovanie zručností** si žiaci precvičia cykly „for“ s Umelcom. V úlohách budú vytvárať komplexné návrhy a jedinečné umenie.
@@ -9189,9 +9189,9 @@ sk:
             csf_digcit:
               display_name: Digitálne občianstvo
             csf_variables:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_sprites:
               display_name: Vplyv Informatiky
             end_of_course_project:
@@ -9362,7 +9362,7 @@ sk:
             csf_variables:
               display_name: Premenné
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             csf_sprites:
               display_name: Objekt "sprite"
             end_of_course_project:
@@ -9664,8 +9664,8 @@ sk:
               key: Premenné
               name: Premenné
             For Loops:
-              key: Cykly "For"
-              name: Cykly "For"
+              key: Cykly "Pre"
+              name: Cykly "Pre"
             Sprite Lab:
               key: Sprite Lab
             Getting Started:
@@ -11082,7 +11082,7 @@ sk:
             csf_variables:
               display_name: Premenné
             csf_for_loops:
-              display_name: Cykly "For"
+              display_name: Cykly "Pre"
             end_of_course_project:
               display_name: Záverečný projekt
           description_audience: 'Vek: 9-18'
@@ -11719,12 +11719,12 @@ sk:
               description_student: Táto včela miluje premenné!
               description_teacher: Táto lekcia na **budovanie zručností** žiakom pomôže pochopiť, ako sa pomocou premenných vytvárajú dynamickejšie programy, keďže umožňujú menenie hodnôt aj po spustení programu.
             For Loops in Bee:
-              key: Cykly "for" s včelou
+              key: Cykly "pre" s včelou
               name: Cykly "for" s včelou
               description_student: V týchto úlohách pomôžeš včele zbierať nektár a vyrábať med pomocou cyklov „for“!
               description_teacher: Táto lekcia zameraná na **budovanie zručností** sa zameriava na cykly a používanie riadiacej premennej na riešenie zložitejších úloh.
             For Loops in Artist:
-              key: Cykly "for" s Umelcom
+              key: Cykly "pre" s Umelcom
               name: Cykly "for" s Umelcom
               description_student: Priprav sa na tvoje ďalšie majstrovské dielo. Budeš používať cykly „pre“. Všetkým z tvojich obrázkov padne sánka.
               description_teacher: V tejto lekcii zameranej na **budovanie zručností** si žiaci precvičia cykly „for“ s Umelcom. V úlohách budú vytvárať komplexné návrhy a jedinečné umenie.
