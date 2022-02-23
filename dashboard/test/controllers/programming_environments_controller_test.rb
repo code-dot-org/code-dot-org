@@ -124,5 +124,15 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
     test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
     test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :show, params: -> {{name: @programming_environment.name}}, user: nil, response: :success
+    test_user_gets_response_for :show, params: -> {{name: @programming_environment.name}}, user: :student, response: :success
+    test_user_gets_response_for :show, params: -> {{name: @programming_environment.name}}, user: :teacher, response: :success
+    test_user_gets_response_for :show, params: -> {{name: @programming_environment.name}}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :index, user: nil, response: :success
+    test_user_gets_response_for :index, user: :student, response: :success
+    test_user_gets_response_for :index, user: :teacher, response: :success
+    test_user_gets_response_for :index, user: :levelbuilder, response: :success
   end
 end

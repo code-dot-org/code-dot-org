@@ -1,7 +1,7 @@
 class ProgrammingExpressionsController < ApplicationController
   load_and_authorize_resource
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:search]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:search, :show]
 
   # GET /programming_expressions/search
   def search
@@ -59,16 +59,17 @@ class ProgrammingExpressionsController < ApplicationController
     end
   end
 
-  def show
+  def show_by_id
     if params[:id]
       @programming_expression = ProgrammingExpression.find(params[:id])
       return render :not_found unless @programming_expression
+      return render :show if @programming_expression
     else
       render :not_found
     end
   end
 
-  def show_by_keys
+  def show
     if params[:programming_environment_name] && params[:programming_expression_key]
       @programming_expression = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_expressions&.find_by_key(params[:programming_expression_key])
       return render :show if @programming_expression
