@@ -46,7 +46,6 @@ const TeacherApplication = props => {
     }
   };
 
-  // [MEG] TODO: Should started-teacher-application be sent if they're coming back to a saved app?
   const onInitialize = () => {
     // Log the user ID to firehose.
     firehoseClient.putRecord(
@@ -66,6 +65,28 @@ const TeacherApplication = props => {
   const onSuccessfulSubmit = () => {
     // Let the server display a confirmation page as appropriate
     window.location.reload(true);
+
+    // Log the user ID to firehose.
+    firehoseClient.putRecord(
+      {
+        user_id: userId,
+        study: 'application-funnel',
+        event: 'submitted-teacher-application'
+      },
+      {includeUserId: false}
+    );
+  };
+
+  const onSuccessfulSave = () => {
+    // Log the user ID to firehose.
+    firehoseClient.putRecord(
+      {
+        user_id: userId,
+        study: 'application-funnel',
+        event: 'saved-teacher-application'
+      },
+      {includeUserId: false}
+    );
   };
 
   // [MEG] TODO: Should a different GA link be sent if they're working on a saved application?
@@ -92,6 +113,7 @@ const TeacherApplication = props => {
       onSetPage={onSetPage}
       onInitialize={onInitialize}
       onSuccessfulSubmit={onSuccessfulSubmit}
+      onSuccessfulSave={onSuccessfulSave}
       sessionStorageKey={sessionStorageKey}
       submitButtonText={submitButtonText}
       validateOnSubmitOnly={true}
