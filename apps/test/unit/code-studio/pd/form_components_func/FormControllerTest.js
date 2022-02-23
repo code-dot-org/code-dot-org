@@ -248,7 +248,9 @@ describe('FormController', () => {
       });
 
       it('Shows saved message alert after saving is complete, and user can close it', () => {
-        form = isolateComponent(<FormController {...defaultProps} />);
+        form = isolateComponent(
+          <FormController {...defaultProps} applicationId={applicationId} />
+        );
 
         const server = sinon.fakeServer.create();
         server.respondWith([
