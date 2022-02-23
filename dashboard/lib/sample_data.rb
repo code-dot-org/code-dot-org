@@ -228,7 +228,7 @@ class SampleData
     end
   end
 
-  # For the given user id, looks up the storage id, or creates a new one if the user doesn't have one.
+  # Look up or create a storage id for the sample data (used for testing purposes)
   def self.find_or_create_storage_id_for_user_id(user_id)
     environment_check!
     storage_id = storage_id_for_user_id(user_id)
