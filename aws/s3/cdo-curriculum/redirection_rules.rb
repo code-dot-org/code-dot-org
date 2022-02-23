@@ -71,6 +71,26 @@ routing_rules = [
   },
   {
     condition: {
+      key_prefix_equals: "hoc/"
+    },
+    redirect: {
+      host_name: CODE_STUDIO_HOST_NAME,
+      replace_key_prefix_with: "learn/"
+    }
+  },
+  {
+    condition: {
+      key_prefix_equals: "hoc-current/"
+    },
+    redirect: {
+      host_name: CODE_STUDIO_HOST_NAME,
+      replace_key_prefix_with: "learn/",
+      http_redirect_code: "302"
+    }
+  },
+
+  {
+    condition: {
       key_prefix_equals: "plcsf/"
     },
     redirect: {
