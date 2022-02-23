@@ -78,7 +78,6 @@ const TeacherApplication = props => {
     !savedStatus && sendFirehoseEvent(userId, 'saved-teacher-application');
   };
 
-  // [MEG] TODO: Should a different GA link be sent if they're working on a saved application?
   const onSetPage = newPage => {
     const nominated = queryString.parse(window.location.search).nominated;
 
@@ -87,6 +86,9 @@ const TeacherApplication = props => {
     url += newPage + 1;
     if (nominated) {
       url += '?nominated=true';
+    }
+    if (savedStatus === 'incomplete') {
+      url += '?returned=true';
     }
 
     ga('set', 'page', url);
