@@ -36,6 +36,7 @@ const TeacherApplication = props => {
     savedFormData,
     accountEmail,
     userId,
+    savedStatus,
     schoolId
   } = props;
 
@@ -73,7 +74,8 @@ const TeacherApplication = props => {
   };
 
   const onSuccessfulSave = () => {
-    sendFirehoseEvent(userId, 'saved-teacher-application');
+    // only send firehose event on the first save of the teacher application
+    !savedStatus && sendFirehoseEvent(userId, 'saved-teacher-application');
   };
 
   // [MEG] TODO: Should a different GA link be sent if they're working on a saved application?
