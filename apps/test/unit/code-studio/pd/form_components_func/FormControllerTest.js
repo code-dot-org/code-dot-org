@@ -138,6 +138,24 @@ describe('FormController', () => {
       });
     });
 
+    it('Never shows save button if status is reopened', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          allowPartialSaving={true}
+          validateOnSubmitOnly={true}
+          savedStatus={'reopened'}
+        />
+      );
+      [0, 1, 2].forEach(page => {
+        setPage(page);
+        const buttons = form.findAll('Button');
+        buttons.forEach(button =>
+          expect(button.content()).not.to.eql(saveButtonText)
+        );
+      });
+    });
+
     it('Shows data was loaded message given application id, and user can close message', () => {
       form = isolateComponent(
         <FormController
