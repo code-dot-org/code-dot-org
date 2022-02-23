@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import CodeDocLink from '@cdo/apps/templates/codeDocs/CodeDocLink';
+import i18n from '@cdo/locale';
 
 export function CategorySection({category}) {
   return (
@@ -34,6 +35,11 @@ export default function ProgrammingEnvironmentOverview({
       {programmingEnvironment.title && <h1>{programmingEnvironment.title}</h1>}
       {programmingEnvironment.description && (
         <EnhancedSafeMarkdown markdown={programmingEnvironment.description} />
+      )}
+      {programmingEnvironment.projectUrl && (
+        <div>
+          <a href={programmingEnvironment.projectUrl}>{i18n.tryItOut()}</a>
+        </div>
       )}
       {programmingEnvironment.categories.map(category => (
         <CategorySection key={category.key} category={category} />
