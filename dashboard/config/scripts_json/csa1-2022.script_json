@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-21 20:27:18 UTC",
+    "serialized_at": "2022-02-23 14:20:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3160,7 +3160,7 @@
       "key": "85ae7d08-f221-404d-af64-557293dfa08f",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for one of the choice problems and add their new method to the `PainterPlus` UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding on Level 2, then continue to complete a choice level on Level 3 to implement their algorithm for their chosen problem in the **PainterPlus** class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for the methods and add them to the `PainterPlus` UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to complete Levels 3 and 4 to implement their algorithms in the `PainterPlus` class.",
         "progression_name": "Using Loops and Boolean Methods"
       },
       "seeding_key": {
@@ -3207,8 +3207,8 @@
       "key": "e629dc77-e83e-4d18-a842-fc2e8ac56e3e",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *efficient*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on their chosen problem on Level 4.",
-        "progression_name": "Code Review: New PainterPlus Method"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *efficient*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 5.",
+        "progression_name": "Code Review: New PainterPlus Methods"
       },
       "seeding_key": {
         "activity_section.key": "e629dc77-e83e-4d18-a842-fc2e8ac56e3e",
@@ -3360,7 +3360,7 @@
       "key": "39f7b3a8-544e-4042-b7c0-61b3f88c06c1",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing pseudocode for an algorithm using an `if-else` statement and the NOT ( `!` ) logical operator.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Using Two-Way Selection and NOT handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for one of the choice problems and add their new method to the `PainterPlus` UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding on Level 2, then continue to complete a choice level on Level 3 to implement their algorithm for their chosen problem in the `PainterPlus` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate writing pseudocode for an algorithm using an `if-else` statement and the NOT ( `!` ) logical operator.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Using Two-Way Selection and NOT handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write pseudocode for the methods and add them to the `PainterPlus` UML diagram on the Unit 1 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to complete Levels 3 and 4 to implement their algorithms in the `PainterPlus` class.",
         "progression_name": "Using Two-Way Selection and NOT"
       },
       "seeding_key": {
@@ -3407,8 +3407,8 @@
       "key": "aceee5c9-27bd-4db5-a477-06a0fb9554c7",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on their chosen problem on Level 4.",
-        "progression_name": "Code Review: New PainterPlus Method"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 5.",
+        "progression_name": "Code Review: New PainterPlus Methods"
       },
       "seeding_key": {
         "activity_section.key": "aceee5c9-27bd-4db5-a477-06a0fb9554c7",
@@ -5239,6 +5239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L1_2022"
+        ],
         "progression": "Java Basics"
       },
       "bonus": false,
@@ -5261,6 +5264,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L2_2022"
+        ],
         "progression": "Java Basics"
       },
       "bonus": false,
@@ -5283,6 +5289,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L3_2022"
+        ],
         "progression": "Java Basics"
       },
       "bonus": false,
@@ -5305,6 +5314,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L4_2022"
+        ],
         "progression": "Java Basics"
       },
       "bonus": false,
@@ -5327,6 +5339,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5349,6 +5364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L1_2022"
+        ],
         "progression": "Create the Painter Object"
       },
       "bonus": false,
@@ -5371,6 +5389,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L2_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5393,6 +5414,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L1_2022"
+        ],
         "progression": "Predict: Painter Class Methods"
       },
       "bonus": false,
@@ -5415,6 +5439,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2_2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5437,6 +5464,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L3_2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5459,6 +5489,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L4_2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5481,6 +5514,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L5_2022"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,
@@ -5503,6 +5539,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5525,6 +5564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1_2022"
+        ],
         "progression": "Predict: Conditionals and More Methods"
       },
       "bonus": false,
@@ -5547,6 +5589,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2_2022"
+        ],
         "progression": "Conditional Moving and Painting"
       },
       "bonus": false,
@@ -5569,6 +5614,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3_2022"
+        ],
         "progression": "Conditional Moving and Painting"
       },
       "bonus": false,
@@ -5591,6 +5639,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5613,6 +5664,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L1_2022"
+        ],
         "progression": "Creating PainterPlus"
       },
       "bonus": false,
@@ -5635,6 +5689,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L2_2022"
+        ],
         "progression": "Creating PainterPlus"
       },
       "bonus": false,
@@ -5657,6 +5714,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L3_2022"
+        ],
         "progression": "Creating PainterPlus"
       },
       "bonus": false,
@@ -5679,6 +5739,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5701,6 +5764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L1_2022"
+        ],
         "progression": "Writing and Using a New Method"
       },
       "bonus": false,
@@ -5723,6 +5789,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2_2022"
+        ],
         "progression": "Writing and Using a New Method"
       },
       "bonus": false,
@@ -5745,6 +5814,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L3_2022"
+        ],
         "progression": "Writing and Using a New Method"
       },
       "bonus": false,
@@ -5767,6 +5839,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5789,6 +5864,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L1_2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -5811,6 +5889,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L2_2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -5833,6 +5914,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L3_2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -5855,6 +5939,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L4_2022"
+        ],
         "progression": "Programming Style, Commits, and the Backpack"
       },
       "bonus": false,
@@ -5877,6 +5964,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L5_2022"
+        ],
         "progression": "Conducting a Code Review"
       },
       "bonus": false,
@@ -5899,6 +5989,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5921,6 +6014,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L1_2022"
+        ],
         "progression": "Predict: More Boolean Methods"
       },
       "bonus": false,
@@ -5943,6 +6039,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L2_2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -5970,7 +6069,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L9-L3_2022"
+          "CSA U1L9-L3v2_2022"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -5978,21 +6077,43 @@
         "activity_section.key": "85ae7d08-f221-404d-af64-557293dfa08f"
       },
       "level_keys": [
-        "CSA U1L9-L3_2022"
+        "CSA U1L9-L3v2_2022"
       ]
     },
     {
       "chapter": 35,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Code Review: New PainterPlus Method"
+        "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L9-L4 CR_2022"
+          "CSA U1L9-L4v2_2022"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022",
+        "activity_section.key": "85ae7d08-f221-404d-af64-557293dfa08f"
+      },
+      "level_keys": [
+        "CSA U1L9-L4v2_2022"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Review: New PainterPlus Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L9-L5 CR_2022"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -6000,12 +6121,12 @@
         "activity_section.key": "e629dc77-e83e-4d18-a842-fc2e8ac56e3e"
       },
       "level_keys": [
-        "CSA U1L9-L4 CR_2022"
+        "CSA U1L9-L5 CR_2022"
       ]
     },
     {
-      "chapter": 36,
-      "position": 5,
+      "chapter": 37,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6014,7 +6135,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L9-L35_2022"
+          "CSA U1L9-L6_2022"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -6022,15 +6143,18 @@
         "activity_section.key": "22361a02-9c7a-4a6b-be5d-e91f879993da"
       },
       "level_keys": [
-        "CSA U1L9-L35_2022"
+        "CSA U1L9-L6_2022"
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L1_2022"
+        ],
         "progression": "Predict: Selection and Logic"
       },
       "bonus": false,
@@ -6048,11 +6172,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L2_2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6070,7 +6197,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6080,7 +6207,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L10-L3_2022"
+          "CSA U1L10-L3v2_2022"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
@@ -6088,21 +6215,43 @@
         "activity_section.key": "39f7b3a8-544e-4042-b7c0-61b3f88c06c1"
       },
       "level_keys": [
-        "CSA U1L10-L3_2022"
+        "CSA U1L10-L3v2_2022"
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Code Review: New PainterPlus Method"
+        "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L10-L4 CR_2022"
+          "CSA U1L10-L4v2_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022",
+        "activity_section.key": "39f7b3a8-544e-4042-b7c0-61b3f88c06c1"
+      },
+      "level_keys": [
+        "CSA U1L10-L4v2_2022"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code Review: New PainterPlus Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1L10-L5 CR_2022"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
@@ -6110,12 +6259,12 @@
         "activity_section.key": "aceee5c9-27bd-4db5-a477-06a0fb9554c7"
       },
       "level_keys": [
-        "CSA U1L10-L4 CR_2022"
+        "CSA U1L10-L5 CR_2022"
       ]
     },
     {
-      "chapter": 41,
-      "position": 5,
+      "chapter": 43,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6124,7 +6273,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L10-L5 Exemplar_2022"
+          "CSA U1L10-L6_2022"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
@@ -6132,15 +6281,18 @@
         "activity_section.key": "78583f0f-8bb6-47e4-9c17-cf58d392f4cb"
       },
       "level_keys": [
-        "CSA U1L10-L5 Exemplar_2022"
+        "CSA U1L10-L6_2022"
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1_2022"
+        ],
         "progression": "Debugging with PainterPlus"
       },
       "bonus": false,
@@ -6158,11 +6310,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L2_2022"
+        ],
         "progression": "Debugging with PainterPlus"
       },
       "bonus": false,
@@ -6180,11 +6335,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L3_2022"
+        ],
         "progression": "Debugging with PainterPlus"
       },
       "bonus": false,
@@ -6202,11 +6360,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L4_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6224,11 +6385,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L1_2022"
+        ],
         "progression": "Exploring Decomposition"
       },
       "bonus": false,
@@ -6246,11 +6410,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L2_2022"
+        ],
         "progression": "Exploring Decomposition"
       },
       "bonus": false,
@@ -6268,11 +6435,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L3_2022"
+        ],
         "progression": "More PainterPlus Methods"
       },
       "bonus": false,
@@ -6290,11 +6460,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L4 CR_2022"
+        ],
         "progression": "Code Review: More PainterPlus Methods"
       },
       "bonus": false,
@@ -6312,11 +6485,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6334,11 +6510,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L1_2022"
+        ],
         "progression": "PatternPainter"
       },
       "bonus": false,
@@ -6356,11 +6535,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L2_2022"
+        ],
         "progression": "PatternPainter"
       },
       "bonus": false,
@@ -6378,11 +6560,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L3_2022"
+        ],
         "progression": "PatternPainter"
       },
       "bonus": false,
@@ -6400,11 +6585,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L4_2022"
+        ],
         "progression": "Code Review: PatternPainter"
       },
       "bonus": false,
@@ -6422,11 +6610,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L13-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6444,11 +6635,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L1_2022"
+        ],
         "progression": "BackgroundPainter"
       },
       "bonus": false,
@@ -6466,11 +6660,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L2_2022"
+        ],
         "progression": "BackgroundPainter"
       },
       "bonus": false,
@@ -6488,11 +6685,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L3_2022"
+        ],
         "progression": "BackgroundPainter"
       },
       "bonus": false,
@@ -6510,11 +6710,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L4_2022"
+        ],
         "progression": "Code Review: BackgroundPainter"
       },
       "bonus": false,
@@ -6532,11 +6735,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L14-L5_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6554,11 +6760,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L15-L1_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6576,11 +6785,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L16-L1_2022"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -6598,11 +6810,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L17-L1_2022"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -6620,11 +6835,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L17-L2_2022"
+        ],
         "progression": "Code Review: Asphalt Art Project"
       },
       "bonus": false,
@@ -6642,11 +6860,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L18-L1_2022"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7063,9 +7284,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L9-L3_2022",
+        "level.key": "CSA U1L9-L3v2_2022",
         "script_level.level_keys": [
-          "CSA U1L9-L3_2022"
+          "CSA U1L9-L3v2_2022"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -7075,9 +7296,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L9-L4 CR_2022",
+        "level.key": "CSA U1L9-L4v2_2022",
         "script_level.level_keys": [
-          "CSA U1L9-L4 CR_2022"
+          "CSA U1L9-L4v2_2022"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022",
+        "activity_section.key": "85ae7d08-f221-404d-af64-557293dfa08f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L9-L5 CR_2022",
+        "script_level.level_keys": [
+          "CSA U1L9-L5 CR_2022"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -7087,9 +7320,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L9-L35_2022",
+        "level.key": "CSA U1L9-L6_2022",
         "script_level.level_keys": [
-          "CSA U1L9-L35_2022"
+          "CSA U1L9-L6_2022"
         ],
         "lesson.key": "lesson-9",
         "lesson_group.key": "lessonGroup-2",
@@ -7123,9 +7356,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L10-L3_2022",
+        "level.key": "CSA U1L10-L3v2_2022",
         "script_level.level_keys": [
-          "CSA U1L10-L3_2022"
+          "CSA U1L10-L3v2_2022"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
@@ -7135,9 +7368,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L10-L4 CR_2022",
+        "level.key": "CSA U1L10-L4v2_2022",
         "script_level.level_keys": [
-          "CSA U1L10-L4 CR_2022"
+          "CSA U1L10-L4v2_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-2022",
+        "activity_section.key": "39f7b3a8-544e-4042-b7c0-61b3f88c06c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1L10-L5 CR_2022",
+        "script_level.level_keys": [
+          "CSA U1L10-L5 CR_2022"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
@@ -7147,9 +7392,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L10-L5 Exemplar_2022",
+        "level.key": "CSA U1L10-L6_2022",
         "script_level.level_keys": [
-          "CSA U1L10-L5 Exemplar_2022"
+          "CSA U1L10-L6_2022"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
