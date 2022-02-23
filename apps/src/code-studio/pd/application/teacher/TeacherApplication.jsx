@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {assign, isEmpty} from 'lodash';
 import FormController from '../../form_components_func/FormController';
 import AboutYou from './AboutYou';
 import ChooseYourProgram from './ChooseYourProgram';
@@ -84,11 +85,14 @@ const TeacherApplication = props => {
     // Report a unique page view to GA.
     let url = '/pd/application/teacher/';
     url += newPage + 1;
-    if (nominated) {
-      url += '?nominated=true';
-    }
-    if (savedStatus === 'incomplete') {
-      url += '?returned=true';
+
+    const parameters = assign(
+      {},
+      nominated && {nominated: 'true'},
+      savedStatus === 'incomplete' && {incomplete: 'true'}
+    );
+    if (!isEmpty(parameters)) {
+      url += `?${queryString.stringify(parameters)}`;
     }
 
     ga('set', 'page', url);
