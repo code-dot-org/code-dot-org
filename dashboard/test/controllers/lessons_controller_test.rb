@@ -60,59 +60,30 @@ class LessonsControllerTest < ActionController::TestCase
 
     @levelbuilder = create :levelbuilder
 
-    @in_development_unit = create :script, name: 'in-development-unit', published_state: SharedCourseConstants::PUBLISHED_STATE.in_development, is_migrated: true, include_student_lesson_plans: true
-    in_development_lesson_group = create :lesson_group, script: @in_development_unit
-    @in_development_lesson = create(
-      :lesson,
-      script_id: @in_development_unit.id,
-      lesson_group: in_development_lesson_group,
-      name: 'In Development Lesson 1',
-      absolute_position: 1,
-      relative_position: 1,
-      has_lesson_plan: true,
-      lockable: false,
-      properties: {
-        overview: 'lesson overview',
-        student_overview: 'student overview'
-      }
-    )
+    @in_development_unit = create :script, :with_lessons, lessons_count: 1, name: 'in-development-unit', published_state: SharedCourseConstants::PUBLISHED_STATE.in_development, is_migrated: true, include_student_lesson_plans: true
+    @in_development_unit.reload
 
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_script = create :script, name: 'pilot-script', pilot_experiment: 'my-experiment', is_migrated: true, include_student_lesson_plans: true
-    pilot_lesson_group = create :lesson_group, script: @pilot_script
-    @pilot_lesson = create(
-      :lesson,
-      script_id: @pilot_script.id,
-      lesson_group: pilot_lesson_group,
-      name: 'Pilot Lesson 1',
-      absolute_position: 1,
-      relative_position: 1,
-      has_lesson_plan: true,
-      lockable: false,
-      properties: {
-        overview: 'lesson overview',
-        student_overview: 'student overview'
-      }
-    )
+    @pilot_script = create :script, :with_lessons, lessons_count: 1, name: 'pilot-script', pilot_experiment: 'my-experiment', is_migrated: true, include_student_lesson_plans: true
+    @pilot_script.reload
     @pilot_section = create :section, user: @pilot_teacher, script: @pilot_script
     @pilot_student = create(:follower, section: @pilot_section).student_user
 
-    @login_req_script = create :script, name: 'signed-in-script', is_migrated: true, include_student_lesson_plans: true, login_required: true
-    login_req_lesson_group = create :lesson_group, script: @login_req_script
-    @login_req_lesson = create(
-      :lesson,
-      script_id: @login_req_script.id,
-      lesson_group: login_req_lesson_group,
-      name: 'Lesson 1 In Login Required Script',
-      absolute_position: 1,
-      relative_position: 1,
-      has_lesson_plan: true,
-      lockable: false,
-      properties: {
-        overview: 'lesson overview',
-        student_overview: 'student overview'
-      }
-    )
+    @pilot_instructor = create :teacher, pilot_experiment: 'pl-my-experiment'
+    @pilot_pl_script = create :script, :with_lessons, lessons_count: 1, name: 'pl-pilot-script', pilot_experiment: 'pl-my-experiment', is_migrated: true, include_student_lesson_plans: true
+    @pilot_pl_script.reload
+    @pilot_pl_section = create :section, user: @pilot_instructor, script: @pilot_pl_script
+    @pilot_participant = create :teacher
+    create(:follower, section: @pilot_pl_section, student_user: @pilot_participant)
+
+    @login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-script', is_migrated: true, include_student_lesson_plans: true, login_required: true
+    @login_req_script.reload
+
+    @pl_login_req_script = create :script, :with_lessons, lessons_count: 1, name: 'signed-in-pl-script', is_migrated: true, include_student_lesson_plans: true, login_required: true, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_login_req_script.reload
+
+    @pl_script = create :script, :with_lessons, lessons_count: 1, name: 'pl-unit-1', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pl_script.reload
   end
 
   # anyone can show lesson with lesson plan
@@ -121,104 +92,150 @@ class LessonsControllerTest < ActionController::TestCase
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :teacher, response: :success
   test_user_gets_response_for :show, params: -> {{script_id: @script.name, position: @lesson.relative_position}}, user: :levelbuilder, response: :success
 
+  # only participants or instructors can show pl lesson with lesson plan
+  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_script.lessons[0].relative_position}}, user: nil, response: 404, name: 'signed out user cannot view pl lesson plan'
+  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_script.lessons[0].relative_position}}, user: :student, response: 404, name: 'student user cannot view pl lesson plan'
+  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_script.lessons[0].relative_position}}, user: :teacher, response: :success, name: 'teacher user can view pl lesson plan'
+  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_script.lessons[0].relative_position}}, user: :facilitator, response: :success, name: 'facilitator user can view pl lesson plan'
+  test_user_gets_response_for :show, params: -> {{script_id: @pl_script.name, position: @pl_script.lessons[0].relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder user can view pl lesson plan'
+
   # anyone can show lesson in a script that has login required
-  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_lesson.relative_position}}, user: nil, response: :success, name: 'signed out user can view lesson on script where login is required'
-  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_lesson.relative_position}}, user: :student, response: :success, name: 'student can view lesson on script where login is required'
-  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view lesson on script where login is required'
-  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view lesson on script where login is required'
+  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_script.lessons[0].relative_position}}, user: nil, response: :success, name: 'signed out user can view lesson on script where login is required'
+  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_script.lessons[0].relative_position}}, user: :student, response: :success, name: 'student can view lesson on script where login is required'
+  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_script.lessons[0].relative_position}}, user: :teacher, response: :success, name: 'teacher can view lesson on script where login is required'
+  test_user_gets_response_for :show, params: -> {{script_id: @login_req_script.name, position: @login_req_script.lessons[0].relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view lesson on script where login is required'
 
   # anyone can show student lesson plan in a script that has login required
-  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_lesson.relative_position}}, user: nil, response: :success, name: 'signed out user can view student lesson plan on script where login is required'
-  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_lesson.relative_position}}, user: :student, response: :success, name: 'student can view student lesson plan on script where login is required'
-  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view student lesson plan on script where login is required'
-  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_lesson.relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view student lesson plan on script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_script.lessons[0].relative_position}}, user: nil, response: :success, name: 'signed out user can view student lesson plan on script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_script.lessons[0].relative_position}}, user: :student, response: :success, name: 'student can view student lesson plan on script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_script.lessons[0].relative_position}}, user: :teacher, response: :success, name: 'teacher can view student lesson plan on script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @login_req_script.name, lesson_position: @login_req_script.lessons[0].relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view student lesson plan on script where login is required'
+
+  # only participants or instructors can show student lesson plan in a script that has login required
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_script.lessons[0].relative_position}}, user: nil, response: 404, name: 'signed out user cannot view student lesson plan on pl script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_script.lessons[0].relative_position}}, user: :student, response: 404, name: 'student cannot view student lesson plan on pl script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_script.lessons[0].relative_position}}, user: :teacher, response: :success, name: 'teacher can view student lesson plan on pl script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_script.lessons[0].relative_position}}, user: :facilitator, response: :success, name: 'facilitator can view student lesson plan on pl script where login is required'
+  test_user_gets_response_for :student_lesson_plan, params: -> {{script_id: @pl_login_req_script.name, lesson_position: @pl_login_req_script.lessons[0].relative_position}}, user: :levelbuilder, response: :success, name: 'levelbuilder can view student lesson plan on pl script where login is required'
 
   # limit access to lesson plans in pilots
   test_user_gets_response_for :show, response: :not_found, user: nil,
-                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}},
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_script.lessons[0].relative_position}},
                               name: 'signed out user cannot view pilot lesson'
 
   test_user_gets_response_for :show, response: :not_found, user: :student,
-                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'student cannot view pilot lesson'
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_script.lessons[0].relative_position}}, name: 'student cannot view pilot lesson'
 
   test_user_gets_response_for :show, response: :not_found, user: :teacher,
-                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}},
+                              params: -> {{script_id: @pilot_pl_script.name, position: @pilot_pl_script.lessons[0].relative_position}}, name: 'participant cannot view pilot lesson'
+
+  test_user_gets_response_for :show, response: :not_found, user: :teacher,
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_script.lessons[0].relative_position}},
                               name: 'teacher without pilot access cannot view pilot lesson'
 
+  test_user_gets_response_for :show, response: :not_found, user: :facilitator,
+                              params: -> {{script_id: @pilot_pl_script.name, position: @pilot_pl_script.lessons[0].relative_position}},
+                              name: 'instructor without pilot access cannot view pilot lesson'
+
   test_user_gets_response_for :show, response: :success, user: -> {@pilot_teacher},
-                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position, section_id: @pilot_section.id}},
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_script.lessons[0].relative_position, section_id: @pilot_section.id}},
                               name: 'pilot teacher can view pilot lesson'
 
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_instructor},
+                              params: -> {{script_id: @pilot_pl_script.name, position: @pilot_pl_script.lessons[0].relative_position, section_id: @pilot_pl_section.id}},
+                              name: 'pilot instructor can view pilot lesson'
+
   test_user_gets_response_for :show, response: :success, user: -> {@pilot_student},
-                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'pilot student can view pilot lesson'
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_script.lessons[0].relative_position}}, name: 'pilot student can view pilot lesson'
+
+  test_user_gets_response_for :show, response: :success, user: -> {@pilot_participant},
+                              params: -> {{script_id: @pilot_pl_script.name, position: @pilot_pl_script.lessons[0].relative_position}}, name: 'pilot participant can view pilot lesson'
 
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
-                              params: -> {{script_id: @pilot_script.name, position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot lesson'
+                              params: -> {{script_id: @pilot_script.name, position: @pilot_script.lessons[0].relative_position}}, name: 'levelbuilder can view pilot lesson'
 
   # also limit access to lesson plans in pilots when showing lesson by id
   test_user_gets_response_for :show_by_id, response: :redirect, user: nil,
-                              params: -> {{id: @pilot_lesson.id}},
+                              params: -> {{id: @pilot_script.lessons[0].id}},
                               name: 'signed out user cannot view pilot lesson by id'
 
   test_user_gets_response_for :show_by_id, response: :forbidden, user: :teacher,
-                              params: -> {{id: @pilot_lesson.id}},
+                              params: -> {{id: @pilot_script.lessons[0].id}},
                               name: 'teacher without pilot access cannot view pilot lesson by id'
 
+  test_user_gets_response_for :show_by_id, response: :forbidden, user: :facilitator,
+                              params: -> {{id: @pilot_pl_script.lessons[0].id}},
+                              name: 'instructor without pilot access cannot view pilot lesson by id'
+
   test_user_gets_response_for :show_by_id, response: :success, user: :levelbuilder,
-                              params: -> {{id: @pilot_lesson.id}},
+                              params: -> {{id: @pilot_script.lessons[0].id}},
                               name: 'levelbuilder can view pilot lesson by id'
 
   # limit access to student lesson plans in pilots
   test_user_gets_response_for :student_lesson_plan, response: :not_found, user: nil,
-                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_script.lessons[0].relative_position}},
                               name: 'signed out user cannot view pilot student lesson plan'
 
   test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :student,
-                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'student cannot view pilot student lesson plan'
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_script.lessons[0].relative_position}}, name: 'student cannot view pilot student lesson plan'
 
   test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :teacher,
-                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}},
+                              params: -> {{script_id: @pilot_pl_script.name, lesson_position: @pilot_pl_script.lessons[0].relative_position}}, name: 'participant cannot view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :teacher,
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_script.lessons[0].relative_position}},
                               name: 'teacher without pilot access cannot view pilot student lesson plan'
 
+  test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :facilitator,
+                              params: -> {{script_id: @pilot_pl_script.name, lesson_position: @pilot_pl_script.lessons[0].relative_position}},
+                              name: 'instructor without pilot access cannot view pilot student lesson plan'
+
   test_user_gets_response_for :student_lesson_plan, response: :success, user: -> {@pilot_teacher},
-                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position, section_id: @pilot_section.id}},
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_script.lessons[0].relative_position, section_id: @pilot_section.id}},
                               name: 'pilot teacher can view pilot student lesson plan'
 
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: -> {@pilot_instructor},
+                              params: -> {{script_id: @pilot_pl_script.name, lesson_position: @pilot_pl_script.lessons[0].relative_position, section_id: @pilot_pl_section.id}},
+                              name: 'pilot instructor can view pilot student lesson plan'
+
   test_user_gets_response_for :student_lesson_plan, response: :success, user: -> {@pilot_student},
-                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'pilot student can view pilot student lesson plan'
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_script.lessons[0].relative_position}}, name: 'pilot student can view pilot student lesson plan'
+
+  test_user_gets_response_for :student_lesson_plan, response: :success, user: -> {@pilot_participant},
+                              params: -> {{script_id: @pilot_pl_script.name, lesson_position: @pilot_pl_script.lessons[0].relative_position}}, name: 'pilot participant can view pilot student lesson plan'
 
   test_user_gets_response_for :student_lesson_plan, response: :success, user: :levelbuilder,
-                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_lesson.relative_position}}, name: 'levelbuilder can view pilot student lesson plan'
+                              params: -> {{script_id: @pilot_script.name, lesson_position: @pilot_script.lessons[0].relative_position}}, name: 'levelbuilder can view pilot student lesson plan'
 
   # limit access to lesson plans in in-development unit
   test_user_gets_response_for :show, response: :not_found, user: nil,
-                              params: -> {{script_id: @in_development_unit.name, position: @in_development_lesson.relative_position}},
+                              params: -> {{script_id: @in_development_unit.name, position: @in_development_unit.lessons[0].relative_position}},
                               name: 'signed out user cannot view in-development lesson'
 
   test_user_gets_response_for :show, response: :not_found, user: :student,
-                              params: -> {{script_id: @in_development_unit.name, position: @in_development_lesson.relative_position}}, name: 'student cannot view in-development lesson'
+                              params: -> {{script_id: @in_development_unit.name, position: @in_development_unit.lessons[0].relative_position}}, name: 'student cannot view in-development lesson'
 
   test_user_gets_response_for :show, response: :not_found, user: :teacher,
-                              params: -> {{script_id: @in_development_unit.name, position: @in_development_lesson.relative_position}},
+                              params: -> {{script_id: @in_development_unit.name, position: @in_development_unit.lessons[0].relative_position}},
                               name: 'teacher access cannot view in-development lesson'
 
   test_user_gets_response_for :show, response: :success, user: :levelbuilder,
-                              params: -> {{script_id: @in_development_unit.name, position: @in_development_lesson.relative_position}}, name: 'levelbuilder can view in-development lesson'
+                              params: -> {{script_id: @in_development_unit.name, position: @in_development_unit.lessons[0].relative_position}}, name: 'levelbuilder can view in-development lesson'
 
   # limit access to student lesson plans in in-development unit
   test_user_gets_response_for :student_lesson_plan, response: :not_found, user: nil,
-                              params: -> {{script_id: @in_development_unit.name, lesson_position: @in_development_lesson.relative_position}},
+                              params: -> {{script_id: @in_development_unit.name, lesson_position: @in_development_unit.lessons[0].relative_position}},
                               name: 'signed out user cannot view in-development student lesson plan'
 
   test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :student,
-                              params: -> {{script_id: @in_development_unit.name, lesson_position: @in_development_lesson.relative_position}}, name: 'student cannot view in-development student lesson plan'
+                              params: -> {{script_id: @in_development_unit.name, lesson_position: @in_development_unit.lessons[0].relative_position}}, name: 'student cannot view in-development student lesson plan'
 
   test_user_gets_response_for :student_lesson_plan, response: :not_found, user: :teacher,
-                              params: -> {{script_id: @in_development_unit.name, lesson_position: @in_development_lesson.relative_position}},
+                              params: -> {{script_id: @in_development_unit.name, lesson_position: @in_development_unit.lessons[0].relative_position}},
                               name: 'teacher access cannot view in-development student lesson plan'
 
   test_user_gets_response_for :student_lesson_plan, response: :success, user: :levelbuilder,
-                              params: -> {{script_id: @in_development_unit.name, lesson_position: @in_development_lesson.relative_position}}, name: 'levelbuilder can view in-development student lesson plan'
+                              params: -> {{script_id: @in_development_unit.name, lesson_position: @in_development_unit.lessons[0].relative_position}}, name: 'levelbuilder can view in-development student lesson plan'
 
   test 'can not show lesson when has_lesson_plan is false' do
     assert_raises(ActiveRecord::RecordNotFound) do

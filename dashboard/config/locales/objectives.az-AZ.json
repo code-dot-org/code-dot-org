@@ -787,6 +787,12 @@
         },
         "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
           "description": "Bir hərəkətin neçə dəfə təkrarlanacağını sayın və bir döngə olaraq göstərin."
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "Maşın öyrənmə modelini hazırlayın və sınaqdan keçirin."
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "İnsan qərəzinin maşın öyrənməsində necə rol oynaması ilə bağlı səbəb."
         }
       }
     }

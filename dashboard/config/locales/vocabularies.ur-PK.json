@@ -50,20 +50,38 @@
         "behavior/coursef/2021": {
           "word": "رویہ"
         },
+        "algorithm/coursef/2021": {
+          "word": "الگورتھم"
+        },
         "variable/coursef/2021": {
           "word": "متغیر"
         },
         "define/coursef/2021": {
           "word": "واضح کرنا"
         },
+        "algorithm/courseb/2021": {
+          "word": "الگورتھم"
+        },
         "drop/courseb/2021": {
           "word": "چھوڑیں"
+        },
+        "algorithm/coursea/2021": {
+          "word": "الگورتھم"
         },
         "drop/coursea/2021": {
           "word": "چھوڑیں"
         },
+        "algorithm/coursec/2021": {
+          "word": "الگورتھم"
+        },
+        "algorithm/coursed/2021": {
+          "word": "الگورتھم"
+        },
         "conditionals/coursed/2021": {
           "word": "شرائط"
+        },
+        "algorithm/express/2021": {
+          "word": "الگورتھم"
         },
         "behavior/express/2021": {
           "word": "رویہ"
@@ -83,6 +101,9 @@
         "drop/pre-express/2021": {
           "word": "چھوڑیں"
         },
+        "algorithm/pre-express/2021": {
+          "word": "الگورتھم"
+        },
         "behavior/coursee/2021": {
           "word": "رویہ"
         },
@@ -97,6 +118,18 @@
         },
         "define/coursee/2021": {
           "word": "واضح کرنا"
+        },
+        "variable/csd/2021": {
+          "word": "متغیر"
+        },
+        "conditionals/csd/2021": {
+          "word": "شرائط"
+        },
+        "function/csd/2021": {
+          "word": "فنکشن"
+        },
+        "copyright/csd/2021": {
+          "word": "کاپی رائٹ"
         }
       }
     }

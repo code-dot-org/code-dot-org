@@ -270,6 +270,7 @@ ms:
       picture: 'Kata Laluan Gambar'
       word: 'Perkataan rahsia'
       email: 'E-mel'
+      google_classroom: 'Bilik Darjah Google'
       clever: 'Clever'
   follower:
     invite_sent: 'Jemputan dihantar'
@@ -286,6 +287,7 @@ ms:
       blank_code: "Sila masukkan kod bahagian"
       cant_join_own_section: "Maaf, anda tidak dapat menyertai bahagian anda sendiri."
       restricted_section: "Kami tidak dapat memasukkan anda ke dalam bahagian %{section_code} kerana ia dikunci. Sila hubungi guru anda untuk bantuan."
+      not_participant_type: "Kami tidak dapat menambahkan anda ke bahagian %{section_code} kerana anda tidak memenuhi jenis peserta untuk bahagian tersebut."
     mail:
       student_disassociated:
         subject: "Code.org pemberitahuan: %{student_name} ini tidak lagi dianggap sebagai pelajar anda."
@@ -319,6 +321,7 @@ ms:
       project_gallery: "Projek"
       help_support: "Bantuan dan sokongan"
       report_bug: "Laporkan masalah"
+      professional_learning: "Pembelajaran Profesional"
       documentation: "Dokumentasi"
       tutorials: "Tutorial"
       educate_hoc: "Hour of Code"
@@ -335,6 +338,7 @@ ms:
       signin: 'Log masuk'
       signup: 'Buat akaun'
       create: 'Buat'
+      algebra_game: 'Algebra'
       artist: 'Artis'
       artist_k1: 'Artis (Prapembaca)'
       basketball: 'Bola keranjang'
@@ -467,6 +471,7 @@ ms:
     current_section_dne: "Maaf, seksyen %{current_section_code} tidak wujud. Sila masukkan kod seksyen yang lain."
     student_ids_not_entered: "Sila berikan student_ids."
     student_not_found: "Satu atau lebih pelajar tidak dijumpai."
+    not_correct_participant_type: "Anda tidak boleh mengalihkan pengguna ini kerana mereka tidak mempunyai kebenaran untuk menjadi peserta dalam bahagian baharu."
   gender:
     male: 'Lelaki'
     female: 'Perempuan'
@@ -485,6 +490,7 @@ ms:
     privacy: 'Dasar Privasi'
     secure: 'Versi Dilindungi'
     report_abuse: 'Lapor Salah Guna'
+    cookie_notice: 'Notis Kuki'
   reference_area:
     title: 'Perlu bantuan?'
     subtitle: 'Lihat video dan petunjuk ini'
@@ -723,8 +729,10 @@ ms:
       email: 'E-mel'
       school: 'Sekolah'
       school_name: 'Nama sekolah'
+      school_city: 'Bandar Sekolah'
       school_city_district: 'Sekolah Bandar/Daerah'
       school_country: 'Negara Sekolah'
+      colombian_school_city: 'Bandar Sekolah'
       colombian_chilean_school_name: 'Nama sekolah'
     form_entries:
       gender:

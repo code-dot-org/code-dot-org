@@ -116,7 +116,9 @@ class ScriptLevelsController < ApplicationController
 
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
-    authorize! :read, @script_level, params.slice(:login_required)
+    # If we have a signed out user for any of these cases we will want to redirect them to sign in
+    authenticate_user! if !can?(:read, @script) || @script.login_required? || (!params.nil? && params[:login_required] == "true")
+    return render 'levels/no_access' unless can?(:read, @script_level)
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)

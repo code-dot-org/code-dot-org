@@ -422,6 +422,26 @@ ta:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': ஏலியன்கள்
             '"BEAR"': கரடிகள்
@@ -908,7 +928,7 @@ ta:
       Dancelab_whenSetup2:
         text: செட்அப்
       gamelab_addBehaviorSimple:
-        text: ஸ்பிரைட்[SPRITE]தொடக்கம்{BEHAVIOR}
+        text: ஸ்பிரைட்{SPRITE}தொடக்கம்{BEHAVIOR}
       gamelab_addTarget:
         text: "{SPRITE}இலக்கை அடைகிறது{TARGET}க்கு{OPT}"
         options:
@@ -973,7 +993,7 @@ ta:
       gamelab_drawLine:
         text: கோடு வரைக {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
-        text: விளிம்புகள் தொகுதி [SPRITE] [0] நகரும் இருந்து
+        text: விளிம்புகள் தொகுதி {SPRITE} நகரும் இருந்து
       gamelab_followingTargets:
         text: பின்வரும் இலக்குகள்
       gamelab_getAllSprites:
@@ -1140,7 +1160,7 @@ ta:
             '180': இடது
             '270': மேலே
       gamelab_mirrorSprite:
-        text: "[SPRITE][SPRITE]முகம்{DIRECTION}"
+        text: "{SPRITE} முகம் {DIRECTION}"
         options:
           DIRECTION:
             '"right"': வலது
@@ -1150,7 +1170,7 @@ ta:
       gamelab_moveBackward:
         text: நகர்வு {SPRITE} {DISTANCE} பிக்சல்கள் பின்னோக்கி
       gamelab_moveForward:
-        text: பிக்சல்களை {SPRITE} [DISTANCE[1] நகர்த்தவும்
+        text: பிக்சல்களை {SPRITE} {DISTANCE} நகர்த்தவும்
       gamelab_moveInDirection:
         text: பிக்சல்களை {SPRITE} {DISTANCE} நகர்த்தவும் {DIRECTION}
         options:
@@ -1328,7 +1348,7 @@ ta:
             '7': வேகமாக
             '9': extra fast
       gamelab_setTint:
-        text: இந்த [0] இன் நிறத்தை {COLOR} ஆக மாற்றவும்
+        text: இந்த {THIS} இன் நிறத்தை {COLOR} ஆக மாற்றவும்
       gamelab_setupScoreboard:
         text: |-
           ஸ்கோர்போர்டை வரையவும்
@@ -1369,7 +1389,7 @@ ta:
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_textJoin:
-        text: "[LEFT_QUOTE][null]{RIGHT_QUOTE}{TEXT2}"
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
         text: "{VAR}{TEXT2}"
       gamelab_tumbling:
@@ -1452,7 +1472,7 @@ ta:
       gamelab_yLocationOf:
         text: y ஒருங்கிணைப்பு {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: ஸ்பிரைட்[SPRITE]தொடக்கம்{BEHAVIOR}
+        text: ஸ்பிரைட்{SPRITE}தொடக்கம்{BEHAVIOR}
       Mikelab_addTrainingData:
         options:
           NAME:

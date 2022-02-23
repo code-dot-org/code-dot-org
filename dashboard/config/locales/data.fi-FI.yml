@@ -402,7 +402,7 @@ fi:
           kutsua hänet seikkailulle. Auta heitä tervehtimään toisiaan käyttämällä
           'näyttelijä sanoo' lohkoa kahdesti.
         studio_iceage_move_to_flag: Scrat etsii tammenterhoaan! Auta häntä kulkemaan
-          viimeiset 200 pikseliä käyttämällä 'liiku' lohkoa.
+          viimeiset 200 kuvapistettä käyttämällä 'liiku' lohkoa.
         studio_iceage_move_to_actor: Diego (näyttelijä 1) etsii Mannya (näyttelijä
           2). Auta Diegoa kulkemaan 200 pikseliä Mannyn luokse käyttämällä 'liikuta
           näyttelijää' lohkoa. Sitten, yhdistä lohko tapahtumaan 'kun näyttelijä koskee'

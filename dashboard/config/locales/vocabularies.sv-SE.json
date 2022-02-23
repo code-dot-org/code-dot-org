@@ -172,6 +172,24 @@
         },
         "define/coursee/2021": {
           "word": "Definiera"
+        },
+        "debugging/csd/2021": {
+          "word": "Felsökning"
+        },
+        "variable/csd/2021": {
+          "word": "Variabel"
+        },
+        "conditionals/csd/2021": {
+          "word": "Villkor"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktion"
+        },
+        "function/csd/2021": {
+          "word": "Funktion"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

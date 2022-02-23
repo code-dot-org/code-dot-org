@@ -441,6 +441,26 @@ es-MX:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': extraterrestres
             '"BEAR"': osos
@@ -1417,13 +1437,14 @@ es-MX:
             '"width"': ancho
             '"height"': altura
       gamelab_setSpeed_dropdown:
+        text: ajustar {SPRITE} a velocidad {SIZE}
         options:
           SIZE:
-            '1': extra slow
+            '1': extra lenta
             '3': lento
             '5': normal
             '7': rápido
-            '9': extra fast
+            '9': extra rápida
       gamelab_setTint:
         text: cambiar color de {THIS} a {COLOR}
       gamelab_setupScoreboard:

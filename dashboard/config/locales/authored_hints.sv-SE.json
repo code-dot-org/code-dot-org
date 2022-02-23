@@ -6,7 +6,8 @@
           "2-3_Artist_Debugging_2_a": "Tips: Varje morrhår är 75 pixlar lång."
         },
         "2-3 Artist Debugging 3": {
-          "2-3_Artist_Debugging_3_a": "En av vändna är 15 grader för liten."
+          "2-3_Artist_Debugging_3_a": "En av vändna är 15 grader för liten.",
+          "2-3_Artist_Debugging_3_b": "Om programmet körs för snabbt för att man ska se vad som händer, försök att sakta ner det med justeringsverktyget."
         },
         "2-3 Artist Functions 1": {
           "2-3_Artist_Functions_1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
@@ -15,7 +16,8 @@
           "2-3_Artist_Functions_3_a": "\\*\\* 115 + 45 = 160 \\*\\*"
         },
         "2-3 Artist Nested Loops 3": {
-          "2-3_Artist_Nested_Loops_3_a": "Behöver du hjälp med vinklar?   \\*\\* 360/12 = 30 \\*\\*"
+          "2-3_Artist_Nested_Loops_3_a": "Behöver du hjälp med vinklar?   \\*\\* 360/12 = 30 \\*\\*",
+          "2-3_Artist_Nested_Loops_3_b": "Kom ihåg att lägga all den grå koden och ditt 'sväng'-block inuti en slinga."
         },
         "2-3 Artist Nested Loops 4": {
           "2-3_Artist_Nested_Loops_3_a": "Behöver du hjälp med vinklar?   \\*\\* 360/12 = 30 \\*\\*"
@@ -200,13 +202,16 @@
           "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
         },
         "Function intro Ryan": {
-          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet."
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
+          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
         },
         "Function intro Ryan_2019": {
-          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet."
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
+          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
         },
         "Function intro Ryan_2020": {
-          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet."
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
+          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
         },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
@@ -232,17 +237,20 @@
         "MC_HOC_2017_02_Cole": {
           "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
           "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!"
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
+          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
         },
         "MC_HOC_2017_02_Cole_2019": {
           "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
           "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!"
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
+          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
         },
         "MC_HOC_2017_02_Cole_2020": {
           "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
           "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!"
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
+          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
         },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
@@ -284,55 +292,70 @@
           "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren."
         },
         "MC_HOC_2017_05_Cole": {
-          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet."
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
+          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
         },
         "MC_HOC_2017_05_Cole_2019": {
-          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet."
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
+          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
         },
         "MC_HOC_2017_05_Cole_2020": {
-          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet."
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
+          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
         },
         "MC_HOC_2017_06_Cole": {
-          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?"
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
+          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
         },
         "MC_HOC_2017_06_Cole_2019": {
-          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?"
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
+          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
         },
         "MC_HOC_2017_06_Cole_2020": {
-          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?"
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
+          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
         },
         "MC_HOC_2017_07_Cole": {
           "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
-          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet."
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
+          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
         },
         "MC_HOC_2017_07_Cole_2019": {
           "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
-          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet."
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
+          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
         },
         "MC_HOC_2017_07_Cole_2020": {
           "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
-          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet."
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
+          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
         },
         "MC_HOC_2017_10_RETRY": {
-          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!"
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
+          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
         },
         "MC_HOC_2017_10_RETRY_2019": {
-          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!"
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
+          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
         },
         "MC_HOC_2017_10_RETRY_2020": {
-          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!"
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
+          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
         },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!"
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
+          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
         },
         "MC_HOC_2017_Ali_2019": {
           "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!"
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
+          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
         },
         "MC_HOC_2017_Ali_2020": {
           "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!"
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
+          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
         },
         "MC_HOC_2017_FP20x20": {
           "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
@@ -477,7 +500,8 @@
           "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'."
         },
         "Function intro Ryan_2021": {
-          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet."
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
+          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
         },
         "MC_HOC_2017_01_RETRY_2021": {
           "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
@@ -487,7 +511,8 @@
         "MC_HOC_2017_02_Cole_2021": {
           "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
           "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!"
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
+          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
         },
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
@@ -503,21 +528,26 @@
           "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren."
         },
         "MC_HOC_2017_05_Cole_2021": {
-          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet."
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
+          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
         },
         "MC_HOC_2017_06_Cole_2021": {
-          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?"
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
+          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
         },
         "MC_HOC_2017_07_Cole_2021": {
           "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
-          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet."
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
+          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
         },
         "MC_HOC_2017_10_RETRY_2021": {
-          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!"
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
+          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
-          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!"
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
+          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
         },
         "MC_HOC_2017_FP20x20_2021": {
           "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
@@ -530,6 +560,611 @@
         },
         "courseE_artist_functions1_dani": {
           "courseE_artist_functions1_a": "Rutorna varje har 100 pixel sidor, det betyder att du kommer att behöva flytta framåt 175 pixlar innan du ritar din andra torget."
+        },
+        "2-3 Artist 1 new": {
+          "2-3_Artist_1_new_a": "Om du använder blocket för att få mig att 'gå framåt med 100 pixlar' så kommer jag att rita en linje automatiskt.",
+          "2-3_Artist_1_new_b": "Har du problem med att komma runt hörnet? Använd 'sväng höger med 90 grader'-blocket."
+        },
+        "2-3 Artist 11": {
+          "2-3_Artist_11_a": "Har du problem med vinklarna? Du behöver gå 360 grader på 8 svängar. Vad är 360/8?"
+        },
+        "2-3 Artist 12": {
+          "2-3_Artist_12_a": "Det är 360 grader i en cirkel. Om konstnären svänger 1 grad varje gång slingan upprepas kommer konstnären behöva gå igenom slingan 360 gånger."
+        },
+        "2-3 Artist 2 new": {
+          "2-3_Artist_2_new_a": "Konstnären verkar inte peka åt rätt håll. Kan du få hen att vända sig rätt innan hen ritar linjen?"
+        },
+        "2-3 Artist 3new": {
+          "2-3_Artist_3new_a": "Vad är 100-70? Baserat på problembeskrivningen är det så hög hatten måste vara!",
+          "2-3_Artist_3new_b": "Konstnären verkar inte peka åt rätt håll. Kan du få hen att vända sig rätt innan hen ritar linjen?"
+        },
+        "2-3 Artist 4": {
+          "2-3_Artist_4_a": "Allt vi behöver göra för att göra klart huset är att rita en kvadrat!"
+        },
+        "2-3 Artist 6": {
+          "2-3_Artist_6_a": "För att göra de små vinklarna behöver du svänga _längre_ varje gång jämfört med när du gjorde kvadraten.",
+          "2-3_Artist_6_b": "Eftersom jag redan är vänd åt höger är det lättast att börja gå framåt och sen svänga vänster för att skapa triangeln.",
+          "2-3_Artist_6_c": "Varje sida av triangeln är samma längd som varje sida i kvadraten... 100 pixlar!"
+        },
+        "2-3 Artist 7": {
+          "2-3_Artist_7_a": "Det är enklast att lösa det här pusslet genom att rita den första kvadraten och avsluta den med att låta konstnären peka nedåt innan man börjar rita sin andra kvadrat."
+        },
+        "2-3 Artist 8": {
+          "2-3_Artist_8_a": "Om du delar 200 på mitten, hur många pixlar bred måste då varje kvadrat vara?"
+        },
+        "2-3 Artist 9 NEW": {
+          "2-3_Artist_9_a": "Den här diamanten är egentligen bara en kvadrat som ligger på sidan."
+        },
+        "2-3 Artist Debugging 10": {
+          "2-3_Artist_Debugging_10_a": "Kom ihåg, du vill göra styrkorset 10 pixlar _bredare_... så se till att _lägga till_ 10 till det nummer du bestämmer dig för att ändra.",
+          "2-3_Artist_Debugging_10_b": "**Att pröva sig fram är en utmärkt strategi för denna uppgift!**\n\nBörja med att byta ut en siffra åt gången.\n\nVilka siffror gör vad?\n\nOm du tappar bort dig, klicka bara på 'Börja om' så återställs koden till ursprungsläget."
+        },
+        "2-3 Artist Debugging 7": {
+          "2-3_Artist_Debugging_7_a": "Vad händer om du får konstnären att gå eller hoppa baklänges efter att han ritat den första linjen."
+        },
+        "2-3 Artist Debugging 8": {
+          "2-3_Artist_Debugging_8_a": "Hur många gånger upprepades min form?\n\nHur många gånger -borde- formen upprepas?\n\nVar kan du ändra det i programmet?"
+        },
+        "2-3 Artist Debugging 9": {
+          "2-3_Artist_Debugging_9_a": "Konstnären behöver svänga 60 grader mer åt vänster innan hen börjar rita!",
+          "2-3_Artist_Debugging_9_b": "Du behöver inte lägga till ett nytt block för att snurra ett helt varv, lägg bara till 60 grader till 'sväng vänster'-blocket som redan ligger där!"
+        },
+        "2-3 Artist Loops New 11": {
+          "2-3_Artist_Loops_New_11_a": "Kom ihåg att koden från förra pusslet var:",
+          "2-3_Artist_Loops_New_11_b": "Din nya sväng borde ligga i **slutet** av koden inuti slingan."
+        },
+        "2-3 Artist Loops New 12": {
+          "2-3_Artist Loops_New_12_a": "Innan artisten börjar med diamanten måste hen svänga vänster med 60 grader för att komma på rätt väg.",
+          "2-3_Artist Loops_New_12_b": "Efter att artisten gått 100 pixlar framåt behöver hen svänga 120 grader höger för att göra ett spetsigt hörn.",
+          "2-3_Artist Loops_New_12_c": "Konstnären behöver bara svänga 60 grader åt höger för att göra ett trubbigt hörn."
+        },
+        "2-3 Artist Loops New 13": {
+          "2-3_Artist_Loops_New_13_a": "I slutet av varje diamant står redan konstnären riktad åt rätt håll för att börja på nästa.\n\nPå grund av detta behöver vi inte lägga in en extra 'sväng vänster med'-block innan vi börjar igen.",
+          "2-3_Artist_Loops_New_13_b": "För att göra en diamant behöver konstnären:\n\n-   gå framåt\n-   svänga höger med 120 grader\n-   gå framåt\n-   svänga höger med 60 grader\n\nGör sen allt igen!"
+        },
+        "2-3 Artist Loops New 9": {
+          "2-3_Artist_Loops_New_9_a": "Konstnären behöver svänga 45 grader åt höger innan hen börjar att rita.",
+          "2-3_Artist_Loops_New_9_b": "Det här V:et är egentligen en halv kvadrat. Hur skulle koden för att rita en halv kvadrat se ut?"
+        },
+        "2-3 Artist Nested Loops 1": {
+          "2-3_Artist_Nested_Loops_1_a": "Kom ihåg att lägga alla grå block inuti din slinga."
+        },
+        "2-3 Artist Nested Loops 5": {
+          "2-3_Artist_Nested_Loops_5_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
+        },
+        "2-3 Artist Nested Loops 7": {
+          "2-3_Artist_Nested_Loops_7_a": "Hur mycket behöver du svänga i varje upprepning?\n\nVad är 360/10?"
+        },
+        "2-3 Artist Nested Loops 9": {
+          "2-3_Artist_Nested_Loops_9_a": "Behöver du hjälp att hitta rätt vinkel?\n\n**360 / 12 = 30**"
+        },
+        "2-3 Bee Conditionals 14": {
+          "2-3_Bee_Conditionals_14_a": "Är det svårt att lista ut hur du ska lägga ut blocken? Försök att behandla den röda blomman på samma vis som den lila!",
+          "2-3_Bee_Conditionals_14_b": "Om den röda blomman var lila, kan du lista ut hur du kan använda ett extra 'upprepa'-block för att korta ner koden?",
+          "2-3_Bee_Conditionals_14_c": "Försök att bryta upp detta i två seperata bitar:\n\n1.  Samla in nektar 3 gånger\n    -   Gå framåt 5 gånger\n    -   Kolla för att se om nektar. Vid nektar: samla in.\n    -   sväng vänster\n\n2.  Gör honung\n    -   Gå framåt en gång\n    -   Gör två honung"
+        },
+        "2-3 Bee Conditionals 15": {
+          "2-3_Bee_Conditionals_15_a": "Kom ihåg: Lila blommor har bara mellan 0 och 1 nektar och det kan ändras för varje gång du kör programmet."
+        },
+        "2-3 Bee Conditionals 3": {
+          "2-3_Bee_Conditionals_3_a": "Koden blir kortast om du använder en slinga varje gång du går framåt, en annan slinga för att samla nektar och en annan för att göra honung."
+        },
+        "2-3 Bee Conditionals 6": {
+          "2-3_Bee_Conditionals_6_a": "Kom ihåg: Lila blommor ändrar mellan 0 och 1 nektar när du kör programmet!"
+        },
+        "2-3 Bee Debugging 1": {
+          "2-3_Bee_Debugging_1_a": "När du hittat och åtgärdat det felaktiga blocket, kan du då se några mönster som går att göras enklare med en 'upprepa'-slinga?"
+        },
+        "2-3 Bee Debugging 2": {
+          "2-3_Bee_Debugging_2_a": "När du hittat och åtgärdat det felaktiga blocket, kan du då se några mönster som går att göras enklare med en 'upprepa'-slinga?"
+        },
+        "2-3 Bee Debugging 4": {
+          "2-3_Bee_Debugging_4_a": "Finns det någonstans där biet gör något som inte verkar logiskt? Vad händer om du ändrar/byter ut det blocket?"
+        },
+        "2-3 Bee Loops 2": {
+          "2-3_Bee_Loops_2_a": "Du borde sluta med fyra block inuti din slinga."
+        },
+        "2-3 Bee Loops 3B": {
+          "2-3_Bee_Loops_3B_a": "Du behöver två olika 'upprepa'-block, ett efter det andra."
+        },
+        "2-3 Bee Loops 4": {
+          "2-3_Bee_Loops_4_a": "Du borde sluta med fem block inuti din slinga."
+        },
+        "2-3 Bee Loops 4A": {
+          "2-3_Bee_Loops_4A_a": "Den första handlingen kommer att vara att svänga, snarare än att gå.",
+          "2-3_Bee_Loops_4A_b": "Den sista delen av programmet kan göras klart genom att skriva kod i slutet av programmet, utanför slingan.",
+          "2-3_Bee_Loops_4A_c": "Om du inte kan se hur slingan borde se ut, försök att skriva ut koden på det långa viset för att upptäcka vad du till slut kan kombinera i ett 'upprepa'-block."
+        },
+        "2-3 Bee Loops 5": {
+          "2-3_Bee_Loops_5_a": "Om du inte upptäcker vilka block som borde vara inuti 'upprepa'-blocket på en gång, börja då med att skriva ut koden för varje enskild förflyttning och leta efter mönster."
+        },
+        "2-3 Bee Loops 6": {
+          "2-3_Bee_Loops_6_a": "Om du inte kan lista ut vad som borde hamna inuti 'upprepa'-slingan, försök att dra ut block, ett och ett, för att se om du kan upptäcka ett mönster.",
+          "2-3_Bee_Loops_6_b": "När du är klar borde det vara 6 block inuti din 'upprepa'-slinga."
+        },
+        "2-3 Bee Loops 7": {
+          "2-3_Bee_Loops_7_a": "Den första handlingen kommer att vara att svänga, snarare än att gå.",
+          "2-3_Bee_Loops_7_b": "Om du inte riktigt kan föreställa dig slingan från början, försök att skriva ut koden på det långa sättet, titta sen efter mönster."
+        },
+        "2-3 Maze 1": {
+          "2-3_Maze_1_a": "För att använda 'gå framåt'-blocket, dra det från verktygsområdet ut till arbetsytan och koppla ihop det med 'vid start'-blocket."
+        },
+        "2-3 Maze 16": {
+          "2-3_Maze_16_a": "Om det är svårt att se mönstret, försök att koda ut allt först för att se vilka saker som upprepas om och om igen innan du lägger in slingorna.",
+          "2-3_Maze_16_b": "För att lägga flera block inuti ett 'upprepa'-block behöver du bara dra ett 'upprepa'-block till arbetsytan, sen drar du alla blocken som fanns i programmet från början in i 'upprepa'-blocket.\n\nKoppla sedan tillbaka allt till 'vid start'-blocket och så är allt klart!"
+        },
+        "2-3 Maze Loops 17": {
+          "2-3_Maze_Loops_17_a": "Om det är svårt att se mönstret, försök att koda ut allt först för att se vilka saker som upprepas om och om igen innan du lägger in slingorna.",
+          "2-3_Maze_Loops_17_b": "Raderades startkoden? Klicka på 'börja om' för att få tillbaka den!"
+        },
+        "2-3 Maze Loops 18": {
+          "2-3_Maze_Loops_18_a": "Om det är svårt att se mönstret, försök att koda ut allt först för att se vilka saker som upprepas om och om igen innan du lägger in slingorna."
+        },
+        "2-3 Maze Loops 19": {
+          "2-3_Maze_Loops_19_a": "Om du sitter fast, försök att skriva ut koden utan slingor först för att leta efter mönster.",
+          "2-3_Maze_Loops_19_b": "Genom att lägga ett 'upprepa'-block inuti ett annat för att minska mängden block som behövs."
+        },
+        "2-3 Maze Loops 20": {
+          "2-3_Maze_Loops_20_a": "Leta efter ett trappstegsmönster i den här labyrinten för att hitta var en loop kan vara användbar."
+        },
+        "2-3 Maze Loops 21": {
+          "2-3_Maze_Loops_21_a": "Om du har svårt att hitta trappstegsmönstret, försök att täcka över de blockerade gångarna med ditt finger."
+        },
+        "4-5 Artist 4": {
+          "4-5_Artist_4_a": "Det är 360 grader i en cirkel!\n\nDet är så många gånger du behöver upprepa den här koden (Om du svänger 1 grad åt gången) innan cirkeln är klar!"
+        },
+        "Overworld Avoid Monsters": {
+          "mc_8_a": "Det finns några vägar du kan ta. Vilken är kortast?",
+          "mc_8_b": "Använd 'upprepa'-blocket för att förenkla din kod.",
+          "mc_8_c": "Ditt mål är att komma till husets dörröppning vid toppen av skärmen."
+        },
+        "Overworld Avoid Monsters_2019": {
+          "mc_8_a": "Det finns några vägar du kan ta. Vilken är kortast?",
+          "mc_8_b": "Använd 'upprepa'-blocket för att förenkla din kod.",
+          "mc_8_c": "Ditt mål är att komma till husets dörröppning vid toppen av skärmen."
+        },
+        "Overworld Avoid Monsters_2020": {
+          "mc_8_a": "Det finns några vägar du kan ta. Vilken är kortast?",
+          "mc_8_b": "Använd 'upprepa'-blocket för att förenkla din kod.",
+          "mc_8_c": "Ditt mål är att komma till husets dörröppning vid toppen av skärmen."
+        },
+        "Overworld Avoid Monsters_2021": {
+          "mc_8_a": "Det finns några vägar du kan ta. Vilken är kortast?",
+          "mc_8_b": "Använd 'upprepa'-blocket för att förenkla din kod.",
+          "mc_8_c": "Ditt mål är att komma till husets dörröppning vid toppen av skärmen."
+        },
+        "Overworld Chop Tree": {
+          "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
+          "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
+        "Overworld Chop Tree_2019": {
+          "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
+          "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
+        "Overworld Chop Tree_2020": {
+          "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
+          "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
+        "Overworld Chop Tree_2021": {
+          "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
+          "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
+        "Overworld Chop Trees": {
+          "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
+          "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
+        "Overworld Chop Trees_2019": {
+          "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
+          "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
+        "Overworld Chop Trees_2020": {
+          "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
+          "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
+        "Overworld Chop Trees_2021": {
+          "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
+          "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
+        "Overworld House Frame Chosen": {
+          "mc_6_a": "Klicka på pilen på 'placera'-blocket för att välja vad du vill lägga ut.",
+          "mc_6_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än.",
+          "mc_6_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
+        "Overworld House Frame Chosen_2019": {
+          "mc_6_a": "Klicka på pilen på 'placera'-blocket för att välja vad du vill lägga ut.",
+          "mc_6_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än.",
+          "mc_6_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
+        "Overworld House Frame Chosen_2020": {
+          "mc_6_a": "Klicka på pilen på 'placera'-blocket för att välja vad du vill lägga ut.",
+          "mc_6_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än.",
+          "mc_6_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
+        "Overworld House Frame Chosen_2021": {
+          "mc_6_a": "Klicka på pilen på 'placera'-blocket för att välja vad du vill lägga ut.",
+          "mc_6_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än.",
+          "mc_6_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
+        "Overworld Move to Sheep": {
+          "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
+          "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
+        },
+        "Overworld Move to Sheep_2019": {
+          "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
+          "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
+        },
+        "Overworld Move to Sheep_2020": {
+          "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
+          "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
+        },
+        "Overworld Move to Sheep_2021": {
+          "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
+          "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
+        },
+        "Overworld Place Wall": {
+          "mc_5_a": "Använd 'placera'-blocket först och sen 'gå'-blocket.",
+          "mc_5_b": "Se till att båda blocken är inuti 'upprepa'-blocket för att köra koden mer än en gång.",
+          "mc_5_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Overworld Place Wall_2019": {
+          "mc_5_a": "Använd 'placera'-blocket först och sen 'gå'-blocket.",
+          "mc_5_b": "Se till att båda blocken är inuti 'upprepa'-blocket för att köra koden mer än en gång.",
+          "mc_5_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Overworld Place Wall_2020": {
+          "mc_5_a": "Använd 'placera'-blocket först och sen 'gå'-blocket.",
+          "mc_5_b": "Se till att båda blocken är inuti 'upprepa'-blocket för att köra koden mer än en gång.",
+          "mc_5_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Overworld Place Wall_2021": {
+          "mc_5_a": "Använd 'placera'-blocket först och sen 'gå'-blocket.",
+          "mc_5_b": "Se till att båda blocken är inuti 'upprepa'-blocket för att köra koden mer än en gång.",
+          "mc_5_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Overworld Plant Crops": {
+          "mc_7_a": "Använd 'plantera gröda'-blocket för att plantera en gröda i rutan du står i.",
+          "mc_7_b": "Båda strecken av brunt land vid vattnet behöver fyllas med grödor.",
+          "mc_7_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
+        "Overworld Plant Crops_2019": {
+          "mc_7_a": "Använd 'plantera gröda'-blocket för att plantera en gröda i rutan du står i.",
+          "mc_7_b": "Båda strecken av brunt land vid vattnet behöver fyllas med grödor.",
+          "mc_7_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
+        "Overworld Plant Crops_2020": {
+          "mc_7_a": "Använd 'plantera gröda'-blocket för att plantera en gröda i rutan du står i.",
+          "mc_7_b": "Båda strecken av brunt land vid vattnet behöver fyllas med grödor.",
+          "mc_7_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
+        "Overworld Plant Crops_2021": {
+          "mc_7_a": "Använd 'plantera gröda'-blocket för att plantera en gröda i rutan du står i.",
+          "mc_7_b": "Båda strecken av brunt land vid vattnet behöver fyllas med grödor.",
+          "mc_7_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
+        "Overworld Powered Minecart": {
+          "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
+          "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
+        },
+        "Overworld Powered Minecart_2019": {
+          "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
+          "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
+        },
+        "Overworld Powered Minecart_2020": {
+          "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
+          "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
+        },
+        "Overworld Powered Minecart_2021": {
+          "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
+          "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
+        },
+        "Overworld Shear Sheep": {
+          "mc_3_a": "'Sax'-blocket når fåren framför dig. Står du vänd mot fåret?",
+          "mc_3_b": "Om du behöver ändra vilket håll du är vänd mot, använd ett 'sväng'-block.",
+          "mc_3_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Overworld Shear Sheep_2019": {
+          "mc_3_a": "'Sax'-blocket når fåren framför dig. Står du vänd mot fåret?",
+          "mc_3_b": "Om du behöver ändra vilket håll du är vänd mot, använd ett 'sväng'-block.",
+          "mc_3_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Overworld Shear Sheep_2020": {
+          "mc_3_a": "'Sax'-blocket når fåren framför dig. Står du vänd mot fåret?",
+          "mc_3_b": "Om du behöver ändra vilket håll du är vänd mot, använd ett 'sväng'-block.",
+          "mc_3_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Overworld Shear Sheep_2021": {
+          "mc_3_a": "'Sax'-blocket når fåren framför dig. Står du vänd mot fåret?",
+          "mc_3_b": "Om du behöver ändra vilket håll du är vänd mot, använd ett 'sväng'-block.",
+          "mc_3_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Underground Avoiding Lava": {
+          "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
+          "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
+        },
+        "Underground Avoiding Lava_2019": {
+          "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
+          "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
+        },
+        "Underground Avoiding Lava_2020": {
+          "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
+          "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
+        },
+        "Underground Avoiding Lava_2021": {
+          "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
+          "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
+        },
+        "Underground If Statements": {
+          "mc_12_a": "Du hittar röd sten i rutorna med röda fläckar.",
+          "mc_12_b": "Kan du använda en 'upprepa'-slinga för att göra din kod kortare?",
+          "mc_12_c": "Använd ett 'om'-uttryck för att kolla av rutor efter lava, placera sen kullersten."
+        },
+        "Underground If Statements_2019": {
+          "mc_12_a": "Du hittar röd sten i rutorna med röda fläckar.",
+          "mc_12_b": "Kan du använda en 'upprepa'-slinga för att göra din kod kortare?",
+          "mc_12_c": "Använd ett 'om'-uttryck för att kolla av rutor efter lava, placera sen kullersten."
+        },
+        "Underground If Statements_2020": {
+          "mc_12_a": "Du hittar röd sten i rutorna med röda fläckar.",
+          "mc_12_b": "Kan du använda en 'upprepa'-slinga för att göra din kod kortare?",
+          "mc_12_c": "Använd ett 'om'-uttryck för att kolla av rutor efter lava, placera sen kullersten."
+        },
+        "Underground If Statements_2021": {
+          "mc_12_a": "Du hittar röd sten i rutorna med röda fläckar.",
+          "mc_12_b": "Kan du använda en 'upprepa'-slinga för att göra din kod kortare?",
+          "mc_12_c": "Använd ett 'om'-uttryck för att kolla av rutor efter lava, placera sen kullersten."
+        },
+        "Underground Iron": {
+          "mc_10_a": "Järnblocket är det fläckade området bakom facklan! Hur ska du komma dit bort?",
+          "mc_10_b": "När du står vid kanten av lavan, använd 'placera kullersten framför'-blocket för att göra en säker väg. Sen kan du gå över!",
+          "mc_10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Underground Iron_2019": {
+          "mc_10_a": "Järnblocket är det fläckade området bakom facklan! Hur ska du komma dit bort?",
+          "mc_10_b": "När du står vid kanten av lavan, använd 'placera kullersten framför'-blocket för att göra en säker väg. Sen kan du gå över!",
+          "mc_10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Underground Iron_2020": {
+          "mc_10_a": "Järnblocket är det fläckade området bakom facklan! Hur ska du komma dit bort?",
+          "mc_10_b": "När du står vid kanten av lavan, använd 'placera kullersten framför'-blocket för att göra en säker väg. Sen kan du gå över!",
+          "mc_10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Underground Iron_2021": {
+          "mc_10_a": "Järnblocket är det fläckade området bakom facklan! Hur ska du komma dit bort?",
+          "mc_10_b": "När du står vid kanten av lavan, använd 'placera kullersten framför'-blocket för att göra en säker väg. Sen kan du gå över!",
+          "mc_10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Underground Mining Coal": {
+          "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
+          "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
+          "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
+        },
+        "Underground Mining Coal_2019": {
+          "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
+          "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
+          "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
+        },
+        "Underground Mining Coal_2020": {
+          "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
+          "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
+          "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
+        },
+        "Underground Mining Coal_2021": {
+          "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
+          "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
+          "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
+        },
+        "course2_artist_nestedLoops_challenge1": {
+          "courseD_artist_nestedLoops_challenge1_a": "Börja med att göra en inbäddad slinga för att skapa fyra åtthörningar. Sväng 45 grader för att göra åtthörningen. Hoppa och sväng sedan 90 grader efter varje.",
+          "courseD_artist_nestedLoops_challenge1_b": "Lägg till kod för att rita en triangel inuti din inbäddade slinga. Använd 120 graders svängar till din triangel.",
+          "courseD_artist_nestedLoops_challenge1_c": "Använd en inbäddad slinga:\n\n    - Upprepa 8 gånger\n    - Rita en åtthörning\n    - Hoppa framåt 50 pixlar\n    - Sväng höger med 90 grader "
+        },
+        "course2_artist_nestedLoops_challenge2": {
+          "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
+          "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
+        },
+        "course2_artist_prog_challenge1": {
+          "courseC_artist_prog_challenge1_a": "Rektangeln är 200 pixlar bred och 100 pixlar hög."
+        },
+        "course2_artist_prog_challenge2": {
+          "courseC_artist_prog_challenge2_a": "Du kan lägga in kommandon inuti 'upprepa'-blocken för att upprepa dem om och om igen. Testa!"
+        },
+        "course2_bee_conditionals_challenge1": {
+          "courseD_bee_conditionals_challenge1_a": "Kan du hitta en väg som går till alla blommor och vaxkakor utan att gå in i några träd?\nDen bästa vägen är en spiral.\n\n**Du kan lösa detta utan att någonsin svänga vänster.**",
+          "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
+        },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge1_b": "På samma sätt som med 'om vid blomman'-blocken körs koden i 'medan nektar > 0'-blocken enbart om biet är vid en blomma. Den stora skillnaden är att koden inuti körs upprepade gånger tills att det inte är någon nektar kvar. Prova det här mönstret: "
+        },
+        "course2_collector_loops_challenge2": {
+          "courseC_maze_loops_challenge2_a": "Den ursprungliga koden skulle ha funkat utmärkt - om det bara var en bit skatt i varje hög!",
+          "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
+        },
+        "course2_collector_prog_challenge1": {
+          "courseC_collector_prog_challenge1_a": "Du kan 'samla in'-kommandot oftare för att samla in extra skatt."
+        },
+        "course2_collector_prog_challenge2": {
+          "courseC_collector_prog_challenge1_a": "Du kan 'samla in'-kommandot oftare för att samla in extra skatt."
+        },
+        "course2_harvester_loops_challenge1": {
+          "courseC_harvester_loops_challenge1_a": "Fundera inte ens på att försöka göra detta utan slingor!",
+          "courseC_harvester_loops_challenge1_b": "Du kan upprepa 'gå framåt' och 'välj majs' så många gånger du behöver, gör sen 'sväng höger' vid varje hörn.",
+          "courseC_harvester_loops_challenge1_c": "Det bästa sättet att plocka din första majs på är med ett 'upprepa'-block inuti ett annat 'upprepa'-block. Du kan använda det här mönstret för resten av pusslet också!"
+        },
+        "course2_harvester_loops_challenge2": {
+          "courseC_harvester_loops_challenge2_a": "Ett sätt att lösa det här pusslet på är i formen av ett zig-zag-mönster. Ett annat sätt ser ut som en spiral! Det finns många olika lösningar till pussel som det här. Var ihärdig!",
+          "courseC_harvester_loops_challenge2_b": "Du kan upprepa 'gå framåt' och 'välj sallad' så många gånger du behöver, sväng sedan vid varje hörn.",
+          "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
+          "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
+        },
+        "course2_maze_loops_challenge1": {
+          "courseC_maze_loops_challenge1_a": "Tänk på den här vägen som att den är uppdelad i tre olika delar. Varje del har sitt eget mönster du kan upprepa.",
+          "courseC_maze_loops_challenge1_b": "Mellan varje 'upprepa'-block behöver du svänga vänster eller svänga höger för att bli redo för nästa mönster.",
+          "courseC_maze_loops_challenge1_c": "Om du kommit så här långt behöver du bara 'svänga vänster' och sen 'gå framåt' några gånger. Ge inte upp!"
+        },
+        "course2_maze_programming_challenge2": {
+          "courseC_maze_programming_challenge2_a": "_Om du skickar iväg mig baklänges, var extra noga med att jag svänger åt rätt håll!_",
+          "courseC_maze_programming_challenge2_b": "Den kortaste lösningen använder enbart 5 block, men det använder 'upprepa'-blocket!"
+        },
+        "courseB_starWars_prog9": {
+          "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseB_starWars_prog9_2018": {
+          "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseB_starWars_prog9_2019": {
+          "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseB_starWars_prog9_2020": {
+          "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseB_starWars_prog9_2021": {
+          "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_collector_loops_challenge2": {
+          "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
+        },
+        "courseC_collector_loops_challenge2_2018": {
+          "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
+        },
+        "courseC_collector_loops_challenge2_2019": {
+          "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
+        },
+        "courseC_collector_loops_challenge2_2020": {
+          "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
+        },
+        "courseC_harvester_loops_challenge2": {
+          "courseC_harvester_loops_challenge2_a": "Ett sätt att lösa det här pusslet på är i formen av ett zig-zag-mönster. Ett annat sätt ser ut som en spiral! Det finns många olika lösningar till pussel som det här. Var ihärdig!",
+          "courseC_harvester_loops_challenge2_b": "Du kan upprepa 'gå framåt' och 'välj sallad' så många gånger du behöver, sväng sedan vid varje hörn.",
+          "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
+          "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
+        },
+        "courseC_harvester_loops_challenge2_2018": {
+          "courseC_harvester_loops_challenge2_a": "Ett sätt att lösa det här pusslet på är i formen av ett zig-zag-mönster. Ett annat sätt ser ut som en spiral! Det finns många olika lösningar till pussel som det här. Var ihärdig!",
+          "courseC_harvester_loops_challenge2_b": "Du kan upprepa 'gå framåt' och 'välj sallad' så många gånger du behöver, sväng sedan vid varje hörn.",
+          "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
+          "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
+        },
+        "courseC_harvester_loops_challenge2_2019": {
+          "courseC_harvester_loops_challenge2_a": "Ett sätt att lösa det här pusslet på är i formen av ett zig-zag-mönster. Ett annat sätt ser ut som en spiral! Det finns många olika lösningar till pussel som det här. Var ihärdig!",
+          "courseC_harvester_loops_challenge2_b": "Du kan upprepa 'gå framåt' och 'välj sallad' så många gånger du behöver, sväng sedan vid varje hörn.",
+          "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
+          "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
+        },
+        "courseC_harvester_loops_challenge2_2020": {
+          "courseC_harvester_loops_challenge2_a": "Ett sätt att lösa det här pusslet på är i formen av ett zig-zag-mönster. Ett annat sätt ser ut som en spiral! Det finns många olika lösningar till pussel som det här. Var ihärdig!",
+          "courseC_harvester_loops_challenge2_b": "Du kan upprepa 'gå framåt' och 'välj sallad' så många gånger du behöver, sväng sedan vid varje hörn.",
+          "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
+          "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "Ett sätt att lösa det här pusslet på är i formen av ett zig-zag-mönster. Ett annat sätt ser ut som en spiral! Det finns många olika lösningar till pussel som det här. Var ihärdig!",
+          "courseC_harvester_loops_challenge2_b": "Du kan upprepa 'gå framåt' och 'välj sallad' så många gånger du behöver, sväng sedan vid varje hörn.",
+          "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
+          "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
+        },
+        "courseC_starWars_loops1": {
+          "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops10": {
+          "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops10_2018": {
+          "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops10_2019": {
+          "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops10_2020": {
+          "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops10_2021": {
+          "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops1_2018": {
+          "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops1_2019": {
+          "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops1_2020": {
+          "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops7": {
+          "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops7_2018": {
+          "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops7_2019": {
+          "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops7_2020": {
+          "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops7_copy": {
+          "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops7_dani": {
+          "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseD_artist_nestedLoops3": {
+          "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
+        },
+        "courseD_artist_nestedLoops3_2018": {
+          "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
+        },
+        "courseD_artist_nestedLoops3_2019": {
+          "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
+        },
+        "courseD_artist_nestedLoops3_2020": {
+          "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
+        },
+        "courseD_artist_nestedLoops_challenge2": {
+          "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
+          "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
+        },
+        "courseD_artist_nestedLoops_challenge2_2018": {
+          "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
+          "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
+        },
+        "courseD_artist_nestedLoops_challenge2_2019": {
+          "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
+          "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
+        },
+        "courseD_artist_nestedLoops_challenge2_2020": {
+          "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
+          "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
+        },
+        "courseD_artist_nestedLoops_challenge2_2021": {
+          "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
+          "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
+        },
+        "courseD_bee_conditionals_challenge1": {
+          "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
+        },
+        "courseD_bee_conditionals_challenge1_2018": {
+          "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
+        },
+        "courseD_bee_conditionals_challenge1_2019": {
+          "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
+        },
+        "courseD_bee_conditionals_challenge1_2020": {
+          "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
+        },
+        "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
         }
       }
     }

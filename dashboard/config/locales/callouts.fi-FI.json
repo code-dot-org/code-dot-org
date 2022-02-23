@@ -489,6 +489,69 @@
         },
         "New Play Lab Project": {
           "New Play Lab Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Vaihda numeroa tässä"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Tässä on koodi"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Vaihda numeroa tässä"
         }
       }
     }

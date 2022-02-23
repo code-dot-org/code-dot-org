@@ -12,6 +12,7 @@ const BorderedCallToAction = ({
   buttonText,
   buttonUrl,
   buttonClass,
+  buttonColor,
   onClick,
   solidBorder
 }) => {
@@ -30,7 +31,7 @@ const BorderedCallToAction = ({
       <Button
         onClick={onClick || (() => navigateToHref(buttonUrl))}
         className={buttonClass}
-        color={Button.ButtonColor.gray}
+        color={buttonColor}
         text={buttonText}
         style={styles.button}
       />

@@ -6,9 +6,16 @@ kn:
         locale: ಭಾಷೆ
   beta: ಬೀಟಾ
   submit: ಸಲ್ಲಿಸಿ
+  cancel: ರದ್ದುಮಾಡಿ
+  okay: ಓಕೆ
   or: ಅಥವಾ
+  join_section:
+    code:
+      placeholder: ವಿಭಾಗ ಕೋಡ್ (ABCDEF)
   unplugged_activity: ಅನ್‌ಪ್ಲಗ್‌ ಆಕ್ಟಿವಿಟಿ
   continue: ಮುಂದುವರೆಯಿರಿ
+  auth:
+    clever: ಕ್ಲೆವರ್
   signup_form:
     user_type: ನೀವು ವಿದ್ಯಾರ್ಥಿ ಅಥವಾ ಶಿಕ್ಷಕರಾಗಿದ್ದೀರಾ?
     user_type_button: ಖಾತೆ ವಿಧವನ್ನು ಅಪ್‌ಡೇಟ್ ಮಾಡಿ
@@ -25,14 +32,22 @@ kn:
     user_type_teacher_ability_3: ವೃತ್ತಿಪರ ಕಲಿಕೆಗೆ ನೋಂದಣಿ ಮಾಡಿಕೊಳ್ಳಿ
     user_type_teacher_ability_4: ನಮ್ಮ ಶಿಕ್ಷಕರ ವೇದಿಕೆಯಲ್ಲಿ ಸಂವಹನ ನಡೆಸಿ
     email_preference_privacy: "(ನಮ್ಮ ಗೌಪ್ಯತೆ ನೀತಿಯನ್ನು ನೋಡಿ)"
+    email_preference_yes: ಹೌದು
+    email_preference_no: ಇಲ್ಲ
     share_teacher_email_reg_partner_question: ಸ್ಥಳೀಯ ವೃತ್ತಿಪರ ಅಭಿವೃದ್ಧಿ, ಸಂಪನ್ಮೂಲಗಳು
       ಮತ್ತು ಈವೆಂಟ್‌ಗಳ ಕುರಿತು ಅವರು ನಿಮಗೆ ತಿಳಿಸಲು ನಿಮ್ಮ ರಾಜ್ಯದ [Code.org ಪ್ರಾದೇಶಿಕ ಪಾಲುದಾರ](%{cdo_regional_partner_desc})
       ಜೊತೆಗೆ ನಿಮ್ಮ ಸಂಪರ್ಕ ಮಾಹಿತಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಲು ನೀವು ಬಯಸುವಿರಾ?
+    share_teacher_email_reg_partner_preference_yes: ಹೌದು
+    share_teacher_email_reg_partner_preference_no: ಇಲ್ಲ
   school_info:
     other: ಇತರೆ
   password:
     reset_form:
       submit: ಸಲ್ಲಿಸಿ
+  section:
+    type:
+      google_classroom: Google Classroom
+      clever: ಕ್ಲೆವರ್
   follower:
     already_exists: ನೀವು ಈಗಾಗಲೇ %{section_name} ವಿಭಾಗಕ್ಕೆ ಸೇರಿದ್ದೀರಿ.
     error:
@@ -47,13 +62,25 @@ kn:
           ವಿಳಾಸಕ್ಕೆ ಹೊಂದುವುದಿಲ್ಲ
   nav:
     header:
+      my_dashboard: ನನ್ನ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್
+      professional_learning: ವೃತ್ತಿಪರ ಕಲಿಕೆ
       educate_hoc: ಅವರ್ ಆಫ್‌ ಕೋಡ್
     user:
       classroom: ಶಿಕ್ಷಕರ ಮುಖಪುಟ
       create: ರಚಿಸಿ
+      algebra_game: ಬೀಜಗಣಿತ
       artist_k1: ಆರ್ಟಿಸ್ಟ್‌ (ಪ್ರೀ-ರೀಡರ್)
+      basketball: ಬಾಸ್ಕೆಟ್‌ಬಾಲ್
+      calc: ಕ್ಯಾಲ್ಕ್
       dance: ಡ್ಯಾನ್ಸ್ ಪಾರ್ಟಿ
+      eval: ಈವಲ್
+      flappy: ಫ್ಲಾಪಿ
       frozen: ಫ್ರೋಜನ್
+      gamelab_jr: ಗೇಮ್ ಲ್ಯಾಬ್ (ಬೀಟಾ)
+      infinity: ಇನ್‌ಫಿನಿಟಿ
+      minecraft_aquatic: Minecraft ಅಕ್ವಾಟಿಕ್
+      minecraft_hero: Minecraft ಹೀರೋ
+      playlab_k1: ಪ್ಲೇ ಲ್ಯಾಬ್ (ಪೂರ್ವ ಓದುಗ)
       poetry: ಕವನ
       poetry_hoc: ಕವನ ಕಲೆ
       sports: ಸ್ಪೋರ್ಟ್ಸ್
@@ -61,16 +88,23 @@ kn:
       starwarsblocks: ಸ್ಟಾರ್ ವಾರ್ಸ್‌ (ಬ್ಲಾಕ್‌ಗಳು)
       starwarsblocks_hour: ಸ್ಟಾರ್ ವಾರ್ಸ್‌ (ಬ್ಲಾಕ್‌ಗಳು)
       loading: ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ...
+      weblab: ವೆಬ್ ಲ್ಯಾಬ್
   teacher:
     panel:
+      answer_viewer: ಶಿಕ್ಷಕರ ಸಮಿತಿ
       student: ವಿದ್ಯಾರ್ಥಿ
       section: ವಿಭಾಗ
+  user:
+    none: ಯಾವುದೂ ಅಲ್ಲ
+    encrypted: ಎನ್‌ಕ್ರಿಪ್ಟ್ ಮಾಡಲಾಗಿದೆ
   user_type:
     student: ವಿದ್ಯಾರ್ಥಿ
     teacher: ಶಿಕ್ಷಕ
   footer:
     more: ಇನ್ನಷ್ಟು
     support: ಬೆಂಬಲ
+  video:
+    label: ವೀಡಿಯೊ
   lesson_plan: ಪಠ್ಯ ಯೋಜನೆ
   view_lesson_plan: ಪಠ್ಯ ಯೋಜನೆ ನೋಡಿ
   share_code:
@@ -120,9 +154,24 @@ kn:
         ಷರತ್ತುಬದ್ಧ ಹೇಳಿಕೆಯ ಬಗ್ಗೆ ಕಲಿಯಿರಿ.
     widgets:
       audience: ವಯಸ್ಸು 14+
+  multi-submittable:
+    wrong_title: ಧನ್ಯವಾದ
+    correct_title: ಧನ್ಯವಾದ
+  level_group:
+    wrong_title: ಧನ್ಯವಾದ
+    correct_title: ಧನ್ಯವಾದ
+  level_group-submittable:
+    wrong_title: ಧನ್ಯವಾದ
+    correct_title: ಧನ್ಯವಾದ
   dialog:
+    ok: ಸರಿ
     startover_title: ನೀವು ಪ್ರಾರಂಭಿಸಲು ಖಚಿತವಾಗಿ ಬಯಸುವಿರಾ?
     startover_ok: ಮೊದಲಿನಿಂದ ಆರಂಭ
+    startover_cancel: ರದ್ದುಮಾಡಿ
+  terms_interstitial:
+    print: ಮುದ್ರಿಸಿ
+  school_info_interstitial:
+    save: ಉಳಿಸಿ
   race_interstitial:
     races:
       other: ಇತರೆ
@@ -130,6 +179,7 @@ kn:
     decline: ಮುಚ್ಚಿ
   project:
     name: ಹೆಸರು
+    saved: ಉಳಿಸಲಾಗಿದೆ
     abuse:
       report_abuse_form:
         abuse_type:
@@ -143,13 +193,20 @@ kn:
   view_teacher_guide: ಟೀಚರ್ ಗೈಡ್ ನೋಡಿ
   pd:
     form_labels:
+      school_city: ಸ್ಕೂಲ್ ಸಿಟಿ
       school_city_district: ಶಾಲೆ ನಗರ/ಜಿಲ್ಲೆ
+      colombian_school_city: ಸ್ಕೂಲ್ ಸಿಟಿ
     form_entries:
       subjects:
         math: ಗಣಿತ
+        science: ವಿಜ್ಞಾನ
+        la: ಭಾಷಾ ಕಲೆ
       workshop_course:
         csf_express: ಸಿಎಸ್ ಫಂಡಮೆಂಟಲ್‌ಗಳು (ಎಕ್ಸ್‌ಪ್ರೆಸ್‌ಗೂ ಮೊದಲು ಅಥವಾ ಎಕ್ಸ್‌ಪ್ರೆಸ್)
         not_applicable: ಅನ್ವಯಿಸುವುದಿಲ್ಲ
+      email_opt_in:
+        opt_in_yes: ಹೌದು
+        opt_in_no: ಇಲ್ಲ
     international_opt_in:
       title: ವರ್ಕ್‌ಶಾಪ್ ಹಾಜರಾತಿ
       intro: Code.org ಪಠ್ಯಕ್ರಮದಲ್ಲಿ ತರಬೇತಿ ಪಡೆಯಲು ಸಮಯ ಮೀಸಲಿಟ್ಟಿದ್ದಕ್ಕೆ ಧನ್ಯವಾದಗಳು.
@@ -170,3 +227,4 @@ kn:
   cookie_banner:
     accept: ನಾನು ಒಪ್ಪುತ್ತೇನೆ
   copy: ಕಾಪಿ ಮಾಡಿ
+  teacher_feedback: ಶಿಕ್ಷಕರ ಪ್ರತಿಕ್ರಿಯೆ
