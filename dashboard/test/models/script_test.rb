@@ -418,59 +418,73 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal courseg_2018.link, courseg_2017.redirect_to_unit_url(student)
   end
 
-  test 'can_view_version? is true for teachers' do
-    unit = create :script, name: 'my-script'
-    teacher = create :teacher
-    assert unit.can_view_version?(teacher)
-  end
+  class CanViewVersion < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @facilitator = create :facilitator
+      @plc_reviewer = create :plc_reviewer
 
-  test 'can_view_version? is true if unit is latest stable version in student locale or in English' do
-    latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: []
-    latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['it-it']
-    student = create :student
+      @courseq_2017 = create(:script, name: 'courseq-2017', family_name: 'courseq', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @courseq_2018 = create(:script, name: 'courseq-2018', family_name: 'courseq', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @courseq_2019 = create(:script, name: 'courseq-2019', family_name: 'courseq', version_year: '2019')
 
-    assert latest_in_english.can_view_version?(student, locale: 'it-it')
-    assert latest_in_english.can_view_version?(nil)
-    assert latest_in_locale.can_view_version?(student, locale: 'it-it')
-    assert latest_in_locale.can_view_version?(nil, locale: 'it-it')
-  end
+      @pl_courseq_2017 = create(:script, name: 'pl-courseq-2017', family_name: 'pl-courseq', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @pl_courseq_2018 = create(:script, name: 'pl-courseq-2018', family_name: 'pl-courseq', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+    end
 
-  test 'can_view_version? is false if unit is unstable and has no progress and is not assigned' do
-    unstable = create :script, name: 'new-unstable', family_name: 'courseg', version_year: '2018'
-    student = create :student
+    test 'can_view_version? is true for instructor audience for old versions' do
+      assert @pl_courseq_2017.can_view_version?(@plc_reviewer)
+    end
 
-    refute unstable.can_view_version?(student, locale: 'it-it')
-  end
+    test 'can_view_version? is true for teachers where they are part of the instructor or participant audiences' do
+      assert @courseq_2017.can_view_version?(@teacher)
+    end
 
-  test 'can_view_version? is true if student is assigned to unit' do
-    unit = create :script, name: 'my-script', family_name: 'script-fam'
-    student = create :student
-    student.expects(:assigned_script?).returns(true)
+    test 'can_view_version? is false for teachers where they are NOT part of the instructor or participant audiences' do
+      refute @pl_courseq_2017.can_view_version?(@teacher)
+    end
 
-    assert unit.can_view_version?(student)
-  end
+    test 'can_view_version? is true if unit is latest stable version in student locale or in English' do
+      latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: []
+      latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['it-it']
+      student = create :student
 
-  test 'can_view_version? is true if student has progress in unit' do
-    unit = create :script, name: 'my-script', family_name: 'script-fam', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    student = create :student
-    student.scripts << unit
+      assert latest_in_english.can_view_version?(student, locale: 'it-it')
+      assert latest_in_english.can_view_version?(nil)
+      assert latest_in_locale.can_view_version?(student, locale: 'it-it')
+      assert latest_in_locale.can_view_version?(nil, locale: 'it-it')
+    end
 
-    assert unit.can_view_version?(student)
-  end
+    test 'can_view_version? is false if unit is unstable and has no progress and is not assigned' do
+      refute @courseq_2019.can_view_version?(@student)
+    end
 
-  test 'can_view_version? is true if student has progress in unit group unit belongs to' do
-    unit_group = create :unit_group, family_name: 'unit-fam'
-    unit1 = create :script, name: 'unit1', family_name: 'unit-fam'
-    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
-    unit2 = create :script, name: 'unit2', family_name: 'unit-fam'
-    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
-    student = create :student
-    student.scripts << unit1
-    unit_group.reload
-    unit1.reload
-    unit2.reload
+    test 'can_view_version? is true if student is assigned to unit' do
+      @student.expects(:assigned_script?).returns(true)
 
-    assert unit2.can_view_version?(student)
+      assert @courseq_2017.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is true if student has progress in unit' do
+      @student.scripts << @courseq_2017
+
+      assert @courseq_2017.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is true if student has progress in unit group unit belongs to' do
+      unit_group = create :unit_group, family_name: 'unit-fam'
+      unit1 = create :script, name: 'unit1', family_name: 'unit-fam'
+      create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+      unit2 = create :script, name: 'unit2', family_name: 'unit-fam'
+      create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+      @student.scripts << unit1
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert unit2.can_view_version?(@student)
+    end
   end
 
   test 'self.latest_stable_version is nil if no unit versions in family are stable in locale' do
