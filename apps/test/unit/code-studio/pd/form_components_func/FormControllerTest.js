@@ -156,6 +156,25 @@ describe('FormController', () => {
       expect(form.exists('Alert')).to.be.false;
     });
 
+    it('Shows data was loaded message if status is reopened', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          applicationId={applicationId}
+          savedStatus={'reopened'}
+          allowPartialSaving={true}
+          validateOnSubmitOnly={true}
+        />
+      );
+      const alert = form.findOne('Alert');
+      expect(alert.content()).to.contain(
+        'Your Regional Partner has requested more information.  Please update and resubmit.'
+      );
+
+      alert.props.onDismiss();
+      expect(form.exists('Alert')).to.be.false;
+    });
+
     it('Does not show data was loaded message if partial saving is disabled', () => {
       form = isolateComponent(
         <FormController
