@@ -3,6 +3,7 @@ require 'securerandom' unless defined?(SecureRandom)
 require 'cdo/firehose'
 
 class JavabuilderSessionsController < ApplicationController
+  include JavalabFilesHelper
   authorize_resource class: false
 
   PRIVATE_KEY = CDO.javabuilder_private_key
@@ -68,6 +69,12 @@ class JavabuilderSessionsController < ApplicationController
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSWORD),
       'RS256'
     )
+
+    if use_dashboard_sources == 'false'
+      success = JavalabFilesHelper.upload_project_files(channel_id, level_id, encoded_payload)
+      return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
+    end
+
     render json: {token: encoded_payload, session_id: session_id}
   end
 end
