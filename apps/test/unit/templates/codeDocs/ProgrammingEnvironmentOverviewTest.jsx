@@ -62,7 +62,7 @@ describe('ProgrammingEnvironmentOverview', () => {
         .first()
         .props().markdown
     ).to.equal('spritelab description');
-    expect(wrapper.find('a').props().href).to.equal('/p/spritelab');
+    expect(wrapper.find('Link').props().href).to.equal('/p/spritelab');
   });
 
   it('doesnt render title and description if not provided', () => {

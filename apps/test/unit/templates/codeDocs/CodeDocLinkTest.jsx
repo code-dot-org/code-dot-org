@@ -13,14 +13,13 @@ describe('CodeDocLink', () => {
         }}
       />
     );
-    expect(wrapper.find('a').length).to.equal(1);
+    expect(wrapper.find('Link').length).to.equal(1);
     expect(
       wrapper
-        .find('a')
+        .find('Link')
         .first()
         .props().href
     ).to.equal('/docs/applab/code');
-    expect(wrapper.text().includes('App Lab Code')).to.be.true;
     expect(wrapper.find('EmbeddedBlock').length).to.equal(0);
   });
 
@@ -34,7 +33,7 @@ describe('CodeDocLink', () => {
         }}
       />
     );
-    expect(wrapper.text().includes('Sprite Lab Block')).to.be.false;
+    expect(wrapper.find('Link').length).to.equal(0);
     expect(wrapper.find('EmbeddedBlock').length).to.equal(1);
   });
 });
