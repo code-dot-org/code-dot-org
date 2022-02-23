@@ -26,7 +26,12 @@ export const PALETTES = {
   roses: ['#4C0606', '#86003C', '#E41F7B', '#FF8BA0 ', '#FFB6B3']
 };
 
-// Author is the only attribute not translated
+// Notes:
+// - author is not translated.
+// - Poems are shown in all languages, unless there is a locale attribute, in which case
+//   the poem is shown in the dropdown only for users with that current locale.
+// - If the locale attribute is set, then title is used and is not translated.
+// - If the locale attribute is set, then linesSplit is used and is not translated.
 export const POEMS = {
   hafez: {author: 'Hafez'},
   field: {author: 'Eugene Field'},
