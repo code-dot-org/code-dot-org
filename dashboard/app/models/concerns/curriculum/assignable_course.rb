@@ -1,5 +1,4 @@
-# Concern to find all the assignable course offerings for a user and
-# be able to summarize them for assignment by the user.
+# Concern to determine if a course version is assignable for a user.
 #
 # To use, include in a model and call the desired method.
 module Curriculum::AssignableCourse
