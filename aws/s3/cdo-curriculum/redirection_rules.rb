@@ -71,15 +71,6 @@ routing_rules = [
   },
   {
     condition: {
-      key_prefix_equals: "hoc/"
-    },
-    redirect: {
-      host_name: CODE_ORG_HOST_NAME,
-      replace_key_prefix_with: "learn/"
-    }
-  },
-  {
-    condition: {
       key_prefix_equals: "hoc-current/"
     },
     redirect: {
