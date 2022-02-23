@@ -11020,8 +11020,8 @@ es-ES:
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         questions:
-        - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
-            ejecutes el programa?
+        - text: Observa este código con atención. ¿Qué crees que ocurrirá cuando se
+            ejecute el programa?
       CourseF_outbreak_story:
         content1: descripción aquí
         markdown: "El Brote: Codifica tu Propia Simulación\n\n## ¡Bienvenido a Monster
