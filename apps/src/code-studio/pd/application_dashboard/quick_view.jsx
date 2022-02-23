@@ -27,6 +27,7 @@ export class QuickView extends React.Component {
   static propTypes = {
     regionalPartnerFilter: RegionalPartnerPropType,
     showRegionalPartnerDropdown: PropTypes.bool,
+    isWorkshopAdmin: PropTypes.bool,
     route: PropTypes.shape({
       path: PropTypes.string.isRequired,
       applicationType: PropTypes.string.isRequired,
@@ -185,6 +186,7 @@ const styles = {
 };
 
 export default connect(state => ({
+  isWorkshopAdmin: state.applicationDashboard.permissions.workshopAdmin,
   regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,
   showRegionalPartnerDropdown:
     state.regionalPartners.regionalPartners.length > 1
