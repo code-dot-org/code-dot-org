@@ -22,6 +22,14 @@ class CourseOfferingTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(@unit_teacher_to_students2)
     @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher2', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, family_name: 'family-3', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_facilitator_to_teacher)
+
+    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
+    @pilot_unit = create :script, pilot_experiment: 'my-experiment', family_name: 'family-4', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    CourseOffering.add_course_offering(@pilot_unit)
+
+    @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
+    @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', family_name: 'family-5', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    CourseOffering.add_course_offering(@pilot_pl_unit)
   end
 
   test "course offering associations" do
@@ -189,6 +197,109 @@ class CourseOfferingTest < ActiveSupport::TestCase
     refute course_offering.valid?
     course_offering.key = '0123456789abcdefghijklmnopqrstuvwxyz-'
     assert course_offering.valid?
+  end
+
+  test 'any_version_has_pilot_access? is true if user has pilot access to any course versions' do
+    refute @unit_teacher_to_students.course_version.course_offering.any_version_has_pilot_access?(@student)
+    refute @unit_teacher_to_students.course_version.course_offering.any_version_has_pilot_access?(@teacher)
+    refute @unit_teacher_to_students.course_version.course_offering.any_version_has_pilot_access?(@pilot_teacher)
+    refute @unit_teacher_to_students.course_version.course_offering.any_version_has_pilot_access?(@pilot_instructor)
+    refute @unit_teacher_to_students.course_version.course_offering.any_version_has_pilot_access?(@levelbuilder)
+
+    refute @unit_facilitator_to_teacher.course_version.course_offering.any_version_has_pilot_access?(@student)
+    refute @unit_facilitator_to_teacher.course_version.course_offering.any_version_has_pilot_access?(@teacher)
+    refute @unit_facilitator_to_teacher.course_version.course_offering.any_version_has_pilot_access?(@pilot_teacher)
+    refute @unit_facilitator_to_teacher.course_version.course_offering.any_version_has_pilot_access?(@pilot_instructor)
+    refute @unit_facilitator_to_teacher.course_version.course_offering.any_version_has_pilot_access?(@levelbuilder)
+
+    refute @pilot_unit.course_version.course_offering.any_version_has_pilot_access?(@student)
+    refute @pilot_unit.course_version.course_offering.any_version_has_pilot_access?(@teacher)
+    assert @pilot_unit.course_version.course_offering.any_version_has_pilot_access?(@pilot_teacher)
+    refute @pilot_unit.course_version.course_offering.any_version_has_pilot_access?(@pilot_instructor)
+    assert @pilot_unit.course_version.course_offering.any_version_has_pilot_access?(@levelbuilder)
+
+    refute @pilot_pl_unit.course_version.course_offering.any_version_has_pilot_access?(@student)
+    refute @pilot_pl_unit.course_version.course_offering.any_version_has_pilot_access?(@teacher)
+    refute @pilot_pl_unit.course_version.course_offering.any_version_has_pilot_access?(@pilot_teacher)
+    assert @pilot_pl_unit.course_version.course_offering.any_version_has_pilot_access?(@pilot_instructor)
+    assert @pilot_pl_unit.course_version.course_offering.any_version_has_pilot_access?(@levelbuilder)
+  end
+
+  test 'can_be_instructor? is true if user can be instructor of any course version' do
+    refute @unit_teacher_to_students.course_version.course_offering.can_be_instructor?(@student)
+    assert @unit_teacher_to_students.course_version.course_offering.can_be_instructor?(@teacher)
+
+    refute @unit_facilitator_to_teacher.course_version.course_offering.can_be_instructor?(@student)
+    refute @unit_facilitator_to_teacher.course_version.course_offering.can_be_instructor?(@teacher)
+    assert @unit_facilitator_to_teacher.course_version.course_offering.can_be_instructor?(@facilitator)
+  end
+
+  test 'pl_course? is true if any course versions are pl courses' do
+    refute @unit_teacher_to_students.course_version.course_offering.pl_course?
+    refute @unit_teacher_to_students2.course_version.course_offering.pl_course?
+    assert @unit_facilitator_to_teacher.course_version.course_offering.pl_course?
+  end
+
+  test 'any_versions_launched? is true if any course versions have been launched' do
+    unit1 = create(:script, name: 'unit1', family_name: 'family-6', version_year: '1991', is_course: true, published_state: 'stable')
+    CourseOffering.add_course_offering(unit1)
+    unit2 = create(:script, name: 'unit2', family_name: 'family-6', version_year: '1992', is_course: true, published_state: 'beta')
+    CourseOffering.add_course_offering(unit2)
+
+    assert unit1.course_version.course_offering.any_versions_launched?
+  end
+
+  test 'any_versions_launched? is false if none of the course versions have been launched' do
+    unit1 = create(:script, name: 'unit1', family_name: 'family-7', version_year: '1991', is_course: true, published_state: 'beta')
+    CourseOffering.add_course_offering(unit1)
+    unit2 = create(:script, name: 'unit2', family_name: 'family-7', version_year: '1992', is_course: true, published_state: 'beta')
+    CourseOffering.add_course_offering(unit2)
+
+    refute unit1.course_version.course_offering.any_versions_launched?
+  end
+
+  test 'any_versions_in_development? is true if any course versions are in development' do
+    unit1 = create(:script, name: 'unit1', family_name: 'family-8', version_year: '1991', is_course: true, published_state: 'stable')
+    CourseOffering.add_course_offering(unit1)
+    unit2 = create(:script, name: 'unit2', family_name: 'family-8', version_year: '1992', is_course: true, published_state: 'in_development')
+    CourseOffering.add_course_offering(unit2)
+
+    assert unit1.course_version.course_offering.any_versions_in_development?
+  end
+
+  test 'any_versions_in_development? is false if none of the course versions are in development' do
+    unit1 = create(:script, name: 'unit1', family_name: 'family-9', version_year: '1991', is_course: true, published_state: 'beta')
+    CourseOffering.add_course_offering(unit1)
+    unit2 = create(:script, name: 'unit2', family_name: 'family-9', version_year: '1992', is_course: true, published_state: 'beta')
+    CourseOffering.add_course_offering(unit2)
+
+    refute unit1.course_version.course_offering.any_versions_in_development?
+  end
+
+  test 'assignable? is false if can not be instructor' do
+    refute @unit_teacher_to_students.course_version.course_offering.assignable?(@student)
+    assert @unit_teacher_to_students.course_version.course_offering.assignable?(@teacher)
+
+    refute @unit_facilitator_to_teacher.course_version.course_offering.assignable?(@teacher)
+    assert @unit_facilitator_to_teacher.course_version.course_offering.assignable?(@facilitator)
+  end
+
+  test 'assignable? is true if has pilot access and any course version is in pilot state' do
+    refute @pilot_unit.course_version.course_offering.assignable?(@teacher)
+    assert @pilot_unit.course_version.course_offering.assignable?(@pilot_teacher)
+    refute @pilot_unit.course_version.course_offering.assignable?(@pilot_instructor)
+
+    refute @pilot_pl_unit.course_version.course_offering.assignable?(@teacher)
+    refute @pilot_pl_unit.course_version.course_offering.assignable?(@pilot_teacher)
+    assert @pilot_pl_unit.course_version.course_offering.assignable?(@pilot_instructor)
+  end
+
+  test 'assignable? is true if any versions in development and user is levelbuilder' do
+    unit1 = create(:script, name: 'unit2', family_name: 'family-10', version_year: '1992', is_course: true, published_state: 'in_development')
+    CourseOffering.add_course_offering(unit1)
+
+    refute unit1.course_version.course_offering.assignable?(@teacher)
+    assert unit1.course_version.course_offering.assignable?(@levelbuilder)
   end
 
   test 'get assignable pl course offerings for teacher should return no offerings' do

@@ -145,11 +145,6 @@ class CourseVersion < ApplicationRecord
     family_name = course_offering.key
     latest_stable_version = content_root_type == 'UnitGroup' ? UnitGroup.latest_stable_version(family_name) : Script.latest_stable_version(family_name, locale: locale_code)
 
-    puts family_name
-    puts locale_code
-    puts latest_stable_version.inspect
-    puts content_root.inspect
-
     latest_stable_version == content_root
   end
 
