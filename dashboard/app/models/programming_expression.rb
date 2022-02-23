@@ -125,11 +125,11 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def self.seed_all
-    removed_records = all.pluck(:name)
+    removed_records = all.pluck(:id)
     Dir.glob(Rails.root.join("config/programming_expressions/{applab,gamelab,weblab,spritelab}/*.json")).each do |path|
       removed_records -= [ProgrammingExpression.seed_record(path)]
     end
-    where(name: removed_records).destroy_all
+    where(id: removed_records).destroy_all
   end
 
   def self.seed_record(file_path)
@@ -137,7 +137,7 @@ class ProgrammingExpression < ApplicationRecord
     record = ProgrammingExpression.find_or_initialize_by(key: properties[:key], programming_environment_id: properties[:programming_environment_id])
     record.assign_attributes(properties)
     record.save! if record.changed?
-    record.name
+    record.id
   end
 
   def documentation_path
