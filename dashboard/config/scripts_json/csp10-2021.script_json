@@ -4,15 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "notice": "Panel Today: A Day in the Life of a Woman College Student in CS",
-          "details": "Join us tonight at 8pm EDT as college women share their experiences as computer science majors. We will discuss classes to take in HS to be prepared for college courses, what classes are like, navigating impostor syndrome and anything you would like to discuss! ",
-          "link": "https://bit.ly/3v9qFAw",
-          "type": "bullhorn",
-          "visibility": "Teacher and student"
-        }
-      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -26,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-22 18:22:50 UTC",
+    "serialized_at": "2022-02-23 18:08:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

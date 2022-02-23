@@ -2,11 +2,16 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Unit 1 Lesson 13 version of `PainterPlus.java`(#e7e8ea) and `PatternPainter.java`(#e7e8ea)",
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "neighborhood",
+    "start_sources": {
+      "MyNeighborhood.java": {
+        "text": "import org.code.neighborhood.Painter;\n\npublic class MyNeighborhood {\n  public static void main(String[] args) {\n\n    // TO DO: Instantiate a PainterPlus object called myPainterPlus.\n\n\n    // TO DO: Test your takeAllPaint() method.\n    \n    \n  }\n}",
+        "isVisible": true
+      }
+    },
     "serialized_maze": [
       [
         {
@@ -16,8 +21,8 @@
         },
         {
           "tileType": 1,
-          "value": 0,
-          "assetId": 0
+          "value": 10,
+          "assetId": 303
         },
         {
           "tileType": 1,
@@ -345,22 +350,17 @@
         }
       ]
     ],
-    "start_sources": {
-      "PainterPlus.java": {
-        "text": "import org.code.neighborhood.Painter;\n\n/*\n * Creates a PainterPlus\n * PainterPlus is a subclass of Painter.\n */\npublic class PainterPlus extends Painter {\n\n  /*\n   * Constructor to create a PainterPlus object\n   */\n  public PainterPlus() {\n    super();  // Calls the Painter constructor\n  }\n\n  /*\n   * Turns a PainterPlus object to the right\n   * by turning left three times\n   */\n  public void turnRight() {\n    turnLeft();\n    turnLeft();\n    turnLeft();\n  }\n\n  /*\n   * Unit 1 Lesson 9\n   */\n  public void takeAllPaint() {\n    while (isOnBucket()) {\n      takePaint();\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 9\n   */\n  public void paintLine(String color) {\n    while (canMove()) {\n      paint(color);\n      move();\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 10\n   */\n  public void moveOrTakePaint() {\n    while (canMove()) {\n      if (!isOnBucket()) {\n        move();\n      }\n      else {\n        takeAllPaint();\n      }\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 10\n   */\n  public void moveSouth() {\n    while (canMove(\"south\")) {\n      if (!facingSouth()) {\n        turnRight();\n      }\n      else {\n        move();\n      }\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 11\n   */\n  public void printStatus() {\n    \n  }\n\n  /*\n   * Unit 1 Lesson 12 - Choice A & B\n   */\n  public void moveFast() {\n    while (canMove()) {\n      move();\n\n      if (isOnBucket()) {\n        takeAllPaint();\n      }\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 12 - Choice A\n   */\n  public void paintSquare(String color) {\n    while (hasPaint()) {\n      paint(color);\n      move();\n\n      if (!canMove()) {\n        turnRight();\n      }\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 12 - Choice B\n   */\n  public void paintDashes(String color) {\n    paint(color);\n    \n    if (canMove()) {\n      move();\n    }\n    \n    paint(color);\n\n    if (canMove()) {\n      move();\n    }\n\n    if (canMove()) {\n      move();\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 12 - Choice C\n   */\n  public void paintFastC(String color) {\n    while (canMove()) {\n      move();\n      \n      if (isOnBucket()) {\n        takeAllPaint();\n      }\n\n      if (hasPaint()) {\n        paint(color);\n      }\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 12 - Choice C\n   */\n  public void paintTruckBorder(String color) {\n    while (hasPaint()) {\n      paintFastC(color);\n\n      if (!canMove()) {\n        turnLeft();\n      }\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 12 - Choice D\n   */\n  public void paintFastD(String color) {\n    while (canMove()) {\n      move();\n\n      if (isOnBucket()) {\n        takeAllPaint();\n      }\n\n      if (hasPaint()) {\n        paint(color);\n      }\n\n      if (!canMove()) {\n        makeTurn();\n      }\n    }\n  }\n\n  /*\n   * Unit 1 Lesson 12 - Choice D\n   */\n  public void makeTurn() {\n    if (facingEast()) {\n      turnRight();\n    }\n    else {\n      turnLeft();\n    }\n  }\n\n  /**\n   * Collects all of the paint and\n   * returns to the beginning.\n   */\n  public void collectPaint() {\n    while (canMove()) {\n      move();\n\n      if (isOnBucket()) {\n        takeAllPaint();\n      }\n    }\n\n    turnLeft();\n    turnLeft();\n\n    while (canMove()) {\n      move();\n    }\n\n    turnLeft();\n    turnLeft();\n  }\n  \n}",
-        "isVisible": true
-      },
-      "PatternPainter.java": {
-        "text": "import org.code.neighborhood.Painter;\n\n/*\n * Creates a PatternPainter\n * PatternPainter is a subclass of PainterPlus.\n */\npublic class PatternPainter extends PainterPlus {\n\n  /*\n   * Constructor to create a PatternPainter object\n   */\n  public PatternPainter() {\n    super();  // Calls the PainterPlus constructor\n  }\n\n  /**\n   * Paints a pattern\n   */\n  public void paintPattern(String color) {\n    paint(color);\n    move();\n    turnRight();\n\n    paint(color);\n    move();\n    turnRight();\n\n    paint(color);\n    move();\n    turnRight();\n\n    paint(color);\n    move();\n    turnRight();\n  }\n\n  /**\n   * Paints a pattern across the entire Neighborhood\n   */\n  public void paintPatternMural(String color) {\n    while (canMove(\"south\")) {\n      paintPattern(color);\n\n      moveIfCanMove();\n      moveIfCanMove();\n      moveIfCanMove();\n\n      moveToNextRow();\n    }\n  }\n\n  /**\n   * Moves to the next row to paint the pattern\n   */\n  public void moveToNextRow() {\n    if (!canMove()) {\n      if (facingEast()) {\n        turnRight();\n        moveIfCanMove();\n        moveIfCanMove();\n        moveIfCanMove();\n        moveIfCanMove();\n        turnRight();\n      }\n      else {\n        turnLeft();\n        moveIfCanMove();\n        moveIfCanMove();\n        turnLeft();\n      }\n    }\n  }\n\n}",
-        "isVisible": true
-      }
-    }
+    "long_instructions": "##Getting Started\r\nImport `PainterPlus.java`(#e7e8ea) from the ![Backpack](https://images.code.org/b17feeef2e8db2a98abdb4a5860c5c61-image-1642175705297.png)\r\n\r\n*Don't have it or it doesn't work? That's ok! Just copy and paste the code from [**here**](http://studio.code.org/s/csa-backpack-2022/lessons/1/levels/1).*\r\n\r\n##In PainterPlus.java:\r\n\r\n2. Write the method signature for the `takeAllPaint()`(#e7e8ea) method.\r\n\r\n3. Inside the `takeAllPaint()`(#e7e8ea) method, use your pseudocode to write the Java code for a `PainterPlus`(#e7e8ea) object to take all of the paint while it is on a paint bucket.\r\n\r\n##In MyNeighborhood.java:\r\n4. 5. Test your `takeAllPaint()`(#e7e8ea) method.\r\n\r\n::: details [**Show Me How**]\r\nA method signature for a `void`(#e7e8ea) method uses the following syntax:\r\n  \r\n  ```\r\n  public void methodName() {\r\n     // code to execute when the method is called\r\n  }\r\n  ```\r\n\r\nBe sure to replace `methodName`(#e7e8ea) with the name of the method.\r\n\r\nA `while`(#e7e8ea) loop uses the following syntax:\r\n\r\n  ```\r\n  while (condition) {\r\n     // code to execute while the condition is true\r\n  }\r\n  ```\r\n:::",
+    "project_template_level_name": "CSA U1L9-L3a PBT_2022",
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 68,
-  "created_at": "2022-02-18T16:07:42.000Z",
+  "published": true,
+  "created_at": "2022-02-23T13:37:13.000Z",
   "level_num": "custom",
   "user_id": 16889,
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2022-02-18T16:07:42.436+00:00\",\"changed\":[\"cloned from \\\"CSA U1L12 PainterPlus\\\"\"],\"cloned_from\":\"CSA U1L12 PainterPlus\"},{\"changed_at\":\"2022-02-18 16:07:58 +0000\",\"changed\":[\"long_instructions\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 16:08:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-18 16:59:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-23 14:52:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-02-23T13:37:13.509+00:00\",\"changed\":[\"cloned from \\\"CSA U1L9-L3a_2022\\\"\"],\"cloned_from\":\"CSA U1L9-L3a_2022\"},{\"changed_at\":\"2022-02-23 13:37:30 +0000\",\"changed\":[\"serialized_maze\",\"display_name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-02-23 13:39:53 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
