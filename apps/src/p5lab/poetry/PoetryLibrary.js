@@ -321,7 +321,8 @@ export default class PoetryLibrary extends CoreLibrary {
       desiredSize,
       (desiredSize * (PLAYSPACE_SIZE - OUTER_MARGIN)) / fullWidth
     );
-    const maxLineHeight = 30 / lines.length;
+    const maxLineHeight =
+      lines.length === 1 ? 30 : PLAYSPACE_SIZE / 2 / lines.length;
 
     this.p5.pop();
     return Math.min(scaledSize, maxLineHeight);
@@ -442,13 +443,8 @@ export default class PoetryLibrary extends CoreLibrary {
       yCursor += LINE_HEIGHT;
     }
     const lineHeight = (PLAYSPACE_SIZE - yCursor) / poemState.lines.length;
-    const longestLine = poemState.lines.reduce(
-      (accumulator, current) =>
-        accumulator.length > current.length ? accumulator : current,
-      '' /* default value */
-    );
     const lineSize = this.getScaledFontSize(
-      longestLine,
+      poemState.lines.join('\n'),
       poemState.font.font,
       FONT_SIZE
     );
