@@ -1,0 +1,80 @@
+<%# Note this file must be indented one level, as it is a child of 'Resources'. %>
+  # -----------------------------------------------
+  # Begin codeprojects.org resources
+  # 
+  # This template component includes resources for the codeprojects.org
+  # infrastructure. Currently this is mostly manually deployed.
+  # 
+  # -----------------------------------------------
+
+<%-
+  hosted_zone_id = "Z2E5MLW9OSPK9O"
+  envs = {
+    staging: {
+      domain_name: "staging.codeprojects.org",
+      alternative_names: []
+    },
+    test: {
+      domain_name: "test.codeprojects.org",
+      alternative_names: []
+    },
+    production: {
+      domain_name: "codeprojects.org",
+      alternative_names: ["www.codeprojects.org"]
+    },
+  }
+-%>
+
+<%- if rack_env?(:staging) -%>
+  # Developer Resources (Deployed with Staging)
+  LocalhostCodeprojectsRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: codeprojects.org
+      Name: localhost.codeprojects.org
+      Type: A
+      TTL: 3600
+      ResourceRecords:
+        - 127.0.0.1
+<%- end -%>
+
+<%- envs.each do |env, config| -%>
+<%- if rack_env == env -%>
+
+  # <%= env %> Resources
+  Codeprojects<%= env.capitalize %>Certificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: <%= config[:domain_name] %>
+      <%- unless config[:alternative_names].empty? -%>
+      SubjectAlternativeNames:
+        <%- config[:alternative_names].each do | alt_name | -%>
+        - <%= alt_name %>
+        <%- end -%>
+      <%- end -%>
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: <%= config[:domain_name] %>
+          HostedZoneId: <%= hosted_zone_id %>
+        <%- config[:alternative_names].each do | alt_name | -%>
+        - DomainName: <%= alt_name %>
+          HostedZoneId: <%= hosted_zone_id %>
+        <%- end -%>
+<%- end -%>
+<%- end -%>
+
+<%- if rack_env?(:production) -%>
+  # One-off resources (Deployed with production)
+  CodeprojectsStaticCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: static.codeprojects.org
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: static.codeprojects.org
+          HostedZoneId: <%= hosted_zone_id %>
+<%- end -%>
+
+  # -----------------------------------------------
+  # End codeprojects.org resources
+  # -----------------------------------------------
