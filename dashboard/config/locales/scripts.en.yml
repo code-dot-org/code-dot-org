@@ -32055,3 +32055,34 @@ en:
           description_short: ''
           description: Versions of classes students have in their **Backpack** throughout the course.
           student_description: ''
+        csd6-projects:
+          lessons:
+            'Mini-Project: On-The-Go App':
+              name: 'Mini-Project: On-The-Go App'
+              description_student: Create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected
+              description_teacher: |-
+                In this mini-project, students will create an app that uses the Circuit Playground to collect data, then has an app to analyze the data that was collected. This is similar to citizen science or step-tracking apps that students may be familiar with. Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.
+
+                **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?
+            'Project: Human Device Interaction':
+              name: 'Project: Human Device Interaction'
+              description_student: 
+              description_teacher: 
+            'Mini-Project: Interactive Art':
+              name: 'Mini-Project: Interactive Art'
+              description_student: Create a piece of interactive artwork using a Circuit Playground and physical materials
+              description_teacher: In this lesson, students create a piece of interactive artwork using the sensors on the Circuit Playground and physical materials. Students explore how the Circuit Playground can augment physical materials to create an interactive experience. This project does not use the App Lab screen except to help with debugging - otherwise, users only interact with the physical artwork itself.
+            lesson-4:
+              name: Independent Practice Levels
+              description_student: 
+              description_teacher: |-
+                This lesson contains a collection of levels that appear in our curriculum. You can use these levels to experiment with how the MicroBit works in the context of our level progression in the curriculum, or to test out individual components of the MicroBit in a smaller setting.
+
+                All levels are designed with the Circuit Playground in mind, so there may not be an exact match between the level instructions and the MicroBit.
+          lesson_groups: {}
+          name: csd6-projects
+          title: CSD Unit 6 Projects
+          description_audience: ''
+          description_short: ''
+          description: These are the new projects for the CS Discoveries Physical Computing unit. This unit exists to help playtesting the new MicroBit features in the Code.org platform
+          student_description: ''
