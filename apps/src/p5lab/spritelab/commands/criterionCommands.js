@@ -29,7 +29,7 @@ export const commands = {
     const spriteIds = this.getSpriteIdsInUse();
     let result = false;
     for (let i = 0; i < spriteIds.length; i++) {
-      if (validationCommands.spriteSpeechRenderedThisFrame.call(this, i)) {
+      if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
         result = true;
       }
     }
@@ -78,7 +78,7 @@ export const commands = {
     let result = false;
     let count = 0;
     for (let i = 0; i < spriteIds.length; i++) {
-      if (validationCommands.spriteSpeechRenderedThisFrame.call(this, i)) {
+      if (commands.spriteSpeechRenderedThisFrame.call(this, i)) {
         count++;
       }
     }
