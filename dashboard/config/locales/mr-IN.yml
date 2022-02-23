@@ -84,12 +84,21 @@ mr:
       signin: साइन इन करा
       signup: अकाउंट तयार करा
       create: बनवा
+      algebra_game: बीजगणित
       artist: आर्टीस्ट
       artist_k1: आर्टीस्ट (पूर्व-वाचन)
+      basketball: बास्केटबॉल
+      calc: कॅल्क
       dance: डांस पार्टी
+      eval: इव्हॅल
+      flappy: फ्लॅपी
       frozen: फ्रोझन
+      gamelab_jr: गेम लॅब (बीटा)
       infinity: अनंत
       minecraft_adventurer: माईनक्राफ्ट साहस
+      minecraft_aquatic: माईनक्राफ्ट ॲक्वेटिक
+      minecraft_hero: माईनक्राफ्ट हिरो
+      playlab_k1: प्ले लॅब (पूर्व-वाचन)
       poetry: कविता
       poetry_hoc: 'कविता कला '
       sports: क्रीडा
@@ -99,6 +108,7 @@ mr:
       weblab: वेब लॅब
   teacher:
     panel:
+      answer_viewer: शिक्षक पॅनेल
       student: विध्यार्थी
   user:
     for_parents_and_guardians: आईवडील आणि पालकांसाठी
@@ -127,6 +137,7 @@ mr:
   video:
     tab: व्हिडिओ.
     notes: व्हिडिओ नाही? नोट्स दाखवा.
+    label: व्हिडीओ
   lesson_plan: 'धड्याचा प्लॅन '
   view_lesson_plan: धड्याचा प्लॅन बघा
   share_code:
@@ -198,12 +209,15 @@ mr:
       Code.org साठी साइन अप करून तुम्ही आमच्या [सेवेच्या अटी]( %{tos_url}) आणि [गोपनीयता
       धोरण](%{privacy_url}) साठी संमती देता.
     print: प्रिंट
+  school_info_interstitial:
+    save: सेव्ह करा
   race_interstitial:
     decline: Band
   project:
     projects: प्रकल्प
     project_gallery: प्रकल्प
     name: नाव
+    saved: सेव्ह केले
   hoc_download:
     minecraft_name: माईनक्राफ्ट अवर ऑफ कोड
     starwars_blocks_name: 'स्टार वॉर्स: कोड वापरून आकाशगंगा तयार करणे (ब्लॉक्स)'
