@@ -74,7 +74,7 @@ routing_rules = [
       key_prefix_equals: "hoc/"
     },
     redirect: {
-      host_name: CODE_STUDIO_HOST_NAME,
+      host_name: CODE_ORG_HOST_NAME,
       replace_key_prefix_with: "learn/"
     }
   },
@@ -83,7 +83,7 @@ routing_rules = [
       key_prefix_equals: "hoc-current/"
     },
     redirect: {
-      host_name: CODE_STUDIO_HOST_NAME,
+      host_name: CODE_ORG_HOST_NAME,
       replace_key_prefix_with: "learn/",
       http_redirect_code: "302"
     }
