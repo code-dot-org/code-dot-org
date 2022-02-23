@@ -30,7 +30,7 @@ module CaptureQueries
   end
 
   def assert_cached_queries(num, *args, &block)
-    Retryable.retryable(on: Minitest::Assertion, tries: 2, sleep: 0) do
+    Retryable.retryable(on: Minitest::Assertion, matching: /Wrong query count/, tries: 2, sleep: 0) do
       assert_queries(num, *args, &block)
     end
   end

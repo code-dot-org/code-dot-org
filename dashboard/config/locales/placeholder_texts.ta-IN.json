@@ -6,16 +6,28 @@
           "498cd895eb5a102c5aeb977e2b928dee": "நன்றி!"
         },
         "courseF_playlab_variables2b": {
-          "48d6215903dff56238e52e8891380c8f": "நீலம்"
+          "48d6215903dff56238e52e8891380c8f": "நீலம்",
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
         },
         "courseF_playlab_variables5c": {
-          "bda9643ac6601722a28f238714274da4": "சிவப்பு"
+          "bda9643ac6601722a28f238714274da4": "சிவப்பு",
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
         },
         "courseF_project_1": {
-          "498cd895eb5a102c5aeb977e2b928dee": "நன்றி!"
+          "498cd895eb5a102c5aeb977e2b928dee": "நன்றி!",
+          "e8a10c04d72b2f135dabe360c4bdd534": "நீங்கள் வெற்றி பெற்றுள்ளீர்கள்!"
         },
         "courseF_apps_aquarium": {
-          "83e4a96aed96436c621b9809e258b309": "மீன்"
+          "83e4a96aed96436c621b9809e258b309": "மீன்",
+          "f655df68ec33643278de7e69794e8d76": "மெய்நிகர் மீன்வளம் ",
+          "a1a2a07348784279a1e7a6f46dc7e353": "எதைச் சேர்ப்பீர்கள்? ",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "உயிரினம்",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "மற்றவை",
+          "0d3e73168beb875063ea0f0302fe32bd": "எந்த மீன்?",
+          "caaf8264ca397dba2d35ef902bbbd953": "எந்த உயிரினம்? ",
+          "78574118d153534fd0925a2f5ca25e79": "எந்த விஷயம்? "
         },
         "courseC19_playLab_EOC1_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "உரையை இங்கே தட்டச்சு செய்க",
@@ -71,6 +83,372 @@
           "71fc859f3abd22273bad5d0d8eda2173": "அனைத்து விலங்குகளையும் எண்ணுங்கள்!",
           "f62038e77820419cd978f7b722da560a": "எத்தனை தோன்றும்?",
           "81a2909a24e4ca3b582ab9ee539c080c": "செல்லப்பிராணிகளை எண்ணுங்கள்"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "பிறந்த நாள் யாருக்கு? ",
+          "d1210f945885351b13feb9bbb868aeef": "அவர்களுக்கு எவ்வளவு வயது இருக்கும்? ",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "பார்ட்டி கேம்ஸ் ",
+          "bf08dd3d1961874f13e77c936aad27e5": "ஒரு வெற்று விண்வெளி கதை ",
+          "514b8d5320196898a9ced3efe0d4c802": "ஒரு பெயரடை உள்ளிடவும்:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "ஒரு பொருளை உள்ளிடவும்:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "உடல் பகுதியை உள்ளிடவும்:",
+          "e522ee28f39133b45497637539ff429b": "எண்ணை உள்ளிடவும்: ",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "விளையாட்டுகள் ",
+          "5306eed2fd2c43fe033efd6016c0c38b": "கால் இனம்! ",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "பிறந்த நாள் யாருக்கு? ",
+          "d1210f945885351b13feb9bbb868aeef": "அவர்களுக்கு எவ்வளவு வயது இருக்கும்? ",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_editable_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி ",
+          "a72e7c5c68af0546e963e510297f5233": "வணக்கம், நான் X-9! உங்கள் பெயர் என்ன? ",
+          "f0e5da70d264f312a1658d51c130b101": "உங்கள் பெயரை உள்ளிடவும்: ",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "உங்கள் வயது என்ன? ",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "உங்கள் வயதை உள்ளிடவும்: ",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "வயதும் கூட!",
+          "605f302ebc9f7fbacba60b15f551a633": "உங்களுக்கு பிடித்த நிறம் என்ன? ",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "உங்களுக்கு பிடித்த நிறத்தை உள்ளிடவும்: ",
+          "ae096fbf24d913754b01a1601672bf62": "கூட!",
+          "1f258d88a70309efc1435ef5daa277a0": "இன்று என்னுடன் அரட்டையடித்ததற்கு நன்றி! "
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "பார்ட்டி கேம்ஸ் ",
+          "bf08dd3d1961874f13e77c936aad27e5": "ஒரு வெற்று விண்வெளி கதை ",
+          "514b8d5320196898a9ced3efe0d4c802": "ஒரு பெயரடை உள்ளிடவும்:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "ஒரு பொருளை உள்ளிடவும்:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "உடல் பகுதியை உள்ளிடவும்:",
+          "e522ee28f39133b45497637539ff429b": "எண்ணை உள்ளிடவும்: ",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "விளையாட்டுகள் ",
+          "5306eed2fd2c43fe033efd6016c0c38b": "கால் இனம்! ",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி ",
+          "c529a06c3f8518b63ff6dfac482b335c": "இந்த கிரகத்திற்கு பெயர்:",
+          "44506356d48394cd903b579df9de9117": ", மண்ணுலகமே!"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "பிறந்த நாள் யாருக்கு? ",
+          "d1210f945885351b13feb9bbb868aeef": "அவர்களுக்கு எவ்வளவு வயது இருக்கும்? "
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி ",
+          "464a456e0747ec9b09fc9afc6fbd13ed": "உன் பிறந்தநாளுக்கு என்ன வேண்டும்?"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி ",
+          "46463b2e9f71f2f15b7238f56f09ba30": "முற்றும்",
+          "c757766b0a7e2017c79e1c94f60e44f7": "அரட்டை அடித்ததற்கு நன்றி! "
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி ",
+          "50d489a15105b987ec6d4410900c95dd": "செயல் சொல்லை உள்ளிடவும்: "
+        },
+        "CourseF_Project_SpriteLab_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "தேர்வு 1 ",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "தேர்வு 2 ",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "தேர்வு 3 "
+        },
+        "CourseF_Project_SpriteLab_examples_2021": {
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "ஸ்கை டான்சர் ",
+          "78d989e01047ba7043a38650d695abaa": "பிளேயரைத் தேர்ந்தெடுக்கவும் ",
+          "6e41661ddc1edd50b00b7c607cdcec1a": "தேர்வு 1 ",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "தேர்வு 2 ",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "தேர்வு 3 "
+        },
+        "courseF_apps_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "வணக்கம், நான் X-9! உங்கள் பெயர் என்ன? ",
+          "f0e5da70d264f312a1658d51c130b101": "உங்கள் பெயரை உள்ளிடவும்: ",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "உங்கள் வயது என்ன? ",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "உங்கள் வயதை உள்ளிடவும்: ",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "வயதும் கூட!",
+          "605f302ebc9f7fbacba60b15f551a633": "உங்களுக்கு பிடித்த நிறம் என்ன? ",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "உங்களுக்கு பிடித்த நிறத்தை உள்ளிடவும்: ",
+          "ae096fbf24d913754b01a1601672bf62": "கூட! ",
+          "1f258d88a70309efc1435ef5daa277a0": "இன்று என்னுடன் அரட்டையடித்ததற்கு நன்றி! "
+        },
+        "courseF_apps_collector": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "நீ வெற்றி பெற்றாய்! ",
+          "077449fb290b51b9d70c9f2f3d3213bc": "வினாடிகள் ",
+          "490082498449bd20ff0199737dfa4916": "விளையாட்டு வகையைத் தேர்ந்தெடுக்கவும்: ",
+          "41f2b2212de0105c2a942ebb4a44e449": "சிறந்த கலெக்டர் விளையாட்டு! "
+        },
+        "courseF_label_predict": {
+          "f15045cb7e57652546d4a0b2c695356f": "நீங்கள் என்ன சாப்பிடுவீர்கள்? ",
+          "937dc37c06cc5d89a7096eb048b73590": "சரியாக வருகிறது! "
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "ரோபோ என்று பெயரிடுங்கள். ",
+          "34088af1fb721900963462375b3bbe23": "ரோபோ! "
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "தேர்வு 1 ",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "தேர்வு 2 ",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "தேர்வு 3 "
+        },
+        "courseE_aboutme_1_2021": {
+          "b63151482630edd1589a9ac24d107c49": "அது நான்தான்! ரிக்கி! நான் குறியிடவும், Thuy உடன் ஹேங்கவுட் செய்யவும், ஐஸ்கிரீம் சாப்பிடவும் விரும்புகிறேன்!",
+          "810896b14fc6615f0c76628b9b6a727e": "அது என் சிறந்த நண்பன் தூய்! அவள் விளையாட்டில் மிகவும் நல்லவள்! ",
+          "8e985f60f328934accd78e7649584840": "ஐஸ்கிரீம் எனக்கு மிகவும் பிடித்த விருந்து! ",
+          "31ba97bb501bb1f5b448221be09bad32": "அது என் கோர்கி, லாலிபாப்! நான் அவளுக்கு எப்படி குறியீடு செய்வது என்று கற்றுக்கொடுக்க வேண்டும்! ",
+          "6f97975a0bda0c9219915161149cbb26": "அது என் கணினி! நான் அதை எல்லா நேரத்திலும் குறியீடு செய்கிறேன்! "
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "வணக்கம், உலகம்!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "வணக்கம், உலகம்!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "வணக்கம், உலகம்!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "ஏய்! "
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "உங்கள் பெயர் என்ன? "
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "New Sprite Lab Project": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "தேர்வு 1 ",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "தேர்வு 2 ",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "தேர்வு 3 ",
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "Alien Defender": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "Choose Your Own Adventure": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "Course 4 Playlab For Loop Freeplay": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "Course E: Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "CourseF_outbreak8": {
+          "fac94901e68fc1dea6e749c012e3efc0": "ஸ்பிரைட்டுகளை கிளிக் செய்து அவற்றுக்கு முக கவசம் கொடுக்கவும்.",
+          "968c8b54671ab303d48320f86937c40b": "வைரஸ் பரவலின் வேகத்தை குறைக்க முக கவசங்கள் உதவும்."
+        },
+        "Find the Wizard": {
+          "0b895ef4c917e50663bc2a7327cbee3d": "நீங்கள் என்னை கண்டுபிடித்தீர்கள்!",
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "FoodFight": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "Guess The Number": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "NEW Course 4 Play Lab Params 11": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "OPD-K5-projects-2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "OPD-K5-projects-3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "OPD-K5-projects-4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "OPD-K5-projects-5": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "course4_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC19_playLab_EOC1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC19_playLab_EOC1_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC19_playLab_EOC2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC19_playLab_EOC2_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC19_playLab_EOC3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC19_playLab_EOC3_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC19_playLab_EOC4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC19_playLab_EOC4_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC_PlayLab_eventsFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC_PlayLab_eventsFP_2018": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC_PlayLab_eventsFP_2019": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseC_PlayLab_eventsFP_2020": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseD_playLab_condFP": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseE_Dogger_2": {
+          "e8a10c04d72b2f135dabe360c4bdd534": "நீங்கள் வெற்றி பெற்றுள்ளீர்கள்!"
+        },
+        "courseE_aboutme_3": {
+          "ed076287532e86365e841e92bfc50d8c": "ஹலோ உலகம்!"
+        },
+        "courseE_aboutme_3_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "ஹலோ உலகம்!"
+        },
+        "courseE_aboutme_4": {
+          "ed076287532e86365e841e92bfc50d8c": "ஹலோ உலகம்!"
+        },
+        "courseE_aboutme_4_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "ஹலோ உலகம்!"
+        },
+        "courseE_aboutme_5": {
+          "ed076287532e86365e841e92bfc50d8c": "ஹலோ உலகம்!"
+        },
+        "courseE_aboutme_5_2020": {
+          "ed076287532e86365e841e92bfc50d8c": "ஹலோ உலகம்!"
+        },
+        "courseE_playLab_scaffold1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseE_playLab_scaffold2": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseE_playLab_scaffold3": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseE_playLab_scaffold4": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseF_playlab_variables1a": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseF_playlab_variables3b_josh": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseF_playlab_variables4b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseF_playlab_variables4c_predictive1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseF_playlab_variables6c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseF_playlab_variables7b": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseF_playlab_variables7c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseF_playlab_variables8c": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "courseF_playlab_variables_challenge1": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
+        },
+        "iceage_free_play": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "டெக்ஸ்டை இங்கே டைப் செய்யவும்",
+          "30fcc1693fa8402931d13ac3a5f396fd": "தலைப்பை இங்கே டைப் செய்யவும்"
         }
       }
     }

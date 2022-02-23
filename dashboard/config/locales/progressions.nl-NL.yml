@@ -2,9 +2,14 @@
 nl:
   data:
     progressions:
+      AI Machine Learning - Video: AI machinaal leren - video
+      'AI: Impact on Society - Video': 'AI: de impact op de maatschappij - video'
+      'AI: Training Data & Bias - Video': 'AI: trainingsdata en vooringenomenheid'
       Alien Defender: Alien Defender
+      App Lab Intro - Video: App Lab Intro - Video
       Artist Project: Artiest Project
       'Artist: Variables': 'Artiest: variabelen'
+      Assessment: Beoordeling
       Back and Forth: Heen en weer
       Bass, Mid, and Treble: Bass, mid en treble
       Binary Numbers: Binaire getallen
@@ -17,16 +22,21 @@ nl:
       Design Mode: Ontwerpmodus
       Drawing: Tekenen
       Events: Gebeurtenissen
+      Example: Voorbeeld
+      Extra: Extra
       For Loops: For-lussen
       Free Play: Vrije Speelruimte
       Functions: Functies
       Functions with Parameters: Functies met Parameters
       Get In Formation: Ga in positie staan
       Headings: Headings
+      Hello World: Hallo Wereld
       Introduction to Arrays: Inleiding tot Arrays
       Lesson Extras: Extra bij Lessen
+      Levels: Niveaus
       Lists: Lijsten
       Measures: Maten
+      'Minecraft: Hero''s Journey': 'Minecraft: Heldenreis'
       More Buttons: Meer knoppen
       Overview: Overzicht
       Pair Programming: Programmeren in Tweetallen
@@ -44,6 +54,7 @@ nl:
       Styling Text: Text stijlen
       Styling with Classes: Stijlen met Classes
       Styling your Website: Je website stijlen
+      Teach AI a New Word: AI een nieuw woord laten leren
       Text Compression: Tekstcompressie
       The Animation Tab: Het tabblad Animatie
       The Artist in Code Studio: De artiest in Code Studio

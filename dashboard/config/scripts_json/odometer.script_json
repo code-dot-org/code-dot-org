@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:51 UTC",
+    "serialized_at": "2021-11-22 19:57:09 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "odometer"
     }
@@ -44,16 +48,37 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f",
+        "lesson.key": "Odometer Widget",
+        "lesson_group.key": "",
+        "script.name": "odometer"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "8295945c-9c93-4897-a937-255729a5bb7c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8295945c-9c93-4897-a937-255729a5bb7c",
+        "lesson_activity.key": "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -67,7 +92,8 @@
         ],
         "lesson.key": "Odometer Widget",
         "lesson_group.key": "",
-        "script.name": "odometer"
+        "script.name": "odometer",
+        "activity_section.key": "8295945c-9c93-4897-a937-255729a5bb7c"
       },
       "level_keys": [
         "Odometer"
@@ -83,7 +109,8 @@
         ],
         "lesson.key": "Odometer Widget",
         "lesson_group.key": "",
-        "script.name": "odometer"
+        "script.name": "odometer",
+        "activity_section.key": "8295945c-9c93-4897-a937-255729a5bb7c"
       }
     }
   ],

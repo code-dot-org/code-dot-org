@@ -169,7 +169,7 @@
   thanks_for_voting: "Vďaka za hlasovanie!"
   share_on_facebook: "Zdieľať na Facebooku"
   share_on_twitter: "Zdieľať na Twitteri"
-  beyond_an_hour: "Ako ďalej po Hodine Kódu"
+  beyond_an_hour: "Ako ďalej po Hodine kódu"
   get_started: "Spustiť"
   i_agree: "Súhlasím"
   participant_select: "-Vybrať-"
@@ -491,7 +491,7 @@
   video_title_obama: "Prezident Obama na informatike"
   video_title_hoc_is_here: "Hodina Kódu je tu - učiť sa môže každý"
   video_title_anybody_can_learn: "Ktokoľvek sa môže učiť"
-  video_title_steph_curry: "Hodina Kódu so Steph Curry"
+  video_title_steph_curry: "Hodina Kódu so Stephom Currym"
   video_title_draymond_green: "Hodine Kódu s Draymond Green"
   video_title_russell_okung: "Hodina Kódu s Russell Okung"
   video_title_real_madrid: "Hodinu Kódu s Real Madrid"
@@ -789,7 +789,7 @@
   dashboard_multi_count: "# otázok s výberom odpovede"
   dashboard_multi_correct_percent: "% správnych odpovedí"
   dashboard_submission_timestamp: "Časová pečiatka odoslania"
-  stats_hoc_2013_heading: 'Neuveriteľná štatistika z minuloročnej Hodiny Kódu. Behom jediného týždňa:'
+  stats_hoc_2013_heading: 'Neuveriteľné štatistiky z minuloročnej Hodiny Kódu. Za jediný týždeň:'
   stats_hoc_2013_image_alt: "Štatistika z Hodiny Kódu 2013"
   dashboard_teacher: "Učiteľ"
   dashboard_student: "Študent"
@@ -1062,6 +1062,12 @@
   coursed-2020_gradelevel: Vek 7-11
   coursee-2020_gradelevel: Vek 8-12
   coursef-2020_gradelevel: Vek 9-13
+  coursea-2021_gradelevel: Vek 4-7
+  courseb-2021_gradelevel: Vek 5-8
+  coursec-2021_gradelevel: Vek 6-10
+  coursed-2021_gradelevel: Vek 7-11
+  coursee-2021_gradelevel: Vek 8-12
+  coursef-2021_gradelevel: Vek 9-13
   accelerated_gradelevel: "Vek 10-18"
   codeorg_platformtext: "Moderné prehliadače, smartfóny, tablety"
   codeintl_platformtext: "Moderné prehliadače, smartfóny, tablety"
@@ -1532,7 +1538,7 @@
   hoc2018_mc_video_2min: "2 min"
   hoc2018_mc_video_3min: "3 minúty"
   hoc2018_mc_video_5min: "5 min"
-  hoc2018_mc_video_title_steph_curry: "Hodina Kódu so Steph Curry"
+  hoc2018_mc_video_title_steph_curry: "Hodina Kódu so Stephom Currym"
   hoc2018_mc_video_title_sports: "Premôž sa. Každý sa dokáže naučiť."
   hoc2018_mc_video_title_cs_is_everything: "Informatika mení svet okolo nás"
   hoc2018_mc_video_title_inspire_girl: "Inšpiruj dievča"
@@ -1601,6 +1607,12 @@
   page_not_found_button: "Späť na domovskú stránku"
   hoc2018_mc_with_microsoft: "V spolupráci s"
   page_not_available_button: "Späť na domovskú stránku"
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Cestujte späť v čase a naučte sa programovať! Nový tutoriál Minecraft Hour of Code je teraz dostupný v hre Minecraft: vzdelávacie vydanie pre Windows, Mac, Chromebook a iPad. Začnite s bezplatnými zdrojmi pre pedagógov a videami.'
+  hoc2021_mc_mee_villages_title: "Rozprávka o dvoch dedinách"
+  hoc2021_mc_mee_villages_description: 'Naučte sa základy programovania a objavte diverzitu a inklúziu so svojimi žiakmi v hre Minecraft: vzdelávacie vydanie'
+  hoc2021_mc_mee_ai_title: "Umelá inteligencia pre dobro"
+  hoc2021_mc_mee_ai_description: 'Objavte AI so svojimi žiakmi a naučte sa programovať v hre Minecraft: vzdelávacie vydanie'
   footer_powered_by_aws: "Poháňaný službami Amazon Web Services"
   codebytes_skinny_banner_english_only: "Len v anglickom jazyku"
   footer_privacy_policy: "Zásady ochrany súkromia"
@@ -1614,3 +1626,5 @@
   ai_in_partnership_with: "V spolupráci s"
   ai_activity: "Aktivita"
   ai_description: "Popis"
+  outbreak_tile_title: "Nákaza"
+  outbreak_tile_subtitle: "Mesto Monster Town napadol vírus! Naprogramujte simulátor ohniska a skúste urobiť predpovede, čo sa stane so susedmi mesta Monster Town."

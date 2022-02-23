@@ -344,6 +344,8 @@ tr:
             '"column"': sütun
             '"x"': çapraz geçiş
             '"plus"': artı
+            '"spiral"': sarmal
+            '"infinity"': sonsuz çizgi
             '"random"': gelişigüzel
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} 'de yeni bir {COSTUME} yapın"
@@ -426,6 +428,26 @@ tr:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
@@ -448,6 +470,8 @@ tr:
             '"column"': sütun
             '"x"': çapraz geçiş
             '"plus"': artı
+            '"spiral"': sarmal
+            '"infinity"': sonsuz çizgi
             '"random"': gelişigüzel
       Dancelab_mixColors:
         text: "{COLOR1} ve {COLOR2}’yi karıştır"
@@ -508,6 +532,7 @@ tr:
             '"fireworks"': Havai fişek
             '"flowers"': Çiçekler
             '"growing_stars"': Büyüyen Yıldızlar
+            '"higher_power"': Higher Power
             '"swirl"': Hipnozcu
             '"kaleidoscope"': Kaleydoskop
             '"lasers"': Lazer Dans Pisti
@@ -902,6 +927,7 @@ tr:
         text: "{SPRITE}, {TARGET}'e erişir."
         options:
           OPT:
+            '"follow"': takip et
             '"avoid"': kaçının
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
@@ -911,6 +937,8 @@ tr:
           UNIT:
             '"seconds"': saniye
             '"frames"': çerçeveler
+      gamelab_avoidingTargets:
+        text: hedeflerden kaçınmak
       gamelab_beginCollectingData:
         text: değeri {VALUE} olan {LABEL} etiketli {BREAK} verisi toplamaya başla
       gamelab_bounceOff:
@@ -934,7 +962,22 @@ tr:
       gamelab_clickedOn:
         text: "{SPRITE} tıklandığında"
       gamelab_clickedSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): sağa dönme
+            new Behavior(spinning_left, []): sola dönme
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): kararsızlık
+            new Behavior(wobbling, []): sallanma
+            new Behavior(wandering, []): gezinme
+            new Behavior(patrolling, []): kontrol sağlama
+            new Behavior(moving_west_and_looping, []): batıya doğru hareket ve döngü
+            new Behavior(moving_east_and_looping, []): doğuya doğru hareket ve döngü
+            new Behavior(moving_north_and_looping, []): kuzeye hareket ve döngü
+            new Behavior(moving_south_and_looping, []): güneye hareket ve döngü
       gamelab_comment:
         text: 'yorum: {COMMENT}'
       gamelab_costumeImage:
@@ -948,6 +991,8 @@ tr:
         text: "{THIS} kaldır"
       gamelab_draggable:
         text: sürüklenebilir olmak
+      gamelab_drawLine:
+        text: çizgi çiz {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: kenarları blok {SPRITE} hareket
       gamelab_followingTargets:
@@ -969,6 +1014,7 @@ tr:
         text: "{CHOICE} sprite"
         options:
           CHOICE:
+            '"this"': bu
             '"other"': diğer
       gamelab_getTime:
         text: "{UNIT} cinsinden süre"
@@ -976,12 +1022,28 @@ tr:
           UNIT:
             '"seconds"': saniye
             '"frames"': çerçeveler
+      gamelab_glideTo:
+        text: "{SPRITE}, {LOCATION} konumuna süzülür"
       gamelab_hideTitleScreen:
         text: başlık ekranını gizle
       gamelab_ifVarEquals:
         text: |-
           eğer {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE}'ın kostümü {COSTUME}'dir."
       gamelab_isKeyPressed:
@@ -1058,15 +1120,21 @@ tr:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: "{NUM} {ANIMATION_NAME} hareketli grafiğiyle {EFFECT} efekti oluşturun"
         options:
           EFFECT:
             '"burst"': patlama
+            '"pop"': patlamak
             '"rain"': yağmur
+            '"spiral"': sarmal
       gamelab_makeNewSpriteAnon:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
         text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
       gamelab_makeProjectile:
+        text: |-
+          mermi oluştur
+          {ANIMATION_NAME}, {LOCATION} konumundan {DIRECTION} yönüne {SPEED} hızıyla
         options:
           DIRECTION:
             '0': sağ
@@ -1096,9 +1164,9 @@ tr:
       gamelab_moveToward:
         text: "{SPRITE} piksel {DISTANCE} doğru hareket {TARGET}"
       gamelab_newSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: yukarı ve aşağı kontrol sağla
       gamelab_playSound:
@@ -1107,9 +1175,54 @@ tr:
         text: playSound {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": aksan
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": patlamak
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": parıldama
             "'sound://category_app/app_button_1.mp3'": Tuş
             "'sound://category_collect/clicky_crunch.mp3'": çatlak
+            "'sound://category_swish/quick_swing.mp3'": sallanma
+            "'sound://category_nature/summer_night_loop.mp3'": yaz gecesi
+            "'sound://category_background/ocean_waves.mp3'": okyanus dalgası
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": sahile vuran
+              su
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": baloncuk
+            "'sound://category_animals/bear.mp3'": Ayı
+            "'sound://category_animals/cat.mp3'": kedi
+            "'sound://category_animals/cow.mp3'": inek
+            "'sound://category_animals/pig.mp3'": domuz
+            "'sound://category_animals/sheep.mp3'": kuzu
+            "'sound://category_animals/goat.mp3'": keçi
+            "'sound://category_animals/chicken.mp3'": tavuk
+            "'sound://category_animals/rooster.mp3'": horoz
+            "'sound://category_animals/elephant.mp3'": fil
+            "'sound://category_animals/dolphin.mp3'": yunus
+            "'sound://category_nature/thunderstorm_1.mp3'": fırtına
+            "'sound://category_animals/chick.mp3'": tavuk
+            "'sound://category_animals/dog.mp3'": köpek
+            "'sound://category_animals/tiger.mp3'": Kaplan
+            "'sound://category_collect/trill_stings.mp3'": ses titremesi
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": arp
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": tıklatma
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": Tonal
+              vurgu
+            "'sound://category_transition/trippy_robotic_transition.mp3'": robotik
+              geçiş
+            "'sound://category_transition/star_dust_particle_10.mp3'": yıldız tozu
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": uzay gemisi
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": büyü
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": seç
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": tuhaf bas
             "'sound://category_digital/jump_7.mp3'": zıpla
+      gamelab_playSpeech:
+        text: konuşmayı çal {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): ok tuşları ile hareket
+            new Behavior(driving_with_arrow_keys, []): ok tuşları ile hareket
+            draggable(): sürüklenebilir olmak
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
         options:
@@ -1134,6 +1247,8 @@ tr:
         text: "{THIS} gelen rengi kaldır"
       gamelab_repeatForever:
         text: Sonsuza kadar tekrarla
+      gamelab_resetTimer:
+        text: zamanlayıcıyı sıfırla
       gamelab_setAnimation:
         text: "{THIS} kostüm {ANIMATION} değiştirmek"
       gamelab_setBackground:
@@ -1144,12 +1259,44 @@ tr:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': mağara
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şehir
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': devam
+              eden çim
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': mahkeme
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': çöl
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': çöl
+              yolu
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': çiftlik
+              arazisi
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': kayan
+              çimen
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': evin
+              önü
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaksi
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': ızgara
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': mutfak
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': salon
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': çayır
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park
+              manzarası
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': çam
+              ağaçları
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': gökkuşağı
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': bilim
+              kurgu
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': futbol
+              sahası
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': Sahne
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': yıldızlar
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': güneş
+              ve gökkuşağı
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': yaz
+              yağmuru
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tenis
+              kortu
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': ağaç
+              adası
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': yeraltı
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': Sualtı
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': kış
             undefined: hiçbiri
@@ -1195,8 +1342,20 @@ tr:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': yavaş
+            '5': normal
+            '7': hızlı
+            '9': extra fast
       gamelab_setTint:
         text: renk değiştirme {THIS} Hedef {COLOR}
+      gamelab_setupScoreboard:
+        text: |-
+          skor tahtası çiz
+          {SPRITE1COSTUME}puan{VAR1}{SPRITE2COSTUME}puan{VAR2}hedef{SPRITE3COSTUME}
       gamelab_setupSim:
         text: |-
           ile kurulum simülasyonu
@@ -1212,10 +1371,26 @@ tr:
           CONDITION:
             '"when"': Ne zaman
             '"while"': sürece
+      gamelab_spriteSay:
+        text: "{SPRITE}, {SPEECH} der"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}{NUM}saniye{TEXT1}der"
+      gamelab_startAvoiding:
+        text: "{SPRITE} {TARGET}'den kaçınmaya başlar"
+      gamelab_startFollowing:
+        text: "{SPRITE} {TARGET}'i takip etmeye başlar"
+      gamelab_startGliding:
+        text: "{SPRITE} süzülmeye başlar"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} diğer hareketli nesnelerden kaçınmayı bırakır"
       gamelab_stopCollectingData:
         text: veri toplamayı bırak
+      gamelab_stopFollowing:
+        text: "{SPRITE} diğer hareketli nesneleri takip etmeyi bırakır"
+      gamelab_stopGliding:
+        text: "{SPRITE} süzülmeyi durdurur"
       gamelab_subjectSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:
@@ -1230,6 +1405,8 @@ tr:
             '"left"': sol
       gamelab_updateTitleWithColor:
         text: Başlık ekranını {BREAK} başlık {TITLE} renginde {COLOR} göster
+      gamelab_whenAllPromptsAnswered:
+        text: tüm istemlere yanıt verildiğinde
       gamelab_whenDownArrow:
         text: aşağı ok basıldığında
       gamelab_whenKey:
@@ -1282,6 +1459,17 @@ tr:
         text: |-
           eğer % {NUM} şans varsa
           {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |-
+          {NUM} şans
+          {STATEMENT}
+        options:
+          NUM:
+            '10': çok düşük
+            '25': düşük
+            '50': 50/50
+            '75': yüksek
+            '90': çok yüksek
       gamelab_xLocationOf:
         text: x {SPRITE} koordinatı
       gamelab_yLocationOf:
@@ -1340,11 +1528,13 @@ tr:
         options:
           SELECT:
             '"all"': tüm
+            '"this"': bu
       Mikelab_groupChangePropBy:
         text: Değiştirmek {PROPERTY} onun {SELECT} {COSTUME} Tarafından {VAL}
         options:
           SELECT:
             '"all"': tüm
+            '"this"': bu
           PROPERTY:
             '"scale"': boyut
             '"rotation"': yön
@@ -1369,6 +1559,7 @@ tr:
         options:
           SELECT:
             '"all"': tüm
+            '"this"': bu
       Mikelab_groupDisplace:
         text: tüm {COSTUME} blok [COSTUME2]hareket eden[1]
       Mikelab_groupEdgesDisplace:
@@ -1376,6 +1567,8 @@ tr:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}'s {PROPERTY}"
         options:
+          SELECT:
+            '"this"': bu
           PROPERTY:
             '"scale"': boyut
             '"rotation"': yön
@@ -1387,21 +1580,25 @@ tr:
         options:
           SELECT:
             '"all"': tüm
+            '"this"': bu
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} durur {BEHAVIOR}"
         options:
           SELECT:
             '"all"': tüm
+            '"this"': bu
       Mikelab_groupRemoveTint:
         text: "{SELECT} {COSTUME} gelen rengi kaldır"
         options:
           SELECT:
             '"all"': tüm
+            '"this"': bu
       Mikelab_groupSetProp:
         text: "{PROPERTY} {SELECT} {COSTUME} {VAL} 123_321"
         options:
           SELECT:
             '"all"': tüm
+            '"this"': bu
           PROPERTY:
             '"scale"': boyut
             '"rotation"': yön
@@ -1413,6 +1610,7 @@ tr:
         options:
           SELECT:
             '"all"': tüm
+            '"this"': bu
       Mikelab_groupWhenClickedOn:
         text: "{COSTUME} tıklandığında"
       Mikelab_groupWhenXTouchesY:
@@ -1492,6 +1690,36 @@ tr:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': şehir
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': devam
+              eden çim
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': çöl
+              yolu
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': çiftlik
+              arazisi
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': kayan
+              çimen
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': evin
+              önü
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': mutfak
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': salon
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': çayır
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': park
+              manzarası
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': çam
+              ağaçları
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': futbol
+              sahası
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': Sahne
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': güneş
+              ve gökkuşağı
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': yaz
+              yağmuru
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tenis
+              kortu
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': ağaç
+              adası
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': yeraltı
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1598,62 +1826,193 @@ tr:
         text: canavarları rastgele yerleştir
       Outbreak_stopMoving:
         text: canavarlar hareket etmeyi bırakıyor
-      PoemBot_makeNumSprites:
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"brick"': tuğla
+            '"fire"': ateş
+            '"flowers"': Çiçekler
+            '"hearts"': kalpler
+            '"iceCream"': Dondurma
+            '"leaves"': yapraklar
+            '"rainbow"': gökkuşağı
+            '"stars"': yıldızlar
+            '"waves"': dalga
+      Poetry_addLine:
+        text: satır ekle {LINE}
+      Poetry_animateText:
+        text: metni canlandır
+      Poetry_destroy:
+        text: kaldır {ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE}, {LOCATION} konumuna süzülür"
+      Poetry_hideText:
+        text: metni gizle
+      Poetry_makeBurst:
+        text: "{NUM} {ANIMATION_NAME} hareketli grafiğiyle {EFFECT} efekti oluşturun"
+        options:
+          EFFECT:
+            '"burst"': patlama
+            '"pop"': patlamak
+            '"rain"': yağmur
+            '"spiral"': sarmal
+      Poetry_makeNewSpriteAnon:
+        text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
+      Poetry_makeNumSprites:
         text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
-      PoemBot_playSound:
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Sakin
+            '"sound://category_nature/steady_campfire_loop.mp3"': Kamp ateşi
+            '"sound://category_nature/rain_loop.mp3"': Çiseleyen yağmur
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': Orman
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Lanetli
+            '"sound://category_background/inside_plane.mp3"': Uğultu
+            '"sound://category_loops/red_flag_loop1.mp3"': Misyon
+            '"sound://category_nature/summer_night_loop.mp3"': gece
+            '"sound://category_background/ocean_waves.mp3"': okyanus
+            '"sound://category_background/rainforest_ambient_sound.mp3"': yağmur ormanı
+            '"sound://category_background/repitition.mp3"': Binme
+            '"sound://category_background/wavering_wind.mp3"': uykulu
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Yavaş
+      Poetry_playSound:
         text: playSound {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: arka plan efektini {EFFECT} {PALETTE} olarak ayarla
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': zil
+            '"sound://category_digital/boing_2.mp3"': boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Kabarcık
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Sohbet
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Söndürme
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Başarısız olma
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Çarpıntı
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Zıplama
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': aydınlık
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Puf
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Tarama
+            '"sound://category_background/typewriter.mp3"': Daktilo
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Canlı
+            '"sound://category_achievements/peaceful_win_1.mp3"': Kazanma
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Koşuşturma
+            '"sound://category_achievements/peaceful_win_6.mp3"': Rüzgar Çanları
+      Poetry_setAuthor:
+        text: yazar ayarla {AUTHOR}
+      Poetry_setBackground:
+        text: arka plan rengini {COLOR} olarak ayarla
+      Poetry_setBackgroundEffect:
+        text: arka planı {EFFECT} {PALETTE} olarak ayarla
         options:
           EFFECT:
-            '"colors"': Renkler
-            '"squiggles"': Karalamalar
-            '"space"': Uzay
-            '"stars"': Yıldızlar
-            '"ripples"': Dalgaları
-          PALETTE:
-            '"rainbow"': Gökkuşağı
-      PoemBot_setBackgroundImageAs:
-        text: arka planı {IMG} olarak ayarlayın
-      PoemBot_setForegroundEffect:
-        text: ön plan efektini {EFFECT} olarak ayarla
-        options:
-          EFFECT:
-            '"rain"': Yağmur
+            '"blooming"': Çiçeklenme
             '"bubbles"': Baloncuklar
-            '"hearts"': Renkli Kalpler
+            '"clouds"': Bulutlu
             '"confetti"': Konfeti
-      PoemBot_startBehavior:
+            '"darkCircles"': Solma
+            '"fadeColors"': Buzlu
+            '"hearts"': kalpler
+            '"space"': Uzay
+            '"rain"': yağmur
+            '"ripples"': Dalgaları
+            '"colors"': Renkler
+            '"stars"': Yıldızlar
+            '"squiggles"': Karalamalar
+          PALETTE:
+            '"autumn"': Güz
+            '"sunrise"': Şafak
+            '"sunset"': Alacakaranlık
+            '"grayscale"': Gri tonlama
+            '"ocean"': okyanus
+            '"rainbow"': gökkuşağı
+            '"roses"': Gül
+            '"sky"': Gökyüzü
+            '"spring"': Bahar
+            '"summer"': Yaz
+            '"winter"': Kış
+      Poetry_setBackgroundImageAs:
+        text: arka planı {IMG} olarak ayarlayın
+      Poetry_setFont:
+        text: yazı tipini ayarlar {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': El yazısı
+            '"Impact"': Impact
+            '"Georgia"': Georgia
+            '"Times"': Times
+      Poetry_setFontColor:
+        text: metin rengini ayarlar {FILL}
+      Poetry_setForegroundEffect:
+        text: "{EFFECT} efekti yap"
+        options:
+          EFFECT:
+            '"bubbles"': Baloncuklar
+            '"confetti"': Konfeti
+            '"hearts"': kalpler
+            '"emojis"': Mutlu Emojiler
+            '"rain"': yağmur
+            '"glass"': Parçalanan Cam
+            '"twinkling"': Parıldama
+      Poetry_setPrompt:
+        text: "{VAR} değişkeni için {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} kullanıcısına
+          sor"
+      Poetry_setPromptWithChoices:
+        text: "{VAR} değişkeni için {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
+          {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C} seçenekleriyle birlikte {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}
+          kullanıcısına sor"
+      Poetry_setSize:
+        text: "{SPRITE} boyutunu {VAL} olarak ayarla"
+      Poetry_setTextEffect:
+        text: metin efektini ayarla {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': soldur
+            '"typewriter"': Daktilo
+      Poetry_showText:
+        text: metni göster
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
-            fluttering: fluttering
-            growing: büyüme
-            jittering: kararsızlık
-            shrinking: küçülme
-            spinning_left: sola dönme
-            spinning_right: sağa dönme
-            swimming_left_and_right: yüzme
-            wandering: gezinme
-            wobbling: sallanma
-      PoemBot_stopBehavior:
+            '"fluttering"': fluttering
+            '"growing"': büyüme
+            '"jittering"': kararsızlık
+            '"shrinking"': küçülme
+            '"spinning_left"': sola dönme
+            '"spinning_right"': sağa dönme
+            '"swimming_left_and_right"': yüzme
+            '"wandering"': gezinme
+            '"wobbling"': sallanma
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            fluttering: fluttering
-            growing: büyüme
-            jittering: kararsızlık
-            shrinking: küçülme
-            spinning_left: sola dönme
-            spinning_right: sağa dönme
-            swimming_left_and_right: yüzme
-            wandering: gezinme
-            wobbling: sallanma
-      PoemBot_stringValue:
-        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
-        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_textVariableJoin:
+            '"fluttering"': fluttering
+            '"growing"': büyüme
+            '"jittering"': kararsızlık
+            '"shrinking"': küçülme
+            '"spinning_left"': sola dönme
+            '"spinning_right"': sağa dönme
+            '"swimming_left_and_right"': yüzme
+            '"wandering"': gezinme
+            '"wobbling"': sallanma
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
-      PoemBot_whenPromptAnswered:
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: "{VAR} cevaplandığında"
       RyanLab_moveForward:
         text: ilerle
@@ -1709,6 +2068,8 @@ tr:
             '0.75': most
             '0.5': half of
             '0.25': few
+      aalab_spriteSayChoices:
+        text: "{SPRITE}, {SPEECH} der"
       binary_drawBin:
         text: ikili {BIN} çizmek
       binary_drawBinScreen:

@@ -1,15 +1,15 @@
 {
-  "func": "onRecordEvent",
+  "key": "onRecordEvent",
+  "name": "onRecordEvent",
   "category": "Data",
-  "paletteParams": [
-    "table",
-    "callback"
+  "category_key": "data",
+  "palette_params": [
+    {
+      "name": "table"
+    },
+    {
+      "name": "callback"
+    }
   ],
-  "params": [
-    "\"mytable\"",
-    "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}"
-  ],
-  "allowFunctionDrop": {
-    "1": true
-  }
+  "syntax": "onRecordEvent(table, callback)"
 }

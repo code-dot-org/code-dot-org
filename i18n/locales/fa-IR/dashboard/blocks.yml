@@ -262,6 +262,11 @@ fa:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": خرد شدن
+            "'sound://category_animals/cat.mp3'": گربه
+            "'sound://category_animals/cow.mp3'": گاو
+            "'sound://category_animals/sheep.mp3'": گوسفند
+            "'sound://category_animals/chicken.mp3'": مرغ
+            "'sound://category_animals/dog.mp3'": سگ
             "'sound://category_digital/jump_7.mp3'": پرش
       gamelab_randColor:
         text: رنگ تصادفی
@@ -305,6 +310,14 @@ fa:
           PROPERTY:
             '"scale"': اندازه
             '"height"': ارتفاع
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': normal
+            '7': سریع
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -447,6 +460,31 @@ fa:
             '"down"': فلش سمت پایین
             '"left"': فلش سمت چپ
             '"right"': فلش سمت راست
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': قلب
+            '"rainbow"': رنگین کمان
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': شب
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': پرش
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': ابری
+            '"hearts"': قلب
+          PALETTE:
+            '"rainbow"': رنگین کمان
+            '"winter"': زمستان
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': قلب
       RyanLab_moveForward:
         text: برو جلو
       RyanLab_turnLeft:

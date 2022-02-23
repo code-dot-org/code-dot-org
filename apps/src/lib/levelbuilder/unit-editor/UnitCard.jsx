@@ -91,7 +91,7 @@ class UnitCard extends Component {
     });
 
     return (
-      <div>
+      <div className="uitest-unit-card">
         <div style={styles.unitHeader}>Unit</div>
         <div style={styles.unitBody}>
           {lessonGroups.map((lessonGroup, index) => (

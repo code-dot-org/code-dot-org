@@ -16,8 +16,7 @@ export default class ProgressTableStudentName extends React.PureComponent {
     lastTimestamp: PropTypes.number,
     studentUrl: PropTypes.string.isRequired,
     onToggleExpand: PropTypes.func.isRequired,
-    isExpanded: PropTypes.bool.isRequired,
-    showSectionProgressDetails: PropTypes.bool
+    isExpanded: PropTypes.bool.isRequired
   };
 
   constructor(props) {
@@ -83,15 +82,13 @@ export default class ProgressTableStudentName extends React.PureComponent {
         data-for={tooltipId}
         aria-describedby={tooltipId}
       >
-        {this.props.showSectionProgressDetails && (
-          <CollapserIcon
-            isCollapsed={!isExpanded}
-            onClick={this.toggleExpand}
-            collapsedIconClass="fa-caret-right"
-            expandedIconClass="fa-caret-down"
-            style={styles.collapser}
-          />
-        )}
+        <CollapserIcon
+          isCollapsed={!isExpanded}
+          onClick={this.toggleExpand}
+          collapsedIconClass="fa-caret-right"
+          expandedIconClass="fa-caret-down"
+          style={styles.collapser}
+        />
         {this.renderTooltip()}
         <a
           style={styles.link}

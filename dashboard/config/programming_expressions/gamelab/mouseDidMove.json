@@ -1,5 +1,7 @@
 {
-  "func": "mouseDidMove",
+  "key": "mouseDidMove",
+  "name": "mouseDidMove",
   "category": "World",
-  "type": "value"
+  "category_key": "world",
+  "syntax": "mouseDidMove"
 }

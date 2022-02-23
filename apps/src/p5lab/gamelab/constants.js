@@ -1,2 +1,2 @@
 /** @const {string} */
-module.exports.GAMELAB_DPAD_CONTAINER_ID = 'studio-dpad-container';
+export const GAMELAB_DPAD_CONTAINER_ID = 'studio-dpad-container';

@@ -786,6 +786,148 @@
           "jittering": "กระวนกระวาย",
           "moving west": "เคลื่อนที่ไปทางตะวันตก",
           "patrolling": "ลาดตระเวน"
+        },
+        "helloworld_animals_backgrounds": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_animals_behaviors": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_animals_costumes": {
+          "moving north": "เคลื่อนที่ไปทางเหนือ"
+        },
+        "helloworld_animals_events": {
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "wandering": "เคลื่อนที่"
+        },
+        "helloworld_animals_sounds": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_emoji_backgrounds": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_emoji_behaviors": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_emoji_costumes": {
+          "moving north": "เคลื่อนที่ไปทางเหนือ"
+        },
+        "helloworld_emoji_events": {
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "wandering": "เคลื่อนที่"
+        },
+        "helloworld_emoji_sounds": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_food_backgrounds": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_food_costumes": {
+          "moving north": "เคลื่อนที่ไปทางเหนือ"
+        },
+        "helloworld_food_events": {
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "wandering": "เคลื่อนที่"
+        },
+        "helloworld_food_sounds": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_retro_backgrounds": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_retro_behaviors": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_retro_costumes": {
+          "moving north": "เคลื่อนที่ไปทางเหนือ"
+        },
+        "helloworld_retro_events": {
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "wandering": "เคลื่อนที่"
+        },
+        "helloworld_retro_sounds": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร",
+          "moving north and looping": "เคลื่อนไปทางทิศเหนือแล้วลูป",
+          "moving south and looping": "เคลื่อนไปทางทิศใต้แล้วลูป"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
         }
       }
     }

@@ -1,39 +1,39 @@
 ---
-title: Hour of Code How-to Guide
+title: 编程一小时指南
 ---
 
 {{ signup_button }}
 
 # How to plan your Hour of Code
 
-### Join the movement and introduce your students to computer science with these steps.
+### 参与活动，并用下面的步骤向学生介绍计算机科学。
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+计算思维有助于培养问题解决能力、逻辑能力和创造力。 科技正改变着地球上的每一个行业。 今天的学生应该学习如何创造技术，而不仅仅是使用它。 如果早点开始，他们将为在21世纪的任何职业道路上取得成功打下基础。
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+尝试编程一个小时是向学生介绍计算机科学的简单而有趣的方式，也许是第一次，它非常适合课堂和课后设置。 Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [观看编程一小时指引视频](#how-to-video)
+- [探索活动和教程](#explore-activities)
+- [制定一天的计划](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [如何稳健地开始你的编程一小时](#how-to-start)
+- [获取编码](#code)
+- [庆祝学生的成功](#celebrate)
 - [适用于教育工作者的其他编程一小时的资源](#other-resources)
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### 编程一小时也可以远程举办！开始吧，看看[举办虚拟编程一小时活动的提示](https://hourofcode.com/us/how-to/virtual)。
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. 观看编程一小时指引视频 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. 探索活动和教程
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -45,7 +45,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. 制定一天的计划
 
 ### Think about your technology needs - computers are optional!
 
@@ -64,7 +64,7 @@ People around the world join in the Hour of Code celebration during CS Education
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. 推广你的编程一小时
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -88,7 +88,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. 如何稳健地开始你的编程一小时
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -103,17 +103,17 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 - 通过男孩和女孩们都关心的例子，介绍科技如何影响我们的生活（比如拯救生命，帮助人们，连接人们等）
 - 让全班一起来列出每天生活中用到编程的地方。
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- 在[这里]({{ urls/girls }})查看帮助年轻女性对计算机科学感兴趣的提示。
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. 获取编码！
 
 指导学生参与活动
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- 将教程链接写在白板上。在参与者数量下面找到你所选教程的[信息]({{ urls/learn }})中列出的链接。
 
 当你的学生遇到困难时，你完全可以用这样的方式回答：
 
@@ -130,7 +130,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. 庆祝学生的成功
 
 [col-33]
 
@@ -154,6 +154,6 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 
 ### 编程一小时之后该做什么？
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+计算机科学不会随编程一小时结束！我们的课程是基于网络的，并且永久免费使用。[学习如何](/beyond)将计算机科学带入你的学校和学生之中。
 
 {{ signup_button }}

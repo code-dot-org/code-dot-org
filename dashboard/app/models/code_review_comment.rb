@@ -39,12 +39,26 @@ class CodeReviewComment < ApplicationRecord
     return true if project_owner.student_of?(potential_reviewer)
     # peers can only review projects where code review has been enabled, which creates a ReviewableProject
     return false unless ReviewableProject.project_reviewable?(storage_app_id, project_owner.id, level_id, script_id)
-    return false if project_owner.sections_as_student.any? {|s| !s.code_review_enabled?}
-    return false if potential_reviewer.sections_as_student.any? {|s| !s.code_review_enabled?}
-    return (project_owner.sections_as_student & potential_reviewer.sections_as_student).any?
+
+    if DCDO.get('code_review_groups_enabled', false)
+      return false if (project_owner.sections_as_student & potential_reviewer.sections_as_student).all? {|s| !s.code_review_enabled?}
+    else
+      return false if project_owner.sections_as_student.any? {|s| !s.code_review_enabled?}
+      return false if potential_reviewer.sections_as_student.any? {|s| !s.code_review_enabled?}
+    end
+
+    if DCDO.get('code_review_groups_enabled', false)
+      return (project_owner.code_review_groups & potential_reviewer.code_review_groups).any?
+    else
+      return (project_owner.sections_as_student & potential_reviewer.sections_as_student).any?
+    end
   end
 
   def compute_is_from_teacher
+    # Only should happen if we hard delete the commenter's account
+    # via the delete accounts helper.
+    return false if commenter.nil?
+
     self.is_from_teacher = commenter.teacher? ? true : false
   end
 end

@@ -2,41 +2,102 @@
 ja:
   data:
     variable_names:
+      "???": "???"
+      Actor_1_Counter: キャラ_1_カウンター
+      Actor_2_Counter: キャラ_2_カウンター
       Blue: 青
       Green: 緑
       Red: 赤
       actor: キャラ
       age: 年齢
+      animal1score: 動物1スコア
+      animal1speed: 動物1スピード
+      animal2score: 動物2スピード
+      animal2speed: 動物2スピード
       answer: 答え
+      armlength: アーム長
       binary: ２しんすう
       birds: 鳥
+      bit: ビット
+      blue1: 青1
+      blue2: 青2
+      bodylength: 身長
+      buttonHeight: ボタンの高さ
+      buttonMargin: ボタンのマージン
+      buttonWidth: ボタンの幅
+      cat_score: ネコ_スコア
+      cat_speed: ネコ_スピード
       cats: すべてのネコ
+      centerToPadLeft: 中央からパッド左へ
+      choice: 選択
+      circ: 円囲み
+      codeName: コード名
       color: 色
+      controllerHeight: 高さコントローラー
+      controllerWidth: 幅コントローラー
       counter: カウンタ変数
+      counter2: カウンター2
+      currentActor: 現在のキャラ
+      direction: 方向
+      dog_score: イヌ_スコア
+      dog_speed: イヌ_スピード
       dogs: すべてのイヌ
+      dragons: ドラゴン
+      enemy_speed: 敵_スピード
       energy: エネルギー
+      firstName: 名
+      footlength: 足の長さ
+      gather: 数
+      green1: 緑1
+      green2: 緑2
+      guess: 推測
       height: 高さ
       honey: ハチミツ
       i: i
       left: 左 に
+      legangle: 足の角度
+      leglength: 足の長さ
       length: 長さ
       level: 'レベル
 
 '
+      marginX: マージンX
+      marginY: マージンY
+      meal: 食事
+      myName: 私の名前
       name: 名前
       nectar: 花のミツ
+      nectars: 花のミツ
+      padYOffset: パッドYオフセット
       planet: 惑星
+      player_score: プレイヤー_スコア
       points: ポイント
+      punchLine: パンチライン
       random: ランダム に
+      red1: 赤1
+      red2: 赤2
       repeat: くりかえし
+      repetitions: 繰り返し
       right: 右 に
       score: スコア
+      score1: スコア1
+      score2: スコア2
+      screenHeight: スクリーンの高さ
+      screenWidth: スクリーンの幅
+      set sides: セット辺
+      setupSimScore1: SimScore1の設定
+      setupSimScore2: SimScore2の設定
       shout: 大声で叫ぶ
+      sides: 辺
       size: 大きさ
       speed: スピード
+      startX: Xの開始
+      startY: Yの開始
       variable: '変数
 
 '
       width: 幅
       wizard: 魔法使い
       x: x
+      your var 1: あなたのvar 1
+      your var 2: あなたのvar 2

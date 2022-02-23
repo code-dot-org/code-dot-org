@@ -1,5 +1,5 @@
 ---
-title: "#CSforGood in your class"
+title: "#CSforGood в вашем классе"
 video_player: true
 theme: responsive
 social:
@@ -14,15 +14,15 @@ social:
   og:video:type: ''
 ---
 
-<h1>#CSforGood in your class</h1>
+<h1>#CSforGood в вашем классе</h1>
 
 <div class="col-40" style="padding-right: 20px; padding-bottom: 20px">
     <img src="/images/csforgood_1-1.png" style="width:100%">
 </div>
 
 <div class="col-60">
-<p>The events of this year—a global pandemic, economic recession, worldwide protests against racial inequities—have shown us both the great promise and the perils of our technology. We rely on technology to keep us connected (Zoom, anyone?), but we’ve also seen how biased algorithms can divide us on the basis of race or gender. We rely on our technology to keep us informed, but we’ve also seen how easy it is to spread misinformation. We rely on our technology to stay productive, but we’ve left behind those who don’t have access to the internet.</p>
-<p>How CS and technology are used and applied in the real world is a crucial part of learning computer science. We can help students understand some of the challenges that people around the world face and inspire them to think deeply about the role computer science can play in creating a more equitable and sustainable world.</p>
+<p>События этого года — глобальная пандемия, экономический спад, всемирные протесты против расового неравенства — продемонстрировали нам как большие перспективы, так и источники опасности наших технологий. Мы полагаемся на технологии, чтобы оставаться на связи (Zoom, anyone?), но мы также видели, как тенденциозные алгоритмы могут разделить нас по расовому или гендерному признаку. Мы полагаемся на технологии, чтобы оставаться в курсе событий, но мы также видели, как можно достаточно легко и просто распространять дезинформацию. Мы полагаемся на технологии, чтобы оставаться продуктивными, но мы забыли о тех, у кого нет доступа к Интернету.</p>
+<p>То, как информатика и технологии используются и применяются в реальном мире, является важной частью изучения этого предмета. Мы можем помочь учащимся понять некоторые проблемы, с которыми сталкиваются люди во всем мире, и вдохновить их на глубокие размышления о той роли, которую информатика может сыграть в создании более справедливого и рационального мира.</p>
 </div>
 
 <div style="clear:both"></div>
@@ -30,77 +30,77 @@ social:
 <br>
 
 <div class="col-100" style="text-align:center">
-  <a href="#discuss">Discussion prompts</a> | <a href="#tutorials">#CSforGood tutorials & lesson plans</a> | <a href="#realworld">#CSforGood in the real world</a> | <a href="#reachout">Reach out!</a>
+  <a href="#discuss">Наводящие вопросы для обсуждения</a> | <a href="#tutorials">#Обучающий материал CSforGood и планы уроков</a> | <a href="#realworld">#CSforGood в реальном мире</a> | <a href="#reachout">Связаться!</a>
 </div>
 
 <a id="discuss"></a>
-<h2>Discussing #CSforGood with your students</h2>
-<p>Here are some themes and questions to spark discussion in your classroom about the role of computer science in creating positive social change. <a href="/files/csforgood-discussion-2020.pdf" target="_blank">Download this discussion guide as a PDF</a>.</p>
+<h2>Обсуждение #CSforGood с вашими учениками</h2>
+<p>Вот несколько тем и вопросов для обсуждения в вашем классе роли информатики в создании позитивных социальных изменений. <a href="/files/csforgood-discussion-2020.pdf" target="_blank">Скачать данное руководство для организации обсуждения в формате PDF</a>.</p>
 
-<h3><strong>We learn CS to detect problems</strong></h3>
+<h3><strong>Мы изучаем информатику для выявления проблем</strong></h3>
 
 <div class="educate-callout-box" style="width:300px; height:235px; background-color:#7665a0; color:#ffffff; padding:20px; border-radius:15px; float:right; margin-left:20px">
-  <p><strong>Is your class virtual this year?</strong></p>
-  <p>Try using breakout rooms to pair or group students together.</p>
-  <p>If breakout rooms aren’t available, use a shared document or slide deck (<a href="https://docs.google.com/presentation/d/1pGcC3Nn_qCvXIChdatuVWqVwnGi6HOt8qJqSwB5YU6w/edit#slide=id.p" target="_blank" style="color:#ffffff">template</a>), designating sections of the document or a single slide for each group of students.</p>
+  <p><strong>Проводятся ли ваши занятия виртуально в этом году?</strong></p>
+  <p>Попробуйте использовать аудитории для групповой работы для объединения учащихся в пары или группы.</p>
+  <p>Если аудитории для групповой работы недоступны, используйте общий документ или презентацию (<a href="https://docs.google.com/presentation/d/1pGcC3Nn_qCvXIChdatuVWqVwnGi6HOt8qJqSwB5YU6w/edit#slide=id.p" target="_blank" style="color:#ffffff">шаблон</a>), выделив разделы документа или отдельный слайд для каждой группы учащихся.</p>
 </div>
 
-<p>Building a society we want to live in begins with understanding the problems we need to address. We can use technology to detect and even predict problems.</p>
-<p>Have students read this story about <a href="https://www.reuters.com/article/us-alphabet-google-quake/google-turns-android-phones-into-earthquake-sensors-california-to-get-alerts-idUSKCN2571TN" target="_blank">how smartphones are being used to detect earthquakes</a> and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
-<p><i>Questions for discussion:</i></p>
+<p>Построение общества, в котором мы хотим жить, начинается с осознания проблем, которые нам необходимо решить. Мы можем использовать технологии для выявления и даже прогнозирования проблем.</p>
+<p>Пусть учащиеся прочитают этот рассказ о том, <a href="https://www.reuters.com/article/us-alphabet-google-quake/google-turns-android-phones-into-earthquake-sensors-california-to-get-alerts-idUSKCN2571TN" target="_blank">как смартфоны используются для выявления землетрясений</a>, а затем поработают в парах или группах и ответят на приведенные ниже вопросы. Затем обсудите это в классе.</p>
+<p><i>Вопросы для обсуждения:</i></p>
 <ul>
-<li>What technology does the article discuss?</li>
-<li>What problem is Google trying to solve? Why is this important?</li>
-<li>What are other ways that computer science or technology can help detect problems?</li>
+<li>О какой технологии идет речь в статье?</li>
+<li>Какую проблему пытается решить Google? Почему это важно?</li>
+<li>Какими еще способами информатика или технологии могут помогать выявлять проблемы?</li>
 </ul>
 
-<h3><strong>We learn CS to find creative solutions</strong></h3>
-<p>Learning computer science gives us a foundation to find solutions. It is our creativity then that enables us in every industry and aspect of life to design solutions built upon that foundation.</p>
-<p>Have students read this story about <a href="https://www.technologyreview.com/2020/09/22/1008675/ai-planners-minecraft-urban-design-healthier-happier-cities/" target="_blank">how urban planners are using AI in Minecraft to design better cities</a>, and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
-<p><i>Questions for discussion:</i></p>
+<h3><strong>Мы изучаем информатику с целью нахождения творческих решений</strong></h3>
+<p>Изучение информатики является для нас основой для поиска решений. Именно творческий подход позволяет нам в любой отрасли и сфере жизни разрабатывать решения, основанные на этом фундаменте.</p>
+<p>Пусть учащиеся прочитают этот рассказ о том, <a href="https://www.technologyreview.com/2020/09/22/1008675/ai-planners-minecraft-urban-design-healthier-happier-cities/" target="_blank">как градостроители используют ИИ в Minecraft для проектирования более благоустроенных городов</a>, а затем, работая в парах или группах, ответят на приведенные ниже вопросы. Затем обсудите это в классе.</p>
+<p><i>Вопросы для обсуждения:</i></p>
 <ul>
-<li>What technology does the article discuss?</li>
-<li>What challenge or challenges are participants trying to address?</li>
-<li>Think of the technology that you use on a daily basis. What does it help you do? What problems or challenges does it help you solve?</li>
-<li>Can you think of a time you used technology in a way it wasn’t necessarily intended, in order to solve a problem?</li>
+<li>О какой технологии идет речь в статье?</li>
+<li>Какую проблему или проблемы пытаются решить участники?</li>
+<li>Вспомните о технологиях, которые вы используете ежедневно. В чем они вам помогают? Какие проблемы или задачи он помогает вам решить?</li>
+<li>Можете ли вы вспомнить случай, когда вы использовали технологию не по назначению, чтобы решить какую-то проблему?</li>
 </ul>
 
-<h3><strong>We learn CS to connect with each other</strong></h3>
+<h3><strong>Мы изучаем информатику с целью общения друг с другом</strong></h3>
 
 <iframe src="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/" id="cbsNewsVideo" allowfullscreen allow="fullscreen" frameborder="0" width="325px" height="183px" style="float:right; margin-left:20px" mark="crwd-mark"></iframe>
 
-<p>From video chats and classes to apps that allow us to sing together remotely, people have built technical innovations that have kept us connected with some semblance of community through a global pandemic. And, we will continue to find ways to humanize technology to unite us.</p>
-<p>Have students watch this video (<a href="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/?intcid=CNM-00-10abd1h" target="_blank">link to original video at CBS News</a>) of students from Chino Valley Unified School District singing an a capella version of “Over the Rainbow” via video conference after covid-19 canceled their annual Choral Festival. Then have them work in pairs or groups to answer the questions below.</p>
-<p><i>Questions for discussion:</i></p>
+<p>Будь то видео-чаты или приложения, позволяющие нам, например, петь вместе удаленно, люди создали технические инновации, которые позволяют нам поддерживать связь в качестве некого подобия сообщества в условиях глобальной пандемии. И мы будем продолжать искать способы гуманизации технологии, чтобы объединиться.</p>
+<p>Пусть учащиеся посмотрят это видео (<a href="https://www.cbsnews.com/video/students-sing-together-from-home-after-coronavirus-cancels-concert/?intcid=CNM-00-10abd1h" target="_blank">ссылка на оригинальное видео на сайте CBS News</a>), где ученики из объединенного школьного округа Chino Valley поют акапельную версию песни «Over the Rainbow» с помощью средства для проведения видеоконференций после того, как из-за Covid-19 был отменен их ежегодный фестиваль хорового пения. Затем попросите их поработать в парах или группах, чтобы ответить на приведенные ниже вопросы.</p>
+<p><i>Вопросы для обсуждения:</i></p>
 <ul>
-<li>Name as many of the technologies as you can that enabled these students to sing together despite stay-at-home orders due to covid.</li>
-<li>Do you use any of these technologies? How frequently--weekly? daily?</li>
-<li>Have you used technology lately to make art? Record music? Write poetry? Play games with friends? Talk to family members? If you did not have access to these technologies, what would you do?</li>
-<li>Should everyone have access to these technologies? Why or why not?</li>
+<li>Назовите как можно больше технологий, которые позволили этим учащимися спеть вместе, несмотря на распоряжение оставаться дома из-за Covid-19.</li>
+<li>Используете ли вы какие-либо из этих технологий? Как часто — каждую неделю? Каждый день?</li>
+<li>Использовали ли вы в последнее время технологии для создания произведений искусства? Записи музыкального произведения? Написания стихотворения? Чтобы поиграть в игры с друзьями? Пообщаться с членами семьи? Если бы у вас не было доступа к этим технологиям, что бы вы делали?</li>
+<li>Должен ли каждый иметь доступ к этим технологиям? Почему да или почему нет?</li>
 </ul>
 
-<h3><strong>We learn CS to ensure equity and inclusion</strong></h3>
-<p>The pandemic has exposed the digital divide like never before. Everyone must have the opportunity to learn computer science to have a part in building a future where all of us are included and all our voices heard.</p>
-<p>Have students read this story about a new tool that <a href="https://www.therobotreport.com/princeton-tool-helps-clear-biases-computer-vision/" target="_blank">helps root out potential biases in image sets that are used to train artificial intelligence (AI)</a>, and then work in pairs or groups to answer the questions below. Then discuss as a class.</p>
+<h3><strong>Мы изучаем информатику для обеспечения равенства и инклюзивности</strong></h3>
+<p>Пандемия обнажила столь очевидное цифровое неравенство. У каждого должна быть возможность изучать информатику, чтобы принять участие в построении будущего, в которое все мы будем вовлечены, и все наши голоса будут услышаны.</p>
+<p>Пусть учащиеся прочитают этот рассказ о новом инструменте, который <a href="https://www.therobotreport.com/princeton-tool-helps-clear-biases-computer-vision/" target="_blank">помогает устранить потенциальные смещения в наборах изображений, используемых для обучения искусственного интеллекта (ИИ)</a>, а затем в парах или группах ответят на приведенные ниже вопросы. Затем обсудите это в классе.</p>
 <ul>
-<li>What does this tool do and what problem is it trying to solve?</li>
-<li>What do you think ‘open-source’ means? Why would the researchers make their tool open-source?</li>
-<li>What are some of the examples mentioned in the article of biases in image sets? Can you think of any others?</li>
-<li>Why is it important to be able to identify these biases? How does this relate to equity and inclusion?</li>
+<li>Как функционирует этот инструмент и какую проблему он призван решить?</li>
+<li>Что, по-вашему, означает «открытый исходный код»? Для чего исследователи создают свой инструмент с открытым исходным кодом?</li>
+<li>Какие примеры смещения в наборах изображений упоминаются в статье? Можете ли вы вспомнить другие?</li>
+<li>Почему важно уметь выявлять эти смещения? Как это связано с равенством и инклюзивностью?</li>
 </ul>
 
 <a id="tutorials"></a>
-<h2>#CSforgood tutorials & lesson plans</h2>
-<p>If you're looking for an engaging way to introduce your students to the concept of #CSforGood, there are lots of tutorials and activities to choose from!</p>
+<h2>Обучающий материал CSforGood и планы уроков</h2>
+<p>Если вы ищете увлекательный способ познакомить своих учеников с понятием #CSforGood, вы можете выбрать множество уроков и занятий!</p>
 
-<h3>Featured:</h3>
+<h3>Избранное:</h3>
 <div class="col-33" style="padding-right: 30px; padding-bottom:40px">
 
 <a href="https://code.org/oceans" target="_blank"><img src="/images/tutorials/hoc2019/oceans.png" style="width: 100%"></a>
 <br>
-<a href="https://code.org/oceans" target="_blank"><h3 style="color:#7665a0"><strong>AI for Oceans</strong></h3></a>
-<p>Computer science is about so much more than coding! Learn about AI, machine learning, training data, and bias, while exploring ethical issues and how AI can be used to address world problems.</p>
-<p><i>From Code.org. For grades 3 and up.</i></p>
+<a href="https://code.org/oceans" target="_blank"><h3 style="color:#7665a0"><strong>ИИ для океанов</strong></h3></a>
+<p>Информатика — это гораздо больше, чем программирование Узнайте об искусственном интеллекте, машинном обучении, обучающих данных и предубеждении, изучите этические вопросы и то, как искусственный интеллект может быть использован для решения мировых проблем.</p>
+<p><i>От Code.org. Для классов, начиная с 3.</i></p>
 
 </div>
 
@@ -108,9 +108,9 @@ social:
 
 <a href="https://aka.ms/HourofCode2020" target="_blank"><img src="/images/tutorials/hoc2020/mee_empathy.jpg" style="width: 100%"></a>
 <br>
-<a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>A Minecraft Tale of Two Villages</strong></h3></a>
-<p>Use the power of code to bring two villages together. Players will experience empathy and compassion for their neighbors, learn cooperation and inclusion, and embrace the diversity that makes us all uniquely special.</p>
-<p><i>From Minecraft: Education Edition. For grades 2 and up.</i></p>
+<a href="https://aka.ms/HourofCode2020" target="_blank"><h3 style="color:#7665a0"><strong>Повесть о двух деревнях в Minecraft</strong></h3></a>
+<p>Используйте силу кода, чтобы объединить две деревни. Игроки будут испытывать сопереживание и сострадание к своим соседям, научатся сотрудничать и участвовать в общественной жизни, а также усвоят, что разнообразие делает всех нас уникальными и особенными.</p>
+<p><i>От Minecraft: Учебное издание. Для классов, начиная с 2.</i></p>
 
 </div>
 
@@ -118,53 +118,53 @@ social:
 
 <a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><img src="/images/tutorials/hoc2020/csfirst_unplugged.png" style="width: 100%"></a>
 <br>
-<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>CS First Unplugged</strong></h3></a>
-<p>No computer or internet? No problem. Try the CS First Unplugged activities to explore how computer science can solve problems like helping people stay connected while apart. "Plugged in" Scratch activities are available too!</p>
-<p><i>From Google. For grades 2 through 8.</i></p>
+<a href="https://csfirst.withgoogle.com/c/cs-first/en/cs-first-unplugged/cs-first-unplugged/introduction-to-cs-first-unplugged.html" target="_blank"><h3 style="color:#7665a0"><strong>Урок без компьютера «Сначала информатика»</strong></h3></a>
+<p>Нет компьютера или Интернета? Это не проблема. Пройдите занятия без компьютера «Сначала информатика», чтобы узнать, как информатика помогает людям оставаться на связи, находясь в разлуке. Также доступны дополнительные занятия с использованием компьютера!</p>
+<p><i>От Google. Для классов со 2 по 8 включительно.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom: 15px"></div>
 
-<h3>More #CSforGood activities and lesson plans:</h3>
-<p><a href="https://pbskids.org/scigirls/games/code-quest" target="_blank">SciGirls: Code Quest</a> (SciGirls/Twin Cities PBS): In this online coding adventure, take Subby the submarine through underwater challenges, using code to find various items and collect scientific data on the ocean floor. A self-guided tutorial for beginners in grades 2-8.</p>
-<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">Climate Clock</a> (Vidcode): In this Hour of Code activity, students will be guided through the construction of their own climate clock. They will engage with objects, properties, variables, functions, and loops, and customize text to convey their message for the world and their hopes for the future. A self-guided tutorial for beginners in grades 6 and up.<p>
-<p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">Code a Happy Place Meditation App</a> (CodeSpeak Labs): It’s been a stressful year for students, but practicing mindfulness can be a challenge. Learn to program a meditation app that transports you to your "happy place." For beginners in grades 2 through 8. Great as a teacher-guided tutorial.</p>
-<p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">Robot Feelings: The Kind Playground</a> (iRobot): Our robot is learning how to make kind choices when playing with friends. In this game, help Root practice by making four kind decisions in a row. If Root makes a bad choice, it has to start all the way at the beginning again! Let's play together! For beginners in kindergarten through grade 5. Root robot is optional.</p>
-<p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">Saving Sea Turtles</a> (micro:bit): Create a prototype of a low-power, red LED beach light that can be used for lighting on beach paths which is also safe for sea turtles. For beginners in grades 6-8. Great for learning at home.</p>
+<h3>Еще занятия #CSforGood и планы уроков:</h3>
+<p><a href="https://pbskids.org/scigirls/games/code-quest" target="_blank">SciGirls: квест Code Quest</a> (SciGirls/Twin Cities PBS): в этом онлайн-приключении, посвященном программированию, помогите подводной лодке Сабби пройти все подводные испытания, используя код для поиска различных предметов и сбора научных данных на дне океана. Самоучитель для начинающих, классы со 2 по 8.</p>
+<p><a href="https://www.vidcode.com/project/climate-clock" target="_blank">Климатические часы</a> (Vidcode): В рамках этого задания «Час кода» учащиеся будут создавать собственные климатические часы. Они будут работать с объектами, свойствами, переменными, функциями и циклами, а также изменять текст, чтобы передать свое послание миру и свои надежды на будущее. Самоучитель для начинающих, для классов, начиная с 6.<p>
+<p><a href="https://www.codespeaklabs.com/blog/code-a-happy-place-meditation-app" target="_blank">Программирование приложения «Медитация о счастливом месте»</a> (Лаборатории CodeSpeak): Этот год был стрессовым для учащихся, но практиковать самоосознанность может быть непросто. Научитесь программировать приложение для медитации, которое перенесет вас в ваше «счастливое место». Для начинающих со 2 по 8 класс. Отлично подходит в качестве учебного пособия под руководством учителя.</p>
+<p><a href="https://edu.irobot.com/learning-library/robot-feelings-the-kind-playground" target="_blank">Чувства робота: Добрая игровая площадка</a> (iRobot): Наш робот учится совершать добрый выбор, когда играет с друзьями. В этой игре помогите Руту принять четыре добрых решения подряд. Если Рут совершает неправильный выбор, ему приходится начинать весь путь с самого начала! Давайте играть вместе! Для начинающих, для детей детского сада и до 5 класса. Робот Рут — факультативное занятие.</p>
+<p><a href="https://microbit.org/news/2020-05-30/microbit-at-home-saving-sea-turtles/" target="_blank">Спасение морских черепах</a> (micro:bit): Создание прототипа маломощного красного светодиодного пляжного фонаря, который можно использовать для освещения пляжных дорожек и который также безопасен для морских черепах. Для начинающих, с 6 по 8 класс. Отлично подходит для обучения дома.</p>
 <br> 
-<p>See the full list of Hour of Code activities and lesson plans, including many more #CSforGood-themed tutorials, at <a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>!</p>
+<p>Полный список занятий и планов уроков «Час кода», включая множество других уроков на тему #CSforGood, можно найти на сайте <a href="https://hourofcode.com/learn" target="_blank">hourofcode.com/learn</a>!</p>
 
 <a id="realworld"></a>
-<h2>Go further: How people are using #CSforgood in the real world</h2>
-<p>Every day, organizations and individuals are finding new ways to use computer science to help solve the world's challenges. Here are some real-world examples to take a look at with your classroom.</p>
+<h2>Продолжите дальше: Как люди используют #CSforgood в реальном мире</h2>
+<p>Каждый день организации и просто отдельные люди находят новые способы использования информатики для решения мировых проблем. Вот несколько реальных примеров, которые можно рассмотреть в вашем классе.</p>
 
-<h3>Detecting problems</h3>
+<h3>Выявление проблем</h3>
 <ul>
-<li><a href="https://www.axios.com/spread-covid-19-smart-thermometers-b0694e9b-f287-4496-8a9d-235b19c906eb.html" target="_blank">Predicting the spread of COVID-19 with smart thermometers</a></li>
-<li><a href="https://spectrum.ieee.org/the-human-os/biomedical/devices/scientists-can-now-take-virtual-walks-through-human-cells" target="_blank">Scientists Can Now Take Virtual Walks Through Human Cells</a></li>
-<li><a href="https://www.bbc.com/news/technology-54538228" target="_blank">The AI that spots Alzheimer's from cookie drawing</a></li>
+<li><a href="https://www.axios.com/spread-covid-19-smart-thermometers-b0694e9b-f287-4496-8a9d-235b19c906eb.html" target="_blank">Прогнозирование распространения COVID-19 с помощью умных термометров</a></li>
+<li><a href="https://spectrum.ieee.org/the-human-os/biomedical/devices/scientists-can-now-take-virtual-walks-through-human-cells" target="_blank">Ученые теперь могут совершать «виртуальные прогулки» по человеческим клеткам</a></li>
+<li><a href="https://www.bbc.com/news/technology-54538228" target="_blank">ИИ, который распознает болезнь Альцгеймера по рисунку печенья</a></li>
 </ul>
 
-<h3>Finding creative solutions</h3>
+<h3>Поиск творческих решений</h3>
 <ul>
-<li><a href="https://www.engadget.com/alphabets-loon-and-att-will-tackle-global-crises-with-internet-balloons-130050805.html" target="_blank">Google's parent company is flying balloons with 'floating cell phone towers' across the ocean to bring internet to Kenya's Rift Valley</a></li>
-<li><a href="https://www.theverge.com/2020/10/19/21522863/health-data-records-covid-coronavirus-model-nih-privacy-n3c" target="_blank">The ambitious effort to piece together America’s fragmented health data</a></li>
-<li><a href="https://www.theverge.com/21523976/virtual-power-plants-solar-energy-grid-resilience-climate-change" target="_blank">The next generation of power plants will be virtual</a></li>
+<li><a href="https://www.engadget.com/alphabets-loon-and-att-will-tackle-global-crises-with-internet-balloons-130050805.html" target="_blank">Материнская компания Google запускает воздушные шары с «плавающими вышками сотовой связи» через океан, чтобы доставить Интернет в Рифтовую долину Кении</a></li>
+<li><a href="https://www.theverge.com/2020/10/19/21522863/health-data-records-covid-coronavirus-model-nih-privacy-n3c" target="_blank">Амбициозная попытка собрать воедино разрозненные медицинские данные Америки</a></li>
+<li><a href="https://www.theverge.com/21523976/virtual-power-plants-solar-energy-grid-resilience-climate-change" target="_blank">Следующее поколение электростанций будет виртуальным</a></li>
 </ul>
 
-<h3>Connecting to each other</h3>
+<h3>Связь друг с другом</h3>
 <ul>
-<li><a href="https://www.wbur.org/artery/2020/10/16/1990s-tech-helping-musicians-collaborate-apart" target="_blank">Tech From The 1990s Is Helping Musicians Play In Time While Apart</a></li>
-<li><a href="https://fabrydiseasenews.com/2020/05/21/video-games-connect-chronically-ill-children-isolated-at-home-hospital/" target="_blank">Video Games Connect Chronically Ill Children Isolated at Home, Hospital</a></li>
+<li><a href="https://www.wbur.org/artery/2020/10/16/1990s-tech-helping-musicians-collaborate-apart" target="_blank">Технологии 1990-х годов помогают музыкантам играть в такт, находясь на удалении</a></li>
+<li><a href="https://fabrydiseasenews.com/2020/05/21/video-games-connect-chronically-ill-children-isolated-at-home-hospital/" target="_blank">Видеоигры объединяют хронически больных детей, изолированных дома и в больнице</a></li>
 </ul>
 
-<h3>Ensuring equity and inclusion</h3>
+<h3>Обеспечение равенства и инклюзивности</h3>
 <ul>
-<li><a href="https://slate.com/technology/2020/09/synthetic-data-artificial-intelligence-bias.html" target="_blank">Fake Data Could Help Solve Machine Learning’s Bias Problem—if We Let It</a></li>
-<li><a href="https://www.nbcnews.com/news/us-news/native-american-teachers-entrepreneurs-seek-new-ways-close-digital-divide-n1243746" target="_blank">Native American teachers, entrepreneurs seek new ways to close digital divide</a></li>
-<li><a href="https://www.wired.com/story/accessibility-video-games-ablegamers/" target="_blank">Gamers Forge Their Own Paths When It Comes to Accessibility</a></li>
+<li><a href="https://slate.com/technology/2020/09/synthetic-data-artificial-intelligence-bias.html" target="_blank">Фальшивые данные могут помочь решить проблему необъективности машинного обучения — если мы это позволим</a></li>
+<li><a href="https://www.nbcnews.com/news/us-news/native-american-teachers-entrepreneurs-seek-new-ways-close-digital-divide-n1243746" target="_blank">Учителя и предприниматели из числа коренных американцев ищут новые пути преодоления цифрового неравенства</a></li>
+<li><a href="https://www.wired.com/story/accessibility-video-games-ablegamers/" target="_blank">Геймеры прокладывают свои собственные пути, когда речь идет о доступности</a></li>
 </ul>
 
 <a id="reachout"></a>
-<h2>Reach out to us!</h2>
-<p>We want to hear about how your students are engaging with #CSforGood! Use the hashtag #CSforGood or send your #CSforGood stories to <a href="mailto:csforgood@code.org">csforgood@code.org</a>.
+<h2>Свяжитесь с нами!</h2>
+<p>Мы хотим узнать, как ваши ученики участвуют в #CSforGood! Используйте хэштег #CSforGood или присылайте свои рассказы #CSforGood на адрес <a href="mailto:csforgood@code.org">csforgood@code.org</a>.

@@ -1,12 +1,15 @@
 {
-  "func": "textAlign",
+  "key": "textAlign",
+  "name": "textAlign",
   "category": "Drawing",
-  "paletteParams": [
-    "horiz",
-    "vert"
+  "category_key": "drawing",
+  "palette_params": [
+    {
+      "name": "horiz"
+    },
+    {
+      "name": "vert"
+    }
   ],
-  "params": [
-    "CENTER",
-    "TOP"
-  ]
+  "syntax": "textAlign(horiz, vert)"
 }

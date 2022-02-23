@@ -240,11 +240,21 @@ sr-SP:
         - {}
         - {}
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: |-
+            **Точкови (са једне стране): 2**
+            **Прозори (са једне стране): 0**
+        - text: |-
+            **Точкови (са једне стране): 2**
+            **Прозори (са једне стране): 1**
+        - text: |-
+            **Точкови (са једне стране): 2**
+            **Прозори (са једне стране): 6**
+        - text: |-
+            **Точкови (са једне стране): 3**
+            **Прозори (са једне стране): 2**
         title: Упаривање
+        content1: Свако возило је растављено на мање делове. Повежи возила са листом
+          делова које им одговара.
       4-5 Computational Thinking Multi 1:
         answers:
         - {}
@@ -254,6 +264,8 @@ sr-SP:
         questions:
         - {}
         title: Вишеструки избор
+        content1: Имамо три реченице. Који одговор испод може да се примени на све
+          три реченице као шаблон?
       4-5 Crowdsourcing Multi 1:
         answers:
         - {}
@@ -381,7 +393,7 @@ sr-SP:
         - {}
         - {}
         questions:
-        - {}
+        - text: Који скуп блокова решава задатак?
       4-5 maze match 1:
         answers:
         - {}
@@ -399,7 +411,7 @@ sr-SP:
         - {}
         - {}
         questions:
-        - {}
+        - text: Који скуп блокова решава задатак?
       CSD Header Size MC:
         answers:
         - {}
@@ -2055,6 +2067,97 @@ sr-SP:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: наслов
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2021:
         answers:
         - {}
         - {}

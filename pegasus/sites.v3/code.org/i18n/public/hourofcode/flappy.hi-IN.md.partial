@@ -1,31 +1,31 @@
 ---
-title: Teacher Resources - Make a Flappy Game
+title: शिक्षकों के लिए संसाधन - एक Flappy गेम बनाएं
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# एक Flappy गेम बनाएं: एक Hour of Code ट्यूटोरियल
 
 {{ hoc_flappy_video }}
 
 [col-50]
 
-## Teacher Resources
+## शिक्षकों के लिए संसाधन
 
-### Lesson Plans:
+### पाठ योजना:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [एक Flappy गेम बनाएं]({{ hoc_flappy_cb_url }})
 
-### Extension Activities:
+### एक्सटेंशन गतिविधियां:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Hour of Code के परे](http://code.org/learn/beyond)
+- [कंप्यूटर साइंस फंडामेंटल्स: कोर्स 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### अन्य शिक्षकों के लिए संसाधन:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- [Hour of Code: शिक्षकों के लिए हाउ-टू गाइड](https://hourofcode.com/how-to)
+- [सफल शिक्षकों के बेस्ट प्रैक्टिसेज](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
 - Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
@@ -34,12 +34,12 @@ video_player: true
 
 ## रूप-रेखा
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+ड्रैग एंड ड्रॉप प्रोग्रामिंग के जरिए अपना खुद का एक Flappy गेम बनाएं, और इसे अलग लुक देने के लिए कस्टमाइज करें (Flappy शार्क, Flappy सेंटा, Flappy कुछ भी) बस एक क्लिक में अपने फोन में गेम जोड़ें करें।
 
-**Recommended Age Range:** 4-104
+**अनुशंसित आयु रेंज:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+** तकनीकी आवश्यकताएं:**  मॉडर्न ब्राउज़र,  स्मार्टफोन+  टेबलेट 
 
-<a href="http://studio.code.org/s/flappy/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/flappy/reset"><button>ट्यूटोरियल को ट्राई करें</button></a>
 
 [/col-50]

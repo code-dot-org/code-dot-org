@@ -389,17 +389,113 @@
         },
         "courseF_apps_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "Quantos anos você tem?",
-          "ae096fbf24d913754b01a1601672bf62": "também!"
+          "ae096fbf24d913754b01a1601672bf62": "também!",
+          "a72e7c5c68af0546e963e510297f5233": "Olá, eu sou o X-9! Qual o seu nome?",
+          "f0e5da70d264f312a1658d51c130b101": "Digite o seu nome:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Digite a sua idade:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "anos também!",
+          "605f302ebc9f7fbacba60b15f551a633": "Qual é a sua cor preferida?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Digite a sua cor favorita:"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Você venceu!"
         },
         "courseF_editable_chatbot": {
           "13e575be866ecf5ac3dcbf61ab2048d7": "Quantos anos você tem?",
-          "ae096fbf24d913754b01a1601672bf62": "também!"
+          "ae096fbf24d913754b01a1601672bf62": "também!",
+          "a72e7c5c68af0546e963e510297f5233": "Olá, eu sou o X-9! Qual o seu nome?",
+          "f0e5da70d264f312a1658d51c130b101": "Digite o seu nome:",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Digite a sua idade:",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "anos também!",
+          "605f302ebc9f7fbacba60b15f551a633": "Qual é a sua cor preferida?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Digite a sua cor favorita:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
         },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Qual é o seu nome?"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Quem está fazendo aniversário?",
+          "d1210f945885351b13feb9bbb868aeef": "Quantos anos eles terão?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_apps_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Quem está fazendo aniversário?",
+          "d1210f945885351b13feb9bbb868aeef": "Quantos anos eles terão?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_editable_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Quem está fazendo aniversário?",
+          "d1210f945885351b13feb9bbb868aeef": "Quantos anos eles terão?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "f6429fe0f1a76611670df7e1234af936": "Qual é o seu nome?"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta",
+          "f6429fe0f1a76611670df7e1234af936": "Qual é o seu nome?"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "minha pergunta"
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
+        },
+        "New Play Lab Project": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "digite o texto aqui",
+          "30fcc1693fa8402931d13ac3a5f396fd": "digite o título aqui"
+        },
+        "New Sprite Lab Project": {
+          "6cd3556deb0da54bca060b4c39479839": "Olá, mundo!"
         }
       }
     }

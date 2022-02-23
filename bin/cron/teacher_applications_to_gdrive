@@ -13,7 +13,9 @@ def get_rows
   applications = [%w(course regional_partner status scholarship_status school_type pay_fee email created_at
                      meets_minimum_requirements meets_scholarship_criteria registered_for_workshop rural_status
                      free_reduced_lunch_percent urm_percent accepted_at accepted race community_type two_or_more_races)]
-  Pd::Application::Teacher2122Application.find_each do |app|
+  Pd::Application::TeacherApplication.where(
+    application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR
+  ).find_each do |app|
     stats = app.get_latest_school_stats(app.school_id)
     pay_fee = app.sanitize_form_data_hash[:principal_pay_fee] || app.sanitize_form_data_hash[:pay_fee]
     frl_percent = stats&.frl_eligible_percent
@@ -63,8 +65,8 @@ def main
   allowed_list = DCDO.get('external_emails_with_application_data_access', [])
 
   # Uses a Google Cloud service account to access Google Drive
-  sheet = Google::Sheet.new CDO.applications_2021_2022_gsheet_key
-  sheet.export(tab_name: 'all_apps_21_22', rows: get_rows)
+  sheet = Google::Sheet.new CDO.applications_2022_2023_gsheet_key
+  sheet.export(tab_name: 'all_apps', rows: get_rows)
   sheet.notify_of_external_sharing(allowed_list)
 end
 

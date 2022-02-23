@@ -1,5 +1,7 @@
 {
-  "func": "mathSqrt",
-  "block": "Math.sqrt(__)",
-  "category": "Math"
+  "key": "mathSqrt",
+  "name": "Math.sqrt",
+  "category": "Math",
+  "category_key": "math",
+  "syntax": "Math.sqrt"
 }

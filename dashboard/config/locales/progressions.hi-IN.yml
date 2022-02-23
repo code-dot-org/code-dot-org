@@ -2,84 +2,423 @@
 hi:
   data:
     progressions:
+      '"If/Else" with the Bee': मधुमक्खी के साथ "इफ/एल्स"
+      AI Machine Learning - Video: AI मशीन प्रशिक्षण - वीडियो
+      'AI: Impact on Society - Video': 'AI: समाज पर प्रभाव - वीडियो'
+      'AI: Training Data & Bias - Video': 'AI: प्रशिक्षण डेटा और पक्षपात - वीडियो'
+      Accelerometer Events: 'त्वरणमापी इवेंट्स
+
+'
+      Adding Images: चित्र शामिल करना
+      Adding Screens: स्क्रीनें शामिल करना
       Alien Defender: एलियन डिफेंडर
+      Animate Your Scene: अपने सीन का एनिमेशन बनाएं
+      App Lab Intro - Video: ऐप लैब परिचय - वीडियो
+      'App Project: Screen Design': 'ऐप प्रोजेक्ट: स्टिकर डिजाइन'
       Arrays: श्रृंखला समूह
+      Artist Intro with JR Hildebrand: JR Hildebrande के साथ आर्टिस्ट का परिचय
+      Artist Intro with JR Hildebrande: JR Hildebrande के साथ आर्टिस्ट का परिचय
       Artist Project: कलाकार परियोजना
       'Artist: Variables': 'आर्टिस्ट: वेरिएबल्स'
+      Assessment: मूल्यांकन
+      Attribution: आरोपण
       Back and Forth: पीछे व आगे
+      Basic Conditionals: बुनियादी सापेक्ष
       Bass, Mid, and Treble: धीमी, मध्यम, व तेज़
+      Be a Super Digital Citizen: सुपर डिजीटल नागरिक बनें
+      Begin planning your project: अपने प्रोजेक्ट की योजना बनाना शुरू करें
+      Begin planning your project_2018: अपने प्रोजेक्ट की योजना बनाना शुरू करें_2018
+      Binary Bracelets - Unplugged Activity: युग्मक ब्रैस्लेट्स - अनप्लग्ड गतिविधि
       Binary Numbers: युग्मक संख्याएं
       Board Events: बोर्ड इवेंट्स
+      Board Input and Output: बोर्ड इनपुट और आउटपुट
+      Boolean Comparison: बूलियन तुलना
+      Build a Platform Jumper: प्लेटफॉर्म जम्पर बनाएं
+      Build a Screen: स्क्रीन बनाएं
+      Building a UI with Design Mode: डिजाइन कोड के साथ UI बनाना
+      Building an App: ऐप बनाना
+      Button Circuits: बटन सर्किट
       CS Discoveries Post-Course Survey: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+      CS Discoveries Post-course Survey: CS अन्वेषण कोर्स के बाद का सर्वेक्षण
+      CSD U3 Interactive Card Exemplar: CSD U3 संवादात्मक कार्ड नमूना
+      CSD U3 platform intro: CSD U3 प्लेटफार्म का परिचय
+      'CSD: For Loop': 'CSD: फॉर लूप्स'
+      Cake Defender: केक डिफेंडर
+      Cake Survey: केक सर्वेक्षण
+      Challenge: चुनौती
+      Challenge Levels: चुनौती स्तर
+      Challenges: चुनौतियां
+      Change: बदलें
+      Checking for a Winner: विजेता की जांच हो रही है
+      Choose Your Own Adventure: अपना खुद का एडवेंचर चुनें
+      Choosing Good IDs: 'अच्छी ID चुनना
+
+'
+      Code Your Own Flappy Game: अपनी खुद की फ्लैपी गेम को कोड करें
+      Collector Game: कलेक्टर गेम
       Collision Detection: संघट्टन अभिज्ञान
       Collisions: संघट्टन
+      Collisions in Games: गेम्स में संघट्टन
+      Color LEDs: रंगीन LED
+      Combining Projects: प्रोजेक्ट्स को जोड़ना
       Combining Representations: प्रस्तुतियों को संयोजित करना
+      Conditionals with Cards - Unplugged Activity: कार्ड्स के साथ सापेक्ष - अनप्लग्ड
+        गतिविधि
+      'Conditionals: If Statements': 'सापेक्ष: इफ स्टेटमेंट्स'
+      'Conditionals: If and If/Else Statements': 'सापेक्ष: इफ और इफ/एल्स स्टेटमेंट्स'
       Course E Artist Project: कोर्स E कलाकार प्रोजेक्ट
+      'Course E: Play Lab Project': 'कोर्स E: प्ले लैब प्रोजेक्ट'
       Course F Artist Project: कोर्स E कलाकार प्रोजेक्ट
+      'Course F: Artist Project': 'कोर्स F: आर्टिस्ट प्रोजेक्ट'
+      'Course F: Artist Project - Revise': 'कोर्स F: आर्टिस्ट प्रोजेक्ट - दोहराएं'
+      'Course F: Play Lab Project': 'कोर्स F: प्ले लैब प्रोजेक्ट '
+      'Course F: Play Lab Project - Revise': 'कोर्स F: प्ले लैब प्रोजेक्ट - दोहराएं'
+      Crack Random Substitution: बेतरतीब प्रतिस्थापन सुलझाएं
+      Crack a Caesar Cipher: सीजर सिफर सुलझाएं
+      Create Your Own Animation: अपना खुद का एनिमेशन बनाएं
+      Create a Story: कहानी बनाएं
+      Create your project: अपना प्रोजेक्ट बनाएं
+      Customize: अनुकूलित करें
       Dance Crews: डांस कर्मीदल
+      Data Visualization: डेटा विजुलाइज़ेशन
+      De-bugging with the Step Button: स्टेप बटन के साथ डी-बगिंग
       Debugging: डीबगिंग
-      Design Mode: डिज़ाइन मोड
-      Designing Screens with Code: कोड के साथ स्क्रीन डिज़ाइन करना
-      Designing for Accessibility: सुलभता के लिए डिज़ाइन करना
+      Debugging with the Step Button: स्टेप बटन के साथ डीबगिंग
+      Demo Apps: डेमो ऐप्स
+      Design Mode: डिजाइन मोड
+      Design Your Game: अपनी गेम डिजाइन करें
+      Design Your Prototype: अपना प्रोटोटाइप डिजाइन करें
+      Design a Screen for your App: अपने ऐप के लिए स्क्रीन डिजाइन करें
+      Designing Screens with Code: कोड के साथ स्क्रीन डिजाइन करना
+      Designing for Accessibility: सुलभता के लिए डिजाइन करना
+      Digital Sharing - Unplugged Activity: डिजीटल शेयरिंग - अनप्लग्ड गतिविधि
       Drawing: ड्राइंग
       End of Course Projects: समाप्ति कोर्स प्रोजेक्ट
+      Escape Room Example: कमरे से बचकर निकलने का उदाहरण
       Event Types: इवेंट के प्रकार
       Events: घटनाएँ
+      Events and Linking Screens: इवेंट्स और लिंकिंग स्क्रीनें
+      Events and Properties: इवेंट्स और विशेषताएं
+      Example: 'उदाहरण:'
+      Example App Types: उदाहरण ऐप प्रकार
+      Example Projects: उदाहरण प्रोजेक्ट्स
+      Example projects: उदाहरण प्रोजेक्ट
+      Exemplar Personal Websites: नमूना निजी वेबसाइटें
+      Expanding Personal Website: निजी वेबसाइटों का विस्तार करना
+      Expanding Your Website: आपकी वेबसाइट का विस्तार करना
+      Experiment with Web Lab: वेब लैप के साथ प्रयोग करें
+      Exploration: पड़ताल
+      'Exploration: For Loops': पड़ताल - फॉर लूप्स
+      'Exploration: Rikki''s Poster': 'पड़ताल: रिकी का पोस्टर'
+      'Exploration: Sample Apps': पड़ताल - नमूना ऐप्स
+      'Exploration: Sample Programs': 'पड़ताल: नमूना प्रोग्राम'
+      'Exploration: Sample Project': 'पड़ताल: नमूना प्रोजेक्ट'
+      Exploring CS in Entertainment: मनोरंजन में CS की पड़ताल करना
+      Exploring more CSS: अधिक CSS की पड़ताल करना
+      Extra: अतिरिक्त
+      Final Room Escape App: फाइनल रूम एस्केप ऐप
+      Find the Wizard: जादूगर ढूंढें
+      Finish a Screen: स्क्रीन समाप्त करें
+      Finish the Prototype: प्रोटोटाइप समाप्त करें
+      Finishing Functions: फंक्शन्स समाप्त करना
+      Finishing Touches: टचेस समाप्त करना
+      Flyer Game: फ्लायर गेम
+      Follow the Algorithm - Unplugged Activity: कलन विधि का अनुसरण करें - अनप्लग्ड
+        गतिविधि
+      Follow the Mouse: माउस का अनुसरण करें
+      Fonts and Style: फोंट्स और शैली
+      FoodFight: FoodFight
+      For Loop Fun - Unplugged Activity: फॉर लूप फन - अनप्लग्ड गतिविधि
       For Loops: फॉर लूप्स
+      For Loops and Color LEDs: फॉर लूप्स और रंगीन LED
+      For Loops and Repeat Blocks: फॉर लूप्स और दोहराएं ब्लॉक्स
       Free Play: फ्री प्ले
+      'Free Play: Make a Scene': 'फ्री प्ले: दृश्य बनाएं '
+      'Free Play: Make an Interactive Scene': 'फ्री प्ले: संवादात्मक दृश्य बनाएं '
       Functions: कार्य
       Functions with Parameters: मापदंडों के साथ फंक्शन
       Get In Formation: सुव्यवस्थित क्रम में प्रवेश करें
       Getters and Setters: गेटर्स एंड सेटर्स
       Getting Properties: गेटिंग विशेषताएं
+      Graph Paper Programming - Unplugged Activity: ग्राफ पेपर प्रोग्रामिंग - अनप्लग्ड
+        गतिविधि
+      Guess The Number: संख्या का अंदाजा लगाएं
       Headings: शीर्षक
+      Hello World: हैलो दुनिया
+      How to Create a Simple Function: साधारण फंक्शन कैसे बनाएं
       How to Make a Sprite: स्प्राइट कैसे बनाएं
+      Ice Age Loops: हिमयुग लूप्स
+      Images and Sounds: चित्र और ध्वनियां
       Images in HTML: HTML में चित्र
+      Innovation Research: इनोवेशन रिसर्च
+      Input Examples: इनपुट उदाहरण
+      Input with If-Else: इफ-एल्स के साथ इनपुट
+      InspirationalArtwork: InspirationalArtwork
+      Intro to For Loops: फॉर लूप्स का परिचय
+      Intro to Sprites: स्प्राइट्स का परिचय
+      Intro to Variables: वेरिएबल्स का परिचय
       Introducing Sprite Lab: स्प्राइट लैब का परिचय
       Introduction to Arrays: श्रृंखला समूहों का परिचय
+      Iteration and Parameters: पुनरावृत्ति और मापदंड
+      Keep On Dancing!: डांस करते रहें!
       Keeping Data Secret: डेटा को गोपनीय रखना
       Keyboard Input: कीबोर्ड इनपुट
+      LED Apps: LED ऐप्स
+      Layout with CSS: CSS के साथ लेआउट
       Learning from Simulations: सिम्युलेशन से सीखना
       Lesson Extras: लेसन एक्स्ट्राज
+      Level Overview: स्तर रूपरेखा
+      Levels: स्तर
+      Light Show: लाइट शो
       Linking Pages: पृष्ठों को लिंक करना
       Linking Screens: स्क्रीनों को लिंक करना
       Lists: सूचियाँ
+      Loops with the Artist: आर्टिस्ट के साथ लूप्स
+      Make a Prediction: अनुमान लगाएं
+      Make it Interactive: इसे संवादात्मक बनाएं
       Making Music: संगीत बनाना
+      Making Scenes: दृश्य बनाना
+      Making Songs: गीत बनाना
+      Making Sounds: ध्वनियां बनाना
+      Making an Interactive Card: संवादात्मक कार्ड बनाना
+      'Maze Intro: Programming with Blocks': 'भूलभुलैया का परिचय: ब्लॉक्स के साथ प्रोग्रामिंग'
       Measures: संगीत प्रविधियां
+      'Minecraft: Hero''s Journey': 'Minecraft: हीरो का सफर'
       'Mini-Project: About Me': स्प्राइट लैब के साथ मेरे बारे में
+      'Mini-Project: Alien Dance Moves': 'लघु-प्रोजेक्ट: एलियन डांस मूव्स'
+      'Mini-Project: Alien Dance Party': 'लघु-प्रोजेक्ट: एलियन डांस पार्टी'
+      'Mini-Project: Create a Virtual Pet': 'लघु-प्रोजेक्ट: वर्चुअल पालतू जानवर बनाएं '
+      'Mini-Project: Outbreak Simulator': 'लघु-प्रोजेक्ट: आउटब्रेक सिम्युलेटर'
+      'Mini-Project: Royal Battle': 'लघु-प्रोजेक्ट: रॉयल बैटल'
+      'Mini-Project: Snowflake #1': 'लघु-प्रोजेक्ट: हिम-पक्षी #1'
+      'Mini-Project: Snowflake #2': 'लघु-प्रोजेक्ट: हिम-पक्षी #2'
+      'Mini-Project: Swimming Fish': 'लघु-प्रोजेक्ट: स्विमिंग फिश'
+      'Mini-Project: Swimming Fish (continued)': 'लघु-प्रोजेक्ट: स्विमिंग फिश (जारी)'
+      'Mini-Project: User Input Programs': 'लघु-प्रोजेक्ट: उपयोगकर्ता इनपुट प्रोग्राम'
+      'Mini-Project: Virtual Pet': 'लघु-प्रोजेक्ट: वर्चुअल पालतू जानवर '
+      'Mini-project: Chase Game': 'लघु-प्रोजेक्ट: चेज गेम'
+      'Mini-project: Flappy Game': 'लघु-प्रोजेक्ट: फ्लैपी गेम'
+      'Mini-project: Interactive Poster': 'लघु-प्रोजेक्ट: संवादात्मक पोस्टर'
+      'Mini-project: Jorge the Dog': 'लघु-प्रोजेक्ट: जॉर्ज द डॉग'
+      'Mini-project: Sticker Art': 'लघु-प्रोजेक्ट: स्टिकर आर्ट'
+      'Mini-project: Sticker Design': 'लघु-प्रोजेक्ट: स्टिकर डिजाइन'
+      Modify simulation variables: सिम्युलेशन वेरिएबल्स संशोधित करें
       More Buttons: और बटन
+      More Input: अधिक इनपुट
+      More Parameters: अधिक पैरामीटर
+      Motorcycle: मोटरसाइकिल
+      Move It Move it Video  - Unplugged Activity: इसे मूव करें, इसे मूव करें वीडियो  -
+        अनप्लग्ड गतिविधि
+      Movement with the Counter Pattern: काउंटर पैटर्न के साथ गतिविधि
       Multi-Screen Apps: मल्टी-स्क्रीन ऐप्स
+      Multiframe Animations: मल्टीफ्रेम एनिमेशन्स
+      Musical Arrays: संगीतमय श्रृंखला समूह
+      My Loopy Robotic Friends - Unplugged Activity: मेरे रोबोटिक दोस्त - अनप्लग्ड
+        गतिविधि
       My Online Neighborhood: मेरा ऑनलाइन पड़ोस
+      My Robotic Friends - Unplugged Activity: मेरे रोबोटिक दोस्त - अनप्लग्ड गतिविधि
+      Nested Loops with the Bee: मधुमक्खी के साथ नेस्टड लूप्स
+      New Challenge Introduction: नई चुनौती का परिचय
+      New Shapes: नई आकृतियां
+      Orientation: अनुकूलन
       Overview: रूपरेखा
+      'Overview: Design Mode': 'संक्षिप्त विवरण: डिजाइन मोड'
+      'Overview: If Statements': संक्षिप्त विवरण - इफ स्टेटमेंट्स
+      'Overview: Images': संक्षिप्त विवरण - चित्र
+      'Overview: onEvent': संक्षिप्त विवरण - onEvent
+      'Overview: setPosition': 'संक्षिप्त विवरण: setPosition'
       Pair Programming: जोड़ी प्रोग्रामिंग
       Picturing Data: तस्वीरों वाला डेटा
+      Plan Your Project: अपने प्रोजेक्ट की योजना बनाएं
       Planning: नियोजन
+      Platform Jumper - Background and Variables: प्लेटफॉर्म जम्पर - पृष्ठभूमि और
+        वेरिएबल्स
+      Platform Jumper - Items: प्लेटफॉर्म जम्पर - आइटमें
+      Platform Jumper - Platforms: प्लेटफॉर्म जम्पर - प्लेटफॉर्म्स
+      Platform Jumper - Player: प्लेटफॉर्म जम्पर - प्लेयर
+      Playing Notes: नोट्स प्ले करना
+      Playing with Notes: नोट्स के साथ प्ले करना
       Polling Events: पोलिंग इवेंट्स
+      Post-Course Survey Instructions: पाठ्यक्रम के बाद के सर्वेक्षण संबंधी निर्देश
+      Practice: अभ्यास
       Predict: "(Predict) पूर्वानुमान लगाइए"
+      Prediction: अनुमान
+      Prepare for your presentation: अपनी प्रस्तुति की तैयारी करें
+      Prepare for your presentation_2018: अपनी प्रस्तुति_2018 की तैयारी करें
+      Problem Solving: सवाल हल करना
+      Problem Solving Process for Programming: प्रोग्रामिंग के लिए सवाल हल करने की
+        प्रक्रिया
       Programming with Rey and BB-8: रे और BB-8 के साथ प्रोग्रामिंग
+      Programs that Repeat: प्रोग्राम, जो दोहराए जाते हैं
       Project: प्रोजेक्ट
+      Project - Background and Variables: प्रोजेक्ट - पृष्ठभूमि और वेरिएबल्स
+      Project - Sprites and Interactions: प्रोजेक्ट - स्प्राइट्स और पारस्परिक क्रियाएं
+      Project Guide: प्रोजेक्ट गाइड
+      Project Work: प्रोजेक्ट कार्य
       Properties: गुण
       Publishing Your Website: आपकी वेबसाइट का प्रकाशन
       Quarter Notes: क्वार्टर नोट्स
+      RGB Exploration: RGB पड़ताल
+      Reading Sensors: संवेदकों को पढ़ना
       Reflection: प्रतिबिंब
+      Relay Programming - Unplugged Activity: रिले प्रोग्रामिंग - अनप्लग्ड गतिविधि
+      Repeat Blocks: दोहराएं ब्लॉक्स
+      Repeat Blocks with BB-8: BB-8 के साथ दोहराएं ब्लॉक्स
+      Repeat Blocks with the Artist: आर्टिस्ट के साथ दोहराएं ब्लॉक्स
+      Repeat Unit Statements: इकाई स्टेटमेंट्स दोहराएं
+      Repeat Until Statements: तक स्टेटमेंट्स दोहराएं
       Representing Images: चित्र प्रस्तुत करना
       Review: समीक्षा करें
+      Run a simulation: सिम्युलेशन चलाएं
+      Sample Programs: नमूना प्रोग्राम
+      Screen Design: स्क्रीन डिजाइन
+      Sensor Events: संवेदक इवेंट्स
+      Sensors to Colors: संवेदकों से रंग
+      Setting Properties: विशेषताएं सेट करना
+      Shapes and the Draw Loop: आकृतियां और ड्रॉ लूप
+      Share Your App: अपना ऐप साझा करना
+      Side Scroller: साइड स्क्रॉलर
+      Simple Circuits: सामान्य सर्किट
       Skill Building: कौशल विकास
+      Skill-Building: कौशल-निर्माण
+      Sliders: स्लाइडर्स
+      Smart Bike - Blinkers: स्मार्ट बाइक - ब्लिंकर्स
+      Social Sleuth: सामाजिक गुप्तचर
+      Songwriting - Functions Unplugged Activity: गीत लेखन - फंक्शन्स अनप्लग्ड गतिविधि
       Speed it Up, Slow it Down: इसकी गति तेज़ करें, इसकी गति धीमी करें
       Sprite Lab Project: स्प्राइट लैब प्रोजेक्ट
+      Sprite Movement: स्प्राइट गतिविधि
+      Sprites and the Draw Loop: स्प्राइट्स और ड्रॉ लूप
+      Star Chaser: Star Chaser
+      Styling Text: स्टाइलिंग टेक्स्ट
+      Styling with Classes: कक्षाओं के साथ स्टाइलिंग
+      Styling your Website: आपकी वेबसाइट की स्टाइलिंग
+      Teach A.I. a new word: A.I. को नया शब्द सिखाएं
+      Teach AI a New Word: AI को नया शब्द सिखाएं
+      'Technique: Frequency Analysis': 'तकनीक: बारंबारता विश्लेषण'
+      Terminology Recap: पारिभाषिक शब्दावली पुनरावृत्ति
       Text Compression: टेक्स्ट कम्प्रेशन
       The Animation Tab: ऐनिमेशन लैब
+      The Artist in Code Studio: Code Studio में आर्टिस्ट
+      The Big Event - Unplugged Activity: विशाल इवेंट - अनप्लग्ड गतिविधि
+      The Buzzer: बजर
+      The Collector: कलेक्टर
       The Draw Loop: ड्रा लूप
       The Harvester: कटाई मशीन
+      The Internet - Unplugged Activity: इंटरनेट - अनप्लग्ड गतिविधि
+      The Power of Words - Unplugged Activity: शब्दों की ताकत - अनप्लग्ड गतिविधि
+      The Right App - Unplugged Activity: सही ऐप - अनप्लग्ड गतिविधि
+      Top Websites: प्रमुख वेबसाइटें
+      Train AI to Clean the Ocean: AI को समुद्र साफ करने के लिए प्रशिक्षित करें
+      UI Element Properties: UI एलिमेंट विशेषताएं
+      Unit 5 Lesson 1 Overview: इकाई 5 पाठ 1 संक्षिप्त विवरण
+      User Interface: उपयोगकर्ता इंटरफेस
+      Using Getters and Setters: गेटर्स एंड सेटर्स का प्रयोग करना
+      Using HTML Tags: HTML टैग्स का प्रयोग करना
+      Using Random Numbers: बेतरतीब संख्याओं का प्रयोग करना
+      Using Training Data: प्रशिक्षण डेटे का प्रयोग करना
+      Using the LED: LED का प्रयोग करना
       Using the Repeat Block: दोहराएं ब्लॉक का उपयोग करना
+      Using the Switch: स्विच का प्रयोग करना
       Variables: चर
       Velocity: वेग
+      Velocity and the Counter Pattern: वेग और काउंटर पैटर्न
       Video: वीडीयो
+      Video - Encryption and Public Keys: वीडियो - कूटलेखन और सार्वजनिक कुंजियां
+      'Video - Maze Intro: Programming with Blocks': 'वीडियो - भूलभुलैया का परिचय:
+        ब्लॉक्स के साथ प्रोग्रामिंग'
+      'Video:  Debugging with the Step Button': 'वीडियो:  स्टेप बटन के साथ डीबगिंग'
+      'Video:  Minecraft - The Agent': 'वीडियो: Minecraft - एजेंट'
+      'Video:  Text  and Prompts': 'वीडियो: टेक्सट और सुझाव'
+      'Video: "If/Else"': 'वीडियो: "इफ/एल्स"'
+      'Video: AI: What is Machine Learning?': 'वीडियो: AI: मशीन प्रशिक्षण क्या है?'
+      'Video: Artist Intro with JR Hildebrand': 'वीडियो: JR Hildebrande के साथ आर्टिस्ट
+        का परिचय'
+      'Video: Artist Intro with JR Hildebrande': 'वीडियो: JR Hildebrande के साथ आर्टिस्ट
+        का परिचय'
+      'Video: Code Your Own Flappy Game': 'वीडियो: अपनी खुद की फ्लैपी गेम बनाएं'
       'Video: Conditional Statements': 'व्हिडिओ: सापेक्ष स्टेटमेंट्स'
+      'Video: Conditionals: If Statements': 'वीडियो: सापेक्ष: इफ स्टेटमेंट्स'
+      'Video: Conditionals: If and If/Else Statements': 'वीडियो: सापेक्ष: इफ और इफ/एल्स
+        स्टेटमेंट्स'
+      'Video: Dance Party Events': 'वीडियो: डांस पार्टी इवेंट्स'
+      'Video: Dance Party Measures': 'वीडियो: डांस पार्टी संगीत प्रविधियां'
+      'Video: Dance Party Party On!': 'वीडियो: डांस पार्टी पार्टी ऑन!'
+      'Video: Dance Party Properties': 'वीडियो: डांस पार्टी विशेषताएं'
+      'Video: Dance Party Warm Up': 'वीडियो: डांस पार्टी की तैयारी'
+      'Video: De-bugging with the Step Button': 'वीडियो: स्टेप बटन के साथ डी-बगिंग'
+      'Video: Debugging with Scrat ': 'वीडियो: स्क्रैट के साथ डीबगिंग '
+      'Video: Debugging with the Step Button': 'वीडियो: स्टेप बटन के साथ डीबगिंग'
+      'Video: Events': 'वीडियो: इवेंट्स'
+      'Video: Follow The Digital Trail': 'वीडियो: डिजीटल ट्रेल का अनुसरण करें'
+      'Video: Getting Loopy': 'वीडियो: लूपी होना'
+      'Video: Happy Maps - Unplugged Activity': 'वीडियो: हैप्पी मैप्स - अनप्लग्ड गतिविधि '
+      'Video: Harvesting with Conditionals': 'वीडियो: सापेक्षों के साथ कटाई करना'
+      'Video: How to Create a Simple Function': 'वीडियो: साधारण फंक्शन कैसे बनाएं'
+      'Video: How to Make a Sprite': 'वीडियो: स्प्राइट कैसे बनाएं'
+      'Video: Ice Age Loops': 'वीडियो: हिमयुग लूप्स'
       'Video: If/Else Statements': 'व्हिडिओ: इफ/ एल्स स्टेटमेंट्स'
+      'Video: Impacts on Society': 'वीडियो: समाज पर प्रभाव '
+      'Video: Introducing Sprite Lab': 'वीडियो: स्प्राइट लैब का परिचय'
+      'Video: Introduction to Play Lab': 'वीडियो: प्ले लैब का परिचय'
+      'Video: Loops in Artist': 'वीडियो: आर्टिस्ट में लूप्स'
+      'Video: Loops with the Artist': 'वीडियो: आर्टिस्ट के साथ लूप्स'
+      'Video: Maze Intro - Programming with Blocks': 'वीडियो: भूलभुलैया का परिचय -
+        ब्लॉक्स के साथ प्रोग्रामिंग'
+      'Video: Maze Intro - Programming with Blocks ': 'वीडियो: भूलभुलैया का परिचय
+        - ब्लॉक्स के साथ प्रोग्रामिंग '
+      'Video: Maze Intro: Programming with Blocks': 'वीडियो: भूलभुलैया का परिचय: ब्लॉक्स
+        के साथ प्रोग्रामिंग'
+      'Video: Measures': 'वीडियो: संगीत प्रविधियां'
+      'Video: Minecraft - Congratulations': 'वीडियो: Minecraft - शुभकामनाएं'
+      'Video: Minecraft - Functions': 'वीडियो: Minecraft - फंक्शन्स'
+      'Video: Minecraft - Repeat Loops': 'वीडियो: Minecraft - दोहराएं लूप्स'
+      'Video: Minecraft - The Agent': 'वीडियो: Minecraft - एजेंट'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'वीडियो: Minecraft: समुद्री
+        यात्रा जलचर सापेक्ष'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'वीडियो: Minecraft: समुद्री
+        यात्रा जलचर बधाई'
+      'Video: Minecraft: Voyage Aquatic Introduction': " वीडियो: Minecraft: समुद्री
+        यात्रा जलचर परिचय"
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'वीडियो: Minecraft: समुद्री
+        यात्रा जलचर तक दोहराएं'
+      'Video: Nested Loops': 'वीडियो: नेस्टड लूप्स'
+      'Video: Nested Loops with the Bee': 'वीडियो: मधुमक्खी के साथ नेस्टड लूप्स'
+      'Video: Outbreak Simulator: Introduction': 'वीडियो: बहुत-से स्प्राइट्स'
+      'Video: Pair Programming': 'वीडियो: जोड़ी प्रोग्रामिंग'
+      'Video: Pair Programming ': 'वीडियो: जोड़ी प्रोग्रामिंग '
       'Video: Problem Solving Process': सवाल हल करने की प्रक्रिया
+      'Video: Programming with Blocks': 'वीडियो: ब्लॉक्स के साथ प्रोग्रामिंग'
+      'Video: Programming with Rey and BB-8': 'वीडियो: रे और BB-8 के साथ प्रोग्रामिंग'
+      'Video: Properties': 'वीडियो: विशेषताएं'
+      'Video: Repeat Blocks': 'वीडियो: दोहराएं ब्लॉक्स'
+      'Video: Repeat Blocks with BB-8': 'वीडियो: BB-8 के साथ दोहराएं ब्लॉक्स'
+      'Video: Repeat Blocks with the Artist': 'वीडियो: आर्टिस्ट के साथ दोहराएं ब्लॉक्स'
+      'Video: Repeat Until Blocks': 'वीडियो: तक ब्लॉक्स दोहराएं'
+      'Video: Repeat Until Statements': 'वीडियो: तक स्टेटमेंट्स दोहराएं '
+      'Video: Sprites in Action': 'वीडियो: क्रिया में स्प्राइट्स'
+      'Video: Star Wars Project': 'वीडियो: Star Wars प्रोजेक्ट'
+      'Video: Text and Prompts': 'वीडियो: टेक्सट और सुझाव'
+      'Video: The Artist in Code Studio': 'वीडियो: Code Studio में आर्टिस्ट'
+      'Video: The Big Event - Unplugged Activity': 'वीडियो: विशाल इवेंट - अनप्लग्ड
+        गतिविधि '
+      'Video: The Collector': 'वीडियो: कलेक्टर'
+      'Video: The Harvester': 'वीडियो: कटाई मशीन'
+      'Video: Training Data & Bias': 'वीडियो: प्रशिक्षण डेटा और पक्षपात'
+      'Video: Unplugged Variables in Envelopes': 'वीडियो: एनवलोप्स में अनप्लग्ड वेरिएबल्स'
+      'Video: Using the Repeat Block': 'वीडियो: दोहराएं ब्लॉक का उपयोग करना'
+      'Video: Variables in Artist': 'वीडियो: आर्टिस्ट में वेरिएबल्स'
+      'Video: Warm Up': 'वीडियो: तैयारी'
+      'Video: While Loops with the Farmer': 'वीडियो: फार्मर के साथ व्हाइल लूप्स'
+      'Video: Wrap-up': 'वीडियो: समाप्ति'
       Warm Up: तैयार हों
+      Website Project: वेबसाइट प्रोजक्ट
       Welcome to Monster Town: मॉन्स्टर टाउन  (Monster Town) में आपका स्वागत है!
       Where'd They Go?: वे कहां जाएंगे?
       While Loops with the Farmer: फार्मर के साथ व्हाइल लूप्स
+      'Widget: Text Compression': 'विजेट : टेक्सट संक्षिप्तीकरण'
       Wrap-up: समाप्ति
+      Your Personal Website: आपकी निजी वेबसाइट
+      getText vs getNumber: getText बनाम getNumber
+      isTouching: isTouching
+      setProperty: setProperty

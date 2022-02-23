@@ -1,6 +1,71 @@
 class Homepage
   MAX_HEROES_IN_ROTATION = 6
 
+  @@announcements_data = nil
+  @@loaded = false
+  @@load_error = false
+  @@json_path = pegasus_dir 'sites.v3/code.org/homepage.json'
+
+  # gets special announcement data for a page, or nil if not found
+  def self.get_announcement_for_page(page)
+    load_announcements
+    return nil if @@load_error || !@@announcements_data
+    pages = @@announcements_data[:pages]
+    banners = @@announcements_data[:banners]
+    banner_id_for_page = pages[page]
+    return nil unless banner_id_for_page
+
+    banner = banners[banner_id_for_page]
+
+    # If the banner has an array of environments, then the current environment must be one of them.
+    return nil if banner["environments"] && !banner["environments"].include?(CDO.rack_env.to_s)
+
+    # If the banner has a required DCDO flag, then it must be set.
+    return nil if banner["dcdo"] && !DCDO.get(banner["dcdo"], false)
+
+    banner ? banner.merge({"id": banner_id_for_page}) : nil
+  end
+
+  def self.load_announcements
+    @@announcements_data = nil
+    @@load_error = false
+    @@loaded = true
+
+    unless File.file?(@@json_path)
+      @@load_error = true
+      return
+    end
+    begin
+      @@announcements_data = JSON.parse(
+        IO.read(@@json_path),
+        symbolize_names: true,
+        object_class: HashWithIndifferentAccess
+      )
+      unless validate_announcements_data(@@announcements_data)
+        @@load_error = true
+      end
+    rescue JSON::ParserError
+      @@load_error = true
+    end
+    @@loaded = true
+  end
+
+  def self.validate_announcements_data(announcements_data)
+    return false unless announcements_data && announcements_data[:pages] &&
+      announcements_data[:banners] &&
+      announcements_data[:banners].respond_to?("each_value")
+
+    announcements_data[:banners].each_value do |banner|
+      return false unless validate_banner(banner)
+    end
+    return true
+  end
+
+  # validate a banner has the required fields
+  def self.validate_banner(banner)
+    banner[:desktopImage] && banner[:items] && banner[:actions]
+  end
+
   def self.get_heroes
     [
       {
@@ -105,20 +170,15 @@ class Homepage
   end
 
   def self.get_actions(request)
-    hero_type = show_single_hero(request)
     # Show a Latin American specific video to users browsing in Spanish or
     # Portuguese to promote LATAM HOC.
     latam_language_codes = [:"es-MX", :"es-ES", :"pt-BR", :"pt-PT"]
+
     if latam_language_codes.include?(I18n.locale)
       youtube_id = "EGgdCryC8Uo"
       download_path = "//videos.code.org/social/latam-hour-of-code-2018.mp4"
       facebook = "https://www.facebook.com/Code.org/videos/173765420214608/"
       twitter = "Aprender las ciencias de la computación es fundamental para trabajar en el siglo XXI. Si aprendan crear la tecnología del futuro, podrán controlar sus futuros. ¿Qué vas a crear? #HoraDelCodigo #QueVasACrear https://twitter.com/codeorg/status/1047063784949460995"
-    elsif hero_type == "codebreak2020"
-      youtube_id = "27ln76y27IQ"
-      download_path = ""
-      facebook = "https://www.facebook.com/sharer/sharer.php?u=https%3A//www.facebook.com/Code.org/posts/2799748100121475"
-      twitter = "Studying home alone? Take a #CodeBreak with me to learn computer science! Tune in Wednesday at 10:00am PT / 1:00pm ET. code.org/break"
     else
       youtube_id = "nKIu9yen5nc"
       download_path = "//videos.code.org/social/what-most-schools-dont-teach.mp4"
@@ -127,41 +187,16 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    if hero_type == "hoc2020_ai"
-      if hoc_mode == "actual-hoc"
-        [
-          {
-            type: "hoc2020_ai_join_us",
-            text: "homepage_action_text_join_us",
-            url: "/hourofcode/overview"
-          }
-        ]
-      else
-        [
-          {
-            type: "hoc2020_ai_join_us",
-            text: "homepage_action_text_join_us",
-            url: "/ai"
-          }
-        ]
+    custom_banner = get_announcement_for_page("homepage")
+
+    if custom_banner
+      custom_banner["actions"].map do |action|
+        {
+          text: action["text"],
+          type: action["type"],
+          url: action["url"]
+        }
       end
-    elsif hero_type == "codebreak2020"
-      [
-        {
-          type: "code_break_check"
-        },
-        {
-          type: "code_break_home"
-        }
-      ]
-    elsif hero_type == "codebytes2020"
-      [
-        {
-          type: "cta_button_solid_yellow",
-          text: "homepage_action_text_join_us",
-          url: "/codebytes"
-        }
-      ]
     elsif hoc_mode == "actual-hoc"
       [
         {
@@ -179,7 +214,7 @@ class Homepage
         },
         {
           text: "homepage_action_text_try_it",
-          type: "cta_button_solid_white",
+          type: "cta_button_solid_grey",
           url: "/hourofcode/overview"
         }
       ]
@@ -199,7 +234,7 @@ class Homepage
           twitter: twitter
         }
       ]
-    else
+    else  # false: not Hour of Code season
       [
         {
           text: "homepage_action_text_join_us",
@@ -391,23 +426,10 @@ class Homepage
     end
   end
 
-  def self.promote_code_break(request)
-    DCDO.get("promote_code_break", nil) && request.language == "en"
-  end
-
-  def self.promote_code_bytes(request)
-    DCDO.get("promote_code_bytes", nil) && request.language == "en"
-  end
-
-  def self.promote_hoc2020_ai(request)
-    DCDO.get("promote_hoc2020_ai", nil)
-  end
-
   def self.show_single_hero(request)
-    if promote_hoc2020_ai(request)
-      "hoc2020_ai"
-    elsif promote_code_bytes(request)
-      "codebytes2020"
+    custom_banner = get_announcement_for_page("homepage")
+    if custom_banner
+      "custom"
     else
       "changeworld"
     end
@@ -415,47 +437,17 @@ class Homepage
 
   def self.get_heroes_arranged(request)
     hero_changeworld = [{centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
-    hero_create = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/announcement.jpg"}]
-    hero_hoc2019 = [{text: "homepage_hero_text_stat_students", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019.jpg"}]
-    hero_dance2019 = [
-      {text: "homepage_hero_text_stat_students", classname: "desktop-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance.jpg"},
-      {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 30%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_dance_narrow.jpg"}
-    ]
-    hero_oceans2019 = [{text: "homepage_hero_text_stat_students", centering: "0% 70%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2019_oceans.png"}]
-    hero_codebreak2020 =
-      [{centering: "40% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/blank_paper.jpg"}]
-    hero_hoc2020 = [
-      {text: "homepage_hero_text_stat_students", centering: "50% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2020.jpg"}
-    ]
-    hero_hoc2020_ai = [
-      {text: "homepage_hero_text_stat_students", classname: "desktop-feature", centering: "50% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2020_ai.jpg"},
-      {text: "homepage_hero_text_stat_students", classname: "mobile-feature", centering: "50% 80%", type: "stat", textposition: "bottom", image: "/images/homepage/hoc2020_ai_mobile.jpg"}
-    ]
-    hero_codebytes2020 = [
-      {centering: "50% 50%", type: "stat", textposition: "bottom", image: "/images/homepage/codebytes2020_background.jpg"}
-    ]
+
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
-    if show_single_hero(request) == "hoc2019"
-      heroes_arranged = hero_hoc2019
-    elsif show_single_hero(request) == "hoc2020"
-      heroes_arranged = hero_hoc2020
-    elsif show_single_hero(request) == "hoc2020_ai"
-      heroes_arranged = hero_hoc2020_ai
-    elsif show_single_hero(request) == "create"
-      heroes_arranged = hero_create
+    custom_banner = get_announcement_for_page("homepage")
+    if custom_banner
+      heroes_arranged =
+        [{centering: "50% 30%", textposition: "bottom", items: custom_banner["items"], image: custom_banner["desktopImage"]}]
     elsif show_single_hero(request) == "changeworld"
       heroes_arranged = hero_changeworld
-    elsif show_single_hero(request) == "dance2019"
-      heroes_arranged = hero_dance2019
-    elsif show_single_hero(request) == "oceans2019"
-      heroes_arranged = hero_oceans2019
-    elsif show_single_hero(request) == "codebreak2020"
-      heroes_arranged = hero_codebreak2020
-    elsif show_single_hero(request) == "codebytes2020"
-      heroes_arranged = hero_codebytes2020
     else
       # The order alternates person & stat.  Person alternates non-celeb and
       # celeb.  Non-celeb is student or teacher. We open with a celeb, i.e.,
@@ -505,15 +497,6 @@ class Homepage
     false
   end
 
-  def self.show_csjourneys_banner(request)
-    request.locale == "en-US"
-  end
-
-  def self.show_professional_learning_banner(request)
-    teacher_application_mode = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode)
-    request.locale == "en-US" && %w(open closing-soon).include?(teacher_application_mode)
-  end
-
   def self.professional_learning_banner_text
     teacher_apps_closing_soon = DCDO.get("teacher_application_mode", CDO.default_teacher_application_mode) == "closing-soon"
     closing_soon_text = "2021 Professional Learning applications are closing soon! Sign up now."
@@ -522,10 +505,6 @@ class Homepage
   end
 
   def self.show_courses_banner(request)
-    false
-  end
-
-  def self.show_special2020_banner(request)
     false
   end
 

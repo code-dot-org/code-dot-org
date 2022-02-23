@@ -1,20 +1,21 @@
 {
-  "func": "rect",
+  "key": "rect",
+  "name": "rect",
   "category": "Drawing",
-  "paramButtons": {
-    "minArgs": 2,
-    "maxArgs": 4
-  },
-  "paletteParams": [
-    "x",
-    "y",
-    "w",
-    "h"
+  "category_key": "drawing",
+  "palette_params": [
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "w"
+    },
+    {
+      "name": "h"
+    }
   ],
-  "params": [
-    "100",
-    "100",
-    "200",
-    "200"
-  ]
+  "syntax": "rect(x, y, w, h)"
 }

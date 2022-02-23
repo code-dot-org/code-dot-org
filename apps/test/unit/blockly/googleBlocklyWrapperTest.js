@@ -1,4 +1,5 @@
 /* global Blockly */
+import sinon from 'sinon';
 import GoogleBlockly from 'blockly/core';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
 import {expect} from '../../util/reconfiguredChai';
@@ -7,6 +8,7 @@ import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load B
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
   beforeEach(() => {
+    GoogleBlockly.JavaScript = sinon.spy();
     Blockly = initializeGoogleBlocklyWrapper(GoogleBlockly); // eslint-disable-line no-global-assign
   });
   afterEach(() => {
@@ -100,15 +102,5 @@ describe('Google Blockly Wrapper', () => {
     expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(0);
     Blockly.SNAP_RADIUS = 100;
     expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(100);
-  });
-
-  it('fieldToDom_ creates title tags', () => {
-    const field = new Blockly.blockly_.Field(null);
-    field.SERIALIZABLE = true;
-    field.name = 'test';
-    const expectedXml = `<title xmlns="https://developers.google.com/blockly/xml" name="test"></title>`;
-    expect(Blockly.Xml.domToText(Blockly.Xml.fieldToDom_(field))).to.equal(
-      expectedXml
-    );
   });
 });

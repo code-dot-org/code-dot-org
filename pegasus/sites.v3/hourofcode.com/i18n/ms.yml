@@ -5,30 +5,32 @@ ms:
   language: Bahasa Inggeris
   front_title: Sertai acara pembelajaran yang terbesar dalam sejarah, %{campaign_date}
   coming_soon: Akan Datang
-  campaign_date_start_short: 7 Dis.
-  campaign_date_start_long: 7 Disember
+  campaign_date_start_short: 6 Dis.
+  campaign_date_start_long: 6 Disember
   campaign_date_short: 7-13 Dis.
-  campaign_date_full: 7-13 Disember
-  campaign_date_year: '2020'
-  campaign_date_full_year: 7-13 Disember 2020
+  campaign_date_full: 6-12 Disember
+  campaign_date_year: '2021'
+  campaign_date_full_year: 6-12 Disember 2021
   latam_campaign_date_start_short: 1 Okt.
   latam_campaign_date_start_long: 1 Oktober
   latam_campaign_date_short: 1 Okt. - 18 Dis.
   latam_campaign_date_full: 1 Oktober - 18 Disember
-  latam_campaign_date_year: '2020'
+  latam_campaign_date_year: '2021'
   latam_campaign_date_full_year: 1 Oktober 2020 - 18 Disember 2020
   europe_campaign_date_start_short: 10 Okt.
   europe_campaign_date_start_long: 10 Oktober
   europe_campaign_date_short: 10-25 Okt.
   europe_campaign_date_full: 10-25 Oktober
-  europe_campaign_date_year: '2020'
+  europe_campaign_date_year: '2021'
   europe_campaign_date_full_year: 10-25 Oktober 2020
-  africa_campaign_date_start_short: 1 Okt.
-  africa_campaign_date_start_long: 1 Oktober
+  africa_campaign_date_start_short: 6 Dis.
+  africa_campaign_date_start_long: 6 Disember
   africa_campaign_date_short: 1-31 Okt.
   africa_campaign_date_full: 1-31 Oktober
-  africa_campaign_date_year: '2020'
+  africa_campaign_date_year: '2021'
   africa_campaign_date_full_year: 1-31 Oktober 2020
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: 'Belajar hari ini, untuk membina masa depan lebih cerah.  '
   hoc2020_header_with_line_break_markdown: |-
     Belajar hari ini,
@@ -63,6 +65,7 @@ ms:
     komputer ialah asas untuk setiap pelajar mempelajarinya.
   social_hoc2019_dance: Menampilkan Katy Perry, Shawn Mendes, Panic! At The Disco,
     Lil Nas X, Jonas Brothers, Nicki Minaj dan 34 lagi!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: AI untuk Lautan
   oceans_landing_description: 'Belajar tentang pembelajaran mesin dan penggunaan AI
     secara beretika.  '
@@ -141,6 +144,9 @@ ms:
     masalah dunia. Sains komputer ialah kursus lebih daripada pengekodan semata-mata!
     Nikmati langkah pertama Code.org dalam perjalanan baharu mengajar lebih banyak
     tentang AI sepanjang kurikulum kami.  '
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Siaran Langsung Acara Jam Kod
   hoc_live_sign_up_title: Sila daftar untuk Siaran Langsung Jam Kod
   hoc_live_learn_title: Belajar dengan Siaran Langsung Acara Jam Kod
@@ -159,6 +165,12 @@ ms:
   hoc_overview_oceans_tutorial_desc: 'Pelajari tentang kecerdasan buatan (AI), pembelajaran
     mesin, data latihan dan kepincangan, sambil meneroka isu etika dan cara AI boleh
     digunakan untuk mengatasi masalah dunia.  '
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: Apakah AI?
   ai_video_title_algorithm_bias: Memerangi kepincangan di dalam algoritma
   ai_video_title_phone_knows_dog: Bagaimanakah telefon anda tahu ini ialah anjing?
@@ -225,6 +237,15 @@ ms:
     acara Jam Kod. Tutorial satu jam dalam lebih daripada 45 bahasa. Pengalaman tidak
     diperlukan.
   hourofcode_homepage_hoc2018_header_line2: Umur 4 hingga 104.
+  codeorg_homepage_hoc_is_coming: Hour of Code akan datang
+  codeorg_homepage_celebrate_cse: Raikan sains komputer di mana sahaja!
+  codeorg_homepage_csc: 'Sains komputer merangkumi seni bahasa, matematik, dan banyak
+    lagi dalam Sambungan SK
+
+'
+  codeorg_homepage_csc_long: Lihat cara sains komputer memenuhi seni bahasa, matematik
+    dan banyak lagi dalam kurikulum kami!
+  codeorg_homepage_csc_title: Sambungan SK
   hoc2018_tutorial_mchoc_description: Minecraft kini kembali untuk Hour of Code dengan
     aktiviti yang baru! Mengembara dalam Minecraft dengan kod.
   codeorg_homepage_hoc2019_dance_heading: Cuba <span class="highlight-word">Majlis&nbsp;Tari-Menari</span>
@@ -608,25 +629,31 @@ ms:
   meta_tag_twitter_description: Jam Kod ialah pergerakan global yang menjangkau puluhan
     juta pelajar daripada semua peringkat umur di 180+ negara dan lebih daripada 45
     bahasa.
+  meta_tag_og_title_cs_movement: 'Hour of Code: Join the Computer Science Movement'
+  meta_tag_og_description_campaign: The Hour of Code is a global campaign reaching
+    and inspiring tens of millions of students of all ages to learn computer science
+    in 180+ countries and over 45 languages.
   twitter_default_text: 'Saya menyertai #HourOfCode tahun ini, bagaimana dengan anda?
     @codeorg'
   twitter_donor_text: "#HourOfCode tahun ini ialah tentang kreativiti. Saya ikut masuk!
     Anda? (Terima kasih %{random_donor} kerana menyokong @codeorg)"
   twitter_donor_text_2019: "#HourOfCode tahun ini ialah tentang #CSforGood. Saya ikut
     masuk! Anda? (Terima kasih %{random_donor} kerana menyokong @codeorg)"
+  twitter_default_text_donor: 'I''m participating in this year''s #HourOfCode, are
+    you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: Soalan Lazim
   hoc_faq_what_is_hoc_q: Apakah Hour of Code?
-  hoc_faq_what_is_hoc_a: Acara Jam Kod bermula sebagai pengenalan kepada sains komputer
-    yang disampaikan selama satu jam, direka bentuk bertujuan untuk menjadikan "kod"
-    lebih mudah difahami, untuk menunjukkan sesiapa sahaja boleh mempelajari asasnya
-    dan meluaskan penyertaan di dalam bidang sains komputer. Sejak itu, ia telah menjadi
-    usaha sedunia untuk meraikan sains komputer, bermula dengan aktiviti pengekodan
-    selama 1 jam tetapi berkembang kepada pelbagai jenis usaha komuniti. Cubalah lihat
-    <a href='%{tutorials}'> tutorial dan aktiviti</a>. Kempen akar umbi ini disokong
-    oleh lebih daripada <a href='%{partners}'>400 rakan kongsi</a> dan 200,000 pendidik
-    di seluruh dunia.
-  hoc_faq_what_is_hoc_a_markdown: Jam Kod dimulakan sebagai pengenalan satu jam kepada
-    sains komputer, yang direka bentuk bertujuan memudahkan "kod", untuk menunjukkan
+  hoc_faq_what_is_hoc_a: Acara Hour of Code bermula sebagai pengenalan kepada sains
+    komputer yang disampaikan selama satu jam, direka bentuk bertujuan untuk menjadikan
+    "kod" lebih mudah difahami, untuk menunjukkan sesiapa sahaja boleh mempelajari
+    asasnya dan meluaskan penyertaan di dalam bidang sains komputer. Sejak itu, ia
+    telah menjadi usaha sedunia untuk meraikan sains komputer, bermula dengan aktiviti
+    pengekodan selama 1 jam tetapi berkembang kepada pelbagai jenis usaha komuniti.
+    Cubalah lihat <a href='%{tutorials}'> tutorial dan aktiviti</a>. Kempen akar umbi
+    ini disokong oleh lebih daripada <a href='%{partners}'>400 rakan kongsi</a> dan
+    200,000 pendidik di seluruh dunia.
+  hoc_faq_what_is_hoc_a_markdown: Hour of Code dimulakan sebagai pengenalan satu jam
+    kepada sains komputer, yang direka bentuk bertujuan memudahkan "kod", untuk menunjukkan
     bahawa sesiapa sahaja boleh mempelajari asasnya dan meluaskan penyertaan di dalam
     bidang sains komputer. Sejak dari itu, ia telah menjadi usaha seluruh dunia untuk
     meraikan sains komputer, bermula dengan aktiviti pengekodan selama 1 jam tetapi
@@ -634,18 +661,18 @@ ms:
     Kempen akar umbi ini disokong oleh lebih daripada [400 partners](%{partners})
     dan 200,000 pendidik di seluruh dunia.
   hoc_faq_last_year: Cublah tutorial itu
-  hoc_faq_when_is_hoc_q: Bilakah acara Jam Kod diadakan?
-  hoc_faq_when_is_hoc_a: Acara Jam Kod diadakan pada setiap tahun semasa <a href='%{csedweek_url}'>
+  hoc_faq_when_is_hoc_q: Bilakah acara Hour of Code diadakan?
+  hoc_faq_when_is_hoc_a: Acara Hour of Code diadakan pada setiap tahun semasa <a href='%{csedweek_url}'>
     Minggu Pendidikan Sains Komputer</a>. Minggu Pendidikan Sains Kumputer %{campaign_date_year}
     akan diadakan pada %{campaign_date_full}, tetapi anda boleh menganjurkan acara
     Jam Kod sepanjang tahun. Minggu Pendidikan Sains Komputer akan diadakan secara
     tahunan sebagai pengiktirafan hari ulangtahun perintis pengkomputeran <a href='%{grace_hopper}'>Laksamana
     Grace Murray Hopper</a> (9 Disember 1906).
-  hoc_faq_when_is_hoc_a_markdown: Acara Jam Kod diadakan pada setiap tahun semasa
+  hoc_faq_when_is_hoc_a_markdown: Acara Hour of Code diadakan pada setiap tahun semasa
     [Computer Science Education Week](%{csedweek_url}). Minggu Pendidikan Sains Kumputer
     %{campaign_date_year} akan diadakan pada %{campaign_date_full}, tetapi anda boleh
-    menganjurkan acara Jam Kod sepanjang tahun. Minggu Pendidikan Sains Komputer akan
-    diadakan secara tahunan sebagai pengiktirafan hari ulangtahun perintis pengkomputeran
+    menganjurkan acara Hour of Code sepanjang tahun. Minggu Pendidikan Sains Komputer
+    akan diadakan secara tahunan sebagai pengiktirafan hari ulangtahun perintis pengkomputeran
     [Admiral Grace Murray Hopper](%{grace_hopper}) (9 Disember 1906).
   hoc_faq_why_cs_q: Mengapakah sains komputer?
   hoc_faq_why_cs_a: "<i>Setiap</i> pelajar perlu diberikan peluang untuk mempelajari
@@ -658,38 +685,38 @@ ms:
     masalah. Apabila bermula awal, pelajar akan memperoleh asas untuk kejayaan di
     dalam mana-mana laluan kerjaya pada abad ke-21. Sila lihat lebih banyak statistik
     [here](%{stats_url}).
-  hoc_faq_how_participate_q: Bagaimanakah saya boleh menyertai acara Jam Kod?
+  hoc_faq_how_participate_q: Bagaimanakah saya boleh menyertai acara Hour of Code?
   hoc_faq_how_participate_a: "<a href='/how-to'>Mula merancang di sini</a> dengan
-    mengkaji panduan cara yang disediakan. Anda boleh menganjurkan acara Jam Kod di
-    sekolah anda atau di dalam komuniti anda &mdash; seperti di dalam kelab kurikulum
+    mengkaji panduan cara yang disediakan. Anda boleh menganjurkan acara Hour of Code
+    di sekolah anda atau di dalam komuniti anda &mdash; seperti di dalam kelab kurikulum
     tambahan, pertubuhan bukan berasaskan keuntungan atau di tempat kerja. Atau, anda
     boleh cuba sendiri apabila tiba %{campaign_date}."
   hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) dengan mengkaji
-    panduan cara yang disediakan. Anda boleh menganjurkan acara Jam Kod di sekolah
+    panduan cara yang disediakan. Anda boleh menganjurkan acara Hour of Code di sekolah
     anda atau di dalam komuniti anda — seperti di dalam kelab kurikulum tambahan,
     pertubuhan bukan berasaskan keuntungan atau di tempat kerja. Atau, anda boleh
     cuba sendiri apabila tiba %{campaign_date}. "
-  hoc_faq_behind_hoc_q: Siapakah di belakang acara Jam Kod?
-  hoc_faq_behind_hoc_a: Acara Jam Kod didorong oleh Jam Kod dan Minggu Pendidikan
+  hoc_faq_behind_hoc_q: Siapakah di sebalik acara Hour of Code?
+  hoc_faq_behind_hoc_a: Acara Hour of Code didorong oleh Hour of Code dan Minggu Pendidikan
     Sains Komputer <a href='%{partner_url}'>Jawatankuasa Penasihat dan Penilaian</a>
     serta gabungan rakan kongsi yang belum pernah diadakan sebelum ini bekerjasama
-    menyokong acara Jam Kod &mdash; termasuk Microsoft, Apple, Amazon, Boys and Girls
+    menyokong acara Hour of Code &mdash; termasuk Microsoft, Apple, Amazon, Boys and
+    Girls Clubs of America dan Lembaga Pentadbir Kolej.
+  hoc_faq_behind_hoc_a_markdown: Acara Hour of Code didorong oleh Hour of Code dan
+    Minggu Pendidikan Sains Komputer [Advisory and Review Committees](%{partner_url})
+    serta gabungan rakan kongsi yang belum pernah diadakan sebelum ini bekerjasama
+    menyokong acara Hour of Code — termasuk Microsoft, Apple, Amazon, Boys and Girls
     Clubs of America dan Lembaga Pentadbir Kolej.
-  hoc_faq_behind_hoc_a_markdown: Acara Jam Kod didorong oleh Jam Kod dan Minggu Pendidikan
-    Sains Komputer [Advisory and Review Committees](%{partner_url}) serta gabungan
-    rakan kongsi yang belum pernah diadakan sebelum ini bekerjasama menyokong acara
-    Jam Kod — termasuk Microsoft, Apple, Amazon, Boys and Girls Clubs of America dan
-    Lembaga Pentadbir Kolej.
   hoc_faq_host_q: Saya tidak tahu apa-apa mengenai pengekodan. Adakah saya masih boleh
     menganjurkan acara?
-  hoc_faq_host_a: Sudah tentu. Aktiviti Jam Kod ialah aktiviti pandu diri. Perkara
+  hoc_faq_host_a: Sudah tentu. Aktiviti Hour of Code ialah aktiviti pandu diri. Perkara
     yang perlu anda lakukan ialah <a href='%{codeorg_url}/learn'>mencuba tutorial
     semasa kami</a>, pilih tutorial yang anda mahu dan luangkan satu jam &mdash; kami
     uruskan yang selainnya. Kami juga mempunyai pilihan untuk setiap peringkat umur
     dan tahap pengalaman, dari tadika dan ke atas. Mula merancang acara anda dengan
     membaca <a href='/how-to'> panduan cara</a> kami.
-  hoc_faq_host_a_markdown: Sudah tentu. Aktiviti Jam Kod ialah aktiviti pandu diri.
-    Perkara yang perlu anda lakukan ialah [try our current tutorials](%{codeorg_url}/learn),
+  hoc_faq_host_a_markdown: Sudah tentu. Aktiviti Hour of Code ialah aktiviti pandu
+    diri. Perkara yang perlu anda lakukan ialah [try our current tutorials](%{codeorg_url}/learn),
     pilih tutorial yang anda mahu dan luangkan satu jam — kami uruskan yang selainnya.
     Kami juga mempunyai pilihan untuk setiap peringkat umur dan tahap pengalaman,
     dari tadika dan ke atas. Mula merancang acara anda dengan membaca [how to guide](%{howto})
@@ -708,12 +735,12 @@ ms:
     khusus tutorial. Jangan lupa bahawa kami juga menawarkan [unplugged activities](%{unplugged_url})
     jika sekolah anda tidak dapat memuatkan tutorial!
   hoc_faq_need_computers_q: Adakah saya memerlukan komputer untuk setiap peserta?
-  hoc_faq_need_computers_a: Tidak. Kami menyediakan tutorial Jam Kod yang boleh dilakukan
-    pada PC, telefon pintar, tablet malah ada yang tidak memerlukan komputer sama
-    sekali! Anda boleh turut serta walau di mana sahaja anda berada, dengan apa sahaja
-    yang ada bersama anda. <p><i>Berikut ialah beberapa pilihan:</i> <br> <ul> <li><b>Bekerja
-    secara berpasangan.</b> <a href='%{pair_programming_research}'>Penyelidikan menunjukkan</a>
-    pelajar belajar dengan lebih baik apabila menggunakan <a href='%{pair_programming_video}'>pengaturcaraan
+  hoc_faq_need_computers_a: Tidak. Kami menyediakan tutorial Hour of Code yang boleh
+    dilakukan pada PC, telefon pintar, tablet malah ada yang tidak memerlukan komputer
+    sama sekali! Anda boleh turut serta walau di mana sahaja anda berada, dengan apa
+    sahaja yang ada bersama anda. <p><i>Berikut ialah beberapa pilihan:</i> <br> <ul>
+    <li><b>Bekerja secara berpasangan.</b> <a href='%{pair_programming_research}'>Penyelidikan
+    menunjukkan</a> pelajar belajar dengan lebih baik apabila menggunakan <a href='%{pair_programming_video}'>pengaturcaraan
     berpasangan</a>, berkongsi komputer dan berganding bahu. Menggalakkan pelajar
     anda menggandakan usaha. <li><b>Gunakan skrin projektor.</b> Jika anda mempunyai
     projektor dan skrin untuk komputer yang disambungkan ke Laman Web, seluruh kumpulan
@@ -722,7 +749,7 @@ ms:
     nirplag.</b> Kami menawarkan tutorial <a href='%{unplugged_url}'> yang tidak memerlukan
     komputer</a> sama sekali. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    Tidak. Kami menyediakan tutorial Jam Kod yang boleh dilakukan pada PC, telefon pintar, tablet malah ada yang tidak memerlukan komputer sama sekali! Anda boleh turut serta walau di mana sahaja anda berada, dengan apa sahaja yang ada bersama anda.
+    Tidak. Kami menyediakan tutorial Hour of Code yang boleh dilakukan pada PC, telefon pintar, tablet malah ada yang tidak memerlukan komputer sama sekali! Anda boleh turut serta walau di mana sahaja anda berada, dengan apa sahaja yang ada bersama anda.
 
     _Berikut ialah beberapa pilihan:_
 
@@ -731,13 +758,14 @@ ms:
     - **Laksanakan secara nirplag.** Kami menawarkan [tutorials that require no computer](%{unplugged_url}) sama sekali.
   hoc_faq_international_q: Saya berada di <country>. Bagaimanakah saya boleh menyertai
     pada peringkat antarabangsa?
-  hoc_faq_international_a: Sesiapa sahaja boleh menganjurkan acara Jam Kod, di mana-mana
-    sahaja di dunia. Pada tahun lepas, para pelajar dari seluruh dunia telah bersama
-    menyertai acara Jam Kod. Ketahui lebih lanjut <a href='/promote'>di sini</a>.
-  hoc_faq_international_a_markdown: Sesiapa sahaja boleh menganjurkan acara Jam Kod,
-    di mana-mana sahaja di dunia. Pada tahun lepas, para pelajar dari seluruh dunia
-    telah bersama menyertai acara Jam Kod. Ketahui lebih lanjut [here](%{promote}).
-  hoc_faq_tutorial_q: Bagaimanakah saya boleh membuat tutorial Jam Kod?
+  hoc_faq_international_a: Sesiapa sahaja boleh menganjurkan acara Hour of Code, di
+    mana-mana sahaja di dunia. Pada tahun lepas, para pelajar dari seluruh dunia telah
+    bersama menyertai acara Hour of Code. Ketahui lebih lanjut <a href='/promote'>di
+    sini</a>.
+  hoc_faq_international_a_markdown: Sesiapa sahaja boleh menganjurkan acara Hour of
+    Code, di mana-mana sahaja di dunia. Pada tahun lepas, para pelajar dari seluruh
+    dunia telah bersama menyertai acara Hour of Code. Ketahui lebih lanjut [here](%{promote}).
+  hoc_faq_tutorial_q: Bagaimanakah saya boleh membuat tutorial Hour of Code?
   hoc_faq_tutorial_a: Jika anda berminat menjadi rakan tutorial, <a href='/tutorial-guidelines'>lihat
     garis panduan dan arahan kami</a>. Kami ingin menganjurkan pelbagai pilihan menarik,
     tetapi matlamat utamanya ialah mengoptimumkan pengalaman untuk pelajar dan guru
@@ -746,17 +774,17 @@ ms:
     guidelines and instructions](%{tutorial_guidelines}). Kami ingin menganjurkan
     pelbagai pilihan menarik, tetapi matlamat utamanya ialah mengoptimumkan pengalaman
     untuk pelajar dan guru yang baharu kepada sains komputer.
-  hoc_faq_account_q: Adakah pelajar perlu log masuk dengan menggunakan akaun?
-  hoc_faq_account_a: Tidak. Tiada pendaftaran atau log masuk diperlukan sama sekali
-    untuk pelajar mencuba Jam Kod. Kebanyakan <a href='%{codeorg_url}/learn/beyond'>kursus
+  hoc_faq_account_q: Adakah pelajar perlu daftar masuk dengan menggunakan akaun?
+  hoc_faq_account_a: Tidak. Tiada pendaftaran atau daftar masuk diperlukan sama sekali
+    untuk pelajar mencuba Hour of Code. Kebanyakan <a href='%{codeorg_url}/learn/beyond'>kursus
     susulan</a> memerlukan penciptaan akaun untuk menyimpan kemajuan pelajar. Pendaftaran
-    untuk Jam Kod juga TIDAK mencipta akaun Studio Kod secara automatik. Jika anda
-    mahu mencipta akaun untuk pelajar anda, sila ikuti arahan <a href='https://youtu.be/_smelV_KISE'>ini</a>.
-  hoc_faq_account_a_markdown: Tidak. Tiada pendaftaran atau log masuk diperlukan sama
-    sekali untuk pelajar mencuba Jam Kod. Kebanyakan [follow-on courses](%{codeorg_url}/learn/beyond)
+    untuk Hour of Code juga TIDAK mencipta akaun Studio Kod secara automatik. Jika
+    anda mahu mencipta akaun untuk pelajar anda, sila ikuti arahan <a href='https://youtu.be/_smelV_KISE'>ini</a>.
+  hoc_faq_account_a_markdown: Tidak. Tiada pendaftaran atau daftar masuk diperlukan
+    sama sekali untuk pelajar mencuba Hour of Code. Kebanyakan [follow-on courses](%{codeorg_url}/learn/beyond)
     memerlukan penciptaan akaun untuk menyimpan kemajuan pelajar. Pendaftaran untuk
-    Jam Kod juga TIDAK mencipta akaun Studio Kod secara automatik. Jika anda mahu
-    mencipta akaun untuk pelajar anda, sila ikuti [instructions](https://youtu.be/_smelV_KISE)
+    Hour of Code juga TIDAK mencipta akaun Studio Kod secara automatik. Jika anda
+    mahu mencipta akaun untuk pelajar anda, sila ikuti [instructions](https://youtu.be/_smelV_KISE)
     ini.
   hoc_faq_high_school_q: Apakah aktiviti yang perlu saya lakukan dengan pelajar sekolah
     menengah?
@@ -776,8 +804,8 @@ ms:
     Pelajar sekolah menengah boleh menyelesaikan satu daripada ini dalam 30 minit
     dan kemudian boleh mencuba tutorial lanjutan di dalam JavaScript, seperti Akademi
     Khan atau CodeHS.
-  hoc_faq_scratch_q: Saya melakukan Scratch untuk Jam Kod, tetapi bagaimana jika pelajar
-    saya mempunyai iPad dan bukannya komputer riba?
+  hoc_faq_scratch_q: Saya melakukan Scratch untuk Hour of Code, tetapi bagaimana jika
+    pelajar saya mempunyai iPad dan bukannya komputer riba?
   hoc_faq_scratch_a: Scratch tidak dijalankan pada tablet. Jika pelajar anda ialah
     golongan muda, mereka boleh menggunakan aplikasi iPad ScratchJR (untuk pembaca
     awal). Jika anda melihat tutorial pada <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
@@ -788,38 +816,39 @@ ms:
     awal). Jika anda melihat tutorial pada [%{partner_url}/learn](%{codeorg_url}/learn),
     anda boleh menemui tutorial lain yang berfungsi dengan baik pada iPad - daripada
     Code.org, Tynker, Lightbot, atau CodeSpark.
-  hoc_faq_count_hoc_q: Bagaimanakah anda mengira Jam Kod?
+  hoc_faq_count_hoc_q: Bagaimanakah anda mengira Hour of Code?
   hoc_faq_map_q: Mengapakah saya tidak dapat melihat titik saya di atas peta?
-  hoc_faq_map_a: Kami minta maaf anda tidak melihat acara anda pada peta Jam Kod.
+  hoc_faq_map_a: Kami minta maaf anda tidak melihat acara anda pada peta Hour of Code.
     Oleh kerana puluhan ribu penganjur mendaftar untuk acara ini, peta itu mengagregatkan
     data dan memaparkan satu titik untuk beberapa acara. Jika anda klik pautan <a
     href='%{events_url}'>halaman acara</a> di bawah peta, anda akan diarahkan ke senarai
     semua acara mengikut negeri dan anda boleh menemui acara anda disenaraikan di
-    sana. Selain itu, memandangkan ribuan individu mendaftar untuk acara Jam Kod,
+    sana. Selain itu, memandangkan ribuan individu mendaftar untuk acara Hour of Code,
     peta dan senarai acara kebiasaannya mengambil masa selama 48 jam untuk dikemas
     kini. Sila semak semula dalam beberapa hari!
   hoc_faq_map_a_markdown: Kami minta maaf anda tidak melihat acara anda pada peta
-    Jam Kod. Oleh kerana puluhan ribu penganjur mendaftar untuk acara ini, peta itu
-    mengagregatkan data dan memaparkan satu titik untuk beberapa acara. Jika anda
+    Hour of Code. Oleh kerana puluhan ribu penganjur mendaftar untuk acara ini, peta
+    itu mengagregatkan data dan memaparkan satu titik untuk beberapa acara. Jika anda
     klik [events page](%{events_url}) pada pautan di bawah peta, anda akan diarahkan
     ke senarai semua acara mengikut negeri dan anda boleh menemui acara anda disenaraikan
-    di sana. Selain itu, memandangkan ribuan individu mendaftar untuk acara Jam Kod,
-    peta dan senarai acara kebiasaannya mengambil masa selama 48 jam untuk dikemas
+    di sana. Selain itu, memandangkan ribuan individu mendaftar untuk acara Hour of
+    Code, peta dan senarai acara kebiasaannya mengambil masa selama 48 jam untuk dikemas
     kini. Sila semak semula dalam beberapa hari!
-  hoc_faq_count_hoc_a: Penjejak Jam Kod bukan ukuran penggunaan yang tepat. Kami tidak
-    mengira ID pelajar yang unik dengan sempurna apabila menjejaki penyertaan Jam
-    Kod, terutamanya kerana kami tidak meminta pelajar log masuk atau mendaftar. Disebabkan
-    itu, kami sama-sama terlebih kira dan terkurang kira peserta dalam masa yang sama.
-    Sila baca semua butiran <a href='%{codeorg_url}/loc'>di sini</a>.
-  hoc_faq_count_hoc_a_markdown: Penjejak Jam Kod bukan ukuran penggunaan yang tepat.
-    Kami tidak mengira ID pelajar yang unik dengan sempurna apabila menjejaki penyertaan
-    Jam Kod, terutamanya kerana kami tidak meminta pelajar log masuk atau mendaftar.
-    Disebabkan itu, kami sama-sama terlebih kira dan terkurang kira peserta dalam
-    masa yang sama. Sila baca semua butiran [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a: Penjejak Hour of Code bukan ukuran penggunaan yang tepat. Kami
+    tidak mengira ID pelajar yang unik dengan sempurna apabila menjejaki penyertaan
+    Hour of Code, terutamanya kerana kami tidak meminta pelajar daftar masuk atau
+    mendaftar. Disebabkan itu, kami sama-sama terlebih kira dan terkurang kira peserta
+    dalam masa yang sama. Sila baca semua butiran <a href='%{codeorg_url}/loc'>di
+    sini</a>.
+  hoc_faq_count_hoc_a_markdown: Penjejak Hour of Code bukan ukuran penggunaan yang
+    tepat. Kami tidak mengira ID pelajar yang unik dengan sempurna apabila menjejaki
+    penyertaan Hour of Code, terutamanya kerana kami tidak meminta pelajar daftar
+    masuk atau mendaftar. Disebabkan itu, kami sama-sama terlebih kira dan terkurang
+    kira peserta dalam masa yang sama. Sila baca semua butiran [here](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Berapa banyakkah seseorang individu boleh belajar dalam masa
     sejam?
-  hoc_faq_one_hour_a: Matlamat Jam Kod bukan bertujuan mengajar siapa pun untuk menjadi
-    pakar saintis komputer dalam tempoh sejam. Sejam hanya cukup untuk mengetahui
+  hoc_faq_one_hour_a: Matlamat Hour of Code bukan bertujuan mengajar siapa pun untuk
+    menjadi pakar saintis komputer dalam tempoh sejam. Sejam hanya cukup untuk mengetahui
     bahawa sains komputer menyeronokkan dan kreatif, bahawa ia boleh diakses pada
     semua peringkat umur, untuk semua pelajar, tanpa mengambil kira latar belakang.
     Ukuran kejayaan kempen ini bukan pada sebanyak mana yang dipelajari oleh pelajar
@@ -840,7 +869,7 @@ ms:
     perkara yang boleh dipelajari oleh semua peserta dalam satu jam, kita pun boleh
     lakukannya.
   hoc_faq_one_hour_a_markdown: |-
-    Matlamat Jam Kod bukan bertujuan mengajar siapa pun untuk menjadi pakar saintis komputer dalam tempoh sejam. Sejam hanya cukup untuk mengetahui bahawa sains komputer menyeronokkan dan kreatif, bahawa ia boleh diakses pada semua peringkat umur, untuk semua pelajar, tanpa mengambil kira latar belakang. Ukuran kejayaan kempen ini bukan pada sebanyak mana yang dipelajari oleh pelajar CS - kejayaannya ditunjukkan dalam penyertaan yang meluas di dalam seluruh kumpulan jantina, etnik dan sosioekonomi, serta hasil peningkatan dalam pendaftaran dan penyertaan yang kita lihat di dalam kursus CS pada semua peringkat gred. Jutaan guru dan pelajar yang menyertai aktiviti ini telah memutuskan untuk menjangkau melebihi sejam - untuk belajar selama sehari atau seminggu atau lebih lama dan ramai pelajar telah memutuskan untuk mendaftar di dalam keseluruhan kursus (atau malah jurusan kolej) sebagai hasilnya.
+    Matlamat Hour of Code bukan bertujuan mengajar siapa pun untuk menjadi pakar saintis komputer dalam tempoh sejam. Sejam hanya cukup untuk mengetahui bahawa sains komputer menyeronokkan dan kreatif, bahawa ia boleh diakses pada semua peringkat umur, untuk semua pelajar, tanpa mengambil kira latar belakang. Ukuran kejayaan kempen ini bukan pada sebanyak mana yang dipelajari oleh pelajar CS - kejayaannya ditunjukkan dalam penyertaan yang meluas di dalam seluruh kumpulan jantina, etnik dan sosioekonomi, serta hasil peningkatan dalam pendaftaran dan penyertaan yang kita lihat di dalam kursus CS pada semua peringkat gred. Jutaan guru dan pelajar yang menyertai aktiviti ini telah memutuskan untuk menjangkau melebihi sejam - untuk belajar selama sehari atau seminggu atau lebih lama dan ramai pelajar telah memutuskan untuk mendaftar di dalam keseluruhan kursus (atau malah jurusan kolej) sebagai hasilnya.
 
     Selain pelajar, "pelajar" lain ialah pendidik yang memperoleh keyakinan selepas sejam bahawa mereka mereka boleh mengajar sains komputer walaupun mereka mungkin tidak mempunyai ijazah kolej sebagai saintis komputer. Puluhan ribu guru memutuskan untuk melanjutkan pelajaran dalam bidang sains komputer, sama ada menghadiri PD atau menawarkan kursus susulan dalam talian, atau kedua-duanya sekali. Dan ini juga diterima pakai kepada pentadbir sekolah, yang menyedari bahawa sains komputer ialah sesuatu yang dikehendaki oleh pelajar dan guru mereka berkebolehan melakukannya.
 
@@ -850,18 +879,18 @@ ms:
     sokongan</a> kami.
   hoc_faq_more_questions_a_markdown: Cuba dapatkan jawapan di dalam [support forum](http://support.code.org)
     kami.
-  hoc_faq_keep_learning_q: Bagaimanakah saya boleh terus pembelajaran selepas Jam
-    Kod?
-  hoc_faq_keep_learning_a: Sesiapa sahaja boleh menganjurkan acara Jam Kod pada bila-bila
-    masa. Tutorialnya sentiasa berterusan sepanjang tahun. Anda boleh menjangkakan
+  hoc_faq_keep_learning_q: Bagaimanakah saya boleh terus pembelajaran selepas Hour
+    of Code?
+  hoc_faq_keep_learning_a: Sesiapa sahaja boleh menganjurkan acara Hour of Code pada
+    bila-bila masa. Tutorialnya sentiasa berterusan sepanjang tahun. Anda boleh menjangkakan
     semua tutorial dan kurikulum kami tersedia secara berkekalan pada laman web kami.
     Sila pergi ke <a href='/promote'>sumber kami</a> untuk panduan cara dan sumber
-    lain acara bagi membantu menjayakan acara Jam Kod anda.
-  hoc_faq_keep_learning_a_markdown: Sesiapa sahaja boleh menganjurkan acara Jam Kod
-    pada bila-bila masa. Tutorialnya sentiasa berterusan sepanjang tahun. Anda boleh
-    menjangkakan semua tutorial dan kurikulum kami tersedia secara berkekalan pada
-    laman web kami. Sila pergi ke [our resources](%{promote}) untuk panduan cara dan
-    sumber lain acara bagi membantu menjayakan acara Jam Kod anda.
+    lain acara bagi membantu menjayakan acara Hour of Code anda.
+  hoc_faq_keep_learning_a_markdown: Sesiapa sahaja boleh menganjurkan acara Hour of
+    Code pada bila-bila masa. Tutorialnya sentiasa berterusan sepanjang tahun. Anda
+    boleh menjangkakan semua tutorial dan kurikulum kami tersedia secara berkekalan
+    pada laman web kami. Sila pergi ke [our resources](%{promote}) untuk panduan cara
+    dan sumber lain acara bagi membantu menjayakan acara Hour of Code anda.
   hoc_faq_certificates_q: Di manakah saya boleh mencetak sijil untuk pelajar saya?
   hoc_faq_certificates_a: Pergi ke <a href='%{codeorg_url}/certificates'>halaman sijil</a>
     kami bagi membolehkan anda mencetak sijil untuk seluruh kelas anda dengan lebih
@@ -872,13 +901,13 @@ ms:
     awal. Anda juga boleh mencetak [special certificates](%{codeorg_url}/certificates?course=mc)
     untuk pelajar yang melakukan tutorial Minecraft.
   hoc_faq_logo_q: Adakah terdapat pengehadan kepada cara saya boleh menggunakan logo
-    atau nama Jam Kod?
-  hoc_faq_logo_a: Jam Kod sudah menjadi tanda dagangan. Kami tidak mahu menghalang
+    atau nama Hour of Code?
+  hoc_faq_logo_a: Hour of Code sudah menjadi tanda dagangan. Kami tidak mahu menghalang
     penggunaannya, tetapi kami mahu memastikan penggunaannya sesuai mengikut had yang
     ditentukan. Sila lihat  <a href='%{logo_url}'>garis panduan ini untuk penggunaan</a>.
-  hoc_faq_logo_a_markdown: Jam Kod sudah menjadi tanda dagangan. Kami tidak mahu menghalang
-    penggunaannya, tetapi kami mahu memastikan penggunaannya sesuai mengikut had yang
-    ditentukan. Sila lihat [these guidelines for usage](%{logo_url}).
+  hoc_faq_logo_a_markdown: Hour of Code sudah menjadi tanda dagangan. Kami tidak mahu
+    menghalang penggunaannya, tetapi kami mahu memastikan penggunaannya sesuai mengikut
+    had yang ditentukan. Sila lihat [these guidelines for usage](%{logo_url}).
   stats_hoc_2013_image_alt: Statistik dari acara Hour of Code 2013
   stats_growth: Ia adalah yang paling cepat untuk mencapai 15 juta pengguna.
   stats_i18n: Pelajar belajar dalam lebih daripada 45 bahasa
@@ -1023,6 +1052,7 @@ ms:
   footer_menu_support: Sokongan
   footer_menu_terms: Terma
   footer_menu_privacy: Dasar Privasi
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: 1 Jam Pengaturacaraan
   learn_banner_blurb: Cubalah suatu tutorial sejam yang direka bagi semua peringkat
     umur dalam lebih daripada 45 bahasa. Sertai berjuta-juta pelajar dan guru dari
@@ -6213,907 +6243,13 @@ ms:
     boleh gunakan kuasa kod untuk menyatukan kedua-dua kampung tersebut. Pemain akan
     berasa empati dan belas kasihan kepada jiran mereka, belajar kerjasama dan perangkuman,
     serta menghayati kepelbagaian yang menjadikan kita semua istimewa.
-  tutorial_dance2019_language: Bahasa Arab, Bahasa Cina, Bahasa Czech, Bahasa Denmark,
-    Bahasa Belanda, Bahasa Inggeris, Bahasa Finland, Bahasa Perancis, Bahasa Jerman,
-    Bahasa Greek, Bahasa Hindi, Bahasa Hungary, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Melayu, Bahasa Poland, Bahasa Portugia dan 10 lagi!
-  tutorial_danceparty_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Catalonia,
-    Bahasa Cina, Bahasa Czech, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Greek, Bahasa Hungary, Bahasa Itali, Bahasa Jepun,
-    Bahasa Korea, Bahasa Norway, Bahasa Poland, Bahasa Portugis, Bahasa Rusia, Bahasa
-    Sepanyol, Bahasa Sweden, Bahasa Thai, Bahasa Turki dan Bahasa Vietnam  "
-  tutorial_chibitronics_language: Bahasa Inggeris
-  tutorial_athlete_language: Bahasa Inggeris, Bahasa Perancis, Bahasa Sepanyol, Bahasa
-    Portugis (Brazil)
-  tutorial_moana_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Cina (Diringkaskan),
-    Bahasa Cina (Tradisional), Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Indonesia, Bahasa Itali, Bahasa Jepun, Bahasa
-    Korea, Bahasa Norway, Bahasa Poland, Bahasa Polinesia (Bahasa Samoa), Bahasa Portugis,
-    Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa Ukraine dan
-    Bahasa Vietnam  "
-  tutorial_star-wars_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_gumadventure_language: Bahasa Inggeris sahaja
-  tutorial_mchoc_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_vidnews_language: Bahasa Inggeris sahaja
-  tutorial_kodable-pre_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Azerbaijani,
-    Bahasa Jerman, Bahasa Greek, Bahasa Sepanyol, Bahasa Parsi, Bahasa Perancis, Bahasa
-    Indonesia, Bahasa Iceland, Bahasa Itali, Bahasa Korea, Bahasa Belanda, Bahasa
-    Norway, Bahasa Poland, Bahasa Portugis, Bahasa Romania, Bahasa Rusia, Bahasa Serbia,
-    Bahasa Sweden, Bahasa Turki, Bahasa Ukraine, Bahasa Cina  "
-  tutorial_highseas_language: Bahasa Inggeris sahaja
-  tutorial_capython_language: Bahasa Inggeris, Bahasa Belanda, Bahasa Sepanyol
-  tutorial_frzn_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_cocom_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Czech, Bahasa Denmark, Bahasa Belanda, Bahasa Perancis, Bahasa Jerman,
-    Bahasa Greek, Bahasa Ibrani, Bahasa Hungary, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Portugis, Bahasa Rusia,
-    Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa Ukraine, Bahasa Vietnam dan
-    9 Bahasa lagi  "
-  tutorial_play-lab_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_boxisland_language: Bahasa Inggeris, Bahasa Cina, Bahasa Croatia, Bahasa
-    Czech, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis, Bahasa
-    Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa Jepun,
-    Bahasa Korea, Bahasa Norway, Bahasa Poland, Bahasa Portugis, Bahasa Romania, Bahasa
-    Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa Ukraine, Bahasa Vietnam
-  tutorial_textcomp_language: Bahasa Inggeris sahaja
-  tutorial_encryption_language: Bahasa Inggeris sahaja
-  tutorial_kanopixel_language: Bahasa Inggeris sahaja
-  tutorial_foos_language: Melayu
-  tutorial_tynkerdd_language: Bahasa Inggeris sahaja
-  tutorial_tynkerana_language: Bahasa Inggeris sahaja
-  tutorial_vidcard_language: Bahasa Inggeris sahaja
-  tutorial_spritebox_language: Bahasa Inggeris, Bahasa Portugis (Brazil)
-  tutorial_tynkerch_language: Bahasa Inggeris sahaja
-  tutorial_lightbot_language: Bahasa Inggeris, Bahasa Cina, Bahasa Croatia, Bahasa
-    Czech, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis, Bahasa
-    Jerman, Bahasa Greek, Bahasa Hindi, Bahasa Hungary, Bahasa Indonesia, Bahasa Itali,
-    Bahasa Jepun, Bahasa Melayu, Bahasa Norway, Bahasa Poland, Bahasa Portugis, Bahasa
-    Romania, Bahasa Rusia, Bahasa Slovak, Bahasa Slovenia, Bahasa Sepanyol, Bahasa
-    Sweden, Bahasa Thai
-  tutorial_hoc_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_code_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_tinspire_language: Bahasa Inggeris sahaja
-  tutorial_itchbounceball_language: Bahasa Inggeris sahaja
-  tutorial_vidclim_language: Bahasa Inggeris sahaja
-  tutorial_matlab_language: Bahasa Inggeris sahaja
-  tutorial_flap_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_galaxy_language: "  Bahasa Inggeris, Bahasa Albania, Bahasa Arab, Bahasa
-    Bosnia, Bahasa Cina, Bahasa Croatia, Bahasa Czech, Bahasa Denmark, Bahasa Belanda,
-    Bahasa Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Indonesia, Bahasa Itali,
-    Bahasa Jepun, Bahasa Korea, Bahasa Parsi, Bahasa Poland, Bahasa Portugis, Bahasa
-    Romania, Bahasa Rusia, Bahasa Slovenia, Bahasa Sepanyol, Bahasa Sweden, Bahasa
-    Turki, Bahasa Vietnam  "
-  tutorial_inf_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_tynkersol_language: Bahasa Inggeris sahaja
-  tutorial_itchg_language: Bahasa Inggeris sahaja
-  tutorial_como_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Cina, Bahasa Czech,
-    Bahasa Perancis, Bahasa Jerman, Bahasa Greek, Bahasa Ibrani, Bahasa Jepun, Bahasa
-    Kazakh, Bahasa Lithuania, Bahasa Poland, Bahasa Portugis, Bahasa Rusia, Bahasa
-    Serbia, Bahasa Sepanyol, Bahasa Turki, Bahasa Ukraine  "
-  tutorial_processfound_language: Bahasa Inggeris sahaja
-  tutorial_tynkerhomo_language: Bahasa Inggeris sahaja
-  tutorial_art_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_tynkerbrick_language: Bahasa Inggeris sahaja
-  tutorial_itchbio_language: Bahasa Inggeris sahaja
-  tutorial_itchj_language: Bahasa Inggeris sahaja
-  tutorial_tickleo_language: Bahasa Inggeris sahaja
-  tutorial_hopgeo_language: Bahasa Inggeris sahaja
-  tutorial_tynkermult_language: Bahasa Inggeris sahaja
-  tutorial_monster_language: Bahasa Inggeris, Bahasa Sepanyol, Bahasa Portugis, Bahasa
-    Itali, Bahasa Perancis, Bahasa Jerman, Bahasa Poland, Bahasa Turki
-  tutorial_tynkerapp_language: Bahasa Inggeris sahaja
-  tutorial_tynkerpup_language: Bahasa Inggeris sahaja
-  tutorial_livecode_language: Bahasa Inggeris sahaja
-  tutorial_cocomgame_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Czech, Bahasa Denmark, Bahasa Belanda, Bahasa Finland,
-    Bahasa Perancis, Bahasa Jerman, Bahasa Greek, Bahasa Ibrani, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine, Bahasa Vietnam dan 8 Bahasa lagi  "
-  tutorial_tynkerspin_language: Bahasa Inggeris sahaja
-  tutorial_code-avengers_language: Bahasa Inggeris, Bahasa Sepanyol, Bahasa Belanda,
-    Bahasa Rusia, Bahasa Portugis
-  tutorial_tynkercq_language: Bahasa Inggeris sahaja
-  tutorial_cmgame_language: Bahasa Inggeris sahaja
-  tutorial_codesters_language: Bahasa Inggeris sahaja
-  tutorial_qrm_language: Bahasa Inggeris, Bahasa Jerman
-  tutorial_texas-instruments_language: Bahasa Inggeris sahaja
-  tutorial_cajava_language: Bahasa Inggeris, Bahasa Belanda, Bahasa Sepanyol
-  tutorial_codehs_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_hopemo_language: Bahasa Inggeris sahaja
-  tutorial_tynkercm_language: Bahasa Inggeris sahaja
-  tutorial_codesterswintergreet_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codestersc_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codestersturtle_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_penjee_language: Bahasa Inggeris sahaja
-  tutorial_trinket_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Korea,
-    Bahasa Sepanyol
-  tutorial_frogger_language: Bahasa Inggeris, Bahasa Sepanyol, Bahasa Itali, Bahasa
-    Perancis, Bahasa Jerman dan Bahasa Belanda
-  tutorial_tynkereco_language: Bahasa Inggeris sahaja
-  tutorial_mitedarc_language: Bahasa Inggeris sahaja
-  tutorial_khan_language: Bahasa Czech, Bahasa Inggeris, Bahasa Portugis (Brazil),
-    Bahasa Sepanyol
-  tutorial_tynkerd_language: Bahasa Inggeris sahaja
-  tutorial_cdmy_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codestersdance_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codestersbasketball_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_nclkarel_language: Pelbagai
-  tutorial_buildpong_language: Bahasa Inggeris, Bahasa Portugis, Bahasa Rusia dan
-    Bahasa Sepanyol
-  tutorial_tynkerdrones_language: Bahasa Inggeris sahaja
-  tutorial_carla_language: Bahasa Inggeris sahaja
-  tutorial_zulama_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_capost_language: Bahasa Inggeris, Bahasa Belanda, Bahasa Sepanyol, Bahasa
-    Rusia
-  tutorial_marco_language: Pelbagai
-  tutorial_codestersflappybike_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_kanopong_language: Bahasa Inggeris sahaja
-  tutorial_tynkerright_language: Bahasa Inggeris sahaja
-  tutorial_touchdevelop_language: Bahasa Inggeris sahaja
-  tutorial_tynkercc_language: Bahasa Inggeris sahaja
-  tutorial_bamboo_language: Bahasa Inggeris sahaja
-  tutorial_robojav_language: Bahasa Inggeris sahaja
-  tutorial_roboba_language: Pelbagai
-  tutorial_knodsnake_language: Bahasa Inggeris sahaja
-  tutorial_soccharater_language: Bahasa Inggeris sahaja
-  tutorial_silent_language: Pelbagai
-  tutorial_robomesh_language: Bahasa Inggeris sahaja
-  tutorial_amaze_language: Bahasa Inggeris, Bahasa Portugis, Bahasa Rusia dan Bahasa
-    Sepanyol
-  tutorial_codestersds_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_knodtext_language: Bahasa Inggeris sahaja
-  tutorial_alicegar_language: Bahasa Inggeris sahaja
-  tutorial_codesterstransform_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_flexfrog_language: Pelbagai
-  tutorial_codemoji_language: Bahasa Inggeris sahaja
-  tutorial_robobii_language: Pelbagai
-  tutorial_robobm_language: Pelbagai
-  tutorial_codingrobots_language: Pelbagai
-  tutorial_robob_language: Pelbagai
-  tutorial_coders_language: Bahasa Inggeris, Bahasa Perancis
-  tutorial_tynkerhw_language: Bahasa Inggeris sahaja
-  tutorial_tynkermh_language: Bahasa Inggeris sahaja
-  tutorial_caphoto_language: Bahasa Inggeris, Bahasa Belanda, Bahasa Sepanyol
-  tutorial_mozillahw_language: Bahasa Inggeris sahaja
-  tutorial_ticklep_language: Bahasa Cina (Tradisional), Bahasa Denmark, Bahasa Inggeris,
-    Bahasa Perancis, Bahasa Jepun
-  tutorial_bbot_language: Bahasa Belanda, Bahasa Suomi, Bahasa Inggeris
-  tutorial_scratchg_language: Bahasa Inggeris sahaja
-  tutorial_sjforest_language: Bahasa Inggeris sahaja
-  tutorial_sjgreet_language: Bahasa Inggeris sahaja
-  tutorial_sjsunset_language: Bahasa Inggeris sahaja
-  tutorial_fufafrenz_language: Bahasa Inggeris sahaja
-  tutorial_bbcgeo_language: Bahasa Inggeris sahaja
-  tutorial_chspixel_language: Bahasa Inggeris sahaja
-  tutorial_hummingbird_language: Bahasa Inggeris sahaja
-  tutorial_recoloring_language: Bahasa Inggeris sahaja
-  tutorial_bbcchem_language: Bahasa Inggeris sahaja
-  tutorial_floalgo_language: Bahasa Inggeris sahaja
-  tutorial_flocond_language: Bahasa Inggeris sahaja
-  tutorial_floloops_language: Bahasa Inggeris sahaja
-  tutorial_pgts_language: Bahasa Inggeris sahaja
-  tutorial_ozo_language: Bahasa Inggeris sahaja
-  tutorial_bbcla_language: Bahasa Inggeris sahaja
-  tutorial_bbcsci_language: Bahasa Inggeris sahaja
-  tutorial_tlctour_language: Bahasa Inggeris sahaja
-  tutorial_codesterstj_language: Bahasa Inggeris sahaja
-  tutorial_tlclocked_language: Bahasa Inggeris sahaja
-  tutorial_baubles_language: Bahasa Inggeris sahaja
-  tutorial_bbcart_language: Bahasa Inggeris sahaja
-  tutorial_tlcknight_language: Bahasa Inggeris sahaja
-  tutorial_fufafit_language: Bahasa Inggeris sahaja
-  tutorial_ozodance_language: Bahasa Inggeris sahaja
-  tutorial_codingrobotics_language: Bahasa Inggeris sahaja
-  tutorial_box_language: Pelbagai
-  tutorial_hopgame_language: Bahasa Inggeris sahaja
-  tutorial_icontrol_language: Bahasa Inggeris sahaja
-  tutorial_cocomteach_language: Bahasa Inggeris sahaja
-  tutorial_bbcmathii_language: Bahasa Inggeris sahaja
-  tutorial_bbcphys_language: Bahasa Inggeris sahaja
-  tutorial_bitsbox_language: Bahasa Inggeris sahaja
-  tutorial_tlcemo_language: Bahasa Inggeris sahaja
-  tutorial_crd_language: Bahasa Inggeris sahaja
-  tutorial_bbcbio_language: Bahasa Inggeris sahaja
-  tutorial_ticklebb8_language: Bahasa Cina (Tradisional), Bahasa Denmark, Bahasa Belanda,
-    Bahasa Inggeris, Bahasa Perancis
-  tutorial_grok_language: Bahasa Inggeris sahaja
-  tutorial_ijournalist_language: Bahasa Inggeris sahaja
-  tutorial_bbcmusic_language: Bahasa Inggeris sahaja
-  tutorial_secretcodes_language: Bahasa Inggeris sahaja
-  tutorial_tlchex_language: Bahasa Inggeris sahaja
-  tutorial_tickles_language: Pelbagai
-  tutorial_ozogame_language: Bahasa Inggeris sahaja
-  tutorial_vidcodeio_language: Bahasa Inggeris sahaja
-  tutorial_tlcbrain_language: Bahasa Inggeris sahaja
-  tutorial_hopquiz_language: Bahasa Inggeris sahaja
-  tutorial_unfortunate_language: Bahasa Inggeris sahaja
-  tutorial_cha_language: Bahasa Inggeris sahaja
-  tutorial_elaseq_language: Bahasa Inggeris sahaja
-  tutorial_bbcmathi_language: Bahasa Inggeris sahaja
-  tutorial_tlcpixel_language: Bahasa Inggeris sahaja
-  tutorial_introrobo_language: Bahasa Inggeris sahaja
-  tutorial_tlcinvis_language: Bahasa Inggeris sahaja
-  tutorial_tlcjflap_language: Bahasa Inggeris sahaja
-  tutorial_procolor_language: Bahasa Inggeris sahaja
-  tutorial_spiralsfinch_language: Bahasa Inggeris sahaja
-  tutorial_ozoi_language: Bahasa Inggeris sahaja
-  tutorial_ticklel_language: Pelbagai
-  tutorial_spiralsdash_language: Bahasa Inggeris sahaja
-  tutorial_ghdebug_language: Bahasa Inggeris sahaja
-  tutorial_tlckk_language: Bahasa Inggeris sahaja
-  tutorial_firstcomp_language: Bahasa Inggeris sahaja
-  tutorial_mazefinch_language: Bahasa Inggeris sahaja
-  tutorial_tlccc_language: Bahasa Inggeris sahaja
-  tutorial_tlcdoodle_language: Bahasa Inggeris sahaja
-  tutorial_tlcpunch_language: Bahasa Inggeris sahaja
-  tutorial_finchfract_language: Bahasa Inggeris sahaja
-  tutorial_tlcmind_language: Bahasa Inggeris sahaja
-  tutorial_tlctelebot_language: Bahasa Inggeris sahaja
-  tutorial_tlcaus_language: Bahasa Inggeris sahaja
-  tutorial_tlcmicro_language: Bahasa Inggeris sahaja
-  tutorial_imathematician_language: Bahasa Inggeris sahaja
-  tutorial_tlcmagic_language: Bahasa Inggeris sahaja
-  tutorial_scratchmus_language: Bahasa Inggeris, Bahasa Catalan, Bahasa Jerman, Bahasa
-    Itali, Bahasa Norway, Bahasa Portugis, Bahasa Sepanyol
-  tutorial_scratchanim_language: Bahasa Inggeris, Bahasa Perancis, Bahasa Jerman,
-    Bahasa Itali, Bahasa Norway, Bahasa Portugis, Bahasa Sepanyol
-  tutorial_scratchfly_language: Bahasa Inggeris, Bahasa Catalan, Bahasa Itali, Bahasa
-    Norway, Bahasa Portugis
-  tutorial_tynkerarc_language: Bahasa Inggeris sahaja
-  tutorial_grokffpython_language: Bahasa Inggeris sahaja
-  tutorial_grokffblock_language: Bahasa Inggeris sahaja
-  tutorial_grokeliza_language: Bahasa Inggeris sahaja
-  tutorial_tynkercan_language: Bahasa Inggeris sahaja
-  tutorial_grokflags_language: Bahasa Inggeris sahaja
-  tutorial_robomind_language: Bahasa Inggeris, Bahasa Belanda
-  tutorial_adventureq_language: Bahasa Cina (Ringkas), Bahasa Inggeris
-  tutorial_khan-es_language: Bahasa Sepanyol
-  tutorial_kpt_language: Bahasa Portugis
-  tutorial_kpl_language: Bahasa Poland
-  tutorial_khe_language: Bahasa Ibrani
-  tutorial_kfr_language: Bahasa Perancis
-  tutorial_app-inventor_language: Bahasa Inggeris sahaja
-  tutorial_blockly_language: Bahasa Inggeris, Bahasa Sepanyol, Bahasa Perancis, 40
-    bahasa yang lain
-  tutorial_tynker_language: Bahasa Inggeris sahaja
-  tutorial_baypt_language: Bahasa Portugis
-  tutorial_code-combat_language: Pelbagai
-  tutorial_mky_language: Pelbagai
-  tutorial_pirates_language: Bahasa Inggeris, Bahasa Denmark, Bahasa Jerman
-  tutorial_csfirst_language: Bahasa Inggeris sahaja
-  tutorial_loopedy_language: Bahasa Inggeris sahaja
-  tutorial_dsw_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_dswb_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_ssw_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_sswb_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_kodable-unplugged_language: Bahasa Inggeris sahaja
-  tutorial_scratch_language: Bahasa Inggeris sahaja
-  tutorial_bayes_language: Bahasa Sepanyol
-  tutorial_gumball_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_hrm_language: Pelbagai
-  tutorial_ice-age_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_koapp_language: Pelbagai
-  tutorial_lightbot-intl_language: Bahasa Perancis, Bahasa Rusia, Bahasa Portugis
-    (Brazil)
-  tutorial_rmc_language: Bahasa Rusia
-  tutorial_smc_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_minecraft-2016_language: Pelbagai
-  tutorial_thinkersmith-es_language: Bahasa Sepanyol
-  tutorial_pixie_language: Bahasa Sepanyol
-  tutorial_play_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_robomind-nl_language: Bahasa Belanda
-  tutorial_spheroi_language: Bahasa Inggeris sahaja
-  tutorial_spherol_language: Bahasa Inggeris sahaja
-  tutorial_spherov_language: Bahasa Inggeris sahaja
-  tutorial_swb_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria, Bahasa
-    Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa Itali, Bahasa
-    Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland, Bahasa Portugis,
-    Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden, Bahasa Turki, Bahasa
-    Ukraine dan 19 Bahasa lagi  "
-  tutorial_build-a-galaxy_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Bulgaria,
-    Bahasa Cina, Bahasa Croatia, Bahasa Denmark, Bahasa Belanda, Bahasa Finland, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Greek, Bahasa Iceland, Bahasa Indonesia, Bahasa
-    Itali, Bahasa Jepun, Bahasa Korea, Bahasa Norway, Bahasa Parsi, Bahasa Poland,
-    Bahasa Portugis, Bahasa Romania, Bahasa Rusia, Bahasa Sepanyol, Bahasa Sweden,
-    Bahasa Turki, Bahasa Ukraine dan 19 Bahasa lagi  "
-  tutorial_alicesims_language: Bahasa Inggeris sahaja
-  tutorial_tchr_language: Bahasa Inggeris sahaja
-  tutorial_robogame_language: Bahasa Inggeris sahaja
-  tutorial_tap_language: Bahasa Inggeris sahaja
-  tutorial_cintl_language: Bahasa Azerbaijan, Bahasa Serbia
-  tutorial_itchstop_language: Bahasa Inggeris sahaja
-  tutorial_tynkerpn_language: Bahasa Inggeris sahaja
-  tutorial_tynkerpd_language: Bahasa Inggeris sahaja
-  tutorial_persistence_language: Bahasa Inggeris sahaja
-  tutorial_getloopy_language: Bahasa Inggeris sahaja
-  tutorial_createface_language: Bahasa Inggeris sahaja
-  tutorial_happymaps_language: Bahasa Inggeris sahaja
-  tutorial_moveit_language: Bahasa Inggeris sahaja
-  tutorial_bigevent_language: Bahasa Inggeris sahaja
-  tutorial_gpp_language: Bahasa Inggeris sahaja
-  tutorial_foosgame_language: "  Bahasa Inggeris, Bahasa Arab, Bahasa Jerman, Bahasa
-    Sepanyol, Bahasa Perancis Bahasa Jepun, Bahasa Korea, Bahasa Belanda, Bahasa Portugis,
-    Bahasa Romania, Bahasa Turki, Bahasa Cina Tradisional, Bahasa Cina Diringkaskan,
-    Bahasa Greek, Bahasa Itali, Bahasa Poland  "
-  tutorial_solopython_language: Bahasa Inggeris sahaja
-  tutorial_kodableint_language: Bahasa Inggeris sahaja
-  tutorial_kodableadv_language: Bahasa Inggeris sahaja
-  tutorial_tynkertj_language: Bahasa Inggeris sahaja
-  tutorial_wolframa_language: Bahasa Inggeris sahaja
-  tutorial_wolframm_language: Bahasa Inggeris sahaja
-  tutorial_wolframspi_language: Bahasa Inggeris sahaja
-  tutorial_wolframsph_language: Bahasa Inggeris sahaja
-  tutorial_wolframp_language: Bahasa Inggeris sahaja
-  tutorial_wolframn_language: Bahasa Inggeris sahaja
-  tutorial_soloweb_language: Bahasa Inggeris sahaja
-  tutorial_khanweb_language: Bahasa Czech, Bahasa Inggeris, Bahasa Portugis (Brazil),
-    Bahasa Sepanyol
-  tutorial_khandata_language: Bahasa Czech, Bahasa Inggeris, Bahasa Portugis (Brazil),
-    Bahasa Sepanyol
-  tutorial_googlelogo_language: Bahasa Inggeris sahaja
-  tutorial_playtune_language: Bahasa Inggeris sahaja
-  tutorial_computeit_language: Bahasa Inggeris, Bahasa Perancis, Bahasa Jerman, Bahasa
-    Indonesia, Bahasa Itali, Bahasa Portugis, Bahasa Romania, Bahasa Sepanyol
-  tutorial_codesterssj_language: Bahasa Inggeris, Bahasa Cina (Tradisional), Bahasa
-    Sepanyol
-  tutorial_cmchat_language: Bahasa Inggeris sahaja
-  tutorial_tynkerdb_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Jepun, Bahasa Sepanyol
-  tutorial_cmbuild_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Ibrani,
-    Bahasa Jepun
-  tutorial_robotrattle_language: Bahasa Inggeris sahaja
-  tutorial_codestersh_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codehsdigipixel_language: Bahasa Inggeris sahaja
-  tutorial_ccbinary_language: Bahasa Inggeris sahaja
-  tutorial_codehsturtle_language: Bahasa Inggeris sahaja
-  tutorial_grokhd_language: Bahasa Inggeris sahaja
-  tutorial_grokem_language: Bahasa Inggeris sahaja
-  tutorial_kodmaze_language: Bahasa Inggeris sahaja
-  tutorial_codestersa_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_cmdodo_language: Bahasa Inggeris, Bahasa Ibrani
-  tutorial_tynkerspace_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Jepun, Bahasa Sepanyol
-  tutorial_gfbloons_language: Bahasa Inggeris sahaja
-  tutorial_raspipong_language: Bahasa Inggeris sahaja
-  tutorial_codehsvr_language: Bahasa Inggeris sahaja
-  tutorial_codesterstp_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codestersbb_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_gfcrossyroad_language: Bahasa Inggeris sahaja
-  tutorial_googleww_language: Bahasa Inggeris sahaja
-  tutorial_codehsjsapp_language: Bahasa Inggeris sahaja
-  tutorial_gfmihi_language: Bahasa Inggeris sahaja
-  tutorial_hopdropphone_language: Bahasa Inggeris sahaja
-  tutorial_techfaa_language: Bahasa Inggeris sahaja
-  tutorial_codehsjsgraph_language: Bahasa Inggeris sahaja
-  tutorial_thunkable_language: Pelbagai
-  tutorial_hopcrossyroad_language: Bahasa Inggeris sahaja
-  tutorial_switchglitch_language: Bahasa Inggeris sahaja
-  tutorial_codecar_language: Bahasa Inggeris sahaja
-  tutorial_codesterscp_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_grokpetblock_language: Bahasa Inggeris sahaja
-  tutorial_techbim_language: Bahasa Inggeris sahaja
-  tutorial_techfpp_language: Bahasa Inggeris sahaja
-  tutorial_codesterscr_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_grokdisease_language: Bahasa Inggeris sahaja
-  tutorial_techec_language: Bahasa Inggeris sahaja
-  tutorial_rgbegin_language: Bahasa Inggeris sahaja
-  tutorial_myradream_language: Bahasa Inggeris sahaja
-  tutorial_thinkfun_language: Bahasa Inggeris sahaja
-  tutorial_hopfireworks_language: Bahasa Inggeris sahaja
-  tutorial_grokspace_language: Bahasa Inggeris sahaja
-  tutorial_codehspython_language: Bahasa Inggeris sahaja
-  tutorial_codehsjava_language: Bahasa Inggeris sahaja
-  tutorial_techioda_language: Bahasa Inggeris sahaja
-  tutorial_grokmonster_language: Bahasa Inggeris sahaja
-  tutorial_techmjs_language: Bahasa Inggeris sahaja
-  tutorial_techga_language: Bahasa Inggeris sahaja
-  tutorial_techioan_language: Bahasa Inggeris sahaja
-  tutorial_techiogsr_language: Bahasa Inggeris sahaja
-  tutorial_groktunnel_language: Bahasa Inggeris sahaja
-  tutorial_stemcod_language: Bahasa Inggeris sahaja
-  tutorial_techikb_language: Bahasa Inggeris sahaja
-  tutorial_kanostreet_language: Bahasa Inggeris sahaja
-  tutorial_codemojijs_language: Bahasa Inggeris sahaja
-  tutorial_techapf_language: Bahasa Inggeris sahaja
-  tutorial_techfpjs_language: Bahasa Inggeris sahaja
-  tutorial_techlinq_language: Bahasa Inggeris sahaja
-  tutorial_gpbcatapult_language: Bahasa Inggeris sahaja
-  tutorial_quorumastro_language: Bahasa Inggeris sahaja
-  tutorial_alicewonder_language: Bahasa Inggeris sahaja
-  tutorial_rginter_language: Bahasa Inggeris sahaja
-  tutorial_cssgrid_language: Pelbagai
-  tutorial_jshero_language: Bahasa Inggeris, Bahasa Jerman
-  tutorial_codemojipy_language: Bahasa Inggeris sahaja
-  tutorial_nclabdrone_language: Bahasa Inggeris sahaja
-  tutorial_gpbcircle_language: Bahasa Inggeris sahaja
-  tutorial_gpbpaint_language: Bahasa Inggeris sahaja
-  tutorial_cocomarcade_language: Pelbagai
-  tutorial_beetik_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codedj_language: Bahasa Inggeris, Bahasa Perancis
-  tutorial_rgadvan_language: Bahasa Inggeris sahaja
-  tutorial_codehsrn_language: Bahasa Inggeris sahaja
-  tutorial_codehswd_language: Bahasa Inggeris sahaja
-  tutorial_turtlerobot_language: Bahasa Inggeris sahaja
-  tutorial_ozoevo_language: Bahasa Inggeris sahaja
-  tutorial_ozoexped_language: Bahasa Inggeris sahaja
-  tutorial_ozojourney_language: Bahasa Inggeris sahaja
-  tutorial_ozocodes_language: Bahasa Inggeris sahaja
-  tutorial_ozoeclipse_language: Bahasa Inggeris sahaja
-  tutorial_ozosimulator_language: Bahasa Inggeris sahaja
-  tutorial_ozoalgorithm_language: Bahasa Inggeris sahaja
-  tutorial_ozotimer_language: Bahasa Inggeris sahaja
-  tutorial_ozohabits_language: Bahasa Inggeris sahaja
-  tutorial_ozoprogram_language: Bahasa Inggeris sahaja
-  tutorial_ozopair_language: Bahasa Inggeris sahaja
-  tutorial_codesnoopy_language: Bahasa Inggeris, Bahasa Cina, Bahasa Belanda, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Itali, Bahasa Korea, Bahasa Melayu, Bahasa Portugis,
-    Bahasa Sepanyol, Bahasa Sweden, Bahasa Thai
-  tutorial_applabintro_language: Bahasa Inggeris sahaja
-  tutorial_cslartist_language: Bahasa Inggeris sahaja
-  tutorial_cslscratchjr_language: Bahasa Inggeris sahaja
-  tutorial_floevents_language: Bahasa Inggeris sahaja
-  tutorial_florobot_language: Bahasa Inggeris sahaja
-  tutorial_isavesanta_language: Bahasa Inggeris sahaja
-  tutorial_iorder_language: Bahasa Inggeris sahaja
-  tutorial_ianimate_language: Bahasa Inggeris sahaja
-  tutorial_iloveada_language: Bahasa Inggeris sahaja
-  tutorial_kodflash_language: Bahasa Inggeris sahaja
-  tutorial_kodchoose_language: Bahasa Inggeris sahaja
-  tutorial_kodpizzapre_language: Bahasa Inggeris sahaja
-  tutorial_kodpizza_language: Bahasa Inggeris sahaja
-  tutorial_kodwomen_language: Bahasa Inggeris sahaja
-  tutorial_tfunplug_language: Bahasa Inggeris sahaja
-  tutorial_lbvariables_language: Bahasa Inggeris sahaja
-  tutorial_lbfunctions_language: Bahasa Inggeris sahaja
-  tutorial_lblogic_language: Bahasa Inggeris sahaja
-  tutorial_lbworld_language: Bahasa Inggeris sahaja
-  tutorial_lbloops_language: Bahasa Inggeris sahaja
-  tutorial_lbtug_language: Bahasa Inggeris sahaja
-  tutorial_lbpotato_language: Bahasa Inggeris sahaja
-  tutorial_lbguitar_language: Bahasa Inggeris sahaja
-  tutorial_lbio_language: Bahasa Inggeris sahaja
-  tutorial_wonpuppy_language: Bahasa Inggeris sahaja
-  tutorial_woncue_language: Bahasa Inggeris sahaja
-  tutorial_wonzoo_language: Bahasa Inggeris sahaja
-  tutorial_wontrip_language: Bahasa Inggeris sahaja
-  tutorial_woncollect_language: Bahasa Inggeris sahaja
-  tutorial_wonsecret_language: Bahasa Inggeris sahaja
-  tutorial_hsscience_language: Bahasa Inggeris sahaja
-  tutorial_popculture_language: Bahasa Inggeris sahaja
-  tutorial_legorobust_language: Bahasa Inggeris sahaja
-  tutorial_legoplants_language: Bahasa Inggeris sahaja
-  tutorial_legopark_language: Bahasa Inggeris sahaja
-  tutorial_legodetect_language: Bahasa Inggeris sahaja
-  tutorial_legolight_language: Bahasa Inggeris sahaja
-  tutorial_alexa_language: Bahasa Inggeris sahaja
-  tutorial_grokpetmicro_language: Bahasa Inggeris sahaja
-  tutorial_pirateplunder_language: Bahasa Inggeris sahaja
-  tutorial_cadj_language: Bahasa Inggeris sahaja
-  tutorial_cacrazy_language: Bahasa Inggeris sahaja
-  tutorial_cajump_language: Bahasa Inggeris sahaja
-  tutorial_carest_language: Bahasa Inggeris sahaja
-  tutorial_accai_language: Bahasa Inggeris, Bahasa Perancis, Bahasa Itali dan Bahasa
-    Belanda
-  tutorial_vceclipse_language: Bahasa Inggeris sahaja
-  tutorial_pmzero_language: Bahasa Inggeris sahaja
-  tutorial_hsela_language: Bahasa Inggeris sahaja
-  tutorial_ticklear_language: Bahasa Inggeris sahaja
-  tutorial_bcrobot_language: Bahasa Cina, Bahasa Inggeris, Bahasa Perancis, Bahasa
-    Jerman, Bahasa Norway, Bahasa Slovenia, Bahasa Sepanyol
-  tutorial_bcsnow_language: Bahasa Cina, Bahasa Inggeris, Bahasa Perancis, Bahasa
-    Jerman, Bahasa Norway, Bahasa Slovenia, Bahasa Sepanyol
-  tutorial_ifly_language: Bahasa Inggeris sahaja
-  tutorial_idowedo_language: Bahasa Inggeris sahaja
-  tutorial_diggindwarf_language: Bahasa Inggeris sahaja
-  tutorial_spheroit_language: Bahasa Inggeris sahaja
-  tutorial_gameofcodes_language: Bahasa Inggeris, Bahasa Portugis, Bahasa Rusia dan
-    Bahasa Sepanyol
-  tutorial_blocklygames_language: Bahasa Inggeris, Bahasa Sepanyol, Bahasa Perancis,
-    40 bahasa yang lain
-  tutorial_spherohello_language: Bahasa Inggeris sahaja
-  tutorial_spheroarcade_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Jepun, Bahasa Sepanyol
-  tutorial_bcpy1_language: Bahasa Inggeris sahaja
-  tutorial_bcpy2_language: Bahasa Inggeris sahaja
-  tutorial_bcjs1_language: Bahasa Inggeris sahaja
-  tutorial_bcjs2_language: Bahasa Inggeris sahaja
-  tutorial_3dbearmars_language: Bahasa Inggeris
-  tutorial_bitsboxyak_language: Bahasa Inggeris
-  tutorial_blockscadbargraphs_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Jepun, Bahasa Norway (Bokmål), Bahasa Serbia (Cyrillic),
-    Bahasa Sepanyol, Bahasa Sweden
-  tutorial_blockscadbirdhouses_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Norway (Bokmål), Bahasa Slovenia, Bahasa Sepanyol,
-    Bahasa Sweden
-  tutorial_blockscadclock_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Norway (Bokmål), Bahasa Slovenia, Bahasa Sepanyol,
-    Bahasa Sweden
-  tutorial_blockscaddinner_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Norway (Bokmål), Bahasa Slovenia, Bahasa Sepanyol,
-    Bahasa Sweden
-  tutorial_blockscadicecream_language: Bahasa Cina (Ringkas), Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Norway (Bokmål), Bahasa Slovenia, Bahasa Sepanyol,
-    Bahasa Sweden
-  tutorial_blockscadpizza_language: Bahasa Cina, Bahasa Inggeris, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Jepun, Bahasa Norway, Bahasa Slovenia, Bahasa Sepanyol,
-    Bahasa Sweden
-  tutorial_blockscadsugar_language: Bahasa Cina, Bahasa Belanda, Bahasa Inggeris,
-    Bahasa Perancis, Bahasa Jepun, Bahasa Norway, Bahasa Slovenia, Bahasa Sepanyol,
-    Bahasa Sweden
-  tutorial_bsgridlight_language: Bahasa Inggeris
-  tutorial_bpartscratch_language: Bahasa Inggeris
-  tutorial_bpartvid_language: Bahasa Inggeris
-  tutorial_bpenglishscratch_language: Bahasa Inggeris
-  tutorial_bpenglishvid_language: Bahasa Inggeris
-  tutorial_bphealthscratch_language: Bahasa Inggeris
-  tutorial_bphealthvid_language: Bahasa Inggeris
-  tutorial_bpmathscratch_language: Bahasa Inggeris
-  tutorial_bpmathvid_language: Bahasa Inggeris
-  tutorial_bpmlkscratch_language: Bahasa Inggeris
-  tutorial_bpmlkvid_language: Bahasa Inggeris
-  tutorial_bpsafetyscratch_language: Bahasa Inggeris
-  tutorial_bpsafetyvid_language: Bahasa Inggeris
-  tutorial_bpsciencescratch_language: Bahasa Inggeris
-  tutorial_bpsciencevid_language: Bahasa Inggeris
-  tutorial_bptechscratch_language: Bahasa Inggeris
-  tutorial_bptechvid_language: Bahasa Inggeris
-  tutorial_caflags_language: Bahasa Inggeris
-  tutorial_matariki_language: Bahasa Inggeris
-  tutorial_carestaurant_language: Bahasa Inggeris
-  tutorial_casea_language: Bahasa Inggeris
-  tutorial_cashield_language: Bahasa Inggeris
-  tutorial_ccwslimer_language: Bahasa Inggeris
-  tutorial_codinggalaxy_language: Bahasa Cina, Bahasa Inggeris
-  tutorial_boatrace_language: "  Bahasa Arab, Bahasa Cina (Diringkaskan), Bahasa Czech,
-    Bahasa Denmark, Bahasa Belanda, Bahasa Perancis, Bahasa Jerman, Bahasa Greek,
-    Bahasa Ibrani, Bahasa Hindi, Bahasa Itali, Bahasa Jepun, Bahasa Korea, Bahasa
-    Lain, Bahasa Poland, Bahasa Romania, Bahasa Serbia (huruf Cyril), Bahasa Sepanyol,
-    Bahasa Ukraine  "
-  tutorial_ccplay_language: Bahasa Inggeris
-  tutorial_grinch_language: Bahasa Inggeris
-  tutorial_codehsart_language: Bahasa Inggeris
-  tutorial_codehsbitcoin_language: Bahasa Inggeris
-  tutorial_codehsblockchain_language: Bahasa Inggeris
-  tutorial_codehscipher_language: Bahasa Inggeris
-  tutorial_codehscollision_language: Bahasa Inggeris
-  tutorial_codehsmath_language: Bahasa Inggeris
-  tutorial_codehsmusic_language: Bahasa Inggeris
-  tutorial_codehssports_language: Bahasa Inggeris
-  tutorial_codemojipizza_language: Bahasa Inggeris
-  tutorial_moonlander_language: Bahasa Inggeris
-  tutorial_sushicards_language: Bahasa Inggeris
-  tutorial_codesparkcreate_language: Melayu
-  tutorial_hardvsoft_language: Bahasa Inggeris
-  tutorial_codestersecard_language: Bahasa Cina, Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codesterslogo_language: Bahasa Cina, Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codesterstshirt_language: Bahasa Cina, Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codewards_language: Bahasa Inggeris, Bahasa Perancis, Bahasa Rusia, Bahasa
-    Sepanyol, Bahasa Turki
-  tutorial_olympics_language: Bahasa Inggeris, Bahasa Perancis, Bahasa Rusia, Bahasa
-    Sepanyol
-  tutorial_codinismhero_language: Bahasa Inggeris
-  tutorial_discovery_language: Bahasa Inggeris, Bahasa Sepanyol (Mexico)
-  tutorial_csfirstname_language: Bahasa Inggeris, Bahasa Sepanyol (Mexico)
-  tutorial_edisonmove_language: Bahasa Inggeris
-  tutorial_edisonspider_language: Bahasa Inggeris
-  tutorial_edisonspotlight_language: Bahasa Inggeris
-  tutorial_firiapython_language: Bahasa Inggeris
-  tutorial_gamefrootsquid_language: Bahasa Inggeris
-  tutorial_duckpiano_language: Bahasa Inggeris
-  tutorial_gpsound_language: Bahasa Inggeris
-  tutorial_groklearningpython_language: Bahasa Inggeris
-  tutorial_htmltimetravel_language: Bahasa Inggeris
-  tutorial_hp_flappy_language: Bahasa Inggeris
-  tutorial_appytappin_language: Bahasa Inggeris
-  tutorial_icipher_language: Bahasa Inggeris
-  tutorial_iguess_language: Bahasa Inggeris
-  tutorial_imake_language: Bahasa Inggeris
-  tutorial_imorse_language: Bahasa Inggeris
-  tutorial_kanohp_language: Bahasa Inggeris
-  tutorial_khanwebpages_language: Bahasa Inggeris, Bahasa Itali, Bahasa Poland, Bahasa
-    Portugis, Bahasa Serbia, Bahasa Sepanyol
-  tutorial_kibobowl_language: Bahasa Inggeris
-  tutorial_kibodance_language: Bahasa Inggeris
-  tutorial_buildcharacters_language: Bahasa Inggeris
-  tutorial_designgames_language: Bahasa Inggeris
-  tutorial_makelevels_language: Bahasa Inggeris
-  tutorial_wizard_language: Bahasa Inggeris
-  tutorial_mbscratchcards_language: Bahasa Inggeris
-  tutorial_mbswiftplaygrounds_language: Bahasa Inggeris
-  tutorial_mbbuttons_language: Bahasa Inggeris
-  tutorial_meteor_language: Bahasa Inggeris
-  tutorial_ballbounce_language: Bahasa Inggeris
-  tutorial_mitcodi_language: Bahasa Inggeris
-  tutorial_mitdoodle_language: Bahasa Inggeris
-  tutorial_talktome_language: Bahasa Inggeris
-  tutorial_mobilecspmap_language: Bahasa Inggeris
-  tutorial_ozorandom_language: Bahasa Inggeris
-  tutorial_ozotroll_language: Bahasa Inggeris
-  tutorial_peblioart_language: Bahasa Inggeris
-  tutorial_astropi_language: "  Bahasa Arab, Bahasa Denmark, Bahasa Belanda, Bahasa
-    Inggeris, Bahasa Finland, Bahasa Perancis, Bahasa Jerman, Bahasa Greek, Bahasa
-    Hungary, Bahasa Itali, Bahasa Norway (Bahasa Norse Baharu), Bahasa Lain, Bahasa
-    Poland, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_rgart_language: Bahasa Inggeris
-  tutorial_rgengineer_language: Bahasa Inggeris
-  tutorial_rgmath_language: Bahasa Inggeris
-  tutorial_rgscience_language: Bahasa Inggeris
-  tutorial_rgtech_language: Bahasa Inggeris
-  tutorial_robotmagic3d_language: Bahasa Inggeris
-  tutorial_robotmagicflappy_language: Bahasa Inggeris
-  tutorial_scratchadventure_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_scratchtalk_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_scratchjrstory_language: Bahasa Inggeris
-  tutorial_scratchjrtwinkle_language: Bahasa Inggeris
-  tutorial_spherocomm_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
-    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_spherocommunity_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris,
-    Bahasa Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa
-    Korea, Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_spherofunctions_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris,
-    Bahasa Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa
-    Korea, Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_spheroinfrared_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris,
-    Bahasa Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa
-    Korea, Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_spherolightsensor_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris,
-    Bahasa Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa
-    Korea, Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_spheromansion_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
-    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_roadblocks_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
-    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_spherotext2_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
-    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_spherotext3_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
-    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_spherotext4_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
-    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_spheroraptor_language: "  Bahasa Arab, Bahasa Cina, Bahasa Inggeris, Bahasa
-    Perancis, Bahasa Jerman, Bahasa Ibrani, Bahasa Itali, Bahasa Jepun, Bahasa Korea,
-    Bahasa Norway, Bahasa Sepanyol, Bahasa Sweden  "
-  tutorial_stempiday_language: Bahasa Inggeris
-  tutorial_stemplanetoids_language: Bahasa Inggeris
-  tutorial_stempong_language: Bahasa Inggeris
-  tutorial_algobot_language: Bahasa Inggeris
-  tutorial_thunkableapps_language: Bahasa Inggeris
-  tutorial_toxicodedot_language: Bahasa Inggeris, Bahasa Perancis, Bahasa Jerman,
-    Bahasa Indonesia, Bahasa Itali, Bahasa Portugis, Bahasa Romania, Bahasa Sepanyol,
-    Bahasa Turki
-  tutorial_gcactions_language: Bahasa Inggeris
-  tutorial_gccomparators_language: Bahasa Inggeris
-  tutorial_gcconditions_language: Bahasa Inggeris
-  tutorial_gccreate_language: Bahasa Inggeris, Bahasa Perancis
-  tutorial_gcevents_language: Bahasa Inggeris
-  tutorial_gcloops_language: Bahasa Inggeris
-  tutorial_gcvariables_language: Bahasa Inggeris
-  tutorial_beanything_language: Bahasa Inggeris
-  tutorial_change_language: Bahasa Inggeris
-  tutorial_cooking_language: Bahasa Inggeris
-  tutorial_crystal_language: Bahasa Inggeris
-  tutorial_landscape_language: Bahasa Inggeris
-  tutorial_pets_language: Bahasa Inggeris
-  tutorial_petvet_language: Bahasa Inggeris
-  tutorial_superhero_language: Bahasa Inggeris
-  tutorial_vidcodeplastic_language: Bahasa Inggeris
-  tutorial_vidcodetypeface_language: Bahasa Inggeris
-  tutorial_washustorm_language: Bahasa Inggeris
-  tutorial_activitypackets_language: Bahasa Inggeris
-  tutorial_googlerookie_language: Bahasa Inggeris
-  tutorial_tommyturtle_language: Bahasa Inggeris
-  tutorial_mazyad_language: "  Bahasa Arab, Bahasa Inggeris  "
-  tutorial_gamemaker_language: Bahasa Inggeris
-  tutorial_duckrace_language: Bahasa Inggeris, Bahasa Jerman
-  tutorial_allcancodeapps_language: Bahasa Inggeris
-  tutorial_n2y_language: Bahasa Inggeris
-  tutorial_microsoftarcade_language: Bahasa Inggeris
-  tutorial_csfirstunplugged_language: Bahasa Inggeris, Bahasa Sepanyol (Mexico)
-  tutorial_toxicodepython_language: Bahasa Denmark, Bahasa Belanda, Bahasa Inggeris,
-    Bahasa Inggeris (UK), Bahasa Estonia, Bahasa Perancis, Bahasa Jerman, Bahasa Indonesia,
-    Bahasa Itali, Bahasa Lain-lain, Bahasa Poland, Bahasa Portugis (Brazil), Bahasa
-    Portugis (Portugal), Bahasa Romania, Bahasa Sepanyol (Sepanyol), Bahasa Sepanyol
-    (Mexico), Bahasa Sweden, Bahasa Turki
-  tutorial_codecombatozaria_language: Bahasa Inggeris, Bahasa Inggeris (UK), Bahasa
-    Cina (Ringkas), Bahasa Sepanyol (Sepanyol), Bahasa Sepanyol (Mexico)
-  tutorial_vidcodedate_language: Bahasa Inggeris
-  tutorial_codemonkeyspace_language: Bahasa Inggeris, Bahasa Inggeris (UK), Bahasa
-    Ibrani
-  tutorial_codespeakhappy_language: Bahasa Inggeris
-  tutorial_grokimage_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_icomputelearn_language: Bahasa Inggeris
-  tutorial_rpstress_language: Bahasa Arab, Bahasa Belanda, Bahasa Inggeris, Bahasa
-    Inggeris (UK), Bahasa Perancis, Bahasa Sepanyol (Mexico)
-  tutorial_bsdcause_language: Bahasa Inggeris
-  tutorial_vidcodeanimoji_language: Bahasa Inggeris, Bahasa Sepanyol (Sepanyol), Bahasa
-    Sepanyol (Mexico)
-  tutorial_vidcodeanimojies_language: Bahasa Inggeris, Bahasa Sepanyol (Sepanyol),
-    Bahasa Sepanyol (Mexico)
-  tutorial_bsdinspire_language: Bahasa Inggeris
-  tutorial_tttractor_language: Bahasa Inggeris
-  tutorial_codeillusionmickey_language: Bahasa Inggeris
-  tutorial_scigirlsquest_language: Bahasa Inggeris
-  tutorial_codespeakbreathe_language: Bahasa Inggeris
-  tutorial_vidcodeface_language: Bahasa Inggeris
-  tutorial_educodemaze_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_educoderace_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_codespeakchatbot_language: Bahasa Inggeris
-  tutorial_gamefrootgames_language: Bahasa Inggeris
-  tutorial_codespeakgrandparent_language: Bahasa Inggeris
-  tutorial_educodekingdom_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_codehsdata_language: Bahasa Inggeris
-  tutorial_educodecake_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_ttsecond_language: Bahasa Inggeris
-  tutorial_bsdtrivia_language: Bahasa Inggeris
-  tutorial_csfirstdialogue_language: Bahasa Inggeris, Bahasa Sepanyol (Mexico)
-  tutorial_codemonkeybeaver_language: Bahasa Arab, Bahasa Cina (Ringkas), Bahasa Inggeris,
-    Bahasa Ibrani, Bahasa Jepun, Bahasa Sepanyol (Sepanyol), Bahasa Sepanyol (Mexico)
-  tutorial_codestersdistance_language: Bahasa Inggeris
-  tutorial_itchspace_language: Bahasa Inggeris
-  tutorial_vidcodemagic_language: Bahasa Inggeris, Bahasa Sepanyol (Sepanyol), Bahasa
-    Sepanyol (Mexico)
-  tutorial_vidcodemagices_language: Bahasa Inggeris, Bahasa Sepanyol (Sepanyol), Bahasa
-    Sepanyol (Mexico)
-  tutorial_codespeakmeal_language: Bahasa Inggeris
-  tutorial_itchfish_language: Bahasa Inggeris
-  tutorial_bsdwebsite_language: Bahasa Inggeris
-  tutorial_codespeaktime_language: Bahasa Inggeris
-  tutorial_itchwebcam_language: Bahasa Inggeris
-  tutorial_itchball_language: Bahasa Inggeris
-  tutorial_ttrace_language: Bahasa Inggeris
-  tutorial_plethora_language: Bahasa Arab, Bahasa Cina (Ringkas), Bahasa Inggeris,
-    Bahasa Perancis, Bahasa Ibrani, Bahasa Portugis (Brazil), Bahasa Sepanyol
-  tutorial_educodesecret_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_itchshapes_language: Bahasa Inggeris
-  tutorial_codeguppytext_language: Bahasa Inggeris
-  tutorial_vidcodeplastiche_language: Bahasa Inggeris, Bahasa Ibrani
-  tutorial_educativechatbot_language: Bahasa Inggeris
-  tutorial_educodebasics_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_codehsdesign_language: Bahasa Inggeris
-  tutorial_htmlacademyphp_language: Bahasa Inggeris
-  tutorial_gamefrootdistance_language: Bahasa Inggeris
-  tutorial_codesterscovid_language: Bahasa Inggeris
-  tutorial_ttbunker_language: Bahasa Inggeris
-  tutorial_cuttle_language: Bahasa Inggeris
-  tutorial_bsdjokes_language: Bahasa Inggeris
-  tutorial_rptree_language: Bahasa Arab, Bahasa Belanda, Bahasa Inggeris, Bahasa Inggeris
-    (UK), Bahasa Perancis, Bahasa Sepanyol (Mexico)
-  tutorial_codestersunity_language: Bahasa Inggeris
-  tutorial_codesterssoccer_language: Bahasa Inggeris
-  tutorial_breakoutlock_language: Bahasa Inggeris
-  tutorial_thunkablemask_language: Bahasa Inggeris
-  tutorial_cafarming_language: Bahasa Inggeris
-  tutorial_blocksmithyeti_language: Bahasa Inggeris
-  tutorial_codecapture_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_codehslitter_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_bsdocean_language: Bahasa Inggeris
-  tutorial_itchplatformer_language: Bahasa Inggeris
-  tutorial_codejika_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_gamefrootclicker_language: Bahasa Inggeris
-  tutorial_rmagicequity_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_ttfreestyle_language: Bahasa Inggeris
-  tutorial_ozobotcolor2_language: Bahasa Inggeris
-  tutorial_ozobotcolor3_language: Bahasa Inggeris
-  tutorial_clcarbon_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_kodablebasics_language: Bahasa Inggeris
-  tutorial_scigirlscc_language: Bahasa Inggeris, Bahasa Sepanyol (Mexico)
-  tutorial_irobotpicture_language: Bahasa Inggeris
-  tutorial_kcjmyself_language: Bahasa Inggeris, Bahasa Perancis
-  tutorial_nearpodalgorithms_language: Bahasa Inggeris
-  tutorial_kibodrop_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_ozobotcolor1_language: Bahasa Inggeris
-  tutorial_scigirlspixels_language: Bahasa Inggeris, Bahasa Sepanyol (Mexico)
-  tutorial_kcjheroines_language: Bahasa Inggeris, Bahasa Perancis
-  tutorial_ozobotvalue_language: Bahasa Inggeris
-  tutorial_icodebytes_language: Bahasa Inggeris
-  tutorial_clfashion2_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_ai4all_language: Bahasa Inggeris
-  tutorial_cldata_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_spheroinputs_language: Bahasa Inggeris
-  tutorial_edisoncount_language: Bahasa Inggeris
-  tutorial_spheroloops_language: Bahasa Inggeris
-  tutorial_kiboprogram_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_hellorubycsin60_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_clfashion1_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_irobottraffic_language: Bahasa Inggeris
-  tutorial_edisonmystery_language: Bahasa Inggeris
-  tutorial_microbitseaturtles_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_ozobotknow_language: Bahasa Inggeris
-  tutorial_imagilabs_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_irobotsimulator_language: Bahasa Inggeris
-  tutorial_irobotkind_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_firiavirtual_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_irobotguesscode_language: Bahasa Inggeris
-  tutorial_ozobotnouns_language: Bahasa Inggeris
-  tutorial_nasa3d_language: Bahasa Inggeris
-  tutorial_blupants_language: Bahasa Inggeris
-  tutorial_legodance_language: Bahasa Inggeris
-  tutorial_nearpodcoding_language: Bahasa Inggeris
-  tutorial_kcjplastic_language: Bahasa Inggeris, Bahasa Perancis
-  tutorial_legojourney_language: Bahasa Inggeris
-  tutorial_legohopper_language: Bahasa Inggeris
-  tutorial_catrobatembroidery_language: Bahasa Arab, Bahasa Bengali, Bahasa Bosnia,
-    Bahasa Cina (Ringkas), Bahasa Croatia, Bahasa Czech, Bahasa Inggeris, Bahasa Perancis,
-    Bahasa Jerman, Bahasa Hindi, Bahasa Indonesia, Bahasa Itali, Bahasa Jepun, Bahasa
-    Korea, Bahasa Norway (Nynorsk), Bahasa Poland, Bahasa Portugis dan banyak lagi!
-  tutorial_irobotphone_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_codeguppydraw_language: Bahasa Inggeris, Bahasa Inggeris (UK)
-  tutorial_codejumper_language: Bahasa Inggeris
-  tutorial_meeempathy_language: Bahasa Inggeris
   tutorial_dance2019_string_detail_grades: Gred 2+
   tutorial_danceparty_string_detail_grades: Gred 2+
   tutorial_chibitronics_string_detail_grades: Gred 2-5
   tutorial_athlete_string_detail_grades: Gred 2+
   tutorial_moana_string_detail_grades: Gred 2+
   tutorial_star-wars_string_detail_grades: Gred 2+
-  tutorial_gumadventure_string_detail_grades: 'Gred 6-8 '
+  tutorial_gumadventure_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_mchoc_string_detail_grades: Gred 2+
   tutorial_vidnews_string_detail_grades: Gred 6+
   tutorial_kodable-pre_string_detail_grades: Prapembaca - Gred 5
@@ -7150,7 +6286,7 @@ ms:
   tutorial_art_string_detail_grades: Gred 2+
   tutorial_tynkerbrick_string_detail_grades: Gred 2+
   tutorial_itchbio_string_detail_grades: Gred 6+
-  tutorial_itchj_string_detail_grades: 'Gred 6-8 '
+  tutorial_itchj_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_tickleo_string_detail_grades: Gred 2+
   tutorial_hopgeo_string_detail_grades: 'Gred 2-8 '
   tutorial_tynkermult_string_detail_grades: 'Gred 2-8 '
@@ -7177,7 +6313,7 @@ ms:
   tutorial_trinket_string_detail_grades: Gred 2+
   tutorial_frogger_string_detail_grades: Gred 6+
   tutorial_tynkereco_string_detail_grades: 'Gred 2-8 '
-  tutorial_mitedarc_string_detail_grades: 'Gred 6-8 '
+  tutorial_mitedarc_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_khan_string_detail_grades: Gred 6+
   tutorial_tynkerd_string_detail_grades: Gred 6+
   tutorial_cdmy_string_detail_grades: Gred 9+
@@ -7191,33 +6327,33 @@ ms:
   tutorial_capost_string_detail_grades: Gred 6+
   tutorial_marco_string_detail_grades: 'Gred 2-8 '
   tutorial_codestersflappybike_string_detail_grades: Gred 6+
-  tutorial_kanopong_string_detail_grades: 'Gred 6-8 '
+  tutorial_kanopong_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_tynkerright_string_detail_grades: 'Gred 2-8 '
   tutorial_touchdevelop_string_detail_grades: do-not-show
   tutorial_tynkercc_string_detail_grades: Gred 6+
   tutorial_bamboo_string_detail_grades: Gred 2-5
   tutorial_robojav_string_detail_grades: Gred 6+
   tutorial_roboba_string_detail_grades: Gred 6+
-  tutorial_knodsnake_string_detail_grades: 'Gred 6-8 '
+  tutorial_knodsnake_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_soccharater_string_detail_grades: Gred 6+
   tutorial_silent_string_detail_grades: Gred 6+
   tutorial_robomesh_string_detail_grades: Gred 2+
   tutorial_amaze_string_detail_grades: Gred 2+
   tutorial_codestersds_string_detail_grades: Gred 2+
-  tutorial_knodtext_string_detail_grades: 'Gred 6-8 '
+  tutorial_knodtext_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_alicegar_string_detail_grades: Gred 6+
   tutorial_codesterstransform_string_detail_grades: Gred 6+
   tutorial_flexfrog_string_detail_grades: Gred 6+
   tutorial_codemoji_string_detail_grades: do-not-show
   tutorial_robobii_string_detail_grades: Gred 6+
-  tutorial_robobm_string_detail_grades: 'Gred 6-8 '
+  tutorial_robobm_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_codingrobots_string_detail_grades: Gred 2+
   tutorial_robob_string_detail_grades: Gred 6+
   tutorial_coders_string_detail_grades: Gred 9+
   tutorial_tynkerhw_string_detail_grades: 'Gred 2-8 '
   tutorial_tynkermh_string_detail_grades: 'Gred 2-8 '
   tutorial_caphoto_string_detail_grades: Gred 6+
-  tutorial_mozillahw_string_detail_grades: 'Gred 6-8 '
+  tutorial_mozillahw_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Gred 2+
   tutorial_scratchg_string_detail_grades: Gred 6+
@@ -7254,21 +6390,21 @@ ms:
   tutorial_bbcphys_string_detail_grades: do-not-show
   tutorial_bitsbox_string_detail_grades: 'Gred 2-8 '
   tutorial_tlcemo_string_detail_grades: 'Gred 2-8 '
-  tutorial_crd_string_detail_grades: 'Gred 6-8 '
+  tutorial_crd_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_bbcbio_string_detail_grades: do-not-show
   tutorial_ticklebb8_string_detail_grades: Gred 2+
   tutorial_grok_string_detail_grades: do-not-show
   tutorial_ijournalist_string_detail_grades: 'Gred 2-8 '
   tutorial_bbcmusic_string_detail_grades: do-not-show
-  tutorial_secretcodes_string_detail_grades: 'Gred 6-8 '
+  tutorial_secretcodes_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_tlchex_string_detail_grades: Gred 6+
   tutorial_tickles_string_detail_grades: Gred 2+
   tutorial_ozogame_string_detail_grades: Semua peringkat umur
   tutorial_vidcodeio_string_detail_grades: Gred 2+
   tutorial_tlcbrain_string_detail_grades: Gred 6+
-  tutorial_hopquiz_string_detail_grades: 'Gred 6-8 '
+  tutorial_hopquiz_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_unfortunate_string_detail_grades: Gred 2-5
-  tutorial_cha_string_detail_grades: 'Gred 6-8 '
+  tutorial_cha_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_elaseq_string_detail_grades: Prapembaca - Gred 5
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: 'Gred 2-8 '
@@ -7393,8 +6529,8 @@ ms:
   tutorial_gfbloons_string_detail_grades: Gred 9+
   tutorial_raspipong_string_detail_grades: Gred 9+
   tutorial_codehsvr_string_detail_grades: Gred 6+
-  tutorial_codesterstp_string_detail_grades: 'Gred 6-8 '
-  tutorial_codestersbb_string_detail_grades: 'Gred 6-8 '
+  tutorial_codesterstp_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_codestersbb_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_gfcrossyroad_string_detail_grades: Gred 9+
   tutorial_googleww_string_detail_grades: Gred 9+
   tutorial_codehsjsapp_string_detail_grades: Gred 6+
@@ -7406,8 +6542,8 @@ ms:
   tutorial_hopcrossyroad_string_detail_grades: 'Gred 2-8 '
   tutorial_switchglitch_string_detail_grades: Gred 2-5
   tutorial_codecar_string_detail_grades: Gred 6+
-  tutorial_codesterscp_string_detail_grades: 'Gred 6-8 '
-  tutorial_grokpetblock_string_detail_grades: 'Gred 6-8 '
+  tutorial_codesterscp_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_grokpetblock_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_techbim_string_detail_grades: Universiti
   tutorial_techfpp_string_detail_grades: Universiti
   tutorial_codesterscr_string_detail_grades: 'Gred 2-8 '
@@ -7437,7 +6573,7 @@ ms:
   tutorial_gpbcatapult_string_detail_grades: Gred 6+
   tutorial_quorumastro_string_detail_grades: Gred 6+
   tutorial_alicewonder_string_detail_grades: Gred 2-5
-  tutorial_rginter_string_detail_grades: 'Gred 6-8 '
+  tutorial_rginter_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_cssgrid_string_detail_grades: Gred 6+
   tutorial_jshero_string_detail_grades: Gred 9+
   tutorial_codemojipy_string_detail_grades: Gred 2-5
@@ -7445,7 +6581,7 @@ ms:
   tutorial_gpbcircle_string_detail_grades: Gred 6+
   tutorial_gpbpaint_string_detail_grades: Gred 6+
   tutorial_cocomarcade_string_detail_grades: Gred 6+
-  tutorial_beetik_string_detail_grades: 'Gred 6-8 '
+  tutorial_beetik_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_codedj_string_detail_grades: Gred 6+
   tutorial_rgadvan_string_detail_grades: Gred 6+
   tutorial_codehsrn_string_detail_grades: Gred 9+
@@ -7477,7 +6613,7 @@ ms:
   tutorial_kodpizzapre_string_detail_grades: Prapembaca - Gred 1
   tutorial_kodpizza_string_detail_grades: Gred 2-5
   tutorial_kodwomen_string_detail_grades: 'Gred 2-8 '
-  tutorial_tfunplug_string_detail_grades: 'Gred 6-8 '
+  tutorial_tfunplug_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_lbvariables_string_detail_grades: 'Gred 2-8 '
   tutorial_lbfunctions_string_detail_grades: 'Gred 2-8 '
   tutorial_lblogic_string_detail_grades: Gred 2+
@@ -7501,9 +6637,9 @@ ms:
   tutorial_legodetect_string_detail_grades: Gred 6+
   tutorial_legolight_string_detail_grades: Gred 6+
   tutorial_alexa_string_detail_grades: Gred 9+
-  tutorial_grokpetmicro_string_detail_grades: 'Gred 6-8 '
+  tutorial_grokpetmicro_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_pirateplunder_string_detail_grades: 'Gred 2-8 '
-  tutorial_cadj_string_detail_grades: 'Gred 6-8 '
+  tutorial_cadj_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_cacrazy_string_detail_grades: 'Gred 2-8 '
   tutorial_cajump_string_detail_grades: 'Gred 2-8 '
   tutorial_carest_string_detail_grades: 'Gred 2-8 '
@@ -7533,8 +6669,8 @@ ms:
   tutorial_blockscadclock_string_detail_grades: Gred 9+
   tutorial_blockscaddinner_string_detail_grades: Gred 2-5
   tutorial_blockscadicecream_string_detail_grades: Gred 6+
-  tutorial_blockscadpizza_string_detail_grades: 'Gred 6-8 '
-  tutorial_blockscadsugar_string_detail_grades: 'Gred 6-8 '
+  tutorial_blockscadpizza_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_blockscadsugar_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_bsgridlight_string_detail_grades: Gred 2+
   tutorial_bpartscratch_string_detail_grades: Gred 6+
   tutorial_bpartvid_string_detail_grades: Gred 6+
@@ -7545,11 +6681,11 @@ ms:
   tutorial_bpmathscratch_string_detail_grades: Gred 2-5
   tutorial_bpmathvid_string_detail_grades: Gred 6+
   tutorial_bpmlkscratch_string_detail_grades: 'Gred 2-8 '
-  tutorial_bpmlkvid_string_detail_grades: 'Gred 6-8 '
+  tutorial_bpmlkvid_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_bpsafetyscratch_string_detail_grades: Gred 2-5
-  tutorial_bpsafetyvid_string_detail_grades: 'Gred 6-8 '
+  tutorial_bpsafetyvid_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_bpsciencescratch_string_detail_grades: Gred 2-5
-  tutorial_bpsciencevid_string_detail_grades: 'Gred 6-8 '
+  tutorial_bpsciencevid_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_bptechscratch_string_detail_grades: Gred 6+
   tutorial_bptechvid_string_detail_grades: Gred 6+
   tutorial_caflags_string_detail_grades: Gred 6+
@@ -7575,7 +6711,7 @@ ms:
   tutorial_sushicards_string_detail_grades: 'Gred 2-8 '
   tutorial_codesparkcreate_string_detail_grades: Prapembaca - Gred 5
   tutorial_hardvsoft_string_detail_grades: Prapembaca - Gred 5
-  tutorial_codestersecard_string_detail_grades: 'Gred 6-8 '
+  tutorial_codestersecard_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_codesterslogo_string_detail_grades: Gred 6+
   tutorial_codesterstshirt_string_detail_grades: Gred 6+
   tutorial_codewards_string_detail_grades: 'Gred 2-8 '
@@ -7616,7 +6752,7 @@ ms:
   tutorial_talktome_string_detail_grades: Gred 6+
   tutorial_mobilecspmap_string_detail_grades: Gred 6+
   tutorial_ozorandom_string_detail_grades: Gred 2+
-  tutorial_ozotroll_string_detail_grades: 'Gred 6-8 '
+  tutorial_ozotroll_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_peblioart_string_detail_grades: Gred 9+
   tutorial_astropi_string_detail_grades: Gred 6+
   tutorial_rgart_string_detail_grades: Gred 2-5
@@ -7633,7 +6769,7 @@ ms:
   tutorial_spherocomm_string_detail_grades: 'Gred 2-8 '
   tutorial_spherocommunity_string_detail_grades: Gred 2-5
   tutorial_spherofunctions_string_detail_grades: Gred 6+
-  tutorial_spheroinfrared_string_detail_grades: 'Gred 6-8 '
+  tutorial_spheroinfrared_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_spherolightsensor_string_detail_grades: 'Gred 2-8 '
   tutorial_spheromansion_string_detail_grades: 'Gred 2-8 '
   tutorial_roadblocks_string_detail_grades: 'Gred 2-8 '
@@ -7676,7 +6812,7 @@ ms:
   tutorial_microsoftarcade_string_detail_grades: Gred 2+
   tutorial_csfirstunplugged_string_detail_grades: 'Gred 2-8 '
   tutorial_toxicodepython_string_detail_grades: Gred 6+
-  tutorial_codecombatozaria_string_detail_grades: Gred 6+
+  tutorial_codecombatozaria_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_vidcodedate_string_detail_grades: Gred 6+
   tutorial_codemonkeyspace_string_detail_grades: 'Gred 2-8 '
   tutorial_codespeakhappy_string_detail_grades: 'Gred 2-8 '
@@ -7714,11 +6850,11 @@ ms:
   tutorial_codespeaktime_string_detail_grades: 'Gred 2-8 '
   tutorial_itchwebcam_string_detail_grades: Gred 6+
   tutorial_itchball_string_detail_grades: 'Gred 2-8 '
-  tutorial_ttrace_string_detail_grades: 'Gred 6-8 '
+  tutorial_ttrace_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_plethora_string_detail_grades: Gred 2+
   tutorial_educodesecret_string_detail_grades: Gred 6+
   tutorial_itchshapes_string_detail_grades: Gred 6+
-  tutorial_codeguppytext_string_detail_grades: 'Gred 6-8 '
+  tutorial_codeguppytext_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_vidcodeplastiche_string_detail_grades: Gred 6+
   tutorial_educativechatbot_string_detail_grades: Gred 9+
   tutorial_educodebasics_string_detail_grades: Gred 6+
@@ -7726,9 +6862,9 @@ ms:
   tutorial_htmlacademyphp_string_detail_grades: Gred 6+
   tutorial_gamefrootdistance_string_detail_grades: Gred 2+
   tutorial_codesterscovid_string_detail_grades: 'Gred 6-8 '
-  tutorial_ttbunker_string_detail_grades: 'Gred 6-8 '
+  tutorial_ttbunker_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_cuttle_string_detail_grades: Gred 6+
-  tutorial_bsdjokes_string_detail_grades: 'Gred 6-8 '
+  tutorial_bsdjokes_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_rptree_string_detail_grades: Gred 6+
   tutorial_codestersunity_string_detail_grades: Gred 6+
   tutorial_codesterssoccer_string_detail_grades: Gred 6+
@@ -7737,13 +6873,13 @@ ms:
   tutorial_cafarming_string_detail_grades: 'Gred 2-8 '
   tutorial_blocksmithyeti_string_detail_grades: Gred 9+
   tutorial_codecapture_string_detail_grades: Gred 6+
-  tutorial_codehslitter_string_detail_grades: 'Gred 6-8 '
-  tutorial_bsdocean_string_detail_grades: 'Gred 6-8 '
+  tutorial_codehslitter_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_bsdocean_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_itchplatformer_string_detail_grades: Gred 6+
   tutorial_codejika_string_detail_grades: Gred 6+
-  tutorial_gamefrootclicker_string_detail_grades: 'Gred 6-8 '
-  tutorial_rmagicequity_string_detail_grades: 'Gred 6-8 '
-  tutorial_ttfreestyle_string_detail_grades: 'Gred 6-8 '
+  tutorial_gamefrootclicker_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_rmagicequity_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_ttfreestyle_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_ozobotcolor2_string_detail_grades: Gred 2+
   tutorial_ozobotcolor3_string_detail_grades: Gred 2+
   tutorial_clcarbon_string_detail_grades: Gred 6+
@@ -7768,8 +6904,8 @@ ms:
   tutorial_hellorubycsin60_string_detail_grades: Prapembaca - Gred 5
   tutorial_clfashion1_string_detail_grades: Gred 6+
   tutorial_irobottraffic_string_detail_grades: Gred 2-5
-  tutorial_edisonmystery_string_detail_grades: 'Gred 6-8 '
-  tutorial_microbitseaturtles_string_detail_grades: 'Gred 6-8 '
+  tutorial_edisonmystery_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_microbitseaturtles_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_ozobotknow_string_detail_grades: Gred 2+
   tutorial_imagilabs_string_detail_grades: 'Gred 2-8 '
   tutorial_irobotsimulator_string_detail_grades: 'Gred 2-8 '
@@ -7779,14 +6915,14 @@ ms:
   tutorial_ozobotnouns_string_detail_grades: Gred 2-5
   tutorial_nasa3d_string_detail_grades: Gred 6+
   tutorial_blupants_string_detail_grades: Gred 6+
-  tutorial_legodance_string_detail_grades: 'Gred 6-8 '
+  tutorial_legodance_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_nearpodcoding_string_detail_grades: Gred 9+
   tutorial_kcjplastic_string_detail_grades: Gred 2+
   tutorial_legojourney_string_detail_grades: 'Gred 2-8 '
   tutorial_legohopper_string_detail_grades: 'Gred 2-8 '
   tutorial_catrobatembroidery_string_detail_grades: Gred 6+
   tutorial_irobotphone_string_detail_grades: 'Gred 2-8 '
-  tutorial_codeguppydraw_string_detail_grades: 'Gred 6-8 '
+  tutorial_codeguppydraw_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_codejumper_string_detail_grades: 'Gred 2-8 '
   tutorial_meeempathy_string_detail_grades: Gred 2+
   tutorial_dance2019_string_platforms: Semua pelayar moden, tablet Android, iPad,
@@ -8520,7 +7656,7 @@ ms:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: Semua pelayar moden, tablet Android, iPad
   tutorial_icomputelearn_string_platforms: Semua pelayar moden
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: Semua pelayar moden, tablet Android, iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Semua pelayar moden, tablet Android, iPad
   tutorial_vidcodeanimojies_string_platforms: Semua pelayar moden, tablet Android,
@@ -10563,108 +9699,6 @@ ms:
     pengekodan semata-mata! Belajar tentang AI, pembelajaran mesin, data latihan dan
     kepincangan, sambil meneroka isu etika dan cara AI boleh digunakan untuk mengatasi
     masalah dunia.  '
-  tutorial_scratchimagine_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codesterspsa_language: Bahasa Inggeris
-  tutorial_googlehero_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codestersbball_language: Bahasa Inggeris
-  tutorial_scratchcartoon_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_codemonkeyjr_language: Bahasa Inggeris
-  tutorial_bananatales_language: Bahasa Inggeris
-  tutorial_scratchtales_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_msemoji_language: Bahasa Inggeris
-  tutorial_cacolor_language: Bahasa Inggeris
-  tutorial_kodablebeach_language: Bahasa Inggeris, Bahasa Lain
-  tutorial_tynkeren_language: Bahasa Inggeris
-  tutorial_tynkerjavapro_language: Bahasa Inggeris
-  tutorial_grasshopperhack_language: Bahasa Inggeris
-  tutorial_pbskids_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_nclabdata_language: Bahasa Inggeris
-  tutorial_grasshopperphoto_language: Bahasa Inggeris
-  tutorial_tynkerpyland_language: Bahasa Inggeris
-  tutorial_codeitimages_language: Bahasa Inggeris, Bahasa Jerman
-  tutorial_hyperpadenemy_language: Bahasa Inggeris
-  tutorial_tynkerpro_language: Bahasa Inggeris
-  tutorial_trashtag_language: Bahasa Inggeris
-  tutorial_casiege_language: Bahasa Inggeris
-  tutorial_thunkableyeet_language: Bahasa Inggeris
-  tutorial_vidcodedeal_language: Bahasa Inggeris
-  tutorial_codehsgeno_language: Bahasa Inggeris
-  tutorial_hyperpadpong_language: Bahasa Inggeris
-  tutorial_tynkerland_language: Bahasa Inggeris
-  tutorial_trinketgirl_language: Bahasa Inggeris
-  tutorial_rpimosquito_language: Bahasa Inggeris
-  tutorial_tynkermars_language: Bahasa Inggeris
-  tutorial_cityx_language: Bahasa Cina (Tradisional), Bahasa Inggeris
-  tutorial_vidcodemap_language: Bahasa Inggeris
-  tutorial_robotmagicfarm_language: Bahasa Inggeris
-  tutorial_codehstriangle_language: Bahasa Inggeris
-  tutorial_ttwhitehouse_language: Bahasa Inggeris
-  tutorial_modulo_language: Bahasa Inggeris
-  tutorial_codingtown_language: Bahasa Inggeris
-  tutorial_kanoart_language: Bahasa Inggeris
-  tutorial_dragonscript_language: Bahasa Inggeris
-  tutorial_uwcloud_language: Bahasa Inggeris
-  tutorial_htmlmuffin_language: Bahasa Inggeris
-  tutorial_microsoftpizza_language: Bahasa Inggeris
-  tutorial_stemc_blckhole_language: Bahasa Inggeris
-  tutorial_careconfigure_language: Bahasa Inggeris
-  tutorial_rpiscratch_language: Bahasa Inggeris
-  tutorial_ozaria_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_ttovum_language: Bahasa Inggeris
-  tutorial_ttpassage_language: Bahasa Inggeris
-  tutorial_tynkerhtmlen_language: Bahasa Inggeris
-  tutorial_ttfrog_language: Bahasa Inggeris
-  tutorial_codemojijava_language: Bahasa Inggeris
-  tutorial_ccfirewall_language: Bahasa Inggeris
-  tutorial_htmljs_language: Bahasa Inggeris
-  tutorial_ttaqueducts_language: Bahasa Inggeris
-  tutorial_vtgame_language: Bahasa Inggeris
-  tutorial_baroborav_language: Bahasa Inggeris
-  tutorial_baroboobstacle_language: Bahasa Inggeris
-  tutorial_pbstorytelling_language: Bahasa Inggeris
-  tutorial_kibosnow_language: Bahasa Inggeris
-  tutorial_kibohappy_language: Bahasa Inggeris
-  tutorial_rubylove_language: Bahasa Inggeris
-  tutorial_spherosmiles_language: Bahasa Inggeris
-  tutorial_spherobaby_language: Bahasa Inggeris
-  tutorial_toxarchitect_language: Bahasa Inggeris
-  tutorial_idodge_language: Bahasa Inggeris
-  tutorial_firiacodebot_language: Bahasa Inggeris
-  tutorial_modlighthouse_language: Bahasa Inggeris
-  tutorial_spherogreen_language: Bahasa Inggeris
-  tutorial_ozopopstar_language: Bahasa Inggeris
-  tutorial_eddesign_language: Bahasa Inggeris
-  tutorial_edshapeup_language: Bahasa Inggeris
-  tutorial_ozocolor_language: Bahasa Inggeris
-  tutorial_icomputeeggs_language: Bahasa Inggeris
-  tutorial_rootunplugged_language: Bahasa Inggeris
-  tutorial_rgtreasure_language: Bahasa Inggeris
-  tutorial_peblioportraits_language: Bahasa Inggeris
-  tutorial_rootcodebreak_language: Bahasa Inggeris
-  tutorial_microbit14_language: Bahasa Inggeris
-  tutorial_barobomoon_language: Bahasa Inggeris
-  tutorial_eddog_language: Bahasa Inggeris
-  tutorial_microbit15_language: Bahasa Inggeris
-  tutorial_unity_language: Bahasa Inggeris
-  tutorial_blockscadtarget_language: Bahasa Inggeris
-  tutorial_tcadicicles_language: Bahasa Inggeris
-  tutorial_blockscadscale_language: Bahasa Inggeris
-  tutorial_tcadloops_language: Bahasa Inggeris
-  tutorial_phidgets_language: Bahasa Inggeris
-  tutorial_modvariables_language: Bahasa Inggeris
-  tutorial_codestersmicro_language: Bahasa Inggeris
-  tutorial_codestersdata_language: Bahasa Inggeris
-  tutorial_ikodexmas_language: Bahasa Inggeris
-  tutorial_rpisensehat_language: Bahasa Inggeris
-  tutorial_mee_language: Bahasa Bulgaria, Bahasa Cina (Ringkas), Bahasa Cina (Tradisional),
-    Bahasa Czech, Bahasa Denmark, Bahasa Belanda, Bahasa Inggeris (UK), Bahasa Inggeris
-    (Amerika Syarikat), Bahasa Finland, Bahasa Perancis (Kanada), Bahasa Perancis
-    (Perancis), Bahasa Jerman, Bahasa Greek, Bahasa Hungary, Bahasa Indonesia, Bahasa
-    Itali , Bahasa Jepun, Bahasa Korea, Bahasa Norway, Bahasa Poland, Bahasa Portugis
-    (Brazil), Bahasa Portugis (Portugal), Bahasa Rusia, Bahasa Slovak, Bahasa Sepanyol
-    (Sepanyol), Bahasa Sepanyol (Mexico), Bahasa Sweden, Bahasa Turki, Bahasa Ukraine
-  tutorial_kuborobo_language: Bahasa Inggeris, Bahasa Sepanyol
-  tutorial_ai-oceans_language: Bahasa Inggeris
   tutorial_scratchimagine_string_detail_grades: Gred 2+
   tutorial_codesterspsa_string_detail_grades: Gred 6+
   tutorial_googlehero_string_detail_grades: 'Gred 2-8 '
@@ -10694,7 +9728,7 @@ ms:
   tutorial_hyperpadpong_string_detail_grades: Gred 9+
   tutorial_tynkerland_string_detail_grades: 'Gred 2-8 '
   tutorial_trinketgirl_string_detail_grades: Gred 6+
-  tutorial_rpimosquito_string_detail_grades: 'Gred 6-8 '
+  tutorial_rpimosquito_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_tynkermars_string_detail_grades: Gred 6+
   tutorial_cityx_string_detail_grades: Gred 6+
   tutorial_vidcodemap_string_detail_grades: Gred 6+
@@ -10706,8 +9740,8 @@ ms:
   tutorial_kanoart_string_detail_grades: Gred 2-5
   tutorial_dragonscript_string_detail_grades: Gred 9+
   tutorial_uwcloud_string_detail_grades: Gred 2+
-  tutorial_htmlmuffin_string_detail_grades: 'Gred 6-8 '
-  tutorial_microsoftpizza_string_detail_grades: 'Gred 6-8 '
+  tutorial_htmlmuffin_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_microsoftpizza_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_stemc_blckhole_string_detail_grades: Gred 9+
   tutorial_careconfigure_string_detail_grades: Gred 6+
   tutorial_rpiscratch_string_detail_grades: Gred 2-5
@@ -10716,10 +9750,10 @@ ms:
   tutorial_ttpassage_string_detail_grades: 'Gred 2-8 '
   tutorial_tynkerhtmlen_string_detail_grades: Gred 2+
   tutorial_ttfrog_string_detail_grades: 'Gred 2-8 '
-  tutorial_codemojijava_string_detail_grades: 'Gred 6-8 '
+  tutorial_codemojijava_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_ccfirewall_string_detail_grades: Gred 6+
-  tutorial_htmljs_string_detail_grades: 'Gred 6-8 '
-  tutorial_ttaqueducts_string_detail_grades: 'Gred 6-8 '
+  tutorial_htmljs_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_ttaqueducts_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_vtgame_string_detail_grades: Gred 6+
   tutorial_baroborav_string_detail_grades: Gred 6+
   tutorial_baroboobstacle_string_detail_grades: Gred 2+
@@ -10754,8 +9788,8 @@ ms:
   tutorial_tcadloops_string_detail_grades: Gred 5-6
   tutorial_phidgets_string_detail_grades: Gred 9+
   tutorial_modvariables_string_detail_grades: Gred 6+
-  tutorial_codestersmicro_string_detail_grades: 'Gred 6-8 '
-  tutorial_codestersdata_string_detail_grades: 'Gred 6-8 '
+  tutorial_codestersmicro_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_codestersdata_string_detail_grades: Darjah 6-8 (umur 11-13)
   tutorial_ikodexmas_string_detail_grades: Gred 2-5
   tutorial_rpisensehat_string_detail_grades: Gred 6+
   tutorial_mee_string_detail_grades: Gred 2+
@@ -11080,6 +10114,921 @@ ms:
     kerja pelajar bersama
   tutorial_ai-oceans_string_detail_programming_languages: "  AI dan Pembelajaran Mesin
     \ "
+  tutorial_hello_name: Hello World
+  tutorial_raspispace_name: 'Space Talk: Launch into Scratch coding'
+  tutorial_codemonkeyjump_name: 'Blocks Jumper: Game Creation'
+  tutorial_poemart_name: Poem Art
+  tutorial_kodablehero_name: Design your Hero
+  tutorial_cacloud_name: Operation Cloud
+  tutorial_blocksmithbot_name: Bot is sus?!
+  tutorial_hatchmario_name: 'Mario''s Secret Adventure: Build Your Own 3D Mario Game'
+  tutorial_microsoftforest_name: Save the Forest!
+  tutorial_blackbirdscreen_name: Screen Saver
+  tutorial_toxicodecompute2_name: Discover Python with Compute it
+  tutorial_minecrafttimecraft_name: Minecraft Timecraft
+  tutorial_blackbirdtether_name: Tetherball
+  tutorial_ob_name: Outbreak Simulator
+  tutorial_codeartportrait_name: Code Your Self-Portrait
+  tutorial_shelly_name: 'Shelly: Learn programming by drawing!'
+  tutorial_weavly_name: 'Weavly: Activities at Home'
+  tutorial_codespeakpassword_name: Program a Strong Password Generator in Python
+  tutorial_kodableshapes_name: Make Shapes with Code
+  tutorial_nasabinary_name: 'Binary Code: How to Talk to a Spacecraft'
+  tutorial_3dmaker_name: 3D Maker
+  tutorial_itchstart_name: 'iTCHcode: Scratch 5 Block Starter'
+  tutorial_hopsub_name: Build Subway Surfers with a Friend
+  tutorial_itchmundos_name: Los mundos en mi mundo_E2
+  tutorial_itchtenacity_name: Tenacity
+  tutorial_kcjskiing_name: 'Sport + Code: Skiing'
+  tutorial_groksecurity_name: 'Cyber Security: Defence Against the Dark Hats'
+  tutorial_creaticode_name: 3D Programming with Scratch Blocks
+  tutorial_kcjhockey_name: 'Sport + Code: Hockey'
+  tutorial_ttdungeon_name: Binary Dungeon
+  tutorial_ccai_name: Jalan ke Liga AI
+  tutorial_bsdai_name: AI Webcam Image Classifier
+  tutorial_stemdata_name: 'Data Science: Earth Day'
+  tutorial_thunkableinfo_name: Build an Informational App on Thunkable
+  tutorial_educodespace_name: Space Solo
+  tutorial_kcjtennis_name: 'Sport + Code: Tennis'
+  tutorial_robotmagictower_name: Hanoi Tower Game - recursive functions
+  tutorial_ttdragons_name: Dragon's Apprentice Chapter 1
+  tutorial_kcjarchery_name: 'Sport + Code: Archery'
+  tutorial_ttsprouts_name: Crowded Sprouts
+  tutorial_ttmaze_name: The Maze
+  tutorial_codetribe_name: 'Code Tribe: 10 Minute Program'
+  tutorial_ttcanyon_name: 'The Canyon: Battle Arena'
+  tutorial_kcjxtrail_name: 'Sport + Code: Xtrail'
+  tutorial_codespeakroad_name: Build a Road Game in Scratch
+  tutorial_educodelair_name: Chiroptera's Lair
+  tutorial_ibmhourofz_name: IBM Hour of Z
+  tutorial_gamefrootbacteria_name: Coding Bacteria with Gamefroot
+  tutorial_educodeforest_name: The Frosted Forest
+  tutorial_educodehorus_name: Temple of Horus
+  tutorial_codespeakpokemon_name: Code a Pokemon Evolution Game
+  tutorial_stemholiday_name: Code a Virtual Holiday Card
+  tutorial_codespeakpixel_name: Code a Pixel Art Editor in Bitsbox
+  tutorial_codespellsnexus_name: 'CodeSpells: The Nexus'
+  tutorial_carnegieslime_name: Super Slime Battle
+  tutorial_ozotown_name: 'Ozobot Blockly Challenge: OzoTown'
+  tutorial_milnedash_name: Dash Joins a Dance Circle
+  tutorial_microbitpet_name: micro:bit pet
+  tutorial_spherotriad_name: CIA Triad and Cybersecurity
+  tutorial_spheropassword_name: Password Security and Protection
+  tutorial_codequilt_name: CodeQuilt
+  tutorial_ozoshape1_name: 'Ozobot Blockly Challenge: ShapeTracer 1'
+  tutorial_ozoshape2_name: 'Ozobot Blockly Challenge: ShapeTracer 2'
+  tutorial_hopescape_name: Can You Escape? Build an Escape Room with Hopscotch
+  tutorial_ozorace_name: 50 cm Race
+  tutorial_ozoequestrian_name: Equestrian Event
+  tutorial_irobotpizza_name: Robot Pizza Party
+  tutorial_ai4alldance_name: 'AI4ALL: AI & Dance'
+  tutorial_ai4allneural_name: How Convolutional Neural Networks Work
+  tutorial_spheroinout_name: Inputs and Outputs
+  tutorial_edisonblueprint_name: Edison the Blueprint Designer
+  tutorial_edisonmaze_name: Edison the Maze Racer
+  tutorial_milnefunctions_name: Dash Joins a Dance Circle (with Functions)
+  tutorial_sasmap_name: 'Show With Code: Features on a Map'
+  tutorial_firstrobotics_name: FIRST Tech Challenge Simulator
+  tutorial_sasdata_name: Building Data Fundamentals
+  tutorial_carnegiesensabot_name: Sensabot Challenge
+  tutorial_robotical4_name: Hour of Code Activity 4 - Getting Started with MartyBlocks
+  tutorial_kinderadd_name: Adding and Subtracting with KIBO
+  tutorial_imagipython_name: Creative Coding in Python
+  tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
+  tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
+    Jr
+  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
+  tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
+  tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
+  tutorial_irobottools_name: 'Robotics for K-2: Robot Tools'
+  tutorial_kindercar_name: Create Your Dream Car with KIBO
+  tutorial_caavatar_name: 'AVATAR: Big Data & Digital Footprints'
+  tutorial_hello_longdescription: Learn the basics of computer science by programming
+    in Sprite Lab. You will create and animate sprites, and make your own interactive
+    scenes.
+  tutorial_raspispace_longdescription: Create a space scene with characters that 'emote'
+    to share their thoughts or feelings using sounds, colours, and actions. Use Scratch
+    blocks to code your characters with graphic effects, costume animation, speech
+    bubbles and sound effects.
+  tutorial_codemonkeyjump_longdescription: Create games and projects with block coding!
+    In this short course students will learn to create a simple jumper game using
+    basic event and function blocks.
+  tutorial_poemart_longdescription: Illustrate the mood of a poem with code.
+  tutorial_kodablehero_longdescription: Welcome to Bug World! The Kodable fuzzFamily
+    needs your coding help. Use your real-life heroes and your imagination to design
+    a character who will protect the fuzzFamily. You'll choose the properties your
+    hero possesses and put their strength to the test against the buggy slimes of
+    Bug World!
+  tutorial_cacloud_longdescription: Felix posts a seemingly innocent photo of Juno
+    on social media. She desperately wants it removed. Max, her friend, is quick to
+    turn the situation into a secret mission. Join them as they learn about cloud
+    computing and try to track down the photo on a server, stored in an ultra secure
+    data centre. Is there anyway to locate and destroy the photo?
+  tutorial_blocksmithbot_longdescription: Lasers, traps and marvelous mazes! Help
+    Bot0 escape before she gets ejected! Bot0 is a friendly, harmless helper robot.
+    Or is she? Her teammates believe otherwise. Program Bot0 to make her way through
+    the underbelly of the space ship and escape before they find her.
+  tutorial_hatchmario_longdescription: Build your very own 3D Mario game, while learning
+    the basics of programming. Learn about the fundamentals of game development; form
+    an understanding of motion in 3D space; learn to add score, lives and cool sound
+    effects to your game, all in less than an hour. And the best part, you can share
+    your game with your family and friends in just one click and play with them on
+    any device in your home.
+  tutorial_microsoftforest_longdescription: Code a game with Microsoft MakeCode Arcade
+    that recreates the conditions for a forest fire, and then code your fire-fighting
+    airtanker plane to spray water and put out the flames!
+  tutorial_blackbirdscreen_longdescription: Learn how to use conditional statements
+    to create a cool 90s style screen saver.
+  tutorial_toxicodecompute2_longdescription: Let's switch roles. This time YOU are
+    the computer! Read and interpret Python programs to find the right trajectory
+    and win the challenges. You will have to focus and use your intuitive abilities
+    to understand some core concepts of Python.
+  tutorial_minecrafttimecraft_longdescription: 'Travel back in time to save the future
+    in this free Hour of Code lesson in Minecraft: Education Edition. Students will
+    choose their own adventure and learn basic coding concepts to correct mysterious
+    mishaps throughout history. Along the way, they''ll connect with great innovators
+    and inventions in science, architecture, music, engineering, and more.'
+  tutorial_blackbirdtether_longdescription: Learn to use objects to program a fun,
+    physics-based game.
+  tutorial_ob_longdescription: Write code to create and run your own simulation of
+    the virus outbreak at Monster Town. A simulation is a computer model of a process
+    or system. Learn to code and make predictions about what will happen to the neighbors
+    of Monster Town.
+  tutorial_codeartportrait_longdescription: 'Learn to program your portrait using
+    p5.js. Express yourself creatively through code by incorporating your favorite
+    artistic styles and personal touches to create a true masterpiece! You may be
+    eligible to submit your finished project to Code/Art’s CodeYourSelf competition
+    for U.S. girls in grades 3-12. '
+  tutorial_shelly_longdescription: Shelly is a programming language for drawing. Drawing
+    is done by issuing instructions to a turtle. The turtle draws lines and shapes
+    as it moves, using various colors and styles. Challenge and creative modes are
+    available. The challenge mode includes a step-by-step tutorial, which introduces
+    the basics of the Shelly language and of programming in general.
+  tutorial_weavly_longdescription: In these short activities, go on a series of missions,
+    from exploring planets, to visiting animals on a safari, to hunting for sunken
+    treasure!
+  tutorial_codespeakpassword_longdescription: Learn to code a password generator in
+    Python and stay safe against hackers.
+  tutorial_kodableshapes_longdescription: 'Math is a part of our lives everywhere.
+    Use math and coding skills to make your own maze and then try to solve it. Start
+    with a basic square and then see how many different shapes you can include in
+    your maze designs! '
+  tutorial_nasabinary_longdescription: Learn how we use binary code to talk to a spacecraft,
+    and then try it yourself by translating your name into binary code on a name tag,
+    bracelet, pin, or even sound.
+  tutorial_3dmaker_longdescription: Make your own really cool, rotatable, 3D objects
+    fast and easily.
+  tutorial_itchstart_longdescription: This lesson is a good entry point for kids grade
+    2 or 3 that are just trying out Scratch for the very first time. They will get
+    to start with a set of 5 blocks that they need to put together to make their character
+    perform some actions.
+  tutorial_hopsub_longdescription: Learn how to pair program with a friend or classmate,
+    and create your own subway surfer with Hopscotch characters!
+  tutorial_itchmundos_longdescription: Conocerán Scratch, una herramienta para programar.
+    Agregarán objetos y fondos, usarán bloques de eventos y apariencia para dar vida
+    a su programa.
+  tutorial_itchtenacity_longdescription: En este proyecto programan en Scratch el
+    simulador de un robot que limpia las aguas marinas.
+  tutorial_kcjskiing_longdescription: 'It''s all fun and games until someone crashes
+    into a tree… or IS that the fun part? Strap on those skis and bend at the knees
+    as you guide your character down a hill of frozen obstacles using code in this
+    Scratch activity. Design the course, add movement and sensing, plus a bit of collision-interaction
+    and boom - you''ve got yourself a mountain of fun. '
+  tutorial_groksecurity_longdescription: Put your cyber-sleuthing hat on in this short
+    introduction to staying safe online. You'll learn about secure passwords, phishing,
+    security settings, social media and more!
+  tutorial_creaticode_longdescription: Learn to build stunning 3D projects using Scratch
+    blocks!
+  tutorial_kcjhockey_longdescription: You shoot, you SCORE - the crowd goes wild!
+    No need to lace up your skates when building this game, but be ready to sharpen
+    your coding skills! Learn how to code your own hockey game and test our skills
+    against an npc goalie in Scratch. Using movement, sensing, and variables, your
+    digital player can dodge and glide the puck to score the winning goal.
+  tutorial_ttdungeon_longdescription: The evil wizard Nullonor poses a grave threat
+    to the realm, and only you have the power to banish them forever. However, Nullonor
+    is as cunning as he is dangerous. He hides in his magical tower of ever-shifting
+    rooms, and no hero has successfully reached the top floor yet. As the champion
+    of the Index Knights, do you have what it takes to find and defeat Nullonor?
+  tutorial_ccai_longdescription: 'Pengekodan kompetitif tidak pernah sebegitu epik!
+    Tiada pengalaman pengekodan...Tiada masalah. Masuk ke penjara di mana anda akan
+    meningkatkan kuasa pengaturcaraan anda dengan mempelajari strategi dan taktik
+    pengekodan yang anda perlukan untuk bersaing. Kemudian lawan pengekod dari seluruh
+    dunia dalam arena sukan CodeCombat AI League! '
+  tutorial_bsdai_longdescription: There is a specific set of neural networks and algorithms
+    that we call machine learning. In this project, we will explore an Artificial
+    Intelligence (AI) Image Recognition tool and learn how AI sees images, makes predictions,
+    and how we can make sure that those predictions are accurate and free of bias.
+  tutorial_stemdata_longdescription: Create a simple model for the climate where you
+    live and then use it to understand how a few degrees of increased temperature
+    can have a significant impact on the natural world. Includes an option to download
+    the data to a spreadsheet for further analysis.
+  tutorial_thunkableinfo_longdescription: Learn how to build an informational app
+    with code blocks and a data table
+  tutorial_educodespace_longdescription: The people of planet Allegrus have lost their
+    ancestral songs. Follow this tutorial to build your own musical side-scrolling
+    game and recover the lost melodies. Customize every aspect of the game, while
+    learning the basics of game development, physics and collisions. No coding or
+    musical knowledge required.
+  tutorial_kcjtennis_longdescription: Serve up a challenge and go head-to-head with
+    your own AI opponent in this digital tennis match. Using Scratch, this activity
+    will teach you how to code back-and-forth sprite interactions through broadcasting,
+    variables, and movement. Incorporate win/loss conditionals and kiss your 'love'
+    score good bye. Complete this project by yourself or with support from a grown
+    up.
+  tutorial_robotmagictower_longdescription: Learn about the Hanoi Tower game and how
+    to use recursive functions to solve problems.
+  tutorial_ttdragons_longdescription: 'An evil force has spread its way across the
+    land of Ovun and is threatening to destroy this peaceful city. Explore hidden
+    temples, learn magic runes that let you program and control the elements around
+    you, and battle the shadow fiends. Find all the keys in the Dragon Temples to
+    awaken the dragon. Be the hero that Ovun needs! '
+  tutorial_kcjarchery_longdescription: Stay on target and guide your arrow to the
+    bullseye using code! Learn how to code your own archery game using Scratch and
+    our step-by-step instructions. With the help of colour-sensing sprites, costume
+    changes, and motion sequences, you too can aim for gold and code your way to victory
+    - plus, add a score counter to up the ante. Complete this project by yourself
+    or with support from a grown up.
+  tutorial_ttsprouts_longdescription: Gardening is a full-time job! Start with just
+    a single bench of pots and tend to the plants within a greenhouse by accessing
+    an array. As you seed, water, and harvest each plant, earn money for all your
+    fruits and veggies! Use an increasingly complicated multidimensional array to
+    locate each pot as the greenhouse gets crowded.
+  tutorial_ttmaze_longdescription: You have landed on an alien planet in a pocket
+    universe and must find a way to escape so you can continue on your journey. Explore
+    the ruins of an advanced robotic civilization, navigate your way through mazes
+    and puzzles and fight off enemy robots. With the help of your trusty sidekick
+    F3lix, learn and use new programming concepts to hack your way to victory.
+  tutorial_codetribe_longdescription: A great intro to coding using HTML, CSS and
+    JavaScript. Code a few lines, and create your first application to verify the
+    age of people attending your party.
+  tutorial_ttcanyon_longdescription: You are trapped on an alien planet and must survive
+    the Arena, an endless fight with alien monsters! Use your hacking blaster to change
+    the programming of your sidekick, your opponents, and your environment. Your trusty
+    feline sidekick F3lix can help heal and support you, while you can reprogram enemies
+    and traps to disable them or fight each other.
+  tutorial_kcjxtrail_longdescription: Hit the trails with this cross country biking
+    activity using code and Scratch. Utilizing colour sensing blocks and movement,
+    you will design your course, integrate stops and interactions along the way, and
+    track your progress by coding a score keeper with functions. Don't forget your
+    helmet because we could be in for a wild ride! Complete this project by yourself
+    or with support from a grown up.
+  tutorial_codespeakroad_longdescription: Create a game where the user plays the role
+    of a civil engineer to plan out a road.
+  tutorial_educodelair_longdescription: George is being chased in Chiroptera's Lair
+    and needs your help to escape! Design your own complete 2D puzzle game by following
+    this tutorial and learning the basics of game development. Code your way out of
+    our level, or make your own to challenge your friends!
+  tutorial_ibmhourofz_longdescription: 'Have you ever withdrawn money from an ATM?
+    Used a credit card to pay for something? All these actions have one thing in common:
+    they all start with a simple click. But what''s really happening behind that click?
+    That''s Enterprise Computing. Get started learning more about how enterprise computing
+    works today with IBM Hour of Z.'
+  tutorial_gamefrootbacteria_longdescription: 'Students learn about the conditions
+    in which salmonella bacteria can survive while coding a fun simulation game in
+    Gamefroot! This activity is designed for science teachers AND Digital Technologies
+    teachers looking to engage their students in multiple subject areas. '
+  tutorial_educodeforest_longdescription: Alex has been trapped in the Frosted Forest
+    for a while. Can you help them escape? This easy-to-follow tutorial teaches you
+    how to build and customize a complete puzzle game that runs in any modern browser.
+    Try to beat our level, or create your own to challenge your friends!
+  tutorial_educodehorus_longdescription: Help Lisa solve Horus's enigma and escape
+    his temple. Follow this tutorial to code and customize your very own puzzle game
+    in a few steps. Try to beat our level, or edit it to make it as easy or challenging
+    as you want. Learn the basics of game development while playing!
+  tutorial_codespeakpokemon_longdescription: Code your favorite Pokemon to level up
+    and evolve.
+  tutorial_stemholiday_longdescription: STEMscopes Coding powered by BitsBox allows
+    students to build and share their own virtual holiday card using typed JavaScript
+    code. Our program is easy to use and requires no prior coding experience. We offer
+    embedded support throughout the program, and students can easily figure it out
+    on their own. Get excited to code your own virtual card to share with friends
+    and family this holiday season!
+  tutorial_codespeakpixel_longdescription: Learn to create a pixel art editor to create
+    your own custom character designs and art.
+  tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
+    puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
+    app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
+  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
+    between researchers at Carnegie Mellon University and students from the Boys and
+    Girls Clubs of Western PA where students and their (co)robot partners must defend
+    their candy stash from oncoming baddies.
+  tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
+    sequencing as students utilize logic, reasoning, and computer science skills to
+    navigate real life scenarios. No bot needed!
+  tutorial_milnedash_longdescription: Dash wants to learn how to dance! Can you help
+    her drive in and out and show her stuff in the middle? This activity is student-directed
+    and will teach the user about sequencing and loops.
+  tutorial_microbitpet_longdescription: 'Code your own electronic pet and customize
+    it to make it your own. '
+  tutorial_spherotriad_longdescription: 'Explore what each of the fundamental principles
+    of cybersecurity mean and learn how to find a balance to achieve a secure system
+    that works for all users. '
+  tutorial_spheropassword_longdescription: Explore how to make strong password combinations
+    using littleBits inventions and coding.
+  tutorial_codequilt_longdescription: Reflect on who gets to code and what can be
+    made with code while becoming familiar with Scratch.
+  tutorial_ozoshape1_longdescription: The Ozobot Blockly ShapeTracer will teach sequencing
+    and debugging skills. Students will utilize logic, reasoning, and computer science
+    skills. No bot needed!
+  tutorial_ozoshape2_longdescription: The Ozobot Blockly ShapeTracer 2 will teach
+    advanced sequencing and looping skills. Students will utilize logic, reasoning,
+    and computer science skills. No bot needed!
+  tutorial_hopescape_longdescription: Code an open-ended logic escape room game, and
+    learn about concepts such as iteration and other important game design elements.
+  tutorial_ozorace_longdescription: Students will plan and execute a program with
+    a variety of parameters, practice measurement, sequencing and debugging as they
+    create a racetrack for Ozobot.
+  tutorial_ozoequestrian_longdescription: Students will use Color Codes to program
+    their mount (Evo) to complete a course.
+  tutorial_irobotpizza_longdescription: Looking to make coding a collaborative, social
+    and super fun experience at your school?  In this out-of-the-box digital event
+    kit, we provide all the tools you'll need to host the perfect family code challenge.
+    At the iRobot Pizza Party, families come together to share a meal and code virtual
+    robots to complete challenges, designed for both beginners and advanced coders.
+  tutorial_ai4alldance_longdescription: In this short, fun byte of AI, students explore
+    how AI tools can help humans innovate, and how human innovators can help improve
+    AI.
+  tutorial_ai4allneural_longdescription: This curriculum is an introductory hands-on
+    deep dive into the technical details about how some AI systems can find objects
+    in images, or other patterns in context. In the end, students will teach others
+    what they have learned. If your students did AI & Dance, they may want to check
+    this out after to learn how that system worked.
+  tutorial_spheroinout_longdescription: indi is ready to learn more about how it and
+    other computers work. In this lesson, discover inputs and outputs through this
+    hands-on exploration.
+  tutorial_edisonblueprint_longdescription: Can you program Edison to drive in different
+    shapes so that the robot can draw different blueprints?
+  tutorial_edisonmaze_longdescription: Let's get the Edison robot to race along a
+    Euler Path shape!
+  tutorial_milnefunctions_longdescription: Dash wants to learn how to dance! Can you
+    help her drive in and out and show her stuff in the middle? This activity is student-directed
+    and will teach the user about sequencing, loops and functions.
+  tutorial_sasmap_longdescription: 'In this lesson, students will use code to demonstrate
+    an understanding of the difference between human and physical features on a map.
+    They will identity a path through a grid of math features such that a robot will
+    land only on human features. Students will then work in teams to write code that
+    will navigate their robot along the correct path. '
+  tutorial_firstrobotics_longdescription: Learn to code with FTC Sim, an online block-based
+    programming language that includes a live simulator so students can instantly
+    see the robot moving based on the code that they have written.
+  tutorial_sasdata_longdescription: Engage students with data through quick polls
+    that generate real-time interactive data visualizations. Students will identify,
+    interpret and communicate about data– important foundational skills for understanding
+    our data-rich world.
+  tutorial_carnegiesensabot_longdescription: Learn how to program a virtual EV3 robot
+    to complete the real-world Sensabot challenge in this activity the Carnegie Mellon
+    Robotics Academy.
+  tutorial_robotical4_longdescription: MartyBlocks is put together in a vertical format,
+    which is more common for writing code. Learners will be presented with a larger
+    workspace and greater functionality for controlling Marty and eventually having
+    them interact with the environment. This lesson will familiarize learners with
+    the sections, layout, comparing this new environment with MartyBlocks Jr.
+  tutorial_kinderadd_longdescription: In this lesson, students will use algorithms
+    and moving robots to model mathematical concepts. KIBO will travel along a physical
+    number line to model counting, addition, and subtraction. Students will create
+    algorithms (optionally including repeat loops) to solve problems, just like programmers
+    do at work!
+  tutorial_imagipython_longdescription: Join the world's first social network for
+    pre-teens who like to code. Design your first colorful project in minutes with
+    the free imagi app.
+  tutorial_robotical2_longdescription: Learners will create a sequence of steps to
+    allow a partner to travel a route to a goal, making use of the Marty Controller.
+    Each of the directional symbols has an attached movement; in this lesson, learners
+    will be encouraged to experiment with the directional arrows but the focus will
+    be on the forward arrow.
+  tutorial_robotical3_longdescription: Learners will explore the new interface for
+    Marty, where their instructions will stay on the device screen. Learners will
+    be estimating how many steps they think Marty will need to reach a goal.
+  tutorial_blockscadvirus_longdescription: 'Use a 3D design platform to model a virus
+    and learn about how our bodies use geometry to fight these invaders. '
+  tutorial_robotical1_longdescription: Learners will see Marty the Robot moving with
+    the Unplugged color cards. Learners will then guide a partner to move forward
+    and stop, making use of colored paper. Each of Robotical's colored cards has an
+    instruction built into it, that Marty understands, without the need to write or
+    arrange any code.
+  tutorial_irobotshapes_longdescription: Learn about different shapes through pattern
+    recognition and sequencing in this unplugged, printable robot-themed workbook!
+  tutorial_irobotparts_longdescription: Learn about the different pieces used to build
+    a robot through exploring your senses and practicing math basics.
+  tutorial_irobottools_longdescription: This workbook explores all of the different
+    kinds of tools used when building a robot through matching, counting, scavenger
+    hunts and measuring activities,
+  tutorial_kindercar_longdescription: Students will become engineers, learning the
+    steps of the Engineering Design Process. Inspired by the book 'If I Built a Car'
+    by Chris Van Dusen, students will follow the engineering design process to create
+    their own dream cars out of craft and recycled materials. They will scan a short
+    programming sequence to get their cars moving!
+  tutorial_caavatar_longdescription: 'AVATAR is the latest interactive attraction
+    at ThrillVille theme park. Sakura and Nikau can''t wait to visit it and experience
+    the world of tomorrow! In this interactive short course, the learner joins Sakura
+    and Nikau to learn about data, digital footprints, the Internet of things, Big
+    Data, and the implications these have for us as people, and our future.   '
+  tutorial_hello_language: Bulgarian, Corsican, Danish, Dutch, English, English (UK),
+    Estonian, French, Georgian, German, Hungarian, Icelandic, Indonesian, Irish, Japanese,
+    Nepali, Norwegian (Bokmål), Norwegian (Nynorsk), Other, Pashto, Portuguese (Portugal),
+    Romanian, Serbian (Cyrillic), Spanish (Spain), Spanish (Mexico), Turkish, Vietnamese
+  tutorial_raspispace_language: Arabic, Dutch, English, English (UK), French, Greek
+  tutorial_codemonkeyjump_language: Bahasa Inggeris
+  tutorial_poemart_language: Bulgarian, Corsican, Danish, Dutch, English, Estonian,
+    French, Georgian, German, Hungarian, Icelandic, Indonesian, Irish, Japanese, Nepali,
+    Norwegian (Bokmål), Norwegian (Nynorsk), Other, Pashto, Portuguese (Brazil), Portuguese
+    (Portugal), Romanian, Serbian (Cyrillic), Spanish (Spain), Spanish (Mexico), Turkish,
+    Vietnamese
+  tutorial_kodablehero_language: Bahasa Inggeris
+  tutorial_cacloud_language: English, English (UK)
+  tutorial_blocksmithbot_language: Bahasa Inggeris
+  tutorial_hatchmario_language: Bahasa Inggeris
+  tutorial_microsoftforest_language: Bahasa Inggeris
+  tutorial_blackbirdscreen_language: Bahasa Inggeris
+  tutorial_toxicodecompute2_language: Bahasa Inggeris
+  tutorial_minecrafttimecraft_language: Bulgarian, Chinese (Simplified), Chinese (Traditional),
+    Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Indonesian,
+    Italian, Japanese, Korean, Norwegian (Bokmål), Norwegian (Nynorsk), Polish, Portuguese
+    (Brazil), Portuguese (Portugal), Russian, Slovenian, Spanish (Spain), Spanish
+    (Mexico), Swedish, Turkish, Ukrainian
+  tutorial_blackbirdtether_language: Bahasa Inggeris
+  tutorial_ob_language: Arabic, Chinese (Simplified), Chinese (Traditional), Czech,
+    Danish, Dutch, English, French, German, Greek, Hindi, Indonesian, Italian, Japanese,
+    Korean, Malay, Other, Portuguese (Brazil), Portuguese (Portugal), Romanian, Serbian
+    (Cyrillic), Slovenian, Spanish (Spain), Spanish (Mexico), Swedish, Tamil, Thai,
+    Turkish, Ukrainian, Urdu (Pakistan), Vietnamese
+  tutorial_codeartportrait_language: Bahasa Inggeris
+  tutorial_shelly_language: English, Polish
+  tutorial_weavly_language: Bahasa Inggeris
+  tutorial_codespeakpassword_language: Bahasa Inggeris
+  tutorial_codecombatozaria_language: Bahasa Inggeris, Bahasa Inggeris (UK), Bahasa
+    Cina (Ringkas), Bahasa Sepanyol (Sepanyol), Bahasa Sepanyol (Mexico)
+  tutorial_kodableshapes_language: Bahasa Inggeris
+  tutorial_nasabinary_language: Bahasa Inggeris
+  tutorial_3dmaker_language: Bahasa Inggeris
+  tutorial_itchstart_language: Bahasa Inggeris
+  tutorial_hopsub_language: Chinese (Simplified), English, Spanish (Spain), Spanish
+    (Mexico)
+  tutorial_itchmundos_language: Spanish (Mexico)
+  tutorial_itchtenacity_language: Spanish (Mexico)
+  tutorial_kcjskiing_language: English, French
+  tutorial_groksecurity_language: Bahasa Inggeris
+  tutorial_creaticode_language: Chinese (Simplified), Chinese (Traditional), English
+  tutorial_kcjhockey_language: English, French
+  tutorial_ttdungeon_language: Bahasa Inggeris
+  tutorial_ccai_language: Arab, Bulgaria, Catalan, Cina (Ringkas), Cina (Tradisional),
+    Czech, Denmark, Belanda, Inggeris, Inggeris (UK), Finland, Perancis, Galicia,
+    Jerman, Yunani, Ibrani, Hungary, Indonesia, Itali, Jepun, Korea , Lithuania, Macedonia
+    (FRYOM), Melayu, Norway (Bokmål), Norway (Nynorsk), Poland, Portugis (Brazil),
+    Portugis (Portugal), Romania, Rusia, Serbia (Cyrillic), Slovenia, Sepanyol (Sepanyol),
+    Sepanyol ( Mexico), Sweden, Thai, Turki, Ukraine, Vietnam
+  tutorial_bsdai_language: English, English (UK)
+  tutorial_stemdata_language: Bahasa Inggeris
+  tutorial_thunkableinfo_language: Bahasa Inggeris
+  tutorial_educodespace_language: Bahasa Inggeris
+  tutorial_kcjtennis_language: English, French
+  tutorial_robotmagictower_language: Bahasa Inggeris
+  tutorial_ttdragons_language: Bahasa Inggeris
+  tutorial_kcjarchery_language: English, French
+  tutorial_ttsprouts_language: Bahasa Inggeris
+  tutorial_ttmaze_language: Bahasa Inggeris
+  tutorial_codetribe_language: English, English (UK)
+  tutorial_ttcanyon_language: Bahasa Inggeris
+  tutorial_kcjxtrail_language: English, French
+  tutorial_codespeakroad_language: Bahasa Inggeris
+  tutorial_educodelair_language: Bahasa Inggeris
+  tutorial_ibmhourofz_language: English, English (UK)
+  tutorial_gamefrootbacteria_language: Bahasa Inggeris
+  tutorial_educodeforest_language: Bahasa Inggeris
+  tutorial_educodehorus_language: Bahasa Inggeris
+  tutorial_codespeakpokemon_language: Bahasa Inggeris
+  tutorial_stemholiday_language: Bahasa Inggeris
+  tutorial_codespeakpixel_language: Bahasa Inggeris
+  tutorial_codespellsnexus_language: Bahasa Inggeris
+  tutorial_carnegieslime_language: Bahasa Inggeris
+  tutorial_ozotown_language: Bahasa Inggeris
+  tutorial_milnedash_language: Bahasa Inggeris
+  tutorial_microbitpet_language: English, Spanish (Mexico), French, Croatian, Korean,
+    Portuguese (Brazil), Portuguese (Portugal), Serbian, Chinese (Simplified)
+  tutorial_spherotriad_language: Bahasa Inggeris
+  tutorial_spheropassword_language: Bahasa Inggeris
+  tutorial_codequilt_language: Bahasa Inggeris
+  tutorial_ozoshape1_language: Bahasa Inggeris
+  tutorial_ozoshape2_language: Bahasa Inggeris
+  tutorial_hopescape_language: Chinese (Simplified), English, Spanish (Spain), Spanish
+    (Mexico)
+  tutorial_ozorace_language: Bahasa Inggeris
+  tutorial_ozoequestrian_language: Bahasa Inggeris
+  tutorial_irobotpizza_language: Bahasa Inggeris
+  tutorial_ai4alldance_language: Bahasa Inggeris
+  tutorial_ai4allneural_language: Bahasa Inggeris
+  tutorial_spheroinout_language: Bahasa Inggeris
+  tutorial_edisonblueprint_language: Bahasa Inggeris
+  tutorial_edisonmaze_language: Bahasa Inggeris
+  tutorial_milnefunctions_language: Bahasa Inggeris
+  tutorial_sasmap_language: Bahasa Inggeris
+  tutorial_firstrobotics_language: Bahasa Inggeris
+  tutorial_sasdata_language: Bahasa Inggeris
+  tutorial_carnegiesensabot_language: Bahasa Inggeris
+  tutorial_robotical4_language: Bahasa Inggeris
+  tutorial_kinderadd_language: English, English (UK)
+  tutorial_imagipython_language: English, Swedish
+  tutorial_robotical2_language: Bahasa Inggeris
+  tutorial_robotical3_language: Bahasa Inggeris
+  tutorial_blockscadvirus_language: Bahasa Inggeris
+  tutorial_robotical1_language: Bahasa Inggeris
+  tutorial_irobotshapes_language: Bahasa Inggeris
+  tutorial_irobotparts_language: Bahasa Inggeris
+  tutorial_irobottools_language: Bahasa Inggeris
+  tutorial_kindercar_language: English, English (UK)
+  tutorial_caavatar_language: English, English (UK)
+  tutorial_hello_string_detail_grades: Gred 2+
+  tutorial_raspispace_string_detail_grades: 'Gred 2-8 '
+  tutorial_codemonkeyjump_string_detail_grades: 'Gred 2-8 '
+  tutorial_poemart_string_detail_grades: 'Gred 2-8 '
+  tutorial_kodablehero_string_detail_grades: Prapembaca - Gred 5
+  tutorial_cacloud_string_detail_grades: Gred 6+
+  tutorial_blocksmithbot_string_detail_grades: 'Gred 2-8 '
+  tutorial_hatchmario_string_detail_grades: Gred 2+
+  tutorial_microsoftforest_string_detail_grades: Gred 2+
+  tutorial_blackbirdscreen_string_detail_grades: Gred 6+
+  tutorial_toxicodecompute2_string_detail_grades: Gred 2+
+  tutorial_minecrafttimecraft_string_detail_grades: Gred 2+
+  tutorial_blackbirdtether_string_detail_grades: Gred 6+
+  tutorial_ob_string_detail_grades: Gred 2+
+  tutorial_codeartportrait_string_detail_grades: Gred 6+
+  tutorial_shelly_string_detail_grades: 'Gred 2-8 '
+  tutorial_weavly_string_detail_grades: 'Gred 2-8 '
+  tutorial_codespeakpassword_string_detail_grades: Gred 2+
+  tutorial_kodableshapes_string_detail_grades: Prapembaca - Gred 5
+  tutorial_nasabinary_string_detail_grades: Gred 6+
+  tutorial_3dmaker_string_detail_grades: 'Gred 2-8 '
+  tutorial_itchstart_string_detail_grades: 'Gred 2-8 '
+  tutorial_hopsub_string_detail_grades: 'Gred 2-8 '
+  tutorial_itchmundos_string_detail_grades: Gred 2+
+  tutorial_itchtenacity_string_detail_grades: Gred 2+
+  tutorial_kcjskiing_string_detail_grades: Gred 2+
+  tutorial_groksecurity_string_detail_grades: Gred 6+
+  tutorial_creaticode_string_detail_grades: Gred 6+
+  tutorial_kcjhockey_string_detail_grades: Gred 2+
+  tutorial_ttdungeon_string_detail_grades: Gred 6+
+  tutorial_ccai_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_bsdai_string_detail_grades: Gred 6+
+  tutorial_stemdata_string_detail_grades: Gred 9+
+  tutorial_thunkableinfo_string_detail_grades: Gred 6+
+  tutorial_educodespace_string_detail_grades: Gred 6+
+  tutorial_kcjtennis_string_detail_grades: Gred 2+
+  tutorial_robotmagictower_string_detail_grades: Gred 6+
+  tutorial_ttdragons_string_detail_grades: Gred 6+
+  tutorial_kcjarchery_string_detail_grades: Gred 2+
+  tutorial_ttsprouts_string_detail_grades: Gred 2+
+  tutorial_ttmaze_string_detail_grades: Gred 6+
+  tutorial_codetribe_string_detail_grades: 'Gred 2-8 '
+  tutorial_ttcanyon_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_kcjxtrail_string_detail_grades: 'Gred 2-8 '
+  tutorial_codespeakroad_string_detail_grades: 'Gred 2-8 '
+  tutorial_educodelair_string_detail_grades: Gred 6+
+  tutorial_ibmhourofz_string_detail_grades: Gred 9+
+  tutorial_gamefrootbacteria_string_detail_grades: Gred 6+
+  tutorial_educodeforest_string_detail_grades: Gred 6+
+  tutorial_educodehorus_string_detail_grades: Gred 6+
+  tutorial_codespeakpokemon_string_detail_grades: Gred 6+
+  tutorial_stemholiday_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_codespeakpixel_string_detail_grades: Gred 6+
+  tutorial_codespellsnexus_string_detail_grades: Gred 6+
+  tutorial_carnegieslime_string_detail_grades: 'Gred 2-8 '
+  tutorial_ozotown_string_detail_grades: Gred 2+
+  tutorial_milnedash_string_detail_grades: Prapembaca
+  tutorial_microbitpet_string_detail_grades: 'Gred 2-8 '
+  tutorial_spherotriad_string_detail_grades: Gred 2+
+  tutorial_spheropassword_string_detail_grades: 'Gred 2-8 '
+  tutorial_codequilt_string_detail_grades: Gred 6+
+  tutorial_ozoshape1_string_detail_grades: Gred 2+
+  tutorial_ozoshape2_string_detail_grades: Gred 2+
+  tutorial_hopescape_string_detail_grades: Gred 2+
+  tutorial_ozorace_string_detail_grades: Prapembaca - Gred 5
+  tutorial_ozoequestrian_string_detail_grades: Prapembaca - Gred 5
+  tutorial_irobotpizza_string_detail_grades: 'Gred 2-8 '
+  tutorial_ai4alldance_string_detail_grades: Gred 6+
+  tutorial_ai4allneural_string_detail_grades: Gred 6+
+  tutorial_spheroinout_string_detail_grades: Prapembaca - Gred 5
+  tutorial_edisonblueprint_string_detail_grades: Gred 6+
+  tutorial_edisonmaze_string_detail_grades: 'Gred 2-8 '
+  tutorial_milnefunctions_string_detail_grades: Darjah 6-8 (umur 11-13)
+  tutorial_sasmap_string_detail_grades: Gred 2-5
+  tutorial_firstrobotics_string_detail_grades: Gred 6+
+  tutorial_sasdata_string_detail_grades: Gred 2+
+  tutorial_carnegiesensabot_string_detail_grades: 'Gred 2-8 '
+  tutorial_robotical4_string_detail_grades: Gred 2-5
+  tutorial_kinderadd_string_detail_grades: Prapembaca - Gred 5
+  tutorial_imagipython_string_detail_grades: 'Gred 2-8 '
+  tutorial_robotical2_string_detail_grades: Prapembaca - Gred 5
+  tutorial_robotical3_string_detail_grades: Gred 2-5
+  tutorial_blockscadvirus_string_detail_grades: Gred 6+
+  tutorial_robotical1_string_detail_grades: Prapembaca - Gred 5
+  tutorial_irobotshapes_string_detail_grades: Prapembaca
+  tutorial_irobotparts_string_detail_grades: Prapembaca
+  tutorial_irobottools_string_detail_grades: Prapembaca
+  tutorial_kindercar_string_detail_grades: Prapembaca
+  tutorial_caavatar_string_detail_grades: Gred 6+
+  tutorial_hello_string_platforms: Semua pelayar moden, tablet Android, iPad, telefon
+    Windows, telefon Android, iPhone
+  tutorial_raspispace_string_platforms: Semua pelayar moden, tablet Android, iPad
+  tutorial_codemonkeyjump_string_platforms: Semua pelayar moden
+  tutorial_poemart_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone, Game console app, Screen reader
+  tutorial_kodablehero_string_platforms: Semua pelayan moden, iPad, iPhone
+  tutorial_cacloud_string_platforms: Semua pelayar moden
+  tutorial_blocksmithbot_string_platforms: Semua pelayar moden
+  tutorial_hatchmario_string_platforms: Semua pelayar moden
+  tutorial_microsoftforest_string_platforms: Semua pelayar moden
+  tutorial_blackbirdscreen_string_platforms: Chrome
+  tutorial_toxicodecompute2_string_platforms: Semua pelayar moden
+  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
+    Android (Chromebooks), iPad, Screen reader
+  tutorial_blackbirdtether_string_platforms: Chrome
+  tutorial_ob_string_platforms: Semua pelayan moden, Pembaca skrin
+  tutorial_codeartportrait_string_platforms: Semua pelayar moden, tablet Android,
+    iPad
+  tutorial_shelly_string_platforms: Semua pelayar moden
+  tutorial_weavly_string_platforms: Semua pelayan moden, Pembaca skrin
+  tutorial_codespeakpassword_string_platforms: Semua pelayar moden
+  tutorial_kodableshapes_string_platforms: Semua pelayan moden, iPad, iPhone
+  tutorial_nasabinary_string_platforms: Unplugged, Screen reader
+  tutorial_3dmaker_string_platforms: Semua pelayar moden, tablet Android, iPad, telefon
+    Windows, telefon Android, iPhone
+  tutorial_itchstart_string_platforms: Semua pelayar moden, iPad
+  tutorial_hopsub_string_platforms: iPad, iPhone
+  tutorial_itchmundos_string_platforms: Semua pelayar moden, tablet Android, iPad
+  tutorial_itchtenacity_string_platforms: Semua pelayar moden, tablet Android, iPad
+  tutorial_kcjskiing_string_platforms: Semua pelayar moden
+  tutorial_groksecurity_string_platforms: Semua pelayar moden, tablet Android, iPad,
+    telefon Windows, telefon Android, iPhone
+  tutorial_creaticode_string_platforms: Semua pelayar moden, tablet Android, iPad,
+    telefon Windows, telefon Android, iPhone
+  tutorial_kcjhockey_string_platforms: Semua pelayar moden
+  tutorial_ttdungeon_string_platforms: Chrome, Firefox
+  tutorial_ccai_string_platforms: Semua pelayar moden
+  tutorial_bsdai_string_platforms: Chrome, Firefox
+  tutorial_stemdata_string_platforms: Semua pelayar moden, iPad
+  tutorial_thunkableinfo_string_platforms: Chrome, Safari
+  tutorial_educodespace_string_platforms: Semua pelayar moden
+  tutorial_kcjtennis_string_platforms: Semua pelayar moden
+  tutorial_robotmagictower_string_platforms: Semua pelayar moden
+  tutorial_ttdragons_string_platforms: Chrome, Firefox
+  tutorial_kcjarchery_string_platforms: Semua pelayar moden
+  tutorial_ttsprouts_string_platforms: Chrome, Firefox
+  tutorial_ttmaze_string_platforms: Chrome, Firefox
+  tutorial_codetribe_string_platforms: Semua pelayar moden, tablet Android, iPad,
+    telefon Windows, telefon Android, iPhone
+  tutorial_ttcanyon_string_platforms: Chrome, Firefox
+  tutorial_kcjxtrail_string_platforms: Semua pelayar moden
+  tutorial_codespeakroad_string_platforms: Chrome
+  tutorial_educodelair_string_platforms: Semua pelayar moden, iPad
+  tutorial_ibmhourofz_string_platforms: Chrome, Firefox, Android phone, iPhone
+  tutorial_gamefrootbacteria_string_platforms: Semua pelayar moden
+  tutorial_educodeforest_string_platforms: Semua pelayar moden, iPad
+  tutorial_educodehorus_string_platforms: Semua pelayar moden, iPad
+  tutorial_codespeakpokemon_string_platforms: Semua pelayar moden
+  tutorial_stemholiday_string_platforms: Chrome
+  tutorial_codespeakpixel_string_platforms: Semua pelayar moden
+  tutorial_codespellsnexus_string_platforms: Chrome, Firefox
+  tutorial_carnegieslime_string_platforms: Semua pelayar moden
+  tutorial_ozotown_string_platforms: Semua pelayar moden
+  tutorial_milnedash_string_platforms: Semua pelayan moden, Pembaca skrin
+  tutorial_microbitpet_string_platforms: Semua pelayan moden, Pembaca skrin
+  tutorial_spherotriad_string_platforms: Android tablet, iPad, Android phone, iPhone,
+    Windows 10, macOS, ChromeOS
+  tutorial_spheropassword_string_platforms: Semua pelayar moden, tablet Android, iPad,
+    telefon Windows, telefon Android, iPhone
+  tutorial_codequilt_string_platforms: Semua pelayar moden
+  tutorial_ozoshape1_string_platforms: Semua pelayar moden
+  tutorial_ozoshape2_string_platforms: Semua pelayar moden
+  tutorial_hopescape_string_platforms: iPad, iPhone
+  tutorial_ozorace_string_platforms: Semua pelayar moden
+  tutorial_ozoequestrian_string_platforms: Semua pelayar moden
+  tutorial_irobotpizza_string_platforms: Nirplag
+  tutorial_ai4alldance_string_platforms: Semua pelayar moden
+  tutorial_ai4allneural_string_platforms: Semua pelayar moden
+  tutorial_spheroinout_string_platforms: Nirplag
+  tutorial_edisonblueprint_string_platforms: Semua pelayar moden
+  tutorial_edisonmaze_string_platforms: Semua pelayar moden
+  tutorial_milnefunctions_string_platforms: Semua pelayan moden, Pembaca skrin
+  tutorial_sasmap_string_platforms: All modern browsers, iPad, Screen reader
+  tutorial_firstrobotics_string_platforms: Semua pelayar moden
+  tutorial_sasdata_string_platforms: Semua pelayar moden
+  tutorial_carnegiesensabot_string_platforms: Semua pelayar moden
+  tutorial_robotical4_string_platforms: Semua pelayar moden
+  tutorial_kinderadd_string_platforms: Nirplag
+  tutorial_imagipython_string_platforms: Chrome, Firefox, Android tablet, iPad, Android
+    phone, iPhone
+  tutorial_robotical2_string_platforms: Nirplag
+  tutorial_robotical3_string_platforms: Semua pelayar moden
+  tutorial_blockscadvirus_string_platforms: Semua pelayar moden
+  tutorial_robotical1_string_platforms: Nirplag
+  tutorial_irobotshapes_string_platforms: Nirplag
+  tutorial_irobotparts_string_platforms: Nirplag
+  tutorial_irobottools_string_platforms: Nirplag
+  tutorial_kindercar_string_platforms: Nirplag
+  tutorial_caavatar_string_platforms: Semua pelayar moden, tablet Android, iPad
+  tutorial_hello_string_detail_platforms: ''
+  tutorial_raspispace_string_detail_platforms: ''
+  tutorial_codemonkeyjump_string_detail_platforms: ''
+  tutorial_poemart_string_detail_platforms: ''
+  tutorial_kodablehero_string_detail_platforms: ''
+  tutorial_cacloud_string_detail_platforms: ''
+  tutorial_blocksmithbot_string_detail_platforms: Internet Explorer 11, Microsoft
+    Edge, Chrome, Firefox, Safari
+  tutorial_hatchmario_string_detail_platforms: ''
+  tutorial_microsoftforest_string_detail_platforms: ''
+  tutorial_blackbirdscreen_string_detail_platforms: ''
+  tutorial_toxicodecompute2_string_detail_platforms: Microsoft Edge, Chrome, Firefox,
+    Safari
+  tutorial_minecrafttimecraft_string_detail_platforms: ''
+  tutorial_blackbirdtether_string_detail_platforms: ''
+  tutorial_ob_string_detail_platforms: ''
+  tutorial_codeartportrait_string_detail_platforms: ''
+  tutorial_shelly_string_detail_platforms: ''
+  tutorial_weavly_string_detail_platforms: ''
+  tutorial_codespeakpassword_string_detail_platforms: Chrome, Firefox, Safari
+  tutorial_kodableshapes_string_detail_platforms: ''
+  tutorial_nasabinary_string_detail_platforms: ''
+  tutorial_3dmaker_string_detail_platforms: ''
+  tutorial_itchstart_string_detail_platforms: ''
+  tutorial_hopsub_string_detail_platforms: ''
+  tutorial_itchmundos_string_detail_platforms: ''
+  tutorial_itchtenacity_string_detail_platforms: ''
+  tutorial_kcjskiing_string_detail_platforms: ''
+  tutorial_groksecurity_string_detail_platforms: ''
+  tutorial_creaticode_string_detail_platforms: ''
+  tutorial_kcjhockey_string_detail_platforms: ''
+  tutorial_ttdungeon_string_detail_platforms: ''
+  tutorial_ccai_string_detail_platforms: ''
+  tutorial_bsdai_string_detail_platforms: ''
+  tutorial_stemdata_string_detail_platforms: ''
+  tutorial_thunkableinfo_string_detail_platforms: ''
+  tutorial_educodespace_string_detail_platforms: ''
+  tutorial_kcjtennis_string_detail_platforms: ''
+  tutorial_robotmagictower_string_detail_platforms: ''
+  tutorial_ttdragons_string_detail_platforms: ''
+  tutorial_kcjarchery_string_detail_platforms: ''
+  tutorial_ttsprouts_string_detail_platforms: ''
+  tutorial_ttmaze_string_detail_platforms: ''
+  tutorial_codetribe_string_detail_platforms: ''
+  tutorial_ttcanyon_string_detail_platforms: ''
+  tutorial_kcjxtrail_string_detail_platforms: ''
+  tutorial_codespeakroad_string_detail_platforms: ''
+  tutorial_educodelair_string_detail_platforms: ''
+  tutorial_ibmhourofz_string_detail_platforms: ''
+  tutorial_gamefrootbacteria_string_detail_platforms: Microsoft Edge, Chrome, Firefox,
+    Safari
+  tutorial_educodeforest_string_detail_platforms: ''
+  tutorial_educodehorus_string_detail_platforms: ''
+  tutorial_codespeakpokemon_string_detail_platforms: ''
+  tutorial_stemholiday_string_detail_platforms: ''
+  tutorial_codespeakpixel_string_detail_platforms: Chrome, Firefox, Safari
+  tutorial_codespellsnexus_string_detail_platforms: ''
+  tutorial_carnegieslime_string_detail_platforms: ''
+  tutorial_ozotown_string_detail_platforms: Ozobot
+  tutorial_milnedash_string_detail_platforms: Robot Dash
+  tutorial_microbitpet_string_detail_platforms: mikro:bit
+  tutorial_spherotriad_string_detail_platforms: Sphero Bolt
+  tutorial_spheropassword_string_detail_platforms: littleBits STEAM+ Coding Kit
+  tutorial_codequilt_string_detail_platforms: ''
+  tutorial_ozoshape1_string_detail_platforms: Ozobot
+  tutorial_ozoshape2_string_detail_platforms: Ozobot
+  tutorial_hopescape_string_detail_platforms: ''
+  tutorial_ozorace_string_detail_platforms: Ozobot
+  tutorial_ozoequestrian_string_detail_platforms: Ozobot
+  tutorial_irobotpizza_string_detail_platforms: ''
+  tutorial_ai4alldance_string_detail_platforms: ''
+  tutorial_ai4allneural_string_detail_platforms: ''
+  tutorial_spheroinout_string_detail_platforms: Sphero indi
+  tutorial_edisonblueprint_string_detail_platforms: Robot Edison
+  tutorial_edisonmaze_string_detail_platforms: Edison robots
+  tutorial_milnefunctions_string_detail_platforms: Robot Dash
+  tutorial_sasmap_string_detail_platforms: iPad, the free app and one robot. Supports
+    BOLT, SPRK+, Sphero Mini, SPRK, Sphero, and Ollie robots.
+  tutorial_firstrobotics_string_detail_platforms: ''
+  tutorial_sasdata_string_detail_platforms: ''
+  tutorial_carnegiesensabot_string_detail_platforms: ''
+  tutorial_robotical4_string_detail_platforms: Marty the Robot
+  tutorial_kinderadd_string_detail_platforms: Kit Robot KIBO
+  tutorial_imagipython_string_detail_platforms: ''
+  tutorial_robotical2_string_detail_platforms: Marty the Robot
+  tutorial_robotical3_string_detail_platforms: Marty the Robot
+  tutorial_blockscadvirus_string_detail_platforms: ''
+  tutorial_robotical1_string_detail_platforms: Marty the Robot
+  tutorial_irobotshapes_string_detail_platforms: ''
+  tutorial_irobotparts_string_detail_platforms: ''
+  tutorial_irobottools_string_detail_platforms: ''
+  tutorial_kindercar_string_detail_platforms: Kit Robot KIBO
+  tutorial_caavatar_string_detail_platforms: ''
+  tutorial_hello_string_detail_programming_languages: Blok
+  tutorial_raspispace_string_detail_programming_languages: Blok, Scratch
+  tutorial_codemonkeyjump_string_detail_programming_languages: Blok
+  tutorial_poemart_string_detail_programming_languages: Blok
+  tutorial_kodablehero_string_detail_programming_languages: JavaScript, iOS/Swift,
+    Language independent (can be taught in multiple languages)
+  tutorial_cacloud_string_detail_programming_languages: Theory Based
+  tutorial_blocksmithbot_string_detail_programming_languages: JavaScript
+  tutorial_hatchmario_string_detail_programming_languages: Blok
+  tutorial_microsoftforest_string_detail_programming_languages: Blok
+  tutorial_blackbirdscreen_string_detail_programming_languages: JavaScript
+  tutorial_toxicodecompute2_string_detail_programming_languages: Python
+  tutorial_minecrafttimecraft_string_detail_programming_languages: Blok, Python
+  tutorial_blackbirdtether_string_detail_programming_languages: JavaScript
+  tutorial_ob_string_detail_programming_languages: Blok
+  tutorial_codeartportrait_string_detail_programming_languages: JavaScript, p5.js
+  tutorial_shelly_string_detail_programming_languages: A Logo-like language
+  tutorial_weavly_string_detail_programming_languages: Blok
+  tutorial_codespeakpassword_string_detail_programming_languages: Python
+  tutorial_kodableshapes_string_detail_programming_languages: JavaScript, Bebas bahasa
+    (boleh diajar dalam pelbagai bahasa)
+  tutorial_nasabinary_string_detail_programming_languages: Binary code
+  tutorial_3dmaker_string_detail_programming_languages: Blok
+  tutorial_itchstart_string_detail_programming_languages: Blok
+  tutorial_hopsub_string_detail_programming_languages: Hopscotch
+  tutorial_itchmundos_string_detail_programming_languages: Blok
+  tutorial_itchtenacity_string_detail_programming_languages: Blok
+  tutorial_kcjskiing_string_detail_programming_languages: Blok
+  tutorial_groksecurity_string_detail_programming_languages: None - no programming
+    required
+  tutorial_creaticode_string_detail_programming_languages: Blok
+  tutorial_kcjhockey_string_detail_programming_languages: Blok
+  tutorial_ttdungeon_string_detail_programming_languages: Algorithms
+  tutorial_ccai_string_detail_programming_languages: JavaScript, Python, Lua, CoffeeScript
+  tutorial_bsdai_string_detail_programming_languages: HTML, CSS and JavaScript
+  tutorial_stemdata_string_detail_programming_languages: JavaScript, Includes option
+    to download and analyze data in Google Sheets and Excel
+  tutorial_thunkableinfo_string_detail_programming_languages: Blok
+  tutorial_educodespace_string_detail_programming_languages: JavaScript
+  tutorial_kcjtennis_string_detail_programming_languages: Blok
+  tutorial_robotmagictower_string_detail_programming_languages: Blok, JavaScript
+  tutorial_ttdragons_string_detail_programming_languages: Blok, JavaScript
+  tutorial_kcjarchery_string_detail_programming_languages: Blok
+  tutorial_ttsprouts_string_detail_programming_languages: JavaScript, C#
+  tutorial_ttmaze_string_detail_programming_languages: JavaScript
+  tutorial_codetribe_string_detail_programming_languages: JavaScript, HTML and CSS.
+  tutorial_ttcanyon_string_detail_programming_languages: Blok, JavaScript
+  tutorial_kcjxtrail_string_detail_programming_languages: Blok
+  tutorial_codespeakroad_string_detail_programming_languages: Blok
+  tutorial_educodelair_string_detail_programming_languages: JavaScript
+  tutorial_ibmhourofz_string_detail_programming_languages: Python, COBOL
+  tutorial_gamefrootbacteria_string_detail_programming_languages: Blok
+  tutorial_educodeforest_string_detail_programming_languages: JavaScript
+  tutorial_educodehorus_string_detail_programming_languages: JavaScript
+  tutorial_codespeakpokemon_string_detail_programming_languages: Blok
+  tutorial_stemholiday_string_detail_programming_languages: JavaScript, HTML5
+  tutorial_codespeakpixel_string_detail_programming_languages: JavaScript
+  tutorial_codespellsnexus_string_detail_programming_languages: Blocks, JavaScript,
+    Racket
+  tutorial_carnegieslime_string_detail_programming_languages: Blok
+  tutorial_ozotown_string_detail_programming_languages: Blok
+  tutorial_milnedash_string_detail_programming_languages: Blok
+  tutorial_microbitpet_string_detail_programming_languages: Python, MakeCode
+  tutorial_spherotriad_string_detail_programming_languages: Blok
+  tutorial_spheropassword_string_detail_programming_languages: Blok
+  tutorial_codequilt_string_detail_programming_languages: Blok
+  tutorial_ozoshape1_string_detail_programming_languages: Blok
+  tutorial_ozoshape2_string_detail_programming_languages: Blok
+  tutorial_hopescape_string_detail_programming_languages: Blocks, Hopscotch
+  tutorial_ozorace_string_detail_programming_languages: Kod Warna Ozobot
+  tutorial_ozoequestrian_string_detail_programming_languages: Color Codes
+  tutorial_irobotpizza_string_detail_programming_languages: Blok
+  tutorial_ai4alldance_string_detail_programming_languages: No programming required.
+  tutorial_ai4allneural_string_detail_programming_languages: No programming required.
+  tutorial_spheroinout_string_detail_programming_languages: None - color tiles
+  tutorial_edisonblueprint_string_detail_programming_languages: Blok
+  tutorial_edisonmaze_string_detail_programming_languages: Blok
+  tutorial_milnefunctions_string_detail_programming_languages: Blok
+  tutorial_sasmap_string_detail_programming_languages: Blok
+  tutorial_firstrobotics_string_detail_programming_languages: Blocks, OnbotJava
+  tutorial_sasdata_string_detail_programming_languages: 'No programming languages. '
+  tutorial_carnegiesensabot_string_detail_programming_languages: Blok
+  tutorial_robotical4_string_detail_programming_languages: Blok
+  tutorial_kinderadd_string_detail_programming_languages: Tangible KIBO blocks
+  tutorial_imagipython_string_detail_programming_languages: Python
+  tutorial_robotical2_string_detail_programming_languages: This makes use of a paper
+    printout of the Marty Controller
+  tutorial_robotical3_string_detail_programming_languages: Blok
+  tutorial_blockscadvirus_string_detail_programming_languages: Blok
+  tutorial_robotical1_string_detail_programming_languages: Language independent (can
+    be taught in multiple languages), Color cards are used to command the device featured
+    in the video and to instruct partners.
+  tutorial_irobotshapes_string_detail_programming_languages: pre-reader computational
+    thinking activity
+  tutorial_irobotparts_string_detail_programming_languages: pre-reader computational
+    thinking activity
+  tutorial_irobottools_string_detail_programming_languages: pre-reader computational
+    thinking activity
+  tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
+  tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
+    needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Gred 2-5
+  tutorial_icomputefireworks_string_platforms: Semua pelayar moden
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Blok
   school_not_found_heading: Kami tidak dapat menemui sekolah anda. Sila masukkan lebih
     banyak maklumat.
   school_name: Nama sekolah
@@ -11143,3 +11092,86 @@ ms:
   all: Semua
   dont_know: Saya tidak tahu
   language_label: Bahasa
+  ar: Arabic
+  az: Azerbaijani
+  bg: Bulgarian
+  bn: Bangla
+  br: Breton
+  bs: Bosnian
+  ca: Catalan
+  cs: Czech
+  cs-cz: Czech (Czechia)
+  da: Danish
+  da-dk: Danish (Denmark)
+  de: German
+  de-de: German (Germany)
+  el: Greek
+  el-gr: Greek (Greece)
+  en: Bahasa Inggeris
+  en-gb: English (United Kingdom)
+  es: Spanish
+  es-es: Spanish (Spain)
+  es-mx: Spanish (Mexico)
+  et: Estonian
+  eu: Basque
+  fa: Persian
+  fa-ir: Persian (Iran)
+  fi: Finnish
+  fi-fi: Finnish (Finland)
+  fil-ph: Filipino (Philippines)
+  fr: French
+  gl: Galician
+  he: Hebrew
+  hi: Hindi
+  hi-in: Hindi (India)
+  hr: Croatian
+  hu: Hungarian
+  ia: Interlingua (International Auxiliary Language Association)
+  id: Bahasa Indonesian
+  is: Icelandic
+  it: Italian
+  it-it: Italian (Italy)
+  ja: Japanese
+  ja-jp: Japanese (Japan)
+  ka: Georgian
+  kk: Kazakh
+  ko: Korean
+  lt: Lithuanian
+  lv: Latvian
+  mk: Macedonian
+  mr: Marathi
+  ms: Malay
+  my: Burmese
+  nl: Dutch
+  nl-nl: Dutch (Netherlands)
+  nn: Norwegian (Nynorsk)
+  false: Norwegian
+  pl: Polish
+  pl-pl: Polish (Poland)
+  pt: Portuguese
+  pt-br: Portuguese (Brazil)
+  pt-pt: Portuguese (Portugal)
+  ro: Romanian
+  ru: Russian
+  sk: Slovak
+  sl: Slovenian
+  sq: Albanian
+  sr: Serbian
+  sv: Swedish
+  sv-se: Swedish (Sweden)
+  sw: Kiswahili
+  ta: Tamil
+  te: Telugu
+  th: Thai
+  tl: Tagalog
+  tr: Turkish
+  uk: Ukrainian
+  ur: Urdu
+  ur-in: Urdu (India)
+  ur-pk: Urdu (Islamic Republic of Pakistan)
+  vi: Vietnamese
+  zh: Chinese (Simplified)
+  zh-cn: Chinese (Simplified, People's Republic of China)
+  zh-hans: Chinese (Simplified) (zh-Hans)
+  zh-hant: Chinese (Traditional) (zh-Hant)
+  zh-tw: Chinese (Traditional, Taiwan)

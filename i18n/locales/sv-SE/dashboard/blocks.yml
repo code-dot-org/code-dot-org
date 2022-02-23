@@ -435,6 +435,26 @@ sv:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': alla aliens
             '"BEAR"': björnar
@@ -946,17 +966,27 @@ sv:
       Dancelab_whenSetup2:
         text: ställ in
       gamelab_addBehaviorSimple:
-        text: Sprite {SPRITE} Börjar {BEHAVIOR}
+        text: sprite {SPRITE} börjar {BEHAVIOR}
       gamelab_addTarget:
+        text: "{SPRITE} får mål {TARGET} till {OPT}"
         options:
           OPT:
+            '"follow"': följ
             '"avoid"': undvik
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: vid {N} {UNIT}
         options:
           UNIT:
             '"seconds"': sekunder
+            '"frames"': ramar
+      gamelab_avoidingTargets:
+        text: undvik mål
+      gamelab_beginCollectingData:
+        text: börja samla data {BREAK} värde {VALUE} med etikett {LABEL}
+      gamelab_bounceOff:
+        text: "{SPRITE} studsar av {TARGET}"
       gamelab_changePropBy:
         text: ändra {SPRITE} {PROPERTY} via {VAL}
         options:
@@ -976,17 +1006,27 @@ sv:
       gamelab_clickedOn:
         text: när {SPRITE} klickade
       gamelab_clickedSpritePointer:
-        text: klickade {SPRITE}
+        text: "{SPRITE}"
       gamelab_comment:
         text: 'kommentar: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: nummer av {SPRITE}
       gamelab_createNewSprite:
         text: "gör en ny Sprite \n Kallas {NAME} \n med kostym {COSTUME} \n På {LOCATION}"
       gamelab_destroy:
         text: ta bort {THIS}
       gamelab_draggable:
         text: vara dragbar
+      gamelab_drawLine:
+        text: rita linje {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: kanter blockera {SPRITE} från att flytta
+      gamelab_followingTargets:
+        text: följ mål
+      gamelab_getAllSprites:
+        text: alla sprites
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
@@ -1000,13 +1040,41 @@ sv:
             '"speed"': hastighet
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
+        options:
+          CHOICE:
+            '"this"': detta
+            '"other"': annan
       gamelab_getTime:
+        text: tid in {UNIT}
         options:
           UNIT:
             '"seconds"': sekunder
+            '"frames"': ramar
+      gamelab_glideTo:
+        text: "{SPRITE} glid till {LOCATION}"
       gamelab_hideTitleScreen:
         text: Dölj titel skärm
+      gamelab_ifVarEquals:
+        text: |-
+          om {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} kostym är {COSTUME}"
       gamelab_isKeyPressed:
+        text: "{KEY} är tryckt"
         options:
           KEY:
             '"up"': upp
@@ -1038,9 +1106,12 @@ sv:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} är berörande kanter"
+      gamelab_isTouchingSprite:
+        text: "{SPRITE} rör {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} hoppa till {LOCATION}"
       gamelab_keyPressed:
@@ -1079,9 +1150,18 @@ sv:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
         text: 'plats x: {X} Y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} bildpunkt {DIRECTION} av {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': Norr
+            '"East"': Öst
+            '"South"': Syd
+            '"West"': Väst
       gamelab_locationMouse:
         text: mus plats
       gamelab_locationOf:
@@ -1089,12 +1169,21 @@ sv:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: skapa {EFFECT} effekt med {NUM} {ANIMATION_NAME} sprites
         options:
           EFFECT:
+            '"burst"': brista
+            '"pop"': pop
             '"rain"': regn
+            '"spiral"': spiral
       gamelab_makeNewSpriteAnon:
         text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
+      gamelab_makeNumSprites:
+        text: gör {NUM} ny {ANIMATION_NAME}sprites
       gamelab_makeProjectile:
+        text: |-
+          skapa projektil
+          {ANIMATION_NAME} från {LOCATION} med fart {SPEED}riktning{DIRECTION}
         options:
           DIRECTION:
             '0': höger
@@ -1109,32 +1198,89 @@ sv:
             '"left"': vänster
       gamelab_mouseLocation:
         text: mus plats
+      gamelab_moveBackward:
+        text: flytta  {SPRITE} {DISTANCE} bildpunkter bakåt
       gamelab_moveForward:
-        text: flytta {SPRITE} {DISTANCE} pixlar framåt
+        text: flytta {SPRITE} {DISTANCE} bildpunkter framåt
       gamelab_moveInDirection:
-        text: Flytta {SPRITE} {DISTANCE} Pixlar {DIRECTION}
+        text: Flytta {SPRITE} {DISTANCE} Bildpunkter {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Norr
+            '"East"': Öst
+            '"South"': Syd
+            '"West"': Väst
       gamelab_moveToward:
-        text: Flytta {SPRITE} Pixlar {DISTANCE} Mot {TARGET}
+        text: flytta {SPRITE} bildpunkter {DISTANCE} mot {TARGET}
       gamelab_newSpritePointer:
-        text: klickade {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: klickade {SPRITE}
+        text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: patrullerar upp och ner
       gamelab_playSound:
-        text: PlaySound {SOUND}
+        text: spelljud {SOUND}
       gamelab_playSoundOptions:
-        text: PlaySound {SOUND}
+        text: spela ljud {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": brytning
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": blinka
+            "'sound://category_app/app_button_1.mp3'": knapp
             "'sound://category_collect/clicky_crunch.mp3'": krasch
+            "'sound://category_swish/quick_swing.mp3'": sväng
+            "'sound://category_nature/summer_night_loop.mp3'": sommarnatt
+            "'sound://category_background/ocean_waves.mp3'": havsvågor
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": strand krusning
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bubbla
+            "'sound://category_animals/bear.mp3'": björn
+            "'sound://category_animals/cat.mp3'": katt
+            "'sound://category_animals/cow.mp3'": ko
+            "'sound://category_animals/pig.mp3'": gris
+            "'sound://category_animals/sheep.mp3'": får
+            "'sound://category_animals/goat.mp3'": get
+            "'sound://category_animals/chicken.mp3'": kyckling
+            "'sound://category_animals/rooster.mp3'": tupp
+            "'sound://category_animals/elephant.mp3'": elefant
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_nature/thunderstorm_1.mp3'": åskväder
+            "'sound://category_animals/chick.mp3'": liten kyckling
+            "'sound://category_animals/dog.mp3'": hund
+            "'sound://category_animals/tiger.mp3'": tiger
+            "'sound://category_collect/trill_stings.mp3'": drill
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harpa
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": knacka
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": ton hit
+            "'sound://category_transition/trippy_robotic_transition.mp3'": robotövergång
+            "'sound://category_transition/star_dust_particle_10.mp3'": stjärnstoff
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": rymdskepp
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magisk förtrollning
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": välj
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": knäpp bas
             "'sound://category_digital/jump_7.mp3'": hoppa
+      gamelab_playSpeech:
+        text: spela tal {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): flytta med piltangenter
+            draggable(): vara dragbar
       gamelab_pointInDirection:
         text: Punkt {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Norr
+            '"East"': Öst
+            '"South"': Syd
+            '"West"': Väst
       gamelab_printText:
         text: tryck {TEXT}
       gamelab_randColor:
-        text: slumpad färg
+        text: slumpartad färg
       gamelab_randomColor:
-        text: slumpad färg
+        text: slumpartad färg
       gamelab_randomLocation:
         text: slumpmässig plats
       gamelab_removeAllBehaviors:
@@ -1155,24 +1301,48 @@ sv:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': grotta
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': kontinuerligt gräs
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': domstol
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': öken
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': ökenväg
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': jordbruksmark
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': flytande gräs
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': husets framsida
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galax
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': rutnät
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': kök
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': vardagsrum
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': äng
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': parkutsikt
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': tall
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': regnbåge
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sci-fi
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': fotbollsplan
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etapp
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': stjärnor
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': tunnelbana
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sol och regnbåge
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': solduschar
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennisbana
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': träd ö
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': tunnelbana
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': under vatten
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': vinter
             undefined: Ingen
       gamelab_setBackgroundImageAs:
         text: ställa in bakgrunden till {IMG}
       gamelab_setDefaultSpriteSize:
+        text: ställ in ny standardstorlek för sprite till {SIZE}
         options:
           SIZE:
-            '25': extra small
-            '50': small
+            '25': extra liten
+            '50': liten
             '75': medel
-            '100': large
+            '100': stor
+      gamelab_setPrompt:
+        text: snabb användare{QUESTION} för variabel {VAR}
+      gamelab_setPromptWithChoices:
+        text: snabb användare {QUESTION} för variabel {VAR} med val {A}{B}{C}
       gamelab_setProp:
         text: ligger {SPRITE} {PROPERTY} Att {VAL}
         options:
@@ -1189,10 +1359,10 @@ sv:
           PROPERTY:
             '"scale"': storlek
           SIZE:
-            '25': extra small
-            '50': small
+            '25': extra liten
+            '50': liten
             '75': medel
-            '100': large
+            '100': stor
       gamelab_setSizes:
         text: ställ in {SPRITE} {PROPERTY} till {N} %
         options:
@@ -1200,8 +1370,20 @@ sv:
             '"scale"': storlek
             '"width"': bredd
             '"height"': höjd
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': långsam
+            '5': normal
+            '7': snabb
+            '9': extra fast
       gamelab_setTint:
         text: ändra färg på {THIS} Att {COLOR}
+      gamelab_setupScoreboard:
+        text: |-
+          rita resultattavlan
+          {SPRITE1COSTUME}resultat{VAR1}{SPRITE2COSTUME}resultat{VAR2}mål{SPRITE3COSTUME}
       gamelab_setupSim:
         text: |-
           Ställ in simulering med
@@ -1217,14 +1399,42 @@ sv:
           CONDITION:
             '"when"': när
             '"while"': medan
+      gamelab_spriteSay:
+        text: "{SPRITE} säger {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}säger{TEXT1}for{NUM}sekunder"
+      gamelab_startAvoiding:
+        text: "{SPRITE} börjar undvika {TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE} börjar följa {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} börjar glida"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} stoppar att undvika andra sprites"
+      gamelab_stopCollectingData:
+        text: stoppar att samla data
+      gamelab_stopFollowing:
+        text: "{SPRITE} stoppar att följa andra sprites"
+      gamelab_stopGliding:
+        text: "{SPRITE} stoppar glidande"
       gamelab_subjectSpritePointer:
-        text: klickade {SPRITE}
+        text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      gamelab_tumbling:
+        text: tumlande
       gamelab_turn:
         text: Vända {SPRITE} {DIRECTION} {N} Grader
         options:
           DIRECTION:
             '"right"': höger
             '"left"': vänster
+      gamelab_updateTitleWithColor:
+        text: visa titelskärm{BREAK} titel {TITLE} färg {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: när alla uppmaningar svarade
       gamelab_whenDownArrow:
         text: när nedåtpilen trycks
       gamelab_whenKey:
@@ -1242,8 +1452,12 @@ sv:
             '"d"': d
       gamelab_whenLeftArrow:
         text: när vänsterpil trycks
+      gamelab_whenPromptAnswered:
+        text: när  {VAR} svarade
       gamelab_whenRightArrow:
         text: när högerpil tryckte
+      gamelab_whenSpriteCreated:
+        text: när {SPRITE} skapade
       gamelab_whenTouching:
         text: När {SPRITE1} Berör {SPRITE2}
       gamelab_whenUpArrow:
@@ -1270,13 +1484,28 @@ sv:
       gamelab_whileTouching:
         text: Medan {SPRITE1} är rörande {SPRITE2}
       gamelab_whileUpArrow:
-        text: medan uppåtpilen tryckte
+        text: medan uppåtpilen tryckte ned
+      gamelab_withPercentChance:
+        text: |-
+          om {NUM}% chance
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} chance
+           {STATEMENT}
+        options:
+          NUM:
+            '10': mycket låg
+            '25': låg
+            '50': 50/50
+            '75': hög
+            '90': mycket hög
       gamelab_xLocationOf:
         text: x koordinat {SPRITE}
       gamelab_yLocationOf:
         text: y koordinat {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: Sprite {SPRITE} Börjar {BEHAVIOR}
+        text: sprite {SPRITE} börjar {BEHAVIOR}
       Mikelab_addTrainingData:
         text: 'Lägg till träningsdata: {NAME},{LOCATION}'
         options:
@@ -1290,6 +1519,8 @@ sv:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": inte min etikett
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: snabb användare {QUESTION} för variabel {VAR} med val {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1325,11 +1556,13 @@ sv:
         options:
           SELECT:
             '"all"': alla
+            '"this"': detta
       Mikelab_groupChangePropBy:
         text: Ändra {PROPERTY} Av {SELECT} {COSTUME} Av {VAL}
         options:
           SELECT:
             '"all"': alla
+            '"this"': detta
           PROPERTY:
             '"scale"': storlek
             '"rotation"': rotation
@@ -1354,6 +1587,7 @@ sv:
         options:
           SELECT:
             '"all"': alla
+            '"this"': detta
       Mikelab_groupDisplace:
         text: Alla {COSTUME} blockera {COSTUME2} från att flytta
       Mikelab_groupEdgesDisplace:
@@ -1361,6 +1595,8 @@ sv:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME} {PROPERTY}"
         options:
+          SELECT:
+            '"this"': detta
           PROPERTY:
             '"scale"': storlek
             '"rotation"': rotation
@@ -1372,21 +1608,25 @@ sv:
         options:
           SELECT:
             '"all"': alla
+            '"this"': detta
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} Stannar {BEHAVIOR}"
         options:
           SELECT:
             '"all"': alla
+            '"this"': detta
       Mikelab_groupRemoveTint:
         text: ta bort färg från {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': alla
+            '"this"': detta
       Mikelab_groupSetProp:
         text: ligger {PROPERTY} Av {SELECT} {COSTUME} Att {VAL}
         options:
           SELECT:
             '"all"': alla
+            '"this"': detta
           PROPERTY:
             '"scale"': storlek
             '"rotation"': rotation
@@ -1398,6 +1638,7 @@ sv:
         options:
           SELECT:
             '"all"': alla
+            '"this"': detta
       Mikelab_groupWhenClickedOn:
         text: när {COSTUME} klickade
       Mikelab_groupWhenXTouchesY:
@@ -1475,6 +1716,20 @@ sv:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': stad
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': kontinuerligt gräs
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': ökenväg
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': jordbruksmark
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': flytande gräs
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': husets framsida
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': kök
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': vardagsrum
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': parkutsikt
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': tall
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': fotbollsplan
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': sol och regnbåge
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': solduschar
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': tennisbana
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': träd ö
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1552,30 +1807,119 @@ sv:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
-      PoemBot_playSound:
-        text: PlaySound {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: täll in bakgrundseffekt {EFFECT} {PALETTE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"brick"': tegelsten
+            '"fire"': brand
+            '"flowers"': blommor
+            '"hearts"': hjärtan
+            '"iceCream"': Glass
+            '"rainbow"': regnbåge
+            '"stars"': stjärnor
+      Poetry_glideTo:
+        text: "{SPRITE} glid till {LOCATION}"
+      Poetry_makeBurst:
+        text: skapa {EFFECT} effekt med {NUM} {ANIMATION_NAME} sprites
         options:
           EFFECT:
-            '"colors"': Färger
-            '"squiggles"': Krumelurer
-            '"space"': Mellanslag
-            '"stars"': Stjärnor
-            '"ripples"': Krusningar
-          PALETTE:
-            '"rainbow"': Regnbåge
-      PoemBot_setBackgroundImageAs:
-        text: ställa in bakgrunden till {IMG}
-      PoemBot_setForegroundEffect:
-        text: ställ in förgrundseffekt {EFFECT}
+            '"burst"': brista
+            '"pop"': pop
+            '"rain"': regn
+      Poetry_makeNewSpriteAnon:
+        text: skapa nya {ANIMATION_NAME} sprite vid {LOCATION}
+      Poetry_makeNumSprites:
+        text: gör {NUM} ny {ANIMATION_NAME}sprites
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Lugn
+            '"sound://category_nature/steady_campfire_loop.mp3"': Lägereld
+            '"sound://category_nature/rain_loop.mp3"': Duggregn
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': skog
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Hemsökt
+            '"sound://category_background/inside_plane.mp3"': Gnola
+            '"sound://category_loops/red_flag_loop1.mp3"': Uppdrag
+            '"sound://category_nature/summer_night_loop.mp3"': natt
+            '"sound://category_background/repitition.mp3"': Ridning
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Långsam
+      Poetry_playSound:
+        text: spelljud {SOUND}
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': Klocka
+            '"sound://category_digital/boing_2.mp3"': boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bubbla
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Prat
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Tömma på luft
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Misslyckas
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Fladdra
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Hoppa
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Poff
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Avsöka
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Livfull
+            '"sound://category_achievements/peaceful_win_1.mp3"': Vinna
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Virvla
+            '"sound://category_achievements/peaceful_win_6.mp3"': Vindspel
+      Poetry_setBackground:
+        text: ange bakgrundsfärg {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"rain"': Regn
             '"bubbles"': Bubblor
-            '"hearts"': Färgglada hjärtan
+            '"clouds"': molnigt
             '"confetti"': Konfetti
+            '"hearts"': hjärtan
+            '"space"': Mellanslag
+            '"rain"': regn
+            '"ripples"': Krusningar
+            '"colors"': Färger
+            '"stars"': Stjärnor
+            '"squiggles"': Krumelurer
+          PALETTE:
+            '"rainbow"': regnbåge
+            '"winter"': vinter
+      Poetry_setBackgroundImageAs:
+        text: ställa in bakgrunden till {IMG}
+      Poetry_setFont:
+        text: Ställ in teckensnitt  {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Skrivstil
+            '"Impact"': Impact
+            '"Georgia"': Georgia
+            '"Times"': Times
+      Poetry_setFontColor:
+        text: ställ in textfärg  {FILL}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"bubbles"': Bubblor
+            '"confetti"': Konfetti
+            '"hearts"': hjärtan
+            '"rain"': regn
             '"starburst"': Stjärnfall
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: när  {VAR} svarade
       RyanLab_moveForward:
         text: gå framåt
       RyanLab_turnLeft:
@@ -1630,6 +1974,8 @@ sv:
             '0.75': most
             '0.5': half of
             '0.25': few
+      aalab_spriteSayChoices:
+        text: "{SPRITE} säger {SPEECH}"
       binary_drawBin:
         text: rita binär {BIN}
       binary_drawBinScreen:

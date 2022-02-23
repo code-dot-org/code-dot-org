@@ -1,7 +1,8 @@
 {
+  "key": "codestudio_number",
+  "name": "math_number",
   "category": "Math",
-  "config": {
-    "docFunc": "codestudio_number",
-    "func": "math_number"
-  }
+  "category_key": "math",
+  "block_name": "math_number",
+  "syntax": "math_number"
 }

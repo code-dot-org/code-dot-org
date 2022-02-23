@@ -426,6 +426,7 @@ fi:
       minecraft_hero: Minecraft sankari
       playlab: Pelilabra
       starwars: Tähtien sota
+      loading: Lataa...
       weblab: Nettilabra
       view_all: Kaikki projektit...
     popup:
@@ -445,6 +446,7 @@ fi:
       prizes_link: lisätietoja
   teacher:
     answer: Vastaus
+    dashboard: Opettajan päänäyttö
     for_teachers_only: Vain opettajille
     title:
       one: 'Opettajasi:'
@@ -979,6 +981,7 @@ fi:
   pd:
     form_labels:
       email: Sähköposti
+      school: Koulu
       school_name: Koulun nimi
       school_country: Koulun maa
       colombian_chilean_school_name: Koulun nimi

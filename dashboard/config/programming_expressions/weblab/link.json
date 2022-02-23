@@ -1,5 +1,7 @@
 {
-  "func": "link",
+  "key": "link",
+  "name": "link",
   "category": "HTML Tags",
+  "category_key": "html_tags",
   "syntax": "<link></link>"
 }

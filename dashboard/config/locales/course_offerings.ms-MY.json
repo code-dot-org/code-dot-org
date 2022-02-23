@@ -1,0 +1,37 @@
+{
+  "ms-MY": {
+    "data": {
+      "course_offerings": {
+        "coursea": "Kursus A",
+        "courseb": "Kursus B",
+        "coursec": "Kursus C",
+        "coursed": "Kursus D",
+        "coursee": "Kursus E",
+        "coursef": "Kursus F",
+        "20-hour": "Pengenalan Dipercepatkan kepada Kursus CS",
+        "flappy": "Kod Flappy",
+        "applab-intro": "Pengenalan kepada Makmal Aplikasi",
+        "artist": "Artis",
+        "course1": "Kursus 1",
+        "course2": "Kursus 2",
+        "course3": "Kursus 3",
+        "course4": "Kursus 4",
+        "dance-extras-2019": "Teruskan Menari (2019)",
+        "dance-extras": "Teruskan Menari (2018)",
+        "frozen": "Kod dengan Anna dan Elsa",
+        "hourofcode": "Pagar Sesat Klasik",
+        "mc": "Jam Kod Minecraft",
+        "oceans": "Kecerdasan Buatan (AI) untuk Lautan",
+        "outbreak": "Simulator Wabak",
+        "text-compression": "Pemampatan Teks",
+        "csa-self-paced-pl": "Menavigasi Code.org untuk Guru Perintis CSA",
+        "counting-csc": "Mengira dengan Laurel",
+        "explore-data-1": "Meneroka Plot dan Histogram Kotak",
+        "outbreak-csc": "Wabak",
+        "poem-art": "Seni Puisi",
+        "edit-code": "Mengedit kod",
+        "tesstest921": "tesstest921"
+      }
+    }
+  }
+}

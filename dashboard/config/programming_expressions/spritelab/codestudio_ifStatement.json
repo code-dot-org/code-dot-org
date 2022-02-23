@@ -1,7 +1,8 @@
 {
+  "key": "codestudio_ifStatement",
+  "name": "controls_if_if",
   "category": "Logic",
-  "config": {
-    "docFunc": "codestudio_ifStatement",
-    "func": "controls_if_if"
-  }
+  "category_key": "logic",
+  "block_name": "controls_if_if",
+  "syntax": "controls_if_if"
 }

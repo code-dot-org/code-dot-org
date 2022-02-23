@@ -203,7 +203,7 @@ sv:
             utforskar isens magi och skönhet.
           lessons:
             Artist:
-              name: Konstnären
+              name: Koda med Anna och Elsa
           student_description: Vi kan använda kod för att följa Anna och Elsa när
             de utforskar isens magi och skönhet. Du kommer att skapa snöflingor och
             mönster genom skridskoåkning och skapa ett underbart vinterland som du
@@ -365,7 +365,7 @@ sv:
             spel med Disney Infinity karaktärer i huvudrollen .
           lessons:
             Infinity:
-              name: Oändligt
+              name: Disney Infinity Play Lab
           student_description: Använd Play Lab för att skapa en berättelse eller ett
             spel med Disney Infinity karaktärer i huvudrollen .
         algebrademo:
@@ -898,9 +898,6 @@ sv:
             i en galax långt, långt borta.
           description_short: Lär dig att programmera droider och skapa ditt eget Star
             Wars-spel i en galax långt, långt borta.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Lär dig att programmera droider och skapa ditt eget
             Star Wars-spel i en galax långt, långt borta.
         mc:
@@ -1259,9 +1256,6 @@ sv:
           title: Göra en basketmatch
           description_short: Göra en basketmatch
           description: Göra en basketmatch
-          lessons:
-            Bounce:
-              name: Studsa
           student_description: Göra en basketmatch
         csd2-2017:
           lessons:
@@ -1378,9 +1372,6 @@ sv:
           title: Sport
           description_short: Koda din egen sport
           description: Koda din egen sport
-          lessons:
-            Sports:
-              name: Sport
           student_description: Koda din egen sport
         2016_sciencePD-phase2b:
           lessons:
@@ -1829,9 +1820,6 @@ sv:
         hero:
           description: Minecraft är tillbaka för Hour of Code med en helt ny aktivitet!
             Res genom Minecraft via koden.
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
           student_description: Minecraft är tillbaka för Hour of Code med en helt
             ny aktivitet! Res genom Minecraft via koden.
         csp-explore-2017:
@@ -2227,7 +2215,7 @@ sv:
             of Code”!
           lessons:
             Aquatic:
-              name: Vatten
+              name: 'Minecraft: Resande vattenlevande'
         dance--draft:
           lessons:
             Dance Party:
@@ -3245,6 +3233,8 @@ sv:
           lessons:
             Virus Simulation for Code Bytes:
               name: Koda en simulering
+            Outbreak:
+              name: Koda en simulering
           lesson_groups:
             outbreak:
               display_name: Utbrottssimulering
@@ -3286,6 +3276,17 @@ sv:
             Conditionals:
               key: Villkor
               name: Villkor
+            Collisions:
+              description_teacher: "**Dagens fråga: Hur kan programmerare bygga på
+                abstraktioner för att skapa ytterligare abstraktioner?**\\\r\n\\\r\nPå
+                denna lektion, programmerar studenter sina sprites för att interagera
+                på nya sätt. Efter en kort genomgång om hur de använde [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
+                blocket, brainstormar studenter andra sätt som två sprites kan interagera.
+                Sedan använder de [`isTouching`(#f78183)](/docs/gamelab/isTouching/)
+                för att få en sprite att skjuta en annan över skärmen innan de övar
+                med de fyra kollisionsblocken ([`collide`(#f78183)](/docs/gamelab/collide/),
+                [`displace`(#f78183)](/docs/gamelab/displace/), [`bounce`(#f78183)](/docs/gamelab/bounce/),
+                och [`bounceOff`(#f78183)](/docs/gamelab/bounceOff/))."
             Functions:
               key: funktioner
               name: funktioner
@@ -3338,6 +3339,10 @@ sv:
               display_name: loopar
             csp_project:
               display_name: Projekt
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmer
         csp7-2021:
           lesson_groups:
             csp_libraries:
@@ -3440,6 +3445,8 @@ sv:
             For Loop Fun:
               key: "'För' loop skoj"
               name: "'För' loop skoj"
+            lesson-5:
+              name: Utbrott
           lesson_groups:
             csf_digcit:
               display_name: Digitalt medborgarskap
@@ -3503,6 +3510,10 @@ sv:
             Automating Data Decisions:
               key: Automatisera databeslut
               name: Automatisera databeslut
+        testtess:
+          lessons:
+            lesson-2:
+              name: ny lektion 1
         contagion-pilot:
           description_short: Använd Sprite Lab för att programmera en simulering av
             ett virusutbrott.
@@ -3531,6 +3542,199 @@ sv:
             lessonGroup-2:
               display_name: Innehåll
         csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa6-pilot:
+          lessons:
+            lesson-1:
+              description_student: De projekt du har utvecklat under kursen har inspirerat
+                till mycket kreativitet i samhället! En kvartersfest kommer att hållas
+                för att visa upp kreativa berättelser, manus, sångtexter, brev och
+                dikter. Kvartersfesten är ett stort projekt som du arbetar med i hela
+                studieenheten, och projektledningsstrategier hjälper till att organisera
+                och strukturera ditt arbete. Du utforskar strategier för att skriva
+                och strukturera kod så att andra mjukvaruingenjörer enkelt kan förstå
+                och använda ett Java-verktyg för att skapa programdokumentation.
+              description_teacher: Eleverna introduceras till kvartersfestprojektet
+                och utvärderar krav och exempel för att identifiera frågor och nyckelfunktioner.
+                Innan de börjar arbeta med projektet fördjupar eleverna sin förståelse
+                av programstruktur och kommenterar genom att identifiera bästa praxis
+                och utforska användningen av Javadocs för att generera programdokumentation.
+            lesson-2:
+              description_student: Du konstruerar ”heltal” och ”dubbla” objekt som
+                representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
+                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
+                du värdena som dessa objekt lagrar som primitiva värden. Du utforskar
+                även de lägsta och högsta värdena för heltal för att undvika spillfel
+                innan du planerar de uppgifter du behöver slutföra för ditt kvartersfestprojekt.
+              description_teacher: Eleverna konstruerar ”heltal” och ”dubbla” objekt
+                som representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
+                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
+                studenterna värdena som dessa objekt lagrar som primitiva värden.
+                Studenterna utforskar även de lägsta och högsta värdena för heltal
+                för att undvika spillfel innan de planerar de uppgifter de behöver
+                slutföra för sitt kvartersfestprojekt.
+            lesson-3:
+              description_student: När vi arbetar med matriser och listor stöter vi
+                ibland på problem där antalet element är okänt eller listans storlek
+                ständigt ändras. I den här lektionen lär du dig om ”matrislistor”
+                och identifierar scenarier där denna datastruktur lämpar sig bättre.
+              description_teacher: Eleverna skapar ”matrislistor” för att lagra ”hela”
+                och ”dubbla” värden. De skiljer mellan ”matrislistor” och endimensionella
+                matriser för att avgöra vilken datastruktur som är bäst lämpad för
+                ett scenario. Eleverna lägger till element i en ”matrislista” och
+                lär sig hur autoboxing konverterar mellan primitiva värden och adapterklasser
+                när de arbetar med lagrade data.
+            lesson-4:
+              description_student: Du använder ”matrisliste”-metoderna ”get()” och
+                ”set()” för att hämta och modifiera element och lära dig om ”sträng”-metoden
+                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Du
+                tillämpar standardalgoritmerna du utvecklade med 1D- och 2D-matriser
+                för att modifiera element i en ”matrislista”. Du lär dig hur unboxing
+                utför omvandlingar mellan primitiva värden och adapterklasser när
+                de arbetar med data som lagras i en ”matrislista”.
+              description_teacher: Eleverna använder ”matrisliste”-metoderna ”get()”
+                och ”set()” för att hämta och modifiera element och lära sig om ”sträng”-metoden
+                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Eleverna
+                tillämpar standardalgoritmerna de utvecklade med 1D- och 2D-matriser
+                för att modifiera element i en ”matrislista”. De lär sig hur unboxing
+                utför omvandlingar mellan primitiva värden och adapterklasser när
+                de arbetar med data som lagras i en ”matrislista”.
+            lesson-5:
+              description_student: Hittills har du skapat ”matrislistor” för att lagra
+                ”heltal” ”dubbla” och ”strängar”. Precis som med 1D- och 2D-matriser
+                kan du även lagra objekt som du skapar i en ”matrislista”. I den här
+                lektionen skapar du en ”matrislista” av objekt för att tillämpa de
+                standardalgoritmer du har använt under året för att arbeta med data
+                som lagras i den här listan.
+              description_teacher: Elever skapar ”matrislistor” för att lagra objekt
+                och lära sig om generiska typer i Java. De tillämpar algoritmerna
+                de lärt sig med endimensionella matriser på ”matrislistor” för att
+                hitta lägsta och högsta värden, beräkna summor och medelvärden eller
+                hitta element som uppfyller specifika kriterier.
+            lesson-6:
+              description_student: Du utforskar funktionen för metoden ”remove()”
+                i ”matrisliste”-klassen och identifierar potentiella fel när du försöker
+                ta bort objekt medan du går igenom listan. Under processen lär du
+                dig att se när en ”matrislista” är bäst för ett scenario eller problem.
+              description_teacher: Eleverna utforskar funktionen för metoden ”remove()”
+                i ”matrisliste”-klassen och identifierar potentiella fel när de försöker
+                ta bort objekt medan de går igenom listan. Under processen lär de
+                sig att se när en ”matrislista” är bäst för ett scenario eller problem.
+            lesson-7:
+              description_student: Du utforskar strukturen för en ”sträng” och erinrar
+                dig att ”strängar” är objekt. Du använder metoderna ”indexOf()” och
+                ”substring()” för att söka efter delsträngar inom en ”sträng” och
+                för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
+              description_teacher: Eleverna utforskar strukturen för en ”sträng” och
+                erinrar sig att ”strängar” är objekt. De använder metoderna ”indexOf()”
+                och ”substring()” för att söka efter delsträngar inom en ”sträng”
+                och för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
+            lesson-8:
+              description_student: Du utforskar användningen av ”compareTo()” för
+                att kontrollera om ”strängar” är i alfabetisk ordning. Du arbetar
+                sedan med ditt kvartersfestprojekt och fokuserar specifikt på de uppgifter
+                du har på din projektplaneringstavla.
+              description_teacher: Eleverna utforskar användningen av ”compareTo()”
+                för att kontrollera om ”strängar” är i alfabetisk ordning. De arbetar
+                sedan med sitt kvartersfestprojekt och fokuserar specifikt på de uppgifter
+                de har på sin projektplaneringstavla.
+            lesson-9:
+              description_student: Du kombinerar dina kunskaper om standardalgoritmer
+                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
+                Du deltar sedan i en session med feedback från andra elever och reflekterar
+                över de framsteg du har gjort i ditt kvartersfestprojekt.
+              description_teacher: Eleverna kombinerar sina kunskaper om standardalgoritmer
+                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
+                De deltar sedan i en session med feedback från andra elever och reflekterar
+                över de framsteg de har gjort i sina kvartersfestprojekt.
+            lesson-10:
+              description_student: Du tillämpar standardalgoritmerna du skrev för
+                1D- och 2D-matriser på ”matrislistan”. Du implementerar en ny standardalgoritm
+                för att få individuella siffror från ett heltal innan du ändrar och
+                tillämpar tidigare algoritmer för att byta element, ta bort dubbletter
+                eller hitta element som uppfyller specifika kriterier i ditt kvartersfestprojekt.
+              description_teacher: Eleverna tillämpar standardalgoritmerna de skrev
+                för 1D- och 2D-matriser på ”matrislistan”. De implementerar en ny
+                standardalgoritm för att få individuella siffror från ett heltal innan
+                de ändrar och tillämpar tidigare algoritmer för att byta element,
+                ta bort dubbletter eller hitta element som uppfyller specifika kriterier
+                i deras kvartersfestprojekt.
+            lesson-11:
+              name: Kvartersfestprojekt – Dag 1
+              description_student: Du fortsätter att utveckla ditt kvartersfestprojekt
+                och skapar en berättelse, dikt, låt eller annan form av litteratur
+                baserat på analys av verk från din favoritförfattare eller favoritartist.
+                Du utvärderar först ditt arbete själv för att bedöma hur väl du har
+                slutfört projektkraven, och skriver sedan acceptanskriterier för en
+                funktion i ditt projekt som en annan kursdeltagare testar. Du använder
+                självbedömningen och feedbacken för att prioritera dina återstående
+                uppgifter och fortsätta utveckla ditt projekt.
+              description_teacher: Eleverna fortsätter att utveckla sina kvartersfestprojekt
+                och skapar en berättelse, dikt, låt eller annan form av litteratur
+                baserat på analys av verk från deras favoritförfattare eller favoritartist.
+                Eleverna utvärderar först sitt arbete själva för att bedöma hur väl
+                de har slutfört projektkraven, och skriver sedan acceptanskriterier
+                för en funktion i sina projekt som en annan elev testar. Eleverna
+                använder självbedömningen och feedbacken för att prioritera sina återstående
+                uppgifter och fortsätta utveckla sina projekt.
+            lesson-12:
+              name: Kvartersfestprojekt – Dag 2
+              description_student: I föregående lektion gjorde du en självbedömning
+                och skrev acceptanskriterier för ditt projekt. I den här lektionen
+                får du feedback från andra kursdeltagare så du kan identifiera vilka
+                uppgifter som återstår för att slutföra och fortsätta utveckla ditt
+                kvartersfestprojekt.
+              description_teacher: I föregående lektion gjorde eleverna självbedömningar
+                och skrev acceptanskriterier för sina projekt. I den här lektionen
+                får eleverna feedback från andra elever så de kan identifiera vilka
+                uppgifter som återstår för att slutföra och fortsätta utveckla sina
+                kvartersfestprojekt.
+            lesson-13:
+              name: Kvartersfestprojekt – Dag 3
+              description_student: Du gör slutliga revisioner och uppdateringar baserade
+                på dina kodgranskningar och projektplaneringstavlan. Du delar ditt
+                kvartersfestprojekt med dina studiekamrater och firar sedan att du
+                har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
+              description_teacher: Eleverna gör slutliga revisioner och uppdateringar
+                baserade på sina kodgranskningar och projektplaneringstavlan. De delar
+                sina kvartersfestprojekt med sina studiekamrater och firar sedan att
+                de har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
+            lesson-15:
+              description_student: I den här studieenheten använde du ”matrislistor”
+                för att lagra programdata och skilja på när du ska använda 1D- och
+                2D-matriser respektive ”matrislistor”. Du utforskade fördelarna och
+                funktionaliteten med en ”matrislistor”, och använde dessa för att
+                lösa problem som involverar numeriska data och objektdata. Du använde
+                metoder i ”sträng”-klassen för att analysera och bearbeta text erhållen
+                från användar- och filindata. Under hela studieenheten skrev du programdokumentation
+                med kommentarer på en enskild rad, kommentarer på flera rader och
+                Javadoc-kommentarer för att skapa API-dokumentation. I processen identifierade
+                och dokumenterade du förvillkor och eftervillkor för objekt och metoder.
+                Nu utvärderar du hur väl du har uppnått studieenhetens lärandemål
+                och färdigheter i en utvärdering med flervalsalternativ.
+              description_teacher: I den här studieenheten använde eleverna ”matrislistor”
+                för att lagra programdata och skilja på när de ska använda 1D- och
+                2D-matriser respektive ”matrislistor”. Eleverna utforskade fördelarna
+                och funktionaliteten med en ”matrislistor”, och använde dessa för
+                att lösa problem som involverar numeriska data och objektdata. De
+                använde metoder i ”sträng”-klassen för att analysera och bearbeta
+                text erhållen från användar- och filindata. Under hela studieenheten
+                skrev eleverna programdokumentation med kommentarer på en enskild
+                rad, kommentarer på flera rader och Javadoc-kommentarer för att skapa
+                API-dokumentation. I processen identifierade och dokumenterade eleverna
+                förvillkor och eftervillkor för objekt och metoder. Nu utvärderar
+                de hur väl de har uppnått studieenhetens lärandemål och färdigheter
+                i en utvärdering med flervalsalternativ.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Innehåll
@@ -3571,6 +3775,10 @@ sv:
               display_name: Lektion 4
             Lesson 5:
               display_name: Lektion 5
+        pl-playground:
+          lessons:
+            lesson-9:
+              name: Komma igång 1
         kodea-pd-2021:
           lessons:
             Next Steps:
@@ -3580,6 +3788,8 @@ sv:
           lessons:
             lesson-9:
               name: Lärar gemenskapen
+        outbreak-module:
+          title: Utbrott
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -3668,5 +3878,673 @@ sv:
               display_name: Innehåll
             lesson_group:
               display_name: Innehåll
+            lessonGroup-2:
+              display_name: Innehåll
+        poem-art:
+          lessons:
+            lesson-1:
+              description_teacher: |-
+                I den här Datavetenskap- och språkintegrerade lektionen kommer studenterna att animera en dikt med kod för att illustrera stämningen i en dikt. Under denna inledande kodningsaktivitet kommer studenterna att läsa och upptäcka stämningen i en dikt. Sedan hittar de motsvarande effekter och bilder för att illustrera diktens stämning. Till sist kommer eleverna att använda händelser (kod) för att illustrera en förändring i stämningen eller animera introduktionen av nya bilder i en dikt.
+
+                Denna lektion kan genomföras som en 1-timmes fristående lektion. Det finns också ett alternativ att använda den här lektionen som den första lektionen i 5-lektionsmodulen som heter [Coding with Poetry](http://code.org/poetry). I slutet av Coding with Poetry-modulen kommer eleverna att skriva sina egna dikter och skapa en app för diktgenerator att dela med vänner.
+
+                Coding with Poetry är en del av Code.orgs Datavetenskap Sammanhang läroplan, som är tänkt att integrera CS i andra ämnesområden som matematik, ELA och naturvetenskap med anpassning till CCSS, NGSS och CSTA-standarder.
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stavnings-bi
+          title: Stavnings-bi
+        outbreak-csc:
+          title: Utbrott
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csd-post-survey-2021:
+          description: Den här enheten innehåller CS Discoveries undersökning efter
+            kursen. Denna enhet kan tilldelas efter att eleverna har slutfört sin
+            sista enhet i CS Discoveries.
+          student_description: Den här enheten innehåller en undersökning för när
+            din klass är klar med enheterna i CS Discoveries. Din lärare kommer att
+            tala om för dig när det är dags att svara på den här undersökningen.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Modul 1 – Komma igång
+        csa-pl-module-1-test:
+          title: Introduktion till Code.org och CSA
+        csa-pl-module-2-test:
+          title: Navigera bland verktygen på Code.org
+        csa-pl-module-3-test:
+          title: Stöd med textbaserad programmering
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              description_student: De projekt du har utvecklat under kursen har inspirerat
+                till mycket kreativitet i samhället! En kvartersfest kommer att hållas
+                för att visa upp kreativa berättelser, manus, sångtexter, brev och
+                dikter. Kvartersfesten är ett stort projekt som du arbetar med i hela
+                studieenheten, och projektledningsstrategier hjälper till att organisera
+                och strukturera ditt arbete. Du utforskar strategier för att skriva
+                och strukturera kod så att andra mjukvaruingenjörer enkelt kan förstå
+                och använda ett Java-verktyg för att skapa programdokumentation.
+              description_teacher: Eleverna introduceras till kvartersfestprojektet
+                och utvärderar krav och exempel för att identifiera frågor och nyckelfunktioner.
+                Innan de börjar arbeta med projektet fördjupar eleverna sin förståelse
+                av programstruktur och kommenterar genom att identifiera bästa praxis
+                och utforska användningen av Javadocs för att generera programdokumentation.
+            Exploring Integer and Double Objects:
+              description_student: Du konstruerar ”heltal” och ”dubbla” objekt som
+                representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
+                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
+                du värdena som dessa objekt lagrar som primitiva värden. Du utforskar
+                även de lägsta och högsta värdena för heltal för att undvika spillfel
+                innan du planerar de uppgifter du behöver slutföra för ditt kvartersfestprojekt.
+              description_teacher: Eleverna konstruerar ”heltal” och ”dubbla” objekt
+                som representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
+                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
+                studenterna värdena som dessa objekt lagrar som primitiva värden.
+                Studenterna utforskar även de lägsta och högsta värdena för heltal
+                för att undvika spillfel innan de planerar de uppgifter de behöver
+                slutföra för sitt kvartersfestprojekt.
+            Using ArrayLists to Store Data:
+              description_student: När vi arbetar med matriser och listor stöter vi
+                ibland på problem där antalet element är okänt eller listans storlek
+                ständigt ändras. I den här lektionen lär du dig om ”matrislistor”
+                och identifierar scenarier där denna datastruktur lämpar sig bättre.
+              description_teacher: Eleverna skapar ”matrislistor” för att lagra ”hela”
+                och ”dubbla” värden. De skiljer mellan ”matrislistor” och endimensionella
+                matriser för att avgöra vilken datastruktur som är bäst lämpad för
+                ett scenario. Eleverna lägger till element i en ”matrislista” och
+                lär sig hur autoboxing konverterar mellan primitiva värden och adapterklasser
+                när de arbetar med lagrade data.
+            Working with ArrayList Data:
+              description_student: Du använder ”matrisliste”-metoderna ”get()” och
+                ”set()” för att hämta och modifiera element och lära dig om ”sträng”-metoden
+                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Du
+                tillämpar standardalgoritmerna du utvecklade med 1D- och 2D-matriser
+                för att modifiera element i en ”matrislista”. Du lär dig hur unboxing
+                utför omvandlingar mellan primitiva värden och adapterklasser när
+                de arbetar med data som lagras i en ”matrislista”.
+              description_teacher: Eleverna använder ”matrisliste”-metoderna ”get()”
+                och ”set()” för att hämta och modifiera element och lära sig om ”sträng”-metoden
+                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Eleverna
+                tillämpar standardalgoritmerna de utvecklade med 1D- och 2D-matriser
+                för att modifiera element i en ”matrislista”. De lär sig hur unboxing
+                utför omvandlingar mellan primitiva värden och adapterklasser när
+                de arbetar med data som lagras i en ”matrislista”.
+            Storing Objects in an ArrayList:
+              description_student: Hittills har du skapat ”matrislistor” för att lagra
+                ”heltal” ”dubbla” och ”strängar”. Precis som med 1D- och 2D-matriser
+                kan du även lagra objekt som du skapar i en ”matrislista”. I den här
+                lektionen skapar du en ”matrislista” av objekt för att tillämpa de
+                standardalgoritmer du har använt under året för att arbeta med data
+                som lagras i den här listan.
+              description_teacher: Elever skapar ”matrislistor” för att lagra objekt
+                och lära sig om generiska typer i Java. De tillämpar algoritmerna
+                de lärt sig med endimensionella matriser på ”matrislistor” för att
+                hitta lägsta och högsta värden, beräkna summor och medelvärden eller
+                hitta element som uppfyller specifika kriterier.
+            Removing Data from an ArrayList:
+              description_student: Du utforskar funktionen för metoden ”remove()”
+                i ”matrisliste”-klassen och identifierar potentiella fel när du försöker
+                ta bort objekt medan du går igenom listan. Under processen lär du
+                dig att se när en ”matrislista” är bäst för ett scenario eller problem.
+              description_teacher: Eleverna utforskar funktionen för metoden ”remove()”
+                i ”matrisliste”-klassen och identifierar potentiella fel när de försöker
+                ta bort objekt medan de går igenom listan. Under processen lär de
+                sig att se när en ”matrislista” är bäst för ett scenario eller problem.
+            Using String Methods:
+              description_student: Du utforskar strukturen för en ”sträng” och erinrar
+                dig att ”strängar” är objekt. Du använder metoderna ”indexOf()” och
+                ”substring()” för att söka efter delsträngar inom en ”sträng” och
+                för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
+              description_teacher: Eleverna utforskar strukturen för en ”sträng” och
+                erinrar sig att ”strängar” är objekt. De använder metoderna ”indexOf()”
+                och ”substring()” för att söka efter delsträngar inom en ”sträng”
+                och för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
+            Comparing Strings:
+              description_student: Du utforskar användningen av ”compareTo()” för
+                att kontrollera om ”strängar” är i alfabetisk ordning. Du arbetar
+                sedan med ditt kvartersfestprojekt och fokuserar specifikt på de uppgifter
+                du har på din projektplaneringstavla.
+              description_teacher: Eleverna utforskar användningen av ”compareTo()”
+                för att kontrollera om ”strängar” är i alfabetisk ordning. De arbetar
+                sedan med sitt kvartersfestprojekt och fokuserar specifikt på de uppgifter
+                de har på sin projektplaneringstavla.
+            Solving Problems with Strings:
+              description_student: Du kombinerar dina kunskaper om standardalgoritmer
+                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
+                Du deltar sedan i en session med feedback från andra elever och reflekterar
+                över de framsteg du har gjort i ditt kvartersfestprojekt.
+              description_teacher: Eleverna kombinerar sina kunskaper om standardalgoritmer
+                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
+                De deltar sedan i en session med feedback från andra elever och reflekterar
+                över de framsteg de har gjort i sina kvartersfestprojekt.
+            Solving Problems with ArrayLists:
+              description_student: Du tillämpar standardalgoritmerna du skrev för
+                1D- och 2D-matriser på ”matrislistan”. Du implementerar en ny standardalgoritm
+                för att få individuella siffror från ett heltal innan du ändrar och
+                tillämpar tidigare algoritmer för att byta element, ta bort dubbletter
+                eller hitta element som uppfyller specifika kriterier i ditt kvartersfestprojekt.
+              description_teacher: Eleverna tillämpar standardalgoritmerna de skrev
+                för 1D- och 2D-matriser på ”matrislistan”. De implementerar en ny
+                standardalgoritm för att få individuella siffror från ett heltal innan
+                de ändrar och tillämpar tidigare algoritmer för att byta element,
+                ta bort dubbletter eller hitta element som uppfyller specifika kriterier
+                i deras kvartersfestprojekt.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Kvartersfestprojekt – Dag 1
+              description_student: Du fortsätter att utveckla ditt kvartersfestprojekt
+                och skapar en berättelse, dikt, låt eller annan form av litteratur
+                baserat på analys av verk från din favoritförfattare eller favoritartist.
+                Du utvärderar först ditt arbete själv för att bedöma hur väl du har
+                slutfört projektkraven, och skriver sedan acceptanskriterier för en
+                funktion i ditt projekt som en annan kursdeltagare testar. Du använder
+                självbedömningen och feedbacken för att prioritera dina återstående
+                uppgifter och fortsätta utveckla ditt projekt.
+              description_teacher: Eleverna fortsätter att utveckla sina kvartersfestprojekt
+                och skapar en berättelse, dikt, låt eller annan form av litteratur
+                baserat på analys av verk från deras favoritförfattare eller favoritartist.
+                Eleverna utvärderar först sitt arbete själva för att bedöma hur väl
+                de har slutfört projektkraven, och skriver sedan acceptanskriterier
+                för en funktion i sina projekt som en annan elev testar. Eleverna
+                använder självbedömningen och feedbacken för att prioritera sina återstående
+                uppgifter och fortsätta utveckla sina projekt.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Kvartersfestprojekt – Dag 2
+              description_student: I föregående lektion gjorde du en självbedömning
+                och skrev acceptanskriterier för ditt projekt. I den här lektionen
+                får du feedback från andra kursdeltagare så du kan identifiera vilka
+                uppgifter som återstår för att slutföra och fortsätta utveckla ditt
+                kvartersfestprojekt.
+              description_teacher: I föregående lektion gjorde eleverna självbedömningar
+                och skrev acceptanskriterier för sina projekt. I den här lektionen
+                får eleverna feedback från andra elever så de kan identifiera vilka
+                uppgifter som återstår för att slutföra och fortsätta utveckla sina
+                kvartersfestprojekt.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Kvartersfestprojekt – Dag 3
+              description_student: Du gör slutliga revisioner och uppdateringar baserade
+                på dina kodgranskningar och projektplaneringstavlan. Du delar ditt
+                kvartersfestprojekt med dina studiekamrater och firar sedan att du
+                har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
+              description_teacher: Eleverna gör slutliga revisioner och uppdateringar
+                baserade på sina kodgranskningar och projektplaneringstavlan. De delar
+                sina kvartersfestprojekt med sina studiekamrater och firar sedan att
+                de har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
+            Assessment Day:
+              description_student: I den här studieenheten använde du ”matrislistor”
+                för att lagra programdata och skilja på när du ska använda 1D- och
+                2D-matriser respektive ”matrislistor”. Du utforskade fördelarna och
+                funktionaliteten med en ”matrislistor”, och använde dessa för att
+                lösa problem som involverar numeriska data och objektdata. Du använde
+                metoder i ”sträng”-klassen för att analysera och bearbeta text erhållen
+                från användar- och filindata. Under hela studieenheten skrev du programdokumentation
+                med kommentarer på en enskild rad, kommentarer på flera rader och
+                Javadoc-kommentarer för att skapa API-dokumentation. I processen identifierade
+                och dokumenterade du förvillkor och eftervillkor för objekt och metoder.
+                Nu utvärderar du hur väl du har uppnått studieenhetens lärandemål
+                och färdigheter i en utvärdering med flervalsalternativ.
+              description_teacher: I den här studieenheten använde eleverna ”matrislistor”
+                för att lagra programdata och skilja på när de ska använda 1D- och
+                2D-matriser respektive ”matrislistor”. Eleverna utforskade fördelarna
+                och funktionaliteten med en ”matrislistor”, och använde dessa för
+                att lösa problem som involverar numeriska data och objektdata. De
+                använde metoder i ”sträng”-klassen för att analysera och bearbeta
+                text erhållen från användar- och filindata. Under hela studieenheten
+                skrev eleverna programdokumentation med kommentarer på en enskild
+                rad, kommentarer på flera rader och Javadoc-kommentarer för att skapa
+                API-dokumentation. I processen identifierade och dokumenterade eleverna
+                förvillkor och eftervillkor för objekt och metoder. Nu utvärderar
+                de hur väl de har uppnått studieenhetens lärandemål och färdigheter
+                i en utvärdering med flervalsalternativ.
+            lesson-2:
+              description_student: Du konstruerar ”heltal” och ”dubbla” objekt som
+                representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
+                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
+                du värdena som dessa objekt lagrar som primitiva värden. Du utforskar
+                även de lägsta och högsta värdena för heltal för att undvika spillfel
+                innan du planerar de uppgifter du behöver slutföra för ditt kvartersfestprojekt.
+              description_teacher: Eleverna konstruerar ”heltal” och ”dubbla” objekt
+                som representerar ”hela” och ”dubbla” primitiva värden som referensvärden.
+                Genom att använda metoderna i klasserna ”heltal” och ”dubbla” returnerar
+                studenterna värdena som dessa objekt lagrar som primitiva värden.
+                Studenterna utforskar även de lägsta och högsta värdena för heltal
+                för att undvika spillfel innan de planerar de uppgifter de behöver
+                slutföra för sitt kvartersfestprojekt.
+            lesson-3:
+              description_student: När vi arbetar med matriser och listor stöter vi
+                ibland på problem där antalet element är okänt eller listans storlek
+                ständigt ändras. I den här lektionen lär du dig om ”matrislistor”
+                och identifierar scenarier där denna datastruktur lämpar sig bättre.
+              description_teacher: Eleverna skapar ”matrislistor” för att lagra ”hela”
+                och ”dubbla” värden. De skiljer mellan ”matrislistor” och endimensionella
+                matriser för att avgöra vilken datastruktur som är bäst lämpad för
+                ett scenario. Eleverna lägger till element i en ”matrislista” och
+                lär sig hur autoboxing konverterar mellan primitiva värden och adapterklasser
+                när de arbetar med lagrade data.
+            lesson-4:
+              description_student: Du använder ”matrisliste”-metoderna ”get()” och
+                ”set()” för att hämta och modifiera element och lära dig om ”sträng”-metoden
+                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Du
+                tillämpar standardalgoritmerna du utvecklade med 1D- och 2D-matriser
+                för att modifiera element i en ”matrislista”. Du lär dig hur unboxing
+                utför omvandlingar mellan primitiva värden och adapterklasser när
+                de arbetar med data som lagras i en ”matrislista”.
+              description_teacher: Eleverna använder ”matrisliste”-metoderna ”get()”
+                och ”set()” för att hämta och modifiera element och lära sig om ”sträng”-metoden
+                ”length()” för att räkna antalet tecken i ett ”sträng”-objekt. Eleverna
+                tillämpar standardalgoritmerna de utvecklade med 1D- och 2D-matriser
+                för att modifiera element i en ”matrislista”. De lär sig hur unboxing
+                utför omvandlingar mellan primitiva värden och adapterklasser när
+                de arbetar med data som lagras i en ”matrislista”.
+            lesson-5:
+              description_student: Hittills har du skapat ”matrislistor” för att lagra
+                ”heltal” ”dubbla” och ”strängar”. Precis som med 1D- och 2D-matriser
+                kan du även lagra objekt som du skapar i en ”matrislista”. I den här
+                lektionen skapar du en ”matrislista” av objekt för att tillämpa de
+                standardalgoritmer du har använt under året för att arbeta med data
+                som lagras i den här listan.
+              description_teacher: Elever skapar ”matrislistor” för att lagra objekt
+                och lära sig om generiska typer i Java. De tillämpar algoritmerna
+                de lärt sig med endimensionella matriser på ”matrislistor” för att
+                hitta lägsta och högsta värden, beräkna summor och medelvärden eller
+                hitta element som uppfyller specifika kriterier.
+            lesson-6:
+              description_student: Du utforskar funktionen för metoden ”remove()”
+                i ”matrisliste”-klassen och identifierar potentiella fel när du försöker
+                ta bort objekt medan du går igenom listan. Under processen lär du
+                dig att se när en ”matrislista” är bäst för ett scenario eller problem.
+              description_teacher: Eleverna utforskar funktionen för metoden ”remove()”
+                i ”matrisliste”-klassen och identifierar potentiella fel när de försöker
+                ta bort objekt medan de går igenom listan. Under processen lär de
+                sig att se när en ”matrislista” är bäst för ett scenario eller problem.
+            lesson-7:
+              description_student: Du utforskar strukturen för en ”sträng” och erinrar
+                dig att ”strängar” är objekt. Du använder metoderna ”indexOf()” och
+                ”substring()” för att söka efter delsträngar inom en ”sträng” och
+                för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
+              description_teacher: Eleverna utforskar strukturen för en ”sträng” och
+                erinrar sig att ”strängar” är objekt. De använder metoderna ”indexOf()”
+                och ”substring()” för att söka efter delsträngar inom en ”sträng”
+                och för att skapa nya ”sträng”-objekt från en befintlig ”sträng”.
+            lesson-8:
+              description_student: Du utforskar användningen av ”compareTo()” för
+                att kontrollera om ”strängar” är i alfabetisk ordning. Du arbetar
+                sedan med ditt kvartersfestprojekt och fokuserar specifikt på de uppgifter
+                du har på din projektplaneringstavla.
+              description_teacher: Eleverna utforskar användningen av ”compareTo()”
+                för att kontrollera om ”strängar” är i alfabetisk ordning. De arbetar
+                sedan med sitt kvartersfestprojekt och fokuserar specifikt på de uppgifter
+                de har på sin projektplaneringstavla.
+            lesson-9:
+              description_student: Du kombinerar dina kunskaper om standardalgoritmer
+                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
+                Du deltar sedan i en session med feedback från andra elever och reflekterar
+                över de framsteg du har gjort i ditt kvartersfestprojekt.
+              description_teacher: Eleverna kombinerar sina kunskaper om standardalgoritmer
+                och ”strängar” för att kontrollera om en ”sträng” är en palindrom.
+                De deltar sedan i en session med feedback från andra elever och reflekterar
+                över de framsteg de har gjort i sina kvartersfestprojekt.
+            lesson-10:
+              description_student: Du tillämpar standardalgoritmerna du skrev för
+                1D- och 2D-matriser på ”matrislistan”. Du implementerar en ny standardalgoritm
+                för att få individuella siffror från ett heltal innan du ändrar och
+                tillämpar tidigare algoritmer för att byta element, ta bort dubbletter
+                eller hitta element som uppfyller specifika kriterier i ditt kvartersfestprojekt.
+              description_teacher: Eleverna tillämpar standardalgoritmerna de skrev
+                för 1D- och 2D-matriser på ”matrislistan”. De implementerar en ny
+                standardalgoritm för att få individuella siffror från ett heltal innan
+                de ändrar och tillämpar tidigare algoritmer för att byta element,
+                ta bort dubbletter eller hitta element som uppfyller specifika kriterier
+                i deras kvartersfestprojekt.
+            lesson-11:
+              name: Kvartersfestprojekt – Dag 1
+              description_student: Du fortsätter att utveckla ditt kvartersfestprojekt
+                och skapar en berättelse, dikt, låt eller annan form av litteratur
+                baserat på analys av verk från din favoritförfattare eller favoritartist.
+                Du utvärderar först ditt arbete själv för att bedöma hur väl du har
+                slutfört projektkraven, och skriver sedan acceptanskriterier för en
+                funktion i ditt projekt som en annan kursdeltagare testar. Du använder
+                självbedömningen och feedbacken för att prioritera dina återstående
+                uppgifter och fortsätta utveckla ditt projekt.
+              description_teacher: Eleverna fortsätter att utveckla sina kvartersfestprojekt
+                och skapar en berättelse, dikt, låt eller annan form av litteratur
+                baserat på analys av verk från deras favoritförfattare eller favoritartist.
+                Eleverna utvärderar först sitt arbete själva för att bedöma hur väl
+                de har slutfört projektkraven, och skriver sedan acceptanskriterier
+                för en funktion i sina projekt som en annan elev testar. Eleverna
+                använder självbedömningen och feedbacken för att prioritera sina återstående
+                uppgifter och fortsätta utveckla sina projekt.
+            lesson-12:
+              name: Kvartersfestprojekt – Dag 2
+              description_student: I föregående lektion gjorde du en självbedömning
+                och skrev acceptanskriterier för ditt projekt. I den här lektionen
+                får du feedback från andra kursdeltagare så du kan identifiera vilka
+                uppgifter som återstår för att slutföra och fortsätta utveckla ditt
+                kvartersfestprojekt.
+              description_teacher: I föregående lektion gjorde eleverna självbedömningar
+                och skrev acceptanskriterier för sina projekt. I den här lektionen
+                får eleverna feedback från andra elever så de kan identifiera vilka
+                uppgifter som återstår för att slutföra och fortsätta utveckla sina
+                kvartersfestprojekt.
+            lesson-13:
+              name: Kvartersfestprojekt – Dag 3
+              description_student: Du gör slutliga revisioner och uppdateringar baserade
+                på dina kodgranskningar och projektplaneringstavlan. Du delar ditt
+                kvartersfestprojekt med dina studiekamrater och firar sedan att du
+                har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
+              description_teacher: Eleverna gör slutliga revisioner och uppdateringar
+                baserade på sina kodgranskningar och projektplaneringstavlan. De delar
+                sina kvartersfestprojekt med sina studiekamrater och firar sedan att
+                de har slutfört projektet och gör en avslutande reflektion av utvecklingsprocessen.
+            lesson-15:
+              description_student: I den här studieenheten använde du ”matrislistor”
+                för att lagra programdata och skilja på när du ska använda 1D- och
+                2D-matriser respektive ”matrislistor”. Du utforskade fördelarna och
+                funktionaliteten med en ”matrislistor”, och använde dessa för att
+                lösa problem som involverar numeriska data och objektdata. Du använde
+                metoder i ”sträng”-klassen för att analysera och bearbeta text erhållen
+                från användar- och filindata. Under hela studieenheten skrev du programdokumentation
+                med kommentarer på en enskild rad, kommentarer på flera rader och
+                Javadoc-kommentarer för att skapa API-dokumentation. I processen identifierade
+                och dokumenterade du förvillkor och eftervillkor för objekt och metoder.
+                Nu utvärderar du hur väl du har uppnått studieenhetens lärandemål
+                och färdigheter i en utvärdering med flervalsalternativ.
+              description_teacher: I den här studieenheten använde eleverna ”matrislistor”
+                för att lagra programdata och skilja på när de ska använda 1D- och
+                2D-matriser respektive ”matrislistor”. Eleverna utforskade fördelarna
+                och funktionaliteten med en ”matrislistor”, och använde dessa för
+                att lösa problem som involverar numeriska data och objektdata. De
+                använde metoder i ”sträng”-klassen för att analysera och bearbeta
+                text erhållen från användar- och filindata. Under hela studieenheten
+                skrev eleverna programdokumentation med kommentarer på en enskild
+                rad, kommentarer på flera rader och Javadoc-kommentarer för att skapa
+                API-dokumentation. I processen identifierade och dokumenterade eleverna
+                förvillkor och eftervillkor för objekt och metoder. Nu utvärderar
+                de hur väl de har uppnått studieenhetens lärandemål och färdigheter
+                i en utvärdering med flervalsalternativ.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              description_teacher: |-
+                I den här Datavetenskap- och språkintegrerade lektionen för nya kodare kommer studenterna att animera en dikt med kod för att illustrera stämningen i en dikt. Eleverna kommer att läsa och upptäcka stämningen i en dikt. De hittar sedan motsvarande effekter och bilder för att illustrera diktens stämning. Slutligen kommer studenterna att använda händelser (kod) för att illustrera en förändring i stämningen eller animera introduktionen av nya bilder i en dikt.
+
+                Denna lektion kan genomföras som en 1-timmes fristående lektion. Det finns också ett alternativ att använda den här lektionen som den första lektionen i flerlektionsmodulen som heter [Coding with Poetry](http://studio.code.org/s/poetry-2021).(<http://studio.code.org/s/poetry-2021>).
+            lesson-1:
+              description_teacher: |-
+                I den här Datavetenskap- och språkintegrerade lektionen kommer studenterna att animera en dikt med kod för att illustrera stämningen i en dikt. Under denna inledande kodningsaktivitet kommer studenterna att läsa och upptäcka stämningen i en dikt. Sedan hittar de motsvarande effekter och bilder för att illustrera diktens stämning. Till sist kommer eleverna att använda händelser (kod) för att illustrera en förändring i stämningen eller animera introduktionen av nya bilder i en dikt.
+
+                Denna lektion kan genomföras som en 1-timmes fristående lektion. Det finns också ett alternativ att använda den här lektionen som den första lektionen i 5-lektionsmodulen som heter [Coding with Poetry](http://code.org/poetry). I slutet av Coding with Poetry-modulen kommer eleverna att skriva sina egna dikter och skapa en app för diktgenerator att dela med vänner.
+
+                Coding with Poetry är en del av Code.orgs Datavetenskap Sammanhang läroplan, som är tänkt att integrera CS i andra ämnesområden som matematik, ELA och naturvetenskap med anpassning till CCSS, NGSS och CSTA-standarder.
+        poetry-2021:
+          lessons:
+            Poem Art:
+              description_teacher: I den här Datavetenskap- och språkintegrerade lektionen
+                för nya kodare kommer studenterna att animera en dikt med kod för
+                att illustrera stämningen i en dikt. Eleverna kommer att läsa och
+                upptäcka stämningen i en dikt. De hittar sedan motsvarande effekter
+                och bilder för att illustrera diktens stämning. Slutligen kommer studenterna
+                att använda händelser (kod) för att illustrera en förändring i stämningen
+                eller animera introduktionen av nya bilder i en dikt.
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Stavnings-bi
+        csa6-exemplars:
+          lessons:
+            lesson-11:
+              name: Kvartersfestprojekt – Dag 1
+            lesson-12:
+              name: Kvartersfestprojekt – Dag 2
+            lesson-13:
+              name: Kvartersfestprojekt – Dag 3
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        2022drafting:
+          lessons:
+            lesson-4:
+              name: Utbrottssimulator
+            For Loop Fun:
+              name: "'För' loop skoj"
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Timmen med Kod
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: variabler
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: funktioner
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Glada kartor
+            'Programming: Happy Maps':
+              name: Glada kartor
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Dansparty
+            lesson-1:
+              name: Dansparty
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+            csf_functions:
+              display_name: funktioner
+            csf_variables:
+              display_name: variabler
+            csf_for_loops:
+              display_name: "'För' loopar"
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Binära tal
+              key: Binära tal
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Felsökning
+              key: Felsökning
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: variabler
+            csp_conditionals:
+              display_name: Villkor
+            csp_functions:
+              display_name: funktioner
+            csp_project:
+              display_name: Projekt
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listor
+            csp_loops:
+              display_name: loopar
+            csp_project:
+              display_name: Projekt
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Flytta det, flytta den
+              key: Flytta det, flytta den
+            Getting Loopy:
+              name: Att bli snurrig
+            'Loops: Getting Loopy':
+              name: Att bli snurrig
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Den stora händelsen
+            Binary Bracelets:
+              name: Binära armband
+              key: Binära armband
+            'Events: The Big Event':
+              name: Den stora händelsen
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        csp7-2022:
+          lesson_groups:
+            csp_libraries:
+              display_name: Bibliotek
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Kalkyleringsprogrammering
+            Relay Programming:
+              name: Stafettprogrammering
+              key: Stafettprogrammering
+            Dance Party:
+              name: Dansparty
+              key: Dansparty
+            Conditionals with Cards:
+              name: Villkorssatser med kort
+              key: Villkorssatser med kort
+            'Algorithms: Graph Paper Programming':
+              name: Kalkyleringsprogrammering
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalt medborgarskap
+            csf_events:
+              display_name: Händelser
+            csf_loops:
+              display_name: loopar
+            csf_conditionals:
+              display_name: Villkor
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Låtskrivande
+            'Functions: Songwriting':
+              name: Låtskrivande
+            Conditionals:
+              key: Villkor
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt medborgarskap
+            ramp_up:
+              display_name: Kapslade slingor(loopar)
+            csf_functions:
+              display_name: funktioner
+            csf_nested_loops:
+              display_name: Villkor
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: "'För' loop skoj"
+              key: "'För' loop skoj"
+            Outbreak:
+              name: Utbrott
+            The Internet:
+              name: Internet
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitalt medborgarskap
+            lessonGroup-8:
+              display_name: variabler
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: loopar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: loopar
+            csf_events:
+              display_name: Händelser
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Villkor
+            lesson-16:
+              name: Felsökning
+            lesson-17:
+              name: Projektinspiration
+            lesson-19:
+              name: Felsökning
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: loopar
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innehåll
+        csa8-pilot-extra:
+          lesson_groups:
             lessonGroup-2:
               display_name: Innehåll

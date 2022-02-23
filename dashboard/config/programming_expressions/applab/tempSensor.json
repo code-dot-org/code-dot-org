@@ -1,4 +1,7 @@
 {
-  "func": "tempSensor",
-  "category": "Circuit"
+  "key": "tempSensor",
+  "name": "tempSensor",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "syntax": "tempSensor"
 }

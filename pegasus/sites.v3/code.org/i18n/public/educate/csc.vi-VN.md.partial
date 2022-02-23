@@ -1,0 +1,56 @@
+---
+title: Kết nối KHMT
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Kết nối Khoa học máy tính
+
+Giáo trình mới nhất của chúng tôi sẽ kết nối việc học khoa học máy tính với các môn học khác như toán, ngữ văn, khoa học và xã hội. Thông khoa Kết nối KHTM, các lớp K-12 sẽ khám phá các môn học thông thường theo cách mới vô cùng thú vị!
+
+## Hãy thử Kết nối KHMT với các hoạt động dành cho Giờ lập trình
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Tranh thơ ca", left_description: "Hãy khám phá bản thân! Dùng mã lệnh để tạo bài thơ với hình chuyển động.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Bắt đầu", right_heading: "Xin chào cả thế giới", right_description: "Chọn trong số bốn chủ đề thú vị để lập trình nhân vật tương tác trong thế giới do chính bạn tạo ra.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Bắt đầu"}}
+{{ clearfix }}
+
+## Học phần
+
+Các học phần Kết nối KHMT có cấu trúc chuỗi các bài học tích hợp khoa học máy tính vào các môn học căn bản như toán, ELA và khoa học. Các học phần này tuân thủ tiêu chuẩn của các môn học và kết thúc bằng một dự án kết hợp nhiều môn học.
+
+Chúng hoàn hảo cho những giáo viên muốn kết hợp khoa học máy tính vào giáo án của mình cho các môn học khác, cũng như các giáo viên về Khoa học Máy tính muốn củng cố những gì học viên đang học trong các môn học khác.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 giờ", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Lập trình với Thơ ca", right_description: "Kết nối khoa học máy tính và thơ ca trong lớp với chuỗi bài học này.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Xem học phần" }}
+
+## Các dự án mở
+
+Tiếp tục liên kết giữa khoa học máy tính và các môn học truyền thống trong dự án kết hợp nhiều môn học. Chỉ mất 1-2 giờ giảng để hoàn thành và lý tưởng cho những giao viên muốn phát triển các dự án theo đề tài cụ thể sao cho phù hợp với giáo trình sẵn có của mình.
+
+<em>Mẹo: Các dự án này yêu cầu một số hiểu biết cơ bản về khoa học máy tính, do vậy, chúng tôi khuyến nghị bạn hoàn thành hoạt động Giờ Lập Trình Hello World (Xin Chào Thế Giới) trước khi bắt đầu!</em>
+
+{{ csc_module, title: "Hệ sinh thái", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Khoa học", duration: "1-2 giờ", description: "Học sinh dùng kỹ năng lập trình căn bản để tạo mô hình hệ sinh thái tương tác nhằm khám phá tác động lẫn nhau của các loài động vật, thực vật và sinh vật. Mô hình này còn có thể áp dụng vào những tương tác giữa địa quyển, sinh quyển, thủy quyết và/hoặc khí quyển.", button_text: "Tìm hiểu thêm", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Vòng đời", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Khoa học", duration: "1-2 giờ", description: "Dự án này tìm hiểu từ trứng thành nòng nọc và trở thành ếch, trong đó học sinh dùng mã lệnh để tạo mô hình chu trình khoa học – như vòng đời của ếch hoặc luân chuyển năng lượng!", button_text: "Tìm hiểu thêm", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Nghiên cứu nhân vật", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2 giờ", description: "Mỗi hành động đều tạo ra phản ứng! Không, đây không phải môn vật lý – dự án này giúp học sinh dùng mã lệnh để tạo cảnh cho một câu chuyện kể về hành động của một nhân vật gây ảnh hưởng tới chuỗi các sự kiện.", button_text: "Tìm hiểu thêm", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Bài học trong câu chuyện", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2 giờ", description: "Chuyện gì xảy ra giữa \"Ngày xưa ngày xưa\" and \"Hết?\" Học sinh sẽ lập trình ứng dụng tương tác để kể lại một câu chuyện và bài học trong đó. Học sinh có thể áp dụng kỹ năng này vào bất kỳ câu chuyện, truyện dân gian, cuốn sách hay truyện ngụ ngôn nào.", button_text: "Tìm hiểu thêm", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Bài học chuyển tiếp
+
+Các bài học chuyển tiếp của chúng tôi mang đế một phương pháp nhanh chóng và thú vị để kết nối giữa khoa học máy tính và các môn học khác. Các bài học này không cần có kiến thức tiền đề về khoa học máy tính nên lý tưởng cho bất kỳ giáo viên nào muốn kết hợp kiến thức thiết yếu của thế kỷ 21 vào giáo trình truyền thống hoặc để khích lệ học sinh học các môn truyền thống theo một phương pháp mới thú vị hơn.
+
+
+{{ csc_module, title: "Đánh vần với Chú ong", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 giờ", description: "V-U-I! Trong bài học này, học sinh sử dụng kỹ năng lập trình căn bản để hướng dẫn Chú ong nơi cần V-O V-E để đánh vần các từ trên bảng đầy chữ cái.", button_text: "Tìm hiểu thêm", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Đếm cùng Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Toán", duration: "1 giờ", description: "Đến giờ săn tìm kho báu rồi! Học sinh sẽ luyện đếm và cộng trong khi lập trình với vòng lặp để giúp Laurel thu thập các viên ngọc trên khắp mê cung.", button_text: "Tìm hiểu thêm", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Quy tắc đạo đức Trí tuệ nhân tạo", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA hoặc Đạo đức", duration: "1 giờ", description: "sau khi nghiên cứu về các nguy cơ về đạo đức tiềm ẩn của trí tuệ nhân tạo (AI), học sinh cùng nhau biên soạn tài liệu \"Quy tắc đạo đức Trí tuệ nhân tạo\" dùng trong lớp học.", button_text: "Tìm hiểu thêm", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Trực quan hóa dữ liệu", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Toán", duration: "1 giờ", description: "Bài học này giới thiệu học sinh đến với công cụ Trực quan hóa dữ liệu trong App Lab cùng hai loại biểu đồ quan trọng: biểu đồ hình cột và biểu đồ tần suất. Trong quá trình học, học sinh sẽ rèn luyện kỹ năng sử dụng công cụ này và đọc dữ liệu.", button_text: "Tìm hiểu thêm", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Bạn đã hoàn thành hoạt động Kết nối KHMT và/hoặc đang tìm thêm lựa chọn cho lớp của mình? Vui lòng <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">chia sẻ góp ý</a> và ý tưởng cho các bài học tại đây!</em>

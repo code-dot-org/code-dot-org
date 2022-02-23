@@ -4,24 +4,36 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
       "hideable_lessons": true,
-      "project_widget_visible": true,
+      "is_course": true,
+      "is_migrated": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "playlab_k1",
         "artist_k1"
       ],
-      "lesson_extras_available": true,
-      "version_year": "2021",
-      "curriculum_umbrella": "CSF",
-      "is_course": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "tts": true
+      "project_widget_visible": true,
+      "supported_locales": [
+        "es-ES",
+        "es-MX",
+        "fr-FR",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK"
+      ],
+      "tts": true,
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-09-03 20:49:54 UTC",
+    "serialized_at": "2022-01-20 17:36:40 UTC",
     "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "courseb-2021"
     }
@@ -111,9 +123,9 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-ND",
-        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nDoes what you do online always stay online? Students learn that the information they share online leaves a digital footprint or \"trail.\" Depending on how they manage it, this trail can be big or small, and harmful or helpful. Students compare different trails and think critically about what kinds of information they want to leave behind.",
+        "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nThis lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nDoes what you do online always stay online? Students learn that the information they share online leaves a digital footprint or \"trail.\" Depending on how they manage it, this trail can be big or small, and harmful or helpful. Students compare different trails and think critically about what kinds of information they want to leave behind.",
         "preparation": "- Review instructional materials.\r\n- Print handout(s) for each student.",
-        "purpose": "Common Sense Education created this lesson to teach students about \"digital footprints\", and what information is OK for them to have in their own.",
+        "purpose": "Common Sense’s Digital Citizenship Curriculum addresses six core topics, based on the latest research on children, media, and technology. This lesson focuses on Digital Footprint & Identity. Students consider the benefits and risks of online sharing and explore how a digital persona can affect one's sense of self, reputation, and relationships.\n",
         "student_overview": "Learn about your digital footprint and how to stay safe when visiting websites. ",
         "unplugged": true
       },
@@ -1237,7 +1249,7 @@
       "key": "4c778537-489f-4c5c-913b-38cbf385737c",
       "position": 1,
       "properties": {
-        "description": "* **digital footprint**: a record of what you do online, including the sites you visit and the things you share\n* **permanent**: something that lasts forever\n* **private information**: information about you that can be used to identify who you are\n* **trail**: a path or track\n\n**Before the lesson**: Cut out the [Digital Trail Squares](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) in advance, keeping the squares for each animal in two separate piles.\n\n**Say**: _Today we're going to watch a video called \"Follow the Digital Trail.\"  Have any of you heard of the word \"trail\" before?_\n\nInvite students to respond, and define trail as *a path or track that someone can follow*. ([Slide 3](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g524b55ab78_0_23))\n\n\n",
+        "description": "* **digital footprint**: a record of what you do online, including the sites you visit and the things you share\n* **permanent**: something that lasts forever\n* **private information**: information about you that can be used to identify who you are\n* **trail**: a path or track\n\n**Before the lesson**: Cut out the [Digital Trail Squares](https://docs.google.com/document/d/1fEqVZDOaww5qpz96GbkCpICweIhBT_405FAyBcIQ77Y/edit) in advance, keeping the squares for each animal in two separate piles.\n\n**Say**: _Today we're going to watch a video called \"Follow the Digital Trail.\"  Have any of you heard of the word \"trail\" before?_\n\nInvite students to respond, and define trail as *a path or track that someone can follow*. ([Slide 3](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g524b55ab78_0_23))\n\n\n",
         "name": "Key Vocabulary: \r",
         "progression_name": "Video: Follow The Digital Trail"
       },
@@ -1250,7 +1262,7 @@
       "key": "854c6fa9-6eda-4b41-8b7f-f7f0839f37ef",
       "position": 2,
       "properties": {
-        "description": "**Show** the [Follow the Digital Trail](https://www.commonsense.org/education/videos/follow-the-digital-trail) video on [Slide 4](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g56a0663814_5_26). As they watch, have students pay close attention to the types of information that are and aren't OK to share online.\n\n**Say**: _In the video, Feet was talking about a digital footprint. What is a digital footprint?_ \n\nInvite students to respond. Clarify that a **digital footprint** is *a record (or trail) of what you do online, including the sites you visit and the things you share*. ([Slide 5](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_19))\n\n**Ask**: _What information does Feet say NOT to share online?_\n\nAfter students have had a chance to share, project [Slide 6](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g513c004c7f_0_192) and review: _Private information_ such as one's _full name, address, phone number, age, birthday, school name._\n\nDefine **private information** as _information about you that can be used to identify who you are_. ([Slide 7](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5af742ae8d_0_0))\n\n**Ask**: _What information does Feet think is OK to share online?_\n\nAfter students have had a chance to share out, project [Slide 8](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_27) and review: _Personal information_ such as _hobbies, favorite things._"
+        "description": "**Show** the [Follow the Digital Trail](https://www.commonsense.org/education/videos/follow-the-digital-trail) video on [Slide 4](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56a0663814_5_26). As they watch, have students pay close attention to the types of information that are and aren't OK to share online.\n\n**Say**: _In the video, Feet was talking about a digital footprint. What is a digital footprint?_ \n\nInvite students to respond. Clarify that a **digital footprint** is *a record (or trail) of what you do online, including the sites you visit and the things you share*. ([Slide 5](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_19))\n\n**Ask**: _What information does Feet say NOT to share online?_\n\nAfter students have had a chance to share, project [Slide 6](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_192) and review: _Private information_ such as one's _full name, address, phone number, age, birthday, school name._\n\nDefine **private information** as _information about you that can be used to identify who you are_. ([Slide 7](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5af742ae8d_0_0))\n\n**Ask**: _What information does Feet think is OK to share online?_\n\nAfter students have had a chance to share out, project [Slide 8](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_27) and review: _Personal information_ such as _hobbies, favorite things._"
       },
       "seeding_key": {
         "activity_section.key": "854c6fa9-6eda-4b41-8b7f-f7f0839f37ef",
@@ -1261,7 +1273,7 @@
       "key": "732166f3-fa43-4af1-ae51-fa6136a7a8e7",
       "position": 1,
       "properties": {
-        "description": "Place the **Digital Trail Squares** on the ground in two different trails, keeping Mervin the Mouse's and Ellie the Elephant's trails separate from each other.  You can also place them in different places around the classroom to see if students can find them.\r\n\r\n**Say**: _Mervin the Mouse and Ellie the Elephant were playing a game online and noticed there was a chat box. They thought it would be fun to talk to the other players and started to share some information about themselves. The only problem is that they forgot to ask their parents if it was OK first._ \r\n\r\n_All of you are detectives at the Little Foot Detective Agency. As a detective, you have been hired to find out as much as possible about Mervin and Ellie._\r\n\r\n**Divide** students into groups of four. Distribute the **Animal Tracks Student Handout** to every student and explain that while they are working together, they should each keep detailed notes and answer the reflection questions on their own handout. ([Slide 9](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g513c004c7f_0_10))\r\n\r\n**Invite** students to go on a hunt for information around the classroom. Let them know that the information that Mervin and Ellie posted can be seen by anyone on the internet, including the detectives. Each group should follow the digital trail of both animals. Stagger the groups so that they follow the trails at slightly different times. Have them answer the two questions on the handout once they are done."
+        "description": "Place the **Digital Trail Squares** on the ground in two different trails, keeping Mervin the Mouse's and Ellie the Elephant's trails separate from each other.  You can also place them in different places around the classroom to see if students can find them.\n\n**Say**: _Mervin the Mouse and Ellie the Elephant were playing a game online and noticed there was a chat box. They thought it would be fun to talk to the other players and started to share some information about themselves. The only problem is that they forgot to ask their parents if it was OK first._ \n\n_All of you are detectives at the Little Foot Detective Agency. As a detective, you have been hired to find out as much as possible about Mervin and Ellie._\n\n**Divide** students into groups of four. Distribute the **Animal Tracks Student Handout** to every student and explain that while they are working together, they should each keep detailed notes and answer the reflection questions on their own handout. ([Slide 9](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_10))\n\n**Invite** students to go on a hunt for information around the classroom. Let them know that the information that Mervin and Ellie posted can be seen by anyone on the internet, including the detectives. Each group should follow the digital trail of both animals. Stagger the groups so that they follow the trails at slightly different times. Have them answer the two questions on the handout once they are done."
       },
       "seeding_key": {
         "activity_section.key": "732166f3-fa43-4af1-ae51-fa6136a7a8e7",
@@ -1272,7 +1284,7 @@
       "key": "2ec9f664-2513-4fd2-972a-32193c8ab3a8",
       "position": 1,
       "properties": {
-        "description": "**Invite** each group to report to the rest of the class what they learned about each of the animals. As a class, complete the chart on [Slide 10](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g513c004c7f_0_180). \r\n\r\n|                                                                | Mervin the Mouse | Ellie the Elephant |\r\n|----------------------------------------------------------------|------------------|--------------------|\r\n| 1. Whose full name do you know?                                | X                | X                  |\r\n| 2. Whose house could you find?                                 |                  | X                  |\r\n| 3. Whose birth date do you know?                               |                  | X                  |\r\n| 4. Whose username and password do you know?                    |                  | X                  |\r\n| 5. Who let out a secret on the internet?                       | X                |                    |\r\n| 6. Which animal can you describe better from his or her photo? |                  | X                  |\r\n\r\n<br />\r\n\r\n**Ask**: _Who can the detectives find out more about, and why?_\r\n\r\nExplain that the answer is Ellie, since they now know where she lives, what she looks like, and a lot of private information about her life. \r\n\r\n**Ask**: _Is there anything that Ellie or Mervin posted that could be a problem for them?_\r\n\r\nInvite students to share. Explain that while it is OK to share fun and interesting information online, sharing private information like where they live or their full name is unsafe, since the internet is a public space where strangers can see their information. And sharing secrets online can hurt other people's feelings.\r\n\r\n**Explain** that it's important to think carefully about what we share online because the information is permanent. Define permanent as something that lasts forever. ([Slide 11](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_36))\r\n\r\n**Project** [Slide 12](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g5ad38f424c_0_44) and have students summarize which information is OK to share online and what is not OK. Add their responses to the chart. Suggested answers:\r\n\r\n| OK to Share | NOT OK to Share                    |\r\n|-------------|------------------------------------|\r\n| Interests   | Full name                          |\r\n| Hobbies     | Address                            |\r\n| Nicknames   | Birth date                         |\r\n|             | Password                           |\r\n|             | School name                        |\r\n|             | Information that would hurt others |\r\n\r\n<br />\r\n\r\nEmphasize that students should ask their parents or caregivers for permission before sharing any information about themselves online."
+        "description": "**Invite** each group to report to the rest of the class what they learned about each of the animals. As a class, complete the chart on [Slide 10](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g513c004c7f_0_180). \n\n|                                                                | Mervin the Mouse | Ellie the Elephant |\n|----------------------------------------------------------------|------------------|--------------------|\n| 1. Whose full name do you know?                                | X                | X                  |\n| 2. Whose house could you find?                                 |                  | X                  |\n| 3. Whose birth date do you know?                               |                  | X                  |\n| 4. Whose username and password do you know?                    |                  | X                  |\n| 5. Who let out a secret on the internet?                       | X                |                    |\n| 6. Which animal can you describe better from his or her photo? |                  | X                  |\n\n<br />\n\n**Ask**: _Who can the detectives find out more about, and why?_\n\nExplain that the answer is Ellie, since they now know where she lives, what she looks like, and a lot of private information about her life. \n\n**Ask**: _Is there anything that Ellie or Mervin posted that could be a problem for them?_\n\nInvite students to share. Explain that while it is OK to share fun and interesting information online, sharing private information like where they live or their full name is unsafe, since the internet is a public space where strangers can see their information. And sharing secrets online can hurt other people's feelings.\n\n**Explain** that it's important to think carefully about what we share online because the information is permanent. Define permanent as something that lasts forever. ([Slide 11](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_36))\n\n**Project** [Slide 12](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g5ad38f424c_0_44) and have students summarize which information is OK to share online and what is not OK. Add their responses to the chart. Suggested answers:\n\n| OK to Share | NOT OK to Share                    |\n|-------------|------------------------------------|\n| Interests   | Full name                          |\n| Hobbies     | Address                            |\n| Nicknames   | Birth date                         |\n|             | Password                           |\n|             | School name                        |\n|             | Information that would hurt others |\n\n<br />\n\nEmphasize that students should ask their parents or caregivers for permission before sharing any information about themselves online."
       },
       "seeding_key": {
         "activity_section.key": "2ec9f664-2513-4fd2-972a-32193c8ab3a8",
@@ -1283,7 +1295,7 @@
       "key": "aada1356-e4af-422e-897b-8ff511b2b4d3",
       "position": 1,
       "properties": {
-        "description": "**Say**: Today we learned about digital footprints, which leave a permanent trail about ourselves on the internet. Now take a moment to reflect on what information is OK to share online and what isn't.\r\n\r\n**Have** students complete the Pause & Think Moment on the [Animal Tracks Student Handout](https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/edit). Read the directions aloud and allow students to complete the reflection independently. ([Slide 13](https://docs.google.com/presentation/d/1g_EDGrwO40dYBQkH4Er34yNLgCvtkNFr_Zbo9oqAldo/edit#slide=id.g56eaf833bc_0_443))\r\n\r\n**Invite** students to share their reflections with the class. Collect handouts to assess student learning."
+        "description": "**Say**: Today we learned about digital footprints, which leave a permanent trail about ourselves on the internet. Now take a moment to reflect on what information is OK to share online and what isn't.\n\n**Have** students complete the Pause & Think Moment on the [Animal Tracks Student Handout](https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/edit). Read the directions aloud and allow students to complete the reflection independently. ([Slide 13](https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit#slide=id.g56eaf833bc_0_443))\n\n**Invite** students to share their reflections with the class. Collect handouts to assess student learning."
       },
       "seeding_key": {
         "activity_section.key": "aada1356-e4af-422e-897b-8ff511b2b4d3",
@@ -6403,8 +6415,8 @@
       "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview",
       "key": "2021_change_log",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "2021_change_log"
@@ -6415,8 +6427,8 @@
       "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
       "key": "20_20_20_rule",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "20_20_20_rule"
@@ -6427,9 +6439,9 @@
       "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit",
       "key": "assessment-answer-big-event",
       "properties": {
-        "type": "Assessment Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment Answer Key"
       },
       "seeding_key": {
         "resource.key": "assessment-answer-big-event"
@@ -6440,9 +6452,9 @@
       "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit",
       "key": "assessment-answer-getting-loopy",
       "properties": {
-        "type": "Assessment Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment Answer Key"
       },
       "seeding_key": {
         "resource.key": "assessment-answer-getting-loopy"
@@ -6453,8 +6465,8 @@
       "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
       "key": "class-section-video",
       "properties": {
-        "type": "Teacher Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Teacher Video"
       },
       "seeding_key": {
         "resource.key": "class-section-video"
@@ -6465,8 +6477,8 @@
       "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
       "key": "common-sense-media-pause-think",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "common-sense-media-pause-think"
@@ -6477,8 +6489,8 @@
       "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe",
       "key": "common_core_and_ngss_guidance",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "common_core_and_ngss_guidance"
@@ -6489,8 +6501,8 @@
       "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit",
       "key": "compass-rose",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "compass-rose"
@@ -6501,8 +6513,8 @@
       "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
       "key": "course-ab-blockly-blocks",
       "properties": {
-        "type": "Manipulatives",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Manipulatives"
       },
       "seeding_key": {
         "resource.key": "course-ab-blockly-blocks"
@@ -6513,8 +6525,8 @@
       "url": "https://studio.code.org/s/courseb-2021/vocab",
       "key": "course_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_vocabulary"
@@ -6525,8 +6537,8 @@
       "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview",
       "key": "cross-curricular_extension_activities",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "cross-curricular_extension_activities"
@@ -6537,9 +6549,9 @@
       "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit",
       "key": "csf-getting-loopy-activity-worksheet",
       "properties": {
-        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet"
       },
       "seeding_key": {
         "resource.key": "csf-getting-loopy-activity-worksheet"
@@ -6550,9 +6562,9 @@
       "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
       "key": "csf-getting-loopy-assessment",
       "properties": {
-        "type": "Assessment",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment"
       },
       "seeding_key": {
         "resource.key": "csf-getting-loopy-assessment"
@@ -6563,9 +6575,9 @@
       "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
       "key": "csf-lesson-recommend",
       "properties": {
-        "type": "Lesson Recommendations",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Lesson Recommendations"
       },
       "seeding_key": {
         "resource.key": "csf-lesson-recommend"
@@ -6576,9 +6588,9 @@
       "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit",
       "key": "csf-the-big-event-assessment",
       "properties": {
-        "type": "Assessment",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Assessment"
       },
       "seeding_key": {
         "resource.key": "csf-the-big-event-assessment"
@@ -6589,8 +6601,8 @@
       "url": "https://studio.code.org/s/courseb-2021/standards",
       "key": "csta_standards_mapping",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csta_standards_mapping"
@@ -6601,8 +6613,8 @@
       "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview",
       "key": "curriculum_guide_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "curriculum_guide_1"
@@ -6613,8 +6625,8 @@
       "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview",
       "key": "debugging_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "debugging_guide"
@@ -6625,9 +6637,9 @@
       "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/",
       "key": "digital-trails-animal-tracks",
       "properties": {
-        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Student Handout"
       },
       "seeding_key": {
         "resource.key": "digital-trails-animal-tracks"
@@ -6638,9 +6650,9 @@
       "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit",
       "key": "digital-trails-digital-trail-squares",
       "properties": {
-        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Student Handout"
       },
       "seeding_key": {
         "resource.key": "digital-trails-digital-trail-squares"
@@ -6651,9 +6663,9 @@
       "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail",
       "key": "digital-trails-follow-the-digital-trail",
       "properties": {
-        "type": "Lesson Video",
         "audience": "Teacher",
-        "download_url": "https://www.commonsense.org/education/video-download/4141356"
+        "download_url": "https://www.commonsense.org/education/video-download/4141356",
+        "type": "Lesson Video"
       },
       "seeding_key": {
         "resource.key": "digital-trails-follow-the-digital-trail"
@@ -6664,8 +6676,8 @@
       "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
       "key": "digital-trails-lesson-slides",
       "properties": {
-        "type": "Slide Deck",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slide Deck"
       },
       "seeding_key": {
         "resource.key": "digital-trails-lesson-slides"
@@ -6676,9 +6688,9 @@
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
       "key": "feeling-faces-image",
       "properties": {
-        "type": "Emotion Images",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Emotion Images"
       },
       "seeding_key": {
         "resource.key": "feeling-faces-image"
@@ -6689,8 +6701,8 @@
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
       "key": "feeling_faces_-_emotion_image",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "feeling_faces_-_emotion_image"
@@ -6701,8 +6713,8 @@
       "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
       "key": "feeling_faces_emotion_image",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "feeling_faces_emotion_image"
@@ -6713,9 +6725,9 @@
       "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit",
       "key": "happy-map-game-pieces",
       "properties": {
-        "type": "Manipulatives",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Manipulatives"
       },
       "seeding_key": {
         "resource.key": "happy-map-game-pieces"
@@ -6726,8 +6738,8 @@
       "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview",
       "key": "implementation_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "implementation_guide"
@@ -6749,8 +6761,8 @@
       "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view",
       "key": "lesson_type_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "lesson_type_guide"
@@ -6761,9 +6773,9 @@
       "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit",
       "key": "mimi-activity",
       "properties": {
-        "type": "Map Activity",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Map Activity"
       },
       "seeding_key": {
         "resource.key": "mimi-activity"
@@ -6774,9 +6786,9 @@
       "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit",
       "key": "mimi-debugging",
       "properties": {
-        "type": "Worksheet",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet"
       },
       "seeding_key": {
         "resource.key": "mimi-debugging"
@@ -6787,9 +6799,9 @@
       "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit",
       "key": "mimi-teacher-puzzle",
       "properties": {
-        "type": "Worksheet Answer Key",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Worksheet Answer Key"
       },
       "seeding_key": {
         "resource.key": "mimi-teacher-puzzle"
@@ -6800,8 +6812,8 @@
       "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
       "key": "pair-programming-vid",
       "properties": {
-        "type": "Student Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Student Video"
       },
       "seeding_key": {
         "resource.key": "pair-programming-vid"
@@ -6812,9 +6824,9 @@
       "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview",
       "key": "play_lab_project_planning_guide",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "play_lab_project_planning_guide"
@@ -6825,8 +6837,8 @@
       "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview",
       "key": "play_lab_project_planning_guide_1",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "play_lab_project_planning_guide_1"
@@ -6837,8 +6849,8 @@
       "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view",
       "key": "stevie_and_the_big_project",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "stevie_and_the_big_project"
@@ -6849,8 +6861,8 @@
       "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G",
       "key": "teacher-video-move-it",
       "properties": {
-        "type": "Teacher Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Teacher Video"
       },
       "seeding_key": {
         "resource.key": "teacher-video-move-it"
@@ -6861,8 +6873,8 @@
       "url": "https://forum.code.org/c/csf/",
       "key": "teacher_forum_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum_1"
@@ -6873,8 +6885,8 @@
       "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0",
       "key": "the-right-app-scenarios",
       "properties": {
-        "type": "Slide Deck",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Slide Deck"
       },
       "seeding_key": {
         "resource.key": "the-right-app-scenarios"
@@ -6885,9 +6897,9 @@
       "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
       "key": "the_big_event_courses_a_b_",
       "properties": {
-        "type": "Controller Image",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Controller Image"
       },
       "seeding_key": {
         "resource.key": "the_big_event_courses_a_b_"
@@ -6898,9 +6910,9 @@
       "url": "https://youtu.be/u0WV9shCoak",
       "key": "unplugged-video-big-event",
       "properties": {
-        "type": "Unplugged Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C1-bigevent-unplugged.mp4"
+        "download_url": "http://videos.code.org/2014/C1-bigevent-unplugged.mp4",
+        "type": "Unplugged Video"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-big-event"
@@ -6911,9 +6923,9 @@
       "url": "https://youtu.be/JoKTqHCni0M",
       "key": "unplugged-video-getting-loopy",
       "properties": {
-        "type": "Unplugged Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C1-getting-loopy.mp4"
+        "download_url": "http://videos.code.org/2014/C1-getting-loopy.mp4",
+        "type": "Unplugged Video"
       },
       "seeding_key": {
         "resource.key": "unplugged-video-getting-loopy"
@@ -6924,8 +6936,8 @@
       "url": "https://youtu.be/rah3DYlp5nQ",
       "key": "unspotted_bugs",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "unspotted_bugs"
@@ -6936,8 +6948,8 @@
       "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit",
       "key": "virtual_lesson_modifications",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_lesson_modifications"
@@ -6948,8 +6960,8 @@
       "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
       "key": "wiggles_-_gonoodle",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "wiggles_-_gonoodle"
@@ -7351,6 +7363,16 @@
       }
     },
     {
+      "key": "click",
+      "word": "Click",
+      "definition": "Press the mouse button",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "click"
+      }
+    },
+    {
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
@@ -7361,13 +7383,13 @@
       }
     },
     {
-      "key": "click",
-      "word": "Click",
-      "definition": "Press the mouse button",
+      "key": "double_click",
+      "word": "Double-Click",
+      "definition": "Press the mouse button very quickly",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "click"
+        "vocabulary.key": "double_click"
       }
     },
     {
@@ -7391,93 +7413,23 @@
       }
     },
     {
-      "key": "double_click",
-      "word": "Double-Click",
-      "definition": "Press the mouse button very quickly",
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "double_click"
+        "vocabulary.key": "event"
       }
     },
     {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "programming",
-      "word": "Programming",
-      "definition": "The art of creating a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "Algorithm",
-      "definition": "A list of steps to finish a task. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "bug",
-      "word": "Bug",
-      "definition": "Part of a program that does not work correctly.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "An algorithm that has been coded into something that can be run by a machine.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "programming",
-      "word": "Programming",
-      "definition": "The art of creating a program.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "programming"
+        "vocabulary.key": "loop"
       }
     },
     {
@@ -7491,13 +7443,23 @@
       }
     },
     {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "loop"
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "programming",
+      "word": "Programming",
+      "definition": "The art of creating a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "programming"
       }
     },
     {
@@ -7508,90 +7470,64 @@
       },
       "seeding_key": {
         "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "repeat",
-      "word": "Repeat",
-      "definition": "To do something again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "The action of doing something over and over again.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
       }
     }
   ],
   "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "vocabulary.key": "repeat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "vocabulary.key": "repeat"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Move It, Move It",
@@ -7612,8 +7548,68 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "persistence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "vocabulary.key": "programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "vocabulary.key": "programming"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sequencing in Maze",
         "vocabulary.key": "click"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "vocabulary.key": "double_click"
       }
     },
     {
@@ -7630,120 +7626,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "vocabulary.key": "double_click"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "vocabulary.key": "persistence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "vocabulary.key": "repeat"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "event"
       }
@@ -7754,63 +7636,23 @@
   ],
   "objectives": [
     {
-      "key": "e66808ba-0c59-48f7-93c3-f5267f7b3de9",
+      "key": "11d46ade-3342-4157-932b-ce46acd1e6b4",
       "properties": {
-        "description": "Learn that the information they share online leaves a digital footprint or \"trail\"."
+        "description": "List several different examples of smartphone apps."
       },
       "seeding_key": {
-        "lesson.key": "Digital Trails",
-        "objective.key": "e66808ba-0c59-48f7-93c3-f5267f7b3de9"
+        "lesson.key": "The Right App",
+        "objective.key": "11d46ade-3342-4157-932b-ce46acd1e6b4"
       }
     },
     {
-      "key": "5efa6c72-000c-40a0-ace0-55f47117305b",
+      "key": "1a658eb5-9957-4d23-9736-ba85ea545c5e",
       "properties": {
-        "description": "Explore what information is OK to be shared online."
+        "description": "Identify the benefits of using a loop structure instead of manual repetition."
       },
       "seeding_key": {
-        "lesson.key": "Digital Trails",
-        "objective.key": "5efa6c72-000c-40a0-ace0-55f47117305b"
-      }
-    },
-    {
-      "key": "d7a194a2-b69d-417f-8996-3f56c7bccd83",
-      "properties": {
-        "description": "Define a list of steps (algorithm) to get a friend from their starting position to their goal"
-      },
-      "seeding_key": {
-        "lesson.key": "Move It, Move It",
-        "objective.key": "d7a194a2-b69d-417f-8996-3f56c7bccd83"
-      }
-    },
-    {
-      "key": "5c532776-e5e5-4e5e-b3f1-15f01eb66449",
-      "properties": {
-        "description": "Translate a list of steps into a series of physical actions"
-      },
-      "seeding_key": {
-        "lesson.key": "Move It, Move It",
-        "objective.key": "5c532776-e5e5-4e5e-b3f1-15f01eb66449"
-      }
-    },
-    {
-      "key": "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37",
-      "properties": {
-        "description": "Identify and fix errors in the execution of an algorithm"
-      },
-      "seeding_key": {
-        "lesson.key": "Move It, Move It",
-        "objective.key": "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37"
-      }
-    },
-    {
-      "key": "567921b7-1dc5-4b17-9c16-0bbcd785a498",
-      "properties": {
-        "description": "Model proper computer lab behaviors"
-      },
-      "seeding_key": {
-        "lesson.key": "Sequencing in Maze",
-        "objective.key": "567921b7-1dc5-4b17-9c16-0bbcd785a498"
+        "lesson.key": "Loops in Collector",
+        "objective.key": "1a658eb5-9957-4d23-9736-ba85ea545c5e"
       }
     },
     {
@@ -7824,33 +7666,33 @@
       }
     },
     {
-      "key": "fae372cb-4b72-4b35-abd6-e2424e54d791",
+      "key": "368e8edc-290d-4737-a616-a543e5298c66",
       "properties": {
-        "description": "Translate movements into a series of commands."
+        "description": "Translate a picture program into a real-world dance."
       },
       "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "objective.key": "fae372cb-4b72-4b35-abd6-e2424e54d791"
+        "lesson.key": "Loops: Getting Loopy",
+        "objective.key": "368e8edc-290d-4737-a616-a543e5298c66"
       }
     },
     {
-      "key": "bffe609e-4319-4507-b643-b2a2ab2507b9",
+      "key": "3997dff6-b815-412c-b3b5-52d4bd1fc019",
       "properties": {
-        "description": "Construct a program by reorganizing sequential movements."
+        "description": "Recognize actions of the teacher as signals to initiate commands."
       },
       "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "objective.key": "bffe609e-4319-4507-b643-b2a2ab2507b9"
+        "lesson.key": "Events: The Big Event",
+        "objective.key": "3997dff6-b815-412c-b3b5-52d4bd1fc019"
       }
     },
     {
-      "key": "7fe333c7-2422-4e9e-8328-9fcd2da6fdba",
+      "key": "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda",
       "properties": {
-        "description": "Build a computer program from a set of written instructions."
+        "description": "Create an animated, interactive story using sequences and event-handlers."
       },
       "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "objective.key": "7fe333c7-2422-4e9e-8328-9fcd2da6fdba"
+        "lesson.key": "Events in Play Lab",
+        "objective.key": "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda"
       }
     },
     {
@@ -7864,13 +7706,53 @@
       }
     },
     {
-      "key": "d5f927b9-727a-423e-90d3-80faad21aa34",
+      "key": "567921b7-1dc5-4b17-9c16-0bbcd785a498",
       "properties": {
-        "description": "Identify and locate bugs in a program."
+        "description": "Model proper computer lab behaviors"
       },
       "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "objective.key": "d5f927b9-727a-423e-90d3-80faad21aa34"
+        "lesson.key": "Sequencing in Maze",
+        "objective.key": "567921b7-1dc5-4b17-9c16-0bbcd785a498"
+      }
+    },
+    {
+      "key": "595564b5-94b4-4104-9613-05eadc30663e",
+      "properties": {
+        "description": "Recommend technology to others based on their unique needs. "
+      },
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "objective.key": "595564b5-94b4-4104-9613-05eadc30663e"
+      }
+    },
+    {
+      "key": "5c532776-e5e5-4e5e-b3f1-15f01eb66449",
+      "properties": {
+        "description": "Translate a list of steps into a series of physical actions"
+      },
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "objective.key": "5c532776-e5e5-4e5e-b3f1-15f01eb66449"
+      }
+    },
+    {
+      "key": "5efa6c72-000c-40a0-ace0-55f47117305b",
+      "properties": {
+        "description": "Explore what information is OK to be shared online."
+      },
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "objective.key": "5efa6c72-000c-40a0-ace0-55f47117305b"
+      }
+    },
+    {
+      "key": "61329a99-1c0a-414f-9694-78f7f9c81372",
+      "properties": {
+        "description": "Create a program that draws complex shapes by repeating simple sequences."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "objective.key": "61329a99-1c0a-414f-9694-78f7f9c81372"
       }
     },
     {
@@ -7884,23 +7766,113 @@
       }
     },
     {
-      "key": "368e8edc-290d-4737-a616-a543e5298c66",
+      "key": "7b0ddd26-468b-4ca1-8d08-444c0563f8c6",
       "properties": {
-        "description": "Translate a picture program into a real-world dance."
+        "description": "Repeat commands given by an instructor."
       },
       "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "objective.key": "368e8edc-290d-4737-a616-a543e5298c66"
+        "lesson.key": "Events: The Big Event",
+        "objective.key": "7b0ddd26-468b-4ca1-8d08-444c0563f8c6"
       }
     },
     {
-      "key": "ddb96aa7-a52d-41d7-b253-8f0d1533e093",
+      "key": "7fe333c7-2422-4e9e-8328-9fcd2da6fdba",
       "properties": {
-        "description": "Convert a series of multiple actions into a single loop."
+        "description": "Build a computer program from a set of written instructions."
       },
       "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "objective.key": "ddb96aa7-a52d-41d7-b253-8f0d1533e093"
+        "lesson.key": "Programming in Maze",
+        "objective.key": "7fe333c7-2422-4e9e-8328-9fcd2da6fdba"
+      }
+    },
+    {
+      "key": "8023306a-d106-4097-8205-5bc1e92ffade",
+      "properties": {
+        "description": "Apply computer science concepts in an open-ended project."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "8023306a-d106-4097-8205-5bc1e92ffade"
+      }
+    },
+    {
+      "key": "8293f536-510e-44a0-880b-397b3f97deeb",
+      "properties": {
+        "description": "Create a program for a given task which loops a sequence of commands."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "objective.key": "8293f536-510e-44a0-880b-397b3f97deeb"
+      }
+    },
+    {
+      "key": "86c93634-0b7d-46de-82dd-50b86576bd56",
+      "properties": {
+        "description": "Practice differentiating pre-defined actions and event-driven ones."
+      },
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "objective.key": "86c93634-0b7d-46de-82dd-50b86576bd56"
+      }
+    },
+    {
+      "key": "8b2f225a-f9d2-4ac4-9adf-bc978b347f34",
+      "properties": {
+        "description": "Decompose a shape into its largest repeatable sequence."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "objective.key": "8b2f225a-f9d2-4ac4-9adf-bc978b347f34"
+      }
+    },
+    {
+      "key": "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37",
+      "properties": {
+        "description": "Identify and fix errors in the execution of an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "objective.key": "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37"
+      }
+    },
+    {
+      "key": "a1e2ab93-1f36-45df-b7f2-d936689e195c",
+      "properties": {
+        "description": "Identify actions that correlate to input events."
+      },
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "objective.key": "a1e2ab93-1f36-45df-b7f2-d936689e195c"
+      }
+    },
+    {
+      "key": "ae68c8b9-0188-48da-a066-b89a819b67e2",
+      "properties": {
+        "description": "Overcome obstacles such as time constraints or bugs."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "ae68c8b9-0188-48da-a066-b89a819b67e2"
+      }
+    },
+    {
+      "key": "b0a4edfa-fd6a-48fc-8421-3ae80769aed3",
+      "properties": {
+        "description": "Apply empathy and creativity to design technology for others. "
+      },
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "objective.key": "b0a4edfa-fd6a-48fc-8421-3ae80769aed3"
+      }
+    },
+    {
+      "key": "b46842b6-02c4-4fd5-abff-6180d77a5c55",
+      "properties": {
+        "description": "Break down a long sequence of instructions into the smallest repeatable sequence possible."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "objective.key": "b46842b6-02c4-4fd5-abff-6180d77a5c55"
       }
     },
     {
@@ -7924,153 +7896,13 @@
       }
     },
     {
-      "key": "8293f536-510e-44a0-880b-397b3f97deeb",
+      "key": "bffe609e-4319-4507-b643-b2a2ab2507b9",
       "properties": {
-        "description": "Create a program for a given task which loops a sequence of commands."
+        "description": "Construct a program by reorganizing sequential movements."
       },
       "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "objective.key": "8293f536-510e-44a0-880b-397b3f97deeb"
-      }
-    },
-    {
-      "key": "cb89ffb0-ef91-48ea-a77a-90e59e45c73e",
-      "properties": {
-        "description": "Employ a combination of sequential and looped commands to reach the end of a maze."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "objective.key": "cb89ffb0-ef91-48ea-a77a-90e59e45c73e"
-      }
-    },
-    {
-      "key": "1a658eb5-9957-4d23-9736-ba85ea545c5e",
-      "properties": {
-        "description": "Identify the benefits of using a loop structure instead of manual repetition."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "objective.key": "1a658eb5-9957-4d23-9736-ba85ea545c5e"
-      }
-    },
-    {
-      "key": "b46842b6-02c4-4fd5-abff-6180d77a5c55",
-      "properties": {
-        "description": "Break down a long sequence of instructions into the smallest repeatable sequence possible."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "objective.key": "b46842b6-02c4-4fd5-abff-6180d77a5c55"
-      }
-    },
-    {
-      "key": "f7153703-ec15-4ce5-943e-02e2f2ebcfef",
-      "properties": {
-        "description": "Count the number of times an action should be repeated and represent it as a loop."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "objective.key": "f7153703-ec15-4ce5-943e-02e2f2ebcfef"
-      }
-    },
-    {
-      "key": "8b2f225a-f9d2-4ac4-9adf-bc978b347f34",
-      "properties": {
-        "description": "Decompose a shape into its largest repeatable sequence."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "objective.key": "8b2f225a-f9d2-4ac4-9adf-bc978b347f34"
-      }
-    },
-    {
-      "key": "61329a99-1c0a-414f-9694-78f7f9c81372",
-      "properties": {
-        "description": "Create a program that draws complex shapes by repeating simple sequences."
-      },
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "objective.key": "61329a99-1c0a-414f-9694-78f7f9c81372"
-      }
-    },
-    {
-      "key": "11d46ade-3342-4157-932b-ce46acd1e6b4",
-      "properties": {
-        "description": "List several different examples of smartphone apps."
-      },
-      "seeding_key": {
-        "lesson.key": "The Right App",
-        "objective.key": "11d46ade-3342-4157-932b-ce46acd1e6b4"
-      }
-    },
-    {
-      "key": "595564b5-94b4-4104-9613-05eadc30663e",
-      "properties": {
-        "description": "Recommend technology to others based on their unique needs. "
-      },
-      "seeding_key": {
-        "lesson.key": "The Right App",
-        "objective.key": "595564b5-94b4-4104-9613-05eadc30663e"
-      }
-    },
-    {
-      "key": "b0a4edfa-fd6a-48fc-8421-3ae80769aed3",
-      "properties": {
-        "description": "Apply empathy and creativity to design technology for others. "
-      },
-      "seeding_key": {
-        "lesson.key": "The Right App",
-        "objective.key": "b0a4edfa-fd6a-48fc-8421-3ae80769aed3"
-      }
-    },
-    {
-      "key": "7b0ddd26-468b-4ca1-8d08-444c0563f8c6",
-      "properties": {
-        "description": "Repeat commands given by an instructor."
-      },
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "objective.key": "7b0ddd26-468b-4ca1-8d08-444c0563f8c6"
-      }
-    },
-    {
-      "key": "3997dff6-b815-412c-b3b5-52d4bd1fc019",
-      "properties": {
-        "description": "Recognize actions of the teacher as signals to initiate commands."
-      },
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "objective.key": "3997dff6-b815-412c-b3b5-52d4bd1fc019"
-      }
-    },
-    {
-      "key": "86c93634-0b7d-46de-82dd-50b86576bd56",
-      "properties": {
-        "description": "Practice differentiating pre-defined actions and event-driven ones."
-      },
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "objective.key": "86c93634-0b7d-46de-82dd-50b86576bd56"
-      }
-    },
-    {
-      "key": "a1e2ab93-1f36-45df-b7f2-d936689e195c",
-      "properties": {
-        "description": "Identify actions that correlate to input events."
-      },
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "objective.key": "a1e2ab93-1f36-45df-b7f2-d936689e195c"
-      }
-    },
-    {
-      "key": "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda",
-      "properties": {
-        "description": "Create an animated, interactive story using sequences and event-handlers."
-      },
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "objective.key": "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda"
+        "lesson.key": "Programming in Maze",
+        "objective.key": "bffe609e-4319-4507-b643-b2a2ab2507b9"
       }
     },
     {
@@ -8084,27 +7916,84 @@
       }
     },
     {
-      "key": "8023306a-d106-4097-8205-5bc1e92ffade",
+      "key": "cb89ffb0-ef91-48ea-a77a-90e59e45c73e",
       "properties": {
-        "description": "Apply computer science concepts in an open-ended project."
+        "description": "Employ a combination of sequential and looped commands to reach the end of a maze."
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "8023306a-d106-4097-8205-5bc1e92ffade"
+        "lesson.key": "Loops in Harvester",
+        "objective.key": "cb89ffb0-ef91-48ea-a77a-90e59e45c73e"
       }
     },
     {
-      "key": "ae68c8b9-0188-48da-a066-b89a819b67e2",
+      "key": "d5f927b9-727a-423e-90d3-80faad21aa34",
       "properties": {
-        "description": "Overcome obstacles such as time constraints or bugs."
+        "description": "Identify and locate bugs in a program."
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "ae68c8b9-0188-48da-a066-b89a819b67e2"
+        "lesson.key": "Programming in Harvester",
+        "objective.key": "d5f927b9-727a-423e-90d3-80faad21aa34"
+      }
+    },
+    {
+      "key": "d7a194a2-b69d-417f-8996-3f56c7bccd83",
+      "properties": {
+        "description": "Define a list of steps (algorithm) to get a friend from their starting position to their goal"
+      },
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "objective.key": "d7a194a2-b69d-417f-8996-3f56c7bccd83"
+      }
+    },
+    {
+      "key": "ddb96aa7-a52d-41d7-b253-8f0d1533e093",
+      "properties": {
+        "description": "Convert a series of multiple actions into a single loop."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "objective.key": "ddb96aa7-a52d-41d7-b253-8f0d1533e093"
+      }
+    },
+    {
+      "key": "e66808ba-0c59-48f7-93c3-f5267f7b3de9",
+      "properties": {
+        "description": "Learn that the information they share online leaves a digital footprint or \"trail\"."
+      },
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "objective.key": "e66808ba-0c59-48f7-93c3-f5267f7b3de9"
+      }
+    },
+    {
+      "key": "f7153703-ec15-4ce5-943e-02e2f2ebcfef",
+      "properties": {
+        "description": "Count the number of times an action should be repeated and represent it as a loop."
+      },
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "objective.key": "f7153703-ec15-4ce5-943e-02e2f2ebcfef"
+      }
+    },
+    {
+      "key": "fae372cb-4b72-4b35-abd6-e2424e54d791",
+      "properties": {
+        "description": "Translate movements into a series of commands."
+      },
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "objective.key": "fae372cb-4b72-4b35-abd6-e2424e54d791"
       }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Trails",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-16"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Digital Trails",
@@ -8128,9 +8017,142 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Digital Trails",
+        "lesson.key": "Events in Play Lab",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1A-IC-16"
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
       }
     },
     {
@@ -8156,149 +8178,37 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Sequencing in Maze",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Maze",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops: Getting Loopy",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Collector",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops in Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-14"
       }
     },
     {
@@ -8313,34 +8223,6 @@
         "lesson.key": "The Right App",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-IC-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events: The Big Event",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Events in Play Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1A-AP-11"
       }
     },
     {

@@ -1,21 +1,12 @@
 {
-  "func": "keyDown",
-  "paletteParams": [
-    "code"
-  ],
-  "params": [
-    "\"up\""
-  ],
-  "dropdown": {
-    "0": [
-      "\"up\"",
-      "\"down\"",
-      "\"left\"",
-      "\"right\"",
-      "\"space\"",
-      "\"a\""
-    ]
-  },
+  "key": "keyDown",
+  "name": "keyDown",
   "category": "World",
-  "type": "value"
+  "category_key": "world",
+  "palette_params": [
+    {
+      "name": "code"
+    }
+  ],
+  "syntax": "keyDown(code)"
 }

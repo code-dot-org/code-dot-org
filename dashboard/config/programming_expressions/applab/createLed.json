@@ -1,11 +1,12 @@
 {
-  "func": "createLed",
+  "key": "createLed",
+  "name": "createLed",
   "category": "Maker",
-  "paletteParams": [
-    "pin"
+  "category_key": "maker",
+  "palette_params": [
+    {
+      "name": "pin"
+    }
   ],
-  "params": [
-    "0"
-  ],
-  "type": "either"
+  "syntax": "createLed(pin)"
 }

@@ -1,17 +1,18 @@
 {
-  "func": "onEvent",
+  "key": "onEvent",
+  "name": "onEvent",
   "category": "UI controls",
-  "paletteParams": [
-    "id",
-    "type",
-    "callback"
+  "category_key": "ui_controls",
+  "palette_params": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "type"
+    },
+    {
+      "name": "callback"
+    }
   ],
-  "params": [
-    "\"id\"",
-    "\"click\"",
-    "function( ) {\n  \n}"
-  ],
-  "allowFunctionDrop": {
-    "2": true
-  }
+  "syntax": "onEvent(id, type, callback)"
 }

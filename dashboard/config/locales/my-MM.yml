@@ -14,6 +14,7 @@ my:
   or: သို့မဟုတ်
   appname: Code.org
   stage_number: သင်ခန်းစာ %{number}
+  unplugged_activity: အန်ပလပ် လှုပ်ရှားမှု
   continue: ဆက်လုပ်ပါ
   auth:
     clever: Clever
@@ -45,13 +46,16 @@ my:
       algebra_game: Algebra
       artist_k1: Artist(စာစဖတ်တတ်စသူများ)
       basketball: Basketball
+      frozen: Frozen
       gamelab_jr: Game Lab (beta)
       infinity: Infinity
       minecraft_adventurer: Minecraft စွန့်စားခန်း
       minecraft_hero: Minecraft သူရဲကောင်း
       playlab_k1: Play Lab(Pre-reader)
+      starwars: Star Wars
       weblab: Web Lab
   teacher:
+    dashboard: ဆရာ့ကျောက်သင်ပုန်း
     panel:
       answer_viewer: ဆရာအဖွဲ့
   user:
@@ -63,10 +67,43 @@ my:
   compatibility:
     upgrade:
       link: ဆက်သင်ယူရန်
+  lesson_plan: |2-
+
+    Lesson Plan
+    သင်ခန်းစာ အစီအစဉ်
+  share_code:
+    flappy_og_title: ကျွန်ုပ် ဖလပ်ပီ ဂိမ်း ကိုကြည့်ပါ။
   upsell:
+    hoc:
+      title: ဂန္တဝင် ဝင်္ကပါ
+      body: ကွန်ပြူတာပညာရပ်၏ အခြေခံများကို စမ်းသုံးကြည့်ပါ။ သန်းပေါင်းများစွာက အဲဒါကို
+        ကစားခဲ့ကြယ်။
+    flappy:
+      title: ဖလပ်ပီ ကုပ်
+      body: သင့်ကိုယ်ပိုင်ဂိမ်းကို 10 မိနစ်အောက်သာရေးလိုပါသလား။ ကျွန်ုပ်တို့၏ ဖလပ်ပီ
+        ကုပ် သင်ခန်းစာကို စမ်းသုံးကြည့်ပါ။
+    hoc2014:
+      try_frozen: 'Frozen မှ အနုပညာရှင် Anna နှင့် Elsa တို့နှင့်အတူ '
+    hoc-encryption:
+      body: ကျောင်းသားများသည် ကုဒ်ဝှက်ထားသော မက်ဆေ့ချ်များကို ဖန်တီးရန်နှင့် crack
+        လုပ်ရန် နည်းပညာများကို သင်ယူရပါမည်။
+    frozen:
+      title: Frozen
+    starwars:
+      title: Star Wars
+    infinity:
+      title: အဆုံးမရှိ ကစားရသည့် စမ်းသပ်ခန်း
     hero:
       body: Minecraftက လုပ်ရှားမှုအသစ်များနဲ့အတူ Hour of Codeအတွက်ပြန်လာပါပြီ။ Minecraftနှင့်code
         မှတစ်ဆင့်ခရီးစဉ်
+    sports:
+      body: ဘတ်စ့်ကပ်ဘောဂိမ်း တစ်ခု ပြုလုပ်ပါ သို့မဟုတ် အားကစားများ ရောနှောပြီး ယှဉ်ပြိုင်ပါ။
+    text-compression:
+      body: ဤသင်ခန်းစာတွင်၊ ကျောင်းသားများသည် သင်္ကေတများဖြင့် ပုံစံများကို အစားထိုးခြင်းဖြင့်
+        စာသားချုံ့ရန် Text Compression Widget ကို အသုံးပြုရပါမည်။
+    unplugged_conditionals:
+      body: ကတ်များကို အသုံးပြု၍ ဤ "unplugged" လုပ်ဆောင်ချက်တွင် algorithms နှင့်
+        conditional statements များအကြောင်း လေ့လာပါ။
   dialog:
     ok: "​ကောင်းပြီ"
     startover_title: အစက ပြန်စချင်တာ သေချာရဲ့လား?
@@ -84,6 +121,9 @@ my:
     saved: သိမ်းထားပြီးပါပြီ
   hoc_download:
     minecraft_name: Minecraft Hour of Code
+    starwars_blocks_name: 'Star Wars : ကုဒ် (Blocks) ဖြင့် Galaxy တစ်ခုကို တည်ဆောက်ခြင်း'
+    starwars_javascript_name: 'Star Wars : ကုဒ် (JavaScript) ဖြင့် Galaxy တစ်ခုကို
+      တည်ဆောက်ခြင်း'
   pd:
     form_labels:
       email: email လိပ္စာ

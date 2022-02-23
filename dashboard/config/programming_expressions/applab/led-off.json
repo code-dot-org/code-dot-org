@@ -1,0 +1,7 @@
+{
+  "key": "led.off",
+  "name": "led.off",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "syntax": "led.off"
+}

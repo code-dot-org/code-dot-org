@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "exclude_csf_column_in_legend": true,
       "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:46 UTC",
+    "serialized_at": "2021-11-22 17:08:09 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd-post-survey-2018"
     }
@@ -49,16 +52,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "a57ecdd4-cf7c-4f0f-b947-b23733f1c3f9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a57ecdd4-cf7c-4f0f-b947-b23733f1c3f9",
+        "lesson.key": "CSD post-course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd-post-survey-2018"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "8667bd82-fed3-4fa1-8d54-bb13b22370e3",
+      "position": 1,
+      "properties": {
+        "name": "CS Discoveries Post-Course Survey",
+        "progression_name": "CS Discoveries Post-Course Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "8667bd82-fed3-4fa1-8d54-bb13b22370e3",
+        "lesson_activity.key": "a57ecdd4-cf7c-4f0f-b947-b23733f1c3f9"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -73,7 +99,8 @@
         ],
         "lesson.key": "CSD post-course survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csd-post-survey-2018"
+        "script.name": "csd-post-survey-2018",
+        "activity_section.key": "8667bd82-fed3-4fa1-8d54-bb13b22370e3"
       },
       "level_keys": [
         "csd-post-survey-levelgroup-2018"
@@ -89,7 +116,8 @@
         ],
         "lesson.key": "CSD post-course survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csd-post-survey-2018"
+        "script.name": "csd-post-survey-2018",
+        "activity_section.key": "8667bd82-fed3-4fa1-8d54-bb13b22370e3"
       }
     }
   ],

@@ -1,38 +1,38 @@
 ---
-title: Teacher Resources - MINECRAFT
+title: 先生のリソース - MINECRAFT
 nav: hoc_teacher_resources_nav
 video_player: true
 theme: responsive
 style_min: true
 ---
 
-# MINECRAFT Hour of Code
+# MINECRAFT 1時間コード
 
 {{ hoc_mc_video }}
 
 [col-50]
 
-## Teacher Resources
+## 先生のリソース
 
-### Lesson Plans:
+### レッスンプラン:
 
-- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
-- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [MINECRAFT レッスンプラン](/files/minecraft-lp.pdf)
+- [Minecraft 一時間コード航海の回答表および先生のヒント](/files/minecraft-aquatic-answer-sheet.pdf)
+- [Minecraft 一時間コード冒険の回答表および先生のヒント](/files/minecraft-adventurer-answer-sheet.pdf)
+- [Answer Sheet and Teacher Tips for Minecraft 一時間コードデザイナーの回答表および先生のヒント](/files/minecraft-designer-answer-sheet.pdf)
+- [追加の課題](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### 延長アクティビティ:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [1時間コードを超えて](http://code.org/learn/beyond)
+- [コンピューターサイエンスの基礎: コース 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### その他の先生のリソース
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-- [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
+- [1時間コード: 教育者をどのように導くか](https://hourofcode.com/how-to)
+- [成功教育者からのベストプラクティス](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- ライブイベント: [教育者の1時間コードへのご案内](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [イベントを計画してリードするのに役立つリソース](https://docs.com/hourofcode2016)
 
 [/col-50]
 
@@ -40,12 +40,12 @@ style_min: true
 
 ## 概要
 
-Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+コードのブロックを使用して Steve または Alex をこの Minecraft ワールドを通した冒険に連れて行きましょう。
 
-**Recommended Age Range:** 6+
+**推奨される年齢範囲:** 6歳以上
 
-**Technology Requirements:** Modern browsers + tablets
+**技術要件:** 最新のブラウザ + タブレット
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>チュートリアルを試す</button></a>
 
 [/col-50]

@@ -39,7 +39,7 @@
         },
         "2-3 Artist Functions 1": {
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "2-3 Artist Functions 11": {
@@ -62,7 +62,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "2-3 Artist Functions 3": {
@@ -70,7 +70,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "2-3 Artist Functions 4": {
@@ -290,7 +290,9 @@
           "get nectar make honey": {
             "name": "मधुरस प्राप्त करें शहद बनाएं",
             "parameters": {
-              "honey": "शहद"
+              "honey": "शहद",
+              "direction": "दिशा",
+              "nectars": "मधुरस"
             }
           }
         },
@@ -323,20 +325,25 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "कुछ कीजिए"
+          },
+          "patrol": {
+            "name": "गश्त लगाना"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "अभिनेता"
-            }
+            },
+            "name": "गश्त लगाना"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "अभिनेता"
-            }
+            },
+            "name": "गश्त लगाना"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -344,7 +351,8 @@
             "parameters": {
               "actor": "अभिनेता",
               "speed": "गति"
-            }
+            },
+            "name": "गश्त लगाना"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -352,7 +360,8 @@
             "parameters": {
               "actor": "अभिनेता",
               "speed": "गति"
-            }
+            },
+            "name": "गश्त लगाना"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -503,13 +512,15 @@
           "n-sided shape": {
             "name": "N-की तरफ वाली आकृति",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw a loop": {
             "name": "लूप खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw spiral circle": {
@@ -523,7 +534,8 @@
           "draw a loop": {
             "name": "लूप खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "n-sided shape": {
@@ -619,13 +631,15 @@
           "draw a polygon": {
             "name": "बहुभुज खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "do something": {
             "name": "कुछ कीजिए",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -633,7 +647,8 @@
           "draw a polygon": {
             "name": "बहुभुज खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -641,7 +656,8 @@
           "draw a polygon": {
             "name": "बहुभुज खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -649,7 +665,8 @@
           "draw a polygon": {
             "name": "बहुभुज खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -657,7 +674,8 @@
           "draw a spiral edge": {
             "name": "सर्पिल किनारा खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -667,16 +685,22 @@
             "parameters": {
               "points": "अंक",
               "length": "लंबाई"
-            }
+            },
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें"
           },
           "draw a circle": {
-            "name": "एक चक्र बनाएं"
+            "name": "एक चक्र बनाएं",
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
           },
           "draw a pinwheel": {
             "name": "चकरी चित्रित करें",
             "parameters": {
               "length": "लंबाई",
-              "repeat": "दोहराएँ"
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
             }
           },
           "draw a triangle": {
@@ -688,7 +712,8 @@
           "draw a shape": {
             "name": "आकृति खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw a house": {
@@ -700,7 +725,8 @@
           "draw a square": {
             "name": "एक वर्ग खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -787,7 +813,8 @@
           "draw a polygon": {
             "name": "बहुभुज खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -797,13 +824,15 @@
             "parameters": {
               "height": "ऊंचाई",
               "actor": "अभिनेता"
-            }
+            },
+            "description": "ऊंचाई और अभिनेता मापदंड के साथ कूदें फंक्शन ब्लॉक"
           },
           "patrol": {
             "parameters": {
               "actor": "अभिनेता",
               "speed": "गति"
-            }
+            },
+            "name": "गश्त लगाना"
           }
         },
         "New Artist Project": {
@@ -812,16 +841,22 @@
             "parameters": {
               "points": "अंक",
               "length": "लंबाई"
-            }
+            },
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें"
           },
           "draw a circle": {
-            "name": "एक चक्र बनाएं"
+            "name": "एक चक्र बनाएं",
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
           },
           "draw a pinwheel": {
             "name": "चकरी चित्रित करें",
             "parameters": {
               "length": "लंबाई",
-              "repeat": "दोहराएँ"
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
             }
           },
           "draw a triangle": {
@@ -833,7 +868,8 @@
           "draw a shape": {
             "name": "आकृति खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw a house": {
@@ -855,13 +891,16 @@
             "parameters": {
               "height": "ऊंचाई",
               "actor": "अभिनेता"
-            }
+            },
+            "description": "ऊंचाई और अभिनेता मापदंड के साथ कूदें फंक्शन ब्लॉक"
           },
           "patrol": {
             "parameters": {
               "actor": "अभिनेता",
               "speed": "गति"
-            }
+            },
+            "name": "गश्त लगाना",
+            "description": "गश्त लगाना फंक्शन, जिसमें अभिनेता और गति मापदंड है"
           }
         },
         "Robot Doodle": {
@@ -1011,7 +1050,10 @@
             }
           },
           "draw a polygon": {
-            "name": "बहुभुज खींचें"
+            "name": "बहुभुज खींचें",
+            "parameters": {
+              "sides": "भुजाएं"
+            }
           },
           "draw a square 20": {
             "name": "वर्ग खींचें 20"
@@ -1756,7 +1798,7 @@
         },
         "courseE_artist_functions1": {
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions10": {
@@ -1805,7 +1847,7 @@
         },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions2": {
@@ -1813,7 +1855,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions2_2018": {
@@ -1821,7 +1863,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions2_2019": {
@@ -1829,7 +1871,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions2_2020": {
@@ -1837,7 +1879,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions2_copy": {
@@ -1845,7 +1887,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -2216,7 +2258,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions_predict1_2018": {
@@ -2224,7 +2266,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions_predict1_2019": {
@@ -2232,7 +2274,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions_predict1_2020": {
@@ -2240,7 +2282,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions_predict1_copy": {
@@ -2248,7 +2290,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions_predict2": {
@@ -2572,7 +2614,8 @@
           "draw a polygon": {
             "name": "बहुभुज खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -2580,7 +2623,8 @@
           "draw a polygon": {
             "name": "बहुभुज खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -2588,7 +2632,8 @@
           "draw a spiral edge": {
             "name": "सर्पिल किनारा खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -2597,7 +2642,8 @@
             "name": "सर्पिल किनारा खींचें",
             "parameters": {
               "length": "लंबाई",
-              "min": "न्यूनतम"
+              "min": "न्यूनतम",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -2606,7 +2652,8 @@
             "name": "सर्पिल किनारा खींचें",
             "parameters": {
               "length": "लंबाई",
-              "min": "न्यूनतम"
+              "min": "न्यूनतम",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -2616,16 +2663,22 @@
             "parameters": {
               "points": "अंक",
               "length": "लंबाई"
-            }
+            },
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें"
           },
           "draw a circle": {
-            "name": "एक चक्र बनाएं"
+            "name": "एक चक्र बनाएं",
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
           },
           "draw a pinwheel": {
             "name": "चकरी चित्रित करें",
             "parameters": {
               "length": "लंबाई",
-              "repeat": "दोहराएँ"
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
             }
           },
           "draw a triangle": {
@@ -2637,7 +2690,8 @@
           "draw a shape": {
             "name": "आकृति खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw a house": {
@@ -2656,7 +2710,8 @@
             "name": "सर्पिल किनारा खींचें",
             "parameters": {
               "length": "लंबाई",
-              "min": "न्यूनतम"
+              "min": "न्यूनतम",
+              "sides": "भुजाएं"
             }
           }
         },
@@ -2668,7 +2723,10 @@
             }
           },
           "draw a polygon": {
-            "name": "बहुभुज खींचें"
+            "name": "बहुभुज खींचें",
+            "parameters": {
+              "sides": "भुजाएं"
+            }
           },
           "draw a square 20": {
             "name": "वर्ग खींचें 20"
@@ -2923,16 +2981,22 @@
             "parameters": {
               "points": "अंक",
               "length": "लंबाई"
-            }
+            },
+            "description": "दिए गए बिंदुओं और दी गई लंबाई की भुजाओं से एक स्टार चित्रित करें"
           },
           "draw a circle": {
-            "name": "एक चक्र बनाएं"
+            "name": "एक चक्र बनाएं",
+            "description": "दिए गए अर्धव्यास का चक्कर चित्रित करें",
+            "parameters": {
+              "radius": "अर्धव्यास"
+            }
           },
           "draw a pinwheel": {
             "name": "चकरी चित्रित करें",
             "parameters": {
               "length": "लंबाई",
-              "repeat": "दोहराएँ"
+              "repeat": "दोहराएँ",
+              "sides": "भुजाएं"
             }
           },
           "draw a triangle": {
@@ -2944,7 +3008,8 @@
           "draw a shape": {
             "name": "आकृति खींचें",
             "parameters": {
-              "length": "लंबाई"
+              "length": "लंबाई",
+              "sides": "भुजाएं"
             }
           },
           "draw a house": {
@@ -3212,7 +3277,7 @@
         },
         "courseE_artist_functions1_dani": {
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions2_2021": {
@@ -3220,7 +3285,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions2_dani": {
@@ -3228,7 +3293,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions3_2021": {
@@ -3352,7 +3417,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions_predict1_dani": {
@@ -3360,7 +3425,7 @@
             "name": "एक वर्ग खींचें"
           },
           "draw ear stems": {
-            "name": "ईयरस्टेमचित्रितकरें"
+            "name": "ईयर स्टेम चित्रित करें"
           }
         },
         "courseE_artist_functions_predict2_2021": {
@@ -3523,6 +3588,82 @@
         "courseE_farmer_functions9a1_2021": {
           "garden square": {
             "name": "बाग वर्ग"
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw body and arms": {
+            "parameters": {
+              "armlength": "armlength",
+              "bodylength": "bodylength"
+            }
+          }
+        },
+        "Course 4 Bee Params 3": {
+          "get 3 nectar": {
+            "parameters": {
+              "direction": "दिशा"
+            }
+          }
+        },
+        "Course 4 Bee Params 4": {
+          "get 3 nectar": {
+            "parameters": {
+              "direction": "दिशा"
+            }
+          }
+        },
+        "Course 4 Bee Params 5": {
+          "get 5 nectar": {
+            "parameters": {
+              "direction": "दिशा"
+            }
+          }
+        },
+        "Course 4 Bee Params 6": {
+          "get 5 nectar": {
+            "parameters": {
+              "direction": "दिशा"
+            }
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "parameters": {
+              "direction": "दिशा",
+              "nectars": "मधुरस"
+            }
+          }
+        },
+        "MC_HOC_2017_FP20x20": {
+          "function 1": {
+            "name": "फंक्शन 1"
+          },
+          "function 2": {
+            "name": "फंक्शन 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2019": {
+          "function 1": {
+            "name": "फंक्शन 1"
+          },
+          "function 2": {
+            "name": "फंक्शन 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2020": {
+          "function 1": {
+            "name": "फंक्शन 1"
+          },
+          "function 2": {
+            "name": "फंक्शन 2"
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "फंक्शन 1"
+          },
+          "function 2": {
+            "name": "फंक्शन 2"
           }
         }
       }

@@ -1,7 +1,8 @@
 {
+  "key": "codestudio_definingFunction",
+  "name": "procedures_defnoreturn",
   "category": "Functions",
-  "config": {
-    "docFunc": "codestudio_definingFunction",
-    "func": "procedures_defnoreturn"
-  }
+  "category_key": "functions",
+  "block_name": "procedures_defnoreturn",
+  "syntax": "procedures_defnoreturn"
 }

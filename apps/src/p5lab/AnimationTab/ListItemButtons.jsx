@@ -24,7 +24,8 @@ class ListItemButtons extends React.Component {
     looping: PropTypes.bool.isRequired,
     onFrameDelayChanged: PropTypes.func.isRequired,
     frameDelay: PropTypes.number.isRequired,
-    singleFrameAnimation: PropTypes.bool.isRequired
+    singleFrameAnimation: PropTypes.bool.isRequired,
+    labType: PropTypes.string.isRequired
   };
 
   state = {isDeleteDialogOpen: false};
@@ -93,6 +94,7 @@ class ListItemButtons extends React.Component {
           onDelete={this.onDeleteItem}
           onCancel={this.closeDeleteDialog}
           isOpen={this.state.isDeleteDialogOpen}
+          labType={this.props.labType}
         />
       </div>
     );

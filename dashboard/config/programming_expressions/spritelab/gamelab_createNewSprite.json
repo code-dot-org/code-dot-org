@@ -1,0 +1,8 @@
+{
+  "key": "gamelab_createNewSprite",
+  "name": "createNewSprite",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "block_name": "gamelab_createNewSprite",
+  "syntax": "createNewSprite"
+}

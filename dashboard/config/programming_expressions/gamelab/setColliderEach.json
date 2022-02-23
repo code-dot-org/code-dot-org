@@ -1,15 +1,12 @@
 {
-  "func": "setColliderEach",
+  "key": "setColliderEach",
+  "name": "setColliderEach",
   "category": "Groups",
-  "paramButtons": {
-    "minArgs": 1,
-    "maxArgs": 6
-  },
-  "paletteParams": [
-    "type"
+  "category_key": "groups",
+  "palette_params": [
+    {
+      "name": "type"
+    }
   ],
-  "params": [
-    "\"rectangle\""
-  ],
-  "modeOptionName": "*.setColliderEach"
+  "syntax": "setColliderEach(type)"
 }

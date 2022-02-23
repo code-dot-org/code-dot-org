@@ -8,8 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-23 19:01:27 UTC",
+    "serialized_at": "2021-11-22 19:57:46 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csa4-exemplars"
     }
@@ -1400,6 +1403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L1 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1421,6 +1427,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L2 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1442,6 +1451,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L3 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1463,6 +1475,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L4 v2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1484,6 +1499,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L5 v2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1505,6 +1523,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L6 v2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1526,6 +1547,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L7 v2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1547,6 +1571,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L8 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {

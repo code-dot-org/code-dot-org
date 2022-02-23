@@ -1,33 +1,33 @@
 ---
-title: Teacher Resources - Conditionals with Cards
+title: Források tanároknak - Kondicionálisok kártyákkal
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# Kondicionálisok kártyákkal: Kódolás órája bemutató
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## Források tanároknak
 
-### Lesson Plans:
+### Óravázlatok:
 
-- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- [Kondicionálisok kártyákkal](/files/ConditionalsHoC.pdf)
+- Video: [Hogyan könnyítsd osztályodban meg a kondicionálisok használatát kártyákkal](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### Tevékenységek kiterjesztése:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [A Kódolás óráján túl](http://code.org/learn/beyond)
+- [Informatikai alapismeretek: 2. kurzus](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Egyéb források tanároknak:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Kódolás órája: Módszertani útmutató oktatóknak](https://hourofcode.com/how-to)
+- [Legjobb gyakorlatok sikeres oktatóktól](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Élő esemény: [Egy oktató útmutatója a Kódolás órájához](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -35,12 +35,12 @@ video_player: true
 
 ## Áttekintés
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+Ismerd meg az algoritmusokat és a feltételes állításokat ebben az „unplugged” tevékenységben egy kártyapakli segítségével. A diákok ezt a tevékenységet csapatokban végzik, és csapatonként egy-egy pakli kártyára van szükségük.
 
-**Recommended Age Range:** 8-12
+**Javasolt korosztály:** 8-12
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**Technológiai igények:** Nincs! Ez egy „unplugged” tevékenység, aminek tanításához csak egy kártyapakli szükséges.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>A tevékenység letöltése</button></a>
 
 [/col-50]

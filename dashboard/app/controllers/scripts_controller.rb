@@ -6,9 +6,11 @@ class ScriptsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
+  before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
-  before_action :set_unit_file, only: [:edit, :update]
+
+  use_reader_connection_for_route(:show)
 
   def show
     if @script.redirect_to?
@@ -27,7 +29,7 @@ class ScriptsController < ApplicationController
     end
 
     if !params[:section_id] && current_user&.last_section_id
-      redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
+      redirect_to request.query_parameters.merge({"section_id" => current_user&.last_section_id})
       return
     end
 
@@ -43,25 +45,37 @@ class ScriptsController < ApplicationController
     @redirect_unit_url = @script.redirect_to_unit_url(current_user, locale: request.locale)
 
     @show_redirect_warning = params[:redirect_warning] == 'true'
-    @section = current_user&.sections&.find_by(id: params[:section_id])&.summarize
-    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :script_id, :course_id)}
-    @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:script_id] == @script.id})}
+    unless current_user&.student?
+      @section = current_user&.sections&.all&.find {|s| s.id.to_s == params[:section_id]}&.summarize
+      sections = current_user.try {|u| u.sections.all.reject(&:hidden).map {|s| s.slice(:id, :name, :script_id, :course_id)}}
+      @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:script_id] == @script.id})}
+    end
 
     @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !@script.is_course
     session[:show_unversioned_redirect_warning] = false
 
-    # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
-    if current_user && current_user.levelbuilder?
-      notice_text = ""
-      @script.lessons.each do |lesson|
-        next unless lesson.visible_after && Time.parse(lesson.visible_after) > Time.now
+    additional_script_data = {
+      course_name: @script.unit_group&.name,
+      course_id: @script.unit_group&.id,
+      show_redirect_warning: @show_redirect_warning,
+      redirect_script_url: @redirect_unit_url,
+      show_unversioned_redirect_warning: !!@show_unversioned_redirect_warning,
+      section: @section,
+      user_type: current_user&.user_type,
+      user_id: current_user&.id,
+      user_providers: current_user&.providers,
+      is_verified_instructor: current_user&.verified_instructor?,
+      locale: Script.locale_english_name_map[request.locale],
+      locale_code: request.locale,
+      course_link: @script.course_link(params[:section_id]),
+      course_title: @script.course_title || I18n.t('view_all_units'),
+      sections: @sections_with_assigned_info
+    }
 
-        formatted_time = Time.parse(lesson.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
-        num_days_away = ((Time.parse(lesson.visible_after) - Time.now) / 1.day).ceil.to_s
-        lesson_visible_after_message = "The lesson #{lesson.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
-        notice_text = notice_text.empty? ? lesson_visible_after_message : "#{notice_text} <br/> #{lesson_visible_after_message}"
-      end
-      flash[:notice] = notice_text.html_safe
+    @script_data = @script.summarize(true, current_user).merge(additional_script_data)
+
+    if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
+      @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
     end
   end
 
@@ -77,8 +91,33 @@ class ScriptsController < ApplicationController
 
   def create
     return head :bad_request unless general_params[:is_migrated]
-    @script = Script.new(unit_params)
-    if @script.save && @script.update_text(unit_params, params[:script_text], i18n_params, general_params)
+
+    # These fields should be set unless a unit is in a unit group
+    # and are required to be set if is_course is true. When creating
+    # a unit it is not yet in a unit group so we set default values here
+    #
+    # Setting default values for the columns would not work because those
+    # are not used when you call new() just when you call create
+    updated_unit_params = unit_params.merge(
+      {
+        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      }
+    )
+
+    updated_general_params = general_params.merge(
+      {
+        published_state: SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
+        instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+      }
+    )
+
+    @script = Script.new(updated_unit_params)
+    if @script.save && @script.update_text(unit_params, i18n_params, updated_general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
       render json: @script.errors
@@ -112,7 +151,6 @@ class ScriptsController < ApplicationController
       script: @script ? @script.summarize_for_unit_edit : {},
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
-      lessonLevelData: @unit_dsl_text,
       locales: options_for_locale_select,
       script_families: Script.family_names,
       version_year_options: Script.get_version_year_options,
@@ -121,24 +159,17 @@ class ScriptsController < ApplicationController
   end
 
   def update
-    if @script.is_migrated && params[:last_updated_at] && params[:last_updated_at] != @script.updated_at.to_s
+    return head :bad_request, json: {message: 'cannot update unmigrated unit'} unless @script.is_migrated
+    return head :bad_request, json: {message: 'is_migrated must be true'} unless general_params[:is_migrated]
+
+    if params[:last_updated_at] && params[:last_updated_at] != @script.updated_at.to_s
       msg = "Could not update the unit because it has been modified more recently outside of this editor. Please save a copy your work, reload the page, and try saving again."
       raise msg
     end
 
-    if !@script.is_migrated && params[:old_unit_text]
-      current_unit_text = ScriptDSL.serialize_lesson_groups(@script).strip
-      old_unit_text = params[:old_unit_text].strip
-      if old_unit_text != current_unit_text
-        msg = "Could not update the unit because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again."
-        raise msg
-      end
-    end
-
     raise 'Must provide family and version year for course' if params[:isCourse] && (!params[:family_name] || !params[:version_year])
 
-    unit_text = params[:script_text]
-    if @script.update_text(unit_params, unit_text, i18n_params, general_params)
+    if @script.update_text(unit_params, i18n_params, general_params)
       @script.reload
       render json: @script.summarize_for_unit_edit
     else
@@ -155,23 +186,19 @@ class ScriptsController < ApplicationController
   end
 
   def vocab
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def resources
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def code
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def standards
-    return render :forbidden unless can? :read, @script
-    @unit_summary = @script.summarize_for_rollup(@current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user)
   end
 
   def get_rollup_resources
@@ -199,10 +226,6 @@ class ScriptsController < ApplicationController
   end
 
   private
-
-  def set_unit_file
-    @unit_dsl_text = @script.is_migrated ? '' : ScriptDSL.serialize_lesson_groups(@script)
-  end
 
   def rake
     @errors = []
@@ -237,12 +260,10 @@ class ScriptsController < ApplicationController
   def set_unit
     @script = get_unit
     raise ActiveRecord::RecordNotFound unless @script
+  end
 
-    if current_user && @script.pilot? && !@script.has_pilot_access?(current_user)
-      render :no_access
-    end
-
-    if current_user && @script.in_development? && !current_user.permission?(UserPermission::LEVELBUILDER)
+  def render_no_access
+    if current_user && !current_user.admin? && !can?(:read, @script)
       render :no_access
     end
   end
@@ -254,6 +275,9 @@ class ScriptsController < ApplicationController
   def general_params
     h = params.permit(
       :published_state,
+      :instruction_type,
+      :instructor_audience,
+      :participant_audience,
       :deprecated,
       :curriculum_umbrella,
       :family_name,

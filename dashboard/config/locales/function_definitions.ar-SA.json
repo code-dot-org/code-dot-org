@@ -1119,7 +1119,7 @@
             "name": "ارسم دولاب الهواء",
             "parameters": {
               "length": "الطول",
-              "repeat": "كرر"
+              "repeat": "تكرار"
             }
           },
           "draw a triangle": {
@@ -1149,10 +1149,10 @@
         },
         "New Minecraft Hero Project": {
           "function 1": {
-            "name": "الدالة 1"
+            "name": "الوظيفة  1"
           },
           "function 2": {
-            "name": "الدالة 2"
+            "name": "الوظيفة 2"
           }
         },
         "New Play Lab Project": {
@@ -3497,16 +3497,22 @@
             "parameters": {
               "points": "نقاط",
               "length": "الطول"
-            }
+            },
+            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة."
           },
           "draw a circle": {
-            "name": "رسم دائرة"
+            "name": "رسم دائرة",
+            "description": "ارسم دائرة قُطرها محدد.",
+            "parameters": {
+              "radius": "قُطر"
+            }
           },
           "draw a pinwheel": {
             "name": "ارسم دولاب الهواء",
             "parameters": {
               "length": "الطول",
-              "repeat": "تكرار"
+              "repeat": "تكرار",
+              "sides": "جوانب"
             }
           },
           "draw a triangle": {
@@ -3518,7 +3524,8 @@
           "draw a shape": {
             "name": "ارسم شكل",
             "parameters": {
-              "length": "الطول"
+              "length": "الطول",
+              "sides": "جوانب"
             }
           },
           "draw a house": {
@@ -3530,8 +3537,21 @@
           "draw a square": {
             "name": "رسم مربع",
             "parameters": {
-              "length": "الطول"
+              "length": "الطول",
+              "sides": "جوانب"
             }
+          },
+          "small flower": {
+            "name": "زهرة صغيرة"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "أزهار المنطق ٢"
+          },
+          "LOGIC FLOWER": {
+            "name": "زهرة المنطق"
+          },
+          "LOGIC FLOWERS": {
+            "name": "أزهار المنطق"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -3583,16 +3603,22 @@
             "parameters": {
               "points": "نقاط",
               "length": "الطول"
-            }
+            },
+            "description": "ارسم نجمة بنقاط وجوانب أطوالها محددة."
           },
           "draw a circle": {
-            "name": "رسم دائرة"
+            "name": "رسم دائرة",
+            "description": "ارسم دائرة قُطرها محدد.",
+            "parameters": {
+              "radius": "قُطر"
+            }
           },
           "draw a pinwheel": {
             "name": "ارسم دولاب الهواء",
             "parameters": {
               "length": "الطول",
-              "repeat": "تكرار"
+              "repeat": "تكرار",
+              "sides": "جوانب"
             }
           },
           "draw a triangle": {
@@ -3604,7 +3630,8 @@
           "draw a shape": {
             "name": "ارسم شكل",
             "parameters": {
-              "length": "الطول"
+              "length": "الطول",
+              "sides": "جوانب"
             }
           },
           "draw a house": {
@@ -3778,6 +3805,9 @@
           },
           "draw square": {
             "name": "ارسم مربعاً"
+          },
+          "staggered squares": {
+            "name": "مربعات متعاقبة"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -3808,6 +3838,9 @@
           },
           "do something": {
             "name": "إفعل شيئاً"
+          },
+          "staggered squares": {
+            "name": "\nمربعات متعاقبة"
           }
         },
         "courseE_artist_functions9_2021": {
@@ -3833,6 +3866,9 @@
           },
           "draw square": {
             "name": "ارسم مربعاً"
+          },
+          "staggered squares": {
+            "name": "\nمربعات متعاقبة"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
@@ -3878,6 +3914,12 @@
           },
           "get all pumpkins": {
             "name": "احصل على كل اليقطين"
+          },
+          "pick along path": {
+            "name": "التقط على امتداد المسار"
+          },
+          "pumpkin square": {
+            "name": "مربع اليقطينة"
           }
         },
         "courseE_farmer_functions11_predict_2021": {
@@ -3886,6 +3928,15 @@
           },
           "get all pumpkins": {
             "name": "احصل على كل اليقطين"
+          },
+          "pick along path": {
+            "name": "التقط على امتداد المسار"
+          },
+          "pumpkin square": {
+            "name": "مربع اليقطينة"
+          },
+          "get produce": {
+            "name": "اجمع المحصول"
           }
         },
         "courseE_farmer_functions1a_2021": {
@@ -3912,6 +3963,9 @@
           },
           "get all pumpkins": {
             "name": "احصل على كل اليقطين"
+          },
+          "pick along path": {
+            "name": "اختر على امتداد المسار"
           }
         },
         "courseE_farmer_functions3c_2021": {
@@ -3930,6 +3984,40 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "انتقل واحصل على الرحيق مع العداد"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "وظيفتي"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "التقط على امتداد المسار"
+          },
+          "check for corn": {
+            "name": "تأكد من وجود الذرة"
+          },
+          "corn rectangle": {
+            "name": "مستطيل الذرة"
+          },
+          "lettuce stairs": {
+            "name": "سلّم الخس"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "مربع الحديقة"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "مربع الحديقة"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "مربع الحديقة"
           }
         }
       }

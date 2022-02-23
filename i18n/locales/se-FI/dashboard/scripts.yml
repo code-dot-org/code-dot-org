@@ -175,7 +175,7 @@ se:
           description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid ja čábbodaga Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid luistiiguin ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit iežat olbmaiguin!
           lessons:
             Artist:
-              name: Dáiddár
+              name: Kode Annain ja Elsain
           student_description: Geavahetnot koda suokkardallat jieŋa earenomášvuođaid ja čábbodaga Annain ja Elsain. Don ráhkadat muohtačalmmiid ja minsttariid luistiiguin ja ráhkadat earenomáš dálveduovdagiid maid sáhtát juogadit iežat olbmaiguin!
         course4:
           title: Kursa 4
@@ -305,6 +305,9 @@ se:
           title: Disney Infinitiija Speallan-lab
           description: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney Infinitiija figurat leat mielde.
           description_short: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney Infinitiija figurat leat mielde.
+          lessons:
+            Infinity:
+              name: Disney Infinitiija Speallan-lab
           student_description: Geavat Speallan-lab ráhkadit muitalusa dahje spealu mas Disney Infinitiija figurat leat mielde.
         algebrademo:
           lessons:
@@ -1480,9 +1483,6 @@ se:
         starwarsblocks:
           description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
           description_short: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
-          lessons:
-            Hour of Code 2015:
-              name: KodenDiibmu 2015
           student_description: Oahpa prográmmeret droidaid, ja ráhkat iežat NásteSoađi spealu galaksii mii lea guhkkin, guhkkin eret.
         mc:
           description_short: Guorahala Minecraft máilmmi kodemiin.
@@ -5676,7 +5676,7 @@ se:
               display_name: Iskkadeapmi
           lessons:
             CSP post-course survey:
-              name: CSP maŋŋil-kurssa iskkadeapmi
+              name: CSP Oahppi Maŋŋil kurssa Iskkadeapmi ('18-'19)
         csp5-pilot:
           lessons:
             Unit 5 Assessment:
@@ -6733,10 +6733,35 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Iskkadeapmi
+        csp5-2021:
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp6-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Maŋŋil Kurssa Iskkadeapmi
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Iskkadeapmi
         csp8-2021:
           lessons:
             Create PT - Complete the Task:
               key: Ráhkat PT - Válbme Barggu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Ráhkat PT
+            lessonGroup-3:
+              display_name: Iskkadeapmi
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Iskkadeapmi
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -6913,6 +6938,18 @@ se:
           lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
         k5-onlinepd-2021:
           lessons:
             Events:
@@ -7036,5 +7073,228 @@ se:
               display_name: Sisdoallu
             lesson_group:
               display_name: Sisdoallu
+            lessonGroup-2:
+              display_name: Sisdoallu
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Herausforderung Sprite-Effekt
+          name: spritelab-effekte-Herausforderung
+          title: Herausforderung Sprite-Effekt
+          description_audience: Sprite Lab für mittlere/fortgeschrittene Benutzer
+          description_short: Nimm die Herausforderung an und erstelle deinen eigenen Sprite-Effekt mit Sprite Lab!
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Modulat
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stávengilvu
+          title: Stávengilvu
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Maŋŋil Kurssa Iskkadeapmi
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Stávengilvu
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprite:at
+        csd6-pilot-2022:
+          lessons:
+            Making Music:
+              name: Ráhkat Musihka
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Movttegis Kárttat
+            'Programming: Happy Maps':
+              name: Movttegis Kárttat
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        express-2022:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            lessonGroup-9:
+              display_name: Dáhpáhusaid
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey:
+              name: CS Prinsihpat Ovdal Iskkadeapmi
+              key: CS Prinsihpat Ovdal Iskkadeapmi
+            Binary Numbers:
+              name: Binára Nummarat
+              key: Binára Nummarat
+          lesson_groups:
+            cspSurvey:
+              display_name: Iskkadeapmi
+        csp2-2022:
+          lessons:
+            The Need for Addressing:
+              name: Dárbu Váldit oktavuođa
+              key: Dárbu Váldit oktavuođa
+            Routers and Redundancy:
+              name: Routarat ja Dárbbašmeahttumat
+              key: Routarat ja Dárbbašmeahttumat
+        courseb-2022:
+          lessons:
+            Getting Loopy:
+              name: Šaddat Gáiggasin
+            The Right App:
+              name: Dat Rievttes App:a
+              key: Dat Rievttes App:a
+            'Loops: Getting Loopy':
+              name: Šaddat Gáiggasin
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Stuora Dáhpáhus
+            Picturing Data:
+              name: Presenteret Dátaid
+              key: Presenteret Dátaid
+            Binary Bracelets:
+              name: Binára Giehtabáttit
+              key: Binára Giehtabáttit
+            'Loops: My Loopy Robotic Friends':
+              key: 'Mohkit: Mu Mohkke Robota Olbmát'
+            'Events: The Big Event':
+              name: Stuora Dáhpáhus
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        csp8-2022:
+          lessons:
+            Create PT - Complete the Task:
+              key: Ráhkat PT - Válbme Barggu
+        coursed-2022:
+          lessons:
+            Build a Star Wars Game:
+              name: Ráhkat Náste Soahti Spealu
+              key: Ráhkat Náste Soahti Spealu
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitála Stáhtaborgárvuohta
+            csf_events:
+              display_name: Dáhpáhusaid
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: Priváhta ja Persovnnlaš Dieđut
+              key: Priváhta ja Persovnnlaš Dieđut
+            Digital Sharing:
+              name: Digitála Juohkin
+              key: Digitála Juohkin
+            Songwriting:
+              name: Lávlagiid čállit
+            Simon Says:
+              key: Simmon Sihtá
+            'Functions: Songwriting':
+              name: Lávlagiid čállit
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprite:at
+            csf_digcit:
+              display_name: Digitála Stáhtaborgárvuohta
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Suohttasat Mohkiid váste
+              key: Suohttasat Mohkiid váste
+            AI For Oceans:
+              name: AI Mearaide
+            AI for Oceans:
+              key: AI Mearaide
+              name: AI Mearaide
+            Internet:
+              key: Interneahtta
+          lesson_groups:
+            ramp_up:
+              display_name: Sprite:at
+            lessonGroup-7:
+              display_name: Digitála Stáhtaborgárvuohta
+        csa1-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        pre-express-2022:
+          lesson_groups:
+            csf_events:
+              display_name: Dáhpáhusaid
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa5-2022:
+          lessons:
+            lesson-2:
+              name: Unit 5 Árvvoštallan
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa1-2022-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu
+        csa8-pilot-extra:
+          lesson_groups:
             lessonGroup-2:
               display_name: Sisdoallu

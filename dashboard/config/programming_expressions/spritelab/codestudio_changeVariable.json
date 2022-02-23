@@ -1,7 +1,8 @@
 {
+  "key": "codestudio_changeVariable",
+  "name": "math_change",
   "category": "Variables",
-  "config": {
-    "docFunc": "codestudio_changeVariable",
-    "func": "math_change"
-  }
+  "category_key": "variables",
+  "block_name": "math_change",
+  "syntax": "math_change"
 }

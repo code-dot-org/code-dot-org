@@ -1411,10 +1411,13 @@
           "courseA_maze_seq_challenge1_a": "Det er to løsninger til dette puslespillet."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!"
+          "courseB_maze_seq1_a": "Koble blokker til <xml><block type=\"when_run\"/></xml> for å få fuglen til å flytte på seg!",
+          "courseB_maze_seq1_b": "Dra tre av disse <xml><block type=\"maze_moveSouth\"/></xml> pilene sammen med  <xml><block type=\"when_run\"/></xml> blokken for å få Scrat til eikenøtten"
         },
         "courseB_maze_seq8_2021": {
-          "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!"
+          "courseB_maze_seq8_b": "Det er to måter å løse denne oppgaven!",
+          "courseB_maze_seq8_a": "Prøv å legg en blokk om gangen til du løser oppgaven.",
+          "courseB_maze_seq8_c": "Vet du ikke hvilken vei å gå? Prøv denne ruten!"
         },
         "courseC_artist_prog2_2021": {
           "courseC_artist_prog2_a": "*\"Hvis du bruker <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">flyttFremover</title><title name=\"VALUE\">100</title></block></xml>-blokken, vil jeg tegne en linje.\"*",
@@ -1473,6 +1476,72 @@
           "courseF_bee_for_challenge2_a": "Ta en titt på dette alternativet for bevegelse:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
           "courseF_bee_for_challenge2_b": "Prøv å bruke to `tell`-løkker: En for å klatre opp og få tak i nektar og en annen for å klatre ned og lage honning.",
           "courseF_bee_for_challenge2_c": "Legg merke til at `tell`-løkkene trenger flere vanlige løkker inni seg som gjentar `teller` ganger for å lage det økende trappemønsteret. \n\nDen andre `tell`-løkka trenger kun en vanlig løkke for å lage `teller` antall honning."
+        },
+        "CourseD_Dance_Party_08": {
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n\\*To dansere må ha en størrelse annet enn 100.\n\n\\*Denne oppgaven slutter etter 5 takter.",
+          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.)"
+        },
+        "CourseD_Dance_Party_09": {
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 7 takter._"
+        },
+        "CourseD_Dance_Party_10": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n\\*Egenskapene til to eller flere danse må endres.\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "CourseD_Dance_Party_11": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "CourseD_Dance_Party_11_5": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "Dance_Party_08": {
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n\\*To dansere må ha en størrelse annet enn 100.\n\n\\*Denne oppgaven slutter etter 5 takter.",
+          "challenges": "**Valgfri utfordring**\n\n-   Eksperimenter med å endre andre egenskaper som f. eks bredde og rotasjoner.)"
+        },
+        "Dance_Party_09": {
+          "validation": "**Hvordan fullfører jeg oppgaven?**\n\n-   Endre fargetone på minst en danser.\n\n_Denne oppgaven slutter etter 7 takter._"
+        },
+        "Dance_Party_10": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n\\*Egenskapene til to eller flere danse må endres.\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "Dance_Party_11": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "Dance_Party_11_5": {
+          "validation": "\\*\\* Hvordan runder jeg dette nivået? \\*\\*\n\n-   Bare vær kreativ!\n\n\\*dette nivået slutter etter 7 takter."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "Prøv å legg til en instruksjon av gangen til du kommer til eikenøtten",
+          "courseB_maze_seq4_b": "Du vil bruke <xml><block type=\"maze_moveEast\"/></xml> blokken til å løse denne oppgaven"
+        },
+        "courseB_maze_seq5_2021": {
+          "courseB_maze_seq5_a": "Hvis du står fast prøv å tegn ruten på papir",
+          "courseB_maze_seq5_b": "Det er to måter å løse denne oppgaven på!",
+          "courseB_maze_seq5_c": "Ikke sikker hvordan du skal komme deg til eikenøtten? Prøve denne ruten"
+        },
+        "courseB_maze_seq6_2021": {
+          "courseB_maze_seq6_a": "Koden skal til slutt ha tre bevegelsesblokker.",
+          "courseB_maze_seq6_b": "Hvis du står fast, prøv å løs oppgaven i to deler, en sideveis og en opp-og-ned.",
+          "courseB_maze_seq5_c": "Det er to måter å løse oppgaven på.",
+          "courseB_maze_seq5_d": "Skjønner ikke hvordan du skal komme deg til eikenøtten? Prøv denne ruten!"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "Legg 1 blokk for å flytte Scrat til eikenøtten.",
+          "courseB_maze_seq7_b": "Prøv å kjøre koden som blir gitt her og se hvor du ender opp.",
+          "courseB_maze_seq7_c": "Klarer du ikke å nå eikenøtten? Prøv denne ruten!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "Prøv å skriv ned alle stegene på en papirlapp først.",
+          "courseB_maze_seq9_b": "Bygg programmet ditt en blokk av gangen og test ettersom du bygger.",
+          "courseB_maze_seq9_c": "Det er to måter å løse denne oppgaven på.",
+          "courseB_maze_seq9_d": "Sitter du fast? Prøv denne ruten!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Den korteste ruten er ikke sikker fungere denne gangen.",
+          "courseB_maze_seq_challenge1_b": "Prøv å bruke <xml><block type=\"maze_moveWest\"/></xml> blokken til å begynne med."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Du trenger ikke legge til eller fjerne blokker for å løse denne oppgaven.",
+          "courseB_maze_seq_challenge2_b": "Omroker blokkene og ta trappetrinn ruten"
         }
       }
     }

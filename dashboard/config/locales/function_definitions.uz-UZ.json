@@ -281,27 +281,70 @@
         },
         "New Artist Project": {
           "draw a circle": {
-            "name": "aylana chizish"
+            "name": "aylana chizish",
+            "description": "berilgan radiusda doira chizish",
+            "parameters": {
+              "radius": "radius"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
-              "repeat": "takrorlash"
-            }
+              "repeat": "takrorlash",
+              "sides": "tomonlar",
+              "length": "uzunlik"
+            },
+            "name": "parrak chizish"
           },
           "draw a house": {
-            "name": "uy chizish"
+            "name": "uy chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a star": {
+            "name": "yulduz chizish",
+            "description": "uchlari berilgan sonda va tomonlari berilgan uzunlikda bo'lgan yulduzcha chizish",
+            "parameters": {
+              "points": "ballar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a triangle": {
+            "name": "uchburchak chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a shape": {
+            "name": "shakl chizish",
+            "parameters": {
+              "sides": "tomonlar",
+              "length": "uzunlik"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
           }
         },
         "New Play Lab Project": {
           "jump": {
             "parameters": {
-              "actor": "aktyor"
-            }
+              "actor": "aktyor",
+              "height": "balandlik"
+            },
+            "name": "sakramoq",
+            "description": "balandlik va aktyor parametrlari bilan sakrash funksiyasi bloki"
           },
           "patrol": {
             "parameters": {
-              "actor": "aktyor"
-            }
+              "actor": "aktyor",
+              "speed": "tezlik"
+            },
+            "name": "patrul",
+            "description": "tezlik va aktyor parametrlari bilan patrul funksiyasi bloki"
           }
         },
         "Standalone_Artist_9": {
@@ -2293,6 +2336,18 @@
               "length": "uzunlik",
               "sides": "tomonlar"
             }
+          },
+          "small flower": {
+            "name": "kichik gul"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGIC FLOWERS2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGIC FLOWERS"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -2552,6 +2607,12 @@
           },
           "staggered squares": {
             "name": "shaxmat katakchalari"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -2565,6 +2626,12 @@
         "courseE_artist_functions8b_2021": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
           }
         },
         "courseE_artist_functions8c_2021": {
@@ -2573,6 +2640,12 @@
           },
           "staggered squares": {
             "name": "shaxmat katakchalari"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
           }
         },
         "courseE_artist_functions9_2021": {
@@ -2581,6 +2654,9 @@
           },
           "draw line of triangles": {
             "name": "uchburchaklar chizig'ini chizish"
+          },
+          "draw triangle": {
+            "name": "uchburchak chizish"
           }
         },
         "courseE_artist_functionsProj_2021": {
@@ -2592,16 +2668,28 @@
           },
           "staggered squares": {
             "name": "shaxmat katakchalari"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "my design": {
+            "name": "mening dizaynim"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "my design": {
+            "name": "mening dizaynim"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -3131,6 +3219,19 @@
             "parameters": {
               "binary": "binarli"
             }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "o'yinni qaytarish"
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "funksiya 1"
+          },
+          "function 2": {
+            "name": "funksiya 2"
           }
         }
       }

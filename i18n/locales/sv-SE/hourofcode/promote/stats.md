@@ -1,52 +1,52 @@
 ---
-title: Blurbs and useful stats
+title: Reklamtext och användbar statistik
 ---
 
 <a id="blurb"></a>
 
 {{ signup_button }}
 
-# Blurbs and useful stats
+# Reklamtext och användbar statistik
 
-### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
+### Använd följande meddelanden om du letar efter sätt att marknadsföra Hour of Code i dina nyhetsbrev och kommunikation.
 
 * * *
 
-## Använd den är korta texten i nyhetsbrev
+## Använd den här korta reklamtexten i nyhetsbrev
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### Ta datavetenskap till din skola. Börja med en timmes Hour of Code!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Men färre än hälften av alla skolor undervisar om datorer! Goda nyheter är, vi är på väg att ändra detta. Om du hört talas om Hour of Code, kanske du vet att projektet skapade historia förra året. 100 miljoner elever har nu upptäckt hur tillgänglig och rolig datavetenskap kan vara genom att bara göra en timmes programmering.
+Med tekniken förändras varje industri på jorden, datalogiskt tänkande har blivit en del av vår nödvändiga kunskap. But just half of all schools offer computer science! Goda nyheter är, vi är på väg att ändra detta. Om du hört talas om Hour of Code förra året, kanske du vet att projektet skapade historia. 100 miljoner studenter har nu upptäckt hur tillgänglig och rolig datavetenskap kan vara genom att bara göra en Hour of Code.
 
-Hour of Code är en entimmes introduktion till datavetenskap, utformad för att avmystifiera kod och visa att vem som helst kan lära sig grunderna. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+Hour of Code är en entimmes introduktion till datavetenskap, utformad för att avmystifiera kodning och visa att vem som helst kan lära sig grunderna. Läs mer på <http://HourofCode.com>, prova en timme själv eller var värd för en Hour of Code för att introducera andra till datorernas värld!
 
-## Messaging for frequently asked questions
+## Meddelanden för vanliga frågor
 
-#### Varför genomför din skola "Hour of Code"?
+#### Varför genomför din skola Hour of Code?
 
 Medan vi alla vet att det är viktigt för eleverna att lära sig navigera i dagens tech-mättade samhälle, är det många lärare som inte har så stora kunskaper inom datavetenskap och inte riktigt vet var de ska börja. Detta event är en chans för oss alla att se vad datavetenskap handlar om.
 
-Vi hoppas att det ska väcka större intresse för eleverna att lära sig mer inom IT. Forskning visar också att barn kan förstå programmeringsprinciper innan de ens kan läsa eller skriva. I själva verket är deras hjärnor mer mottagliga för datorspråk vid ung ålder, precis som för främmande språk. <br /> <br />
+Vi hoppas att det ska väcka större intresse för eleverna att lära sig mer. Forskning visar också att barn kan förstå programmerings-principer innan de ens kan läsa eller skriva. I själva verket är deras hjärnor mer mottagliga för datorspråk vid ung ålder, precis som för främmande språk. <br /> <br />
 
-#### Varför är det viktigt?
+#### Varför är detta viktigt?
 
-Teknik förändrar varje industrin på planeten. Under 2015 erbjöds 7 miljoner anställningar i USA inom yrken — inklusive konst och design – som värdesätter färdigheter i kodning. But 53 percent of schools in the U.S. don't teach computer science. Det är dags för oss att komma ikapp till 2000-talet. Vi vet att oavsett vad våra elever gör när de växer upp, oavsett om de börjar studera medicin, ekonomi, politik, eller konst, så behöver de veta hur man använder teknik och det kommer att ge dem större självförtroende och en konkurrensfördel. <br /> <br />
+Teknologi förändrar varje industri på jorden. Under 2015 erbjöds 7 miljoner anställningar i USA inom yrken — inklusive konst och design – som värdesätter färdigheter i kodning. But 49 percent of schools in the U.S. don't offer computer science. Det är dags för oss att komma ikapp till 2000-talet. Vi vet att oavsett vad våra elever gör när de växer upp, oavsett om de börjar studera medicin, företagsverksamhet, politik, eller konst, så behöver de veta hur man använder teknologi och det kommer att ge dem större självförtroende och en konkurrensfördel. <br /> <br />
 
-#### A quote you can use in materials
+#### Ett citat du kan använda i material
 
-"The Hour of Code" timmen är tänkt att avmystifiera kodning och visa att datavetenskap inte är rocket science — vem som helst kan lära sig grunderna," sa Hadi Partovi, grundare och CEO av Code.org. "Över 100 miljoner elever över hela världen har provat på "Hour of Code". The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"The Hour of Code" timmen är tänkt att avmystifiera kodning och visa att datavetenskap inte är rocket science — vem som helst kan lära sig grunderna," sa Hadi Partovi, grundare och VD av Code.org. "Över 100 miljoner studenter över hela världen har provat på "Hour of Code". Efterfrågan på relevanta datavetenskapliga utbildningar på 2000-talet går över alla gränser och känner inga begränsningar." <br /> <br />
 
 #### Om Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Efter lanseringen år 2013, har Code.org organiserade kampanjen "Hour of Code" – som har introducerad över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org är en 501c3 offentlig ideell organisation som är dedikerad till att utöka deltagandet i datavetenskap och öka deltagandet av unga kvinnor och studenter från andra underrepresenterade grupper. Dess vision är att varje student i varje skola ska ges möjlighet att lära sig datorprogrammering. Efter lanseringen år 2013, organiserade Code.org kampanjen "Hour of Code" – som har introducerat över 100 miljoner elever till datavetenskap hittills. Man samarbetar i USA med 70 offentliga skoldistrikt för att rikstäckande expandera datorvetenskapliga program. Code.org stöds av filantropiska donationer från företag, stiftelser och generösa individer, inklusive Microsoft, Infosys Foundation, USA, Amazon, med flera. För mer information, vänligen besök: [code.org]({{ codeorg_link }}).
 
-## Share these on social media and in emails
+## Dela detta på sociala medier och e-mejl
 
-[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![bild](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![bild](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![bild](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Infographics
+## Infografik
 
 {{ stats_carousel }}
 

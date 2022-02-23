@@ -1,6 +1,7 @@
 {
-  "func": "nextFrame",
+  "key": "nextFrame",
+  "name": "nextFrame",
   "category": "Animations",
-  "modeOptionName": "anim_nextFrame",
-  "noAutocomplete": true
+  "category_key": "animations",
+  "syntax": "nextFrame"
 }

@@ -8,8 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-13 17:08:44 UTC",
+    "serialized_at": "2021-11-22 19:57:41 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ai-lab"
     }
@@ -281,6 +284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-class test-ai lab choice-5"
+        ],
         "progression": "Open Exploration"
       },
       "bonus": false,
@@ -303,6 +309,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-exploration-app lab"
+        ],
         "progression": "Open Exploration"
       },
       "bonus": false,

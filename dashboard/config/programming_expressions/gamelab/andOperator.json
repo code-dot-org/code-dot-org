@@ -1,5 +1,7 @@
 {
-  "func": "andOperator",
-  "block": "__ && __",
-  "category": "Math"
+  "key": "andOperator",
+  "name": "andOperator",
+  "category": "Math",
+  "category_key": "math",
+  "syntax": "__ && __"
 }

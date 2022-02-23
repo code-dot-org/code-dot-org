@@ -73,11 +73,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-"A Hora do Código foi elaborada para desmistificar a programação e mostrar que a ciência da computação não é nada de outro mundo - todos podem aprender seus fundamentos básicos", afirmou Hadi Partovi, fundador e CEO da Code.org. "Mais de 100 milhões de alunos do mundo todo experimentaram uma Hora do Código. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"A Hora do Código foi elaborada para desmistificar a programação e mostrar que a ciência da computação não é nada de outro mundo - todos podem aprender seus fundamentos básicos", afirmou Hadi Partovi, fundador e CEO da Code.org. "Mais de 100 milhões de alunos do mundo todo experimentaram uma Hora do Código. A demanda por formação relevante em ciência da computação no século XXI cruza todas as fronteiras e não conhece limites”. <br /> <br />
 
 #### Sobre a Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+A Code.org é uma organização pública sem fins lucrativos 501c3, dedicada à expansão da participação nas ciências da computação e uma participação cada vez maior de jovens mulheres e estudantes de outros grupos subrepresentados. Sua visão é a de que todos os estudantes em todas as escolas tenham a oportunidade de aprender a programar um computador. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. A Code.org tem o apoio de doações filantrópicas de empresas, fundações e pessoas generosas, incluindo Microsoft, Facebook, Fundação Infosys EUA, Amazon e outras. For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

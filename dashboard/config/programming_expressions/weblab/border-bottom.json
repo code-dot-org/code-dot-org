@@ -1,0 +1,7 @@
+{
+  "key": "border-bottom",
+  "name": "border-bottom",
+  "category": "CSS Properties",
+  "category_key": "css_properties",
+  "syntax": "border-bottom: border-width border-style border-color;"
+}

@@ -1,10 +1,12 @@
 {
-  "func": "write",
+  "key": "write",
+  "name": "write",
   "category": "UI controls",
-  "paletteParams": [
-    "text"
+  "category_key": "ui_controls",
+  "palette_params": [
+    {
+      "name": "text"
+    }
   ],
-  "params": [
-    "\"text\""
-  ]
+  "syntax": "write(text)"
 }

@@ -4,46 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-18/csp-create/"
-        ],
-        [
-          "teacherForum",
-          "https://forum.code.org/c/csp/ap-prep"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-18/csp-create/standards/"
-        ]
-      ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2018",
-      "is_stable": true,
-      "exclude_csf_column_in_legend": true,
-      "script_announcements": [
-        {
-          "notice": "CS Principles Post-Course Survey for Students Now Open!",
-          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
-          "link": "https://studio.code.org/s/csp-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Student-only"
-        },
-        {
-          "notice": "CS Principles Post-Course Survey for Students Now Open!",
-          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
-          "link": "https://studio.code.org/s/csp-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
-      "project_sharing": true,
-      "curriculum_umbrella": "CSP",
-      "family_name": "csp-create",
-      "hideable_lessons": true,
       "announcements": [
         {
           "notice": "CS Principles Post-Course Survey for Students Now Open!",
@@ -59,12 +19,37 @@
           "type": "bullhorn",
           "visibility": "Teacher-only"
         }
-      ]
+      ],
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-18/csp-create/"
+        ],
+        [
+          "teacherForum",
+          "https://forum.code.org/c/csp/ap-prep"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-18/csp-create/standards/"
+        ]
+      ],
+      "use_legacy_lesson_plans": true,
+      "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csp-create",
-    "serialized_at": "2021-08-03 22:47:32 UTC",
+    "serialized_at": "2021-11-22 17:07:48 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp-create-2018"
     }
@@ -158,16 +143,136 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "440d7acd-b57a-46ad-af69-c29b91c39ef7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "440d7acd-b57a-46ad-af69-c29b91c39ef7",
+        "lesson.key": "Create PT Prep - Reviewing the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "key": "4303fea8-2109-4379-8b5d-a393db39014a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4303fea8-2109-4379-8b5d-a393db39014a",
+        "lesson.key": "Create PT Prep - Making a Plan",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "key": "d78e6d1b-2b3d-497e-8853-23caf5062b99",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d78e6d1b-2b3d-497e-8853-23caf5062b99",
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "csp_ap_3",
+        "script.name": "csp-create-2018"
+      }
+    },
+    {
+      "key": "d63a3537-7b00-4415-8aaa-9517e7f85666",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d63a3537-7b00-4415-8aaa-9517e7f85666",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-create-2018"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "d916f6fc-5292-4599-8b8c-916d55f1b701",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "d916f6fc-5292-4599-8b8c-916d55f1b701",
+        "lesson_activity.key": "440d7acd-b57a-46ad-af69-c29b91c39ef7"
+      }
+    },
+    {
+      "key": "284fc4d0-9ff8-4d9d-8e52-8f641f6b07d9",
+      "position": 2,
+      "properties": {
+        "name": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos",
+        "progression_name": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos"
+      },
+      "seeding_key": {
+        "activity_section.key": "284fc4d0-9ff8-4d9d-8e52-8f641f6b07d9",
+        "lesson_activity.key": "440d7acd-b57a-46ad-af69-c29b91c39ef7"
+      }
+    },
+    {
+      "key": "9c925bfb-c423-4bc0-9409-ab86fe110a2b",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c925bfb-c423-4bc0-9409-ab86fe110a2b",
+        "lesson_activity.key": "4303fea8-2109-4379-8b5d-a393db39014a"
+      }
+    },
+    {
+      "key": "2e785e86-fac3-4a6d-bde0-b7c109178424",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e785e86-fac3-4a6d-bde0-b7c109178424",
+        "lesson_activity.key": "d78e6d1b-2b3d-497e-8853-23caf5062b99"
+      }
+    },
+    {
+      "key": "c5382700-795b-4838-99b2-29d5d092e6eb",
+      "position": 2,
+      "properties": {
+        "name": "Create PT - Complete the Task",
+        "progression_name": "Create PT - Complete the Task"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5382700-795b-4838-99b2-29d5d092e6eb",
+        "lesson_activity.key": "d78e6d1b-2b3d-497e-8853-23caf5062b99"
+      }
+    },
+    {
+      "key": "d429f44d-09dd-4d01-b62e-1035b298d82b",
+      "position": 1,
+      "properties": {
+        "name": "Post-Course Survey Instructions",
+        "progression_name": "Post-Course Survey Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "d429f44d-09dd-4d01-b62e-1035b298d82b",
+        "lesson_activity.key": "d63a3537-7b00-4415-8aaa-9517e7f85666"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -182,7 +287,8 @@
         ],
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "d916f6fc-5292-4599-8b8c-916d55f1b701"
       },
       "level_keys": [
         "CSP CreateL01 SFLP"
@@ -191,7 +297,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -206,7 +312,8 @@
         ],
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "284fc4d0-9ff8-4d9d-8e52-8f641f6b07d9"
       },
       "level_keys": [
         "csp-pt-tech-setup-and-tools_2018"
@@ -215,7 +322,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -230,7 +337,8 @@
         ],
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "9c925bfb-c423-4bc0-9409-ab86fe110a2b"
       },
       "level_keys": [
         "CSP CreateL02 SFLP_2018"
@@ -239,7 +347,7 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -254,7 +362,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "2e785e86-fac3-4a6d-bde0-b7c109178424"
       },
       "level_keys": [
         "CSP CreateL03 SFLP"
@@ -263,7 +372,7 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -278,7 +387,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "c5382700-795b-4838-99b2-29d5d092e6eb"
       },
       "level_keys": [
         "Practice Create Performance Task_2018"
@@ -287,7 +397,7 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -302,7 +412,8 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "d429f44d-09dd-4d01-b62e-1035b298d82b"
       },
       "level_keys": [
         "csp-post-survey-2018-markdown-with-link-to-survey_v2"
@@ -318,7 +429,8 @@
         ],
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "d916f6fc-5292-4599-8b8c-916d55f1b701"
       }
     },
     {
@@ -329,7 +441,8 @@
         ],
         "lesson.key": "Create PT Prep - Reviewing the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "284fc4d0-9ff8-4d9d-8e52-8f641f6b07d9"
       }
     },
     {
@@ -340,7 +453,8 @@
         ],
         "lesson.key": "Create PT Prep - Making a Plan",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "9c925bfb-c423-4bc0-9409-ab86fe110a2b"
       }
     },
     {
@@ -351,7 +465,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "2e785e86-fac3-4a6d-bde0-b7c109178424"
       }
     },
     {
@@ -362,7 +477,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "csp_ap_3",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "c5382700-795b-4838-99b2-29d5d092e6eb"
       }
     },
     {
@@ -373,7 +489,8 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp-create-2018"
+        "script.name": "csp-create-2018",
+        "activity_section.key": "d429f44d-09dd-4d01-b62e-1035b298d82b"
       }
     }
   ],

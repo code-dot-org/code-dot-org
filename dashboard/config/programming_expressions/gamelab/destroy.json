@@ -1,5 +1,7 @@
 {
-  "func": "destroy",
+  "key": "destroy",
+  "name": "destroy",
   "category": "Sprites",
-  "modeOptionName": "*.destroy"
+  "category_key": "sprites",
+  "syntax": "destroy"
 }

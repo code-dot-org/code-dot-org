@@ -377,6 +377,8 @@ pl:
             '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
+            '"spiral"': spirala
+            '"infinity"': nieskończona linia
             '"random"': losowy
       Dancelab_makeAnonymousDanceSprite:
         text: utwórz nowy {COSTUME} w {LOCATION}
@@ -459,6 +461,26 @@ pl:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': obcy
             '"BEAR"': niedźwiedzie
@@ -486,6 +508,8 @@ pl:
             '"right"': prawa kolumna
             '"x"': krzyż
             '"plus"': plus
+            '"spiral"': spirala
+            '"infinity"': nieskończona linia
             '"random"': losowy
       Dancelab_mixColors:
         text: zmieszaj {COLOR1} z {COLOR2}
@@ -547,6 +571,7 @@ pl:
             '"fireworks"': Fajerwerki
             '"flowers"': Kwiaty
             '"growing_stars"': Powiększające się gwiazdy
+            '"higher_power"': Higher Power
             '"swirl"': Hypno
             '"kaleidoscope"': Kalejdoskop
             '"lasers"': Laserowy parkiet
@@ -1013,6 +1038,8 @@ pl:
             '"y"': współrzędna y
             '"direction"': kierunek ruchu
             '"speed"': prędkość
+      gamelab_changeVarBy:
+        text: zastąp {VARIABLE} przez {VAL}
       gamelab_checkTouching:
         text: "{CONDITION} {SPRITE1} dotyka {SPRITE2}"
         options:
@@ -1023,6 +1050,21 @@ pl:
         text: kiedy {SPRITE} kliknął
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): obracanie się w prawo
+            new Behavior(spinning_left, []): obracanie się w lewo
+            new Behavior(fluttering, []): trzepotanie
+            new Behavior(jittering, []): trzęsienie się
+            new Behavior(wobbling, []): chybotanie
+            new Behavior(wandering, []): wędrowanie
+            new Behavior(patrolling, []): patrolowanie
+            new Behavior(moving_west_and_looping, []): przechodząc na zachód i powtarzając w pętli
+            new Behavior(moving_east_and_looping, []): przechodząc na wschód i powtarzając w pętli
+            new Behavior(moving_north_and_looping, []): poruszanie się na północ i w pętli
+            new Behavior(moving_south_and_looping, []): poruszanie się na południe i w pętli
       gamelab_comment:
         text: 'komentarz: {COMMENT}'
       gamelab_costumeImage:
@@ -1074,6 +1116,20 @@ pl:
         text: |-
           jeśli {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: kostium {SPRITE} jest {COSTUME}
       gamelab_isKeyPressed:
@@ -1156,7 +1212,7 @@ pl:
             '"y"': 'y'
             '"z"': z
       gamelab_locationAt:
-        text: 'location x: {X} y: {Y}'
+        text: 'pozycja x: {X} y: {Y}'
       gamelab_locationModifier:
         text: "{DISTANCE} pikseli {DIRECTION} od {LOCATION}"
         options:
@@ -1178,9 +1234,9 @@ pl:
             '"burst"': wybuch
             '"pop"': popularny
             '"rain"': deszcz
-            '"zigzag"': zigzag
+            '"spiral"': spirala
       gamelab_makeNewSpriteAnon:
-        text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
+        text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
       gamelab_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
       gamelab_makeProjectile:
@@ -1222,20 +1278,56 @@ pl:
       gamelab_patrollingUpDown:
         text: patrolowanie w górę i w dół
       gamelab_playSound:
-        text: PlaySound {SOUND}
+        text: zagraj {SOUND}
       gamelab_playSoundOptions:
-        text: PlaySound {SOUND}
+        text: zagraj {SOUND}
         options:
           SOUND:
             "'sound://category_accent/puzzle_game_accent_a_01.mp3'": akcent
             "'sound://category_digital/boing_2.mp3'": boing
             "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": popularny
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": migotanie
             "'sound://category_app/app_button_1.mp3'": przycisk
             "'sound://category_collect/clicky_crunch.mp3'": chrzęst
             "'sound://category_swish/quick_swing.mp3'": huśtać się
+            "'sound://category_nature/summer_night_loop.mp3'": letnia noc
+            "'sound://category_background/ocean_waves.mp3'": fale oceanu
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": fala na plaży
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bąbel
+            "'sound://category_animals/bear.mp3'": niedźwiedź
+            "'sound://category_animals/cat.mp3'": kot
+            "'sound://category_animals/cow.mp3'": krowa
+            "'sound://category_animals/pig.mp3'": świnka
+            "'sound://category_animals/sheep.mp3'": owca
+            "'sound://category_animals/goat.mp3'": koza
+            "'sound://category_animals/chicken.mp3'": kurczak
+            "'sound://category_animals/rooster.mp3'": kogut
+            "'sound://category_animals/elephant.mp3'": słoń
+            "'sound://category_animals/dolphin.mp3'": kliknięcia delfina
+            "'sound://category_nature/thunderstorm_1.mp3'": burza z piorunami
+            "'sound://category_animals/chick.mp3'": ćwierkanie ptaszka
+            "'sound://category_animals/dog.mp3'": szczekanie psa
+            "'sound://category_animals/tiger.mp3'": ryk tygrysa
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": tap
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": uderzenie tonalne
+            "'sound://category_transition/trippy_robotic_transition.mp3'": głos robota
+            "'sound://category_transition/star_dust_particle_10.mp3'": gwiezdny pył
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": statek kosmiczny
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": magiczne zaklęcie
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": ping
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": dziwaczny bas
             "'sound://category_digital/jump_7.mp3'": skocz
       gamelab_playSpeech:
         text: odtwórz mowę {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): poruszanie się za pomocą klawiszy strzałek
+            new Behavior(driving_with_arrow_keys, []): poruszanie się za pomocą klawiszy strzałek
+            draggable(): będąc przeciągalnym
       gamelab_pointInDirection:
         text: punkt {SPRITE} {DIRECTION}
         options:
@@ -1260,6 +1352,8 @@ pl:
         text: usuń kolor z {THIS}
       gamelab_repeatForever:
         text: powtarzaj w nieskończoność
+      gamelab_resetTimer:
+        text: zresetuj czasomierz
       gamelab_setAnimation:
         text: zmień {THIS} kostium na {ANIMATION}
       gamelab_setBackground:
@@ -1286,12 +1380,14 @@ pl:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': tęcza
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SF
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etap
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': gwiazdy
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce i tęcza
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': prysznice słoneczne
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': kort tenicowy
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': wyspa drzew
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podziemny
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': podwodny
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: żaden
@@ -1336,6 +1432,15 @@ pl:
             '"scale"': rozmiar
             '"width"': szerokość
             '"height"': wysokość
+      gamelab_setSpeed_dropdown:
+        text: ustaw prędkość {SPRITE} na {SIZE}
+        options:
+          SIZE:
+            '1': bardzo powoli
+            '3': powoli
+            '5': normalny
+            '7': szybko
+            '9': bardzo szybko
       gamelab_setTint:
         text: zmień kolor {THIS} na {COLOR}
       gamelab_setupScoreboard:
@@ -1343,7 +1448,7 @@ pl:
           narysuj tablicę wyników
           {SPRITE1COSTUME}wynik{VAR1}{SPRITE2COSTUME}wynik{VAR2}cel{SPRITE3COSTUME}
       gamelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       gamelab_showTitleScreen:
         text: pokaż ekran tytułowy {BREAK} tytuł {TITLE} podtytuł {SUBTITLE}
       gamelab_spriteClicked:
@@ -1354,18 +1459,6 @@ pl:
             '"while"': dopóki
       gamelab_spriteSay:
         text: "{SPRITE} powiedz {SPEECH}"
-      gamelab_spriteSayChoices:
-        text: "{SPRITE} powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Batman!"': Jestem Batmanem!
-            '"Being kind is never wasted."': Bycie miłym nigdy nie jest stratą.
-            '"When you know better, you do better."': Gdy wiesz lepiej, robisz lepiej.
-            '"You always pass failure on the way to success."': Zawsze mijasz porażkę na drodze do sukcesu.
-            '"Make each day your masterpiece."': Uczyń każdy dzień swoim arcydziełem.
-            '"I am Catwoman!"': Jestem Kobietą Kotem!
-            '"Never quit!"': Nigdy nie rezygnuj!
-            '"Live Fast."': Żyj szybko.
       gamelab_spriteSayTime:
         text: "{SPRITE}mówi{TEXT1}przez{NUM}sekundy"
       gamelab_startAvoiding:
@@ -1670,7 +1763,7 @@ pl:
       Mikelab_joinText:
         text: "{TEXT} {NEXT}"
       Mikelab_locationAt:
-        text: 'location x: {X} y: {Y}'
+        text: 'pozycja x: {X} y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
       Mikelab_poemTextJoin:
@@ -1708,11 +1801,13 @@ pl:
             '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': widok parku
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': sosny
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etap
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce i tęcza
             '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': prysznice słoneczne
             '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': kort tenicowy
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': wyspa drzew
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podziemny
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1727,7 +1822,7 @@ pl:
           populacja:{SPRITE2N}
           {TOGGLE}wirus
       Mikelab_setupSim:
-        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3]{SPRITE2COSTUME} z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
+        text: "ustaw symulację  {SPRITE1N}{SPRITE1COSTUME} z prędkością \n{SPRITE1SPEED}\nSPRITE2N][3][null][4] z prędkością\n {SPRITE2SPEED}\nzbierając\n{SPRITE3N}{SPRITE3COSTUME}"
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -1822,169 +1917,232 @@ pl:
         text: załóż Miasto Potworów z [COUNT] [0] potworami
       Outbreak_stopMoving:
         text: potwory zatrzymują się
-      PoemBot_addLine:
+      Poetry_addFrame:
+        text: dodaj zarys {BRUSH}
+        options:
+          BRUSH:
+            '"bamboo"': Bambus
+            '"beaded"': Zroszony
+            '"brick"': Cegła
+            '"decorative"': Dekoracyjny
+            '"donuts"': Pączki
+            '"fire"': Ogień
+            '"flowers"': kwiaty
+            '"gilded"': Pozłacany
+            '"hearts"': serca
+            '"iceCream"': Lody
+            '"leaves"': Liście
+            '"metal"': Metalowa ramka
+            '"pawPrints"': Odciski łap
+            '"rainbow"': tęcza
+            '"stars"': gwiazdy
+            '"swirls"': Wiry
+            '"waves"': fale
+            '"wood"': Drewniana ramka
+            '"zigzag"': Zig-Zag
+      Poetry_addLine:
         text: dodaj linię {LINE}
-      PoemBot_destroy:
+      Poetry_addTextHighlight:
+        text: dodaj wyróżnienie tekstu {COLOR}
+      Poetry_animateText:
+        text: animowany tekst
+      Poetry_destroy:
         text: usuń {ANIMATION_NAME}
-      PoemBot_hidePoem:
-        text: ukryj wiersz
-      PoemBot_makeNumSprites:
+      Poetry_glideTo:
+        text: "{SPRITE} skocz do {LOCATION}"
+      Poetry_hideText:
+        text: ukryj tekst
+      Poetry_makeBurst:
+        text: utwórz {EFFECT} efekt z {NUM} {ANIMATION_NAME} duszkami
+        options:
+          EFFECT:
+            '"burst"': wybuch
+            '"pop"': popularny
+            '"rain"': deszcz
+            '"spiral"': spirala
+      Poetry_makeNewSpriteAnon:
+        text: utwórz nowego {ANIMATION_NAME} duszka w {LOCATION}
+      Poetry_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
-      PoemBot_playSound:
-        text: PlaySound {SOUND}
+      Poetry_playMusic:
+        text: graj muzykę {SOUND}
         options:
           SOUND:
-            '"sound://category_bell/bells_win_low.mp3"': Dzwon
             '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Jasny
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Spokojny
+            '"sound://category_nature/steady_campfire_loop.mp3"': Ognisko
+            '"sound://category_nature/rain_loop.mp3"': Mżawka
             '"sound://category_background/fire_burning.mp3"': Kominek
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': Las
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harfy
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Nawiedzany
+            '"sound://category_background/inside_plane.mp3"': Szum
+            '"sound://category_loops/red_flag_loop1.mp3"': Misja
             '"sound://category_nature/summer_night_loop.mp3"': Noc
-            '"sound://category_background/ocean_waves.mp3"': Ocean
+            '"sound://category_background/ocean_waves.mp3"': ocean
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Deszczowy
             '"sound://category_background/rainforest_ambient_sound.mp3"': Deszczowy las
+            '"sound://category_background/repitition.mp3"': Jazda konna
             '"sound://category_background/wavering_wind.mp3"': Senny
-            '"sound://category_background/typewriter.mp3"': Maszyna do pisania
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Powoli
             '"sound://category_background/waterfall.mp3"': Wodospad
-      PoemBot_randomWord:
-        text: losowe słowo
-      PoemBot_setAuthor:
-        text: ustaw autora wiersza {AUTHOR}
-      PoemBot_setBackgroundEffect:
-        text: ustaw efekt tła {EFFECT}
+      Poetry_playSound:
+        text: zagraj {SOUND}
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': Dzwon
+            '"sound://category_digital/boing_2.mp3"': Dźwięk odbicia
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bąbelki
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Gadać
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Spuszczenie powietrza
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Porażka
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Trzepot
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Skok
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': światło
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Dźwięk niewielkiego wybuchu
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Skan
+            '"sound://category_background/typewriter.mp3"': Maszyna do pisania
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Drgania
+            '"sound://category_achievements/peaceful_win_1.mp3"': Zwycięstwo
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Wir
+            '"sound://category_achievements/peaceful_win_6.mp3"': Dzwonki wietrzne
+      Poetry_setAuthor:
+        text: ustaw autora {AUTHOR}
+      Poetry_setBackground:
+        text: ustaw kolor tła {COLOR}
+      Poetry_setBackgroundEffect:
+        text: ustaw efekt tła {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Kolory
-            '"squiggles"': Pokręcone linie
-            '"space"': Przestrzeń
-            '"stars"': Gwiazdy
-            '"darkCircles"': Ciemne koła
-            '"fadeColors"': Zanikanie kolorów
             '"blooming"': Rozkwiecony
+            '"bubbles"': Bąbelki
+            '"clouds"': Pochmurno
+            '"confetti"': Konfetti
+            '"darkCircles"': Zblakły
+            '"fadeColors"': Oszroniony
+            '"hearts"': serca
+            '"space"': Przestrzeń
+            '"rain"': deszcz
             '"ripples"': Fale
-            '"clouds"': Chmury
+            '"colors"': Kolory
+            '"stars"': Gwiazdy
+            '"squiggles"': Pokręcone linie
           PALETTE:
-            '"sky"': Niebo
+            '"autumn"': Jesień
+            '"sunrise"': Świt
+            '"sunset"': Zmierzch
+            '"grayscale"': Szarości
             '"ocean"': Ocean
-            '"sunrise"': Wschód słońca
-            '"sunset"': Zachód słońca
+            '"rainbow"': tęcza
+            '"roses"': Róże
+            '"sky"': Niebo
             '"spring"': Wiosna
             '"summer"': Lato
-            '"autumn"': Jesień
             '"winter"': Zima
-            '"grayscale"': Czarny i biały
-            '"rainbow"': Tęcza
-            '"roses"': Róże
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: ustaw tło na {IMG}
-      PoemBot_setFont:
+      Poetry_setFont:
         text: ustaw czcionkę {FONT}
         options:
           FONT:
             '"Arial"': Arial
-            '"Georgia"': Georgia
-            '"Palatino"': Palatino
-            '"Times"': Times
-            '"Courier"': Courier
             '"Arial Black"': Arial Black
-            '"Impact"': Wpływ
-            '"Tahoma"': Tahoma
-            '"Verdana"': Verdana
-      PoemBot_setFontColor:
+            '"Courier"': Courier
+            '"Cursive"': Pismo odręczne
+            '"Impact"': Impact
+            '"Georgia"': Georgia
+            '"Times"': Times
+      Poetry_setFontColor:
         text: ustaw kolor czcionki {FILL}
-      PoemBot_setForegroundEffect:
-        text: ustaw efekt pierwszego planu {EFFECT}
+      Poetry_setForegroundEffect:
+        text: wykonaj efekt {EFFECT}
         options:
           EFFECT:
-            '"rain"': Deszcz
             '"bubbles"': Bąbelki
-            '"hearts"': Kolorowe Serca
-            '"emojis"': Szczęśliwe emotikony
             '"confetti"': Konfetti
+            '"hearts"': serca
+            '"emojis"': Szczęśliwe emotikony
+            '"rain"': deszcz
             '"starburst"': Rozprysk
             '"glass"': Rozbijające się szkło
             '"twinkling"': Migotliwy
-      PoemBot_setPoem:
-        text: ustaw wiersz {POEM}
-        options:
-          POEM:
-            '"---"': "---"
-            '"hafez"': Mój wspaniały obraz
-            '"carroll_1"': Błysk, Błysk, Mała gwiazda
-            '"rumi_1"': Śpiewać
-            '"field"': Wynken, Blynken, and Nod
-            '"carroll_2"': Krokodyl
-            '"twain"': Ciepłe letnie słońce
-            '"wordsworth"': Wędrowałem samotnie jak chmura
-            '"carroll_3"': Jabberwocky
-            '"rios"': Nie wchodź do biblioteki
-            '"rumi_2"': Ocean
-            '"hughes_1"': Wariacje snów
-            '"hughes"': Harlem
-      PoemBot_setPrompt:
-        text: monituj użytkownika {NAME}{RIGHT_QUOTE} o zmienną {VAR}
-      PoemBot_setPromptWithChoices:
-        text: monituj użytkownika  {TEXT}{RIGHT_QUOTE} o zmienną {VAR} z wyborami {A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
-      PoemBot_setSize:
+      Poetry_setPrompt:
+        text: monituj użytkownika {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} o zmienną {VAR}
+      Poetry_setPromptWithChoices:
+        text: monit użytkownika {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} o zmienną {VAR} z możliwością wyboru {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
         text: ustaw {SPRITE} rozmiar na {VAL}
-      PoemBot_setTextEffect:
+      Poetry_setTextEffect:
         text: ustaw efekt tekstu {EFFECT}
         options:
           EFFECT:
             '"fade"': znikać
-            '"typewriter"': maszyna do pisania
-            '"flyLeft"': lecieć z lewej
-            '"flyRight"': lecieć z prawej
+            '"flyLeft"': lecieć z lewa
+            '"flyRight"': lecieć z prawa
             '"flyTop"': lecieć z góry
             '"flyBottom"': lecieć z dołu
-      PoemBot_setTitle:
-        text: ustaw tytuł wiersza {TITLE}
-      PoemBot_showPoem:
-        text: pokaż wiersz
-      PoemBot_startBehavior:
+            '"typewriter"': maszyna do pisania
+      Poetry_setTitle:
+        text: ustaw tytuł {TITLE}
+      Poetry_showText:
+        text: pokaż tekst
+      Poetry_startBehavior:
         text: 'duszek {ANIMATION_NAME} rozpoczyna {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: trzepotanie
-            growing: rośnięcie
-            jittering: trzęsienie się
-            moving_north_and_looping: pętla na północ
-            moving_south_and_looping: pętla na południe
-            moving_east_and_looping: pętla na wschód
-            moving_west_and_looping: pętla na zachód
-            shrinking: zwężenie
-            spinning_left: obracanie się w lewo
-            spinning_right: obracanie się w prawo
-            swimming_left_and_right: pływanie
-            wandering: wędrowanie
-            wobbling: chybotanie
-      PoemBot_stopBehavior:
+            '"fluttering"': trzepotanie
+            '"growing"': rośnięcie
+            '"jittering"': trzęsienie się
+            '"moving_north_and_looping"': pętla na północ
+            '"moving_south_and_looping"': pętla na południe
+            '"moving_east_and_looping"': pętla na wschód
+            '"moving_west_and_looping"': pętla na zachód
+            '"shrinking"': zwężenie
+            '"spinning_left"': obracanie się w lewo
+            '"spinning_right"': obracanie się w prawo
+            '"swimming_left_and_right"': pływanie
+            '"wandering"': wędrowanie
+            '"wobbling"': chybotanie
+      Poetry_stopBehavior:
         text: 'duszek {ANIMATION_NAME} zatrzymuje {BEHAVIOR} '
         options:
           BEHAVIOR:
-            fluttering: trzepotanie
-            growing: rośnięcie
-            jittering: trzęsienie się
-            moving_north_and_looping: pętla na północ
-            moving_south_and_looping: pętla na południe
-            moving_east_and_looping: pętla na wschód
-            moving_west_and_looping: pętla na zachód
-            shrinking: zwężenie
-            spinning_left: obracanie się w lewo
-            spinning_right: obracanie się w prawo
-            swimming_left_and_right: pływanie
-            wandering: wędrowanie
-            wobbling: chybotanie
+            '"fluttering"': trzepotanie
+            '"growing"': rośnięcie
+            '"jittering"': trzęsienie się
+            '"moving_north_and_looping"': pętla na północ
+            '"moving_south_and_looping"': pętla na południe
+            '"moving_east_and_looping"': pętla na wschód
+            '"moving_west_and_looping"': pętla na zachód
+            '"shrinking"': zwężenie
+            '"spinning_left"': obracanie się w lewo
+            '"spinning_right"': obracanie się w prawo
+            '"swimming_left_and_right"': pływanie
+            '"wandering"': wędrowanie
+            '"wobbling"': chybotanie
             '"all"': "--wszystkie zachowania--"
-      PoemBot_stringValue:
+      Poetry_stringValue:
         text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
-      PoemBot_textConcat:
+      Poetry_textConcat:
         text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
-      PoemBot_whenLineShows:
+      Poetry_whenLineShows:
         text: gdy linia {N} pokazuje
-      PoemBot_whenPromptAnswered:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
         text: gdy {VAR} uzyskała odpowiedź
       RyanLab_moveForward:
         text: idź do przodu

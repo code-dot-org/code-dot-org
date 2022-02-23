@@ -1,22 +1,24 @@
 {
-  "func": "setPosition",
+  "key": "setPosition",
+  "name": "setPosition",
   "category": "UI controls",
-  "paramButtons": {
-    "minArgs": 3,
-    "maxArgs": 5
-  },
-  "paletteParams": [
-    "id",
-    "x",
-    "y",
-    "width",
-    "height"
+  "category_key": "ui_controls",
+  "palette_params": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "width"
+    },
+    {
+      "name": "height"
+    }
   ],
-  "params": [
-    "\"id\"",
-    "0",
-    "0",
-    "100",
-    "100"
-  ]
+  "syntax": "setPosition(id, x, y, width, height)"
 }

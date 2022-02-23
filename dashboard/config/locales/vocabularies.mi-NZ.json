@@ -2,6 +2,27 @@
   "mi-NZ": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Taumahi"
+        },
+        "code/poem-art/2021": {
+          "word": "Waehere"
+        },
+        "code/artist/unversioned": {
+          "word": "Waehere"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Ngā Here"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Ngā Koromeke"
+        },
+        "code/sports/unversioned": {
+          "word": "Waehere"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Waehere"
+        },
         "variable/coursef/2021": {
           "word": "Taurangi"
         },
@@ -49,6 +70,21 @@
         },
         "define/coursee/2021": {
           "word": "Whakamahukitia"
+        },
+        "variable/csd/2021": {
+          "word": "Taurangi"
+        },
+        "conditionals/csd/2021": {
+          "word": "Ngā Here"
+        },
+        "abstraction/csd/2021": {
+          "word": "Te Whakawaitara"
+        },
+        "function/csd/2021": {
+          "word": "Taumahi"
+        },
+        "copyright/csd/2021": {
+          "word": "Manatārua"
         }
       }
     }

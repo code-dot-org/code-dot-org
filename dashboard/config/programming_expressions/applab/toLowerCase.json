@@ -1,6 +1,7 @@
 {
-  "func": "toLowerCase",
+  "key": "toLowerCase",
+  "name": "toLowerCase",
   "category": "Variables",
-  "modeOptionName": "*.toLowerCase",
-  "type": "value"
+  "category_key": "variables",
+  "syntax": "toLowerCase"
 }

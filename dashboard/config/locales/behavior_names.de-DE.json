@@ -1679,7 +1679,9 @@
           "swimming left and right2": "links und rechts schwimmen2\n",
           "moving north2": "nach Norden bewegen2\n",
           "jittering2": "schwankend2",
-          "patrolling2": "patrollierend2"
+          "patrolling2": "patrollierend2",
+          "moving with arrow keys2": "mit Pfeiltasten2 bewegen",
+          "driving with arrow keys2": "mit Pfeiltasten2 fahren"
         },
         "courseF_apps_card": {
           "driving with arrow keys": "fahren mit den Pfeiltasten",
@@ -1695,7 +1697,8 @@
           "moving south": "nach Süden gehen",
           "moving west": "nach Westen gehen",
           "spinning right": "nach rechts drehen",
-          "spinning left": "nach links drehen"
+          "spinning left": "nach links drehen",
+          "blocking movement": "blockierende Bewegung"
         },
         "courseF_apps_chatbot": {
           "driving with arrow keys": "fahren mit den Pfeiltasten",
@@ -1723,7 +1726,10 @@
           "moving north2": "nach Norden bewegen2\n",
           "jittering2": "schwankend2",
           "moving west2": "nach Westen bewegen2\n",
-          "patrolling2": "patrollierend2"
+          "patrolling2": "patrollierend2",
+          "blocking movement": "blockierende Bewegung",
+          "moving with arrow keys2": "mit Pfeiltasten2 bewegen ",
+          "driving with arrow keys2": "mit Pfeiltasten2 fahren"
         },
         "courseF_apps_collector": {
           "wandering": "wandern",
@@ -1751,7 +1757,10 @@
           "moving north2": "nach Norden bewegen2\n",
           "jittering2": "schwankend2",
           "patrolling2": "patrollierend2",
-          "fluttering": "flattern"
+          "fluttering": "flattern",
+          "flying west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving with arrow keys2": "mit Pfeiltasten2 bewegen",
+          "driving with arrow keys2": "mit Pfeiltasten2 fahren"
         },
         "courseF_apps_madlib": {
           "wandering": "wandern",
@@ -1806,7 +1815,8 @@
           "moving south": "nach Süden gehen",
           "moving west": "nach Westen gehen",
           "spinning right": "nach rechts drehen",
-          "spinning left": "nach links drehen"
+          "spinning left": "nach links drehen",
+          "blocking movement": "blockierende Bewegung"
         },
         "courseF_editable_chatbot": {
           "driving with arrow keys": "fahren mit den Pfeiltasten",
@@ -1822,7 +1832,8 @@
           "moving south": "nach Süden gehen",
           "moving west": "nach Westen gehen",
           "spinning right": "nach rechts drehen",
-          "spinning left": "nach links drehen"
+          "spinning left": "nach links drehen",
+          "blocking movement": "blockierende Bewegung"
         },
         "courseF_editable_madlib": {
           "wandering": "wandern",
@@ -1857,7 +1868,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "patroullieren",
@@ -1872,7 +1884,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "patroullieren",
@@ -1889,7 +1902,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "patroullieren",
@@ -1906,7 +1920,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_events_conflict": {
           "patrolling": "patroullieren",
@@ -1922,7 +1937,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_events_freeplay_air": {
           "moving east": "nach Osten gehen",
@@ -2035,7 +2051,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_events_practice_reorder": {
           "moving east": "nach Osten gehen",
@@ -2054,7 +2071,8 @@
           "driving with arrow keys": "fahren mit den Pfeiltasten",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_events_predict": {
           "mystery behavior": "geheimnisvolles Verhalten\n",
@@ -2087,7 +2105,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_events_ship": {
           "patrolling": "patroullieren",
@@ -2104,7 +2123,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_events_stops": {
           "moving east": "nach Osten gehen",
@@ -2120,7 +2140,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_events_time": {
           "patrolling": "patroullieren",
@@ -2137,7 +2158,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_label_predict": {
           "moving east": "nach Osten gehen",
@@ -2412,7 +2434,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_text_choice_color": {
           "patrolling": "patroullieren",
@@ -2428,7 +2451,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_text_choice_conversation": {
           "wandering": "wandern",
@@ -2544,7 +2568,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_text_concat": {
           "patrolling": "patroullieren",
@@ -2560,7 +2585,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_text_events": {
           "patrolling": "patroullieren",
@@ -2576,7 +2602,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_text_print": {
           "patrolling": "patroullieren",
@@ -2592,7 +2619,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_text_prompts": {
           "patrolling": "patroullieren",
@@ -2608,7 +2636,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_text_review": {
           "patrolling": "patroullieren",
@@ -2624,7 +2653,8 @@
           "spinning left": "nach links drehen",
           "fluttering": "flattern",
           "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
-          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
         },
         "courseF_variables_card": {
           "wandering": "wandern",
@@ -2791,6 +2821,518 @@
           "moving west": "nach Westen gehen",
           "patrolling": "patroullieren",
           "moving with arrow keys": "Scrollen mit Pfeiltasten"
+        },
+        "helloworld_animals_backgrounds": {
+          "swimming left and right": "nach links und rechts schwimmen",
+          "shrinking": "schrumpfen",
+          "patrolling": "patroullieren",
+          "wandering": "wandern",
+          "growing": "wachsen",
+          "jittering": "zittern",
+          "moving east": "nach Osten gehen",
+          "moving north": "nach Norden gehen",
+          "moving south": "nach Süden gehen",
+          "moving west": "nach Westen gehen",
+          "spinning right": "nach rechts drehen",
+          "spinning left": "nach links drehen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_animals_behaviors": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_animals_costumes": {
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "helloworld_animals_events": {
+          "patrolling": "patroullieren",
+          "growing": "wachsen",
+          "moving west": "nach Westen gehen",
+          "spinning right": "nach rechts drehen",
+          "moving east": "nach Osten gehen",
+          "moving north": "nach Norden gehen",
+          "moving south": "nach Süden gehen",
+          "jittering": "zittern",
+          "wandering": "wandern",
+          "shrinking": "schrumpfen",
+          "spinning left": "nach links drehen",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
+        },
+        "helloworld_animals_sounds": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_emoji_backgrounds": {
+          "swimming left and right": "nach links und rechts schwimmen",
+          "shrinking": "schrumpfen",
+          "patrolling": "patroullieren",
+          "wandering": "wandern",
+          "growing": "wachsen",
+          "jittering": "zittern",
+          "moving east": "nach Osten gehen",
+          "moving north": "nach Norden gehen",
+          "moving south": "nach Süden gehen",
+          "moving west": "nach Westen gehen",
+          "spinning right": "nach rechts drehen",
+          "spinning left": "nach links drehen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_emoji_behaviors": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_emoji_costumes": {
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "helloworld_emoji_events": {
+          "patrolling": "patroullieren",
+          "growing": "wachsen",
+          "moving west": "nach Westen gehen",
+          "spinning right": "nach rechts drehen",
+          "moving east": "nach Osten gehen",
+          "moving north": "nach Norden gehen",
+          "moving south": "nach Süden gehen",
+          "jittering": "zittern",
+          "wandering": "wandern",
+          "shrinking": "schrumpfen",
+          "spinning left": "nach links drehen",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
+        },
+        "helloworld_emoji_sounds": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_food_backgrounds": {
+          "swimming left and right": "nach links und rechts schwimmen",
+          "shrinking": "schrumpfen",
+          "patrolling": "patroullieren",
+          "wandering": "wandern",
+          "growing": "wachsen",
+          "jittering": "zittern",
+          "moving east": "nach Osten gehen",
+          "moving north": "nach Norden gehen",
+          "moving south": "nach Süden gehen",
+          "moving west": "nach Westen gehen",
+          "spinning right": "nach rechts drehen",
+          "spinning left": "nach links drehen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_food_costumes": {
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "helloworld_food_events": {
+          "patrolling": "patroullieren",
+          "growing": "wachsen",
+          "moving west": "nach Westen gehen",
+          "spinning right": "nach rechts drehen",
+          "moving east": "nach Osten gehen",
+          "moving north": "nach Norden gehen",
+          "moving south": "nach Süden gehen",
+          "jittering": "zittern",
+          "wandering": "wandern",
+          "shrinking": "schrumpfen",
+          "spinning left": "nach links drehen",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
+        },
+        "helloworld_food_sounds": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_retro_backgrounds": {
+          "swimming left and right": "nach links und rechts schwimmen",
+          "shrinking": "schrumpfen",
+          "patrolling": "patroullieren",
+          "wandering": "wandern",
+          "growing": "wachsen",
+          "jittering": "zittern",
+          "moving east": "nach Osten gehen",
+          "moving north": "nach Norden gehen",
+          "moving south": "nach Süden gehen",
+          "moving west": "nach Westen gehen",
+          "spinning right": "nach rechts drehen",
+          "spinning left": "nach links drehen",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_retro_behaviors": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_retro_costumes": {
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "helloworld_retro_events": {
+          "patrolling": "patroullieren",
+          "growing": "wachsen",
+          "moving west": "nach Westen gehen",
+          "spinning right": "nach rechts drehen",
+          "moving east": "nach Osten gehen",
+          "moving north": "nach Norden gehen",
+          "moving south": "nach Süden gehen",
+          "jittering": "zittern",
+          "wandering": "wandern",
+          "shrinking": "schrumpfen",
+          "spinning left": "nach links drehen",
+          "fluttering": "flattern",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving forward": "vorwärts bewegen"
+        },
+        "helloworld_retro_sounds": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen",
+          "moving north and looping": "nach Norden bewegen und eine Schleife drehen",
+          "moving south and looping": "nach Süden bewegen und eine Schleife drehen"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "wandern",
+          "moving east": "nach Osten gehen",
+          "spinning left": "nach links drehen",
+          "spinning right": "nach rechts drehen",
+          "shrinking": "schrumpfen",
+          "growing": "wachsen",
+          "moving south": "nach Süden gehen",
+          "swimming left and right": "nach links und rechts schwimmen",
+          "moving north": "nach Norden gehen",
+          "jittering": "zittern",
+          "moving west": "nach Westen gehen",
+          "patrolling": "patroullieren",
+          "moving with arrow keys": "Scrollen mit Pfeiltasten",
+          "driving with arrow keys": "fahren mit den Pfeiltasten",
+          "fluttering": "flattern",
+          "wobbling": "wackelnd",
+          "moving west and looping": "nach Westen bewegen und eine Schleife drehen",
+          "moving east and looping": "nach Osten bewegen und eine Schleife drehen"
         }
       }
     }

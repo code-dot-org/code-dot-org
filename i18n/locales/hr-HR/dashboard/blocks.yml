@@ -5,6 +5,8 @@ hr:
       Dancelab_alternateMoves:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_atTimestamp:
@@ -14,6 +16,8 @@ hr:
       Dancelab_changeMoveEachLR:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_changePropBy:
@@ -25,6 +29,8 @@ hr:
       Dancelab_changePropEachBy:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -34,6 +40,8 @@ hr:
       Dancelab_doMoveEachLR:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_everySeconds:
@@ -63,6 +71,8 @@ hr:
       Dancelab_jumpToEach:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           LOCATION:
@@ -72,6 +82,8 @@ hr:
       Dancelab_layoutSprites:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           FORMAT:
@@ -106,6 +118,7 @@ hr:
       Dancelab_makeNewDanceSpriteGroup:
         options:
           COSTUME:
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           LAYOUT:
@@ -116,7 +129,7 @@ hr:
       Dancelab_setDanceSpeed:
         options:
           SPEED:
-            '1': normal
+            '1': normalan
             '2': brzu
             '4': very fast
             '0.5': slow
@@ -124,10 +137,12 @@ hr:
       Dancelab_setDanceSpeedEach:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           SPEED:
-            '1': normal
+            '1': normalan
             '2': brzu
             '4': very fast
             '0.5': slow
@@ -141,6 +156,8 @@ hr:
       Dancelab_setPropEach:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -156,6 +173,8 @@ hr:
       Dancelab_setPropRandomEach:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -165,16 +184,22 @@ hr:
       Dancelab_setTintEach:
         options:
           THIS:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_setTintEachInline:
         options:
           THIS:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_setVisibleEach:
         options:
           THIS:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
       Dancelab_startMapping:
@@ -186,6 +211,8 @@ hr:
       Dancelab_startMappingEach:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -201,6 +228,8 @@ hr:
       Dancelab_stopMappingEach:
         options:
           GROUP:
+            sprites: sve
+            '"ALIEN"': vanzemaljaci
             '"CAT"': mačke
             '"DOG"': psi
           PROPERTY:
@@ -239,6 +268,20 @@ hr:
           CONDITION:
             '"when"': kada
             '"while"': dok
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): vrteći se udesno
+            new Behavior(spinning_left, []): vrteći se ulijevo
+            new Behavior(fluttering, []): lepršanje
+            new Behavior(jittering, []): treperenje
+            new Behavior(wobbling, []): njihanje
+            new Behavior(wandering, []): lutanje
+            new Behavior(patrolling, []): patroliranje
+            new Behavior(moving_west_and_looping, []): krećući se prema zapadu i petljajući
+            new Behavior(moving_east_and_looping, []): krećući se prema istoku i petljajući
+            new Behavior(moving_north_and_looping, []): krećući se prema sjeveru i petljajući
+            new Behavior(moving_south_and_looping, []): krećući se prema jugu i petljajući
       gamelab_getProp:
         options:
           PROPERTY:
@@ -293,7 +336,17 @@ hr:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": krckati
+            "'sound://category_animals/cat.mp3'": mačka
+            "'sound://category_animals/cow.mp3'": krava
+            "'sound://category_animals/sheep.mp3'": ovca
+            "'sound://category_animals/chicken.mp3'": kokoš
+            "'sound://category_animals/dog.mp3'": pas
             "'sound://category_digital/jump_7.mp3'": skoči
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): vožnja sa strelicama
+            new Behavior(driving_with_arrow_keys, []): vožnja sa strelicama
       gamelab_randColor:
         text: nasumično odabrana boja
       gamelab_randomColor:
@@ -309,6 +362,13 @@ hr:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': duga
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': pod vodom
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
+      gamelab_setDefaultSpriteSize:
+        options:
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': srednje
+            '100': large
       gamelab_setProp:
         options:
           PROPERTY:
@@ -320,12 +380,25 @@ hr:
         options:
           PROPERTY:
             '"scale"': veličina
+          SIZE:
+            '25': extra small
+            '50': small
+            '75': srednje
+            '100': large
       gamelab_setSizes:
         options:
           PROPERTY:
             '"scale"': veličina
             '"width"': širina
             '"height"': visina
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': normalan
+            '7': brzu
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -375,8 +448,14 @@ hr:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+      Mikelab_groupChangeAnim:
+        options:
+          SELECT:
+            '"all"': sve
       Mikelab_groupChangePropBy:
         options:
+          SELECT:
+            '"all"': sve
           PROPERTY:
             '"scale"': veličina
             '"x"': x pozicija
@@ -386,18 +465,40 @@ hr:
           LOCATION:
             "{x: 100, y: 200}": lijevo
             "{x: 300, y: 200}": desno
+      Mikelab_groupDestroy:
+        options:
+          SELECT:
+            '"all"': sve
       Mikelab_groupGetProp:
         options:
           PROPERTY:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+      Mikelab_groupRemoveAllBehaviors:
+        options:
+          SELECT:
+            '"all"': sve
+      Mikelab_groupRemoveBehaviorSimple:
+        options:
+          SELECT:
+            '"all"': sve
+      Mikelab_groupRemoveTint:
+        options:
+          SELECT:
+            '"all"': sve
       Mikelab_groupSetProp:
         options:
+          SELECT:
+            '"all"': sve
           PROPERTY:
             '"scale"': veličina
             '"x"': x pozicija
             '"y"': y pozicija
+      Mikelab_groupSetTint:
+        options:
+          SELECT:
+            '"all"': sve
       Mikelab_hideFish:
         options:
           TRASH:
@@ -472,28 +573,73 @@ hr:
             '"down"': strelica dolje
             '"left"': strelica lijevo
             '"right"': strelica desno
-      PoemBot_startBehavior:
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': srca
+            '"rainbow"': duga
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': kiša
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': noć
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': skoči
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': oblaci
+            '"hearts"': srca
+            '"rain"': kiša
+          PALETTE:
+            '"rainbow"': duga
+            '"winter"': zima
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': srca
+            '"rain"': kiša
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
-            fluttering: lepršanje
-            growing: rastući
-            jittering: treperenje
-            shrinking: skupljanje
-            spinning_left: vrteći se ulijevo
-            spinning_right: vrteći se udesno
-            wandering: lutanje
-            wobbling: njihanje
-      PoemBot_stopBehavior:
+            '"fluttering"': lepršanje
+            '"growing"': rastući
+            '"jittering"': treperenje
+            '"shrinking"': skupljanje
+            '"spinning_left"': vrteći se ulijevo
+            '"spinning_right"': vrteći se udesno
+            '"wandering"': lutanje
+            '"wobbling"': njihanje
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            fluttering: lepršanje
-            growing: rastući
-            jittering: treperenje
-            shrinking: skupljanje
-            spinning_left: vrteći se ulijevo
-            spinning_right: vrteći se udesno
-            wandering: lutanje
-            wobbling: njihanje
+            '"fluttering"': lepršanje
+            '"growing"': rastući
+            '"jittering"': treperenje
+            '"shrinking"': skupljanje
+            '"spinning_left"': vrteći se ulijevo
+            '"spinning_right"': vrteći se udesno
+            '"wandering"': lutanje
+            '"wobbling"': njihanje
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: idi naprijed
       RyanLab_turnLeft:
@@ -508,6 +654,20 @@ hr:
         options:
           FORMAT:
             '"random"': slučajno odabran
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': sve
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': sve
+            '0.75': most
+            '0.5': half of
+            '0.25': few
       binary_move:
         options:
           DIR:

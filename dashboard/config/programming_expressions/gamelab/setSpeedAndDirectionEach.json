@@ -1,13 +1,15 @@
 {
-  "func": "setSpeedAndDirectionEach",
+  "key": "setSpeedAndDirectionEach",
+  "name": "setSpeedAndDirectionEach",
   "category": "Groups",
-  "paletteParams": [
-    "speed",
-    "angle"
+  "category_key": "groups",
+  "palette_params": [
+    {
+      "name": "speed"
+    },
+    {
+      "name": "angle"
+    }
   ],
-  "params": [
-    "1",
-    "90"
-  ],
-  "modeOptionName": "*.setSpeedAndDirectionEach"
+  "syntax": "setSpeedAndDirectionEach(speed, angle)"
 }

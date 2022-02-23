@@ -251,6 +251,7 @@ bs:
       infinity: 'Beskonačnost'
       playlab: 'Play Lab'
       starwars: 'Zvijezdani ratovi'
+      loading: 'Učitavam...'
     popup:
       progress_for_user: "Napredak za %{name}"
       progress: 'Tvoj napredak'
@@ -264,6 +265,7 @@ bs:
       prizes_link: 'više informacija'
   teacher:
     answer: Odgovor
+    dashboard: 'Nadzorna Ploča za Nastavnike'
     for_teachers_only: Samo za učitelje
     title:
       one: 'Tvoj učitelj:'
@@ -617,6 +619,7 @@ bs:
   pd:
     form_labels:
       email: 'Email'
+      school: 'Škola'
     form_entries:
       gender:
         male: 'Muško'

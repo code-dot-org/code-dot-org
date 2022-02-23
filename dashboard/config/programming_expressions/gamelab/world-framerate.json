@@ -1,0 +1,7 @@
+{
+  "key": "World.frameRate",
+  "name": "World.frameRate",
+  "category": "World",
+  "category_key": "world",
+  "syntax": "World.frameRate"
+}

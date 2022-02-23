@@ -1,14 +1,14 @@
 ---
-title: Blurbs and useful stats
+title: 简介和有用的统计数据
 ---
 
 <a id="blurb"></a>
 
 {{ signup_button }}
 
-# Blurbs and useful stats
+# 简介和有用的统计数据
 
-### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
+### 如果你正在寻找在你的通讯和沟通中推广编程一小时的方法，请使用以下信息。
 
 * * *
 
@@ -16,11 +16,11 @@ title: Blurbs and useful stats
 
 #### 将计算机科学带到你的学校。从《编程一小时》开始。
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. 但只有不到一半的学校有在讲授计算机科学！ 好消息是，我们正在着手改变现状。 如果你以前听说过《编程一小时》，你应该知道它创造了历史。 1亿名学生正通过编程一小时活动入门计算机科学并体验着其中的乐趣。
+科技正改变着这星球上的每一行业，计算机知识也已成为人类必备的技能之一。 But just half of all schools offer computer science! 好消息是，我们正在着手改变现状。 如果你以前听说过《编程一小时》，你应该知道它创造了历史。 1亿名学生正通过编程一小时活动入门计算机科学并体验着其中的乐趣。
 
-编程一小时是个一小时的计算机科学介绍活动，希望能揭开编程的神秘面纱，并说明它是任何人都可以学会的基础知识。 Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+编程一小时是个一小时的计算机科学介绍活动，希望能揭开编程的神秘面纱，并说明它是任何人都可以学会的基础知识。 在[http://HourOfCode.com](http://HourofCode.com)了解更多信息，自己尝试体验一小时，或者举办一个编程一小时的活动，向他人介绍计算机世界！
 
-## Messaging for frequently asked questions
+## 常见问题信息
 
 #### 为什么你的学校组织编程一小时活动？
 
@@ -30,17 +30,17 @@ With technology changing every industry on the planet, computing knowledge has b
 
 #### 为什么这很重要？
 
-科技正改变着地球上的每一个行业。 在 2015 年，美国有700 万工作机会看重编程技能，其中包括艺术和设计。 But 53 percent of schools in the U.S. don't teach computer science. 现在是我们应该迎头赶上21世界步伐的时候了。 我们知道，无论我们的学生们长大后做什么，无论他们从事医药，商业，政治或者艺术工作，知道如何使用科技将会给他们信心并让他们知道成功的诀窍。 <br /> <br />
+科技正改变着地球上的每一个行业。 在 2015 年，美国有700 万工作机会看重编程技能，其中包括艺术和设计。 But 49 percent of schools in the U.S. don't offer computer science. 现在是我们应该迎头赶上21世界步伐的时候了。 我们知道，无论我们的学生们长大后做什么，无论他们从事医药，商业，政治或者艺术工作，知道如何使用科技将会给他们信心并让他们知道成功的诀窍。 <br /> <br />
 
-#### A quote you can use in materials
+#### 你可以在材料中使用的引文
 
-Hadi Partovi，Code.org的创始人和CEO曾说过“打造编程一小时就是为了揭秘代码并表明计算机科学并不是火箭科学，是任何人都可以学习的基础知识， 全球超过 1 亿学生已经尝试过代码一小时。 The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+Hadi Partovi，Code.org的创始人和CEO曾说过“打造编程一小时就是为了揭秘代码并表明计算机科学并不是火箭科学，是任何人都可以学习的基础知识， 全球超过 1 亿学生已经尝试过代码一小时。 对21世纪计算机科学教育的需求跨越了所有边界，没有国界。 <br /> <br />
 
 #### 关于Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org是一个501c3公共非营利组织，致力于扩大对计算机科学的参与，提高来自其他弱势群体的年轻女性和学生的参与。 其愿景是，每所学校的每个学生都有机会学习计算机编程。 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org得到了来自企业、基金会和慷慨个人的慈善捐赠，包括微软、Facebook、美国印孚瑟斯基金会、亚马逊等。 更多信息，请访问[code.org]({{ codeorg_link }})。
 
-## Share these on social media and in emails
+## 在社交媒体和电子邮件中分享这些
 
 [![图片](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 

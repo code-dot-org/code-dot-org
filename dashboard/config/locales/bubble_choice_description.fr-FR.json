@@ -79,7 +79,26 @@
         "courseF_sprites_desert": "Créez une scène. Entraînez vous à faire des sprites et à choisir leur emplacement.",
         "courseF_sprites_properties": "Apprendre à changer la taille des sprites. ",
         "courseF_apps_collector": "Ramasse les objets aussi vite que possible ! ",
-        "international_outbreak_freeplay": "Utilise ton projet pour partager un message. Que veux-tu que les autres en retiennent de ceci ? "
+        "international_outbreak_freeplay": "Continue avec les mêmes blocs que tu as déjà rencontrés !",
+        "helloworld_animals_location": "Faites en sorte que le sprite adopte un nouveau comportement après un certain temps. ",
+        "helloworld_animals_sizes": "Apprendre à changer la taille des sprites. ",
+        "helloworld_emoji_location": "Faites en sorte que le sprite adopte un nouveau comportement après un certain temps. ",
+        "helloworld_emoji_sizes": "Apprendre à changer la taille des sprites. ",
+        "helloworld_food_location": "Faites en sorte que le sprite adopte un nouveau comportement après un certain temps. ",
+        "helloworld_food_sizes": "Apprendre à changer la taille des sprites. ",
+        "helloworld_retro_location": "Faites en sorte que le sprite adopte un nouveau comportement après un certain temps. ",
+        "helloworld_retro_sizes": "Apprendre à changer la taille des sprites. ",
+        "helloworld_animals_costumes": "Apprendre à modifier l'apparence des sprites.",
+        "helloworld_animals_sounds": "Découvrez comment jouer des sons.",
+        "helloworld_emoji_costumes": "Apprendre à modifier l'apparence des sprites.",
+        "helloworld_emoji_sounds": "Découvrez comment jouer des sons.",
+        "helloworld_food_costumes": "Apprendre à modifier l'apparence des sprites.",
+        "helloworld_food_sounds": "Découvrez comment jouer des sons.",
+        "helloworld_retro_costumes": "Apprendre à modifier l'apparence des sprites.",
+        "helloworld_retro_sounds": "Découvrez comment jouer des sons.",
+        "CourseF_app_computer": "Connectez toutes les pièces et découvrez comment allumer l'ordinateur !",
+        "courseF_sprites_freeplay_aquatic": "Créez une scène sous-marine avec des poissons et d'autres créatures. ",
+        "courseF_sprites_freeplay_food": "Créez une scène drôle avec des sprites alimentaires qui rigolent. "
       }
     }
   }

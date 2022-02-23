@@ -8,7 +8,8 @@
 .careers__banner,
 .careers__banner--faq {
   align-items: center;
-  background: url('/images/careers-at-code/jobs-banner.jpg') top right/contain no-repeat #00adbc;
+  background: url("/images/careers-at-code/jobs-banner.jpg") top right/contain
+    no-repeat #00adbc;
   display: flex;
   margin-bottom: 32px;
   padding: 18px 24px;
@@ -25,7 +26,7 @@
 .careers__banner--faq a:link,
 .careers__banner--faq a:visited {
   color: #ffffff;
-  font-family: 'Gotham 4r', sans-serif;
+  font-family: "Gotham 4r", sans-serif;
 }
 
 .careers__banner--faq i {
@@ -53,55 +54,14 @@
 }
 
 .careers__explore-button {
-  font-family: 'Gotham 7r', sans-serif;
+  font-family: "Gotham 7r", sans-serif;
   font-size: 16px;
   padding: 6px 24px;
-}
-
-.careers__section-container--values {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.careers__values-icon {
-  height: 60px;
-  padding-bottom: 6px;
-}
-
-.careers__values-group {
-  display: flex;
-  height: 260px;
-  max-width: 388px;
 }
 
 .careers__section-container {
   min-height: 100px;
   overflow: hidden;
-}
-
-.careers__values-tile {
-  line-height: 20px;
-  font-size: 15px;
-  text-align: center;
-  font-weight: 700;
-  float: left;
-  height: 250px;
-  overflow-wrap: anywhere;
-  width: 100%;
-  color: white;
-  margin-right: 10px;
-  padding: 11px;
-  padding-top: 24px;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(255, 255, 255, 0) 25%
-  )
-}
-
-.careers__values-tile:last-of-type {
-  margin-right: 0;
 }
 
 .careers__benefits {
@@ -144,7 +104,7 @@
   min-width: 25%;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .careers__benefit__icon img {
@@ -152,59 +112,35 @@
 }
 
 .careers__benefit--teal {
-  background: linear-gradient(90deg,#4FABBA,#79C8D1);
+  background: linear-gradient(90deg, #4fabba, #79c8d1);
 }
 
 .careers__benefit__icon.careers__benefit--teal {
-  background: #4FABBA;
+  background: #4fabba;
 }
 
 .careers__benefit--green {
-  background: linear-gradient(90deg,#BABE41,#AAAC48);
+  background: linear-gradient(90deg, #babe41, #aaac48);
 }
 
 .careers__benefit__icon.careers__benefit--green {
-  background: #BABE41;
+  background: #babe41;
 }
 
 .careers__benefit--orange {
-  background: linear-gradient(90deg,#E19444,#F1A73B);
+  background: linear-gradient(90deg, #e19444, #f1a73b);
 }
 
 .careers__benefit__icon.careers__benefit--orange {
-  background: #F1A73B;
+  background: #f1a73b;
 }
 
 .careers__benefit--purple {
-  background: linear-gradient(90deg,#7665A0,#5F5988);
+  background: linear-gradient(90deg, #7665a0, #5f5988);
 }
 
 .careers__benefit__icon.careers__benefit--purple {
-  background: #7665A0;
-}
-
-.careers__teal {
-  background-color: #00adbc;
-}
-
-.careers__purple {
-  background-color: #7665a0;
-}
-
-.careers__orange {
-  background-color: #ffa400;
-}
-
-.careers__cyan {
-  background-color: #0094ca;
-}
-
-.careers__green {
-  background-color: #b9bf15;
-}
-
-.careers__dark-gray {
-  background-color: #4d575f;
+  background: #7665a0;
 }
 
 #lever-jobs-container {
@@ -219,10 +155,18 @@
   width: 100%;
 }
 
-.lever-team:nth-of-type(1n) .lever-team-title { color: #0094CA; }
-.lever-team:nth-of-type(2n) .lever-team-title { color: #B9BF15; }
-.lever-team:nth-of-type(3n) .lever-team-title { color: #01AEBC; }
-.lever-team:nth-of-type(4n) .lever-team-title { color: #FFA400; }
+.lever-team:nth-of-type(1n) .lever-team-title {
+  color: #0094ca;
+}
+.lever-team:nth-of-type(2n) .lever-team-title {
+  color: #b9bf15;
+}
+.lever-team:nth-of-type(3n) .lever-team-title {
+  color: #01aebc;
+}
+.lever-team:nth-of-type(4n) .lever-team-title {
+  color: #ffa400;
+}
 
 .lever-team[data-team="Future Openings"] {
   display: none;
@@ -256,11 +200,6 @@ ul li:before {
   content: "";
 }
 
-.careers__future {
-  margin: 10px 0;
-  margin-bottom: 0;
-}
-
 .careers__team-photos {
   display: flex;
   flex-wrap: wrap;
@@ -277,20 +216,7 @@ ul li:before {
   margin-right: 12px;
 }
 
-@media screen and (min-width: 971px) {
-
-  .careers__values-group:first-of-type {
-    margin-right: 10px;
-  }
-
-  .careers__values-group {
-    max-width: 49%;
-  }
-
-}
-
 @media screen and (max-width: 970px) {
-
   .careers__banner {
     background-position-x: 125%;
   }
@@ -320,11 +246,9 @@ ul li:before {
   .careers__benefit__icon img {
     width: 48px;
   }
-
 }
 
 @media screen and (max-width: 600px) and (min-width: 470px) {
-
   .careers__banner {
     background-position: top right;
   }
@@ -334,11 +258,9 @@ ul li:before {
     min-width: 60%;
     width: auto;
   }
-
 }
 
 @media screen and (max-width: 560px) {
-
   .careers__banner--faq {
     background: #00adbc;
   }
@@ -363,18 +285,10 @@ ul li:before {
   .careers__benefit:nth-child(even) .careers__benefit__title {
     text-align: left;
   }
-
 }
 
 @media screen and (max-width: 475px) {
-
   .careers__banner {
     padding: 12px;
   }
-
-  .careers__values-tile {
-    padding-left: 6px;
-    padding-right: 6px;
-  }
-
-} 
+}

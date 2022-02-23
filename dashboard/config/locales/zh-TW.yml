@@ -180,6 +180,7 @@ zh-TW:
     email_preference_yes: 是
     email_preference_no: 否
     email_preference_required: 你必須指定一個信箱地址。
+    share_teacher_email_reg_partner_question: 您是否希望我們與您所在州的[Code.org區域合作夥伴](%{cdo_regional_partner_desc})共用您的聯絡資料，以便他們向您告知當地的專業開發、資源和活動？
     share_teacher_email_reg_partner_preference_yes: 是
     share_teacher_email_reg_partner_preference_no: 否
     share_teacher_email_reg_partner_preference_required: 你必須指定一個信箱地址。
@@ -289,6 +290,7 @@ zh-TW:
       provider_managed_section: 這個學習小組是由另一位提供者管理的，你無法加入。請詢問你的老師是否能透過 %{provider} 將你加入，並重新同步他們的學習小組。
       restricted_section: 我們不能將你加入至課程 %{section_code} ，因為課程已經鎖起來了。請向你的老師尋求幫助。
       full_section: 我們不能將你加入至課程 %{section_code}，因為已經有 %{section_capacity} 個學生在裡面了。請向你的老師尋求幫助。
+      not_participant_type: 我們無法將您添加到%{section_code}部分，因為您不滿足該部分的參與者類型。
     mail:
       student_disassociated:
         subject: Code.org 通知： %{student_name} 已不再是你的學生。
@@ -406,12 +408,15 @@ zh-TW:
       minecraft_hero: Minecraft 英雄們
       playlab: Play Lab
       playlab_k1: Play Lab （學齡前）
+      poetry: 詩歌
+      poetry_hoc: 詩歌藝術
       scratch: Scratch
       sports: 運動
       spritelab: Sprite Lab
       starwars: 星際大戰
       starwarsblocks: 星際大戰（程式積木）
       starwarsblocks_hour: 星際大戰（程式積木）
+      loading: 正在載入…
       weblab: Web Lab
       view_all: 瀏覽所有專案…
     popup:
@@ -427,6 +432,7 @@ zh-TW:
       prizes_link: 更多的資訊
   teacher:
     answer: 答案
+    dashboard: 教師控制台
     for_teachers_only: 僅限教師
     title:
       one: 你的老師：
@@ -553,6 +559,7 @@ zh-TW:
     all_students_must_be_in_current_section: 所有的學生都必須在你的學習小組中。
     already_enrolled_in_new_section: 你無法移動這些學生，因為這個教師已經把他們放到另一個學習小組了。
     third_party_login: 你不可將學生移動到與第三方工具同步的學習小組。
+    not_correct_participant_type: 您無法移動這些用戶，因為他們沒有成為新部分的參與者的許可權。
   share:
     title: 在 Code Studio 上學習
     description: 任何人都可以學習計算機科學，用程式來建立遊戲、應用程式及藝術作品。
@@ -610,6 +617,7 @@ zh-TW:
     how_it_works: 它是如何運作的（檢視程式碼）
     try_hour_of_code: 試試「一小時玩程式」！
     store: 商店
+    cookie_notice: Cookie通知
   reference_area:
     title: 需要幫忙？
     subtitle: 看看這些影片和提示
@@ -1023,8 +1031,10 @@ zh-TW:
       email: 電子信箱
       email_alternate: 備用信箱
       gender: 性別
+      school: 學校
       school_name: 學校名稱
       school_city: 學校所在城市
+      school_city_district: 學校城市/區
       school_country: 學校所屬國家
       colombian_school_city: 學校所在城市
       colombian_school_municipality: 學校當局
@@ -1147,3 +1157,6 @@ zh-TW:
     this_sprite: 這個角色
   unit_prefix: "%{n} 個單位"
   code_org_logo_alt: Code.org 首頁
+  teacher_feedback: '老師的回饋
+
+'

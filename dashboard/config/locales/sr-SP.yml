@@ -289,6 +289,7 @@ sr:
       iceage: Ледено доба
       infinity: Бесконачно
       playlab: Играоница
+      loading: Учитава се...
     popup:
       progress_for_user: Напредак %{name}
       progress: Напредак
@@ -302,6 +303,7 @@ sr:
       prizes_link: Више информација
   teacher:
     answer: Одговор
+    dashboard: Контролна табла за наставнике
     for_teachers_only: Само за наставнике
     title:
       one: 'Твој учитељ:'
@@ -494,6 +496,7 @@ sr:
   pd:
     form_labels:
       email: Електронска пошта
+      school: Школа
       school_name: Име школе
       colombian_chilean_school_name: Име школе
     form_entries:

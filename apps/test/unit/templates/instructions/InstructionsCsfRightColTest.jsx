@@ -39,6 +39,37 @@ describe('InstructionsCsfRightCol', () => {
     expect(setColHeightSpy.calledOnce).to.be.true;
   });
 
+  it('only recalculates col width and height if height or collapsed props change', () => {
+    const setColWidthSpy = sinon.spy();
+    const setColHeightSpy = sinon.spy();
+    const wrapper = setUp({
+      setColHeight: setColHeightSpy,
+      setColWidth: setColWidthSpy,
+      height: 50,
+      collapsed: false,
+      isRtl: false
+    });
+
+    // Should be called after mount
+    expect(setColWidthSpy).to.have.been.calledOnce;
+    expect(setColHeightSpy).to.have.been.calledOnce;
+
+    // Should not be called when unrelated prop changes
+    wrapper.setProps({isRtl: true});
+    expect(setColWidthSpy).to.have.been.calledOnce;
+    expect(setColHeightSpy).to.have.been.calledOnce;
+
+    // Should be called when height changes
+    wrapper.setProps({height: 100});
+    expect(setColWidthSpy).to.have.been.calledTwice;
+    expect(setColHeightSpy).to.have.been.calledTwice;
+
+    // Should be called when collapsed changes
+    wrapper.setProps({collapsed: true});
+    expect(setColWidthSpy).to.have.been.calledThrice;
+    expect(setColHeightSpy).to.have.been.calledThrice;
+  });
+
   it('displays collapser button if there is feedback', () => {
     const wrapper = setUp({feedback: {message: 'feedback', isFailure: false}});
     expect(wrapper.find(CollapserButton)).to.have.length(1);

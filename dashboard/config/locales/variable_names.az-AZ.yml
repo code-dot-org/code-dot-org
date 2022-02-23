@@ -3,6 +3,8 @@ az:
   data:
     variable_names:
       "???": "???"
+      Actor_1_Counter: Aktyor_1_sayğac
+      Actor_2_Counter: Aktyor_2_sayğac
       Blue: Göy
       Green: Yaşıl
       Red: Qırmızı
@@ -31,8 +33,14 @@ az:
       circ: dövrə
       codeName: kodAdı
       color: rəng
+      controllerHeight: nəzarətçiBoy
+      controllerWidth: nəzarətçiEn
       counter: sayğac
+      counter2: sayğac2
+      currentActor: hazırkıAktyor
       direction: istiqamət
+      dog_score: it_xal
+      dog_speed: it_sürət
       dogs: itlər
       dragons: əjdahalar
       enemy_speed: düşmən_sürəti
@@ -67,6 +75,7 @@ az:
       score2: xal2
       screenHeight: ekranHündürlüyü
       screenWidth: ekranGenişliyi
+      set sides: kənarları təyin etmək
       shout: bağırmaq
       sides: tərəflər
       size: ölçü

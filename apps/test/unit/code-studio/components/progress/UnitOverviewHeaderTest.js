@@ -13,8 +13,8 @@ const defaultProps = {
   plcHeaderProps: undefined,
   announcements: [],
   isSignedIn: true,
-  viewAs: ViewType.Teacher,
-  isVerifiedTeacher: true,
+  viewAs: ViewType.Instructor,
+  isVerifiedInstructor: true,
   hasVerifiedResources: false,
   scriptId: 99,
   scriptName: 'course1',
@@ -61,12 +61,12 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
   });
 
-  it('includes a single notification default for non-verified teachers', () => {
+  it('includes a single notification default for non-verified instructors', () => {
     const wrapper = shallow(
       <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
-        isVerifiedTeacher={false}
+        isVerifiedInstructor={false}
         verificationCheckComplete={true}
       />,
       {disableLifecycleMethods: true}
@@ -74,12 +74,12 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('has non-verified and provided teacher announcements if necessary', () => {
+  it('has non-verified and provided instructor announcements if necessary', () => {
     const wrapper = shallow(
       <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
-        isVerifiedTeacher={false}
+        isVerifiedInstructor={false}
         verificationCheckComplete={true}
         announcements={[
           fakeTeacherAnnouncement,
@@ -92,13 +92,13 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('has student announcement if viewing as student', () => {
+  it('has participant announcement if viewing as participant', () => {
     const wrapper = shallow(
       <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
-        isVerifiedTeacher={false}
-        viewAs={ViewType.Student}
+        isVerifiedInstructor={false}
+        viewAs={ViewType.Participant}
         announcements={[fakeStudentAnnouncement]}
       />,
       {disableLifecycleMethods: true}
@@ -156,7 +156,7 @@ describe('UnitOverviewHeader', () => {
     assert.equal(true, coursea2018.isSelected);
   });
 
-  it('has correct unit description for teacher', () => {
+  it('has correct unit description for instructor', () => {
     const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true
     });
@@ -165,9 +165,9 @@ describe('UnitOverviewHeader', () => {
     );
   });
 
-  it('has correct unit description for student', () => {
+  it('has correct unit description for participant', () => {
     const wrapper = shallow(
-      <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Student} />,
+      <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Participant} />,
       {
         disableLifecycleMethods: true
       }

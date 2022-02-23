@@ -681,6 +681,13 @@ pt-BR:
           <hr>
 
           ** Agora você tenta! **
+        teacher_markdown: "### Planejamento vem primeiro\n\nAlguns estudantes gostam
+          de mexer no Modo Programação desde o início, mas para esta lição vamos focar
+          apenas em planejar um prototipo da Interface de Usuário. Lembre os estudantes
+          que eles vão chegar na parte de programação logo mais. Estes primeiros passos
+          permitirão aos alunos construir uma tela de sua própria concepção utilizando
+          todos os elementos disponíveis no App Lab, sem precisarem se preocupar com
+          o aplicativ o em si que estão desenvolvendo. "
       CSD - Getters and Setters:
         markdown: |
           # Getters e Setters
@@ -3851,6 +3858,10 @@ pt-BR:
 
 
 
+        teacher_markdown: |-
+          #### Desenvolvendo bons Hábitos de Programação
+
+          Seguir convenções claras e consistentes de nomes é um hábito importante a ser desenvolvido, mas os benefícios raramente são imediatamente óbvios para os estudantes. A longo prazo, vale muito a pena aderir às boas práticas de nomenclaturas, particularmente porque salvará sua própria sanidade quando chegar a hora de ler os programas de seus alunos, mas também simplificará o processo de combinar a tela de cada aluno em uma aplicação completa da equipe.
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Condicionais com Cartas
@@ -4623,6 +4634,10 @@ pt-BR:
           <strong>Ideia chave: Múltiplas Telas - Área de Códificação Única.</strong> Teste é o código que trata o evento "clique" para uma <em>imagem que está localizada em uma tela diferente</em> - a <em>goodbyeScreen</em>. Você não pode ver a image neste momento, ou a tela, porque a tela não está selecionada. Entretanto, o código para ela é colocado aqui.</p>
 
           </div>
+        teacher_markdown: |-
+          #### De Cartões para Telas
+
+          Para simplificar o processo de prototipagem, as equipes podem pensar em cada cartão que criaram na Prototipagem de Papel como uma tela separada na iteração do App Lab de sua aplicação. Na realidade, telas que são muito semelhantes podem muitas vezes ser desenvolvidas como uma única tela com conteúdo que muda com base na interação do usuário. Na próxima lição, os alunos verão alguns exemplos de como isso pode funcionar, mas não se espera que eles tenham incorporado esse tipo de funcionalidade neste projeto.
       MyLoopyRoboticFriends-Unplugged:
         markdown: |
           # Meus Amigos Robôs Entrelaçados
@@ -6019,6 +6034,30 @@ pt-BR:
           é <strong>chamada pelo sistema</strong> ao mesmo tempo em que um evento
           específico ocorre. Funções callback são um padrão comum em programação orientada
           a eventos.</p>\n</div>\n\n\n### Você irá experimentar isto em seguida!\n\n"
+        teacher_markdown: "#### Focando no essencial\n\nHá muito material para digerir
+          aqui, e muitos dos detalhes sobre o funcionamento de eventos no App Lab
+          não são essenciais para a compreensão desse módulo. Se os estudantes tiverem
+          difucldade na programação dentro do App Lab, concentre-se nos seguintes
+          pontos fundamentais:\n\n* O loop de desenho `draw` nunca executa para sempre\n*
+          O bloco `onEvent()` define:\n\t* o ID de um elemento\n    * um evento (por
+          exemplo, \"click\" ou \"mouseover\")\n    * código que deve ser executado
+          sempre que o evento ocorrer (esse código é uma chamada de função anônima,
+          ou anonymous callback function., e é representado por um bloco verde)\n*
+          O bloco de código dentro de `onEvent()` é executado sempre que o evento
+          especificado ocorre\n\n#### Relação com o Game Lab\n\nNo Game Lab, podemos
+          usar o código a seguir para verificar se o sprite chamado \"button\" foi
+          clicado, e tomar alguma atitude a respeito:\n\n    function draw() {\n    \tif
+          (mousePressedOver(button)) {\n       \t\t// Fazer algo\n       \t}\n    }\n\n\nNo
+          App Lab, quando você tem um botão chamado \"button\", podemos escrever o
+          seguinte código para fazer o mesmo:\n\n\n    onEvent(\"button\", \"click\",
+          function () {\n    \t// Fazer algo\n    });\n\nNo exemplo do App Lab, a
+          função é apenas mais um parâmetro que passamos para a função onEvent, e
+          esse parâmetro por no caso é em si uma função. Também poderíamos definir
+          a função separadamente e escrever o código da seguinte forma:\n\n    function
+          doSomething() {\n    \t// Fazer algo\n    }\n    \n    onEvent(\"button\",
+          \"click\", doSomething);\n\n\nNesse segundo exemplo, note que ao passarmos
+          a função `doSomething` para a função `onEvent`, nós _não_ incluímos os parênteses
+          ao final. Isso é porque estamos passando a função em si como um objeto.\n"
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Identifique o Perturbador
@@ -8994,7 +9033,7 @@ pt-BR:
         markdown: |-
           #Minha Vizinhança Online
 
-          ##Como você vai a lugares online seguros?
+          ##Como você vai com segurança à lugares online?
       csd-post-survey-2017-levelgroup:
         title: Pesquisa de estudantes ao final do curso do CS Discoveries
       csd-post-survey-2017-levelgroup_2018:
@@ -9454,32 +9493,6 @@ pt-BR:
           > <a href="http://support.code.org" target="blank"><button class="plc">Obtenha ajuda >></button></a>
 
           Após inserir comentários no fórum, volte aqui e clique abaixo para ir à próxima etapa.
-      OPD-K5 CS Courses_dani:
-        markdown: "# Planejamento > Primeiros passos com Code.org\n\n\n## Passo 1:
-          Escolha um curso\nTodos os nossos cursos - desde a alfabetização até os
-          níveis avançados - estão listados em nosso **[catálogo de cursos](https://studio.code.org/courses)**.
-          Para encontrar as lições de Fundamentos de CC que você esteve praticando,
-          vá à nosso **[página da ensino elementar](https://code.org/educate/curriculum/elementary-school)**
-          e role para baixo até a seção \"Cursos\". Todos os nossos cursos estão disponíveis
-          sem custos. Converse com colegas na sua escola para definir como o currículo
-          do curso pode ser integrado com uma variedade de disciplinas. \n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          Passo 2: Prepare a seção de sua sala de aula\nPrepare uma seção de sala
-          de aula para acompanhar a evolução de seus alunos, imprimir cartões de login
-          para seus estudantes, gerenciar suas contas, e imprimir os certificados
-          que eles poderão levar para casa quando terminarem o curso. Clique neste
-          link para **[assistir um breve vídeo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          que demostra como preparar sua primeira sala de aula na Code.org. Você pode
-          encontrar os passos neste **[artigo de apoio](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          Passo 3: Associe o curso à sua seção\nClique sobre o curso que estiver lecionando
-          - você deverá ver uma tela que se parece com a tela mostrada abaixo. Você
-          pode a seguir clicar em \"associar curso\" para associar este curso a uma
-          de suas seções.\n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Passo 4: Comece a lecionar!\nUma aula é tudo o que você precisa para trazer
-          conceitos de ciência da computação à sua sala de aula. Quando você ver o
-          entusiasmo dos seus alunos por CC, siga em frente com planoejamento de aulas
-          diárias para guiar seus estudantes, com atividades desplugadas que você
-          pode fazer sem um computador, e com os fóruns para se conectar a outros
-          professores.\n\n\n"
       OPD-K5 CS Tips_dani:
         markdown: |
           Vamos Começar > Navegando por este Curso Online
@@ -10035,41 +10048,6 @@ pt-BR:
           > **O que Esperar desta Etapa:** Nos níveis que seguem, iremos introduzir uma aula desplugada e uma série de quebra-cabeças do Curso C (destinado ao Ano 2) com foco no conceito de laços. Para completar um quebra-cabeça, você precisará escrever código usando programação visual, baseada em blocos. Iremos terminar com uma oportunidade para refletir. Você deverá gastar entre 20-45 minutos nesta etapa.
 
           Tudo pronto? Vamos lá!
-      OPD-K5 Stage5Go_dani:
-        markdown: |
-          # Condicionais > Lições Desplugadas
-
-
-          **1. Reveja o Plano de Aulas "[Condicionais com Cartas](https://curriculum.code.org/csf-18/coursed/13/)" do Curso D:**
-          <br/>
-          O Curso D é destinado a alunos do Ano 3. Esta mesma lição também aparece no Curso E e no Curso F. Condicionais não são cobertas nos Cursos A, B ou C.
-          <br/><br/>
-
-          **2. Veja o vídeo para estudantes: Condicionais com Cartas**
-          <br/>
-          Este é um vídeo que você mostraria aos alunos para ajudar a introduzir o conceito de condicionais, e dar início à aula desplugada.
-          <iframe width="640" height="390" src="https://www.youtube.com/embed/UymN4lTL50s" frameborder="0" allowfullscreen></iframe>
-          <br/>
-          [Não consegue ver o vídeo? Clique aqui](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
-
-          <br/><br/>
-          **3. Assista ao vídeo do professor: "Condicionais com Cartas"**
-          <br/>
-          Este vídeo tem por objetivo suportá-lo como professor, se você estiver procurando dicas em como apresentar a lição.
-
-          <iframe width="640" height="390" src="https://www.youtube.com/embed/2m2Rn9VxHfU" frameborder="0" allowfullscreen></iframe>
-          [Não consegue ver o vídeo? Clique aqui](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)
-
-          <br/><br/>
-
-          ---
-
-          > ## Reflita
-          > Como você poderia explicar o conceito de condicionais a seus estudantes? Compartilhe suas ideias em [nosso fórum](http://forum.code.org/t/teaching-conditionals/406/1).
-
-          > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank"><button class="plc">Discuta nos fórums >></button></a>
-
-          Após comentar no fórum, volte aqui e clique abaixo para prosseguir à etapa seguinte.
       OPD-K5 Stage5Review_dani:
         markdown: |
           # Condicionais > Reflexão
@@ -10259,42 +10237,6 @@ pt-BR:
           - Refletir no seu aprendizado
           - Planejar os próximos passos que você poderá tomar para continuar seu aprendizado
           - Conectar-se com a comunidade global de educadores interessados no ensino de ciência da computação
-      OPD-K5 Stage9Start_dani:
-        markdown: "# Planejamento > Explorando o Material do Professor\n\nDurante
-          as Etapas 4-8, você conheceu alguns dos recursos \"desplugados\" e online
-          que estão disponíveis para Fundamentos de CC, quando estavam alinhados com
-          os conceitos de CC que você estava aprendendo. \n\nAgora que você tem algum
-          conhecimento em como codificar, assim como em como lecionar ciência da computação,
-          é hora de começar a planejar suas aulas. Nesta etapa, iremos visitar outras
-          áreas da plataforma Code.org e o **[Painel do Professor](http://studio.code.org/)**.
-          \n\nAo completar esta etapa, você irá:\n\n- Explorar os materiais disponíveis
-          para professores\n- Explorar o **[Painel do Professor](http://studio.code.org/)**
-          da Code.org\n- Planejar como você poderia integrar ciência da computação
-          à sua prática\n\n***\n\nUma captura de tela do Painel do Professor é mostrada
-          abaixo. Para visualizá-la, você terá que se autenticar na sua conta de professor
-          na Code.org - quando você estiver autenticado, esta deverá ser a tela padrão
-          que você verá no website da Code.org. Se você não tiver uma conta de professor,
-          você pode **[cadastrar-se aqui para obter uma](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
-      OPD-K5 Using CS_dani:
-        markdown: |+
-          # Planejamento > Preparando-se para uma aula com Code Studio
-
-          Vamos dar uma olhada como funciona o Code Studio para você e para seus alunos em um ambiente de sala de aula.
-
-          ## Passo 1: Escolha um curso
-          Verifique nossa [página de ensino elementar](https://code.org/educate/curriculum/elementary-school) e encontre os planos de aulas e cursos completos para Fundamentos de CC, A-F. Ou, se você estiver interessado em nossos cursos de ensino médio, você irá encontrar cursos para todos os níveis - desde a pré-alfabetização até alunos sêniores, e todos os níveis intermediários. Todos os nossos cursos são disponíveis de forma gratuita. Converse com seus colegas na escola para definir como o currículo do curso poderá ser integrado à variedade de disciplinas.
-
-          ## Passo 2: Prepare a seção da sala de aula
-          Configure uma seção de sala de aula para visualizar a evolução dos alunos, imprimir cartões de login para seus alunos, gerenciar suas contas, e imprimir certificados que eles poderão levar para casa após terminar o curso. Clique neste link para [assistir um breve vídeo](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b) que demonstra como criar sua primeira sala de aulas de ciência da computação na Code.org. Você pode também encontrar os passos [neste artigo de apoio](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).
-
-          ## Passo 3: Associe o curso à sua seção
-          Clique sobre o curso que você está lecionando - você deve ver uma tela semelhate à tela mostrada abaixo. Você pode a seguir clicar em "Associar Curso" para associar este curso a uma de suas seções.
-
-          ## Passo 4: Comece a lecionar!
-          Uma aula é tudo o que você precisa para trazer conceitos de ciência da computação à sua sala de aula. Quando você vir o entusiasmo dos seus alunos por CC, vá em frente com planos de aulas diárias para orientar seus alunos, com atividades desplugadas que não requerem um computador, e com os fóruns para se conectar a outros professores.
-
-
-
       OPD-K5 Vocabulary_dani:
         markdown: |
           # Fundamentos de CC > Vocabulário Chave
@@ -10935,7 +10877,7 @@ pt-BR:
         markdown: |-
           #Minha Vizinhança Online
 
-          ##Como você vai a lugares online seguros?
+          ##Como você vai com segurança à lugares online?
       express_EOC_2021:
         description: Você alcançou o final do Curso E! Escolha um projeto para criar.
       grade2_multi_collector_A_predict1_2021:
@@ -10955,3 +10897,397 @@ pt-BR:
         questions:
         - text: Olhe para este código cuidadosamente. O que você acha que irá acontecer
             quando este programa for executado?
+      CSD Interactive Animations and Games Post-Project Test:
+        title: Teste Pós-Projeto de Animações e Jogos Interativos
+      courseF_intro_apps:
+        description: Bem-vindo aos Fundamentos da Ciência da Computação! Estes projetos
+          foram todos criados com o Sprite Lab. Experimente eles agora para ver o
+          que é possível. Ao final deste curso, você conseguirá criar os seus próprios
+          projetos como esses... e mais!
+        display_name: Aplicativos Sprite Lab
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Propriedades do Sprite
+      CSD Games variables practice_2021:
+        display_name: Prática de Variáveis
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Olhe o código abaixo e preveja como os títulos serão mostrados.
+          Escolha entre uma das opções à direita.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Ovos &lt;/h3&gt;
+          &lt;h1&gt; Bacon &lt;/h1&gt;
+          &lt;h6&gt; Waffles &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipos de nível:** Esta pergunta de múltipla escolha pede aos estudantes que escolham como os títulos em HTML serão exibidos em uma página da Web. Você pode ver quais alunos responderam corretamente à pergunta, indo até esse nível e puxando o Painel do Professor do lado direito.  Os alunos que responderam com sucesso à pergunta terão uma bolha verde.  Os alunos têm tantas chances quanto quiserem de responder corretamente, então chutar e conferir também pode levar a uma resposta correta.
+
+          <div class="clear"></div>
+        title: Verificação rápida de títulos
+      CSD Interactive Animations and Games Post-Project Test_pilot_2021:
+        title: Teste Pós-Projeto de Animações e Jogos Interativos
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Estilo de texto com CSS
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Adicionando Imagens
+      CSD U2 Image practice_pilot_2021:
+        display_name: Adicionando Imagens
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png">
+        - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png">
+        - text: <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png">
+        - text: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png">
+        content1: Faça coincidir o código HTML com erros com a descrição de seu erro.
+        questions:
+        - text: O atributo 'src' está escrito incorretamente.
+        - text: O atributos 'src' e 'alt' estão trocados
+        - text: A extensão do arquivo (.jpg) está faltando no endereço da imagem
+        - text: O endereço da imagem não se dá como um atributo 'src'
+        - text: Há um espaço no nome do arquivo
+        teacher_markdown: Embora este nível possa ser utilizado para avaliar a compreensão
+          do estudante sobre a sintaxe da tag `<img>`, seu principal objetivo é conscientizar
+          os estudantes sobre os tipos mais comuns de erros que podem encontrar ao
+          adicionar imagens a páginas da web.
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: descrição aqui
+        teacher_markdown: |-
+          # Ponto de controle de planejamento
+
+          Verifique os planos dos estudantes antes de permitir que eles continuem nos demais níveis.
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - text: cachorro.rotacao &lt; gato.rotacao
+        - text: cachorro.x &lt; gato.x
+        - text: cachorro.escala &gt; gato.escala
+        - text: cachorro.x &gt; gato.x
+        - text: cachorro.x == gato.x
+        content1: Combine a expressão booleana com a descrição em inglês.
+        questions:
+        - text: A rotação da sprite do cachorro é menor que a do gato?
+        - text: A sprite x do cachorro é menor que a x da sprite do gato?
+        - text: A escala do sprite do cachorro é maior que a do gato?
+        - text: O x da escala do cachorro é maior que o x do gato?
+        - text: A sprite x do cachorro é igual ao x da sprite do gato?
+        title: 'Combinando: operadores de comparação'
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - text: |-
+            verdadeiro
+            falso
+            verdadeiro
+          correct: true
+        - text: "  0<br>200<br>100"
+        - text: "  verdadeiro<br>erro<br>verdadeiro"
+        - text: "  falso<br>verdadeiro<br>falso"
+        questions:
+        - text: Qual resultado será mostrado no console por este programa?
+        title: título
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: descrição aqui
+        markdown: |
+          # Seu cartão interativo
+
+          Nos próximos níveis, você estará completando seu próprio cartão interativo. Aqui estão alguns exemplos para lhe dar algumas idéias. Não esqueça de olhar o código para ver como eles funcionam.
+
+          ## Exemplos
+
+          [![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295.png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - text: O quadrado vermelho será desenhado, mas o verde não. Você não pode
+            chamar funções depois que elas são criadas.
+          feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+            é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
+            organizadas!
+        - text: O quadrado verde será desenhado, mas o vermelho não. Você não pode
+            chamar funções depois que elas são criadas.
+          feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+            é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
+            organizadas!
+        - text: Ambos os quadrados serão desenhados. Você pode criar funções em qualquer
+            lugar que você preferir no seu código.
+          correct: true
+          feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+            é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
+            organizadas!
+        - text: Nenhum quadrado será desenhado. Há um erro no código.
+          feedback: Funções poderão ser criadas em qualquer lugar no seu código. Ainda
+            é uma boa ideia mantê-las agrupadas na parte inferior para que fiquem
+            organizadas!
+        markdown: |
+          # Importa onde você cria funções?
+
+          Até agora, todas as suas funções foram criadas na parte inferior do seu código. O que você acha que acontecerá se você chamar uma função antes que ela seja definida?
+
+          Observe que o quadrado vermelho é desenhado ** antes de ** sua função ser criada, enquanto o quadrado verde é desenhado ** após ** sua função ser criada. Qual destes você acha que será desenhado?
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
+            style='border: 1px solid #ccc'>"
+        questions:
+        - text: Leia este programa e especifique quais das seguintes animações serão
+            produzidas.
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
+        content1: Combine o código com a imagem que será produzida.
+        questions:
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
+        title: drawSprites
+      CSD U3 drawing practice choice_2021:
+        display_name: Praticar
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: descrição aqui
+        markdown: |
+          # Crie seu próprio jogo
+
+          Agora que você tem todas as habilidades que precisa, é hora de fazer seu próprio jogo!
+
+          Com um parceiro, debata ideias diferentes para o seu jogo. Você pode pensar nos jogos que já viu ou ver mais alguns exemplos de jogos para lhe dar ideias.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Depois de escolher um tipo de jogo com seu parceiro, preencha o Guia do Projeto com os planos de fundo, variáveis, sprites e funções que você precisará para criar o jogo. Você passará os próximos níveis criando seu jogo.
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: descrição aqui
+      CSD U5 test_2021:
+        title: Teste pós-projeto de dados e sociedade
+      CSD U6 LED create intro_2021:
+        content1: descrição aqui
+        markdown: |
+          # Aplicativos LED
+
+          No último nível, você criou um aplicativo para controlar o LED com diferentes botões na tela. Nos próximos dois níveis, você verá outros exemplos de aplicativos e poderá criar um de seus próprios.
+
+          Ao examinar os exemplos, pense em qual código pode ser útil para o aplicativo que você e seu parceiro desejam criar.
+      CSD U6 array multi_2021:
+        answers:
+        - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png" width="200px"
+          correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
+        questions:
+        - text: O que o laboratório de aplicativos exibirá quando o código à esquerda
+            for executado?
+        title: Usando Vetores
+      CSD U6 circuit smart bike blinker build_2021:
+        markdown: |
+          # Construa seu pisca-pisca
+
+          Usando o circuito que você acabou de construir, retorne ao seu protótipo de bicicleta inteligente e adicione o pisca-pisca.
+      CSD U6 final intro_2021:
+        content1: descrição aqui
+        markdown: |-
+          # Prototipe sua própria inovação
+
+          Agora que você tem todas as habilidades necessárias, é hora de criar seu próprio jogo!
+
+          Com um parceiro ou equipe, faça um levantamento sobre alguns dispositivos físicos diferentes que você pode criar protótipo. Você pode desenvolver os programas que você já criou nas lições anteriores, dispositivos inovadores que você viu no mundo real ou quaisquer idéias malucas que você possa ter.
+
+          Depois de definir uma idéia com sua equipe, preencha o Guia do projeto com os esboços dos componentes físicos do seu dispositivo, entradas e saídas necessárias e planos para quais informações serão processadas.
+
+          ## Ideias de inovação
+
+          Para ajudar a iniciar seu levantamento de idéias, confira estes exemplos de projetos:
+
+          Luz noturna automática
+
+          Usando fios condutores, LEDs e o sensor de luz, crie uma peça decorativa da arte da parede que se torna uma luz noturna quando as luzes se apagam. Este foi projetado para parecer vagalumes tremeluzentes.
+
+          ! [] (https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Instrumento musical
+
+          Crie um instrumento musical que possa ser tocado da maneira que desejar, usando sensores ou botões para entrada. Nesse caso, criamos cinco novos botões usando fita condutora de cobre, embora você também possa usar papel alumínio ou qualquer outro material condutor.
+
+          ! [] (https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          Faça um jogo! Este usa uma matriz para armazenar os diferentes comandos, que são selecionados aleatoriamente cada vez que você segue corretamente as instruções na tela.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
+      CSD U6 game project stop_2021:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
+            style="max-width: 100px;">'
+          correct: true
+        questions:
+        - text: Leia o código e preveja como esse aplicativo será quando executar.
+        title: Faça uma Predição
+      CSD U6 tugowar stop_2021:
+        markdown: |
+          # Pare
+
+          Antes de prosseguir, você precisará consultar o Guia do Projeto para este projeto. Aguarde instruções do seu professor também.
+      CSD games cake challenge choice_2021:
+        display_name: Desafios
+      CSD games functions practice choice_2021:
+        display_name: Prática de Funções
+      CSD games platform challenge choice_2021:
+        display_name: Desafios
+      CSD web conditionals practice choice_2021:
+        display_name: Prática de Condicionais
+      CSD web draw loop practice choice_2021:
+        display_name: Praticar
+      CSD web movement practice choice_2021:
+        display_name: Praticar
+      CSD web text practice choice_2021:
+        display_name: Praticar
+      CSDU6 Innovation_2021:
+        markdown: |+
+          # Pesquisa em Inovação
+
+          Escolha um dos tópicos a seguir para investigar. Você terá que encontrar informações sobre alguns dos mais recentes dispositivos de computação inovadores relacionados à sua categoria.
+
+          ## Tecnologia utilizável
+          A tecnologia utilizável inclui qualquer forma de computação projetada para ser usada pelo usuário, seja ela incorporada na roupa ou usada como acessório. Muitos utilizáveis, como pedômetros inteligentes, se sobrepõem um pouco com a saúde e a segurança, pois o dispositivo é tanto usável como destinado a ajudar a melhorar sua saúde pessoal.
+
+          ## Saúde e segurança
+          O amplo tópico inclui tanto a tecnologia do consumidor (coisas que você pode usar para melhorar sua saúde ou segurança) quanto a tecnologia profissional (equipamento que um médico ou outro profissional pode usar).
+
+          ## Agricultura
+          A agricultura pode não ser um assunto óbvio, mas as inovações tecnológicas tiveram um impacto enorme na maneira como abordamos a agricultura. Isso inclui incorporar computadores aos equipamentos agrícolas existentes, usar sensores e robótica para monitorar culturas e analisar dados para melhorar a eficiência e a sustentabilidade.
+
+          ## Manufacturing
+          Avanços em prototipagem rápida, robótica industrial e automação tiveram um grande impacto sobre como as mercadorias são produzidas. Quer seja a tecnologia para permitir a produção em pequena escala acessível (como impressoras 3D e cortadores a laser) ou a integração de computadores no trabalho de fábrica, há muitas áreas interessantes para pesquisar aqui.
+
+          ## Arte e Design
+          A interseção entre expressão artística e computação pode produzir resultados impressionantes e inesperados. Embora seja menos provável que você encontre produtos disponíveis comercialmente relacionados à arte e ao design, você encontrará uma grande variedade de criações caseiras que usam todas as maneiras de dispositivos de computação de maneiras criativas e expressivas.
+
+          ## Lar inteligente
+          O sonho de uma casa que compreende e até antecipa as suas necessidades está mais perto do que nunca. Se controlado explicitamente através de comandos de voz, ou usando sensores para monitorar e responder às condições de mudança, os dispositivos domésticos inteligentes cuidam de qualquer número de tarefas mundanas ou repetitivas em casa.
+
+
+          # Considerações sobre pesquisa
+
+          Ao pesquisar dispositivos no seu tópico, tenha as seguintes considerações em mente:
+
+          * Foque em soluções baseadas em hardware sobre programas de software
+          * Concentre-se em inovações recentes sobre notícias antigas
+          * Siga o que te interessa
+
+          Além dos sites recomendados listados para cada tópico, considere olhar para os vários sites de financiamento colaborativo (como Kickstarter e Indiegogo) para ver os produtos que ainda não chegaram ao mercado.
+
+      Design a Screen for your App_2021:
+        markdown: |
+          # Simulando seu App
+
+          Agora que você tem um pouco de experiência movendo elementos no App Lab, você pode começar a trabalhar com a simulação do seu próprio app. Com o seu grupo, divida as telas para que todos estejam trabalhando em telas diferentes.
+
+          Já que você estará dividindo o trabalho, você vai querer realizar um planejamento a frente para decidir em um visual e funcionamento comum a todas suas páginas. Por exemplo, você irá querer acordar em coisas como:
+
+          * Onde os botões de navegação serão colocados?
+          * Quais cores irão ser utilizadas para fundos de tela, textos e botões
+          * Qual o estilo e layout padrão?
+
+          # Espaçamento
+
+          Na próxima aula você irá irá combinar todas as telas dos membros do seu time em apenas um app. Para ter certeza de que os IDs de uma página não entrem em conflito com o de outra, você precisará incluir um único _espaçamento_ para sua página. Isso será algo que você irá adicionar no início de cada id para que seu elemento não entre em conflito com outros quando você juntar todas as telas. Seu espaçamento deve ser o ID da sua tela com um sublinhado no final. Por exemplo, se você estiver fazendo a página inicial, você pode utilizar "home_" como seu espaçamento - o que gerará IDs como:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+        teacher_markdown: |-
+          #### Namespacing
+
+          Garantir que todos os alunos estejam criando identificações únicas para todos os elementos e que os nomes que os coloquem adequadamente irão contribuir muito para evitar problemas na próxima aula, por isso, vale a pena ser rígido aqui. Você pode fornecer aos alunos o Guia de Atividades de Design de Tela opcional para manter o controle de suas identificações de elementos.
+
+          #### Trabalhando juntos, separados
+
+          Ainda mais que a atividade de protótipo de papel, é fácil para os alunos nesta lição esquecer que eles precisam considerar como suas escolhas afetam sua equipe. Incentivar a discussão ativa entre as equipes enquanto projetam telas para garantir que todos eles estejam trabalhando para um objetivo comum.
+      csd-pre-survey-levelgroup_21_22:
+        title: Questionário prévio para Estudantes do Descobertas de CC
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2021:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2021:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2021:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2021:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2021:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2021:
+        title: Pesquisa rápida do CS Discoveries!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
+        title: Pesquisa rápida do CS Discoveries!

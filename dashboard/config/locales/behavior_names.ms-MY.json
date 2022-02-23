@@ -166,6 +166,96 @@
           "jittering": "gelisah",
           "moving west": "ke barat",
           "patrolling": "ronda"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "driving with arrow keys": "memandu dengan kekunci anak panah",
+          "fluttering": "berkibar-kibar",
+          "wobbling": "bergoyang-goyang",
+          "moving west and looping": "bergerak ke barat dan bergelung",
+          "moving east and looping": "bergerak ke timur dan bergelung",
+          "moving north and looping": "bergerak ke utara dan bergelung",
+          "moving south and looping": "bergerak ke selatan dan bergelung"
+        },
+        "helloworld_animals_sounds": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "helloworld_emoji_sounds": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "helloworld_food_sounds": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "helloworld_retro_sounds": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "wandering": "mengembara",
+          "moving east": "bergerak ke timur",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "poetry_hoc_addSprites": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "poetry_hoc_exemplar1": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "poetry_hoc_exemplar2": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "poetry_hoc_freeplay": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "moving with arrow keys": "bergerak dengan kunci arah"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "bergerak dengan kunci arah",
+          "moving north and looping": "bergerak ke utara dan gelung",
+          "moving south and looping": "bergerak ke selatan dan gelung"
+        },
+        "helloworld_retro_events": {
+          "patrolling": "meronda",
+          "moving forward": "bergerak ke hadapan",
+          "growing": "membesar"
         }
       }
     }

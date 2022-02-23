@@ -6,22 +6,22 @@ nav: how_to_nav
 
 サインアップ
 
-# How to organize an Hour of Code assembly or event
+# Hour of Code 集会、イベントを開催する方法
 
-### Get your entire school or community involved in an Hour of Code!
+### すべての学校、地域住民にHour of Codeを普及させましょう！
 
 * * *
 
 ## 1. イベントの準備
 
 - 場所、日時を決めます。
-- 地元の市長、議員、知事や有力な実業家に[手紙](https://hourofcode.com/promote/resources#sample-emails)を送ってスピーチをお願いしましょう。 Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- 地元の市長、議員、知事や有力な実業家に[手紙](https://hourofcode.com/promote/resources#sample-emails)を送ってスピーチをお願いしましょう。 Hour of Codeに議員を迎えるときの詳細については、 [how-to toolkit]({{ localized_files/elected_official }}) ハウツー・ツールキット</a> をチェックします。
+- メディアやブロガーに声をかけましょう。[プレスキット]({{ promote/press_kit_url }})がご利用いただけます。
 
-## 2. イベントの実施
+## 2. イベントの実施中
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- [学習意欲を高めるビデオ](<%= hoc_uri('/resources#videos') %>)を使ってイベントを開始します。
+- コンピュータサイエンスがなぜ重要なのか、[こちらの統計やインフォグラフィック]({{ promote/stats_url }})で紹介します。   
       
     
 - ** その他のイベントアイデア **: 
@@ -33,35 +33,35 @@ nav: how_to_nav
 
 ## 3. 結果の共有
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+Facebook やTwitter でイベントの写真をシェアしましょう。ハッシュタグは **#HourOfCode**です。
 
 * * *
 
-## Hour of Codeのファミリーコードナイトを主催して保護者を招待する
+## Hour of Code のFamily Code Night を主催して保護者の参加を促す
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. これは、より大きなコミュニティを巻き込んで、学校でコンピュータサイエンスを学ぶためのサポートを保護者に呼びかける最適な方法です。 Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. イベントキットをダウンロードするには[ここ](http://www.familycodenight.org/DownloadCodeDotOrg.html)をクリックします。
+K-5（幼稚園から小学校5年生まで）向けの夜間イベントを主催して、生徒がコンピュータサイエンスについて学ぶ機会に保護者が参加できるようにします。 これは、より大きなコミュニティを巻き込んで、学校でコンピュータサイエンスを学ぶためのサポートについて、保護者に呼びかける最適な方法です。 Family Code Night のパートナーは、計画時チェックリスト、講演者の台本、招待メール、ポスター、PowerPoint 資料 、イベントを実施する上で必要な他のものをまとめたイベントキットを作成しています。 イベントキットをダウンロードするには[ここ](http://www.familycodenight.org/DownloadCodeDotOrg.html)をクリックします。
 
 * * *
 
-## Example plan for a school assembly or event
+## 学校での集会、イベントを計画する（参考例）
 
 **イベント:** コンピュータサイエンス教育週間の全校キックオフ集会
 
 **Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
 
-**時間:** 登校日の日中、午前中に１時間程度のイベントを開催できることが望ましい。
+**時間:** 授業中または午前中に１時間程度のイベントを開催できることが望ましい。
 
-**場所:** 全校集会用のホール（例、講義室、体育館、カフェテリア）
+**場所:** 全校集会用の大部屋（例、講義室、体育館、カフェテリア）
 
 ## 当日の流れ（例）
 
-| 時刻          | 内容                                                                                                                                    |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00-10:05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                    |
-| 10:05-10:15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}). |
-| 10:15-10:30 | スペシャルゲストに、ゲストの背景や、テクノロジーやコンピューターサイエンスが日常生活にどのように重要な役割を果たしているか話をしてもらいます。                                                               |
-| 10:30-10:40 | 数人の生徒に、Hour of Codeのデモをお願いしましょう。学校長や政治家、もしくは他の生徒に教える様子が見せられると、とても楽しいと思います。                                                            |
-| 10:40-11:00 | 生徒にオフラインのアクティビティをデモしてもらいます。コンピューターサイエンスはコンピューターがなくても教えられることを見てもらいます。                                                                  |
-| 11:00-11:05 | このイベントを主催した先生に、閉会の言葉を頂きましょう。                                                                                                          |
+| 時刻          | 内容                                                                        |
+| ----------- | ------------------------------------------------------------------------- |
+| 10:00-10:05 | [学習意欲を高めるビデオ](%= resolve_url('/promote/resources#videos') %)を視聴           |
+| 10:05-10:15 | 校長によるコンピューターサイエンス重要性の紹介　[統計情報やインフォグラフィック](/resources/stats)を利用します。        |
+| 10:15-10:30 | スペシャルゲストに、ゲストの背景、およびテクノロジーやコンピューターサイエンスが日常生活にどのように重要な役割を果たしているか話をしてもらいます。 |
+| 10:30-10:40 | 数人の生徒にHour of Codeのデモを依頼します。　「楽しい時間」として生徒が学校長、政治家、他の生徒に教えます。              |
+| 10:40-11:00 | 生徒にオフラインのアクティビティをデモをします。コンピューターサイエンスはコンピューターがなくても教えられることを見てもらいます。         |
+| 11:00-11:05 | このイベントを主催した先生に、閉会の言葉を頂きましょう。                                              |
 
 サインアップ

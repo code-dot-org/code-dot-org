@@ -3,7 +3,10 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
-import {AdministratorResourcesActionBlock} from './TwoColumnActionBlock';
+import {
+  AdministratorResourcesActionBlock,
+  CscInfoActionBlock
+} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
@@ -40,6 +43,8 @@ class CoursesTeacherEnglish extends Component {
           </ContentContainer>
 
           <CourseBlocksTeacherGradeBands />
+
+          <CscInfoActionBlock />
 
           <CourseBlocksHoc />
 

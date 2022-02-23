@@ -5,10 +5,6 @@ zu:
       category:
         math_category_name: Izibalo
       name:
-        infinity:
-          lessons:
-            Infinity:
-              name: Akugcini noma utalagu
         csd2-2017:
           lessons:
             Lists:
@@ -67,6 +63,10 @@ zu:
               key: Umbhalo
               name: Umbhalo
         csp5-2021:
+          lesson_groups:
+            csp_lists:
+              display_name: Umbhalo olandelanayo
+        csp5-2022:
           lesson_groups:
             csp_lists:
               display_name: Umbhalo olandelanayo

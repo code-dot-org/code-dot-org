@@ -17,7 +17,6 @@ import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 
 export default function initPage(unitEditorData) {
   const scriptData = unitEditorData.script;
-  const lessonLevelData = unitEditorData.lessonLevelData;
   const lessonGroups = mapLessonGroupDataForEditor(scriptData.lesson_groups);
 
   const locales = unitEditorData.locales;
@@ -53,6 +52,9 @@ export default function initPage(unitEditorData) {
         name={unitEditorData.script.name}
         i18nData={unitEditorData.i18n}
         initialPublishedState={scriptData.publishedState}
+        initialInstructionType={scriptData.instructionType}
+        initialInstructorAudience={scriptData.instructorAudience}
+        initialParticipantAudience={scriptData.participantAudience}
         initialDeprecated={scriptData.deprecated}
         initialLoginRequired={scriptData.loginRequired}
         initialHideableLessons={scriptData.hideable_lessons}
@@ -72,7 +74,6 @@ export default function initPage(unitEditorData) {
         initialTeacherResources={teacherResources}
         initialLastUpdatedAt={scriptData.updated_at}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
-        initialLessonLevelData={lessonLevelData}
         initialHasVerifiedResources={scriptData.has_verified_resources}
         initialCurriculumPath={scriptData.curriculum_path || ''}
         initialPilotExperiment={scriptData.pilot_experiment || ''}
@@ -99,13 +100,13 @@ export default function initPage(unitEditorData) {
           scriptData.weeklyInstructionalMinutes
         }
         initialCourseVersionId={scriptData.courseVersionId}
-        preventCourseVersionChange={scriptData.preventCourseVersionChange}
         isMigrated={scriptData.is_migrated}
         initialIncludeStudentLessonPlans={
           scriptData.includeStudentLessonPlans || false
         }
         initialUseLegacyLessonPlans={scriptData.useLegacyLessonPlans || false}
         scriptPath={scriptData.scriptPath}
+        courseOfferingEditorLink={scriptData.courseOfferingEditPath}
       />
     </Provider>,
     document.querySelector('.edit_container')

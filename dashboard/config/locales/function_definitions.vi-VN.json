@@ -604,13 +604,19 @@
             }
           },
           "draw a circle": {
-            "name": "vẽ một hình tròn"
+            "name": "vẽ một hình tròn",
+            "description": "vẽ một hình tròn với bán kính cho trước",
+            "parameters": {
+              "radius": "bán kính"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "chiều dài",
-              "repeat": "lặp lại"
-            }
+              "repeat": "lặp lại",
+              "sides": "các cạnh"
+            },
+            "name": "vẽ một cái chong chóng"
           },
           "draw a triangle": {
             "name": "vẽ một hình tam giác",
@@ -620,8 +626,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "chiều dài"
-            }
+              "length": "chiều dài",
+              "sides": "các cạnh"
+            },
+            "name": "vẽ một hình khối"
           },
           "draw a house": {
             "name": "vẽ một căn nhà",
@@ -1927,6 +1935,12 @@
         "courseE_artist_functions10_2021": {
           "do something": {
             "name": "thực hiện"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
           }
         },
         "courseE_artist_functions1_dani": {
@@ -1976,6 +1990,12 @@
           },
           "draw square": {
             "name": "vẽ hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -1992,6 +2012,9 @@
           },
           "do something": {
             "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
           }
         },
         "courseE_artist_functions8c_2021": {
@@ -2000,26 +2023,56 @@
           },
           "do something": {
             "name": "thực hiện"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
           }
         },
         "courseE_artist_functions9_2021": {
           "do something": {
             "name": "thực hiện"
+          },
+          "draw triangle": {
+            "name": "vẽ tam giác"
+          },
+          "draw line of triangles": {
+            "name": "vẽ hàng tam giác"
           }
         },
         "courseE_artist_functionsProj_2021": {
           "draw square": {
             "name": "vẽ hình vuông"
+          },
+          "draw hexagon": {
+            "name": "vẽ hình lục giác"
+          },
+          "draw line of hexagons": {
+            "name": "vẽ hàng lục giác"
+          },
+          "staggered squares": {
+            "name": "hình vuông so le"
+          },
+          "draw a line of squares": {
+            "name": "vẽ một hàng hình vuông"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "thực hiện"
+          },
+          "my design": {
+            "name": "thiết kế của tôi"
           }
         },
         "courseE_artist_functions_predict1_2021": {
@@ -2041,6 +2094,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "thực hiện"
+          },
+          "draw line of polygons": {
+            "name": "vẽ hàng đa giác"
+          },
+          "draw polygon": {
+            "name": "vẽ đa giác"
           }
         },
         "courseF_apps_collector": {
@@ -2467,6 +2526,116 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "di chuyển và lấy mật hoa bằng biến đếm"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "hàm 1"
+          },
+          "function 2": {
+            "name": "hàm 2"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "vẽ cửa sổ"
+          }
+        },
+        "courseE_farmer_functions10a1_2021": {
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          },
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          },
+          "pumpkin square": {
+            "name": "hình vuông bí ngô"
+          }
+        },
+        "courseE_farmer_functions11_predict_2021": {
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          },
+          "pumpkin square": {
+            "name": "hình vuông bí ngô"
+          },
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get produce": {
+            "name": "thu hoạch nông sản"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          },
+          "check for corn": {
+            "name": "kiểm tra ngô"
+          },
+          "corn rectangle": {
+            "name": "hình chữ nhật ngô"
+          },
+          "lettuce stairs": {
+            "name": "bậc thang rau diếp"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "nhặt trên đường đi"
+          },
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "kiểm tra ngô trong ô"
+          },
+          "get all pumpkins": {
+            "name": "hái hết bí ngô"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "hình vuông khu vườn"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "hình vuông khu vườn"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "hình vuông khu vườn"
           }
         }
       }

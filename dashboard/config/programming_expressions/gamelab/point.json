@@ -1,12 +1,15 @@
 {
-  "func": "point",
+  "key": "point",
+  "name": "point",
   "category": "Drawing",
-  "paletteParams": [
-    "x",
-    "y"
+  "category_key": "drawing",
+  "palette_params": [
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
-  "params": [
-    "200",
-    "200"
-  ]
+  "syntax": "point(x, y)"
 }

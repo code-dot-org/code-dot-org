@@ -206,12 +206,18 @@ fi:
             taikaa ja kauneutta ohjelmoinnin avulla.
           lessons:
             Artist:
-              name: Taiteilija
+              name: Koodaa Annan ja Elsan kanssa
           student_description: Koodataan Annan ja Elsan kanssa kun he tutkivat jään
             kauneutta ja taikaa. Tässä pelissä luot lumihiutaleita ja kuvioita luistellen
             ja luot taianomaisen lumimaan, jonka voit myös jakaa ystäviesi kanssa!
         course4:
           title: Kurssi 4
+          description: Kurssi 4 on suunniteltu opiskelijoille, jotka ovat jo käyneet
+            kurssit 2 ja 3. Opiskelijat oppivat kuinka ratkaista yhä vaikeampia pulmia
+            kun he oppivat yhdistämään useita käsitteitä ratkaisua tehdessään. Kurssin
+            loppuun mennessä opiskelijat pystyvät luomaan ohjelmia joilla he pystyvät
+            osoittamaan useita eri taitoja, mukaan lukien toistorakenteita ja funktiota
+            joilla on parametreja. Suositeltu luokkataso 4-8.
           description_short: Suosittelemme kurssien 2 ja 3 suorittamista ennen kurssia
             4.
           description_audience: 10+ -vuotiaille (kurssin 3 jälkeen)
@@ -260,6 +266,12 @@ fi:
               name: 'Tietokoneeton tekeminen: parametroitu sävellys'
             'Unplugged: Tangrams':
               name: 'Tietokoneeton tekeminen: tantagrammit'
+          student_description: Kurssi 4 on suunniteltu opiskelijoille, jotka ovat
+            jo käyneet kurssit 2 ja 3. Opiskelijat oppivat kuinka ratkaista yhä vaikeampia
+            pulmia kun he oppivat yhdistämään useita käsitteitä ratkaisua tehdessään.
+            Kurssin loppuun mennessä opiskelijat pystyvät luomaan ohjelmia joilla
+            he pystyvät osoittamaan useita eri taitoja, mukaan lukien toistorakenteita
+            ja funktiota joilla on parametreja. Suositeltu luokkataso 4-8.
         Course4pre:
           title: Kurssin 4 esitiedot
           description: Lyhyt kertaus käsitteistä oppilaille, jotka eivät ole käyneet
@@ -344,7 +356,7 @@ fi:
             Disneyn Infinity-hahmot.
           lessons:
             Infinity:
-              name: Ääretön
+              name: Disneyn Infinity-Pelilabra
           student_description: Tee Pelilabrassa tarina tai peli jonka pääosassa ovat
             Disneyn Infinity-hahmot.
         algebrademo:
@@ -787,9 +799,6 @@ fi:
             ikioma Tähtien Sota -pelisi.
           description_short: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
             ikioma Tähtien Sota -pelisi.
-          lessons:
-            Hour of Code 2015:
-              name: Kooditunti 2015
           student_description: Opettele ohjelmoimaan droideja ja luo kaukaiseen galaksiin
             ikioma Tähtien Sota -pelisi.
         mc:
@@ -1110,9 +1119,6 @@ fi:
           title: Tee koripallopeli
           description_short: Tee koripallopeli
           description: Tee koripallopeli
-          lessons:
-            Bounce:
-              name: Bounce
           student_description: Tee koripallopeli
         csd2-2017:
           lesson_groups:
@@ -1294,6 +1300,8 @@ fi:
           lessons:
             Introduction:
               name: Johdanto
+            Input:
+              name: Syöte
         csd5-draft:
           lesson_groups:
             csd5_1:
@@ -1600,9 +1608,6 @@ fi:
         hero:
           description: Minecraft on palannut takaisin Hour of Code -tunnille täysin
             uudella toiminnolla! Matka Minecraftin läpi koodilla.
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Koodaustunti
           student_description: Minecraft on palannut takaisin Hour of Code -tunnille
             täysin uudella toiminnolla! Matka Minecraftin läpi koodilla.
         csp-explore-2017:
@@ -2014,7 +2019,7 @@ fi:
             täysin uudella toiminnolla!
           lessons:
             Aquatic:
-              name: merellinen
+              name: 'Minecraft: Merellinen matka'
         dance--draft:
           lessons:
             Dance Party:
@@ -2032,7 +2037,11 @@ fi:
             csp_functions:
               display_name: Funktiot
         dance-extras:
+          title: Jatka tanssimista (2018)
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
+          lessons:
+            Dance Party - Go Further:
+              name: Jatka tanssimista (2018)
           student_description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla
             projekti-ideoilla.
         coursef-2019:
@@ -2110,6 +2119,8 @@ fi:
               name: Internet
             Crowdsourcing:
               name: Joukkoistaminen
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
             Songwriting:
               name: Säveltäminen
         express-2019:
@@ -2145,6 +2156,8 @@ fi:
               name: Joukkoistaminen
             Dance Party:
               name: Tanssibileet
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
         csd1-2019:
           lesson_groups:
             cspSurvey:
@@ -2563,6 +2576,9 @@ fi:
             required:
               display_name: Yleiskatsaus
         dance-2019:
+          title: Tanssibileet (2019)
+          description_short: Mukana Katy Perry, Shawn Mendes, Panic! At The Disco,
+            Lil Nas X, Jonas Brothers, Nicki Minaj ja 34 muuta!
           description: Koodaa oma Dance Party, jonka voit jakaa ystäviesi kanssa!
           lessons:
             Dance Party:
@@ -2586,7 +2602,11 @@ fi:
             For Loops:
               name: Silmukat
         dance-extras-2019:
+          title: Jatka tanssimista (2019)
           description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla projekti-ideoilla.
+          lessons:
+            Dance Party - Go Further:
+              name: Jatka tanssimista
           student_description: Syvennä ensimmäisen oppitunnin osaamistasi laajennetuilla
             projekti-ideoilla.
         csp4-preview:
@@ -2599,6 +2619,8 @@ fi:
               display_name: Funktiot
         time4cs-original-unit-1:
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
             Conditionals:
               name: Ehtolausekkeet
         time4cs-control-unit-2:
@@ -2627,6 +2649,8 @@ fi:
             csf_digcit:
               display_name: Digitaalinen kansalaisuus
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
             Conditionals:
               name: Ehtolausekkeet
         time4cs-experiment-unit-1:
@@ -2640,6 +2664,8 @@ fi:
             csf_digcit:
               display_name: Digitaalinen kansalaisuus
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
             Conditionals:
               name: Ehtolausekkeet
         csp7-pilot:
@@ -2801,6 +2827,8 @@ fi:
             csf_functions:
               display_name: Funktiot
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
             'Functions: Songwriting':
               name: Säveltäminen
         coursef-2020:
@@ -2835,6 +2863,8 @@ fi:
           lessons:
             Dance Party:
               name: Tanssibileet
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
         pre-express-2020:
           lesson_groups:
             csf_loops:
@@ -2921,6 +2951,22 @@ fi:
               name: Nopeus
             Functions:
               name: Funktiot
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: Oppitunti
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: Oppitunti
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: Oppitunti
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: Oppitunti
         2021drafting:
           lesson_groups:
             introduction:
@@ -3022,6 +3068,26 @@ fi:
               display_name: Listat
             csp_loops:
               display_name: Silmukat
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmit
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kysely
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kysely
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kysely
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kysely
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -3096,6 +3162,9 @@ fi:
               display_name: Digitaalinen kansalaisuus
         coursee-2021:
           lessons:
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Ehtolauseet Minecraft: Merellisessä matkassa'
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
             Conditionals:
               key: Ehtolausekkeet
             'Functions: Songwriting':
@@ -3138,6 +3207,9 @@ fi:
             Dance Party:
               key: Tanssibileet
               name: Tanssibileet
+            'Conditionals in Minecraft: Voyage Aquatic':
+              key: 'Ehtolauseet Minecraft: Merellisessä matkassa'
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
             lesson-1:
               name: Tanssibileet
           lesson_groups:
@@ -3273,3 +3345,208 @@ fi:
           lessons:
             lesson-2:
               name: Pienoisohjelmat
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Pienoisohjelmat
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Kirjurimehiläinen
+          title: Kirjurimehiläinen
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Kirjurimehiläinen
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Oppitunti
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Silmukkahupia
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Koodaustunti
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Muuttujat
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funktiot
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Iloiset kartat
+            'Programming: Happy Maps':
+              name: Iloiset kartat
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Tanssibileet
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
+              key: 'Ehtolauseet Minecraft: Merellisessä matkassa'
+            lesson-1:
+              name: Tanssibileet
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Tapahtumat
+            csf_loops:
+              display_name: Silmukat
+            csf_conditionals:
+              display_name: Ehtolausekkeet
+            csf_functions:
+              display_name: Funktiot
+            csf_variables:
+              display_name: Muuttujat
+            csf_for_loops:
+              display_name: Silmukat
+        csp1-2022:
+          lesson_groups:
+            cspSurvey:
+              display_name: Kysely
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Virheen etsintä
+              key: Virheen etsintä
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Muuttujat
+            csp_conditionals:
+              display_name: Ehtolausekkeet
+            csp_functions:
+              display_name: Funktiot
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listat
+            csp_loops:
+              display_name: Silmukat
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Liikuta, liikuta
+              key: Liikuta, liikuta
+            Getting Loopy:
+              name: Mennään silmukoille
+            'Loops: Getting Loopy':
+              name: Mennään silmukoille
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Suuri tapahtuma
+            Binary Bracelets:
+              name: Binäärikorut
+              key: Binäärikorut
+            'Events: The Big Event':
+              name: Suuri tapahtuma
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Ruutupaperiohjelmointi
+            Relay Programming:
+              name: Releohjelmointi
+              key: Releohjelmointi
+            Dance Party:
+              name: Tanssibileet
+              key: Tanssibileet
+            Conditionals with Cards:
+              name: Ehtolauseet pelikorteilla
+              key: Ehtolauseet pelikorteilla
+            'Algorithms: Graph Paper Programming':
+              name: Ruutupaperiohjelmointi
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitaalinen kansalaisuus
+            csf_events:
+              display_name: Tapahtumat
+            csf_loops:
+              display_name: Silmukat
+            csf_conditionals:
+              display_name: Ehtolausekkeet
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Säveltäminen
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Ehtolauseet Minecraft: Merellisessä matkassa'
+              key: 'Ehtolauseet Minecraft: Merellisessä matkassa'
+            'Functions: Songwriting':
+              name: Säveltäminen
+            Conditionals:
+              key: Ehtolausekkeet
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitaalinen kansalaisuus
+            ramp_up:
+              display_name: Sisäkkäiset silmukat
+            csf_functions:
+              display_name: Funktiot
+            csf_nested_loops:
+              display_name: Ehtolausekkeet
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Silmukkahupia
+              key: Silmukkahupia
+            The Internet:
+              name: Internetti
+            Internet:
+              key: Internet
+              name: Internetti
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digitaalinen kansalaisuus
+            lessonGroup-8:
+              display_name: Muuttujat
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Silmukat
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Silmukat
+            csf_events:
+              display_name: Tapahtumat
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Ehtolausekkeet
+            lesson-16:
+              name: Virheen etsintä
+            lesson-17:
+              name: Innoitusta projekteihin
+            lesson-19:
+              name: Virheen etsintä
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Silmukat

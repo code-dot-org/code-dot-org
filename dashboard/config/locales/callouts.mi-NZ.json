@@ -261,6 +261,75 @@
         },
         "Underground Iron_2021": {
           "craft_what_is_iron": "Mainahia tēnei rino!"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "He paraka/wahanga hou!",
+          "hello_world_new_block": "He paraka/wahanga hou!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "He paraka/wahanga hou!",
+          "hello_world_new_block": "He paraka/wahanga hou!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "He paraka/wahanga hou!",
+          "hello_world_new_block": "He paraka/wahanga hou!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "He paraka/wahanga hou!",
+          "poetry_foreground": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "He paraka/wahanga hou!",
+          "poetry_multiple_sprites": "He paraka/wahanga hou!",
+          "poetry_new_block": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "He paraka/wahanga hou!",
+          "poetry_music": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "He paraka/wahanga hou!",
+          "poetry_sprite_stops": "He paraka/wahanga hou!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "He paraka/wahanga hou!",
+          "poetry_remove_sprite": "He paraka/wahanga hou!"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Patohia i te \"whakahaerehia\" mena e rite ana koe."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Pātohia te \"whakahaerehia\" ki te neke."
         }
       }
     }

@@ -1,5 +1,4 @@
 import {commands as behaviorCommands} from './behaviorCommands';
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 function move(coreLibrary, spriteArg, distance) {
   let sprites = coreLibrary.getSpriteArray(spriteArg);
@@ -10,6 +9,12 @@ function move(coreLibrary, spriteArg, distance) {
     let direction = sprite.direction % 360;
     sprite.x += distance * Math.cos((direction * Math.PI) / 180);
     sprite.y += distance * Math.sin((direction * Math.PI) / 180);
+  });
+}
+
+function addSpriteSpeechBubble(coreLibrary, spriteArg, text, seconds) {
+  coreLibrary.getSpriteArray(spriteArg)?.forEach(sprite => {
+    coreLibrary.addSpeechBubble(sprite, text, seconds);
   });
 }
 
@@ -70,6 +75,7 @@ export const commands = {
       }
     });
   },
+
   edgesDisplace(spriteArg) {
     if (!this.p5.edges) {
       this.p5.createEdgeSprites();
@@ -134,6 +140,7 @@ export const commands = {
     });
     return touching;
   },
+
   jumpTo(spriteArg, location) {
     if (!location) {
       return;
@@ -144,6 +151,7 @@ export const commands = {
       sprite.y = location.y;
     });
   },
+
   mirrorSprite(spriteArg, direction) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
@@ -154,6 +162,7 @@ export const commands = {
       }
     });
   },
+
   moveForward(spriteArg, distance) {
     move(this, spriteArg, distance);
   },
@@ -178,6 +187,7 @@ export const commands = {
       dirs[direction](sprite);
     });
   },
+
   moveToward(spriteArg, distance, target) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
@@ -241,17 +251,12 @@ export const commands = {
     });
   },
 
-  spriteSay(spriteArg, speech) {
-    let sprites = this.getSpriteArray(spriteArg);
-    sprites.forEach(sprite => {
-      const bubbleId = this.addSpeechBubble(sprite, speech);
-      audioCommands.playSpeech({
-        text: speech,
-        gender: 'female',
-        language: 'English',
-        onComplete: () => this.removeSpeechBubble(bubbleId)
-      });
-    });
+  spriteSay(spriteArg, text) {
+    addSpriteSpeechBubble(this, spriteArg, text, 4 /* seconds */);
+  },
+
+  spriteSayTime(spriteArg, text, seconds) {
+    addSpriteSpeechBubble(this, spriteArg, text, seconds);
   },
 
   removeTint(spriteArg) {
@@ -272,8 +277,10 @@ export const commands = {
     sprites.forEach(sprite => {
       if (direction === 'right') {
         sprite.rotation += degrees;
+        sprite.direction += degrees;
       } else {
         sprite.rotation -= degrees;
+        sprite.direction -= degrees;
       }
     });
   }

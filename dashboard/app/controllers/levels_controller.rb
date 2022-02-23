@@ -98,6 +98,10 @@ class LevelsController < ApplicationController
   # GET /levels/get_filtered_levels/
   # Get all the information for levels after filtering
   def get_filtered_levels
+    if params[:name]&.start_with?('blockly:')
+      @levels = [Level.find_by_key(params[:name]).summarize_for_edit]
+      return render json: {numPages: 1, levels: @levels}
+    end
     filter_levels(params)
 
     @levels = @levels.limit(150)
@@ -112,7 +116,7 @@ class LevelsController < ApplicationController
   def filter_levels(params)
     # Gather filtered search results
     @levels = @levels.order(updated_at: :desc)
-    @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%") if params[:name]
+    @levels = @levels.where('levels.name LIKE ?', "%#{params[:name]}%").or(@levels.where('levels.level_num LIKE ?', "%#{params[:name]}%")) if params[:name]
     @levels = @levels.where('levels.type = ?', params[:level_type]) if params[:level_type].present?
     @levels = @levels.joins(:script_levels).where('script_levels.script_id = ?', params[:script_id]) if params[:script_id].present?
     @levels = @levels.left_joins(:user).where('levels.user_id = ?', params[:owner_id]) if params[:owner_id].present?
@@ -130,7 +134,7 @@ class LevelsController < ApplicationController
       full_width: true,
       small_footer: @game.uses_small_footer? || @level.enable_scrolling?,
       has_i18n: @game.has_i18n?,
-      useGoogleBlockly: params[:blocklyVersion] == "Google"
+      blocklyVersion: params[:blocklyVersion]
     )
   end
 
@@ -143,6 +147,8 @@ class LevelsController < ApplicationController
     fb = FirebaseHelper.new('shared')
     @dataset_library_manifest = fb.get_library_manifest
   end
+
+  use_reader_connection_for_route(:get_rubric)
 
   # GET /levels/:id/get_rubric
   # Get all the information for the mini rubric
@@ -189,12 +195,15 @@ class LevelsController < ApplicationController
       toolbox_blocks = "<xml>#{blocks.join('')}</xml>"
     end
 
+    validation = @level.respond_to?(:validation) ? @level.validation : nil
+
     level_view_options(
       @level.id,
       start_blocks: blocks_xml,
       toolbox_blocks: toolbox_blocks,
       edit_blocks: type,
-      skip_instructions_popup: true
+      skip_instructions_popup: true,
+      validation: validation
     )
     view_options(full_width: true)
     @game = @level.game
@@ -229,9 +238,10 @@ class LevelsController < ApplicationController
     render json: {redirect: level_url(@level)}
   end
 
-  def update_properties
+  def update_properties(ignored_keys: [])
     changes = JSON.parse(request.body.read)
     changes.each do |key, value|
+      next if ignored_keys.include?(key)
       @level.properties[key] = value
     end
 
@@ -264,6 +274,18 @@ class LevelsController < ApplicationController
       log_save_error(@level)
       render json: @level.errors, status: :unprocessable_entity
     end
+  end
+
+  # POST /levels/:id/update_start_code
+  # Update start code for a level. If params contains "validation",
+  # set validation directly to ensure it is encrypted.
+  # Then set any remaining properties with update_properties.
+  def update_start_code
+    changes = JSON.parse(request.body.read)
+    if @level.respond_to?(:validation)
+      @level.validation = changes["validation"]
+    end
+    return update_properties(ignored_keys: ["validation"])
   end
 
   # POST /levels

@@ -1,6 +1,7 @@
 {
-  "func": "rotateToDirection",
+  "key": "rotateToDirection",
+  "name": "rotateToDirection",
   "category": "Sprites",
-  "modeOptionName": "*.rotateToDirection",
-  "type": "property"
+  "category_key": "sprites",
+  "syntax": "rotateToDirection"
 }

@@ -199,7 +199,8 @@
           "craft_drag_block_callout": "ஒரு \"முன்னோக்கி நகர்த்து\" தொகுதியை இழுத்து, மற்ற தொகுதிக்கு கீழே ஒட்டுங்கள்"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_drag_block_callout": "ஒரு \"முன்னோக்கி நகர்த்து\" தொகுதியை இழுத்து, மற்ற தொகுதிக்கு கீழே ஒட்டுங்கள்"
+          "craft_drag_block_callout": "ஒரு \"முன்னோக்கி நகர்த்து\" தொகுதியை இழுத்து, மற்ற தொகுதிக்கு கீழே ஒட்டுங்கள்",
+          "craft_run_button_callout": "உங்கள் திட்டத்தை முயற்சிக்க \"ரன்\" என்பதை அழுத்தவும் "
         },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "இந்த புதிரில் இந்த தொகுதிகளில் ஒன்று மட்டுமே உங்களிடம் உள்ளது."
@@ -266,6 +267,498 @@
         },
         "courseC_maze_debugging9_2021": {
           "courseC_maze_debugging9_2019_1": "கருவிப்பெட்டியில் இருந்து தொகுதிகளை உங்கள் பணியிடத்திற்கு இழுக்கவும்."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "புதிய தொகுதி!",
+          "hello_world_new_block": "புதிய தொகுதி!!!! "
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "புதிய தொகுதி!",
+          "hello_world_new_block": "புதிய தொகுதி!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "புதிய தொகுதி!",
+          "hello_world_new_block": "புதிய தொகுதி!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "புதிய தொகுதி!",
+          "hello_world_new_block": "புதிய தொகுதி!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "புதிய தொகுதி!",
+          "poetry_foreground": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "புதிய தொகுதி!",
+          "poetry_multiple_sprites": "புதிய தொகுதி!",
+          "poetry_new_block": "புதிய தொகுதி!",
+          "poetry_selector": "ஏதேனும் ஒரு கவிதையைத் தேர்ந்தெடுங்கள் அல்லது உங்களுடையதை உள்ளிடவும்!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "புதிய தொகுதி!",
+          "poetry_music": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "புதிய தொகுதி!",
+          "poetry_sprite_stops": "புதிய தொகுதி!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "புதிய தொகுதி!",
+          "poetry_remove_sprite": "புதிய தொகுதி!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_collector": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_apps_pet": {
+          "run_button": "முதலில் ரன் பட்டனை அழுத்தவும்!",
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "உங்கள் திட்டத்தில் புதிய ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும்! "
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "உங்கள் திட்டத்தில் புதிய ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும்! "
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "கருவிப்பெட்டியில் சில புதிய தொகுதிகளை நீங்கள் பார்க்கிறீர்களா? கவலைப்பட வேண்டாம், அவற்றை எப்படிப் பயன்படுத்துவது என்பதை இன்னொரு பாடத்தில் காண்பிப்போம்."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "அனைத்து தொகுதிகளையும் இணைத்த பிறகு, உங்கள் நிரலைத் தொடங்க \"இயக்கு\" என்பதை அழுத்தவும்."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "இது கருவிப்பெட்டி. உங்கள் புதிர்களை முடிக்க கூடுதல் தொகுதிகளை நீங்கள் காணலாம்."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "கூடுதல் தொகுதிகளை தூக்கி எறிய கருவிப்பெட்டிக்கு இழுக்கலாம்.",
+          "courseC_maze_programming3_3": "இந்த தொகுதிகள் கல் மற்றும் தூக்கி எறிய முடியாது."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "இது உங்கள் தொகுதி வரம்பு. இவற்றில் எத்தனை தொகுதிகளை நீங்கள் பயன்படுத்த விட்டுள்ளீர்கள் என்பதை இது உங்களுக்குக் கூறுகிறது."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "இந்த தொகுதிகளுக்கு எண்கள் இல்லை. நீங்கள் எவ்வளவு வேண்டுமானாலும் பயன்படுத்தலாம்!"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "உங்கள் குறியீட்டை ஒரு நேரத்தில் ஒரு தொகுதிக்குள் நுழைய முயற்சிக்கவும். "
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "எப்போது என்பதை மாற்ற முயற்சிக்கவும். "
+        },
+        "courseF_events_conflict": {
+          "stops_block": "புதிய தொகுதிகள் இங்கே! "
+        },
+        "courseF_events_key": {
+          "whenKey": "இங்கே காணப்படும் புதிய நிகழ்வுத் தொகுதியைப் பயன்படுத்தவும்."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "இந்த தொகுதி தவறான வரிசையில் உள்ளது. "
+        },
+        "courseF_events_time": {
+          "events_category": "நிகழ்வுகள் வகையைத் திறக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "இந்த புள்ளியின் கீழே உள்ள குறியீட்டை உற்றுப் பாருங்கள். "
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "நடத்தை வகையைத் திறக்க இங்கே கிளிக் செய்யவும்."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Sprites வகையைத் திறக்க இங்கே கிளிக் செய்யவும்."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "இருப்பிட வகையைத் திறக்க இங்கே கிளிக் செய்யவும்."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "இங்கே ஒரு புதிய தொகுதியைத் தேடுங்கள். "
+        },
+        "courseF_text_answer": {
+          "answered_block": "இங்கே ஒரு புதிய தொகுதியைத் தேடுங்கள்! "
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "நீங்கள் கேள்விக்கு பதிலளிக்கும் போது பின்னணி நிறம் மாறியதா? அப்படியானால், 'பினிஷ்' என்பதை அழுத்தவும். இல்லையெனில், 'ரீசெட்' என்பதை அழுத்தி, உங்கள் குறியீட்டை மாற்றி, மீண்டும் 'ரன்' என்பதை அழுத்தவும்."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "நீங்கள் முடித்து விட்டீர்களா? அப்படியானால், 'பினிஷ்' என்பதை அழுத்தவும். இல்லையெனில், 'ரீசெட்' என்பதை அழுத்தி, உங்கள் குறியீட்டை மாற்றி, மீண்டும் 'ரன்' என்பதை அழுத்தவும்."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "இரண்டு புதிய தொகுதிகளை இங்கே தேடுங்கள்! ",
+          "text_answer_finish": "தலைப்புத் திரை 3 வினாடிகள் காட்டப்பட்டதா? அப்படியானால், 'பினிஷ்' என்பதை அழுத்தவும். இல்லையெனில், 'ரீசெட்' என்பதை அழுத்தி, உங்கள் குறியீட்டை மாற்றி, மீண்டும் 'ரன்' என்பதை அழுத்தவும்."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "புதிய தொகுதிகளை இங்கே தேடுங்கள்! "
+        },
+        "courseF_text_events": {
+          "events_category": "நிகழ்வுகள் வகையைத் திறக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "courseF_text_print": {
+          "print_block": "அச்சுத் தொகுதியை இங்கே கண்டுபிடி!",
+          "text_print_finish": "உங்கள் செய்தி மேலே அச்சிடப்பட்டதா? அப்படியானால், 'பினிஷ்' என்பதை அழுத்தவும். இல்லையெனில், 'ரீசெட்' என்பதை அழுத்தி, உங்கள் குறியீட்டை மாற்றி, மீண்டும் 'ரன்' என்பதை அழுத்தவும்."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "உடனடி தொகுதியை இங்கே கண்டறியவும்!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "இந்த புள்ளியின் கீழே உள்ள குறியீட்டை உற்றுப் பாருங்கள். "
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "கருவிப்பெட்டியிலிருந்து தொகுதிகளை உங்கள் பணியிடத்திற்கு இழுக்கவும். "
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "உங்கள் குறியீடு எவ்வாறு செயல்படுகிறது என்பதைப் பற்றி உங்களை அல்லது உங்கள் ஆசிரியர் குறிப்புகளை விட்டுவிட, இந்தத் தடுப்பைப் பயன்படுத்தவும். "
+        },
+        "Overworld Chop Trees_2021": {
+          "craft_callout_preplaced": "நீங்கள் தொடங்குவதற்கு சில தொகுதிகளை இங்கு வைத்துள்ளோம் "
+        },
+        "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "இந்தக் குறியீடு உங்கள் வீட்டைக் கட்டத் தொடங்கும். அதை முடிக்க முடியுமா? "
+        },
+        "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "இங்கே தொகுதிகளை வைப்பதன் மூலம் செயல்களை மீண்டும் செய்யவும் "
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "இந்த குறியீடு எரிமலைக்குழம்பு சரிபார்க்கும், முன்னோக்கி நகர்த்த ஒரு கட்டளையைச் சேர்க்க முடியுமா? "
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "இந்த இரும்பு என்னுடையது!"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "இந்தப் புதிரில் எத்தனை தொகுதிகளை நீங்கள் பயன்படுத்தலாம் என்பதை இந்த எண் சொல்கிறது."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "இந்த எண்ணின் அர்த்தம், இறுதிப் பதிலில் இந்த வகையான ஒரு தொகுதியை மட்டுமே பயன்படுத்த முடியும்."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "உங்களுக்குத் தேவைப்படும்போதெல்லாம் ஒரு கோட்டைத் திரும்பப் பெற முடியும் என்பது உங்களுக்குத் தெரியுமா?"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "இது ஒரு அழைப்பு"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "நிகழ்வு அம்புக்குறியின் திசையை மாற்ற இங்கே கிளிக் செய்க."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "இது ஒரு \"சீரற்ற\" ஒலியைத் தேர்வுசெய்வோம், அதாவது நீங்கள் கேட்கும் வரை நீங்கள் எதைப் பெறப் போகிறீர்கள் என்பது உங்களுக்குத் தெரியாது!"
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "கருவிப்பெட்டியில் இந்த தொகுதிகளில் ஒன்று மட்டுமே உள்ளது. நீங்கள் அதை எவ்வாறு பயன்படுத்துவீர்கள்?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "புதையலை சேகரிக்க இந்த தொகுதியைப் பயன்படுத்தவும்."
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "திசைகளை மாற்ற பச்சை கீழ்நோக்கிய அம்புக்குறியைப் பயன்படுத்தவும்."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "இந்தத் திட்டத்திற்கு இந்தத் தொகுதி மிகவும் முக்கியமானது. கண்டிப்பாக பயன்படுத்தவும்!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "உங்கள் திட்டத்தின் நடுவில் இதைச் சேர்க்கவும்."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "உங்கள் திட்டத்தை இங்கே மெதுவாக்கலாம். "
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "உங்களுக்குத் தேவைப்பட்டால் கருவிப்பெட்டியில் இருந்து அதிக தொகுதிகளை எடுக்கலாம்!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "பூசணிக்காயில் உள்ள நான்காம் எண், நான்கு பூசணிக்காய்களை எடுக்கக் கிடைக்கும் என்று கூறுகிறது."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "இந்த தொகுதிகள் பூட்டப்பட்டுள்ளன, அவற்றை நீக்க முடியாது!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "இது உங்கள் முதல் சவாலான புதிர்! இவை கடினமானவை மற்றும் பல முயற்சிகள் எடுக்கலாம்.",
+          "courseC_maze_programming7_2": "இந்த தொகுதிகள் கல்லால் ஆனவை மற்றும் தூக்கி எறிய முடியாது."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "இந்தப் புதிரைச் சரியாகப் பெற நீங்கள் வண்ணங்களைப் பயன்படுத்த வேண்டியதில்லை. நீங்கள் விரும்பினால், இந்த `ரேண்டம் கலர்` பிளாக் அதை எளிதாக்குகிறது! "
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "நினைவில் வைத்து கொள்ளுங்கள், ஒவ்வொரு மேகத்திலும் ஒரு மலர் இருக்கிறதா என்று பார்க்கவும். தேன்கூடு இருக்கிறதா என்று பார்க்க வேண்டியதில்லை."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "ஒரு பூவிலிருந்து (அல்லது தேன்கூடு) தேன் (அல்லது தேன்) அனைத்தையும் சேகரிக்க இந்த வளையத்தைப் பயன்படுத்தவும். "
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "இந்தப் புதிரைத் தீர்க்க, `முன்னோக்கிச் செல்லும் பாதை' பிளாக்கைப் பயன்படுத்த வேண்டும்."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "இது உங்கள் தொகுதி வரம்பு. இவற்றில் எத்தனை தொகுதிகளை நீங்கள் பயன்படுத்த விட்டுள்ளீர்கள் என்பதை இது உங்களுக்குக் கூறுகிறது."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "இந்தத் தொகுதிகளில் எண்கள் இல்லை. நீங்கள் எவ்வளவு வேண்டுமானாலும் பயன்படுத்தலாம்! "
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "அனைத்து தொகுதிகளையும் இணைத்த பிறகு, உங்கள் நிரலைத் தொடங்க \"இயக்கு\" என்பதை அழுத்தவும்."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "இது கருவிப்பெட்டி. உங்கள் புதிர்களை முடிக்க கூடுதல் தொகுதிகளை இங்கே காணலாம்."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "கூடுதல் தொகுதிகளை தூக்கி எறிய கருவிப்பெட்டிக்கு இழுக்கலாம்.",
+          "stone_block_2": "சாம்பல் தொகுதிகளை தூக்கி எறிய முடியாது. "
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "இந்தத் தொகுதிகளில் எண்கள் இல்லை. நீங்கள் எவ்வளவு வேண்டுமானாலும் பயன்படுத்தலாம்! "
+        },
+        "courseE_aboutme_2_2021": {
+          "": "இங்கே கிளிக் செய்யவும்"
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "இந்த பச்சை தொகுதி இயங்கும் போது, செயல்பாட்டில் உள்ள அனைத்து குறியீடுகளும் இயங்கும். முதல் சதுரத்தை வரைந்த பிறகு கலைஞர் என்ன செய்ய வேண்டும்?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "செயல்பாடுகளை உருவாக்குவதற்கான உங்கள் தொகுதிகள் கருவிப்பெட்டியில் இந்த லேபிளின் கீழ் நகர்த்தப்பட்டுள்ளன. "
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "கீழே மேலும் குறியீட்டைச் சேர்ப்பதன் மூலம் இந்த நிரலைத் தொடரவும்.",
+          "courseE_artist_functions_challenge1_callout2": "இந்த வடிவமைப்பு உங்களுக்குப் பிடிக்கவில்லை என்றால், நீங்கள் விரும்பும் எதையும் மாற்றவும்!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "கீழே மேலும் குறியீட்டைச் சேர்ப்பதன் மூலம் இந்த நிரலைத் தொடரவும்.",
+          "courseE_artist_functions_challenge2_callout2": "இந்த வடிவமைப்பு உங்களுக்குப் பிடிக்கவில்லை என்றால், நீங்கள் விரும்பும் எதையும் மாற்றவும்!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "இந்த காய்கறி தெரியவில்லை. நீங்கள் நிரலை இயக்கும் ஒவ்வொரு முறையும் இது மாறும். "
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "கருவிப்பெட்டி இந்த முறை சற்று வித்தியாசமாக ஏற்பாடு செய்யப்பட்டுள்ளது! உங்களிடம் உள்ள தொகுதிகளைக் காண வெவ்வேறு வகைகளைக் கிளிக் செய்யவும். "
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "இந்த காய்கறி தெரியவில்லை. நீங்கள் நிரலை இயக்கும் ஒவ்வொரு முறையும் இது மாறும். "
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "இந்த காய்கறி தெரியவில்லை. நீங்கள் நிரலை இயக்கும் ஒவ்வொரு முறையும் இது மாறும். "
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "உங்கள் குறியீட்டிற்கு அதிக இடமளிக்க, கருவிப்பெட்டி \"வகை\" பயன்முறையில் உள்ளது. இங்கு `For` சுழல்கள் உள்ளன."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "நீங்கள் இங்கே `for` வளையத்தைக் காண்பீர்கள்! "
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "இங்கே நீங்கள் 'கணிதம்' தொகுதியைக் காணலாம். "
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "உங்கள் மாறிகளை இங்கே காணலாம்! "
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "இந்த நடத்தை எவ்வாறு செயல்படுகிறது என்பதைப் பார்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "புதிய பின்னணியை அமைக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "கீழே உள்ள நடத்தைகளில் ஒன்றைக் கொண்டு இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "குறியீட்டை இயக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "இந்த நிகழ்வுத் தொகுதியை உங்கள் பணியிடத்தில் சேர்க்கவும். "
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "உங்கள் திட்டத்தில் ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_animals_location": {
+          "pin": "பின்  "
+        },
+        "helloworld_animals_multi": {
+          "pin": "பின்  "
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "உருவங்களை பேச இந்த தொகுதியை பயன்படுத்தவும். ",
+          "hello_world_make_sprite": "ஸ்பிரைட்டை உருவாக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "புதிய பின்னணியை அமைக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "கீழே உள்ள நடத்தைகளில் ஒன்றைக் கொண்டு இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "குறியீட்டை இயக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "இந்த நிகழ்வுத் தொகுதியை உங்கள் பணியிடத்தில் சேர்க்கவும். "
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "உங்கள் திட்டத்தில் ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_emoji_location": {
+          "pin": "பின்  "
+        },
+        "helloworld_emoji_multi": {
+          "pin": "பின்  "
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "உருவங்களை பேச இந்த தொகுதியை பயன்படுத்தவும். ",
+          "hello_world_make_sprite": "ஸ்பிரைட்டை உருவாக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "புதிய பின்னணியை அமைக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "கீழே உள்ள நடத்தைகளில் ஒன்றைக் கொண்டு இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_click": {
+          "hw_Run": "குறியீட்டை இயக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "இந்த நிகழ்வுத் தொகுதியை உங்கள் பணியிடத்தில் சேர்க்கவும். "
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "உங்கள் திட்டத்தில் ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_food_location": {
+          "pin": "பின்  "
+        },
+        "helloworld_food_multi": {
+          "pin": "பின்  "
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "உருவங்களை பேச இந்த தொகுதியை பயன்படுத்தவும். ",
+          "hello_world_make_sprite": "ஸ்பிரைட்டை உருவாக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "புதிய பின்னணியை அமைக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "கீழே உள்ள நடத்தைகளில் ஒன்றைக் கொண்டு இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "குறியீட்டை இயக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "இந்த நிகழ்வுத் தொகுதியை உங்கள் பணியிடத்தில் சேர்க்கவும். "
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "உங்கள் திட்டத்தில் ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_retro_location": {
+          "pin": "பின்  "
+        },
+        "helloworld_retro_multi": {
+          "pin": "பின்  "
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "உருவங்களை பேச இந்த தொகுதியை பயன்படுத்தவும். ",
+          "hello_world_make_sprite": "ஸ்பிரைட்டை உருவாக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "குறியீடு தொகுதிகளை இங்கே கண்டறியவும். ",
+          "run_button": "இந்தப் பொத்தான் மூலம் உங்கள் அனிமேஷனைச் சோதிக்கவும். "
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "திரை பச்சை நிறத்திற்கு மாறியதா? அவ்வாறெனில், 'ஃபினிஷ்'-ஐ தட்டவும். இல்லையெனில், 'ரீசெட்'-ஐ தட்டி, உங்கள் கோடு-ஐ மாற்றி, 'ரன்'-ஐ மீண்டும் தட்டவும்."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "நீங்கள் இப்போது வடிவமைப்பு மோடு-ல் உள்ளீர்கள்."
+        },
+        "Infinity_move_collide": {
+          "Infinity_move_collide_callout": "இந்த நிகழ்வு நடக்கும்போது ஒரு சத்தத்தை எழுப்புங்கள்."
+        },
+        "Infinity_move_directions": {
+          "Infinity_move_directions_callout": "மேல்நோக்கிய அம்புக்குறி அழுத்தப்படும்போது, எந்த ப்ளாக் பேமேக்ஸை மேலே நகரச் செய்யும்?",
+          "Infinity_move_directions_callout_arrow": "வழிகாட்டுவதற்கு இந்த அம்புக்குறிகளைப் பயன்படுத்தவும்"
+        },
+        "Infinity_move_right": {
+          "Infinity_move_right_runbutton": "மூவ் ப்ளாக்-ஐ இங்கு சேர்க்கவும்"
+        },
+        "Infinity_repeat": {
+          "Infinity_repeat_callout": "மூவ் ப்ளாக்குகளை இங்கு உள்ளே வைக்கவும்"
+        },
+        "frozen circle function with parameter": {
+          "frozen_circle_function_with_parameter_circle": "\"கிரியேட் ய சர்கிள்\" பிளாக்-ஐப் பயன்படுத்தி அளவை மாற்றவும்."
+        },
+        "frozen cross": {
+          "repeat_blocks_1": "(1) இந்த ப்ளாக்-ஐ பயன்படுத்தவும் மற்றும் பணியிடத்தில் உள்ள சாம்பல் நிற ப்ளாக்குகளைச் சுற்றி அதனை போடவும்.",
+          "repeat_blocks_2": "(2) \"ரிபீட்\" ப்ளாக்-ஐ இங்கு நகர்த்தவும், மற்றும் சாம்பல் நிற ப்ளாக்குகளை உள்ளே வைக்கவும்."
+        },
+        "frozen cross rotate": {
+          "replace_questions_degree": "\"???\" என்பதை ஒரு எண்ணைக் கொண்டு மாற்றுவதற்கு டிராப்-டௌன்-ஐ பயன்படுத்தவும்."
+        },
+        "frozen diamond": {
+          "frozen_diamond_repeat": "இந்த வடிவத்தை உருவாக்குவதற்கு ரிபீட் ப்ளாக்-ஐ பயன்படுத்தவும்."
+        },
+        "frozen diamond snowflake": {
+          "frozen_diamond_repeat": "இந்த வடிவத்தை உருவாக்குவதற்கு ரிபீட் ப்ளாக்-ஐ பயன்படுத்தவும்."
+        },
+        "frozen freeplay": {
+          "snowflake_dropdown": "வெவ்வேறு பனித்திவலைகளை உருவாக்குவதற்கு இந்த டிராப்-டௌன்-ஐ பயன்படுத்தவும்!"
+        },
+        "frozen line": {
+          "run": "உங்கள் புரோக்ராமை முயற்சி செய்வதற்கு \"ரன்\"-ஐ தட்டவும்!",
+          "move_elsa_forward": "எல்சா முன்னோக்கி செல்வதற்கு, \"மூவ் ஃபார்வார்டு\" பிளாக்-ஐ இழுத்துவந்து, அதனை \"வென் ரன்\" ப்ளாக்குக்கு கீழே நொடிக்கவும்."
+        },
+        "frozen perpendicular": {
+          "turn_elsa": "எல்சா திரும்புவதற்கு \"திரும்பு\" ப்ளாக்-ஐ பயன்படுத்தவும். ட்ராப்-டௌன்-ல் வரும் எண், எல்சா எவ்வளவு திரும்புகிறார் என்பதை தீர்மானிக்கிறது."
+        },
+        "frozen snowflake branch": {
+          "frozen_snowflake_branch": "\"கிரியேட் ய ஸ்னோஃப்ளேக் பிராஞ்ச்\" பிளாக்-ஐப் பயன்படுத்தவும்."
+        },
+        "frozen square iterative": {
+          "frozen_create_square": "ஒரு சதுரத்தை உருவாக்குவதற்கு கூடுதல் ப்ளாக்குகளை இங்கு இணைக்கவும்."
+        },
+        "frozen square loop": {
+          "replace_questions": "\"???\" என்பதை ஒரு எண்ணைக் கொண்டு மாற்றுவதற்கு டிராப்-டௌன்-ஐ பயன்படுத்தவும்."
+        },
+        "frozen square loop 3x": {
+          "replace_questions": "\"???\" என்பதை ஒரு எண்ணைக் கொண்டு மாற்றுவதற்கு டிராப்-டௌன்-ஐ பயன்படுத்தவும்."
+        },
+        "frozen square snowflake": {
+          "replace_questions": "\"???\" என்பதை ஒரு எண்ணைக் கொண்டு மாற்றுவதற்கு டிராப்-டௌன்-ஐ பயன்படுத்தவும்."
         }
       }
     }

@@ -1,5 +1,7 @@
 {
-  "func": "style",
+  "key": "style",
+  "name": "style",
   "category": "HTML Tags",
+  "category_key": "html_tags",
   "syntax": "<style>"
 }

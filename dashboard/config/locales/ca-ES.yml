@@ -325,6 +325,7 @@ ca:
       playlab: Play Lab
       spritelab: Laboratori de personatges
       starwars: Star Wars
+      loading: Carregant...
       view_all: Mostra tots els projectes...
     popup:
       progress_for_user: Progrés de %{name}

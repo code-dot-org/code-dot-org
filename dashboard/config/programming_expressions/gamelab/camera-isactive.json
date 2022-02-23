@@ -1,0 +1,7 @@
+{
+  "key": "camera.isActive",
+  "name": "camera.isActive",
+  "category": "World",
+  "category_key": "world",
+  "syntax": "camera.isActive"
+}

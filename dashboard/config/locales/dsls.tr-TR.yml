@@ -5815,8 +5815,10 @@ tr-TR:
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       courseAB_EOC_2021:
         display_name: Ders Projesinin Sonu
+        description: Son derse sonuna ulaştınız! Oluşturmak üzere bir proje seçin.
       courseB_EOC_2021:
         display_name: Ders Projesinin Sonu
+        description: Son derse sonuna ulaştınız! Oluşturmak üzere bir proje seçin.
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: Artist, üç eşit kenara sahip bir üçgen çizecek.
@@ -5826,7 +5828,8 @@ tr-TR:
         - text: Oyuncu bir kare çizecek.
           correct: true
           feedback: Doğru!
-        - {}
+        - text: Sanatçı bir beşgen çizecek
+          feedback: Yanlış. Sanatçı bir kare çiziyor.
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
       courseC_multi_harvester_loops11_predict1_2021:
@@ -5848,12 +5851,24 @@ tr-TR:
             balkabağı toplayacak?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: Scrat, palamuda ulaşacak. Kodda hata yok.
+          feedback: Yanlış. Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
+            kadar yeterli sayıda ileri gitmiyor.
+        - text: Scrat, palamuda ulaşmayacak çünkü yanlış yöne dönüyor.
+          correct: true
+          feedback: Doğru! Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
+            kadar yeterli sayıda ileri gitmiyor.
+        - text: Scrat palamuda ulaşmayacak çünkü yeteri kadar "ileri hareket" bloğu
+            yok.
+          correct: true
+          feedback: Doğru! Scrat önce yanlış yöne dönüyor, sonra da palamuda ulaşacak
+            kadar yeterli sayıda ileri gitmiyor.
+        - text: Scrat, birinci bloktan hareket etmeyecek.
+          feedback: Bu kodda iki hata var. Scrat önce yanlış yöne dönüyor, sonra da
+            palamuda ulaşacak kadar yeterli sayıda ileri gitmiyor.
         questions:
-        - {}
+        - text: Bu koddaki hataları bulun. Scrat, palamuda ulaşacak mı yoksa bir sorun
+            mu var?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: Kuş, domuza bir adım kala duracak.
@@ -5863,7 +5878,8 @@ tr-TR:
           feedback: Doğru!
         - text: Kuş, TNT'ye çarpacak.
           feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
-        - feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
+        - text: Kuş, duvara çarpacak.
+          feedback: Yanlış. Bu kod, kuşu domuza sorunsuz ulaştırıyor.
         questions:
         - text: Aşağıdaki kodu dikkatle okuyun. "Çalıştır"a tıkladığınızda ne olacak?
       courseC_multi_starWars_predict1_2021:
@@ -5875,7 +5891,8 @@ tr-TR:
         - text: BB-8 5 kez ilerler ve tüm metal parçalarını toplar
           correct: true
           feedback: Doğru!
-        - feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
+        - text: BB-8 yalnızca 3 birim ilerler.
+          feedback: Yanlış. Tekrar bloğu, BB-8'in beş kez ilerlemesini sağlar.
         questions:
         - text: '"Çalıştır"a bastığınızda sizce ne olacak?'
       courseC_multi_starWars_predict2_2021:
@@ -5889,12 +5906,15 @@ tr-TR:
         - text: BB-8 tüm metal parçalarını hiç sorunsuz toplayacak.
           feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
             2 birim gitmesini sağlayacak.
-        - feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
+        - text: BB-8, ilk döngüden sonra yanlış yöne dönecek.
+          feedback: Yanlış. İlk döngü BB-8'in 3 birim gitmesi gerekirken yalnızca
             2 birim gitmesini sağlayacak.
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda ne olacak?
       courseD_EOC_2021:
         display_name: Ders Projesinin Sonu
+        description: Kurs D'nin son dersine ulaştınız! Oluşturmak üzere bir proje
+          seçin.
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -5906,7 +5926,8 @@ tr-TR:
         - text: C
           feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
             dört kez tekrar ederek bir çembere dönüştürüyor.
-        - feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
+        - text: Yukarıdakilerden hiçbiri
+          feedback: Yanlış. İçteki döngü bir beşgen oluşturuyor ve dıştaki döngü bunu
             dört kez tekrar ederek bir çembere dönüştürüyor.
         markdown: |-
           <table>
@@ -5928,7 +5949,8 @@ tr-TR:
         - text: 'Arı buluta gidecek ama ne olursa olsun bir şey yapmayacak. '
           feedback: Yanlış. "Eğer çiçekte ise" bloğu, bulutun altında çiçek varsa
             arının nektar almaya çalışmasını sağlar.
-        - feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
+        - text: Arı, buluta ulaşmayacak.
+          feedback: Yanlış. "Eğer çiçekte ise" bloğu, arının yalnızca bulutun altında
             çiçek varsa nektar almaya çalışmasını sağlar.
         questions:
         - text: Bulut, görüntüyü engelliyor. Bu bulutun altında bir çiçek olabilir.
@@ -5963,7 +5985,8 @@ tr-TR:
         - text: Arı hem çiçeklerden hem de petekten bal almaya çalışacak.
           feedback: Yanlış. Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar
             alır ve her petekte bal yapar.
-        - feedback: Yanlış. Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar
+        - text: Arı hem çiçeklerden hem de petekten bal ve nektar almaya çalışacak.
+          feedback: Yanlış. Yanlış. "Çiçekteyse" bloğu, arının her çiçekte nektar
             alır ve her petekte bal yapar.
         questions:
         - text: 'Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastığınızda sizce
@@ -5980,7 +6003,8 @@ tr-TR:
         - text: Arı, nektarın tamamını alır.
           correct: true
           feedback: Doğru!
-        - feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
+        - text: Arı yanlış yöne dönecek.
+          feedback: Yanlış. Arı döngüleri, döngüye alınmış ilerle ve nektar al eylemlerini
             tekrarlayarak bulmacayı çözmeyi sağlar.
         questions:
         - text: Aşağıdaki iç içe döngüleri dikkatle inceleyin. "Çalıştır"a bastığınızda
@@ -6016,7 +6040,8 @@ tr-TR:
         - text: Hasatçı, ürünün tamamını toplayacak, balkabağı hariç.
           correct: true
           feedback: Doğru!
-        - feedback: Yanlış. Kod, hasatçının sürekli bir merdiven deseni yapmasını
+        - text: Çiftçi sadece balkabağını toplayacak.
+          feedback: Yanlış. Kod, hasatçının sürekli bir merdiven deseni yapmasını
             ve her denk geldiği mısırı veya marulu toplamasını sağlayacak. Balkabağı
             toplamayacak.
         markdown: |-
@@ -6034,7 +6059,8 @@ tr-TR:
         - text: Bu kod çukurları olduğu gibi bırakacak.
           feedback: Yanlış. "While" döngüsü, her boyutta döngüyü çalıştırabilir fakat
             yığından toprak almak için bir kod yok.
-        - feedback: Yanlış. Yığından toprak almak için bir kod yok.
+        - text: Bu kod son çukuru olduğu gibi bırakacak.
+          feedback: Yanlış. Yığından toprak almak için bir kod yok.
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. Bulmacanın sonunda geriye ne kalacak?
       courseD_multi_farmer_while4_predict1_2021:
@@ -6049,7 +6075,8 @@ tr-TR:
             duracak.
           correct: true
           feedback: Doğru!
-        - feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
+        - text: Çiftçi toprağı sadece bir kez kaldıracak.
+          feedback: Yanlış. Çiftçi bir yığın olduğu sürece toprağı atacak, yığın ortadan
             kalktığında duracak
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
@@ -6064,7 +6091,8 @@ tr-TR:
         - text: Zombi ilk yolda sağa döner ve sürekli çember çizer.
           feedback: Yanlış. Zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
             gidecek.
-        - feedback: Bu kodda, zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
+        - text: Zombi ileriye giden yolun sonunda sıkışıp kalacak.
+          feedback: Bu kodda, zombi doğru yolu geçecek ve sonsuza kadar ileri ve geri
             gidecek.
         questions:
         - text: Aşağıdaki kodu dikkatle inceleyin. "Çalıştır"a bastıktan sonra ne
@@ -6080,24 +6108,31 @@ tr-TR:
         - text: Kuş ilerleyecek ve TNT'ye çarpacak.
           feedback: Yanlış. Kod, güvenli bir yol varsa kuşun ilerlemesini ve sola
             dönmesini sağlar. Bunu, domuza ulaşana kadar yapmaya devam eder!
-        - feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
+        - text: Kuşlar yanlış yere dönüyor.
+          feedback: Kod, bir yol varsa kuşun ilerlemesini ve sola dönmesini sağlar.
             Bunu, domuza ulaşana kadar yapmaya devam eder!
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastığınızda sizce ne
             olacak?
       courseE_EOC_2021:
         display_name: Ders Projesinin Sonu
+        description: Kurs E'nin sonuna ulaştınız! Oluşturmak üzere bir proje seçin.
       courseE_EOC_examples_2021:
         display_name: Ders Projesinin Sonu
+        description: Kurs E'nin sonuna ulaştınız! Oluşturmak üzere bir proje seçin.
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Hiçbir şey olmayacak.
-        - {}
-        - correct: true
+          feedback: Yanlış. Uzaylı, ekranda yukarı ve aşağı hareket etmeye başlayacak.
+        - text: Uzaylı sağdan sola devriye gezmeye başlayacak.
+          feedback: Yanlış. Uzaylı, ekranda yukarı ve aşağı hareket etmeye başlayacak.
+        - text: Uzaylı, ekranda yukarı ve aşağı hareket etmeye başlayacak.
+          correct: true
           feedback: Doğru!
-        - {}
+        - text: Uzaylı, ekranın üstünden kaybolacak.
+          feedback: Yanlış. Mavi uzaylı, ekranda yukarı ve aşağı hareket etmeye başlayacak.
         questions:
-        - {}
+        - text: Aşağıdaki kodu iyice inceleyin. Uzaylıya tıkladıktan sonra ne olacak?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Çiftçi iki balkabağı toplayacak.
@@ -6147,35 +6182,57 @@ tr-TR:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Hiçbir şey olmayacak.
-        - {}
-        - correct: true
+          feedback: Yanlış. Kuru ot yuvarlanmaya başlayacak
+        - text: Kuru ot ekranın üst kısmına doğru kayacak
+          feedback: Yanlış. Kuru ot yuvarlanmaya başlayacak
+        - text: Kuru ot yuvarlanmaya başlayacak
+          correct: true
           feedback: Doğru!
-        - {}
+        - text: Kuru ot göz kırpacak.
+          feedback: Yanlış. Kuru ot yuvarlanmaya başlayacak
         questions:
         - text: Aşağıdaki kodu iyice inceleyin. "Çalıştır"a bastıktan sonra ne olacak?
       courseF_EOC_2021:
         display_name: Ders Projesinin Sonu
+        description: Kurs F'nin sonuna ulaştınız! Oluşturmak üzere bir proje seçin.
       courseF_EOC_examples_2021:
         display_name: Ders Projesinin Sonu
+        description: Kurs F'nin sonuna ulaştınız! Oluşturmak üzere bir proje seçin.
       courseF_EOC_samples_2021:
         display_name: Ders Projesinin Sonu
+        description: Son projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere
+          bakmak için biraz zaman ayırın.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Hareketli nesne sadece sağa dönecek.
+          feedback: Yanlış. Hareketli nesne doğuya doğru da hareket edecek.
+        - text: Hareketli nesne sadece doğuya doğru hareket edecek.
+          feedback: Yanlış. Hareketli nesnenin dönüşü durmamıştır; dolayısıyla ikisini
+            de aynı anda yapar.
+        - text: Hareketli nesne aynı anda dönecek ve hareket edecek.
+          correct: true
+          feedback: Doğru! İki davranış aynı anda olacak.
+        - text: Hareketli nesne önce dönecek, sonra hareket edecek.
+          feedback: Yanlış. Hareketli Nesne Laboratuvarında bağlı bloklar, birbiri
+            ardından gerçekleşir. Dolayısıyla iki davranış aynı anda olacak.
         questions:
-        - {}
+        - text: Kodu oku, sonra da bir tahminde bulun.
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Bir pizza hemen geliyor!"'
+          feedback: Yanlış. Değişken etiketleri eşleşmiyor.
+        - text: '"Bir yemek hemen geliyor!"'
+          feedback: Yanlış. Değişkenin etkieti asla yazdırılmaz.
+        - text: '"Bir yiyecek hemen geliyor!"'
+          feedback: Yanlış. Değişkenin etkieti asla yazdırılmaz.
+        - text: '"Bir  hemen geliyor!"'
+          correct: true
+          feedback: Doğru! Değişken etiketleri eşleşmiyor.
+        - text: Hiçbir şey yazdırılmayacak.
+          feedback: Yanlış. Olay ve yazdır bloğu yine de çalışır.
         questions:
-        - {}
+        - text: Bu kod tanıdık gelebilir, ancak dikkatlice okuyun. Kullanıcı "pizza"
+            yazarsa ne yazdırılır?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.
@@ -6187,7 +6244,8 @@ tr-TR:
         - text: Sanatçı, 50 derecelik dönüşleri olan üç açık kenar çizecek.
           feedback: Yanlış. Bunun için, "uzunluk" değişkeninin "dönüş" bloğunda kullanılması
             gerekir.
-        - feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
+        - text: Bilgisayar, kullanıcıdan bir sayı isteyecek.
+          feedback: '"Uzunluk" değişkeni 50''ye ayarlanmış ve "kadar ilerle" bloğunda
             kullanılıyor. Sanatçı, kenarları 50 piksel olan bir üçgen çizecek.'
         questions:
         - text: '"Uzunluk" değişkenini 50 olarak ayarladık. "Çalıştır"a bastığınızda
@@ -6204,29 +6262,64 @@ tr-TR:
         - text: 'Arı ilerleyecek ve her çiçekten bir nektar toplayacak. '
           feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
             sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
-        - feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
+        - text: 'Arı ilerleyerek 1 ve 4 numaralı çiçeklerden bir nektar toplayacak. '
+          feedback: Yanlış. "For" döngüsü, arının doğru miktarda nektar toplamasını
             sağlar ama yalnızca 4 çiçeğe ulaşacak şekilde ayarlanmış.
         markdown: Ah! 'İçin' döngülerinin kullanımı, bu bulmacayı daha da kolaylaştırır!
         questions:
         - text: Aşağıdaki kodu okuyun. "Çalıştır"a bastığınızda ne olacak?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Her iki uçak da ızgara boyunca bir boşluk kadar hareket edecek, ardından
+            duracak.
+          feedback: Yanlış. Bu hareketli nesnelerde, durmaları söylenene kadar koşmaya
+            devam etme "davranışı" vardır.
+        - text: Her iki uçak da hareket etmeye başlayacak ve durmayacak.
+          correct: true
+          feedback: Doğru! Bu davranışlar uçaklara harekete başlamalarını ve devam
+            etmelerini söyler.
+        - text: Önce bir uçak hareket edecek ve sonra da diğer uçak hareket edecek.
+          feedback: Yanlış. Hareketli Nesne Laboratuvarındaki her kod bloğu, öncekinin
+            hemen ardından çalışır.
+        - text: Uçaklar çarpışacak.
+          feedback: Yanlış. Uçaklar, temas edecekleri şekilde konumlandırılmaz.
         questions:
-        - {}
+        - text: Kodu oku, sonra da bir tahminde bulun.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Program, "Merhaba ad!" yazacak
+          feedback: Yanlış. Ad bloğunun yerini, yazdığınız şey alacak.
+        - text: Program, seni yazdığın ad ile karşılayacak.
+          correct: true
+          feedback: Doğru! Yazdıkların, ad bloğunun yerine kullanılır.
+        - text: Hareketli nesne boyut değiştirecek.
+          feedback: Yanlış. Metin, ekrana yazılır.
+        - text: Bilgisayar, başka bir soru soracak.
+          feedback: Yanlış. Program başladığı anda sadece bir soru sorulur.
         questions:
-        - {}
+        - text: 'Bu program, bir soruyu klavyeyle yazarak yanıtlamanı sağlar. "yazdır"
+            bloğu ekranda metni gösterir. Bir tahmin yap: Soruyu cevapladıktan sonra
+            ne olacak?'
       courseF_variables_stop:
         content1: açıklama buraya
+        markdown: |-
+          # Dur!
+
+          ## Devam etmeye hazır olduğundan emin misin?
+
+
+          Bir sonraki seviyede, projeniz için kod yazmaya başlayacaksınız. En iyi sonucu, hazır bir planınız varsa alırsınız.
+
+          Tamamlanmış planınız şunları içermelidir:
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Hazırladığın projenin türü. Örneğin, bir tebrik kartı, sohbet robotu veya boş alan hikayesi.
+          * Kullanıcıya soracağın soruların bir listesi.
+          * Ekranda göstereceğin diğer metinler.
+          * İhtiyaç duyacağın hareketli nesnelerin (ve davranışlarının) bir açıklaması veya çizimi.
+
+          Devam etmeye hazır olup olmadığından emin değilsen öğretmenine danış!
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: Artist, bulmacayı doğru çözecek.
@@ -6243,6 +6336,10 @@ tr-TR:
         - text: '"Çalıştır" düğmesine bastığınızda ne olacak?'
       csf_be_a_super_digital_citizen_2021:
         content1: açıklama buraya
+        markdown: |-
+          # Süper Dijital Vatandaş
+
+          ## Siber zorbalık gördüğümüzde nasıl karşı çıkabiliriz?
       csf_digital_trails_2021:
         markdown: |-
           # Dijital İzi Takip Edin
@@ -6250,8 +6347,31 @@ tr-TR:
           ## Dijital ayak izinizde hangi bilgilere sahip olunabilir?
       csf_password_power-up_2021:
         content1: açıklama buraya
+        markdown: |-
+          # Şifrenizi Güçlendirin
+
+          ## Hatırlanması Gereken Şifre İpuçları
+
+          * Unutmayacağınız bir **ifade** ile başlayın.
+          * Şifrenizi yalnızca **ebeveynleriniz** bilmelidir.
+          * Şifrenizde asla **özel** kimlik bilgilerini kullanmayın.
+          * En az **sekiz** karakterden oluşan şifreler oluşturun.
+          * Şifrenizde harfler, sayılar ve **semboller** kullanın.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: açıklama buraya
+        markdown: |
+          # STOP Kötülüğe DUR de
+
+          ## İnternette biri sana kötü davranıyorsa ne yapmalısın?
+
+          * **S**tep away / Uzaklaş
+          * **T**ell a trusted adult / Güvendiğin bir yetişkine anlat
+          * **O**K sites first / Önce uygun siteler
+          * **P**ause and think online / Dur ve düşün
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_safety_in_my_online_neighborhood_2021:
         markdown: |-
           # Çevrimiçi Komşum
@@ -6259,6 +6379,7 @@ tr-TR:
           ## İnternette güvenli bir şekilde sayfalara nasıl gidersiniz?
       express_EOC_2021:
         display_name: Ders Projesinin Sonu
+        description: Kurs E'nin sonuna ulaştınız! Oluşturmak üzere bir proje seçin.
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Laurel bu kodu kullanarak 4 parça hazine toplayacak.
@@ -6271,7 +6392,349 @@ tr-TR:
         - text: Laurel hazinenin tamamını toplayacak.
           feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
             ve bu hataya neden oluyor.
-        - feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
+        - text: Laurel bu kodu kullanarak 1 parça hazine toplayacak.
+          feedback: Yanlış. Laurel, hazine olmayan yerde hazine toplamaya çalışıyor
             ve bu hataya neden oluyor.
         questions:
         - text: Bu koda dikkatlice bakın. Sizce program çalıştığında ne olacak?
+      courseF_intro_apps:
+        description: Bilgisayar Bilimi Temelleri'ne hoş geldiniz! Bu projelerin tamamı
+          Hareketli Nesne Laboratuvarı ile hazırlandı. Neler mümkün olduğunu görmek
+          için hemen deneyin. Bu kursu tamamladığınızda bunun gibi ve daha birçok
+          proje yapabileceksiniz.
+        display_name: Hareketli Nesne Laboratuvarı Uygulamaları
+        teacher_markdown: |-
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Buradaki tercihler, öğrencileri keşfedebilecekleri uygulamaları denemeye sevk eder. Bu aktivitenin amacı, [ders planında](.././) bulunan Uygulamaları Keşfetme çalışma sayfasıyla koordinasyonu sağlamaktır.
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |-
+          # Boş Alan Hikayeleri
+
+          Bu derste, boş alan hikayelerini kullanmayı ve yazmayı öğreneceksiniz. Bunun bilgisayar bilimi ile nasıl bağlantılı olduğunu öğrenmek için bu videoyu izleyin.
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # Kelimelerin Gücü
+
+          ## Birisi internette kaba veya incitici bir dil kullandığında ne yapmalısınız?
+      courseF_events_freeplay:
+        description: Artık öğrendiklerinizi projenizi daha da iyi hale getirmek için
+          kullanabilirsiniz! Programınızın üstüne eklemeye devam edin veya yeni bir
+          şeye başlayın!
+        display_name: Olaylar - Ücretsiz Oyun
+      courseF_events_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Olaylarla alıştırma yapmaya devam et!
+        display_name: Olay Alıştırması
+        teacher_markdown: |+
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Fırlat!|Uçmayı öğrenme|Fıçı tono yap|Küçült ve Büyüt|Balığı şişir!|Penguen hareket halinde|
+          |-|-|-|-|-|
+          | ***Tür*** |**İnceleme**|**Debug**|**Hata Ayıklama**|**Debug**|**İsteğe Bağlı İçerik**|**İsteğe Bağlı İçerik**
+          | ***Kavram***|*events, behaviors*|*olaylar, davranışlar*|*events, behaviors*|*olaylar, davranışlar*|*when/while events*|*when/while olayları*|
+
+
+      courseF_sprites_freeplay:
+        description: İstediğin her şeyi oluşturma sırası sende! Ne tür bir proje yapacaksın?
+        display_name: Hareketli Nesneler - Ücretsiz Oyna
+      courseF_sprites_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Hareketli nesneler ve davranışlarla alıştırma
+          yapmaya devam et!
+        display_name: Hareketli Nesne Alıştırması
+        teacher_markdown: |+
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Çöl Sahnesi|Meyvenin boyutunu değiştir.|Yüzen Gemi Animasyonu Yap|Esintili Bir Gün|
+          |-|-|-|-|-|
+          | ***Tür*** |**İnceleme**|**Review**|**İnceleme**|**İnceleme**|
+          | ***Kavram***|*sprites, locations*|*hareketli nesneler, özellikler*|*sprites, locations, behaviors*|*davranışlar*|
+
+
+      courseF_text_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Metin ve istemlerle alıştırma yapmaya devam et!
+        display_name: Metin ve İstem Alıştırması
+        teacher_markdown: |+
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya sizin istediğiniz) kadarı üzerinde çalışabilirler.
+
+          Aşağıdaki açıklamaları kullanarak öğrenclerin kendi tercihlerini seçmelerine yardımcı olabilir veya kaç tane alt seviye tamamlamaları gerektiği ile ilgili beklenti oluşturabilirsiniz.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Metin için Konuşmayı Kullanma|İstemlerden Metin|Robotu adlandır!|Değişken Etiketleri|Büyük Metin|Renkler için istemde bulunma|Sıfırdan başlama|
+          |-|-|-|-|-|
+          | ***Tür*** |**İnceleme**|**Debug**|**Hata Ayıklama**|**Debug**|**İsteğe Bağlı İçerik**|**Optional Content**|**Ücretsiz Oyun**
+          | ***Kavram***|*print block, events*|*istemler, olaylar*|*adding spaces*|*eşleşen değişken etiketleri*|*title screen blocks*|*renk saklama*|*yeni içerik yok*
+
+
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # Özel ve Kişisel Bilgiler
+
+          ## Kendinizle ilgili hangi bilgileri İnternette paylaşmak uygun?
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Algoritmayı İzle
+
+          Bir oyun oynayın ve doğru sonu elde etmek için hangi komutların gerektiğini düşünün
+      courseD_EOC_examples_2021:
+        description: Son projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere
+          bakmak için biraz zaman ayırın.
+        display_name: Proje Örnekleri
+      courseF_artist_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Döngüler ve Sanatçı ile alıştırma yapmaya devam
+          et!
+        display_name: Sanatçı Alıştırması
+      courseF_beeFor_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Döngüler ve arı için alıştırma yapmaya devam et!
+        display_name: Arı Alıştırması
+      courseF_beeVar_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Değişkenler ve arı ile alıştırma yapmaya devam
+          et!
+        display_name: Arı Alıştırması
+      courseF_bee_practice:
+        description: Şimdiye kadar çok iyi gitti! Bir sonraki aktiviteni seç. Mümkün
+          olduğu kadar çok tamamla. Döngüler ve arı ile alıştırma yapmaya devam et!
+        display_name: Arı Alıştırması
+      courseF_variables_projects:
+        description: Bir tebrik kartı, bir sohbet robotu veya bir boş alan hikayesi
+          oluşturacaksınız. Projenizin \"1. Kısmını\" bitirdiyseniz \"2. Kısmına\"
+          gidin.
+        display_name: Proje Seç
+        teacher_markdown: |-
+          # Tercih Seviyesine Genel Bakış
+          Tercih seviyeleri, öğrencilerin tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki alt seviyelerden en az birini tamamlamalıdır ancak aynı proje için **iki** seviyeyi tamamlamaları teşvik edilmelidir.
+
+          Öğrenciler, buradaki tercihler arasında nasıl gezineceklerini anlamak için gerçekten net talimatlara ihtiyaç duyabilirler. Proje tercihlerinin her biri için burada iki alt seviye vardır. Başlamak için, öğrenciler "1. Kısım" olarak işaretlenmiş seviyelerden birini seçmelidir. Bu seviyeyi bitirdikten sonra buraya geri dönmeli ve *aynı* projenin "2. Kısmı"nı seçmelidirler. Her tercihin ilk seviyesi, öğrencilere projenin temel bileşenlerini bir araya getirmeleri sırasında geri bildirim sağlayacaktır. İkinci seviye, öğrencilerin kodlarında istedikleri değişiklikleri yapmalarına izin vermeyi amaçlayan bir "serbest oyun"dur.
+      courseF_variables_samples:
+        description: Bir tebrik kartı, bir sohbet robotu veya bir boş alan hikayesi
+          oluşturacaksınız. Başlamadan önce, ne oluşturmak istediğinizi görmek için
+          aşağıdaki örnek projeleri inceleyin. Kendi programınızı planlamaya hazır
+          olduğunuzda \"Bitir\"e basın.
+        display_name: Keşif - Örnek Programlar
+        teacher_markdown: "# Tercih Seviyesine Genel Bakış \nTercih seviyeleri, öğrencilerin
+          tamamlayacağı ek seviyeleri içeren bir menü sağlar. Öğrenciler buradaki
+          alt seviyelerden en az birini mutlaka tamamlamalıdır ancak istedikleri (veya
+          sizin istediğiniz) kadarı üzerinde çalışabilirler. \n\nÖğrenciler ne yaratmak
+          istediklerine karar vermeden önce bu projelere dikkatlice bakmalıdır. Onlara
+          bir sınıf olarak birlikte bakabilir veya öğrencilerin kendi başlarına keşfetmelerini
+          sağlayabilirsiniz."
+      express_EOC_examples_2021:
+        description: Son projenize başlamak üzeresiniz. Başlamadan önce, örnek projelere
+          bakmak için biraz zaman ayırın.
+        display_name: Proje Örnekleri
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # Genel Bakış
+
+          Sınıf, karakterlerini yeni yollarla etkileşime girecek şekilde programlar. temasEtme bloğunu nasıl kullandıklarına dair kısa bir incelemeden sonra, sınıf iki hareketli nesnenin etkileşime girebileceği başka yollar üzerinde beyin fırtınası yapar. Ardından, dört çarpışma bloğu (çarpışma, yer değiştirme, sekme ve tersine sekme) ile alıştırma yapmadan önce bir hareketli grafiğin diğerini ekran boyunca itmesini sağlamak için temasEtme'yi kullanırlar.
+          ## Kelime bilgisi
+
+          * **Soyutlama** - Bir çözümün birden fazla sorun için işe yaramasını sağlamak için belirli farklılıkları ortaya çıkarmak.
+
+          ## Tanıtılan Kod
+
+          * [hareketlinesne.tersinesekme()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [hareketlinesne.çarpışma()](//studio.code.org/docs/gamelab/collide/)
+          * [hareketlinesne.yerdeğiştirme()](//studio.code.org/docs/gamelab/displace/)
+          * [hareketlinesne.çarpıştırıcıkur()](//studio.code.org/docs/gamelab/setCollider/)
+          * [hareketlinesne.sekme()](//studio.code.org/docs/gamelab/bounce/)
+          * [hareketlinesne.canlılık](//studio.code.org/docs/gamelab/bonciness/)
+      CSD U3 Functions SFLP:
+        markdown: |-
+          # Genel Bakış
+
+          Bu ders, kodlarını düzenlemenin, daha okunabilir hale getirmenin ve tekrarlanan kod bloklarını kaldırmanın bir yolu olan işlevleri kapsar. Sınıf, daha yüksek seviyeli veya daha fazla soyut adımların, adımları anlamayı ve akıl yürütmeyi kolaylaştırdığını öğrenir ve ardından Game Lab'de işlevler oluşturmaya başlar. Dersin sonunda sınıf, yan kamera açılı oyunlarının son sürümünü düzenlemek ve işlevsellik eklemek için bu becerileri kullanır.
+          ## Kelime bilgisi
+
+          * **İşlev** - Tekrar tekrar kolayca arayabileceğiniz bir kod parçası.
+
+          ## Tanıtılan Kod
+
+          * [Bir işlev tanımlama](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Bir işlevi çağırma](//studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # Genel Bakış
+
+          Bu ders, çizim becerilerini genişlik ve yüksekliği içerecek şekilde genişletir ve rastgele sayı üretme kavramını tanıtır. Sınıf, genişlik ve yükseklik parametrelerini içeren elips() ve dikdörtgen() çeşitleriyle çizim yapmayı ve ekranı renkle doldurmak için arka plan() bloğunu kullanmayı öğrenir. İlerlemenin sonunda sınıf, randomNumber() bloğuna öğrenir ve rastgele bir gökkuşağı yılanı çizmek için yeni blokları kullanır.
+          ## Kelime bilgisi
+
+          * **Parametre** - Özel bir ihtiyaç için özelleştirmek üzere işleve ilettiğiniz fazladan bir bilgi parçası.
+
+          ## Tanıtılan Kod
+
+          * [arkaplan()](//studio.code.org/docs/gamelab/background/)
+          * [elips()](//studio.code.org/docs/gamelab/ellipse/)
+          * [dikdörtgen()](//studio.code.org/docs/gamelab/rect/)
+          * [rastgeleSayı()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          # Genel Bakış
+
+          Bu ders, bir programdaki bir sayıyı etiketlemenin veya rastgele oluşturulmuş bir değeri kaydetmenin bir yolu olarak değişkenleri tanıtır. Sınıf, derse bir değişkenin amacının çok basit bir tanımıyla başlar ve yeni blokları kullanarak alıştırmalar yapar. Daha sonra sınıf, rastgele bir sayı kaydetmek için değişkenleri kullanır ve programların aynı rastgele sayıyı birden çok kez kullanmasına izin verir.
+          ## Kelime bilgisi
+
+          * **Değişken** - Değişebilen bir bilgi parçası için yer tutucu.
+
+          ## Tanıtılan Kod
+
+          * [Bir değişken bildirme](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Bir değişkene değer bildirme ve atama](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Kaynaklar
+
+          * [Değişkenlere Giriş](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Nesne özellikleri
+      CSD Games variables practice_2021:
+        display_name: Değişkenleri Uygulama
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Aşağıdaki koda bak ve başlıkların nasıl görüntüleneceğini tahmin
+          et. Sağdaki seçeneklerden birini seç.
+        title: Hızlı Başlık Taraması
+      CSD U2 CSS practice_pilot_2021:
+        display_name: CSS ile Metin Biçimlendirme
+      CSD U2 Image challenge_pilot_2021:
+        display_name: 'Görüntü Ekleme '
+      CSD U2 Image practice_pilot_2021:
+        display_name: 'Görüntü Ekleme '
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: açıklama buraya
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: başlık
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: açıklama buraya
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - text: "![](https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif)"
+        - text: "![](https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif)"
+        - text: "![](https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif)"
+          correct: true
+        - text: "![](https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif)"
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Egzersizler
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: açıklama buraya
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: açıklama buraya
+      CSD U6 LED create intro_2021:
+        content1: açıklama buraya
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: açıklama buraya
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD games cake challenge choice_2021:
+        display_name: Meydan okuma
+      CSD games functions practice choice_2021:
+        display_name: Fonksiyonları Uygulama
+      CSD games platform challenge choice_2021:
+        display_name: Meydan okuma
+      CSD web conditionals practice choice_2021:
+        display_name: 'Koşulları Uygulama
+
+'
+      CSD web draw loop practice choice_2021:
+        display_name: Egzersizler
+      CSD web movement practice choice_2021:
+        display_name: Egzersizler
+      CSD web text practice choice_2021:
+        display_name: Egzersizler
+      csd-pre-survey-levelgroup_21_22:
+        title: CS Keşifleri Öğrenci Ön Ders Değerlendirmesi

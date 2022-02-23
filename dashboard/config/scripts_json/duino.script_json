@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:53 UTC",
+    "serialized_at": "2021-11-22 19:56:49 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "duino"
     }
@@ -89,16 +93,106 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "7e25c3e1-5d1e-4e60-9f8c-d71288176f01",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e25c3e1-5d1e-4e60-9f8c-d71288176f01",
+        "lesson.key": "Basic Circuits",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "key": "2be4feb4-a821-4ac8-a627-a07ccbde1210",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2be4feb4-a821-4ac8-a627-a07ccbde1210",
+        "lesson.key": "Blinky Lights",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "key": "3efd7aef-b90f-44c1-aa32-34dc9da04a75",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3efd7aef-b90f-44c1-aa32-34dc9da04a75",
+        "lesson.key": "Making Music",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    },
+    {
+      "key": "39076ae8-0641-4ac8-af3c-15404c05eef7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "39076ae8-0641-4ac8-af3c-15404c05eef7",
+        "lesson.key": "JunkBot",
+        "lesson_group.key": "",
+        "script.name": "duino"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "d3dd5a99-e218-4ab6-bc1e-d5a568665240",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d3dd5a99-e218-4ab6-bc1e-d5a568665240",
+        "lesson_activity.key": "7e25c3e1-5d1e-4e60-9f8c-d71288176f01"
+      }
+    },
+    {
+      "key": "0806f3ad-ec0c-4d97-81f9-d2adca77eadf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0806f3ad-ec0c-4d97-81f9-d2adca77eadf",
+        "lesson_activity.key": "2be4feb4-a821-4ac8-a627-a07ccbde1210"
+      }
+    },
+    {
+      "key": "eda4f432-591a-4233-bf7e-ba310dcf12a0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eda4f432-591a-4233-bf7e-ba310dcf12a0",
+        "lesson_activity.key": "3efd7aef-b90f-44c1-aa32-34dc9da04a75"
+      }
+    },
+    {
+      "key": "453f3b5c-b201-4f3d-9418-7b3604b5ff31",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "453f3b5c-b201-4f3d-9418-7b3604b5ff31",
+        "lesson_activity.key": "39076ae8-0641-4ac8-af3c-15404c05eef7"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -112,7 +206,8 @@
         ],
         "lesson.key": "Basic Circuits",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "d3dd5a99-e218-4ab6-bc1e-d5a568665240"
       },
       "level_keys": [
         "duino battery led"
@@ -121,7 +216,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -135,7 +230,8 @@
         ],
         "lesson.key": "Basic Circuits",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "d3dd5a99-e218-4ab6-bc1e-d5a568665240"
       },
       "level_keys": [
         "duino button led"
@@ -144,7 +240,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -158,7 +254,8 @@
         ],
         "lesson.key": "Blinky Lights",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "0806f3ad-ec0c-4d97-81f9-d2adca77eadf"
       },
       "level_keys": [
         "duino multi leds"
@@ -167,7 +264,7 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -181,7 +278,8 @@
         ],
         "lesson.key": "Blinky Lights",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "0806f3ad-ec0c-4d97-81f9-d2adca77eadf"
       },
       "level_keys": [
         "duino pov"
@@ -190,7 +288,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -204,7 +302,8 @@
         ],
         "lesson.key": "Making Music",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "eda4f432-591a-4233-bf7e-ba310dcf12a0"
       },
       "level_keys": [
         "duino music"
@@ -213,7 +312,7 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -227,7 +326,8 @@
         ],
         "lesson.key": "Making Music",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "eda4f432-591a-4233-bf7e-ba310dcf12a0"
       },
       "level_keys": [
         "duino auduino"
@@ -236,7 +336,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -250,7 +350,8 @@
         ],
         "lesson.key": "JunkBot",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "453f3b5c-b201-4f3d-9418-7b3604b5ff31"
       },
       "level_keys": [
         "duino junkbot build"
@@ -259,7 +360,7 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -273,7 +374,8 @@
         ],
         "lesson.key": "JunkBot",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "453f3b5c-b201-4f3d-9418-7b3604b5ff31"
       },
       "level_keys": [
         "duino junkbot software"
@@ -289,7 +391,8 @@
         ],
         "lesson.key": "Basic Circuits",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "d3dd5a99-e218-4ab6-bc1e-d5a568665240"
       }
     },
     {
@@ -300,7 +403,8 @@
         ],
         "lesson.key": "Basic Circuits",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "d3dd5a99-e218-4ab6-bc1e-d5a568665240"
       }
     },
     {
@@ -311,7 +415,8 @@
         ],
         "lesson.key": "Blinky Lights",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "0806f3ad-ec0c-4d97-81f9-d2adca77eadf"
       }
     },
     {
@@ -322,7 +427,8 @@
         ],
         "lesson.key": "Blinky Lights",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "0806f3ad-ec0c-4d97-81f9-d2adca77eadf"
       }
     },
     {
@@ -333,7 +439,8 @@
         ],
         "lesson.key": "Making Music",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "eda4f432-591a-4233-bf7e-ba310dcf12a0"
       }
     },
     {
@@ -344,7 +451,8 @@
         ],
         "lesson.key": "Making Music",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "eda4f432-591a-4233-bf7e-ba310dcf12a0"
       }
     },
     {
@@ -355,7 +463,8 @@
         ],
         "lesson.key": "JunkBot",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "453f3b5c-b201-4f3d-9418-7b3604b5ff31"
       }
     },
     {
@@ -366,7 +475,8 @@
         ],
         "lesson.key": "JunkBot",
         "lesson_group.key": "",
-        "script.name": "duino"
+        "script.name": "duino",
+        "activity_section.key": "453f3b5c-b201-4f3d-9418-7b3604b5ff31"
       }
     }
   ],

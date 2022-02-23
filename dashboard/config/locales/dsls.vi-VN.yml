@@ -2513,31 +2513,6 @@ vi-VN:
           # Câu chuyện khoảng trống
 
           Trong bài học này, bạn sẽ học cách sử dụng và viết câu chuyện khoảng trống. Hãy xem video này để tìm hiểu mối liên hệ với khoa học máy tính.
-      OPD-K5 CS Courses_dani:
-        markdown: "# Lập kế hoạch > Bắt đầu trên Code.org\n\n\n## Bước 1: Chọn khóa
-          học\nTất cả các khóa học của chúng tôi – từ khóa dành cho trẻ chưa biết
-          đọc tới khóa dành cho học sinh trung học – đều có trên **[danh mục khóa
-          học](https://studio.code.org/courses)**. Để tìm các bài học Nguyên tắc cơ
-          bản của KHMT mà bạn đã luyện tập, hãy truy cập **[trang tiểu học](https://code.org/educate/curriculum/elementary-school)**
-          và cuộn xuống phần “Khóa học”. Tất cả khóa học của chúng tôi đều miễn phí.
-          Hãy trò chuyện với đồng nghiệp ở trường bạn để quyết định xem chương trình
-          đào tạo nào có thể tích hợp với nhiều môn học khác nhau.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          Bước 2: Thiết lập nhóm đào tạo của bạn\nThiết lập nhóm đào tạo để xem tiến
-          trình của học sinh, in thẻ điểm danh cho học sinh của bạn, quản lý tài khoản
-          của các em và in chứng chỉ để các em có thể mang về nhà khi kết thúc khóa
-          học. Hãy nhấp chuột vào liên kết này để **[xem một đoạn video ngắn](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**
-          minh họa cách thiết lập lớp khoa học máy tính đầu tiên của bạn trên Code.org.
-          Bạn cũng có thể tìm thấy các bước trong **[bài viết hỗ trợ sau](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          Bước 3: Chỉ định khóa học cho nhóm của bạn\nNhấp chuột vào khóa học mà bạn
-          đang dạy – bạn sẽ thấy màn hình như dưới đây. Sau đó, bạn có thể nhấp chuột
-          vào “Chỉ định khóa học” và chỉ định khóa học đó cho một trong các nhóm của
-          bạn. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Bước 4: Bắt đầu dạy thôi!\nChỉ cần một bài học duy nhất để mang các khái
-          niệm khoa học máy tính vào lớp học của bạn. Sau khi thấy học sinh của mình
-          nhiệt tình với KHMT, hãy tiếp tục với giáo án hàng ngày để hướng dẫn học
-          sinh của mình, các hoạt động không sử dụng thiết bị điện tử để bạn có thể
-          thực hiện mà không cần máy tính và các diễn đàn để kết nối với các thầy
-          cô giáo khác.\n\n\n"
       OPD-K5 Stage3aGo_dani:
         content1: mô tả ở đây
       SimonSays-Unplugged_2021:
@@ -2569,18 +2544,19 @@ vi-VN:
         answers:
         - text: '4'
           feedback: Sai rồi. Với mỗi vòng lặp trong số 3 vòng lặp, người nông dân
-            sẽ thu thập 4 bí ngô. 4 nhân 3 là 12!
+            sẽ lấy 4 bí ngô. 4 nhân 3 là 12!
         - text: '12'
           correct: true
           feedback: Chính xác!
         - text: '15'
           feedback: Sai rồi. Với mỗi vòng lặp trong số 3 vòng lặp, người nông dân
-            sẽ thu thập 4 bí ngô. 4 nhân 3 là 12!
+            sẽ lấy 4 bí ngô. 4 nhân 3 là 12!
         - text: '20'
           feedback: Sai rồi. Với mỗi vòng lặp trong số 3 vòng lặp, người nông dân
-            sẽ thu thập 4 bí ngô. 4 nhân 3 là 12!
+            sẽ lấy 4 bí ngô. 4 nhân 3 là 12!
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh dưới đây. Người nông dân sẽ thu hoạch được bao
+            nhiêu bí ngô sau khi bạn nhấp chuột vào nút “Run” (chạy)?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - text: Scrat sẽ đến được chỗ hạt sồi. Không có lỗi trong mã lệnh.
@@ -2621,7 +2597,7 @@ vi-VN:
           feedback: Sai rồi. Khối lặp lại sẽ khiến BB-8 tiến lên 5 lần.
         - text: BB-8 sẽ chỉ di chuyển một ô
           feedback: Sai rồi. Khối lặp lại sẽ khiến BB-8 tiến lên 5 lần.
-        - text: BB-8 sẽ di chuyển 5 lần và lấy toàn bộ phế liệu
+        - text: BB-8 sẽ di chuyển 5 lần và nhặt toàn bộ phế liệu
           correct: true
           feedback: Chính xác!
         - text: BB-8 sẽ chỉ di chuyển 3 ô.
@@ -2636,7 +2612,7 @@ vi-VN:
         - text: BB-8 không đi đủ xa trong vòng lặp đầu tiên để lấy hết phế liệu.
           correct: true
           feedback: Chính xác!
-        - text: BB-8 sẽ thu thập toàn bộ phế liệu mà không gặp trở ngại gì.
+        - text: BB-8 sẽ nhặt toàn bộ phế liệu mà không gặp trở ngại gì.
           feedback: Sai rồi. Vòng lặp đầu tiên chỉ giúp BB-8 tiến lên 2 ô mặc dù cậu
             ta cần tiến lên 3 ô.
         - text: BB-8 sẽ rẽ sai hướng sau vòng lặp đầu tiên.
@@ -2659,19 +2635,46 @@ vi-VN:
           correct: true
           feedback: Chính xác!
         - text: B
+          feedback: Sai rồi. Vòng lặp bên trong vẽ hình ngũ giác và vòng lặp bên ngoài
+            lặp lại vòng lặp đó 4 lần theo hình tròn.
         - text: C
+          feedback: Sai rồi. Vòng lặp bên trong vẽ hình ngũ giác và vòng lặp bên ngoài
+            lặp lại vòng lặp đó 4 lần theo hình tròn.
         - text: Không mục nào ở trên
+          feedback: Sai rồi. Vòng lặp bên trong vẽ hình ngũ giác và vòng lặp bên ngoài
+            lặp lại vòng lặp đó 4 lần theo hình tròn.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh dưới đây. Chương trình này sẽ vẽ hình gì khi nhấp
+            chuột vào nút “Run” (chạy)?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Dù sao thì chú ong cũng sẽ di chuyển đến chỗ đám mây và thử lấy mật
+            hoa.
+          feedback: Sai rồi. Khối `if at flower` (nếu ở hoa) sẽ đảm bảo rằng chú ong
+            sẽ chỉ thử lấy mật hoa nếu có bông hoa dưới đám mây.
+        - text: Chú ong sẽ di chuyển đến chỗ đám mây và thử lấy mật hoa nếu có bông
+            hoa bên dưới.
+          correct: true
           feedback: Chính xác!
-        - {}
+        - text: Dù sao thì chú ong cũng sẽ di chuyển đến chỗ đám mây và không làm
+            gì cả.
+          feedback: Sai rồi. Khối `if at flower` (nếu ở hoa) sẽ đảm bảo rằng chú ong
+            sẽ thử lấy mật hoa nếu có bông hoa dưới đám mây.
         - text: Chú ong sẽ không chạm được đám mây.
+          feedback: Sai rồi. Khối `if at flower` (nếu ở hoa) sẽ đảm bảo rằng chú ong
+            sẽ chỉ thử lấy mật hoa nếu có bông hoa dưới đám mây.
         questions:
-        - {}
+        - text: Đám mây đang chắn tầm nhìn. Có thể có một bông hoa dưới đám mây này.
+            Nếu có hoa, chú ong cần lấy mật hoa một lần. Nếu không có hoa, chú ong
+            không nên làm gì cả. Hãy xem kỹ mã lệnh dưới đây. Bạn nghĩ điều gì sẽ
+            xảy ra sau khi bạn nhấp chuột vào “Run” (chạy)?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
@@ -2682,85 +2685,158 @@ vi-VN:
         - {}
       courseD_multi_bee_conditionals7_predict2_2021:
         answers:
-        - correct: true
+        - text: Chú ong sẽ lấy mật hoa ở từng bông hoa và làm mật ở từng tổ ong.
+          correct: true
           feedback: Chính xác!
-        - {}
-        - {}
+        - text: Chú ong sẽ thử lấy mật hoa ở cả bông hoa và tổ ong.
+          feedback: Sai rồi. Khối `if at flower` (nếu ở bông hoa) sẽ giúp chú ong
+            lấy mật hoa ở mỗi bông hoa và làm mật ở mỗi tổ ong.
+        - text: Chú ong sẽ cố gắng lấy mật từ cả bông hoa và tổ ong.
+          feedback: Sai rồi. Khối `if at flower` (nếu ở bông hoa) sẽ giúp chú ong
+            lấy mật hoa ở mỗi bông hoa và làm mật ở mỗi tổ ong.
         - text: Chú ong sẽ cố gắng lấy mật và mật hoa từ cả hoa và tổ ong.
+          feedback: Sai rồi. Khối `if at flower` (nếu ở bông hoa) sẽ giúp chú ong
+            lấy mật hoa ở mỗi bông hoa và làm mật ở mỗi tổ ong.
         questions:
-        - {}
+        - text: 'Hãy xem kỹ mã lệnh dưới đây. Bạn nghĩ điều gì sẽ xảy ra sau khi bạn
+            nhấp chuột vào “Run” (chạy)? Hãy nhớ rằng: sẽ chỉ có *một* tổ ong hoặc
+            *một* bông hoa đằng sau mỗi đám mây.'
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Chú ong sẽ tiến lên và lấy mật hoa một lần duy nhất.
+          feedback: Sai rồi. Chú ong lặp lại hành động tiến lên và lấy mật hoa, từ
+            đó giải được bài tập.
+        - text: Chú ong sẽ chỉ lấy được 2 đơn vị mật hoa.
+          feedback: Sai rồi. Chú ong lặp lại hành động tiến lên và lấy mật hoa, từ
+            đó giải được bài tập.
+        - text: Chú ong sẽ lấy toàn bộ mật hoa.
+          correct: true
           feedback: Chính xác!
         - text: Chũ ong sẽ rẽ sai hướng.
+          feedback: Sai rồi. Chú ong lặp lại hành động tiến lên và lấy mật hoa, từ
+            đó giải được bài tập.
         questions:
-        - {}
+        - text: Hãy quan sát kỹ các vòng lặp lồng nhau bên dưới. Điều gì sẽ xảy ra
+            khi bạn nhấp chuột vào nút “Run” (chạy)?
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
+          feedback: Sai rồi. Chú ong lấy 2 mật hoa trong vòng lặp tiến lên, sau đó
+            lấy tiếp 2 mật hoa trong vòng đi xuống. Tất cả nằm trong một vòng lặp
+            khác lặp lại hai lần. 4 nhân 2 là 8!
         - text: '8'
           correct: true
           feedback: Chính xác!
         - text: '10'
+          feedback: Sai rồi. Chú ong lấy 2 mật hoa trong vòng lặp tiến lên, sau đó
+            lấy tiếp 2 mật hoa trong vòng đi xuống. Tất cả nằm trong một vòng lặp
+            khác lặp lại hai lần. 4 nhân 2 là 8!
         - text: '12'
+          feedback: Sai rồi. Chú ong lấy 2 mật hoa trong vòng lặp tiến lên, sau đó
+            lấy tiếp 2 mật hoa trong vòng đi xuống. Tất cả nằm trong một vòng lặp
+            khác lặp lại hai lần. 4 nhân 2 là 8!
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh dưới đây. Chú ong sẽ tạo ra bao nhiêu mật ong sau
+            khi bạn nhấp chuột vào nút “Run” (chạy)?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Người thu hoạch sẽ nhặt tất cả các loại nông sản.
+          feedback: Sai rồi. Không có mã lệnh nào để nhặt bí ngô.
+        - text: Người thu hoạch sẽ không nhặt bất kỳ loại nông sản nào trên con đường
+            mà cô ấy đang đi.
+          feedback: Sai rồi. Mã lệnh sẽ yêu cầu người thu hoạch liên tục đi theo hình
+            bậc thang và nhặt toàn bộ ngô hoặc rau diếp khi cô ấy tìm thấy. Cô ấy
+            sẽ không nhặt bí ngô.
+        - text: Người thu hoạch sẽ nhặt tất cả các loại nông sản, ngoại trừ bí ngô.
+          correct: true
           feedback: Chính xác!
         - text: Người thu hoạch sẽ chỉ hái bí.
+          feedback: Sai rồi. Mã lệnh sẽ yêu cầu người thu hoạch liên tục đi theo hình
+            bậc thang và nhặt toàn bộ ngô hoặc rau diếp khi cô ấy tìm thấy. Cô ấy
+            sẽ không nhặt bí ngô.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh dưới đây. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (chạy)?
+        markdown: |
+          Cây trong bài tập này có thể là ngô hoặc rau diếp.
+          <br/>
       courseD_multi_farmer_while10_predict2_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Không có gì. Mã lệnh này sẽ chỉ để lại mặt đất phẳng.
+          feedback: Sai rồi. Không có mã lệnh nào để dọn đống đất.
+        - text: Mã lệnh này sẽ khiến đống đất còn nguyên.
+          correct: true
           feedback: Chính xác!
-        - {}
+        - text: Mã lệnh này sẽ khiến hố còn nguyên.
+          feedback: Sai rồi. Vòng lặp `while` (khi) sẽ xử lý vòng lặp có kích thước
+            bất kỳ, nhưng không có mã lệnh nào để dọn đống đất.
         - text: Mã lệnh này sẽ không xử lý hố cuối cùng.
+          feedback: Sai rồi. Không có mã lệnh nào để dọn đống đất.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh dưới đây. Cuối bài tập này sẽ còn sót lại gì?
       courseD_multi_farmer_while4_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Sẽ không có gì xảy ra.
+          feedback: Sai rồi. Người nông dân sẽ dọn tiếp chừng nào đống đất vẫn còn,
+            rồi dừng lại khi hết đống đất.
+        - text: Người nông dân sẽ không ngừng dọn đống đất.
+          feedback: Sai rồi. Người nông dân sẽ dọn tiếp chừng nào đống đất vẫn còn,
+            rồi dừng lại khi hết đống đất.
+        - text: Người nông dân sẽ dọn tiếp chừng nào đống đất vẫn còn, rồi dừng lại
+            khi hết đống đất.
+          correct: true
           feedback: Chính xác!
         - text: Bác nông dân sẽ làm sạch vết bẩn một lần duy nhất.
+          feedback: Sai rồi. Người nông dân sẽ dọn tiếp chừng nào đống đất vẫn còn,
+            rồi dừng lại khi hết đống đất.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (chạy)?
       courseD_multi_maze_until10_predict2_2021:
         answers:
-        - correct: true
+        - text: Thây ma sẽ bỏ qua đường đi đúng và cuối cùng sẽ tiến và lùi mãi mãi.
+          correct: true
           feedback: Chính xác!
-        - {}
-        - {}
+        - text: Thây ma sẽ đến được chỗ hoa hướng dương.
+          feedback: Sai rồi. Thây ma sẽ bỏ qua đường đi đúng và cuối cùng sẽ tiến
+            và lùi mãi mãi.
+        - text: Thây ma sẽ xoay phải ở lối đi đầu tiên và đi vòng quanh mãi mãi.
+          feedback: Sai rồi. Thây ma sẽ bỏ qua đường đi đúng và cuối cùng sẽ tiến
+            và lùi mãi mãi.
         - text: Thây ma sẽ bị mắc kẹt ở cuối con đường phía trước.
+          feedback: Trong mã lệnh này, thây ma sẽ bỏ qua đường đi đúng và cuối cùng
+            sẽ tiến và lùi mãi mãi.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh sau đây. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (Chạy)?
       courseD_multi_maze_until2_predict1_2021:
         answers:
-        - {}
+        - text: Chú chim sẽ không di chuyển chút nào.
+          feedback: Sai rồi. Mã lệnh làm chú chim tiến lên khi có đường đi, sau đó
+            xoay trái. Chú chim sẽ tiếp tục làm như vậy cho đến khi tới chỗ con heo!
         - text: Chú chim sẽ đến được chỗ con heo.
           correct: true
           feedback: Chính xác!
-        - {}
+        - text: Chú chim sẽ tiến lên và lao vào thuốc nổ.
+          feedback: Sai rồi. Mã lệnh làm chú chim tiến lên khi có đường đi an toàn,
+            sau đó xoay trái. Chú chim sẽ tiếp tục làm như vậy cho đến khi tới chỗ
+            con heo!
         - text: Chú chim sẽ quay sai hướng.
+          feedback: Mã lệnh làm chú chim tiến lên khi có đường đi, sau đó xoay trái.
+            Chú chim sẽ tiếp tục làm như vậy cho đến khi tới chỗ con heo!
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh dưới đây. Bạn nghĩ điều gì sẽ xảy ra khi nhấp chuột
+            vào nút “Run” (chạy)?
       courseE_EOC_2021:
         display_name: Dự án tổng kết khóa học
+        description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
       courseE_EOC_examples_2021:
         display_name: Dự án tổng kết khóa học
+        description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
       courseE_multi_dance_events_predict1_2021:
         answers:
-        - feedback: Sai. Người ngoài hành tinh sẽ bắt đầu di chuyển lên và xuống trên
+        - text: Sẽ không có gì xảy ra.
+          feedback: Sai. Người ngoài hành tinh sẽ bắt đầu di chuyển lên và xuống trên
             màn hình.
         - text: Người ngoài hành tinh sẽ bắt đầu tuần tra từ phải sang trái.
           feedback: Sai. Người ngoài hành tinh sẽ bắt đầu di chuyển lên và xuống trên
@@ -2772,24 +2848,40 @@ vi-VN:
           feedback: Sai. Người ngoài hành tinh xanh sẽ bắt đầu di chuyển lên và xuống
             trên màn hình.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào người ngoài hành tinh?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Người thu hoạch sẽ hái hai quả bí ngô.
+          feedback: Sai rồi. Người thu hoạch tiến lên cho đến cuối con đường, sau
+            đó xoay ngược lại và lùi đến khi hái được rau diếp.
+        - text: Người thu hoạch sẽ hái toàn bộ bí ngô.
+          feedback: Sai rồi. Người thu hoạch tiến lên cho đến cuối con đường, sau
+            đó xoay ngược lại và lùi đến khi hái được rau diếp.
+        - text: Người thu hoạch sẽ hái rau diếp.
+          correct: true
           feedback: Chính xác!
-        - {}
+        - text: Người thu hoạch sẽ hái ngô.
+          feedback: Sai rồi. Người thu hoạch tiến lên cho đến cuối con đường, sau
+            đó xoay ngược lại và lùi đến khi hái được rau diếp.
         questions:
-        - {}
+        - text: Hãy nhìn vào các hàm được định nghĩa bên dưới. Người thu hoạch sẽ
+            hái những nông sản nào?
       courseE_prediction_artistFunction1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Không có gì. Hàm không được khai báo trong chương trình.
+          feedback: Sai rồi. Hàm thực ra được khai báo hai lần trong chương trình.
+        - text: Họa sĩ sẽ vẽ một hình vuông duy nhất.
+          feedback: Sai rồi. Hàm thực ra được khai báo hai lần trong chương trình.
+        - text: Họa sĩ sẽ vẽ hai hình vuông chồng lên nhau.
+          feedback: Sai rồi. Chiều dài mỗi cạnh của hình vuông chỉ là 100 điểm ảnh,
+            nhưng họa sĩ đã nhảy 175 điểm ảnh giữa các hàm.
+        - text: Họa sĩ sẽ vẽ hai hình vuông với một khoảng trống nhỏ ở giữa.
+          correct: true
+          feedback: Chính xác! Hàm được khai báo hai lần trong chương trình, kèm theo
+            một bước nhảy ở giữa.
         questions:
-        - {}
+        - text: Bạn nghĩ điều gì sẽ xảy ra khi bạn nhấp Run vào nút “Run” (chạy)?
       courseE_prediction_artistFunction1_dani:
         answers:
         - {}
@@ -2800,7 +2892,8 @@ vi-VN:
         - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
-        - feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+        - text: Sẽ không có gì xảy ra.
+          feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
         - text: Cỏ lăn sẽ nổi lên trên cùng của màn hình
           feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
         - text: Cỏ lăn sẽ bắt đầu lăn
@@ -2809,7 +2902,8 @@ vi-VN:
         - text: Cỏ lăn sẽ nhấp nháy.
           feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (chạy)?
       courseF_EOC_2021:
         display_name: Dự án tổng kết khóa học
         description: Bạn đã đến phần cuối của Khóa học F! Hãy chọn một dự án để tạo.
@@ -2886,7 +2980,7 @@ vi-VN:
           # Tổng quan về cấp độ lựa chọn
           Các cấp độ lựa chọn đưa ra danh mục các cấp độ bổ sung để học sinh hoàn thành. Học sinh phải hoàn thành ít nhất một trong các cấp độ phụ ở đây, nhưng có thể hoàn thành bao nhiêu cấp độ mà họ (hoặc bạn) muốn.
 
-          Các lựa chọn ở đây sẽ đưa học sinh đến các ứng dụng mẫu mà họ có thể khám phá. Hoạt động này nhằm phối hợp với trang tính Ứng dụng khám phá, có trong [giáo án] (.././).
+          Các lựa chọn ở đây sẽ đưa học sinh đến các ứng dụng mẫu mà họ có thể khám phá. Hoạt động này nhằm phối hợp với trang tính Ứng dụng khám phá, có trong [giáo án](.././).
       courseF_labels_predict_multi:
         answers:
         - text: "“Một chiếc pizza sắp ra ngay đây!”"
@@ -2905,46 +2999,48 @@ vi-VN:
             sẽ được hiển thị nếu người dùng nhập “pizza”?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
-        - text: Họa sĩ sẽ vẽ hình tam giác có cạnh 50 pixel.
+        - text: Họa sĩ sẽ vẽ hình tam giác có cạnh 50 điểm ảnh.
           correct: true
           feedback: Chính xác!
-        - text: Họa sĩ sẽ vẽ đa giác 50 cạnh, mỗi cạnh 3 pixel.
+        - text: Họa sĩ sẽ vẽ đa giác 50 cạnh, mỗi cạnh 3 điểm ảnh.
           feedback: Sai rồi. Biến `length` (chiều dài) cần phải ở trong vòng lặp `repeat`
             (lặp lại) để làm được điều đó.
         - text: Họa sĩ sẽ vẽ ba cạnh mở có các góc xoay 50 độ.
-          feedback: Sai rồi. Biến `length` (chiều dài) cần được dùng trong khối `repeat`
-            (lặp lại) để làm được điều đó.
+          feedback: Sai rồi. Biến `length` (chiều dài) cần được dùng trong khối `turn`
+            (xoay) để làm được điều đó.
         - text: Máy tính sẽ nhắc người dùng nhập số.
           feedback: Biến `length` được đặt giá trị 50 và đang được dùng trong khối
             `move forward by` (tiến lên một khoảng), vì vậy họa sĩ sẽ vẽ hình tam
-            giác có cạnh 50 pixel.
+            giác có cạnh 50 điểm ảnh.
         questions:
         - text: Chúng ta đã đặt biến “length” (chiều dài) thành 50. Điều gì sẽ xảy
             ra khi bạn nhấp chuột vào nút “Run” (Chạy)?
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - text: Chú ong sẽ tiến lên và thu thập tất cả mật hoa từ mỗi bông hoa.
-          feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong thu thập lượng mật
-            hoa phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông
-            hoa mà thôi.
-        - text: Chú ong sẽ tiến lên và thu thập tất cả mật hoa từ mỗi bông hoa, trừ
-            một bông.
+        - text: Chú ong sẽ tiến lên và lấy tất cả mật hoa từ mỗi bông hoa.
+          feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong lấy lượng mật hoa
+            phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông hoa
+            mà thôi.
+        - text: Chú ong sẽ tiến lên và lấy tất cả mật hoa từ mỗi bông hoa, trừ một
+            bông.
           correct: true
           feedback: Chính xác!
-        - text: Chú ong sẽ tiến lên và thu thập một mật hoa từ mỗi bông hoa.
-          feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong thu thập lượng mật
-            hoa phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông
-            hoa mà thôi.
+        - text: Chú ong sẽ tiến lên và lấy một mật hoa từ mỗi bông hoa.
+          feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong lấy lượng mật hoa
+            phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông hoa
+            mà thôi.
         - text: Chú ong sẽ di chuyển về phía trước và thu thập một mật hoa từ hoa
             số 1 và 4.
-          feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong thu thập lượng mật
-            hoa phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông
-            hoa mà thôi.
+          feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong lấy lượng mật hoa
+            phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông hoa
+            mà thôi.
         questions:
         - text: Hãy đọc mã lệnh dưới đây. Điều gì sẽ xảy ra khi bạn nhấp chuột vào
             nút “Run” (Chạy)?
-        markdown: Đúng rồi! Dùng vòng lặp `for` (với) sẽ khiến bài tập này đơn giản
-          hơn rất nhiều đấy!
+        markdown: |+
+          Đúng rồi! Dùng vòng lặp `for` (với) sẽ khiến bài tập này đơn giản hơn rất nhiều đấy!
+
+
       courseF_sprites_freeplay:
         description: Đến lượt bạn tự sáng tạo bằng ý tưởng của chính mình rồi! Bạn
           sẽ thực hiện loại dự án nào?
@@ -3055,15 +3151,26 @@ vi-VN:
           Nếu bạn không chắc mình đã sẵn sàng để tiếp tục hay chưa, hãy hỏi giáo viên nhé!
       coursee_prediction_artistfunction2_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Họa sĩ sẽ giải quyết các bài tập một cách chính xác.
+          feedback: Sai rồi. Vòng lặp sử dụng “draw polygon” (vẽ đa giác) thay vì
+            “draw line of polygon” (vẽ hàng đa giác).
+        - text: Họa sĩ sẽ vẽ bốn hình vuông theo mẫu cửa sổ.
+          correct: true
           feedback: Chính xác!
-        - {}
-        - {}
+        - text: Họa sĩ sẽ chỉ vẽ một hàng hình vuông.
+          feedback: Sai rồi. Chương trình không khai báo hàm “draw line of polygons”
+            (vẽ hàng đa giác).
+        - text: Họa sĩ sẽ vẽ bốn hình vuông chồng lên nhau.
+          feedback: Sai rồi. Vòng lặp xoay 90 độ giữa các lần khai báo hàm “draw polygon”
+            (vẽ đa giác).
         questions:
-        - {}
+        - text: Điều gì sẽ xảy ra khi bạn nhấp chuột vào nút “Run” (chạy)?
       csf_be_a_super_digital_citizen_2021:
         content1: mô tả ở đây
+        markdown: |-
+          # Siêu công dân số
+
+          ## Làm thế nào để có thể trở thành người bênh vực khi chứng kiến hành vi bắt nạt trên mạng?
       csf_digital_trails_2021:
         markdown: |-
           # Theo dấu chân số
@@ -3071,8 +3178,25 @@ vi-VN:
           ## Thông tin nào là OK để có trong dấu chân số của bạn?
       csf_password_power-up_2021:
         content1: mô tả ở đây
+        markdown: |
+          # Nâng cấp mật khẩu
+
+          ## Lời khuyên cần nhớ về mật khẩu
+
+          * Bắt đầu bằng một **cụm từ** dễ nhớ.
+          * Chỉ có **cha mẹ** bạn mới nên biết mật khẩu của bạn.
+          * Không bao giờ sử dụng bất kỳ thông tin định danh **riêng tư** nào trong mật khẩu của bạn.
+          * Tạo mật khẩu có ít nhất **tám** ký tự.
+          * Hãy dùng các chữ cái, số và **ký tự** trong mật khẩu của bạn.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: mô tả ở đây
+        markdown: "# STOP (DỪNG) hành vi tiêu cực\n\n## Bạn nên làm gì nếu ai đó có
+          hành vi tiêu cực với bạn trên mạng?\n\n* **S**tep away (Bỏ đi).\n* **T**ell
+          a trusted adult (Nói với người lớn đáng tin cậy).\n* **O**K sites first
+          (Chọn trước trang web tốt).\n* **P**ause and think online (Dừng lại và suy
+          nghĩ khi lên mạng).\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)\n "
       csf_safety_in_my_online_neighborhood_2021:
         markdown: |-
           # Khu phố trực tuyến của tôi
@@ -3080,25 +3204,22 @@ vi-VN:
           ## Làm thế nào để bạn đến những nơi trực tuyến một cách an toàn
       express_EOC_2021:
         display_name: Dự án tổng kết khóa học
+        description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
       express_EOC_examples_2021:
         description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
           hãy dành thời gian xem xét các dự án mẫu.
         display_name: Ví dụ dự án
       grade2_multi_collector_A_predict1_2021:
         answers:
-        - text: Laurel sẽ thu thập 4 mảnh báu vật khi sử dụng mã lệnh này.
-          feedback: Sai rồi. Laurel cố gắng thu thập ở ô không có báu vật và do đó
-            bị lỗi.
-        - text: Laurel sẽ cố gắng thu thập báu vật ở ô không có báu vật và do đó bị
-            lỗi.
+        - text: Laurel sẽ lấy 4 mảnh báu vật khi sử dụng mã lệnh này.
+          feedback: Sai rồi. Laurel cố gắng lấy ở ô không có báu vật và do đó bị lỗi.
+        - text: Laurel sẽ cố gắng lấy báu vật ở ô không có báu vật và do đó bị lỗi.
           correct: true
           feedback: Chính xác!
-        - text: Laurel sẽ thu thập toàn bộ báu vật.
-          feedback: Sai rồi. Laurel cố gắng thu thập ở ô không có báu vật và do đó
-            bị lỗi.
+        - text: Laurel sẽ lấy toàn bộ báu vật.
+          feedback: Sai rồi. Laurel cố gắng lấy ở ô không có báu vật và do đó bị lỗi.
         - text: Laurel sẽ thu thập 1 mẩu kho báu bằng cách sử dụng mã lệnh này.
-          feedback: Sai rồi. Laurel cố gắng thu thập ở ô không có báu vật và do đó
-            bị lỗi.
+          feedback: Sai rồi. Laurel cố gắng lấy ở ô không có báu vật và do đó bị lỗi.
         questions:
         - text: Hãy xem kỹ mã lệnh này. Bạn nghĩ điều gì sẽ xảy ra khi chạy chương
             trình?
@@ -3146,3 +3267,230 @@ vi-VN:
           * Lập trình viên cần phải hiểu nhu cầu của mọi người và thiết kế ứng dụng phù hợp với họ!
 
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      BinaryBracelets-Unplugged_2021:
+        markdown: |
+          # Vòng tay nhị phân
+
+          Hãy làm một chiếc vòng tay thể hiện cho tên của bạn trong một hệ thống mà máy tính hiểu được!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      ConditionalsWithCards-Unplugged_2021:
+        markdown: |
+          # Lệnh điều kiện với lá bài
+
+          Hãy chơi một trò chơi với lá bài và tạo ra luật chơi như sau: “Nếu tôi rút phải lá màu đỏ, tôi được một điểm” và “Nếu tôi rút phái lá màu đen, bạn được một điểm.”
+      GraphPaperProgramming-Unplugged_2021:
+        markdown: |
+          # Lập trình trên giấy kẻ ô ly
+
+          Hãy viết các thuật toán để bạn cùng lớp có thể dùng để vẽ hình tranh.
+      MyLoopyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Những người bạn robot Loopy của tôi
+
+          Rút gọn chương trình bằng cách dùng vòng lặp!
+      MyRoboticFriends-Unplugged_2021:
+        markdown: |
+          # Những người bạn robot của tôi
+
+          Học lập trình bằng cách viết mã lệnh cho bạn bè!
+      RelayProgramming-Unplugged_2021:
+        markdown: |
+          # Lập trình tiếp sức
+
+          Hãy chia thành các nhóm và làm việc cùng nhau để viết các chương trình có chức năng vẽ hình.
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |-
+          # Thiết kế cho trợ năng
+
+          * Trong thế giới khoa học máy tính, **trợ năng** là hoạt động kiến tạo công nghệ dành cho người khuyết tật.
+          * Khuyết tật bao gồm thể chất, thính giác, thị giác và nhiều dạng khuyết tật khác.
+          * Khuyết tật rất đa dạng và tác động đến mọi người theo những cách khác nhau, bao gồm cả cách họ sử dụng công nghệ như **ứng dụng trên điện thoại thông minh**.
+          * Thiết kế các ứng dụng để người khuyết tật có thể truy cập khiến các ứng dụng đó có ích hơn cho cả những người khác!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |
+          # Chia sẻ nội dung số
+
+          Trong bài học này, bạn sẽ xem xét những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền, đặc biệt là trong môi trường số.
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # Thông tin cá nhân và riêng tư
+
+          ## Thông tin nào về bạn có thể chia sẻ trực tuyến?
+      Songwriting-Unplugged_2021:
+        markdown: |-
+          # Sáng tác nhạc
+
+          Hãy dùng khái niệm điệp khúc trong một bài hát để tìm hiểu về cách xác định và khai báo các hàm.
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Tổng quan
+
+          Lớp sẽ lập trình nhân vật của mình tương tác theo những cách mới. Sau khi ôn tập nhanh về cách sử dụng khối isTouching (đang chạm), lớp sẽ động não và tìm ra các cách tương tác khác giữa hai nhân vật. Sau đó họ sẽ dùng isTouching để cho một nhân vật đẩy nhân vật còn lại trên màn hình trước khi luyện tập với bốn khối va chạm (va chạm, chiếm chỗ, nảy và bật lại).
+          ## Từ vựng
+
+          * **Trừu tượng** - Đưa ra các điểm khác biệt nhất định để khiến một giải pháp phát huy tác dụng với nhiều vấn đề.
+
+          ## Mã lệnh giới thiệu
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Tổng quan
+
+          Bài học này đề cập đến hàm như một phương pháp tổ chức mã lệnh, khiến mã lệnh dễ đọc hơn và loại bỏ các khối mã lệnh lặp lại. Lớp sẽ hiểu rằng cấp độ cao hơn hoặc các bước trừu tượng hơn sẽ giúp dễ hiểu và dễ suy luận các bước hơn, sau đó họ bắt đầu tạo hàm trong Game Lab. Vào cuối bài học này, cả lớp sẽ sử dụng các kỹ năng này để sắp xếp và thêm hàm vào phiên bản cuối cùng của tựa game đi cảnh của mình.
+          ## Từ vựng
+
+          * **Hàm** - Đoạn mã lệnh có thể dễ dàng gọi nhiều lần..
+
+          ## Mã lệnh giới thiệu
+
+          * [Xác định hàm](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Gọi hàm](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Tổng quan
+
+          Bài học này sẽ mở rộng kỹ năng vẽ bao gồm chiều rộng và chiều cao, đồng thời giới thiệu khái niệm tạo số ngẫu nhiên. Lớp sẽ học cách vẽ các phiên bản ellipse() và rect() bao gồm các thông số chiều rộng và chiều cao cũng như sử dụng khối background() để tô màu màn hình. Vào cuối giai đoạn này, lớp sẽ làm quen với khối randomNumber() và sử dụng các khối mới để vẽ một con rắn cầu vồng ngẫu nhiên.
+          ## Từ vừng
+
+          * **Thông số** - Thông tin thêm mà bạn đưa vào hàm để tùy chỉnh cho nhu cầu nhất định.
+
+          ## Mã lệnh giới thiệu
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Tổng quan
+
+          Bài học này giới thiệu các biến như một phương pháp dán nhãn cho con số trong chương trình hoặc lưu lại giá trị đã tạo. Lớp sẽ bắt đầu bài học bằng một phần mô tả rất cơ bản về mục đích của biến và luyện tập sử dụng các khối mới Sau đó, lớp sẽ dùng biến để lưu một con số ngẫu nhiên, để chương trình sử dụng con số ngẫu nhiên đó nhiều lần.
+          ## Từ vựng
+
+          * **Biến** - Trình giữ chỗ cho một mẩu thông tin có thể thay đổi.
+
+          ## Mã lệnh giới thiệu
+
+          * [Khai báo biến](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Khai báo và chỉ định giá trị cho biến](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Tài liệu tham khảo
+
+          * [Giới thiệu về biến](https://youtu.be/G41G_PEWFjE) - Video ([tải về](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Tạo phong cách cho văn bản với CSS
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: tiêu đề
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: mô tả ở đây
+      CSD U6 LED create intro_2021:
+        content1: mô tả ở đây
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: mô tả ở đây
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}

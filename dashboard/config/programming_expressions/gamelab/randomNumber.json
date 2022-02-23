@@ -1,9 +1,7 @@
 {
-  "func": "randomNumber",
+  "key": "randomNumber",
+  "name": "randomNumber",
   "category": "Math",
-  "type": "value",
-  "params": [
-    "1",
-    "10"
-  ]
+  "category_key": "math",
+  "syntax": "randomNumber"
 }

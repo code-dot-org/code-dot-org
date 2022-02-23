@@ -4,18 +4,21 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "student_detail_progress_view": true,
-      "version_year": "2020",
+      "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
-      "weekly_instructional_minutes": 225,
       "show_calendar": true,
-      "include_student_lesson_plans": true
+      "student_detail_progress_view": true,
+      "version_year": "2020",
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "ui-test-versioned-script",
-    "serialized_at": "2021-07-27 16:15:39 UTC",
+    "serialized_at": "2021-11-22 19:57:34 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "allthemigratedthings"
     }
@@ -535,9 +538,9 @@
       "url": "fake/url/",
       "key": "student_resource",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "student_resource"
@@ -549,8 +552,8 @@
       "key": "teacher_resource",
       "properties": {
         "assessment": true,
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "teacher_resource"

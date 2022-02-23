@@ -1,0 +1,56 @@
+---
+title: Sambungan SK
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Sambungan Sains Komputer
+
+Kurikulum terbaharu kami membuat hubungan antara belajar sains komputer dan mata pelajaran lain seperti matematik, seni bahasa, sains, dan pengajian sosial. Melalui Sambungan CS, bilik darjah K-12 meneroka subjek biasa mereka dengan cara baharu yang menarik!
+
+## Cuba Sambungan SK dengan aktiviti ini untuk Jam Kod
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Seni Puisi", left_description: "Ekspresikan diri anda! Gunakan kod untuk mencipta puisi animasi", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Mula", right_heading: "Helo Dunia", right_description: "Pilih daripada empat tema yang menyeronokkan untuk mengekodkan aksara interaktif dalam dunia yang anda cipta.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Mula"}}
+{{ clearfix }}
+
+## Modul
+
+Modul Sambungan SK adalah satu siri pelajaran berstruktur yang mengintegrasikan pembelajaran sains komputer ke dalam bidang subjek teras seperti matematik, ELA, dan sains. Modul ini sejajar dengan piawaian merentasi subjek dan memuncak dalam projek silang kurikulum.
+
+Ini cukup sempurna untuk para guru yang ingin menggabungkan sains komputer ke dalam rancangan pengajaran mereka bagi subjek lain, serta pendidik CS yang mahu memperkukuh perkara yang dipelajari oleh pelajar dalam subjek lain.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 jam", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Pengekodan dengan Puisi", right_description: "Sambungkan sains komputer dan puisi di dalam bilik darjah anda dengan siri pelajaran ini.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Lihat modul" }}
+
+## Projek terbuka
+
+Teruskan membuat rangkaian antara sains komputer dan subjek tradisional dengan projek silang kurikulum kami. Mereka hanya mengambil masa 1-2 jam pengajaran untuk disiapkan dan sesuai untuk mana-mana guru yang ingin membangunkan projek khusus topik agar sesuai dengan kurikulum sedia ada.
+
+<em>Petua: Projek ini memerlukan sedikit pemahaman tentang asas sains komputer, jadi kami mengesyorkan anda melengkapkan aktiviti Jam Kod Helo Dunia kami sebelum bermula!</em>
+
+{{ csc_module, title: "Ekosistem", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Sains", duration: "1-2 jam", description: "Menggunakan kemahiran pengekodan asas, pelajar mencipta model interaktif ekosistem yang meneroka cara haiwan, tumbuhan dan organisma yang berbeza mempengaruhi satu sama lain. Model ini juga boleh disesuaikan ke dalam interaksi antara geosfera, biosfera, hidrosfera dan/atau atmosfera.", button_text: "Ketahui lebih lanjut", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Kitaran Hidup", image: "/images/csc/landing/project_cycles.png", grades: "3+", subject: "Sains", duration: "1-2 jam", description: "Teroka daripada telur ke berudu ke katak dengan projek ini, pelajar menggunakan kod untuk mencipta model kitaran saintifik - seperti kitaran hidup katak atau pemindahan tenaga!", button_text: "Ketahui lebih lanjut", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Kajian Watak", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2 jam", description: "Setiap tindakan ada ada akibatnya! Tidak, ini bukan fizik - projek ini membenarkan pelajar menggunakan kod untuk membina adegan daripada cerita yang menunjukkan cara tindakan sesuatu watak mempengaruhi rantaian peristiwa.", button_text: "Ketahui lebih lanjut", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Pengajaran daripada cerita", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2 jam", description: "Apakah antara \"Pada suatu masa dahulu\" dan \"Akhirnya?\" Pelajar mengekodkan aplikasi interaktif yang menceritakan kisah dan akhlaknya. Pelajar boleh menggunakan kemahiran ini pada mana-mana cerita, cerita rakyat, buku atau dongeng.", button_text: "Ketahui lebih lanjut", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Pelajaran Perkaitan
+
+Pelajaran perkaitan kami menyediakan cara yang cepat dan menarik untuk membuat perkaitan antara sains komputer dan mata pelajaran lain. Pelajaran ini tidak memerlukan pengetahuan awal tentang sains komputer, jadi ia sesuai untuk mana-mana guru yang ingin menggabungkan pembelajaran penting abad ke-21 ke dalam kurikulum tradisional atau memotivasikan pelajar dengan cara baharu yang lebih menarik untuk mempelajari subjek lama.
+
+
+{{ csc_module, title: "Mengeja Bersama Lebah", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 jam", description: "S-E-R-O-N-O-K! Dalam pelajaran ini, pelajar menggunakan kemahiran pengekodan asas untuk memberitahu Lebah di mana untuk B-U-Z-Z- untuk mengeja perkataan pada grid yang dipenuhi huruf.", button_text: "Ketahui lebih lanjut", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Mengira bersama Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Matematik", duration: "1 jam", description: "Ini adalah perburuan harta karun! Pelajar akan berlatih mengira dan menambah apabila mereka kod dengan gelung untuk membantu Laurel mengumpul permata merentasi grid pagar sesat.", button_text: "Ketahui lebih lanjut", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Kod Etika AI", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA atau Kemanusiaan", duration: "1 jam", description: "Selepas meneliti potensi perangkap etika kecerdasan buatan (AI), pelajar bekerjasama untuk membangunkan kelas \"Kod Etika AI\" resource.", button_text: "Ketahui lebih lanjut", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Penggambaran Data", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Matematik", duration: "1 jam", description: "Pelajaran ini memperkenalkan pelajar kepada alat Penggambaran Data dalam Makmal Aplikasi serta dua jenis carta penting: carta bar dan histogram. Sepanjang pelajaran, pelajar akan membina kemahiran menggunakan alat ini dan membaca data", button_text: "Ketahui lebih lanjut", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Selesai dengan aktiviti Sambungan SK dan/atau mencari lebih banyak pilihan untuk bilik darjah anda? Sila <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">share your feedback</a> dan idea untuk lebih banyak pelajaran di sini!</em>

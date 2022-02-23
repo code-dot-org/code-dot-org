@@ -16,7 +16,6 @@ import {
 } from './sectionProgressRedux';
 import {loadScriptProgress} from './sectionProgressLoader';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
-import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import {
   setScriptId,
   validScriptPropType
@@ -34,7 +33,7 @@ class SectionProgress extends Component {
   static propTypes = {
     //Provided by redux
     scriptId: PropTypes.number,
-    section: sectionDataPropType.isRequired,
+    sectionId: PropTypes.number,
     validScripts: PropTypes.arrayOf(validScriptPropType).isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
@@ -42,71 +41,51 @@ class SectionProgress extends Component {
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
+    isRefreshingProgress: PropTypes.bool,
     showStandardsIntroDialog: PropTypes.bool
   };
 
-  constructor(props) {
-    super(props);
-    this.onChangeScript = this.onChangeScript.bind(this);
-    this.onChangeLevel = this.onChangeLevel.bind(this);
-    this.navigateToScript = this.navigateToScript.bind(this);
-  }
-
   componentDidMount() {
-    loadScriptProgress(this.props.scriptId, this.props.section.id);
+    loadScriptProgress(this.props.scriptId, this.props.sectionId);
   }
 
-  onChangeScript(scriptId) {
+  onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    loadScriptProgress(scriptId, this.props.section.id);
+    loadScriptProgress(scriptId, this.props.sectionId);
 
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'change_script',
-        data_json: JSON.stringify({
-          section_id: this.props.section.id,
-          old_script_id: this.props.scriptId,
-          new_script_id: scriptId
-        })
-      },
-      {includeUserId: true}
-    );
-  }
+    this.recordEvent('change_script', {
+      old_script_id: this.props.scriptId,
+      new_script_id: scriptId
+    });
+  };
 
-  onChangeLevel(lessonOfInterest) {
+  onChangeLevel = lessonOfInterest => {
     this.props.setLessonOfInterest(lessonOfInterest);
 
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'jump_to_lesson',
-        data_json: JSON.stringify({
-          section_id: this.props.section.id,
-          script_id: this.props.scriptId,
-          stage_id: this.props.scriptData.lessons[lessonOfInterest].id
-        })
-      },
-      {includeUserId: true}
-    );
-  }
+    this.recordEvent('jump_to_lesson', {
+      script_id: this.props.scriptId,
+      stage_id: this.props.scriptData.lessons[lessonOfInterest].id
+    });
+  };
 
-  navigateToScript() {
+  navigateToScript = () => {
+    this.recordEvent('go_to_script', {script_id: this.props.scriptId});
+  };
+
+  recordEvent = (eventName, dataJson = {}) => {
     firehoseClient.putRecord(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'progress',
-        event: 'go_to_script',
+        event: eventName,
         data_json: JSON.stringify({
-          section_id: this.props.section.id,
-          script_id: this.props.scriptId
+          section_id: this.props.sectionId,
+          ...dataJson
         })
       },
       {includeUserId: true}
     );
-  }
+  };
 
   render() {
     const {
@@ -115,9 +94,11 @@ class SectionProgress extends Component {
       scriptId,
       scriptData,
       isLoadingProgress,
+      isRefreshingProgress,
       showStandardsIntroDialog
     } = this.props;
-    const levelDataInitialized = scriptData && !isLoadingProgress;
+    const levelDataInitialized =
+      scriptData && !isLoadingProgress && !isRefreshingProgress;
     const lessons = scriptData ? scriptData.lessons : [];
     const scriptWithStandardsSelected =
       levelDataInitialized && scriptData.hasStandards;
@@ -214,11 +195,12 @@ export const UnconnectedSectionProgress = SectionProgress;
 export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
-    section: state.sectionData.section,
+    sectionId: state.teacherSections.selectedSectionId,
     validScripts: state.unitSelection.validScripts,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
+    isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
     showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
   }),
   dispatch => ({

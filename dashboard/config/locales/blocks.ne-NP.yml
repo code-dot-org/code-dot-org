@@ -2,36 +2,219 @@
 ne:
   data:
     blocks:
+      Dancelab_alternateMoves:
+        options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
+          MOVE1:
+            MOVES.Roll: बडी रोल
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गमनम
+            MOVES.Kick: तारा
+            MOVES.ThisOrThat: यो वा त्यो
+          MOVE2:
+            MOVES.Roll: बडी रोल
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गमनम
+            MOVES.Kick: तारा
+            MOVES.ThisOrThat: यो वा त्यो
       Dancelab_atTimestamp:
+        text: पछि
         options:
           UNIT:
+            '"measures"': मापनहरु
             '"seconds"': seconds
+      Dancelab_changeColorBy:
+        text: परिवर्तन
+        options:
+          METHOD:
+            '"hue"': रंगीन चक्र
+            '"saturation"': अतितृप्त
+            '"brightness"': चम्किलो
+      Dancelab_changeMoveEachLR:
+        text: सधैंभरिलाई
+        options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
+          MOVE:
+            '"next"': अर्को
+            '"prev"': अघिल्लो
+            '"rand"': अनियमित
+            MOVES.Roll: बडी रोल
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गमनम
+            MOVES.Kick: तारा
+            MOVES.ThisOrThat: यो वा त्यो
+      Dancelab_changeMoveLR:
+        text: सधैंलाई
+        options:
+          MOVE:
+            '"next"': अर्को
+            '"prev"': अघिल्लो
+            '"rand"': अनियमित
+            MOVES.Roll: बडी रोल
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गमनम
+            MOVES.Kick: तारा
+            MOVES.ThisOrThat: यो वा त्यो
       Dancelab_changePropBy:
+        text: परिवर्तन
         options:
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
       Dancelab_changePropEachBy:
+        text: परिवर्तन
         options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
+      Dancelab_doMoveEachLR:
+        text: एकपटक
+        options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
+          MOVE:
+            '"rand"': अनियमित
+            MOVES.XBend: बेन्ड गर्नुहोस्
+            MOVES.Roll: बडी रोल
+            MOVES.XClapSide: तालि
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.XFever: डिस्को
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गमनम
+            MOVES.XHeadHips: टाउको + कम्मर
+            MOVES.XHop: हप
+            MOVES.XHighKick: लात
+            MOVES.XKnee: घुँडा
+            MOVES.XKneel: घुँडा टेक्नु
+            MOVES.XOle: औला ठड्याउनु
+            MOVES.XArmsSide: पहुँच
+            MOVES.XSlide: सार्नु
+            MOVES.Kick: तारा
+            MOVES.XArmsUp: तन्काउनुहोस्
+            MOVES.ThisOrThat: यो वा त्यो
+      Dancelab_doMoveLR:
+        text: एकपटक
+        options:
+          MOVE:
+            '"rand"': अनियमित
+            MOVES.XBend: बेन्ड गर्नुहोस्
+            MOVES.Roll: बडी रोल
+            MOVES.XClapSide: तालि
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.XFever: डिस्को
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Clown: गमनम
+            MOVES.XHeadHips: टाउको + कम्मर
+            MOVES.XHop: हप
+            MOVES.XHighKick: लात
+            MOVES.XKnee: घुँडा
+            MOVES.XKneel: घुँडा टेक्नु
+            MOVES.XOle: औला ठड्याउनु
+            MOVES.XArmsSide: पहुँच
+            MOVES.XSlide: सार्नु
+            MOVES.Kick: तारा
+            MOVES.XArmsUp: तन्काउनुहोस्
+            MOVES.ThisOrThat: यो वा त्यो
+      Dancelab_everyMeasuresRange:
+        text: "{START}  पछि प्रत्येक {N} मापनहरु दोहो¥याउनुहोस् "
       Dancelab_everySeconds:
+        text: प्रत्येक {N} {UNIT}  दोहो¥याउनुहोस्
         options:
           UNIT:
+            '"measures"': मापनहरु
             '"seconds"': seconds
       Dancelab_getProp:
         options:
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
       Dancelab_getTime:
         options:
           UNIT:
+            '"measures"': मापनहरु
             '"seconds"': seconds
+      Dancelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Clown: गमनम
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Roll: बडी रोल
+            MOVES.Kick: तारा
+            MOVES.ThisOrThat: यो वा त्यो
       Dancelab_ifTime:
         options:
           UNIT:
+            '"measures"': मापनहरु
             '"seconds"': seconds
       Dancelab_jumpTo:
         options:
@@ -40,11 +223,27 @@ ne:
             "{x: 300, y: 200}": दाँया
       Dancelab_jumpToEach:
         options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
           LOCATION:
             "{x: 100, y: 200}": बाँया
             "{x: 300, y: 200}": दाँया
       Dancelab_layoutSprites:
         options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
           FORMAT:
             '"diamond"': diamond
       Dancelab_makeAnonymousDanceSprite:
@@ -73,36 +272,118 @@ ne:
             "{x: 300, y: 200}": दाँया
       Dancelab_makeNewDanceSpriteGroup:
         options:
+          COSTUME:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
           LAYOUT:
             '"diamond"': diamond
       Dancelab_randomColor:
         text: कुनै एक  रङ
+      Dancelab_setBackgroundEffectWithPalette:
+        options:
+          EFFECT:
+            '"rand"': अनियमित
+      Dancelab_setDanceSpeedEach:
+        options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
+      Dancelab_setForegroundEffectExtended:
+        options:
+          EFFECT:
+            '"rand"': अनियमित
       Dancelab_setProp:
         options:
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
       Dancelab_setPropEach:
         options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
       Dancelab_setPropRandom:
         options:
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
       Dancelab_setPropRandomEach:
         options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
+      Dancelab_setTintEach:
+        options:
+          THIS:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
+      Dancelab_setTintEachInline:
+        options:
+          THIS:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
       Dancelab_setVisible:
         options:
           VISIBILITY:
             'true': देखिने
       Dancelab_setVisibleEach:
         options:
+          THIS:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
           VISIBILITY:
             'true': देखिने
       Dancelab_startMapping:
@@ -110,21 +391,49 @@ ne:
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
       Dancelab_startMappingEach:
         options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
       Dancelab_stopMapping:
         options:
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
       Dancelab_stopMappingEach:
         options:
+          GROUP:
+            '"BEAR"': भालुहरु
+            '"DUCK"': हाँसहरु
+            '"FROG"': भ्यागुताहरु
+            '"PINEAPPLE"': भुइकटहरहरु
+            '"SHARK"': सार्कहरु
+            '"SLOTH"': स्लथ्स
+            '"UNICORN"': घोडाहरु
           PROPERTY:
             '"scale"': size
             '"height"': height
+            '"rotation"': परिक्रमण
+            '"x"': क्षितिजीय स्थिति
+            '"y"': ठाडो स्थिति
       Dancelab_translateStrings:
         options:
           STRING:
@@ -144,9 +453,11 @@ ne:
           UNIT:
             '"seconds"': seconds
       gamelab_changePropBy:
+        text: परिवर्तन
         options:
           PROPERTY:
             '"scale"': size
+            '"rotation"': परिक्रमण
             '"speed"': speed
       gamelab_checkTouching:
         options:
@@ -157,6 +468,7 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"rotation"': परिक्रमण
             '"speed"': speed
       gamelab_getTime:
         options:
@@ -199,6 +511,11 @@ ne:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_animals/cat.mp3'": cat
+            "'sound://category_animals/cow.mp3'": cow
+            "'sound://category_animals/sheep.mp3'": sheep
+            "'sound://category_animals/chicken.mp3'": chicken
+            "'sound://category_animals/dog.mp3'": dog
             "'sound://category_digital/jump_7.mp3'": jump
       gamelab_randColor:
         text: कुनै एक  रङ
@@ -227,6 +544,7 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"rotation"': परिक्रमण
             '"speed"': speed
       gamelab_setProp_dropdown:
         options:
@@ -272,6 +590,7 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"rotation"': परिक्रमण
       Mikelab_createNewSprite:
         options:
           LOCATION:
@@ -281,10 +600,12 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"rotation"': परिक्रमण
       Mikelab_groupChangePropBy:
         options:
           PROPERTY:
             '"scale"': size
+            '"rotation"': परिक्रमण
       Mikelab_groupCreateNewSprite:
         options:
           LOCATION:
@@ -294,10 +615,25 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"rotation"': परिक्रमण
       Mikelab_groupSetProp:
         options:
           PROPERTY:
             '"scale"': size
+            '"rotation"': परिक्रमण
+      Mikelab_ifDanceIs:
+        options:
+          DANCE:
+            MOVES.ClapHigh: उच्च तालि
+            MOVES.Clown: गमनम
+            MOVES.Dab: हात तेस्र्याउनु
+            MOVES.DoubleJam: तलतिर दोहो¥याउनु
+            MOVES.Drop: खसाल्नु
+            MOVES.Floss: डोरीले मिलाउनु
+            MOVES.Fresh: ताजा
+            MOVES.Roll: बडी रोल
+            MOVES.Kick: तारा
+            MOVES.ThisOrThat: यो वा त्यो
       Mikelab_randomColor:
         text: कुनै एक  रङ
       Mikelab_repeatUntilComplete:
@@ -310,6 +646,7 @@ ne:
         options:
           PROPERTY:
             '"scale"': size
+            '"rotation"': परिक्रमण
       Mikelab_showScoreboard:
         options:
           CORNER:
@@ -354,6 +691,31 @@ ne:
             '"down"': down arrow
             '"left"': left arrow
             '"right"': right arrow
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': hearts
+            '"rainbow"': इन्द्रणी
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': राति
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': jump
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': बादल लागेको
+            '"hearts"': hearts
+          PALETTE:
+            '"rainbow"': इन्द्रणी
+            '"winter"': चिसो
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': hearts
       RyanLab_moveForward:
         text: move forward
       RyanLab_turnLeft:

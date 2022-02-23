@@ -1,0 +1,56 @@
+---
+title: CS कनेक्शन्स
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# संगणक विज्ञान कनेक्शन्स
+
+आमचा नवीनतम अभ्यासक्रम संगणक विज्ञान शिकणे आणि इतर विषय जसे की गणित, भाषा कला, विज्ञान आणि सामाजिक अभ्यास यांच्यात संबंध निर्माण करतो. CS कनेक्शनद्वारे, K-12 वर्ग त्यांच्या नेहमीच्या विषयांचे रोमांचक नवीन पद्धतींनी शोध घेतात!
+
+## कोडच्या तासांसाठी या क्रियाकलापांसह CS कनेक्शन वापरून पहा
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "कवितेची कला", left_description: "स्वतःला व्यक्त करा! अॅनिमेटेड कविता तयार करण्यासाठी कोड वापरा.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "हॅलो वर्ल्ड", right_description: "तुम्ही तयार केलेल्या जगात इंटरएक्टिव्ह वर्ण कोड करण्यासाठी चार मजेदार थीममधून निवडा.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
+{{ clearfix }}
+
+## मॉड्यूल्स
+
+CS कनेक्शन मॉड्यूल ही धड्यांची एक संरचित मालिका आहे जी गणित, ELA आणि विज्ञान यांसारख्या मुख्य विषयांमध्ये संगणक विज्ञान शिक्षण एकत्रित करते. हे मॉड्युल्स सर्व विषयांच्या मानकांशी जुळतात आणि परिणामी एक क्रॉस-करिक्युलर प्रोजेक्ट तयार होतो.
+
+ज्या शिक्षकांना इतर विषयांसाठी त्यांच्या धड्याच्या योजनांमध्ये संगणक विज्ञानाचा समावेश करायचा आहे, तसेच CS शिक्षक ज्यांना विद्यार्थी इतर विषयांमध्ये काय शिकत आहेत ते बळकट करू इच्छितात अशा शिक्षकांसाठी ते योग्य आहेत.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "कवितेसह कोडींग", right_description: "धड्यांच्या या मालिकेसह तुमच्या वर्गात संगणक विज्ञान आणि कविता जोडा.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
+
+## ओपन एंडेड प्रोजेक्ट्स
+
+आमच्या क्रॉस-करिक्युलर प्रकल्पांसह संगणक विज्ञान आणि पारंपारिक विषयांमधील संबंध जोडणे सुरू ठेवा. ते पूर्ण होण्यासाठी फक्त 1-2 शिकवण्याचे तास घेतात आणि त्यांच्या विद्यमान अभ्यासक्रमात बसण्यासाठी विषय-विशिष्ट प्रकल्प विकसित करू पाहणाऱ्या कोणत्याही शिक्षकांसाठी ते आदर्श आहेत.
+
+<em>टीप: या प्रकल्पांना संगणक विज्ञानाच्या मूलभूत गोष्टी समजून घेणे आवश्यक आहे, म्हणून आम्ही प्रारंभ करण्यापूर्वी आमच्या हॅलो वर्ल्ड अवर ऑफ कोड उपक्रम पूर्ण करण्यासाठी शिफारस करतो!</em>
+
+{{ csc_module, title: "Ecosystems", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "विज्ञान", duration: "1-2 तास", description: "मूलभूत कोडींग कौशल्ये वापरून, विद्यार्थी एका परिसंस्थेचे इंटरअॅक्टीव्ह मॉडेल तयार करतात जे वेगवेगळे प्राणी, वनस्पती आणि जीव एकमेकांवर कसा प्रभाव टाकतात हे शोधतात. हे मॉडेल जिओस्फियर, बायोस्फियर, हायड्रोस्फियर आणि / किंवा अॅट्मॉस्फियर यांच्यातील परस्परसंवादांमध्ये देखील रुपांतरित केले जाऊ शकते.", button_text: "अधिक जाणून घ्या", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "जीवन चक्र", image: "/images/csc/landing/project_cycles.png", grades: "3+", subject: "विज्ञान", duration: "1-2 तास", description: "या प्रकल्पा मध्ये अंड्यापासून ते टॅडपोल ते बेडका पर्यंत जा, ज्यामध्ये विद्यार्थी वैज्ञानिक चक्राचे मॉडेल तयार करण्यासाठी कोड वापरतात - जसे बेडकाचे जीवनचक्र किंवा ऊर्जा हस्तांतरण!", button_text: "Learn more", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: " पात्रांचा अभ्यास", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2 तास", description: "प्रत्येक कृतीला प्रतिक्रिया असते! नाही, हे भौतिकशास्त्र नाही - हा प्रकल्प विद्यार्थ्यांना कथेतील एक दृश्य तयार करण्यासाठी कोड वापरण्याची अनुमती देतो जे एका पात्राच्या क्रिया इव्हेंटच्या मालिकेवर कसा परिणाम करतात हे दर्शविते.", button_text: "अधिक जाणून घ्या", url: "https:// bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Story Morals", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2 तास ", description: "\वन्स अपॉन अ टाइम" आणि \"द एंड?\" मध्ये काय आहे? विद्यार्थी एक इंटरअॅक्टीव्ह अॅप कोड करतात जे कथा आणि तिचे नैतिकतेचे वर्णन करते. विद्यार्थी हे कौशल्य कोणत्याही कथा, लोककथा, पुस्तक किंवा दंतकथा यावर लागू करू शकतात.", button_text: "अधिक जाणून घ्या", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## ब्रिजिंग धडे
+
+आमचे ब्रिजिंग धडे संगणक विज्ञान आणि इतर विषयांमध्‍ये संबंध जोडण्‍याचा एक जलद आणि मनोरंजक मार्ग देतात. या धड्यांसाठी संगणक विज्ञानाच्या कोणत्याही पूर्व ज्ञानाची आवश्यकता नाही, म्हणून ते कोणत्याही शिक्षकासाठी योग्य आहेत ज्यांना 21 व्या शतकातील आवश्यक शिक्षणाचा पारंपरिक अभ्यासक्रमात समावेश करायचा आहे किंवा जुने विषय शिकण्यासाठी नवीन रोमांचक मार्गांनी विद्यार्थ्यांना प्रेरित करायचे आहे.
+
+
+{{ csc_module, title: "स्पेलिंग विथ बी", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 तास ", description: "मजा! या धड्यामध्ये, अक्षरांनी भरलेल्या ग्रिडवर शब्दांचे स्पेलिंग करण्यासाठी मधमाशीला कुठे बझ करायचे हे सांगण्यासाठी विद्यार्थी मूलभूत कोडिंग कौशल्ये वापरतात.", button_text: "अधिक जाणून घ्या", url: "https://studio.code.org/s /spelling-bee-2021/lesons/1" }}
+{{ csc_module, title: "लॉरेल सह मोजणे", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "गणित", duration: "1 तास", description: "ही खजिन्याची शोधाशोध आहे! लॉरेलला चक्रव्यूहाच्या ग्रिडमधून रत्ने गोळा करण्यात मदत करण्यासाठी लूपसह कोड करताना विद्यार्थी मोजण्याचा आणि जोडण्याचा सराव करतील.", button_text: "अधिक जाणून घ्या", url: "https://studio.code.org/s/counting-csc-2021/lessons/1"}}
+{{ csc_module, title: "एआय कोड ऑफ एथिक्स", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA or Humanities", duration: "1 तास", description: "कृत्रिम बुद्धिमत्ता (AI) च्या संभाव्य नैतिक त्रुटींवर संशोधन केल्यानंतर, विद्यार्थी \"AI Code of Ethics\" संसाधन विकसित करण्यासाठी एकत्र काम करतात.", button_text: "अधिक जाणून घ्या", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "डेटा व्हिज्युअलायझेशन", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "गणित", duration: "1 तास", description: "हा धडा विद्यार्थ्यांना अॅप लॅबमधील डेटा व्हिज्युअलायझर टूलची तसेच दोन महत्त्वाच्या चार्ट प्रकारांची ओळख करून देतो: बार चार्ट आणि हिस्टोग्राम. धड्याच्या दरम्यान, विद्यार्थी हे साधन वापरण्यात आणि डेटा वाचण्यात कौशल्य निर्माण करतील", button_text: "अधिक जाणून घ्या", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>CS कनेक्शन क्रियाकलाप पूर्ण केला आणि/किंवा आपल्या वर्गासाठी अधिक पर्याय शोधत आहात? कृपया येथे अधिक धड्यांसाठी <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">तुमचा अभिप्राय आणि कल्पना शेअर करा</a>!</em>

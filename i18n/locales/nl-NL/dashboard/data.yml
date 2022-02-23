@@ -39,6 +39,7 @@ nl:
         Custom: Kunstenaar
         CustomStudio: Speel Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Brons
@@ -454,6 +455,8 @@ nl:
         CSF_if_allskins: Het if-blok
         CSF_loops_AB: Lussen
         hoc_dance_warmup: Dance Party - Opwarmen
+        hoc_dance_events: Dance Party - Evenementen
+        hoc_dance_properties: Dansfeest - Eigenschappen
         hoc_dance_congrats: Dance Party - Party On!
         writing_first_program: Schrijf je eerste computerprogramma!
         csd_pair_programming: Programmeren in Tweetallen
@@ -467,6 +470,28 @@ nl:
         hoc_dance_properties_2019: Dance Party 2019 - Eigenschappen
         playlab_2021: Inleiding tot Play Lab
         playlab_2021_reader: Inleiding tot Play Lab
+        PL_CSD_TeacherTips_Advise: Tips voor leraren - Advies voor nieuwe leraren
+        PL_CSD_TeacherTips_IntroToCSD: Tips voor leraren - Inleiding tot CS Discoveries
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Tips voor leraren - Het proces voor het oplossen van problemen
+        PL_CSD_TeacherTips_PairProgramming: Tips voor leraren - Programmeren in paren
+        PL_CSD_TeacherTips_Debugging: Tips voor leraren - Fouten opsporen
+        PL_CSD_TeacherTips_LeadLearner: Tips voor leraren - De beste leerling
+        poembot-playtest-intro: PoemBot Playtest Intro
+        poembot-playtest-sprites: PoemBot Playtest Sprites
+        poembot-playtest-events: PoemBot Playtest Events
+        hello_world_intro: Hallo Wereld - Welkom bij Sprite Lab
+        hello_world_events: Hallo Wereld - Programmeren met events
+        hello_world_congrats: Hallo wereld - Wat wilt u
+        rough_poemart_intro: v1 Poem Art Intro
+        rough_poemart_events: v1 Poem Art Gebeurtenissen
+        rough_poemart_imagery: v1 Poem Art Beeldmateriaal
+        rough_poemart_congrats: v1 Poem Art Felicitaties
+        poetry_module_variables: Variabelen - Coderen met poëzie
+        poetry_module_textandvariables: Tekst en variabelen - Coderen met poëzie
+        poetry_module_planningapp: Het plannen van je Gedichtengenerator-app - Coderen met poëzie
+        poetry_module_multichoiceprompts: Meerkeuzeopdrachten - Coderen met poëzie
+        poetry_module_conditionals: Conditionals - Coderen met poëzie
+        poemart_intro: Inleiding tot de dichtkunst
     callout:
       text:
         drag_blocks: Sleep een "vooruit" blok en plak het onder het andere blok

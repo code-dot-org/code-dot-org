@@ -26,6 +26,7 @@ class CourseVersion < ApplicationRecord
   belongs_to :course_offering
   has_many :resources
   has_many :vocabularies
+  has_many :reference_guides
 
   attr_readonly :content_root_type
   attr_readonly :content_root_id
@@ -80,6 +81,7 @@ class CourseVersion < ApplicationRecord
         display_name: content_root.version_year,
         content_root: content_root,
       )
+      course_version.published_state = content_root.published_state
     else
       course_version = nil
     end

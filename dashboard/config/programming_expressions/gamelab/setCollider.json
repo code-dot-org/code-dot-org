@@ -1,15 +1,12 @@
 {
-  "func": "setCollider",
+  "key": "setCollider",
+  "name": "setCollider",
   "category": "Sprites",
-  "paramButtons": {
-    "minArgs": 1,
-    "maxArgs": 6
-  },
-  "paletteParams": [
-    "type"
+  "category_key": "sprites",
+  "palette_params": [
+    {
+      "name": "type"
+    }
   ],
-  "params": [
-    "\"rectangle\""
-  ],
-  "modeOptionName": "*.setCollider"
+  "syntax": "setCollider(type)"
 }

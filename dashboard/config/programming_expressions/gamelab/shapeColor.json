@@ -1,6 +1,7 @@
 {
-  "func": "shapeColor",
+  "key": "shapeColor",
+  "name": "shapeColor",
   "category": "Sprites",
-  "modeOptionName": "*.shapeColor",
-  "type": "property"
+  "category_key": "sprites",
+  "syntax": "shapeColor"
 }

@@ -392,6 +392,7 @@ mn:
       starwars: 'Оддын дайн'
       starwarsblocks: 'Оддын дайн (Блокууд)'
       starwarsblocks_hour: 'Оддын дайн (Блокууд)'
+      loading: 'Ачааллаж байна...'
       weblab: 'Вэбийн лаб'
       view_all: 'Бүх төслийг харах...'
     popup:
@@ -407,6 +408,7 @@ mn:
       prizes_link: 'дэлгэрэнгүй мэдээлэл'
   teacher:
     answer: Хариулт
+    dashboard: 'Багшийн хянах самбар'
     for_teachers_only: Багш нарт зөвхөн зориулав
     title:
       one: 'Таны багш:'
@@ -945,6 +947,7 @@ mn:
       email: 'Цахим шуудан'
       email_alternate: 'Өөр цахим шуудан'
       gender: 'Хүйсийн тодорхойлолт'
+      school: 'Сургууль'
       school_name: 'Сургуулийн нэр'
       school_city: 'Сургууль байрлах хот'
       school_country: 'Сургууль байрлах улс'
@@ -1043,3 +1046,4 @@ mn:
   page_not_found_description: "Таны хайж буй хуудас энэ хаягт байхгүй байна. Вэб хаягийг шалгаад дахин илгээнэ үү. Эсвэл манай нүүр хуудас руу буцна уу."
   page_not_found_button: "Нүүр хуудас руу буцах"
   copy: 'Хуулах'
+  teacher_feedback: "Багшийн хариу үйлдэл"

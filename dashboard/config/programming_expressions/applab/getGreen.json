@@ -1,16 +1,18 @@
 {
-  "func": "getGreen",
+  "key": "getGreen",
+  "name": "getGreen",
   "category": "Canvas",
-  "paletteParams": [
-    "imgData",
-    "x",
-    "y"
+  "category_key": "canvas",
+  "palette_params": [
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
-  "params": [
-    "imgData",
-    "0",
-    "0"
-  ],
-  "type": "value",
-  "dontMarshal": true
+  "syntax": "getGreen(imgData, x, y)"
 }

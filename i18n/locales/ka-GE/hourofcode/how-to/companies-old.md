@@ -78,7 +78,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 **როცა მოსწავლეები რამე სირთულეს გადააწყდებიან, არაუშავს, თუ უპასუხებთ:**
 
 - "არ ვიცი. მოდი ერთად გავარჩიოთ."
-- "პროგრამირების სწავლა უცხო ენის სწავლას ჰგავს; შეუძლებელია დაუყოვნებლივ დაიწყოთ გამართულად საუბარი."
+- „პროგრამირების სწავლა უცხო ენის სწავლას ჰგავს; შეუძლებელია პირველი ცდის მერე დაიწყოთ გამართულად საუბარი.“
 
 **როგორ მოვიქცეთ თუ ვინმემ ნაადრევად დაასრულა?**
 
@@ -87,7 +87,7 @@ We host a variety of [fun, hour-long activities]({{ urls/learn }}) for participa
 
 ## 7) აღნიშნეთ
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
+- [დაბეჭდეთ სერტიფიკატები]({{ urls/certificates }}) მონაწილეების და მოსწავლეებისთვის.
 - [Print "I did an Hour of Code!"]({{ promote/resources_stickers }}) stickers.
 - [შეუკვეთეთ მაისურები](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) თქვენი თანამშრომლებისთვის.
 - გააზიარეთ თქვენი კოდირების საათის ამსახველი ფოტო და ვიდეო მასალა სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg რათა ჩვენც შევძლოთ თქვენი წარმატების აღნიშვნა!

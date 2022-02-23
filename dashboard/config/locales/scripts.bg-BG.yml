@@ -208,7 +208,7 @@ bg:
             и Елза и заедно  опознаем  магията и красотата на леда.
           lessons:
             Artist:
-              name: Художник
+              name: Код с Анна и Елза
           student_description: Нека да използваме кода, за да се присъединим към Анна
             и Елза, които опознават магията и красотата на леда. Вие ще създадете
             снежинки и модели в градината на своята зимна приказка, които след това
@@ -371,7 +371,7 @@ bg:
             или игра с участието на героите от Дисни Инфинити.
           lessons:
             Infinity:
-              name: Инфинити
+              name: Дисни Инфинити Игрална лаборатория
           student_description: Използвайте "Игрална лаборатория", за да създадете
             история или игра с участието на героите от Дисни Инфинити.
         algebrademo:
@@ -1026,6 +1026,8 @@ bg:
               name: Компресия на текста
             Web Lab:
               name: Web Lab
+            Java Lab:
+              name: Java (Джава) Практически Урок
           student_description: Всички типове нива за тестване на потребителски интерфейс.
             Моля, влезте в акаунта си, за да тествате applab нивата ( applab нивата
             работят само ако сте в профила си).
@@ -1245,9 +1247,6 @@ bg:
             игра "Междузвездни войни" в галактиката далече, далече.
           description_short: Научете се да програмирате дроиди и създайте своя собствена
             игра "Междузвездни войни" в галактиката далече, далече.
-          lessons:
-            Hour of Code 2015:
-              name: Часът на кодирането 2015
           student_description: Научете се да програмирате дроиди и създайте своя собствена
             игра "Междузвездни войни" в галактиката далече, далече.
         mc:
@@ -1760,9 +1759,6 @@ bg:
           title: Направете баскетболна игра
           description_short: Направете баскетболна игра
           description: Направете баскетболна игра
-          lessons:
-            Bounce:
-              name: Bounce
           student_description: Направете баскетболна игра
         csd2-2017:
           lessons:
@@ -1881,9 +1877,6 @@ bg:
           title: Програмирай своя спортна игра
           description_short: Програмирай свой собствен спорт
           description: Програмирай свой собствен спорт
-          lessons:
-            Sports:
-              name: Спорт
           student_description: Програмирай свой собствен спорт
         2016_sciencePD-phase2b:
           lessons:
@@ -1962,6 +1955,8 @@ bg:
               name: Списъци
             For Loops:
               name: За циклите
+            Map:
+              name: Карта
             Functions with Parameters:
               name: Функции с параметри
         workshop-gamelab:
@@ -2366,7 +2361,7 @@ bg:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Пътуването на героя в часът на кода'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
+              name: 'Minecraft: Пътуването на героя'
           student_description: Minecraft се завръща за часът на кода с чисто нова
             дейност! Пътешествай през Minecraft с код.
         csp-explore-2017:
@@ -2848,6 +2843,9 @@ bg:
               name: Художник
         aquatic:
           title: 'Minecraft: Подводното пътешествие'
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Подводното пътешествие'
         cspplayground:
           lesson_groups:
             csp_variables:
@@ -3820,6 +3818,8 @@ bg:
           lessons:
             new stage:
               name: нов етап
+            Tools:
+              name: Инструменти
             Debugging:
               name: Отстраняване на грешки
         csp5-virtual:
@@ -3904,18 +3904,30 @@ bg:
             cspSurvey:
               display_name: Съдържание
         ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: Урок
           lesson_groups:
             lg_1:
               display_name: Съдържание
         ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: Урок
           lesson_groups:
             lg_1:
               display_name: Съдържание
         ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: Урок
           lesson_groups:
             lg_1:
               display_name: Съдържание
         ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: Урок
           lesson_groups:
             lg_1:
               display_name: Съдържание
@@ -4016,10 +4028,28 @@ bg:
               display_name: Списъци
             csp_loops:
               display_name: Повторения
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Алгоритми
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Проучване
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Проучване
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Раздел 9: данни'
+            lessonGroup-2:
+              display_name: Проучване
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Проучване
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -4181,22 +4211,58 @@ bg:
             intro:
               name: Урок 1
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa2-pilot:
+          lessons:
+            lesson-16:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lesson group:
               display_name: Съдържание
         csa3-pilot:
+          lessons:
+            lesson-17:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa4-pilot:
+          lessons:
+            lesson-16:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -4315,27 +4381,49 @@ bg:
               name: Общ преглед
         csa-u6-dev:
           lessons:
+            lesson-12:
+              name: Инструменти
             lesson-13:
               name: Примери
+            lesson-17:
+              name: Конзола
             lesson-18:
               name: Джаджи
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Уроци
         csa1-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa2-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lesson group:
               display_name: Съдържание
         csa3-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa4-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
         csa5-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
@@ -4343,8 +4431,13 @@ bg:
           lessons:
             lesson-2:
               name: Джаджи
+            lesson-3:
+              name: Инструменти
             lesson-4:
               name: Примери
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Уроци
         csa4-exemplars:
           lesson_groups:
             lesson group:
@@ -4353,5 +4446,306 @@ bg:
               display_name: Съдържание
             lesson_group:
               display_name: Съдържание
+            lessonGroup-2:
+              display_name: Съдържание
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Джаджи
+            lesson-2:
+              name: Инструменти
+            lesson-3:
+              name: Примери
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Правопис
+          title: Правопис
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa6-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Правопис
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Урок
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Повторения за забавление
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайт
+            lessonGroup-3:
+              display_name: Променливи
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Функции
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Щастливи карти
+            'Programming: Happy Maps':
+              name: Щастливи карти
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        express-2022:
+          lesson_groups:
+            csf_sprites:
+              display_name: Спрайт
+            lessonGroup-9:
+              display_name: Събития
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+            csf_functions:
+              display_name: Функции
+            csf_variables:
+              display_name: Променливи
+            csf_for_loops:
+              display_name: За циклите
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Бинарни числа
+              key: Бинарни числа
+          lesson_groups:
+            cspSurvey:
+              display_name: Проучване
+            csp_unit1_2020:
+              display_name: 'Урок 1: Цифрова информация'
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Раздел 2: Интернет'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Отстраняване на грешки
+              key: Отстраняване на грешки
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Променливи
+            csp_conditionals:
+              display_name: Условия
+            csp_functions:
+              display_name: Функции
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Списъци
+            csp_loops:
+              display_name: Повторения
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Преместете го, преместете го
+              key: Преместете го, преместете го
+            Getting Loopy:
+              name: Да повтаряме
+            'Loops: Getting Loopy':
+              name: Да повтаряме
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Голямото събитие
+            Binary Bracelets:
+              name: Двоични гривни
+              key: Двоични гривни
+            'Events: The Big Event':
+              name: Голямото събитие
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрови граждани
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+            csf_data:
+              display_name: Данни
+        csp9-2022:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Раздел 9: данни'
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Програмиране на милиметрова хартия
+            Relay Programming:
+              name: Повтори програмирането
+              key: Повтори програмирането
+            Conditionals with Cards:
+              name: Условия с карти
+              key: Условия с карти
+            'Algorithms: Graph Paper Programming':
+              name: Програмиране на милиметрова хартия
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Цифрови граждани
+            csf_events:
+              display_name: Събития
+            csf_loops:
+              display_name: Повторения
+            csf_conditionals:
+              display_name: Условия
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Писане на песен
+            'Functions: Songwriting':
+              name: Писане на песен
+            Conditionals:
+              key: Условия
+          lesson_groups:
+            csf_sprites:
+              display_name: Спрайт
+            csf_digcit:
+              display_name: Цифрови граждани
+            ramp_up:
+              display_name: Вмъкнати цикли
+            csf_functions:
+              display_name: Функции
+            csf_nested_loops:
+              display_name: Условия
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Повторения за забавление
+              key: Повторения за забавление
+            The Internet:
+              name: Интернет
+            Internet:
+              key: Интернет
+              name: Интернет
+          lesson_groups:
+            ramp_up:
+              display_name: Спрайт
+            lessonGroup-7:
+              display_name: Цифрови граждани
+            lessonGroup-8:
+              display_name: Променливи
+        csa1-2022:
+          lessons:
+            lesson-2:
+              name: Java (Джава) Практически Урок
+            lesson-9:
+              name: Повторения
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Повторения
+            csf_events:
+              display_name: Събития
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Условия
+            lesson-14:
+              name: Условия в Minecraft
+            lesson-16:
+              name: Отстраняване на грешки
+            lesson-19:
+              name: Отстраняване на грешки
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java (Джава) Практически Урок
+            lesson-9:
+              name: Повторения
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
+          lesson_groups:
             lessonGroup-2:
               display_name: Съдържание

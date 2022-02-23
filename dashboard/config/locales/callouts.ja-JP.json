@@ -1692,7 +1692,7 @@
           "answered_block": "ここで新しいブロックをさがしましょう。"
         },
         "courseF_text_choice_color": {
-          "text_color_finish": "質問に答えたときに背景の色は変わりましたか？ そうであれば「おわり」をクリックします。 そうでなければ「リセット」を押してコードを変更し、もう一度「実行」を押します。"
+          "text_color_finish": "質問に答えたときに背景の色が変わりましたか？ そうであれば「おわり」をクリックします。 そうでないければ「リセット」を押してコードを変更し、もう一度「実行」を押します。"
         },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "終わりましたか？そうであれば「おわり」を押してください。そうでなければ「リセット」を押して、コードを変更した後、もう一度「実行」を押してください。\n"
@@ -1706,6 +1706,189 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "この下にあるコードをじっくりと見てみましょう。"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "新しいブロック！",
+          "hello_world_new_block": "新しいブロック！"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "新しいブロック！"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "新しいブロック！"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "新しいブロック！",
+          "poetry_foreground": "新しいブロック！"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "新しいブロック！",
+          "poetry_multiple_sprites": "新しいブロック！",
+          "poetry_new_block": "新しいブロック！",
+          "poetry_selector": "任意の詩を選ぶか、自分の詩を入力しましょう。"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "新しいブロック！",
+          "poetry_music": "新しいブロック！"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "新しいブロック！",
+          "poetry_sprite_stops": "新しいブロック！"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "新しいブロック！",
+          "poetry_remove_sprite": "新しいブロック！"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "コードを実行するには、ここをクリックします。"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
+        "helloworld_animals_location": {
+          "pin": "ピン"
+        },
+        "helloworld_animals_multi": {
+          "pin": "ピン"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "コードを実行するには、ここをクリックします。"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
+        "helloworld_emoji_location": {
+          "pin": "ピン"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "ピン"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
+        },
+        "helloworld_food_click": {
+          "hw_Run": "コードを実行するには、ここをクリックします。"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
+        "helloworld_food_location": {
+          "pin": "ピン"
+        },
+        "helloworld_food_multi": {
+          "pin": "ピン"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "新しい背景を設定するには、このブロックを使います。"
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "下のビヘイビアの1つを含むこのブロックを使います。"
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "コードを実行するには、ここをクリックします。"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "このイベントブロックをワークスペースに追加します。"
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "ここをクリックして、作品に新しいコスチュームを追加します。"
+        },
+        "helloworld_retro_location": {
+          "pin": "ピン"
+        },
+        "helloworld_retro_multi": {
+          "pin": "ピン"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "このブロックを使ってスプライトに何か言わせます。",
+          "hello_world_make_sprite": "このブロックを使ってスプライトをつくります。"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "こちらでコードブロックを探します。",
+          "pause_button": "このボタンでアニメーションをテストします。",
+          "run_button": "このボタンでアニメーションをテストします。"
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "カテゴリをクリックして、ツールボックスのブロックを見てみましょう！ブロックをワークスペースにドラッグすると、プログラムに追加できます。",
+          "New Artist Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
+          "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "カテゴリをクリックして、ツールボックスのブロックを見てみましょう！ブロックをワークスペースにドラッグすると、プログラムに追加できます。",
+          "New Play Lab Project_callout2": "「実行（じっこう）」ボタンをおすと、プログラムを保存（ほぞん）して、実行します。",
+          "sign_in_to_save_project": "後でプロジェクトにアクセスしたいと考えていますか？ サインインすると、このプロジェクトをアカウントに保存できます！"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "デザイン・モードです。"
         }
       }
     }

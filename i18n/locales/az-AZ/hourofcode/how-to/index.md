@@ -4,7 +4,7 @@ title: Hour of Code How-to Guide
 
 {{ signup_button }}
 
-# How to plan your Hour of Code
+# Kod Saatınızı necə planlaşdırmalı
 
 ### Join the movement and introduce your students to computer science with these steps.
 
@@ -18,8 +18,8 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 - [Promote your Hour of Code](#promote-your-hour)
 - [How to start your Hour of Code strong](#how-to-start)
 - [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
-- [Tədrisçilər üçün digər Kod qaynaqları](#other-resources)
+- [Şagirdlərinizin uğurunu qeyd edin](#celebrate)
+- [Təlimçilər üçün digər Kod Saatı materialları](#other-resources)
 
 ### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
@@ -27,13 +27,13 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Kod Saatı üçün təlimat videosuna baxın <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Fəaliyyət və dərslikləri nəzərdən keçirin
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -45,7 +45,7 @@ Explore the activities and decide ahead of time if you want to choose a single t
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Günün planını hazırlayın
 
 ### Think about your technology needs - computers are optional!
 
@@ -64,7 +64,7 @@ People around the world join in the Hour of Code celebration during CS Education
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Kod Saatınızı təbliğ edin
 
 Now that you've planned your event, it's time to start promoting it!
 

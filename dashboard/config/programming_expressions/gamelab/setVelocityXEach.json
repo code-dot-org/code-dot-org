@@ -1,11 +1,12 @@
 {
-  "func": "setVelocityXEach",
+  "key": "setVelocityXEach",
+  "name": "setVelocityXEach",
   "category": "Groups",
-  "paletteParams": [
-    "velocityX"
+  "category_key": "groups",
+  "palette_params": [
+    {
+      "name": "velocityX"
+    }
   ],
-  "params": [
-    "3"
-  ],
-  "modeOptionName": "*.setVelocityXEach"
+  "syntax": "setVelocityXEach(velocityX)"
 }

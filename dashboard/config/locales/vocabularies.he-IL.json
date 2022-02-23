@@ -2,14 +2,98 @@
   "he-IL": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/hero/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "function/hero/unversioned": {
+          "word": "פונקציה"
+        },
+        "code/poem-art/2021": {
+          "word": "קוד"
+        },
+        "mood/poem-art/2021": {
+          "word": "אווירה"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "code/artist/unversioned": {
+          "word": "קוד"
+        },
+        "debugging/artist/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "תנאים"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "חזרות"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/mc/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "code/sports/unversioned": {
+          "word": "קוד"
+        },
+        "debugging/sports/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "מציאת טעויות"
+        },
+        "code/poem-art/unversioned": {
+          "word": "קוד"
+        },
+        "mood/poem-art/unversioned": {
+          "word": "אווירה"
+        },
+        "sprite/coursef/2021": {
+          "word": "ספרייט"
+        },
         "behavior/coursef/2021": {
           "word": "התנהגות"
         },
         "variable/coursef/2021": {
           "word": "משתנה"
         },
+        "dns/coursef/2021": {
+          "word": "DNS"
+        },
         "internet/coursef/2021": {
           "word": "אינטרנט"
+        },
+        "url/coursef/2021": {
+          "word": "קישור"
         },
         "define/coursef/2021": {
           "word": "הגדר"
@@ -17,11 +101,17 @@
         "debugging/courseb/2021": {
           "word": "מציאת טעויות"
         },
+        "click/courseb/2021": {
+          "word": "קליק"
+        },
         "drop/courseb/2021": {
           "word": "דְרוֹפּ"
         },
         "debugging/coursea/2021": {
           "word": "מציאת טעויות"
+        },
+        "click/coursea/2021": {
+          "word": "קליק"
         },
         "drop/coursea/2021": {
           "word": "דְרוֹפּ"
@@ -44,6 +134,9 @@
         "behavior/express/2021": {
           "word": "התנהגות"
         },
+        "sprite/express/2021": {
+          "word": "ספרייט"
+        },
         "conditionals/express/2021": {
           "word": "תנאים"
         },
@@ -56,6 +149,9 @@
         "define/express/2021": {
           "word": "הגדר"
         },
+        "click/pre-express/2021": {
+          "word": "קליק"
+        },
         "drop/pre-express/2021": {
           "word": "דְרוֹפּ"
         },
@@ -64,6 +160,9 @@
         },
         "behavior/coursee/2021": {
           "word": "התנהגות"
+        },
+        "sprite/coursee/2021": {
+          "word": "ספרייט"
         },
         "copyright/coursee/2021": {
           "word": "זכויות יוצרים"
@@ -76,6 +175,27 @@
         },
         "define/coursee/2021": {
           "word": "הגדר"
+        },
+        "debugging/csd/2021": {
+          "word": "מציאת טעויות"
+        },
+        "variable/csd/2021": {
+          "word": "משתנה"
+        },
+        "sprite/csd/2021": {
+          "word": "ספרייט"
+        },
+        "conditionals/csd/2021": {
+          "word": "תנאים"
+        },
+        "abstraction/csd/2021": {
+          "word": "הפשטה"
+        },
+        "function/csd/2021": {
+          "word": "פונקציה"
+        },
+        "copyright/csd/2021": {
+          "word": "זכויות יוצרים"
         }
       }
     }

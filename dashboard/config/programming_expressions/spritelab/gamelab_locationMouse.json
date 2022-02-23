@@ -1,0 +1,8 @@
+{
+  "key": "gamelab_locationMouse",
+  "name": "locationMouse",
+  "category": "Location",
+  "category_key": "location",
+  "block_name": "gamelab_locationMouse",
+  "syntax": "locationMouse"
+}

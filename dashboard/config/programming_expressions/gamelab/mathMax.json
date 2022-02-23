@@ -1,5 +1,7 @@
 {
-  "func": "mathMax",
-  "block": "Math.max(__)",
-  "category": "Math"
+  "key": "mathMax",
+  "name": "Math.max",
+  "category": "Math",
+  "category_key": "math",
+  "syntax": "Math.max"
 }

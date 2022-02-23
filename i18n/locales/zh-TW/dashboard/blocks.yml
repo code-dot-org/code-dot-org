@@ -371,6 +371,7 @@ zh-TW:
             '"right"': 右排
             '"x"': 十字交叉
             '"plus"': 十字加號
+            '"infinity"': 無窮線
             '"random"': 隨機
       Dancelab_makeAnonymousDanceSprite:
         text: 角色 創建一個新的 {COSTUME} 定位到 {LOCATION}
@@ -453,6 +454,26 @@ zh-TW:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': 全部外星人
             '"BEAR"': 全部熊仔
@@ -480,6 +501,7 @@ zh-TW:
             '"right"': 右排
             '"x"': 十字交叉
             '"plus"': 十字加號
+            '"infinity"': 無窮線
             '"random"': 隨機
       Dancelab_mixColors:
         text: 混合顏色 {COLOR1} 和 {COLOR2}
@@ -543,6 +565,7 @@ zh-TW:
             '"fireworks"': 煙火
             '"flowers"': 花朵
             '"growing_stars"': 星星
+            '"higher_power"': Higher Power
             '"swirl"': 催眠
             '"kaleidoscope"': 萬花筒
             '"lasers"': 鐳射舞池
@@ -972,6 +995,12 @@ zh-TW:
         text: 設定
       gamelab_addBehaviorSimple:
         text: 角色 {SPRITE} 開始 {BEHAVIOR}
+      gamelab_addTarget:
+        text: "{SPRITE}使目標{TARGET}至{OPT}"
+        options:
+          OPT:
+            '"follow"': 跟隨
+            '"avoid"': 避開
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
@@ -980,6 +1009,10 @@ zh-TW:
           UNIT:
             '"seconds"': 秒
             '"frames"': 頁框
+      gamelab_avoidingTargets:
+        text: 避開目標
+      gamelab_beginCollectingData:
+        text: 開始收集數據{BREAK}，值{VALUE}，標籤{LABEL}
       gamelab_bounceOff:
         text: "{SPRITE} 跳離 {TARGET}"
       gamelab_changePropBy:
@@ -1001,7 +1034,22 @@ zh-TW:
       gamelab_clickedOn:
         text: 當角色 {SPRITE} 被點擊
       gamelab_clickedSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): 向右旋轉
+            new Behavior(spinning_left, []): 向左旋轉
+            new Behavior(fluttering, []): 飄移
+            new Behavior(jittering, []): 抖動
+            new Behavior(wobbling, []): 搖晃
+            new Behavior(wandering, []): 徘徊
+            new Behavior(patrolling, []): 巡邏
+            new Behavior(moving_west_and_looping, []): 向西移動並循環
+            new Behavior(moving_east_and_looping, []): 向東移動並循環
+            new Behavior(moving_north_and_looping, []): 向北移動並迴圈
+            new Behavior(moving_south_and_looping, []): 向南移動並迴圈
       gamelab_comment:
         text: 註解：{COMMENT}
       gamelab_costumeImage:
@@ -1016,8 +1064,12 @@ zh-TW:
         text: 角色 移除 {THIS}
       gamelab_draggable:
         text: 可拖曳
+      gamelab_drawLine:
+        text: 畫線{COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: 角色 {SPRITE} 碰到邊緣就停止
+      gamelab_followingTargets:
+        text: 跟隨目標
       gamelab_getAllSprites:
         text: 所有小怪
       gamelab_getProp:
@@ -1043,8 +1095,30 @@ zh-TW:
           UNIT:
             '"seconds"': 秒
             '"frames"': 頁框
+      gamelab_glideTo:
+        text: "{SPRITE}滑動到{LOCATION}"
       gamelab_hideTitleScreen:
         text: 標題畫面隱藏
+      gamelab_ifVarEquals:
+        text: |-
+          如果{NUM} ={VAL}
+          {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      gamelab_isCostumeEqual:
+        text: "{SPRITE}服裝是{COSTUME}"
       gamelab_isKeyPressed:
         text: 按下 {KEY}  鍵
         options:
@@ -1141,14 +1215,17 @@ zh-TW:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: 使用{NUM} {ANIMATION_NAME}精靈圖，創建{EFFECT}效果
         options:
           EFFECT:
+            '"pop"': 爆破
             '"rain"': 下雨
       gamelab_makeNewSpriteAnon:
         text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
       gamelab_makeNumSprites:
         text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
       gamelab_makeProjectile:
+        text: "創建炮彈 \n{ANIMATION_NAME}，從{LOCATION}，速度{SPEED}，方向{DIRECTION}"
         options:
           DIRECTION:
             '0': 向右
@@ -1178,7 +1255,7 @@ zh-TW:
       gamelab_moveToward:
         text: 角色 {SPRITE} 面朝 {TARGET} 移動 {DISTANCE} 像素
       gamelab_newSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: 物件 {SPRITE}
       gamelab_patrollingUpDown:
@@ -1189,8 +1266,46 @@ zh-TW:
         text: 播放音效 {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": 重音
+            "'sound://category_digital/boing_2.mp3'": 啵嚶
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": 爆破
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": 閃爍
             "'sound://category_collect/clicky_crunch.mp3'": 緊縮
+            "'sound://category_swish/quick_swing.mp3'": 搖擺
+            "'sound://category_nature/summer_night_loop.mp3'": 夏日夜晚
+            "'sound://category_background/ocean_waves.mp3'": 海洋波浪
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": 海灘漣漪
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": 泡泡
+            "'sound://category_animals/bear.mp3'": 熊仔
+            "'sound://category_animals/cat.mp3'": 貓
+            "'sound://category_animals/cow.mp3'": 乳牛
+            "'sound://category_animals/pig.mp3'": 豬
+            "'sound://category_animals/sheep.mp3'": 綿羊
+            "'sound://category_animals/chicken.mp3'": 雞
+            "'sound://category_animals/elephant.mp3'": 大象
+            "'sound://category_animals/dolphin.mp3'": 海豚
+            "'sound://category_nature/thunderstorm_1.mp3'": 雷暴
+            "'sound://category_animals/chick.mp3'": 小雞
+            "'sound://category_animals/dog.mp3'": 狗
+            "'sound://category_collect/trill_stings.mp3'": 顫音
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": 豎琴
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": 點擊
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": 音調打擊
+            "'sound://category_transition/trippy_robotic_transition.mp3'": 機器人轉調
+            "'sound://category_transition/star_dust_particle_10.mp3'": 星塵
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": 外星飛船
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": 魔咒
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": 古怪低音
             "'sound://category_digital/jump_7.mp3'": 定位到
+      gamelab_playSpeech:
+        text: 游戲言語{SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): 使用方向鍵移動
+            new Behavior(driving_with_arrow_keys, []): 用方向鍵駕駛
+            draggable(): 可拖曳
       gamelab_pointInDirection:
         text: 角色 {SPRITE} 面朝 {DIRECTION} 度
         options:
@@ -1215,6 +1330,8 @@ zh-TW:
         text: 角色 {THIS} 顏色移除
       gamelab_repeatForever:
         text: 重複無限次
+      gamelab_resetTimer:
+        text: 重置計時器
       gamelab_setAnimation:
         text: 角色 {THIS} 造型設為 {ANIMATION}
       gamelab_setBackground:
@@ -1256,12 +1373,17 @@ zh-TW:
       gamelab_setBackgroundImageAs:
         text: 背景設為 {IMG}
       gamelab_setDefaultSpriteSize:
+        text: 將新精靈圖默認尺寸設定為 {SIZE}
         options:
           SIZE:
-            '25': extra small
-            '50': small
+            '25': 超小
+            '50': 小
             '75': 中
-            '100': large
+            '100': 大
+      gamelab_setPrompt:
+        text: 提示用戶{QUESTION}變量{VAR}
+      gamelab_setPromptWithChoices:
+        text: 提示用戶{QUESTION}變量{VAR}，選項{A}{B}{C}
       gamelab_setProp:
         text: 角色 {SPRITE} {PROPERTY} 設為 {VAL}
         options:
@@ -1278,10 +1400,10 @@ zh-TW:
           PROPERTY:
             '"scale"': 尺寸
           SIZE:
-            '25': extra small
-            '50': small
+            '25': 超小
+            '50': 小
             '75': 中
-            '100': large
+            '100': 大
       gamelab_setSizes:
         text: 角色 {SPRITE} {PROPERTY} 設為 {N}%
         options:
@@ -1289,8 +1411,18 @@ zh-TW:
             '"scale"': 尺寸
             '"width"': 寬度
             '"height"': 高度
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': 慢
+            '5': 普通
+            '7': 快
+            '9': extra fast
       gamelab_setTint:
         text: 角色 {THIS} 顏色設為 {COLOR}
+      gamelab_setupScoreboard:
+        text: "畫記分板 \n{SPRITE1COSTUME}分{VAR1}{SPRITE2COSTUME}分{VAR2}目標{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           設置類比
@@ -1306,8 +1438,30 @@ zh-TW:
           CONDITION:
             '"when"': 當
             '"while"': 重複 判斷
+      gamelab_spriteSay:
+        text: "{SPRITE}說{SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}說{TEXT1}，持續{NUM}秒"
+      gamelab_startAvoiding:
+        text: "{SPRITE}開始避開{TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE}開始跟隨{TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE}開始滑動"
+      gamelab_stopAvoiding:
+        text: "{SPRITE}停止避開其他精靈圖"
+      gamelab_stopCollectingData:
+        text: 停止收集數據
+      gamelab_stopFollowing:
+        text: "{SPRITE}停止跟隨其他精靈圖"
+      gamelab_stopGliding:
+        text: "{SPRITE}停止滑動"
       gamelab_subjectSpritePointer:
-        text: 點擊 {SPRITE}
+        text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: 翻滾
       gamelab_turn:
@@ -1318,6 +1472,8 @@ zh-TW:
             '"left"': " 向左"
       gamelab_updateTitleWithColor:
         text: 標題畫面顯示 {BREAK} 標題 {TITLE} 顏色 {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: 當所有提示已回答
       gamelab_whenDownArrow:
         text: 當向下鍵被按下
       gamelab_whenKey:
@@ -1335,8 +1491,12 @@ zh-TW:
             '"d"': d
       gamelab_whenLeftArrow:
         text: 當向左鍵被按下
+      gamelab_whenPromptAnswered:
+        text: 當{VAR}已回答
       gamelab_whenRightArrow:
         text: 當向右鍵被按下
+      gamelab_whenSpriteCreated:
+        text: 當{SPRITE}已創建
       gamelab_whenTouching:
         text: 當角色 {SPRITE1} 碰到角色 {SPRITE2} 時
       gamelab_whenUpArrow:
@@ -1364,6 +1524,21 @@ zh-TW:
         text: 當角色 {SPRITE1} 碰著角色 {SPRITE2} 時
       gamelab_whileUpArrow:
         text: 當向上鍵被按住
+      gamelab_withPercentChance:
+        text: |-
+          如果{NUM}%幾率
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM}幾率
+           {STATEMENT}
+        options:
+          NUM:
+            '10': 非常低
+            '25': 低
+            '50': 50/50
+            '75': 高
+            '90': 非常高
       gamelab_xLocationOf:
         text: x 座標 {SPRITE}
       gamelab_yLocationOf:
@@ -1383,6 +1558,8 @@ zh-TW:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": 不是我的標籤
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: 提示用戶{QUESTION}變量{VAR}，選項{A}{B}{C}
       Mikelab_changeAnim:
         text: 角色 {SPRITE} 造型設為 {COSTUME}
       Mikelab_changePropBy:
@@ -1742,56 +1919,201 @@ zh-TW:
         text: 隨機佈局怪物
       Outbreak_stopMoving:
         text: 怪物停止移動
-      PoemBot_makeNumSprites:
-        text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
-      PoemBot_playSound:
-        text: 播放音效 {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: 背景效果設為 {EFFECT} {PALETTE}
+      Poetry_addFrame:
         options:
-          EFFECT:
-            '"colors"': 色塊
-            '"squiggles"': 蜿曲線段
-            '"space"': 太空
-            '"stars"': 星星
-            '"ripples"': 漣漪
-          PALETTE:
+          BRUSH:
+            '"brick"': 磚頭
+            '"fire"': 火
+            '"flowers"': 花
+            '"hearts"': 愛心
+            '"iceCream"': 冰淇淋
+            '"leaves"': 退出
             '"rainbow"': 彩虹
-      PoemBot_setBackgroundImageAs:
-        text: 背景設為 {IMG}
-      PoemBot_setForegroundEffect:
-        text: 前景效果設為 {EFFECT}
+            '"stars"': 星空
+      Poetry_addLine:
+        text: 添加行{LINE}
+      Poetry_animateText:
+        text: 動畫文本
+      Poetry_destroy:
+        text: 移除{ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE}滑動到{LOCATION}"
+      Poetry_hideText:
+        text: 隱藏文本
+      Poetry_makeBurst:
+        text: 使用{NUM} {ANIMATION_NAME}精靈圖，創建{EFFECT}效果
         options:
           EFFECT:
-            '"rain"': 雨滴
+            '"pop"': 爆破
+            '"rain"': 下雨
+      Poetry_makeNewSpriteAnon:
+        text: 角色 創建一個新的 {ANIMATION_NAME} 定位到 {LOCATION}
+      Poetry_makeNumSprites:
+        text: 產生 {NUM} 個新的 {ANIMATION_NAME} 小怪
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': 平靜
+            '"sound://category_nature/steady_campfire_loop.mp3"': 篝火
+            '"sound://category_nature/rain_loop.mp3"': 細雨
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': 森林
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': 鬧鬼
+            '"sound://category_background/inside_plane.mp3"': 嗯
+            '"sound://category_loops/red_flag_loop1.mp3"': 使命
+            '"sound://category_nature/summer_night_loop.mp3"': 夜晚
+            '"sound://category_background/ocean_waves.mp3"': 洋
+            '"sound://category_background/rainforest_ambient_sound.mp3"': 雨林
+            '"sound://category_background/repitition.mp3"': 騎術
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': 緩慢
+      Poetry_playSound:
+        text: 播放音效 {SOUND}
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': 鈴
+            '"sound://category_digital/boing_2.mp3"': 嚶嚶聲
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': 氣泡
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': 交談
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': 放氣
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': 失敗
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': 飄揚
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': 跳躍
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': 噗
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': 掃描
+            '"sound://category_background/typewriter.mp3"': 打字機
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': 活力
+            '"sound://category_achievements/peaceful_win_1.mp3"': 成功
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': 漩渦
+            '"sound://category_achievements/peaceful_win_6.mp3"': 風鈴
+      Poetry_setAuthor:
+        text: 設定作者{AUTHOR}
+      Poetry_setBackground:
+        text: 背景顏色設為 {COLOR}
+      Poetry_setBackgroundEffect:
+        text: 設定背景到{EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"blooming"': 開花
             '"bubbles"': 氣泡
-            '"hearts"': 繽紛愛心
+            '"clouds"': 多雲
             '"confetti"': 紙屑
+            '"darkCircles"': 淡入淡出
+            '"fadeColors"': 結霜
+            '"hearts"': 愛心
+            '"space"': 太空
+            '"rain"': 下雨
+            '"ripples"': 漣漪
+            '"colors"': 色塊
+            '"stars"': 星星
+            '"squiggles"': 蜿曲線段
+          PALETTE:
+            '"autumn"': 秋天
+            '"sunrise"': 黎明
+            '"sunset"': 黃昏
+            '"grayscale"': 灰色
+            '"ocean"': 洋
+            '"rainbow"': 彩虹
+            '"roses"': 玫瑰
+            '"sky"': 天空
+            '"spring"': 春天
+            '"summer"': 夏天
+            '"winter"': 冬天
+      Poetry_setBackgroundImageAs:
+        text: 背景設為 {IMG}
+      Poetry_setFont:
+        text: 設定字體{FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': 手寫
+            '"Impact"': Impact
+            '"Georgia"': Georgia
+            '"Times"': Times
+      Poetry_setFontColor:
+        text: 設定文本顏色{FILL}
+      Poetry_setForegroundEffect:
+        text: 製作{EFFECT}效果
+        options:
+          EFFECT:
+            '"bubbles"': 氣泡
+            '"confetti"': 紙屑
+            '"hearts"': 愛心
+            '"emojis"': 快樂表情
+            '"rain"': 下雨
             '"starburst"': 星爆
-      PoemBot_startBehavior:
+            '"glass"': 破碎玻璃
+            '"twinkling"': 閃爍
+      Poetry_setPrompt:
+        text: 提示用戶{LEFT_QUOTE}{NAME}{RIGHT_QUOTE}，針對變數{VAR}
+      Poetry_setPromptWithChoices:
+        text: 提示用戶{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}，針對變數{VAR}，選擇{LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B} {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: 設置{SPRITE}大小到{VAL}
+      Poetry_setTextEffect:
+        text: 設置文本效果{EFFECT}
+        options:
+          EFFECT:
+            '"fade"': 淡入淡出
+            '"flyLeft"': 從左邊飛
+            '"flyRight"': 從右邊飛
+            '"flyTop"': 從頂部飛
+            '"flyBottom"': 從底部飛
+            '"typewriter"': 打字機
+      Poetry_setTitle:
+        text: 設定標題{TITLE}
+      Poetry_showText:
+        text: 顯示文本
+      Poetry_startBehavior:
+        text: 精靈圖{ANIMATION_NAME}開始{BEHAVIOR}
         options:
           BEHAVIOR:
-            fluttering: 飄移
-            growing: 放大
-            jittering: 抖動
-            shrinking: 縮小
-            spinning_left: 向左旋轉
-            spinning_right: 向右旋轉
-            swimming_left_and_right: 游泳
-            wandering: 徘徊
-            wobbling: 搖晃
-      PoemBot_stopBehavior:
+            '"fluttering"': 飄移
+            '"growing"': 放大
+            '"jittering"': 抖動
+            '"shrinking"': 縮小
+            '"spinning_left"': 向左旋轉
+            '"spinning_right"': 向右旋轉
+            '"swimming_left_and_right"': 游泳
+            '"wandering"': 徘徊
+            '"wobbling"': 搖晃
+      Poetry_stopBehavior:
+        text: 精靈圖{ANIMATION_NAME}停止{BEHAVIOR}
         options:
           BEHAVIOR:
-            fluttering: 飄移
-            growing: 放大
-            jittering: 抖動
-            shrinking: 縮小
-            spinning_left: 向左旋轉
-            spinning_right: 向右旋轉
-            swimming_left_and_right: 游泳
-            wandering: 徘徊
-            wobbling: 搖晃
+            '"fluttering"': 飄移
+            '"growing"': 放大
+            '"jittering"': 抖動
+            '"shrinking"': 縮小
+            '"spinning_left"': 向左旋轉
+            '"spinning_right"': 向右旋轉
+            '"swimming_left_and_right"': 游泳
+            '"wandering"': 徘徊
+            '"wobbling"': 搖晃
+            '"all"': "--所有行為--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        text: 當行{N}顯示時
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: 當{VAR}已回答
       RyanLab_moveForward:
         text: 移動-向前
       RyanLab_turnLeft:
@@ -1846,6 +2168,8 @@ zh-TW:
             '0.75': most
             '0.5': half of
             '0.25': few
+      aalab_spriteSayChoices:
+        text: "{SPRITE}說{SPEECH}"
       binary_drawBin:
         text: 繪製二進位 {BIN}
       binary_drawBinScreen:

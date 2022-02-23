@@ -1,5 +1,5 @@
 /* global dashboard */
-import React, {Component} from 'react';
+import React, {useState, useRef} from 'react';
 import {connect} from 'react-redux';
 import $ from 'jquery';
 import BackToFrontConfetti from './BackToFrontConfetti';
@@ -19,152 +19,189 @@ const blankCertificates = {
   hero: require('@cdo/static/MC_Hour_Of_Code_Certificate_Hero.png'),
   aquatic: require('@cdo/static/MC_Hour_Of_Code_Certificate_Aquatic.png'),
   mee: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee.png'),
-  mee_empathy: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_empathy.png')
+  mee_empathy: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_empathy.png'),
+  mee_timecraft: require('@cdo/static/MC_Hour_Of_Code_Certificate_mee_timecraft.png')
 };
 
-class Certificate extends Component {
-  constructor() {
-    super();
-    this.state = {
-      personalized: false
-    };
-  }
+function Certificate(props) {
+  const [personalized, setPersonalized] = useState(false);
+  const [studentName, setStudentName] = useState();
+  const nameInputRef = useRef(null);
 
-  static propTypes = {
-    tutorial: PropTypes.string,
-    certificateId: PropTypes.string,
-    randomDonorTwitter: PropTypes.string,
-    responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
-    under13: PropTypes.bool,
-    children: PropTypes.node
-  };
+  const isMinecraft = () =>
+    /mc|minecraft|hero|aquatic|mee|mee_empathy|mee_timecraft/.test(
+      props.tutorial
+    );
+  const isAIOceans = () => /oceans/.test(props.tutorial);
 
-  isMinecraft = () =>
-    /mc|minecraft|hero|aquatic|mee|mee_empathy/.test(this.props.tutorial);
-  isAIOceans = () => /oceans/.test(this.props.tutorial);
-
-  personalizeCertificate(session) {
+  const personalizeCertificate = session => {
     $.ajax({
       url: '/v2/certificate',
       type: 'post',
       dataType: 'json',
       data: {
         session_s: session,
-        name_s: this.nameInput.value
+        name_s: nameInputRef.current.value
       }
     }).done(response => {
       if (response.certificate_sent) {
-        this.setState({personalized: true});
+        setStudentName(response['name']);
+        setPersonalized(true);
       }
     });
-  }
+  };
 
-  render() {
-    const {
-      responsiveSize,
-      tutorial,
-      certificateId,
-      randomDonorTwitter,
-      under13,
-      children
-    } = this.props;
-    const certificate = certificateId || 'blank';
-    const personalizedCertificate = `${
-      dashboard.CODE_ORG_URL
-    }/api/hour/certificate/${certificate}.jpg`;
-    const blankCertificate =
-      blankCertificates[tutorial] || blankCertificates.hourOfCode;
-    const imgSrc = this.state.personalized
-      ? personalizedCertificate
-      : blankCertificate;
-    const certificateLink = `https:${
-      dashboard.CODE_ORG_URL
-    }/certificates/${certificate}`;
-    const desktop =
-      responsiveSize === ResponsiveSize.lg ||
-      responsiveSize === ResponsiveSize.md;
-    const headingStyle = desktop ? styles.heading : styles.mobileHeading;
-    const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
+  const getEncodedParams = () => {
+    const donor = studentName ? props.randomDonorName : null;
+    const data = {
+      name: studentName,
+      course: props.tutorial,
+      donor
+    };
+    return btoa(JSON.stringify(data));
+  };
 
-    const facebook = queryString.stringify({
-      u: certificateLink
-    });
-
-    const twitter = queryString.stringify({
-      url: certificateLink,
-      related: 'codeorg',
-      text: randomDonorTwitter
-        ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
-        : i18n.justDidHourOfCode()
-    });
-
-    let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
-    if (this.isMinecraft() && !this.state.personalized) {
-      // Correct the minecraft print url for non-personalized certificates.
-      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
-    }
-    if (this.isAIOceans() && !this.state.personalized) {
-      // Correct the minecraft print url for non-personalized certificates.
-      print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${tutorial}`;
+  const getCertificateImagePath = certificate => {
+    if (!props.showStudioCertificate) {
+      return `${
+        dashboard.CODE_ORG_URL
+      }/api/hour/certificate/${certificate}.jpg`;
     }
 
-    return (
-      <div style={styles.container}>
-        <h1 style={headingStyle}>{i18n.congratsCertificateHeading()}</h1>
-        {tutorial && (
-          <LargeChevronLink
-            link={`/s/${tutorial}`}
-            linkText={i18n.backToActivity()}
-          />
-        )}
-        <div id="uitest-certificate" style={certificateStyle}>
-          <BackToFrontConfetti
-            active={this.state.personalized}
-            style={styles.confetti}
-          />
-          <a href={certificateLink}>
-            <img src={imgSrc} />
-          </a>
-        </div>
-        <div style={certificateStyle}>
-          {tutorial && !this.state.personalized && (
-            <div>
-              <h2>{i18n.congratsCertificatePersonalize()}</h2>
-              <input
-                id="name"
-                type="text"
-                style={styles.nameInput}
-                placeholder={i18n.yourName()}
-                ref={input => (this.nameInput = input)}
-              />
-              <button
-                type="button"
-                style={styles.submit}
-                onClick={this.personalizeCertificate.bind(this, certificate)}
-              >
-                {i18n.submit()}
-              </button>
-            </div>
-          )}
-          {tutorial && this.state.personalized && (
-            <div>
-              <h2 id="uitest-thanks">{i18n.congratsCertificateThanks()}</h2>
-              <p>{i18n.congratsCertificateContinue()}</p>
-            </div>
-          )}
-          <h2>{i18n.congratsCertificateShare()}</h2>
-          <SocialShare
-            facebook={facebook}
-            twitter={twitter}
-            print={print}
-            under13={under13}
-          />
-        </div>
-        {children}
+    const filename = getEncodedParams();
+    return `/certificate_images/${filename}.jpg`;
+  };
+
+  const getPrintPath = certificate => {
+    if (!props.showStudioCertificate) {
+      let print = `${dashboard.CODE_ORG_URL}/printcertificate/${certificate}`;
+      if (isMinecraft() && !personalized) {
+        // Correct the minecraft print url for non-personalized certificates.
+        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
+          props.tutorial
+        }`;
+      }
+      if (isAIOceans() && !personalized) {
+        // Correct the minecraft print url for non-personalized certificates.
+        print = `${dashboard.CODE_ORG_URL}/printcertificate?s=${
+          props.tutorial
+        }`;
+      }
+      return print;
+    }
+
+    const encoded = getEncodedParams();
+    return `/print_certificates/${encoded}`;
+  };
+
+  const getCertificateSharePath = certificate => {
+    if (!props.showStudioCertificate) {
+      return `https:${dashboard.CODE_ORG_URL}/certificates/${certificate}`;
+    }
+
+    const encoded = getEncodedParams();
+    return `/certificates/${encoded}`;
+  };
+
+  const {
+    responsiveSize,
+    tutorial,
+    certificateId,
+    randomDonorTwitter,
+    under13,
+    children
+  } = props;
+
+  const certificate = certificateId || 'blank';
+  const personalizedCertificate = getCertificateImagePath(certificate);
+  const blankCertificate =
+    blankCertificates[tutorial] || blankCertificates.hourOfCode;
+  const imgSrc = personalized ? personalizedCertificate : blankCertificate;
+  const certificateShareLink = getCertificateSharePath(certificate);
+  const desktop =
+    responsiveSize === ResponsiveSize.lg ||
+    responsiveSize === ResponsiveSize.md;
+  const headingStyle = desktop ? styles.heading : styles.mobileHeading;
+  const certificateStyle = desktop ? styles.desktopHalf : styles.mobileFull;
+
+  const facebook = queryString.stringify({
+    u: certificateShareLink
+  });
+
+  const twitter = queryString.stringify({
+    url: certificateShareLink,
+    related: 'codeorg',
+    text: randomDonorTwitter
+      ? i18n.justDidHourOfCodeDonor({donor_twitter: randomDonorTwitter})
+      : i18n.justDidHourOfCode()
+  });
+
+  const print = getPrintPath(certificate);
+
+  return (
+    <div style={styles.container}>
+      <h1 style={headingStyle}>{i18n.congratsCertificateHeading()}</h1>
+      {tutorial && (
+        <LargeChevronLink
+          link={`/s/${tutorial}`}
+          linkText={i18n.backToActivity()}
+        />
+      )}
+      <div id="uitest-certificate" style={certificateStyle}>
+        <BackToFrontConfetti active={personalized} style={styles.confetti} />
+        <a href={certificateShareLink}>
+          <img src={imgSrc} />
+        </a>
       </div>
-    );
-  }
+      <div style={certificateStyle}>
+        {tutorial && !personalized && (
+          <div>
+            <h2>{i18n.congratsCertificatePersonalize()}</h2>
+            <input
+              id="name"
+              type="text"
+              style={styles.nameInput}
+              placeholder={i18n.yourName()}
+              ref={nameInputRef}
+            />
+            <button
+              type="button"
+              style={styles.submit}
+              onClick={personalizeCertificate.bind(this, certificate)}
+            >
+              {i18n.submit()}
+            </button>
+          </div>
+        )}
+        {tutorial && personalized && (
+          <div>
+            <h2 id="uitest-thanks">{i18n.congratsCertificateThanks()}</h2>
+            <p>{i18n.congratsCertificateContinue()}</p>
+          </div>
+        )}
+        <h2>{i18n.congratsCertificateShare()}</h2>
+        <SocialShare
+          facebook={facebook}
+          twitter={twitter}
+          print={print}
+          under13={under13}
+        />
+      </div>
+      {children}
+    </div>
+  );
 }
+
+Certificate.propTypes = {
+  tutorial: PropTypes.string,
+  certificateId: PropTypes.string,
+  randomDonorTwitter: PropTypes.string,
+  randomDonorName: PropTypes.string,
+  responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']).isRequired,
+  under13: PropTypes.bool,
+  children: PropTypes.node,
+  showStudioCertificate: PropTypes.bool
+};
 
 const styles = {
   heading: {

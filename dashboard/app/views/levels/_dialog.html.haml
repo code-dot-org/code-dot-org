@@ -15,7 +15,7 @@
     - else
       %a.btn.btn-large.btn-primary.next-lesson.submitButton
         =t('submit')
-      - if @level.properties['submittable']
+      - if @level.properties['submittable'] && !Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
         %a.btn.btn-large.btn-primary.unsubmitButton{style: 'display: none'}
           =t('unsubmit')
 .clear

@@ -1,39 +1,39 @@
 ---
-title: Hour of Code How-to Guide
+title: Gebruiksaanwijzing voor 'Hour of Code'
 ---
 
 {{ signup_button }}
 
 # Hoe plan je een CodeUur
 
-### Join the movement and introduce your students to computer science with these steps.
+### Wordt lid van de beweging en laat uw studenten met deze stappen kennis maken met informatica.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Rekenkundig denken draagt bij aan vaardigheden voor het oplossen van problemen, logica, en creativiteit. En technologie verandert elke industrie op de planeet. Vandaag de dag dienen studenten te leren hoe ze technologie moeten creëren, niet alleen gebruiken. Door vroeg te beginnen leggen ze de basis voor succes in elk carrièrepad in de 21ste eeuw.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time, and it fits perfectly for both in-class and after-school settings. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
+'Hour of Code' is een makkelijke en leuke manier om studenten kennis te laten maken met informatica, misschien wel voor de allereerste keer, en het is uitstekend geschikt voor lessen in de klas als naschoolse bijlessen. Take a look at our [participation guide if you still have questions]({{ localized_files/participation_guide }}).
 
-- [Watch the Hour of Code how-to video](#how-to-video)
-- [Explore activities and tutorials](#explore-activities)
-- [Create your plan for the day](#create-your-plan)
+- [Bekijk de tutorial van 'Hour of Code'](#how-to-video)
+- [Verken de activiteiten en tutorials](#explore-activities)
+- [Creëer je plan voor de dag](#create-your-plan)
 - [Promote your Hour of Code](#promote-your-hour)
-- [How to start your Hour of Code strong](#how-to-start)
-- [Get coding](#code)
-- [Celebrate your students' success](#celebrate)
+- [Hoe sterk te beginnen met je 'Hour of Code'](#how-to-start)
+- [Coding verkrijgen](#code)
+- [Vier het succes van uw studenten](#celebrate)
 - [Other Hour of Code resources for educators](#other-resources)
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Een 'Hour of Code' kan ook op afstand worden gehost. Bekijk om te beginnen onze [tips voor het hosten van een virtuele 'Hour of Code'](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 
 <a id="how-to-video"></a>
 
-## 1. Watch the Hour of Code how-to video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
+## 1. Bekijk de 'Hour of Code' video <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
 * * *
 
 <a id="explore-activities"></a>
 
-## 2. Explore activities and tutorials
+## 2. Verken activiteiten en tutorials
 
 We provide a variety of fun, [student-guided tutorials]({{ urls/learn }}) for all age groups and experience levels. It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
 
@@ -45,7 +45,7 @@ Verken de activiteiten en beslis vooraf of je een enkele tutorial voor al je lee
 
 <a id="create-your-plan"></a>
 
-## 3. Create your plan for the day
+## 3. Creëer je plan voor de dag
 
 ### Denk na over je technologische benodigdheden - computers zijn optioneel!
 
@@ -64,7 +64,7 @@ People around the world join in the Hour of Code celebration during CS Education
 
 <a id="promote-your-hour"></a>
 
-## 4. Promote your Hour of Code
+## 4. Je 'Hour of Code' promoten
 
 Now that you've planned your event, it's time to start promoting it!
 
@@ -88,7 +88,7 @@ Learn more about posters, videos, stickers and other ways to [promote your event
 
 <a id="how-to-start"></a>
 
-## 5. How to start your Hour of Code strong
+## 5. Hoe sterk te beginnen met je 'Hour of Code'
 
 Once your Hour of Code celebration has arrived, make sure you start your event strong with some of these tools and tips.
 
@@ -99,21 +99,21 @@ Laat een inspirerende video zien:
 - The original Code.org launch video, featuring Bill Gates, Mark Zuckerberg, and NBA star Chris Bosh. (There are [1 minute](https://www.youtube.com/watch?v=qYZF6oIZtfc), [5 minute](https://www.youtube.com/watch?v=nKIu9yen5nc), and [9 minute](https://www.youtube.com/watch?v=dU1xS07N-FA) versions available)
 - Find more inspirational [resources]({{ urls/inspire }}) and [videos](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-Het maakt niet uit als programmeren voor u en uw leerlingen nog nieuw is. Hier zijn een paar ideeën om uw CodeUur activiteit te introduceren:
+Het maakt niet uit als programmeren voor u en uw leerlingen nog nieuw is. Hier zijn een paar ideeën om uw 'Hour of Code'-activiteit te introduceren:
 
 - Explain ways that technology impacts our lives, with examples both boys and girls will care about (talk about saving lives, helping people, connecting people, etc.).
 - Noem dingen op waarmee codering wordt gebruikt.
-- See tips for getting young women interested in computer science [here]({{ urls/girls }}).
+- Bekijk [hier]({{ urls/girls }}) tips om jonge vrouwen geïnteresseerd te krijgen in informatica.
 
 * * *
 
 <a id="code"></a>
 
-## 6. Get coding!
+## 6. Coding verkrijgen!
 
 Betrek de deelnemers bij de activiteit
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Schrijf de link van de tutorial op een whiteboard. de link is te vinden in de [informatie over uw geselecteerde tutorial]({{ urls/learn }}) onder het aantal deelnemers.
 
 Wanneer uw studenten moeilijkheden tegenkomen kunt u gerust reageren met:
 
@@ -130,7 +130,7 @@ What if a student finishes early?
 
 <a id="celebrate"></a>
 
-## 7. Celebrate your students' success
+## 7. Vier het succes van uw studenten
 
 [col-33]
 
@@ -154,6 +154,6 @@ What if a student finishes early?
 
 ### Wat komt er na het CodeUur?
 
-Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
+Informatica hoeft niet te eindigen met de 'Hour of Code'. Ons curriculum bevindt zich op het web en is altijd gratis te gebruiken. [Leer hoe](/beyond) u uw school en studenten kennis kunt laten maken met CS.
 
 {{ signup_button }}

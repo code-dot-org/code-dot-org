@@ -1,6 +1,7 @@
 {
-  "func": "declareAssign_list_abd",
-  "block": "var list = [\"a\", \"b\", \"d\"];",
+  "key": "declareAssign_list_abd",
+  "name": "declareAssign_list_abd",
   "category": "Variables",
-  "noAutocomplete": true
+  "category_key": "variables",
+  "syntax": "var list = [\"a\", \"b\", \"d\"];"
 }

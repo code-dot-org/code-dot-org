@@ -4,18 +4,30 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "notice": "CSA Pilot: The Playground",
+          "details": "Please note that for the AP CSA Pilot, The Playground is offered only in Units 4 and 8 and in a sandbox level found at the end of each unit. The Playground is not available as a standalone project outside of the course. Projects created in The Playground may not function after the end of the school year as potential updates are implemented. If this happens, we will provide instructions for students who wish to keep their projects working as expected.",
+          "link": "",
+          "type": "warning",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSA",
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_migrated": true,
       "pilot_experiment": "csa-pilot",
-      "hideable_lessons": true,
-      "weekly_instructional_minutes": 225,
       "show_calendar": true,
-      "include_student_lesson_plans": true
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-23 19:28:46 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-01-05 18:12:18 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa4-pilot"
     }
@@ -46,9 +58,21 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "Pilot Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Sandbox"
       },
@@ -96,7 +120,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "Treating Data as a Different Types",
+      "name": "Treating Data as a Different Type",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -311,7 +335,7 @@
       "key": "lesson-15",
       "name": "Assessment Day",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
@@ -327,12 +351,27 @@
       }
     },
     {
-      "key": "lesson-16",
-      "name": "Java Lab",
+      "key": "lesson-20",
+      "name": "Unit 4 Pilot Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Java Lab",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -344,10 +383,10 @@
     {
       "key": "lesson-17",
       "name": "The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -359,10 +398,10 @@
     {
       "key": "lesson-18",
       "name": "The Theater",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -374,10 +413,10 @@
     {
       "key": "lesson-19",
       "name": "The Playground",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -1003,6 +1042,18 @@
       }
     },
     {
+      "key": "6f89cdd9-27ca-40d3-8c82-9e6a98c4e947",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f89cdd9-27ca-40d3-8c82-9e6a98c4e947",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot"
+      }
+    },
+    {
       "key": "620c1e22-7f2a-41a6-8c66-6a9b8f31e07d",
       "position": 1,
       "properties": {
@@ -1180,19 +1231,8 @@
       }
     },
     {
-      "key": "e85403e7-23c3-4d65-abe0-42a9e5c9f745",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the APIs and Libraries video."
-      },
-      "seeding_key": {
-        "activity_section.key": "e85403e7-23c3-4d65-abe0-42a9e5c9f745",
-        "lesson_activity.key": "2e828b71-fb86-4a4d-9084-aa28cb267fed"
-      }
-    },
-    {
       "key": "60dde12a-a8a5-4f61-8d59-c8a94e77868e",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "The `Scanner` and `String` classes are part of the Java API, which we use to write programs. That is why the package names start with `java`, such as `java.util` and `java.lang`.\n\nWe saw at the beginning of class that apps and websites often use functions from other apps. The software engineers of these programs can add functions and interact with other apps by using APIs.\n\nLet's look at some popular APIs used in many of the programs we use every day.",
         "duration": "15",
@@ -1206,7 +1246,7 @@
     },
     {
       "key": "f1707318-0d45-427b-bbea-868027a54956",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students explore example APIs such as Google Developers and Spotify for Developers.",
         "progression_name": "Exploring APIs"
@@ -1218,7 +1258,7 @@
     },
     {
       "key": "b1520cb5-7216-4563-9e1a-a4af9473d985",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What do you notice about these APIs?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students notice that the APIs define functionalities that software engineers can incorporate into their programs and include documentation explaining how to use them. Students may wonder if there are APIs for other apps they use or how to incorporate these into their programs."
       },
@@ -1229,7 +1269,7 @@
     },
     {
       "key": "45aaa9b2-6e4d-431f-a0d4-d5e6f4c4c218",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The Neighborhood is hosting a block party, and you have been asked to develop a game to play at the block party. In this unit, you will implement the API for The Playground, which allows people in the community to gather to play games with their friends and family.\n\nThroughout this unit, you will develop a game called Pop the Balloon for The Neighborhood Block Party.",
         "remarks": true
@@ -1241,7 +1281,7 @@
     },
     {
       "key": "ef528e6f-b9ed-4472-ae60-eab09115b42f",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to review the API documentation for The Playground.",
         "progression_name": "Exploring The Playground"
@@ -1253,7 +1293,7 @@
     },
     {
       "key": "249b7a2c-b25b-49b7-832c-7d115907e9a7",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What could you do or create with this API?*\n\n**Discussion Goal:** Students notice the API includes adding and removing images and clickable images. Students also notice that the API allows them to play sounds. Students share ideas about making games and interactive programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 5 on Code Studio. Students import The Playground and run the sample code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce using The Playground.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio.",
         "progression_name": "Creating the Dice and Roll Button"
@@ -1330,7 +1370,7 @@
       "key": "79351cf1-a370-4e24-9e3d-8e1076e7d51d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you find most interesting about the `Math` class?*\n* *What questions do you have?*\n\n**Discussion Goal:** Students share what they found during the scavenger hunt and any questions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the “What We Want to Know” column on the KWL chart on the first page of their Solving Problems with the Math Class handout. Students can add to this column throughout the lesson."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you find most interesting about the `Math` class?*\n* *What questions do you have?*\n\n**Discussion Goal:** Students share what they found during the scavenger hunt and any questions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the “What We Know” column on the KWL chart on the first page of their Solving Problems with the Math Class handout. Students can add to this column throughout the lesson."
       },
       "seeding_key": {
         "activity_section.key": "79351cf1-a370-4e24-9e3d-8e1076e7d51d",
@@ -1997,7 +2037,8 @@
       "key": "bdde54ed-79c1-414f-8de3-46883bf2c4bb",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the last two tasks from the checklist.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how the score is calculated in Pop the Balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the last two tasks from the checklist.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how the score is calculated in Pop the Balloons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 6 and 7 on Code Studio.",
+        "progression_name": "Calculating the Score"
       },
       "seeding_key": {
         "activity_section.key": "bdde54ed-79c1-414f-8de3-46883bf2c4bb",
@@ -2632,7 +2673,7 @@
       "key": "b3ba21bf-5f97-4ff9-894a-e75b496e92cd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Conditional Statements video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the Glows, Grows, Want-to-Knows prompts:\n* Glow: *What is awesome about writing your code?*\n* Grow: *What is one action you can take to improve your code?*\n* Want-to-Know: *What is one question you have about an algorithm you worked on today?*\n\n**Discussion Goal:** Students share successes they experienced in writing their methods in today's activities and ideas for improvements to their code. Students ask questions about the methods they wrote today and may even share wonders about the effects of potential modifications to the code they wrote.\n\n**Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the Glows, Grows, Want-to-Knows prompts:\n* Glow: *What is awesome about writing your code?*\n* Grow: *What is one action you can take to improve your code?*\n* Want-to-Know: *What is one question you have about an algorithm you worked on today?*\n\n**Discussion Goal:** Students share successes they experienced in writing their methods in today's activities and ideas for improvements to their code. Students ask questions about the methods they wrote today and may even share wonders about the effects of potential modifications to the code they wrote.\n\n**Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "b3ba21bf-5f97-4ff9-894a-e75b496e92cd",
@@ -2947,7 +2988,7 @@
       "key": "387f1149-8978-4eba-8e8f-9231eb32d639",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Truth Tables activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define truth table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Creating a Truth Table video. Direct students to follow along and complete the truth tables on their activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Truth Tables activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define truth table."
       },
       "seeding_key": {
         "activity_section.key": "387f1149-8978-4eba-8e8f-9231eb32d639",
@@ -3792,6 +3833,17 @@
       }
     },
     {
+      "key": "fe804b56-113c-43ca-a7e9-6458df7c2dfe",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 4 Pilot Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "fe804b56-113c-43ca-a7e9-6458df7c2dfe",
+        "lesson_activity.key": "6f89cdd9-27ca-40d3-8c82-9e6a98c4e947"
+      }
+    },
+    {
       "key": "2201b689-447b-4b31-b18a-d3869a5236c7",
       "position": 1,
       "properties": {
@@ -4594,7 +4646,8 @@
       "properties": {
         "level_keys": [
           "CSA U4L5-L6"
-        ]
+        ],
+        "progression": "Calculating the Score"
       },
       "bonus": false,
       "seeding_key": {
@@ -4618,7 +4671,8 @@
       "properties": {
         "level_keys": [
           "CSA U4L5-L7"
-        ]
+        ],
+        "progression": "Calculating the Score"
       },
       "bonus": false,
       "seeding_key": {
@@ -5416,6 +5470,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSA Pilot Survey Unit 4"
+        ],
+        "progression": "Unit 4 Pilot Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 4"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "fe804b56-113c-43ca-a7e9-6458df7c2dfe"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 4"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSA Java Lab Sandbox"
         ],
         "progression": "Java Lab"
@@ -5435,7 +5514,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5460,7 +5539,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5485,7 +5564,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6269,6 +6348,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 4",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 4"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa4-pilot",
+        "activity_section.key": "fe804b56-113c-43ca-a7e9-6458df7c2dfe"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Java Lab Sandbox",
         "script_level.level_keys": [
           "CSA Java Lab Sandbox"
@@ -6322,8 +6413,8 @@
       "url": "https://docs.google.com/document/d/1ZIVUtV10cfpzV5TyXnwxt9V3kjLQtXOoG7vkXBL6TYw/edit#",
       "key": "_key_casting_exploration",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_casting_exploration"
@@ -6334,8 +6425,8 @@
       "url": "https://docs.google.com/document/d/1DX4-GghzBqTMk1-4YHeQkIrL-Qgc2neSJfznym2P0DI/edit?usp=sharing",
       "key": "_key_comparing_objects",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_comparing_objects"
@@ -6346,8 +6437,8 @@
       "url": "https://docs.google.com/document/d/1EeKzmo5fRWha8iCkOQMwjD7lelmax5rqTMdtVFeJ3Ic/edit?usp=sharing",
       "key": "_key_exploring_operators",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_exploring_operators"
@@ -6358,8 +6449,8 @@
       "url": "https://docs.google.com/document/d/1cjhvLYhYiFfUDPiKFZd7GTAc8aBrfjYx-r8s35CypAw/edit?usp=sharing",
       "key": "_key_frq_writing_2",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_frq_writing_2"
@@ -6370,8 +6461,8 @@
       "url": "https://docs.google.com/document/d/144NcvwidgzxpHJUa7M6-fpqkkoFHWCukQfWwvkfVG-I/edit?usp=sharing",
       "key": "_key_math_class_activity_guide",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_math_class_activity_guide"
@@ -6382,8 +6473,8 @@
       "url": "https://docs.google.com/document/d/1-a3CcJ0vKuDDFYWu52zzaOWOjsijtdmMNR3DhyLr5oI/edit?usp=sharing",
       "key": "_key_truth_tables",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_truth_tables"
@@ -6394,8 +6485,8 @@
       "url": "https://docs.google.com/document/d/1BvL6DI6Jb6WBynVmLMJuux3196GTPNBhRmNsADOWgHI/edit?usp=sharing",
       "key": "_key_u4l10_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u4l10_extra_practice"
@@ -6406,8 +6497,8 @@
       "url": "https://docs.google.com/document/d/1d4c2QCa3D9cmlPEyTKBIHBQ5hUCjuWBj7DHdauSzpdw/edit?usp=sharing",
       "key": "_key_u4l1_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u4l1_extra_practice"
@@ -6418,8 +6509,8 @@
       "url": "https://docs.google.com/document/d/1kjF5zAh_QwWcNuYknSxq7OGQGtIF2lSysRy-qod9XR4/edit?usp=sharing",
       "key": "_key_u4l2_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u4l2_extra_practice"
@@ -6430,8 +6521,8 @@
       "url": "https://docs.google.com/document/d/1x4sYy9FICs5exxkiCjmCX6XP6ISU9W_oZrRoZBKVK88/edit?usp=sharing",
       "key": "_key_u4l3_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u4l3_extra_practice"
@@ -6442,8 +6533,8 @@
       "url": "https://docs.google.com/document/d/1NT4dzln49Zq2yxlqs53c2aIKWPDqhzkmH7pm0xYLotk/edit?usp=sharing",
       "key": "_key_u4l4_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u4l4_extra_practice"
@@ -6454,8 +6545,8 @@
       "url": "https://docs.google.com/document/d/1PV8nE8aYJ_qdQ1qKu-a6fB9n0cJo1YavimYg8D_7ZTY/edit?usp=sharing",
       "key": "_key_u4l5_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u4l5_extra_practice"
@@ -6463,11 +6554,11 @@
     },
     {
       "name": "[KEY] U4L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1DX4-GghzBqTMk1-4YHeQkIrL-Qgc2neSJfznym2P0DI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1LdS0ZMIbYwTSwO4wMGfkMzhRMQ9Ao4KUo0lB3lEs_M8/edit?usp=sharing",
       "key": "_key_u4l6_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u4l6_extra_practice"
@@ -6478,8 +6569,8 @@
       "url": "https://docs.google.com/document/d/18gj3DKgRPkcJ_5ZYMNlPDbaNme_D7v0syca_nbIszwo/edit?usp=sharing",
       "key": "_key_u4l7_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u4l7_extra_practice"
@@ -6490,8 +6581,8 @@
       "url": "https://docs.google.com/document/d/19Cw6zoHDO4LkfWyMc-3cvPz1pdJPJnoS8Zn5Am6no88/edit?usp=sharing",
       "key": "_key_u4l8_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u4l8_extra_practice"
@@ -6502,8 +6593,8 @@
       "url": "https://docs.google.com/document/d/1iwKVDmmdfmH9axRsPKN0F0PXdc7nlVg-2Ie5XkSqExw/edit?usp=sharing",
       "key": "_key_u4l9_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u4l9_extra_practice"
@@ -6514,11 +6605,23 @@
       "url": "https://docs.google.com/document/d/1FMlneQD0SY65y9atWPYPz2fN63wboyhUiTx8csrU_Vw/edit?usp=sharing",
       "key": "around_the_world_printouts",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "around_the_world_printouts"
+      }
+    },
+    {
+      "name": "Casting and Rounding",
+      "url": "https://youtu.be/DimjDSTb7T0",
+      "key": "casting_and_rounding",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "casting_and_rounding"
       }
     },
     {
@@ -6526,8 +6629,8 @@
       "url": "https://docs.google.com/document/d/1IPYgSjg3JmKCD33csEdikwi4-egwQGrWwciFeaHLFUA/edit#",
       "key": "casting_exploration",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "casting_exploration"
@@ -6538,11 +6641,23 @@
       "url": "https://docs.google.com/document/d/1eZuLlzoqKsNHUysCihhE82rRfelMdVRhnpkSgKRrnWU/edit?usp=sharing",
       "key": "comparing_objects",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "comparing_objects"
+      }
+    },
+    {
+      "name": "Equals and Aliasing",
+      "url": "https://youtu.be/o4UfB3r-TPI",
+      "key": "equals_and_aliasing",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "equals_and_aliasing"
       }
     },
     {
@@ -6550,11 +6665,23 @@
       "url": "https://docs.google.com/document/d/1Oel7wKZ_3KAaDW_7R84z_AuhFixeYy6l8hgPU7R70SA/edit?usp=sharing",
       "key": "exploring_operators",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "exploring_operators"
+      }
+    },
+    {
+      "name": "Final Classes and Static Methods",
+      "url": "https://youtu.be/9cGeWGs0A4g",
+      "key": "final_classes_and_static_methods",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "final_classes_and_static_methods"
       }
     },
     {
@@ -6562,8 +6689,8 @@
       "url": "https://docs.google.com/document/d/1dj5xv6_3-6yVytSqIesTffJY5FSa-qQ9PIEe0yPGbYE/edit?usp=sharing",
       "key": "frq_scoring_guide_2",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "frq_scoring_guide_2"
@@ -6574,11 +6701,23 @@
       "url": "https://docs.google.com/document/d/1lBJAzXNmzZ_vdrt9zH3RanG_-logRxC6PxtuA46UkCc/edit?usp=sharing",
       "key": "frq_writing_2",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "frq_writing_2"
+      }
+    },
+    {
+      "name": "if/else Statements",
+      "url": "https://youtu.be/A1zMZrt_0yA",
+      "key": "if_else_statements",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "if_else_statements"
       }
     },
     {
@@ -6586,8 +6725,8 @@
       "url": "https://docs.google.com/document/d/1NWyUTX0o8NfjphkP8FKqH-mY-0PRKw6apnLa-EDQSdw/edit?usp=sharing",
       "key": "math_class_activity_guide",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "math_class_activity_guide"
@@ -6598,8 +6737,8 @@
       "url": "https://docs.google.com/document/d/1KRhGaNFERthhN9yDlNMLkjXvRFWGaROKTDBdMJRKLCo/edit?usp=sharing",
       "key": "neighborhood_block_party_project_planning_guide",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "neighborhood_block_party_project_planning_guide"
@@ -6610,8 +6749,8 @@
       "url": "https://docs.google.com/document/d/12qNF6CP52KogGwtvXVIOhiDofXJH8Ytvh7G2AEoVgNg/edit",
       "key": "neighborhood_block_party_project_planning_guide_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "neighborhood_block_party_project_planning_guide_1"
@@ -6622,11 +6761,23 @@
       "url": "https://docs.google.com/presentation/d/1sQFdGkK3O6REikNhecpBtRRxMToUhrjsZ3GcwMrwBHk/edit?usp=sharing",
       "key": "object_references_manipulatives",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "object_references_manipulatives"
+      }
+    },
+    {
+      "name": "Probability with Math.random()",
+      "url": "https://youtu.be/HiRJW3IhgX8",
+      "key": "probability_with_math_random_",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "probability_with_math_random_"
       }
     },
     {
@@ -6634,11 +6785,23 @@
       "url": "https://docs.google.com/document/u/2/d/1c9smHGRY2DNFQupRe7GS3RlU7u4Dd2J-y8dfpukljc4/edit",
       "key": "quiz_quiz_trade_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "quiz_quiz_trade_1"
+      }
+    },
+    {
+      "name": "Random",
+      "url": "https://youtu.be/Lx5-YOnWm3M",
+      "key": "random",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "random"
       }
     },
     {
@@ -6646,8 +6809,8 @@
       "url": "https://docs.google.com/document/d/11R3PZsgz0H0JVMGoEzkBC-nfrSS1944hwj3zTr0K4nQ/edit?usp=sharing",
       "key": "simple_list_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "simple_list_vocabulary"
@@ -6658,8 +6821,8 @@
       "url": "https://docs.google.com/document/u/1/d/1ctKlgd7zP61hdc4JFVtSGr5TZ1tI_xZmBEaLIfRizb8/edit",
       "key": "truth_tables",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "truth_tables"
@@ -6670,8 +6833,8 @@
       "url": "https://docs.google.com/document/d/1XyaSNf3CmwIYsIpKUVyH1Gu5p3H_Vsc3rATDq9TcIWI/edit?usp=sharing",
       "key": "u4l10_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u4l10_extra_practice"
@@ -6682,8 +6845,8 @@
       "url": "https://docs.google.com/document/d/1ABN1VF8UND-BN653ldj6Qhz3PACNcKDrTF5n2Tqe6cU/edit?usp=sharing",
       "key": "u4l1_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u4l1_extra_practice"
@@ -6694,8 +6857,8 @@
       "url": "https://docs.google.com/document/d/1yz0twZpG5rCWoi-9mtYgOAb05GpII7d7m_tRdddBiRM/edit?usp=sharing",
       "key": "u4l2_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u4l2_extra_practice"
@@ -6706,8 +6869,8 @@
       "url": "https://docs.google.com/document/d/1BAKDgU8YD1hQjNyMzuhChHnkYTK6uKSXWRZ9_vLvDQY/edit?usp=sharing",
       "key": "u4l3_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u4l3_extra_practice"
@@ -6718,8 +6881,8 @@
       "url": "https://docs.google.com/document/d/1UCI-265f20rEIljtpvstsYkNZLlP4jfaWZjrx7NLA4k/edit?usp=sharing",
       "key": "u4l4_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u4l4_extra_practice"
@@ -6730,8 +6893,8 @@
       "url": "https://docs.google.com/document/d/1YyzGnv1oh7nvRvG3DaW5A1nvxns977fGp2c88Qh1jnQ/edit?usp=sharing",
       "key": "u4l5_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u4l5_extra_practice"
@@ -6742,8 +6905,8 @@
       "url": "https://docs.google.com/document/d/1F0j-9xQ-VlRMlhP-OVpK6BTmUA4GHj17EaJsBdKGTco/edit?usp=sharing",
       "key": "u4l6_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u4l6_extra_practice"
@@ -6754,8 +6917,8 @@
       "url": "https://docs.google.com/document/d/14Ssh6iBSp543H5A_LWHKV7HWXIalTBOdk8-Q1jTUsMM/edit?usp=sharing",
       "key": "u4l7_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u4l7_extra_practice"
@@ -6766,8 +6929,8 @@
       "url": "https://docs.google.com/document/d/17XzT1L9FU9ghQXA3AaJ0XKSfuufGgtytYR7zO9OX8ao/edit?usp=sharing",
       "key": "u4l8_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u4l8_extra_practice"
@@ -6778,8 +6941,8 @@
       "url": "https://docs.google.com/document/d/14IUvb3_k7FWW3rFku0TUC2izaGwDYrvLvgeGFzORDnA/edit?usp=sharing",
       "key": "u4l9_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u4l9_extra_practice"
@@ -6790,8 +6953,8 @@
       "url": "https://docs.google.com/document/d/1YA_zYh2HlVntDUpFTKrFlO6He__qySBndCt1X-09BkA/edit?usp=sharing",
       "key": "unit_4_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_4_guide"
@@ -6802,8 +6965,8 @@
       "url": "https://docs.google.com/presentation/d/1kqcy8SPwKS39ciR9OfTYuoTM9XRmHexpwyYi26fe0NM/edit?usp=sharing",
       "key": "unit_4_presentation_slides",
       "properties": {
-        "type": "Slides",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "unit_4_presentation_slides"
@@ -6994,6 +7157,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "final_classes_and_static_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "math_class_activity_guide"
       }
     },
@@ -7024,7 +7193,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
+        "resource.key": "casting_and_rounding"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "resource.key": "casting_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "random"
       }
     },
     {
@@ -7078,6 +7259,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "probability_with_math_random_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "quiz_quiz_trade_1"
       }
     },
@@ -7114,6 +7301,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-7",
+        "resource.key": "equals_and_aliasing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "resource.key": "object_references_manipulatives"
       }
     },
@@ -7133,6 +7326,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_key_u4l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "if_else_statements"
       }
     },
     {
@@ -7174,6 +7373,16 @@
   ],
   "vocabularies": [
     {
+      "key": "alias",
+      "word": "Alias",
+      "definition": "A reference variable that points to the same object as another reference variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "alias"
+      }
+    },
+    {
       "key": "application_program_interface_api_",
       "word": "Application Program Interface (API)",
       "definition": "A set of tools, definitions, and methods that can be used in a program to access features of other applications and services",
@@ -7181,106 +7390,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "application_program_interface_api_"
-      }
-    },
-    {
-      "key": "library",
-      "word": "Library",
-      "definition": "A collection of existing code that can be used in a program",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "library"
-      }
-    },
-    {
-      "key": "package",
-      "word": "Package",
-      "definition": "A collection of similar classes",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "package"
-      }
-    },
-    {
-      "key": "math_class",
-      "word": "Math Class",
-      "definition": "A final class in Java that contains methods to perform mathematical operations",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "math_class"
-      }
-    },
-    {
-      "key": "final_class",
-      "word": "final Class",
-      "definition": "A class that cannot be extended",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "final_class"
-      }
-    },
-    {
-      "key": "static_method",
-      "word": "Static Method",
-      "definition": "A method that is called by the class instead of by an instance of the class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "static_method"
-      }
-    },
-    {
-      "key": "truncate",
-      "word": "Truncate",
-      "definition": "Remove everything to the right of the decimal point",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "truncate"
-      }
-    },
-    {
-      "key": "cast",
-      "word": "Cast",
-      "definition": "To assign a value of one type to another",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "cast"
-      }
-    },
-    {
-      "key": "widen",
-      "word": "Widen",
-      "definition": "Automatically cast from a smaller type to a larger type",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "widen"
-      }
-    },
-    {
-      "key": "inclusive",
-      "word": "Inclusive",
-      "definition": "To include every value in a range",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "inclusive"
-      }
-    },
-    {
-      "key": "relational_operator",
-      "word": "Relational Operator",
-      "definition": "Used to compare numeric values or arithmetic expressions",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "relational_operator"
       }
     },
     {
@@ -7294,83 +7403,13 @@
       }
     },
     {
-      "key": "sprite",
-      "word": "Sprite",
-      "definition": "An element of a game that can be manipulated in some way",
+      "key": "cast",
+      "word": "Cast",
+      "definition": "To assign a value of one type to another",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "sprite"
-      }
-    },
-    {
-      "key": "probability",
-      "word": "Probability",
-      "definition": "The likelihood of something happening",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "probability"
-      }
-    },
-    {
-      "key": "alias",
-      "word": "Alias",
-      "definition": "A reference variable that points to the same object as another reference variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "alias"
-      }
-    },
-    {
-      "key": "if_else_statement",
-      "word": "if/else Statement",
-      "definition": "Specifies a block of code to execute when the condition is `true` and a block of code to execute when the condition is `false`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "if_else_statement"
-      }
-    },
-    {
-      "key": "two_way_selection",
-      "word": "Two-Way Selection",
-      "definition": "Used when two sets of conditional statements are needed: one to execute when the condition is `true` and one to execute when the condition is `false`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "two_way_selection"
-      }
-    },
-    {
-      "key": "multi_selection_statement",
-      "word": "Multi-Selection Statement",
-      "definition": "A statement that selects a single action from three or more conditional statements based on which Boolean expression is `true`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "multi_selection_statement"
-      }
-    },
-    {
-      "key": "nested_if_statement",
-      "word": "Nested if Statement",
-      "definition": "An `if` statement inside of another `if` statement",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "nested_if_statement"
-      }
-    },
-    {
-      "key": "logical_operator",
-      "word": "Logical Operator",
-      "definition": "An operator that returns a Boolean value",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "logical_operator"
+        "vocabulary.key": "cast"
       }
     },
     {
@@ -7394,13 +7433,13 @@
       }
     },
     {
-      "key": "truth_table",
-      "word": "Truth Table",
-      "definition": "A table used to determine the truth values of a Boolean expression",
+      "key": "final_class",
+      "word": "final Class",
+      "definition": "A class that cannot be extended",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "truth_table"
+        "vocabulary.key": "final_class"
       }
     },
     {
@@ -7414,6 +7453,26 @@
       }
     },
     {
+      "key": "if_else_statement",
+      "word": "if/else Statement",
+      "definition": "Specifies a block of code to execute when the condition is `true` and a block of code to execute when the condition is `false`",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "if_else_statement"
+      }
+    },
+    {
+      "key": "inclusive",
+      "word": "Inclusive",
+      "definition": "To include every value in a range",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "inclusive"
+      }
+    },
+    {
       "key": "iterative_design",
       "word": "Iterative Design",
       "definition": "An approach used to continually evaluate and improve a product",
@@ -7421,6 +7480,146 @@
       },
       "seeding_key": {
         "vocabulary.key": "iterative_design"
+      }
+    },
+    {
+      "key": "library",
+      "word": "Library",
+      "definition": "A collection of existing code that can be used in a program",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "key": "logical_operator",
+      "word": "Logical Operator",
+      "definition": "An operator that returns a Boolean value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "key": "math_class",
+      "word": "Math Class",
+      "definition": "A final class in Java that contains methods to perform mathematical operations",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "math_class"
+      }
+    },
+    {
+      "key": "multi_selection_statement",
+      "word": "Multi-Selection Statement",
+      "definition": "A statement that selects a single action from three or more conditional statements based on which Boolean expression is `true`",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "multi_selection_statement"
+      }
+    },
+    {
+      "key": "nested_if_statement",
+      "word": "Nested if Statement",
+      "definition": "An `if` statement inside of another `if` statement",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "nested_if_statement"
+      }
+    },
+    {
+      "key": "package",
+      "word": "Package",
+      "definition": "A collection of similar classes",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "package"
+      }
+    },
+    {
+      "key": "probability",
+      "word": "Probability",
+      "definition": "The likelihood of something happening",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "probability"
+      }
+    },
+    {
+      "key": "relational_operator",
+      "word": "Relational Operator",
+      "definition": "Used to compare numeric values or arithmetic expressions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "relational_operator"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "An element of a game that can be manipulated in some way",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "key": "static_method",
+      "word": "Static Method",
+      "definition": "A method that is called by the class instead of by an instance of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "static_method"
+      }
+    },
+    {
+      "key": "truncate",
+      "word": "Truncate",
+      "definition": "Remove everything to the right of the decimal point",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "truncate"
+      }
+    },
+    {
+      "key": "truth_table",
+      "word": "Truth Table",
+      "definition": "A table used to determine the truth values of a Boolean expression",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "truth_table"
+      }
+    },
+    {
+      "key": "two_way_selection",
+      "word": "Two-Way Selection",
+      "definition": "Used when two sets of conditional statements are needed: one to execute when the condition is `true` and one to execute when the condition is `false`",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "two_way_selection"
+      }
+    },
+    {
+      "key": "widen",
+      "word": "Widen",
+      "definition": "Automatically cast from a smaller type to a larger type",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "widen"
       }
     }
   ],
@@ -7445,8 +7644,44 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-3",
-        "vocabulary.key": "math_class"
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "compound_boolean_expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "logical_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "nested_if_statement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "de_morgan_s_laws"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "vocabulary.key": "truth_table"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "vocabulary.key": "iterative_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "game_engine"
       }
     },
     {
@@ -7458,13 +7693,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "vocabulary.key": "static_method"
+        "vocabulary.key": "math_class"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-4",
-        "vocabulary.key": "truncate"
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "static_method"
       }
     },
     {
@@ -7476,19 +7711,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "vocabulary.key": "widen"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-4",
         "vocabulary.key": "inclusive"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-5",
-        "vocabulary.key": "relational_operator"
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "truncate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "widen"
       }
     },
     {
@@ -7499,14 +7734,20 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-6",
-        "vocabulary.key": "sprite"
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "relational_operator"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
         "vocabulary.key": "probability"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "sprite"
       }
     },
     {
@@ -7532,134 +7773,12 @@
         "lesson.key": "lesson-9",
         "vocabulary.key": "multi_selection_statement"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "vocabulary.key": "nested_if_statement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "vocabulary.key": "logical_operator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "vocabulary.key": "compound_boolean_expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "vocabulary.key": "de_morgan_s_laws"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "vocabulary.key": "truth_table"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "vocabulary.key": "game_engine"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "vocabulary.key": "iterative_design"
-      }
     }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-    {
-      "key": "a4d602d5-104c-42b1-b4dc-d5a095fad72b",
-      "properties": {
-        "description": "Explain the purpose and capabilities of APIs and libraries"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "a4d602d5-104c-42b1-b4dc-d5a095fad72b"
-      }
-    },
-    {
-      "key": "06000e53-ee6d-4643-b9f8-c6fc7b2623c2",
-      "properties": {
-        "description": "Add new functionality to program code by importing a package"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "06000e53-ee6d-4643-b9f8-c6fc7b2623c2"
-      }
-    },
-    {
-      "key": "8c1c7aa0-9e79-4b29-8d5f-01bfbae5956c",
-      "properties": {
-        "description": "Call `Math` class methods"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "8c1c7aa0-9e79-4b29-8d5f-01bfbae5956c"
-      }
-    },
-    {
-      "key": "3957c1e1-202b-460b-bb55-77e6674152ee",
-      "properties": {
-        "description": "Define a static method"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "3957c1e1-202b-460b-bb55-77e6674152ee"
-      }
-    },
-    {
-      "key": "2a3ef7a2-62b5-4e1b-ae2b-e285491de8a3",
-      "properties": {
-        "description": "Define a `final` class"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "2a3ef7a2-62b5-4e1b-ae2b-e285491de8a3"
-      }
-    },
-    {
-      "key": "81bef01d-1f7f-422d-b345-c0b4cc08639d",
-      "properties": {
-        "description": "Identify the need for `final` classes and static methods"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "81bef01d-1f7f-422d-b345-c0b4cc08639d"
-      }
-    },
-    {
-      "key": "3323cde4-6f82-4648-a6f3-de3eaf244465",
-      "properties": {
-        "description": "Cast between `int`s and `double`s"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "3323cde4-6f82-4648-a6f3-de3eaf244465"
-      }
-    },
-    {
-      "key": "1d921fe4-b0d1-4666-8253-620fece6b206",
-      "properties": {
-        "description": "Round `double`s to the nearest `int`"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "1d921fe4-b0d1-4666-8253-620fece6b206"
-      }
-    },
     {
       "key": "03473cb3-8601-4bb8-8861-5066652fe2f1",
       "properties": {
@@ -7668,126 +7787,6 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "03473cb3-8601-4bb8-8861-5066652fe2f1"
-      }
-    },
-    {
-      "key": "5524873e-9f54-4dd7-81a9-86a164ada4ab",
-      "properties": {
-        "description": "Evaluate expressions using relational operators"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "objective.key": "5524873e-9f54-4dd7-81a9-86a164ada4ab"
-      }
-    },
-    {
-      "key": "ed9c8df0-539c-4bbb-bb70-737272712974",
-      "properties": {
-        "description": "Write `if` statements using relational operators"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "objective.key": "ed9c8df0-539c-4bbb-bb70-737272712974"
-      }
-    },
-    {
-      "key": "da25aec1-6d77-4aba-a5f2-19500e92349a",
-      "properties": {
-        "description": "Use `Math.random()` to generate random numbers"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "objective.key": "da25aec1-6d77-4aba-a5f2-19500e92349a"
-      }
-    },
-    {
-      "key": "9b56f9b2-34d1-45c3-b0ae-e9d852d17db1",
-      "properties": {
-        "description": "Write conditional statements to execute an action based on a random number"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "objective.key": "9b56f9b2-34d1-45c3-b0ae-e9d852d17db1"
-      }
-    },
-    {
-      "key": "aca009d5-ae48-4a80-bc4e-44be1dbe234e",
-      "properties": {
-        "description": "Explain the difference between `==` and `equals()`"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "objective.key": "aca009d5-ae48-4a80-bc4e-44be1dbe234e"
-      }
-    },
-    {
-      "key": "56c25e89-fb66-4db2-99c9-18ead4d223c6",
-      "properties": {
-        "description": "Write an `equals()` method to compare object data for equality"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "objective.key": "56c25e89-fb66-4db2-99c9-18ead4d223c6"
-      }
-    },
-    {
-      "key": "fa9d5ed3-65e0-4045-ac6a-5f1ed07dc814",
-      "properties": {
-        "description": "Write `if/else` statements to implement alternate outcomes"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "objective.key": "fa9d5ed3-65e0-4045-ac6a-5f1ed07dc814"
-      }
-    },
-    {
-      "key": "73fd386d-f182-458c-9239-36b1f1454868",
-      "properties": {
-        "description": "Access elements in an array based on the outcome of a Boolean expression"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "objective.key": "73fd386d-f182-458c-9239-36b1f1454868"
-      }
-    },
-    {
-      "key": "9f49c933-e7c0-446d-9ed1-0fdf7cd34b2d",
-      "properties": {
-        "description": "Use `if/else` statements to check the validity of a move in the Pop the Balloons game"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-8",
-        "objective.key": "9f49c933-e7c0-446d-9ed1-0fdf7cd34b2d"
-      }
-    },
-    {
-      "key": "e79effb7-0529-4063-92eb-127139ef85c0",
-      "properties": {
-        "description": "Write `if/else-if/else` statements using relational operators"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "e79effb7-0529-4063-92eb-127139ef85c0"
-      }
-    },
-    {
-      "key": "e375a8fd-e335-45b7-a7aa-884b50247450",
-      "properties": {
-        "description": "Evaluate multiple conditions to determine a specific outcome"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "e375a8fd-e335-45b7-a7aa-884b50247450"
-      }
-    },
-    {
-      "key": "cd6dd581-6042-497f-bc57-8a73bcacf2a6",
-      "properties": {
-        "description": "Access elements in an array based on the outcome of a Boolean expression"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-9",
-        "objective.key": "cd6dd581-6042-497f-bc57-8a73bcacf2a6"
       }
     },
     {
@@ -7801,93 +7800,13 @@
       }
     },
     {
-      "key": "f6344639-6603-466b-a851-dc43cfec0b6e",
+      "key": "06000e53-ee6d-4643-b9f8-c6fc7b2623c2",
       "properties": {
-        "description": "Explain the effect of logical operators `!` (not), `&&` (and), and `||` (or)"
+        "description": "Add new functionality to program code by importing a package"
       },
       "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "f6344639-6603-466b-a851-dc43cfec0b6e"
-      }
-    },
-    {
-      "key": "1221f661-f4b9-41d6-a00f-ee54b51f8722",
-      "properties": {
-        "description": "Construct a conditional statement involving logical operators"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "1221f661-f4b9-41d6-a00f-ee54b51f8722"
-      }
-    },
-    {
-      "key": "c4105e1b-d193-4b18-945c-3c158d893c67",
-      "properties": {
-        "description": "Construct truth tables to evaluate Boolean expressions"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "objective.key": "c4105e1b-d193-4b18-945c-3c158d893c67"
-      }
-    },
-    {
-      "key": "98913902-79de-4d37-ab7e-9021fb63b945",
-      "properties": {
-        "description": "Use truth tables to prove De Morgan’s Laws"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "objective.key": "98913902-79de-4d37-ab7e-9021fb63b945"
-      }
-    },
-    {
-      "key": "2c81c5b4-7ccb-4822-b013-30436308233a",
-      "properties": {
-        "description": "Evaluate compound Boolean expressions for equivalence"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "objective.key": "2c81c5b4-7ccb-4822-b013-30436308233a"
-      }
-    },
-    {
-      "key": "82c94605-929c-4640-9b61-cb59f095b130",
-      "properties": {
-        "description": "Design a game engine that sets up the display of a game, checks whether a move is valid, updates the score, and checks whether the game is over"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "82c94605-929c-4640-9b61-cb59f095b130"
-      }
-    },
-    {
-      "key": "bd81a49c-b0e8-40f3-858a-fe44cbe951e0",
-      "properties": {
-        "description": "Implement conditional logic to make decisions based on user interaction"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "bd81a49c-b0e8-40f3-858a-fe44cbe951e0"
-      }
-    },
-    {
-      "key": "f381a44f-d9c5-4626-944d-b31073fdbbd4",
-      "properties": {
-        "description": "Design a game engine consisting of the core logic and structure of a game"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "objective.key": "f381a44f-d9c5-4626-944d-b31073fdbbd4"
-      }
-    },
-    {
-      "key": "9c5e4a1f-d94e-452a-a099-3b27727781f0",
-      "properties": {
-        "description": "Write methods that incorporate conditional logic and player selections"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-12",
-        "objective.key": "9c5e4a1f-d94e-452a-a099-3b27727781f0"
+        "lesson.key": "lesson-1",
+        "objective.key": "06000e53-ee6d-4643-b9f8-c6fc7b2623c2"
       }
     },
     {
@@ -7901,13 +7820,63 @@
       }
     },
     {
-      "key": "c07a9bc0-1655-4aa0-90f5-a445c7d84719",
+      "key": "1221f661-f4b9-41d6-a00f-ee54b51f8722",
       "properties": {
-        "description": "Write methods that incorporate conditional logic and player selections"
+        "description": "Construct a conditional statement involving logical operators"
       },
       "seeding_key": {
-        "lesson.key": "lesson-13",
-        "objective.key": "c07a9bc0-1655-4aa0-90f5-a445c7d84719"
+        "lesson.key": "lesson-10",
+        "objective.key": "1221f661-f4b9-41d6-a00f-ee54b51f8722"
+      }
+    },
+    {
+      "key": "1d921fe4-b0d1-4666-8253-620fece6b206",
+      "properties": {
+        "description": "Round `double`s to the nearest `int`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "1d921fe4-b0d1-4666-8253-620fece6b206"
+      }
+    },
+    {
+      "key": "2a3ef7a2-62b5-4e1b-ae2b-e285491de8a3",
+      "properties": {
+        "description": "Define a `final` class"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "2a3ef7a2-62b5-4e1b-ae2b-e285491de8a3"
+      }
+    },
+    {
+      "key": "2c81c5b4-7ccb-4822-b013-30436308233a",
+      "properties": {
+        "description": "Evaluate compound Boolean expressions for equivalence"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "2c81c5b4-7ccb-4822-b013-30436308233a"
+      }
+    },
+    {
+      "key": "3323cde4-6f82-4648-a6f3-de3eaf244465",
+      "properties": {
+        "description": "Cast between `int`s and `double`s"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "3323cde4-6f82-4648-a6f3-de3eaf244465"
+      }
+    },
+    {
+      "key": "3957c1e1-202b-460b-bb55-77e6674152ee",
+      "properties": {
+        "description": "Define a static method"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "3957c1e1-202b-460b-bb55-77e6674152ee"
       }
     },
     {
@@ -7921,13 +7890,33 @@
       }
     },
     {
-      "key": "8dee2812-af22-4374-beba-8c5abad1e527",
+      "key": "5524873e-9f54-4dd7-81a9-86a164ada4ab",
       "properties": {
-        "description": "Implement methods based on a given set of specifications"
+        "description": "Evaluate expressions using relational operators"
       },
       "seeding_key": {
-        "lesson.key": "lesson-14",
-        "objective.key": "8dee2812-af22-4374-beba-8c5abad1e527"
+        "lesson.key": "lesson-5",
+        "objective.key": "5524873e-9f54-4dd7-81a9-86a164ada4ab"
+      }
+    },
+    {
+      "key": "56c25e89-fb66-4db2-99c9-18ead4d223c6",
+      "properties": {
+        "description": "Write an `equals()` method to compare object data for equality"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "56c25e89-fb66-4db2-99c9-18ead4d223c6"
+      }
+    },
+    {
+      "key": "73fd386d-f182-458c-9239-36b1f1454868",
+      "properties": {
+        "description": "Access elements in an array based on the outcome of a Boolean expression"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "73fd386d-f182-458c-9239-36b1f1454868"
       }
     },
     {
@@ -7941,6 +7930,46 @@
       }
     },
     {
+      "key": "81bef01d-1f7f-422d-b345-c0b4cc08639d",
+      "properties": {
+        "description": "Identify the need for `final` classes and static methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "81bef01d-1f7f-422d-b345-c0b4cc08639d"
+      }
+    },
+    {
+      "key": "82c94605-929c-4640-9b61-cb59f095b130",
+      "properties": {
+        "description": "Design a game engine that sets up the display of a game, checks whether a move is valid, updates the score, and checks whether the game is over"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "82c94605-929c-4640-9b61-cb59f095b130"
+      }
+    },
+    {
+      "key": "8c1c7aa0-9e79-4b29-8d5f-01bfbae5956c",
+      "properties": {
+        "description": "Call `Math` class methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "8c1c7aa0-9e79-4b29-8d5f-01bfbae5956c"
+      }
+    },
+    {
+      "key": "8dee2812-af22-4374-beba-8c5abad1e527",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "8dee2812-af22-4374-beba-8c5abad1e527"
+      }
+    },
+    {
       "key": "90beffeb-63be-45b3-862a-9679c533235f",
       "properties": {
         "description": "Translate pseudocode into Java"
@@ -7948,6 +7977,176 @@
       "seeding_key": {
         "lesson.key": "lesson-14",
         "objective.key": "90beffeb-63be-45b3-862a-9679c533235f"
+      }
+    },
+    {
+      "key": "98913902-79de-4d37-ab7e-9021fb63b945",
+      "properties": {
+        "description": "Use truth tables to prove De Morgan’s Laws"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "98913902-79de-4d37-ab7e-9021fb63b945"
+      }
+    },
+    {
+      "key": "9b56f9b2-34d1-45c3-b0ae-e9d852d17db1",
+      "properties": {
+        "description": "Write conditional statements to execute an action based on a random number"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "9b56f9b2-34d1-45c3-b0ae-e9d852d17db1"
+      }
+    },
+    {
+      "key": "9c5e4a1f-d94e-452a-a099-3b27727781f0",
+      "properties": {
+        "description": "Write methods that incorporate conditional logic and player selections"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "9c5e4a1f-d94e-452a-a099-3b27727781f0"
+      }
+    },
+    {
+      "key": "9f49c933-e7c0-446d-9ed1-0fdf7cd34b2d",
+      "properties": {
+        "description": "Use `if/else` statements to check the validity of a move in the Pop the Balloons game"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "9f49c933-e7c0-446d-9ed1-0fdf7cd34b2d"
+      }
+    },
+    {
+      "key": "a4d602d5-104c-42b1-b4dc-d5a095fad72b",
+      "properties": {
+        "description": "Explain the purpose and capabilities of APIs and libraries"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "a4d602d5-104c-42b1-b4dc-d5a095fad72b"
+      }
+    },
+    {
+      "key": "aca009d5-ae48-4a80-bc4e-44be1dbe234e",
+      "properties": {
+        "description": "Explain the difference between `==` and `equals()`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "aca009d5-ae48-4a80-bc4e-44be1dbe234e"
+      }
+    },
+    {
+      "key": "bd81a49c-b0e8-40f3-858a-fe44cbe951e0",
+      "properties": {
+        "description": "Implement conditional logic to make decisions based on user interaction"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "bd81a49c-b0e8-40f3-858a-fe44cbe951e0"
+      }
+    },
+    {
+      "key": "c07a9bc0-1655-4aa0-90f5-a445c7d84719",
+      "properties": {
+        "description": "Write methods that incorporate conditional logic and player selections"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "c07a9bc0-1655-4aa0-90f5-a445c7d84719"
+      }
+    },
+    {
+      "key": "c4105e1b-d193-4b18-945c-3c158d893c67",
+      "properties": {
+        "description": "Construct truth tables to evaluate Boolean expressions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "c4105e1b-d193-4b18-945c-3c158d893c67"
+      }
+    },
+    {
+      "key": "cd6dd581-6042-497f-bc57-8a73bcacf2a6",
+      "properties": {
+        "description": "Access elements in an array based on the outcome of a Boolean expression"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "cd6dd581-6042-497f-bc57-8a73bcacf2a6"
+      }
+    },
+    {
+      "key": "da25aec1-6d77-4aba-a5f2-19500e92349a",
+      "properties": {
+        "description": "Use `Math.random()` to generate random numbers"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "da25aec1-6d77-4aba-a5f2-19500e92349a"
+      }
+    },
+    {
+      "key": "e375a8fd-e335-45b7-a7aa-884b50247450",
+      "properties": {
+        "description": "Evaluate multiple conditions to determine a specific outcome"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "e375a8fd-e335-45b7-a7aa-884b50247450"
+      }
+    },
+    {
+      "key": "e79effb7-0529-4063-92eb-127139ef85c0",
+      "properties": {
+        "description": "Write `if/else-if/else` statements using relational operators"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "e79effb7-0529-4063-92eb-127139ef85c0"
+      }
+    },
+    {
+      "key": "ed9c8df0-539c-4bbb-bb70-737272712974",
+      "properties": {
+        "description": "Write `if` statements using relational operators"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "ed9c8df0-539c-4bbb-bb70-737272712974"
+      }
+    },
+    {
+      "key": "f381a44f-d9c5-4626-944d-b31073fdbbd4",
+      "properties": {
+        "description": "Design a game engine consisting of the core logic and structure of a game"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "f381a44f-d9c5-4626-944d-b31073fdbbd4"
+      }
+    },
+    {
+      "key": "f6344639-6603-466b-a851-dc43cfec0b6e",
+      "properties": {
+        "description": "Explain the effect of logical operators `!` (not), `&&` (and), and `||` (or)"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "f6344639-6603-466b-a851-dc43cfec0b6e"
+      }
+    },
+    {
+      "key": "fa9d5ed3-65e0-4045-ac6a-5f1ed07dc814",
+      "properties": {
+        "description": "Write `if/else` statements to implement alternate outcomes"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "objective.key": "fa9d5ed3-65e0-4045-ac6a-5f1ed07dc814"
       }
     }
   ],
@@ -7992,6 +8191,48 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.E.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.G.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.G.3"
       }
     },
     {
@@ -8202,48 +8443,6 @@
         "lesson.key": "lesson-9",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.A.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.F.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.F.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.G.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.G.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-11",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.G.3"
       }
     }
   ],

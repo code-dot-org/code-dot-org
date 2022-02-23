@@ -1,14 +1,18 @@
 {
-  "func": "setProperty",
+  "key": "setProperty",
+  "name": "setProperty",
   "category": "UI controls",
-  "paletteParams": [
-    "id",
-    "property",
-    "value"
+  "category_key": "ui_controls",
+  "palette_params": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "property"
+    },
+    {
+      "name": "value"
+    }
   ],
-  "params": [
-    "\"id\"",
-    "\"width\"",
-    "100"
-  ]
+  "syntax": "setProperty(id, property, value)"
 }

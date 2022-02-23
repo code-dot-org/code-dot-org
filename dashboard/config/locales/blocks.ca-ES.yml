@@ -781,6 +781,12 @@ ca:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": cruixit
+            "'sound://category_animals/bear.mp3'": Ós
+            "'sound://category_animals/cow.mp3'": vaca
+            "'sound://category_animals/sheep.mp3'": ovella
+            "'sound://category_animals/chicken.mp3'": gallina
+            "'sound://category_animals/dolphin.mp3'": Dofí
+            "'sound://category_animals/dog.mp3'": gos
             "'sound://category_digital/jump_7.mp3'": salt
       gamelab_randColor:
         text: color aleatori
@@ -823,6 +829,14 @@ ca:
             '"scale"': mida
             '"width"': amplada
             '"height"': alçcada
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': lent
+            '5': normal
+            '7': ràpid
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -983,21 +997,40 @@ ca:
             '"down"': fletxa cap avall
             '"left"': fletxa esquerra
             '"right"': fletxa dreta
-      PoemBot_setBackgroundEffect:
-        text: definir l'efecte de fons {EFFECT} {PALETTE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': cors
+            '"rainbow"': Arc de Sant Martí
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': nit
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': lent
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': salt
+      Poetry_setBackground:
+        text: definir el color de fons {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
+            '"bubbles"': Bombolles
+            '"clouds"': ennuvolat
+            '"confetti"': Confeti
+            '"hearts"': cors
             '"space"': Espai
             '"stars"': Estrelles
           PALETTE:
             '"rainbow"': Arc de Sant Martí
-      PoemBot_setForegroundEffect:
-        text: definir l'efecte de fons {EFFECT}
+            '"winter"': l'hivern
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Pluja
             '"bubbles"': Bombolles
             '"confetti"': Confeti
+            '"hearts"': cors
       RyanLab_moveForward:
         text: avança
       RyanLab_turnLeft:

@@ -1,8 +1,13 @@
 ro:
   data:
     progressions:
+      AI Machine Learning - Video: Învățarea Mașinii IA - Video
+      'AI: Impact on Society - Video': 'IA: Impact asupra Societății - Video'
+      'AI: Training Data & Bias - Video': 'IA: Date & Predispoziție de Instruire - Video'
+      App Lab Intro - Video: Introducere App Lab - Video
       Artist Project: Proiectul Artist
       'Artist: Variables': 'Artist: Variabile'
+      Assessment: Evaluare
       Back and Forth: Înainte și înapoi
       Bass, Mid, and Treble: Sunete joase, medii şi înalte
       Binary Numbers: Numerele binare
@@ -12,19 +17,23 @@ ro:
       Designing for Accessibility: Design pentru accesibilitate
       Drawing: Desen
       Events: Evenimente
+      Example: Exemplu
       Final Personal Website: Site-ul personal final
       For Loops: Bucle Pentru
       Free Play: Joc la liber
       Functions: Funcţii
       Functions with Parameters: Funcții cu Parametrii
-      Get In Formation: Intră în formaţie
+      Get In Formation: Intră în Formaţie
+      Hello World: Bună Lume
       How to Make a Sprite: Cum să Faci un Desen
       Introducing Sprite Lab: Prezentând Laboratorul de Desen
       Introduction to Arrays: Introducere în matrice
       Learning from Simulations: Învață din Simulări
       Lesson Extras: Suplimente de lecţie
+      Levels: Nivele
       Lists: Liste
       Measures: Măsuri
+      'Minecraft: Hero''s Journey': 'Minecraft: Călătoria eroului'
       'Mini-Project: About Me': 'Despre mine cu Laboratorul cu sprites'
       More Buttons: Mai multe butoane
       My Online Neighborhood: Cartierul meu online
@@ -39,6 +48,8 @@ ro:
       Speed it Up, Slow it Down: Măreşte viteza, Micşorează viteza
       Sprite Lab Project: Proiectul Prite Lab
       Sprite Properties: Proprietăți spiriduș
+      Teach AI a New Word: Predă IA un Nou Cuvânt
+      Text Compression: Comprimare de text
       The Animation Tab: Fila de animație
       The Harvester: Culegătorul
       Using the Repeat Block: Utilizarea blocului ”repetă” (repeat)

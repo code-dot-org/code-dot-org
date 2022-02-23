@@ -2,6 +2,24 @@
   "mk-MK": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Функција"
+        },
+        "code/poem-art/2021": {
+          "word": "Код"
+        },
+        "code/artist/unversioned": {
+          "word": "Код"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Лупови"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Код"
+        },
         "variable/coursef/2021": {
           "word": "Променлива"
         },
@@ -22,6 +40,12 @@
         },
         "define/coursee/2021": {
           "word": "Дефинирајте"
+        },
+        "variable/csd/2021": {
+          "word": "Променлива"
+        },
+        "function/csd/2021": {
+          "word": "Функција"
         }
       }
     }

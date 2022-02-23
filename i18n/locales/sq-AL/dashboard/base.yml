@@ -288,6 +288,7 @@ sq:
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
       starwars: 'Lufta e Yjeve'
+      loading: 'Në ngarkim...'
     popup:
       progress_for_user: "Progresi i %{name}"
       progress: 'Progresi yt'
@@ -301,6 +302,7 @@ sq:
       prizes_link: 'Më shumë informacion'
   teacher:
     answer: Përgjigje
+    dashboard: 'Dërrasa e zezë '
     for_teachers_only: Vetëm për mësuesit
     title:
       one: 'Mësuesi yt:'
@@ -717,6 +719,7 @@ sq:
   pd:
     form_labels:
       email: 'Email'
+      school: 'Shkolla'
       school_name: 'Emri i shkollës'
       school_country: 'Qyteti i shkollës'
       colombian_chilean_school_name: 'Emri i shkollës'

@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:58 UTC",
+    "serialized_at": "2021-11-22 19:57:16 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "test-teaching-ap-cs-unit-1"
     }
@@ -159,16 +163,175 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "0a9920d0-930a-481c-8e57-275849330b12",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a9920d0-930a-481c-8e57-275849330b12",
+        "lesson.key": "test Unit 1 required reading",
+        "lesson_group.key": "required",
+        "script.name": "test-teaching-ap-cs-unit-1"
+      }
+    },
+    {
+      "key": "1ea27d2f-6a9c-4e9b-97ec-abd6d5d7da11",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ea27d2f-6a9c-4e9b-97ec-abd6d5d7da11",
+        "lesson.key": "test Unit 1 content module Alpha",
+        "lesson_group.key": "content",
+        "script.name": "test-teaching-ap-cs-unit-1"
+      }
+    },
+    {
+      "key": "4fae6228-41eb-44cc-8361-1f310abda23a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4fae6228-41eb-44cc-8361-1f310abda23a",
+        "lesson.key": "test Unit 1 content module Bravo",
+        "lesson_group.key": "content",
+        "script.name": "test-teaching-ap-cs-unit-1"
+      }
+    },
+    {
+      "key": "33a67b20-1139-4603-a31b-fee719e52a79",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "33a67b20-1139-4603-a31b-fee719e52a79",
+        "lesson.key": "test Unit 1 content module Charlie",
+        "lesson_group.key": "content",
+        "script.name": "test-teaching-ap-cs-unit-1"
+      }
+    },
+    {
+      "key": "c810d539-f4c1-43fe-8cc9-113ce9520826",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c810d539-f4c1-43fe-8cc9-113ce9520826",
+        "lesson.key": "test Unit 1 practice module Delta",
+        "lesson_group.key": "practice",
+        "script.name": "test-teaching-ap-cs-unit-1"
+      }
+    },
+    {
+      "key": "62af0eb1-dba1-4caf-b1bb-a9726460bcf2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "62af0eb1-dba1-4caf-b1bb-a9726460bcf2",
+        "lesson.key": "test Unit 1 practice module Echo",
+        "lesson_group.key": "practice",
+        "script.name": "test-teaching-ap-cs-unit-1"
+      }
+    },
+    {
+      "key": "31c0e36a-0250-4cbc-8212-ec4fb5bf6dc7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31c0e36a-0250-4cbc-8212-ec4fb5bf6dc7",
+        "lesson.key": "test Unit 1 practice module Foxtrot",
+        "lesson_group.key": "practice",
+        "script.name": "test-teaching-ap-cs-unit-1"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "356c3497-79c8-487c-906e-1bf322b65cab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "356c3497-79c8-487c-906e-1bf322b65cab",
+        "lesson_activity.key": "0a9920d0-930a-481c-8e57-275849330b12"
+      }
+    },
+    {
+      "key": "e81085fc-d8aa-437f-a5d5-0d7b217b781c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e81085fc-d8aa-437f-a5d5-0d7b217b781c",
+        "lesson_activity.key": "1ea27d2f-6a9c-4e9b-97ec-abd6d5d7da11"
+      }
+    },
+    {
+      "key": "ad7a1e5c-8828-4584-81f0-2c5933f7ddff",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ad7a1e5c-8828-4584-81f0-2c5933f7ddff",
+        "lesson_activity.key": "4fae6228-41eb-44cc-8361-1f310abda23a"
+      }
+    },
+    {
+      "key": "b1a69441-51f9-4850-bc2b-5cbd48913cf0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b1a69441-51f9-4850-bc2b-5cbd48913cf0",
+        "lesson_activity.key": "33a67b20-1139-4603-a31b-fee719e52a79"
+      }
+    },
+    {
+      "key": "be503caf-e6a0-4f65-a927-08072d8349b5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "be503caf-e6a0-4f65-a927-08072d8349b5",
+        "lesson_activity.key": "c810d539-f4c1-43fe-8cc9-113ce9520826"
+      }
+    },
+    {
+      "key": "33677ab1-b81b-43d1-a42f-60eab1424284",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "33677ab1-b81b-43d1-a42f-60eab1424284",
+        "lesson_activity.key": "62af0eb1-dba1-4caf-b1bb-a9726460bcf2"
+      }
+    },
+    {
+      "key": "7e2056f9-f06e-4adf-a943-75d1e9fdf706",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7e2056f9-f06e-4adf-a943-75d1e9fdf706",
+        "lesson_activity.key": "31c0e36a-0250-4cbc-8212-ec4fb5bf6dc7"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -182,7 +345,8 @@
         ],
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "356c3497-79c8-487c-906e-1bf322b65cab"
       },
       "level_keys": [
         "CSPPD Welcome Video"
@@ -191,7 +355,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -205,7 +369,8 @@
         ],
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "356c3497-79c8-487c-906e-1bf322b65cab"
       },
       "level_keys": [
         "PDECS tour"
@@ -214,7 +379,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -228,7 +393,8 @@
         ],
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "356c3497-79c8-487c-906e-1bf322b65cab"
       },
       "level_keys": [
         "PDECS commitment"
@@ -237,7 +403,7 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -251,7 +417,8 @@
         ],
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "e81085fc-d8aa-437f-a5d5-0d7b217b781c"
       },
       "level_keys": [
         "CSPPD2 chunk 1"
@@ -260,7 +427,7 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -274,7 +441,8 @@
         ],
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "e81085fc-d8aa-437f-a5d5-0d7b217b781c"
       },
       "level_keys": [
         "CSPPD2 chunk 1 lessons"
@@ -283,7 +451,7 @@
     {
       "chapter": 6,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -297,7 +465,8 @@
         ],
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "e81085fc-d8aa-437f-a5d5-0d7b217b781c"
       },
       "level_keys": [
         "CSPPD2 PIvideo"
@@ -306,7 +475,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -320,7 +489,8 @@
         ],
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "ad7a1e5c-8828-4584-81f0-2c5933f7ddff"
       },
       "level_keys": [
         "CSPPD2 chunk 2"
@@ -329,7 +499,7 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -343,7 +513,8 @@
         ],
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "ad7a1e5c-8828-4584-81f0-2c5933f7ddff"
       },
       "level_keys": [
         "CSPPD2 chunk 2 lessons"
@@ -352,7 +523,7 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -366,7 +537,8 @@
         ],
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "ad7a1e5c-8828-4584-81f0-2c5933f7ddff"
       },
       "level_keys": [
         "CSPPD2 chunk 2 reflection"
@@ -375,7 +547,7 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -389,7 +561,8 @@
         ],
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "b1a69441-51f9-4850-bc2b-5cbd48913cf0"
       },
       "level_keys": [
         "CSPPD2 chunk 3"
@@ -398,7 +571,7 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -412,7 +585,8 @@
         ],
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "b1a69441-51f9-4850-bc2b-5cbd48913cf0"
       },
       "level_keys": [
         "CSPPD2 chunk 3 lessons"
@@ -421,7 +595,7 @@
     {
       "chapter": 12,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -435,7 +609,8 @@
         ],
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "b1a69441-51f9-4850-bc2b-5cbd48913cf0"
       },
       "level_keys": [
         "CSPPD2 share protocol"
@@ -444,7 +619,7 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -458,7 +633,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "be503caf-e6a0-4f65-a927-08072d8349b5"
       },
       "level_keys": [
         "CSPPD2 chunk 4"
@@ -467,7 +643,7 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -481,7 +657,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "be503caf-e6a0-4f65-a927-08072d8349b5"
       },
       "level_keys": [
         "CSPPD2 chunk 4 lessons"
@@ -490,7 +667,7 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -504,7 +681,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "be503caf-e6a0-4f65-a927-08072d8349b5"
       },
       "level_keys": [
         "CSPPD2 share compression"
@@ -513,7 +691,7 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -527,7 +705,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "33677ab1-b81b-43d1-a42f-60eab1424284"
       },
       "level_keys": [
         "CSPPD2 PT"
@@ -536,7 +715,7 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -550,7 +729,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "33677ab1-b81b-43d1-a42f-60eab1424284"
       },
       "level_keys": [
         "CSPPD2 PT activity"
@@ -559,7 +739,7 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -573,7 +753,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "33677ab1-b81b-43d1-a42f-60eab1424284"
       },
       "level_keys": [
         "CSPPD2 PT forum"
@@ -582,7 +763,7 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -596,7 +777,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Foxtrot",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "7e2056f9-f06e-4adf-a943-75d1e9fdf706"
       },
       "level_keys": [
         "CSPPD2 congrats"
@@ -605,7 +787,7 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -619,7 +801,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Foxtrot",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "7e2056f9-f06e-4adf-a943-75d1e9fdf706"
       },
       "level_keys": [
         "CSPPD2 next step announcements"
@@ -635,7 +818,8 @@
         ],
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "356c3497-79c8-487c-906e-1bf322b65cab"
       }
     },
     {
@@ -646,7 +830,8 @@
         ],
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "356c3497-79c8-487c-906e-1bf322b65cab"
       }
     },
     {
@@ -657,7 +842,8 @@
         ],
         "lesson.key": "test Unit 1 required reading",
         "lesson_group.key": "required",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "356c3497-79c8-487c-906e-1bf322b65cab"
       }
     },
     {
@@ -668,7 +854,8 @@
         ],
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "e81085fc-d8aa-437f-a5d5-0d7b217b781c"
       }
     },
     {
@@ -679,7 +866,8 @@
         ],
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "e81085fc-d8aa-437f-a5d5-0d7b217b781c"
       }
     },
     {
@@ -690,7 +878,8 @@
         ],
         "lesson.key": "test Unit 1 content module Alpha",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "e81085fc-d8aa-437f-a5d5-0d7b217b781c"
       }
     },
     {
@@ -701,7 +890,8 @@
         ],
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "ad7a1e5c-8828-4584-81f0-2c5933f7ddff"
       }
     },
     {
@@ -712,7 +902,8 @@
         ],
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "ad7a1e5c-8828-4584-81f0-2c5933f7ddff"
       }
     },
     {
@@ -723,7 +914,8 @@
         ],
         "lesson.key": "test Unit 1 content module Bravo",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "ad7a1e5c-8828-4584-81f0-2c5933f7ddff"
       }
     },
     {
@@ -734,7 +926,8 @@
         ],
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "b1a69441-51f9-4850-bc2b-5cbd48913cf0"
       }
     },
     {
@@ -745,7 +938,8 @@
         ],
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "b1a69441-51f9-4850-bc2b-5cbd48913cf0"
       }
     },
     {
@@ -756,7 +950,8 @@
         ],
         "lesson.key": "test Unit 1 content module Charlie",
         "lesson_group.key": "content",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "b1a69441-51f9-4850-bc2b-5cbd48913cf0"
       }
     },
     {
@@ -767,7 +962,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "be503caf-e6a0-4f65-a927-08072d8349b5"
       }
     },
     {
@@ -778,7 +974,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "be503caf-e6a0-4f65-a927-08072d8349b5"
       }
     },
     {
@@ -789,7 +986,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Delta",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "be503caf-e6a0-4f65-a927-08072d8349b5"
       }
     },
     {
@@ -800,7 +998,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "33677ab1-b81b-43d1-a42f-60eab1424284"
       }
     },
     {
@@ -811,7 +1010,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "33677ab1-b81b-43d1-a42f-60eab1424284"
       }
     },
     {
@@ -822,7 +1022,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Echo",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "33677ab1-b81b-43d1-a42f-60eab1424284"
       }
     },
     {
@@ -833,7 +1034,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Foxtrot",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "7e2056f9-f06e-4adf-a943-75d1e9fdf706"
       }
     },
     {
@@ -844,7 +1046,8 @@
         ],
         "lesson.key": "test Unit 1 practice module Foxtrot",
         "lesson_group.key": "practice",
-        "script.name": "test-teaching-ap-cs-unit-1"
+        "script.name": "test-teaching-ap-cs-unit-1",
+        "activity_section.key": "7e2056f9-f06e-4adf-a943-75d1e9fdf706"
       }
     }
   ],

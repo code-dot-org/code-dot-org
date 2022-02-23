@@ -16,7 +16,7 @@ title: Blurbs and useful stats
 
 #### Bring computer science to your school. Start with an Hour of Code!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But fewer than half of all schools teach computer science! De gode nyheder er, at vi er på vej til at ændre dette. Hvis du har hørt om #HourOfCode sidste år, ved du måske også at det skabte historie. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But just half of all schools offer computer science! De gode nyheder er, at vi er på vej til at ændre dette. Hvis du har hørt om #HourOfCode sidste år, ved du måske også at det skabte historie. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
 
@@ -30,7 +30,7 @@ Vi håber at det vil styrke interessen hos eleverne og at de vil fortsætte sene
 
 #### Hvorfor er dette vigtigt?
 
-Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 53 percent of schools in the U.S. don't teach computer science. Det er tid for os, at tage fat på det 21. århundrede. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br /> <br />
+Technology is transforming every industry on the planet. In 2015, 7 million openings in the U.S. were in occupations—including art and design—that value coding skills. But 49 percent of schools in the U.S. don't offer computer science. Det er tid for os, at tage fat på det 21. århundrede. We know that regardless of what our students do when they grow up, whether they go into medicine, business, politics, or the arts, knowing how to build technology will give them confidence and a competitive edge. <br /> <br />
 
 #### A quote you can use in materials
 

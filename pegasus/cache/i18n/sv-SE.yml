@@ -952,6 +952,12 @@ sv-SE:
   coursed-2020_gradelevel: Åldrarna 7-11
   coursee-2020_gradelevel: Åldrarna 8-12
   coursef-2020_gradelevel: Åldrarna 9-13
+  coursea-2021_gradelevel: Åldrarna 4-7
+  courseb-2021_gradelevel: Åldrarna 5-8
+  coursec-2021_gradelevel: Åldrarna 6-10
+  coursed-2021_gradelevel: Åldrarna 7-11
+  coursee-2021_gradelevel: Åldrarna 8-12
+  coursef-2021_gradelevel: Åldrarna 9-13
   accelerated_gradelevel: Åldrar 10 + (efter kurs 3)
   codeorg_platformtext: Moderna webbläsare, smartphones, surfplattor
   codeintl_platformtext: Moderna webbläsare, smartphones, surfplattor
@@ -1663,6 +1669,14 @@ sv-SE:
   hoc2018_mc_thank_microsoft: "  Vi tackar Microsoft som stöttar vår vision och målsättnng
     att säkerställa att alla barn har möjlighet att lära sig datavetenskap och får
     de färdigheter som behövs för att lyckas på 2000-talet.  "
+  hoc2021_mc_mee_description: 'Res bakåt i tiden och lär dig koda! Den nya självstudien
+    Minecraft Hour of Code är nu tillgänglig i Minecraft: Utbildningsversion för Windows,
+    Mac, Chromebook och iPad. Kom igång med kostnadsfria pedagogiska resurser, utbildningar
+    och videor.'
+  hoc2021_mc_mee_villages_description: 'Lär dig grundläggande kodning och utforska
+    mångfald och inkludering med dina elever i Minecraft: Utbildningsversion.'
+  hoc2021_mc_mee_ai_description: 'Utforska AI med dina elever och lär dig koda i Minecraft:
+    Utbildningsversion.'
   footer_powered_by_aws: Drivs av Amazon Web Services
   footer_privacy_policy: Sekretesspolicy
   footer_about: Om
@@ -1676,3 +1690,6 @@ sv-SE:
     de färdigheter som behövs för att lyckas på 2000-talet.  "
   ai_activity: Aktivitet
   ai_description: Beskrivning
+  outbreak_tile_title: Utbrott
+  outbreak_tile_subtitle: Ett virus har infekterat Monsterstaden! Koda en utbrottssimulator
+    och gör förutsägelser om vad som kommer att hända med Monsterstadens grannar.

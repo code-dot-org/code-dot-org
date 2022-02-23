@@ -4,15 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
+      "is_course": true,
+      "is_migrated": true,
       "professional_learning_course": "Facilitators in Training Summer Reflections 2019",
-      "version_year": "unversioned",
-      "is_course": true
+      "student_detail_progress_view": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "fit2019-apprentice",
-    "serialized_at": "2021-08-03 22:47:46 UTC",
+    "serialized_at": "2022-01-10 15:56:26 UTC",
     "published_state": "preview",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "fit2019-apprentice"
     }
@@ -136,16 +140,156 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "bb32fcc5-b0d7-471e-9048-44c3449e6cf4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb32fcc5-b0d7-471e-9048-44c3449e6cf4",
+        "lesson.key": "Apprentice Reflection Overview",
+        "lesson_group.key": "required",
+        "script.name": "fit2019-apprentice"
+      }
+    },
+    {
+      "key": "ea0be8c4-9a07-4387-91a6-a42d7635db02",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea0be8c4-9a07-4387-91a6-a42d7635db02",
+        "lesson.key": "Day 1",
+        "lesson_group.key": "content",
+        "script.name": "fit2019-apprentice"
+      }
+    },
+    {
+      "key": "839cb0ea-2b88-47a4-9782-13ced68aff3e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "839cb0ea-2b88-47a4-9782-13ced68aff3e",
+        "lesson.key": "Day 2",
+        "lesson_group.key": "content",
+        "script.name": "fit2019-apprentice"
+      }
+    },
+    {
+      "key": "e909881e-bb8f-4a73-8538-567f7e3d5e3a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e909881e-bb8f-4a73-8538-567f7e3d5e3a",
+        "lesson.key": "Day 3",
+        "lesson_group.key": "content",
+        "script.name": "fit2019-apprentice"
+      }
+    },
+    {
+      "key": "a517177d-6600-45a3-9e0f-3b3e5d87bae5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a517177d-6600-45a3-9e0f-3b3e5d87bae5",
+        "lesson.key": "Day 4",
+        "lesson_group.key": "content",
+        "script.name": "fit2019-apprentice"
+      }
+    },
+    {
+      "key": "54f602cd-fd8f-482e-8f26-5d778ea86bdf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54f602cd-fd8f-482e-8f26-5d778ea86bdf",
+        "lesson.key": "Wrap Up",
+        "lesson_group.key": "content",
+        "script.name": "fit2019-apprentice"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "8364669a-128d-4b06-8edb-443199d8cb28",
+      "position": 1,
+      "properties": {
+        "name": "Welcome Apprentice Facilitators!",
+        "progression_name": "Welcome Apprentice Facilitators!"
+      },
+      "seeding_key": {
+        "activity_section.key": "8364669a-128d-4b06-8edb-443199d8cb28",
+        "lesson_activity.key": "bb32fcc5-b0d7-471e-9048-44c3449e6cf4"
+      }
+    },
+    {
+      "key": "157189ce-c9f0-4552-800d-f0c429c33207",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207",
+        "lesson_activity.key": "ea0be8c4-9a07-4387-91a6-a42d7635db02"
+      }
+    },
+    {
+      "key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c",
+        "lesson_activity.key": "839cb0ea-2b88-47a4-9782-13ced68aff3e"
+      }
+    },
+    {
+      "key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170",
+        "lesson_activity.key": "e909881e-bb8f-4a73-8538-567f7e3d5e3a"
+      }
+    },
+    {
+      "key": "0b954473-0e56-48ef-8879-3bb54a0b4c24",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24",
+        "lesson_activity.key": "a517177d-6600-45a3-9e0f-3b3e5d87bae5"
+      }
+    },
+    {
+      "key": "da3416ab-4c67-4efb-b06c-b827b9889ffe",
+      "position": 1,
+      "properties": {
+        "name": "Congrats on completing the apprentice program!",
+        "progression_name": "Congrats on completing the apprentice program!"
+      },
+      "seeding_key": {
+        "activity_section.key": "da3416ab-4c67-4efb-b06c-b827b9889ffe",
+        "lesson_activity.key": "54f602cd-fd8f-482e-8f26-5d778ea86bdf"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -160,7 +304,8 @@
         ],
         "lesson.key": "Apprentice Reflection Overview",
         "lesson_group.key": "required",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "8364669a-128d-4b06-8edb-443199d8cb28"
       },
       "level_keys": [
         "welcome-apprentice-18"
@@ -169,7 +314,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -183,7 +328,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207"
       },
       "level_keys": [
         "morning-prep-monday"
@@ -192,7 +338,7 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -206,7 +352,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207"
       },
       "level_keys": [
         "feel-monday"
@@ -215,7 +362,7 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -229,7 +376,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207"
       },
       "level_keys": [
         "debrief-monday"
@@ -238,7 +386,7 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -252,7 +400,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207"
       },
       "level_keys": [
         "engagement-monday"
@@ -261,7 +410,7 @@
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -275,7 +424,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207"
       },
       "level_keys": [
         "novice-monday-2"
@@ -284,7 +434,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -298,7 +448,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       },
       "level_keys": [
         "morning-prep-tuesday"
@@ -307,7 +458,7 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -321,7 +472,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       },
       "level_keys": [
         "feel-tuesday"
@@ -330,7 +482,7 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -344,7 +496,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       },
       "level_keys": [
         "instructional-strategy-tuesday"
@@ -353,7 +506,7 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -367,7 +520,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       },
       "level_keys": [
         "debrief-tuesday"
@@ -376,7 +530,7 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -390,7 +544,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       },
       "level_keys": [
         "engagement-tuesday"
@@ -399,7 +554,7 @@
     {
       "chapter": 12,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -413,7 +568,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       },
       "level_keys": [
         "novice-tuesday-2"
@@ -422,7 +578,7 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -436,7 +592,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       },
       "level_keys": [
         "morning-prep-wednesday"
@@ -445,7 +602,7 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -459,7 +616,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       },
       "level_keys": [
         "feel-wednesday"
@@ -468,7 +626,7 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -482,7 +640,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       },
       "level_keys": [
         "getting-buy-in-wednesday"
@@ -491,7 +650,7 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -505,7 +664,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       },
       "level_keys": [
         "debrief-wednesday"
@@ -514,7 +674,7 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -528,7 +688,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       },
       "level_keys": [
         "engagement-wednesday"
@@ -537,7 +698,7 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -551,7 +712,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       },
       "level_keys": [
         "novice-wednesday-2"
@@ -560,7 +722,7 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -574,7 +736,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       },
       "level_keys": [
         "morning-prep-thursday"
@@ -583,7 +746,7 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -597,7 +760,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       },
       "level_keys": [
         "feel-thursday"
@@ -606,7 +770,7 @@
     {
       "chapter": 21,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -620,7 +784,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       },
       "level_keys": [
         "recruiting-thursday"
@@ -629,7 +794,7 @@
     {
       "chapter": 22,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -643,7 +808,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       },
       "level_keys": [
         "debrief-thursday"
@@ -652,7 +818,7 @@
     {
       "chapter": 23,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -666,7 +832,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       },
       "level_keys": [
         "engagement-thursday"
@@ -675,7 +842,7 @@
     {
       "chapter": 24,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -689,7 +856,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       },
       "level_keys": [
         "novice-thursday-2"
@@ -698,7 +866,7 @@
     {
       "chapter": 25,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -713,7 +881,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "da3416ab-4c67-4efb-b06c-b827b9889ffe"
       },
       "level_keys": [
         "apprentice-congrats"
@@ -729,7 +898,8 @@
         ],
         "lesson.key": "Apprentice Reflection Overview",
         "lesson_group.key": "required",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "8364669a-128d-4b06-8edb-443199d8cb28"
       }
     },
     {
@@ -740,7 +910,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207"
       }
     },
     {
@@ -751,7 +922,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207"
       }
     },
     {
@@ -762,7 +934,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207"
       }
     },
     {
@@ -773,7 +946,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207"
       }
     },
     {
@@ -784,7 +958,8 @@
         ],
         "lesson.key": "Day 1",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "157189ce-c9f0-4552-800d-f0c429c33207"
       }
     },
     {
@@ -795,7 +970,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       }
     },
     {
@@ -806,7 +982,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       }
     },
     {
@@ -817,7 +994,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       }
     },
     {
@@ -828,7 +1006,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       }
     },
     {
@@ -839,7 +1018,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       }
     },
     {
@@ -850,7 +1030,8 @@
         ],
         "lesson.key": "Day 2",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "2a7d314c-ac56-4369-b0c6-c29d8ca75a1c"
       }
     },
     {
@@ -861,7 +1042,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       }
     },
     {
@@ -872,7 +1054,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       }
     },
     {
@@ -883,7 +1066,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       }
     },
     {
@@ -894,7 +1078,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       }
     },
     {
@@ -905,7 +1090,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       }
     },
     {
@@ -916,7 +1102,8 @@
         ],
         "lesson.key": "Day 3",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "07f3040f-41a2-451f-8b97-7ca0eb2fa170"
       }
     },
     {
@@ -927,7 +1114,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       }
     },
     {
@@ -938,7 +1126,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       }
     },
     {
@@ -949,7 +1138,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       }
     },
     {
@@ -960,7 +1150,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       }
     },
     {
@@ -971,7 +1162,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       }
     },
     {
@@ -982,7 +1174,8 @@
         ],
         "lesson.key": "Day 4",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "0b954473-0e56-48ef-8879-3bb54a0b4c24"
       }
     },
     {
@@ -993,7 +1186,8 @@
         ],
         "lesson.key": "Wrap Up",
         "lesson_group.key": "content",
-        "script.name": "fit2019-apprentice"
+        "script.name": "fit2019-apprentice",
+        "activity_section.key": "da3416ab-4c67-4efb-b06c-b827b9889ffe"
       }
     }
   ],

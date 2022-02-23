@@ -4,28 +4,28 @@ title: Sprid ordet
 
 {{ signup_button }}
 
-# Get your community involved in the Hour of Code
+# Engagera din grupp i Hour of Code
 
 ## 1. Sprid ordet
 
-Tell your friends about the **#HourOfCode**!
+Berätta för dina vänner om **#HourOfCode**
 
 {{ promote/share_buttons }}
 
-## 2. Be din skola att arrangera Hour of Code
+## 2. Be hela din skola att erbjuda en Hour of Code
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[Skicka det här e-postmeddelandet]({{ promote/sample_emails }}) till din rektor och utmana alla klassrum på din skola att registrera sig.
 
 ## 3. Fråga om din arbetsgivare vill engagera sig
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[Skicka detta e-postmeddelande]({{ promote/sample_emails }}) till din chef eller företagets VD.
 
-## 5. Gör reklam för Hour of Code i din kommun
+## 4. Gör reklam för Hour of Code i din grupp och kommun
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Du behöver inte vara i skolan för att lära sig nya färdigheter. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[Rekrytera en lokal grupp]({{ promote/sample_emails }})— pojk/flickscoutklubb, kyrka, universitet, veterangrupp, fackförening eller till och med några vänner. Du behöver inte vara i skolan för att lära sig nya färdigheter. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
-## 5. Be dina lokala politiker stötta Hour of Code
+## 5. Be dina lokala politiker stödja Hour of Code
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Det kan hjälpa till att bygga stöd för datavetenskap i ditt område efter Hour of Code.
+[Skicka det här e-postmeddelandet]({{ promote/sample_emails }}) till dina lokala representanter, kommunfullmäktige eller skolstyrelse och bjud in dem att besöka din skola för Hour of Code. Det kan hjälpa till att bygga stöd för datavetenskap i ditt område efter Hour of Code.
 
 {{ signup_button }}

@@ -2,6 +2,81 @@
   "fil-PH": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "function/hero/unversioned": {
+          "word": "Function"
+        },
+        "code/poem-art/2021": {
+          "word": "Code"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "code/artist/unversioned": {
+          "word": "Code"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Mga conditional"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Mga loop"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Pag-Encrypt"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "code/sports/unversioned": {
+          "word": "Code"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Pagdedebug"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Code"
+        },
+        "behavior/coursef/2021": {
+          "word": "Paggawi"
+        },
         "variable/coursef/2021": {
           "word": "Variable"
         },
@@ -41,6 +116,9 @@
         "debugging/express/2021": {
           "word": "Pagdedebug"
         },
+        "behavior/express/2021": {
+          "word": "Paggawi"
+        },
         "conditionals/express/2021": {
           "word": "Mga conditional"
         },
@@ -59,6 +137,9 @@
         "debugging/pre-express/2021": {
           "word": "Pagdedebug"
         },
+        "behavior/coursee/2021": {
+          "word": "Paggawi"
+        },
         "copyright/coursee/2021": {
           "word": "Karapatang-ari"
         },
@@ -70,6 +151,33 @@
         },
         "define/coursee/2021": {
           "word": "magtakda"
+        },
+        "debugging/csd/2021": {
+          "word": "Pagdedebug"
+        },
+        "variable/csd/2021": {
+          "word": "Variable"
+        },
+        "conditionals/csd/2021": {
+          "word": "Mga conditional"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraction"
+        },
+        "function/csd/2021": {
+          "word": "Function"
+        },
+        "input/csd/2021": {
+          "word": "Input"
+        },
+        "processing/csd/2021": {
+          "word": "Pagproseso"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Digital na Bakas"
+        },
+        "copyright/csd/2021": {
+          "word": "Karapatang-ari"
         }
       }
     }

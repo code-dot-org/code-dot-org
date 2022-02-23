@@ -398,6 +398,358 @@
         },
         "CourseF_outbreak7": {
           "costumes_callout": "नवीन पोशाख तयार करण्यासाठी क्लिक करा"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "नवीन ब्लॉक!",
+          "hello_world_new_block": "नवीन ब्लॉक!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "नवीन ब्लॉक!",
+          "hello_world_new_block": "नवीन ब्लॉक!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "नवीन ब्लॉक!",
+          "hello_world_new_block": "नवीन ब्लॉक!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "नवीन ब्लॉक!",
+          "hello_world_new_block": "नवीन ब्लॉक!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "नवीन ब्लॉक!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "नवीन ब्लॉक!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "नवीन ब्लॉक!",
+          "poetry_foreground": "नवीन ब्लॉक!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "नवीन ब्लॉक!",
+          "poetry_multiple_sprites": "नवीन ब्लॉक!",
+          "poetry_new_block": "नवीन ब्लॉक!",
+          "poetry_selector": "कोणतीही कविता निवडा, किंवा तुमची स्वतःची कविता प्रविष्ट करा!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "नवीन ब्लॉक!",
+          "poetry_music": "नवीन ब्लॉक!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "नवीन ब्लॉक!",
+          "poetry_sprite_stops": "नवीन ब्लॉक!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "नवीन ब्लॉक!",
+          "poetry_remove_sprite": "नवीन ब्लॉक!"
+        },
+        "courseA_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी जास्तीचे ब्लॉक्स मिळतील. "
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स एकत्र जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा."
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "जेव्हा तुम्हाला हिंट हवी असेल तेव्हा लाईटबल्बवर क्लिक करा!  "
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी अतिरिक्त ब्लॉक्स दिसतील. "
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "टूलबॉक्समध्ये यापैकी फक्त एकच ब्लॉक आहे. तुम्ही तो कसा वापराल?"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "दिशा बदलण्यासाठी हिरवा ड्रॉप डाऊन ॲरो वापरा."
+        },
+        "courseE_aboutme_2_2021": {
+          "": "येथे क्लिक करा!"
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "तुम्हाला 'for' लूप इथे सापडेल!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "तुम्हाला 'math' ब्लॉक इथे सापडेल."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "हे बिहेवियर कसे काम करते ते पाहण्यासाठी इथे क्लिक करा."
+        },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "तुमचा कोड कसा काम करतो याबद्दल तुमच्यासाठी किंवा तुमच्या शिक्षकांसाठी नोट्स लिहून ठेवण्यासाठी हा ब्लॉक वापरा."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "हा ब्लॉक या प्रोजेक्टसाठी खूप महत्त्वाचा आहे. तो नक्की वापरा!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "हे तुमच्या प्रोग्रॅमच्या मध्यभागी जोडा. "
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "तुम्हाला टूलबॉक्समध्ये काही नवीन ब्लॉक्स दिसत आहेत का? काळजी करू नका, ते कसे वापरायचे हे आम्ही तुम्हाला दुसऱ्या धड्यात दाखवू."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "तुम्हाला गरज असेल तर तुम्ही टूलबॉक्समधून अजून ब्लॉक्स घेऊ शकता!"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "हे ब्लॉक्स लॉक केलेले आहेत आणि काढून टाकता येत नाहीत!"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा. "
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी अतिरिक्त ब्लॉक्स दिसतील. "
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "अतिरिक्त ब्लॉक्स फेकून देण्यासाठी तुम्ही ते टूलबॉक्समध्ये ड्रॅग करू शकता.  ",
+          "courseC_maze_programming3_3": "हे ब्लॉक्स दगड आहेत आणि ते फेकून देता येत नाहीत."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "ही तुमच्या ब्लॉकची मर्यादा आहे. तुमच्याकडे वापरण्यासाठी किती ब्लॉक्स शिल्लक आहेत, हे ती तुम्हाला सांगते."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "या ब्लॉक्सवर संख्या नाही आहेत. तुम्ही हवे तितके ब्लॉक्स वापरू शकता! "
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "हे तुमचे पहिले आव्हानात्मक कोडे आहे! ते अवघड असणे अपेक्षित आहे आणि त्यासाठी अनेक प्रयत्न करावे लागू शकतात.",
+          "courseC_maze_programming7_2": "हे ब्लॉक्स दगडापासून बनवलेले आहेत आणि ते फेकून देता येत नाहीत."
+        },
+        "courseD_artist_nestedLoops1a_2021": {
+          "courseD_artist_nestedLoops1a_1": "तुम्हाला हे कोडे योग्यप्रकारे सोडवण्यासाठी रंग वापरणे आवश्यक नाही. जर तुम्हाला रंग वापरायचे असतील तर  या `random color` ब्लॉकमुळे ते अधिक सोपे होते!"
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "प्रत्येक ढगाच्या खाली फूल आहे का ते तपासायचे लक्षात ठेवा. तुम्ही मधाची पोळी तपासण्याची अजिबात गरज नाही."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "एका फुलातून (किंवा मधाच्या पोळ्यातून) सगळे परागकण (किंवा मध) गोळा करण्यासाठी हा लूप वापरा."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "हे कोडे सोडवण्यासाठी तुम्ही `while path ahead` ब्लॉक वापरणे आवश्यक आहे."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "जेव्हा हा हिरवा ब्लॉक रन होतो तेव्हा, त्या फंक्शनमधला सगळा कोड रन होतो. पहिला चौरस काढल्यावर आर्टीस्टने काय केले पाहिजे? "
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "फंक्शन्स तयार करण्यासाठीचे तुमचे ब्लॉक्स या लेबलच्या खाली टूलबॉक्समध्ये हलवण्यात आले आहेत."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "शेवटी अजून कोड जोडून हा प्रोग्रॅम सुरू ठेवा.",
+          "courseE_artist_functions_challenge1_callout2": "तुम्हाला हे डिझाईन आवडले नसल्यास, ते  बदलून तुम्हाला हवे ते डिझाईन तयार करा!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "शेवटी अजून कोड जोडून हा प्रोग्रॅम सुरू ठेवा.",
+          "courseE_artist_functions_challenge2_callout2": "तुम्हाला हे डिझाईन आवडले नसल्यास, ते  बदलून तुम्हाला हवे ते डिझाईन तयार करा!"
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "ही भाजी अज्ञात आहे. तुम्ही प्रोग्रॅम रन केला की प्रत्येकवेळी ती बदलते."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "यावेळी टूलबॉक्सची रचना थोडीशी वेगळी आहे! तुमच्याकडे कोणते ब्लॉक्स आहेत हे पाहण्यासाठी विविध श्रेणींवर क्लिक करा."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "ही भाजी अज्ञात आहे. तुम्ही प्रोग्रॅम रन केला की प्रत्येकवेळी ती बदलते."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "ही भाजी अज्ञात आहे. तुम्ही प्रोग्रॅम रन केला की प्रत्येकवेळी ती बदलते."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "तुमच्या कोडसाठी अजून जागा तयार करण्यासाठी टूलबॉक्स \"कॅटेगरी\" मोडमध्ये आहे. 'for' लूप्स इथे आहेत."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "तुम्हाला तुमचे व्हेरीएबल्स इथे खाली दिसतील!"
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "टूलबॉक्समधील ब्लॉक्स तुमच्या वर्कस्पेसमध्ये ड्रॅग करा."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "नवीन पार्श्वभूमी सेट करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "खालील वर्तनांपैकी एकासह हा ब्लॉक वापरा."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "कोड रन करण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "तुमच्या कार्यक्षेत्रात हा इव्हेंट ब्लॉक जोडा."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "तुमच्या प्रोजेक्टमध्ये पोशाख जोडण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_animals_location": {
+          "pin": "पिन"
+        },
+        "helloworld_animals_multi": {
+          "pin": "पिन"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "स्प्राईट्सला बोलण्यासाठी या ब्लॉकचा वापर करा.",
+          "hello_world_make_sprite": "स्प्राईट तयार करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "नवीन पार्श्वभूमी सेट करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "खालील वर्तनांपैकी एकासह हा ब्लॉक वापरा."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "कोड रन करण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "तुमच्या कार्यक्षेत्रात हा इव्हेंट ब्लॉक जोडा."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "तुमच्या प्रोजेक्टमध्ये पोशाख जोडण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_emoji_location": {
+          "pin": "पिन"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "पिन"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "स्प्राईट्सला बोलण्यासाठी या ब्लॉकचा वापर करा.",
+          "hello_world_make_sprite": "स्प्राईट तयार करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "नवीन पार्श्वभूमी सेट करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "खालील वर्तनांपैकी एकासह हा ब्लॉक वापरा."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "कोड रन करण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "तुमच्या कार्यक्षेत्रात हा इव्हेंट ब्लॉक जोडा."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "तुमच्या प्रोजेक्टमध्ये पोशाख जोडण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_food_location": {
+          "pin": "पिन"
+        },
+        "helloworld_food_multi": {
+          "pin": "पिन"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "स्प्राईट्सला बोलण्यासाठी या ब्लॉकचा वापर करा.",
+          "hello_world_make_sprite": "स्प्राईट तयार करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "नवीन पार्श्वभूमी सेट करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "खालील वर्तनांपैकी एकासह हा ब्लॉक वापरा."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "कोड रन करण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "तुमच्या कार्यक्षेत्रात हा इव्हेंट ब्लॉक जोडा."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "तुमच्या प्रोजेक्टमध्ये पोशाख जोडण्यासाठी येथे क्लिक करा."
+        },
+        "helloworld_retro_location": {
+          "pin": "पिन"
+        },
+        "helloworld_retro_multi": {
+          "pin": "पिन"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "स्प्राईट्सला बोलण्यासाठी या ब्लॉकचा वापर करा.",
+          "hello_world_make_sprite": "स्प्राईट तयार करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "ही संख्या तुम्हाला यातील किती ब्लॉक्स तुम्ही या कोड्यात वापरू शकता, ते सांगते."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "ही संख्या म्हणजे अंतिम उत्तरात या प्रकारचा फक्त एक ब्लॉक वापरता येईल."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "तुम्हाला माहिती आहे का की जेव्हा गरज असेल तेव्हा तुम्ही एका रेषेवर काही काढू शकता?"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "हे कॉलआऊट आहे"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "इव्हेंट ॲरोची दिशा बदलण्यासाठी येथे क्लिक करा."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "त्यामुळे तुम्ही एक 'रँडम' आवाज निवडू शकाल, म्हणजे तुम्ही ऐकेपर्यंत कोणता आवाज येईल हे तुम्हाला माहीत नसेल!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा. "
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "खजिना गोळा करण्यासाठी हा ब्लॉक वापरा."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "पुढच्या पातळीपर्यंत जाण्यासाठी पात्राला या ध्वजापर्यंत पोचवा."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "जेव्हा वॅडल्स आणि चॉम्पचा एकमेकांना स्पर्श होतो तेव्हा हा ब्लॉक वापरा!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "ब्लॉक्समुळे तुम्ही पात्रांना गेम स्पेसमधील वेगवेगळ्या ठिकाणी हलवू शकता."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "भोपळ्यावरील चार ही संख्या तुम्हाला दाखवते की अजून चार भोपळे तोडण्यासाठी उपलब्ध आहेत. "
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "टूलबॉक्समधील ब्लॉक्स तुमच्या वर्कस्पेसमध्ये ड्रॅग करा."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "ही तुमच्या ब्लॉकची मर्यादा आहे. तुमच्याकडे वापरण्यासाठी किती ब्लॉक्स शिल्लक आहेत, हे ती तुम्हाला सांगते."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "या ब्लॉक्सवर संख्या नाही आहेत. तुम्ही हवे तितके ब्लॉक्स वापरू शकता! "
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी अतिरिक्त ब्लॉक्स दिसतील."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "अतिरिक्त ब्लॉक्स फेकून देण्यासाठी तुम्ही ते टूलबॉक्समध्ये ड्रॅग करू शकता.",
+          "stone_block_2": "ग्रे ब्लॉक्स फेकून देता येत नाहीत."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "या ब्लॉक्सवर संख्या नाही आहेत. तुम्ही हवे तितके ब्लॉक्स वापरू शकता! "
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "कोड ब्लॉक्स येथे शोधा.",
+          "run_button": "या बटणासह आपल्या अॅनिमेशनची चाचणी घ्या."
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "स्क्रीनचा रंग हिरवा झाला का? असेल तर \"Finish\" दाबा, नसेल तर \"Reset\" दाबा, तुमचा कोड बदला आणि पुन्हा 'Run' दाबा."
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "तुम्ही आता डिझाईन मोडमध्ये आहात."
+        },
+        "frozen line": {
+          "run": "तुमचा प्रोग्रॅम करून पाहण्यासाठी \"रन\" दाबा!",
+          "move_elsa_forward": "\"move forward\" ब्लॉक ड्रॅग करा आणि एल्साला पुढे जायला लावण्यासाठी तो \"When Run\" ब्लॉकच्या खाली जोडा."
         }
       }
     }

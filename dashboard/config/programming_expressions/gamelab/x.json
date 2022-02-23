@@ -1,6 +1,7 @@
 {
-  "func": "x",
+  "key": "x",
+  "name": "x",
   "category": "Sprites",
-  "modeOptionName": "*.x",
-  "type": "property"
+  "category_key": "sprites",
+  "syntax": "x"
 }

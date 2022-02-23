@@ -79,8 +79,8 @@ const customInputTypes = {
         `${inputConfig.label}(0, 0)`,
         `${inputConfig.name}_LABEL`
       );
-      const label =
-        currentInputRow.titleRow[currentInputRow.titleRow.length - 1];
+      const fieldRow = currentInputRow.getFieldRow();
+      const label = fieldRow[fieldRow.length - 1];
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = '\uf276';
@@ -98,7 +98,7 @@ const customInputTypes = {
           if (value) {
             try {
               const loc = JSON.parse(value);
-              label.setText(
+              label.setValue(
                 `${inputConfig.label}(${loc.x}, ${APP_HEIGHT - loc.y})`
               );
             } catch (e) {

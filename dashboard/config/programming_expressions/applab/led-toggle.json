@@ -1,0 +1,7 @@
+{
+  "key": "led.toggle",
+  "name": "led.toggle",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "syntax": "led.toggle"
+}

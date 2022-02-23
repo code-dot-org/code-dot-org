@@ -9,10 +9,10 @@ You can join tens of millions of students worldwide in this global event. Togeth
 
 [<img src="/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg" />]({{ urls/learn }})
 
-<h3>What do I need to get started?</h3>
+<h3>დაწყებისთვის რა მჭირდება?</h3>
 The Hour of Code is simple to run - even for beginners. You don’t need experience in computer science or teaching in order to facilitate a fun activity for your children that will get them both learning and laughing.
 
-You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! Here's how to get started.
+You can try the Hour of Code with a computer, a tablet, a smartphone, or completely unplugged! აქ გაიგებთ როგორ დაიწყოთ.
 
 ***
 
@@ -69,8 +69,8 @@ It’s okay if both you and your child are brand new to computer science. Here a
 <h3>Problem-solve together</h3>
 Lastly, when your child comes across difficulties it's okay to respond:
 - "არ ვიცი. მოდი ერთად გავარჩიოთ."
-- ტექნოლოგია ყოველთვის არ იქცევა ისე, როგორც ჩვენ გვინდა
-- "პროგრამირების სწავლა უცხო ენის სწავლას ჰგავს; შეუძლებელია დაუყოვნებლივ დაიწყოთ გამართულად საუბარი."
+- „ტექნოლოგია ყოველთვის არ იქცევა ისე, როგორც ჩვენ გვინდა.“
+- „პროგრამირების სწავლა უცხო ენის სწავლას ჰგავს; შეუძლებელია პირველი ცდის მერე დაიწყოთ გამართულად საუბარი.“
 
 Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
 
@@ -79,7 +79,7 @@ Computer science is all about learning how to “debug” situations that didn�
 
 The Hour of Code is a global event, and your family deserves to celebrate. Here are some ways to make your Hour of Code extra special:
 
-- Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
+- დაბეჭდეთ <a href="https://staging.code.org/certificates">კოდის ერთი საათის სერტიფიკატები</a>, რომლებსაც მისცემთ მოსწავლეებს აქტივობის დასრულების მერე
 - <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
 - Share photos and videos of your at-home Hour of Code on social media. გამოიყენეთ #HourOfCode და @codeorg რათა ჩვენც შევძლოთ თქვენი წარმატების აღნიშვნა!
 
@@ -87,4 +87,4 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 <h2>რა ხდება კოდის ერთი საათის შემდეგ?</h2>
 
-კომპიუტერული მეცნიერებები არ მთავრდება კოდირების საათით! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+კომპიუტერული მეცნიერება არ მთავრდება კოდის ერთი საათით! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.

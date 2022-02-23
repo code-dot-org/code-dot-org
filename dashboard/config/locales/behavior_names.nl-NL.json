@@ -155,6 +155,84 @@
           "recovering": "herstellend",
           "moving left and right": "links en rechts bewegen",
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_animals_sounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_emoji_sounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_food_sounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_retro_sounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_addSprites": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_exemplar1": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_exemplar2": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_freeplay": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen",
+          "moving north and looping": "Naar het noorden bewegen en lussen",
+          "moving south and looping": "Naar het zuiden bewegen en lussen"
         }
       }
     }

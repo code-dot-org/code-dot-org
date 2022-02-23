@@ -34,6 +34,7 @@ class Lesson < ApplicationRecord
   belongs_to :script, inverse_of: :lessons
   belongs_to :lesson_group
   has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
+  has_many :activity_sections, through: :lesson_activities
   has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
@@ -67,7 +68,6 @@ class Lesson < ApplicationRecord
     purpose
     preparation
     announcements
-    visible_after
     assessment_opportunities
   )
 
@@ -117,76 +117,9 @@ class Lesson < ApplicationRecord
     )
   end
 
-  def self.add_lessons(unit, lesson_group, raw_lessons, counters, new_suffix, editor_experiment)
-    unit.lessons.reload
-    raw_lessons.map do |raw_lesson|
-      Lesson.prevent_blank_display_name(raw_lesson)
-      Lesson.prevent_changing_stable_i18n_key(unit, raw_lesson)
-
-      lesson = unit.lessons.detect {|l| l.key == raw_lesson[:key]} ||
-        Lesson.find_or_create_by(
-          key: raw_lesson[:key],
-          script: unit
-        ) do |l|
-          l.name = raw_lesson[:name]
-          l.relative_position = 0 # will be updated below, but cant be null
-          l.has_lesson_plan = true # will be reset below if specified
-        end
-
-      numbered_lesson = !!raw_lesson[:has_lesson_plan] || !raw_lesson[:lockable]
-
-      lesson.assign_attributes(
-        name: raw_lesson[:name],
-        absolute_position: (counters.lesson_position += 1),
-        lesson_group: lesson_group,
-        lockable: !!raw_lesson[:lockable],
-        has_lesson_plan: !!raw_lesson[:has_lesson_plan],
-        visible_after: raw_lesson[:visible_after],
-        unplugged: !!raw_lesson[:unplugged],
-        relative_position: numbered_lesson ? (counters.numbered_lesson_count += 1) : (counters.unnumbered_lesson_count += 1)
-      )
-      lesson.save! if lesson.changed?
-
-      lesson.script_levels = ScriptLevel.add_script_levels(
-        unit, lesson_group, lesson, raw_lesson[:script_levels], counters, new_suffix, editor_experiment
-      )
-      lesson.save!
-      lesson.reload
-
-      Lesson.prevent_multi_page_assessment_outside_final_level(lesson)
-
-      lesson
-    end
-  end
-
-  def self.prevent_changing_stable_i18n_key(unit, raw_lesson)
-    if unit.stable? && ScriptConstants.i18n?(unit.name) && I18n.t("data.script.name.#{unit.name}.lessons.#{raw_lesson[:key]}").include?('translation missing:')
-
-      raise "Adding new keys or update existing keys for lessons in units that are marked as stable and included in the i18n sync is not allowed. Offending Lesson Key: #{raw_lesson[:key]}"
-    end
-  end
-
   def self.prevent_blank_display_name(raw_lesson)
     if raw_lesson[:name].blank?
       raise "Expect all lessons to have display names. The following lesson does not have a display name: #{raw_lesson[:key]}"
-    end
-  end
-
-  # Go through all the script levels for this lesson, except the last one,
-  # and raise an exception if any of them are a multi-page assessment.
-  # (That's when the script level is marked assessment, and the level itself
-  # has a pages property and more than one page in that array.)
-  # This is because only the final level in a lesson can be a multi-page
-  # assessment.
-  def self.prevent_multi_page_assessment_outside_final_level(lesson)
-    lesson.script_levels.each do |script_level|
-      if lesson.script_levels.last != script_level && script_level.long_assessment?
-        raise "Only the final level in a lesson may be a multi-page assessment.  Lesson: #{lesson.name}"
-      end
-    end
-
-    if lesson.lockable && !lesson.script_levels.last.assessment?
-      raise "Expect lockable lessons to have an assessment as their last level. Lesson: #{lesson.name}"
     end
   end
 
@@ -241,6 +174,19 @@ class Lesson < ApplicationRecord
     result = get_localized_property(property_name)
     result = Services::MarkdownPreprocessor.process(result || '')
     return result
+  end
+
+  # If there is a script_level, build_script_level_path will provide the correct url,
+  # even if it's a lockable lesson. Otherwise, we give the url to the student resources
+  # page, and the lesson plan pdf as a backup.
+  def start_url
+    if script_levels.first
+      return url_from_path(build_script_level_path(script_levels.first))
+    elsif script.include_student_lesson_plans && script.is_migrated
+      return url_from_path(script_lesson_student_path(script, self))
+    elsif student_lesson_plan_pdf_url
+      return student_lesson_plan_pdf_url
+    end
   end
 
   # A simple helper function to encapsulate creating a unique key, since this
@@ -312,12 +258,6 @@ class Lesson < ApplicationRecord
     end
   end
 
-  def unit_resource_pdf_url
-    if script.is_migrated?
-      Services::CurriculumPdfs.get_unit_resources_url(script)
-    end
-  end
-
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
@@ -354,7 +294,8 @@ class Lesson < ApplicationRecord
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
-        lessonEditPath: get_uncached_edit_path
+        lessonEditPath: get_uncached_edit_path,
+        lessonStartUrl: start_url
       }
       # Use to_a here so that we get access to the cached script_levels.
       # Without it, script_levels.last goes back to the database.
@@ -398,7 +339,9 @@ class Lesson < ApplicationRecord
     # a user trying to edit a lesson plan via /s/[script-name]/lessons/1/edit
     # has sufficient permissions or not. therefore, use a different path
     # when editing lesson plans in hoc scripts.
-    ScriptConfig.hoc_scripts.include?(script.name) ? edit_lesson_path(id: id) : script_lesson_edit_path(script, self)
+    has_lesson_plan && !ScriptConfig.hoc_scripts.include?(script.name) ?
+      script_lesson_edit_path(script, self) :
+      edit_lesson_path(id: id)
   end
 
   def get_uncached_show_path
@@ -473,18 +416,13 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_edit),
-      programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_edit),
-      objectives: objectives.map(&:summarize_for_edit),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_edit),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_edit),
+      objectives: objectives.sort_by(&:description).map(&:summarize_for_edit),
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
-      courseVersionId: lesson_group.script.get_course_version&.id,
-      unitIsLaunched: script.launched?,
-      scriptPath: script_path(script),
-      lessonPath: get_uncached_show_path,
-      lessonExtrasAvailableForUnit: script.lesson_extras_available
+      lessonPath: get_uncached_show_path
     }
   end
 
@@ -500,20 +438,20 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       purpose: render_property(:purpose),
       preparation: render_property(:preparation),
-      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown)},
-      resources: resources_for_lesson_plan(user&.authorized_teacher?),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
-      objectives: objectives.map(&:summarize_for_lesson_show),
+      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user)},
+      resources: resources_for_lesson_plan(user&.verified_instructor?),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
+      objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_show),
       is_teacher: user&.teacher?,
       assessmentOpportunities: Services::MarkdownPreprocessor.process(assessment_opportunities),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
       courseVersionStandardsUrl: course_version_standards_url,
-      isVerifiedTeacher: user&.authorized_teacher?,
+      isVerifiedInstructor: user&.verified_instructor?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
-      scriptResourcesPdfUrl: unit_resource_pdf_url
+      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
     }
   end
 
@@ -523,10 +461,10 @@ class Lesson < ApplicationRecord
       position: relative_position,
       displayName: localized_name,
       preparation: render_property(:preparation),
-      resources: resources_for_lesson_plan(user&.authorized_teacher?),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
-      objectives: objectives.map(&:summarize_for_lesson_show),
+      resources: resources_for_lesson_plan(user&.verified_instructor?),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
+      objectives: objectives.sort_by(&:description).map(&:summarize_for_lesson_show),
       standards: standards.map(&:summarize_for_lesson_show),
       link: script_lesson_path(script, self)
     }
@@ -543,8 +481,8 @@ class Lesson < ApplicationRecord
       overview: get_localized_property(:student_overview) || '',
       announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
-      vocabularies: vocabularies.map(&:summarize_for_lesson_show),
-      programmingExpressions: programming_expressions.map(&:summarize_for_lesson_show),
+      vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
+      programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
       studentLessonPlanPdfUrl: student_lesson_plan_pdf_url
     }
   end
@@ -658,6 +596,9 @@ class Lesson < ApplicationRecord
   end
 
   def next_level_path_for_lesson_extras(user)
+    if script.show_unit_overview_between_lessons?
+      return script_path(script)
+    end
     next_level = next_level_for_lesson_extras(user)
     next_level ?
       build_script_level_path(next_level) : script_completion_redirect(script)
@@ -666,14 +607,6 @@ class Lesson < ApplicationRecord
   def next_level_number_for_lesson_extras(user)
     next_level = next_level_for_lesson_extras(user)
     next_level ? next_level.lesson.relative_position : nil
-  end
-
-  def published?(user)
-    return true if user&.levelbuilder?
-
-    return true unless visible_after
-
-    Time.parse(visible_after) <= Time.now
   end
 
   # Updates this lesson's lesson_activities to match the activities represented
@@ -708,11 +641,12 @@ class Lesson < ApplicationRecord
     return unless objectives
 
     self.objectives = objectives.map do |objective|
+      next nil unless objective['description'].present?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
-    end
+    end.compact
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to
@@ -813,7 +747,7 @@ class Lesson < ApplicationRecord
   end
 
   def resources_for_lesson_plan(verified_teacher)
-    grouped_resources = resources.map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
+    grouped_resources = resources.sort_by(&:name).map(&:summarize_for_lesson_plan).group_by {|r| r[:audience]}
     if verified_teacher && grouped_resources.key?('Verified Teacher')
       grouped_resources['Teacher'] ||= []
       grouped_resources['Teacher'] += grouped_resources['Verified Teacher']
@@ -854,6 +788,42 @@ class Lesson < ApplicationRecord
 
     copied_lesson.save!
 
+    # Copy objects that require course version, i.e. resources and vocab
+    course_version = destination_unit.get_course_version
+
+    copied_resource_map = {}
+    copied_lesson.resources = resources.map do |original_resource|
+      copied_resource = original_resource.copy_to_course_version(course_version)
+      copied_resource_map[original_resource.key] = copied_resource
+      copied_resource
+    end.uniq
+
+    copied_vocab_map = {}
+    copied_lesson.vocabularies = vocabularies.map do |original_vocab|
+      copied_vocab = original_vocab.copy_to_course_version(course_version)
+      copied_vocab_map[original_vocab.key] = copied_vocab
+      copied_vocab
+    end.uniq
+
+    update_resource_link_on_clone = proc do |resource|
+      new_resource = copied_resource_map[resource.key] || resource.copy_to_course_version(course_version)
+      "[r #{new_resource ? Services::GloballyUniqueIdentifiers.build_resource_key(new_resource) : Services::GloballyUniqueIdentifiers.build_resource_key(resource)}]"
+    end
+
+    update_vocab_definition_on_clone = proc do |vocab|
+      new_vocab = copied_vocab_map[vocab.key] || vocab.copy_to_course_version(course_version)
+      "[v #{new_vocab ? Services::GloballyUniqueIdentifiers.build_vocab_key(new_vocab) : Services::GloballyUniqueIdentifiers.build_vocab_key(vocab)}]"
+    end
+
+    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.overview, update_resource_link_on_clone) if copied_lesson.overview
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.overview, update_vocab_definition_on_clone) if copied_lesson.overview
+    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.student_overview, update_resource_link_on_clone) if copied_lesson.student_overview
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.student_overview, update_vocab_definition_on_clone) if copied_lesson.student_overview
+    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.preparation, update_resource_link_on_clone) if copied_lesson.preparation
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.preparation, update_vocab_definition_on_clone) if copied_lesson.preparation
+    Services::MarkdownPreprocessor.sub_resource_links!(copied_lesson.assessment_opportunities, update_resource_link_on_clone) if copied_lesson.assessment_opportunities
+    Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_lesson.assessment_opportunities, update_vocab_definition_on_clone) if copied_lesson.assessment_opportunities
+
     # Copy lesson activities, activity sections, and script levels
     copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
       copied_lesson_activity = original_lesson_activity.dup
@@ -864,6 +834,10 @@ class Lesson < ApplicationRecord
         copied_activity_section = original_activity_section.dup
         copied_activity_section.key = SecureRandom.uuid
         copied_activity_section.lesson_activity_id = copied_lesson_activity.id
+        if copied_activity_section.description
+          Services::MarkdownPreprocessor.sub_resource_links!(copied_activity_section.description, update_resource_link_on_clone)
+          Services::MarkdownPreprocessor.sub_vocab_definitions!(copied_activity_section.description, update_vocab_definition_on_clone)
+        end
         copied_activity_section.save!
         sl_data = original_activity_section.script_levels.map.with_index(1) do |original_script_level, pos|
           # Only include active level and discard variants
@@ -895,21 +869,6 @@ class Lesson < ApplicationRecord
     copied_lesson.standards = standards
     copied_lesson.opportunity_standards = opportunity_standards
 
-    # Copy objects that require course version, i.e. resources and vocab
-    course_version = destination_unit.get_course_version
-    copied_lesson.resources = resources.map {|r| r.copy_to_course_version(course_version)}.uniq
-
-    copied_lesson.vocabularies = vocabularies.map do |original_vocab|
-      persisted_vocab = Vocabulary.where(word: original_vocab.word, course_version_id: course_version.id).first
-      if persisted_vocab && !!persisted_vocab.common_sense_media == !!original_vocab.common_sense_media
-        persisted_vocab
-      else
-        copied_vocab = Vocabulary.create!(word: original_vocab.word, definition: original_vocab.definition, common_sense_media: original_vocab.common_sense_media, course_version_id: course_version.id)
-        copied_vocab
-      end
-    end.uniq
-
-    copied_lesson.save!
     Script.merge_and_write_i18n(copied_lesson.i18n_hash, destination_unit.name)
     destination_unit.fix_script_level_positions
     destination_unit.write_script_json

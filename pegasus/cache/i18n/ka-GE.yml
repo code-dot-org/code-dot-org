@@ -22,6 +22,13 @@ ka-GE:
   csedweek_banner_teachers_text: " CS მასწავლებელი ხართ? გაეცანით CSEd კვირის სხვა
     რესურსებს"
   n_have_learned_an_hoc: "<h1> სცადეთ </h1><h2>კოდის ერთი საათი</h2><h3>#</h3>"
+  try_hoc_num_served: "<h1>სცადეთ</h1><h2>საათი კოდექსის</h2><h3>%{num} მსახურობდა</h3>"
+  try_hoc_num_served_markdown: |-
+    # სცადეთ
+
+    # # საათი კოდექსის
+
+    ### %{num} მსახურობდა #Try an
   anybody_can_learn: სწავლა შეუძლია ყველას.
   learn_now: ისწავლეთ ახლა
   petition_message: ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა ისწავლოს
@@ -41,9 +48,15 @@ ka-GE:
   og_title_here: კოდის ერთი საათი დაიწყო!
   og_description: ყოველი სკოლის ყოველ მოსწავლეს უნდა ჰქონდეს შესაძლებლობა, ისწავლოს
     კომპიუტერული მეცნიერება. ის ყველაფერს ცვლის.
+  og_description_celeb: სცადეთ ახალი გაკვეთილები, გაიმარჯვებს სახელგანთქმული ვიდეო
+    სტატისტიკა თქვენთვის ან თქვენი კლასის!
   csedweek_og_title: კომპიუტერული მეცნიერების საგანმანათლებლო კვირეული
   csedweek_og_description: 2018 წლის 3-9 დეკემბერი. კომპიუტერული მეცნიერებები ყოველმა
     მოსწავლემ უნდა ისწავლოს.
+  csedweek_og_description_soon: კოდექსის საათი მოდის 2018 წლის 3-9 დეკემბერს. კომპიუტერული
+    მეცნიერება არის ფუძემდებელი ყველა სტუდენტი უნდა ვისწავლოთ.
+  csedweek_og_description_here: კოდექსის საათი აქ არის. კომპიუტერული მეცნიერება არის
+    ფუძემდებელი ყველა სტუდენტი უნდა ვისწავლოთ.
   hoc2014_heading: შეუერთდით<a href="http://hourofcode.com">კოდის ერთ საათს</a><br/>
     2014 წლის დეკემბერში<br/>
   hoc2014_students: მოსწავლეები
@@ -54,6 +67,7 @@ ka-GE:
   hoc2014_support: დაუჭირეთ მხარი &#x25BE;
   hoc2014_whatishoc: რა არის კოდის ერთი საათი?
   csedweek_map_header: "# CSEdWeek / კოდის ერთი საათი მთელს მსოფლიოში"
+  csedweek_map_header_num: "%{num} CSEDWeek/კოდის ღონისძიებების საათი მთელს მსოფლიოში"
   csedweek_map_signup: დაარეგისტრირეთ თქვენი ღონისძიება
   csedweek_map_search_placeholder: კოდის ერთი საათის ღონისძიების პოვნა
   csedweek_map_search_search: ძიება
@@ -216,6 +230,8 @@ ka-GE:
   personalize_certificate: სერტიფიკატის პერსონიფიკაცია
   print_batch_certificates: ამობეჭდეთ სერტიფიკატების დასტა
   print_certificates: სერტიფიკატის ამობეჭდვა
+  certificate_sponsor_message: "%{sponsor_name} გააკეთა გულუხვი საჩუქარი სპონსორი
+    თქვენი სწავლის."
   print_ice_art_from_frozen: ამობეჭდეთ ნახატები „გაყინულის“ ტუტორიალიდან
   want_a_blank_certificate_template: ცარიელი სერტიფიკატი გინდათ, რომ ხელით ჩაწეროთ
     მოსწავლეების სახელები?
@@ -229,6 +245,8 @@ ka-GE:
   beyond_hour_message: გააგრძელეთ ჩვენი <a href='http://studio.code.org'>სხვა კურსები</a>
     ან გაიგეთ, კიდევ როგორ შეგიძლითა <a href='/learn/beyond'>ისწავლოთ ერთი საათის
     დასრულების შემდეგ</a>.
+  beyond_hour_message_markdown: შეინახეთ ჩვენი [სხვა კურსები] (http://studio.code.org),
+    ან უფრო მეტი ვარიანტი [ვისწავლოთ მიღმა საათი] (/სწავლა/მიღმა).
   leaderboards_for_hoc: კოდის ერთი საათის ლიდერთა დაფა.
   support_url: http://support.code.org/
   country: ქვეყანა
@@ -284,6 +302,8 @@ ka-GE:
   just_did_accelerated: ახლახან დავასრულე ინტენსიური კურსი - ნახე! @codeorg
   just_did_hoc_donor: 'მე ახლახან დავასრულე #HourOfCode - ნახეთ! (მადლობა %{donor_twitter}-ს
     @codeorgის მხარდაჭერისთვის)'
+  just_did_course_donor: მე უბრალოდ დასრულდა %{course} - შეამოწმეთ იგი! მადლობა %{donor_twitter}
+    მხარდასაჭერად @codeorg
   twitter_teach_cs: '10–დან 9 ადამიანი გვეთანმება: კომპიუტერული მეცნიერება უნდა ისწავლებოდეს
     სკოლებში. http://youtu.be/nKIu9yen5nc. ეწვიეთ: https://code.org/.'
   twitter_cs_foundational: კომპიუტერული მეცნიერებები ყოველმა მოსწავლემ უნდა ისწავლოს.
@@ -311,6 +331,12 @@ ka-GE:
     - მარია ალზატე, მეხუთეკლასელი'
   stats_michael: '"მე <b>ჯერ არასდროს</b> არ მინახავს ჩემი მოსწავლეები ასე დაინტერესებულიყვნენ
     სწავლით" - მიშელ კლარკი, მასწავლებელი'
+  stats_nina_markdown: "„ყოველ დღე ერთსა და იმავე შედეგს გამოიღო - 100% ჩართულობა.“
+    - ნინა ნიჩოლი პეერი, მასწავლებელი"
+  stats_student_markdown: "„ვიცოდი, რომ ეს იყო **ერთხელ სიცოცხლე** შანსი.“ - მარიანა
+    ალზატე, მე -5 კლასის მოსწავლე"
+  stats_michael_markdown: "„მე **არასოდეს, მარადი** მინახავს ჩემი სტუდენტები იმდენად
+    აღფრთოვანებული სწავლის შესახებ.“ - ფრენკ მარტინესი, მასწავლებელი"
   studiobar_title: შეისწავლეთ <a href='http://studio.code.org'>კოდის სტუდია</a>
   studiobar_title_nolink: გაეცანით კოდის სტუდიას
   studiobar_elementary_title: კურსები დამწყებთათვის
@@ -329,6 +355,13 @@ ka-GE:
   studiobar_donate_body: ყოველი შემოწირული დოლარი უზრუნველჰყოფს ერთი ბავშვის განათლებას
   studiobar_shop_title: მაღაზია
   studiobar_shop_body: დაამსხვრიე სტერეოტიპები. ატარე ჩვენი ლოგო სიამაყით.
+  homepage_stats_students: აშშ სტუდენტები ანგარიშები Code.org
+  homepage_stats_female: ჩვენი სტუდენტები არიან ქალი
+  homepage_stats_teachers: მასწავლებლები იყენებენ Code.org
+  homepage_stats_hourofcodde: მსოფლიოს სტუდენტებმა სცადეს კოდექსის საათი
+  homepage_stats_policy: სახელმწიფოებმა კომპიუტერული მეცნიერების მხარდასაჭერად პოლიტიკა
+    შეცვალეს
+  homepage_stats_title: ჩვენ ვქმნით განსხვავებას
   homepage_hero_text_malala: "&ldquo; ყველა ქვეყნის გოგონებს მოვუწოდებ - გაიარეთ კოდის
     ერთი საათი&rdquo; მალალა, ნობელის პრემიის მფლობელი მშვიდობის დარგში"
   homepage_hero_text_susan: "&ldquo;თუ შეგიძლიათ ტექნოლოგიის შეცვლა, ყველფარის შეცვლა
@@ -384,6 +417,7 @@ ka-GE:
   homepage_action_text_girlvideo: შთააგონეთ გოგოს
   homepage_action_text_learn: დაიწყეთ სწავლა
   homepage_action_text_signpetition: მოაწერეთ ხელი პეტიციას
+  homepage_action_text_wincelebritychat: მოიგე სახელგანთქმული სტატისტიკა
   homepage_signpetition_dropdown: ვეთანხმები პეტიციას &#x25BE;
   homepage_signpetition_dropdown_text: ვეთანხმები
   homepage_diversity_pledge: დაუჭირეთ მხარი მრავალფეროვნებას
@@ -436,6 +470,9 @@ ka-GE:
   homepage_header_donors: Code.org მადლობას უხდის მხარდამჭერებს
   homepage_donors_seall: ყველას ნახვა
   homepage_donors_donate: შემოწირულობის გაღება
+  homepage_below_hero_announcement_text: ჩვენ ვზრუნავთ თქვენს კონფიდენციალურობაზე
+    და ვახორციელებთ განახლებებს ჩვენი კონფიდენციალურობის პოლიტიკაში, რომელიც 25 მაისს
+    მოქმედებს.
   homepage_below_hero_announcement_link_text: გაიგეთ მეტი
   contact_form_topic_student: მე ვარ მოსწავლე
   contact_form_topic_parent: მე ვარ მშობელი
@@ -480,8 +517,12 @@ ka-GE:
   class_submission_languages_other: სხვა ენები
   videos_more: მეტი <a href='%{inspiring_videos_playlist}'>შთამაგონებელი ვიდეო</a>
     ცნობადი სახეების მონაწილეობით
+  videos_more_markdown: მეტი [inspirational videos] (%{inspiring_videos_playlist})
+    რომელშიც როლი მოდელები და ცნობილი სახეები
   careers_page_more: მეტი <a href='%{careers_url}' target='_blank'>შთამაგონებელი ვიდეო</a>
     პროფესიონალების მონაწილეობით
+  careers_page_more_markdown: მეტი [ინსპირაციული ვიდეოები] (%{careers_url}), რომელშიც
+    პროფესიონალები არიან ტექნოლოგიურ სფეროებში
   playlab_choose_theme: აირჩიეთ თამაშების ლაბორატორიის თემა
   playlab_classic_title: კლასიკური
   playlab_gumball_title: გამბოლის საოცარი სამყარო
@@ -504,10 +545,14 @@ ka-GE:
   mc_gradelevel: ასაკი 6-106
   mc_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   mc_specs: სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | ასაკი 6+
+  minecraft_agent: Minecraft გმირის მოგზაურობა
   minecraft_designer: Minecraft დიზაინერი
   minecraft_adventurer: Minecraft თავგადასავალი
   minecraft_tutorials: 'Minecraft-ის კოდის ერთი საათი: ტუტორიალები'
   minecraft_specs: სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+ კლასი
+  minecraft_start_tutorial: დაწყება სამეურვეო
+  minecraft_agent_description: Minecraft დაბრუნდა საათის კოდი ახალი საქმიანობის! მოგზაურობა
+    Minecraft კოდით.
   minecraft_agent_button: დაწყება
   minecraft_designer_description: დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის
     საკუთარ სამყაროში.
@@ -518,8 +563,44 @@ ka-GE:
   minecraft_no_internet: არ გაქვთ ინტერნეტი?
   minecraft_download_adventurer: Minecraft თავგადასავლის გადმოწერა.
   minecraft_subtitle: Minecraft-ის კოდის ერთი საათი
+  minecraft_store_camps: უფასო Minecraft საათი კოდექსის ბანაკებში Microsoft Store
+  minecraft_signup_store_camps: "<a href='%{signup_store_camp}', target='_blank'>დარეგისტრირდით</a>
+    უფასო Minecraft Hour Code სემინარები Microsoft მაღაზიები ავსტრალიაში, კანადაში,
+    პუერტო ან აშშ. შეიტყვეთ, თუ როგორ არის კოდირება ყველასთვის და აერთიანებს შემოქმედებას,
+    პრობლემის გადაჭრას და იტვირთება გართობა."
+  minecraft_host_event: უმასპინძლეთ Minecraft საათი კოდი ღონისძიება
+  minecraft_teach_resources: მასწავლებლის რესურსები და გაკვეთილი გეგმა.
+  minecraft_leader_guide: ჩამოტვირთეთ რესურსები, რათა დაგეხმაროთ დაგეგმოთ და გამოიწვიოს
+    ღონისძიება.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>ჩამოტვირთვა</a>
+    ფასილიტატორი სწრაფი დაწყების სახელმძღვანელო და PowerPoint პრეზენტაციები ახალგაზრდა
+    და ხანდაზმული სტუდენტები ახლა."
+  minecraft_join_online_training: მზად არის ხელი შეუწყოს საკუთარი Hour Code ერთად
+    Minecraft, მაგრამ არ ვარ დარწმუნებული, სად უნდა დაიწყოს? შეამოწმეთ ჩვენი <a href='%{minecraft_webinar_url}',
+    target='_blank'>მოთხოვნის webinar</a>. თქვენ შეისწავლით საუკეთესო პრაქტიკას, ხელმისაწვდომი
+    ფასილიტატორის მასალებს და მიიღეთ Minecraft- ის გუნდიდან ახალი გმირის მოგზაურობის
+    გაკვეთილი. მიიღეთ ხელმძღვანელი იწყება ფიქრი, თუ რა უნდა მოიტანოთ კოდექსის საათი
+    ახალგაზრდებისთვის კომპიუტერული მეცნიერების განათლების კვირეულის დროს (4-10 დეკემბერი)
+    და მის ფარგლებს გარეთ.
+  minecraft_continue_learning: 'კომპიუტერული მეცნიერება ყველასთვის: Microsoft Store-
+    ში კოდის საათის მიღმა'
+  minecraft_continue_learning_description: არარის კომპიუტერული მეცნიერების გამოცდილება
+    საჭირო! დახმარება უზრუნველყოს ყველა ახალგაზრდას შეუძლია ისწავლოს ღირებული უნარები
+    მიღებული მეშვეობით კომპიუტერული მეცნიერების განათლება. შემოგვიერთდით Microsoft
+    Store ჩაერთონ უფასო სერია სამი, 1-საათიანი სემინარები, სადაც თქვენ განიცდიან კოდირების
+    გართობა და სტრესი თავისუფალი გარემო, გაეცნოს ძირითადი კომპიუტერული მეცნიერების
+    ცნებები, და მოემზადეთ გამოიწვიოს საათი კოდი თქვენს საკლასო ოთახში ან საზოგადოებაში.
+    შენ ეს! <a href='%{minecraft_continue_learning_url}', target='_blank'>დარეგისტრირდით
+    დღეს</a>.
+  minecraft_future: დახმარება ყველა ახალგაზრდობა გახდეს მომავალი მზად
+  minecraft_future_description: შეიტყვეთ, თუ როგორ ხდება სხვა სკოლები და არაკომერციული
+    ციფრული უნარ-ჩვევები, ციფრული წიგნიერებისგან კომპიუტერულ მეცნიერებათა განათლებაში,
+    მათ თემებში. განვიხილოთ სხვადასხვა მოდელები, მიიღეთ რჩევები და ხრიკები და <a href='%{minecraft_future_url}',
+    target='_blank'>რესურსების ხელმისაწვდომობა</a> მათ ყველაზე ღირებული.
   minecraft_og_designer: Minecraft-ი დაბრუნდა ახალი აქტივობით კოდის ერთი საათისთვის.
     დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის საკუთარ სამყაროში.
+  minecraft_og_agent: Minecraft დაბრუნდა საათი კოდი, და თქვენ გმირი! დაწერეთ კოდი
+    მოგზაურობა მეშვეობით Minecraft ბიომები.
   sports_page_title: 'კოდის ერთი საათი: სპორტი'
   sports_og_title: აჯობე საკუთარ თავს. სწავლა ყველას შეუძლია.
   sports_og_description: ჩემპიონები და ოქროს მედლების მფლობელები მოგიწოდებენ, სცადო
@@ -567,13 +648,16 @@ ka-GE:
   video_title_obama: პრეზიდენტი ობამა კომპიუტერული მეცნიერებების შესახებ
   video_title_hoc_is_here: კოდის ერთი საათი დაიწყო - სწავლა შეუძლია ყველას
   video_title_anybody_can_learn: სწავლა შეუძლია ყველას
+  video_title_steph_curry: კოდის საათი სტეფი კურისთან
   video_title_draymond_green: კოდის ერთი საათი დრეიმონდ გრინთან ერთად
   video_title_russell_okung: კოდის ერთი საათი რასელ ოკუნგთან ერთად
   video_title_real_madrid: კოდის ერთი საათი რეალ მადრიდთან ერთად
   video_title_marco_belinelli: კოდის ერთი საათი მარკო ბელინელთან ერთად
   video_title_chris_bosh: კრის ბოში კომპიუტერული მეცნიერებების შესახებ
+  video_title_my_name_is_aracely: ჩემი სახელი არარეულია
   video_1min: 1 წუთი
   video_2min: 2 წუთი
+  video_3min: 3 წთ
   video_5min: 5 წუთი
   speak_another_language: სხვა ენაზე ლაპარაკობთ?
   help_translate: დაგვეხმარეთ თარგმნაში.
@@ -581,8 +665,7 @@ ka-GE:
   download_offline: ჩამოტვირთეთ ოფლაინ ვერსია.
   are_you_teacher: მასწავლებელი ხართ?
   review_lesson_plan: გადახედეთ გაკვეთილის გეგმასა და მასწავლებლის სხვა რესურსებს.
-  volunteer_engineer_submission_title: შთააგონეთ მოსწავლეებს და გახდით კოდის ერთი
-    საათის მოხალისე.
+  volunteer_engineer_submission_title: გახდით მოხალისე; შთააგონეთ მოსწავლეები
   volunteer_engineer_submission_subtitle_generic: 'წელს, 7-13 დეკემბერს, 100,000 მასწავლებელი
     ჩაატარებს კოდის ერთ საათს თავის კლასში. მათ თქვენი დახმარება სჭირდებათ! '
   volunteer_engineer_submission_subtitle_specific: "%{num_teachers} მასწავლებელს სჭირდება
@@ -592,19 +675,32 @@ ka-GE:
     ათობით მილიონი მოსწავლისთვის. თქვენც ჩაერთეთ ინფორმატიკის საგანმანათლებლო კვირეულში,
     რომელიც დეკემბრის 7-13 რიცხვებში ტარდება.
   volunteer_engineer_submission_intro_recruit: 'მასწავლებლებს გაუხარდებოდათ, რომ ჰყავდეთ
-    <span style="font-family: ''Gotham 7r'', sans-serif;">ვინმე, ვისაც უყვარს პროგრამირება
-    და ინფორმატიკა</span> და შეუძლია დაეხმაროს მათ კლასსში, ან ვინმე, <span style="font-family:
-    ''Gotham 7r'', sans-serif;"> ვინც შეძლებდა, შთაეგონებინა</span> მოსწავლეები, მოეყოლა
-    ინფორმატიკის უსაზღვრო შესაძლებლობების შესახებ (თუნდაც ვიდეო-ჩატით).'
+    <span style="font-family: ''Gotham 7r'', sans-serif;">ვინმე, ვისაც უყვარს პროგრამირების
+    სწავლება</span> და შეუძლია დაეხმაროს მათ კლასში, ან ვინმე, <span style="font-family:
+    ''Gotham 7r'', sans-serif;">ვინც შეძლებდა, შთაეგონებინა</span> მოსწავლეები, მოეყოლა
+    კომპიუტერული მეცნიერების უსაზღვრო შესაძლებლობების შესახებ (თუნდაც ვიდეო ზარით).'
+  volunteer_engineer_submission_intro_recruit_markdown: მასწავლებლებს გაუხარდებოდათ,
+    რომ ჰყავდეთ **ვინმე, ვისაც უყვარს პროგრამირების სწავლება** და შეუძლია დაეხმაროს
+    მათ კლასში, ან ვინმე, **ვინც შეძლებდა, შთაეგონებინა** მოსწავლეები, მოეყოლა კომპიუტერული
+    მეცნიერების უსაზღვრო შესაძლებლობების შესახებ (თუნდაც ვიდეო ზარით).
   volunteer_engineer_submission_intro_guide: შეისწავლეთ მეტი ჩვენი <a href="%{volunteer_guide}">სამოხალისეო
     პროგრამის შესახებ აქ</a>.
+  volunteer_engineer_submission_intro_guide_markdown: გაიგეთ მეტი ჩვენი [მოხალისეობის
+    პროგრამის შესახებ აქ](%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: შეავსეთ შემდეგი ველები, თუ ხართ კომპიუტერული
     მეცნიერების სტუდენტი ან დეველოპერი. დასარეგისტრირებლად უნდა იყოთ მინიმუმ 18 წლის.
     დააკვირდით, რომ ამ სექციაში თქვენ მიერ შეყვანილი ინფორმაცია საჯაროდ იქნება ხელმისაწვდომი
     <a href="/volunteer/local">მოხალისეების რუკაზე</a>. ველები, რომლებიც მონიშნულია
     სიმბოლოთი <span class="form-required-field">*</span>, სავალდებულოა.
+  volunteer_engineer_submission_intro_signup_markdown: შეავსეთ შემდეგი ველები, თუ
+    ხართ კომპიუტერული მეცნიერების სტუდენტი, ან დეველოპერი. დასარეგისტრირებლად უნდა
+    იყოთ მინიმუმ 18 წლის. გაითვალისწინეთ, რომ ამ სექციაში თქვენ მიერ შეყვანილი ინფორმაცია
+    საჯაროდ იქნება ხელმისაწვდომი [მოხალისეების რუკაზე](/volunteer/local). ველები,
+    რომლებიც მონიშნულია _*_ სიმბოლოთი, სავალდებულოა.
   volunteer_engineer_submission_intro_links: მასწავლებელი ხართ და მოხალისეებს ეძებთ?
     იპოვეთ ადგილობრივი მოხალისე <a href="%{volunteer_local}">მოხალისეთა რუკაზე</a>.
+  volunteer_engineer_submission_intro_links_markdown: მასწავლებელი ხართ და მოხალისეებს
+    ეძებთ? იპოვეთ ადგილობრივი მოხალისე [მოხალისეთა რუკაზე](%{volunteer_local}).
   volunteer_engineer_submission_update_information: თქვენი ინფორმაციის განახლება
   volunteer_engineer_submission_header_shared: მოხალისეთა რუკაზე მასწავლებლებთან გაზიარებული
     ინფორმაცია
@@ -615,16 +711,15 @@ ka-GE:
   volunteer_engineer_submission_field_experience_level: გამოცდილების დონე
   volunteer_engineer_submission_field_location: ადგილმდებარეობა
   volunteer_engineer_submission_field_location_desc: თქვენი ადგილმდებარეობა გამოიყენება
-    იმისთვის, რომ მასწავლებლებმა მარტივად იპოვონ ახლოს მდებარე მოხალისეები რუკაზე.
-    თუ კონფიდენციალურობა გაღელვებთ, მიუთითეთ თქვენი სამსახურის/სკოლის მისამართი ან
-    მხოლოდ ქალაქი.
+    იმისთვის, რომ მასწავლებლებმა მარტივად იპოვონ რუკაზე ახლოს მყოფი მოხალისეები. თუ
+    კონფიდენციალურობა გაღელვებთ, მიუთითეთ თქვენი სამსახურის/სკოლის მისამართი, ან მხოლოდ
+    ქალაქი.
   volunteer_engineer_submission_field_location_placeholder: საფოსტო კოდი, ქალაქი და
     შტატი/ქვეყანა ან მისამართი
   volunteer_engineer_submission_field_location_flexibility: მოხალისეობრივად შემიძლია...
     (აირჩიეთ ყველა შესაბამისი ვარიანტი)
   volunteer_engineer_submission_checkbox_after_hoc: მინდა, მთელი წელი ვიყო მოხალისე
-  volunteer_engineer_submission_field_time_commitment: კოდის ერთი საათის მერე საათობრივი
-    ვალდებულება
+  volunteer_engineer_submission_field_time_commitment: დროის დაზუსტება
   volunteer_engineer_submission_field_linkedin: LinkedIn ანგარიში
   volunteer_engineer_submission_field_linkedin_placeholder: http://www.linkedin.com/in/your_name
   volunteer_engineer_submission_field_facebook: Facebook ანგარიში
@@ -632,15 +727,17 @@ ka-GE:
   volunteer_engineer_submission_field_description: აღწერა
   volunteer_engineer_submission_field_description_desc: აღწერეთ თქვენი გამოცდილება
     პროგრამირებასა და ინფორმატიკაში და როგორ შეგიძლიათ დაეხმაროთ ადგილობრივ მასწავლებლებს.
-  volunteer_engineer_submission_field_description_placeholder: გამოცდილების და/ან
-    მონაწილეობის აღწერა. თუ ინგლისურის გარდა სხვა ენებიც იცით, აუცილებლად მიუთითეთ
-    ისინიც.
+  volunteer_engineer_submission_field_description_placeholder: გამოცდილების აღწერა.
+    თუ ქართულის გარდა სხვა ენებიც იცით, აუცილებლად მიუთითეთ ისინიც.
   volunteer_engineer_submission_header_private: ინფორმაცია ინახება კონფიდენციალურად
     და არასდროს არ გავრცელდება
   volunteer_engineer_submission_field_email: ელ.ფოსტის მისამართი
   volunteer_engineer_submission_field_email_desc: თქვენი ელ. ფოსტის მისამართი ინახება
     კონფიდენციალურად, მაგრამ ჩვენ გამოგიგზავნით მასწავლებლების შეტყობინებებს.
   volunteer_engineer_submission_field_email_placeholder: ელ.ფოსტის მისამართი
+  volunteer_engineer_submission_field_email_preference: შეიძლება, რომ ელფოსტით მოგწეროთ
+    კურსების განახლებები, მოხალისეობის ადგილობრივი შესაძლებლობები და სხვა სიახლეები
+    კომპიუტერული მეცნიერებების შესახებ?
   volunteer_engineer_submission_field_email_preference_privacy: "(იხილეთ ჩვენი კონფიდენციალურობის
     დებულება)"
   volunteer_engineer_submission_field_email_preference_yes: დიახ
@@ -659,6 +756,10 @@ ka-GE:
   volunteer_engineer_submission_thankyou: მადლობა, რომ ხართ კოდის ერთი საათის მოხალისე.
     კოდის ერთი საათისთვის მოსამზადებლად და სხვა მოხალისეების მოსაზიდად <a href="%{url}">გაეცანით
     დამატებით ინფორმაციას აქ.</a>
+  volunteer_engineer_submission_thankyou_markdown: დიდი მადლობა! თქვენი მოხალისე ინფორმაცია
+    წარმატებით იქნა წარმოდგენილი. პედაგოგები გამოიყენებენ [ეს რუკა] (%{url}), რათა
+    მოძებნოთ და დაუკავშირდეთ მოხალისეებს, როგორც თქვენ. გთხოვთ, ნება დართოთ 48 საათი
+    თქვენი ინფორმაციისთვის სწორად გამოჩნდეს რუკაზე.
   volunteer_engineer_submission_commitment_uncertain: განუსაზღვრელი
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 საათი კვირაში
   volunteer_engineer_submission_commitment_three_hrs_per_week: კვირაში 3 საათი
@@ -668,14 +769,14 @@ ka-GE:
   volunteer_engineer_submission_commitment_monthly: რამდენიმე საათი თვეში
   volunteer_engineer_submission_commitment_weekly: რამდენიმე საათი კვირაში
   volunteer_engineer_submission_commitment_more: მეტი
-  volunteer_engineer_submission_location_flexibility_onsite: სკოლაში ვიზიტით (1-2
-    საათი საკლასო ოთახში)
-  volunteer_engineer_submission_location_flexibility_remote: დისტნაციური კონტროლი
-    (მასწავლებლები ან მოსწავლეები)
+  volunteer_engineer_submission_location_flexibility_onsite: სკოლაში ვიზიტი (1-2 საათი)
+  volunteer_engineer_submission_location_flexibility_remote: დისტანციურად მონაწილეობა
+    (ვიდეო ზარით)
   volunteer_engineer_submission_location_flexibility_curriculum: მინდა, დავეხმარო
     ღია საგანმანათლებლო პროექტებს
   volunteer_engineer_submission_experience_unspecified: დაუზუსტებელი
-  volunteer_engineer_submission_experience_tech_company: არ ვარ დეველოპერი ტექ. კომპანიაში
+  volunteer_engineer_submission_experience_tech_company: ტექ. კომპანიაში ვმუშაობ,
+    მაგრამ დეველოპერი არ ვარ
   volunteer_engineer_submission_experience_university_student_or_researcher: ამჟამად
     სტუდენტი (ან უნივერსიტეტთან ასოცირებული მკვლევარი)
   volunteer_engineer_submission_experience_software_professional: პროგრამული უზრუნველყოფის
@@ -950,8 +1051,13 @@ ka-GE:
   dashboard_coursed: 'კურსი D: '
   dashboard_coursee: 'კურსი E: '
   dashboard_coursef: 'კურსი F: '
+  dashboard_pre-express: 'წინასწარი მკითხველის ექსპრეს კურსი: '
+  dashboard_express: 'ექსპრეს კურსი: '
   dashboard_unplugged: თუ არ გაქვთ კომპიუტერები, <a href='%{unplugged_url}'>ჩაატარეთ
     ეს გაკვეთილები, რომლებსაც არ სჭირდებათ კომპიუტერი</a> თქვენს საკლასო ოთახში.
+  dashboard_unplugged_markdown: თუ არ გაქვთ კომპიუტერი, [სცადეთ ეს unplugged გაკვეთილები]
+    (%{unplugged_url}) თქვენს საკლასო ოთახში.
+  dashboard_tools: 'ინსტრუმენტები: '
   dashboard_curriculum: კურიკულუმი
   dashboard_curriculum_overview: K-5 კურიკულუმის მომიხილვა
   dashboard_overview: მიმოხილვა
@@ -969,6 +1075,8 @@ ka-GE:
   dashboard_curriculum_csins: 'ინფორმატიკა მეცნიერებაში:'
   dashboard_curriculum_csp: 'კომპიუტერული მეცნიერების პრინციპები:'
   dashboard_curriculum_ecs: 'ინფორმატიკის შესწავლა:'
+  dashboard_curriculum_csd: 'კომპიუტერული მეცნიერების აღმოჩენები: '
+  dashboard_curriculum_apcsa: 'AP კომპიუტერული მეცნიერების Java: '
   dashboard_grade_k: K (საბავშვო ბაღი)
   dashboard_grade_other: სხვა
   dashboard_login_word: სიტყვა
@@ -1065,6 +1173,7 @@ ka-GE:
   carousel_heading_beyond_languages: პროგრამირების სხვა ენების ტუტორიალები
   carousel_heading_apps_games: შექმენით საკუთარი აპლიკაციები და თამაშები
   carousel_heading_university: საუნივერსიტეტო კურსები ონლაინ
+  carousel_heading_online_university: უნივერსიტეტის კურსები ხელმისაწვდომია ონლაინ
   carousel_heading_webpages: ვებ-გვერდების შექმნის სწავლა
   carousel_heading_robots: პროგრამირების სწავლა რობოტებთან ერთად
   carousel_heading_ide: მასწავლებლებს შორის პოპულარული პლატფორმები
@@ -1152,7 +1261,39 @@ ka-GE:
   coursee_name: კურსი E
   coursef-draft_name: კურსი F
   coursef_name: კურსი F
+  coursea-2017_name: კურსი A (2017)
+  courseb-2017_name: კურსი B (2017)
+  coursec-2017_name: კურსი C (2017)
+  coursed-2017_name: კურსი D (2017)
+  coursee-2017_name: კურსი E (2017)
+  coursef-2017_name: კურსი F (2017)
+  coursea-2018_name: კურსი A (2018)
+  courseb-2018_name: კურსი B (2018)
+  coursec-2018_name: კურსი C (2018)
+  coursed-2018_name: კურსი D (2018)
+  coursee-2018_name: კურსი E (2018)
+  coursef-2018_name: კურსი F (2018)
+  coursea-2019_name: კურსი A (2019)
+  courseb-2019_name: კურსი B (2019)
+  coursec-2019_name: კურსი C (2019)
+  coursed-2019_name: კურსი D (2019)
+  coursee-2019_name: კურსი E (2019)
+  coursef-2019_name: კურსი F (2019)
+  coursea-2020_name: კურსი A (2020)
+  courseb-2020_name: კურსი B (2020)
+  coursec-2020_name: კურსი C (2020)
+  coursed-2020_name: კურსი D (2020)
+  coursee-2020_name: კურსი E (2020)
+  coursef-2020_name: კურსი F (2020)
   express-2018_name: დაჩქარებული კურსი
+  pre-express-2018_name: წინასწარი მკითხველის ექსპრეს კურსი (2018)
+  express-2019_name: ექსპრეს კურსი (2019)
+  pre-express-2019_name: წინასწარი მკითხველის ექსპრეს კურსი (2019)
+  express-2020_name: ექსპრესის კურსი (2020)
+  pre-express-2020_name: წინასწარი მკითხველის ექსპრეს კურსი (2020)
+  pre-express-2021_name: წინასწარი მკითხველის ექსპრეს კურსი (2021)
+  csd2_name: 'განყოფილება 2: ვებ განვითარება'
+  csd3_name: 'განყოფილება 3: ანიმაცია და თამაშები'
   accelerated_name: დაჩქარებული კურსი
   express_name: დაჩქარებული კურსი
   pre-express_name: კითხვამდელთა ექსპრეს კურსი
@@ -1165,7 +1306,10 @@ ka-GE:
   iceage_name: გამყინვარების პერიოდი
   minecraft_name: Minecraft
   starwarsblocks_name: ვარსკვალვური ომები (ბლოკები)
+  hoc-impact-study_name: კლასიკური ლაბირინთი კვლევით
+  flappy-impact-study_name: Flappy კოდი კვლევა
   hoc-encryption_name: მარტივი შიფრირება
+  text-compression_name: ტექსტის შეკუმშვა
   applab_name: App Lab
   gamelab_name: თამაშების ლაბი
   basketball_name: კალათბურთის თამაშის შექმნა
@@ -1257,6 +1401,12 @@ ka-GE:
   coursed-2020_gradelevel: კლასები 8+
   coursee-2020_gradelevel: ასაკი 8-12
   coursef-2020_gradelevel: 9-13 წელი
+  coursea-2021_gradelevel: 4-7 წელი
+  courseb-2021_gradelevel: 5-8 წელი
+  coursec-2021_gradelevel: 6-10 წელი
+  coursed-2021_gradelevel: კლასები 8+
+  coursee-2021_gradelevel: ასაკი 8-12
+  coursef-2021_gradelevel: 9-13 წელი
   accelerated_gradelevel: 'ასაკი: 10-18'
   codeorg_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   codeintl_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
@@ -1400,18 +1550,50 @@ ka-GE:
     ჯერ კითხვა არ იცის.
   courseb_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ მკითხველთათვის.
     (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+  coursec_shortdescription_congrats: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები
+    და შექმნათ თქვენი საკუთარი ხელოვნება, ისტორიები და თამაშები.
+  coursed_shortdescription_congrats: სწრაფად დაფარავს კონცეფციებს კურსის C- დან, შემდეგ
+    კი ალგორითმებით, წყობილი მარყუჟებით, პირობებით და სხვა.
+  coursee_shortdescription_congrats: სწრაფად დაფარავს ცნებები კურსი C & D და შემდეგ
+    წავიდეთ შემდგომი ფუნქციები.
+  coursef_shortdescription_congrats: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების
+    საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
   coursea-2017_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში მათთვის,
     ვინც ჯერ კითხვა არ იცის.
   courseb-2017_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
     მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+  coursec-2017_shortdescription_congrats: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები
+    და შექმნათ თქვენი საკუთარი ხელოვნება, ისტორიები და თამაშები.
+  coursed-2017_shortdescription_congrats: სწრაფად დაფარავს კონცეფციებს კურსის C- დან,
+    შემდეგ კი ალგორითმებით, წყობილი მარყუჟებით, პირობებით და სხვა.
+  coursee-2017_shortdescription_congrats: სწრაფად დაფარავს ცნებები კურსი C & D და
+    შემდეგ წავიდეთ შემდგომი ფუნქციები.
+  coursef-2017_shortdescription_congrats: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების
+    საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
   coursea-2018_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში მათთვის,
     ვინც ჯერ კითხვა არ იცის.
   courseb-2018_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
     მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+  coursec-2018_shortdescription_congrats: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები
+    და შექმნათ თქვენი საკუთარი ხელოვნება, ისტორიები და თამაშები.
+  coursed-2018_shortdescription_congrats: სწრაფად დაფარავს კონცეფციებს კურსის C- დან,
+    შემდეგ კი ალგორითმებით, წყობილი მარყუჟებით, პირობებით და სხვა.
+  coursee-2018_shortdescription_congrats: სწრაფად დაფარავს ცნებები კურსი C & D და
+    შემდეგ წავიდეთ შემდგომი ფუნქციები.
+  coursef-2018_shortdescription_congrats: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების
+    საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
   coursea-2019_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში მათთვის,
     ვინც ჯერ კითხვა არ იცის.
   courseb-2019_shortdescription_congrats: შესავალი კომპიუტერულ მეცნიერებაში დამწყებ
     მკითხველთათვის. (A კურსის მსგავსი, მაგრამ უფრო მრავალფეროვანი უფრო მოსწავლეებისთვის.)
+  coursec-2019_shortdescription_congrats: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები
+    და შექმნათ თქვენი საკუთარი ხელოვნება, ისტორიები და თამაშები.
+  coursed-2019_shortdescription_congrats: სწრაფად დაფარავს კონცეფციებს კურსის C- დან,
+    შემდეგ კი ალგორითმებით, წყობილი მარყუჟებით, პირობებით და სხვა.
+  coursee-2019_shortdescription_congrats: სწრაფად დაფარავს ცნებები კურსი C & D და
+    შემდეგ წავიდეთ შემდგომი ფუნქციები.
+  coursef-2019_shortdescription_congrats: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების
+    საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
   coursea-2020_shortdescription_congrats: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ
     უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია,
     რომლის გაზიარებასაც შეძლებთ.
@@ -1422,6 +1604,16 @@ ka-GE:
     და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ
     პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას.
     კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
+  coursed-2020_shortdescription_congrats: სტუდენტები განავითარებენ მარყუჟების, პირობებისა
+    და მოვლენების გაგებას. კოდირების მიღმა სტუდენტები გაეცნობიან ციფრულ მოქალაქეობას.
+  coursee-2020_shortdescription_congrats: დაიწყეთ კოდირება ალგორითმებით, მარყუჟებით,
+    პირობებითა და მოვლენებით და შემდეგ გადაადგილდებით ფუნქციებზე. ამ კურსის მეორე
+    ნაწილში, დიზაინი და შექმნა კაფსტონის პროექტი შეგიძლიათ გაუზიაროთ თქვენს მეგობრებს
+    და ოჯახს.
+  coursef-2020_shortdescription_congrats: ვისწავლოთ გამოიყენოთ სხვადასხვა სახის მარყუჟები,
+    მოვლენები, ფუნქციები და პირობები. გამოიძიოს სხვადასხვა პრობლემის გადაჭრის ტექნიკა
+    და განიხილოს სოციალური გავლენა კომპიუტერული და ინტერნეტი. ამ კურსის მეორე ნაწილში,
+    დიზაინი და შექმნა capstone პროექტი შეგიძლიათ გაუზიაროთ მეგობრებს და ოჯახს.
   coursea-2021_shortdescription_congrats: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ
     უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია,
     რომლის გაზიარებასაც შეძლებთ.
@@ -1432,6 +1624,16 @@ ka-GE:
     და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ
     პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას.
     კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
+  coursed-2021_shortdescription_congrats: სტუდენტები განავითარებენ მარყუჟების, პირობებისა
+    და მოვლენების გაგებას. კოდირების მიღმა სტუდენტები გაეცნობიან ციფრულ მოქალაქეობას.
+  coursee-2021_shortdescription_congrats: დაიწყეთ კოდირება ალგორითმებით, მარყუჟებით,
+    პირობებითა და მოვლენებით და შემდეგ გადაადგილდებით ფუნქციებზე. ამ კურსის მეორე
+    ნაწილში, დიზაინი და შექმნა კაფსტონის პროექტი შეგიძლიათ გაუზიაროთ თქვენს მეგობრებს
+    და ოჯახს.
+  coursef-2021_shortdescription_congrats: ვისწავლოთ გამოიყენოთ სხვადასხვა სახის მარყუჟები,
+    მოვლენები, ფუნქციები და პირობები. გამოიძიოს სხვადასხვა პრობლემის გადაჭრის ტექნიკა
+    და განიხილოს სოციალური გავლენა კომპიუტერული და ინტერნეტი. ამ კურსის მეორე ნაწილში,
+    დიზაინი და შექმნა capstone პროექტი შეგიძლიათ გაუზიაროთ მეგობრებს და ოჯახს.
   codeorg_longdescription: ისწავლეთ ინფორმატიკის საფუძვლები ვიზუალური პროგრამირებით.
     ამ თამაშის მსგავს კურსში ვიდეო ლექციებს წაგიკითხავთ ბილ გეითსი, მარკ ცუკერბერგი,
     Angry Birds და Plants vs. Zombies თამაშების შემქმნელები. ისწავლეთ გამეორების ციკლები,
@@ -1925,14 +2127,23 @@ ka-GE:
   header_teacher_community: მასწავლებელთა კოლექტივი
   header_help_support: 'დახმარება და მხარდაჭერა '
   header_report_bug: მოგვახსენეთ ტექნიკური ხარვეზის შესახებ
+  header_report_abuse: ბოროტად გამოყენების შესახებ
+  header_legal: კონფიდენციალურობა და იურიდიული
   header_legal_privacy: კონფიდენციალურობის პოლიტიკა
   header_legal_tos: მომსახურების პირობები
   header_tutorials: ტუტორიალები
   header_screen_reader_hamburger: მენიუ
   header_screen_reader_help: დახმარების მენიუ
+  app_lab_documentation: აპლიკაციის ლაბორატორია დოკუმენტაცია
+  app_lab_tutorials: App ლაბორატორია გაკვეთილები
+  game_lab_documentation: თამაშის ლაბორატორია დოკუმენტაცია
+  game_lab_tutorials: თამაშის ლაბორატორია გაკვეთილები
+  sprite_lab_documentation: Sprite ლაბორატორია დოკუმენტაცია
+  sprite_lab_tutorials: Sprite ლაბორატორია გაკვეთილები
   header_documentation: დოკუმენტაცია
   user_header_label: გამარჯობა %{username}
   user_header_team: გუნდი
+  user_header_my_projects: ჩემი პროექტები
   user_header_settings: ანგარიშის პარამეტრები
   user_header_logout: გასვლა
   user_header_signin: შესვლა
@@ -1942,8 +2153,10 @@ ka-GE:
   user_header_gamelab: თამაშების ლაბი
   user_header_playlab: თამაშების ლაბი
   user_header_dance: ცეკვა
+  user_header_spritelab: სპრიტის ლაბორატორია
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_all: ყველა პროექტის ნახვა...
   user_header_view_project_gallery: დაათვალიერეთ პროექტის გალერეა
   user_header_view_my_projects: ჩემი პროექტების ნახვა
   view_all_sections: ყველა განყოფილების ნახვა
@@ -1952,34 +2165,115 @@ ka-GE:
   privacy_doc_explanation: დააწკაპუნეთ აქ ჩვენი კონფიდენციალურობის დოკუმენტის სანახავად.
     თქვენ შეგიძლიათ, გაუზიაროთ ის მოსწავლეებს ციფრულად ან ბეჭდურად.
   signing_in: შესვლა
+  sign_in_overview: 'თქვენს სტუდენტებს შეუძლიათ შეხვიდეთ თავიანთ Code.org ანგარიშებზე
+    შემდეგი ნაბიჯებით:'
   sign_in_instruct_website: გადადით %{code_org_url}-ზე.
   sign_in_instruct_code: 'ჩაწერეთ სექციის კოდი: %{section_code}.'
   sign_in_instruct_name: აირჩიეთ გამოსაჩენი სახელი.
   sign_in_instruct_secret: აირჩიეთ მათი საიდუმლო %{secret}.
   sign_in_instruct_button: დააწკაპუნეთ "შესვლის" ღილაკს.
+  sign_in_overview_cards: სტუდენტებს შეუძლიათ იპოვონ ყველა ეს ინფორმაცია, მათ შორის
+    მათი საიდუმლო %{secret}, შესვლის ბარათები ქვემოთ.
   reset_student_password: მოსწავლეთა პაროლების ხელახლა შეყვანა
+  reset_student_password_instructions: თქვენ შეგიძლიათ აღადგინოთ საიდუმლო <word/picture>
+    ნებისმიერი თქვენი სტუდენტები აპირებს tab „მართვა სტუდენტები“ განყოფილებაში, დააჭირეთ
+    „საიდუმლო“ ღილაკს ქვეშ სვეტი „პაროლი“, და დააჭირეთ „გადატვირთვის საიდუმლო“ ღილაკს.
+  login_cards: შესვლა ბარათები
   print_login_cards: ანგარიშის ბარათების დაბეჭდვა
   joining_section: თქვენს განყოფილებაში გაწევრიანება (მხოლოდ ერთხელ)
+  joining_section_overview: თუ სტუდენტი არ შეუერთდა თქვენს განყოფილებას, გთხოვთ, მიმართოთ
+    შემდეგ ნაბიჯებს. გაითვალისწინეთ, რომ მათ მხოლოდ ამის გაკეთება სჭირდებათ. თქვენი
+    განყოფილების გაწევრიანებით, სტუდენტები შეძლებენ იხილონ მათთვის მინიჭებული კურსი
+    და თქვენ შეძლებთ თვალყური ადევნოთ მუშაობის პროგრესს, როდესაც ისინი ხელმოწერილია.
+  joining_section_instruct_website: 'შექმენით Code.org ანგარიში, თუ ისინი უკვე არ
+    გაკეთებულა. მათ შეუძლიათ ამის გაკეთება https://studio.code.org/users/sign_up.
+    გაითვალისწინეთ, რომ მათ შეუძლიათ დარეგისტრირდნენ ელექტრონული ფოსტის მისამართით
+    და პაროლით, ან დარეგისტრირდით Google- ის, Facebook- ის ან Microsoft- ის მეშვეობით
+    ერთ-ერთ ღილაკზე დაჭერით:'
   joining_section_instruct_account: შედით თქვენს Code.org-ის ანგარიშში.
   joining_section_instruct_code: 'გადადით %{code_org_url} და შეიყვანეთ განყოფილების
     კოდი: %{section_code}.'
+  joining_section_instruct_button: მას შემდეგ, რაც ისინი დააჭირეთ „Go“ ღილაკს, მათ
+    უნდა დაემატოს თქვენი სექცია.
   signing_in_single_instruct: თქვენს მოსწავლეებს შეუძლიათ Code.org-ის ანგარიშებში
     შესვლა ამ ბმულზე https://code.org/ გადასვლით და ზედა მარჯვენა კუთხეში მდებარე
     "შესვლის" ღილაკზე დაწკაპებით.
+  reset_student_password_email: თუ თქვენი სტუდენტი შეიქმნა Code.org ანგარიშის გამოყენებით
+    მათი ელექტრონული ფოსტის მისამართი და პაროლი (ნაცვლად ხელმოწერის მეშვეობით მათი
+    Google, Facebook, Microsoft, ან ჭკვიანი ანგარიში), თქვენ შეგიძლიათ აღადგინოთ თქვენი
+    პაროლი აპირებს tab „მართვა სტუდენტები“ განყოფილებაში, და დააჭირეთ „პაროლის აღდგენა“
+    ღილაკს ქვეშ“ პაროლი“ სვეტი.
   syncing_students: მიმდინარეობს თქვენი მოსწავლეების სინქრონიზაცია
+  syncing_students_instructions: 'თუ თქვენი Code.org სექცია ოდესმე მოძველებულია თქვენი
+    სია სტუდენტების Google Classroom, დააჭირეთ „Sync სტუდენტები Google Classroom“
+    ღილაკს „მართვა სტუდენტები“ tab:'
   google_sign_in_instruct: 'აქ მათ უნდა აირჩიონ "შედი გუგლის ანგარიშის საშუალებით":'
+  hero_name: 'Minecraft: გმირის მოგზაურობა'
+  applab-intro_name: აპლიკაციის ლაბორატორია შესავალი
+  applab_tile_title: შესავალი ოთახი ლაბორატორია (ასაკი 13+)
+  applab_tile_subtitle: შექმენით თქვენი საკუთარი აპლიკაცია JavaScript- ში ბლოკის დაფუძნებული
+    პროგრამირების გამოყენებით. ან მიიღოს თქვენი ცოდნა მომდევნო დონეზე ტექსტის დაფუძნებული
+    პროგრამირების. (მხოლოდ ინგლისური)
   applab_tile_start_tutorial: დაწყება
+  applab_tile_teacher_guide: იხილეთ მასწავლებლის სახელმძღვანელო
+  aquatic_name: 'Minecraft: მოგზაურობა წყლის'
   account_sign_up_email_opt_in: შეიძლება, რომ ელფოსტით მოგწეროთ კურსების განახლებები,
     ადგილობრივი შესაძლებლობები და სხვა სიახლეები კომპიუტერული მეცნიერებების შესახებ?
   hoc_overview_dance_title: ცეკვა
+  hoc_overview_dance_subtitle: კოდი Dance Party გაუზიაროს თქვენს მეგობრებს. Katy Perry,
+    მადონა, ჯ ბალვინი, სია, კეიტ ურბანი, Ciara და კიდევ 25!
+  hoc_overview_dance_2019_subtitle: კოდი Dance Party გაუზიაროს თქვენს მეგობრებს. რომელშიც
+    Katy Perry, Shawn Mendes, პანიკა! დისკო, Lil Nas X, Jonas Brothers, Nicki Minaj,
+    და კიდევ 34!
+  hoc_overview_title: კოდის საქმიანობის საათი Code.org— დან
+  hoc_overview_subtitle_markdown: "[კოდექსის საათი] (https://hourofcode.com) არის
+    გლობალური მოძრაობა, რომელიც აღწევს ათობით მილიონი სტუდენტს 180+ ქვეყანაში. ყველას,
+    ყველგან შეუძლია ორგანიზება საათი კოდექსის ღონისძიება ან ცდილობენ ნებისმიერი მეტი
+    500+ ერთსაათიანი გაკვეთილები, შესაძლებელია მეტი 45 ენებზე."
+  hoc_overview_partner_activities_title: მეტი აქტივობები პარტნიორებისგან
+  hoc_overview_partner_activities_body: კოდის ვებ-გვერდს აქვს 500-ზე მეტი კომპიუტერული
+    მეცნიერების საქმიანობა ყველა ასაკისა და გამოცდილების დონეზე, რომელიც შემუშავებულია
+    კოდი.org და პარტნიორების მიერ.
+  hoc_overview_partner_activities_link: საქმიანობის ნახვა
   hoc_overview_start_tutorial: დაწყება
+  hoc_overview_more_resources: დამატებითი რესურსების შესახებ, თუ როგორ უნდა ითანამშრომლონ
+    თქვენი დისტანციური კლასის, იხილეთ ჩვენი სახელმძღვანელო მასპინძლობს [ვირტუალური
+    საათი კოდი] (https://hourofcode.com/us/how-to/virtual). სტუდენტებისთვის შეზღუდული
+    ან არ ტექნოლოგია ან კავშირით, გაუზიაროს ეს პაკეტი [unplugged Hour of Code საქმიანობის]
+    (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+  hoc_overview_view_teacher_guide: იხილეთ მასწავლებლის სახელმძღვანელო
+  hoc2018_creativity: შემოქმედების
   hoc2018_creativity_create: შექმნა
+  hoc2018_creativity_hoc_coming: კოდექსის საათი მოდის…
   hoc2018_creativity_what_will_you_create: რას შექმნი შენ?
+  hoc2018_creativity_homepage: მიეცით ფრენის ფანტაზია და დაბადება ინოვაცია. იწყეთ
+    კოდექსის საათი და შემოქმედების საკუთარი ბრენდი, რაც შეიძლება იყოს. ნახეთ ჩვენი
+    ვიდეო.
+  hoc2018_creativity_hoc_about: 'წელს, კოდექსის საათი არის ყველაფერი შემოქმედების
+    შესახებ. '
+  hoc2018_creativity_social_media: 'წლევანდელი #HourOfCode შემოქმედებას ეხება. მე
+    ვარ! ხარ?'
+  hoc2018_creativity_social_media_2: 'წლევანდელი #HourOfCode შემოქმედებას ეხება. რას
+    ქმნით?'
+  hoc2018_creativity_courses: წავიდეთ შემდგომი Code.org- ის კურსებით
   hoc2018_creativity_courses_link: გააგრძელეთ სწავლა <a href="https://studio.code.org/courses">Code.org-ის
     კურსებით</a>
+  hoc2018_homepage: დარეგისტრირდით თქვენს კლასში, რათა შეეცადოთ ერთი მეტი 150 ახალი
+    აქტივისტი კოდექსის საათი (3-9 დეკ)!
   hoc2018_mc_page_title: 'Minecraft-ის კოდის ერთი საათი: ტუტორიალები'
   hoc2018_mc_details: სხვადასხვა ენები | თანამედროვე ბრაუზერები და პლანშეტები | 2+
     კლასი
+  hoc2018_mc_aquatic_announcement: დარეგისტრირდით თქვენი კლასის ცდილობენ ერთი მეტი
+    150 ახალი საქმიანობის საათი კოდექსის (დეკ 3-9). დარწმუნდით, რომ შეამოწმეთ ჩვენი
+    ახალი Minecraft აქტივობა 2018 წლისთვის, Voyage წყლის! დარეგისტრირდით თქვენი კლასის
+    დღეს.
+  hoc2018_mc_aquatic_title: Minecraft Voyage წყლის
+  hoc2018_mc_aquatic_description: Minecraft დაბრუნდა საათის კოდი ახალი საქმიანობის!
+    მოგზაურობა Minecraft კოდით.
+  hoc2019_mc_aquatic_description: გამოიკვლიეთ და ავაშენოთ წყალქვეშა სამყაროს კოდი.
+  hoc2018_mc_hero_title: Minecraft გმირის მოგზაურობა
+  hoc2018_mc_hero_description: Minecraft დაბრუნდა საათის კოდი ახალი საქმიანობის! მოგზაურობა
+    Minecraft კოდით.
   hoc2018_mc_designer_title: Minecraft დიზაინერი
   hoc2018_mc_designer_description: დააპროგრამე ცხოველები და სხვა ქმნილებები Minecraft-ის
     საკუთარ სამყაროში.
@@ -1989,7 +2283,23 @@ ka-GE:
   hoc2018_mc_start: დაწყება
   hoc2018_mc_no_internet: არ გაქვთ ინტერნეტი?
   hoc2018_mc_download_adventurer: Minecraft თავგადასავლის გადმოწერა.
+  hoc2018_mc_educators: პედაგოგებისთვის
+  hoc2018_mc_educators_box1_title: კოდი Minecraft
+  hoc2018_mc_educators_box1_desc: 'Minecraft: განათლება Edition უზრუნველყოფს სტანდარტების
+    შეესაბამება სასწავლო გეგმა, სასწავლო და კოდირების Minecraft.'
+  hoc2018_mc_educators_box1_button: დავიწყოთ
+  hoc2018_mc_educators_box2_title: ჩამოტვირთეთ ფასილიტატორის სახელმძღვანელო
+  hoc2018_mc_educators_box2_desc: ეს ინსტრუმენტარიტი დაგეხმარებათ უმასპინძლოთ კოდის
+    საათს და ჩაერთოთ თქვენს სტუდენტებს კომპიუტერულ მეცნიერებაში.
   hoc2018_mc_educators_box2_button: გადმოწერა
+  hoc2018_mc_educators_box3_title: დაესწრო უფასო სტუდენტური სემინარს
+  hoc2018_mc_educators_box3_desc: ეწვიეთ Microsoft Store- ს თქვენს ტერიტორიაზე უფასო
+    კოდის სემინარის საათისთვის. მონაწილეთა ყველა უნარი დონეზე, ასაკის ექვსი და მდე.
+  hoc2018_mc_educators_box3_button: იპოვეთ სემინარი
+  hoc2018_mc_educators_box4_title: მეტი კომპიუტერული მეცნიერების რესურსების ხელმისაწვდომობა
+  hoc2018_mc_educators_box4_desc: შექმენით ცვლილება თქვენს საზოგადოებაში ციფრული უნარებისა
+    და კომპიუტერული მეცნიერების განათლების რესურსებით Microsoft-ისგან.
+  hoc2018_mc_educators_box4_button: შეისწავლეთ რესურსები
   hoc2018_mc_watch_videos: სანამ დაიწყებთ, უყურეთ ამ ვიდეოებიდან რომელიმეს
   hoc2018_mc_videos_more: მეტი <a href='%{inspiring_videos_playlist}'>შთამაგონებელი
     ვიდეო</a> ცნობადი სახეების მონაწილეობით
@@ -1997,7 +2307,9 @@ ka-GE:
     ვიდეო</a> პროფესიონალების მონაწილეობით
   hoc2018_mc_video_1min: 1 წუთი
   hoc2018_mc_video_2min: 2 წუთი
+  hoc2018_mc_video_3min: 3 წთ
   hoc2018_mc_video_5min: 5 წუთი
+  hoc2018_mc_video_title_steph_curry: კოდის საათი სტეფი კურისთან
   hoc2018_mc_video_title_sports: აჯობე საკუთარ თავს. სწავლა ყველას შეუძლია.
   hoc2018_mc_video_title_inspire_girl: შთააგონეთ გოგოს
   hoc2018_mc_video_title_cs_intro: 'კომპიუტერული მეცნიერება: შესავალი'
@@ -2005,26 +2317,239 @@ ka-GE:
   hoc2018_mc_video_title_obama: პრეზიდენტი ობამა კომპიუტერული მეცნიერებების შესახებ
   hoc2018_mc_video_title_hoc_is_here: კოდის ერთი საათი დაიწყო - სწავლა შეუძლია ყველას
   hoc2018_mc_video_title_anybody_can_learn: სწავლა შეუძლია ყველას
+  hoc2018_mc_video_title_my_name_is_aracely: ჩემი სახელი არარეულია
+  hoc2018_mc_homepage_hoc_coming: კოდექსის საათი მოდის...
   hoc2018_mc_homepage_what_create: რას შექმნი შენ?
+  hoc2018_mc_homepage_give_flight: მიეცით ფრენის ფანტაზია და დაბადება ინოვაცია. იწყეთ
+    კოდექსის საათი და შემოქმედების საკუთარი ბრენდი, რაც შეიძლება იყოს.
+  hoc2018_mc_homepage_watch_video: ნახეთ ჩვენი ვიდეო
   hoc2018_mc_homepage_join_us: შემოგვიერთდით
   hoc2018_mc_homepage_try_it: სცადეთ
+  hoc2018_mc_back: Minecraft დაბრუნდა ახალი საქმიანობის Hour of Code!
+  hoc2018_mc_back_journey: Minecraft დაბრუნდა საათის კოდი ახალი საქმიანობის! მოგზაურობა
+    Minecraft კოდით.
+  hoc2018_mc_teacher_guide: იხილეთ მასწავლებლის სახელმძღვანელო
   hoc2018_mc_minecraft_education: Minecraft Education
+  hoc2018_mc_short_description: გამოიყენეთ თქვენი კრეატიულობა და პრობლემის გადაჭრის
+    უნარი, რათა იპოვოთ საგანძური და შეისწავლონ წყლის სამყაროს ქვეშ კოდი.
+  hoc2018_mc_short_description_shorter: გამოიყენეთ თქვენი შემოქმედების და პრობლემის
+    გადაჭრის უნარი შეისწავლონ და ავაშენოთ წყალქვეშა სამყაროს კოდი.
+  hoc2018_mc_journey: მოგზაურობა Minecraft კოდით.
   hoc2018_dance_party_main_heading: ცეკვა
+  hoc2018_dance_party_landing_title: ცეკვა
+  hoc2018_dance_party_subheading: დახმარება თარგმნა Dance Party
   hoc2018_dance_create_your_own_dance_title: შექმენი საცეკვაო წვეულება
   hoc2018_dance_party_box_title: ცეკვა
+  hoc2018_dance_party_box_description: კოდი Dance Party გაუზიაროს თქვენს მეგობრებს!
+  hoc2018_dance_party_specs: ენა | ფორმატი | ასაკი 6-106
   hoc2018_dance_party_button: დაწყება
+  hoc2018_dance_keep_on_dancing_box_title: ცეკვის შენარჩუნება
+  hoc2018_dance_keep_on_dancing_description: სცილდება პირველი საათის გაფართოებული
+    პროექტის იდეები.
+  hoc2018_dance_keep_on_dancing_specs: ენა | ფორმატი | ასაკი 13+
+  hoc2018_dance_keep_on_dancing_button: დაწყება ნაწილი 2
+  hoc2018_dance_teacher_resources_title: მასწავლებელთა რესურსები
+  hoc2018_dance_teacher_resources_tile1_description: გაკვეთილი გეგმები, სერთიფიკატები
+    და მუსიკა ფილტრაცია.
   hoc2018_dance_teacher_resources_tile1_button: გაკვეთილის გეგმა
+  hoc2018_dance_teacher_resources_tile2_title: ცეკვის პარტია unplugged
+  hoc2018_dance_teacher_resources_tile2_description: კომპიუტერი არ არის საჭირო! ვისწავლოთ
+    კოდირების ცნებები ქორეოგრაფი ცეკვის პარტიის ერთად.
   hoc2018_dance_teacher_resources_tile2_button: აქტივობა უკომპიუტეროდ
+  hoc2018_dance_featured_student_creations_title: გამორჩეული სტუდენტური შემოქმედება
+  hoc2018_dance_videos_section_heading: მიიღეთ შთაგონებული
+  hoc2018_dance_video_title_what_is_creativity: რა არის კრეატიულობა?
+  hoc2018_dance_view_creativity_video_playlist: რა არის კრეატიულობა? სრული სერიის
+    ნახვა (5 წთ)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: პარტნიორობით
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* არის ყოვლისმომცველი ბავშვი-კარიერის პროგრამა, რომელიც გააჩინოს, განათლებას
+    და მოამზადებს დაბალი შემოსავლის და სხვა დაუცველი ბავშვებისა და ახალგაზრდების კარიერას
+    კომპიუტერულ მეცნიერებაში. <a href='%{amazon_future_engineer_link}' target='_blank'>შეიტყვეთ
+    მეტი</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* არის ყოვლისმომცველი ბავშვი-კარიერის პროგრამა, რომელიც გააჩინოს,
+    განათლებას და მოამზადებს დაბალი შემოსავლის და სხვა დაუცველი ბავშვებისა და ახალგაზრდების
+    კარიერას კომპიუტერულ მეცნიერებაში. [შეიტყვეთ მეტი] (%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: თუ თქვენ ხართ სტუდენტი
+    ან მასწავლებელი საფრანგეთში, ეწვიეთ [Amazon მომავალი ინჟინერი - საფრანგეთი] (%{amazon_future_engineer_france_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: შეიტყვეთ მეტი
+    Amazon მომავალი ინჟინრის
+  hoc2018_dance_amazon_about_future_engineer_title: ამაზონის მომავალი ინჟინრის შესახებ
+  hoc2018_dance_amazon_about_future_engineer_description: გაეცნობიან Amazon- ის საბავშვო
+    ბაღის კარიერის პროგრამას კომპიუტერული მეცნიერების განათლების ხელმისაწვდომობის
+    გაზრდის მიზნით. მოიძიეთ ინფორმაცია იმის შესახებ, თუ როგორ უნდა ჩაერთოთ ჩვენს საზაფხულო
+    ბანაკებში, უმაღლესი სკოლის CS კლასებში, სტიპენდიებსა და სტაჟირებაში.
   hoc2018_dance_amazon_about_future_engineer_button: გაიგეთ მეტი
+  hoc2018_dance_amazon_try_coding_this_summer_title: სცადეთ კოდირება ამ ზაფხულს
+  hoc2018_dance_amazon_try_coding_this_summer_description: ჩაერთეთ Amazon Future ინჟინრის
+    უფასო, სახალისო და ინკლუზიური კომპიუტერული მეცნიერების ბანაკებში! საზაფხულო ბანაკები
+    ხელმისაწვდომია საბავშვო ბაღის სტუდენტებისთვის მე -8 კლასში აშშ-ში სხვადასხვა ადგილას
+    2019 წლის ზაფხულში.
+  hoc2018_dance_amazon_try_coding_this_summer_button: შეუერთდით ბანაკს
+  hoc2018_dance_amazon_scholarship_programs_title: სტიპენდიის პროგრამები
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon სთავაზობს სტიპენდიებს
+    $10,000 წელიწადში underserved სტუდენტები, რომლებიც წარმატებით დასრულდა ან ამჟამად
+    ჩარიცხული AP CS კურსი და აპირებს შეისწავლოს CS ხარისხი 4-წლიანი კოლეჯის ან უნივერსიტეტის
+    ამერიკის შეერთებულ შტატებში.
   hoc2018_dance_amazon_scholarship_programs_button: მიიღეთ მონაწილეობა ახლავე
+  hoc2018_dance_amazon_internships_title: მოდი სტაჟიორი Amazon
+  hoc2018_dance_amazon_internships_description: პროგრამები ახლა ღიაა 2019 წლის ზაფხულში
+    Amazon მომავალი ინჟინერი სტაჟირება. სტაჟიორებს პარტნიორი გაუწევს მენეჯერი, ტექნიკური
+    მენტორი და სხვა სტაჟიორი ნოვატორი და შექმნას ახალი ფუნქციები და მომსახურება სახელით
+    მომხმარებელს Amazon. სტაჟირება ხელმისაწვდომია აშშ-სა და კანადაში.
+  hoc2018_dance_amazon_internships_button: სტაჟირების მოძებნა
+  hoc2018_dance_amazon_k8_programs_title: K-8 პროგრამები
+  hoc2018_dance_amazon_funding_title: მიიღეთ დაფინანსება თქვენი CS ხარისხისთვის
+  hoc2018_dance_amazon_future_engineer_footer: "* მხატვრები, რომელთა მუსიკა გამოიყენება
+    ამ tutorial არ აფინანსებს ან მხარს უჭერს Amazon, როგორც ნაწილი ლიცენზირების გამოყენების
+    მათი მუსიკა Code.org.\n\n"
+  hoc2018_dance_measure: გაზომვა
+  hoc2018_dance_measure_colon: 'ღონისძიება:'
+  hoc2018_aquatic_video1: Minecraft Voyage წყლის - შესავალი
+  hoc2018_aquatic_video2: Minecraft Voyage წყლის - მარყუჟები
+  hoc2018_aquatic_video3: Minecraft Voyage წყლის - პირობები
+  hoc2018_aquatic_video4: Minecraft Voyage წყლის - გილოცავთ
+  hoc2018_dance_video1: ცეკვის პარტია - შესავალი
+  hoc2018_dance_video2: ცეკვის წვეულება - ღონისძიებები
+  hoc2018_dance_video3: ცეკვის პარტია - თვისებები
+  hoc2018_dance_video4: ცეკვის პარტია - გილოცავთ
   page_not_found_title: გვერდი არ მოიძებნა
+  page_not_found_header: '404: გვერდი ვერ მოიძებნა'
+  page_not_found_description: გვერდი, რომელსაც ეძებთ, არ არსებობს ამ მისამართზე. შეამოწმეთ
+    ვებ მისამართი და დააბრუნეთ. ან, დაბრუნდით ჩვენს მთავარ გვერდზე.
+  page_not_found_button: სახლში დაბრუნება
+  hoc2018_mc_with_microsoft: პარტნიორობით
+  hoc2018_mc_thank_microsoft: ჩვენ მადლობას ვუხდით Microsoft- ს ჩვენი ხედვისა და მისიის
+    მხარდასაჭერად, რათა უზრუნველყოს ყველა ბავშვს აქვს შესაძლებლობა ისწავლოს კომპიუტერული
+    მეცნიერება და უნარი წარმატების მისაღწევად 21-ე საუკუნეში.
+  hoc2019_mc_mee_title: Minecraft AI კარგი
+  hoc2019_mc_mee_description1: 'ახალი Minecraft საათი კოდექსის სამეურვეო ახლა ხელმისაწვდომია
+    Minecraft: განათლების გამოცემა Windows, Mac და iPad. ვისწავლოთ საფუძვლები კოდირების
+    და შეისწავლონ AI თქვენი სტუდენტები!'
+  hoc2019_mc_mee_description2: უფასო რესურსებზე წვდომა გაკვეთილის გეგმის, ვიდეოების,
+    კომპიუტერული მეცნიერების სასწავლო გეგმისა და მასწავლებელთა ტრენინგების ჩათვლით.
+  hoc2019_mc_more_coding_resources: მეტი კოდირების რესურსები
+  hoc2019_dance_previous_versions: "ვეძებთ წინა ვერსია Dance Party?  \nდააწკაპუნეთ
+    აქ, რათა დაიწყოს [ნაწილი 1] (%{dance_2018_link}) და [ნაწილი 2] (%{dance_extras_2018_link})
+    საწყისი 2018."
+  homepage_slot_text_title_at_home: ისწავლეთ სახლში
+  homepage_slot_text_blurb_at_home: ეს რესურსები გაადვილებს
+  homepage_slot_text_link_code_break: მიიღეთ კოდი Break
+  homepage_slot_text_link_do_hoc: გააკეთე კოდის საათი
+  homepage_slot_text_link_express_course: სცადეთ ექსპრეს კურსი
+  page_not_available_title: გვერდი არ არის ხელმისაწვდომი
+  page_not_available_description: ჩვენ ვწუხვართ, თქვენს მიერ მოთხოვნილი გვერდი აღარ
+    არის ხელმისაწვდომი ამ მისამართზე. თუ თქვენ ჯერ კიდევ გჭირდებათ წვდომა, გთხოვთ
+    მოგვწეროთ [support@code.org] (%{support_email_link}).
+  page_not_available_button: სახლში დაბრუნება
+  hoc2020_mc_available_code_org: ხელმისაწვდომია Code.org-ზე
+  hoc2020_mc_available_mee: 'ხელმისაწვდომია Minecraft- ში: განათლების გამოცემა'
+  hoc2020_mc_mee_title: Minecraft ზღაპარი ორი სოფელი
+  hoc2020_mc_mee_description: 'ახალი Minecraft საათი კოდი tutorial ახლა ხელმისაწვდომია
+    Minecraft: განათლების გამოცემა Windows, Mac, Chromebook და iPad. ისწავლეთ კოდირების
+    საფუძვლები და შეისწავლოთ მრავალფეროვნება და ჩართულობა თქვენს სტუდენტებთან! უფასო
+    რესურსებზე წვდომა გაკვეთილის გეგმის, ვიდეოების, კომპიუტერული მეცნიერების სასწავლო
+    გეგმის, კაპიტალის გაკვეთილების და მასწავლებელთა ტრენინგების ჩათვლით.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'იმოგზაუროთ დროში და ვისწავლოთ კოდი! ახალი Minecraft
+    საათი კოდი tutorial ახლა ხელმისაწვდომია Minecraft: განათლების გამოცემა Windows,
+    Mac, Chromebook და iPad. დავიწყოთ უფასო საგანმანათლებლო რესურსებით, ტრენინგებით
+    და ვიდეოებით.'
+  hoc2021_mc_mee_villages_title: ზღაპარი ორი სოფელი
+  hoc2021_mc_mee_villages_description: 'ვისწავლოთ კოდირების საფუძვლები და შეისწავლონ
+    მრავალფეროვნება და ჩართულობა თქვენს სტუდენტებთან Minecraft- ში: განათლების გამოცემა.'
+  hoc2021_mc_mee_ai_title: AI კარგი
+  hoc2021_mc_mee_ai_description: 'ექსპლორ AI თქვენი სტუდენტები და ვისწავლოთ კოდი Minecraft:
+    განათლება გამოცემა.'
   footer_powered_by_aws: შექმნილია Amazon Web Services დახმარებით
+  footer_built_on_github: აგებულია GitHub- ზე Microsoft- ისგან
+  codebytes_skinny_banner_title: შემოგვიერთდით 7-11 დეკემბერს ჩვენი კოდების ცოცხალი
+    მინი-გაკვეთილები!
+  codebytes_skinny_banner_description: 'შემოგვიერთდით ყოველ დღე CS განათლების კვირეული
+    CodeBytes, 20 წუთი ინტერაქტიული კომპიუტერული მეცნიერების გაკვეთილები. ნაკადი ცოცხალი
+    ორჯერ ყოველდღიურად, CodeBytes არის დიდი გზა სტუდენტებისთვის მონაწილეობის ვირტუალური
+    #HourOfCode!'
+  codebytes_skinny_banner_learn: შეიტყვეთ უფრო მეტი [code.org/codebytes] (%{code_bytes_url}).
   footer_privacy_policy: კონფიდენციალურობის პოლიტიკა
+  footer_privacy_policy_updated: კონფიდენციალურობის პოლიტიკა (მხრიდან)
   footer_about: გაიცანით
   footer_partners: პარტნიორები
+  footer_blog: ბლოგი
   footer_donate: შემოწირულობა
+  footer_store: მაღაზია
   footer_support: დახმარება და თემი
   footer_terms: პირობები
+  ai_for_oceans: AI ოკეანეებისთვის
   ai_for_oceans_lesson_plan: გაკვეთილის გეგმა
+  ai_for_oceans_tile_description: დახმარება A.I. გაწმენდა ოკეანეები მიერ სასწავლო
+    მას აღმოაჩინოს ნაგავი! გაეცნობიან სასწავლო მონაცემები და კომპენსაცია, და როგორ
+    AI შეუძლია მიმართოს მსოფლიო პრობლემები. ნახვა
+  how_ai_works: როგორ მუშაობს AI
+  how_ai_works_tile_description: შეიტყვეთ იმაზე, თუ როგორ მუშაობს AI და რატომ არის
+    მნიშვნელოვანი ამ სერიის მოკლე ვიდეოები. Microsoft CEO Satya Nadella და მრავალფეროვანი
+    მსახიობი ექსპერტები.
+  watch_the_videos: ნახეთ ვიდეოები
+  ai_and_ethics: AI და ეთიკა
+  ai_and_ethics_tile_description: სტუდენტები ასახავს ეთიკურ შედეგებს AI, მაშინ ერთად
+    ვიმუშაოთ, რათა შეიქმნას რესურსი „AI ეთიკის კოდექსი“ AI შემქმნელები და კანონმდებლები
+    ყველგან.
+  view_lesson_plan: გაკვეთილის გეგმის ნახვა
+  ai_in_partnership_with: პარტნიორობით
+  ai_microsoft_thanks: ჩვენ მადლობას ვუხდით Microsoft- ს ჩვენი ხედვისა და მისიის მხარდასაჭერად,
+    რათა უზრუნველყოს ყველა ბავშვს აქვს შესაძლებლობა ისწავლოს კომპიუტერული მეცნიერება
+    და უნარი წარმატების მისაღწევად 21-ე საუკუნეში.
+  ai_ethics_panel_header: AI პანელის დისკუსიის ეთიკის შესწავლა
+  ai_ethics_panel_description_1: წავიდეთ უფრო ღრმა ზოგიერთი ჩვენი საყვარელი AI ექსპერტები!
+    პანელური დისკუსია ეხება მნიშვნელოვან საკითხებს, როგორიცაა ალგორითმული მიკერძოება
+    და მუშაობის მომავალი. წყვილთან ერთად
+  ai_ethics_lesson_plan: AI და ეთიკის გაკვეთილის გეგმა
+  ai_ethics_panel_description_2: დიდი შესავალი ეთიკის ხელოვნური ინტელექტი!
+  cs_for_good: CS კარგი
+  cs_for_good_tile_description: რესურსების გააჩინოს სტუდენტები ვიფიქროთ ღრმად როლი
+    კომპიუტერულ მეცნიერებათა შეუძლია შექმნას უფრო სამართლიანი და მდგრადი მსოფლიოში.
+  view_resources: რესურსების ნახვა
+  imagine_cup_junior: წარმოიდგინეთ თასის უმცროსი
+  imagine_cup_junior_tile_description: ეს გლობალური AI for კარგი გამოწვევა სტუდენტებს
+    წარუდგენს Microsoft AI კარგი ინიციატივები, რაც მათ საშუალებას აძლევს გადაჭრას
+    პრობლემა მსოფლიოში ძალა AI.
   ai_activity: აქტივობა
   ai_description: აღწერა
+  ai_seeing_ai: AI-ს დანახვა
+  ai_seeing_ai_description: უფასო აპლიკაცია, რომელიც თქვენს ირგვლივ მსოფლიოს სხვადასხვა
+    ენაზე მოგვითხრობს.
+  ai_quick_draw: იჩქარეთ, დახაზეთ!
+  ai_quick_draw_description: შეიძლება ნერვული ქსელი ვისწავლოთ აღიაროს doodling?
+  ai_teachable_machine: სწავლებადი მანქანა
+  ai_teachable_machine_description: მოამზადეთ კომპიუტერი, რომ აღიაროს საკუთარი სურათები,
+    ხმები და უქმნის.
+  ai_google: AI ექსპერიმენტები Google- თან
+  ai_google_description: დაიწყეთ მანქანათმცოდნეობის შესწავლა სურათები, ნახატები, ენა,
+    მუსიკა და სხვა.
+  ai_zooniverse: Zooniverse - Snapshot მთის ზებრა
+  ai_zooniverse_description: დახმარება დაიცვას გადაშენების პირას მყოფი Cape Mountain
+    Zebra მიერ საიდენტიფიკაციო სხვადასხვა ცხოველები images.
+  ai_audience: აუდიტორია
+  ai_minecraft_description: 'უფასო რესურსებზე წვდომა გაკვეთილის გეგმის, ვიდეოების,
+    კომპიუტერული მეცნიერების სასწავლო გეგმისა და მასწავლებელთა ტრენინგების ჩათვლით.
+    (მოითხოვს Minecraft: განათლება გამოცემა)'
+  ai_k_12_audience: K-12 (საჭიროა კითხვა)
+  ai_microsoft_workshop: უფასო ვირტუალური სემინარები Microsoft- ისგან
+  ai_microsoft_workshop_description: Spark ცნობისმოყვარეობა უფასო ღეროვანი და კოდირების
+    სემინარები.
+  ai_machine_learning_for_kids: მანქანათმცოდნეობის ბავშვებისათვის
+  ai_machine_learning_for_kids_description: მოამზადეთ მანქანა სწავლის მოდელი ტექსტით,
+    ნომრებით ან სურათებით და გამოიყენეთ ის, რომ თამაშები Scratch.
+  ai_ibm_machine_learning_for_kids: 'IBM: მანქანათმცოდნეობა ბავშვებისათვის'
+  ai_ecs: 'ECS: ხელოვნური ინტელექტი (AI)'
+  ai_ecs_description: ახალი ალტერნატიული სასწავლო გეგმის ერთეული კომპიუტერული მეცნიერების
+    (ECS) სასწავლო გეგმის შესასწავლად.
+  ai_elements: AI ელემენტები
+  ai_elements_description: რეაკტორისა და ჰელსინკის უნივერსიტეტის მიერ შექმნილი უფასო
+    ონლაინ კურსების სერია.
+  ai_cognimates: შემეცნებითი
+  ai_cognimates_description: AI განათლების პლატფორმა მშენებლობის თამაშები, პროგრამირების
+    რობოტები და სასწავლო.
+  ai_try_activity: სცადეთ აქტივობა
+  outbreak_tile_subtitle: ვირუსი ინფიცირებულია Monster Town! კოდექსის ეპიდემიის სიმულატორი
+    და პროგნოზები, თუ რა მოხდება მეზობლები Monster Town.

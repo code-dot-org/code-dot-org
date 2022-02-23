@@ -198,3 +198,15 @@ form .form-required-field {
     z-index: -1 !important;
 }
 
+//Keep styling consistent when we use react-bootstrap
+//components in TeacherApplication
+.control-label {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: bold;
+  font-family: "Gotham 4r", sans-serif;
+}
+
+#application-container .form-group {
+  margin-bottom: 0px
+}

@@ -1,6 +1,7 @@
 {
-  "func": "tint",
+  "key": "tint",
+  "name": "tint",
   "category": "Sprites",
-  "modeOptionName": "*.tint",
-  "type": "property"
+  "category_key": "sprites",
+  "syntax": "tint"
 }

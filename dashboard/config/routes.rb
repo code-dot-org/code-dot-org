@@ -89,6 +89,9 @@ Dashboard::Application.routes.draw do
         post 'leave'
         post 'update_sharing_disabled'
         get 'student_script_ids'
+        get 'code_review_groups'
+        post 'code_review_groups', to: 'sections#set_code_review_groups'
+        post 'code_review_enabled', to: 'sections#set_code_review_enabled'
       end
       collection do
         get 'membership'
@@ -259,6 +262,7 @@ Dashboard::Application.routes.draw do
       post 'update_properties'
       post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
       post 'clone'
+      post 'update_start_code'
     end
   end
 
@@ -271,6 +275,8 @@ Dashboard::Application.routes.draw do
       delete '/:filename', to: 'level_starter_assets#destroy'
     end
   end
+
+  resources :course_offerings, only: [:edit, :update], param: 'key'
 
   get '/course/:course_name', to: redirect('/courses/%{course_name}')
   get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
@@ -315,9 +321,17 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_expressions, only: [] do
+  resources :programming_expressions, only: [:new, :create, :edit, :update, :show] do
     collection do
       get :search
+    end
+  end
+
+  resources :programming_environments, only: [:index, :new, :create, :edit, :update, :show], param: 'name' do
+    resources :programming_expressions, param: 'programming_expression_key' do
+      member do
+        get :show, to: 'programming_expressions#show_by_keys'
+      end
     end
   end
 
@@ -388,6 +402,12 @@ Dashboard::Application.routes.draw do
     get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
   end
 
+  get '/certificate_images/:filename', to: 'certificate_images#show'
+
+  get '/print_certificates/:encoded_params', to: 'print_certificates#show'
+
+  get '/certificates/:encoded_params', to: 'certificates#show'
+
   get '/beta', to: redirect('/')
 
   get '/hoc/reset', to: 'script_levels#reset', script_id: Script::HOC_NAME, as: 'hoc_reset'
@@ -455,6 +475,8 @@ Dashboard::Application.routes.draw do
   post '/admin/studio_person_split', to: 'admin_users#studio_person_split', as: 'studio_person_split'
   post '/admin/studio_person_add_email_to_emails', to: 'admin_users#studio_person_add_email_to_emails', as: 'studio_person_add_email_to_emails'
   get '/admin/user_progress', to: 'admin_users#user_progress_form', as: 'user_progress_form'
+  get '/admin/user_projects', to: 'admin_users#user_projects_form', as: 'user_projects_form'
+  put '/admin/user_project', to: 'admin_users#user_project_restore_form', as: 'user_project_restore_form'
   get '/admin/delete_progress', to: 'admin_users#delete_progress_form', as: 'delete_progress_form'
   post '/admin/delete_progress', to: 'admin_users#delete_progress', as: 'delete_progress'
   get '/census/review', to: 'census_reviewers#review_reported_inaccuracies', as: 'review_reported_inaccuracies'
@@ -465,8 +487,6 @@ Dashboard::Application.routes.draw do
   get '/admin/gatekeeper', to: 'dynamic_config#gatekeeper_show', as: 'gatekeeper_show'
   post '/admin/gatekeeper/delete', to: 'dynamic_config#gatekeeper_delete', as: 'gatekeeper_delete'
   post '/admin/gatekeeper/set', to: 'dynamic_config#gatekeeper_set', as: 'gatekeeper_set'
-  get '/admin/standards', to: 'admin_standards#index', as: 'admin_standards_index'
-  post '/admin/standards', to: 'admin_standards#import_standards', as: 'admin_standards_import'
 
   get '/notes/:key', to: 'notes#index'
 
@@ -565,7 +585,7 @@ Dashboard::Application.routes.draw do
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
 
-        resources :teacher, controller: 'teacher_applications', only: :create do
+        resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
           member do
             post :send_principal_approval
             post :principal_approval_not_required
@@ -580,7 +600,6 @@ Dashboard::Application.routes.draw do
           get :cohort_view
           get :search
           get :fit_cohort
-          get :applications_closed
         end
       end
 
@@ -601,7 +620,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
   get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
-  get '/dashboardapi/v1/pd/applications/applications_closed', to: 'api/v1/pd/applications#applications_closed'
+  get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning_landing#applications_closed'
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
   post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
@@ -720,10 +739,11 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
+  get '/api/teacher_panel_section', to: 'api#teacher_panel_section'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson'
-  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson_and_level'
+  get '/api/user_app_options/:script/:lesson_position/:level_position/:level', to: 'api#user_app_options', as: 'user_app_options'
+  get '/api/example_solutions/:script_level_id/:level_id', to: 'api#example_solutions'
   put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
@@ -751,8 +771,10 @@ Dashboard::Application.routes.draw do
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/display_theme', to: 'users#get_display_theme'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
+      get 'users/current', to: 'users#current'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
+      get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
       patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
@@ -857,11 +879,13 @@ Dashboard::Application.routes.draw do
 
   get '/javabuilder/access_token', to: 'javabuilder_sessions#get_access_token'
 
-  get '/sprites', to: 'sprite_management#sprite_management_directory'
-
-  get '/sprites/sprite_upload', to: 'sprite_management#sprite_upload'
-
-  get '/sprites/default_sprites_editor', to: 'sprite_management#default_sprites_editor'
+  resources :sprites, only: [:index], controller: 'sprite_management' do
+    collection do
+      get 'sprite_upload'
+      get 'default_sprites_editor'
+      get 'select_start_animations'
+    end
+  end
 
   # These really belong in the foorm namespace,
   # but we leave them outside so that we can easily use the simple "/form" paths.
@@ -906,4 +930,6 @@ Dashboard::Application.routes.draw do
   resources :reviewable_projects, only: [:create, :destroy]
   get 'reviewable_projects/for_level', to: 'reviewable_projects#for_level'
   get 'reviewable_projects/reviewable_status', to: 'reviewable_projects#reviewable_status'
+
+  get '/offline/join_pilot', action: :set_offline_cookie, controller: :offline
 end

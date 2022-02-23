@@ -5714,7 +5714,7 @@ zh-TW:
         - text: 外星人將從螢幕頂部消失。
           feedback: 不正確。藍色外星人將開始在螢幕上上下移動。
         questions:
-        - {}
+        - text: 仔細查看下方的程式碼。點擊外星人後會發生什麼事呢？
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: 收割機將採收兩顆南瓜。
@@ -5905,3 +5905,276 @@ zh-TW:
           * [最終個人網站](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/edit?usp=sharing) - 同儕審查範例 ([PDF](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1GxyJPbd9In4GBgDPQRCE1v-LGXPnKoY8r2L1WQDTOIE/export?format=doc))
 
           [/key]
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # 概述
+
+          學生進行程式設計，讓精靈圖以新的方式互動。在簡要回顧了如何使用isTouching積木後，學生思考兩個精靈圖互動的其他方式。 然後學生使用isTouching讓一個精靈圖在螢幕上推動另一個精靈圖，然後練習4個碰撞積木（碰撞、替代、反彈和彈開）。
+          ## 詞彙
+
+          * **抽象概念** - 找出特定的差異，使一個解決方案適用於多個問題。
+
+          ## 引進代碼
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # 概述
+
+          本課將介紹組織代碼、提高代碼可讀性和移除重複代碼積木的方法。 學生學習更高層次或更抽象的步驟，從而更容易理解和推理步驟，然後開始在游戲實驗室中創建函數。 在課程結束時，學生使用這些技能來向側面卷軸遊戲的最終版本組織和添加功能。
+          ## 詞彙
+
+          * **函數** - 一段可以輕鬆地反覆調用的代碼。
+
+          ## 引進代碼
+
+          * [Define a function](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Call a function](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # 概述
+
+          這節課擴展了繪圖技能，包括寬度和高度，並介紹了隨機數生成的概念。學生學習使用包含寬度和高度參數的ellipse()和rect()版本繪製，並使用background()積木填充螢幕的顏色。 在進程結束時，將向學生介紹randomNumber()積木，並使用新積木隨機繪製彩虹蛇。
+          ## 詞彙
+
+          * **參數** - 你傳遞給函數的額外資料，以根據特定需要定製它。
+
+          ## 引進代碼
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # 概述
+
+          這節課介紹變量，作為在程式中標記數字或儲存隨機生成值的方法。 本課程從一個非常基本的變量用途描述開始，練習使用新積木。 然後，學生使用變量來儲存一個隨機數，允許程式多次使用相同的隨機數。
+          ## 詞彙
+
+          * **變量** - 可變訊息的佔位符。
+
+          ## 引進代碼
+
+          * [Declare a variable](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Declare and assign a value to a variable](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## 資源
+
+          * [變量介紹](https://youtu.be/G41G_PEWFjE) - 視訊 ([下載](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games variables practice_2021:
+        display_name: 變數的練習
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: 查看以下的程式碼，並且預測網頁內容的標題會如何顯示。從右側的選項中選擇正確的答案。
+        markdown: |
+          <pre>
+          &lt;h3&gt; 蛋 &lt;/h3&gt;
+          &lt;h1&gt; 培根 &lt;/h1&gt;
+          &lt;h6&gt; 鬆餅 &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Level Types:** This multiple choice question that asks students to choose how HTML headings will display on a web page. You can see which students have answered the question correctly by going to that level and pulling out the Teacher Panel from the right hand side.  Students who have successfully answered the question will have a green bubble.  Students have as many chances as they like to answer correctly, so guessing and checking can also lead to a correct answer.
+
+          <div class="clear"></div>
+      CSD U2 CSS practice_pilot_2021:
+        display_name: 透過 CSS 修改文字樣式
+      CSD U2 Image challenge_pilot_2021:
+        display_name: 增加圖像
+      CSD U2 Image practice_pilot_2021:
+        display_name: 增加圖像
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        content1: Match the buggy HTML code with the description of its bug.
+        questions:
+        - text: The `src` attribute is spelled incorrectly.
+        - text: The `src` and `alt` attributes are switched
+        - text: The file extension (.jpg) is missing from the image address
+        - text: The image address is not given as a `src` attribute
+        - text: There is a space in the file name
+        teacher_markdown: 'Although this level can be used to assess student understanding
+          of the syntax of the `<img>` tag, its main purpose is to make students aware
+          of the most common types of bugs they may encounter when adding images to
+          web pages.
+
+'
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: 在此描述
+        teacher_markdown: |
+          # 計畫檢查點
+
+          在同意讓學生們繼續剩下的階段之前，檢查他們的計畫。
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: 標題
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: 在此描述
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
+            style='border: 1px solid #ccc'>"
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: 練習
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: 在此描述
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: 在此描述
+      CSD U6 LED create intro_2021:
+        content1: 在此描述
+        markdown: |
+          # LED 應用程式
+
+          在上一個等級中, 你完成了一個APP, 其在螢幕上有許多不同的按紐可用來控制LED. 在接下來的兩個等級中, 你將會看到其他應用程式的範例, 並且有機會自己動作做一個.
+
+          看完這些範例後, 思考有哪些代碼可能對這個應用程式是有用的並與你的夥伴一起完成它.
+          As you look at the examples, think of what code might be useful for the app that you and your partner want to create.
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: 在此描述
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - text: 閱讀這份程式並且預測這個應用程式將會如何執行
+        title: 預測一下
+      CSD games cake challenge choice_2021:
+        display_name: 挑戰
+      CSD games functions practice choice_2021:
+        display_name: 函式的練習
+      CSD games platform challenge choice_2021:
+        display_name: 挑戰
+      CSD web conditionals practice choice_2021:
+        display_name: 條件判斷的練習
+      CSD web draw loop practice choice_2021:
+        display_name: 練習
+      CSD web movement practice choice_2021:
+        display_name: 練習
+      CSD web text practice choice_2021:
+        display_name: 練習
+      CSDU6 Innovation_2021:
+        markdown: |-
+          # 創新研究
+
+          從下列主題中選一個閱讀. 你會想要找尋一些資訊, 來了解那些與你相關的創新資訊科技
+
+          ## 穿戴式科技
+          穿戴式科技包含了那些以任何形式為了使用者穿戴所設計的計算裝置, 無論它是否內嵌於衣物或者是以配件及飾品呈現.
+          許多穿戴式科技, 像是智慧計步器, 與具有健康及安全的裝置在功能上有所重疊. 但它們都是可穿戴於人身上且主要是用來幫助改善人的健康.
+
+          ## 健康及安全
+          這是項非常廣的主題, 其包含了一般消費者用來改善自身健康及安全的消費型產品以及醫生或是其他專職人員所使用的專業型產品.
+
+          ## 農業
+          農業或許不是一項很顯而易見的主題, 但是科技化的創新在農業上曾有巨大的變革. 這包含了將電腦應用在現存的農業設備上, 使用感應器和機器人來監控作物, 以及分析資料以改善效率和永續性.
+
+          ## 製造業
+          資訊科技在快速的製作原型, 工業用機器人以及自動化的生產產品上曾有一個主要的變革. 不論是有能力進行更小的製程(像是3D列印機和雷射切割機)或是將電腦整合進工廠作業, 在製造業上還有許多值得研究的地方.
+
+          ## 藝術和設計
+          藝術與電腦的融合能產生令人印象深刻與意想不到的結果. 儘管你可能無法找到可用的藝術和設計的商用產品, 但你可以找到非常多種使用各種資訊科技所創造和呈現的自製產品.
+
+          ## 智慧家庭
+          資訊科技讓房子有能力了解甚至是預測你所需的這個夢想比起過往變得更近了. 不論是使用聲控或是用感應器對環境變化進行監測或反應, 智慧家庭裝置幫助我們解決的許多重複和例行的工作.
+
+          # 研究注意事項
+
+          當你研究所選取主題的資訊科技, 請先了解以下事項:
+          * 專注於以硬體為基礎的資訊科技, 而非軟體.
+          * 專注於新興的資訊科技, 而非過時的.
+          * 挑選你所感興趣的
+
+          除了上述主題所列的推薦網站以外, 也可以看看其他Crowd出資的網站(像是Kickstarter和Indiegogo)來了解那些還未被實現的產品.
+      csd-pre-survey-levelgroup_21_22:
+        title: 發現計算機科學, 學生先修課程調查

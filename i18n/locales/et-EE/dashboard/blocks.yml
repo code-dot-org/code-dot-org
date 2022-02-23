@@ -877,6 +877,13 @@ et:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": purustama
+            "'sound://category_animals/bear.mp3'": Karu
+            "'sound://category_animals/cat.mp3'": kass
+            "'sound://category_animals/cow.mp3'": lehm
+            "'sound://category_animals/sheep.mp3'": lammas
+            "'sound://category_animals/chicken.mp3'": kana
+            "'sound://category_animals/dolphin.mp3'": delfiin
+            "'sound://category_animals/dog.mp3'": koer
             "'sound://category_digital/jump_7.mp3'": hüppa
       gamelab_randColor:
         text: juhuslik värv
@@ -931,6 +938,14 @@ et:
             '"scale"': suurus
             '"width"': laius
             '"height"': kõrgus
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': aeglane
+            '5': tavaline
+            '7': kiire
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -1147,21 +1162,43 @@ et:
             '"down"': nool alla
             '"left"': nool vasakule
             '"right"': nool paremale
-      PoemBot_setBackgroundEffect:
-        text: |-
-          määra taustaefekt
-          {EFFECT} {PALETTE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': südamed
+            '"rainbow"': vikerkaar
+      Poetry_makeBurst:
         options:
           EFFECT:
+            '"rain"': vihm
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': öö
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': aeglane
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hüppa
+      Poetry_setBackground:
+        text: määra taustavärv {COLOR}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"bubbles"': Mullid
+            '"clouds"': pilvine
+            '"hearts"': südamed
+            '"rain"': vihm
             '"colors"': Värvid
           PALETTE:
-            '"rainbow"': Vikerkaar
-      PoemBot_setForegroundEffect:
-        text: määra esiplaani efekt {EFFECT}
+            '"rainbow"': vikerkaar
+            '"winter"': talv
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
-            '"rain"': Vihm
             '"bubbles"': Mullid
+            '"hearts"': südamed
+            '"rain"': vihm
       RyanLab_moveForward:
         text: liigu edasi
       RyanLab_turnLeft:

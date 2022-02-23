@@ -5,7 +5,7 @@
     uploaded to a suitable location.
   %li
     markdown-enabled instructions can take advantage of
-    = link_to 'various markdown rendering options', 'https://commonmark.org/help/', target: '_blank'
+    = link_to 'various markdown rendering options', 'https://github.com/code-dot-org/code-dot-org/wiki/Markdown', target: '_blank'
     to provide more in-depth (and more vertically intrusive) instruction.
 
   %div{ style: 'border: 8px solid rgb(239, 239, 239)' }
@@ -13,24 +13,10 @@
     %div{ style: 'background-color: rgb(239, 239, 239); padding-top: 12px' }
       ~ f.text_area :long_instructions, rows: 4
 
-- if @level.is_a? GamelabJr
-  = f.label :instructions_icon,'Instructions Icon'
-  %p Please refer to #{link_to 'Sprite Lab Static Assets', 'https://github.com/code-dot-org/code-dot-org/tree/levelbuilder/apps/static/spritelab'} for available assets, then enter the name of the image to use as the instructions icon for this level.
-  = f.text_field :instructions_icon, value: @level.instructions_icon
-  %p Preview:
-  %img.instructions-icon-preview{style: 'height: 64px;'}
+= render partial: 'levels/editors/fields/custom_instructor', locals: {f: f} if @level.is_a? GamelabJr
+
 
 :javascript
-  $(document).ready(function() {
-    if ($('#level_instructions_icon').length > 0) {
-      function updateIconPreview() {
-        var iconName = $('#level_instructions_icon')[0].value || 'avatar';
-        $('.instructions-icon-preview').attr('src', 'https://studio.code.org/blockly/media/spritelab/' + iconName + '.png');
-      }
-      $('#level_instructions_icon').change(updateIconPreview);
-      updateIconPreview();
-    }
-  })
   var mdEditor = levelbuilder.initializeCodeMirror('level_long_instructions', 'markdown', {
     callback: function (editor, change) {
       convertXmlToBlockly(document.getElementById('level_long_instructions_preview'));

@@ -945,6 +945,12 @@
   coursed-2020_gradelevel: Клас 8 +
   coursee-2020_gradelevel: Възраст 8-12
   coursef-2020_gradelevel: Възраст 9-13
+  coursea-2021_gradelevel: Възраст 4-7
+  courseb-2021_gradelevel: Възраст 5-8
+  coursec-2021_gradelevel: Възраст 6-10
+  coursed-2021_gradelevel: Клас 8 +
+  coursee-2021_gradelevel: Възраст 8-12
+  coursef-2021_gradelevel: Възраст 9-13
   accelerated_gradelevel: "Възраст 10 + (след курс 3)"
   codeorg_platformtext: "Съвременни браузъри, смартфони, таблети"
   codeintl_platformtext: "Съвременни браузъри, смартфони, таблети"
@@ -1390,6 +1396,7 @@
   hoc2018_dance_amazon_scholarship_programs_button: "Регистрирай се сега"
   page_not_found_title: "Страницата не е намерена"
   footer_powered_by_aws: "Създадено с Amazon Web Services"
+  codebytes_skinny_banner_english_only: "Само на английски"
   footer_privacy_policy: "Защита на личните данни"
   footer_about: "Относно"
   footer_partners: "Партньори"

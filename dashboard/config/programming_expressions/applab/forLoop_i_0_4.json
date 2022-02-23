@@ -1,5 +1,7 @@
 {
-  "func": "forLoop_i_0_4",
-  "block": "for (var i = 0; i < 4; i++) {\n  __;\n}",
-  "category": "Control"
+  "key": "forLoop_i_0_4",
+  "name": "forLoop_i_0_4",
+  "category": "Control",
+  "category_key": "control",
+  "syntax": "for (var i = 0; i < 4; i++) {\n  __;\n}"
 }

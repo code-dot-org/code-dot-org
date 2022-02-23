@@ -129,7 +129,7 @@ ne:
     login: 'इमेल'
     password: 'पासवर्ड'
     remember: 'Remember me'
-    submit: 'साइन इन'
+    submit: 'साइन इन गर्नुहोस्'
   signin:
     try_heading: 'Want to try coding without signing up?'
     try_hoc: 'Try one Hour of Code first'
@@ -139,7 +139,7 @@ ne:
     name: 'Choose your name'
     picture: 'Now find your secret picture'
     words: 'Now enter your secret words'
-    login: 'साइन इन'
+    login: 'साइन इन गर्नुहोस्'
     invalid_login: 'Invalid login, please try again'
     pair_programming: 'I have a partner at my computer'
   password:
@@ -201,13 +201,17 @@ ne:
     access_denied: 'You do not have access to this %{model}.'
   nav:
     header:
-      finished_hoc: "I've finished my Hour of Code"
+      finished_hoc: "मैले पुरा गरे!"
       sign_in_to_save: 'Sign in to save progress'
-      project_gallery: "Projects"
+      course_catalog: "पाठ्यक्रम विवरण"
+      project_gallery: "\nपरियोजनाहरु"
+      help_support: "मद्दत र समर्थन"
+      report_bug: "समस्या प्रतिवेदन गर्नुहोस्"
       educate_hoc: "Hour of Code"
       stats: "Stats"
-      legal_privacy: "Privacy Policy"
-      legal_tos: "Terms of Service"
+      about: "बारेमा"
+      legal_privacy: "गोपनीयता नीति"
+      legal_tos: "सेवाका सर्तहरु"
     user:
       classroom: 'Teacher Home Page'
       district_dashboard: 'District Dashboard'
@@ -215,7 +219,7 @@ ne:
       stats: 'Code Studio'
       settings: 'My account'
       logout: 'साइन आउट गर्नुहोस्'
-      signin: 'साइन इन'
+      signin: 'साइन इन गर्नुहोस्'
       signup: 'खाता खोल्नुहोस्'
       already_registered: 'Already registered?'
       team: 'Team'
@@ -238,6 +242,7 @@ ne:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
+      loading: 'लोड हुदैछ...'
     popup:
       progress_for_user: "%{name}'s progress"
       progress: 'तपाईँको प्रगति'
@@ -251,6 +256,7 @@ ne:
       prizes_link: 'more info'
   teacher:
     answer: Answer
+    dashboard: 'Teacher Dashboard'
     for_teachers_only: For Teachers Only
     title:
       one: 'Your teacher:'
@@ -355,30 +361,30 @@ ne:
     code_from_html: 'Code.org uses p5.play, which is licensed under <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: 'Powered by Amazon Web Services'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; are trademarks of Code.org.'
-    copyright: 'Copyright'
+    copyright: 'प्रतिलिपि अधिकार'
     more: 'थप'
     feedback: 'सुझाव दिनुहोस्'
     translate: 'हामीलाई तपाईँको भाषामा अनुवाद गर्न  सहायता गर्नुहोस्'
     support: 'Support'
     tos_short: 'Terms'
-    tos: 'Terms of Service'
-    privacy: 'Privacy Policy'
+    tos: 'सेवाका सर्तहरु'
+    privacy: 'गोपनीयता नीति'
     secure: 'Secure Version'
-    report_abuse: 'Report Abuse'
+    report_abuse: 'दुव्र्यवहारको रिपोर्ट गर्नुहोस्'
     built_on_code_studio: 'Built on Code Studio'
     make_my_own_app: 'Make my own app'
     how_it_works: 'यसले कसरी काम गर्छ'
     try_hour_of_code: 'Try an Hour of Code!'
   reference_area:
-    title: 'सहायता चाहिन्छ?'
-    subtitle: 'See these videos and hints'
+    title: 'मद्दत चाहिएको छ ?'
+    subtitle: 'यी भिडियो र संकेत हेर्नुहोस्'
     teacher: 'See the solution'
     auth_error: 'You are not authorized to see the solution.'
     submit: 'Update Artist Location'
     direction: 'Start Direction (in degrees)'
   video:
-    tab: 'Video.'
-    notes: 'No video? Show notes.'
+    tab: 'भिडियोहरु'
+    notes: 'भिडियो छैन? नोट देखाउनुहोस् ।'
     notes_coming_soon: 'Notes for this video coming soon.'
     autoplay_option: 'Autoplay videos'
     download: 'Download Video'
@@ -477,6 +483,7 @@ ne:
     report_bug: "Report Bug"
     support: "Get Help"
     help_resources: "Help and Resources"
+    help_support: "मद्दत र समर्थन"
   free_response:
     placeholder: "Enter your answer here"
   multi:
@@ -529,7 +536,7 @@ ne:
     ok: "ठीक छ"
     startover_title: "Are you sure you want to start over?"
     startover_body: "This will reset the puzzle to its start state and reset all the data you've added or changed."
-    startover_ok: "Start Over"
+    startover_ok: "सुरु गर्नुहोस्"
     startover_cancel: "रद्द गर्नुहोस्"
   time:
     hour: '1 hour'
@@ -543,13 +550,13 @@ ne:
     intro_desc: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016.  The biggest change: we will <i>no longer store email addresses for student accounts on Code Studio.</i> This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_desc_markdown: "We updated our Terms of Service and Privacy Policy, as shown below. The changes are effective as of August 24, 2016. The biggest change: we will _no longer store email addresses for student accounts on Code Studio._ This is a big deal for us, and we hope it sets a new standard for student privacy in education technology. We've sent you a summary of the other changes via email."
     intro_instructions: "You'll need to accept these new terms for students under the age of 13 in your classroom to have full access to all the latest features in Code Studio.  When registering an account for a student under 13, you will be asked to confirm that your school has parental consent for the collection of the student’s personal information for the use and benefit of the school, including educational programs such as Code Studio."
-    tos: "Terms of Service"
-    privacy: "Privacy Policy"
+    tos: "सेवाका सर्तहरु"
+    privacy: "गोपनीयता नीति"
     privacy_notice: "Privacy Notice"
     accept_label: 'I agree to the updated <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>'
     accept_label_markdown: I agree to the updated [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url})
     accept: "Accept"
-    print: "Print"
+    print: "मुद्रण गर्नुहोस्"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
     review_terms: "Review updated terms"
   school_info_interstitial:
@@ -582,12 +589,12 @@ ne:
     completed_courses: "Completed courses"
     all_courses: "All courses"
   project:
-    projects: "Projects"
+    projects: "\nपरियोजनाहरु"
     create: "Create Project"
     create_a_project: 'Create a new project:'
     new: "Create New"
     exit: "Return to Course"
-    project_gallery: "Projects"
+    project_gallery: "\nपरियोजनाहरु"
     share_title: Share your project
     share_copy_link: "Copy the link:"
     share_embed_description: "You can paste the embed code into an HTML page to display the project on a webpage."

@@ -27,7 +27,11 @@ ur:
   submit: جمع کرائیں
   next_page: اگلا صفحہ
   cancel: منسوخ کریں
+  okay: اوکے
   or: یا
+  join_section:
+    code:
+      placeholder: سیکشن کوڈ (ABCDEF)
   add_hint_form:
     placeholder: براے مہربانی اپنا اشارہ یہاں enter کریں
     submit: اشارہ شامل کریں
@@ -85,6 +89,10 @@ ur:
     email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
     email_preference_yes: جی
     email_preference_no: نہيں
+    share_teacher_email_reg_partner_question: کیا آپ چاہیں گے کہ ہم آپ کی ریاست میں
+      [Code.org علاقائی پارٹنر](%{cdo_regional_partner_desc}) کے ساتھ آپ کے رابطہ
+      کی معلومات کا اشتراک کریں تاکہ وہ آپ کو مقامی پیشہ ورانہ ترقی، وسائل اور واقعات
+      کے بارے میں مطلع کر سکیں؟
     share_teacher_email_reg_partner_preference_yes: جی
     share_teacher_email_reg_partner_preference_no: نہيں
     parent_account_checkbox: میں ایک والد یا والدہ/سرپرست ہوں جو اپنے بچے کی جانب
@@ -146,7 +154,10 @@ ur:
       algebra_game: الجبرا
       artist_k1: آرٹسٹ (پری ریڈر)
       basketball: باسکٹ بال
+      calc: Calc
       dance: ڈانس پارٹی
+      eval: Eval
+      flappy: فلاپی
       frozen: فروزن
       gamelab_jr: کھیل لیب (بیٹا)
       iceage: برفانی عہد
@@ -154,11 +165,19 @@ ur:
       minecraft_aquatic: Minecraft تعلیم کے لئے جانا
       minecraft_hero: Minecraft ہیرو
       playlab_k1: لیب کھیلیں (پری ریڈر)
+      poetry: شاعری
+      poetry_hoc: نظم کا فن
+      sports: کھیل کود
+      starwars: اسٹار وارز
+      starwarsblocks: اسٹار وارز (بلاکس)
+      starwarsblocks_hour: اسٹار وارز (بلاکس)
       weblab: ویب لیب
     popup:
       prizes_link: مزید معلومات
   teacher:
+    dashboard: ٹیچر کا ڈیش بورڈ
     panel:
+      answer_viewer: ٹیچر پینل
       student: Talib-e-ilm
       last_updated: 'آخری تازہ کاری:'
   user:
@@ -171,6 +190,7 @@ ur:
     none: کوئی نہيں
     only_one_parent_email_supported_warning: 'نوٹ: ہم فعل الحال ایک سٹوڈنٹ اکاؤنٹ
       میں والدین/سرپرست کا ایک ہی ایمیل ایڈرس رکھنے کی سہولت دے پا رہے ہیں۔'
+    encrypted: انکرپٹ کردہ
   home:
     student_reg_link: طالبعلم کا سائن اپ
     teacher_reg_link: استاد کا سائن اپ
@@ -208,6 +228,10 @@ ur:
       try_frozen: آرٹسٹ اینا اور ایلسا کے ساتھ، فروزن سے ماخوذ
     frozen:
       title: فروزن
+    starwars:
+      title: اسٹار وارز
+    sports:
+      title: کھیل کود
     unplugged:
       title: ان پلگڈ اسباق
       body_short: اگر آپ کے پاس کمپیوٹر نہیں ہے، تو اپنے کلاس روم میں پلگ نکالا اسباق
@@ -218,6 +242,15 @@ ur:
       audience: عمر 14+
   landing:
     help_support: مدد اور معاونت
+  multi-submittable:
+    wrong_title: آپکا شکریہ
+    correct_title: آپکا شکریہ
+  level_group:
+    wrong_title: آپکا شکریہ
+    correct_title: آپکا شکریہ
+  level_group-submittable:
+    wrong_title: آپکا شکریہ
+    correct_title: آپکا شکریہ
   dialog:
     ok: ٹھیک ہے
     startover_title: کیا آپ یقینی طور پر دوبارہ شروع (اسٹارٹ اوور) کرنا چاہتے ہیں؟
@@ -231,6 +264,8 @@ ur:
       شرائط](%{tos_url}) اور [پرائیویسی پالیسی](%{privacy_url})
       سے اتفاق کرتے ہیں۔.
     print: پرنٹ کریں
+  school_info_interstitial:
+    save: محفوظ کریں
   race_interstitial:
     races:
       other: دیگر
@@ -249,9 +284,14 @@ ur:
           other: دیگر
   hoc_download:
     minecraft_name: Minecraft کوڈ کی گھڑی
+    starwars_blocks_name: 'اسٹار وارز: کوڈ کے ساتھ کہکشاں بنانا (بلاکس)'
+    starwars_javascript_name: 'اسٹار وارز: کوڈ کے ساتھ کہکشاں بنانا (جاوا اسکرپٹ)'
   pd:
     form_labels:
       email: Email
+      school_city: سکول سٹی
+      school_city_district: سکول سٹی/ضلع
+      colombian_school_city: سکول سٹی
     form_entries:
       subjects:
         cs: کمپیوٹر سائنس
@@ -272,3 +312,4 @@ ur:
       سے جو‌ڑ لیں۔"
     link_your_email: ایمیل ایڈرس اس اکاؤنٹ سے جو‌ڑ لیں
     not_now: ابھی نہیں
+  teacher_feedback: استاد کے حوالے سے رائے

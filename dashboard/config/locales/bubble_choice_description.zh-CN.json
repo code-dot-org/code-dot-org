@@ -83,7 +83,25 @@
         "courseF_variables_madlib_finish": "对你的项目进行最后润色，然后分享它！",
         "ramp_artist_loops4_2021": "通过循环一个序列来创建这个星形图案",
         "ramp_artist_loops6v1_2021": "使用循环来绘制这个楼梯。",
-        "international_outbreak_freeplay": "使用你的项目来共享信息。你希望别人从中学到什么？"
+        "international_outbreak_freeplay": "使用你曾看过的相同模块继续前进！",
+        "helloworld_animals_location": "让精灵图在一段时间后开始一个新行为。",
+        "helloworld_animals_sizes": "学习改变精灵图的大小。",
+        "helloworld_emoji_location": "让精灵图在一段时间后开始一个新行为。",
+        "helloworld_emoji_sizes": "学习改变精灵图的大小。",
+        "helloworld_food_location": "让精灵图在一段时间后开始一个新行为。",
+        "helloworld_food_sizes": "学习改变精灵图的大小。",
+        "helloworld_retro_location": "让精灵图在一段时间后开始一个新行为。",
+        "helloworld_retro_sizes": "学习改变精灵图的大小。",
+        "helloworld_animals_costumes": "学习改变精灵图的外观。",
+        "helloworld_animals_sounds": "学习如何播放声音。",
+        "helloworld_emoji_costumes": "学习改变精灵图的外观。",
+        "helloworld_emoji_sounds": "学习如何播放声音。",
+        "helloworld_food_costumes": "学习改变精灵图的外观。",
+        "helloworld_food_sounds": "学习如何播放声音。",
+        "helloworld_retro_costumes": "学习改变精灵图的外观。",
+        "helloworld_retro_sounds": "学习如何播放声音。",
+        "courseF_extras_sim": "创建和自定义您自己的模拟！",
+        "spritelab_extras_repeat": "使用循环快速创建许多匹配的精灵！"
       }
     }
   }

@@ -4,12 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "has_verified_resources": true
+      "has_verified_resources": true,
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:08 UTC",
+    "serialized_at": "2021-11-22 17:07:22 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp-post-survey"
     }
@@ -46,16 +50,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e27dd266-a4b8-4e8c-9dca-1455b9eb8a86",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e27dd266-a4b8-4e8c-9dca-1455b9eb8a86",
+        "lesson.key": "CSP post-course survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp-post-survey"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "807c4d9d-52c6-492b-9bee-957789ce0be1",
+      "position": 1,
+      "properties": {
+        "name": "CS Principles Post-course Survey",
+        "progression_name": "CS Principles Post-course Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "807c4d9d-52c6-492b-9bee-957789ce0be1",
+        "lesson_activity.key": "e27dd266-a4b8-4e8c-9dca-1455b9eb8a86"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -70,7 +97,8 @@
         ],
         "lesson.key": "CSP post-course survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp-post-survey"
+        "script.name": "csp-post-survey",
+        "activity_section.key": "807c4d9d-52c6-492b-9bee-957789ce0be1"
       },
       "level_keys": [
         "csp-post-survey-2018-levelgroup"
@@ -86,7 +114,8 @@
         ],
         "lesson.key": "CSP post-course survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp-post-survey"
+        "script.name": "csp-post-survey",
+        "activity_section.key": "807c4d9d-52c6-492b-9bee-957789ce0be1"
       }
     }
   ],

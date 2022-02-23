@@ -2,196 +2,434 @@
   "pt-BR": {
     "data": {
       "lessons": {
+        "dance-extras/Dance Party - Go Further": {
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.",
+          "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos).",
+          "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música."
+        },
+        "minecraft/Minecraft Hour of Code Designer": {
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final.",
+          "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final."
+        },
+        "hero/Minecraft Hour of Code": {
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final."
+        },
+        "poem-art-2021/Poem Art": {
+          "overview": "Nesta lição com CS e ELA integradas para novos codificadores, os alunos vão animar um poema com código para ilustrar o astral do poema. Os alunos vão ler e detectar o astral de um poema. Em seguida, eles vão encontrar os efeitos e imagens correspondentes para ilustrar o astral do poema. Finalmente, os alunos vão utilizar eventos (código) para ilustrar uma mudança de astral ou animar a introdução de novas imagens no poema. \n\nEsta lição pode ser concluída como uma lição autônoma de uma hora. Também temos a opção de utilizar esta lição como primeira lição do módulo multilições conhecido como [Coding with Poetry](http://studio.code.org/s/poetry-2021).",
+          "preparation": "-   Leia e complete o tutorial online você mesmo: [Arte de Poema](http://studio.code.org/s/poem-art).  - Certifique-se de testar as atividades antes de pedir aos seus alunos para completá-las.   - Verifique a sua tecnologia e decida se você precisa solucionar algo com antecedência.  - Alguns níveis exigem som para ser tocado. Distribua fones de ouvido com antecedência.   - [Opcional] 2 notas autoadesivas por aluno para a Avaliação."
+        },
+        "hourofcode/Maze": {
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos jovens, de 4 a 10 anos de idade, mas pode ser adaptada para alunos mais velhos utilizando as sugestões de diferenciação fornecidas.",
+          "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos jovens, de 4 a 10 anos de idade, mas pode ser adaptada para alunos mais velhos utilizando as sugestões de diferenciação fornecidas."
+        },
+        "frozen/Artist": {
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos do nível fundamental, de 10 a 13 anos de idade, mas pode ser adaptada para alunos mais jovens ou mais velhos, utilizando as sugestões de diferenciação fornecidas. Os alunos deverão ter uma compreensão básica de geometria simples e saber traçar ângulos.",
+          "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos do nível fundamental, de 10 a 13 anos de idade, mas pode ser adaptada para alunos mais jovens ou mais velhos, utilizando as sugestões de diferenciação fornecidas. Os alunos deverão ter uma compreensão básica de geometria simples e saber traçar ângulos."
+        },
+        "iceage/Ice Age Play Lab": {
+          "student_overview": "Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico."
+        },
+        "hello-world-emoji-2021/Hello World": {
+          "overview": "Nesta lição, os alunos vão aprender os fundamentos da ciência da computação, programando em um Laboratório de Fadas. O Laboratório de Fadas é uma ferramenta que você pode usar para desenvolver projetos imaginativos e divertidos. Os alunos vão aprender a criar e animar fadas e torná-las interativas utilizando eventos. \n\nExistem várias versões desta lição. Cada versão ensina os mesmos conceitos, mas recursos diferentes com imagens conforme o interesse de cada aluno. Para obter mais informações, visite a [página inicial do Hello World.](https://code.org/helloworld)",
+          "preparation": "-   Desvende os enigmas para descobrir qualquer área com possíveis problemas na sua aula. \n-   Use os recursos da [CS Connections](https://code.org/educate/csc) para elaborar um plano de aulas de ciência da computação depois do tutorial inicial.",
+          "purpose": "Esta lição tem o objetivo de preparar os alunos para criarem projetos de programação simples no Laboratório de Fadas. Com essa habilidade, os alunos poderão criar projetos com qualquer tema, como outros temas da escola ou algo que seja pessoalmente relevante para eles. Visite a [CS Connections](https://code.org/educate/csc) para ver ideias de como integrar a ciência da computação a outros assuntos."
+        },
+        "artist/Artist": {
+          "overview": "Nesta lição, os alunos assumirão o controle do Artista para concluir os desenhos na tela. Esta etapa do Artista permitirá que os alunos criem imagens de complexidade crescente usando novos blocos como \"avançar em 100 pixels\" e \"virar à direita em 90 graus\".",
+          "student_overview": "Crie belas imagens programando o Artista."
+        },
+        "dance/Dance Party": {
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.",
+          "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos).",
+          "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música."
+        },
+        "hello-world-food-2021/Hello World": {
+          "overview": "Nesta lição, os alunos vão aprender os fundamentos da ciência da computação, programando em um Laboratório de Fadas. O Laboratório de Fadas é uma ferramenta que você pode usar para desenvolver projetos imaginativos e divertidos. Os alunos vão aprender a criar e animar fadas e torná-las interativas utilizando eventos. \n\nExistem várias versões desta lição. Cada versão ensina os mesmos conceitos, mas recursos diferentes com imagens conforme o interesse de cada aluno. Para obter mais informações, visite a [página inicial do Hello World.](https://code.org/helloworld)",
+          "preparation": "-   Desvende os enigmas para descobrir qualquer área com possíveis problemas na sua aula. \n-   Use os recursos da [CS Connections](https://code.org/educate/csc) para elaborar um plano de aulas de ciência da computação depois do tutorial inicial.",
+          "purpose": "Esta lição tem o objetivo de preparar os alunos para criarem projetos de programação simples no Laboratório de Fadas. Com essa habilidade, os alunos poderão criar projetos com qualquer tema, como outros temas da escola ou algo que seja pessoalmente relevante para eles. Visite a [CS Connections](https://code.org/educate/csc) para ver ideias de como integrar a ciência da computação a outros assuntos."
+        },
+        "aquatic/Aquatic": {
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final."
+        },
+        "hoc-encryption/Simple Encryption": {
+          "overview": "Nesta lição, os alunos conhecem a necessidade da criptografia e técnicas simples para revelar (ou decifrar) mensagens secretas. Os alunos tentam decifrar  por conta própria uma mensagem codificada com a cifragem clássica de Caesar, além de uma cifragem por substituição aleatória. Os alunos devem se familiarizar bem com a ideia de que, na era das ferramentas poderosas de computação, as técnicas de criptografia terão de ser mais sofisticadas. O aspecto mais importante desta lição é a compreensão de como e por que a criptografia desempenha um papel na vida de todos nós, todos os dias, na internet, e de que uma boa criptografia não é algo trivial. Os alunos farão sua estreia ao compreenderem as considerações que fazem parte de uma criptografia forte diante das ferramentas de computação poderosas que podem ser utilizadas para decifrá-la. A necessidade de se manter o sigilo ao enviar bits pela internet é importante para qualquer pessoa que use a internet.",
+          "student_overview": "Nesta lição, os alunos conhecem a necessidade da criptografia e técnicas simples para revelar (ou decifrar) mensagens secretas. Os alunos tentam decifrar  por conta própria uma mensagem codificada com a cifragem clássica de Caesar, além de uma cifragem por substituição aleatória. Os alunos devem se familiarizar bem com a ideia de que, na era das ferramentas poderosas de computação, as técnicas de criptografia terão de ser mais sofisticadas. O aspecto mais importante desta lição é a compreensão de como e por que a criptografia desempenha um papel na vida de todos nós, todos os dias, na internet, e de que uma boa criptografia não é algo trivial. Os alunos farão sua estreia ao compreenderem as considerações que fazem parte de uma criptografia forte diante das ferramentas de computação poderosas que podem ser utilizadas para decifrá-la. A necessidade de se manter o sigilo ao enviar bits pela internet é importante para qualquer pessoa que use a internet."
+        },
+        "hello-world-animals-2021/Hello World": {
+          "overview": "Nesta lição, os alunos vão aprender os fundamentos da ciência da computação, programando em um Laboratório de Fadas. O Laboratório de Fadas é uma ferramenta que você pode usar para desenvolver projetos imaginativos e divertidos. Os alunos vão aprender a criar e animar fadas e torná-las interativas utilizando eventos. \n\nExistem várias versões desta lição. Cada versão ensina os mesmos conceitos, mas recursos diferentes com imagens conforme o interesse de cada aluno. Para obter mais informações, visite a [página inicial do Hello World.](https://code.org/helloworld)",
+          "preparation": "-   Desvende os enigmas para descobrir qualquer área com possíveis problemas na sua aula. \n-   Use os recursos da [CS Connections](https://code.org/educate/csc) para elaborar um plano de aulas de ciência da computação depois do tutorial inicial.",
+          "purpose": "Esta lição tem o objetivo de preparar os alunos para criarem projetos de programação simples no Laboratório de Fadas. Com essa habilidade, os alunos poderão criar projetos com qualquer tema, como outros temas da escola ou algo que seja pessoalmente relevante para eles. Visite a [CS Connections](https://code.org/educate/csc) para ver ideias de como integrar a ciência da computação a outros assuntos."
+        },
+        "starwars/Hour of Code 2015": {
+          "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição tem duas versões. "
+        },
+        "mc/Hour of Code 2015": {
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final.",
+          "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição funciona bem para qualquer aluno com idade suficiente para ler (mais de 6 anos). Alunos mais jovens provavelmente não conseguirão concluir o tutorial, mas terão muita diversão trabalhando com os quebra-cabeças por uma hora. Alunos do ensino médio em geral devem concluir o tutorial e ter algum tempo para se divertirem no nível gratuito de jogos no final."
+        },
+        "playlab/Play Lab": {
+          "student_overview": "Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico."
+        },
+        "applab-intro/Intro to App Lab": {
+          "student_overview": "Ao final do tutorial, você poderá expandir um projeto que há começou a desenvolver, transformando-o em um aplicativo de “Escolha sua própria aventura”, “Cartão de boas festas” ou “Teste de personalidade”. Você também poderá continuar e desenvolver mais projetos em destaque na página code.org/applab. \n\nDivirta-se no seu treinamento do Hour of Code com o Laboratório de Aplicativos!"
+        },
+        "hello-world-retro-2021/Hello World": {
+          "overview": "Nesta lição, os alunos vão aprender os fundamentos da ciência da computação, programando em um Laboratório de Fadas. O Laboratório de Fadas é uma ferramenta que você pode usar para desenvolver projetos imaginativos e divertidos. Os alunos vão aprender a criar e animar fadas e torná-las interativas utilizando eventos. \n\nExistem várias versões desta lição. Cada versão ensina os mesmos conceitos, mas recursos diferentes com imagens conforme o interesse de cada aluno. Para obter mais informações, visite a [página inicial do Hello World.](https://code.org/helloworld)",
+          "preparation": "-   Desvende os enigmas para descobrir qualquer área com possíveis problemas na sua aula. \n-   Use os recursos da [CS Connections](https://code.org/educate/csc) para elaborar um plano de aulas de ciência da computação depois do tutorial inicial.",
+          "purpose": "Esta lição tem o objetivo de preparar os alunos para criarem projetos de programação simples no Laboratório de Fadas. Com essa habilidade, os alunos poderão criar projetos com qualquer tema, como outros temas da escola ou algo que seja pessoalmente relevante para eles. Visite a [CS Connections](https://code.org/educate/csc) para ver ideias de como integrar a ciência da computação a outros assuntos."
+        },
+        "starwarsblocks/Hour of Code 2015": {
+          "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição tem duas versões. "
+        },
+        "text-compression/Text Compression": {
+          "student_overview": "Em algum ponto, atingiremos o limite físico da velocidade com que podemos enviar bits, e se quisermos enviar um grande volume de informações mais rapidamente, teremos de encontrar um meio de representar essas informações com menos bits – teremos de compactar os dados. "
+        },
+        "sports/Sports": {
+          "overview": "Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.",
+          "student_overview": "Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!"
+        },
+        "infinity/Infinity": {
+          "student_overview": "Nesta lição, os alunos terão uma experiência introdutória com a ciência da computação e criarão um jogo utilizando código em blocos básico."
+        },
+        "basketball/Bounce": {
+          "overview": "Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.",
+          "student_overview": "Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!"
+        },
+        "dance-extras-2019/Dance Party - Go Further": {
+          "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos)."
+        },
+        "dance-2019/Dance Party": {
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música.",
+          "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos).",
+          "student_overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Esta lição foi projetada para alunos de todas as idades, mas requer leitura. Esta atividade requer o uso de sons, pois a ferramenta foi desenvolvida para reagir à música."
+        },
+        "oceans/Oceans": {
+          "overview": "Nesta lição, alunos de todas as idades terão uma experiência introdutória com codificação e ciência da computação em um ambiente de apoio seguro. Primeiro, os alunos classificam objetos como “peixes\" ou \"não peixes”, para tentar remover entulhos do oceano. Em seguida, os alunos terão de expandir seu conjunto de dados de treinamento para incluir outras criaturas marinhas que vivem na água. Na segunda parte da atividade, os alunos vão escolher seus próprios identificadores para aplicar às imagens de peixes geradas aleatoriamente. Esses dados de treinamento servem como modelo de aprendizagem de máquina, em que os alunos poderão identificar novas imagens por conta própria.",
+          "student_overview": "Resumo do Tutorial: primeiro os estudantes classificam objetos como \"peixe\" ou \"não peixe\" para tentar remover o lixo do oceano. Em seguida, eles precisarão expandir seu conjunto de dados para incluir outras criaturas marinhas que pertencem à água. Na segunda parte da atividade, irão escolher suas próprias marcações para aplicar às imagens de peixes gerados aleatoriamente. Esses dados de treinamento são usados para um modelo de aprendizado de máquina que depois deve ser capaz de marcar novas imagens sozinho."
+        },
+        "hello-world-food/lesson-1": {
+          "overview": "Nesta lição, os alunos vão aprender os fundamentos da ciência da computação, programando em um Laboratório de Fadas. O Laboratório de Fadas é uma ferramenta que você pode usar para desenvolver projetos imaginativos e divertidos. Os alunos vão aprender a criar e animar fadas e torná-las interativas utilizando eventos. \n\nExistem várias versões desta lição. Cada versão ensina os mesmos conceitos, mas recursos diferentes com imagens conforme o interesse de cada aluno. Para obter mais informações, visite a [página inicial do Hello World.][0]",
+          "preparation": "-   Desvende os enigmas para descobrir qualquer área com possíveis problemas na sua aula. \n-   Use os recursos da [CS Connections][0] para elaborar um plano de aulas de ciência da computação depois do tutorial inicial.",
+          "purpose": "Esta lição tem o objetivo de preparar os alunos para criarem projetos de programação simples no Laboratório de Fadas. Com essa habilidade, os alunos poderão criar projetos com qualquer tema, como outros temas da escola ou algo que seja pessoalmente relevante para eles. Visite a [CS Connections][0] para ver ideias de como integrar a ciência da computação a outros assuntos."
+        },
+        "poem-art/lesson-1": {
+          "overview": "Nesta aula integrada de CS e ELA, os alunos animarão um poema com código para ilustrar o humor de um poema. Durante esta atividade de codificação introdutória, os alunos irão ler e detectar o humor de um poema. Em seguida, eles encontrarão os efeitos e as imagens correspondentes para ajudar a ilustrar o humor do poema. Por último, os alunos usarão os eventos (código) para ilustrar uma mudança de humor ou animar a introdução de novas imagens de um poema. Esta aula pode ser feita na forma de uma aula autônoma de 1 hora. Há também a opção de usar esta aula como a primeira lição do módulo de 5 aulas chamado [Codificação com Poesia](http://code.org/poetry). Ao final do módulo de Codificação com Poesia, os alunos escreverão os seus próprios poemas e criarão um aplicativo gerador de poemas para compartilhar com os seus amigos. A Codificação com Poesia faz parte do currículo das Conexões CS da Code.org, que visa integrar CS em outras disciplinas como matemática, ELA e ciências em sintonia com os padrões CCSS, NGSS e CSTA.",
+          "preparation": "-   Leia e complete o tutorial online você mesmo: [Arte de Poema](http://studio.code.org/s/poem-art).  - Certifique-se de testar as atividades antes de pedir aos seus alunos para completá-las.   - Verifique a sua tecnologia e decida se você precisa solucionar algo com antecedência.  - Alguns níveis exigem som para ser tocado. Distribua fones de ouvido com antecedência.   - [Opcional] 2 notas autoadesivas por aluno para a Avaliação."
+        },
+        "jigsaw/Jigsaw": {
+          "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
+          "student_overview": "Clique e arraste para finalizar os quebra-cabeças."
+        },
+        "coursef-2021/lesson-6": {
+          "overview": "Nesta lição de**configuração de contexto**, os alunos discutirão o papel dos computadores e da tecnologia em suas vidas, concentrando-se em como aplicativos e ferramentas oferecem aos usuários opções sobre como usá-los. Os alunos também explorarão aplicativos semelhantes aos que eles mesmos criarão mais tarde.",
+          "preparation": "-   Determine como os alunos farão login no Code.org.\n-   Se necessário, crie contas do Code.org para os alunos.\n    — Atribua Introducing Sprite Lab aos alunos.\n-   Imprima cópias da planilha **\\\\ \\*Explorando Apps** (ou publique a versão digital no seu LMS).",
+          "purpose": "A primeira lição é sobre deixar os alunos entusiasmados com o curso e conectar seus próprios interesses pessoais à ciência da computação. "
+        },
+        "coursef-2021/lesson-7": {
+          "preparation": "Jogue pelos níveis e revise os slides da lição**\\\\ \\***.",
+          "purpose": "Esta lição foi criada para apresentar aos alunos a programação no Sprite Lab. Os alunos começarão a compreender o modelo de programação dessa ferramenta e explorarão maneiras de usá-la para se expressar."
+        },
+        "coursef-2021/lesson-8": {
+          "preparation": "Jogue os níveis e revise os slides da lição.",
+          "purpose": "Esta lição foi elaborada para reforçar as habilidades da lição anterior e apresentar aos alunos a programação com eventos. Ao longo deste curso, os eventos serão a principal forma de os alunos mudarem a forma como seus programas são executados ao longo do tempo ou em resposta ao usuário."
+        },
         "coursef-2021/Virtual Pet": {
           "overview": "Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta \"Trajes\" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!",
+          "purpose": "Esta lição permite que os alunos apliquem conceitos de programação de aulas anteriores em outro contexto criativo. ",
           "student_overview": "Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta \"Trajes\" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!"
         },
         "coursef-2021/lesson-2": {
+          "overview": " [![Educação de senso comum](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEsta lição foi originalmente criada pela Common Sense Education. [Saiba mais.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nÀ medida que as crianças crescem, elas naturalmente começarão a se comunicar mais online. Mas parte do que eles vêem pode fazer com que eles se sintam magoados, tristes, irritados ou até mesmo com medo. Ajude seus alunos a criar empatia pelos outros e aprenda estratégias a serem usadas quando confrontados com o cyberbullying.",
+          "preparation": "-   Revise os materiais instrucionais.\n-   Imprima folheto (s) para cada aluno.\n-   Prepare uma corda longa (ou corda) e papel para a aula.",
+          "purpose": "A Common Sense Education criou esta lição para ensinar aos alunos o que eles devem fazer quando alguém usa uma linguagem maldosa ou prejudicial na Internet.",
           "student_overview": "Bullying nunca é bom. Esta lição ensinará sobre o que é e o que não é bom dizer on-line."
+        },
+        "coursef-2021/lesson-9": {
+          "preparation": "Obtenha 6 envelopes (também adequados: papel ou cartões de índice, dobrados ao meio). \n\n-   Identifique a frente de cada envelope com letras grandes: objeto, líquido, número, adjetivo, parte do corpo, número\n-   Imprima cópias do aluno**\\\\ \\*planilha** (ou publique a versão digital no seu LMS).",
+          "purpose": "Esta lição fornece um contexto compartilhado que será útil para entender como as variáveis funcionam quando os alunos retornam à programação."
+        },
+        "coursef-2021/lesson-10": {
+          "preparation": "Jogue os níveis e revise os slides da lição.",
+          "purpose": "Variáveis serão usadas neste curso para armazenar e modificar dados. Nesse ponto, os alunos simplesmente armazenarão e recuperarão valores sem alterá-los. Em aulas posteriores, os alunos armazenarão valores numéricos e os modificarão ao longo do tempo para acompanhar coisas como a pontuação de um jogador em um jogo."
+        },
+        "coursef-2021/lesson-11": {
+          "preparation": "-   Imprima o guia de planejamento ou distribua uma cópia digital para cada aluno. Revise-o com antecedência, caso você queira fazer alguma modificação para se adequar à sua classe.\n\n-   Analise as opções no nível 3 com antecedência para se familiarizar com o fluxo que os alunos precisarão seguir.\n\n— Esta lição tem o potencial de se estender a vários períodos de aula. Considere agendar implicações antes do tempo.",
+          "purpose": "Esta lição não introduz novas habilidades ou conceitos, mas dá aos alunos a oportunidade de aplicar o que estão aprendendo de forma criativa."
         },
         "coursef-2021/Loops with the Artist": {
           "overview": "Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.",
+          "purpose": "Os alunos praticarão o uso de loops, um conceito que será revisitado nas próximas lições.",
           "student_overview": "Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!"
         },
         "coursef-2021/Variables that Change in Artist": {
           "overview": "Nesta lição, os alunos explorarão a criação de designs repetitivos usando variáveis ​​no ambiente do Artist. Os alunos aprenderão como as variáveis ​​podem ser usadas para tornar o código mais fácil de escrever e mais fácil de ler. Após quebra-cabeças guiados, os alunos terminam em um nível de freeplay para mostrar o que aprenderam e criar seus próprios designs.",
+          "purpose": "As variáveis são essencialmente espaços reservados para valores que podem ser desconhecidos no momento em que você executa o programa ou para valores que podem mudar durante a execução de um programa. Eles são vitais para a criação de código dinâmico, pois permitem que seu programa mude e cresça com base em qualquer número de modificações potenciais. Essa etapa reforça o uso de variáveis, usando os recursos mais básicos de configuração e uso deles.",
           "student_overview": "Nesta lição, você fará desenhos usando variáveis ​​que mudam à medida que o programa é executado."
         },
         "coursef-2021/Nested Loops in the Maze": {
           "overview": "Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em \\`Executar '.",
+          "purpose": "Esta lição apresenta (ou analisa) como os quebra-cabeças do Bee funcionam e apresenta aos alunos _loops_ aninhados. A próxima lição retornará às variáveis.",
           "student_overview": "Laços dentro de loops dentro de laços. O que isto significa? Esta lição ensinará o que acontece quando você coloca uma repetição dentro de outro laço."
         },
         "coursef-2021/Variables that Change in Bee": {
           "overview": "Esta lição ajudará a ilustrar como as variáveis ​​podem tornar os programas mais poderosos, permitindo que os valores mudem enquanto o código está em execução. ",
+          "purpose": "Esta lição ilustrará como o código com valores variáveis pode ser útil e preparar os alunos para entender como os loops “for” funcionam nas próximas lições.",
           "student_overview": "Esta abelha adora variáveis!"
         },
         "coursef-2021/For Loop Fun": {
           "overview": "Sabemos que os loops nos permitem fazer as coisas repetidas vezes, mas agora vamos aprender a usar loops com estruturas extras integradas. Essas novas estruturas permitirão que os alunos criem código mais poderoso e dinâmico. ",
+          "preparation": "-   Assista ao vídeo**\\\\ \\***.\n-   Imprima uma planilha**\\\\ \\*** por grupo.\n    — Imprima uma **\\\\ \\*avaliação** para cada aluno.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Nesse ponto, os alunos se tornaram mestres em loops. Hoje, eles aprenderão sobre outro loop comumente usado na programação. O loop “for” repete comandos um certo número de vezes, mas também acompanha os valores sobre os quais está iterando. Por exemplo, um loop “for” que começa em 4, termina com 8 e tem um valor de etapa de 1 será repetido 4 vezes, mas os valores 4, 5, 6 e 7 também serão capturados para uso em outro lugar. Usar essa estrutura com variáveis pode criar alguns programas fantásticos. Hoje, os alunos simplesmente aprenderão o básico de um loop “for” antes de mergulhar na programação com eles da próxima vez!",
           "student_overview": "Você vai se divertir aprendendo muito sobre os loops `for`!"
         },
         "coursef-2021/For Loops in Bee": {
           "overview": "Apresentando Bee, esta lição se concentra nos loops `for` e no uso de uma variável de incremento para resolver quebra-cabeças mais complicados. Os alunos começarão revisando os loops das lições anteriores e depois farão uma introdução aos loops `for` para que possam resolver de maneira mais eficaz problemas complicados.",
+          "purpose": "O conceito de hoje, para loops, é um tópico muito importante na ciência da computação. Além de serem amplamente utilizados, o processo de aprendizado de loops aprimora o aprendizado de outros conceitos importantes (como variáveis e parâmetros). Os alunos terão muita prática ao pensar criticamente nos problemas, determinando os valores inicial, final e de passo para cada loop for. Esse conceito também usa muita matemática, então sinta-se à vontade para combiná-lo com uma aula de matemática para uma experiência de aprendizado ainda mais profunda.",
           "student_overview": "Buzz buzz. Nestes quebra-cabeças, você guiará uma abelha para o néctar e o mel usando loops `for`!"
         },
         "coursef-2021/For Loops in Artist": {
           "overview": "Nesta lição, os alunos continuam praticando loops `for`, mas desta vez com o Artist. Os alunos irão completar quebra-cabeças combinando as idéias de variáveis, loops e loops `for` para criar designs complexos. No final, eles terão a chance de criar sua própria arte em um nível de freeplay.",
+          "purpose": "Criatividade e pensamento crítico se unem lindamente nesta lição. Os alunos continuarão sua prática com loops e variáveis for enquanto criam imagens de cair o queixo. Esta lição inspira uma mente criativa enquanto ensina conceitos básicos para a ciência da computação.",
           "student_overview": "Prepare-se para fazer sua próxima obra-prima. Aqui você usará loops `for` para fazer algumas fotos de cair o queixo."
         },
         "coursef-2021/Simulating Experiments": {
           "overview": "Ao executar uma simulação simples no Sprite Lab, os alunos experimentarão como a computação pode ser usada para coletar dados que identificam tendências ou padrões. Depois de executar a simulação várias vezes, os alunos terão a oportunidade de fazer uma previsão sobre como a alteração de uma variável na simulação pode impactar o resultado e depois testar essa hipótese.",
+          "preparation": "-   Determine se os alunos executarão simulações em seu próprio computador, ou se você as executará como uma classe inteira\n-   Se necessário, prepare-se para projetar as duas simulações nesta lição.",
+          "purpose": "As ciências em muitas disciplinas usam a Ciência da Computação para executar modelos e simulações para executar experimentos, coletar dados e analisar esses dados para obter insights. Embora a simulação introduzida nesta lição seja bastante simplista, ela pode ser usada como um ponto de partida para os alunos considerarem como modelos computacionais mais sofisticados poderiam ser usados para testar hipóteses.",
           "student_overview": "Execute simulações no computador e experimente alterando variáveis."
+        },
+        "coursef-2021/AI for Oceans": {
+          "purpose": "Esta lição foi projetada para apresentar rapidamente aos alunos o aprendizado de máquina, um tipo de inteligência artificial. Os alunos explorarão como os dados de treinamento são usados para permitir que um modelo de aprendizado de máquina classifique novos dados. Os alunos devem ter uma experiência positiva durante o tutorial e, mais importante, devem estar motivados a continuar aprendendo ciência da computação. "
         },
         "coursef-2021/Internet": {
           "overview": "Embora muitas pessoas usem a Internet diariamente, poucas sabem como ela funciona. Nesta lição, os alunos fingirão fluir pela Internet, aprendendo o tempo todo sobre conexões, URLs, endereços IP e DNS.",
+          "preparation": "-   Assista ao vídeo**\\\\ \\*Internet** - Professor.\n-   Imprima suficiente**\\\\ \\*Cartões de Endereço IP e Cartões de Tipo de Entrega** - Manipulativos para cada grupo.\n    — Imprima uma avaliação **\\\\ \\*Internet** - para cada aluno.\n    — Acesso à internet (como **\\\\ \\*get-site-ip.com**.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Se você tem feito todas as lições deste curso, então cada aluno da sua sala de aula usou a internet... mas quantos sabem como funciona? Aprender mais sobre a internet ajudará os alunos a desenvolver uma melhor compreensão de suas infinitas possibilidades.",
           "student_overview": "Já imaginou como a informação viaja pela Internet? Não é mágico! Esta lição ensinará os conceitos básicos de como a Internet funciona."
         },
         "coursef-2021/End of Course Project": {
+          "preparation": "-   Passe algum tempo fazendo seu próprio projeto com o Artist e o Sprite Lab. Familiarize-se com os recursos e as limitações de cada ferramenta.\n-   Modifique a rubrica para se adequar às metas da classe e imprima uma cópia para cada aluno.\n-   Modifique a planilha de design do projeto para se adequar à sua turma e imprima um pacote para cada aluno.",
+          "purpose": "Os alunos podem estar prontos para começar a construir seus projetos, mas esta lição ajudará a moldar suas ideias em planos. Essa estrutura manterá os sonhadores com os pés no chão e iluminará um caminho para aqueles que se sentem deixados no escuro. Ofereça aos alunos tempo suficiente para construir e revisar seus projetos. A tentativa e o erro inevitavelmente envolvidos nesta lição ensinarão a resolução de problemas e a persistência.",
           "student_overview": "Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!"
         },
         "courseb-2021/Digital Trails": {
+          "overview": " [![Educação de senso comum](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEsta lição foi originalmente criada pela Common Sense Education. [Saiba mais.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nO que você faz online sempre fica online? Os alunos aprendem que as informações que compartilham online deixam uma pegada digital ou um “rastro”. Dependendo de como eles o gerenciam, essa trilha pode ser grande ou pequena e prejudicial ou útil. Os alunos comparam trilhas diferentes e pensam criticamente sobre quais tipos de informações eles querem deixar para trás.",
+          "preparation": "-   Revise os materiais instrucionais.\n-   Imprima folheto (s) para cada aluno.",
+          "purpose": "A Common Sense Education criou esta lição para ensinar aos alunos sobre “pegadas digitais” e quais informações são aceitas para eles terem por conta própria.",
           "student_overview": "Aprenda sobre sua pegada digital e como se manter seguro ao visitar sites. "
         },
         "courseb-2021/Move It, Move It": {
           "overview": "Esta lição trabalhará para preparar mentalmente os alunos para os exercícios de codificação que eles encontrarão ao longo deste curso. Em equipes pequenas, os alunos usarão atividade física para programar seus colegas de classe para que sigam com cuidado de um lugar para outro até que uma meta seja alcançada.",
+          "preparation": "-   Assista ao **\\\\ \\*Vídeo do Professor**\n-   Imprimir (ou preparar para exibir) um**\\\\ \\*Chave de Resposta da Planilha**\n-   Imprima um**\\\\ \\*Atividade do Mapa** e uma **\\\\ \\*Planilha** por grupo de 2-3 alunos\n-   Prepare papéis em branco para preencher o resto da grade de caminhada (4-7 necessário por grupo)",
+          "purpose": "Ao usar o movimento físico para programar seus colegas de classe, os alunos encontrarão problemas e emoções semelhantes ao que sentirão quando começarem a codificar em um computador. Encontrar essas tensões em um ambiente lúdico e aberto ajudará a aliviar a intensidade e permitirá que os alunos pratiquem as habilidades necessárias antes de enfrentarem problemas por conta própria.",
           "student_overview": "Programe seus colegas de classe para caminhar com cuidado de um lugar para outro."
         },
         "courseb-2021/Sequencing in Maze": {
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
+          "preparation": "-   Se seus alunos são novos em arrastar e soltar, considere atribuí-los \\*\\*\\\\ \\*Prática de arrastar e soltar \\*\\* antes de iniciar esta lição.\n-   Assista à seção **\\\\ \\*Como fazer uma aula no Code.org** - Vídeo do professor, crie sua própria seção de classe no Code.org e certifique-se de que cada aluno tenha um cartão com sua senha.\n-   Faça com que o pessoal de TI da escola adicione um link rápido para a seção da turma à área de trabalho do computador.\n    — Certifique-se de que cada aluno tenha um diário.",
           "purpose": "Nesta lição, os estudantes desenvolverão habilidades de programação e depuração em uma plataforma de computador. O formato baseado em blocos dos quebra-cabeças ajuda os estudantes a aprender sobre conceitos e sequências, sem precisar se preocupar com a perfeição da sintaxe.",
           "student_overview": "Ajude o Angry Bird Vermelho a seguir o caminho para o porco travesso."
         },
         "courseb-2021/Programming in Maze": {
           "overview": "Usando personagens da Era do Gelo, os alunos desenvolverão algoritmos seqüenciais para mover o Scrat de um lado de um labirinto para a bolota do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Localize ou reimprima suprimentos para **\\\\ \\*Mapas felizes**.\n    — Certifique-se de que cada aluno tenha um Diário de Reflexão.\n-   Corte o suficiente **\\\\ \\*Manipulativos** de cada direção (N, S, E, W) para dar dois conjuntos a cada par de alunos (se você escolher a Opção de Bridging #1).",
+          "purpose": "Nesta lição, os alunos desenvolverão habilidades de programação em uma plataforma de computador. O formato baseado em blocos desses quebra-cabeças ajuda os alunos a aprender sobre sequência e conceitos, sem ter que se preocupar em aperfeiçoar a sintaxe.",
           "student_overview": "Crie programas para ajudar o Angry Bird a se mover pelo labirinto."
         },
         "courseb-2021/Programming in Harvester": {
           "overview": "Os alunos aplicarão os conceitos de programação que aprenderam no ambiente Colheita. Agora, em vez de apenas atingir o objetivo, os alunos precisam coletar milho usando um novo bloco. Os alunos continuarão a desenvolver habilidades de algoritmo seqüencial e começarão a usar o processo de depuração. ",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Nesta lição, os alunos desenvolverão habilidades de depuração e continuarão desenvolvendo suas habilidades de programação.",
           "student_overview": "Ajude a colheitadeira a coletar vegetais ao longo de um caminho."
         },
         "courseb-2021/Loops: Getting Loopy": {
           "overview": "Quando começamos a escrever programas mais longos e mais interessantes, nosso código geralmente contém muita repetição. Nesta lição, os alunos aprenderão sobre como os loops podem ser usados ​​para comunicar mais facilmente instruções que têm muita repetição, observando os padrões repetidos de movimento em uma dança.",
+          "preparation": "-   Prepare-se para exibir a planilha\\*\\*\\\\ \\*para os alunos.\n-   Imprima uma **\\\\ \\*Avaliação** por aluno.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Neste ponto do curso, os alunos deveriam ter desenvolvido conforto com a programação de um conjunto de instruções lineares. Freqüentemente, o conjunto linear de instruções inclui padrões que são repetidos várias vezes e, à medida que os alunos desejam escrever programas mais complexos e interessantes, a duplicação manual desse código se torna complicada e ineficiente. Para permitir que os alunos escrevam programas mais poderosos, precisaremos confiar em estruturas que saem dessa lista linear única. Os loops permitem que os alunos estruturem seu código de uma forma que se repita. Nesta lição, vamos nos concentrar em identificar padrões no movimento físico antes de voltar para o computador para procurar padrões em nosso código.",
           "student_overview": "Nesta lição, teremos uma festa de dança usando repetidos loops!"
         },
         "courseb-2021/Loops in Harvester": {
           "overview": "Com base no conceito de repetir instruções de \"Getting Loopy\", nesta etapa, os alunos usarão loops para colher milho com mais eficiência no Code.org.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Revise **\\\\ \\*Dicas de atividades principais dos fundamentos do CS - Recomendações de lição**.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n-   (Opcional) Se você ainda não o fez, imprima e recorte blocos de **\\\\ \\*Manipulativos** para se preparar para uma das atividades de ponte desta lição.",
+          "purpose": "Nesta aula, os alunos aprenderão mais sobre loops e como implementá-los no código Blockly. Usar loops é uma habilidade importante na programação porque repetir comandos manualmente é entediante e ineficiente. Com os quebra-cabeças da Code.org, os alunos aprenderão a adicionar instruções aos loops existentes, reunir códigos repetidos em loops e reconhecer padrões que precisam ser repetidos.",
           "student_overview": "Ajude a Colheitadeira a coletar ainda mais, usando loops!"
         },
         "courseb-2021/Loops in Collector": {
           "overview": "Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n-   Revise **\\\\ \\*Dicas de atividades principais dos fundamentos do CS - Recomendações da lição**\n-   Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Esta lição dá aos alunos mais prática com loops e os incentiva a colocar vários blocos dentro de uma `repetição` enquanto tentam coletar o máximo de tesouros possível.",
           "student_overview": "Programe Laurel, o aventureiro, para coletar tesouros em uma caverna aberta."
         },
         "courseb-2021/Loops in Artist": {
           "overview": "Voltando aos loops, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na lição on-line anterior, loops foram usados ​​para atravessar um labirinto e coletar tesouros. Aqui, os alunos usam loops para criar padrões. No final desta etapa, os alunos terão a oportunidade de criar suas próprias imagens usando loops.",
+          "preparation": "-   Jogue os quebra-cabeças antes da aula para encontrar possíveis áreas problemáticas para sua classe.\n-   Revise **\\\\ \\*Dicas de atividades principais dos fundamentos do CS - Recomendações de lição**.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
           "purpose": "Esta lição dá uma perspectiva diferente sobre como laços são capazes de criar coisas em programação. Os estudantes testarão suas habilidades de pensamento crítico ao avaliar um certo código e determinar o que é necessário acrescentar para solucionar o quebra-cabeça. Eles também podem refletir sobre a ineficiência da programação sem laços devido à quantidade de blocos que o programa iria necessitar sem a ajuda dos laços de repetição.",
           "student_overview": "Use padrões e loops para finalizar as imagens."
         },
         "courseb-2021/The Right App": {
           "overview": "Esta lição faz com que os alunos reconheçam que a ciência da computação pode ajudar as pessoas na vida real. Primeiro, os alunos simpatizam com vários usuários fictícios de smartphones, a fim de ajudá-los a encontrar o \"aplicativo certo\" que atenda às suas necessidades. Em seguida, os alunos exercitam empatia e criatividade para desenhar seu próprio aplicativo para smartphone que atenda às necessidades de um usuário adicional. ",
+          "preparation": "-   Leia as notas do orador na apresentação de slides **\\\\ \\***. \n-   Prepare material de esboço/desenho suficientes para todos os alunos.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Hoje, a computação está mais acessível do que nunca. Pessoas de todas as esferas da vida usam software em muitos dispositivos diferentes, particularmente smartphones, para obter informações, comunicação e entretenimento. Como as pessoas têm experiências e necessidades tão diversas, é importante que os cientistas da computação iniciantes tenham empatia com as pessoas e identifiquem soluções com elas em mente. ",
           "student_overview": "Esboce seu próprio aplicativo para smartphone."
         },
         "courseb-2021/Events: The Big Event": {
           "overview": "Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.\nÉ para isto que os eventos servem.",
+          "preparation": "-   Prepare-se para projetar**\\\\ \\*Imagem do controlador**.\n-   Imprima uma **\\\\ \\*Avaliação** por aluno.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Hoje, os alunos aprenderão a distinguir eventos de ações. Os alunos verão as atividades interrompidas por ter um “botão” pressionado em um controle remoto de papel. Ao ver esse evento, a classe reagirá com uma ação única. Os eventos são amplamente utilizados na programação e devem ser facilmente reconhecíveis após esta lição.",
           "student_overview": "Mova-se ou grite quando o professor pressionar botões em um controle remoto gigante."
         },
         "courseb-2021/Events in Play Lab": {
           "overview": "Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n-   Revise **\\\\ \\*Dicas de atividades principais dos fundamentos do CS - Recomendações de lição**.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
           "purpose": "Nesta atividade on-line, os estudantes irão aprender a usar eventos no Play Lab. Eles começarão treinando o cavaleiro para se mover quando uma tecla de direção for pressionada, depois concluir com a oportunidade de demonstrar as outras habilidades aprendidas durante este curso, inclusive sequências e laços, como parte de seu quebra-cabeça livre.",
           "student_overview": "Use eventos para criar uma história ou criar um jogo interativo."
         },
+        "courseb-2021/lesson-1": {
+          "preparation": "-   Codifique seus próprios projetos do Play Lab com antecedência para inspirar os alunos!",
+          "purpose": "Esta lição dá aos alunos uma última oportunidade de usar criativamente suas novas habilidades em ciência da computação."
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "overview": "[![Educação de senso comum](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEsta lição foi originalmente criada pela Common Sense Education. [Saiba mais.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nO poder da internet permite que os alunos experimentem e visitem lugares que talvez não consigam ver pessoalmente. Mas, assim como viajar pelo mundo real, é importante estar seguro ao viajar online. Nesta viagem de campo virtual, as crianças podem praticar a segurança em aventuras online.",
+          "preparation": "-   Revise os materiais de instrução.\n-   Imprima apostila(s) para cada aluno(a).\n-   (Opcional) Imprima o poster com o poema para mostrar em sala de aula.",
+          "purpose": "A Common Sense Education criou esta lição para ensinar aos alunos como eles podem ir a lugares online com segurança.",
+          "student_overview": "Saiba como ter segurança ao visitar lugares online."
+        },
         "coursea-2021/Learn to Drag and Drop": {
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
+          "preparation": "-   Assista à seção **\\\\ \\*Como fazer uma aula** no Code.org - Vídeo do professor. Crie sua própria seção de aula no Code.org e certifique-se de que cada aluno tenha um cartão com a senha.\n    — Certifique-se de que os alunos possam acessar a Lição 2 a partir de seus dispositivos. Considere se você deseja ocultar lições futuras para evitar que os alunos sigam em frente muito rapidamente.\n-   Faça com que o pessoal de TI da escola adicione um link rápido para a seção da turma à área de trabalho do computador.\n-   Consulte o site Common Sense Education para obter mais conteúdo de segurança online.",
+          "purpose": "O principal objetivo desta lição é desenvolver a experiência dos alunos com computadores. Ao cobrir as funções mais básicas do computador, como clicar, arrastar e soltar, estamos criando um campo de jogo mais igualitário na classe para futuros quebra-cabeças. Esta lição também oferece uma ótima oportunidade para introduzir a terminologia básica de hardware de computador, potencialmente incluindo “mouse”, “trackpad” ou “touchscreen”, dependendo de seus dispositivos.",
           "student_overview": "Clique e arraste para finalizar os quebra-cabeças."
         },
         "coursea-2021/Programming: Happy Maps": {
           "overview": "A ponte de algoritmos para programação pode ser curta se os alunos entenderem a diferença entre planejar uma sequência e programar esta sequência em uma linguagem apropriada. Esta atividade irá ajudar os alunos a ganhar experiência escrevendo e lendo em códigos abreviados.",
+          "preparation": "-   Imprima uma planilha**\\\\ \\*e um conjunto de**\\\\ \\*Manipulativos\\*\\* por grupo de 2-3.\n    — Certifique-se de que cada aluno tenha um Diário de Reflexão.",
           "purpose": "A ponte de algoritmos para programação pode ser curta se os alunos entenderem a diferença entre planejar uma sequência e programar esta sequência em uma linguagem apropriada. Esta atividade irá ajudar os alunos a ganhar experiência escrevendo e lendo em códigos abreviados.",
           "student_overview": "Escreva instruções para levar o Flurb à fruta."
         },
         "coursea-2021/Sequencing with Scrat": {
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
+          "preparation": "-   Corte blocos de direção de **\\\\ \\*Manipulativos** para usar com a atividade de ponte Happy Maps.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
           "purpose": "Nesta lição, os estudantes desenvolverão habilidades de programação e depuração em uma plataforma de computador. O formato baseado em blocos dos quebra-cabeças ajuda os estudantes a aprender sobre conceitos e sequências, sem precisar se preocupar com a perfeição da sintaxe.",
           "student_overview": "Programe Scrat para alcançar a bolota."
         },
         "coursea-2021/Programming in Ice Age": {
           "overview": "Usando personagens da Era do Gelo, os alunos desenvolverão algoritmos seqüenciais para mover o Scrat de um lado de um labirinto para a bolota do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
           "purpose": "Nesta lição, os estudantes desenvolverão habilidades de programação e depuração em uma plataforma de computador. O formato baseado em blocos dos quebra-cabeças ajuda os estudantes a aprender sobre conceitos e sequências, sem precisar se preocupar com a perfeição da sintaxe.",
           "student_overview": "Escreva programas para ajudar Scrat a alcançar a bolota."
         },
         "coursea-2021/Programming with Rey and BB-8": {
           "overview": "Nesta lição, os alunos usarão suas novas habilidades de programação de maneiras mais complicadas para navegar em um curso complicado com o BB-8.",
+          "preparation": "-   Jogue os quebra-cabeças correspondentes a esta lição para encontrar possíveis áreas problemáticas para sua classe.\n-   Revise **\\\\ \\*Dicas de atividades principais dos fundamentos do CS - Recomendações de lição**.\n    — Certifique-se de que cada aluno tenha um Reflection Journal.",
+          "purpose": "Com a transferência de conhecimento em mente, esta lição oferece aos alunos um novo ambiente para praticar as habilidades que eles vêm cultivando. Os fãs de _Star Wars_ saltarão de alegria quando virem esses quebra-cabeças. Cada quebra-cabeça desta série foi adicionado para fornecer uma compreensão mais profunda dos conceitos básicos que eles usarão ao longo do restante deste curso.",
           "student_overview": "Ajude o BB-8 a coletar a sucata."
         },
         "coursea-2021/Loops: Happy Loops": {
           "overview": "Repetições são uma ferramenta muito útil e poderosa em programação. Para entender como repetições úteis podem ser, os alunos precisarão ser levados a desejar uma maneira mais fácil de resolver problemas mundanos.",
+          "preparation": "-   Imprima uma planilha **\\\\ \\*** para exibir para a classe\n-   Por cada grupo de 2-3, imprima uma de cada: **\\\\ \\*Peças do jogo,\\\\ \\*Planilha XL e\\\\ \\*Manipulativos de Pacote Bonus**.\n    — Certifique-se de que cada aluno tenha um Diário de Reflexão.",
           "purpose": "Esta lição funciona como uma introdução a laços. Eles possibilitam que os estudantes simplifiquem seu código agrupando comandos que precisam ser repetidos. Os estudantes desenvolverão habilidades de pensamento crítico ao notar a repetição nos movimentos de seus colegas e determinar quantas vezes os comandos são repetidos. Ao ver novamente \"Mapas Felizes\", os estudantes terão chance de relacionar conceitos antigos, como o sequenciamento, com o novo conceito de laços repetidos.",
           "student_overview": "Ajude o Flurb a resolver problemas maiores usando loops."
         },
         "coursea-2021/Loops in Ice Age": {
           "overview": "Com base no conceito de repetir instruções de \"Happy Loops\", nesta etapa, os alunos usarão loops para chegar à bolota com mais eficiência no Code.org.",
+          "preparation": "-   Revise a lição anterior desconectada e desenvolva perguntas para lembrar aos alunos por que os loops são usados.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n-   Reúna suprimentos de Happy Loops anteriores para reutilizar para aquecimento\n-   Certifique-se de que cada aluno tenha um Reflection Journal.",
+          "purpose": "Nesta aula, os alunos aprenderão mais sobre loops e como implementá-los no código Blockly. Usar loops é uma habilidade importante na programação porque repetir comandos manualmente é entediante e ineficiente. Com esses quebra-cabeças da Code.org, os alunos aprenderão a adicionar instruções aos loops existentes, reunir códigos repetidos em loops e reconhecer padrões que precisam ser repetidos.",
           "student_overview": "Ajude Scrat a cobrir mais terreno usando loops."
         },
         "coursea-2021/Loops in Collector": {
           "overview": "Aproveitando o conceito de repetição de instruções da aula \"Repetições Felizes\", este nível os alunos irão usar repetições para coletar tesouro de uma forma mais eficiente no Code.org.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n-   Revise **\\\\ \\*Recomendações da lição CSF**\n-   Certifique-se de que cada aluno tenha um diário de reflexão",
+          "purpose": "Esta lição dá aos alunos mais prática com loops e introduz um novo bloco, `get treasure`. O bloco funciona exatamente como o `pick corn` fez no Harvester. Esses quebra-cabeças são mais abertos, dando aos alunos mais flexibilidade para suas soluções finais.",
           "student_overview": "Ajude Laurel, o aventureiro, a coletar o tesouro no subsolo."
         },
         "coursea-2021/Ocean Scene with Loops": {
           "overview": "Retornando às repetições, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na última lição online, repetições foram utilizadas para atravessar um labirinto e coletar tesouro. Aqui, as repetições estão criando padrões. No fim deste nível, os alunos terão a oportunidade de criar as suas próprias imagens usando repetições.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Revise **\\\\ \\*Recomendações da lição CSF**.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Esta lição dá uma perspectiva diferente sobre como os loops podem criar coisas na programação. Os alunos também podem refletir sobre a ineficiência da programação sem loops aqui por causa de quantos blocos o programa exigiria sem a ajuda de loops `repetid`.",
           "student_overview": "Use loops e padrões para finalizar as imagens."
         },
         "coursea-2021/Events: The Big Event": {
           "overview": "Eventos são uma ótima forma de adicionar variedade a um algoritmo pré-escrito. Algumas vezes você quer que o seu programa esteja apto a responder ao usuário exatamente quando o usuário quiser.\nÉ para isto que os eventos servem.",
+          "preparation": "-   Prepare-se para projetar**\\\\ \\*A imagem do controlador**.\n-   Imprima uma **\\\\ \\*Avaliação** por aluno.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Hoje, os alunos aprenderão a distinguir eventos de ações. Os alunos verão as atividades interrompidas por ter um “botão” pressionado em um controle remoto de papel. Ao ver esse evento, a classe reagirá com uma ação única. Os eventos são amplamente utilizados na programação e devem ser facilmente reconhecíveis após esta lição.",
           "student_overview": "Mova-se e grite quando seus professores pressionam botões em um controle remoto gigante."
         },
         "coursea-2021/Events in Play Lab": {
           "overview": "Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n    — Revise **\\\\ \\*Recomendações da lição CSF**.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
           "purpose": "Os alunos irão desenvolver ainda mais sua compreensão de eventos usando o Play Lab hoje. Eventos são muito comuns na maioria dos programas de computador. Nesta atividade, os alunos usarão eventos para fazer um personagem se movimentar pela tela, fazer ruídos e alterar planos de fundo com base em eventos iniciados pelo usuário.",
           "student_overview": "Crie seu próprio jogo ou história."
         },
+        "coursea-2021/lesson-1": {
+          "preparation": "-   Escreva e codifique sua própria história para o Artista com antecedência para inspirar os alunos!",
+          "purpose": "Esta lição dá aos alunos uma última oportunidade de usar criativamente suas novas habilidades em ciência da computação."
+        },
+        "coursec-2021/Putting a STOP to Online Meanness": {
+          "overview": " [![Educação de senso comum](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEsta lição foi originalmente criada pela Common Sense Education. [Saiba mais.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nA internet está cheia de todos os tipos de pessoas interessantes, mas, às vezes, algumas delas podem ser más entre si. Com essa dramatização, ajude seus alunos a entender por que muitas vezes é mais fácil ser maldoso online do que pessoalmente e como lidar com a maldade online quando eles a virem.",
+          "preparation": "-   Revise os materiais instrucionais.\n-   Imprima folheto (s) para cada aluno.\n    — Traga um bicho de pelúcia ou um brinquedo para a aula.",
+          "purpose": "A Common Sense Education criou esta lição para ensinar os alunos sobre maldade e o que eles devem fazer se a encontrarem online."
+        },
         "coursec-2021/Programming: My Robotic Friends": {
           "overview": "Usando um conjunto de símbolos no lugar do código, os alunos projetam algoritmos para instruir um \"robô\" a empilhar copos em diferentes padrões. Os alunos se revezam participando como o robô, respondendo apenas ao algoritmo definido por seus colegas. Esse segmento ensina aos alunos a conexão entre símbolos e ações, a diferença entre um algoritmo e um programa e a valiosa habilidade de depuração.",
+          "preparation": "-   Prepare uma pilha de 20 copos de papel (ou trapézios de papel) para cada grupo de 2-3 alunos.\n-   Exiba os símbolos de**\\\\ \\*Chave de símbolo** onde os alunos podem fazer referência ao longo da lição.\n-   (Opcional) Imprima uma **\\\\ \\*Idéias de empilhamento de copo** por grupo de 2 a 3 alunos.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
           "purpose": "Esta lição desconectada une a turma em uma equipe com uma simples tarefa para concluir: fazer um \"robô\" empilhar copos em um padrão específico. Esta atividade estabelece os fundamentos para a programação que os estudantes realizarão ao longo do curso à medida que aprendem a importância de definir um algoritmo claramente enunciado.",
           "student_overview": "Nesta lição, você fingirá que seus colegas de classe são robôs e os programará para criar padrões de copos empilhados."
         },
         "coursec-2021/Programming in Maze": {
           "overview": "Usando os personagens do jogo Angry Birds, os alunos desenvolverão algoritmos sequenciais para mover um pássaro de um lado de um labirinto para o porco do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe. \n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
           "purpose": "Nesta lição, os estudantes desenvolverão habilidades de programação e depuração em uma plataforma de computador. O formato baseado em blocos dos quebra-cabeças ajuda os estudantes a aprender sobre conceitos e sequências, sem precisar se preocupar com a perfeição da sintaxe.",
           "student_overview": "Aprenda sobre sequências e algoritmos com o Angry Birds."
         },
         "coursec-2021/Debugging in Maze": {
           "overview": "A depuração é um elemento essencial para aprender a programar. Nesta lição, os alunos encontrarão quebra-cabeças que foram resolvidos incorretamente. Eles precisarão percorrer o código existente para identificar erros, incluindo loops incorretos, blocos ausentes, blocos extras e blocos fora de ordem.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe. \n-   Revise **\\\\ \\*Dicas de atividades principais dos fundamentos do CS - Recomendações de lição**.\n-   Revise o **\\\\ \\*Guia de depuração** na página de visão geral do currículo deste curso com a turma.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Os alunos da sua turma podem ficar frustrados com esta lição por causa da essência da depuração. A depuração é um conceito muito importante para a programação de computadores. Os cientistas da computação precisam ser realmente bons em enfrentar os bugs em seus próprios programas. A depuração força os alunos a reconhecer problemas e superá-los enquanto desenvolvem habilidades de pensamento crítico e resolução de problemas.",
           "student_overview": "Encontre problemas em quebra-cabeças e pratique suas habilidades de depuração."
         },
         "coursec-2021/Programming in Collector": {
           "overview": "Nesta série de quebra-cabeças, os alunos continuarão a desenvolver sua compreensão de algoritmos e depuração. Com um novo personagem, Laurel, o Aventureiro, os alunos criarão algoritmos sequenciais para que Laurel pegue um tesouro enquanto ela caminha por um caminho.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar áreas problemáticas em potencial para sua classe.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Nesta lição, os alunos praticarão suas habilidades de programação usando uma nova personagem, Laurel, a Aventureira. Quando alguém começa a programar, ele reúne instruções em uma ordem específica usando algo que uma máquina pode ler. Através do uso da programação, os alunos desenvolverão uma compreensão de como um computador navega pelas instruções e pela ordem. Usar um novo personagem com um objetivo de quebra-cabeça diferente ajudará os alunos a ampliar seu escopo de experiência com sequenciamento e algoritmos em programação.",
           "student_overview": "Escreva algoritmos para ajudar Laurel, o Aventureiro, a coletar muitas jóias!"
         },
         "coursec-2021/Programming in Artist": {
           "overview": "Nesta lição, os alunos assumirão o controle do Artista para concluir os desenhos na tela. Esta etapa do Artista permitirá que os alunos criem imagens de complexidade crescente usando novos blocos como \"avançar em 100 pixels\" e \"virar à direita em 90 graus\".",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Obtenha retratores para sua classe para visualizar os ângulos que eles devem usar para completar os quebra-cabeças.\n-   Imprima um**\\\\ \\*Adesão do Aluno** para cada aluno.",
           "purpose": "Dando continuidade à experiência anterior com sequenciamento, esta lição irá trabalhar para inspirar mais criatividade com a codificação. O objetivo é consolidar o conhecimento sobre sequenciamento apresentando novos blocos e objetivos. Neste caso, os estudantes aprendem mais sobre pixels e ângulos usando os novos blocos, enquanto ainda praticam suas habilidades de sequenciamento. Além disso, os estudantes terão capacidade para visualizar novos objetivos como codificar o Artista para desenhar um quadrado.",
           "student_overview": "Crie belas imagens programando o Artista."
         },
         "coursec-2021/Loops: My Loopy Robotic Friends": {
           "overview": "Com base na atividade inicial \"Meus amigos robóticos\", os alunos lidam com projetos maiores e mais complicados. Para programar seus \"robôs\" para concluir esses projetos maiores, os alunos precisarão identificar padrões repetidos em suas instruções que possam ser substituídos por um loop.",
+          "preparation": "-   Certifique-se de que cada aluno tenha um diário.\n-   Prepare uma pilha de 20 copos de papel (ou **\\\\ \\*trapézios de papel**) para cada grupo de 4 alunos.\n-   Exiba os símbolos**\\\\ \\*** onde os alunos podem fazer referência ao longo da lição.\n-   (Opcional) Imprima uma **\\\\ \\*Idéias de empilhamento de copo** por grupo de 4 alunos.",
           "purpose": "Esta lição funciona com uma reintrodução aos laços, usando agora o conhecido conjunto de instruções de programação de \"robôs\". Os estudantes desenvolverão habilidades de pensamento crítico ao procurar padrões de repetição nos movimentos de colegas e determinar como simplificar os padrões repetidos usando laços.",
           "student_overview": "Nesta lição, você programará seus colegas novamente, mas, usando loops, poderá resolver problemas maiores e mais complicados."
         },
         "coursec-2021/Loops with Rey and BB-8": {
           "overview": "Com base no conceito de repetir instruções de \"Getting Loopy\", nesta etapa, os alunos usarão loops para ajudar o BB-8 a atravessar um labirinto com mais eficiência do que antes.",
+          "preparation": "-   Jogue os quebra-cabeças para determinar se haverá alguma área problemática para sua classe.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Nesta aula, os alunos aprenderão mais sobre loops e como implementá-los no código Blockly. Usar loops é uma habilidade importante na programação porque repetir comandos manualmente é entediante e ineficiente. Com os quebra-cabeças da Code.org, os alunos aprenderão a adicionar instruções aos loops existentes, reunir códigos repetidos em loops e reconhecer padrões que precisam ser repetidos. Deve-se notar que os alunos enfrentarão quebra-cabeças com muitas soluções diferentes. Isso abrirá discussões sobre as várias maneiras de resolver quebra-cabeças com vantagens e desvantagens para cada abordagem.",
           "student_overview": "Ajude o BB-8 através de labirintos usando loops! "
         },
         "coursec-2021/Loops in Harvester": {
+          "purpose": "Nesta lição, os alunos usarão loops para repetir ações como colher abóboras. Novos padrões surgirão e os alunos usarão criatividade e pensamento lógico para determinar qual código precisa ser repetido e quantas vezes.",
           "student_overview": "Vamos usar loops para ajudar a colheitadeira a coletar alguns vegetais!"
         },
         "coursec-2021/Sticker Art with Loops": {
+          "overview": "Esta lição**mini-projeto** baseia-se na compreensão dos loops das lições anteriores. Os alunos criarão obras de arte exclusivas com o Artista.",
+          "preparation": "-   Pratique fazer seu próprio design. Anote como esses níveis são diferentes de tudo o que veio antes.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
           "purpose": "Esta série destaca o poder dos laços com projetos criativos e pessoais.  \n\nOferecida como uma sequência com o suporte de um projeto, esta progressão irá permitir que os estudantes continuem a desenvolver seu próprio trabalho e criem artefatos incríveis.",
           "student_overview": "Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!"
         },
         "coursec-2021/Events: The Big Event": {
           "overview": "Em breve, os alunos aprenderão que os eventos são uma ótima maneira de adicionar flexibilidade a um algoritmo pré-escrito. Às vezes, você deseja que seu programa seja capaz de responder ao usuário exatamente quando o usuário deseja. Os eventos podem tornar seu programa mais interessante e interativo.",
+          "preparation": "-   Imprima ou exiba o **\\\\ \\*Event Controller**.\n-   Imprima uma **\\\\ \\*avaliação** para cada aluno.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Hoje, os alunos aprenderão a distinguir eventos e ações. Os alunos verão as atividades interrompidas por ter um “botão” pressionado em um controle remoto de papel. Ao ver esse evento, a classe reagirá com uma ação única. Os eventos são amplamente utilizados na programação e devem ser facilmente reconhecíveis após esta lição.",
           "student_overview": "Jogue um jogo divertido para aprender sobre os eventos. "
         },
         "coursec-2021/Build a Flappy Game": {
           "overview": "Nesta etapa especial, os alunos constroem seu próprio jogo Flappy Bird usando manipuladores de eventos para detectar cliques do mouse e colisões de objetos. No final do nível, os alunos poderão personalizar seu jogo alterando os visuais ou regras.",
+          "purpose": "Eventos são muito comuns em programas de computador. Nesta lição, os alunos desenvolverão ainda mais sua compreensão dos eventos fazendo um jogo _Flappy Bird_. Os alunos aprenderão a fazer seu personagem se mover pela tela, fazer barulhos e reagir a obstáculos com base em eventos iniciados pelo usuário.",
           "student_overview": "Construa seu próprio jogo Flappy Bird da maneira que quiser e compartilhe com seus amigos!"
         },
         "coursec-2021/Events in Play Lab": {
@@ -201,21 +439,31 @@
         },
         "coursec-2021/Picturing Data": {
           "overview": "Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos.",
+          "preparation": "-   Imprima uma planilha **\\\\ \\*** para cada aluno.\n    — Experimente a lição de hoje no Code Studio. Isso deve ser usado como uma ferramenta para as atividades de hoje. Esteja preparado para projetá-lo para a classe ou permitir que os alunos o visitem em seus próprios computadores.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Os computadores foram criados para ajudar a processar dados. Há uma quantidade crescente de dados no mundo, portanto, ser capaz de lê-los e analisá-los é importante. Esta lição está aqui para garantir que os alunos tenham a experiência básica de coletar, visualizar e analisar um conjunto simples de dados.",
           "student_overview": "Os dados podem ser usados ​​para ajudar os alunos a entender seu mundo e responder a perguntas interessantes. Nesta lição, os alunos coletarão dados de um projeto do Play Lab e os visualizarão usando diferentes tipos de gráficos."
         },
         "coursec-2021/Binary Bracelets": {
           "overview": "Binário é extremamente importante no mundo dos computadores. Atualmente, a maioria dos computadores armazena todos os tipos de informações em formato binário. Esta lição ajuda a demonstrar como é possível tirar algo da vida real e traduzi-lo em uma série de prós e contras.",
+          "preparation": "-   (Opcional) Assista ao vídeo**\\\\ \\*Lição em Ação**.\n    — Reúna marcadores para as pulseiras. Outras decorações, como miçangas e limpadores de tubos, são opcionais.\n-   Imprima uma planilha**\\\\ \\*e uma \\*\\*\\\\ \\*avaliação** por aluno.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.\n-   (Opcional) Escreva uma mensagem curta no quadro em binário.",
+          "purpose": "Nesta lição, os alunos aprenderão como as informações são representadas de forma que um computador possa interpretá-las e armazená-las. Ao aprender binário, os alunos terão a oportunidade de escrever códigos e compartilhá-los com colegas como mensagens secretas. Isso pode estar relacionado à forma como os computadores lêem um programa, traduzem para binário, usam as informações de alguma forma e, em seguida, respondem de uma maneira que os humanos possam entender. Por exemplo, quando digitamos uma frase em um documento e pressionamos salvar, um computador converte a frase em binário, armazena as informações e publica uma mensagem indicando que o documento foi salvo.",
           "student_overview": "Crie sua própria pulseira binária e aprenda como os computadores lembram informações!"
         },
         "coursec-2021/End of Course Project: Create a Play Lab Game": {
           "overview": "Esta lição fundamental leva os alunos ao processo de criar, desenvolver e apresentar seus próprios projetos do Play Lab! Para garantir que esse processo ocorra sem problemas, fornecemos uma estrutura passo a passo para os alunos seguirem, desde o planejamento em papel até a codificação em nosso site. Além disso, oferecemos idéias para ajudar os professores a facilitar um final de demonstração! ",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Imprima um **\\\\ \\*Guia de planejamento de projeto** para cada aluno (ou par).\n-   Revise o documento\\*\\*\\\\ \\*Guia de Planejamento de Projetos (Exemplar) \\*\\*.\n-   (Opcional) Complete seu próprio guia de planejamento e codifique seu próprio projeto para mostrar aos alunos!",
+          "purpose": "Esta lição oferece aos alunos espaço para criar um projeto de design próprio, usando um processo passo a passo que requer planejamento, mas também permite ampla criatividade.",
           "student_overview": "Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto."
         },
         "coursed-2021/lesson-5": {
+          "overview": " [![Educação do senso comum](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEsta lição foi originalmente criada por [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nSenhas online mais fortes e seguras são uma boa ideia para todos. Mas como podemos ajudar as crianças a criar senhas melhores e realmente se lembrar delas? Use as dicas desta lição para ajudar as crianças a criar senhas seguras e memoráveis.",
+          "preparation": "-   Revise os materiais instrucionais.\n-   Imprima folheto (s) para cada aluno.\n    — Prepare papel de escrita ou cadernos para os alunos.",
+          "purpose": "A Common Sense Education criou esta lição para ensinar aos alunos como senhas fortes podem ajudar a proteger sua privacidade.",
           "student_overview": "Nesta lição, você aprenderá sobre como as senhas protegem suas informações e como criar uma boa senha."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "overview": "Ao \"programar\" uns aos outros para desenhar imagens, os alunos têm a oportunidade de experimentar alguns dos principais conceitos de programação de uma maneira divertida e acessível. A aula começará com os alunos usando símbolos para instruir uns aos outros a colorir quadrados em papel milimétrico, em um esforço para reproduzir uma imagem existente. Se houver tempo, a lição pode terminar com imagens criadas pelos alunos.  ",
+          "preparation": "-   (Opcional) Assista ao vídeo**\\\\ \\*Lição em Ação**.\n-   Imprima uma planilha **\\\\ \\*** e **\\\\ \\*avaliação** para cada aluno.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
           "purpose": "O objetivo desta atividade é desenvolver habilidades de pensamento crítico e a empolgação para o curso ao apresentar alguns conceitos fundamentais de programação, que serão usados durante o curso. Ao apresentar conceitos básicos como sequenciamento e algoritmos à turma em uma atividade desconectada, os estudantes que se sentem intimidados com o computador ainda podem desenvolver uma base de compreensão sobre estes tópicos. Nesta lição, os estudantes aprenderão a desenvolver um algoritmo e codificá-lo em um programa. ",
           "student_overview": "Nesta lição, você programará seu colega de classe para desenhar desenhos!"
         },
@@ -225,205 +473,299 @@
           "student_overview": "Esta lição lhe permitirá praticar as habilidades necessárias para este curso."
         },
         "coursed-2021/Relay Programming": {
+          "preparation": "-   Assista ao **\\\\ \\*Vídeo do Professor**.\n-   Localize um amplo espaço aberto para esta atividade, como a academia ou o campo ao ar livre.\n-   Imprima um **\\\\ \\*Pacote de Atividade** para cada grupo.\n-   Forneça a cada grupo bastante papel e canetas/lápis.\n    — Imprima uma planilha\\*\\*\\\\ \\*para cada aluno.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "O trabalho em equipe é muito importante na ciência da computação. As equipes escrevem e depuram código umas com as outras, em vez de trabalharem como indivíduos. Nesta lição, os alunos aprenderão a trabalhar juntos e, ao mesmo tempo, serem tão eficientes quanto possível. \n\nEsta atividade também fornece um senso de urgência que ensinará os alunos a equilibrar seu tempo com cuidado e evitar erros sem ficar muito para trás. Essa experiência pode ser estressante (o que é esperado!) Certifique-se de fornecer aos alunos as ferramentas para lidar com possíveis frustrações.",
           "student_overview": "Lembra no início do curso quando você fez desenhos com código? Nesta lição, você estará trabalhando com uma equipe para fazer algo muito semelhante!"
         },
         "coursed-2021/Debugging in Collector": {
           "overview": "Nesta atividade online, os alunos praticarão a depuração no ambiente \"coletor\". Os alunos aprenderão a ler e editar código para corrigir quebra-cabeças com algoritmos simples, laços e laços aninhados.",
+          "purpose": "O objetivo desta lição é ensinar aos alunos que o fracasso é normal ao aprender uma nova habilidade. Os alunos receberão programas pré-escritos que NÃO funcionam. Eles serão solicitados a corrigir esses programas. Esse processo, chamado de depuração, ensina aos alunos habilidades essenciais de resolução de problemas e pensamento crítico. Essas habilidades são transferidas à medida que os alunos avançam para projetos de programação cada vez mais difíceis.",
           "student_overview": "Você já teve problemas durante a codificação? Nesta lição, você aprenderá sobre os segredos da depuração. Depuração é o processo de encontrar e corrigir problemas no seu código."
         },
         "coursed-2021/Events in Bounce": {
           "overview": "Nesta atividade online, os alunos aprenderão o que são eventos e como os computadores os usam em programas como videogames. Os alunos trabalharão com quebra-cabeças, fazendo o programa reagir a eventos (como botões de seta sendo pressionados.) No final do quebra-cabeça, os alunos terão a oportunidade de personalizar seu jogo com diferentes velocidades e sons.",
+          "preparation": "-   Certifique-se de que cada aluno tenha um diário de reflexão.\n-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Leia o deque de slides **\\\\ \\*** (a ser apresentado aos alunos no final da aula).",
           "purpose": "Eventos são muito comuns em ciência da computação, especialmente em jogos eletrônicos.  \n\nNesta lição, os estudantes desenvolverão sua compreensão sobre eventos ao criar um jogo baseado em esportes. Os estudantes irão aprender a fazer sua raquete se mover de acordo com as teclas de direção e emitir sons quando objetos colidem. No fim, eles conseguirão personalizar seu jogo e torná-lo ainda mais especial!",
           "student_overview": "Você já desejou poder jogar videogame na escola? Nesta lição, você poderá fazer o seu próprio!"
         },
         "coursed-2021/Build a Star Wars Game": {
           "overview": "Nesta lição, os alunos irão praticar o uso de eventos para criar um jogo que eles possam compartilhar on-line. Apresentando R2-D2 e outros personagens de Star Wars, os alunos serão guiados através de eventos e, em seguida, terão espaço para criar seu próprio jogo.",
+          "preparation": "-   Jogue os quebra-cabeças e encontre quaisquer áreas problemáticas em potencial.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "CS Fundamentals não é simplesmente ensinar ciência da computação, é sobre tornar a ciência da computação divertida e emocionante. Nesta série, os alunos aprenderão sobre eventos usando personagens populares de _Star Wars_. Esses quebra-cabeças confundem as linhas entre “aprendizado” e “diversão”. Além disso, os alunos aprenderão a reconhecer práticas regulares de programação em jogos para que, quando jogarem em casa, possam ver princípios comuns da ciência da computação sendo usados.",
           "student_overview": "Sinta a força ao construir seu próprio jogo Star Wars nesta lição."
         },
         "coursed-2021/Dance Party": {
           "overview": "Nesta lição, os alunos irão programar sua própria festa de dança interativa. Esta atividade requer som, pois a ferramenta foi criada para responder à música.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.\n    — Considere a necessidade de fones de ouvido. Essa atividade depende do som.",
           "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos).",
           "student_overview": "Hora de celebrar! Nesta lição, você programa sua própria festa de dança interativa."
         },
         "coursed-2021/Loops in Ice Age": {
           "overview": "Como uma rápida atualização (ou introdução) do uso de loops, nesta etapa, os alunos usam o bloco `repeat` para levar o Scrat à bolota com mais eficiência.",
+          "preparation": "-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Nesta aula, os alunos aprenderão mais sobre loops e como implementá-los no código Blockly. Usar loops é uma habilidade importante na programação porque repetir comandos manualmente é entediante e ineficiente. Com esses quebra-cabeças da Code.org, os alunos aprenderão a adicionar instruções aos loops existentes, reunir códigos repetidos em loops e reconhecer padrões que precisam ser repetidos.",
           "student_overview": "Nesta lição, você usará o bloco de repetição para ajudar o Scrat a alcançar a bolota da maneira mais eficiente possível."
         },
         "coursed-2021/Loops in Artist": {
           "overview": "Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade funciona como um exercício de depuração para prática extra de solução de problemas.",
+          "purpose": "Esta série destaca o poder dos loops com uma variedade de quebra-cabeças destinados a fazer os alunos pensarem sobre por que os loops `repetido` são superiores aos longos.",
           "student_overview": "Nesta lição, os loops facilitam a criação de imagens interessantes com o Artista!"
         },
         "coursed-2021/Nested Loops in Bee": {
           "overview": "Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em \\`Executar '.",
+          "purpose": "Nesta introdução aos loops aninhados, os alunos sairão de sua zona de conforto para criar soluções mais eficientes para quebra-cabeças.  \n\nEm quebra-cabeças anteriores, os loops levavam os alunos a reconhecer a repetição. Aqui, os alunos aprenderão a reconhecer padrões \\_dentro de padrões repetidos para desenvolver esses loops aninhados. Esta etapa começa incentivando os alunos a tentar resolver um quebra-cabeça em que o código é irritante e complexo demais para escrever o longo caminho. Depois que um vídeo apresenta loops aninhados, os alunos recebem um exemplo e são solicitados a prever o que acontecerá quando um loop for colocado dentro de outro loop. Essa progressão leva a muita prática para os alunos solidificarem e desenvolverem sua compreensão do loop na programação.",
           "student_overview": "Loops dentro de loops dentro de loops. O que isto significa? Esta lição ensinará o que acontece quando você cria um loop aninhado."
         },
         "coursed-2021/Conditionals with Cards": {
+          "overview": "Nesta lição**configuração de contexto**, os alunos escreverão declarações \\_condicionais (se/else) \\_ para declarar as regras de jogos de cartas simples. ",
+          "preparation": "-   Reúna baralhos de cartas ou algo parecido.\n-   Imprima ou exiba os programas de amostra**\\\\ \\***.\n    — Imprima uma **\\\\ \\*avaliação** para cada aluno.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Uma das melhores partes do ensino de condicionais é que os alunos já entendem o conceito de sua vida cotidiana. \n\nEsta lição mescla a ciência da computação com o mundo real, desenvolvendo a capacidade de saber se uma condição é verdadeira ou falsa. Os alunos aprenderão a usar instruções if para declarar quando um determinado comando deve ser executado, bem como instruções if/else para declarar quando um comando deve ser executado e o que executar de outra forma. Os alunos podem não reconhecer a palavra condicionais, mas a maioria dos alunos entenderá a ideia de usar “se” para garantir que alguma ação ocorra apenas quando deveria.",
           "student_overview": "É hora de jogar um jogo em que você ganha pontos apenas sob certas condições!"
         },
         "coursed-2021/lesson-6": {
           "overview": "Esta lição foi criada originalmente para a Hour of Code, juntamente com a equipe do Minecraft. Os alunos terão a chance de praticar as idéias que aprenderam até o momento, além de obter uma prévia dos condicionais!",
+          "preparation": "-   Jogue os quebra-cabeças associados a esta lição para encontrar quaisquer áreas problemáticas em potencial para sua classe.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Este conjunto de quebra-cabeças funcionará para solidificar e desenvolver o conhecimento de loops e introduzir condicionais. Ao emparelhar esses dois conceitos, os alunos poderão explorar o potencial de criar programas divertidos e inovadores em um ambiente novo e empolgante.",
           "student_overview": "Evite a lava! Aqui você começará a aprender sobre condicionais no mundo do Minecraft."
         },
         "coursed-2021/Conditionals in Bee": {
           "overview": "Até esse momento, os alunos escreviam um código que é executado exatamente da mesma maneira cada vez que é executado - confiável, mas não muito flexível. Nesta lição, sua classe começará a codificar com condicionais, permitindo que eles escrevam códigos que funcionem de maneira diferente, dependendo das condições específicas que o programa encontra.",
+          "purpose": "Depois de serem apresentados aos condicionais em “Condicionais com Cartões”, os alunos agora praticarão o uso deles em seus programas. Os blocos “if/else” permitirão um programa mais flexível. A abelha só coletará néctar _se_ houver uma flor ou fazer mel _se_ houver um favo de mel. ",
           "student_overview": "Agora que você entende os condicionais, é hora de programar a Abelha para coletar mel e néctar. "
         },
         "coursed-2021/While Loops in Farmer": {
+          "purpose": "À medida que seus alunos continuam a aprofundar seus conhecimentos sobre loops, eles encontrarão problemas em que um comando precisa ser repetido, mas não se sabe quantas vezes ele precisa ser repetido. É aqui que entram os loops while. Na lição de hoje, os alunos desenvolverão uma compreensão iniciante de loops baseados em condições e também expandirão seu conhecimento sobre loops em geral. ",
           "student_overview": "Laços são muito úteis na codificação. Esta lição ensinará sobre um novo tipo de laço: laços enquanto!"
         },
         "coursed-2021/Until Loops in Maze": {
           "overview": "Nesta lição, os alunos aprenderão sobre os loops \\`até '. Os alunos criarão programas que terão como personagem principal repetir ações até atingirem o ponto de parada desejado.",
+          "purpose": "Este conjunto de quebra-cabeças funcionará para solidificar e desenvolver o conhecimento de loops adicionando o condicional `até`. Ao emparelhar esses conceitos, os alunos poderão explorar o potencial de criar programas complexos e inovadores.",
           "student_overview": "Você pode fazer coisas incríveis quando usar loops `até`!"
         },
         "coursed-2021/End of Course Project": {
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Imprima um **\\\\ \\*Guia de planejamento de projeto** para cada aluno (ou par).\n-   (Opcional) Complete seu próprio guia de planejamento e codifique seu próprio projeto para mostrar aos alunos!",
+          "purpose": "Esta lição oferece aos alunos espaço para criar um projeto de design próprio, usando um processo passo a passo que requer planejamento, mas também permite ampla criatividade.",
           "student_overview": "Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto."
         },
         "express-2021/Programming with Angry Birds": {
           "overview": "Usando os personagens do jogo Angry Birds, os alunos desenvolverão algoritmos sequenciais para mover um pássaro de um lado de um labirinto para o porco do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe. \n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Nesta lição, os alunos desenvolverão habilidades de programação em uma plataforma de computador. O formato baseado em blocos desses quebra-cabeças ajuda os alunos a aprender sobre sequência e conceitos, sem ter que se preocupar em aperfeiçoar a sintaxe.",
           "student_overview": "Aprenda sobre sequências e algoritmos com o Angry Birds."
         },
         "express-2021/Debugging with Scrat": {
           "overview": "A depuração é um elemento essencial para aprender a programar. Nesta lição, os alunos encontrarão quebra-cabeças que foram resolvidos incorretamente. Eles precisarão percorrer o código existente para identificar erros, incluindo loops incorretos, blocos ausentes, blocos extras e blocos fora de ordem.",
+          "preparation": "-   Jogue a lição para encontrar quaisquer áreas problemáticas em potencial para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe. \n    — Certifique-se de que cada aluno tenha um Reflection Journal.",
+          "purpose": "Os alunos da sua turma podem ficar frustrados com esta lição por causa da essência da depuração. A depuração é um conceito muito importante para a programação de computadores. Os cientistas da computação precisam ser realmente bons em encontrar os bugs em seus próprios programas. A depuração força os alunos a reconhecer problemas e superá-los enquanto desenvolvem habilidades de pensamento crítico e resolução de problemas.",
           "student_overview": "Encontre problemas em quebra-cabeças e pratique suas habilidades de depuração."
         },
         "express-2021/Collecting Treasure with Laurel": {
-          "overview": "Nesta série de quebra-cabeças, os alunos continuarão a desenvolver sua compreensão de algoritmos e depuração. Com um novo personagem, Laurel, o Aventureiro, os alunos criarão algoritmos sequenciais para que Laurel pegue um tesouro enquanto ela caminha por um caminho."
+          "overview": "Nesta série de quebra-cabeças, os alunos continuarão a desenvolver sua compreensão de algoritmos e depuração. Com um novo personagem, Laurel, o Aventureiro, os alunos criarão algoritmos sequenciais para que Laurel pegue um tesouro enquanto ela caminha por um caminho.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar áreas problemáticas em potencial para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Nesta aula, os alunos estarão praticando suas habilidades de programação usando um novo personagem, _Laurel the Adventurer_. Quando alguém começa a programar, ele reúne instruções em uma ordem específica usando algo que uma máquina pode ler. Através do uso da programação, os alunos desenvolverão uma compreensão de como um computador navega pelas instruções e pela ordem. Usar um novo personagem com um objetivo de quebra-cabeça diferente ajudará os alunos a ampliar seu escopo de experiência com sequenciamento e algoritmos em programação.",
+          "student_overview": "Escreva algoritmos para ajudar _Laurel the Adventurer_ a coletar muitas joias!"
         },
         "express-2021/Creating Art with Code": {
           "overview": "Nesta lição, os alunos assumirão o controle do Artista para concluir os desenhos na tela. Esta etapa do Artista permitirá que os alunos criem imagens de complexidade crescente usando novos blocos como \"avançar em 100 pixels\" e \"virar à direita em 90 graus\".",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Obtenha retratores para sua classe para visualizar os ângulos que eles devem usar para completar os quebra-cabeças.\n-   Imprima um**\\\\ \\*Adesão do Aluno** para cada aluno.",
           "purpose": "Dando continuidade à experiência anterior com sequenciamento, esta lição irá trabalhar para inspirar mais criatividade com a codificação. O objetivo é consolidar o conhecimento sobre sequenciamento apresentando novos blocos e objetivos. Neste caso, os estudantes aprendem mais sobre pixels e ângulos usando os novos blocos, enquanto ainda praticam suas habilidades de sequenciamento. Além disso, os estudantes terão capacidade para visualizar novos objetivos como codificar o Artista para desenhar um quadrado.",
           "student_overview": "Crie belas imagens programando o Artista."
         },
         "express-2021/Swimming Fish in Sprite Lab": {
           "overview": "Nesta lição, os alunos aprenderão sobre os dois conceitos no coração do Sprite Lab: sprites e comportamentos. Sprites são personagens ou objetos na tela que os alunos podem mover, alterar e manipular. Comportamentos são ações que os sprites executarão continuamente até serem interrompidos.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Esta lição foi elaborada para apresentar aos alunos o vocabulário básico do Sprite Lab e permitir que eles apliquem conceitos que aprenderam em outros ambientes a essa ferramenta. Ao criar um aquário, os alunos começarão a compreender o modelo de programação dessa ferramenta e explorarão maneiras de usá-la para se expressar.",
           "student_overview": "Aprenda a criar e editar sprites."
+        },
+        "express-2021/lesson-2": {
+          "preparation": "Jogue pelos níveis e revise os slides da lição**\\\\ \\***.",
+          "purpose": "Esta lição foi criada para apresentar aos alunos a programação no Sprite Lab. Os alunos começarão a compreender o modelo de programação dessa ferramenta e explorarão maneiras de usá-la para se expressar."
+        },
+        "express-2021/lesson-3": {
+          "preparation": "Jogue os níveis e revise os slides da lição.",
+          "purpose": "Esta lição foi elaborada para apresentar aos alunos a programação com eventos. Ao longo deste curso, os eventos serão a principal forma de os alunos mudarem a forma como seus programas são executados ao longo do tempo ou em resposta ao usuário."
         },
         "express-2021/Virtual Pet with Sprite Lab": {
           "overview": "Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta \"Trajes\" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Esta lição permite que os alunos apliquem conceitos de programação de aulas anteriores em outro contexto criativo. ",
           "student_overview": "Nesta lição, os alunos criarão um animal de estimação virtual interativo que se parece e se comporta como deseja. Os alunos usarão a ferramenta \"Trajes\" do Sprite Lab para personalizar a aparência do animal. Eles então usarão eventos, comportamentos e outros conceitos que aprenderam para dar vida própria ao animal de estimação!"
         },
         "express-2021/lesson-1": {
           "overview": "Nesta lição, os alunos irão programar sua própria festa de dança interativa. Esta atividade requer som, pois a ferramenta foi criada para responder à música.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.\n    — Considere a necessidade de fones de ouvido. Essa atividade depende do som.",
           "purpose": "Esta lição apresenta os principais conceitos do CS sobre codificação e programação de eventos (usando blocos).",
           "student_overview": "Hora de celebrar! Nesta lição, você programa sua própria festa de dança interativa."
         },
         "express-2021/Loops with Rey and BB-8": {
+          "overview": "Esta lição**construção de habilidade** faz com que os alunos usem loops para ajudar o personagem _Star Wars_ _BB-8_ a atravessar um labirinto com eficiência.",
+          "preparation": "-   Jogue os quebra-cabeças para determinar se haverá alguma área problemática para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Nesta aula, os alunos aprenderão sobre loops e como implementá-los no código Blockly. Usar loops é uma habilidade importante na programação porque repetir comandos manualmente é entediante e ineficiente. Com os quebra-cabeças da Code.org, os alunos aprenderão a adicionar instruções aos loops existentes, reunir códigos repetidos em loops e reconhecer padrões que precisam ser repetidos. Deve-se notar que os alunos enfrentarão quebra-cabeças com muitas soluções diferentes. Isso abrirá discussões sobre as várias maneiras de resolver quebra-cabeças com vantagens e desvantagens para cada abordagem.",
           "student_overview": "Ajude o BB-8 através de labirintos usando loops! "
         },
         "express-2021/Sticker Art with Loops": {
           "overview": "Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.",
+          "preparation": "-   Pratique fazer seu próprio design. Anote como esses níveis são diferentes de tudo o que veio antes.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
           "purpose": "Esta série destaca o poder dos laços com projetos criativos e pessoais.  \n\nOferecida como uma sequência com o suporte de um projeto, esta progressão irá permitir que os estudantes continuem a desenvolver seu próprio trabalho e criem artefatos incríveis.",
           "student_overview": "Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!"
         },
         "express-2021/Nested Loops in Maze": {
           "overview": "Nesta atividade on-line, os alunos terão a oportunidade de elevar sua compreensão dos laços a um nível totalmente novo. Jogando com a Abelha e Plantas vs Zumbis, os alunos aprenderão como programar um laço para ficar dentro de outro laço. Eles também serão incentivados a descobrir como poucas alterações em qualquer laço afetarão seu programa quando clicarem em \\`Executar '.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Nesta introdução aos loops aninhados, os alunos sairão de sua zona de conforto para criar soluções mais eficientes para quebra-cabeças.  \n\nEm quebra-cabeças anteriores, os loops levavam os alunos a reconhecer a repetição. Aqui, os alunos aprenderão a reconhecer padrões \\_dentro de padrões repetidos para desenvolver esses loops aninhados. Esta etapa começa incentivando os alunos a tentar resolver um quebra-cabeça em que o código é irritante e complexo para escrever o longo caminho. Depois que um vídeo apresenta loops aninhados, os alunos recebem um exemplo e são solicitados a prever o que acontecerá quando um loop for colocado dentro de outro loop. Essa progressão leva a muita prática para os alunos solidificarem e desenvolverem sua compreensão do loop na programação.",
           "student_overview": "Loops dentro de loops dentro de loops. O que isto significa? Esta lição ensinará o que acontece quando você cria um loop aninhado."
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "overview": "Agora que os alunos sabem como estratificar seus loops, eles podem criar tantas coisas bonitas. Esta lição levará os alunos a uma série de exercícios para ajudá-los a criar suas próprias imagens prontas para o portfólio, usando as excelentes habilidades de patinação no gelo de Anna e Elsa!",
+          "preparation": "-   Jogue a lição para encontrar e possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
           "purpose": "Nesta série, os estudantes conseguirão praticar laços aninhados enquanto criam imagens que eles serão incentivados a compartilhar. \n\nComeçando com algumas instruções, os estudantes tomarão suas próprias decisões no sentido de criar projetos para repetições. Depois eles irão trabalhar de diversas maneiras para terminar como uma obra de arte que é realmente original.",
           "student_overview": "Anna e Elsa têm excelentes habilidades de patinação no gelo, mas precisam de sua ajuda para criar padrões no gelo. Use loops aninhados para criar algo super legal. "
         },
         "express-2021/Looking Ahead with Minecraft ": {
           "overview": "Esta lição foi criada originalmente para a Hour of Code, juntamente com a equipe do Minecraft. Os alunos terão a chance de praticar as idéias que aprenderam até o momento, além de obter uma prévia dos condicionais!",
+          "preparation": "-   Jogue os quebra-cabeças associados a esta lição para encontrar quaisquer áreas problemáticas em potencial para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Este conjunto de quebra-cabeças funcionará para solidificar e desenvolver o conhecimento de loops e introduzir condicionais. Ao emparelhar esses dois conceitos, os alunos poderão explorar o potencial de criar programas divertidos e inovadores em um ambiente novo e empolgante.",
           "student_overview": "Evite a lava! Aqui você começará a aprender sobre condicionais no mundo do Minecraft."
         },
         "express-2021/If/Else with Bee": {
           "overview": "Até esse momento, os alunos escreviam um código que é executado exatamente da mesma maneira cada vez que é executado - confiável, mas não muito flexível. Nesta lição, sua classe começará a codificar com condicionais, permitindo que eles escrevam códigos que funcionem de maneira diferente, dependendo das condições específicas que o programa encontra.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Os alunos praticarão o uso de condicionais em seus programas. Os blocos if/else permitirão um programa mais flexível. A abelha só coletará néctar _se_ houver uma flor ou fazer mel _se_ houver um favo de mel. ",
           "student_overview": "Agora que você entende os condicionais, é hora de programar a Abelha para coletar mel e néctar. "
         },
         "express-2021/While Loops with the Farmer": {
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "À medida que seus alunos continuam a aprofundar seus conhecimentos sobre loops, eles encontrarão problemas em que um comando precisa ser repetido, mas não se sabe quantas vezes ele precisa ser repetido. É aqui que entram os loops while. Na lição de hoje, os alunos desenvolverão uma compreensão iniciante de loops baseados em condições e também expandirão seu conhecimento sobre loops em geral. ",
           "student_overview": "Laços são muito úteis na codificação. Esta lição ensinará sobre um novo tipo de laço: laços enquanto!"
         },
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "overview": "Esta lição foi criada originalmente para a Hour of Code, juntamente com a equipe do Minecraft. Os alunos terão a chance de praticar as idéias que aprenderam até o momento, além de obter uma prévia dos condicionais!",
+          "preparation": "-   Jogue os quebra-cabeças associados a esta lição para encontrar quaisquer áreas problemáticas em potencial para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Este conjunto de quebra-cabeças funcionará para solidificar e desenvolver o conhecimento de loops e condicionais. Ao emparelhar esses dois conceitos, os alunos poderão explorar o potencial de criar programas divertidos e inovadores em um ambiente novo e empolgante.",
           "student_overview": "Aqui você aprenderá sobre condicionais no mundo do Minecraft."
         },
         "express-2021/Until Loops in Maze": {
           "overview": "Nesta lição, os alunos aprenderão sobre os loops \\`até '. Os alunos criarão programas que terão como personagem principal repetir ações até atingirem o ponto de parada desejado.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Este conjunto de quebra-cabeças funcionará para solidificar e desenvolver o conhecimento de loops adicionando o até condicional. Ao emparelhar esses conceitos, os alunos poderão explorar o potencial de criar programas complexos e inovadores.",
           "student_overview": "Você pode fazer coisas incríveis quando usar loops `até`!"
         },
         "express-2021/Harvesting with Conditionals": {
           "overview": "Os alunos irão praticar os laços `enquanto`,`ate` e `se / senao`. Todos esses blocos usam condicionais. Ao praticar todos os três, os alunos aprenderão a escrever código complexo e flexível.",
+          "preparation": "-   Jogue a lição para encontrar quaisquer áreas problemáticas em potencial para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
           "purpose": "Praticar o uso de condicionais em diferentes cenários ajuda a desenvolver a compressão do estudante sobre a capacidade de condicionais. Na lição anterior, os estudantes usaram condicionais apenas para se mover por um labirinto. Nesta lição, os estudantes usarão condicionais para ajudar a fazendeira a saber quando fazer a colheita. Novos padrões surgirão, e os estudantes usarão a criatividade e o pensamento lógico para determinar as condições nas quais o código deve ser executado e repetido.",
           "student_overview": "Nem sempre é claro quando usar cada condicional. Esta lição ajudará você a praticar o processo de decisão."
         },
         "express-2021/Functions in Minecraft": {
           "overview": "Os alunos começarão a entender como as funções podem ser úteis nesta divertida e interativa aventura de Minecraft!",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Os alunos descobrirão a versatilidade da programação praticando funções em diferentes ambientes. Aqui, os alunos reconhecerão padrões reutilizáveis e poderão incorporar blocos nomeados para chamar funções predefinidas.",
           "student_overview": "Você pode descobrir como usar funções para o código mais eficiente?"
         },
         "express-2021/Functions with Artist": {
           "overview": "Os alunos serão apresentados ao uso de funções no Code.org. Imagens magníficas serão criadas e modificadas com funções no Artista. Para padrões mais complicados, os alunos aprenderão sobre aninhamento de funções, chamando uma função dentro de outra.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Um dos componentes mais importantes desta lição é fornecer aos alunos um espaço para criar algo do qual eles se orgulham. Esses quebra-cabeças progridem para imagens cada vez mais complexas, mas cada novo quebra-cabeça só se baseia no quebra-cabeça anterior. No final desta lição, os alunos se sentirão confiantes e orgulhosos de seu trabalho árduo.",
           "student_overview": "Faça desenhos complexos mais facilmente com funções!"
         },
         "express-2021/Functions with Harvester": {
           "overview": "Os alunos praticaram a criação de designs impressionantes no Artist e a navegar labirintos no Bee, mas hoje eles usarão funções para colher colheitas em Harvester. Esta lição levará os alunos a usar funções de novas maneiras, combinando-as com loops `while` e instruções`if/else`.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Esta lição tem como objetivo incentivar ainda mais os alunos a usar funções de maneiras mais criativas. Os alunos aprenderão que há muitas maneiras de abordar um problema, mas algumas são mais eficientes do que outras. Esses quebra-cabeças têm como objetivo aumentar a resolução de problemas e as habilidades de pensamento crítico.",
           "student_overview": "As funções economizarão muito trabalho, pois você ajuda o fazendeiro com sua colheita!"
+        },
+        "express-2021/lesson-4": {
+          "preparation": "Jogue os níveis e revise os slides da lição.",
+          "purpose": "Variáveis serão usadas neste curso para armazenar e modificar dados. Nesse ponto, os alunos simplesmente armazenarão e recuperarão valores sem alterá-los. Em aulas posteriores, os alunos armazenarão valores numéricos e os modificarão ao longo do tempo para acompanhar coisas como a pontuação de um jogador em um jogo."
         },
         "express-2021/Variables with Artist": {
           "overview": "Nesta lição, os alunos explorarão a criação de designs repetitivos usando variáveis ​​no ambiente do Artist. Os alunos aprenderão como as variáveis ​​podem ser usadas para tornar o código mais fácil de escrever e mais fácil de ler. Após quebra-cabeças guiados, os alunos terminam em um nível de freeplay para mostrar o que aprenderam e criar seus próprios designs.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "As variáveis são essencialmente espaços reservados para valores que podem ser desconhecidos no momento em que você executa o programa ou para valores que podem mudar durante a execução de um programa. Eles são vitais para a criação de código dinâmico, pois permitem que seu programa mude e cresça com base em qualquer número de modificações potenciais. Essa etapa reforça o uso de variáveis, usando os recursos mais básicos de configuração e uso deles.",
           "student_overview": "Nesta lição, você fará desenhos usando variáveis ​​que mudam à medida que o programa é executado."
         },
         "express-2021/Changing Variables with Bee": {
           "overview": "Esta lição ajudará a ilustrar como as variáveis ​​podem tornar os programas mais poderosos, permitindo que os valores mudem enquanto o código está em execução. ",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Esta lição ilustrará como o código com valores variáveis pode ser útil e preparar os alunos para entender como os “loops for” funcionam nas próximas lições.",
           "student_overview": "Esta abelha adora variáveis!"
         },
         "express-2021/For Loops with Bee": {
           "overview": "Apresentando Bee, esta lição se concentra nos loops `for` e no uso de uma variável de incremento para resolver quebra-cabeças mais complicados. Os alunos começarão revisando os loops das lições anteriores e depois farão uma introdução aos loops `for` para que possam resolver de maneira mais eficaz problemas complicados.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "O conceito de hoje, os loops for são um tópico muito importante na ciência da computação. Além de serem amplamente utilizados, o processo de aprendizado de loops aprimora o aprendizado de outros conceitos importantes (como variáveis e parâmetros). Os alunos terão muita prática ao pensar criticamente nos problemas, determinando os valores inicial, final e de passo para cada loop for. Esse conceito também usa muita matemática, então sinta-se à vontade para combiná-lo com uma aula de matemática para uma experiência de aprendizado ainda mais profunda.",
           "student_overview": "Buzz buzz. Nestes quebra-cabeças, você guiará uma abelha para o néctar e o mel usando loops `for`!"
         },
         "express-2021/For Loops with Artist": {
           "overview": "Nesta lição, os alunos continuam praticando loops `for`, mas desta vez com o Artist. Os alunos irão completar quebra-cabeças combinando as idéias de variáveis, loops e loops `for` para criar designs complexos. No final, eles terão a chance de criar sua própria arte em um nível de freeplay.",
+          "preparation": "-   Jogue a lição para encontrar e possíveis áreas problemáticas para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Criatividade e pensamento crítico se unem lindamente nesta lição. Os alunos continuarão sua prática com loops e variáveis for enquanto criam imagens de cair o queixo. Esta lição inspira uma mente criativa enquanto ensina conceitos básicos para a ciência da computação.",
           "student_overview": "Prepare-se para fazer sua próxima obra-prima. Aqui você usará loops `for` para fazer algumas fotos de cair o queixo."
         },
         "express-2021/End of Course Project": {
+          "preparation": "-   Passe algum tempo fazendo seu próprio projeto com as duas ferramentas de projeto disponíveis para os alunos. Familiarize-se com os recursos e as limitações de cada ferramenta.\n-   Modifique a rubrica\\*\\*\\\\ \\*para se adequar às metas da classe e imprima uma cópia para cada aluno ou grupo.\n-   Modifique o guia de planejamento do projeto\\*\\*\\\\ \\*para se adequar à sua classe e imprima um para cada aluno ou grupo.",
+          "purpose": "Esta lição oferece aos alunos espaço para criar um projeto de design próprio, usando um processo passo a passo que requer planejamento, mas também permite ampla criatividade.",
           "student_overview": "Prepare essas mãos para muita codificação! É hora de começar a construir seu projeto."
         },
         "pre-express-2021/Learn to Drag and Drop": {
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
+          "preparation": "-   Assista ao vídeo **\\\\ \\*Como fazer uma aula no Code.org** - Professor. Crie sua própria seção de aula no Code.org e certifique-se de que cada aluno tenha um cartão com sua **senha** nela.\n    — Certifique-se de que os alunos possam acessar a Lição 2 a partir de seus dispositivos. Considere se você deseja ocultar lições futuras para evitar que os alunos sigam em frente muito rapidamente.\n-   Faça com que o pessoal de TI da escola adicione um link rápido para a seção da turma à área de trabalho do computador.\n-   Consulte o site Common Sense Education para obter mais conteúdo de segurança online.",
+          "purpose": "O principal objetivo desta lição é desenvolver a experiência dos alunos com computadores. Ao cobrir as funções mais básicas do computador, como clicar, arrastar e soltar, estamos criando um campo de jogo mais igualitário na classe para futuros quebra-cabeças. Esta lição também oferece uma ótima oportunidade para introduzir a terminologia básica de hardware de computador, potencialmente incluindo “mouse”, “trackpad” ou “touchscreen”, dependendo de seus dispositivos.",
           "student_overview": "Clique e arraste para finalizar os quebra-cabeças."
         },
         "pre-express-2021/Sequencing with Scrat": {
           "overview": "Esta lição dará aos alunos uma ideia sobre o que esperar quando eles vão para o laboratório de informática. A lição começa com uma breve discussão introduzindo à eles as condutas do laboratório de informática, então eles irão progredir usando um computador para completar quebra-cabeças online.",
+          "preparation": "-   Certifique-se de que cada aluno tenha um Reflection Journal.",
           "purpose": "Nesta lição, os estudantes desenvolverão habilidades de programação e depuração em uma plataforma de computador. O formato baseado em blocos dos quebra-cabeças ajuda os estudantes a aprender sobre conceitos e sequências, sem precisar se preocupar com a perfeição da sintaxe.",
           "student_overview": "Programe Scrat para alcançar a bolota."
         },
         "pre-express-2021/Programming in with Angry Birds": {
           "overview": "Usando personagens da Era do Gelo, os alunos desenvolverão algoritmos seqüenciais para mover o Scrat de um lado de um labirinto para a bolota do outro lado. Para fazer isso, eles empilharão os blocos de código em uma sequência linear, fazendo com que eles se movam reto, vire à esquerda ou vire à direita.",
+          "preparation": "-   Jogue a lição para encontrar quaisquer áreas problemáticas em potencial para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n    — Certifique-se de que cada aluno tenha um Diário de Reflexão.",
           "purpose": "Nesta lição, os estudantes desenvolverão habilidades de programação e depuração em uma plataforma de computador. O formato baseado em blocos dos quebra-cabeças ajuda os estudantes a aprender sobre conceitos e sequências, sem precisar se preocupar com a perfeição da sintaxe."
         },
         "pre-express-2021/Programming with Rey and BB-8": {
           "overview": "Nesta lição, os alunos usarão suas novas habilidades de programação de maneiras mais complicadas para navegar em um curso complicado com o BB-8.",
+          "preparation": "-   Jogue a lição para encontrar quaisquer áreas problemáticas em potencial para sua classe.\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
           "purpose": "Tendo como objetivo a transferência de conhecimento, esta lição dá aos estudantes um novo ambiente para praticar as habilidades que vêm sendo desenvolvidas. Fãs de Guerra nas Estrelas ficarão muito felizes ao ver estes quebra-cabeças. Cada um desta série foi adicionado para proporcionar uma compreensão mais detalhada dos conceitos básicos que serão usados durante o restante do curso."
         },
         "pre-express-2021/Programming in Harvester": {
           "overview": "Os alunos aplicarão os conceitos de programação que aprenderam no ambiente Colheita. Agora, em vez de apenas atingir o objetivo, os alunos precisam coletar milho usando um novo bloco. Os alunos continuarão a desenvolver habilidades de algoritmo seqüencial e começarão a usar o processo de depuração. ",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe\n-   Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Nesta lição, os alunos desenvolverão habilidades de depuração e continuarão desenvolvendo suas habilidades de programação.",
           "student_overview": "Ajude a colheitadeira a coletar vegetais ao longo de um caminho."
         },
         "pre-express-2021/Loops with Scrat": {
+          "preparation": "-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n    — Certifique-se de que cada aluno tenha um Diário de Reflexão.",
           "purpose": "Nesta lição, os estudantes aprenderão mais sobre laços e como implementá-los no código do Blockly. Usar _loops_ (laços) é uma habilidade importante em programação, já que repetir comandos manualmente é aborrecedor e ineficiente. Com os quebra-cabeças do Code.org, os estudantes aprenderão a adicionar instruções a laços existentes, juntar códigos repetidos em laços e reconhecer padrões que precisam ser repetidos.",
           "student_overview": "Ajude Scrat a cobrir mais terreno usando loops."
         },
         "pre-express-2021/Loops with Laurel": {
-          "overview": "Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada."
+          "overview": "Nesta lição, os alunos continuam aprendendo o conceito de loops. Aqui, Laurel, o Aventureiro, usa loops para coletar tesouros em espaços abertos de cavernas. Um novo bloco de obtenção de tesouros é introduzido para ajudá-la em sua jornada.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n    — Certifique-se de que cada aluno tenha um Diário de Reflexão.",
+          "purpose": "Esta lição dá aos alunos mais prática com loops e os incentiva a colocar vários blocos dentro de uma `repetição` enquanto tentam coletar o máximo de tesouros possível."
         },
         "pre-express-2021/Ocean Scene with Loops": {
           "overview": "Retornando às repetições, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na última lição online, repetições foram utilizadas para atravessar um labirinto e coletar tesouro. Aqui, as repetições estão criando padrões. No fim deste nível, os alunos terão a oportunidade de criar as suas próprias imagens usando repetições.",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n    — Certifique-se de que cada aluno tenha um Diário de Reflexão.",
           "purpose": "Esta lição oferece uma perspectiva diferente sobre como os laços podem criar coisas na programação. Os alunos também podem refletir sobre a ineficiência da programação sem laços devido à quantidade de blocos que o programa exigiria sem a ajuda de laços “repeat”.",
           "student_overview": "Use loops e padrões para finalizar as imagens."
         },
         "pre-express-2021/Drawing Gardens with Loops": {
           "overview": "Voltando aos loops, os alunos aprendem a desenhar imagens repetindo sequências simples de instruções. Na lição on-line anterior, loops foram usados ​​para atravessar um labirinto e coletar tesouros. Aqui, os alunos usam loops para criar padrões. No final desta etapa, os alunos terão a oportunidade de criar suas próprias imagens usando loops.",
+          "preparation": "-   Jogue a lição para encontrar quaisquer áreas problemáticas em potencial para sua classe.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
           "purpose": "Esta lição dá uma perspectiva diferente sobre como laços são capazes de criar coisas em programação. Os estudantes testarão suas habilidades de pensamento crítico ao avaliar um certo código e determinar o que é necessário acrescentar para solucionar o quebra-cabeça. Eles também podem refletir sobre a ineficiência da programação sem laços devido à quantidade de blocos que o programa iria necessitar sem a ajuda dos laços de repetição.",
           "student_overview": "Use padrões e loops para finalizar as imagens."
         },
         "pre-express-2021/On the Move with Events": {
           "overview": "Nesta atividade online, os alunos irão ter a oportunidade de aprender a como utilizar eventos no Laboratório de Jogos e aplicar todas as habilidades de programação que eles aprenderam para criar um jogo animado. É hora de ser criativo e criar uma história no Laboratório de Jogos!",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n    — Certifique-se de que cada aluno tenha um Reflection Journal",
           "purpose": "Os alunos irão desenvolver ainda mais sua compreensão de eventos usando o Play Lab hoje. Eventos são muito comuns na maioria dos programas de computador. Nesta atividade, os alunos usarão eventos para fazer um personagem se movimentar pela tela, fazer ruídos e alterar planos de fundo com base em eventos iniciados pelo usuário.",
           "student_overview": "Crie seu próprio jogo ou história."
         },
         "pre-express-2021/A Royal Battle with Events": {
           "overview": "Nesta atividade online, os alunos terão a oportunidade de aprender a usar eventos no Play Lab e aplicar todas as habilidades de codificação que aprenderam para criar um jogo animado. É hora de ser criativo e criar um jogo no Play Lab!",
+          "preparation": "-   Jogue os quebra-cabeças para encontrar possíveis áreas problemáticas para sua classe.\n-   (Opcional) Escolha alguns quebra-cabeças para fazer em grupo com sua classe.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
           "purpose": "Nesta atividade on-line, os estudantes irão aprender a usar eventos no Play Lab. Eles começarão treinando o cavaleiro para se mover quando uma tecla de direção for pressionada, depois concluir com a oportunidade de demonstrar as outras habilidades aprendidas durante este curso, inclusive sequências e laços, como parte de seu quebra-cabeça livre.",
           "student_overview": "Use eventos para criar uma história ou criar um jogo interativo."
         },
@@ -433,13 +775,19 @@
         },
         "coursee-2021/Learning Sprites with Sprite Lab": {
           "overview": "Nesta lição, os alunos aprenderão sobre os dois conceitos no coração do Sprite Lab: sprites e comportamentos. Sprites são personagens ou objetos na tela que os alunos podem mover, alterar e manipular. Comportamentos são ações que os sprites executarão continuamente até serem interrompidos.",
+          "purpose": "Esta lição foi elaborada para apresentar aos alunos o vocabulário básico do Sprite Lab e permitir que eles apliquem conceitos que aprenderam em outros ambientes a essa ferramenta. Ao criar um aquário, os alunos começarão a compreender o modelo de programação dessa ferramenta e explorarão maneiras de usá-la para se expressar.",
           "student_overview": "Aprenda a criar e editar sprites."
         },
         "coursee-2021/Alien Dance Party with Sprite Lab": {
           "overview": "Esta lição apresenta o Sprite Lab, uma plataforma na qual os alunos podem criar suas próprias animações e jogos interativos. Além dos comportamentos, hoje os alunos incorporam a entrada do usuário como eventos para criar uma \"festa de dança alienígena\".  ",
           "student_overview": "Crie um projeto interativo que possa ser compartilhado com os colegas de classe."
         },
+        "coursee-2021/lesson-4": {
+          "purpose": "A Common Sense Education criou esta lição para ensinar aos alunos o que eles devem fazer quando alguém usa uma linguagem maldosa ou prejudicial na Internet."
+        },
         "coursee-2021/Private and Personal Information": {
+          "preparation": "-   Revise os materiais instrucionais.\n-   Imprima folheto (s) para cada aluno.",
+          "purpose": "A Common Sense Education criou esta lição para ensinar aos alunos como eles podem ir a lugares online com segurança.",
           "student_overview": "A internet é divertida mas é importante estar seguro também. Esta lição ensina a diferença entre informações seguras para compartilhar e informações particulares."
         },
         "coursee-2021/About Me": {
@@ -450,6 +798,7 @@
         },
         "coursee-2021/Programming and Loops with the Artist": {
           "overview": "Veja os rostos dos alunos se iluminarem enquanto criam seus próprios designs lindos usando um pequeno número de blocos e adesivos digitais! Esta lição baseia-se na compreensão dos loops das lições anteriores e oferece aos alunos a chance de serem verdadeiramente criativos. Essa atividade é fantástica para a produção de artefatos para portfólios ou conferências de pais/professores.",
+          "purpose": "Os alunos praticarão o uso de loops, um conceito que será revisitado nas próximas lições.",
           "student_overview": "Nesta lição, os loops facilitam a criação de imagens ainda mais legais com o Artist!"
         },
         "coursee-2021/Nested Loops in Artist": {
@@ -467,14 +816,18 @@
         },
         "coursee-2021/Functions in Minecraft": {
           "overview": "Os alunos começarão a entender como as funções podem ser úteis nesta divertida e interativa aventura de Minecraft!",
+          "purpose": "Os alunos descobrirão a versatilidade da programação praticando funções em diferentes ambientes. Aqui, os alunos reconhecerão padrões reutilizáveis e poderão incorporar blocos nomeados para chamar funções predefinidas.",
           "student_overview": "Você pode descobrir como usar funções para o código mais eficiente?"
         },
         "coursee-2021/Functions in Artist": {
           "overview": "Os alunos serão apresentados ao uso de funções no Code.org. Imagens magníficas serão criadas e modificadas com funções no Artista. Para padrões mais complicados, os alunos aprenderão sobre aninhamento de funções, chamando uma função dentro de outra.",
+          "purpose": "Um dos componentes mais importantes desta lição é fornecer aos alunos um espaço para criar algo do qual eles se orgulham. Esses quebra-cabeças progridem para imagens cada vez mais complexas, mas cada novo quebra-cabeça só se baseia no quebra-cabeça anterior. No final desta lição, os alunos se sentirão confiantes e orgulhosos de seu trabalho árduo.",
           "student_overview": "Faça desenhos complexos mais facilmente com funções!"
         },
         "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "overview": "Esta lição foi criada originalmente para a Hour of Code, juntamente com a equipe do Minecraft. Os alunos terão a chance de praticar as idéias que aprenderam até o momento, além de obter uma prévia dos condicionais!",
+          "preparation": "-   Jogue os quebra-cabeças associados a esta lição para encontrar quaisquer áreas problemáticas em potencial para sua classe.\n    — Certifique-se de que cada aluno tenha um diário de reflexão.",
+          "purpose": "Este conjunto de quebra-cabeças funcionará para solidificar e desenvolver o conhecimento de loops e introduzir condicionais. Ao emparelhar esses dois conceitos, os alunos poderão explorar o potencial de criar programas divertidos e inovadores em um ambiente novo e empolgante.",
           "student_overview": "Aqui você aprenderá sobre condicionais no mundo do Minecraft."
         },
         "coursee-2021/Conditionals": {
@@ -490,7 +843,38 @@
         },
         "coursee-2021/End of Course Project": {
           "overview": "As próximas quatro lições proporcionam aos alunos a oportunidade de usar suas habilidades de codificação em um projeto principal. Este projeto ajudará as pessoas a ganhar experiência com codificação e produzir um exemplo para compartilhar com colegas e entes queridos. Com a intenção de ser uma experiência de várias lições ou de várias semanas, os alunos passarão um tempo explorando o brainstorming, aprendendo sobre o processo de design, construindo e apresentando seu trabalho final. \\\\r\n\\\\r\nNa fase de exploração, os alunos brincam com exemplos pré-criados de projetos no Artist e no Sprite Lab para se inspirar. Em seguida, os alunos aprenderão sobre o processo de design e como implementá-lo em seus próprios projetos. Eles terão espaço para criar seu próprio projeto no Artist, no Sprite Lab ou em outra interface com a qual se familiarizarem (esse é provavelmente o estágio mais longo do projeto). Finalmente, os alunos poderão apresentar seus trabalhos concluídos aos colegas.",
+          "purpose": "Os alunos podem estar prontos para começar a construir seus projetos, mas esta lição ajudará a moldar suas ideias em planos. Essa estrutura manterá os sonhadores com os pés no chão e iluminará um caminho para aqueles que se sentem deixados no escuro. Ofereça aos alunos tempo suficiente para construir e revisar seus projetos. A tentativa e o erro inevitavelmente envolvidos nesta lição ensinarão a resolução de problemas e a persistência.",
           "student_overview": "Projetos desse tamanho levam tempo e muito planejamento. Encontre sua inspiração, desenvolva um plano e libere sua criatividade!"
+        },
+        "csd6-2021/The Circuit Playground": {
+          "overview": "Nesta lição os alunos têm sua primeira oportunidade de escrever programas que usam a placa de circuito. Após primeiramente inspecionar visualmente a placa e imaginar algumas possibilidades de funcionamento, os alunos se movem online para onde eles irão aprender a escrever aplicações que controlam um LED. Ao combinar telas do App Lab com os Playgrounds, alunos poderão gradualmente iniciar a integrar elementos da placa como elementos de saída, enquanto usam o App Lab para entrada de informações pelos usuários."
+        },
+        "csd6-2021/Input Unplugged": {
+          "overview": "Na preparação para aprofundar a programação com o Laboratório de Aplicativos, os alunos explorarão como vários programas diferentes escritos no Laboratório de Jogos e no Laboratório de Aplicativos lidam com a entrada do usuário. Depois de comparar e contrastar as abordagens que eles viram nos aplicativos de exemplo, os alunos se agrupam para representar os dois modelos diferentes de entrada (condicionais em um laço infinito e eventos assíncronos) para obter uma melhor compreensão de como eles funcionam."
+        },
+        "csd6-2021/Analog Input": {
+          "overview": "Nesta lição, os alunos exploram como os três sensores analógicos (som, luz e temperatura) podem ser usados para escrever programas que respondem a mudanças no ambiente. O uso desses sensores marca uma transição em termos de como os usuários interagem com um programa. Ao usar sensores como entrada, o usuário de um aplicativo não precisa interagir diretamente com ele, ou pode interagir sem realmente perceber que está fazendo isso."
+        },
+        "csd6-2021/The Program Design Process": {
+          "overview": "Essa lição apresenta aos alunos o processo que eles usarão para criar seus próprios programas ao longo desta unidade. Esse processo é centrado em torno de um guia de projeto que solicita aos alunos que desenhem suas telas, identifiquem elementos do Circuito Playground a serem usados, definam variáveis e descrevem eventos antes de começarem a programar. Esse processo é semelhante ao Processo de Design de Jogos que usamos na Unidade 3. Nesta lição, os alunos começam jogando um jogo no estilo cabo de guerra em que o código está oculto. Eles discutem sobre quais componentes, eventos e variáveis precisam para criar o programa. Eles recebem um guia completo do projeto, que mostra uma maneira de implementar o projeto. Os alunos passam por esse processo através de uma série de níveis. No final da lição, os alunos têm a oportunidade de fazer melhorias no programa para torná-lo seu."
+        },
+        "csd6-2021/Arrays and Color LEDs": {
+          "overview": "Uma matriz é uma coleção ordenada de itens, geralmente do mesmo tipo. Nesta lição, os alunos aprendem maneiras de acessar um valor específico ou aleatório de uma lista usando seu índice. Eles então aprendem como acessar a matriz corLEDs que controla o comportamento dos LEDs coloridos no parque de diversões do circuito. Os alunos controlarão a cor e a intensidade de cada LED e usarão o que aprenderam para programar padrões de luz para criar um show de luzes no parque de diversões do circuito."
+        },
+        "csd6-2021/Arrays and For Loops": {
+          "overview": "Usar uma _repetição para_ para iterar sobre todos os elementos em um vetor é uma construção realmente útil na maioria das linguagens de programação. Nesta lição, os alunos aprendem o básico de como uma _repetição para_ pode ser usada para repetir o código e depois combiná-la com o que eles já aprenderam sobre vetores para escrever programas que processam todos os elementos em um vetor. Os alunos usam os laços para percorrer cada elemento de uma lista, um de cada vez, sem precisar escrever código para cada elemento. No final da lição, os alunos aplicarão isso com a lista `corLed` no quadro para criar um aplicativo que altere todos os LEDs cada vez que um botão for clicado."
+        },
+        "csd6-2021/Accelerometer": {
+          "overview": "Nesta lição, os alunos explorarão o acelerômetro e seus recursos. Eles se familiarizarão com seus eventos e propriedades, além de criarem vários programas utilizando o acelerômetro semelhante aos que provavelmente encontraram em aplicativos do mundo real."
+        },
+        "csd6-2021/Functions with Parameters": {
+          "overview": "A lição começa com uma rápida revisão dos parâmetros, no contexto dos blocos do Laboratório de Aplicativos que os alunos viram recentemente. Os alunos examinam exemplos de parâmetros nas funções criadas pelo usuário no Laboratório de Aplicativos e criam e chamam funções com parâmetros para eles mesmos, usando-os para controlar vários elementos em uma tela. Posteriormente, os alunos usam laços para iterar sobre uma matriz, passando cada elemento para uma função. Por fim, os alunos usam o que aprenderam para criar um jogo de captura de estrelas."
+        },
+        "csd6-2021/Circuits and Physical Prototypes": {
+          "overview": "Na preparação para o projeto final deste capítulo, os alunos aprenderão como desenvolver um protótipo de um objeto físico que inclua um Circuito Playground. Usando um guia de planejamento de projeto modelado, os alunos aprenderão como conectar alguns circuitos simples e criar protótipos que possam comunicar o design pretendido de um produto, usando materiais baratos e facilmente encontrados, como papelão e fita adesiva."
+        },
+        "csd6-2021/Project: Prototype an Innovation": {
+          "overview": "Neste projeto final do curso, os alunos se unem para desenvolver e testar um protótipo para um dispositivo de computação inovador baseado no parque de diversões do circuito. Usando as entradas e saídas disponíveis no quadro, os grupos criarão programas que permitem interações interessantes e exclusivas do usuário. "
         }
       }
     }

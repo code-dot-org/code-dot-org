@@ -1,0 +1,8 @@
+{
+  "key": "gamelab_comment",
+  "name": "comment",
+  "category": "Comments",
+  "category_key": "comments",
+  "block_name": "gamelab_comment",
+  "syntax": "comment"
+}

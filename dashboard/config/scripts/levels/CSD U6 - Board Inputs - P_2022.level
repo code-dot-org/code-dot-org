@@ -44,7 +44,7 @@
     "disable_procedure_autopopulate": "false",
     "start_blocks": "onBoardEvent(buttonL, \"down\", function() {\r\n  led.on();\r\n});",
     "contained_level_names": [
-      "CSDU6 - button_LED_prediction_2021"
+      "CSDU6 - button_LED_prediction_2022"
     ],
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20413,
@@ -57,7 +57,8 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "teacher_markdown": "This code uses an event to detect user input, but it waits for an event on the circuit playground instead of the screen. When students run the code, nothing will happen until they press the left button on their circuit playground. Once they do, the red LED will light up. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook."
   },
   "game_id": 41,
   "published": true,
@@ -65,7 +66,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-31T16:13:20.655+00:00\",\"changed\":[\"cloned from \\\"CSDU6 - button LED prediction_2021\\\"\"],\"cloned_from\":\"CSDU6 - button LED prediction_2021\"},{\"changed_at\":\"2021-08-31 16:13:25 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-31T16:13:20.655+00:00\",\"changed\":[\"cloned from \\\"CSDU6 - button LED prediction_2021\\\"\"],\"cloned_from\":\"CSDU6 - button LED prediction_2021\"},{\"changed_at\":\"2021-08-31 16:13:25 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-29 21:48:59 +0000\",\"changed\":[\"contained_level_names\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-29 22:13:20 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

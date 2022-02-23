@@ -4,14 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSP",
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "project_sharing": true,
-      "hideable_lessons": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit8/{LESSON}",
-      "is_stable": true,
-      "script_announcements": [
+      "announcements": [
         {
           "notice": "",
           "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
@@ -20,6 +13,13 @@
           "visibility": "Teacher-only"
         }
       ],
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit8/{LESSON}",
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -30,21 +30,15 @@
           "https://curriculum.code.org/csp-20/unit8/standards/"
         ]
       ],
-      "has_lesson_plan": true,
-      "announcements": [
-        {
-          "notice": "",
-          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
-          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ]
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:57 UTC",
+    "serialized_at": "2021-11-22 17:08:25 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp8-2020"
     }
@@ -110,16 +104,111 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "7227d6bb-125d-4f78-b604-a90e188df590",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7227d6bb-125d-4f78-b604-a90e188df590",
+        "lesson.key": "Create PT - Review the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2020"
+      }
+    },
+    {
+      "key": "3a4a6c10-2f17-417d-a84d-d16d2a6ff0ee",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3a4a6c10-2f17-417d-a84d-d16d2a6ff0ee",
+        "lesson.key": "Create PT - Make a Plan",
+        "lesson_group.key": "",
+        "script.name": "csp8-2020"
+      }
+    },
+    {
+      "key": "a574fa2d-6007-465a-b834-d28e67dd419a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a574fa2d-6007-465a-b834-d28e67dd419a",
+        "lesson.key": "Create PT - Complete the Task",
+        "lesson_group.key": "",
+        "script.name": "csp8-2020"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "000e1f37-d557-4922-b372-7d5ba26b7d43",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "000e1f37-d557-4922-b372-7d5ba26b7d43",
+        "lesson_activity.key": "7227d6bb-125d-4f78-b604-a90e188df590"
+      }
+    },
+    {
+      "key": "60ff4c65-6e98-4986-89e7-73edbd05dd9a",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "60ff4c65-6e98-4986-89e7-73edbd05dd9a",
+        "lesson_activity.key": "3a4a6c10-2f17-417d-a84d-d16d2a6ff0ee"
+      }
+    },
+    {
+      "key": "14a75a0a-1ff5-42af-aa85-a183949f6c83",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "14a75a0a-1ff5-42af-aa85-a183949f6c83",
+        "lesson_activity.key": "a574fa2d-6007-465a-b834-d28e67dd419a"
+      }
+    },
+    {
+      "key": "a785bd0c-6749-49df-9efe-13fdd517c91f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Tech Setup and Tools for Create PT"
+      },
+      "seeding_key": {
+        "activity_section.key": "a785bd0c-6749-49df-9efe-13fdd517c91f",
+        "lesson_activity.key": "a574fa2d-6007-465a-b834-d28e67dd419a"
+      }
+    },
+    {
+      "key": "6c128e44-d37b-48d1-b882-a3271908ba7d",
+      "position": 3,
+      "properties": {
+        "name": "Create PT Coding Workspace",
+        "progression_name": "Create PT Coding Workspace"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c128e44-d37b-48d1-b882-a3271908ba7d",
+        "lesson_activity.key": "a574fa2d-6007-465a-b834-d28e67dd419a"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -134,7 +223,8 @@
         ],
         "lesson.key": "Create PT - Review the Task",
         "lesson_group.key": "",
-        "script.name": "csp8-2020"
+        "script.name": "csp8-2020",
+        "activity_section.key": "000e1f37-d557-4922-b372-7d5ba26b7d43"
       },
       "level_keys": [
         "CSP U8L1 SFLP 20-21"
@@ -143,7 +233,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -158,7 +248,8 @@
         ],
         "lesson.key": "Create PT - Make a Plan",
         "lesson_group.key": "",
-        "script.name": "csp8-2020"
+        "script.name": "csp8-2020",
+        "activity_section.key": "60ff4c65-6e98-4986-89e7-73edbd05dd9a"
       },
       "level_keys": [
         "CSP U8L2 SFLP 20-21"
@@ -167,7 +258,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -182,7 +273,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
-        "script.name": "csp8-2020"
+        "script.name": "csp8-2020",
+        "activity_section.key": "14a75a0a-1ff5-42af-aa85-a183949f6c83"
       },
       "level_keys": [
         "CSP U8L3 SFLP 20-21"
@@ -191,7 +283,7 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -206,7 +298,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
-        "script.name": "csp8-2020"
+        "script.name": "csp8-2020",
+        "activity_section.key": "a785bd0c-6749-49df-9efe-13fdd517c91f"
       },
       "level_keys": [
         "csp-pt-tech-setup-and-tools_2020"
@@ -215,7 +308,7 @@
     {
       "chapter": 5,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -230,7 +323,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
-        "script.name": "csp8-2020"
+        "script.name": "csp8-2020",
+        "activity_section.key": "6c128e44-d37b-48d1-b882-a3271908ba7d"
       },
       "level_keys": [
         "Create PT Workspace 2020"
@@ -246,7 +340,8 @@
         ],
         "lesson.key": "Create PT - Review the Task",
         "lesson_group.key": "",
-        "script.name": "csp8-2020"
+        "script.name": "csp8-2020",
+        "activity_section.key": "000e1f37-d557-4922-b372-7d5ba26b7d43"
       }
     },
     {
@@ -257,7 +352,8 @@
         ],
         "lesson.key": "Create PT - Make a Plan",
         "lesson_group.key": "",
-        "script.name": "csp8-2020"
+        "script.name": "csp8-2020",
+        "activity_section.key": "60ff4c65-6e98-4986-89e7-73edbd05dd9a"
       }
     },
     {
@@ -268,7 +364,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
-        "script.name": "csp8-2020"
+        "script.name": "csp8-2020",
+        "activity_section.key": "14a75a0a-1ff5-42af-aa85-a183949f6c83"
       }
     },
     {
@@ -279,7 +376,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
-        "script.name": "csp8-2020"
+        "script.name": "csp8-2020",
+        "activity_section.key": "a785bd0c-6749-49df-9efe-13fdd517c91f"
       }
     },
     {
@@ -290,7 +388,8 @@
         ],
         "lesson.key": "Create PT - Complete the Task",
         "lesson_group.key": "",
-        "script.name": "csp8-2020"
+        "script.name": "csp8-2020",
+        "activity_section.key": "6c128e44-d37b-48d1-b882-a3271908ba7d"
       }
     }
   ],

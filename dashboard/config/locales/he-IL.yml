@@ -112,9 +112,9 @@ he:
     email_signup: הירשם באמצעות הדוא"ל שלך
     student_count: "%{count} תלמידים כבר נרשמו."
     teacher_count: "%{count} מורים כבר נרשמו."
-    overview: הרשם לקבלת חשבון בכדי לעקוב אחר התקדמות וניהול הכיתה שלך. <a href="/">באפשרותך
-      לדפדף בין השלבים והפאזלים השונים</a> ללא חשבון, אבל תידרש להירשם בכדי לשמור
-      את התקדמותך ואת הפרויקטים שלך.
+    overview: הירשם ליצירת חשבון כדי לעקוב אחר התקדמות הכיתה שלך וניהולה. <a href="/">באפשרותך
+      לדפדף בין החידות והשלבים השונים</a> ללא חשבון, אבל תידרש להירשם כדי לשמור את
+      התקדמותך ואת הפרויקטים שלך.
     overview_markdown: הרשם לקבלת חשבון בכדי לעקוב אחר התקדמות וניהול הכיתה שלך. [באפשרותך
       לדפדף בין השלבים והפאזלים השונים](/) ללא חשבון, אבל תידרש להירשם בכדי לשמור
       את התקדמותך ואת הפרויקטים שלך.
@@ -322,7 +322,7 @@ he:
       educate_elementary: בית ספר יסודי
       educate_middle: חטיבת ביניים
       educate_high: תיכון
-      educate_hoc: שעה של קוד
+      educate_hoc: שעת הקוד
       educate_partner: שותף יחד איתנו
       educate_beyond: מעבר ל-Code.org
       educate_inspire: הנחל השראה לתלמיד
@@ -363,7 +363,7 @@ he:
       create: צור
       algebra_game: חשבון
       applab: מעבדת היישומים
-      artist: אמן
+      artist: אומן
       artist_k1: האמן (טרום-קריאה)
       basketball: כדורסל
       bounce: להקפיץ
@@ -377,11 +377,14 @@ he:
       infinity: אינסוף
       minecraft_adventurer: הרפתקן מיינקראפט
       minecraft_aquatic: מיינקראפט ימי
+      minecraft_codebuilder: מיינקראפט
       minecraft_designer: מיינקראפט
-      minecraft_hero: גיבור מיינקרפט
+      minecraft_hero: גיבור מיינקראפט
       playlab: מעבדת הצעצועים
       playlab_k1: מעבדת הצעצועים (טרום-קריאה)
+      poetry_hoc: אומנות השירה
       starwars: מלחמת הכוכבים
+      loading: טוען...
       weblab: מעבדת האתרים
     popup:
       progress_for_user: ההתקדמות של %{name}
@@ -398,6 +401,7 @@ he:
     answer: 'תשובה
 
 '
+    dashboard: לוח בקרה למורה
     for_teachers_only: למורים בלבד
     title:
       one: 'המורה שלך :'
@@ -511,11 +515,11 @@ he:
     view_course: צפה בקורס
     prize_info: 'פרסים על השתתפות(מורים מארצות הברית בלבד): עד ל 1000$ בפרסי כיתה.'
     tryfirst: 'או, שתוכל לנסות זאת קודם כל, ולהירשם לאחר מכן:'
-    trynow: נסה עכשיו
+    trynow: לנסות עכשיו
     add_hint_help: אנא עזור לנו להוסים רמזים חכמים למדריכים code.org
     20hour_overview: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות.
       הקורס מתוכנן לשימוש בכיתות גן עד ח׳, אבל זה כיף ללמוד בכל הגילאים.
-    test_videos_help: נסה את נגן הוידאו החדש שלנו בבית ספרך
+    test_videos_help: נסה את נגן הווידאו החדש שלנו בבית ספרך
     try_beta_courses: חדש! נסה את קורסי הבטה שלנו לגילאי גן חובה-כיתה ה'
     use_as_teacher: השתמש באתר הזה כמורה
     your_gallery: גלריה
@@ -576,8 +580,8 @@ he:
     how_it_works: איך זה עובד
     try_hour_of_code: נסה את שעת קוד!
   reference_area:
-    title: צריך עזרה?
-    subtitle: לראות את קטעי וידאו ורמזים
+    title: צריכים עזרה?
+    subtitle: לצפייה בסרטונים וברמזים
     teacher: הצג את הפתרון
     teacher_no_solution: הפסק צפייה בפתרון
     auth_error: אינך מורשה לראות את הפתרון.
@@ -585,7 +589,7 @@ he:
     direction: התחל כיוון (במעלות)
   video:
     tab: וידאו.
-    notes: אין וידאו? הצג הערות.
+    notes: אין וידאו? הצג הערות
     notes_coming_soon: הערות עבור וידאו זה יתווספו בקרוב.
     autoplay_option: הפעלה אוטומטית של סרטונים
     download: הורד סרטון
@@ -612,7 +616,7 @@ he:
   share_code:
     title: לחץ'ריצה' כדי לראות את התקדמותי בזמן פעולה
     bounce_og_title: תראה את המשחק קפיצה שלי
-    flappy_og_title: תראה את משחק ההתנופפות שלי
+    flappy_og_title: כדאי לך לבדוק את המשחק המעופף שלי
     studio_og_title: בוא תראה את האפליקצייה שייצרתי במעבדת הצעצועים
     check_out_what_i_made: בדוק מה הכנתי
     og_description: כתבתי קוד בעצמי באמצעות code.org
@@ -649,8 +653,8 @@ he:
       title: מבוך קלאסי
       body: נסה את הבסיס של מדעי המחשב.מיליונים כבר ניסו.
     flappy:
-      title: קוד מתנופף
-      body: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
+      title: קוד מעופף
+      body: רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך קוד ההתעופפות שלנו!
     20-hour:
       title: קורס מואץ
       body: קורס בן 20 שעות זה, מציג בפניך בסיס במדעי המחשב וברעיונות בתכנות. הקורס
@@ -682,14 +686,14 @@ he:
       title: מלחמת הכוכבים
     infinity:
       title: אינסוף מעבדת הצעצועים
-      body: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף
-        של דיסני.
+      body: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות מתוך "דיסני
+        אינסוף".
     minecraft:
       title: מיינקראפט
       body: גלה את העולם של מיינקראפט באמצעות קוד
     minecraft2016:
       title: מיינקראפט
-      body: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
+      body: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
     aquatic:
       title: מיינקראפט
     hero:
@@ -716,13 +720,13 @@ he:
       cta: למד כיצד
   landing:
     report_bug: דווח על באג
-    support: קבל עזרה
+    support: עזרה
     help_resources: עזרה ומשאבים
     help_support: עזרה ותמיכה
     documentation: מסמכים
     tutorials: מדריכים
   free_response:
-    placeholder: הכנס את התשובה שלך כאן
+    placeholder: הקלידו את התשובה שלכם כאן
   multi:
     wrong_title: תשובה לא נכונה
     wrong_body: התשובה שענית אינה נכונה. נא נסה שנית!
@@ -770,17 +774,17 @@ he:
     baddomainsize: בחוזה שלך אין את המספר הנכון של פריטים כפי שמופיע בקבוצת המחשבים.
     baddomainname: לאחד או יותר מן הפריטים בתחום יש שם לא נכון.
   text_match:
-    placeholder: הכנס את התשובה שלך כאן
+    placeholder: הקלידו את התשובה שלכם כאן
     open_response_title: תודה
     open_response_body: תודה על תגובתך!
     correct_title: נכון
     correct_body: זאת התשובה הנכונה.
   dialog:
     ok: אישור
-    startover_title: האם אתה בטוח שאתה רוצה להתחיל מחדש?
+    startover_title: האם אכן להתחיל מחדש?
     startover_body: פעולה זו תחזיר את החידה למצב ההתחלתי שלה ותמחוק את כל השינויים
       שלך.
-    startover_ok: התחל מחדש
+    startover_ok: להתחיל מחדש
     startover_cancel: בטל
   time:
     hour: שעה אחת
@@ -946,7 +950,7 @@ he:
       אחת ולהשתמש בו להתקנה בכל המחשבים. שים לב: התלמידים לא יוכלו להתחבר לסטודיו
       קוד, לשמור התקדמות ולהדפיס תעודות. באפשרות המורים להדפיס תעודות בטרם השיעור
       <a href="%{url}">כאן</a>.'
-    minecraft_name: שעת קוד של מיינקרפט
+    minecraft_name: שעת קוד של מיינקראפט
     starwars_blocks_name: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
     starwars_javascript_name: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (JavaScript)'
     download_message: הורד %{app_name} לשימוש ללא אינטרנט (136MB)
@@ -1011,6 +1015,7 @@ he:
       email: דואר אלקטרוני
       email_alternate: דוא"ל חלופי
       gender: זהות מגדרית
+      school: בית ספר
       school_name: שם בית הספר
       school_city: יישוב בית הספר
       school_country: ארץ בית הספר
@@ -1079,3 +1084,4 @@ he:
     accept: מסכים
   copy: העתק
   confirm: אשר
+  teacher_feedback: משוב מורה

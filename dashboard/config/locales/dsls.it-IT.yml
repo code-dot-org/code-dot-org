@@ -7667,7 +7667,7 @@ it-IT:
           Gioca a carte e crea regole come "Se disegno una carta rossa, ricevo un punto" e "Se disegno una carta nera, tu ricevi un punto."
       CourseF_outbreak_story:
         content1: descrizione qui
-        markdown: "# Epidemia: programma la tua simulazione\n\n## Benvenuto nella
+        markdown: "# Epidemia - Programma la tua simulazione\n\n## Benvenuto nella
           Città dei Mostri!\nUn tempo la Città dei Mostri era un luogo sano e felice.
           I mostri della Città dei Mostri adoravano girovagare per andare a trovare
           i loro amici. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
@@ -7743,7 +7743,7 @@ it-IT:
           del virus quando questo arriva in città. "
       CourseF_outbreak_story2:
         content1: descrizione qui
-        markdown: "# Epidemia: Pensare come uno scienziato\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+        markdown: "# Epidemia - Pensare come uno scienziato\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nLe simulazioni sono un ottimo modo
           per imparare cose che possono essere difficili da osservare nel mondo reale.
           Aiutano gli scienziati a risolvere problemi e testare nuove idee in modo
@@ -7889,30 +7889,6 @@ it-IT:
           > <a href="http://support.code.org" target="blank"><button class="plc">Get help >></button></a>
 
           Dopo aver commentato nel forum, torna qui e clicca il pulsante sottostante per accedere alla prossima lezione.
-      OPD-K5 CS Courses_dani:
-        markdown: "# Gestione della classe > Come iniziare in Code.org\n\n\n## Passo
-          1 - Seleziona un corso\nTutti i corsi proposti da Code.org sono elencati
-          nella sezione **[corsi](https://studio.code.org/courses)**. I corsi A-F
-          di Fondamenti di informatica per la scuola primaria con cui hai fatto pratica
-          in questo corso per insegnanti li trovi subito dopo i corsi rapidi (che
-          possono a loro volta essere utili in situazioni particolari). Tutti i nostri
-          corsi sono gratuiti. Confrontati con i tuoi colleghi a scuola per decidere
-          come questi corsi possano essere integrati con le altre materie d'insegnamento.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          Passo 2 - Crea la tua classe\nCrea una nuova classe per controllare i progressi
-          dei tuoi alunni, stampare le loro credenziali di accesso, gestire le utenze
-          e stampare i certificati che gli alunni porteranno a casa al termine del
-          corso. **[In questa pagina](https://programmailfuturo.it/chi/iscrizione-per-insegnanti)**
-          trovi le istruzioni dettagliate per creare la tua classe, incluso un [video](https://youtu.be/JjLoKLs7NRg)
-          che presenta in dettaglio tutte le funzioni disponibili.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          Passo 3 - Assegna un corso alla tua classe\nClicca sul corso che hai intenzione
-          di insegnare alla tua classe -- dovresti quindi vedere una schermata simile
-          a quella qui sotto. Clicca quindi sul pulsante \"Assegna alla classe\".\n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Step 4 - Inizia ad insegnare! \nBasterà una singola lezione per introdurre
-          i primi concetti di informatica nella tua classe. Quando vedrai l'entusiasmo
-          dei tuoi alunni per l'informatica, proseguirai con la pianificazione giornaliera
-          delle lezioni per guidarli nell'apprendimento e lo svolgimento delle attività
-          tradizionali che potrai fare senza uso di computer. Utilizza i forum di
-          Code.org e Programma il Futuro per unirti agli altri insegnanti.\n\n"
       OPD-K5 CS Tips_dani:
         markdown: |-
           # Per cominciare > Esplorando questo corso online
@@ -8509,33 +8485,6 @@ it-IT:
           > **Come si svolge questa lezione** - Nei livelli che seguono presenteremo una lezione tradizionale ed una serie di esercizi tratti dal Corso C (adatti per la 2ª primaria) che trattano il concetto di "istruzione di ripetizione" (ciclo). Per completare gli esercizi dovrai scrivere del codice utilizzando la programmazione a blocchi. La lezione terminerà poi con un momento di riflessione. Prevedi di impiegare tra 20 e 45 minuti per terminare questa lezione.
 
           Pronti? Partiamo!
-      OPD-K5 Stage5Go_dani:
-        markdown: "# Istruzioni condizionali > Lezione tradizionale\n\n**1. Guarda
-          la struttura della lezione \"[Istruzioni condizionali con le carte da gioco](https://curriculum.code.org/csf-18/coursed/13/)\"
-          del corso D**\n<br/>\nIl corso D è indicato per gli alunni della classe
-          3ª primaria. La medesima lezione è presente anche nei corsi E ed F. Mentre,
-          nei corsi A, B e C le istruzioni condizionali non vengono trattate.\n<br/><br/>\n\n**2.
-          Guarda il video per gli alunni - Istruzioni condizionali con le carte da
-          gioco**\n<br/>\nPotresti far vedere ai tuoi alunni questo video che ti aiuta
-          ad introdurre il concetto di istruzione condizionale ed iniziare la relativa
-          attività tradizionale. \n[![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37
-          PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)\n<br/>\n[Non riesci
-          a vedere il video? Clicca qui](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)\n\n<br/><br/>\n**3.
-          Guarda il video per l'insegnante su come proporre la lezione tradizionale
-          \"Istruzioni condizionali con le carte da gioco\"**\n<br/>\nQuesto video
-          è fatto per fornire spunti agli insegnanti su come impostare la lezione.\n\n[![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41
-          PM.png)](https://www.youtube.com/watch?v=2m2Rn9VxHfU)\n\n[Non riesci a vedere
-          il video? Clicca qui](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)\n\n<br/><br/>\n\n---\n\n>
-          ## Riflessioni\n> Come spiegheresti il concetto di istruzione condizionale
-          ai tuoi alunni? [Condividi i tuoi pensieri nel forum di Programma il Futuro](https://programmailfuturo.it/forum/corso-online-per-l-insegnamento).\n\n>
-          <a href=\"https://programmailfuturo.it/forum/corso-online-per-l-insegnamento\"
-          target=\"blank\"><button class=\"plc\">Confrontiamoci nel forum di Programma
-          il Futuro>></button></a>\n\nOppure, se sai l'inglese...\n\n> ## Reflect\n>
-          How would you explain the concept of conditionals to your students? [Share
-          your thoughts in our forum](http://forum.code.org/t/teaching-conditionals/406/1).\n\n>
-          <a href=\"http://forum.code.org/t/teaching-conditionals/406/1\" target=\"blank\"><button
-          class=\"plc\">Discuss in the forums >></button></a>\n\nDopo che hai commentato
-          nel forum, torna qui e clicca sul pulsante sottostante per proseguire."
       OPD-K5 Stage5Review_dani:
         markdown: |-
           # Cicli > Riflessioni
@@ -8748,49 +8697,6 @@ it-IT:
           - riflettere su ciò che hai imparato;
           - pensare ai prossimi passi da compiere per proseguire il tuo apprendimento;
           - connetterti con una comunità di insegnanti interessati all'insegnamento dell'informatica.
-      OPD-K5 Stage9Start_dani:
-        markdown: "# Gestione della classe > Esploriamo le risorse per gli insegnanti\n\nDalla
-          lezione 4 alla lezione 8 hai avuto modo di prendere visione di alcune lezioni
-          tradizionali e risorse online disponibili per i corsi di \"Fondamenti di
-          informatica\" relative ai concetti di informatica che stai imparando.\nOra
-          che hai un'idea di cosa sia la programmazione informatica ed anche di come
-          si possa insegnare questa materia, è giunto il momento di pianificare il
-          tuo insegnamento. In questa lezione visiteremo altre aree della piattaforma
-          di Code.org ed il **[Pannello di controllo dell'insegnante](http://studio.code.org/)**.
-          \n\nAl termine della lezione 10, avrai:\n\n- scoperto altre risorse disponibili
-          per gli insegnanti,\n- imparato ad utilizzare il **[Pannello di controllo
-          dell'insegnante](http://studio.code.org/)** di Code.org,\n- riflettuto su
-          come integrare l'informatica nelle tue pratiche di insegnamento.\n\n***\n\nQui
-          sotto puoi vedere come si presenta il pannello di controllo dell'insegnante.
-          Per arrivarci devi fare login in Code.org con la tua utenza da insegnante
-          -- sarà la tua schermata predefinita quando accederai a questo sito. Se
-          non hai un'utenza da insegnante, puoi **[richiederla qui](https://studio.code.org/users/sign_up)**.
-          Se sei un'insegnante italiano, ti consigliamo di partire dal [sito di Programma
-          il Futuro](https://programmailfuturo.it).\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
-      OPD-K5 Using CS_dani:
-        markdown: "# Gestione della classe > Preparati per una lezione in Code Studio\n\nVediamo
-          come puoi gestire la tua classe durante una lezione in Code Studio.\n\n##
-          Passo 1: Seleziona un corso\nControlla la pagina con il [catalogo di tutti
-          i corsi disponibili in Code Studio](https://studio.code.org/courses) dove
-          trovi tutti i corsi di Fondamenti di informatica con i relativi piani di
-          lavoro delle lezioni. Più in basso nella pagina, trovi anche corsi per la
-          scuola secondaria, questi però non sono ancora tradotti in italiano. Tutti
-          i nostri corsi sono gratuiti. Confrontati con i tuoi colleghi a scuola per
-          decidere come questi corsi possano essere integrati con le altre materie
-          d'insegnamento.\n \n## Step 2: Crea la tua classe\nCrea una nuova classe
-          per controllare i progressi dei tuoi alunni, stampare le loro credenziali
-          di accesso, gestire le utenze e stampare i certificati che gli alunni porteranno
-          a casa al termine del corso. **[In questa pagina](https://programmailfuturo.it/chi/iscrizione-per-insegnanti)**
-          trovi le istruzioni dettagliate per creare la tua classe, incluso un [video](https://youtu.be/JjLoKLs7NRg)
-          che presenta in dettaglio tutte le funzioni disponibili.\n\n## Step 3: Assegna
-          un corso alla tua classe\nScegli il corso che hai intenzione di insegnare
-          alla tua classe e clicca quindi sul pulsante \"Assegna alla classe\".\n\n##
-          Step 4: Inizia ad insegnare! \nBasterà una singola lezione per introdurre
-          i primi concetti di informatica nella tua classe. Quando vedrai l'entusiasmo
-          dei tuoi alunni per l'informatica, proseguirai con la pianificazione giornaliera
-          delle lezioni per guidarli nell'apprendimento e lo svolgimento delle attività
-          tradizionali che potrai fare senza uso di computer. Utilizza i forum di
-          Code.org e Programma il Futuro per unirti agli altri insegnanti.\n\n"
       OPD-K5 Vocabulary_dani:
         markdown: |-
           # Fondamenti di informatica > Parole chiave
@@ -8959,8 +8865,10 @@ it-IT:
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       courseAB_EOC_2021:
         display_name: Progetto di fine corso
+        description: Hai raggiunto l'ultima lezione! Scegli un progetto da creare.
       courseB_EOC_2021:
         display_name: Progetto di fine corso
+        description: Hai raggiunto l'ultima lezione! Scegli un progetto da creare.
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.
@@ -8970,7 +8878,8 @@ it-IT:
         - text: L'artista disegnerà un quadrato.
           correct: true
           feedback: Corretto!
-        - {}
+        - text: L'artista disegnerà un pentagono
+          feedback: Sbagliato. L'artista disegna un quadrato.
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
@@ -9005,7 +8914,8 @@ it-IT:
           correct: true
           feedback: Corretto! Prima, Scart si gira nella direzione errata, poi non
             si muove in avanti abbastanza volte per raggiungere la ghianda.
-        - feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
+        - text: Scrat non si muoverà dal primo blocco.
+          feedback: Ci sono due bug in questo codice. Prima, Scrat si gira nella direzione
             sbagliata, poi non si muove in avanti abbastanza volte per raggiungere
             la ghianda.
         questions:
@@ -9022,7 +8932,8 @@ it-IT:
         - text: L'uccellino finirà contro la dinamite (TNT).
           feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
             perfettamente il maialino.
-        - feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
+        - text: L'uccellino finirà contro il muro.
+          feedback: Sbagliato. Questo programma fa in modo che l'uccellino raggiunga
             perfettamente il maialino.
         questions:
         - text: Leggi molto attentamente il codice riportato nell'area di lavoro.
@@ -9038,7 +8949,8 @@ it-IT:
         - text: BB-8 si sposterà 5 volte e recupererà tutti i rottami metallici.
           correct: true
           feedback: Corretto!
-        - feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
+        - text: BB-8 si muoverà solo di 3 caselle.
+          feedback: Sbagliato. Il blocco "ripeti ... volte" fa andare avanti BB-8
             per 5 volte.
         questions:
         - text: Cosa pensi che succederà quando cliccherai su "Esegui"?
@@ -9054,7 +8966,8 @@ it-IT:
         - text: BB-8 raccoglierà tutti i rottami metallici senza problemi.
           feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
-        - feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
+        - text: BB-8 si girerà nella direzione sbagliata dopo il primo ciclo.
+          feedback: Sbagliato. Il primo ciclo fa andare avanti BB-8 solo di 2 caselle,
             mentre dovrebbe andare avanti di 3.
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
@@ -9074,7 +8987,8 @@ it-IT:
         - text: C
           feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
-        - feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
+        - text: Nessuno dei precedenti
+          feedback: Sbagliato. Il ciclo interno realizza un pentagono e quello esterno
             lo ripete 4 volte in cerchio.
         markdown: |+
           <table>
@@ -9099,7 +9013,8 @@ it-IT:
         - text: 'L''ape andrà fin sotto la nuvola e non farà nulla in ogni caso. '
           feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare se c'è un fiore sotto alla nuvola.
-        - feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
+        - text: 'L''ape non raggiungerà la nuvola. '
+          feedback: Sbagliato. Grazie al blocco `se c'è un fiore`, l'ape prende il
             nettare solo se c'è un fiore sotto alla nuvola.
         questions:
         - text: La nuvola sta bloccando la visuale. Potrebbe esserci un fiore sotto
@@ -9140,7 +9055,8 @@ it-IT:
         - text: L'ape cercherà di fare il miele sia sui fiori che sui favi.
           feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
             all'ape ad ogni fiore e fare il miele ad ogni nido..
-        - feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
+        - text: L'ape cercherà di prendere il miele sia dai fiori che dai favi.
+          feedback: Errato. Errato. Il blocco 'se al fiore' fa ottenere il nettare
             all'ape ad ogni fiore e fare il miele ad ogni nido..
         questions:
         - text: 'Guarda molto attentamente il codice presente nell''area di lavoro.
@@ -9157,7 +9073,8 @@ it-IT:
         - text: L'ape raccoglierà tutto il nettare.
           correct: true
           feedback: Corretto!
-        - feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
+        - text: L'ape girerà nella direzione sbagliata.
+          feedback: Sbagliato.  L'ape ripete tre volte il ciclo che la fa andare avanti
             e raccogliere il nettare, riuscendo così a risolvere l'esercizio.
         questions:
         - text: Guarda molto attentamente i cicli annidati presenti nell'area di lavoro.
@@ -9197,7 +9114,8 @@ it-IT:
         - text: La contadina raccoglierà tutte le colture, eccetto la zucca.
           correct: true
           feedback: Corretto!
-        - feedback: Sbagliato. Il programma fa in modo che la contadina esegua ripetutamente
+        - text: La contadina raccoglierà soltanto la zucca.
+          feedback: Sbagliato. Il programma fa in modo che la contadina esegua ripetutamente
             un percorso a scalinata e raccolga tutte le pannocchie e le lattughe che
             incontra. Ma alla fine non raccoglie la zucca.
         markdown: |
@@ -9218,7 +9136,8 @@ it-IT:
           feedback: Sbagliato. Il ciclo `mentre` può essere eseguito tutte le volte
             che serve, ma non ci sono blocchi di codice per rimuovere i mucchi di
             terra.
-        - feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
+        - text: Questo programma non livellerà l'ultima buca.
+          feedback: Sbagliato. Non ci sono blocchi di codice per rimuovere i mucchi
             di terra.
         questions:
         - text: Dai una bella occhiata al codice riportato di seguito. Cosa rimarrà
@@ -9235,7 +9154,8 @@ it-IT:
             il mucchio sarà finito.
           correct: true
           feedback: Corretto!
-        - feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
+        - text: La contadina rimuoverà la sporcizia solo una volta.
+          feedback: Sbagliato. La contadina rimuove la terra mentre ce n'è, smettendo
             appena il mucchio è finito
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
@@ -9252,7 +9172,8 @@ it-IT:
         - text: Lo zombie prenderà il percorso a destra e girerà in tondo per sempre.
           feedback: Errato. Lo zombie oltrepasserà il bivio corretto e finirà per
             andare avanti e indietro per sempre.
-        - feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
+        - text: Lo zombie sarà bloccato in avanti alla fine del sentiero.
+          feedback: In questo programma, lo zombie oltrepasserà il bivio corretto
             e finirà per andare avanti e indietro per sempre.
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
@@ -9270,7 +9191,8 @@ it-IT:
           feedback: Sbagliato. Il programma fa andare l'uccellino avanti mentre c'è
             strada in avanti, poi gira a sinistra. Continua a fare ciò fino a quando
             non raggiunge il maiale!
-        - feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
+        - text: L'uccello gira dalla parte sbagliata.
+          feedback: Il programma fa andare l'uccellino avanti mentre c'è strada in
             avanti, poi gira a sinistra. Continua a fare ciò fino a quando non raggiunge
             il maialino!
         questions:
@@ -9285,12 +9207,20 @@ it-IT:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Non succederà nulla.
-        - {}
-        - correct: true
+          feedback: Sbagliato. L'alieno inizierà a muoversi verso l'alto e verso il
+            basso sullo schermo.
+        - text: L'alieno inizierà a pattugliare da destra a sinistra.
+          feedback: Sbagliato. L'alieno inizierà a muoversi verso l'alto e verso il
+            basso sullo schermo.
+        - text: L'alieno inizierà a muoversi verso l'alto e verso il basso sullo schermo.
+          correct: true
           feedback: Corretto!
-        - {}
+        - text: L'alieno scomparirà dalla parte superiore dello schermo.
+          feedback: Sbagliato. L'alieno blu inizierà a muoversi verso l'alto e verso
+            il basso sullo schermo.
         questions:
-        - {}
+        - text: Guarda molto attentamente il codice presente nell'area di lavoro.
+            Cosa succederà quando cliccherai sull'alieno?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La contadina raccoglierà due zucche.
@@ -9342,10 +9272,14 @@ it-IT:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Non succederà nulla.
-        - {}
-        - correct: true
+          feedback: Sbagliato. La balla di fieno inizierà a rotolare
+        - text: La balla di fieno inizierà a fluttuare in cima allo schermo
+          feedback: Sbagliato. La balla di fieno inizierà a rotolare
+        - text: La balla di fieno inizierà a rotolare
+          correct: true
           feedback: Corretto!
-        - {}
+        - text: La balla di fieno si accenderà e si spegnerà.
+          feedback: Sbagliato. La balla di fieno inizierà a rotolare
         questions:
         - text: Guarda molto attentamente il codice presente nell'area di lavoro.
             Cosa succederà quando cliccherai su "Esegui"?
@@ -9357,23 +9291,40 @@ it-IT:
         display_name: Progetto di fine corso
       courseF_EOC_samples_2021:
         display_name: Progetto di fine corso
+        description: Stai per iniziare il tuo progetto finale. Prima di cominciare,
+          trascorri un po' tempo a osservare i progetti di esempio.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Il personaggiosi girerà soltanto verso destra.
+          feedback: Sbagliato. Il personaggio si muoverà anche verso est.
+        - text: Il personaggiosi muoverà semplicemente verso est.
+          feedback: Sbagliato. Il personaggio non ha smesso di girare, quindi farà
+            entrambe le cose contemporaneamente.
+        - text: Il personaggio girerà e si muoverà allo stesso tempo.
+          correct: true
+          feedback: Corretto! Entrambi i comportamenti si manifesteranno contemporaneamente.
+        - text: Il personaggio farà prima un giro e dopo si sposterà.
+          feedback: Sbagliato. Nel Laboratorio dei Personaggi, i blocchi collegati
+            sono eseguiti in maniera consecutiva, ognuno subito dopo l'ultimo, quindi
+            entrambi i comportamenti verranno eseguiti contemporaneamente.
         questions:
-        - {}
+        - text: Leggi il codice, poi fai una previsione.
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Una pizza arriva subito!"'
+          feedback: Sbagliato. Le etichette delle variabili non corrispondono.
+        - text: '"Un pasto arriva subito!"'
+          feedback: Sbagliato. L'etichetta di una variabile non è mai stampata.
+        - text: '"Un alimento arriva subito!"'
+          feedback: Sbagliato. L'etichetta di una variabile non è mai stampata.
+        - text: '"Uno arriva subito!"'
+          correct: true
+          feedback: Corretto! Le etichette delle variabili non corrispondono.
+        - text: Non verrà stampato nulla.
+          feedback: Sbagliato. I blocchi evento e stampa continueranno a funzionare.
         questions:
-        - {}
+        - text: Questo codice potrebbe apparire fmailiare, ma leggilo attentamente.
+            Cosa verrà stampato, se l'utente digita "pizza"?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: L'artista disegnerà un triangolo con lati lunghi 50 pixel.
@@ -9386,7 +9337,8 @@ it-IT:
             gradi.
           feedback: Sbagliato. Sarebbe successo questo, se avessimo messo la variabile
             `length` nel blocco `gira`.
-        - feedback: La variabile `length` è impostata a 50 e viene usata nel blocco
+        - text: Il computer chiederà un numero all'utente.
+          feedback: La variabile `length` è impostata a 50 e viene usata nel blocco
             `vai avanti`, quindi l'artista disegna un triangolo con lati di 50 pixel.
         questions:
         - text: Abbiamo impostato la variabile "length" (_lunghezza_) a 50. Cosa accadrà
@@ -9405,7 +9357,9 @@ it-IT:
           feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
-        - feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
+        - text: 'L''ape andrà avanti e raccoglierà una dose di nettare dai fiori numero
+            1 e 4. '
+          feedback: Sbagliato. Il ciclo con contatore farà in modo che l'ape raccolga
             la giusta quantità di nettare, ma, così com'è impostata, permetterà di
             raggiungere solo 4 fiori.
         markdown: |+
@@ -9417,22 +9371,53 @@ it-IT:
             cliccherai su "Esegui"?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Entrambi gli aerei si sposteranno di una casella lungo la griglia,
+            poi si fermeranno.
+          feedback: Sbagliato. Questi personaggi hanno dei "comportamenti", con cui
+            i personaggi continueranno a correre fin quando non gli diranno di fermarsi.
+        - text: Entrambi gli aerei inizieranno a muoversi e non si fermeranno.
+          correct: true
+          feedback: Corretto! Questi comportamenti diranno agli aerei di iniziare
+            a muoversi e di continuare a farlo.
+        - text: Un aereo si muoverà per primo, mentre l'altro si muoverà in un secondo
+            momento.
+          feedback: Sbagliato. Ogni blocco di codice nel Laboratorio dei personaggi
+            viene eseguito istantaneamente, uno dopo l'altro.
+        - text: Gli aerei si scontrano.
+          feedback: Sbagliato. Gli aerei non sono posizionati in modo che si entrino
+            in contatto.
         questions:
-        - {}
+        - text: Leggi il codice, poi fai una previsione.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Il programma stamperà "Ciao nome!"
+          feedback: Sbagliato. Il blocco del nome verrà sostituito con qualsiasi cosa
+            tu digiti.
+        - text: Il programma ti saluterà usando il nome che hai digitato.
+          correct: true
+          feedback: Corretto! Quello che digiti viene usato al posto del blocco del
+            nome.
+        - text: Il personaggio cambierà le sue dimensioni.
+          feedback: Sbagliato. Il testo viene stampato a video.
+        - text: Il computer farà un'altra domanda.
+          feedback: Sbagliato. Soltanto una domanda viene rivolta, proprio quando
+            il programma viene avviato.
         questions:
-        - {}
+        - text: 'Questo programma ti consente di rispondere a una domanda digitando
+            direttamente dalla tua tastiera. Il blocco "stampa" mostra il testo sullo
+            schermo. Fai una previsione: cosa succederà dopo aver risposto alla domanda?'
       courseF_variables_stop:
         content1: descrizione qui
+        markdown: "# Stop!\n\n## Sei sicuro che tu sia pronto per procedere? \n\n\nNel
+          livello successivo, inizierai a scrivere il codice per il tuo progetto,
+          che funzionerà al meglio se hai già un piano.\n\nIl tuo piano completato
+          dovrebbe includere:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Il tipo di progetto
+          che stai costruendo. Ad esempio, un biglietto di auguri, chatbot o storia
+          delle caselle vuote.\n* Un elenco delle domande che ciederai all'utente.\n*
+          L'altro testo che visualizzerai sullo schermo.\n* Una descrizione o un disegno
+          dei personaggi di cui avrai bisogno (e dei loro comportamenti).\n\nSe non
+          sei sicuro di essere pronto per continuare, controlla con il tuo insegnante!\n"
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: L'artista risolverà correttamente l'esercizio.
@@ -9506,7 +9491,8 @@ it-IT:
         - text: Usando questo codice Laura raccoglierà tutti i diamanti.
           feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
             un diamante in una casella che non ne contiene.
-        - feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
+        - text: Usando questo codice Laura raccoglierà 1 diamante.
+          feedback: Sbagliato. Il programma si blocca perché Laura cerca di raccogliere
             un diamante in una casella che non ne contiene.
         questions:
         - text: Guarda molto attentamente il codice riportato nell'area di lavoro.
@@ -9521,3 +9507,444 @@ it-IT:
         title: 'Design Centrato dell''Utente: Test Post-Progetto'
       CSD Web Development Post-Project Test:
         title: Testo Post-Progetto di Sviluppo Web
+      courseF_intro_apps:
+        display_name: App del Laboratorio di personaggi
+        description: Ti diamo il benvenuto nei Principi fondamentali di CS! Tutti
+          questi progetti sono stati creati con il Laboratorio dei personaggi. Provali
+          ora per capire cos'è possibile fare. Entro la fine di questo corso, potrai
+          creare dei progetti tutti tuoi che siano uguali a questi... e altro ancora!
+        teacher_markdown: |-
+          # Panoramica del livello della scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+
+          Le scelte qui contenute conducono gli studenti ai modelli di app che possono esplorare. Questa attività deve essere coordinata con il foglio di lavoro di Esplorazione delle app, che si trova nel [piano delle lezioni](.././).
+      courseF_sprites_freeplay:
+        display_name: 'Personaggi: gioco libero'
+        description: Tocca a te creare qualsiasi cosa tu desideri! Che tipo di progetto
+          realizzerai?
+      courseF_sprites_practice:
+        display_name: La pratica dei personaggi
+        description: Hai fatto un ottimo lavoro finora!
+        teacher_markdown: |-
+          # Panoramica del livello della scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+
+          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Scena del deserto|Ridimensiona la frutta.|Anima un veliero|Un giornata ventilata|
+          |-|-|-|-|-|
+          | ***Digita*** |**Recensione**|**Recensione**|**Recensione**|**Recensione**|
+          | ***Concetto***|*personaggi, posizioni*|*personaggi, proprietà*|*personaggi, posizioni, comportamenti*|*comportamenti*|
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Segui l'algoritmo
+
+          Prova a fare un gioco e pensa a quali comandi sono necessari per ottenere il giusto risultato.
+      courseD_EOC_examples_2021:
+        description: Stai per iniziare il tuo progetto finale. Prima di cominciare,
+          trascorri un po' tempo a osservare i progetti di esempio.
+        display_name: Esempi di progetti
+      courseF_artist_practice:
+        display_name: Pratica dell'artista
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          i cicli e l'Artista!
+      courseF_beeFor_practice:
+        display_name: Esercitazioni con le api
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          cicli e api!
+      courseF_beeVar_practice:
+        display_name: Esercitazioni con le api
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          variabili e api!
+      courseF_bee_practice:
+        display_name: Esercitazioni con le api
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          cicli e api!
+      courseF_events_freeplay:
+        display_name: 'Eventi: gioco libero'
+        description: Ora puoi mettere in pratica ciò hai imparato per migliorare ancora
+          di più il tuo progetto! Continua con le aggiunte al tuo programma oppure
+          inizia qualcosa di nuovo!
+      courseF_events_practice:
+        display_name: Esercitazioni per gli eventi
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          gli eventi!
+        teacher_markdown: |-
+          # Panoramica del livello della scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+
+          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Lancio!|Imparare a volare|Fai un avvitamento|Rimpicciolisci e ingrandisci|Fai gonfiare il pesce!|Pinguino in movimento|
+          |-|-|-|-|-|-|-|
+          | ***Digita*** |**Recensione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**
+          | ***Concetto***|*eventi, comportamenti*|*eventi, comportamenti*|*eventi, comportamenti*|*eventi, comportamenti*|*quando/durante gli eventi*|*quando/durante gli eventi*|
+      courseF_text_practice:
+        display_name: Pratica con il testo e i comandi
+        description: Hai fatto un ottimo lavoro finora! Scegli la tua prossima attività.
+          Portane a termine il maggior numero possibile. Continua ad esercitarti con
+          i testi e i comandi!
+        teacher_markdown: |-
+          # Panoramica del livello della scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+
+          Puoi usare le descrizioni riportate di seguito per aiutare gli studenti a selezionare autonomamente le proprie scelte, oppure a impostare le aspettative riguardanti il numero di sottolivelli che dovrebbero completare.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Discorso in testo!|Dal testo ai comandi|Dai un nome al robot|Etichette delle variabili|Grande testo|Suggerimento per i colori|Iniziare da capo|
+          |-|-|-|-|-|-|-|
+          | ***Digita*** |**Recensione**|**Debug**|**Debug**|**Debug**|**Contenuto facoltativo**|**Contenuto facoltativo**|**Gioco libero**
+          | ***Concetto***|*blocco stampa, eventi*|*comandi, eventi*|*aggiunta di caselle*|*etichette delle variabili corrispondenti*|*blocchi della schermata del titolo*|*memorizzazione colori*|*nessun nuovo contenuto*
+      courseF_variables_projects:
+        display_name: Scegli un progetto
+        description: Creerai un biglietto di auguri, un chatbot o una storia delle
+          caselle vuote. Se hai già terminato la \"Parta 1\" del tuo progetto, vai
+          alla \"Parte 2\".
+        teacher_markdown: |
+          # Panoramica del livello delle scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma podevono essere incoraggiati a completare **due** livelli per lo stesso progetto.
+
+          Gli studenti potrebbero aver realmente bisogno di ricevere istruzioni chiare per capire come navigare tra le scelte. Per ognuna delle scelte del progetto, ci sono due sottolivelli. Per iniziare, gli studenti devono selezionare uno dei livelli contrassegnati come "Parte 1". Una volta che hanno terminato quel livello devono ritornare qui e selezionare la "Parte 2" dello *stesso* progetto. Per ogni scelta, il primo livello fornirà agli studenti un feedback mentre mettono insieme i componenti base del loro progetto. Il secondo livello è' un "gioco libero" che consente agli studenti di apportare al loro codice tutte le modifiche che desiderano.
+      courseF_variables_samples:
+        display_name: 'Esplorazione: Programmi di esempio'
+        description: Creerai un biglietto di auguri, un chatbot o una storia delle
+          caselle vuote. Prima che inizi, esplora i progetti di esempio sottostanti,
+          per capire cosa ti interessa creare. Premi su \"Termina"\ quando sarai pronto
+          per iniziare a pianificare il tuo programma.
+        teacher_markdown: |-
+          # Panoramica del livello della scelta
+          I livelli della scelta offrono un menu di livelli aggiuntivi, che gli studenti devono portare a termine. Gli studenti devono completare almeno uno dei sottolivelli qui presenti, ma possono dedicarsi a tanti livelli quanti ne desiderano (o ne desideri).
+
+          Gli studenti devono osservare questi progetti attentamente prima di decidere quale desiderano creare. Puoi analizzarli insieme a loro come una classe, oppure puoi lasciare che gli studenti li esplorino per conto loro.
+      express_EOC_examples_2021:
+        description: Stai per iniziare il tuo progetto finale. Prima di cominciare,
+          trascorri un po' tempo a osservare i progetti di esempio.
+        display_name: Esempi di progetti
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |-
+          # Storia delle caselle vuote
+
+          In questa lezione, imparerai a usare e scrivere storie delle caselle vuote. Guarda questo video per imparare come questa attività si colleghi all'informatica.
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Panoramica
+
+          La classe programma i personaggi per farli interagire in nuovi modi. Dopo una breve rassegna del modo in cui hanno usato il blocco sta Toccando, la classe penserà ad altri modi in cui i personaggi potrebbero interagire. Dopodiché useranno staToccando" per fare in modo che un personaggio spinga un altro attraverso lo schermo, prima di fare pratica con i quattro blocchi di collisione (entra in collisione, rimuovi, rimbalza e fai rimbalzare contro.
+          ## Vocabolario
+
+          * **Astrazione**: tirar fuori differenze specifiche per fare in modo che una soluzione funzioni per molti problemi.
+
+          ## Codice introdotto
+
+          * [personaggio.rimbalzaContro()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [personaggio.entraInCollisione()](//studio.code.org/docs/gamelab/collide/)
+          * [personaggio.rimuovi()](//studio.code.org/docs/gamelab/displace/)
+          * [personaggio.impostaCollisore()](//studio.code.org/docs/gamelab/setCollider/)
+          * [personaggio.rimbalza()](//studio.code.org/docs/gamelab/bounce/)
+          * [personaggio.rimbalzo](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Panoramica
+
+          Questa lezione tratta le funzioni come un modo per organizzare il loro codice, rendendolo più leggibile e rimuovendo i blocchi di codice ripetuti. La classe imparerà che il livello superiore o i passaggi più astratti facilitano la comprensione e il ragionamento sui passaggi, poi inizierà a creare funzioni su Game Lab.  Alla fine della lezione, la classe utilizzerà queste capacità per organizzare e aggiungere funzionalità alla versione finale al loro gioco di scroller laterale.
+          ## Vocabolario
+
+          * **Funzione**: un pezzo di codice che può richiamare facilmente più e più volte.
+
+          ## Codice introdotto
+
+          * [Definisci una funzione](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Richiama una funzione](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Panoramica
+
+          Questa lezione introduce le variabili come un modo per etichettare un numero in un programma, o per salvare un valore generato in maniera casuale. La classe inizia la lezione con una descrizione molto semplice dello scopo di una variabile e delle pratiche utilizzando i nuovi blocchi.  Dopodiché, la classe userà le variabili per salvare un numero casuale, consentendo ai programmi di usare lo stesso numero casuale più volte.
+          ## Vocabolario
+
+          * **Variabile**: un segnaposto per una parte di informazione che può cambiare.
+
+          ## Codice introdotto
+
+          * [Dichiara una variabile](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Dichiara e assegna un valore a una variabile](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Risorse
+
+          * [Introduzione alle variabili](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD U4L08 SFLP:
+        markdown: |+
+          # Panoramica
+
+          Per avviare il disegno applicativo, la classe si organizza in squadre distinte e comincia ad esplorare le funzionalità dell' applicazione. Diversi esempi di applicazioni socialmente utili possono essere utilizzati come spunto per il progetto.
+
+
+          ## Risorse
+
+          * [Avvio Disegno applicativo](https://docs.google.com/document/d/1u5oTuQcEV0sweTA6bEER_wZT6FKoX7EqX8JdiY8YCAA/export?format=pdf) - Guida attività
+
+      CSD U4L09 SFLP:
+        markdown: |
+          # Panoramica
+
+          Approfondite lo sviluppo identificando applicazioni esistenti che possono essere utili per utenti con requisiti simili ai vostri. Ogni gruppo identifichi alcune applicazioni che indirizzano le stesse funzionalità su cui sta lavorando, usandole per raffinare il concetto di applicazione che si intende sviluppare.
+
+
+          ## Risorse
+
+          * [Ricerca di mercato](https://docs.google.com/document/d/1zDS5HCQ3nTwWHh4Dr4Ix17Db9fMRVJA8lNefwdcjiA0/export?format=pdf) - Guida Attività
+      CSD U4L11 SFLP:
+        markdown: |
+          # Panoramica
+
+          In questa lezione i teams mettono alla prova i loro prototipi su carta con i compagni . Con uno studente che impersona il computer , uno che illustra , e gli altri che assistono, i team ottengono un riscontro immediato sulla bontà del loro disegno applicativo, che servirà per la versione successiva dei loro prototipi.
+
+
+          ## Risorse
+
+          * [Prototipo - Verifica Utente](https://docs.google.com/document/d/1cPIdaayUutKdsq1RFT-keF4X-o4XBrF2BnMaVutc-_4/export?format=pdf) - Guida attività
+          * [Verifica applicazione " Menù del pranzo"](https://drive.google.com/open?id=0BxKeX2-Lg_EYUTBNbnMyUENFcGs) - Video
+      CSD U4L15 SFLP:
+        markdown: "# Panoramica\n\nI teams eseguono un altro ciclo di verifiche utente,
+          questa volta usando il loro prototipo interattivo. I riscontri raccolti
+          in questa sessione saranno utilizzati per preparare la sessione finale dei
+          prototipi applicativi. \n\n\n## Risorse\n\n* [Verifica utente dell'applicazione
+          ](https://docs.google.com/document/d/1-ZgkOaZ1Y_jCG1c9Hzkz_SMEZXrJAzVFLgoCVIQiIts/export?format=pdf)
+          - Guida attività\n"
+      CSD U4L16 SFLP:
+        markdown: |
+          # Panoramica
+
+          Basandovi sui risultati dell'ultima sessione di verifica, implementate le modifiche che indirizzano i requisiti utente. Ogni squadra tenga traccia e assegni una priorità alle funzionalità che intende aggiungere e ai "bug" da correggere.
+          ## Vocabolario
+
+          * **Bug** - parte di un programma che non funziona correttamente
+          * **Feature** - un singolo elemento funzionale di un software item. Ad esempio lo sviluppo di una nuova funzionalità, l'integrazione di una funzione esistente tra diverse piattaforme, o l'efficientamento di una funzione.
+
+
+          ## Risorse
+
+          * [Analisi della verifica Utente](https://docs.google.com/document/d/1Y7cri91LU_70n6CrIGnUSedPwA_TMfYCkyhCjfpfTns/export?format=pdf) - Guida attività
+      Example App Types_2018:
+        markdown: |
+          # Esempi di applicazioni
+
+          Nei livelli successivi potete vedere diversi esempi di applicazioni. Vi daranno un'idea di come potrebbe apparire l' Interfaccia Utente in base ai diversi scopi dell' applicazione.
+
+          Per ciascuna applicazione:
+
+          * Navigate nell'applicazione per avere un' idea di come funziona.
+          * Prendete nota delle singole funzioni e/o elementi dell' Interfaccia Utente e del loro utilizzo.
+          * Discutete con il vostro gruppo di come l' applicazione o la sua Interfaccia Utente potrebbero essere applicate al vostro caso.
+
+          # Nota
+
+          Queste applicazioni sono prototipi; consentono ad un utente di interagire senza preoccuparsi delle funzionalità sottostanti. Per esempio, quando utilizzate l'applicazione Quiz, qualunque domanda avrà sempre lo stesso esito, indipendentemente dalla risposta che scegliete.
+
+          Concentrandosi dapprima su un prototipo interattivo potete imparare molto circa le modalità con cui gli utenti potrebbero navigare nella vostra applicazione prima dedicarvi ai suo funzionamento ed ai contenuti.
+        teacher_markdown: "In questa attività gli studenti familiarizzano con un alcune
+          applicazioni a funzionalità limitate \n\n* Quiz Me\n* Albero decisionale\n*
+          Gestione liste\n* Crowdsourcing\n\nPer gli studenti piu' giovani o inesperti
+          è possibile limitare l'accesso a queste sole applicazioni. Sono state scelte
+          perché piuttosto semplici da sviluppare in App Lab. \nSe consentite agli
+          studenti di allontanarsi dagli esempi forniti, dovete considerare che alcuni
+          tipi di applicazioni sono piu' difficili da creare in App Lab e lo sviluppo
+          di un prototipo puo' richiedere piu' creatività. Ad esempio, App Lab non
+          supporta funzionalità di mappatura. Se gli studenti desiderano sviluppare
+          un' applicazione di mappatura, dovranno trovare o creare un' immagine statica
+          di una mappa da utilizzare nella loro app.\n"
+      Example App Types_2018_2019:
+        markdown: |
+          # Esempi di applicazioni
+
+          Nei livelli successivi potete vedere diversi esempi di applicazioni. Vi daranno un'idea di come potrebbe apparire l' Interfaccia Utente in base ai diversi scopi dell' applicazione.
+
+          Per ciascuna applicazione:
+
+          * Navigate nell'applicazione per avere un' idea di come funziona.
+          * Prendete nota delle singole funzioni e/o elementi dell' Interfaccia Utente e del loro utilizzo.
+          * Discutete con il vostro gruppo di come l' applicazione o la sua Interfaccia Utente potrebbero essere applicate al vostro caso.
+
+          # Nota
+
+          Queste applicazioni sono prototipi; consentono ad un utente di interagire senza preoccuparsi delle funzionalità sottostanti. Per esempio, quando utilizzate l'applicazione Quiz, qualunque domanda avrà sempre lo stesso esito, indipendentemente dalla risposta che scegliete.
+
+          Concentrandosi dapprima su un prototipo interattivo potete imparare molto circa le modalità con cui gli utenti potrebbero navigare nella vostra applicazione prima dedicarvi ai suo funzionamento ed ai contenuti.
+        teacher_markdown: "In questa attività gli studenti familiarizzano con un alcune
+          applicazioni a funzionalità limitate \n\n* Quiz Me\n* Albero decisionale\n*
+          Gestione liste\n* Crowdsourcing\n\nPer gli studenti piu' giovani o inesperti
+          è possibile limitare l'accesso a queste sole applicazioni. Sono state scelte
+          perché piuttosto semplici da sviluppare in App Lab. \nSe consentite agli
+          studenti di allontanarsi dagli esempi forniti, dovete considerare che alcuni
+          tipi di applicazioni sono piu' difficili da creare in App Lab e lo sviluppo
+          di un prototipo puo' richiedere piu' creatività. Ad esempio, App Lab non
+          supporta funzionalità di mappatura. Se gli studenti desiderano sviluppare
+          un' applicazione di mappatura, dovranno trovare o creare un' immagine statica
+          di una mappa da utilizzare nella loro app.\n"
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Guarda il codice sotto e predici come le intestazioni saranno mostrati.
+          Scegli da una delle opzioni a destra.
+        teacher_markdown: |-
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipi di livello:** Questa domanda a scelta multipla chiede agli studenti di scegliere come visualizzare le intestazioni HTML su una pagina web. Puoi vedere quali studenti hanno risposto correttamente alla domanda andando a quel livello e richiamando il riquadro Insegnante dal lato destro.  Gli studenti che hanno risposto correttamente alla domanda avranno una bolla verde.  Gli studenti hanno tutte le possibilità che vogliono per rispondere correttamente, quindi indovinare e controllare può anche portare ad una risposta corretta.
+
+          <div class="clear"></div>
+      CSD Interactive Animations and Games Post-Project Test_pilot_2021:
+        title: Animazioni Interattive e Test Post-Progetto dei Giochi
+      CSD Physical Computing Post-Project Test_2021:
+        title: Test Post-Progetto di Informatica Fisica
+      CSD U1 Test_2021:
+        title: Computer e Risoluzione di Problemi - Verifica finale
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Aggiungere Immagini
+      CSD U2 Image practice_pilot_2021:
+        display_name: Aggiungere Immagini
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png
+        - text: https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png
+        - text: https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png
+        - text: https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png
+        content1: Abbina il codice HTML buggato con la descrizione del suo bug.
+        questions:
+        - text: L'attributo 'src' è scritto in modo scorretto.
+        - text: Gli attributi 'src' 'alt' sono invertiti
+        - text: L'estensione file (.jpg) è mancante dall'indirizzo immagine
+        - text: L'indirizzo immagine non è dato come attributo 'src'
+        - text: C'è uno spazio nel nome del file
+        teacher_markdown: Sebbene questa lezione possa essere utilizzata per valutare
+          la comprensione da parte degli studenti della sintassi del tag `<img>`,
+          il suo scopo principale è quello di rendere gli studenti consapevoli dei
+          tipi più comuni di bug che possono incontrare quando aggiungono immagini
+          alle pagine web.
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: descrizione qui
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - text: dog.rotation &lt; cat.rotation
+        - text: dog.x &lt; cat.x
+        - text: dog.scale &gt; cat.scale
+        - text: dog.x &gt; cat.x
+        - text: dog.x == cat.x
+        content1: Abbina l'espressione booleana alla descrizione in inglese.
+        questions:
+        - text: La rotazione del personaggio cane è inferiore alla rotazione del personaggio
+            gatto?
+        - text: La rotazione del personaggio cane x è minore di quella del personaggio
+            gatto x?
+        - {}
+        - {}
+        - {}
+        title: 'Abbinamento: Comparazione Operatori'
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: titolo
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: descrizione qui
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Pratica
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: descrizione qui
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: descrizione qui
+      CSD U5 test_2021:
+        title: Test Post-Progetto su Dati e Società
+      CSD U6 LED create intro_2021:
+        content1: descrizione qui
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: descrizione qui
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Fai una previsione
+      CSD User Centered Design Post-Project Test_2021:
+        title: 'Design Centrato dell''Utente: Test Post-Progetto'
+      CSD Web Development Post-Project Test_pilot_2021:
+        title: Testo Post-Progetto di Sviluppo Web
+      CSD games cake challenge choice_2021:
+        display_name: Sfide
+      CSD games platform challenge choice_2021:
+        display_name: Sfide
+      CSD web draw loop practice choice_2021:
+        display_name: Pratica
+      CSD web movement practice choice_2021:
+        display_name: Pratica
+      CSD web text practice choice_2021:
+        display_name: Pratica
+      csd-pre-survey-levelgroup_21_22:
+        title: Alla Scoperta dell'Informatica - Indagine preliminare

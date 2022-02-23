@@ -1,6 +1,7 @@
 {
-  "func": "declareAssign_object",
-  "block": "var object = {\"key\": \"value\"};",
+  "key": "declareAssign_object",
+  "name": "declareAssign_object",
   "category": "Variables",
-  "noAutocomplete": true
+  "category_key": "variables",
+  "syntax": "var object = {\"key\": \"value\"};"
 }

@@ -2,6 +2,27 @@
   "lt-LT": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Komanda"
+        },
+        "code/poem-art/2021": {
+          "word": "Kodavimas"
+        },
+        "code/artist/unversioned": {
+          "word": "Kodavimas"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Kartojimas"
+        },
+        "code/sports/unversioned": {
+          "word": "Kodavimas"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kodavimas"
+        },
         "variable/coursef/2021": {
           "word": "Kintamasis"
         },
@@ -40,6 +61,21 @@
         },
         "define/coursee/2021": {
           "word": "Apibrėžti"
+        },
+        "variable/csd/2021": {
+          "word": "Kintamasis"
+        },
+        "conditionals/csd/2021": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "abstraction/csd/2021": {
+          "word": "Komandos su parametrais"
+        },
+        "function/csd/2021": {
+          "word": "Komanda"
+        },
+        "copyright/csd/2021": {
+          "word": "Autorinės teisės"
         }
       }
     }

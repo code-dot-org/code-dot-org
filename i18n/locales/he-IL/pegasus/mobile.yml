@@ -66,7 +66,7 @@
   csedweek_map_legend_cs_tech_jam: "אירוע מיוחד"
   cded_sign_up: "הירשם"
   cded_try_it: "נסו זאת"
-  try_now: "נסה עכשיו"
+  try_now: "לנסות עכשיו"
   california_heading: "בקש מבית הספר שלך ללמד מדעי המחשב"
   california_text: "כל מורה יכול להציע את <a href='http://learn.code.org/'> קורס המבוא החינמי שלנו</a>.  כל בית ספר יסודי יכול <a href='http://code.org/educate/k5'>ללמד מדעי המחשב</a>. בקשו מבתי ספר תיכוניים <a href='http://code.org/educate/districts'>להשתתף עימנו."
   california_button: "למד עוד"
@@ -239,8 +239,8 @@
   studiobar_flappy_body: "צור ושתף את משחק הפלאפי בירד שלך"
   studiobar_teacher_title: "נוצר עבור מורים"
   studiobar_teacher_body: "הצג את קוד הסטודיו בכיתתך"
-  studiobar_frozen_title: "שעה של קוד"
-  studiobar_frozen_body: "צור עולם פלאים חורפי עם אלסה ואנה"
+  studiobar_frozen_title: "שעת הקוד"
+  studiobar_frozen_body: "צור עולם פלאים חורפי עם אלזה ואנה"
   studiobar_donate_title: "תרום"
   studiobar_donate_body: "ילד אחד ילמד עבור כל דולר תרומה"
   studiobar_shop_title: "חנות"
@@ -286,7 +286,7 @@
   homepage_slot_text_studio: "כל המדריכים שלנו"
   homepage_slot_text_course4: "מסלול 4"
   homepage_slot_text_shop: "חנות"
-  homepage_slot_text_flappy: "קוד מתנופף"
+  homepage_slot_text_flappy: "קוד מעופף"
   homepage_action_text_hoc: "שעה של קוד לכל תלמיד."
   homepage_action_text_num_served: "# למדו"
   homepage_action_text_join_us: "הצטרף אלינו"
@@ -307,7 +307,7 @@
   homepage_banner_20k_teachers_link: "למד עוד"
   homepage_banner_emailprivacy_link: "קראו עוד"
   homepage_banner_40k_teachers_link: "למד עוד"
-  homepage_slot_text_title_hoc: "שעה של קוד"
+  homepage_slot_text_title_hoc: "שעת הקוד"
   homepage_slot_text_blurb_hoc: "כל אחד יכול ללמוד. התחל היום"
   homepage_slot_text_link_hoc: "נסה את \"שעת הקוד\" (Hour of Code)"
   homepage_slot_text_link_about_hoc: "אודות שעה של קוד"
@@ -408,7 +408,7 @@
   minecraft_specs: "שפות רבות | טאבלטים ודפדפנים מודרניים | כיתות ב+"
   minecraft_start_tutorial: "התחלת מדריך"
   minecraft_agent_button: "התחל"
-  minecraft_designer_description: "תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך."
+  minecraft_designer_description: "תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך."
   minecraft_designer_button: "התחל"
   minecraft_adventurer_description: "השתמש בקוד כדי לצאת עם אלכס או סטיב להרפתקה."
   minecraft_adventurer_button: "התחל"
@@ -724,7 +724,7 @@
   hourofcode_name: "מבוך קלאסי"
   playlab_name: "מעבדת הצעצועים"
   infinity_name: "אינסוף מעבדת הצעצועים"
-  artist_name: "אמן"
+  artist_name: "אומן"
   course1_name: "מסלול 1"
   course2_name: "מסלול 2"
   course3_name: "מסלול 3"
@@ -829,6 +829,12 @@
   coursed-2020_gradelevel: כיתות ח' ומעלה
   coursee-2020_gradelevel: גילאי 8-12
   coursef-2020_gradelevel: גילאי 9-13
+  coursea-2021_gradelevel: גילאי 4-7
+  courseb-2021_gradelevel: גילאי 5-8
+  coursec-2021_gradelevel: גילאי 6-10
+  coursed-2021_gradelevel: כיתות ח' ומעלה
+  coursee-2021_gradelevel: גילאי 8-12
+  coursef-2021_gradelevel: גילאי 9-13
   accelerated_gradelevel: "גילאי 10-18"
   codeorg_platformtext: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
   codeintl_platformtext: "דפדפנים מודרנים, סמארטפונים, טאבלטים"
@@ -911,10 +917,10 @@
   projguts_shortdescription: "נסו מודלים וסימולציות באמצעות אבן/נייר/מספריים"
   hourofcode_shortdescription: "למד לכתוב קוד עם מרק צוקרברג והאנגרי בירדז!"
   frozen_shortdescription: "בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם והיופי של קרח."
-  starwars_shortdescription: "למדו כיצד לתכנת דרואידים, וליצור את משחק \"מלחמת הכוכבים\" הפרטי שלכם בגלקסיה רחוקה, רחוקה."
+  starwars_shortdescription: "למדו כיצד לתכנת דרואידים וליצור את משחק \"מלחמת הכוכבים\" הפרטי שלכם, בגלקסיה רחוקה רחוקה..."
   playlab_shortdescription: "צור סיפור או משחק בעזרת מעבדת הצעצועים!"
-  infinity_shortdescription: "השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני."
-  artist_shortdescription: "ציירו תמונות מגניבות ועיצובים עם האמן!"
+  infinity_shortdescription: "בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות מתוך \"דיסני אינסוף\"."
+  artist_shortdescription: "ציירו תמונות מגניבות ועיצובים עם האומן!"
   coursed-2020_shortdescription_congrats: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
   coursed-2021_shortdescription_congrats: בקורס זה תלמידים יפתחו את ההבנה שלהם בלולאות מקוננות, לולאות "כל עוד", התניות ואירועים. מעבר לתכנות, תלמידים ילמדו על אזרחות דיגיטלית.
   codeorg_longdescription: "למדו את עקרונות היסוד של מדעי המחשב באמצעות תכנות גרור ושחרר. זוהי הדרכה דמוית משחק בקצב אישי מלווה בהרצאות בכיכובם של ביל גייטס, מרק צוקרברג, אנגרי בירדז, וצמחים נגד זומבים. למדו על לולאות, תנאים ואלגוריתמים בסיסיים. מוצע ב34 שפות."
@@ -951,7 +957,7 @@
   thinkersmith2_longdescription: "תלמידים לומדים על הצגה ואחסון של אותיות בצורה בינארית, באמצעות הסימנים \"מופעל\" ו\"מכובה\". בסופו של שיעור, הכיתה תוכל להצפין את ראשי התיבות של שמם כדי לקחתם הביתה."
   projguts_longdescription: "פעילות זו שאינה מצריכה חיבור לרשת מסייעת לתלמידים ללמוד איך מידול וסימולציה עובדים על ידי כך שקבוצת תלמידים תשחק בגרסאות שונות של המשחק \"אבן נייר ומספריים\" , ותראה את התוצאות כניסוים שונים במידול."
   hourofcode_longdescription: "מחזיק מקום עבור code.org/hoc חדש"
-  frozen_longdescription: "תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!"
+  frozen_longdescription: "השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את זה עם חבריכם!"
   starwars_longdescription: "למדו כיצד לתכנת דרואידים, וליצור את משחק \"מלחמת הכוכבים\" הפרטי שלכם בגלקסיה רחוקה, רחוקה..."
   playlab_longdescription: "צור סיפור או משחק בעזרת מעבדת הצעצועים! גרום לחיות, פיראטים, זומבים, נינג'ות ודמויות רבות נוספות לעזוז, לעשות קולות, לצבור נקודות, ואפילו לזרוק כדורי אש!"
   codeorg_beyond_name: "מבוא למדעי המחשב (גן חובה-כיתה ח')"
@@ -1097,7 +1103,8 @@
   compatibility_hide_this_warning: "הסתר את האזהרה הזו"
   compatibility_unsupported_browser: "הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}', target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה בעיות בחלק מן הפונקציונליות הקיימת."
   compatibility_unsupported_browser_markdown: "הדפדפן שלך אינו נתמך. אנא שדרג אותו <a href='%{supported_browsers_url}', target='_blank'> לאחד מהדפדפנים הנתמכים</a>. תוכל לנסות ולצפות בדף, אבל צפה בעיות בחלק מן הפונקציונליות הקיימת."
-  flappy_shortcode: "נופף"
+  starwars_shortcode: "כוכב"
+  flappy_shortcode: "התעופף"
   header_home: "בית"
   header_my_dashboard: "לוח הבקרה שלי"
   header_courses: "מסלולים"
@@ -1109,7 +1116,7 @@
   header_educate_elementary: "בית ספר יסודי"
   header_educate_middle: "חטיבת ביניים"
   header_educate_high: "תיכון"
-  header_educate_hoc: "שעה של קוד"
+  header_educate_hoc: "שעת הקוד"
   header_educate_partner: "שותף יחד איתנו"
   header_educate_beyond: "מעבר ל-Code.org"
   header_educate_inspire: "הנחל השראה לתלמיד"
@@ -1145,7 +1152,7 @@
   user_header_signin: "התחבר"
   user_header_create: 'צור '
   user_header_applab: 'מעבדת היישומים '
-  user_header_artist: 'אמן '
+  user_header_artist: 'אומן '
   user_header_gamelab: "מעבדת המשחקים"
   user_header_playlab: "מעבדת הצעצועים"
   user_header_dance: "מסיבת ריקודים"
@@ -1182,7 +1189,7 @@
   hoc2018_mc_aquatic_title: "מיינקראפט: מסע ימי"
   hoc2018_mc_hero_title: "המסע של הגיבור במיינקראפט"
   hoc2018_mc_designer_title: "מעצב מיינקראפט"
-  hoc2018_mc_designer_description: "תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך."
+  hoc2018_mc_designer_description: "תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך."
   hoc2018_mc_adventurer_title: "הרפתקן מיינקראפט"
   hoc2018_mc_adventurer_description: "השתמש בקוד כדי לצאת עם אלכס או סטיב להרפתקה."
   hoc2018_mc_start: "התחל"
@@ -1200,9 +1207,9 @@
   hoc2018_mc_homepage_what_create: "מה אתם תיצרו?"
   hoc2018_mc_homepage_join_us: "הצטרף אלינו"
   hoc2018_mc_homepage_try_it: "נסו זאת"
-  hoc2018_mc_minecraft_education: "לימוד בעזרת מיינקרפט"
-  hoc2018_mc_continue_learning: "המשך ללמוד עם מיינקרפט."
-  hoc2018_mc_go_to_mc_education: "עבור ללימוד בעזרת מיינקרפט"
+  hoc2018_mc_minecraft_education: "לימוד בעזרת מיינקראפט"
+  hoc2018_mc_continue_learning: "המשך ללמוד עם מיינקראפט."
+  hoc2018_mc_go_to_mc_education: "עבור ללימוד בעזרת מיינקראפט"
   hoc2018_mc_short_description_shorter: "השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות ולבנות עולמות תת-ימיים עם קוד."
   hoc2018_mc_journey: "מסע במיינקראפט עם קוד."
   hoc2018_dance_party_main_heading: "מסיבת ריקודים"
@@ -1246,7 +1253,6 @@
   hoc2018_dance_video4: "מסיבת ריקודים - סיום"
   hoc2018_mc_with_microsoft: "בשיתוף עם: "
   hoc2018_mc_thank_microsoft: "אנו מודים למיקרוסופט על תמיכתה בחזון ובמשימה שלנו – להבטיח שלכל ילד תהיה ההזדמנות ללמוד מדעי המחשב ולרכוש את הכישורים הנדרשים כדי להצליח במאה ה־21."
-  ! '': ' '
   footer_powered_by_aws: "ממונע ע\"י Amazon Web Services"
   codebytes_skinny_banner_english_only: "אנגלית בלבד"
   footer_privacy_policy: "הצהרת פרטיות"
@@ -1260,3 +1266,4 @@
   ai_microsoft_thanks: "אנו מודים למיקרוסופט על תמיכתה בחזון ובמשימה שלנו – להבטיח שלכל ילד תהיה ההזדמנות ללמוד מדעי המחשב ולרכוש את הכישורים הנדרשים כדי להצליח במאה ה־21."
   ai_activity: "פעילות"
   ai_description: "תיאור"
+  outbreak_tile_title: "התפרצות"

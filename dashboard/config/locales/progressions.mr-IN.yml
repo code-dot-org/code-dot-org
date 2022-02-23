@@ -2,8 +2,13 @@
 mr:
   data:
     progressions:
+      AI Machine Learning - Video: AI मशिन लर्निंग - व्हिडिओ
+      'AI: Impact on Society - Video': 'AI:  समाजावर होणारा परिणाम - व्हिडिओ'
+      'AI: Training Data & Bias - Video': 'AI: प्रशिक्षण डेटा आणि पूर्वाग्रह - व्हिडिओ'
+      App Lab Intro - Video: अॅप लॅब परिचय - व्हिडिओ
       Artist Project: आर्टीस्ट प्रोजेक्ट
       'Artist: Variables': 'आर्टीस्ट: व्हेरीएबल्स'
+      Assessment: मूल्यांकन
       Back and Forth: मागे आणि पुढे
       Bass, Mid, and Treble: बेस, मिड आणि ट्रेबल
       Code Your Own Flappy Game: तुमच्या स्वत:च्या फ्लॅपी गेमचा कोड लिहा
@@ -11,15 +16,27 @@ mr:
       Debugging: डीबगिंग
       Drawing: चित्र काढणे
       Events: ईव्हेंट्स
+      Example: उदाहरण
+      'Exploration: Rikki''s Poster': 'पहा: रिक्कीचे पोस्टर'
       Get In Formation: चला एक रचना बनवू या
+      Hello World: हॅलो वर्ल्ड
       Learning from Simulations: सिम्युलेशन्समधून शिकणे
+      Levels: पातळ्या
+      Lists: याद्या
       Measures: मापे
       'Mini-Project: Outbreak Simulator': 'मिनी-प्रोजेक्ट: आऊटब्रेक सिम्युलेटर    '
       More Buttons: अधिक बटणे
       Overview: आढावा
+      Programming with Rey and BB-8: रे आणि BB-8 सह प्रोग्रॅमिंग
       Quarter Notes: पाव नोट्स
       Speed it Up, Slow it Down: वेग वाढवा, वेग कमी करा
+      Sprite Lab Project: स्प्राईट लॅब प्रोजेक्ट
+      Teach AI a New Word: AI ला एक नवीन शब्द शिकवा
       Text Compression: टेक्स्ट कॉम्प्रेशन
+      Variables: व्हेरीएबल्स
+      'Video: "If/Else"': 'व्हिडिओ: "जर/अन्यथा"'
+      'Video: Outbreak Simulator: Introduction': 'व्हिडिओ: आऊटब्रेक सिम्युलेटर: परिचय'
+      'Video: Programming with Rey and BB-8': 'व्हिडिओ: रे आणि BB-8 सह प्रोग्रॅमिंग'
       Warm Up: वार्म अप
       Welcome to Monster Town: राक्षसांच्या शहरात स्वागत
       Where'd They Go?: ते कुठे गेले?

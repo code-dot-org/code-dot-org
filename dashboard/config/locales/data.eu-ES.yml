@@ -38,6 +38,7 @@ eu:
         NetSim: Internet simulagailua
         Custom: Artista
         CustomStudio: Jolas Laborategia
+        Gamelab: Jolas laborategia
     trophy:
       name:
         Bronze: Brontzea
@@ -609,10 +610,13 @@ eu:
         C4_unplugged_forloops: For begiztak
         C4_unplugged_parameters: Abestiak idazten parametroekin
         C4_unplugged_binary: Bitarra
+        CSF_create_functions: Sortu funtzioak
         CSF_debugging_k1_blocks: Arazketa
         CSF_debugging_text_blocks: Arazketa
         CSF_EF_cs_matters: Informatika Gaiak
         CSF_my_robotic_friends: Nire lagun robotikoak
+        CSF_Power_of_Words: Hitzen indarra
+        CSF_Super_Digital_Citizen: Super hiritar digitala
         CSF_stevie_big_project: Stevie eta Big Proiektua
         CSF_zuck_loops_short: Errepikatu Loops
         frozen_intro: 'Sarrera: Kodetzeko ordua'
@@ -625,10 +629,30 @@ eu:
         infinity_playlab_intro: Jolas Laborategia - Sarrera
         infinity_playlab_events: Jolas Laborategia - Gertaerak
         infinity_playlab_repeat_forever: Jolas Laborategia - "Errepikatu Betirako"
+        csd_concept_how_computers_work: Ordenagailuen funtzionamendua aurkezten
+        csd_concept_binary_data: 'Nola funtzionatzen duten ordenagailuak: bitarrak
+          eta datuak'
+        csd_concept_circuits_logic: 'Nola funtzionatzen duten ordenagailuak: zirkuituak
+          eta logika'
+        csd_concept_memory_cpu_input_output: 'Ordenagailuen funtzionamendua: memoria,
+          PUZ, sarrera eta irteera'
+        csd_concept_hardware_software: 'Ordenagailuen funtzionamendua: Hardwarea eta
+          softwarea'
+        csd_concept_search: Nola funtzionatzen duen bilaketak
+        csd_external_netflix_data: Nola egiten ditu Netflix-ek telesaio eta film iradokizunak?
+        csd_external_waze_data: Zergatik daude hainbeste erabiltzaile Wazerekin obsesionatuta?
+        csd_gamelab_animation_tab: Animazio fitxa
+        csd_gamelab_velocity: Abiadura
+        csd_weblab_intro_1: Web Lab sarrera - 1. zatia
+        csd_weblab_intro_2: Web Lab sarrera - 2. zatia
+        csd_weblab_css_1: CSS sarrera - 1. zatia
+        csd_weblab_css_2: CSS sarrera - 2. zatia
+        csd_weblab_intro_3: Web Lab sarrera - 3. zatia
         csp_applab_functions: 'Sarrera: Funtzioak'
         csp_applab_functions_parameters: Parametrodun funtzioak
         csp_applab_loops: Itzuliak
         csp_concept_rgb: Informazio pixka bat pixelei buruz
+        csp_cs_is_changing_everything: Informatika dena aldatzen ari da
         starwars_intro: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Sarrera'
         starwars_typing: Star Wars - Code-ren bitartez galaxia bat eraikitzen - JavaScript
         starwars_events: 'Star Wars: Code-ren bitartez galaxia bat eraikitzen - Gertaerak'

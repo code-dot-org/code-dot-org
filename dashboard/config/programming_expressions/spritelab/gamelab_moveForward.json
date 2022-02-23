@@ -1,0 +1,8 @@
+{
+  "key": "gamelab_moveForward",
+  "name": "moveForward",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "block_name": "gamelab_moveForward",
+  "syntax": "moveForward"
+}

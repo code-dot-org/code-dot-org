@@ -18,6 +18,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # GET /api/v1/sections
   # Get the set of sections owned by the current user
   def index
+    prevent_caching
     render json: current_user.sections.map(&:summarize)
   end
 
@@ -52,8 +53,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         lesson_extras: params['lesson_extras'] || false,
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
-        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
-        code_review_enabled: params[:code_review_enabled].nil? ? true : params[:code_review_enabled]
+        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
       }
     )
     render head :bad_request unless section
@@ -101,7 +101,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
-    fields[:code_review_enabled] = params[:code_review_enabled].nil? ? true : params[:code_review_enabled]
 
     section.update!(fields)
     if script_id
@@ -198,6 +197,52 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     return head :forbidden unless current_user
     site_key = CDO.recaptcha_site_key
     render json: {key: site_key}
+  end
+
+  # GET /api/v1/sections/<id>/code_review_groups
+  # Get all code review groups and their members for this section. Also include
+  # all unassigned followers.
+  # Format is:
+  # { groups: [
+  #   {unassigned: true, name: 'unassigned', members: [{follower_id: 1, name: 'student_name'},...]},
+  #   {id: <group-id>, name: 'group_name', members: [{follower_id: 2, name: 'student_name'},...]},
+  #   ...
+  # ]}
+  def code_review_groups
+    groups = @section.code_review_groups
+    groups_details = []
+    assigned_follower_ids = []
+    groups.each do |group|
+      members = []
+      group.members.each do |member|
+        members << {follower_id: member.follower_id, name: member.name}
+        assigned_follower_ids << member.follower_id
+      end
+      groups_details << {id: group.id, name: group.name, members: members}
+    end
+
+    unassigned_students = @section.followers.where.not(id: assigned_follower_ids)
+    unassigned_students = unassigned_students.map {|student| {follower_id: student.id, name: student.student_user.name}}
+    groups_details << {unassigned: true, members: unassigned_students}
+    render json: {groups: groups_details}
+  end
+
+  # POST /api/v1/sections/<id>/code_review_groups
+  def set_code_review_groups
+    @section.reset_code_review_groups(params[:groups])
+    render json: {result: 'success'}
+  # if the group data is invalid we will get a record invalid exception
+  rescue ActiveRecord::RecordInvalid
+    render json: {result: 'invalid groups'}, status: 400
+  end
+
+  # POST /api/v1/sections/<id>/code_review_enabled
+  def set_code_review_enabled
+    # ensure a string or boolean gets parsed correctly
+    enable_code_review = ActiveModel::Type::Boolean.new.cast(params[:enabled])
+    @section.update_code_review_expiration(enable_code_review)
+    @section.save
+    render json: {result: 'success', expiration: @section.code_review_expires_at}
   end
 
   private

@@ -1,18 +1,19 @@
 {
   "pages": {
-    "/projects": "home-learning-2020",
-    "/home": "nextsteps-faq"
+    "/projects": "coldplay",
+    "/home": "superhero",
+    "/certificates": "congrats-certificate-share"
   },
 
   "banners": {
-    "nextsteps-faq": {
-      "image": "/images/csjourneys/nextsteps-faq-banner3.png",
-      "title": "Demystify next steps for your students",
-      "body": "Give high school students the opportunity to hear answers to some of the most common questions about computer science, including what career options are available and how artificial intelligence and big data will shape the job market.",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-1",
-      "buttonId": "nextsteps-faq-details"
-    },  
+    "superhero": {
+      "image": "/images/marketing/superhero_teacherdash.png",
+      "title": "Help your students become superheroes!",
+      "body": "Add to your teaching toolbox with Code.org’s Professional Learning Program. More than 90% of attendees would recommend our program to another teacher!",
+      "buttonText": "Learn More",
+      "buttonUrl": "https://code.org/educate/professional-learning/",
+      "buttonId": "superhero-pl-details"
+    },
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
       "title": "Explore the wide world of computer science",
@@ -103,6 +104,22 @@
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/ai",
       "buttonId": "2020-ai"
+    },
+    "congrats-certificate-share": {
+      "image": "/images/teacherdashboard1.png",
+      "title": "Try an Hour of Code",
+      "body": "Anyone can learn!",
+      "buttonText": "Start",
+      "buttonUrl": "https://code.org/learn",
+      "buttonId": "congrats-certificate-share-button"
+    },
+    "coldplay": {
+      "image": "/images/marketing/coldplay_minibanner.png",
+      "title": "Code and dance with Coldplay",
+      "body": "Use Dance Party to create something awesome! Share it online and Coldplay might spotlight your project on social media. You could even get to see the band live! Let's see what you create!",
+      "buttonText": "Try it",
+      "buttonUrl": "https://code.org/coldplay",
+      "buttonId": "coldplay"
     }
   }
 }

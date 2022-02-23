@@ -189,7 +189,7 @@
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\n  var pitch = accelerometer.getOrientation(\"pitch\");\n  var roll = accelerometer.getOrientation(\"roll\");\n  setProperty(\"roll\", \"text\", \"roll: \" + roll);\n  setProperty(\"pitch\", \"text\", \"pitch: \" + pitch);\n  setProperty(\"airplane\", \"y\", 225 + pitch);\n  setProperty(\"airplane\", \"x\", 150 + roll);\n});\n",
+    "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\r\n  var pitch = accelerometer.getOrientation(\"pitch\");\r\n  var roll = accelerometer.getOrientation(\"roll\");\r\n  setProperty(\"roll\", \"text\", \"roll: \" + roll);\r\n  setProperty(\"pitch\", \"text\", \"pitch: \" + pitch);\r\n  setProperty(\"airplane\", \"y\", 225 + pitch);\r\n  setProperty(\"airplane\", \"x\", 150 + roll);\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -235,15 +235,19 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "teacher_markdown": "The accelerometer has two properties: the `roll` and `pitch`. The `roll` corresponds to tilting left and right, and `pitch` corresponds to tilting forwards and backwards. Students should notice this if they're holding their circuit playground level to the ground with the USB cable pointing away from them so all the lettering appears correctly. Students may also experiment with moving their circuit playground in the physical space - moving it up and down or left and right - but this doesn't affect the accelerometer. Only rotating and tilting the circuit playground will change the roll and pitch."
   },
   "game_id": 41,
+  "published": true,
   "created_at": "2021-09-01T22:35:52.000Z",
   "level_num": "custom",
   "user_id": 568,
-  "published": true,
   "notes": "Markdown in contained level.",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:35:52.255+00:00\",\"changed\":[\"cloned from \\\"CSD U6 Airplane predict_2021\\\"\"],\"cloned_from\":\"CSD U6 Airplane predict_2021\"},{\"changed_at\":\"2021-09-01 22:36:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-01 22:36:43 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-01 22:36:58 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:35:52.255+00:00\",\"changed\":[\"cloned from \\\"CSD U6 Airplane predict_2021\\\"\"],\"cloned_from\":\"CSD U6 Airplane predict_2021\"},{\"changed_at\":\"2021-09-01 22:36:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-01 22:36:43 +0000\",\"changed\":[\"start_blocks\",\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-01 22:36:58 +0000\",\"changed\":[\"start_html\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-01 00:45:32 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

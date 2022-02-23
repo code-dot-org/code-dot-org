@@ -1,5 +1,5 @@
 ---
-title: Learn about Artificial Intelligence (AI)
+title: Belajar tentang Kecerdasan Buatan (AI)
 video_player: true
 theme: responsive
 style_min: true
@@ -18,17 +18,17 @@ social:
 
 {{ ai_header_stylesheets_links }}
 
-# Learn about Artificial Intelligence (AI)
+# Belajar tentang Kecerdasan Buatan (AI)
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">NEW AI and Machine Learning Module</h2><p>Our new curriculum module focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts through a number of online and unplugged activities and full-group discussions.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Explore the module</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">Modul AI dan Pembelajaran Mesin yang BARU</h2><p>Modul kurikulum kami yang baru fokus pada etika AI, mengkaji berbagai isu tentang bias, dan menggali serta menjelaskan konsep-konsep dasar lewat sejumlah aktivitas online dan unplugged serta diskusi seluruh anggota grup.</p><a  href="#about-aimodule"><button>Pelajari selengkapnya</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Telusuri modul</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI Lab"/></div>
 <div class="clear"></div>
 </div>
 
-AI and Machine Learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications.
+AI dan Pembelajaran Mesin memengaruhi seluruh sendi kehidupan kita sehingga mengubah cara kita hidup dan bekerja. Itulah sebabnya kita semua dituntut dan harus memahami teknologi yang semakin penting ini, tidak hanya mengerti cara merancang dan menerapkannya, tetapi juga implikasi kemasyarakatan dan etisnya.
 
-Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!
+Bergabunglah bersama kami untuk menjelajahi AI dalam serial video baru, melatih AI untuk Ocean dalam 25+ bahasa, mendiskusikan etika, dan lain-lain!
 
 {{ ai_20px_margin }}
 
@@ -46,19 +46,19 @@ Join us to explore AI in a new video series, train AI for Oceans in 25+ language
 
 <a id="about-aimodule"></a>
 
-## NEW AI and Machine Learning Module
+## Modul AI dan Pembelajaran Mesin yang BARU
 <div>
 <div class="col-50">
-<p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2021">unit in CS Discoveries</a>. It focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts</p><p>Because machine learning depends on large sets of data, the new unit includes real life datasets on healthcare, demographics, and more to engage students while exploring questions like, “What is a problem Machine Learning can help solve?” “How can AI help society?” “Who is benefiting from AI?” “Who is being harmed?” “Who is involved?” “Who is missing?”  </p>
-<p>Ethical considerations will be at the forefront of these discussions, with frequent discussion points and lessons around the impacts of these technologies. This will help students develop a holistic, thoughtful understanding of these technologies while they learn the technical underpinnings of how the technologies work.</p>
+<p>Modul AI dan Pembelajaran Mesin secara kasar berupa modul kurikulum lima mingguan yang dapat diajarkan sebagai <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >modul mandiri</a> atau unit opsional <a href="https://studio.code.org/s/csd7-2021">dalam CS Discoveries</a>. Modul ini fokus membahas etika AI, mengkaji berbagai isu tentang bias, dan menggali serta menjelaskan konsep-konsep dasar</p><p>Karena pembelajaran mesin mengandalkan himpunan data dalam jumlah besar, unit baru ini menyertakan himpunan data kehidupan nyata tentang layanan kesehatan, demografi, dan lain-lain untuk memancing interaksi murid seraya mendalami berbagai pertanyaan seperti, “Apa saja masalah yang dapat dipecahkan dengan Pembelajaran Mesin?” “Bagaimana cara AI membantu masyarakat?” “Siapa saja yang memetik manfaat AI?” “Siapa saja yang dirugikan?” “Siapa saja yang terlibat?” “Siapa saja yang ketinggalan?”  </p>
+<p>Pertimbangan etis akan menjadi tema pokok dalam diskusi tersebut dengan berbagai selipan poin dan tema diskusi seputar dampak teknologi AI. Teknik ini akan membantu murid dalam membangun pemahaman yang utuh, bulat, dan matang tentang teknologi ini sambil mempelajari dasar-dasar teknis tentang cara kerja teknologi AI.</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>Explore the module</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 
-## How AI Works
+## Cara Kerja AI
 
-With an introduction by Microsoft CEO Satya Nadella, this series of short videos will introduce you to how artificial intelligence works and why it matters. Learn about neural networks, or how AI learns, and delve into issues like algorithmic bias and the ethics of AI decision-making.
+Dengan pengantar oleh Satya Nadella selaku CEO Microsoft, serial video singkat ini akan memperkenalkan cara kerja kecerdasan buatan dan alasan pentingnya kepada Anda. Pelajari tentang jaringan neural, atau cara belajar AI, dan selami berbagai masalah seperti bias algorithm dan etika pengambilan keputusan AI.
 
 {{ ai_vid_intro }}
 {{ ai_vid_mlintro }}
@@ -83,35 +83,35 @@ With an introduction by Microsoft CEO Satya Nadella, this series of short videos
 
 
 
-### Videos about AI from other organizations:
-- [Seeing AI: Making the visual world more accessible](https://youtu.be/DybczED-GKE) (3:27)
-- [Fighting bias in algorithms](https://youtu.be/UG_X_7g63rY) (8:44)
-- [Machine Learning and Human Bias](https://youtu.be/59bMh59JQDo) (2:33)
-- [The Ethics of AI](https://youtu.be/GboOXAjGevA) (8:03)
-- [Machine Learning: Solving Problems Big, Small, and Prickly](https://youtu.be/_rdINNHLYaQ) (5:19)
-- [How does your phone know this is a dog?](https://youtu.be/bHvf7Tagt18) (5:57)
-- [What is AI?](https://youtu.be/mJeNghZXtMo) (6:14)
-- [Machine Learning Explained in 5 Minutes](https://youtu.be/3bJ7RChxMWQ) (5:14)
-- [Types of Machine Learning](https://youtu.be/wy-m6sd1BOA) (6:37)
-- [What is Machine Learning and How does it Work?](https://youtu.be/xr5LeWKbVnY) (3:51)
+### Video tentang AI dari organisasi lain:
+- [Menyaksikan AI: Menghadirkan dunia visual yang lebih mudah diakses](https://youtu.be/DybczED-GKE) (3:27)
+- [Meredam bias dalam algorithm](https://youtu.be/UG_X_7g63rY) (8:44)
+- [Pembelajaran Mesin dan Bias Manusia](https://youtu.be/59bMh59JQDo) (2:33)
+- [Etika AI](https://youtu.be/GboOXAjGevA) (8:03)
+- [Pembelajaran Mesin: Memecahkan Masalah Besar, Kecil, dan Pelik](https://youtu.be/_rdINNHLYaQ) (5:19)
+- [Bagaimana ponsel Anda bisa tahu bahwa ini adalah anjing?](https://youtu.be/bHvf7Tagt18) (5:57)
+- [Apa itu AI?](https://youtu.be/mJeNghZXtMo) (6:14)
+- [Penjelasan 5 Menit tentang Pembelajaran Mesin](https://youtu.be/3bJ7RChxMWQ) (5:14)
+- [Jenis-Jenis Pembelajaran Mesin](https://youtu.be/wy-m6sd1BOA) (6:37)
+- [Apa itu Pembelajaran Mesin dan Bagaimana Cara Kerjanya?](https://youtu.be/xr5LeWKbVnY) (3:51)
 
 
-## More resources
+## Materi pembelajaran lainnya
 
 {{ ai_resource_tiles }}
 
-## Activities Powered by AI and ML
+## Aktivitas yang Didukung oleh AI dan ML
 {{ ai_activities_table }}
 
-## Teach and Learn about AI
+## Ajarkan dan Belajar tentang AI
 {{ ai_teach_and_learn_table }}
 
 
 
-### AI for Oceans: Behind the Scenes
+### AI untuk Ocean: Di Balik Layar
 
-Levels 2-4 use a pretrained model provided by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md) project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks) that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over 14 million images hand-annotated with words such as "balloon" or "strawberry". In order to customize this model with the labeled training data the student generates in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning). Each image in the training dataset is fed to MobileNet, as pixels, to obtain a list of annotations that are most likely to apply to it. Then, for a new image, we feed it to MobileNet and compare its resulting list of annotations to those from the training dataset. We classify the new image with the same label (such as "fish" or "not fish") as the images from the training set with the most similar results.
+Level 2-4 menggunakan model yang sudah dilatih dan disediakan oleh proyek [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md). Model MobileNet merupakan sebuah [jaringan neural konvolusional](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks) yang sudah dilatih di [ImageNet](http://www.image-net.org/), yaitu himpunan data lebih dari 14 juta gambar yang diberi anotasi tangan dengan kata-kata seperti "balon" atau "stroberi". Agar dapat menyesuaikan model ini dengan data pelatihan berlabel yang dihasilkan murid dalam aktivitas ini, kami menggunakan teknik [Pembelajaran Transfer](https://en.wikipedia.org/wiki/Transfer_learning). Setiap gambar dalam himpunan data pelatihan dimasukkan ke dalam MobileNet, sebagai pixel, untuk mendapatkan daftar anotasi yang paling mungkin berlaku untuknya. Kemudian kami memasukkan gambar baru ke MobileNet dan membandingkan daftar anotasi yang dihasilkannya dengan daftar anotasi dari himpunan data pelatihan. Kami mengelompokkan gambar baru yang berlabel sama (seperti "ikan” atau "bukan ikan") sebagai gambar dari himpunan data pelatihan dengan hasil yang paling mirip.
 
-Levels 6-8 use a \[Support-Vector Machine\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). We look at each component of the fish (such as eyes, mouth, body) and assemble all of the metadata for the components (such as number of teeth, body shape) into a vector of numbers for each fish. We use these vectors to train the SVM. Based on the training data, the SVM separates the "space" of all possible fish into two parts, which correspond to the classes we are trying to learn (such as "blue" or "not blue").
+Level 6-8 menggunakan \[Mesin Dukung-Vektor\] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Kami mempelajari setiap komponen ikan (seperti mata, mulut, tubuh) dan menghimpun semua metadata untuk komponen tersebut (seperti jumlah gigi, bentuk tubuh) ke dalam vektor angka untuk setiap ikan. Kami menggunakan vektor ini untuk melatih SVM. Berdasarkan data pelatihan, SVM memisahkan "ruang" untuk semua calon ikan menjadi dua bagian, yang sesuai dengan materi pelajaran yang kami coba pelajari (seperti "biru" atau "bukan biru").
 
 [[Kembali ke atas]](#top)

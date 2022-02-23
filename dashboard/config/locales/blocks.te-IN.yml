@@ -378,6 +378,26 @@ te:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': ఏలియన్
             '"BEAR"': బేర్
@@ -850,6 +870,19 @@ te:
         options:
           UNIT:
             '"seconds"': సెకండ్లు
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -932,6 +965,11 @@ te:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": బబ్బుల్స్
+            "'sound://category_animals/bear.mp3'": బేర్
       gamelab_setBackground:
         text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       gamelab_setBackgroundImage:
@@ -957,6 +995,14 @@ te:
             '"scale"': సైజు
             '"width"': వెడల్పు
             '"height"': ఎత్తు
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': స్లో
+            '5': normal
+            '7': ఫాస్ట్
+            '9': extra fast
       gamelab_subjectSpritePointer:
         text: "{SPRITE}"
       gamelab_turn:
@@ -1099,21 +1145,67 @@ te:
           KEY:
             '"yes"': అవును
             '"no"': లేదు
-      PoemBot_setBackgroundEffect:
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"iceCream"': ఐస్ క్రీమ్
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': కామ్
+            '"sound://category_nature/steady_campfire_loop.mp3"': క్యాంప్‌ఫైర్
+            '"sound://category_nature/rain_loop.mp3"': డిజ్జల్
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': హంటెడ్
+            '"sound://category_background/inside_plane.mp3"': హమ్
+            '"sound://category_loops/red_flag_loop1.mp3"': మిషన్
+            '"sound://category_background/repitition.mp3"': రైడింగ్
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': స్లో
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': బెల్
+            '"sound://category_digital/boing_2.mp3"': బోయింగ్
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': బబుల్
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': చాటర్
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': డిఫ్లేట్
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': ఫెయిల్
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': ఫ్లట్టర్
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': జంప్
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': పూఫ్
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': స్కాన్
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': వైబ్రేంట్
+            '"sound://category_achievements/peaceful_win_1.mp3"': విన్
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': విర్ల్
+            '"sound://category_achievements/peaceful_win_6.mp3"': విండ్ చిమ్స్
+      Poetry_setBackground:
+        text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"colors"': రంగులు
-            '"space"': స్పేస్
-            '"stars"': స్టార్స్
-          PALETTE:
-            '"rainbow"': రెయిన్‌బో
-      PoemBot_setForegroundEffect:
-        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {EFFECT}
-        options:
-          EFFECT:
-            '"rain"': రెయిన్
             '"bubbles"': బబ్బుల్స్
             '"confetti"': కన్ఫెట్టీ
+            '"space"': స్పేస్
+            '"colors"': రంగులు
+            '"stars"': స్టార్స్
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       aalab_layoutSprites:
         options:
           FORMAT:

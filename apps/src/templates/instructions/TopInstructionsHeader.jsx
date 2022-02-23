@@ -37,6 +37,8 @@ function TopInstructionsHeader(props) {
     isRtl,
     documentationUrl,
     teacherMarkdown,
+    exampleSolutions,
+    isViewingAsInstructorInTraining,
     isEmbedView,
     isCollapsed,
     collapsible
@@ -131,6 +133,7 @@ function TopInstructionsHeader(props) {
           )}
           {displayReviewTab && (
             <InstructionsTab
+              className="uitest-reviewTab"
               onClick={handleReviewTabClick}
               selected={tabSelected === TabType.REVIEW}
               text={i18n.review()}
@@ -138,8 +141,10 @@ function TopInstructionsHeader(props) {
               isRtl={isRtl}
             />
           )}
-          {isViewingAsTeacher &&
-            (teacherMarkdown || showContainedLevelAnswer) && (
+          {(isViewingAsTeacher || isViewingAsInstructorInTraining) &&
+            (teacherMarkdown ||
+              showContainedLevelAnswer ||
+              exampleSolutions.length > 0) && (
               <InstructionsTab
                 className="uitest-teacherOnlyTab"
                 onClick={handleTeacherOnlyTabClick}
@@ -260,6 +265,8 @@ TopInstructionsHeader.propTypes = {
   isRtl: PropTypes.bool.isRequired,
   documentationUrl: PropTypes.string,
   teacherMarkdown: PropTypes.string,
+  exampleSolutions: PropTypes.array,
+  isViewingAsInstructorInTraining: PropTypes.bool,
   isEmbedView: PropTypes.bool.isRequired,
   isCollapsed: PropTypes.bool.isRequired,
   collapsible: PropTypes.bool.isRequired

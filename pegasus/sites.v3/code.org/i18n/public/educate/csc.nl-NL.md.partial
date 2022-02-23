@@ -1,0 +1,56 @@
+---
+title: CS Connections
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Connecties van informatica
+
+Onze nieuwste curriculum bouwt bruggen tussen het leren van informatica en andere vakken zoals wiskunde, taal, wetenschap en maatschappijleer. Dankzij CS Connections kunnen basis- en middelbare scholen hun normale vakken op spannende manieren verkennen.
+
+## Probeer CS Connections met deze activiteiten voor 'Hour of Code'.
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Poem Art", left_description: "Express yourself! Gebruik code om geanimeerde gedichten te creëren, left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Starten", right_heading: "Hallo Wereld", right_description: "Kies uit vier leuke thema's om interactieve characters te creëen in een door jou gemaakte wereld.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Starten"}}
+{{ clearfix }}
+
+## Modules
+
+De modules van CS Connections bestaat uit een gestructureerde reeks an lessen die informatica integreren in kernvakken zoals wiskunde, ELA en wetenschap. Deze modules zijn in lijn gebracht met normen in vakken en culmineren in een project dat uit meerdere curriculums bestaat.
+
+Deze zijn perfect voor leraren die informatica willen integreren in hun lesplannen voor andere vakken, en ook voor leraren informatica die wat de leerlingen in andere vakken leren willen verrijken.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "wit", niveau: "3+", onderwerp: "ELA", tijdsduur: "5 uur", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coderen met gedichten", right_description: "Laat informatica en poëzie met elkaar in contact komen in uw klaslokaal dankzij deze serie aan lessen.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Module bekijken" }}
+
+## Projecten met een open einde
+
+Blijf de bruggen bouwen tussen informatica en traditionele vakken dankzij onze projecten die meerdere curriculums omvatten. Ze hebben slechts 1 á 2 lesuren nodig om te worden afgerond, en zijn ideaal voor leraren die onderwerpspecifieke projecten willen ontwikkelen die passen binnen het bestaande curriculum.
+
+<em>Tip: Deze projecten vereisen enige kennis van de basisbeginselen van de informatica, dus we raden aan onze Hello World Hour of Code-activiteit te voltooien voordat je begint!</em>
+
+{{ csc_module, title: "Ecosystemen", image: "/images/csc/landing/project_ecosystems.png", niveau: "3+", subject: "Wetenschap", tijdsduur: "1-2 uur", beschrijving: "Dankzij basis coderingsvaardigheden, creëren studenten een interactief model van een ecosysteem dat verkent hoe verschillende dieren, planten en organismen elkaar beïnvloeden. Dit model dient ook te worden overgenomen in interacties tussen geosfeer, biosfeer, hydrosfeer en/of atmosfeer.", button_text: "Meer informatie", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Levenscycli", niveau: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Wetenschap", tijdsduur: "1-2 uur", beschrijving: "Ga van eijtje via kikkervisje naar kikker met dit project, waarin studenten code leren te gebruiken om een model van een wetenschappelijke cyclus te creëren - zoals de levenscyclus van een kikker of de overdracht van energie.", button_text: "Meer informatie", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Karakterstudie", image: "/images/csc/landing/project_characterstudy.png", niveau: "3+", onderwerp: "ELA", tijdsduur: "1-2 uur", beschrijving: "Op elke actie volgt een reactie! Nee, dit is geen natuurkunde - dit project stelt studenten in staat code te gebruiken om een scene uit een verhaal te creëren waarin wordt aangetoond hoe de handelingen van een personage een keten van gebeurtenissen beïnvloed", button_text: "Meer informatie", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Moraal van het verhaal", image: "/images/csc/landing/project_storymorals.jpg", niveau: "3+", onderwerp: "ELA", tijdsduur: "1-2 uur", beschrijving: "Wat zit er tussen \"Er was eens\" en \"Het einde?\" Students programmeren een interactieve app dat een verhaal en de moraal ervan verteld. Studenten kunnen deze vaardigheid gebruiken om een verhaal, fabel of boek te vertellen", button_text: "Meer informatie", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Bruggen bouwen
+
+Onze lessen bouwen bruggen en creëren een snelle en interessante manier om verbinding te maken tussen informatica en andere vakken. Voor deze lessen is geen reeds opgedange kennis van informatica nodig, en dus zijn ze perfect voor elke leraar die leren dat van essentieel belang is in de 21ste eeuw wil opnemen in het tradicionele curriculum of studenten wil motiveren met nieuwe leuke manieren om oudere vakken te leren.
+
+
+{{ csc_module, title: "Spellen met de bij", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", niveau: "K+", onderwerp: "ELA", tijdsuur: "1 uur", beschrijving: "PLEZIER! In deze les gebruiken studenten codeervaardigheden op basisniveau om de Bij te vertellen waar te ZOEMEN om woorden te spellen op een ratster gevuld met letters.", button_text: "Meer informatie", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Tellen met Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", niveau: "K+", onderwerp: "Wiskunde", tijdsuur: "1 uur", beschrijving: "Schatgraven! Studenten zullen tellen en optellen oefenen als ze coderen met lussen om Laurel te helpen bij het bijeenrapen van edelstenen in een doolhof.", button_text: "Meer informatie", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Ethische code AI", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", niveau: "9+", onderwerp: "ELA of geesteswetenschappen", tijdsduur: "1 uur", beschrijvingn: "Na het onderzoeken de mogelijke ethische valkuilen inzake kunstmatige intelligentie (AI), gaan studenten samenwerken om een lesresource in \"Ethische code AI\" te ontwikkelen.", button_text: "Meer informatie", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Datavisualisatie", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", niveau: "6+", onderwerp: "Wiskunde", tijdsuur: "1 uur", beschrijving: "Deze les laat studenten kennismaken met de Data Visualizer in App Lab en ook twee belangrijke diagramman: een staafdiagram en een histogram. Tijdens de les zullen studenten vaardigheden op doen tijdens het gebruik van dit programma en het lezen van data.", button_text: "Meer informatie", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Hebt u een activiteit van CS Connection afgerond en bent u op zoek naar meer opties voor uw klaslokaal? Deel <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">hier uw feedback</a> en ideeën voor meer lessen.</em>

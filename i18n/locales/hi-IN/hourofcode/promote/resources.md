@@ -6,9 +6,9 @@ title: संसाधन
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Promote the Hour of Code
+# ऑवर ऑफ़ कोड को प्रमोट करें
 
-### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
+### अपने ऑवर ऑफ़ कोड पर ध्यान आकर्षित करने के लिए जरूरी सभी संसाधनों का पता लगाएं। पता नहीं कहां से शुरू करना है? [ऑवर ऑफ़ कोड को होस्ट करने के लिए हमारे हाउ-टू गाइड ]({{ how_to_url }}) से शुरू करें!
 
 * * *
 
@@ -16,135 +16,135 @@ title: संसाधन
 
 <a id="posters"></a>
 
-## Hang these posters in your school
+## इन पोस्टरों को अपने स्कूल में टांगें
 
-A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
+मलाला, स्टीफन करी, शकीरा और बहुत लोगों को फीचर करते हुए नए पोस्टर सेट उपलब्ध है! इस साल, प्रत्येक सेट में 6 पोस्टर और 126 "मैंने ऑवर ऑफ कोड में भाग लिया" वाले स्टिकर भी आएंगे। आपूर्ति सीमित है, इसलिए जल्द ही [अपने पोस्टर ऑर्डर करें](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH)। खुद से प्रिंट करने के लिए, प्रिंट करने योग्य संस्करण को देखने और सेव करने के लिए बस नीचे दी गई तस्वीर पर क्लिक करें।
 
 {{ promote_new_posters }}
 
-* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
+* पिछले सालों के हमारे पोस्टर खोज रहे हैं? [उन्हें यहां खोजें]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
-## Post these on social media
+## इन्हें सोशल मीडिया पर पोस्ट करें
 
-[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![इमेज](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![इमेज](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![इमेज](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![इमेज](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![image](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![इमेज](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![इमेज](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![इमेज](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
-## Use the Hour of Code logo to spread the word
+## प्रचार प्रसार करने के लिए ऑवर ऑफ़ कोड के लोगो का इस्तेमाल करें
 
-[![image]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![image]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
+[![इमेज]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![इमेज]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
-[Download hi-res versions](http://images.code.org/share/hour-of-code-logo.zip)
+[हाई रेसोल्यूशन संस्करण डाऊनलोड करें](https://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
+**"ऑवर ऑफ कोड" और "होरा डेल कोडिगो" ट्रेडमार्क हैं। हम उनके इस्तेमाल को रोकना नहीं चाहते हैं, लेकिन हम यह सुनिश्चित करना चाहते हैं कि उपयोग कुछ सीमाओं के भीतर फिट बैठता है:**
 
-1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
+1. "ऑवर ऑफ कोड" या "होरा डेल कोडिगो" के किसी भी संदर्भ का उपयोग ऐसे फैशन में किया जाना चाहिए जिससे ऐसा नहीं लगे कि यह आपका अपना ब्रांड नाम है, बल्कि ऑवर ऑफ कोड को जमीनी स्तर पर आंदोलन के रूप में संदर्भित किया जाना चाहिए।
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
+    <strong>अच्छा उदाहरण</strong>: "Your-COMPANY.com में ऑवर ऑफ़ कोड में भाग लें
   </li>
   <li>
-    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
+    <strong>बुरा उदहारण</strong>: " YOUR-COMPANY के ऑवर ऑफ़ कोड में भाग लें."
   </li>
 </ul>
 
-1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
-2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
+1. अपनी वेब साइट और ऐप विवरण दोनों में, ऑवर ऑफ़ कोड का उल्लेख करने वाले महत्वपूर्ण स्थानों पर TM का इस्तेमाल करें और "होरा डेल कोडिगो" का उल्लेख करने वाले सबसे प्रमुख स्थानों में "Ⓡ" सुपरस्क्रिप्ट का उपयोग करें।
+2. CSEdWeek और [Code.org]({{ codeorg_link }}) वेबसाइटों के लिंक सहित, अपने पेज पर (या फूटर में) ऐसी भाषा शामिल करें, जिसका आशय निम्नलिखित है:
     
-    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
+    *"ऑवर ऑफ कोड™'/'होरा डेल कोडिगो®' कंप्यूटर साइंस एजुकेशन सप्ताह [csedweek.org] और Code.org [code.org] के द्वारा एक वैश्विक पहल है, जिसका उद्देश्य लाखों छात्रों को एक घंटे के कंप्यूटर साइंस और कंप्यूटर प्रोग्रामिंग से परिचित कराना है।"*
 
-3. No use of "Hour of Code" or "Hora del Código" in app names.
+3. एप्प के नाम में "Hour of Code" या "Hora del Código" का इस्तेमाल न करें.
 
 <a id="stickers"></a>
 
-## Print these stickers to give to your students
+## अपने छात्रों को देने के लिए इन स्टिकर्स को प्रिंट करें
 
-(Stickers are 1" diameter, 63 per sheet) <br />
+(स्टिकर 1 " जिसका व्यास, 63 प्रति शीट हैं) <br />
 
-[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![इमेज](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Invite people in your community to your Hour of Code and promote your event through email
+## अपने कम्युनिटी के लोगों को अपने ऑवर ऑफ़ कोड में आमंत्रित करें और ईमेल के माध्यम से अपने ईवेंट का प्रचार करें
 
-### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
+### आवर ऑफ कोड के बारे में बात करते समय [अधिक जानकारी और भाषा जिसका आप इस्तेमाल कर सकते हैं]({{ promote/stats_url }}) खोजें।
 
 * * *
 
 <a id="email"></a>
 
-### Ask your school, employer, or friends to sign up:
+### अपने स्कूल, एम्प्लायर या दोस्तों से साइन अप करने के लिए कहें:
 
-**Subject line:** Join me and over 100 million students for an Hour of Code <br />
+**सब्जेक्ट लाइन** ऑवर ऑफ़ कोड में शामिल होने के लिए मुझसे और मेरे 100 मिलियन से अधिक छात्रों से जुड़ें <br />
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history. More than 100 million students have tried an Hour of Code.
+कंप्यूटर हर जगह हैं, और यह पृथ्वी पर हर उद्योग को बदल रहा है। But only 51% of all high schools offer computer science. अच्छी खबर यह है कि हम इसे बदलने की राह पर हैं! यदि आपने पहले ऑवर ऑफ कोड के बारे में सुना है, तो आप जान सकते हैं कि इसने इतिहास रच दिया। 100 मिलियन से भी ज्यादा छात्रों ने ऑवर ऑफ़ कोड को आजमाया है
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. दुनिया के प्रत्येक ऐप्पल स्टोर ने एक घंटे के कोड को होस्ट किया है, और राष्ट्रपति ओबामा और कनाडा के प्रधान मंत्री जस्टिन ट्रूडो जैसे नेताओं ने अभियान के हिस्से के रूप में कोड की अपनी पहली पंक्तियां लिखीं।
 
-This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
+इस साल, आइए इसे और भी बड़ा बनाते हैं। मैं आपको ऑवर ऑफ कोड में शामिल होने के लिए आमंत्रित कर रहा हूं {{ campaign_date/year }}. कृपया कंप्यूटर विज्ञान शिक्षा सप्ताह के दौरान ऑवर ऑफ़ कोड कार्यक्रम में शामिल हों, {{ campaign_date/full }}.
 
-Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
+प्रचार करें। एक कार्यक्रम को होस्ट करें। स्थानीय स्कूल से साइन अप करने के लिए कहें। या ऑवर ऑफ़ कोड को स्वयं आज़माएँ—हर कोई मूलभूत बातें सीखने से लाभ उठा सकता है।
 
-Get started at http://hourofcode.com/{{ country_language }} <br />
+http://hourofcode.com/{{ country_language }} से शुरुआत करें <br />
 
 * * *
 
 <a id="help-schools"></a>
 
-### Volunteer at a school:
+### किसी स्कूल में वालंटियर बनें:
 
-#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
+#### [यहां स्कूलों में स्वयंसेवा के बारे में अधिक संसाधन और जानकारी प्राप्त करें]({{ how_to_volunteers_url }})।
 
-**Subject line:** Can we help you host an Hour of Code?
+**विषय:** क्या हम ऑवर ऑफ़ कोड को होस्ट करने में आपकी सहायता कर सकते हैं? 
 
-Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
+{{ Campaign_date/short }} के बीच, दुनिया के दस प्रतिशत छात्र अपने स्कूल में एक घंटे का कोड करके कंप्यूटर साइंस एजुकेशन सप्ताह मनाएंगे। यह हर बच्चे के लिए यह सीखने का अवसर है कि हमारे आसपास की टेक्नोलॉजी कैसे काम करती है।
 
-[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
+[हमारा संगठन/मेरा नाम] एक ऑवर ऑफ़ कोड कार्यक्रम चलाने में [स्कूल का नाम] मदद करना चाहता है। हम शिक्षकों को उनकी कक्षाओं में एक ऑवर ऑफ़ कोड को होस्ट करने में मदद कर सकते हैं (हमें कंप्यूटर की भी आवश्यकता नहीं है!) या यदि आप एक स्कूल असेंबली को होस्ट करना चाहते हैं, तो हम इस बारे में बात करने के लिए एक स्पीकर की व्यवस्था कर सकते हैं कि टेक्नोलॉजी कैसे काम करती है और एक सॉफ्टवेयर इंजीनियर बनना कैसा होता है। ।
 
-The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
+छात्र अपने स्वयं के ऐप या गेम बनाएंगे जो वे अपने माता-पिता को दिखा सकते हैं, और हम ऑवर ऑफ़ कोड सर्टिफिकेट भी प्रिंट करेंगे जो वे घर ले जा सकते हैं। और, यह बहुत मजेदार होता है! इंटरैक्टिव, व्यावहारिक गतिविधियों के साथ, छात्र एक सुलभ तरीके से कम्प्यूटेशनल थिंकिंग स्किल सीखेंगे।
 
-Computers are everywhere, changing every industry on the planet. But only 47% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+कंप्यूटर हर जगह हैं, और यह पृथ्वी पर हर उद्योग को बदल रहा है। But only 51% of all high schools offer computer science. अच्छी खबर यह है कि हम इसे बदलने की राह पर हैं! यदि आपने पहले ऑवर ऑफ कोड के बारे में सुना है, तो आप जान सकते हैं कि इसने इतिहास रच दिया है - दुनिया भर में 100 मिलियन से अधिक छात्रों ने ऑवर ऑफ कोड को आजमाया है। राष्ट्रपति ओबामा और कनाडा के प्रधान मंत्री जस्टिन ट्रूडो जैसे दुनिया के नेताओं ने कैंपेन के हिस्से के रूप में कोड की अपनी पहली पंक्तियां लिखीं।
 
-You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
+आप इवेंट के बारे में http://hourofcode.com पर अधिक पढ़ सकते हैं। या, अगर आप इस बारे में बात करने के लिए कुछ समय निश्चित करना चाहते हैं कि [स्कूल का नाम] कैसे भाग ले सकता है तो हमें बताएं। <br />
 
 * * *
 
 <a id="parents"></a>
 
-### Tell parents about your school's event:
+### अपने स्कूल के कार्यक्रम के बारे में माता-पिता को बताएं:
 
-**Subject line:** Our students are changing the future with an Hour of Code
+**विषय:** हमारे छात्र ऑवर ऑफ़ कोड के साथ भविष्य बदल रहे हैं 
 
-Dear Parents,
+प्रिय अभिभावक,
 
-We live in a world surrounded by technology. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
+हम ऐसी दुनिया में रहते हैं जो टेक्नोलॉजी से घिरी है। और हम जानते हैं कि हमारे छात्र बड़े होने पर जिस भी क्षेत्र में जाना चाहते हैं, उनकी सफल होने की क्षमता तेजी से इस बात पर निर्भर करेगी कि टेक्नोलॉजी कैसे काम करती है।
 
-But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools offer computer science.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. To continue bringing programming activities to your students, we want to make our Hour of Code event huge. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
+इसलिए हमारा पूरा स्कूल इतिहास के सबसे बड़े शिक्षण कार्यक्रम में शामिल हो रहा है: द ऑवर ऑफ कोड, कंप्यूटर साइंस एजुकेशन वीक ({{ campaign_date/full }}) के दौरान. 100 मिलियन से भी ज्यादा छात्रों ने ऑवर ऑफ़ कोड को आजमाया है हमारा ऑवर ऑफ़ कोड यह दर्शाता है कि [स्कूल का नाम] इन मूलभूत 21वीं सदी के स्किल को सिखाने के लिए तैयार है। अपने छात्रों के लिए प्रोग्रामिंग एक्टिविटीज को जारी रखने के लिए, हम अपने ऑवर ऑफ़ कोड कार्यक्रम को बड़ा बनाना चाहते हैं। मैं आपको वालंटियर करने, स्थानीय मीडिया तक पहुंचने, सोशल मीडिया चैनलों पर समाचार शेयर करने और कम्युनिटी में अतिरिक्त ऑवर ऑफ़ कोड कार्यक्रमों को होस्ट करने पर विचार करने के लिए प्रोत्साहित करता हूं।
 
-This is a chance to change the future of education in [TOWN/CITY NAME].
+यह [TOWN/CITY NAME] में शिक्षा के भविष्य को बदलने का एक मौका है।
 
-See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
+विवरण के लिए http://hourofcode.com/{{ country_language }} देखें, और प्रचार में मदद करें। <br />
 
 * * *
 
 <a id="media-pitch"></a>
 
-### Invite media to attend your event:
+### अपने कार्यक्रम में शामिल होने के लिए मीडिया को आमंत्रित करें:
 
-#### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
+#### [मीडिया को अपने कार्यक्रम में आमंत्रित करने के बारे में अधिक जानकारी के लिए हमारी प्रेस किट देखें।]({{ promote/press_kit_url }})
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Good news is, we’re on our way to change this.
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools offer computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. अच्छी खबर यह है कि हम इसे बदलने की राह पर हैं। 
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Over 100 partners have joined together to support this movement. Every Apple Store in the world has hosted an Hour of Code. Even President Obama wrote his first line of code as part of the campaign.
 
@@ -162,22 +162,22 @@ I look forward to being in touch. <br />
 
 <a id="politicians"></a>
 
-### Invite a local politician to your school's event:
+### अपने स्कूल के कार्यक्रम में किसी स्थानीय राजनेता को आमंत्रित करें:
 
-#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
+#### [और जानकारी चाहिए? राजनेताओं को अपने कार्यक्रम में शामिल होने के लिए आमंत्रित करने के लिए हमारे रिसोर्सेज पर एक नज़र डालें]({{ how_to_public_officials_url }})।
 
-**Subject line**: Join our school as we change the future with an Hour of Code
+**विषय**: हमारे स्कूल में शामिल हों क्योंकि हम ऑवर ऑफ़ कोड के साथ भविष्य बदलते हैं
 
-Dear [Mayor/Governor/Representative/Senator LAST NAME]:
+आदरणीय [Mayor/Governor/Representative/Senator LAST NAME]:
 
-Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
+क्या आप जानते हैं कि कंप्यूटिंग यू.एस. में वेतन का #1 स्रोत है? देश भर में 500,000 से अधिक कंप्यूटिंग नौकरियां उपलब्ध हैं, लेकिन पिछले साल केवल 42,969 कंप्यूटर साइंस के छात्रों ने टास्क फाॅर्स में ग्रेजुएट किया।
 
-Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
+Computer science is foundational for every industry today, yet most schools don’t offer it. At [SCHOOL NAME], we are trying to change that.
 
-That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
+इसलिए हमारा पूरा स्कूल इतिहास के सबसे बड़े शिक्षण कार्यक्रम में शामिल हो रहा है: द ऑवर ऑफ कोड, कंप्यूटर साइंस एजुकेशन वीक ({{ campaign_date/full }}) के दौरान. 100 मिलियन से भी ज्यादा छात्रों ने ऑवर ऑफ़ कोड को आजमाया है
 
-I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
+हम आपको हमारे ऑवर ऑफ कोड इवेंट में शामिल होने और हमारी किकऑफ़ असेंबली में स्पीकर के रूप में आमंत्रित करना चाहते हैं। यह [DATE, TIME, PLACE] को होगा, और यह एक मजबूत मैसेज भेजेगा कि [राज्य या शहर का नाम] हमारे छात्रों को 21वीं सदी के महत्वपूर्ण स्किल सिखाने के लिए तैयार है। हम यह सुनिश्चित करना चाहते हैं कि हमारे छात्र भविष्य की तकनीक बनाने में सबसे आगे हों - न कि केवल उसका उपभोग करने में।
 
-Please contact me at [PHONE NUMBER OR EMAIL ADDRESS]. I look forward to your response.
+कृपया हमें [फ़ोन नंबर या ईमेल पता] पर संपर्क करें। हमें आपके जवाब का इंतज़ार रहेगा।
 
 {{ signup_button }}

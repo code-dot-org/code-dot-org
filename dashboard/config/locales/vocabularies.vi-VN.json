@@ -2,107 +2,804 @@
   "vi-VN": {
     "data": {
       "vocabularies": {
+        "event/dance-extras/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "event/minecraft/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Vòng lặp",
+          "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/hero/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "function/hero/unversioned": {
+          "word": "Hàm",
+          "definition": "Một đoạn mã lệnh mà bạn có thể dễ dàng khai báo nhiều lần."
+        },
+        "code/poem-art/2021": {
+          "word": "Mã",
+          "definition": "(v) để viết hướng dẫn cho máy tính."
+        },
+        "event/poem-art/2021": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "line/poem-art/2021": {
+          "word": "Dòng",
+          "definition": "(thơ) - một phần của bài thơ được sắp xếp thành một hàng, kết thúc ở lề bên phải."
+        },
+        "mood/poem-art/2021": {
+          "word": "Tâm trạng",
+          "definition": "sự thể hiện một cảm giác, bầu không khí hoặc cảm xúc trong nghệ thuật hoặc văn bản."
+        },
+        "program/poem-art/2021": {
+          "word": "Chương trình",
+          "definition": "Một loạt các bước đã được mã hóa thành một thứ gì đó có thể chạy bằng máy."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/flappy/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/frozen/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/iceage/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/artist/unversioned": {
+          "word": "Mã"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/artist/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/gumball/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "event/dance/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "program/dance/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Điều kiện"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Vòng lặp",
+          "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/starwars/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/mc/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/playlab/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "event/outbreak/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Mô hình và bản mô phỏng",
+          "definition": "chương trình sao chép hoặc bắt chước các đặc điểm chính của một sự kiện trong thế giới thực để nghiên cứu kết quả của sự kiện đó mà không tốn chi phí, thời gian hoặc gặp nguy hiểm khi chạy thử nghiệm trong đời thực."
+        },
+        "event/sports/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "code/sports/unversioned": {
+          "word": "Mã"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/sports/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/infinity/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "event/basketball/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/basketball/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Học máy",
+          "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Mã",
+          "definition": "(v) để viết hướng dẫn cho máy tính."
+        },
+        "event/poem-art/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "program/poem-art/unversioned": {
+          "word": "Chương trình",
+          "definition": "Một loạt các bước đã được mã hóa thành một thứ gì đó có thể chạy bằng máy."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Tâm trạng",
+          "definition": "sự thể hiện một cảm giác, bầu không khí hoặc cảm xúc trong nghệ thuật hoặc văn bản."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Dòng",
+          "definition": "(thơ) - một phần của bài thơ được sắp xếp thành một hàng, kết thúc ở lề bên phải."
+        },
+        "sprite/coursef/2021": {
+          "word": "Nhân vật",
+          "definition": "Yếu tố đồ họa trên màn hình có vị trí, kích thước và ngoại hình."
+        },
+        "user/coursef/2021": {
+          "word": "Người dùng",
+          "definition": "Cá nhân sử dụng một đối tượng, bao gồm cả phần mềm và phần cứng."
+        },
         "behavior/coursef/2021": {
-          "word": "Hành vi"
+          "word": "Hành vi",
+          "definition": "Hành động mà nhân vật thực hiện liên tục cho đến khi được yêu cầu dừng lại."
+        },
+        "program/coursef/2021": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "algorithm/coursef/2021": {
+          "word": "Thuật toán",
+          "definition": "Danh sách các bước để hoàn thành một nhiệm vụ."
+        },
+        "event/coursef/2021": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
         "variable/coursef/2021": {
-          "word": "Biến"
+          "word": "Biến",
+          "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
+        },
+        "prompt/coursef/2021": {
+          "word": "Lời nhắc",
+          "definition": "Thông báo trên màn hình máy tính chờ người dùng nhập dữ liệu đầu vào."
+        },
+        "input/coursef/2021": {
+          "word": "Đầu vào",
+          "definition": "Thông tin máy tính nhận được từ người dùng."
+        },
+        "loop/coursef/2021": {
+          "word": "Vòng lặp",
+          "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "repeat/coursef/2021": {
+          "word": "Lặp lại",
+          "definition": "Làm lại một việc."
+        },
+        "for_loop/coursef/2021": {
+          "word": "Vòng lặp for",
+          "definition": "Các vòng lặp có điểm bắt đầu, kết thúc và gia số xác định trước (khoảng cách của bước nhảy)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Mô hình và bản mô phỏng",
+          "definition": "chương trình sao chép hoặc bắt chước các đặc điểm chính của một sự kiện trong thế giới thực để nghiên cứu kết quả của sự kiện đó mà không tốn chi phí, thời gian hoặc gặp nguy hiểm khi chạy thử nghiệm trong đời thực."
         },
         "machine_learning/coursef/2021": {
-          "word": "Học máy"
+          "word": "Học máy",
+          "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
+        },
+        "dns/coursef/2021": {
+          "word": "DNS",
+          "definition": "viết tắt của Domain Name System – Hệ thống tên miền. Hệ thống này dịch tên miền (Ví dụ: example.com) sang địa chỉ IP (Ví dụ: 93.184.216.34)"
         },
         "internet/coursef/2021": {
-          "word": "internet"
+          "word": "internet",
+          "definition": "Một nhóm máy tính và máy chủ kết nối với nhau."
+        },
+        "packets/coursef/2021": {
+          "word": "Gói",
+          "definition": "Những phần thông tin nhỏ đã được chia cẩn thận từ những phần thông tin lớn hơn."
+        },
+        "servers/coursef/2021": {
+          "word": "Máy chủ",
+          "definition": "Máy tính chỉ tồn tại để cung cấp dữ liệu cho máy tính khác."
+        },
+        "url/coursef/2021": {
+          "word": "URL",
+          "definition": "Địa chỉ dễ nhớ để mở trang web (Ví dụ: www.code.org)."
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/cáp",
+          "definition": "Phương pháp gửi thông tin bằng cáp điện thoại hoặc truyền hình."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Cáp quang",
+          "definition": "Kết nối sử dụng ánh sáng để truyền thông tin"
+        },
+        "ip_address/coursef/2021": {
+          "word": "Địa chỉ IP",
+          "definition": "Con số được gán cho bất kỳ mục nào kết nối với Internet."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi",
+          "definition": "Phương pháp gửi thông tin không dây bằng sóng vô tuyến."
         },
         "define/coursef/2021": {
-          "word": "Định nghĩa"
+          "word": "Định nghĩa",
+          "definition": "Tìm hiểu chi tiết các vấn đề mà bạn đang cố gắng giải quyết"
+        },
+        "prepare/coursef/2021": {
+          "word": "Chuẩn bị",
+          "definition": "Nghiên cứu, lập kế hoạch và thu thập tài liệu cho hoạt động bạn sắp thực hiện"
+        },
+        "reflect/coursef/2021": {
+          "word": "Suy nghĩ",
+          "definition": "Suy nghĩ cẩn thận về điều gì đó nhằm mục đích cải thiện kết quả trong tương lai"
+        },
+        "try/coursef/2021": {
+          "word": "Thử",
+          "definition": "Cố gắng làm điều gì đó"
+        },
+        "algorithm/courseb/2021": {
+          "word": "Thuật toán",
+          "definition": "Danh sách các bước để hoàn thành nhiệm vụ."
+        },
+        "bug/courseb/2021": {
+          "word": "Lỗi",
+          "definition": "Một phần của chương trình không hoạt động chính xác."
         },
         "debugging/courseb/2021": {
-          "word": "Sửa lỗi"
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "click/courseb/2021": {
+          "word": "Nhấp chuột",
+          "definition": "Nhấn nút chuột"
+        },
+        "drag/courseb/2021": {
+          "word": "Kéo",
+          "definition": "Nhấp vào nút chuột và giữ trong lúc di chuyển con trỏ chuột đến vị trí mới"
         },
         "drop/courseb/2021": {
-          "word": "Thả"
+          "word": "Thả",
+          "definition": "Thả nút chuột để “thả” một mục mà bạn đang kéo"
+        },
+        "double_click/courseb/2021": {
+          "word": "Nhấơ đúp chuột",
+          "definition": "Nhấn nút chuột rất nhanh"
+        },
+        "program/courseb/2021": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
         "programming/courseb/2021": {
-          "word": "Lập trình"
+          "word": "Lập trình",
+          "definition": "Đó là nghệ thuật sáng tạo chương trình."
+        },
+        "persistence/courseb/2021": {
+          "word": "Sự kiên trì",
+          "definition": "Cố gắng hết lần này đến lần khác, ngay cả khi tình huống vô cùng khó khăn."
+        },
+        "loop/courseb/2021": {
+          "word": "Vòng lặp",
+          "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "repeat/courseb/2021": {
+          "word": "Lặp lại",
+          "definition": "Làm lại một việc."
+        },
+        "event/courseb/2021": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "algorithm/coursea/2021": {
+          "word": "Thuật toán",
+          "definition": "Danh sách các bước để hoàn thành nhiệm vụ."
         },
         "debugging/coursea/2021": {
-          "word": "Sửa lỗi"
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/coursea/2021": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "click/coursea/2021": {
+          "word": "Nhấp chuột",
+          "definition": "Nhấn nút chuột"
+        },
+        "drag/coursea/2021": {
+          "word": "Kéo",
+          "definition": "Nhấp vào nút chuột và giữ trong lúc di chuyển con trỏ chuột đến vị trí mới"
         },
         "drop/coursea/2021": {
-          "word": "Thả"
+          "word": "Thả",
+          "definition": "Thả nút chuột để “thả” một mục mà bạn đang kéo"
+        },
+        "double_click/coursea/2021": {
+          "word": "Nhấơ đúp chuột",
+          "definition": "Nhấn nút chuột rất nhanh"
+        },
+        "bug/coursea/2021": {
+          "word": "Lỗi",
+          "definition": "Một phần của chương trình không hoạt động chính xác."
         },
         "programming/coursea/2021": {
-          "word": "Lập trình"
+          "word": "Lập trình",
+          "definition": "Đó là nghệ thuật sáng tạo chương trình."
+        },
+        "loop/coursea/2021": {
+          "word": "Vòng lặp",
+          "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "repeat/coursea/2021": {
+          "word": "Lặp lại",
+          "definition": "Làm lại một việc."
+        },
+        "event/coursea/2021": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "algorithm/coursec/2021": {
+          "word": "Thuật toán",
+          "definition": "Danh sách các bước để hoàn thành nhiệm vụ."
+        },
+        "bug/coursec/2021": {
+          "word": "Lỗi",
+          "definition": "Một phần của chương trình không hoạt động chính xác."
         },
         "debugging/coursec/2021": {
-          "word": "Sửa lỗi"
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/coursec/2021": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
         "sequencing/coursec/2021": {
-          "word": "Chuỗi tuần tự"
+          "word": "Chuỗi tuần tự",
+          "definition": "Đặt các lệnh theo đúng thứ tự để máy tính có thể đọc các lệnh."
         },
         "programming/coursec/2021": {
-          "word": "Lập trình"
+          "word": "Lập trình",
+          "definition": "Đó là nghệ thuật sáng tạo chương trình."
+        },
+        "loop/coursec/2021": {
+          "word": "Vòng lặp",
+          "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "repeat/coursec/2021": {
+          "word": "Lặp lại",
+          "definition": "Làm lại một việc."
+        },
+        "event/coursec/2021": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
         "binary/coursec/2021": {
-          "word": "Nhị phân"
+          "word": "Nhị phân",
+          "definition": "Một cách biểu diễn thông tin chỉ sử dụng hai tùy chọn."
+        },
+        "algorithm/coursed/2021": {
+          "word": "Thuật toán",
+          "definition": "Danh sách các bước để hoàn thành nhiệm vụ."
+        },
+        "program/coursed/2021": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "bug/coursed/2021": {
+          "word": "Lỗi",
+          "definition": "Một phần của chương trình không hoạt động chính xác."
         },
         "debugging/coursed/2021": {
-          "word": "Sửa lỗi"
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "loop/coursed/2021": {
+          "word": "Vòng lặp",
+          "definition": "Hành động lặp đi lặp lại một việc."
         },
         "programming/coursed/2021": {
-          "word": "Lập trình"
+          "word": "Lập trình",
+          "definition": "Đó là nghệ thuật sáng tạo chương trình."
+        },
+        "frustrated/coursed/2021": {
+          "word": "Bực bội",
+          "definition": "Cảm thấy khó chịu hoặc tức giận vì điều gì đó không như bạn muốn."
+        },
+        "persistence/coursed/2021": {
+          "word": "Sự kiên trì",
+          "definition": "Cố gắng hết lần này đến lần khác, ngay cả khi tình huống vô cùng khó khăn."
+        },
+        "event/coursed/2021": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "repeat/coursed/2021": {
+          "word": "Lặp lại",
+          "definition": "Làm lại một việc."
+        },
+        "command/coursed/2021": {
+          "word": "Lệnh",
+          "definition": "Chỉ dẫn cho máy tính. Nhiều lệnh kết hợp với nhau tạo nên các thuật toán và chương trình máy tính."
         },
         "conditionals/coursed/2021": {
           "word": "Điều kiện"
         },
+        "pseudocode/coursed/2021": {
+          "word": "mã giả",
+          "definition": "Mô tả bằng ngôn ngữ đơn giản về các bước trong thuật toán"
+        },
+        "while_loop/coursed/2021": {
+          "word": "Vòng lặp while",
+          "definition": "Vòng lặp tiếp tục lặp lại khi điều kiện đúng."
+        },
+        "until/coursed/2021": {
+          "word": "Đến khi",
+          "definition": "Lệnh yêu cầu bạn làm một việc chỉ cho đến khi điều kiện nào đó trở thành sự thật."
+        },
+        "algorithm/express/2021": {
+          "word": "Thuật toán",
+          "definition": "Danh sách các bước để hoàn thành nhiệm vụ."
+        },
+        "bug/express/2021": {
+          "word": "Lỗi",
+          "definition": "Một phần của chương trình không hoạt động chính xác."
+        },
         "debugging/express/2021": {
-          "word": "Sửa lỗi"
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
         },
         "sequencing/express/2021": {
-          "word": "Chuỗi tuần tự"
+          "word": "Chuỗi tuần tự",
+          "definition": "Đặt các lệnh theo đúng thứ tự để máy tính có thể đọc các lệnh."
+        },
+        "program/express/2021": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
         "programming/express/2021": {
-          "word": "Lập trình"
+          "word": "Lập trình",
+          "definition": "Đó là nghệ thuật sáng tạo chương trình."
         },
         "behavior/express/2021": {
-          "word": "Hành vi"
+          "word": "Hành vi",
+          "definition": "Hành động mà nhân vật thực hiện liên tục cho đến khi được yêu cầu dừng lại."
+        },
+        "sprite/express/2021": {
+          "word": "Nhân vật",
+          "definition": "Yếu tố đồ họa trên màn hình có vị trí, kích thước và ngoại hình."
+        },
+        "event/express/2021": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "code/express/2021": {
+          "definition": "lập trình hoặc viết chỉ dẫn cho máy tính."
+        },
+        "loop/express/2021": {
+          "word": "Vòng lặp",
+          "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "repeat/express/2021": {
+          "word": "Lặp lại",
+          "definition": "Làm lại một việc."
+        },
+        "command/express/2021": {
+          "word": "Lệnh",
+          "definition": "Chỉ dẫn cho máy tính. Nhiều lệnh kết hợp với nhau tạo nên các thuật toán và chương trình máy tính."
         },
         "conditionals/express/2021": {
           "word": "Điều kiện"
         },
+        "while_loop/express/2021": {
+          "word": "Vòng lặp while",
+          "definition": "Vòng lặp tiếp tục lặp lại khi điều kiện đúng."
+        },
+        "until/express/2021": {
+          "word": "Đến khi",
+          "definition": "Lệnh yêu cầu bạn làm một việc chỉ cho đến khi điều kiện nào đó trở thành sự thật."
+        },
         "function/express/2021": {
-          "word": "Hàm"
+          "word": "Hàm",
+          "definition": "Một đoạn mã lệnh mà bạn có thể dễ dàng khai báo nhiều lần."
         },
         "variable/express/2021": {
-          "word": "Biến"
+          "word": "Biến",
+          "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
+        },
+        "prompt/express/2021": {
+          "word": "lời nhắc",
+          "definition": "Thông báo trên màn hình máy tính chờ người dùng nhập dữ liệu đầu vào."
+        },
+        "for_loop/express/2021": {
+          "word": "Vòng lặp for",
+          "definition": "Các vòng lặp có điểm bắt đầu, kết thúc và gia số xác định trước (khoảng cách của bước nhảy)."
         },
         "define/express/2021": {
-          "word": "Định nghĩa"
+          "word": "Định nghĩa",
+          "definition": "Tìm hiểu chi tiết các vấn đề mà bạn đang cố gắng giải quyết"
+        },
+        "prepare/express/2021": {
+          "word": "Chuẩn bị",
+          "definition": "Nghiên cứu, lập kế hoạch và thu thập tài liệu cho hoạt động bạn sắp thực hiện"
+        },
+        "reflect/express/2021": {
+          "word": "Suy nghĩ",
+          "definition": "Suy nghĩ cẩn thận về điều gì đó nhằm mục đích cải thiện kết quả trong tương lai"
+        },
+        "try/express/2021": {
+          "word": "Thử",
+          "definition": "Cố gắng làm điều gì đó"
+        },
+        "click/pre-express/2021": {
+          "word": "Nhấp chuột",
+          "definition": "Nhấn nút chuột"
+        },
+        "drag/pre-express/2021": {
+          "word": "Kéo",
+          "definition": "Nhấp vào nút chuột và giữ trong lúc di chuyển con trỏ chuột đến vị trí mới"
         },
         "drop/pre-express/2021": {
-          "word": "Thả"
+          "word": "Thả",
+          "definition": "Thả nút chuột để “thả” một mục mà bạn đang kéo"
+        },
+        "double_click/pre-express/2021": {
+          "word": "Nhấơ đúp chuột",
+          "definition": "Nhấn nút chuột rất nhanh"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Thuật toán",
+          "definition": "Danh sách các bước để hoàn thành nhiệm vụ."
+        },
+        "bug/pre-express/2021": {
+          "word": "Lỗi",
+          "definition": "Một phần của chương trình không hoạt động chính xác."
         },
         "debugging/pre-express/2021": {
-          "word": "Sửa lỗi"
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/pre-express/2021": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
         "programming/pre-express/2021": {
-          "word": "Lập trình"
+          "word": "Lập trình",
+          "definition": "Đó là nghệ thuật sáng tạo chương trình."
+        },
+        "persistence/pre-express/2021": {
+          "word": "Sự kiên trì",
+          "definition": "Cố gắng hết lần này đến lần khác, ngay cả khi tình huống vô cùng khó khăn."
+        },
+        "loop/pre-express/2021": {
+          "word": "Vòng lặp",
+          "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "repeat/pre-express/2021": {
+          "word": "Lặp lại",
+          "definition": "Làm lại một việc."
+        },
+        "event/pre-express/2021": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
         "behavior/coursee/2021": {
-          "word": "Hành vi"
+          "word": "Hành vi",
+          "definition": "Hành động mà nhân vật thực hiện liên tục cho đến khi được yêu cầu dừng lại."
+        },
+        "algorithm/coursee/2021": {
+          "word": "thuật toán",
+          "definition": "Danh sách các bước để hoàn thành nhiệm vụ"
+        },
+        "sprite/coursee/2021": {
+          "word": "Nhân vật",
+          "definition": "Yếu tố đồ họa trên màn hình có vị trí, kích thước và ngoại hình."
+        },
+        "event/coursee/2021": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
         "copyright/coursee/2021": {
-          "word": "Bản quyền"
+          "word": "Bản quyền",
+          "definition": "quyền hợp pháp độc quyền để in, xuất bản, biểu diễn, quay phim hoặc ghi lại tài liệu văn học, nghệ thuật hoặc âm nhạc và cho phép người khác làm điều tương tự"
+        },
+        "loop/coursee/2021": {
+          "word": "Vòng lặp",
+          "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "repeat/coursee/2021": {
+          "word": "Lặp lại",
+          "definition": "Làm lại một việc."
         },
         "function/coursee/2021": {
-          "word": "Hàm"
+          "word": "Hàm",
+          "definition": "Một đoạn mã lệnh mà bạn có thể dễ dàng khai báo nhiều lần."
         },
         "conditionals/coursee/2021": {
           "word": "Điều kiện"
         },
+        "while_loop/coursee/2021": {
+          "word": "Vòng lặp while",
+          "definition": "Vòng lặp tiếp tục lặp lại khi điều kiện đúng."
+        },
         "define/coursee/2021": {
-          "word": "Định nghĩa"
+          "word": "Định nghĩa",
+          "definition": "Tìm hiểu chi tiết các vấn đề mà bạn đang cố gắng giải quyết"
+        },
+        "prepare/coursee/2021": {
+          "word": "Chuẩn bị",
+          "definition": "Nghiên cứu, lập kế hoạch và thu thập tài liệu cho hoạt động bạn sắp thực hiện"
+        },
+        "reflect/coursee/2021": {
+          "word": "Suy nghĩ",
+          "definition": "Suy nghĩ cẩn thận về điều gì đó nhằm mục đích cải thiện kết quả trong tương lai"
+        },
+        "try/coursee/2021": {
+          "word": "Thử",
+          "definition": "Cố gắng làm điều gì đó"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Học máy",
+          "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
+        },
+        "bug/csd/2021": {
+          "word": "Lỗi",
+          "definition": "Một phần của chương trình không hoạt động chính xác."
+        },
+        "for_loop/csd/2021": {
+          "word": "Vòng lặp for",
+          "definition": "Các vòng lặp có điểm bắt đầu, kết thúc và gia số xác định trước (khoảng cách của bước nhảy)."
+        },
+        "debugging/csd/2021": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/csd/2021": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "variable/csd/2021": {
+          "word": "Biến",
+          "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
+        },
+        "sprite/csd/2021": {
+          "word": "Nhân vật"
+        },
+        "conditionals/csd/2021": {
+          "word": "Điều kiện"
+        },
+        "abstraction/csd/2021": {
+          "word": "Trừu tượng"
+        },
+        "function/csd/2021": {
+          "word": "Hàm"
+        },
+        "input/csd/2021": {
+          "word": "Đầu vào"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Dấu vết số"
+        },
+        "copyright/csd/2021": {
+          "word": "Bản quyền",
+          "definition": "quyền hợp pháp độc quyền để in, xuất bản, biểu diễn, quay phim hoặc ghi lại tài liệu văn học, nghệ thuật hoặc âm nhạc và cho phép người khác làm điều tương tự"
         }
       }
     }

@@ -26,10 +26,7 @@ export default class ProgressBubble extends React.Component {
     level: levelWithProgressType.isRequired,
     disabled: PropTypes.bool.isRequired,
     smallBubble: PropTypes.bool,
-    selectedSectionId: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.number
-    ]),
+    selectedSectionId: PropTypes.number,
     selectedStudentId: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number
@@ -94,7 +91,7 @@ export default class ProgressBubble extends React.Component {
       level.isLocked,
       level.isUnplugged,
       level.bonus,
-      false,
+      level.paired,
       level.bubbleText || level.letter || level.levelNumber,
       bubbleSize
     );

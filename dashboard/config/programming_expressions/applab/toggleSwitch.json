@@ -1,4 +1,7 @@
 {
-  "func": "toggleSwitch",
-  "category": "Circuit"
+  "key": "toggleSwitch",
+  "name": "toggleSwitch",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "syntax": "toggleSwitch"
 }

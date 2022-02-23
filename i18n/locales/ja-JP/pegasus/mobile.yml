@@ -1000,6 +1000,8 @@
   iceage_name: "アイス・エイジ"
   minecraft_name: "マインクラフト"
   starwarsblocks_name: "スター ・ ウォーズ (ブロック)"
+  hoc-impact-study_name: 調査付きのクラシック迷路
+  flappy-impact-study_name: ゆるいコードとアンケート
   hoc-encryption_name: 単純な暗号化
   text-compression_name: テキスト圧縮
   applab_name: "アプリ ラボ"
@@ -1092,6 +1094,12 @@
   coursed-2020_gradelevel: 中学2年生以上向け
   coursee-2020_gradelevel: 8才-12才
   coursef-2020_gradelevel: 9～13 歳
+  coursea-2021_gradelevel: 4～7 歳
+  courseb-2021_gradelevel: 5～8 歳
+  coursec-2021_gradelevel: 6～10 歳
+  coursed-2021_gradelevel: 中学2年生以上向け
+  coursee-2021_gradelevel: 8才-12才
+  coursef-2021_gradelevel: 9～13 歳
   accelerated_gradelevel: "10-18 才"
   codeorg_platformtext: "最新ブラウザ、スマート フォン、タブレット"
   codeintl_platformtext: "最新ブラウザ、スマート フォン、タブレット"
@@ -1494,6 +1502,8 @@
   header_legal_privacy: "プライバシー ポリシー"
   header_legal_tos: "利用規約"
   header_tutorials: "チュートリアル"
+  header_screen_reader_hamburger: "メニュー"
+  header_screen_reader_help: "[ヘルプ] メニュー"
   app_lab_documentation: "アプリラボのドキュメント"
   app_lab_tutorials: "アプリラボのチュートリアル"
   game_lab_documentation: "ゲームラボのドキュメント"
@@ -1636,6 +1646,7 @@
   hoc2018_mc_go_to_mc_education: "マインクラフト　エデュケーションへ"
   hoc2018_mc_short_description: "創造力と問題解決スキルを発揮して、プログラムの力でお宝を探して水中の世界を探検しましょう。"
   hoc2018_mc_short_description_shorter: "創造力と問題解決スキルを発揮して、プログラムで水中の世界を探検し構築しましょう。"
+  hoc2018_mc_journey: "コードでマインクラフトを旅する。"
   hoc2018_dance_party_main_heading: "ダンスパーティー"
   hoc2018_dance_party_landing_title: "ダンス"
   hoc2018_dance_party_subheading: "ダンスパーティーを作り変えるのを手伝ってください"
@@ -1661,6 +1672,7 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "協力者:"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer *は、包括的な幼年期～キャリアへのプログラムで、コンピューター サイエンスのキャリアを追求できるように、低所得者世帯の子供たちやその他の恵まれない子供たち、それに若者を刺激し、教育し、訓練します。<a href='%{amazon_future_engineer_link}' target='_blank'>詳細はこちら</a>"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer *は、包括的な幼年期～キャリアへのプログラムで、コンピューター サイエンスのキャリアを追求できるように、低所得者世帯の子供たちやその他の恵まれない子供たち、それに若者を刺激し、教育し、訓練します。[詳細はこちら] (%{amazon_future_engineer_link}) "
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "フランスの学生または教師の方は、[Amazon Future Engineer-フランス] にアクセスしてください (%{amazon_future_engineer_france_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Amazon Future Engineerの詳細"
   hoc2018_dance_amazon_about_future_engineer_title: "Amazon Future Engineerについて"
   hoc2018_dance_amazon_about_future_engineer_description: "コンピューター サイエンス教育をもっと身近に触れてもらうためのAmazonの幼稚園～キャリアへのプログラムについて学びましょう。サマーキャンプ、高校のCSクラス、奨学金、インターンシップに参加する方法に関する詳細をご覧ください。"
@@ -1679,6 +1691,10 @@
   hoc2018_dance_amazon_future_engineer_footer: "*このチュートリアルであるアーティストの音楽を使用していることで、そのアーティストが、Code.orgへの音楽のライセンス許諾の一環として、Amazonを後援または支持していることにはなりません。"
   hoc2018_dance_measure: "小節"
   hoc2018_dance_measure_colon: '小節:'
+  hoc2018_aquatic_video1: "マインクラフト・ヴォヤージュ・アクアティック-はじめに"
+  hoc2018_aquatic_video2: "マインクラフト・ヴォヤージュ・アクアティック-ループ"
+  hoc2018_aquatic_video3: "Minecraft Voyage Aquatic-条件文"
+  hoc2018_aquatic_video4: "マインクラフト・ヴォヤージュ・アクアティック-おめでとう"
   hoc2018_dance_video1: "ダンスパーティー - はじめに"
   hoc2018_dance_video2: "ダンスパーティー - イベント"
   hoc2018_dance_video3: "ダンスパーティー - プロパティ"
@@ -1689,6 +1705,7 @@
   page_not_found_button: "ホームへ戻る"
   hoc2018_mc_with_microsoft: "協力者:"
   hoc2018_mc_thank_microsoft: "21世紀で成功するためにすべての子供たちにコンピューター サイエンスとスキルを学ぶ機会を確実に与えるという私たちのビジョンと使命をサポートしてくれたMicrosoftに感謝します。"
+  hoc2019_mc_mee_title: "マインクラフト AI for Good"
   hoc2019_mc_mee_description1: '新しいマインクラフトのHour of CodeチュートリアルがWindows、Mac、iPad向けのマインクラフト: エデュケーション エディションでご利用いただけるようになりました。プログラミングの基本を学び、生徒と一緒にAIを探索してください！'
   hoc2019_mc_mee_description2: "レッスンプラン、ビデオ、コンピューター サイエンスのカリキュラム、先生用のトレーニングなどの無料のリソースにアクセスしてください。"
   hoc2019_mc_more_coding_resources: "その他のプログラミングリソース"
@@ -1698,18 +1715,81 @@
   homepage_slot_text_link_code_break: "コードブレークを行う"
   homepage_slot_text_link_do_hoc: "Hour of Codeを行う"
   homepage_slot_text_link_express_course: "エクスプレスコースを試す"
+  page_not_available_title: "ページは利用できません"
+  page_not_available_description: "申し訳ございません。リクエストされたページはこのアドレスではご利用いただけません。それでもアクセスが必要な場合は、[support@code.org] (%{support_email_link}) にメールしてください。"
   page_not_available_button: "ホームへ戻る"
+  hoc2020_mc_available_code_org: "Code.orgで入手可能"
+  hoc2020_mc_available_mee: 'Minecraft: 教育版で利用可能'
+  hoc2020_mc_mee_title: "マインクラフト・テイル・オブ・ツー・ビレッジ"
+  hoc2020_mc_mee_description: '新しい Minecraft のコード時間チュートリアルが Minecraft: Windows、Mac、Chromebook、および iPad 用の教育版で利用可能になりました。コーディングの基本を学び、生徒と一緒に多様性とインクルージョンを探りましょう！授業計画、ビデオ、コンピュータサイエンスのカリキュラム、エクイティレッスン、教師トレーニングなどの無料リソースにアクセスできます。'
+  hoc2021_mc_mee_title: "マインクラフト タイムクラフト"
+  hoc2021_mc_mee_description: '時間をさかのぼってプログラミングを学びましょう。新しいチュートリアル「マインクラフト Hour of Code」がWindows、Mac、Chromebook、iPad向け教育版マインクラフトでご利用いただけるようになりました。無料の教育者向けリソース、トレーニング、動画を是非ご利用ください。'
+  hoc2021_mc_mee_villages_title: "2つの村の物語"
+  hoc2021_mc_mee_villages_description: '教育版マインクラフトで、プログラミングの基本を学び、生徒と一緒に多様性とインクルージョンについて詳しく見てみましょう。'
+  hoc2021_mc_mee_ai_title: "AI For Good（AI の社会貢献）"
+  hoc2021_mc_mee_ai_description: '生徒と一緒にAIを探り、教育版マインクラフトでプログラミングする方法を学びましょう。'
   footer_powered_by_aws: "Powered by Amazon Web Services"
+  footer_built_on_github: "マイクロソフトの GitHub 上に構築"
+  codebytes_skinny_banner_title: "12月7日～11日のCodeBytesライブミニレッスンにご参加ください！"
+  codebytes_skinny_banner_description: 'CS Education Weekの毎日、CodeBytes、20分間のインタラクティブなコンピュータサイエンスのレッスンに参加してください。CodeBytesは、学生がバーチャル #HourOfCode! に参加するのに最適な方法です。'
   codebytes_skinny_banner_english_only: "英語のみ"
+  codebytes_skinny_banner_learn: "詳細については [code.org/codebytes] (%{code_bytes_url}) をご覧ください。"
   footer_privacy_policy: "プライバシー ポリシー"
+  footer_privacy_policy_updated: "プライバシーポリシー (更新)"
   footer_about: "概要"
   footer_partners: "パートナー"
+  footer_blog: "ブログ"
   footer_donate: "寄付する"
+  footer_store: "ストア"
   footer_support: "ヘルプとコミュニティ"
   footer_terms: "利用規約"
   ai_for_oceans: "海洋のためのAI"
   ai_for_oceans_lesson_plan: "レッスンのけいかく"
+  ai_for_oceans_tile_description: "ゴミを検知するように訓練して、A.I. が海をきれいにするのを手伝ってください！トレーニングデータとバイアス、そしてAIが世界の問題にどう対処できるかについて学びます。[表示]"
+  how_ai_works: "人工知能のしくみ"
+  how_ai_works_tile_description: "この一連の短い動画で、AI の仕組みとそれが重要な理由について学んでください。マイクロソフトのCEO、Satya Nadellaと多様な専門家が出演します。"
+  watch_the_videos: "動画を見る"
+  ai_and_ethics: "人工知能と倫理"
+  ai_and_ethics_tile_description: "生徒たちはAIの倫理的意味合いを振り返り、協力して、あらゆる場所のAIクリエイターや立法者のために「AI倫理規定」リソースを作成します。"
+  view_lesson_plan: "授業計画を見る"
   ai_in_partnership_with: "協力者:"
   ai_microsoft_thanks: "21世紀で成功するためにすべての子供たちにコンピューター サイエンスとスキルを学ぶ機会を確実に与えるという私たちのビジョンと使命をサポートしてくれたMicrosoftに感謝します。"
+  ai_ethics_panel_header: "AIの倫理を探るパネルディスカッション"
+  ai_ethics_panel_description_1: "私たちのお気に入りのAIエキスパートとさらに深く行きましょう！このパネルディスカッションでは、アルゴリズムバイアスや仕事の未来といった重要な問題について触れます。それを私たちとペアリングしてください"
+  ai_ethics_lesson_plan: "人工知能と倫理の授業計画"
+  ai_ethics_panel_description_2: "人工知能の倫理の素晴らしい入門書に！"
+  cs_for_good: "CS for Good"
+  cs_for_good_tile_description: "より公平で持続可能な世界を創造する上でコンピュータサイエンスの役割について学生に深く考えるよう促すリソース。"
+  view_resources: "リソースを表示"
+  imagine_cup_junior: "イマジンカップジュニア"
+  imagine_cup_junior_tile_description: "このグローバルな AI for Good チャレンジでは、学生に Microsoft の AI for Good イニシアチブを紹介し、AI の力で世界の問題を解決できるようにします。"
   ai_activity: "アクティビティ"
   ai_description: "説明"
+  ai_seeing_ai: "人工知能を見る"
+  ai_seeing_ai_description: "あなたの周りの世界をさまざまな言語で語る無料アプリ。"
+  ai_quick_draw: "クイック、ドロー！"
+  ai_quick_draw_description: "ニューラルネットワークは落書きを認識することを学ぶことができますか？"
+  ai_teachable_machine: "ティーチブルマシン"
+  ai_teachable_machine_description: "自分のイメージ、サウンド、ポーズを認識するようにコンピュータをトレーニングします。"
+  ai_google: "グーグルで人工知能実験"
+  ai_google_description: "写真、図面、言語、音楽などを通して機械学習の探索を始めましょう。"
+  ai_zooniverse: "Zooniverse-スナップショットマウンテンゼブラ"
+  ai_zooniverse_description: "画像でさまざまな動物を識別して、絶滅危惧種のケープマウンテンゼブラを保護しましょう。"
+  ai_audience: "オーディエンス"
+  ai_minecraft_description: '授業計画、ビデオ、コンピュータサイエンスのカリキュラム、教師向けトレーニングなど、無料のリソースにアクセスできます。(マインクラフト:教育版が必要)'
+  ai_k_12_audience: "K-12 (必読)"
+  ai_microsoft_workshop: "マイクロソフトの無料バーチャルワークショップ"
+  ai_microsoft_workshop_description: "無料のSTEMとコーディングワークショップで好奇心を掻き立てる。"
+  ai_machine_learning_for_kids: "子供向け機械学習"
+  ai_machine_learning_for_kids_description: "機械学習モデルをテキスト、数字、または画像でトレーニングし、それを使用して Scratch でゲームを作成します。"
+  ai_ibm_machine_learning_for_kids: 'IBM: 子供向け機械学習'
+  ai_ecs: 'ECS: 人工知能 (AI)'
+  ai_ecs_description: "コンピュータサイエンスの探索 (ECS) カリキュラムの新しい代替カリキュラムユニット。"
+  ai_elements: "人工知能の要素"
+  ai_elements_description: "Reaktorとヘルシンキ大学が作成した一連の無料オンラインコース。"
+  ai_cognimates: "Cognimates"
+  ai_cognimates_description: "ゲームの構築、ロボットのプログラミング、トレーニングのためのAI教育プラットフォームです。"
+  ai_try_activity: "アクティビティを試す"
+  outbreak_tile_title: "大流行"
+  outbreak_tile_subtitle: "モンスタータウンにウイルスが感染しました！発生シミュレーターをプログラミングし、モンスタータウンの隣人に何が起こるかについて予測しましょう。"
+  footer_cookie_notice: "クッキーについての通知"

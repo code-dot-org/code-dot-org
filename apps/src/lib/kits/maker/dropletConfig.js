@@ -7,11 +7,12 @@ import {
   CP_BUTTON_VARS,
   CP_COMPONENT_EVENTS,
   SONG_CHARGE,
-  SONG_1D
+  SONG_SINGLE_NOTE
 } from './boards/circuitPlayground/PlaygroundConstants';
 
 import {
   MB_BUTTON_VARS,
+  MB_SENSOR_VARS,
   MB_COMPONENT_EVENTS
 } from './boards/microBit/MicroBitConstants';
 
@@ -30,9 +31,7 @@ const colorPixelVariables = _.range(N_COLOR_LEDS).map(
 const colorLedBlockPrefix = `${colorPixelVariables[0]}.`;
 
 function stringifySong(song) {
-  return (
-    '[\n' + song.map(note => `  ${JSON.stringify(note)}`).join(',\n') + '\n]'
-  );
+  return '[' + song.map(note => `${JSON.stringify(note)}`).join(', ') + ']';
 }
 config.stringifySong = stringifySong;
 
@@ -64,108 +63,99 @@ function getBoardEventDropdownForParam(firstParam, componentEvents) {
 }
 config.getBoardEventDropdownForParam = getBoardEventDropdownForParam;
 
-// We don't want these to show up as blocks (because that interferes with
-// parameter dropdowns) but we also don't want them to generate "_ is not
-// defined" warnings from the linter.
-config.additionalPredefValues = Object.keys(CP_COMPONENT_EVENTS);
-
 // Block properties we'll reuse in multiple entries
-const createLedProps = {
-  parent: api,
-  category: MAKER_CATEGORY,
-  paletteParams: ['pin'],
-  params: ['0']
-};
-const createButtonProps = {
-  parent: api,
-  category: MAKER_CATEGORY,
-  paletteParams: ['pin'],
-  params: ['0']
-};
-const createCapacitiveTouchSensorProps = {
-  parent: api,
-  category: MAKER_CATEGORY,
-  paletteParams: ['pin'],
-  params: ['0']
-};
+function createMakerPinProps(defaultParam) {
+  return {
+    parent: api,
+    category: MAKER_CATEGORY,
+    paletteParams: ['pin'],
+    params: [defaultParam]
+  };
+}
 
 /**
  * Generic Johnny-Five / Firmata blocks
  */
-const makerBlocks = [
-  {
-    func: 'pinMode',
-    parent: api,
-    category: MAKER_CATEGORY,
-    paletteParams: ['pin', 'mode'],
-    params: ['13', '"output"'],
-    dropdown: {1: ['"output"', '"input"', '"analog"']}
-  },
-  {
-    func: 'digitalWrite',
-    parent: api,
-    category: MAKER_CATEGORY,
-    paletteParams: ['pin', 'value'],
-    params: ['13', '1'],
-    dropdown: {1: ['1', '0']}
-  },
-  {
-    func: 'digitalRead',
-    parent: api,
-    category: MAKER_CATEGORY,
-    type: 'value',
-    nativeIsAsync: true,
-    paletteParams: ['pin'],
-    params: ['"D4"']
-  },
-  {
-    func: 'analogWrite',
-    parent: api,
-    category: MAKER_CATEGORY,
-    paletteParams: ['pin', 'value'],
-    params: ['5', '150']
-  },
-  {
-    func: 'analogRead',
-    parent: api,
-    category: MAKER_CATEGORY,
-    type: 'value',
-    nativeIsAsync: true,
-    paletteParams: ['pin'],
-    params: ['5']
-  },
-  {
-    func: 'boardConnected',
-    parent: api,
-    category: MAKER_CATEGORY,
-    type: 'value'
-  },
-  {func: 'exit', category: MAKER_CATEGORY, noAutocomplete: true},
-
-  {
-    func: 'createLed',
-    ...createLedProps,
-    type: 'either'
-  },
-  {
-    func: 'var myLed = createLed',
-    ...createLedProps,
-    noAutocomplete: true,
-    docFunc: 'createLed'
-  },
-
-  {
-    func: 'createButton',
-    ...createButtonProps,
-    type: 'either'
-  },
-  {
-    func: 'var myButton = createButton',
-    ...createButtonProps,
-    noAutocomplete: true,
-    docFunc: 'createButton'
+function getMakerBlocks(boardType) {
+  let defaultPin = '"A6"';
+  if (boardType === MICROBIT_CATEGORY) {
+    defaultPin = '0';
   }
-];
+  return [
+    {
+      func: 'pinMode',
+      parent: api,
+      category: MAKER_CATEGORY,
+      paletteParams: ['pin', 'mode'],
+      params: ['13', '"output"'],
+      dropdown: {1: ['"output"', '"input"', '"analog"']}
+    },
+    {
+      func: 'digitalWrite',
+      parent: api,
+      category: MAKER_CATEGORY,
+      paletteParams: ['pin', 'value'],
+      params: ['13', '1'],
+      dropdown: {1: ['1', '0']}
+    },
+    {
+      func: 'digitalRead',
+      parent: api,
+      category: MAKER_CATEGORY,
+      type: 'value',
+      nativeIsAsync: true,
+      paletteParams: ['pin'],
+      params: ['"D4"']
+    },
+    {
+      func: 'analogWrite',
+      parent: api,
+      category: MAKER_CATEGORY,
+      paletteParams: ['pin', 'value'],
+      params: ['5', '150']
+    },
+    {
+      func: 'analogRead',
+      parent: api,
+      category: MAKER_CATEGORY,
+      type: 'value',
+      nativeIsAsync: true,
+      paletteParams: ['pin'],
+      params: ['5']
+    },
+    {
+      func: 'boardConnected',
+      parent: api,
+      category: MAKER_CATEGORY,
+      type: 'value'
+    },
+    {func: 'exit', category: MAKER_CATEGORY, noAutocomplete: true},
+
+    {
+      func: 'createLed',
+      ...createMakerPinProps(defaultPin),
+      type: 'either'
+    },
+    {
+      func: 'var myLed = createLed',
+      ...createMakerPinProps(defaultPin),
+      noAutocomplete: true,
+      docFunc: 'createLed'
+    },
+
+    {
+      func: 'createButton',
+      ...createMakerPinProps(defaultPin),
+      type: 'either'
+    },
+    {
+      func: 'var myButton = createButton',
+      ...createMakerPinProps(defaultPin),
+      noAutocomplete: true,
+      docFunc: 'createButton'
+    }
+  ];
+}
 
 /**
  * Circuit-Playground-specific blocks
@@ -176,7 +166,7 @@ const circuitPlaygroundBlocks = [
     parent: api,
     category: CIRCUIT_CATEGORY,
     paletteParams: ['component', 'event', 'callback'],
-    params: ['buttonL', '"down"', 'function(event) {\n  \n}'],
+    params: ['buttonL', '"down"', 'function() {\n  \n}'],
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(CP_COMPONENT_EVENTS),
@@ -312,14 +302,14 @@ const circuitPlaygroundBlocks = [
     func: 'buzzer.playNotes',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['notes', 'tempo'],
-    params: [stringifySong(SONG_1D), 120],
+    params: [stringifySong(SONG_SINGLE_NOTE), 120],
     paramButtons: {minArgs: 1, maxArgs: 2}
   },
   {
     func: 'buzzer.playSong',
     category: CIRCUIT_CATEGORY,
     paletteParams: ['notes', 'tempo'],
-    params: [stringifySong(SONG_CHARGE), 120],
+    params: [`[${stringifySong(SONG_CHARGE[0])}]`, 120],
     paramButtons: {minArgs: 1, maxArgs: 2}
   },
   {
@@ -422,12 +412,12 @@ const circuitPlaygroundBlocks = [
 const microBitBlocks = [
   {
     func: 'createCapacitiveTouchSensor',
-    ...createCapacitiveTouchSensorProps,
+    ...createMakerPinProps('"A6"'),
     type: 'either'
   },
   {
     func: 'var mySensor = createCapacitiveTouchSensor',
-    ...createCapacitiveTouchSensorProps,
+    ...createMakerPinProps('"A6"'),
     noAutocomplete: true,
     docFunc: 'createCapacitiveTouchSensor'
   },
@@ -436,7 +426,7 @@ const microBitBlocks = [
     parent: api,
     category: MICROBIT_CATEGORY,
     paletteParams: ['component', 'event', 'callback'],
-    params: ['buttonA', '"down"', 'function(event) {\n  \n}'],
+    params: ['buttonA', '"down"', 'function() {\n  \n}'],
     allowFunctionDrop: {2: true},
     dropdown: {
       0: Object.keys(MB_COMPONENT_EVENTS),
@@ -549,36 +539,6 @@ const microBitBlocks = [
     category: MICROBIT_CATEGORY,
     type: 'property'
   },
-
-  {
-    func: 'soundSensor.start',
-    category: MICROBIT_CATEGORY,
-    noAutocomplete: true
-  },
-  {
-    func: 'soundSensor.value',
-    category: MICROBIT_CATEGORY,
-    type: 'readonlyproperty'
-  },
-  {
-    func: 'soundSensor.getAveragedValue',
-    category: MICROBIT_CATEGORY,
-    params: ['500'],
-    paletteParams: ['ms'],
-    type: 'value'
-  },
-  {
-    func: 'soundSensor.setScale',
-    category: MICROBIT_CATEGORY,
-    params: ['0', '100'],
-    paletteParams: ['low', 'high']
-  },
-  {
-    func: 'soundSensor.threshold',
-    category: MICROBIT_CATEGORY,
-    type: 'property'
-  },
-
   {
     func: 'compass.getHeading',
     category: MICROBIT_CATEGORY,
@@ -613,7 +573,8 @@ export let configMicrobit = {
       blocks: []
     }
   },
-  blocks: [...makerBlocks, ...microBitBlocks]
+  blocks: [...getMakerBlocks(MICROBIT_CATEGORY), ...microBitBlocks],
+  additionalPredefValues: [...MB_BUTTON_VARS, ...MB_SENSOR_VARS]
 };
 
 export let configCircuitPlayground = {
@@ -624,5 +585,6 @@ export let configCircuitPlayground = {
       blocks: []
     }
   },
-  blocks: [...makerBlocks, ...circuitPlaygroundBlocks]
+  blocks: [...getMakerBlocks(CIRCUIT_CATEGORY), ...circuitPlaygroundBlocks],
+  additionalPredefValues: Object.keys(CP_COMPONENT_EVENTS)
 };

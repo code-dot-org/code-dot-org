@@ -33,6 +33,11 @@ module Api::V1::Pd::Application
     test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
     test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
 
+    # [MEG] TODO: Add different kinds of users, teachers can't access an application they don't own
+    test_redirect_to_sign_in_for :update, params: -> {{id: @application.id}}
+    test_user_gets_response_for :update, user: :student, params: -> {{id: @application.id}}, response: :forbidden
+    test_user_gets_response_for :update, user: :teacher, params: -> {{id: @application.id}}, response: :forbidden
+
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
       user: -> {@program_manager},
@@ -56,7 +61,7 @@ module Api::V1::Pd::Application
       assert_response :success
     end
 
-    test 'do not send principal approval email on successful create if RP has selective principal approval' do
+    test 'does not send principal approval email on successful create if RP has selective principal approval' do
       Pd::Application::TeacherApplicationMailer.expects(:confirmation).
         with(instance_of(TEACHER_APPLICATION_CLASS)).
         returns(mock {|mail| mail.expects(:deliver_now)})
@@ -114,6 +119,47 @@ module Api::V1::Pd::Application
 
       assert_equal 112, TEACHER_APPLICATION_CLASS.last.sanitize_form_data_hash[:cs_total_course_hours]
       assert JSON.parse(TEACHER_APPLICATION_CLASS.last.response_scores).any?
+    end
+
+    test 'can submit an empty form if application is incomplete' do
+      sign_in @applicant
+      put :create, params: {status: 'incomplete'}
+
+      assert_equal 'incomplete', TEACHER_APPLICATION_CLASS.last.status
+      assert_response :created
+    end
+
+    test 'does not update course hours nor autoscore on successful create if application status is incomplete' do
+      Pd::Application::TeacherApplication.expects(:auto_score).never
+      Pd::Application::TeacherApplication.expects(:queue_email).never
+
+      sign_in @applicant
+      put :create, params: {status: 'incomplete'}
+      assert_response :created
+    end
+
+    test 'updating an application with empty form data updates appropriate fields' do
+      sign_in @applicant
+      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
+      original_data = application.form_data_hash
+      original_school_info = @applicant.school_info
+
+      # Keep cs_total_course_hours because it is calculated on create or update
+      put :update, params: {id: application.id, status: 'incomplete', form_data: {"cs_total_course_hours": 80}}
+      application.reload
+      refute_equal original_data, application.form_data_hash
+      assert_nil application.course
+      assert_nil application.form_data_hash[:cs_total_course_hours]
+      assert_equal original_school_info, @applicant.school_info
+      assert_response :ok
+    end
+
+    test 'updating an application with an error renders bad_request' do
+      sign_in @applicant
+      application = create TEACHER_APPLICATION_FACTORY, user: @applicant
+      put :update, params: {id: application.id, form_data: @test_params, application_year: nil}
+
+      assert_response :bad_request
     end
 
     test 'send_principal_approval queues up an email if none exist' do

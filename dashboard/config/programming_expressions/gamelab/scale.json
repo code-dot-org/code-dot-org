@@ -1,6 +1,7 @@
 {
-  "func": "scale",
+  "key": "scale",
+  "name": "scale",
   "category": "Sprites",
-  "modeOptionName": "*.scale",
-  "type": "property"
+  "category_key": "sprites",
+  "syntax": "scale"
 }

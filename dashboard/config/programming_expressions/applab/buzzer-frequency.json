@@ -1,0 +1,15 @@
+{
+  "key": "buzzer.frequency",
+  "name": "buzzer.frequency",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "palette_params": [
+    {
+      "name": "frequency"
+    },
+    {
+      "name": "duration"
+    }
+  ],
+  "syntax": "buzzer.frequency(frequency, duration)"
+}

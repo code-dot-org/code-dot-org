@@ -1,0 +1,37 @@
+---
+title: Codificação com Poesia
+theme: responsive
+set_dir: true
+social:
+  og:title: Coding with Poetry
+  twitter:title: Coding with Poetry
+  og:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  twitter:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  og:image: https://code.org/images/social-media/poetry-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/poetry-og-image-1200x630.png
+---
+
+# Codificação com Poesia
+
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Arte Poética", left_description: "Adicione arte e animação a um poema clássico nesta atividade do Hour of Code!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Iniciar", right_heading: "Codificação com poesia", right_description: "Conecte a ciência da computação à poesia na sua sala de aula com esta série de lições.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Módulo de visualização" }}
+
+## Saiba mais sobre Codificação com Poesia
+
+No módulo Codificação com Poesia em Conexões CS, os alunos poderão ver duas disciplinas - ciência da computação e poesia - de uma nova forma. Durante o curso de cinco lições, alunos da 4ª à 6ª séries desenvolvem um programa de geração de poemas que recita diferentes versões do poema que escreverem. Em seguida, os alunos testam seus programas com seus colegas e concluem o projeto compartilhando os poemas gerados pelos usuários no círculo de poesia.
+
+Ao desenvolverem um gerador de poemas, os alunos aprendem como os computadores obtém dados dos usuários, os armazenam na memória e geral os resultados desejados. Ao redigirem seus próprios poemas, os alunos exploram elementos de poesia, como a gramática, a ambiência e a escolha das palavras.
+
+<em>Nossa atividade Hora do Código de Arte do Poema também é a primeira aula no módulo de Codificação com Poesia do nosso currículo de Conexões de Ciência da Computação. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Inscreva-se aqui para uma sessão especial de CodeBytes</a> na terça-feira, 7 de dezembro, às 10:00.m. ET e novamente às 10 h. PT; vamos mostrar aos alunos como começar com a atividade Hora do Código de Arte do Poema.</em>
+
+{{ teacher_info, heading: "Informações sobre os professores", title: "Como continuar aprendendo depois da Codificação com Poesia", description: "No nosso novo currículo de Conexões CS, explore atividades adicionais que combinam ELA e ciência da computação, e confira ainda mais conexões entre a ciência da computação e outras disciplinas como matemática, ciências e estudos sociais, que você pode apresentar na sua sala de aula.", button_text: "Saiba mais", url: "/educate/csc" }}
+
+## Criações de alunos em destaque
+
+{{ featured_project, title: "Tarde", author: "M", age: "13+", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
+{{ featured_project, title: "Nuvem", author: "D", age: "8+", image: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
+{{ featured_project, title: "Estrela", author: "B", age: "18+", image: "images/csc/poetry/cscpoetry_star.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocyS8UULutWk0lZfbK7-o41e4" }}
+{{ featured_project, title: "Cantar", author: "W", age: "13+", image: "images/csc/poetry/cscpoetry_sing.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocye7a3gSe86YxTcGwWjCfOX8" }}
+{{ clearfix }}

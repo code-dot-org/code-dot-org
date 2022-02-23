@@ -29,6 +29,7 @@ import AdminCohortView from './admin_cohort_view';
 import _ from 'lodash';
 
 const ROOT_PATH = '/pd/application_dashboard';
+// eslint-disable-next-line react-hooks/rules-of-hooks
 const browserHistory = useRouterHistory(createHistory)({
   basename: ROOT_PATH
 });
@@ -43,7 +44,7 @@ const ApplicationDashboardHeader = props => (
   <Header baseName="Application Dashboard" {...props} />
 );
 
-const paths = {
+export const DASHBOARD_COURSES = {
   csd_teachers: {
     type: 'teacher',
     name: 'CS Discoveries Teacher Applications',
@@ -53,6 +54,11 @@ const paths = {
     type: 'teacher',
     name: 'CS Principles Teacher Applications',
     course: 'csp'
+  },
+  csa_teachers: {
+    type: 'teacher',
+    name: 'Computer Science A Teacher Applications',
+    course: 'csa'
   }
 };
 
@@ -106,8 +112,8 @@ export default class ApplicationDashboard extends React.Component {
             <IndexRedirect to="/summary" />
             <Route path="summary" breadcrumbs="Summary" component={Summary} />
             {_.flatten(
-              Object.keys(paths).map((path, i) => {
-                const cohort_path_name = paths[path].name.replace(
+              Object.keys(DASHBOARD_COURSES).map((path, i) => {
+                const cohort_path_name = DASHBOARD_COURSES[path].name.replace(
                   'Applications',
                   'Cohort'
                 );
@@ -116,20 +122,20 @@ export default class ApplicationDashboard extends React.Component {
                     key={`detail_${i}`}
                     path={`${path}/(:applicationId)`}
                     breadcrumbs={[
-                      {name: paths[path].name, path: path},
+                      {name: DASHBOARD_COURSES[path].name, path: path},
                       {name: 'Application Details', path: ''}
                     ]}
                     component={DetailView}
-                    viewType={paths[path].type}
-                    course={paths[path].course}
+                    viewType={DASHBOARD_COURSES[path].type}
+                    course={DASHBOARD_COURSES[path].course}
                   />,
                   <Route
                     key={`quick_view_${i}`}
                     path={path}
-                    breadcrumbs={paths[path].name}
+                    breadcrumbs={DASHBOARD_COURSES[path].name}
                     component={QuickView}
-                    applicationType={paths[path].name}
-                    viewType={paths[path].type}
+                    applicationType={DASHBOARD_COURSES[path].name}
+                    viewType={DASHBOARD_COURSES[path].type}
                     role={path}
                   />,
                   <Route
@@ -138,7 +144,7 @@ export default class ApplicationDashboard extends React.Component {
                     breadcrumbs={cohort_path_name}
                     component={CohortView}
                     applicationType={cohort_path_name}
-                    viewType={paths[path].type}
+                    viewType={DASHBOARD_COURSES[path].type}
                     role={path}
                   />
                 ];

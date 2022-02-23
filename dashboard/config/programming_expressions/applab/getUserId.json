@@ -1,5 +1,7 @@
 {
-  "func": "getUserId",
+  "key": "getUserId",
+  "name": "getUserId",
   "category": "Data",
-  "type": "value"
+  "category_key": "data",
+  "syntax": "getUserId"
 }

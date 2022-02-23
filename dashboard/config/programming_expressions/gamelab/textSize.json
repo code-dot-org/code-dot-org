@@ -1,10 +1,12 @@
 {
-  "func": "textSize",
+  "key": "textSize",
+  "name": "textSize",
   "category": "Drawing",
-  "paletteParams": [
-    "pixels"
+  "category_key": "drawing",
+  "palette_params": [
+    {
+      "name": "pixels"
+    }
   ],
-  "params": [
-    "12"
-  ]
+  "syntax": "textSize(pixels)"
 }

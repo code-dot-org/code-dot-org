@@ -972,6 +972,7 @@ id-ID:
         - correct: true
         questions:
         - {}
+        title: Buat Prediksi
       CSD U6 setProperty predict multi_2018:
         answers:
         - {}
@@ -980,6 +981,7 @@ id-ID:
         - correct: true
         questions:
         - {}
+        title: Buat Prediksi
       CSD U6 setProperty predict multi_2018_2019:
         answers:
         - {}
@@ -988,6 +990,7 @@ id-ID:
         - correct: true
         questions:
         - {}
+        title: Buat Prediksi
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Kondisional Dengan Kartu
@@ -4390,8 +4393,10 @@ id-ID:
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
       courseAB_EOC_2021:
         display_name: Proyek Akhir Kursus
+        description: Anda sudah sampai di pelajaran terakhir! Pilih proyek untuk dibuat.
       courseB_EOC_2021:
         display_name: Proyek Akhir Kursus
+        description: Anda sudah sampai di pelajaran terakhir! Pilih proyek untuk dibuat.
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: Si artis akan menggambar setiga sama sisi.
@@ -4401,7 +4406,8 @@ id-ID:
         - text: Si artis akan mengambar sebuah kotak.
           correct: true
           feedback: Benar!
-        - {}
+        - text: Artis akan menggambar pentagon
+          feedback: Salah. Artis menggambar persegi.
         questions:
         - text: Cermati kode di bawah ini dengan jeli. Apa yang akan terjadi saat
             anda mengklik "Jalankan"?
@@ -4424,12 +4430,24 @@ id-ID:
             petani setelah Anda mengklik "Jalankan"?
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
-        - {}
-        - correct: true
-        - correct: true
-        - {}
+        - text: Scrat akan sampai di akorn. Tidak ada bug dalam code.
+          feedback: Salah. Pertama, Scrat salah belok, lalu Scrat tidak bergerak maju
+            secukupnya agar mencapai akorn.
+        - text: Scrat tidak akan mencapai akorn karena dia salah belok.
+          correct: true
+          feedback: Benar! Pertama, Scrat salah belok, lalu Scrat tidak bergerak maju
+            secukupnya agar mencapai akorn.
+        - text: Scrat tidak akan mencapai akorn karena tidak cukup ada blok `move
+            forward`.
+          correct: true
+          feedback: Benar! Pertama, Scrat salah belok, lalu Scrat tidak bergerak maju
+            secukupnya agar mencapai akorn.
+        - text: Scrat tidak akan bergerak dari blok pertama.
+          feedback: Ada dua bug di dalam code ini. Pertama, Scrat salah belok, lalu
+            Scrat tidak bergerak maju secukupnya agar mencapai akorn.
         questions:
-        - {}
+        - text: Cari bug dalam code ini. Akankah Scrat mencapai akorn atau apakah
+            ada masalah?
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: Burung akhirnya akan kurang satu langkah dari babi.
@@ -4439,7 +4457,8 @@ id-ID:
           feedback: Benar!
         - text: Burung akan menabrak TNT.
           feedback: Salah. Kode ini membawa burungnya pas ke babi.
-        - feedback: Salah. Kode ini membawa burungnya pas ke babi.
+        - text: Burung akan terbang menabrak dinding.
+          feedback: Salah. Kode ini membawa burungnya pas ke babi.
         questions:
         - text: Baca kode berikut dengan teliti. Apa yang akan terjadi saat Anda mengklik
             "Jalankan"?
@@ -4454,7 +4473,8 @@ id-ID:
         - text: BB-8 akan bergerak 5 kali dan mengambil semua logam rongsokan
           correct: true
           feedback: Benar!
-        - feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+        - text: BB-8 hanya akan bergerak 3 kotak.
+          feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
             kali.
         questions:
         - text: Menurut anda, apa yang akan terjadi ketika anda mengklik "Jalankan"?
@@ -4470,13 +4490,16 @@ id-ID:
         - text: BB-8 akan mengumpulkan semua logam rongsokan tanpa kesulitan.
           feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
             padahal perlu bergerak maju sebanyak 3 kotak.
-        - feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
+        - text: BB-8 akan salah belok setelah loop pertama.
+          feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
             padahal perlu bergerak maju sebanyak 3 kotak.
         questions:
         - text: Cermati code di bawah ini. Apa yang akan terjadi saat anda mengklik
             "Jalankan"?
       courseD_EOC_2021:
         display_name: Proyek Akhir Kursus
+        description: Anda sudah sampai di pelajaran terakhir Kursus D! Pilih proyek
+          untuk dibuat.
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -4488,7 +4511,8 @@ id-ID:
         - text: C
           feedback: Salah.  Loop-dalam menghasilkan pentagon, dan loop-luar mengulangnya
             4 kali dalam sebuah loop.
-        - feedback: Salah.  Loop-dalam menghasilkan pentagon, dan loop-luar mengulangnya
+        - text: Tidak satu pun dari yang di atas
+          feedback: Salah.  Loop-dalam menghasilkan pentagon, dan loop-luar mengulangnya
             4 kali dalam sebuah loop.
         markdown: |+
           <table>
@@ -4575,7 +4599,8 @@ id-ID:
         - text: Lebah akan mendapatkan semua nektar.
           correct: true
           feedback: Benar!
-        - feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
+        - text: Lebah akan salah belok.
+          feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
             dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
         questions:
         - text: Cermati loop berlapis di bawah ini. Apa yang akan terjadi saat Anda
@@ -4611,7 +4636,8 @@ id-ID:
         - text: Pemanen akan memilih semua tanaman, kecuali labu.
           correct: true
           feedback: Benar!
-        - feedback: Salah. Kode akan membuat pemanen berulang kali membuat pola anak
+        - text: Pemanen hanya akan memetik labu.
+          feedback: Salah. Kode akan membuat pemanen berulang kali membuat pola anak
             tangga dan mengambil jagung atau selada sebanyak-banyaknya. Ia tidak akan
             memilih labu.
         markdown: |
@@ -4630,7 +4656,8 @@ id-ID:
         - text: Code ini akan membiarkan lubang tak terjamah sama sekali.
           feedback: Salah. Loop `while` akan menangani loop segala ukuran, tetapi
             tidak ada code untuk menghilangkan kotoran dari tumpukan.
-        - feedback: Salah. Tidak ada code untuk menghilangkan kotoran dari tumpukan.
+        - text: Code ini akan membiarkan lubang terakhir tidak tersentuh.
+          feedback: Salah. Tidak ada code untuk menghilangkan kotoran dari tumpukan.
         questions:
         - text: Cermati code di bawah ini. Apa yang akan tersisa pada akhir puzzle
             ini?
@@ -4646,7 +4673,8 @@ id-ID:
             ketika tumpukan hilang.
           correct: true
           feedback: Benar!
-        - feedback: Salah. Petani akan menghilangkan kotoran sepanjang ada tumpukan,
+        - text: Petani hanya akan menghilangkan kotoran satu kali.
+          feedback: Salah. Petani akan menghilangkan kotoran sepanjang ada tumpukan,
             lalu berhenti ketika tumpukan hilang.
         questions:
         - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
@@ -4662,7 +4690,8 @@ id-ID:
         - text: Zombi akan belok kanan di jalur pertama dan berputar-putar selamanya.
           feedback: Salah. Zombie akan melewati jalan yang benar dan akhirnya bolak-balik
             selamanya.
-        - feedback: Dalam kode ini, zombie akan melewati jalan yang benar dan akhirnya
+        - text: Zombi akan terpaku di akhir jalan lurus.
+          feedback: Dalam kode ini, zombie akan melewati jalan yang benar dan akhirnya
             bolak-balik selamanya.
         questions:
         - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
@@ -4678,24 +4707,32 @@ id-ID:
         - text: Burung akan bergerak maju dan menabrak TNT.
           feedback: Salah. Kode membuat burung bergerak maju selagi ada jalur aman,
             lalu belok kiri. Burung akan terus begitu sampai menjangkau babi!
-        - feedback: Kode membuat burung bergerak maju selagi ada jalur, lalu belok
+        - text: Burung salah belok.
+          feedback: Kode membuat burung bergerak maju selagi ada jalur, lalu belok
             kiri. Burung akan terus begitu hingga menjangkau babi!
         questions:
         - text: Cermati kode di bawah ini. Menurut Anda apa yang akan terjadi ketika
             Anda mengklik "Jalankan"?
       courseE_EOC_2021:
         display_name: Proyek Akhir Kursus
+        description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
       courseE_EOC_examples_2021:
         display_name: Proyek Akhir Kursus
+        description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Tidak akan terjadi apa-apa.
-        - {}
-        - correct: true
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
+        - text: Alien akan mulai berpatroli dari kanan ke kiri.
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
+        - text: Alien akan mulai bergerak naik dan turun di layar.
+          correct: true
           feedback: Benar!
-        - {}
+        - text: Alien akan lenyap dari bagian atas layar.
+          feedback: Salah. Alien biru akan mulai bergerak naik dan turun di layar.
         questions:
-        - {}
+        - text: Lihat dengan cermat code di bawah. Apa yang akan terjadi setelah Anda
+            mengklik alien?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Pemanen akan mengambil dua labu.
@@ -4746,36 +4783,59 @@ id-ID:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Tidak akan terjadi apa-apa.
-        - {}
-        - correct: true
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
+        - text: Gulma raksasa akan mengambang ke bagian atas layar
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
+        - text: Gulma raksasa akan mulai berguling-guling
+          correct: true
           feedback: Benar!
-        - {}
+        - text: Gulma raksasa akan berkedip-kedip.
+          feedback: Salah. Gulma raksasa akan mulai berguling-guling
         questions:
         - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Jalankan"?
       courseF_EOC_2021:
         display_name: Proyek Akhir Kursus
+        description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
+          waktu untuk mencermati proyek-proyek contoh.
       courseF_EOC_examples_2021:
         display_name: Proyek Akhir Kursus
+        description: Anda sudah sampai di akhir Kursus F! Pilih proyek untuk dibuat.
       courseF_EOC_samples_2021:
         display_name: Proyek Akhir Kursus
+        description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
+          waktu untuk mencermati proyek-proyek contoh.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: Sprite hanya akan memutar ke kanan.
+          feedback: Salah. Sprite juga akan bergerak ke timur.
+        - text: Sprite hanya akan bergerak ke timur.
+          feedback: Salah. Sprite belum berhenti berputar, jadi dia akan melakukan
+            keduanya serentak.
+        - text: Sprite akan berputar dan bergerak bersamaan.
+          correct: true
+          feedback: Benar! Kedua perilaku akan berlangsung serentak.
+        - text: Sprite terlebih dahulu akan berputar lalu bergerak kemudian.
+          feedback: Salah. Di Sprite Lab, blok yang terhubung segera muncul setiap
+            selesai blok terakhir, jadi kedua perilaku akan berlangsung serentak.
         questions:
-        - {}
+        - text: Baca code, lalu buat prediksi.
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Satu piza siap saji!"'
+          feedback: Salah. Label variable tidak cocok.
+        - text: '"Satu menu siap saji!"'
+          feedback: Salah. Label variable tidak pernah ditampilkan.
+        - text: '"Satu menu makanan siap saji!"'
+          feedback: Salah. Label variable tidak pernah ditampilkan.
+        - text: '"Satu menu siap saji!"'
+          correct: true
+          feedback: Benar! Label variable tidak cocok.
+        - text: Tidak ada yang akan ditampilkan.
+          feedback: Salah. Event dan blok print tetap akan bekerja.
         questions:
-        - {}
+        - text: Code ini mungkin terlihat akrab, tetapi bacalah dengan cermat. Apa
+            yang akan ditampilkan jika pengguna mengetik "piza"?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: Si artis akan menggambar segitiga dengan sisi 50 piksel.
@@ -4787,7 +4847,8 @@ id-ID:
         - text: Si artis akan menggambar tiga sisi terbuka dengan belokan 50 derajat.
           feedback: Salah.  Variabel `length` perlu digunakan di dalam blok `turn`
             agar bisa terjadi.
-        - feedback: Variabel `length` disetel ke 50 dan digunakan di blok `move forward
+        - text: Komputer akan meminta angka kepada pengguna.
+          feedback: Variabel `length` disetel ke 50 dan digunakan di blok `move forward
             by` sehingga artis akan menggambar segitiga dengan sisi 50 piksel.
         questions:
         - text: Kami telah menyetel variabel "length" ke 50. Apa yang akan terjadi
@@ -4806,7 +4867,9 @@ id-ID:
             bunga. '
           feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
             jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
-        - feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
+        - text: 'Lebah akan bergerak maju dan mengumpulkan satu nektar dari bunga
+            nomor 1 dan 4. '
+          feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
             jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
         markdown: |+
           Ah!  Penggunaan loop `for` menjadikan puzzle ini jauh lebih mudah!
@@ -4816,22 +4879,50 @@ id-ID:
         - text: Baca kode di bawah ini. Apa yang akan terjadi saat Anda mengklik "Jalankan"?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Kedua pesawat akan bergerak satu kotak di sepanjang kisi-kisi, lalu
+            berhenti.
+          feedback: Salah. Sprite ini memiliki "perilaku" yang membuatnya terus berlari
+            sampai disuruh berhenti.
+        - text: Kedua pesawat akan mulai bergerak dan tidak berhenti.
+          correct: true
+          feedback: Benar! Perilaku ini menyuruh pesawat untuk mulai bergerak dan
+            terus bergerak.
+        - text: Satu pesawat akan bergerak yang pertama, dan pesawat lainnya akan
+            bergerak kemudian.
+          feedback: Salah. Setiap blok code di Sprite Lab berlari seketika setelah
+            berikutnya.
+        - text: Pesawat akan bertabrakan.
+          feedback: Salah. Posisi pesawat begitu rupa sehingga tidak akan membuatnya
+            akan bersentuhan.
         questions:
-        - {}
+        - text: Baca code, lalu buat prediksi.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Program akan mencetak "Halo, nama!"
+          feedback: Salah. Blok nama akan diganti dengan apa pun yang Anda ketik.
+        - text: Program akan menyambut Anda dengan nama yang Anda ketik.
+          correct: true
+          feedback: Benar! Apa yang Anda ketik digunakan untuk mengganti blok nama.
+        - text: Sprite akan berubah ukuran.
+          feedback: Salah. Teks ditampilkan ke layar.
+        - text: Komputer akan mengajukan pertanyaan lain.
+          feedback: Salah. Hanya satu pertanyaan yang diajukan, tepat ketika program
+            dimulai.
         questions:
-        - {}
+        - text: 'Program ini mempersilakan Anda menjawab pertanyaan dengan mengetik
+            di keyboard. Blok `print` menampilkan teks di layar. Buat prediksi: Apa
+            yang akan terjadi setelah menjawab pertanyaan?'
       courseF_variables_stop:
         content1: deskripsi di sini
+        markdown: '# Setop!## Anda yakin sudah siap lanjut?Di level berikutnya, Anda
+          akan mulai menulis code untuk proyek Anda. Level ini sangat cocok jika Anda
+          sudah punya rencana.Rencana Anda yang sudah jadi ini harus meliputi:<img
+          src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png"
+          style="float:left; height:70px; padding:10px"/>* Jenis proyek yang Anda
+          buat. Misalnya, kartu ucapan, bot obrolan, atau cerita spasi kosong.* Daftar
+          pertanyaan yang akan Anda ajukan kepada pengguna.* Teks lain yang akan ditampilkan
+          di layar.* Deskripsi atau gambar sprite yang akan Anda butuhkan (dan perilakunya).Jika
+          belum tahu pasti apakah sudah siap lanjut, tanyakan kepada guru Anda!'
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: Si artis akan memecahkan puzzle dengan benar.
@@ -4849,12 +4940,25 @@ id-ID:
         - text: Apa yang akan terjadi ketika Anda menekan tombol "Jalankan"?
       csf_be_a_super_digital_citizen_2021:
         content1: deskripsi di sini
+        markdown: "# Warga Digital Super## Bagaimana kita bisa menjadi pembela kebenaran
+          ketika menyaksikan cyberbullying?"
       csf_password_power-up_2021:
         content1: deskripsi di sini
+        markdown: "#  Perkuat Kata Sandi Anda## Tips Kata Sandi yang Harus Diingat*
+          Awali dengan **frasa** yang mudah diingat.* Hanya **orang tua** Anda yang
+          boleh tahu kata sandi Anda.* Jangan sekali-kali menggunakan informasi identitas
+          **privat** dalam kata sandi Anda.* Buat kata sandi dengan minimal **delapan**
+          karakter.* Gunakan huruf, angka, dan **simbol** dalam kata sandi Anda.![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
       csf_putting_a_stop_to_online_meanness_2021:
         content1: deskripsi di sini
+        markdown: "# STOP Tindakan Kasar## Apa yang sebaiknya dilakukan jika ada orang
+          bersikap kasar kepada Anda secara online?* **S**tep away (Menjauh).* **T**ell
+          a trusted adult (Beri tahu orang dewasa tepercaya).* **O**K sites first
+          (Cari situs yang aman).* **P**ause and think online (Jeda sejenak dan berpikir
+          matang secara online).![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
       express_EOC_2021:
         display_name: Proyek Akhir Kursus
+        description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Laurel akan mengumpulkan 4 buah harta karun menggunakan code ini.
@@ -4867,7 +4971,8 @@ id-ID:
         - text: Laurel akan mengumpulkan semua harta karun.
           feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
             tidak ada sehingga muncul kesalahan.
-        - feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
+        - text: Laurel akan mengumpulkan 1 buah harta karun menggunakan code ini.
+          feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
             tidak ada sehingga muncul kesalahan.
         questions:
         - text: Perhatikan kode berikut ini. Menurutmu apa yang akan terjadi saat
@@ -4877,3 +4982,333 @@ id-ID:
           masalah untuk berbagai permasalahan \nGuna mengeksplor bagaimana setiap
           langkah anda membangun dan mening\nkatkan solusi untuk masalah tersebut\n\n##sumber\n*[Solving
           Problem - Activity Guide]\n(https://docs.google.com/document/d/1cym51Muy41CbvXYe7F57N2Xf16Afp0hjsHovhR0GD2M/export?format=pdf)"
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # Gambaran Umum
+
+          Kelas memprogram sprite mereka agar berinteraksi dengan cara baru. Setelah evaluasi singkat terkait cara mereka dalam menggunakan blok isTouching, kelas memikirkan cara lain agar dua sprite dapat berinteraksi. Mereka lalu menggunakan isTouching agar sebuah sprite mendorong sprite lain melintasi layar sebelum berlatih dengan empat blok tabrakan (collide, displace, bounce, dan bounceOff).
+          ## Kosa kata
+
+          * **Abstraksi** - Mengeluarkan perbedaan yang spesifik untuk menciptakan satu solusi yang berfungsi untuk banyak masalah.
+
+          ## Kode yang Diperkenalkan
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Gambaran Umum
+
+          Pelajaran ini membahas fungsi sebagai cara untuk mengatur kode, membuatnya lebih mudah dibaca, dan menghapus blok kode yang berulang. Kelas mempelajari bahwa tingkat yang lebih tinggi atau langkah yang lebih abstrak memudahkan pemahaman dan alasan tentang langkah, lalu mulai membuat fungsi di Game Lab. Di akhir pelajaran, kelas menggunakan keterampilan ini untuk mengatur dan menambahkan fungsi ke versi akhir dari game side scroller mereka.
+          ## Kosa kata
+
+          * **Fungsi** -  Kode yang dapat Anda panggil berulang kali dengan mudah.
+
+          ## Kode yang Diperkenalkan
+
+          * [Menetapkan fungsi](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Memanggil fungsi](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |-
+          # Gambaran Umum
+
+          Pelajaran ini mengembangkan keterampilan menggambar yang mencakup lebar dan tinggi serta mengenalkan konsep pembuatan bilangan acak. Kelas belajar menggambar dengan versi elips() dan persegi() yang mencakup parameter lebar dan tinggi dan menggunakan blok latar belakang() untuk mengisi layar dengan warna. Di akhir progres, kelas diperkenalkan dengan blok angkaAcak() dan menggunakan blok baru tersebut untuk menggambar ular pelangi acak.
+          ## Kosa kata
+
+          * **Parameter** - Bagian informasi tambahan yang Anda berikan kepada fungsi untuk menyesuaikannya untuk kebutuhan tertentu.
+
+          ## Kode yang Diperkenalkan
+
+          * [latar belakang()](//studio.code.org/docs/gamelab/background/)
+          * [elips()](//studio.code.org/docs/gamelab/ellipse/)
+          * [persegi()](//studio.code.org/docs/gamelab/rect/)
+          * [angkaAcak()](//studio.code.org/docs/gamelab/randomNumber/)
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          # Gambaran Umum
+
+          Pelajaran ini memperkenalkan variabel sebagai cara untuk memberi label nomor dalam sebuah program atau menyimpan nilai yang dihasilkan secara acak. Kelas memulai pelajaran dengan penjelasan yang sangat mendasar tentang tujuan dari variabel dan berlatih menggunakan blok baru. Setelah itu, kelas menggunakan variabel untuk menyimpan nomor acak, sehingga program dapat menggunakan nomor acak yang sama beberapa kali.
+          ## Kosak kata
+
+          * **Variabel** - Placeholder untuk bagian informasi yang dapat berubah.
+
+          ## Kode yang Diperkenalkan
+
+          * [Menyebutkan sebuah variabel](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Menyebutkan dan memberi nilai pada sebuah variabel](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Sumber Daya
+
+          * [Pengantar tentang Variabel](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: "# Cerita Spasi KosongDalam pelajaran ini, Anda akan belajar menggunakan
+          dan menulis cerita spasi kosong. Tonton video ini untuk mempelajari hubungan
+          materi ini dengan ilmu komputer."
+      PowerOfWords-Unplugged_2021:
+        markdown: "# Kekuatan Kata-Kata## Apa yang harus Anda lakukan ketika seseorang
+          menggunakan kata-kata kasar atau menyakitkan di internet?"
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: "# Informasi Privat dan Pribadi## Apa saja informasi tentang diri
+          Anda yang AMAN untuk dibagikan secara online?"
+      SimonSays-Unplugged_2021:
+        markdown: "# Ikuti AlgorithmMainkan game dan pikirkan perintah apa saja yang
+          dibutuhkan untuk mendapatkan hasil yang benar."
+      courseD_EOC_examples_2021:
+        description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
+          waktu untuk mencermati proyek-proyek contoh.
+        display_name: Contoh-Contoh Proyek
+      courseF_artist_practice:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan loop dan Artis!
+        display_name: Praktik Artis
+      courseF_beeFor_practice:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan for loop dan lebah!
+        display_name: Praktik Lebah
+      courseF_beeVar_practice:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan variable dan lebah!
+        display_name: Praktik Lebah
+      courseF_bee_practice:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan loop dan lebah!
+        display_name: Praktik Lebah
+      courseF_events_freeplay:
+        description: Sekarang Anda dapat menggunakan materi yang sudah dipelajari
+          untuk membuat proyek Anda lebih baik lagi! Terus tambahkan ke program Anda
+          atau mulai buat sesuatu yang baru!
+        display_name: Event - Bermain Bebas
+      courseF_events_practice:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan event!
+        display_name: Berlatih Event
+        teacher_markdown: "# Ikhtisar Level PilihanLevel pilihan berisi menu level
+          tambahan untuk dikerjakan murid sampai selesai. Murid harus menyelesaikan
+          sedikitnya satu sub-level di sini, tetapi boleh mengerjakannya sebanyak
+          yang disukainya atau yang (Anda) suka.Anda dapat menggunakan deskripsi di
+          bawah ini untuk membantu murid memilih sendiri pilihannya atau mengatur
+          ekspektasi terhadap jumlah sub-level yang harus mereka selesaikan.|&nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Meluncur!|Belajar
+          terbang|Lakukan atraksi gulungan barel|Mengecil dan Membesar|Pompa ikannya!|Penguin
+          sedang beraksi||-|-|-|-|-|-|-|| ***Jenis*** |**Tinjau Kembali**|**Debug**|**Debug**|**Debug**|**Konten
+          Opsional**|**Konten Opsional**| ***Konsep***|*event, perilaku*|*event, perilaku*|*event,
+          perilaku*|*event, perilaku*|*when/while event*|*when/while event*|"
+      courseF_intro_apps:
+        description: Selamat datang di CS Fundamental! Proyek ini semuanya di buat
+          dengan Sprite Lab. Cobalah sekarang untuk mengetahui apa yang memungkinkan.
+          Di akhir kursus ini, kamu akan bisa membuat proyekmu sendiri seperti ini...dan
+          banyak lagi!
+        display_name: Sprite Lab app
+        teacher_markdown: "# Ikhtisar Level PilihanLevel pilihan berisi menu level
+          tambahan untuk dikerjakan murid sampai selesai. Murid harus menyelesaikan
+          sedikitnya satu sub-level di sini, tetapi boleh mengerjakannya sebanyak
+          yang disukainya atau yang (Anda) suka.Pilihan di sini akan membawa murid
+          ke aplikasi contoh yang dapat dieksplorasi lebih lanjut. Aktivitas ini hendaknya
+          dikerjakan bersama dengan lembar kerja Exploring Apps, yang ada di [paket
+          pelajaran](.././)."
+      courseF_sprites_freeplay:
+        description: Giliran Anda membuat apa pun yang Anda mau! Apa jenis proyek
+          yang akan Anda buat?
+        display_name: Sprite - Bermain Bebas
+      courseF_sprites_practice:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan sprite dan perilaku!
+        display_name: Praktik Sprite
+        teacher_markdown: "# Ikhtisar Level PilihanLevel pilihan berisi menu level
+          tambahan untuk dikerjakan murid sampai selesai. Murid harus menyelesaikan
+          sedikitnya satu sub-level di sini, tetapi boleh mengerjakannya sebanyak
+          yang disukainya atau yang (Anda) suka.Anda dapat menggunakan deskripsi di
+          bawah ini untuk membantu murid memilih sendiri pilihannya atau mengatur
+          ekspektasi terhadap jumlah sub-level yang harus mereka selesaikan.|&nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Adegan Gurun|Ubah
+          ukuran buah.|Buat Animasi Kapal Berlayar|Hari Semilir||-|-|-|-|-|| ***Jenis***
+          |**Tinjau Kembali**|**Tinjau Kembali**|**Tinjau Kembali**|**Tinjau Kembali**||
+          ***Konsep***|*sprite, lokasi*|*sprite, properti*|*sprite, lokasi, perilaku*|*perilaku*|"
+      courseF_text_practice:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan teks dan prompt!
+        display_name: Berlatih Teks dan Prompt
+        teacher_markdown: "# Ikhtisar Level PilihanLevel pilihan berisi menu level
+          tambahan untuk dikerjakan murid sampai selesai. Murid harus menyelesaikan
+          sedikitnya satu sub-level di sini, tetapi boleh mengerjakannya sebanyak
+          yang disukainya atau yang (Anda) suka.Anda dapat menggunakan deskripsi di
+          bawah ini untuk membantu murid memilih sendiri pilihannya atau mengatur
+          ekspektasi terhadap jumlah sub-level yang harus mereka selesaikan.|&nbsp;
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Menggunakan Ujaran
+          untuk Teks|Teks dari Prompt|Beri Nama robotnya!|Label Variable|Teks Besar|Prompting
+          untuk warna|Mulai dari nol||-|-|-|-|-|-|-|-|| ***Jenis*** |**Tinjau Kembali**|**Debug**|**Debug**|**Debug**|**Konten
+          Opsional**|**Konten Opsional**|**Bermain Bebas**| ***Konsep***|*blok print,
+          event*|*prompt, event*|*menambahkan spasi*|*mencocokkan label variable*|*blok
+          layar judul*|*menyimpan warna*|*tidak ada konten baru*"
+      courseF_variables_projects:
+        description: Anda akan membuat kartu ucapan, bot obrolan, atau cerita spasi
+          kosong. Jika Anda sudah menyelesaikan \"Bagian 1\" proyek, buka \"Bagian
+          2\".
+        display_name: Pilih Proyek
+        teacher_markdown: '# Ikhtisar Level PilihanLevel pilihan berisi menu level
+          tambahan untuk dikerjakan murid sampai selesai. Murid harus menyelesaikan
+          sedikitnya satu sub-level di sini, tetapi harus didorong untuk menyelesaikan
+          **dua** level untuk proyek yang sama.Murid membutuhkan instruksi yang benar-benar
+          jelas agar dapat memahami cara menavigasi pilihan di sini. Untuk setiap
+          pilihan proyek, ada dua sub-level di sini. Sebagai permulaan, murid harus
+          memilih salah satu level bertanda "Bagian 1". Setelah level tersebut selesai,
+          mereka harus kembali lagi ke sini dan memilih "Bagian 2" dari proyek yang
+          *sama*. Level pertama untuk setiap pilihan akan memberikan masukan kepada
+          murid saat mereka menghimpun komponen-komponen dasar proyek. Level kedua
+          adalah "bermain bebas” yang sengaja mempersilakan murid mengubah code yang
+          mereka suka.'
+      courseF_variables_samples:
+        description: Anda akan membuat kartu ucapan, bot obrolan, atau cerita spasi
+          kosong. Sebelum mulai, eksplorasi proyek-proyek contoh berikut untuk melihat
+          proyek mana yang Anda berminat membuatnya. Tekan \"Finish\" ketika sudah
+          siap memulai perencanaan program Anda sendiri.
+        display_name: Eksplorasi - Contoh Program
+        teacher_markdown: "# Ikhtisar Level PilihanLevel pilihan berisi menu level
+          tambahan untuk dikerjakan murid sampai selesai. Murid harus menyelesaikan
+          sedikitnya satu sub-level di sini, tetapi boleh mengerjakannya sebanyak
+          yang disukainya atau yang (Anda) suka.Murid harus memperhatikan proyek-proyek
+          ini dengan cermat sebelum memutuskan ingin membuat apa. Anda dapat mengawasi
+          mereka bersama-sama di kelas atau menyuruh murid mengeksplorasi sendiri."
+      csf_digital_trails_2021:
+        markdown: "# Mengikuti Jejak Digital## Apa informasi yang AMAN untuk disimpan
+          sebagai jejak digital Anda?"
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: "# Lingkungan Tetangga Online Saya## Bagaimana Anda pergi mengunjungi
+          tempat-tempat online secara aman?"
+      express_EOC_examples_2021:
+        description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
+          waktu untuk mencermati proyek-proyek contoh.
+        display_name: Contoh-Contoh Proyek
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games variables practice_2021:
+        display_name: Latih Variable
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Membuat Gaya Teks dengan CSS
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Menambahkan Gambar
+      CSD U2 Image practice_pilot_2021:
+        display_name: Menambahkan Gambar
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: deskripsi di sini
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: judul
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: deskripsi di sini
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Praktik
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: deskripsi di sini
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: deskripsi di sini
+      CSD U6 LED create intro_2021:
+        content1: deskripsi di sini
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: deskripsi di sini
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Buat Prediksi
+      CSD games cake challenge choice_2021:
+        display_name: Tantangan
+      CSD games functions practice choice_2021:
+        display_name: Praktik Function
+      CSD games platform challenge choice_2021:
+        display_name: Tantangan
+      CSD web conditionals practice choice_2021:
+        display_name: Praktik Conditional
+      CSD web draw loop practice choice_2021:
+        display_name: Praktik
+      CSD web movement practice choice_2021:
+        display_name: Praktik
+      CSD web text practice choice_2021:
+        display_name: Praktik

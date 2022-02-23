@@ -1,34 +1,34 @@
 ---
-title: Teacher Resources - Code with Anna and Elsa
+title: Recursos do professor - Codifique com Anna e Elsa
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Code with Anna and Elsa: An Hour of Code Tutorial
+# Código com Anna e Elsa: Tutorial do Uma Hora de Código
 
 {{ hoc_frozen_video }}
 
 [col-50]
 
-## Teacher Resources
+## Recursos para professores
 
-### Lesson Plans:
+### Planos de aula:
 
-- [Code with Anna and Elsa]({{ hoc_frozen_cb_url }})
-- [Answer Sheet](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
-- OPTIONAL: [The Drawing Machine](http://code.org/curriculum/misc/hocunplugged/Teacher)
+- [Programe com a Anna e a Elsa]({{ hoc_frozen_cb_url }})
+- [Folha de respostas](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
+- OPCIONAL: [A máquina de desenho](http://code.org/curriculum/misc/hocunplugged/Teacher)
 
-### Extension Activities:
+### Atividades complementares:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Além da Hora do Código](http://code.org/learn/beyond)
+- [Fundamentos de Ciência da Computação: Curso 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Outros recursos para professores:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hora do Código: Guia para Educadores](https://hourofcode.com/how-to)
+- [Melhores Práticas de Educadores de Sucesso](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Evento ao-vivo: [Guia do Educador para a Hora do Código](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -36,12 +36,12 @@ video_player: true
 
 ## Resumo
 
-Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+Use a programação para explorar a mágica e a beleza do gelo com Anna e Elsa. Você criará flocos de neve e padrões enquanto patina no gelo e fará um país das maravilhas do inverno que poderá compartilhar com seus amigos!
 
-**Recommended Age Range:** 8+
+**Faixa etária recomendada:**8+
 
-**Technology Requirements:** Modern browsers + tablets
+**Requisitos de Tecnologia:** Navegadores modernos + tablets
 
-<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/frozen/reset"><button>Experimente o tutorial</button></a>
 
 [/col-50]

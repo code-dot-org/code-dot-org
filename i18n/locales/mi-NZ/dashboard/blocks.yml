@@ -430,6 +430,26 @@ mi:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': ngā kaituarangi
             '"BEAR"': ngā pea
@@ -971,7 +991,7 @@ mi:
       gamelab_clickedOn:
         text: ina pāwhiria {SPRITE}
       gamelab_clickedSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_costumeImage:
         text: "{COSTUME}"
       gamelab_getProp:
@@ -987,6 +1007,19 @@ mi:
         options:
           UNIT:
             '"seconds"': ngā hēkona
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1077,13 +1110,20 @@ mi:
             '"right"': matau
             '"left"': mauī
       gamelab_newSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_playSoundOptions:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": karihi
+            "'sound://category_animals/bear.mp3'": pea
+            "'sound://category_animals/cat.mp3'": ngeru
+            "'sound://category_animals/cow.mp3'": kau
+            "'sound://category_animals/sheep.mp3'": hipi
+            "'sound://category_animals/chicken.mp3'": heihei
+            "'sound://category_animals/dolphin.mp3'": aihe
+            "'sound://category_animals/dog.mp3'": kurī
             "'sound://category_digital/jump_7.mp3'": peke
       gamelab_randColor:
         text: tae matapōkere
@@ -1136,13 +1176,21 @@ mi:
             '"scale"': te rahi
             '"width"': whānui
             '"height"': teitei
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': pōturi
+            '5': noa
+            '7': tere
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
             '"when"': ina
             '"while"': i te
       gamelab_subjectSpritePointer:
-        text: pāwhiria {SPRITE}
+        text: "{SPRITE}"
       gamelab_turn:
         options:
           DIRECTION:
@@ -1344,25 +1392,65 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
-      PoemBot_setBackgroundEffect:
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': ngā manawa
+            '"iceCream"': Aihikirīmi
+            '"rainbow"': kahukura
+      Poetry_makeBurst:
         options:
           EFFECT:
-            '"colors"': Tae
-            '"squiggles"': Ngā Koropikopiko
-            '"space"': Tuarangi
-            '"stars"': Ngā Whetū
-            '"ripples"': Ngā Pungarungaru
-          PALETTE:
-            '"rainbow"': Āniwaniwa
-      PoemBot_setForegroundEffect:
-        text: whakarite i te papamua {EFFECT}
+            '"rain"': ua
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': pō
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': pōturi
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': peke
+      Poetry_setBackground:
+        text: kowhiri te tae papamuri {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
-            '"rain"': Ua
             '"bubbles"': Ngā mirumiru
-            '"hearts"': Manawa Tae
+            '"clouds"': kāpuapua
             '"confetti"': Pepa tae iti
+            '"hearts"': ngā manawa
+            '"space"': Tuarangi
+            '"rain"': ua
+            '"ripples"': Ngā Pungarungaru
+            '"colors"': Tae
+            '"stars"': Ngā Whetū
+            '"squiggles"': Ngā Koropikopiko
+          PALETTE:
+            '"rainbow"': kahukura
+            '"winter"': hōtoke
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"bubbles"': Ngā mirumiru
+            '"confetti"': Pepa tae iti
+            '"hearts"': ngā manawa
+            '"rain"': ua
             '"starburst"': Pāpahu Whetū
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: neke ki mua
       RyanLab_turnLeft:

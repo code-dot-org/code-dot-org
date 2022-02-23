@@ -16,18 +16,18 @@ nav: promote_nav
 
 ## 2. 邀请你的学校加入编程一小时
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[发送这封电子邮件]({{ promote/sample_emails }})给你的校长并让学校的每个班级来报名。
 
 ## 请求你的雇主参与其中
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[发送这封电子邮件]({{ promote/sample_emails }})给你的经理或公司的首席执行官。
 
 ## 4. 在你的社区中推广编程一小时
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. 你不必在学校学习新的技能。 Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[招募本地团体]({{ promote/sample_emails }})— 男孩/女孩童子军俱乐部、 教会、 大学、 退伍军人团体、 工会或甚至是一些朋友。 你不必在学校学习新的技能。 为你的活动使用这些[海报、 横幅、 贴纸、 视频等等](/promote/resources)。
 
 ## 5.邀请当地官员支持编程一小时活动
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. 它能为你在你领域的计算机科学找到一小时之外的支持。
+[发送这封电子邮件]({{ promote/sample_emails }})给你的当地代表、 市议会或学校董事会，邀请他们来你们学校参观编程一小时。 它能为你在你领域的计算机科学找到一小时之外的支持。
 
 {{ signup_button }}

@@ -228,7 +228,15 @@ it:
     user_type_button: Aggiorna Tipologia di Account
     user_type_label: Tipo di account
     user_type_student: Studente
+    user_type_student_desc: 'Esplora tutti i tuoi corsi e attività, più:'
+    user_type_student_ability_1: Salva i tuoi progressi e progetti
+    user_type_student_ability_2: Partecipa alla sezione della classe del tuo insegnante
     user_type_teacher: Insegnante
+    user_type_teacher_desc: 'Tutto ciò a cui hanno accesso gli studenti, più:'
+    user_type_teacher_ability_1: Crea le sezioni della classe
+    user_type_teacher_ability_2: Assegna e tieni traccia del lavoro degli studenti
+    user_type_teacher_ability_3: Iscriviti all'apprendimento professionale
+    user_type_teacher_ability_4: Interagisci sul nostro forum per insegnanti
     field_is_required: è un dato obbligatorio
     accept_terms: Devi accettare le condizioni per creare un account
     error: Si è verificato un errore.
@@ -239,6 +247,10 @@ it:
     email_preference_no: 'No'
     email_preference_required: Devi specificare una preferenza relativa all'indirizzo
       email.
+    share_teacher_email_reg_partner_question: Desideri che noi condividiamo le tue
+      informazioni con  [partner regionale Code.org](%{cdo_regional_partner_desc})
+      nel tuo Stato, in modo da poterti inviare una notifica sul tuo sviluppo professionale
+      locale, risorse ed eventi?
     share_teacher_email_reg_partner_preference_yes: Sì
     share_teacher_email_reg_partner_preference_no: 'No'
     share_teacher_email_reg_partner_preference_required: Devi specificare una preferenza
@@ -355,6 +367,8 @@ it:
       provider_managed_section: Questa sezione è gestita da un altro provider e non
         può essere unita. Chiedi al tuo insegnante di aggiungerti via %{provider}
         e risincronizza la loro sezione.
+      not_participant_type: Non siamo riusciti ad aggiungerti alla sezione %{section_code}
+        perché non soddisfi la tipologia di partecipante per la sezione.
     mail:
       student_disassociated:
         subject: 'Notifica da Code.org: %{student_name} non è più iscritto come tuo
@@ -475,12 +489,15 @@ it:
       minecraft_hero: L'Eroe di Minecraft
       playlab: Laboratorio
       playlab_k1: Laboratorio (pre-scolare)
+      poetry: Poesia
+      poetry_hoc: L'arte della poesia
       scratch: Scratch
       sports: Sport
       spritelab: Laboratorio dei Personaggi
       starwars: Guerre Stellari
       starwarsblocks: Guerre Stellari (Blocchi)
       starwarsblocks_hour: Guerre Stellari (Blocchi)
+      loading: Sto caricando...
       weblab: Sviluppo Web
       view_all: Guarda tutti i progetti...
     popup:
@@ -496,6 +513,7 @@ it:
       prizes_link: Più informazioni
   teacher:
     answer: Rispondi
+    dashboard: Cruscotto dell'Insegnante
     for_teachers_only: Per gli insegnanti
     title:
       one: 'Il tuo insegnante:'
@@ -665,6 +683,8 @@ it:
       già ad una classe di questo insegnante.
     third_party_login: Non puoi spostare gli studenti in una classe sincronizzata
       con un strumento di terze parti.
+    not_correct_participant_type: Non puoi spostare questi utenti perché non hanno
+      le autorizzazioni a partecipare alla nuova sezione.
   share:
     title: Impara su Code Studio
     description: Chiunque può imparare l'informatica. Realizza giochi, app e lavori
@@ -707,6 +727,7 @@ it:
     code_from_html: Code.org usa p5.play, il quale è sotto licenza <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Eseguito su Amazon Web Services
+    built_on_github: Costruito su GitHub di Microsoft
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
       of Code&reg; sono marchi registrati di Code.org."
     copyright: Copyright
@@ -718,12 +739,15 @@ it:
     tos_short: Condizioni
     tos: Termini di servizio
     privacy: Informativa sulla privacy
+    privacy_updated: Informativa sulla privacy (aggiornata)
     secure: Versione sicura
     report_abuse: Segnala un abuso
     built_on_code_studio: Costruito con Code Studio
     make_my_own_app: Creo la mia App
     how_it_works: Come funziona
     try_hour_of_code: Prova l'Ora del Codice!
+    store: Negozio
+    cookie_notice: Informativa sui cookie
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
@@ -1269,8 +1293,10 @@ it:
       email: Indirizzo email
       email_alternate: Email alternativa
       gender: Identità di genere
+      school: Scuola
       school_name: Nome della scuola
       school_city: Città della scuola
+      school_city_district: Città/Quartiere della scuola
       school_country: Paese della Scuola
       colombian_school_city: Città della scuola
       colombian_school_municipality: Provincia della Scuola
@@ -1431,3 +1457,4 @@ it:
     this_sprite: questo personaggio
   unit_prefix: Unità %{n}
   code_org_logo_alt: Code.org Home
+  teacher_feedback: Commento dell'insegnante

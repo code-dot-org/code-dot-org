@@ -21,7 +21,7 @@ uk:
           title: allthethingscourse
           description_short: Це курс для всіх інших
           description_student: Це курс для всіхмасштабів і має довший опис для учнів
-          description_teacher: Це курс для всіхпослідовностей і має більш довгий опис для вчителів
+          description_teacher: Це - масштабований курс для всіх і має довший опис для учителів
         csd-2018:
           assignment_family_title: Дослідження комп'ютерних наук
           title: Дослідження комп'ютерних наук ('18-'19)

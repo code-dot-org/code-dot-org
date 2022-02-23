@@ -3849,3 +3849,181 @@ nl-NL:
           # Mijn Online Woonwijk
 
           ## Hoe beweeg je veilig online?
+      CSD U3 Collisions SFLP:
+        markdown: |+
+          # Overzicht
+
+          De klas programmeert hun sprites zodat deze op nieuwe manieren interacteren. Na een korte evaluatie over hoe zij het blok isTouching hebben gebruikt, zal de klas gaan brainstormen over andere manieren over hoe twee sprites met elkaar kunnen interacteren. Ze maken dan gebruik van isTouching om de ene sprite de andere over het scherm te duwen voordat ze met de vier botsingsblokken (botsen, verdrijven, stuiteren, en kaatsen)
+          ## Vocabulaire
+
+          * **Abstractie** - Het eruit halen van specifieke verschillen om een oplossing te laten werken voor meerdere problemen.
+
+          ## Geïntroduceerde code
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+
+      CSD U3 Functions SFLP:
+        markdown: |+
+          # Overzicht
+
+          Deze les behandeld functies zoals de wijze over hoe ze hun code kunnen organiseren, en herhaalde codeblokken kunnen weghalen. de klas leert dat stappen op hoger niveau of die abstracter zijn ervoor zorgen dat stappen makkelijker te begrijpen en te beredeneren zijn, waarna de klas begint met het creëren van functies in Game Lab. Aan het einde van de les zal de klas deze vaardigheden gebruiken om functionaliteit te organiseren en toe tevoegen in de uiteindelijke versie van hun side-scroller spel.
+          ## Vocabulaire
+
+          * **Functie** -Een stukje code dat u makkelijk steeds weer kunt oproepen.
+
+          ## Geïntroduceerde code
+
+          * [Een functie definiëren](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Een functie oproepen](//studio.code.org/docs/gamelab/callMyFunction/)
+
+      CSD U3 Lesson Overview 4:
+        markdown: |+
+          # Overzicht
+
+          Deze les bouwt voort op de tekenvaardigheden en breidt deze uit met breedte en hoogte, en introduceert het concept van het willekeurig genereren van cijfers. De klas leert te tekenen met versies van ellipsen () en rechte lijnen () welke zijn inbegrepen met parameters voor breedte en hoogte en hoe ze het blok achtergrond() kunnen gebruiken om het scherm te vullen met kleur. Aan het einde van de les maakt de klas kennis met het blok randomNumber() en zal de nieuwe blokken gaan gebruiken om een willekeurige regenboogslang te tekenen.
+          ## Vocabulaire
+
+          * **Parameter** - Een extra stukje informatie dat u aan de functie geeft om deze aan te passen voor een bepaalde behoefte.
+
+          ## Geïntroduceerde code
+
+          * [background()](//studio.code.org/docs/gamelab/background/)
+          * [ellipse()](//studio.code.org/docs/gamelab/ellipse/)
+          * [rect()](//studio.code.org/docs/gamelab/rect/)
+          * [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)
+
+      CSD U3 Lesson Overview 5:
+        markdown: |
+          # Overzicht
+
+          In deze les worden variabelen geïntroduceerd als een manier om een cijfer in een programma een label te geven of een willekeurig gegenereerde variabele op te slaan. De klas begint de les met een zeer basale beschrijving van het doel van de variabele en oefent met het gebruik van de nieuwe blokken. Daarna gebruikt de klas variabelen om een willekeurig cijfer op te slaan waardoor het programma hetzelfde willekeurige cijfer meerdere keren kan gebruiken.
+          ## Vocabulaire
+
+          * **Variabele** - Een placeholder voor een stukje informatie dat gewijzigd kan worden.
+
+          ## Geïntroduceerde code
+
+          * [Een variabele declareren](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Een waarde aan een variabele declareren en toewijzen](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Resources
+
+          * [Inleiding tot variabelen](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games variables practice_2021:
+        display_name: Variabelen oefenen
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: beschrijving hier
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: titel
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: beschrijving hier
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: beschrijving hier
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: beschrijving hier
+      CSD U6 LED create intro_2021:
+        content1: beschrijving hier
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: beschrijving hier
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD games cake challenge choice_2021:
+        display_name: Uitdagingen
+      CSD games functions practice choice_2021:
+        display_name: Functies oefenen
+      CSD games platform challenge choice_2021:
+        display_name: Uitdagingen
+      CSD web conditionals practice choice_2021:
+        display_name: Voorwaardelijke instructies oefenen

@@ -1291,11 +1291,9 @@ pl-PL:
 
           W części 2 stworzysz swój własny projekt. Nie ma tu żadnych łamigłówek - zamiast tego przedstawionych jest wiele projektów, które pokazują różne sposoby tworzenia bardziej złożonych układów tanecznych.
 
-          Możesz zrealizować te poziomy _w dowolnej kolejności_. Zobacz w jaki sposób coś zostało zrobione na poprzednim poziomie lub połącz koncepcje między projektami. Wypróbuj je wszystkie, wybierz swoje ulubione i poświęć swój czas na pracę nad dodaniem ich do tego projektu, aby powstał z niego twój własny.
+          Możesz zrealizować te poziomy _w dowolnej kolejności_. Zobacz, w jaki sposób coś zostało zrobione na poprzednim poziomie lub połącz pomysły między projektami. Wypróbuj je wszystkie, wybierz swoje ulubione i poświęć swój czas na pracę nad dodaniem ich do tego projektu, aby powstał z niego Twój własny.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Kontynuuj</a>
-
-          <div class="clearfix"></div>
+          <a class="clearfix"></div>
 
           <div style="float: left; margin: 10px">
           <a href="2">
@@ -1357,11 +1355,11 @@ pl-PL:
 
           </div>
       Dance_Party_extras_intro_2019:
-        markdown: "\"# Tańcz dalej!\n\nW Ii części stworzysz swój własny projekt.
+        markdown: "\"# Tańcz dalej!\n\nW części 2, stworzysz swój własny projekt.
           Nie ma tam żadnych łamigłówek — za to jest zbiór projektów, które pokazują
           różne sposoby, w jakie można stworzyć bardziej złożone potańcówki.\n\nMożesz
-          przerabiać te poziomy _w dowolnej kolejności_. Przeskocz do poprzedniego
-          poziomu, aby zobaczyć, jak coś zostało w nim zrobione, lub połącz koncepcje
+          przechodzić te poziomy _w dowolnej kolejności_. Przeskocz do poprzedniego
+          poziomu, aby zobaczyć, jak coś zostało w nim zrobione, lub połącz pomysły
           z różnych projektów. Wypróbuj je wszystkie, wybierz swój ulubiony i poświęć
           trochę czasu na tworzenie projektu, tak by stał się on naprawdę Twój.\n\n<a
           class=\"\"btn btn-large btn-primary next-stage submitButton pull-right\"\">Dalej</a>\n\n<div
@@ -5204,7 +5202,7 @@ pl-PL:
         markdown: |
           # Bransoletki binarne
 
-          Utwórz bransoletkę, która przedstawia Twoje imię w systemie, zrozumiałą dla komputera!
+          Utwórz bransoletkę, która przedstawia Twoje imię w systemie, zrozumiałym dla komputerów!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CourseF_outbreak_story:
@@ -5217,7 +5215,7 @@ pl-PL:
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
 
-          Pewnego dnia jeden z potworów poczuł się chory. Potwór złapał **wirusa**! Wirus to malutki zarazek, który może wywołać chorobę. Inne potwory nie były zbyt zmartwione. Ciągle odwiedzali swoich przyjaciół.
+          Pewnego dnia jeden z potworów poczuł się chory. Potwór złapał **wirusa**! Wirus to malutki zarazek, który może wywołać chorobę. Inne potwory nie były zbyt zmartwione. Ciągle odwiedzały swoich przyjaciół.
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
 
@@ -5244,7 +5242,7 @@ pl-PL:
 
           ## Co się później stanie?
 
-          Dzisiaj masz zamiar napisać kod, aby utworzyć i uruchomić własną **symulację** epidemii wirusa w Miaście potworów. Symulacja to komputerowy model procesu lub systemu. Naucz się kodować i przewidywać, co stanie się z sąsiadami Miasta potworów.
+          Dzisiaj masz zamiar napisać kod, aby utworzyć i uruchomić własną **symulację** epidemii wirusa w Mieście potworów. Symulacja to komputerowy model procesu lub systemu. Naucz się kodować i przewidywać, co stanie się z sąsiadami Miasta potworów.
 
           <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
 
@@ -5362,8 +5360,10 @@ pl-PL:
           aplikacji mając to na uwadze!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)1555611687284.png)"
       courseAB_EOC_2021:
         display_name: Koniec projektu kursu
+        description: Dotarłeś do ostatniej lekcji! Wybierz projekt do utworzenia.
       courseB_EOC_2021:
         display_name: Koniec projektu kursu
+        description: Dotarłeś do ostatniej lekcji! Wybierz projekt do utworzenia.
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: Artysta narysuje trójkąt o trzech równych bokach.
@@ -5408,7 +5408,8 @@ pl-PL:
           correct: true
           feedback: Brawo! Najpierw, Scrat skręca w złą stronę, a następnie Scrat
             nie idzie na przód odpowiednią ilość razy, by dotrzeć do żołędzia
-        - feedback: Są dwa błędy w tym kodzie. Najpierw Scrat skręca w złą stronę,
+        - text: Scrat nie zejdzie z pierwszego bloku.
+          feedback: Są dwa błędy w tym kodzie. Najpierw Scrat skręca w złą stronę,
             a następnie Scrat nie idzie do przodu odpowiednią ilość razy, by dotrzeć
             do żołędzia
         questions:
@@ -5438,7 +5439,8 @@ pl-PL:
         - text: BB-8 przemieści się 5 razy i zbierze cały złom
           correct: true
           feedback: Poprawnie!
-        - feedback: Źle. Blok powtarzania sprawi, że BB-8 przesunie się do przodu
+        - text: BB-8 przemieści się tylko o 3 miejsca.
+          feedback: Źle. Blok powtarzania sprawi, że BB-8 przesunie się do przodu
             5 razy.
         questions:
         - text: Jak myślisz, co się stanie, gdy naciśniesz "Uruchom"?
@@ -5454,7 +5456,8 @@ pl-PL:
         - text: BB-8 bez żadnego problemu zbierze cały złom
           feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
             miejsca, gdy trzeba przemieścić się o 3 miejsca. '
-        - feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
+        - text: BB-8 obróci się w złym kierunku po pierwszej pętli.
+          feedback: 'Niepoprawnie. Pierwsza pętla pozwala BB-8 przemieścić się o dwa
             miejsca, gdy trzeba przemieścić się o 3 miejsca. '
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
@@ -5496,7 +5499,8 @@ pl-PL:
             okoliczności. '
           feedback: Niepoprawnie. Blok "jeśli obok kwiatka" zapewnia, że pszczółka
             będzie próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
-        - feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
+        - text: Pszczółka nie doleci do chmurki.
+          feedback: Niepoprawnie. Blok "jeśli na kwiatku" zapewnia, że pszczoła będzie
             próbować zbierać nektar tylko wówczas, gdy pod chmurą jest kwiatek.
         questions:
         - text: Chmura zasłania widok. Pod tą chmurą mógł być kwiatek. Jeśli będzie,
@@ -5517,7 +5521,9 @@ pl-PL:
             z plastra miodu.
           feedback: Niepoprawnie. Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce
             zebrać nektar z każdego kwiatka i robić miód na każdym plastrze miodu.
-        - feedback: Niepoprawnie. Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce
+        - text: Pszczółka podejmie próbę zebrania miodu i nektaru z każdego kwiatka
+            i na każdym plastrze miodu.
+          feedback: Niepoprawnie. Niepoprawnie. Blok "jeśli na kwiatku" pozwala pszczółce
             zebrać nektar z każdego kwiatka i robić miód na każdym plastrze miodu.
         questions:
         - text: 'Przyjrzyj się uważnie poniższemu kodowi. Jak myślisz, co się stanie,
@@ -5534,7 +5540,8 @@ pl-PL:
         - text: Pszczółka zbierze cały nektar.
           correct: true
           feedback: Poprawnie!
-        - feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
+        - text: Pszczółka odwróci się w złym kierunku.
+          feedback: Niepoprawnie. Pszczółka wykonuje w pętli pętlę poruszania się
             do przodu i zbierania nektaru, aby w ten sposób rozwiązać łamigłówkę.
         questions:
         - text: Spójrz uważnie na zagnieżdżone pętle poniżej. Co się stanie, gdy klikniesz
@@ -5570,7 +5577,8 @@ pl-PL:
         - text: Żniwiarka zbierze cały plon, z wyjątkiem dyń.
           correct: true
           feedback: Poprawnie!
-        - feedback: Niepoprawnie. Dzięki kodowi żniwiarka będzie powtarzała wykonywanie
+        - text: Żniwiarka zbierze tylko dynię.
+          feedback: Niepoprawnie. Dzięki kodowi żniwiarka będzie powtarzała wykonywanie
             wzoru kaskadowego i będzie zbierać tyle kukurydzy lub sałaty, na ile trafi.
             Nie będzie zbierać dyń.
         markdown: Kiełki w tej łamigłówce będą kiełkami kukurydzy lub sałaty.
@@ -5586,7 +5594,8 @@ pl-PL:
         - text: Ten kod pozostawi dziury całkowicie nietknięte.
           feedback: Niepoprawnie. Pętle "dopóki" będzie obsługiwać pętle dowolnego
             rozmiaru, natomiast nie ma kodu do usunięcia brudu z tej sterty.
-        - feedback: Niepoprawnie. Nie ma kodu na usunięcie brudu z tego stosu.
+        - text: Ten kod pozostawi ostatnią dziurę w stanie nietkniętym.
+          feedback: Niepoprawnie. Nie ma kodu na usunięcie brudu z tego stosu.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co pozostanie na końcu tej łamigłówki?
       courseD_multi_farmer_while4_predict1_2021:
@@ -5601,7 +5610,8 @@ pl-PL:
             gdy sterta zniknie.
           correct: true
           feedback: Poprawnie!
-        - feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
+        - text: Farmer usunie ziemię tylko raz.
+          feedback: Niepoprawnie. Farmer będzie usuwał brud, jeśli istnieje stos,
             a następnie przestanie, gdy sterta zniknie.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
@@ -5618,7 +5628,8 @@ pl-PL:
             w kółko.
           feedback: Niepoprawnie. Zombie przejdzie odpowiednią ścieżką i kończy na
             tym, że chodzi bez końca tam i z powrotem.
-        - feedback: W ramach tego kodu Zombie przejdzie odpowiednią ścieżką i kończy
+        - text: Zombie utknie na końcu ścieżki wiodącej do przodu.
+          feedback: W ramach tego kodu Zombie przejdzie odpowiednią ścieżką i kończy
             na tym, że chodzi bez końca tam i z powrotem.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
@@ -5634,7 +5645,8 @@ pl-PL:
           feedback: Niepoprawnie! Kod sprawia, że ptak porusza się do przodu, jeśli
             jest bezpieczna ścieżka, a następnie skręca w lewo. Robi to, aż dotrze
             do świnki!
-        - feedback: Kod sprawia, że ptak porusza się do przodu, jeśli jest ścieżka,
+        - text: Ptak odwraca się w złą stronę.
+          feedback: Kod sprawia, że ptak porusza się do przodu, jeśli jest ścieżka,
             a następnie skręca w lewo. Robi to, aż dotrze do świnki!
         questions:
         - text: Spójrz uważnie na kod poniżej. Jak myślisz, co się stanie, gdy klikniesz
@@ -5648,12 +5660,19 @@ pl-PL:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Nic się nie wydarzy.
-        - {}
-        - correct: true
+          feedback: Niepoprawnie. Ufoludek zacznie się poruszać na ekranie w górę
+            i w dół.
+        - text: Ufoludek rozpocznie patrolowanie od strony prawej do lewej.
+          feedback: Niepoprawnie. Ufoludek zacznie się poruszać na ekranie w górę
+            i w dół.
+        - text: Ufoludek zacznie się poruszać na ekranie w górę i w dół.
+          correct: true
           feedback: Poprawnie!
-        - {}
+        - text: Ufoludek zniknie z górnej części ekranu.
+          feedback: Niepoprawnie. Niebieski ufoludek zacznie się poruszać na ekranie
+            w górę i w dół.
         questions:
-        - {}
+        - text: Spójrz uważnie na poniższy kod. Co się stanie, gdy klikniesz ufoludka?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Pani żniwiarka zbierze dwie dynie.
@@ -5690,10 +5709,14 @@ pl-PL:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Nic się nie wydarzy.
-        - {}
-        - correct: true
+          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
+        - text: Roślina biegacz będzie dryfować do górnej części ekranu.
+          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
+        - text: Roślina biegacz zacznie się toczyć.
+          correct: true
           feedback: Poprawnie!
-        - {}
+        - text: Roślina biegacz będzie mrugać.
+          feedback: Niepoprawnie. Roślina biegacz zacznie się toczyć.
         questions:
         - text: Spójrz uważnie na kod poniżej. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_EOC_2021:
@@ -5704,25 +5727,51 @@ pl-PL:
         display_name: Koniec projektu kursu
       courseF_EOC_samples_2021:
         display_name: Koniec projektu kursu
+        description: Zaraz zaczniesz swój projekt końcowy. Zanim zaczniesz, poświęć
+          trochę czasu na zapoznanie się z przykładowymi projektami.
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: 'Duszek będzie się właśnie obracać w prawo. '
+          feedback: Niepoprawnie. Duszek będzie się również przemieszczać na wschód.
+        - text: Duszek będzie się właśnie przemieszczał na wschód.
+          feedback: Niepoprawnie. Duszek nie przestał obracać się wokół własnej osi,
+            zatem zrobi obie rzeczy jednocześnie.
+        - text: Duszek będzie się jednocześnie obracał wokół własnej osi i przemieszczał.
+          correct: true
+          feedback: Poprawnie! Oba zachowania będą zachodzić jednocześnie.
+        - text: Duszek najpierw będzie się obracał wokół własnej osi, a potem będzie
+            się przemieszczał.
+          feedback: Niepoprawnie. W Sprite Lab połączone bloki będą się pojawiać jednocześnie,
+            po każdym ostatni, zatem do obu zachowań dojdzie jednocześnie.
         questions:
-        - {}
+        - text: Przeczytaj kod, a potem zgadnij.
       courseF_intro_apps:
         display_name: 'Aplikacje Sprite Lab '
+        description: Witamy w "Podstawach Informatyki"! Wszystkie te projekty utworzono
+          przy pomocy Sprite Lab. Sugerujemy, aby je teraz wypróbować, aby przekonać
+          się, jakie oferują możliwości. Po przejściu tego kursu będziesz w stanie
+          tworzyć własne projekty takie, jak te... i nie tylko!
+        teacher_markdown: |
+          Omówienie poziomu wyboru #
+          W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić tyle, ile się chce.
+
+          Dokonując wyboru uczniowie przechodzą do przykładowych aplikacji, które mogą zgłębiać. To ćwiczenie służy do koordynacji  kraty pracy "Zgłębiania aplikacji", którą można znaleźć w [plan lekcji](.././).
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Już idzie jedna pizza!"'
+          feedback: Niepoprawnie. Etykiety zmiennych nie pasują.
+        - text: '"Już idzie jeden posiłek!"'
+          feedback: Niepoprawnie. Etykieta zmiennej nigdy nie jest drukowana.
+        - text: '"Już idzie jedno jedzenie!"'
+          feedback: Niepoprawnie. Etykieta zmiennej nie jest wydrukowana.
+        - text: '"Już idzie jedna porcja!"'
+          correct: true
+          feedback: Poprawnie! Etykiety zmiennych nie pasują.
+        - text: Nic się nie wydrukuje.
+          feedback: Niepoprawnie. Zdarzenie i blok drukowania będą nadal działać.
         questions:
-        - {}
+        - text: Kod może wyglądać znajomo, ale należy uważnie go przeczytać. Co się
+            wydrukuje, jeśli użytkownik wpisze "pizza"?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: Artysta narysuje trójkąt o bokach 50 pikseli.
@@ -5734,7 +5783,8 @@ pl-PL:
         - text: Artysta narysuje trzy otwarte boki ze skrętami 50 stopni.
           feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być użyta w bloku
             "skręć", aby to się wydarzyło. '
-        - feedback: Zmienna "długość" jest ustawiona na 50 i wykorzystywana w bloku
+        - text: Komputer poprosi użytkownika o liczbę.
+          feedback: Zmienna "długość" jest ustawiona na 50 i wykorzystywana w bloku
             "idź do przodu o" tak, że artysta narysuje trójkąt o bokach 50 pikseli.
         questions:
         - text: Ustawiliśmy zmienną "długość" na 50. Co się stanie, gdy klikniesz
@@ -5751,29 +5801,62 @@ pl-PL:
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
           feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
             ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
-        - feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+        - text: Pszczółka poleci do przodu i zbierze jeden nektar z kwiatków numer
+            1 i 4.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
             ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         markdown: Ach! Użycie pętli "dla" czyni łamigłówkę czymś dużo prostszym.
         questions:
         - text: Zapoznaj się z poniższym kodem. Co się stanie, gdy klikniesz "Uruchom"?
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Oba samoloty będą się przemieszczać o jedno pole w siatce, a potem
+            się zatrzymają.
+          feedback: Błąd. Te duszki są wyposażone w takie "zachowania", że biegają,
+            aż otrzymają polecenie, by się zatrzymać.
+        - text: Oba samoloty będą się poruszać i nie zatrzymają się.
+          correct: true
+          feedback: Poprawnie! Przy pomocy tych zachowań nakazuje się samolotom rozpoczęcie
+            i kontynuację przemieszczania się.
+        - text: Jeden samolot rozpocznie się poruszać, jako pierwszy, a drugi, jako
+            drugi.
+          feedback: Niepoprawnie. Każdy blok kodu w Sprite Lab uruchamia się natychmiast
+            po kolejnym.
+        - text: Samoloty się zderzą.
+          feedback: Niepoprawnie. Samoloty nie są umiejscowione tak, aby mogły się
+            zetknąć.
         questions:
-        - {}
+        - text: Przeczytaj kod, a potem zgadnij.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Program wydrukuje "Cześć imię!"
+          feedback: Niepoprawnie. Blok imienia zostanie zastąpiony przez to, co wpiszesz.
+        - text: Program przywita się z Tobą imieniem, które wpiszesz.
+          correct: true
+          feedback: Poprawnie! To, co wpiszesz, zostanie użyte w miejscu w bloku imienia.
+        - text: 'Duszek zmieni rozmiar.
+
+'
+          feedback: Niepoprawnie. Tekst jest wydrukowany na ekranie.
+        - text: Komputer zada inne pytanie.
+          feedback: Niepoprawnie. Zadawane jest tylko jedno pytanie, wtedy, gdy program
+            rozpoczyna działanie.
         questions:
-        - {}
+        - text: 'Ten program pozwala ci odpowiedzieć na pytanie poprzez wpisanie przy
+            pomocy swojej klawiatury. Blok ''drukuj'' pokazuje tekst na ekranie. Dokonaj
+            prognozy: Co się stanie po udzieleniu odpowiedzi na pytanie?'
       courseF_variables_stop:
         content1: opis tutaj
+        markdown: "# Stop!\n\n## Czy jesteś pewien, że jesteś gotowy na dalsze działania?
+          \n\n\nNa kolejnym poziomie rozpoczniesz pisanie kodu na potrzeby swojego
+          projektu. To sprawdza się najlepiej, gdy masz już plan.\n\nTwój gotowy plan
+          powinien obejmować:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Rodzaj projektu,
+          który budujesz. N przykład kartę z życzeniami, chatbota lub historię pustej
+          przestrzeni.\n* Wykaz pytań, które zadasz użytkownikowi.\n* Inny tekst,
+          który wyświetlisz na ekranie.\n* Opis lub rysunek duszków, które będą ci
+          potrzebne (i ich zachowania).\n\nIf you are not sure if you are ready to
+          move on, check with your teacher!\n"
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: Artysta rozwiąże tę łamigłówkę poprawnie.
@@ -5833,7 +5916,8 @@ pl-PL:
         - text: Laurel zbierze cały skarb.
           feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
             co powoduje powstanie błędu.
-        - feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
+        - text: Przy pomocy tego kodu Laurel zbierze 1 skarb.
+          feedback: Niepoprawnie. Laurel próbuje zebrać skarb tam, gdzie go nie ma,
             co powoduje powstanie błędu.
         questions:
         - text: Spójrz uważnie na ten kod. Jak sądzisz, co się stanie, gdy program
@@ -5909,3 +5993,339 @@ pl-PL:
           * W haśle użyj liter, liczb i **symboli**.
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      courseF_events_freeplay:
+        description: Teraz można wykorzystać to, czego się nauczyliśmy, aby jeszcze
+          ulepszyć projekt! Ciągle dodawaj coś do swojego programu albo zacznij coś
+          nowego!
+        display_name: Zdarzenia - czas na zabawę
+      courseF_events_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia ze zdarzeniami!
+        display_name: Ćwiczenia ze zdarzeniami
+        teacher_markdown: |+
+          # Omówienie poziomu wyboru
+          W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić tyle, ile się chce.
+
+          Można skorzystać z poniższych opisów, aby pomóc uczniom w dokonywaniu własnych wyborów lub aby ustanowić oczekiwania dotyczące tego, ile podpoziomów powinni przejść.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Wystrzelenie!|Nauka latania|Wykonaj "beczkę"|Kurcz się i rośnij|Nadmij rybę!|Pingwin w ruchu|
+          |-|-|-|-|-|-|-|
+          | ***Wpisz*** |**Powtórz**|**Debuguj**|**Debuguj**|**Debuguj**|**Treść alternatywna**|**Treść alternatywna**
+          | ***Koncepcja***|*zdarzenia, zachowania*|*zdarzenia, zachowania*|*zdarzenia, zachowania*|*zdarzenia, zachowania*|*zdarzenia kiedy/ podczas, gdy*|*zdarzenia kiedy/ podczas, gdy*|
+
+
+      courseF_sprites_freeplay:
+        description: Teraz twoja kolej na tworzenie tego, co tylko zechcesz! Jaki
+          rodzaj projektu stworzysz?
+        display_name: Duszki - czas na zabawę
+      courseF_sprites_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z duszkami i
+          zachowaniami!
+        display_name: Ćwiczenia z duszkami
+        teacher_markdown: |+
+          # Omówienie poziomu wyboru
+          W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić tyle, ile się chce.
+
+          Można skorzystać z poniższych opisów, aby pomóc uczniom w dokonywaniu własnych wyborów lub aby ustanowić oczekiwania dotyczące tego, ile podpoziomów powinni przejść.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Scena na pustyni|Zmień wielkość owocu.|Ożyw płynący statek|Wietrzny dzień|
+          |-|-|-|-|-|
+          | ***Type*** |**Powtórka**|**Powtórka**|**Powtórka**|**Powtórka**|
+          | ***Koncepcja***|*duszki, lokalizacje*|*duszki, właściwości*|*duszki, lokalizacje, zachowania*|*zachowania*|
+
+
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |
+          # Historie pustej przestrzeni
+
+          Na tej lekcji nauczysz się korzystać z historii pustej przestrzeni i pisać je. Obejrzyj ten film wideo i dowiedz się, jak łączy się to z informatyką.
+      courseF_artist_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami i Artystą!
+        display_name: " Ćwiczenie artysty"
+      courseF_beeFor_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami "dla"
+          i pszczółką!
+        display_name: Ćwiczenie pszczółki
+      courseF_beeVar_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia ze zmiennymi
+          i pszczółką!
+        display_name: Ćwiczenie pszczółki
+      courseF_bee_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami i pszczółką!
+        display_name: Ćwiczenie pszczółki
+      courseF_text_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z tekstem i podpowiedziami!
+        display_name: Ćwiczenia w zakresie tekstu i podpowiedzi
+        teacher_markdown: |+
+          # Omówienie poziomu wyboru
+          W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić tyle, ile się chce.
+
+          Można skorzystać z poniższych opisów, aby pomóc uczniom w dokonywaniu własnych wyborów lub aby ustanowić oczekiwania dotyczące tego, ile podpoziomów powinni przejść.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Korzystanie z mowy na potrzebę tekstu|Tekst z podpowiedzi|Nazwij robota!|Etykiety zmiennych|Ważny tekst|Podpowiedzi w zakresie kolorów|Zaczynanie od początku|
+          |-|-|-|-|-|-|-|-|
+          | ***Wpisz*** |**Powtórz**|**Debuguj**|**Debuguj**|**Debuguj**|**Treść faktultatywna**|**Treść faktultatywna**|**Czas na zabawę**
+          | ***Koncepcja***|*blok drukowania, zdarzenia*|*podpowiedzi, zdarzenia*|*dodawanie obszarów*|*dopasowywanie etykiet zmiennych*|*bloki ekraników*|*przechowywanie kolorów*|*brak nowych treści*
+
+      courseF_variables_projects:
+        description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historię
+          pustej przestrzeni. Jeśli już skończyłeś \"Część 1\" swój projekt, przejdź
+          do \"Części 2\".
+        display_name: Wybierz projekt
+        teacher_markdown: |2-
+           # Omówienie poziomu wyboru
+          W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą tutaj przejść przynajmniej jeden z podpoziomów, ale należy ich zachęcać, aby przeszli **dwa** poziomy dla tego samego projektu.
+
+          Studenci mogą potrzebować naprawdę czytelnych instrukcji, aby zrozumieć jak poruszać się pośród możliwości wyboru. Dla każdego z wyborów w ramach projektu występują tutaj dwa podpoziomy. Na początek uczniowie powinni wybrać jeden z poziomów oznaczonych jako "Część 1". Po ukończeniu poziomu powinni oni powrócić tutaj i wybrać "Część 2" tego *samego* projektu. W ramach pierwszego poziomu uczniom zostaną zapewnione informacje zwrotne w trakcie łączenia ze sobą podstawowych elementów składowych projektu. Drugi poziom to "czas na zabawę", który jest przeznaczony do tego, by umożliwić uczniom dokonywanie wszelkich zmian w swoim kodzie, jaki chcą.
+      courseF_variables_samples:
+        description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historie
+          pustej przestrzeni. Zanim zaczniesz, zbadaj poniższe przykładowe projekty,
+          aby przekonać się czego tworzeniem się interesujesz. Wciśnij \"Koniec"\,
+          gdy będziesz gotowy do rozpoczęcia planowania swojego własnego programu.
+        display_name: Eksploracja - Przykładowe programy
+        teacher_markdown: "Omówienie poziomu wyboru # W ramach poziomów wyboru oferuje
+          się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą
+          wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić
+          tyle, ile się chce. \n\nUczniowie powinni uważnie zapoznać się z tymi projektami
+          przed podjęciem decyzji, co chcą tworzyć. Można zapoznać się z nimi wspólnie,
+          jako klasa lub kazać uczniom zgłębiać je na własną rękę.\n"
+      SimonSays-Unplugged_2021:
+        markdown: |-
+          # Podążaj za algorytmem
+
+          Zagraj w grę i pomyśl, jakie komendy są potrzebne, aby uzyskać właściwy wynik.
+      courseD_EOC_examples_2021:
+        description: Zaraz zaczniesz swój projekt końcowy. Zanim zaczniesz, poświęć
+          trochę czasu na zapoznanie się z przykładowymi projektami.
+        display_name: Przykłady projektów
+      express_EOC_examples_2021:
+        description: Zaraz zaczniesz swój projekt końcowy. Zanim zaczniesz, poświęć
+          trochę czasu na zapoznanie się z przykładowymi projektami.
+        display_name: Przykłady projektów
+      CSD U3 Collisions SFLP:
+        markdown: |-
+          # Streszczenie
+
+          Klasa programuje swoje duszki tak, aby wchodziły w interakcję na nowe sposoby. Po krótkiej powtórce poświęconej sposobowi użycia bloku "dotykają się", uczniowie przeprowadzają burzę mózgów na temat innych sposobów, w jakie dwa duszki mogą wejść ze sobą w interakcję. Korzystają z "Dotykają się", aby sprawić, by jeden duszek popchnął drugiego przepychając go przez cały ekran zanim zaczną ćwiczenia z użyciem czterech bloków kolizji ('kolizja', 'przemieszczenie', 'podskok' i 'odskok`).
+
+          ##Słownictwo
+
+          * **Abstrakcja** - Wyłanianie określonych różnic, aby sprawić, by jedno rozwiązanie sprawdzało się w rozwiązywaniu wielu zadań.
+
+          ## Wprowadzony kod
+
+          * [sprite.bounceOff()](//studio.code.org/docs/gamelab/bounceOff/)
+          * [sprite.collide()](//studio.code.org/docs/gamelab/collide/)
+          * [sprite.displace()](//studio.code.org/docs/gamelab/displace/)
+          * [sprite.setCollider()](//studio.code.org/docs/gamelab/setCollider/)
+          * [sprite.bounce()](//studio.code.org/docs/gamelab/bounce/)
+          * [sprite.bounciness](//studio.code.org/docs/gamelab/bounciness/)
+      CSD U3 Functions SFLP:
+        markdown: |-
+          # Streszczenie
+
+          Ta lekcja poświęcona jest funkcjom jako sposobowi porządkowania ich kodu, zwiększania ich czytelności oraz usuwania powtórzonych bloków kodu. Klasa uczy się, że wyższy poziom lub bardziej abstrakcyjne kroki ułatwiają zrozumienie i uzasadnienie kroków, a następnie zaczynają tworzyć funkcje w Game Lab. Pod koniec lekcji klasa korzysta z umiejętności organizowania i dodawania funkcjonalności do ostatecznej wersji ich gry typu "side scroller".
+
+          ## Słownictwo
+
+          * **Funkcja** - Część kodu, którą można łatwo wywoływać ponownie.
+
+          ## Wprowadzony kod
+
+          * [Zdefiniuj funkcję](//studio.code.org/docs/gamelab/functionParams_none/)
+          * [Wywołaj funkcję](//studio.code.org/docs/gamelab/callMyFunction/)
+      CSD U3 Lesson Overview 4:
+        markdown: "Podczas wej lekcji zwiększany jest zakres umiejętności rysowania
+          tak, aby uwzględnić szerokość i wysokość oraz wprowadza koncepcje tworzenia
+          numerów losowych. Klasa uczy się rysować wersje elipsy() i prostokąta(),
+          w których uwzględnia się parametry szerokości i wysokości oraz korzystać
+          z bloku tła(), aby wypełnić ekran kolorem.  Pod koniec lekcji klasie przedstawia
+          się bloku Liczbylosowej() i używanie nowych bloków do narysowania losowego
+          tęczowego węża. \n\n* **Parametr** - Dodatkowa informacja, która przekazuje
+          się funkcji,a by dostosować ją do określonych potrzeb.\n\n## Wprowadzony
+          kod\n\n* [background()](//studio.code.org/docs/gamelab/background/)\n* [ellipse()](//studio.code.org/docs/gamelab/ellipse/)\n*
+          [rect()](//studio.code.org/docs/gamelab/rect/)\n* [randomNumber()](//studio.code.org/docs/gamelab/randomNumber/)\n"
+      CSD U3 Lesson Overview 5:
+        markdown: |-
+          # Streszczenie
+
+          Na tej lekcji wprowadza się zmienne jako sposób oznaczenia liczby w programie lub zapisania losowo wygenerowanej wartości. Klasa zaczyna lekcję od bardzo podstawowego opisu celu zmiennej oraz praktyk w zakresie używania nowych bloków. Następnie klasa korzysta ze zmiennych, aby zapisać losową liczbę, pozwalając na to, by program używał tej samej losowej liczby wielokrotnie.
+
+          ## Słownictwo
+
+          * **Zmienne** - Symbol zastępczy dla informacji, którą może ulegać zmianie.
+
+          ## Wprowadzony kod
+
+          * [Zadeklaruj zmienną](//studio.code.org/docs/gamelab/declareNoAssign_x/)
+          * [Zadeklaruj i przyporządkuj wartość do zmiennej](//studio.code.org/docs/gamelab/declareAssign_x/)
+
+          ## Zasoby
+
+          * [Wprowadzenie do zmienych](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Właściwości duszka
+      CSD Games variables practice_2021:
+        display_name: Zmienne - Praktyka
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Spójrz na poniższy kod i spróbuj przewidzieć, jak będą wyświetlane
+          nagłówki. Wybierz jedną z opcji po prawej stronie.
+        title: Szybkie sprawdzenie nagłówków
+      CSD Interactive Animations and Games Post-Project Test_pilot_2021:
+        title: 'Test po projekcie Interaktywnych animacji i gier '
+      CSD Physical Computing Post-Project Test_2021:
+        title: 'Test po projekcie: Obliczenia fizyczne'
+      CSD U1 Test_2021:
+        title: "\nTest po projekcie: Komputery i rozwiązywanie problemów "
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Ustalanie stylu tekstu przy użyciu CSS
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Dodawanie obrazów
+      CSD U2 Image practice_pilot_2021:
+        display_name: Dodawanie obrazów
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        teacher_markdown: Chociaż ten poziom można wykorzystać do oceny zrozumienia
+          przez uczniów składni znacznika `<img>`, jego głównym celem jest uświadomienie
+          uczniom najczęstszych rodzajów błędów, jakie mogą napotkać podczas dodawania
+          grafiki do stron internetowych.
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: opis tutaj
+        teacher_markdown: |-
+          # Sprawdzenie planowania
+
+          Sprawdź plany uczniów, zanim pozwolisz im kontynuować na pozostałych poziomach.
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: tytuł
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: opis tutaj
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Ćwiczenia
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: opis tutaj
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: opis tutaj
+      CSD U5 test_2021:
+        title: 'Test po projekcie: Dane i społeczeństwo'
+      CSD U6 LED create intro_2021:
+        content1: opis tutaj
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: opis tutaj
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Przewidzieć coś
+      CSD User Centered Design Post-Project Test_2021:
+        title: 'Test po projekcie: Projektowanie zorientowane na użytkownika'
+      CSD Web Development Post-Project Test_pilot_2021:
+        title: 'Test po projekcie: Tworzenie stron internetowych '
+      CSD games cake challenge choice_2021:
+        display_name: Wyzwania
+      CSD games functions practice choice_2021:
+        display_name: Funkcje - Ćwiczenia
+      CSD games platform challenge choice_2021:
+        display_name: Wyzwania
+      CSD web conditionals practice choice_2021:
+        display_name: Zmienne - Praktyka
+      CSD web draw loop practice choice_2021:
+        display_name: Ćwiczenia
+      CSD web movement practice choice_2021:
+        display_name: Ćwiczenia
+      CSD web text practice choice_2021:
+        display_name: Ćwiczenia
+      csd-pre-survey-levelgroup_21_22:
+        title: 'Ankieta uczniowska przed kursem CS Discoveries '

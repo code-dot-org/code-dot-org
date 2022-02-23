@@ -1,0 +1,56 @@
+---
+title: Powiązania z informatyką
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Powiązania z informatyką
+
+Nasz najnowszy program nauczania łączy naukę informatyki z innymi przedmiotami, takimi jak matematyka, językoznawstwo, przyroda i nauki społeczne. Dzięki Powiązaniom z informatyką, klasy K-12 odkrywają swoje zwykłe przedmioty na nowe, ekscytujące sposoby!
+
+## Wypróbuj Powiązania z informatyką z tymi zajęciami w Godzinie Kodowania
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Sztuka poezji", left_description: "Wyraź siebie! Użyj kodu do tworzenia animowanych wierszy.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Rozpocznij", right_heading: "Witaj świecie", right_description: "Wybierz jeden z czterech zabawnych motywów, aby zakodować interaktywne postacie w tworzonym przez siebie świecie.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Rozpocznij"}}
+{{ clearfix }}
+
+## Moduły
+
+Moduły Powiązań z informatyką to uporządkowane ciągi lekcji, które integrują naukę informatyki z podstawowymi obszarami przedmiotów, takich jak matematyka, ELA i nauki przyrodnicze. Moduły te są dostosowane do standardów różnych przedmiotów i kończą się projektem międzyprzedmiotowym.
+
+Są idealne dla nauczycieli, którzy chcą włączyć informatykę do swoich planów lekcji dotyczących innych przedmiotów, a także dla nauczycieli informatyki, którzy chcą wzmocnić to, czego uczniowie uczą się na innych przedmiotach.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 godzin", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Kodowanie z poezją", right_description: "Powiąż informatykę i poezję w swojej klasie z tym ciągiem lekcji.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Zobacz moduł" }}
+
+## Otwarte projekty
+
+Kontynuuj tworzenie powiązań między informatyką a tradycyjnymi przedmiotami dzięki naszym projektom międzyprzedmiotowym. Zajmują one tylko 1-2 godziny instruktażowe i są idealne dla wszystkich nauczycieli, którzy chcą opracować projekty tematyczne, które pasują do istniejącego programu nauczania.
+
+<em>Wskazówka: te projekty wymagają pewnego zrozumienia podstaw informatyki, dlatego zalecamy ukończenie naszej aktywności Hello World w ramach Godziny kodowania przed rozpoczęciem!</em>
+
+{{ csc_module, title: "Ekosystemy", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Przyroda", duration: "1-2 godziny", description: " Korzystając z podstawowych umiejętności kodowania, uczniowie tworzą interaktywny model ekosystemu, który bada, jak różne zwierzęta, rośliny i organizmy wpływają na siebie nawzajem. Ten model można również dostosować do interakcji między geosferą, biosferą, hydrosferą i/lub atmosferą.", button_text: "Dowiedz się więcej", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Cykle", image: "/images/csc/landing/project_cycles.png", grades: "3+", subject: "Przyroda", duration: "1-2 godziny", description: "Przejdź od jajka przez kijankę do żaby z tym projektem, w którym uczniowie używają kodu do stworzenia modelu cyklu naukowego — takiego jak, cykl życia żaby lub transfer energii!", button_text: "Dowiedz się więcej", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Studia charakteru", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2 godzin", description: "Każdej akcji towarzyszy reakcja! Nie, to nie jest fizyka — ten projekt pozwala uczniom wykorzystać kod do zbudowania sceny z historii, która pokazuje, jak działania jednej postaci wpływają na łańcuch zdarzeń.", button_text: "Dowiedz się więcej", url: "https://bit.ly/3wFlpTX" }}
+{{csc_module, title: "Historia z morałami", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2 godziny", description: "Co jest między \"Dawno, dawno temu\" a \"Koniec? \"Uczniowie kodują interaktywną aplikację, która opowiada historię i jej morały. Uczniowie mogą zastosować tę umiejętność do dowolnej opowieści, baśni ludowej, książki lub bajki.", button_text: "Dowiedz się więcej", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Lekcje pomostowe
+
+Nasze lekcje pomostowe zapewniają szybki i interesujący sposób na połączenie informatyki z innymi przedmiotami. Lekcje te nie wymagają wcześniejszej znajomości informatyki, więc są idealne dla każdego nauczyciela, który chce włączyć podstawową naukę XXI wieku do tradycyjnego programu nauczania lub zmotywować uczniów nowymi ekscytującymi sposobami uczenia się starszych przedmiotów.
+
+
+{{csc_module, title: "Literowanie z Pszczółką", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K +", subject: "ELA", duration: "1 godzina", description: "ZABAWA! Na tej lekcji uczniowie używają podstawowych umiejętności kodowania, aby powiedzieć pszczółce, gdzie należy B-U-Z-Z, aby przeliterować słowa w tablicy wypełnionej literami.", button_text: "Dowiedz się więcej", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{csc_module, title: "Liczenie z Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K +", subject: "Matematyka", duration: "1 godzina", description: "Poszukiwanie skarbów! Uczniowie będą ćwiczyć liczenie i dodawanie podczas kodowania za pomocą pętli, aby pomóc Laurel zbierać klejnoty w siatce labiryntu.", button_text: "Dowiedz się więcej", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Kodeks etyki AI", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA lub nauki humanistyczne", duration: " 1 godzina", description: "Po zbadaniu potencjalnych pułapek etycznych związanych ze sztuczną inteligencją (AI), uczniowie pracują wspólnie nad stworzeniem zasobu \"Kodeksu etyki AI\"", button_text: "Dowiedz się więcej", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Wizualizacja danych", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Matematyka", duration: "1 godzina", description: "Ta lekcja przedstawia uczniom wizualizator danych w App Lab, a także dwa ważne typy wykresów: wykres słupkowy i histogram. W trakcie lekcji uczniowie będą rozwijać umiejętności korzystania z tego narzędzia i czytania danych.", button_text: "Dowiedz się więcej", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Ukończyłeś ćwiczenie z Powiązań z informatyką i/lub szukasz więcej opcji dla swojej klasy? Podziel <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">się swoją opinią</a> i pomysłami na więcej lekcji tutaj!</em>

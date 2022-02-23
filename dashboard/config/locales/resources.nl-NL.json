@@ -2,6 +2,20 @@
   "nl-NL": {
     "data": {
       "resources": {
+        "list_of_poems/poem-art/2021": {
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "Dichtkunst 1 - Inleiding",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "Lijst van gedichten",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "For Lus fun"
         },
@@ -34,6 +48,13 @@
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Lerarenforum"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Wijzigingen virtuele les",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "mimi-activity/courseb/2021": {
           "name": "verplaats het, verplaats het"
@@ -86,6 +107,10 @@
         "teacher_forum_1/courseb/2021": {
           "name": "Lerarenforum"
         },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "Wijzigingen virtuele les",
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Programmeren in Tweetallen"
         },
@@ -109,6 +134,10 @@
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Lerarenforum"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "Wijzigingen virtuele les",
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "My Robotic Friends"
@@ -160,6 +189,10 @@
         },
         "teacher_forum_1/coursec/2021": {
           "name": "Lerarenforum"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "Wijzigingen virtuele les",
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Programmeren op Ruitjespapier"
@@ -224,8 +257,18 @@
         "teacher_forum_1/coursed/2021": {
           "name": "Lerarenforum"
         },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "Wijzigingen virtuele les",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+        },
         "pair_programming/express/2021": {
           "name": "Programmeren in Tweetallen"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Documentatie van Sprite Lab"
         },
         "variables_video/express/2021": {
           "name": "Variabelen"
@@ -239,6 +282,9 @@
         "teacher_forum_1/pre-express/2021": {
           "name": "Lerarenforum"
         },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
         "implementation_guide/coursee/2021": {
           "name": "Implementatiehandleiding"
         },
@@ -247,6 +293,88 @@
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Lerarenforum"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Documentatie van Sprite Lab"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Wijzigingen virtuele les",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "AI zien"
+        },
+        "design_mode/csd/2021": {
+          "name": "Ontwerpmodus"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Ontwerpmodus"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Lerarenforum"
+        },
+        "functions_2/csd/2021": {
+          "name": "Functies"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Inleiding tot Arrays"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For-lussen"
+        },
+        "for_loops/csd/2021": {
+          "name": "For-lussen"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Het voorstellen van informatie"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Het voorstellen van getallen"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Machinaal leren"
+        },
+        "variables_1/csd/2021": {
+          "name": "Variabelen"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Het tabblad Animatie"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Sprites"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Snelheid"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Snelheid"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "Botsingdetectie"
+        },
+        "collision_detection/csd/2021": {
+          "name": "Botsingdetectie"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Functies"
+        },
+        "functions_1/csd/2021": {
+          "name": "Functies"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Lerarenforum"
+        },
+        "lists/csd/2021": {
+          "name": "Lijsten"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "Introductie tot CSS - Deel 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "Introductie tot CSS - Deel 2"
+        },
+        "classes/csd/2021": {
+          "name": "Lessen"
         }
       }
     }

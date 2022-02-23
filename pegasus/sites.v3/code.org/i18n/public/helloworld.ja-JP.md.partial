@@ -1,0 +1,37 @@
+---
+title: ハローワールド
+theme: responsive
+set_dir: true
+social:
+  og:title: Hello World!
+  twitter:title: Hello World!
+  og:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!
+  twitter:description: Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity
+  og:image: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/helloworld-og-image-1200x630.png
+---
+
+# ハローワールド！
+
+コンピューターサイエンス101では、多くの生徒が最初に作成するプログラムは、よく登場するテキスト行「Hello World!」を出力する単純なプログラムです。 基本的なコーディングスキルと自信を持ってアプリを作成するこの入門演習でコンピュータサイエンスの世界にご挨拶。 楽しい4テーマから選択して作成した世界のインタラクティブなキャラクターをコーディングしましょう！
+
+# ハローワールドのテーマを選択する
+
+{{ spritelab_module, title: "食べ物", color: "#C14790", image: "images/csc/helloworld/helloworldhappyfoodtheme.png", url: "https://studio.code.org/s/hello-world-food-2021/reset" }}
+{{ spritelab_module, title: "動物", color: "#00ADBC", image: "images/csc/helloworld/helloworldanimalstheme.png", url: "https://studio.code.org/s/hello-world-animals-2021/reset" }}
+{{ spritelab_module, title: "レトロ", color: "#FFA400", image: "images/csc/helloworld/helloworldretrotheme.png", url: "https://studio.code.org/s/hello-world-retro-2021/reset" }}
+{{ spritelab_module, title: "絵文字", color: "#0094CA", image: "images/csc/helloworld/helloworldemojitheme.png", url: "https://studio.code.org/s/hello-world-emoji-2021/reset" }}
+{{ clearfix }}
+
+{{ teacher_info, heading: "先生向けの情報", title: "Hello Worldの後で学習を継続する方法", description: "Hello Worldは、クラスにとって新カリキュラムのCSコネクションのオープンエンドプロジェクトに挑戦する前の最初のステップとして最適です。 コーディングの基礎学習を終えると生徒はCSコネクションのクロスカリキュラムプロジェクトに進むことができます。", button_text: "もっと見る", url: "/educate/csc" }}
+
+## 注目の生徒作品
+
+{{ featured_project, title: "Food", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood2.gif", url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8" }}
+{{ featured_project, title: "絵文字", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
+{{ featured_project, title: "動物", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
+{{ featured_project, title: "レトロ", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
+{{ clearfix }}

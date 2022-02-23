@@ -70,6 +70,7 @@ fil:
   previous_page: Dating pahina
   next_page: Susunod na pahina
   next_resource: Susunod na resource
+  done_with_module: Tapos na sa Learning Module na ito
   cancel: Kanselahin
   okay: Okey
   or: o
@@ -232,16 +233,30 @@ fil:
     user_type_button: I-update ang Uri ng Account
     user_type_label: Uri ng Account
     user_type_student: Estudyante
+    user_type_student_desc: 'I-explore ang lahat ng mga kurso at aktibidad namin,
+      kasama ang:'
+    user_type_student_ability_1: I-save ang pag-unlad at mga proyekto mo
+    user_type_student_ability_2: Sumali sa seksyon ng silid-aralan ng guro mo
     user_type_teacher: Teacher
+    user_type_teacher_desc: 'May access sa lahat ang mga estudyante, kasama ang:'
+    user_type_teacher_ability_1: Gumawa ng mga seksyon ng silid-aralan
+    user_type_teacher_ability_2: Magtalaga at subaybayan ang gawain ng mag-aaral
+    user_type_teacher_ability_3: Magpatala sa propesyonal na pag-aaral
+    user_type_teacher_ability_4: Makipag-ugnayan sa forum ng guro namin
     field_is_required: ay kailangan
     accept_terms: Kailangan mong sumang-ayon para gumawa ng account
     error: May problemang naganap.
     email_preference_question: Maaari ba kaming mag-email sa iyo tungkol sa mga pag-update
       sa aming mga kurso, lokal na mga oportunidad, o iba pang balita sa agham ng
       computer? (halos isang beses sa isang buwan)
+    email_preference_privacy: "(Tingnan ang aming patakaran sa pagkapribado)"
     email_preference_yes: Oo
     email_preference_no: Hindi
     email_preference_required: Dapat mong tukuyin ang isang kagustuhan sa email.
+    share_teacher_email_reg_partner_question: Gusto mo bang ibahagi namin ang impormasyon
+      mo sa [Code.org regional partner](%{cdo_regional_partner_desc}) sa iyong estado
+      upang maabisuhan ka nila tungkol sa lokal na propesyonal na pag-unlad, mga mapagkukunan,
+      at mga kaganapan?
     share_teacher_email_reg_partner_preference_yes: Oo
     share_teacher_email_reg_partner_preference_no: Hindi
     share_teacher_email_reg_partner_preference_required: Dapat mong tukuyin ang isang
@@ -346,6 +361,7 @@ fil:
     invite_sent: Imbitasyon napadala na
     added_teacher: "%{name} dinagdag ka bilang guro"
     registered: Ikaw ay nagrehistro para sa %{section_name}.
+    captcha_required: Mangyaring punan ang CAPTCHA upang makasali sa seksyong ito.
     already_exists: Ikaw ay nakasali na sa seksyon na %{section_name}.
     error:
       signed_in: Maaring mag signout muna bago magpatuloy
@@ -361,6 +377,11 @@ fil:
       provider_managed_section: Ang seksyon na ito ay pinamahalaan ng ibang provider
         at hindi maaaring masalihan. Pakisabihan ang iyong guro na idagdag ka gamit
         ang %{provider} at ire-sync ang kanilang seksyon.
+      restricted_section: Hindi ka namin maidagdag sa seksyong %{section_code} dahil
+        naka-lock ito. Mangyaring makipag-ugnayan sa guro mo para sa tulong.
+      full_section: Hindi ka namin maidagdag sa seksyong %{section_code} dahil mayroon
+        nang %{section_capacity} na mag-aaral dito. Mangyaring makipag-ugnayan sa
+        guro mo para sa tulong.
     mail:
       student_disassociated:
         subject: 'Notipikasyon ng Code.org: Si %{student_name} ay hindi mo na estudyante.'
@@ -466,15 +487,19 @@ fil:
       infinity: Walang katapusan
       makerlab: Maker Toolkit
       minecraft_adventurer: Tagapaglakbay sa Minecraft
+      minecraft_aquatic: Minecraft Aquatic
       minecraft_codebuilder: 'Minecraft: Koneksyon sa Code'
       minecraft_designer: Minecraft
       minecraft_hero: Minecraft Hero
       playlab: Play Lab
       playlab_k1: Play Lab (Pre-reader)
+      poetry: Panulaan
+      poetry_hoc: Sining ng Tula
       sports: Mga Palakasan
       starwars: Star Wars
       starwarsblocks: Star Wars (Mga bloke)
       starwarsblocks_hour: Star Wars (Mga bloke)
+      loading: Loading...
       weblab: Web Lab
     popup:
       progress_for_user: Progreso ni %{name}
@@ -489,6 +514,7 @@ fil:
       prizes_link: Para sa maraming kaalaman
   teacher:
     answer: Sagot
+    dashboard: Dashboard ng Guro
     for_teachers_only: Para sa mga Guro Lang
     title:
       one: 'Ang iyong guro:'
@@ -521,11 +547,16 @@ fil:
     email_confirm_needed_required: 'Ang email address mong %{email} ay hindi pa nakukumpirma:'
     email_confirm_wrong_email: "(Maling email address?)"
     email_resend_confirm: Ipadalang muli ang mga instruksyon sa pag-kumpirma
+    new_email_hint: "(siguraduhing makakatanggap ka ng mga email sa email address
+      na ito)"
     new_password_hint: "(Iwan ito na walang laman kung ayaw mong baguhin ito)"
     current_password_hint: "(kailangan namin ang iyong kasalukuyang password para
       kumpirmahin ang iyong mga binago)"
     delete: Burahin ang iyong account
     delete_text: Ang pagpindut sa button sa baba ay magbubura ng iyong account.
+    delete_text_teacher_managed_note: Wala kang pahintulot na tanggalin ang account
+      na ito dahil pinamamahalaan ito ng guro mo. Kakailanganin ng (mga) guro mo na
+      alisin ka sa kanilang mga seksyon bago mo ma-delete ang iyong account.
     delete_text_teacher_note: 'Paki-tandaan: ang pagbura ng iyong account ay hindi
       magbubura sa mga account ng iyong mga estudyante.'
     delete_confirm: Sigurado ka bang gusto mong burahin ang account na ito?
@@ -545,6 +576,8 @@ fil:
     create_personal_login_info: Kung gusto mo pa ring gamitin ang iyong Code.org na
       account kahit pagkatapos ng school year, maaring kang maglikha ng iyong sariling
       login sa baba.
+    create_personal_login_link_account: Maaari mo ring piliin na kumonekta sa isang
+      personal na account sa ilalim ng seksyong "Pamahalaan ang Mga Naka-link na Account".
     create_personal_login_terms: Sa paglikha ng personal na login, ako ay sumasang-ayon
       na masailalaim sa mga <a href='%{terms_of_service_url}', target='_blank'>alituntunin</a>
       ng Code.org. Kung ako ay nasa baba ng 13 taong gulang, kinukompirma ko na ako
@@ -568,8 +601,15 @@ fil:
     enter_new_login_info: Ipasok ang iyong bagong login na impormasyon
     confirm_secret_words: Ikompirma na ikaw talaga ito sa pamamagitan ng paglagay
       ng iyong kasalukuyang mga secret na mga pulong
+    parent_email_label: Email ng magulang/tagapag-alaga (opsyonal)
+    parent_email_hint: "(maaari itong gamitin sa pagbawi ng password)"
     enter_parent_email: Ilagay ang iyong mga magulang, o tagapangalaga na email address
       (para sa password recovery)
+    update: I-update ang account
+    account_successfully_updated: Matagumpay na na-update ang account.
+    auth_option_saved: Matagumpay mong na-link ang %{provider} account mo sa email
+      na %{email}.
+    auth_option_saved_no_email: Matagumpay mong na-link ang %{provider} account mo.
     update_email: I-update
     for_parents_and_guardians: Para sa mga Magulang at mga Tagapag-alaga
     link_a_parent_email: Iugnay ang email address ng magulang/tagapag-alaga sa account
@@ -580,6 +620,7 @@ fil:
     none: Wala
     only_one_parent_email_supported_warning: 'Tandaan: masusuportahan lang namin ang
       isang email address ng magulang/tagapag-alaga sa bawat estudyante sa ngayon. '
+    encrypted: Na-encrypt na
   user_level:
     completed: Nakompleto
     tried: Sinubukan
@@ -626,6 +667,10 @@ fil:
     try_beta_courses: Bago! Subukan ang aming mga beta na mga kurso para sa mga K-5
       na mga estudyante
     use_as_teacher: Gamitin ang site na 'to biliang isang guro
+    heading_elementary_markdown: |-
+      ## 20 oras na mga kurso para sa
+
+      # Computer Science Fundamentals (lahat ng edad)
     your_gallery: Galeriya
     no_primary_course: Subukan ang Code Studio na kurso
     choose_next_course: Subukan ang isang Code Studio na kurso sa pagpili ng isa sa
@@ -644,6 +689,8 @@ fil:
       naka-enrol sa iyong seksiyon.
     already_enrolled_in_new_section: Hindi mo maaring ilipat ang mga estudyanteng
       ito dahil nasa bagong seksiyon na sila.
+    third_party_login: Hindi mo maaaring ilipat ang mga mag-aaral sa isang seksyon
+      na naka-sync sa isang tool ng third party.
   share:
     title: Mag-aral sa Code Studio
     description: Kahit sino man ay maaring matuto ng computer science. Gumawa ng mga
@@ -652,6 +699,8 @@ fil:
   gender:
     male: Lalaki
     female: Babae
+    non_binary: Hindi binary
+    not_listed: Hindi nakalista ang gustong termino
     none: Mas mabuti na hindi sagutin
   user_type:
     student: Estudyante
@@ -686,6 +735,8 @@ fil:
       ng <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Pinagana sa pamamagitan ng Amazon Web Services
+    google_copyright: "&copy; Ginamit nang may pahintulot ang Google Inc. Isang trademark
+      ng Google Inc ang Google Classroom."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, ang CODE logo at
       ang Hour of Code&reg; ay pagkakakilanlan ng Code.org."
     copyright: Karapatang-ari
@@ -877,6 +928,8 @@ fil:
       audience: Edad 14+
       cta: Pag-aralang kung paano
   landing:
+    prerelease_tutorial: Nasa **beta** ang tutorial na ito. Napapailalim ito sa rebisyon
+      habang ang feedback ay natanggap at mga pagpapabuti ay ginawa.
     report_bug: I-report ang Bug
     support: Humingi ng Tulong
     help_resources: Mga Tulong at mga Pag-aaring Yaman
@@ -944,6 +997,8 @@ fil:
     open_response_body: Salamat sa iyong tugon!
     correct_title: Tama
     correct_body: Iyon ay ang tamang sagot.
+  lesson_extras:
+    bonus_level: Antas ng Bonus
   dialog:
     ok: OK
     startover_title: Sigurado ka bang gusto mong magsimula muli?
@@ -958,6 +1013,11 @@ fil:
   age_interstitial:
     age: Ang iyong edad
     header: Update sa Impormasyon ng Account
+    warning: Nasa proseso kami ng pag-update ng karanasan upang mabigyan ka ng mas
+      malakas na proteksyon sa privacy. Upang gawin ito, kailangang ilagay ng mga
+      umiiral na user namin ang kanilang edad dito.
+    disclaimer: Gaya ng nakasanayan, hindi kailanman aarkilahin, ibebenta, o ibabahagi
+      ng code.org ang impormasyong ito sa anumang mga third party.
   terms_interstitial:
     title: Binago ang mga Palatuntunan at ang Privacy Policy
     intro_desc: 'Binago namin ang aming mga palatuntunan at privacy policy, gaya ng
@@ -1212,8 +1272,10 @@ fil:
   pd:
     form_labels:
       email: Email
+      school: Paaralan
       school_name: Pangalan ng Paaralan
       school_city: Lungsod ng Paaralan
+      school_city_district: Lungsod/Distrito ng Paaralan
       school_country: Bansa ng Paaralan
       colombian_school_city: Lungsod ng Paaralan
       colombian_chilean_school_name: Pangalan ng Paaralan
@@ -1221,6 +1283,8 @@ fil:
       gender:
         male: Lalaki
         female: Babae
+        non_binary: Hindi binary
+        not_listed: Hindi nakalista ang gustong termino
         none: Mas mabuti na hindi sagutin
       subjects:
         cs: Computer Science
@@ -1245,3 +1309,4 @@ fil:
       na ito para manatiling updated sa progreso at mga proyekto ng anak mo!"
     link_your_email: I-link ang email mo
     not_now: Hindi ngayon
+  teacher_feedback: Feedback ng Guro

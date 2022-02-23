@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
@@ -81,7 +80,7 @@ export const UnconnectedSectionLoginInfo = SectionLoginInfo;
 export default connect(state => ({
   section:
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
-  students: state.sectionData.section.students
+  students: state.teacherSections.selectedStudents
 }))(SectionLoginInfo);
 
 class OAuthLogins extends React.Component {
@@ -189,27 +188,35 @@ class WordOrPictureLogins extends React.Component {
   }
 
   printLoginCards = () => {
-    const printArea = document.getElementById('printArea').outerHTML;
-    // Adding a unique ID to the window name allows for multiple instances of this window
-    // to be open at once without affecting each other.
-    const windowName = `printWindow-${_.uniqueId()}`;
-    let printWindow = window.open('', windowName, '');
     const {section} = this.props;
-
-    printWindow.document.open();
-    printWindow.addEventListener('load', event => {
-      printWindow.print();
+    const printArea = document.getElementById('printArea').outerHTML;
+    // Popup blockers cause issues with creating a new window for printing.
+    // Creating a hidden iframe temporarily on the page as a workaround.
+    const printIframe = document.createElement('iframe');
+    // The iframe will be embedded in the page but we don't want the user to actually see it.
+    printIframe.style.display = 'none';
+    // Append the iframe to the document so it's  content is initialized.
+    document.body.appendChild(printIframe);
+    // Print the content of the iframe after all the content has been loaded.
+    printIframe.addEventListener('load', event => {
+      // [Hack] Since Safari sends the 'load' event before all the images are loaded, we will delay
+      // the print request so the iframe has enough time to load the images.
+      setTimeout(() => {
+        printIframe.contentWindow.print();
+        // Remove the temporary, hidden iframe from the main page.
+        printIframe.remove();
+      }, 1000);
     });
-
-    printWindow.document.write(
+    // Write the content we want to print to the iframe document.
+    printIframe.contentDocument.open();
+    printIframe.contentDocument.write(
       `<html><head><title>${i18n.printLoginCards_windowTitle({
         sectionName: section.name
-      })}</title></head>`
+      })}</title></head>
+        <body>${printArea}</body></html>`
     );
-    printWindow.document.write('<body onafterprint="self.close()">');
-    printWindow.document.write(printArea);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
+    // Flush the written html and trigger content/images to be loaded in the iframe.
+    printIframe.contentDocument.close();
   };
 
   render() {
@@ -315,7 +322,7 @@ class LoginCard extends React.Component {
           <SafeMarkdown
             style={styles.text}
             markdown={i18n.loginCardForPrint3Word({
-              secretWords: student.secret_words
+              secretWords: student.secretWords
             })}
           />
         )}
@@ -324,7 +331,7 @@ class LoginCard extends React.Component {
             {i18n.loginCardForPrint3Picture()}
             <br />
             <img
-              src={pegasus(`/images/${student.secret_picture_path}`)}
+              src={pegasus(`/images/${student.secretPicturePath}`)}
               style={styles.img}
             />
             <br />

@@ -1,4 +1,64 @@
 {
   "name": "applab",
-  "editorType": "droplet"
+  "description": "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.",
+  "editor_type": "droplet",
+  "title": "App Lab",
+  "image_url": "https://studio.code.org/shared/images/courses/logo_applab_square.png",
+  "categories": [
+    {
+      "key": "ui_controls",
+      "name": "UI controls",
+      "color": "#fff176"
+    },
+    {
+      "key": "canvas",
+      "name": "Canvas",
+      "color": "#f78183"
+    },
+    {
+      "key": "data",
+      "name": "Data",
+      "color": "#d3e965"
+    },
+    {
+      "key": "turtle",
+      "name": "Turtle",
+      "color": "#4dd0e1"
+    },
+    {
+      "key": "control",
+      "name": "Control",
+      "color": "#64B5F6"
+    },
+    {
+      "key": "math",
+      "name": "Math",
+      "color": "#FFB74D"
+    },
+    {
+      "key": "variables",
+      "name": "Variables",
+      "color": "#BB77C7"
+    },
+    {
+      "key": "functions",
+      "name": "Functions",
+      "color": "#68D995"
+    },
+    {
+      "key": "advanced",
+      "name": "Advanced",
+      "color": "#19c3e1"
+    },
+    {
+      "key": "maker",
+      "name": "Maker",
+      "color": "#4dd0e1"
+    },
+    {
+      "key": "circuit",
+      "name": "Circuit",
+      "color": "#f78183"
+    }
+  ]
 }

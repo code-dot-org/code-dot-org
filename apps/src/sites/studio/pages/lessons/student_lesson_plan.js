@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import announcementsReducer, {
   addAnnouncement
@@ -11,6 +10,7 @@ import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
 import StudentLessonOverview from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
+import {retrieveProgress} from '@cdo/apps/code-studio/progress';
 
 $(document).ready(function() {
   displayLessonOverview();
@@ -21,10 +21,12 @@ $(document).ready(function() {
  * Collect and preprocess all data students should see for the lesson, and
  * render the React component which displays them.
  */
-function displayLessonOverview() {
+async function displayLessonOverview() {
   const lessonData = getScriptData('lesson');
-
+  const scriptName = getScriptData('scriptName');
   const store = getStore();
+
+  await retrieveProgress(scriptName, null, null);
 
   if (lessonData.announcements) {
     registerReducers({announcements: announcementsReducer});

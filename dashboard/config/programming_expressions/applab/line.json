@@ -1,10 +1,21 @@
 {
-  "func": "line",
+  "key": "line",
+  "name": "line",
   "category": "Canvas",
-  "paletteParams": [
-    "x1",
-    "y1",
-    "x2",
-    "y2"
-  ]
+  "category_key": "canvas",
+  "palette_params": [
+    {
+      "name": "x1"
+    },
+    {
+      "name": "y1"
+    },
+    {
+      "name": "x2"
+    },
+    {
+      "name": "y2"
+    }
+  ],
+  "syntax": "line(x1, y1, x2, y2)"
 }

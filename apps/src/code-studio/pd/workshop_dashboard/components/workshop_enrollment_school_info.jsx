@@ -13,7 +13,8 @@ import {
   SubjectNames,
   CourseKeyMap
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {CSD, CSP} from '../../application/ApplicationConstants';
+import {CSD, CSP, CSA} from '../../application/ApplicationConstants';
+import {DASHBOARD_COURSES} from '../../application_dashboard/application_dashboard.jsx';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;
@@ -144,12 +145,15 @@ export class WorkshopEnrollmentSchoolInfo extends React.Component {
   }
 
   getApplicationURL(application_id, course) {
-    if (!application_id || ![CSD, CSP].includes(course)) {
+    if (!application_id || ![CSD, CSP, CSA].includes(course)) {
       return null;
     }
 
-    // Note: These paths are defined in ApplicationDashboard component
-    let path = course === CSD ? 'csd_teachers' : 'csp_teachers';
+    // get the path associated with a course, i.e. csd_teachers for csd
+    const shortCourse = CourseKeyMap[course];
+    const path = Object.keys(DASHBOARD_COURSES).find(
+      path => DASHBOARD_COURSES[path].course === shortCourse
+    );
     return `/pd/application_dashboard/${path}/${application_id}`;
   }
 

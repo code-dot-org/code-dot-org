@@ -85,4 +85,24 @@ class VocabulariesControllerTest < ActionController::TestCase
     assert_equal assigns(:course_version), course_version
     assert_equal assigns(:vocabularies), [vocabulary.summarize_for_edit]
   end
+
+  class AuthTests < ActionController::TestCase
+    setup do
+      course_version = create :course_version
+      @vocabulary = create :vocabulary, course_version: course_version
+      @new_params = {word: 'algorithm', definition: 'a list of steps', course_version_id: course_version.id}
+      @update_params = {id: @vocabulary.id, word: @vocabulary.word, definition: 'an updated definition', course_version_id: course_version.id}
+      Vocabulary.any_instance.stubs(:serialize_scripts)
+    end
+
+    test_user_gets_response_for :create, params: -> {@new_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :create, params: -> {@new_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :create, params: -> {@new_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :create, params: -> {@new_params}, user: :levelbuilder, response: :success
+
+    test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+  end
 end

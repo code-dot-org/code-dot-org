@@ -543,9 +543,6 @@
           "repeat_every_ideas": "**아이디어가 필요하세요?**\n\n-   댄서가 커지도록 반복해서 댄서의 크기를 변경하세요.\n-   댄서가 돌 수 있도록 반복해서 댄서의 회전을 변경하세요.\n\n_반대되는 효과가 나오도록 음수를 사용할 수도 있습니다!_",
           "next_previous": "**선택 도전**\n\n-   이 새 이벤트 블록을 사용하여 동작을 `(무작위)`, `(다음)`, `(이전)`으로 설정하여 댄스 동작 목록을 반복할 수 있습니다.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
-        "CourseD_Dance_2020_bonus1": {
-          "alternate": "교대 블록은 “댄서” 카테고리에 있습니다."
-        },
         "CourseD_Dance_Party_01": {
           "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   댄서가 화면에 나오게 하세요.\n\n_이 레벨은 4 마디 이후에 끝납니다._",
           "challenges": "\\*\\* 선택 도전\\*\\*\n\n-   다른 노래를 선택하여 재생하세요.\n-   댄서 이름을 바꾸세요."
@@ -676,9 +673,6 @@
         },
         "Dance_Party_11b": {
           "validation": "**이 레벨은 어떻게 통과하나요?**\n\n-   `화살표를 누를 때` 블록을 사용하여 블록을 누를 때 로봇이 춤을 추도록 만드세요.\n\n_이 레벨은 7 마디 이후에 끝납니다._"
-        },
-        "Dance_Party_extras_alternate_2019": {
-          "alternate": "교대 블록은 “댄서” 카테고리에 있습니다."
         },
         "Function intro Ryan": {
           "Function_intro_Ryan_b": "함수를 바르게 호출할 경우, 이 경로로 이동하게 될 것입니다....",
@@ -4052,16 +4046,16 @@
           "courseD_bee_conditionals_challenge1_b": "이 퍼즐에서 각 공간에는 꽃 또는 벌집이 있거나 아무 것도 없을 수 있습니다. 각 사각형에서 'if/else' 조건문을 반복할 수 있다는 의미입니다."
         },
         "courseD_bee_conditionals_challenge2": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2018": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2019": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_conditionals_challenge2_2020": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_playLab_cond1": {
           "courseD_playLab_cond1_a": "이 도전을 풀기 위해,  `액터 1 위로 이동` 블록을  `위 화살표일 때`이벤트에 부착하고, 그 다음 모든 다른 방향과 동일하게 행동하세요.",
@@ -5388,7 +5382,7 @@
           "courseD_bee_debugging_challenge1_c": "벌이 하단 열까지 온 후, 다음 명령을 반복하게 하세요:\n\n-   2번 반복:\n    -   앞으로 이동\n    -   꿀 3개 만들기\n-   뒤로 이동"
         },
         "course3_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_b": "다음, 이 열에서 나머지 보석을 모으세요.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\n블록을 프로그램에 추가하세요.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml> ",
+          "courseD_collector_debugging_challenge2_b": "다음, 이 열에서 나머지 보석을 모으세요.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\n블록을 프로그램에 추가하세요.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml> ",
           "courseD_collector_debugging_challenge2_c": "마지막으로, 나머지 보물을 모으세요. 블록을 프로그램에 추가하세요.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml> ",
           "courseD_collector_debugging_challenge2_d": "이 퍼즐을 위한 완전한 솔루션이 여기에 있습니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -5943,8 +5937,8 @@
           "courseD_bee_debugging_challenge1_c": "벌이 하단 열까지 온 후, 다음 명령을 반복하게 하세요:\n\n-   2번 반복:\n    -   앞으로 이동\n    -   꿀 3개 만들기\n-   뒤로 이동"
         },
         "courseD_collector_debugging_challenge2": {
-          "courseD_collector_debugging_challenge2_a": "처음 **두** 개의 더미에서 보석 **두** 개만 모으는 걸로 시작하세요.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n다음 블록을 사용하세요.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n</xml>",
-          "courseD_collector_debugging_challenge2_b": "다음, 이 열에서 나머지 보석을 모으세요.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\n블록을 프로그램에 추가하세요.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n\n        </statement>\n      </block>\n\n</xml> ",
+          "courseD_collector_debugging_challenge2_a": "처음 **두** 개의 더미에서 보석 **두** 개만 모으는 걸로 시작하세요.\n\n![](<https://images.code.org/8493c16a5b913b91e28b36eb2b280b8c-image-1494775939149.25.04 AM copy.png>)\n다음 블록을 사용하세요.\n\n<xml>\n<block type=\"collector_collect\"></block>\n<block type=\"controls_repeat\" limit=\"2\">\n    <title name=\"TIMES\">2</title>\n  </block>\n<block type=\"maze_move\" x=\"175px\" y=\"17px\">\n                    <title name=\"DIR\">moveForward</title>\n                  </block>\n                  \n \n   <block type=\"controls_repeat\" limit=\"2\" x=\"175px\" y=\"56px\">\n    <title name=\"TIMES\">2</title>\n  </block>\n\n\n\n</xml>",
+          "courseD_collector_debugging_challenge2_b": "다음, 이 열에서 나머지 보석을 모으세요.\n\n![](<https://images.code.org/22fff9fb20a50beaf4800aa022a5deb0-image-1494775944657.25.04 AM.png>)\n블록을 프로그램에 추가하세요.\n\n<xml><block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n<block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml> ",
           "courseD_collector_debugging_challenge2_c": "마지막으로, 나머지 보물을 모으세요. 블록을 프로그램에 추가하세요.\n\n<xml>\n  <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          \n        </statement>\n      </block>\n</xml> ",
           "courseD_collector_debugging_challenge2_d": "이 퍼즐을 위한 완전한 솔루션이 여기에 있습니다:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">4</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"controls_repeat\">\n                <title name=\"TIMES\">2</title>\n                <statement name=\"DO\">\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveForward</title>\n                    <next>\n                      <block type=\"controls_repeat\">\n                        <title name=\"TIMES\">2</title>\n                        <statement name=\"DO\">\n                          <block type=\"collector_collect\"/>\n                        </statement>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n                <next>\n                  <block type=\"maze_move\">\n                    <title name=\"DIR\">moveBackward</title>\n                  </block>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -7121,7 +7115,6 @@
           "courseF_bee_for2_b": "꽃에 도착하기 위해 각 루프 사이에서 앞으로 이동해야 한다는 걸 기억하세요."
         },
         "OPD-K5-forloops-5": {
-          "courseF_bee_for4_a": "이 퍼즐을 풀기 위해 1에서 1씩 증가하여 7로 가는 `for` 루프를 사용하세요.",
           "courseF_bee_for4_b": "`For` 루프 내에서 `앞으로 이동` 명령과 과즙을 모으기 위한 루프가 필요할 거예요.",
           "courseF_bee_for4_c": "충분한 과즙을 얻기 위해 `카운터` 변수를 중첩 `반복` 루프 안에서 사용하도록 하세요!"
         },
@@ -7171,22 +7164,18 @@
           "courseF_bee_for2_b": "꽃에 도착하기 위해 각 루프 사이에서 앞으로 이동해야 한다는 걸 기억하세요."
         },
         "courseF_bee_for4": {
-          "courseF_bee_for4_a": "이 퍼즐을 풀기 위해 1에서 1씩 증가하여 7로 가는 `for` 루프를 사용하세요.",
           "courseF_bee_for4_b": "`For` 루프 내에서 `앞으로 이동` 명령과 과즙을 모으기 위한 루프가 필요할 거예요.",
           "courseF_bee_for4_c": "충분한 과즙을 얻기 위해 `카운터` 변수를 중첩 `반복` 루프 안에서 사용하도록 하세요!"
         },
         "courseF_bee_for4_2018": {
-          "courseF_bee_for4_a": "이 퍼즐을 풀기 위해 1에서 1씩 증가하여 7로 가는 `for` 루프를 사용하세요.",
           "courseF_bee_for4_b": "`For` 루프 내에서 `앞으로 이동` 명령과 과즙을 모으기 위한 루프가 필요할 거예요.",
           "courseF_bee_for4_c": "충분한 과즙을 얻기 위해 `카운터` 변수를 중첩 `반복` 루프 안에서 사용하도록 하세요!"
         },
         "courseF_bee_for4_2019": {
-          "courseF_bee_for4_a": "이 퍼즐을 풀기 위해 1에서 1씩 증가하여 7로 가는 `for` 루프를 사용하세요.",
           "courseF_bee_for4_b": "`For` 루프 내에서 `앞으로 이동` 명령과 과즙을 모으기 위한 루프가 필요할 거예요.",
           "courseF_bee_for4_c": "충분한 과즙을 얻기 위해 `카운터` 변수를 중첩 `반복` 루프 안에서 사용하도록 하세요!"
         },
         "courseF_bee_for4_2020": {
-          "courseF_bee_for4_a": "이 퍼즐을 풀기 위해 1에서 1씩 증가하여 7로 가는 `for` 루프를 사용하세요.",
           "courseF_bee_for4_b": "`For` 루프 내에서 `앞으로 이동` 명령과 과즙을 모으기 위한 루프가 필요할 거예요.",
           "courseF_bee_for4_c": "충분한 과즙을 얻기 위해 `카운터` 변수를 중첩 `반복` 루프 안에서 사용하도록 하세요!"
         },
@@ -7321,44 +7310,32 @@
           "courseF_bee_for5_c": "실수하는 것을 두려워하지 마세요! 퍼즐을 아직 풀지 못했더라도 블록을 추가하고 코드를 실행해 보세요."
         },
         "courseF_bee_for8": {
-          "courseF_bee_for8_a": "루프가 숫자가 올라가며 세어지면, 다 셀 때까지 증가분을 카운터 변수에 더하세요. \n\n다음 과즙 양을 얻기 위해 얼마를 각 숫자에 더해야 합니까r?",
-          "courseF_bee_for8_b": "이 퍼즐에서는 꽃에 가기 까지 계단 패턴으로 이동해야 합니다.",
-          "courseF_bee_for8_c": "루프는 _3부터 15까지_ 일정 수 만큼 증가하며 셉니다. 얼마큼 일까요?"
+          "courseF_bee_for8_b": "이 퍼즐에서는 꽃에 가기 까지 계단 패턴으로 이동해야 합니다."
         },
         "courseF_bee_for8_2018": {
-          "courseF_bee_for8_a": "루프가 숫자가 올라가며 세어지면, 다 셀 때까지 증가분을 카운터 변수에 더하세요. \n\n다음 과즙 양을 얻기 위해 얼마를 각 숫자에 더해야 합니까r?",
-          "courseF_bee_for8_b": "이 퍼즐에서는 꽃에 가기 까지 계단 패턴으로 이동해야 합니다.",
-          "courseF_bee_for8_c": "루프는 _3부터 15까지_ 일정 수 만큼 증가하며 셉니다. 얼마큼 일까요?"
+          "courseF_bee_for8_b": "이 퍼즐에서는 꽃에 가기 까지 계단 패턴으로 이동해야 합니다."
         },
         "courseF_bee_for8_2019": {
-          "courseF_bee_for8_a": "루프가 숫자가 올라가며 세어지면, 다 셀 때까지 증가분을 카운터 변수에 더하세요. \n\n다음 과즙 양을 얻기 위해 얼마를 각 숫자에 더해야 합니까r?",
-          "courseF_bee_for8_b": "이 퍼즐에서는 꽃에 가기 까지 계단 패턴으로 이동해야 합니다.",
-          "courseF_bee_for8_c": "루프는 _3부터 15까지_ 일정 수 만큼 증가하며 셉니다. 얼마큼 일까요?"
+          "courseF_bee_for8_b": "이 퍼즐에서는 꽃에 가기 까지 계단 패턴으로 이동해야 합니다."
         },
         "courseF_bee_for8_2020": {
-          "courseF_bee_for8_a": "루프가 숫자가 올라가며 세어지면, 다 셀 때까지 증가분을 카운터 변수에 더하세요. \n\n다음 과즙 양을 얻기 위해 얼마를 각 숫자에 더해야 합니까r?",
-          "courseF_bee_for8_b": "이 퍼즐에서는 꽃에 가기 까지 계단 패턴으로 이동해야 합니다.",
-          "courseF_bee_for8_c": "루프는 _3부터 15까지_ 일정 수 만큼 증가하며 셉니다. 얼마큼 일까요?"
+          "courseF_bee_for8_b": "이 퍼즐에서는 꽃에 가기 까지 계단 패턴으로 이동해야 합니다."
         },
         "courseF_bee_for9": {
           "courseF_bee_for9_a": "카운터 변수로 수학을 해보세요.\n\n모아야 하는 과즙 양을 똑같이 하기 위해 각 꽃에서 카운터로 무엇을 해야 할까요?",
-          "courseF_bee_for9_c": "이 퍼즐을 풀길 원하면, 각 루프 반복의 시작점에서 벌을 회전시켜야 할 것처럼 보이네요.",
-          "courseF_bee_for9_b": "**기억하세요:** 루프가 숫자가 올라가며 세어지면, 다 셀 때까지 증가분을 카운터 변수에 더하세요."
+          "courseF_bee_for9_c": "이 퍼즐을 풀길 원하면, 각 루프 반복의 시작점에서 벌을 회전시켜야 할 것처럼 보이네요."
         },
         "courseF_bee_for9_2018": {
           "courseF_bee_for9_a": "카운터 변수로 수학을 해보세요.\n\n모아야 하는 과즙 양을 똑같이 하기 위해 각 꽃에서 카운터로 무엇을 해야 할까요?",
-          "courseF_bee_for9_c": "이 퍼즐을 풀길 원하면, 각 루프 반복의 시작점에서 벌을 회전시켜야 할 것처럼 보이네요.",
-          "courseF_bee_for9_b": "**기억하세요:** 루프가 숫자가 올라가며 세어지면, 다 셀 때까지 증가분을 카운터 변수에 더하세요."
+          "courseF_bee_for9_c": "이 퍼즐을 풀길 원하면, 각 루프 반복의 시작점에서 벌을 회전시켜야 할 것처럼 보이네요."
         },
         "courseF_bee_for9_2019": {
           "courseF_bee_for9_a": "카운터 변수로 수학을 해보세요.\n\n모아야 하는 과즙 양을 똑같이 하기 위해 각 꽃에서 카운터로 무엇을 해야 할까요?",
-          "courseF_bee_for9_c": "이 퍼즐을 풀길 원하면, 각 루프 반복의 시작점에서 벌을 회전시켜야 할 것처럼 보이네요.",
-          "courseF_bee_for9_b": "**기억하세요:** 루프가 숫자가 올라가며 세어지면, 다 셀 때까지 증가분을 카운터 변수에 더하세요."
+          "courseF_bee_for9_c": "이 퍼즐을 풀길 원하면, 각 루프 반복의 시작점에서 벌을 회전시켜야 할 것처럼 보이네요."
         },
         "courseF_bee_for9_2020": {
           "courseF_bee_for9_a": "카운터 변수로 수학을 해보세요.\n\n모아야 하는 과즙 양을 똑같이 하기 위해 각 꽃에서 카운터로 무엇을 해야 할까요?",
-          "courseF_bee_for9_c": "이 퍼즐을 풀길 원하면, 각 루프 반복의 시작점에서 벌을 회전시켜야 할 것처럼 보이네요.",
-          "courseF_bee_for9_b": "**기억하세요:** 루프가 숫자가 올라가며 세어지면, 다 셀 때까지 증가분을 카운터 변수에 더하세요."
+          "courseF_bee_for9_c": "이 퍼즐을 풀길 원하면, 각 루프 반복의 시작점에서 벌을 회전시켜야 할 것처럼 보이네요."
         },
         "courseF_artist_for10": {
           "courseF_artist_for10_a": "그림 속 이미지는 브러쉬 크기로서 `알파 설정`과 `카운터`/ 10을 위한 카운터를 사용하여 만들었습니다.",
@@ -8652,7 +8629,7 @@
           "next_previous": "**선택 도전**\n\n-   이 새 이벤트 블록을 사용하여 동작을 `(무작위)`, `(다음)`, `(이전)`으로 설정하여 댄스 동작 목록을 반복할 수 있습니다.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "CourseD_Dance_2020_bonus1_2021": {
-          "alternate": "교대 블록은 “댄서” 카테고리에 있습니다."
+          "alternate": "교대 블록은 “댄서” 범주에 있습니다."
         },
         "CourseE_HOC 2018 Level_10_2021": {
           "voyage_aquatic_10a": "**바다 랜턴**![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)이 보여요? 어떻게 그것을 조건문과 함께 사용해 바다 유적에 갈 수 있을까요?"
@@ -9333,7 +9310,11 @@
         },
         "courseC19_playLab_EOC2_2021": {
           "courseE_playLab_scaffold1_b": "`화살표일 때` 이벤트 블록이 네 개가 있고 각각 아래에 이동 방향이 있어야 합니다.",
-          "courseE_playLab_scaffold1_c": "모두 마쳤으면, 화살표 키로 주인공을 이동시킬 수 있어야 합니다!"
+          "courseE_playLab_scaffold1_c": "모두 마쳤으면, 화살표 키로 주인공을 이동시킬 수 있어야 합니다!",
+          "playlab_up": "액터를 위로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_down": "액터를 아래로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_left": "액터를 왼쪽으로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "playlab_right": "액터를 오른쪽으로 이동하기 위해, 다음의 블록을 연결할 수 있습니다:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml> "
         },
         "courseC19_playLab_EOC4_2021": {
           "courseE_playLab_scaffold4_a": "`포인트 점수`를 사용하여 1 포인트를 추가하고 `포인트 제거`는 점수를 차감합니다."
@@ -9900,7 +9881,7 @@
           "courseD_bee_conditionals_challenge1_b": "이 퍼즐에서 각 공간에는 꽃 또는 벌집이 있거나 아무 것도 없을 수 있습니다. 각 사각형에서 'if/else' 조건문을 반복할 수 있다는 의미입니다."
         },
         "courseD_bee_conditionals_challenge2_2021": {
-          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">></title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+          "courseD_bee_conditionals_challenge1_b": "`만약 꽃에서` 블록과 마찬가지로, `과즙 > 0인 동안` 내부에 있는 코드는 벌이 꽃에 있을 때만 실행될 것입니다. 차이는 내부의 코드는 과즙이 더 이상 남아 있지 않을 때까지 계속해서 실행된다는 것입니다. 이 패턴을 시도해 보세요:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
         },
         "courseD_bee_nestedLoops1_2021": {
           "courseD_bee_nestedLoops1_a": "안돼요? \"단계\" 버튼을 사용하여 한 줄 한 줄 무슨 일이 일어나는지 보세요.",
@@ -10363,19 +10344,21 @@
         },
         "courseF_artist_variables8_2021": {
           "courseF_artist_variables8_b": "삼각형을 위한 코드를 `길이 설정` 블록으로 시작하는 걸 기억하고 이것을 150 픽셀에서 시작하세요.",
-          "courseF_artist_variables8_c": "`반복` 루프를 사용해서 이 삼각형을 그려세요."
+          "courseF_artist_variables8_c": "`반복` 루프를 사용해서 이 삼각형을 그려세요.",
+          "courseF_artist_variables8_a": "끝에서, \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml> 블록을 \n\n루프 안에 넣어 보세요."
         },
         "courseF_artist_variables9_2021": {
-          "courseF_artist_variables9_a": "이 퍼즐을 위해, 해야 할 일은 루프의 반복 횟수만 변경하면 됩니다. "
+          "courseF_artist_variables9_a": "이 퍼즐을 위해, 해야 할 일은 루프의 반복 횟수만 변경하면 됩니다. ",
+          "courseF_artist_variables9_b": "`길이`를 변화시키는 블록은 루프 내에 있어 선이 계속해서 길어져야 합니다."
         },
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "밟아야 하는 단계 수와 모아야 하는 과즙 수 사이에서 패턴을 찾아낼 수 있어요?",
           "courseF_bee_for10_b": "첫 번째 꽃 세트에는 **14개 꽃**이 있어요. 이 첫 번째 세트를 얻기 위해, 벌은 **7개 사각형** (또는 2로 나눈 14개 사각형)을 내려가야 합니다. 다음 세트에는 몇 개의 꽃이 있고 벌은 그곳에 가기 위해 얼마 만큼을 이동해야 할까요?",
-          "courseF_bee_for10_c": "이 퍼즐에서, 첫 번째 꽃 세트에는 **14**개 꽃이 있고 두 번째 세트에는 **10**개 꽃, 세 번째 세트에는 **6**개 꽃이 있으며, 네 번째 세트에는 **2**개 꽃이 있어요.\n\n이 그림에서, **7**개의 빨간색 사각형과 **5**개의 주황색 사각형, **3**개의 녹색 사각형, **1**개의 파란색 블록이 있음을 인지하세요.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\n숫자는 어떤 관련이 있습니까?",
+          "courseF_bee_for10_c": "이 퍼즐에서, 첫 번째 꽃 세트에는 **14**개 꽃이 있고 두 번째 세트에는 **10**개 꽃, 세 번째 세트에는 **6**개 꽃이 있으며, 네 번째 세트에는 **2**개 꽃이 있어요.\n\n이 그림에서, **7**개의 빨간색 사각형과 **5**개의 주황색 사각형, **3**개의 녹색 사각형, **1**개의 파란색 블록이 있음을 인지하세요.\n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\n숫자는 어떤 관련이 있습니까?",
           "courseF_bee_for10_d": "2개의 반복이 필요할 것이며 한 개는 수학 블록을 사용할 것입니다."
         },
         "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "12가 15 보다 얼마나 더 적습니까?\\\n9가 12 보다 얼마나 더 적습니까?\n\n패턴이 보여요?"
+          "courseF_bee_for11_a": "12가 15 보다 얼마나 더 적습니까?\n9가 12 보다 얼마나 더 적습니까?\n\n패턴이 보여요?"
         },
         "courseF_bee_for1_2021": {
           "courseF_bee_for1_b": "과즙 모두 모으려면 ‘반복’ 루프 안에 두 개의 블록이 있어야 합니다."
@@ -10385,7 +10368,7 @@
           "courseF_bee_for2_b": "꽃에 도착하기 위해 각 루프 사이에서 앞으로 이동해야 한다는 걸 기억하세요."
         },
         "courseF_bee_for4_2021": {
-          "courseF_bee_for4_a": "이 퍼즐을 풀기 위해 1에서 1씩 증가하여 7로 가는 `for` 루프를 사용하세요.",
+          "courseF_bee_for4_a": "이 퍼즐을 풀기 위해 증가분 1로 1에서 7로 가는 `for` 루프를 사용하세요.",
           "courseF_bee_for4_b": "`For` 루프 내에서 `앞으로 이동` 명령과 과즙을 모으기 위한 루프가 필요할 거예요.",
           "courseF_bee_for4_c": "충분한 과즙을 얻기 위해 `카운터` 변수를 중첩 `반복` 루프 안에서 사용하도록 하세요!"
         },
@@ -10405,14 +10388,14 @@
           "courseF_bee_for7_c": "`반복` 루프 안에서 `카운트` 변수를 사용하는 걸 기억하세요."
         },
         "courseF_bee_for8_2021": {
-          "courseF_bee_for8_a": "루프가 숫자가 올라가며 세어지면, 다 셀 때까지 증가분을 카운터 변수에 더하세요. \n\n다음 과즙 양을 얻기 위해 얼마를 각 숫자에 더해야 합니까r?",
+          "courseF_bee_for8_a": "루프를 실행할 때마다 숫자가 증가하면, 끝날 때마다 증가분을 카운터 변수에 더하세요. \n\n다음 과즙 양을 얻기 위해 얼마를 각 숫자에 더해야 할까요?",
           "courseF_bee_for8_b": "이 퍼즐에서는 꽃에 가기 까지 계단 패턴으로 이동해야 합니다.",
-          "courseF_bee_for8_c": "루프는 _3부터 15까지_ 일정 수 만큼 증가하며 셉니다. 얼마큼 일까요?"
+          "courseF_bee_for8_c": "루프는 _3부터 15까지_ 일정 수 만큼 증가하며 수를 셉니다. 그 증가분은 얼마일까요?"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "카운터 변수로 수학을 해보세요.\n\n모아야 하는 과즙 양을 똑같이 하기 위해 각 꽃에서 카운터로 무엇을 해야 할까요?",
           "courseF_bee_for9_c": "이 퍼즐을 풀길 원하면, 각 루프 반복의 시작점에서 벌을 회전시켜야 할 것처럼 보이네요.",
-          "courseF_bee_for9_b": "**기억하세요:** 루프가 숫자가 올라가며 세어지면, 다 셀 때까지 증가분을 카운터 변수에 더하세요."
+          "courseF_bee_for9_b": "**기억하세요:** 루프를 실행할 때마다 숫자가 증가하면, 끝날 때마다 증가분을 카운터 변수에 더하세요."
         },
         "courseF_bee_for_challenge2_2021": {
           "courseF_bee_for_challenge2_a": "이동을 위해 이 옵션을 보세요: \n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
@@ -10439,16 +10422,202 @@
           "iceage_warn_ice_age_b": "두 개의 새 블록 모두를 '실행 시' 이벤트 아래에 추가하여 프로그램 시작 후 즉시 이것들이 일어나도록 하세요.  "
         },
         "CourseF_outbreak1": {
-          "step1": "이 블록을 사용하여 스프라이트를 만드세요:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\n이 블록은 도구 상자의 **스프라이트** 카테고리에 있습니다.",
-          "step2": "이 블록으로 스프라이트의 크기를 바꿔보세요: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\n이 블록은 도구 상자의 **동작** 카테고리에 있습니다.",
-          "step3": "이 블록으로 모든 스프라이트가 돌아 다니게 하세요: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\n이 블록은 도구 상자의 **동작** 카테고리에 있습니다."
+          "step1": "이 블록을 사용하여 스프라이트를 만드세요:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\n이 블록은 도구 상자의 **스프라이트** 범주에 있습니다.",
+          "step2": "이 블록으로 스프라이트의 크기를 바꿔보세요: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\n이 블록은 툴박스의 **스프라이트** 범주에서 찾을 수 있습니다.",
+          "step3": "이 블록으로 모든 스프라이트를 돌아 다니게 만드세요: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\n이 블록은 툴박스의 **행동** 범주에 있습니다."
         },
         "CourseF_outbreak2": {
           "hint1": "이벤트 블록의 '+' 버튼을 클릭하세요. 내부에서 찾은 '대상' 블록으로 '의상 변경' 블록의 비어 있는 자리를 채우세요.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "몬스터에게 마스크를 주려면, '클릭할 때' 이벤트와 '의상 변경' 블록을 같이 사용하세요:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\n조그맣고 빨간 '클릭됨' 블록도 드래그해야 합니다!",
-          "hint2": "이 레벨의 새로운 코드도 다음과 같아야 합니다:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "몬스터에게 마스크를 주려면, '클릭할 때' 이벤트와 '의상 변경' 블록을 같이 사용하세요:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n조그맣고 빨간 '클릭됨' 블록도 드래그해야 합니다!",
+          "hint2": "이 레벨의 새로운 코드도 다음과 같아야 합니다:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "courseF_sprites_clouds": {
+          "behavior_list": "\"동쪽으로 이동 및 반복\", \"오른쪽으로 돌기\", \"떠돌기\" 등과 같은 행동을 사용해 보세요."
+        },
+        "CourseF_outbreak4": {
+          "challenge": "## 더 어려운 도전을 찾으세요?\n\n몬스터를 또한 더 빠르게 또는 더 느리게 만들 수 있습니다.\n\n1.  이 블록 <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml>에서 `편집`을 클릭하세요.\n2.  블록 내 숫자를 증가 또는 감소합니다: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\n몬스터를 더 느리게 이동하게 만들려면, `0.5` 또는 `0.25`와 같은 소수를 선택하세요. 몬스터를 더 빠르게 이동하게 하려면 1보다 큰 수를 선택하세요."
+        },
+        "CourseF_outbreak6": {
+          "hint2": "다른 \"동작\" 블록을 `if chance` 블록:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml> 내부로 이동해야 합니다.",
+          "hint1": "건강한 스프라이트와 감염된 스프라이트 간 `접촉`의 모든 가능한 조합을 확인하기 위해 3개 이상의 `접촉 시` 이벤트가 필요할 것입니다. \n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>"
+        },
+        "CourseF_outbreak7": {
+          "whenclicked": "## 백신\n\n몬스터를 클릭하여 몬스터에게 백신을 주었을 때를 시뮬레이션할 수 있습니다. 이를 위해, `의상 변경` 블록을 이 이벤트와 함께 사용합니다:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>",
+          "verionhistory": "도움이 필요한가요? 언제든 아래 `버전 이력`을 클릭하고 그 다음 \"다시 시작\"을 선택하여 코드를 재설정할 수 있습니다."
+        },
+        "courseF_artist_variablesFP_2021": {
+          "polygon_table": "다른 다각형을 시도해 보고 싶으세요? \n\n`반복`에서 선분의 숫자와 `회전` 블록에서 각도를 사용하세요.\n다음을 시도해 보세요:\n\n|  도형 |  변  |  각도  |\n| :-: | :-: | :--: |\n| 삼각형 |  3  | 120° |\n| 사각형 |  4  |  90° |\n| 오각형 |  5  |  72° |\n| 육각형 |  6  |  60° |\n| 팔각형 |  8  |  45° |\n| 구각형 |  9  |  40° |\n| 십각형 |  10 |  36° |"
+        },
+        "courseF_bee_variables_3a_2021": {
+          "courseF_bee_variables_3_2021_1": "패턴을 계속하기 위해 반복 숫자를 증가시킵니다:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3aa_2021": {
+          "courseF_bee_variables_3_2021_1": "1을 변수에 추가하기 위해 프로그램에서 이 코드를 사용할 수 있습니다:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_4a_2021": {
+          "courseF_bee_variables_4_2021_1": "변수에 1을 더하는 대신, 매번 2를 더합니다."
+        },
+        "courseF_events_choice_pufferfish": {
+          "changeProp": "또한 다음의 블록도 필요할 것입니다:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"스케일\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"생명체_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_events_key": {
+          "changePropBlock": "이 블록이 필요할 것입니다:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+        },
+        "courseF_text_choice_multiprompt": {
+          "when_answered_var": "`응답되었을 때` 블록에서 변수 라벨을 변경해 보세요. 복수의 프롬프트가 있기 때문에, 응답할 *최종* 프롬프트의 라벨을 사용합니다.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_variables_card_finish": {
+          "card_idea1": "다른 변수를 가진 새 프롬프트 블록을 첫 번째 `응답되었을 때` 이벤트에 연결함으로써 두 번째 (또는 세 번째, 네 번째) 프롬프트를 추가할 수 있습니다.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">생일에 무엇을 하고 싶어요?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">선물</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "card_idea2": "`스프라이트 정지` 블록을 이벤트 아래 `스프라이트 시작` 블록과 함께 사용하여 한 행동을 다른 행동으로 변경할 수 있습니다.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">이름</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"로봇_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">왼쪽으로 회전</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"로봇_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">오른쪽으로 회전</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "사용자가 키를 누를 때 또는 일정 시간이 지난 후 어떤 일이 일어나게 만듦으로써 프로그램을 인터액티브하게 만들 수 있습니다. \n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"때(when)\"</title>\n    <title name=\"KEY\">\"위로\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"스케일\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"로봇_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_chatbot_finish": {
+          "chatbot_idea1": "다른 변수를 가진 새 프롬프트 블록을 첫 번째 `응답되었을 때` 이벤트에 연결함으로써 두 번째 (또는 세 번째, 네 번째) 프롬프트를 추가할 수 있습니다.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">이름</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">몇 살이예요?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">나이</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea2": "`스프라이트 정지` 블록을 이벤트 아래 `스프라이트 시작` 블록과 함께 사용하여 한 행동을 다른 행동으로 변경할 수 있습니다.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">이름</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"로봇_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">왼쪽으로 회전</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"로봇_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">오른쪽으로 회전</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "chatbot_idea3": "사용자가 키를 누를 때 또는 일정 시간이 지난 후 어떤 일이 일어나게 만듦으로써 프로그램을 인터액티브하게 만들 수 있습니다. \n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"때(when)\"</title>\n    <title name=\"KEY\">\"위로\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"스케일\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"로봇_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea4": "제목 화면 블록으로 프로그램의 끝을 암시할 수 있습니다.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">끝</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">채팅해 주셔서 감사합니다!</title>\n        </block>\n      </value>\n      </block></xml>"
+        },
+        "courseF_variables_madlib_finish": {
+          "card_idea1": "다른 변수를 가진 새 프롬프트 블록을 사용함으로써 두 번째 (또는 세 번째, 네 번째) 프롬프트를 추가할 수 있습니다.\n\n<xml>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">동작 단어 입력:</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">동사</title>\n          </block>\n        </value>\n      </block>\n    </xml>",
+          "card_idea2": "`스프라이트 정지` 블록을 이벤트 아래 `스프라이트 시작` 블록과 함께 사용하여 한 행동을 다른 행동으로 변경할 수 있습니다.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">이름</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"로봇_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">왼쪽으로 회전</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"로봇_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">오른쪽으로 회전</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
+          "card_idea3": "사용자가 키를 누를 때 또는 일정 시간이 지난 후 어떤 일이 일어나게 만듦으로써 프로그램을 인터액티브하게 만들 수 있습니다. \n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"때(when)\"</title>\n    <title name=\"KEY\">\"위로\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"스케일\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"로봇_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_animals_backgrounds": {
+          "hello_world_background": "`배경 설정` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하여 배경을 변경할 수 있습니다:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_animals_behaviors": {
+          "storyboard_behavior_example": "_비고:_ 스프라이트에 행동을 부여하기 위해, `스프라이트 시작` 블록을 `오른쪽으로 회전` 등과 같은 녹색 행동 블록 중 하나와 함께 사용해야 합니다.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"cuteanimals_rooster_hello\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_animals_click": {
+          "hw_no_changes": "이 레벨에서는 코드를 변경할 필요가 없습니다."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_costumes": "`의상 변경` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하세요:\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"\"cuteanimals_sheep\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"\"cuteanimals_goat_hello\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click": "`말하기` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하세요:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, ocean!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"cuteanimals_seahorse\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_animals_location": {
+          "location_pin_hint": "스프라이트 위치를 변경하기 위해, 위치 블록 상의 핀을 클릭하고 그 다음 그것을 보내고 싶은 위치를 클릭하세요.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "의상은 각 스프라이트에게 어울려야 합니다.\n\n<xml>\n  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_cat_hello\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Meow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_cat_hello\"</title>\n      </block>\n    </value>\n    </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "곰이 뭔가를 말하게 만들려면, 다음과 같은 코드 블록을 연결하세요:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"cuteanimals_bear\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_bear\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_animals_sizes": {
+          "storyboard_setProp": "스프라이트의 크기를 한 번 만 설정하려면. 다음 블록을 사용할 수 있습니다:\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "스프라이트의 크기를 계속해서 변경하길 원하면 (이벤트와 함께), 다음 블록을 사용하세요:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hello_world_background": "`배경 설정` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하여 배경을 변경할 수 있습니다:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_emoji_behaviors": {
+          "storyboard_behavior_example": "_비고:_ 스프라이트에 행동을 부여하기 위해, `스프라이트 시작` 블록을 `오른쪽으로 회전` 등과 같은 녹색 행동 블록 중 하나와 함께 사용해야 합니다.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"emoji_05_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_emoji_click": {
+          "hw_no_changes": "이 레벨에서는 코드를 변경할 필요가 없습니다."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_costumes": "`의상 변경` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하세요:\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"emoji_25_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_18_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click": "`말하기` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하세요:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Look at that!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"emoji_06_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_emoji_location": {
+          "location_pin_hint": "스프라이트 위치를 변경하기 위해, 위치 블록 상의 핀을 클릭하고 그 다음 그것을 보내고 싶은 위치를 클릭하세요.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_emoji_multi": {
+          "storyboard_costume": "의상은 각 스프라이트에게 어울려야 합니다.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Look at me!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_14_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "이모티콘이 뭔가를 말하게 만들려면, 다음 코드 블록을 연결하세요:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"emoji_19\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_19\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_emoji_sizes": {
+          "storyboard_setProp": "스프라이트의 크기를 한 번 만 설정하려면. 다음 블록을 사용할 수 있습니다:\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_17_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "스프라이트의 크기를 계속해서 변경하길 원하면 (이벤트와 함께), 다음 블록을 사용하세요:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"emoji_33_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_backgrounds": {
+          "hello_world_background": "`배경 설정` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하여 배경을 변경할 수 있습니다:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "_비고:_ 스프라이트에 행동을 부여하기 위해, `스프라이트 시작` 블록을 `오른쪽으로 회전` 등과 같은 녹색 행동 블록 중 하나와 함께 사용해야 합니다.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_click": {
+          "hw_no_changes": "이 레벨에서는 코드를 변경할 필요가 없습니다."
+        },
+        "helloworld_food_costumes": {
+          "hello_world_costumes": "`의상 변경` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하세요:\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_events": {
+          "hello_world_click": "`말하기` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하세요:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_food_location": {
+          "location_pin_hint": "스프라이트 위치를 변경하기 위해, 위치 블록 상의 핀을 클릭하고 그 다음 그것을 보내고 싶은 위치를 클릭하세요.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_food_multi": {
+          "storyboard_costume": "의상은 각 스프라이트에게 어울려야 합니다.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "피자가 뭔가를 말하게 만들려면, 다음 코드 블록을 연결하세요:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_food_sizes": {
+          "storyboard_setProp": "스프라이트의 크기를 한 번 만 설정하려면. 다음 블록을 사용할 수 있습니다:\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_changePropBy": "스프라이트의 크기를 계속해서 변경하길 원하면 (이벤트와 함께), 다음 블록을 사용하세요:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_retro_backgrounds": {
+          "hello_world_background": "`배경 설정` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하여 배경을 변경할 수 있습니다:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retroship_21\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"background_landscape11_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_retro_behaviors": {
+          "storyboard_behavior_example": "_비고:_ 스프라이트에 행동을 부여하기 위해, `스프라이트 시작` 블록을 `오른쪽으로 회전` 등과 같은 녹색 행동 블록 중 하나와 함께 사용해야 합니다.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"retrocreature_09_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_retro_click": {
+          "hw_no_changes": "이 레벨에서는 코드를 변경할 필요가 없습니다."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_costumes": "`의상 변경` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하세요:\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_20_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retrocreature_07_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click": "`말하기` 블록을 `클릭할 때` 이벤트 블록 아래에 연결하세요:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">POWERUP!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"retro_powerup_heart\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "helloworld_retro_location": {
+          "location_pin_hint": "스프라이트 위치를 변경하기 위해, 위치 블록 상의 핀을 클릭하고 그 다음 그것을 보내고 싶은 위치를 클릭하세요.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "helloworld_retro_multi": {
+          "storyboard_costume": "의상은 각 스프라이트에게 어울려야 합니다.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_16\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "창작품을 말하게 만들기 위해, 다음 코드 블록을 연결하세요:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"retrocreature_18_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retrocreature_18_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "helloworld_retro_sizes": {
+          "hw_retro_setProp": "스프라이트의 크기를 한 번 만 설정하려면. 다음 블록을 사용할 수 있습니다:\n<xml><block type=\"gamelab_setProp\">\n    <title name=\"PROPERTY\">\"scale\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"retro_purple_burst\"</title>\n      </block>\n    </value>\n    <value name=\"VAL\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">50</title>\n      </block>\n    </value>\n  </block></xml>",
+          "hw_retro_changePropBy": "스프라이트의 크기를 계속해서 변경하길 원하면 (이벤트와 함께), 다음 블록을 사용하세요:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"retrocreature_11_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "poetry_hoc_addSprites": {
+          "location_hint": "각 스프라이트는 특정 **위치**에 있어야 합니다. 다음 블록 위 핀을 클릭하여 위치를 설정할 수 있습니다: \n\n<xml><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></xml>\n\n-   위치 블록 위 핀 ![](<https://images.code.org/e9531e292b034feef0f176d4f97ac47f-image-1634932451913.54.05 PM.png>)을 클릭하고 그 다음 화면 위 스프라이트를 위한 새 위치를 선택하세요.\n-   코드가 완료되면 \"실행\" 버튼을 누르세요.",
+          "remove_hint": "일정 행 번호에서 스프라이트를 제거할 수 있습니다. 그 자리를 차지할 새 스프라이트를 추가할 수 있습니다: \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">3</title><next><block type=\"Poetry_destroy\"><title name=\"ANIMATION_NAME\">\"twinkling_star\"</title><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"night_moon\"</title><title name=\"LOCATION\">{\"x\":200,\"y\":225}</title></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "add_background_effect": "다음과 같은 배경 블록을 찾으세요:\n<xml><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"colors\"</title><title name=\"PALETTE\">\"sunrise\"</title></block></xml>\n\n또한 다음과 같은 텍스트 효과 블록을 찾으세요: \n\n<xml><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value></block></xml>\n\n이들 블록을 작업공간 내 `실행 시` 아래에 연결하세요.",
+          "add_more_effects": "더 많은 색상 또는 효과를 추가하여 이 시의 분위기를 만드는 데 도움을 주세요. \n\n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"squiggles\"</title><title name=\"PALETTE\">\"sky\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#000099</title></block></value><next><block type=\"Poetry_setFont\"><title name=\"FONT\">\"Courier\"</title><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"typewriter\"</title></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_events1": {
+          "do_effect_hint": "이 새로운 `효과 연출` 블록으로는 새 효과가 한번 만 추가될 것입니다. \n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">1</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></xml>\n\n한 개 이상의 `효과 연출` 블록을 서로의 상단에 쌓아 효과를 더 길게 지속할 수 있습니다.\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">0</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"twinkling\"</title></block></next></block></next></block></next></block></xml>",
+          "background_effect_hint": "다음과 같이 생긴 코드로 다른 효과를 이벤트 블록 아래에 추가할 수 있습니다:\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setBackgroundEffect\">\n    <title name=\"EFFECT\">\"ripples\"</title>\n    <title name=\"PALETTE\">\"sky\"</title>\n  </block></next></block></xml>",
+          "more_events_hint": "한 개 이상의 이벤트를 프로그램에서 사용할 수 있습니다. 두 개의 이벤트를 다른 효과와 함께 사용하여 시의 새 행에 어울리게 해 보세요. \n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">2</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"starburst\"</title></block></next></block></xml>\n\n<xml><block type=\"Poetry_whenLineShows\"><title name=\"N\">4</title><next><block type=\"Poetry_setForegroundEffect\"><title name=\"EFFECT\">\"bubbles\"</title></block></next></block></xml>"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound_hint": "다음 블록:\n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></next></block></xml>\n또는 다음 블록을 찾으세요: \n\n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>\n\n이것을 작업공간 내 `실행 시`에 연결하세요.",
+          "more_code": "선택한 사운드에 어울리는 더 많은 효과와 색상을 추가하세요. \n<xml><block type=\"when_run\" movable=\"false\"><next><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\"</title><next><block type=\"Poetry_setBackgroundEffect\"><title name=\"EFFECT\">\"blooming\"</title><title name=\"PALETTE\">\"sunrise\"</title><next><block type=\"Poetry_setFontColor\"><value name=\"FILL\"><block type=\"colour_picker\"><title name=\"COLOUR\">#996633</title></block></value><next><block type=\"Poetry_setTextEffect\"><title name=\"EFFECT\">\"fade\"</title></block></next></block></next></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "add_behavior": "`스프라이트 시작` 블록을 코드에 추가하세요. 행동을 부여할 스프라이트는 이미 만들어져 있어야 합니다. \n\n<xml><block type=\"when_run\"><next><block type=\"Poetry_makeNewSpriteAnon\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"LOCATION\">{\"x\":65,\"y\":105}</title><next><block type=\"Poetry_startBehavior\"><title name=\"ANIMATION_NAME\">\"smiling_sun\"</title><title name=\"BEHAVIOR\">spinning_right</title></block></next></block></next></block></xml>"
+        },
+        "poetry_hoc_spriteSizes": {
+          "size hint": "다음 블록을 찾고 `150`을 클릭하세요.\n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">150</title></block></xml>\n\n번호가 `25`가 될 때 무슨 일이 일어나나요? \n<xml><block type=\"Poetry_setSize\"><title name=\"SPRITE\">\"ocean_wave\"</title><title name=\"VAL\">25</title></block></xml>"
         }
       }
     }

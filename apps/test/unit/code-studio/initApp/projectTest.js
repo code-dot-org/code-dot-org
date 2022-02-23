@@ -14,6 +14,7 @@ describe('project.js', () => {
 
   const setData = project.__TestInterface.setCurrentData;
   const setSources = project.__TestInterface.setCurrentSources;
+  const setInitialSaveComplete = project.__TestInterface.setInitialSaveComplete;
 
   beforeEach(() => {
     sourceHandler = createStubSourceHandler();
@@ -1018,6 +1019,73 @@ describe('project.js', () => {
       expect(project.isCurrentCodeDifferent('test2')).to.be.true;
     });
   });
+
+  describe('saveIfSourcesChanged', () => {
+    let server;
+    let updateChannelSpy;
+
+    beforeEach(() => {
+      project.init(sourceHandler);
+      setInitialSaveComplete(false);
+
+      // create fake server that responds to the requests to save source
+      // code and channel metadata
+      server = sinon.createFakeServer({autoRespond: true});
+      stubPutMainJson(server);
+      stubPostChannels(server);
+
+      // spy on updateChannels_ to determine if a request to save channel
+      // metadata was sent
+      updateChannelSpy = sinon.spy(project, 'updateChannels_');
+    });
+
+    afterEach(() => {
+      server.restore();
+      project.updateChannels_.restore();
+    });
+
+    it('calls updateChannels_ if source code changes', done => {
+      setData({isOwner: true});
+
+      // change getLevelSource stub to simulate changing source code
+      const getLevelSourceStub = sinon.stub();
+      getLevelSourceStub.onCall(0).resolves('source code v0');
+      getLevelSourceStub.onCall(1).resolves('source code v1');
+      sourceHandler.getLevelSource = getLevelSourceStub;
+
+      // Call saveIfSourcesChanged twice
+      project
+        .saveIfSourcesChanged()
+        .then(() => project.saveIfSourcesChanged())
+        .then(() => {
+          expect(updateChannelSpy).to.have.been.calledTwice;
+          done();
+        })
+        .catch(err => done(err));
+    });
+
+    it('calls updateChannels_ only once if appOptions.reduceChannelUpdates is true', done => {
+      window.appOptions.reduceChannelUpdates = true;
+      setData({isOwner: true});
+
+      // change getLevelSource stub to simulate changing source code
+      const getLevelSourceStub = sinon.stub();
+      getLevelSourceStub.onCall(0).resolves('source code v0');
+      getLevelSourceStub.onCall(1).resolves('source code v1');
+      sourceHandler.getLevelSource = getLevelSourceStub;
+
+      // Call saveIfSourcesChanged twice, updateChannels_ should only be called
+      // the first time
+      project
+        .saveIfSourcesChanged()
+        .then(() => project.saveIfSourcesChanged())
+        .then(() => {
+          expect(updateChannelSpy).to.have.been.calledOnce;
+          done();
+        })
+        .catch(err => done(err));
+    });
+  });
 });
 
 function replaceAppOptions() {
@@ -1138,7 +1206,9 @@ function createStubSourceHandler() {
     getMakerAPIsEnabled: sinon.stub(),
     setSelectedSong: sinon.stub(),
     getSelectedSong: sinon.stub(),
-    prepareForRemix: sinon.stub().returns(Promise.resolve()),
+    setSelectedPoem: sinon.stub(),
+    getSelectedPoem: sinon.stub(),
+    prepareForRemix: sinon.stub().resolves(),
     setInitialLibrariesList: sinon.stub(),
     getLibrariesList: sinon.stub()
   };

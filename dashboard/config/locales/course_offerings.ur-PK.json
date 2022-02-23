@@ -1,0 +1,24 @@
+{
+  "ur-PK": {
+    "data": {
+      "course_offerings": {
+        "coursea": "کورس A",
+        "courseb": "کورس B",
+        "coursec": "کورس C",
+        "coursed": "کورس D",
+        "coursee": "کورس E",
+        "coursef": "کورس F",
+        "frozen": "اینا اور ایلسا کے ساتھ کوڈ",
+        "mc": "Minecraft کوڈ کی گھڑی",
+        "outbreak": "وباء کا سیمیولیٹر",
+        "starwars": "اسٹار وارز: کوڈ کے ساتھ کہکشاں بنانا (جاوا اسکرپٹ)",
+        "starwarsblocks": "کوڈ کے ساتھ کہکشاں بنانا (بلاکلی)",
+        "csa-self-paced-pl": "CSA پائلٹ اساتذہ کے لیے Code.org کا استعمال کرنا",
+        "counting-csc": "لارل کے ساتھ گنتی",
+        "explore-data-1": "باکس پلاٹ اور ہسٹوگرامس دیکھیں",
+        "outbreak-csc": "وباء کا پھیلنا",
+        "poem-art": "نظم کا فن"
+      }
+    }
+  }
+}

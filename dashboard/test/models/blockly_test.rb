@@ -62,6 +62,52 @@ XML
   <category name="Variables" custom="VARIABLE"/>
 </xml>
 XML
+
+    @category_xml_fields = <<XML
+<xml>
+  <category name="Category1">
+  <block type="controls_repeat_simplified">
+    <field name="TIMES">5</field>
+  </block>
+  </category>
+
+  <category name="Category2">
+  <block type="controls_repeat_simplified">
+    <field name="TIMES">5</field>
+  </block>
+  </category>
+
+  <category name="Functions" custom="PROCEDURE"/>
+  <category name="Variables" custom="VARIABLE"/>
+</xml>
+XML
+
+    @toolbox_xml_fields = <<XML
+<xml>
+  <block type="category">
+    <field name="CATEGORY">Category1</field>
+  </block>
+  <block type="controls_repeat_simplified">
+    <field name="TIMES">5</field>
+  </block>
+
+  <block type="category">
+    <field name="CATEGORY">Category2</field>
+  </block>
+  <block type="controls_repeat_simplified">
+    <field name="TIMES">5</field>
+  </block>
+
+  <block type="custom_category">
+    <field name="CUSTOM">PROCEDURE</field>
+  </block>
+
+  <block type="custom_category">
+    <field name="CUSTOM">VARIABLE</field>
+  </block>
+</xml>
+XML
+
     @xml = <<XML
 <xml>
   <block type="simple_move_up"/>
@@ -91,16 +137,33 @@ XML
 XML
   end
 
+  test 'field_or_title' do
+    no_fields_or_titles = Nokogiri::XML('<xml><block type="block1"></block></xml>', &:noblanks)
+    assert_equal "field", Blockly.field_or_title(no_fields_or_titles)
+
+    fields = Nokogiri::XML('<xml><block type="block2"><field name="value">Example</field></block></xml>', &:noblanks)
+    assert_equal "field", Blockly.field_or_title(fields)
+
+    titles = Nokogiri::XML('<xml><block type="block3"><title name="value">Example</title></block></xml>', &:noblanks)
+    assert_equal "title", Blockly.field_or_title(titles)
+
+    both = Nokogiri::XML('<xml><block type="block4"><title name="value">Example</title><field name="value2">Example</field></block></xml>', &:noblanks)
+    exception = assert_raises(Exception) {Blockly.field_or_title(both)}
+    assert_equal("unexpected error: XML contains both field and title elements", exception.message)
+  end
+
   test 'count xml blocks' do
     assert_equal 4, Blockly.count_xml_blocks(@xml)
   end
 
   test 'convert toolbox to category' do
     assert_equal_xml @category_xml, Blockly.convert_toolbox_to_category(@toolbox_xml)
+    assert_equal_xml @category_xml_fields, Blockly.convert_toolbox_to_category(@toolbox_xml_fields)
   end
 
   test 'convert category to toolbox' do
     assert_equal_xml @toolbox_xml, Blockly.convert_category_to_toolbox(@category_xml)
+    assert_equal_xml @toolbox_xml_fields, Blockly.convert_category_to_toolbox(@category_xml_fields)
   end
 
   test 'blocks placed outside a category are placed in a default category' do
@@ -472,7 +535,7 @@ XML
   end
 
   test 'localizes authored hints' do
-    test_locale = :"te-ST"
+    test_locale = :"es-MX"
     level_name = 'test_localize_authored_hints'
 
     I18n.locale = test_locale
@@ -491,7 +554,7 @@ XML
 
     level = Level.create(
       name: level_name,
-      user: create(:user),
+      level_num: 'custom',
       type: 'Maze',
       authored_hints: JSON.generate(
         [
@@ -504,13 +567,64 @@ XML
     localized_hints = JSON.parse(level.localized_authored_hints)
 
     assert_equal localized_hints[0]["hint_markdown"], "first test markdown"
-    assert_equal localized_hints[0]["tts_url"], "https://tts.code.org/sharon22k/180/100/1889ea7b2140fc1aef28a2145df32fbb/test_localize_authored_hints.mp3"
+    assert_equal localized_hints[0]["tts_url"], "https://tts.code.org/rosa22k/180/100/1889ea7b2140fc1aef28a2145df32fbb/test_localize_authored_hints.mp3"
 
     assert_equal localized_hints[1]["hint_markdown"], "second test markdown"
-    assert_equal localized_hints[1]["tts_url"], "https://tts.code.org/sharon22k/180/100/62885e459602efbd236f324c4796acc9/test_localize_authored_hints.mp3"
+    assert_equal localized_hints[1]["tts_url"], "https://tts.code.org/rosa22k/180/100/62885e459602efbd236f324c4796acc9/test_localize_authored_hints.mp3"
   end
 
-  test 'localized_blocks_with_placeholder_texts' do
+  test 'localizes authored hints with embedded behavior block' do
+    DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    test_locale = :"es-MX"
+    level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
+    hint = <<~HINT
+      oración de muestra: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.
+
+      El <xml><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></xml> bloque
+      This block is found in the **Behaviors** category of the toolbox.
+    HINT
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'authored_hints' => {
+          level_name => {
+            "first": hint,
+          }
+        },
+        behavior_names: {
+          level_name => {
+            "wandering": "deambulando",
+          }
+        }
+      },
+      'behaviors': {
+        "this_sprite": "Este sprite"
+      },
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+    I18n.backend.store_translations :en, 'behaviors': {"this_sprite": "this sprite"}
+
+    level = Level.create(
+      name: level_name,
+      level_num: 'custom',
+      type: 'Maze',
+      authored_hints: JSON.generate(
+        [
+          {"hint_markdown": hint, "hint_id": "first"},
+        ]
+      )
+    )
+
+    localized_hints = JSON.parse(level.localized_authored_hints)
+
+    expected_translated_hint = hint.gsub("wandering", "deambulando").gsub("this sprite", "Este sprite")
+    assert_equal expected_translated_hint, localized_hints[0]["hint_markdown"]
+  end
+
+  test 'localized_placeholder_text_blocks' do
     test_locale = 'vi-VN'
     original_str = 'Hello'
     localized_str = 'Xin Chao'
@@ -557,7 +671,7 @@ XML
         </blocks>
       </GamelabJr>
     XML
-    localized_block_xml = level.localized_blocks_with_placeholder_texts(block_xml)
+    localized_block_xml = level.localized_placeholder_text_blocks(block_xml)
 
     # Expected result is an one-line XML, in which the original string
     # has been replaced by a localized string.
@@ -565,6 +679,124 @@ XML
     expected_localized_block_xml = block_xml_cleaned.gsub(original_str, localized_str)
 
     assert_equal expected_localized_block_xml, localized_block_xml
+  end
+
+  test 'placeholder text is localized within markdown' do
+    DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    level_name = 'test_localize_markdown_placeholder_text'
+    test_locale = 'vi-VN'
+    original_str = 'Hello'
+    localized_str = 'Xin Chao'
+
+    # Create a simple blockly level markdown string containing the
+    # original string.
+    markdown = <<~HTML
+      Test [link](https://code.org)
+      <xml><block type="gamelab_printText"><value name="TEXT"><block type="text"><title name="TEXT">#{original_str}</title></block></value></block></xml>
+    HTML
+
+    # Add translation mapping to the I18n backend
+    custom_i18n = {
+      'data' => {
+        'placeholder_texts' => {
+          level_name => {
+            # Must generate the string key in the same way it is created in
+            # the get_i18n_strings function in sync-in.rb script.
+            Digest::MD5.hexdigest(original_str) => localized_str
+          }
+        },
+        "short_instructions" => {
+          level_name => markdown
+        },
+        "long_instructions" => {
+          level_name => markdown
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+      level_num: 'custom',
+      short_instructions: markdown,
+      long_instructions: markdown
+    )
+
+    localized_markdown = level.localized_blockly_in_text(markdown)
+
+    # Expected result is markdown in which the original string
+    # has been replaced by a localized string. Newlines should be
+    # maintained.
+    expected_localized_markdown = markdown.gsub(original_str, localized_str)
+
+    assert_equal expected_localized_markdown, level.localized_blockly_level_options({})['shortInstructions']
+    assert_equal expected_localized_markdown, level.localized_blockly_level_options({})['longInstructions']
+    assert_equal expected_localized_markdown, localized_markdown
+  end
+
+  test 'placeholder text is localized within markdown with malformed HTML' do
+    DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    # This test was created because we ran into an issue when translating blocks in markdown text
+    # where the text had malformed HTML, for example missing closing tag or orphaned closing tags.
+    level_name = 'test_localize_markdown_placeholder_text_with_bad_html'
+    test_locale = 'es-ES'
+    original_str = 'Hello'
+    localized_str = 'Hola mundo'
+    # Create a simple blockly level markdown string containing the
+    # original string.
+    markdown = <<~HTML
+      Test [link](https://code.org)
+      <img src="example.com/example.png">
+      <img src="example.com/example2.png">
+      </div>
+      <xml><block type="gamelab_printText"><value name="TEXT"><block type="text"><title name="TEXT">#{original_str}</title></block></value></block></xml>
+    HTML
+
+    # Add translation mapping to the I18n backend
+    custom_i18n = {
+      'data' => {
+        'placeholder_texts' => {
+          level_name => {
+            # Must generate the string key in the same way it is created in
+            # the get_i18n_strings function in sync-in.rb script.
+            Digest::MD5.hexdigest(original_str) => localized_str
+          }
+        },
+        "short_instructions" => {
+          level_name => markdown
+        },
+        "long_instructions" => {
+          level_name => markdown
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+      level_num: 'custom',
+      short_instructions: markdown,
+      long_instructions: markdown
+    )
+
+    localized_markdown = level.localized_blockly_in_text(markdown)
+
+    # Expected result is markdown in which the original string
+    # has been replaced by a localized string. Newlines should be
+    # maintained.
+    expected_localized_markdown = markdown.gsub(original_str, localized_str)
+
+    assert_equal expected_localized_markdown, level.localized_blockly_level_options({})['shortInstructions']
+    assert_equal expected_localized_markdown, level.localized_blockly_level_options({})['longInstructions']
+    assert_equal expected_localized_markdown, localized_markdown
   end
 
   test 'handles bad authored hint localization data' do

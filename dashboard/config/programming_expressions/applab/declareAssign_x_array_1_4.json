@@ -1,5 +1,7 @@
 {
-  "func": "declareAssign_x_array_1_4",
-  "block": "var x = [1, 2, 3, 4];",
-  "category": "Variables"
+  "key": "declareAssign_x_array_1_4",
+  "name": "declareAssign_x_array_1_4",
+  "category": "Variables",
+  "category_key": "variables",
+  "syntax": "var x = [1, 2, 3, 4];"
 }

@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
 
   include SeamlessDatabasePool::ControllerFilter
-  # use_database_pool :all => :master
+  include MultipleDatabasesTransitionHelper::ControllerFilter
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -63,7 +63,7 @@ class ApplicationController < ActionController::Base
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
-    elsif rack_env? :development
+    elsif rack_env?(:development, :adhoc)
       raise
     else
       # we know who you are, you shouldn't be here
@@ -93,7 +93,12 @@ class ApplicationController < ActionController::Base
   end
 
   def prevent_caching
-    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    # Rails has some logic to normalize the cache-control header that varies
+    # from version to version. Ideally, we would include 'no-cache' here but
+    # that causes Rails 5.2 to remove 'must-revalidate' which causes issues
+    # on older mobile Safari browsers. See Rails logic at
+    # https://github.com/rails/rails/blob/v5.2.4.4/actionpack/lib/action_dispatch/http/cache.rb#L185
+    response.headers["Cache-Control"] = "no-store, max-age=0, must-revalidate"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end

@@ -22,6 +22,8 @@
 #  tts_autoplay_enabled :boolean          default(FALSE), not null
 #  restrict_section     :boolean          default(FALSE)
 #  code_review_enabled  :boolean          default(TRUE)
+#  properties           :text(65535)
+#  participant_type     :string(255)      default("student"), not null
 #
 # Indexes
 #

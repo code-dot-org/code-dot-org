@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_16_222743) do
+ActiveRecord::Schema.define(version: 2022_02_04_222749) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -292,6 +292,23 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.index ["storage_app_id", "project_version"], name: "index_code_review_comments_on_storage_app_id_and_version"
   end
 
+  create_table "code_review_group_members", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "code_review_group_id", null: false
+    t.bigint "follower_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code_review_group_id"], name: "index_code_review_group_members_on_code_review_group_id"
+    t.index ["follower_id"], name: "index_code_review_group_members_on_follower_id"
+  end
+
+  create_table "code_review_groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "section_id", null: false
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id"], name: "index_code_review_groups_on_section_id"
+  end
+
   create_table "concepts", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at"
@@ -374,9 +391,10 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
   create_table "course_offerings", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "key", null: false
     t.string "display_name", null: false
-    t.text "properties"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category", default: "other", null: false
+    t.boolean "is_featured", default: false, null: false
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
@@ -668,7 +686,7 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.index ["level_source_id"], name: "index_level_source_images_on_level_source_id"
   end
 
-  create_table "level_sources", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+  create_table "level_sources", id: :bigint, unsigned: true, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "level_id"
     t.string "md5", limit: 32, null: false
     t.string "data", limit: 20000, null: false
@@ -696,7 +714,7 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.string "level_num"
     t.bigint "ideal_level_source_id", unsigned: true
     t.integer "user_id"
-    t.text "properties", limit: 16777215
+    t.text "properties", limit: 4294967295, collation: "utf8mb4_unicode_520_ci"
     t.string "type"
     t.string "md5"
     t.boolean "published", default: false, null: false
@@ -891,6 +909,7 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.integer "school_info_id"
     t.datetime "deleted_at"
     t.text "properties"
+    t.integer "application_id"
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true
     t.index ["email"], name: "index_pd_enrollments_on_email"
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id"
@@ -1325,6 +1344,17 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
+  create_table "programming_environment_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.integer "programming_environment_id", null: false
+    t.string "key", null: false
+    t.string "name"
+    t.string "color"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["key", "programming_environment_id"], name: "index_programming_environment_categories_on_key_and_env_id", unique: true
+    t.index ["programming_environment_id"], name: "index_programming_environment_categories_on_environment_id"
+  end
+
   create_table "programming_environments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.text "properties"
@@ -1341,7 +1371,9 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "key", null: false
+    t.integer "programming_environment_category_id"
     t.index ["name", "category"], name: "index_programming_expressions_on_name_and_category", type: :fulltext
+    t.index ["programming_environment_category_id"], name: "index_programming_expressions_on_environment_category_id"
     t.index ["programming_environment_id", "key"], name: "programming_environment_key", unique: true
     t.index ["programming_environment_id"], name: "index_programming_expressions_on_programming_environment_id"
   end
@@ -1373,6 +1405,19 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_queued_account_purges_on_user_id", unique: true
+  end
+
+  create_table "reference_guides", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.string "key", null: false
+    t.bigint "course_version_id", null: false
+    t.string "parent_reference_guide_key"
+    t.string "display_name"
+    t.text "content"
+    t.integer "position", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_version_id", "key"], name: "index_reference_guides_on_course_version_id_and_key", unique: true
+    t.index ["course_version_id", "parent_reference_guide_key"], name: "index_reference_guides_on_course_version_id_and_parent_key"
   end
 
   create_table "regional_partner_program_managers", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1556,9 +1601,15 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.string "new_name"
     t.string "family_name"
     t.string "published_state", default: "in_development"
+    t.string "instruction_type"
+    t.string "instructor_audience"
+    t.string "participant_audience"
     t.index ["family_name"], name: "index_scripts_on_family_name"
+    t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
+    t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
+    t.index ["participant_audience"], name: "index_scripts_on_participant_audience"
     t.index ["published_state"], name: "index_scripts_on_published_state"
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
   end
@@ -1627,6 +1678,8 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.boolean "tts_autoplay_enabled", default: false, null: false
     t.boolean "restrict_section", default: false
     t.boolean "code_review_enabled", default: true
+    t.text "properties"
+    t.string "participant_type", default: "student", null: false
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["user_id"], name: "index_sections_on_user_id"
@@ -1780,7 +1833,13 @@ ActiveRecord::Schema.define(version: 2021_09_16_222743) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "published_state", default: "in_development", null: false
+    t.string "instruction_type", default: "teacher_led", null: false
+    t.string "instructor_audience", default: "teacher", null: false
+    t.string "participant_audience", default: "student", null: false
+    t.index ["instruction_type"], name: "index_unit_groups_on_instruction_type"
+    t.index ["instructor_audience"], name: "index_unit_groups_on_instructor_audience"
     t.index ["name"], name: "index_unit_groups_on_name"
+    t.index ["participant_audience"], name: "index_unit_groups_on_participant_audience"
     t.index ["published_state"], name: "index_unit_groups_on_published_state"
   end
 

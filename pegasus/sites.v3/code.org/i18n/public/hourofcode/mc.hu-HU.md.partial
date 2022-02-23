@@ -1,38 +1,38 @@
 ---
-title: Teacher Resources - MINECRAFT
+title: Források tanároknak - MINECRAFT
 nav: hoc_teacher_resources_nav
 video_player: true
 theme: responsive
 style_min: true
 ---
 
-# MINECRAFT Hour of Code
+# MINECRAFT Kódolás órája
 
 {{ hoc_mc_video }}
 
 [col-50]
 
-## Teacher Resources
+## Források tanároknak
 
-### Lesson Plans:
+### Óravázlatok:
 
-- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
-- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [MINECRAFT Óravázlat](/files/minecraft-lp.pdf)
+- [Válaszlap és tanári tippek a Minecraft Hour of Code Voyage Aquatic modulhoz](/files/minecraft-aquatic-answer-sheet.pdf)
+- [Válaszlap és tanári tippek a Minecraft Hour of Code Adventurer modulhoz](/files/minecraft-adventurer-answer-sheet.pdf)
+- [Válaszlap és tanári tippek a Minecraft Hour of Code Designer modulhoz](/files/minecraft-designer-answer-sheet.pdf)
+- [Extra kihívások](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### Tevékenységek kiterjesztése:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [A Kódolás óráján túl](http://code.org/learn/beyond)
+- [Informatikai alapismeretek: 2. kurzus](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Egyéb források tanároknak:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-- [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
+- [Kódolás órája: Módszertani útmutató oktatóknak](https://hourofcode.com/how-to)
+- [Legjobb gyakorlatok sikeres oktatóktól](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Élő esemény: [Egy oktató útmutatója a Kódolás órájához](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Források, amelyek segítenek megtervezni és levezetni egy eseményt](https://docs.com/hourofcode2016)
 
 [/col-50]
 
@@ -40,12 +40,12 @@ style_min: true
 
 ## Áttekintés
 
-Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+Használj kódblokkokat, hogy Steve-et vagy Alexet kalandra vidd a Minecraft világában.
 
-**Recommended Age Range:** 6+
+**Javasolt korosztály:** 6+
 
-**Technology Requirements:** Modern browsers + tablets
+**Technológiai igények:** Modern böngészők + tabletek
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>Próbáld ki a bemutatót</button></a>
 
 [/col-50]

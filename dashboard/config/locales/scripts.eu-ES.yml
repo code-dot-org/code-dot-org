@@ -205,7 +205,7 @@ eu:
             izotz mundu magiko eta ederra esploratzeko.
           lessons:
             Artist:
-              name: Artista
+              name: Anna eta Elsarekin programatu
           student_description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren
             edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak
             sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan
@@ -320,7 +320,7 @@ eu:
             istorioak edo jokoak sortzeko
           lessons:
             Infinity:
-              name: Infinitu
+              name: Disneyren Infinity Play Lab
           student_description: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin
             istorioak edo jokoak sortzeko
         algebrademo:
@@ -698,9 +698,6 @@ eu:
             urrun, urruneko galaxia batetan.
           description_short: Ikasi droideak programatzen, eta sortu zure Star Wars
             jokua urrun, urruneko galaxia batetan.
-          lessons:
-            Hour of Code 2015:
-              name: 2015 Code ordua
           student_description: Ikasi droideak programatzen, eta sortu zure Star Wars
             jokua urrun, urruneko galaxia batetan.
         mc:
@@ -779,6 +776,8 @@ eu:
           lessons:
             Functions:
               name: Funtzioak
+            Velocity:
+              name: Abiadura
         CSF_Secret_Sample:
           description_audience: 8-18 bitarteko adina
         algebraFacilitator:
@@ -795,6 +794,10 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
+        allthehiddenthings:
+          lessons:
+            Game Lab:
+              name: Jolas laborategia
         CSDU5-Draft:
           description_short: Datu
         CSF_Secret_Sample_Story:
@@ -893,6 +896,8 @@ eu:
               display_name: Bista orokorra
         csd3-2017:
           lessons:
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
             Variables:
@@ -948,10 +953,6 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        basketball:
-          lessons:
-            Bounce:
-              name: Errebotea
         csd2-2017:
           lessons:
             Lists:
@@ -1124,10 +1125,14 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         csd3-old:
           lessons:
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         csd2-draft:
@@ -1140,6 +1145,8 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
             'null':
@@ -1342,10 +1349,6 @@ eu:
           lessons:
             Creating Functions:
               name: Funtzioak sortzen
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Kode Ordua
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -1388,6 +1391,8 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         csd3-2018:
@@ -1396,6 +1401,8 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         csd2-2018:
@@ -1774,6 +1781,8 @@ eu:
               name: Gertaera Handia
             Binary Bracelets:
               name: Eskumuturreko bitarrak
+        gamelab:
+          title: Jolas laborategia
         coursea-2019:
           lesson_groups:
             csf_digcit:
@@ -1829,6 +1838,8 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         csd6-2019:
@@ -1961,6 +1972,8 @@ eu:
               name: Aldagaiak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
             Sprite Properties:
@@ -2136,6 +2149,8 @@ eu:
               name: Sprite-n Propietateak
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
             Text:
@@ -2279,6 +2294,8 @@ eu:
               name: Aldagaiak
         virtual-holding-place:
           lessons:
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         code-break:
@@ -2315,6 +2332,8 @@ eu:
               name: Testua
             Conditionals:
               name: Baldintzak
+            Velocity:
+              name: Abiadura
             Functions:
               name: Funtzioak
         2021drafting:
@@ -2339,6 +2358,9 @@ eu:
             Conditionals:
               key: Baldintzak
               name: Baldintzak
+            Velocity:
+              key: Abiadura
+              name: Abiadura
             Functions:
               key: Funtzioak
               name: Funtzioak
@@ -2366,6 +2388,10 @@ eu:
               display_name: Zerrendak
             csp_loops:
               display_name: Itzuliak
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmoak
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2559,3 +2585,182 @@ eu:
           lessons:
             lesson-1:
               name: Bista orokorra
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Letraz-letra
+          title: Letraz-letra
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Letraz-letra
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Begizta jostarirako
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Kode Ordua
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Aldagaiak
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funtzioak
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Mapa Zoriontsuak
+            'Programming: Happy Maps':
+              name: Mapa Zoriontsuak
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+            csf_functions:
+              display_name: Funtzioak
+            csf_variables:
+              display_name: Aldagaiak
+            csf_for_loops:
+              display_name: For begiztak
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Arazketa
+              key: Arazketa
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Aldagaiak
+            csp_conditionals:
+              display_name: Baldintzak
+            csp_functions:
+              display_name: Funtzioak
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Zerrendak
+            csp_loops:
+              display_name: Itzuliak
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Mugi ezazu, mugi ezazu!
+              key: Mugi ezazu, mugi ezazu!
+            Getting Loopy:
+              name: Iteratzen
+            'Loops: Getting Loopy':
+              name: Iteratzen
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Gertaera Handia
+            Binary Bracelets:
+              name: Eskumuturreko bitarrak
+              key: Eskumuturreko bitarrak
+            'Events: The Big Event':
+              name: Gertaera Handia
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+            csf_data:
+              display_name: Datu
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Paper grafiko programazioa
+            Relay Programming:
+              name: Txandaka programatzen
+              key: Txandaka programatzen
+            Conditionals with Cards:
+              name: Baldintzak Txartelekin
+              key: Baldintzak Txartelekin
+            'Algorithms: Graph Paper Programming':
+              name: Paper grafiko programazioa
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Hiritartasun digitala
+            csf_events:
+              display_name: Gertaerak
+            csf_loops:
+              display_name: Itzuliak
+            csf_conditionals:
+              display_name: Baldintzak
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Musika idazten
+            'Functions: Songwriting':
+              name: Musika idazten
+            Conditionals:
+              key: Baldintzak
+          lesson_groups:
+            csf_digcit:
+              display_name: Hiritartasun digitala
+            ramp_up:
+              display_name: Kabiatutako begiztak
+            csf_functions:
+              display_name: Funtzioak
+            csf_nested_loops:
+              display_name: Baldintzak
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Begizta jostarirako
+              key: Begizta jostarirako
+            The Internet:
+              name: Internet
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Hiritartasun digitala
+            lessonGroup-8:
+              display_name: Aldagaiak
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Itzuliak
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Itzuliak
+            csf_events:
+              display_name: Gertaerak
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Baldintzak
+            lesson-16:
+              name: Arazketa
+            lesson-19:
+              name: Arazketa
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Itzuliak

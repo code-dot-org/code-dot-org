@@ -76,10 +76,28 @@
         "ramp_artist_loops6v1_2021": "Pomocí cyklu vytvořte toto schodiště.",
         "CourseF_outbreak4": "Změňte způsob, jak simulace funguje, a udělejte předpověď, co se stane.",
         "CourseF_outbreak5": "Změňte způsob, jak simulace funguje, a udělejte předpověď, co se stane.",
-        "CourseF_outbreak6": "Pomozte svým sprajtům automaticky se časem zlepšovat!",
-        "CourseF_outbreak7": "Virus nebývá vždy přenášen a také roušky ne vždy zabrání přenosu. Zlepšete svou simulaci tím, že způsobíte, aby k infekcím docházelo náhodně.",
+        "CourseF_outbreak6": "Virus nebývá vždy přenášen a také roušky ne vždy zabrání přenosu. Zlepšete svou simulaci zajištěním, že k infekcím bude docházet náhodně.",
+        "CourseF_outbreak7": "Zamezte onemocnění svých sprajtů tím, že jim dáte imunitu.",
         "CourseF_outbreak8": "Zamezte onemocnění svých sprajtů tím, že jim dáte imunitu.",
-        "international_outbreak_freeplay": "Použijte tento projekt ke sdělení nějakého sdělení. Co chcete, aby se ostatní na základě tohoto naučili?"
+        "international_outbreak_freeplay": "Pokračujte dále se stejnými bloky, jaké jste už viděli!",
+        "helloworld_animals_location": "Způsobte, aby sprajt po uplynutí určité doby zahájil nějaké nové chování.",
+        "helloworld_animals_sizes": "Naučte se měnit velikost sprajtů.",
+        "helloworld_emoji_location": "Způsobte, aby sprajt po uplynutí určité doby zahájil nějaké nové chování.",
+        "helloworld_emoji_sizes": "Naučte se měnit velikost sprajtů.",
+        "helloworld_food_location": "Způsobte, aby sprajt po uplynutí určité doby zahájil nějaké nové chování.",
+        "helloworld_food_sizes": "Naučte se měnit velikost sprajtů.",
+        "helloworld_retro_location": "Způsobte, aby sprajt po uplynutí určité doby zahájil nějaké nové chování.",
+        "helloworld_retro_sizes": "Naučte se měnit velikost sprajtů.",
+        "helloworld_animals_sounds": "Naučte se přehrávat zvuky.",
+        "helloworld_emoji_sounds": "Naučte se přehrávat zvuky.",
+        "helloworld_food_sounds": "Naučte se přehrávat zvuky.",
+        "helloworld_retro_sounds": "Naučte se přehrávat zvuky.",
+        "courseC_artist_prog_challenge1_2021": "Nakresli pokoje pro jednotlivá zvířata. ",
+        "courseF_bee_variables_7a_2021": "Tahle úloha je trochu jiná. Co k jejímu řešení potřebuješ?",
+        "helloworld_animals_costumes": "Učte se měnit vzhled sprajtů.",
+        "helloworld_emoji_costumes": "Učte se měnit vzhled sprajtů.",
+        "helloworld_food_costumes": "Učte se měnit vzhled sprajtů.",
+        "helloworld_retro_costumes": "Učte se měnit vzhled sprajtů."
       }
     }
   }

@@ -2,4 +2,9 @@ name 'CSD U6 - Board Outputs - Chal_2022'
 display_name 'Challenge Levels'
 
 sublevels
-level 'ml-intro app lab-book recommender 5B-2021'
+level 'CSD U6 - Board Outputs - ChalA_2022'
+level 'CSD U6 - Board Outputs - ChalB_2022'
+level 'CSD U6 - Board Outputs - ChalC_2022'
+level 'CSD U6 - Board Outputs - ChalD_2022'
+level 'CSD U6 - Board Outputs - ChalE_2022'
+level 'CSD U6 - Board Outputs - ChalF_2022'

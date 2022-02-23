@@ -22,7 +22,7 @@
 
     .content {
       width: 100%;
-      padding: 0 10px;
+      padding-right: 10px;
       overflow: visible;
       box-sizing: border-box;
     }
@@ -41,13 +41,12 @@
 
     #logo-wrapper {
       display: inline-block;
-      padding: 4px 0 4px 16px;
+      padding: 4px 16px;
       float: left;
 
       #logo {
         width: 42px;
         height: 42px;
-        margin-left: 5px;
       }
 
       #logo-uk {
@@ -65,8 +64,6 @@
     #headerlinks {
       float: left;
       position: relative;
-      padding-left: 6px;
-      position: relative;
 
       .rtl & {
         float: right;
@@ -75,7 +72,7 @@
       .headerlink {
         display: inline-block;
         font-size: 14px;
-        margin: 14px 0 0 30px;
+        margin: 12px 0 0 30px;
         font-family: 'Gotham 4r', sans-serif;
         color: $white;
         text-decoration: none;

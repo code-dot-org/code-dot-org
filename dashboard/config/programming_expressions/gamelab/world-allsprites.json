@@ -1,0 +1,7 @@
+{
+  "key": "World.allSprites",
+  "name": "World.allSprites",
+  "category": "World",
+  "category_key": "world",
+  "syntax": "World.allSprites"
+}

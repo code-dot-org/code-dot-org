@@ -149,6 +149,7 @@ ja:
     email_preference_yes: "はい"
     email_preference_no: "いいえ"
     email_preference_required: "メール設定を指定しなくてはなりません。"
+    share_teacher_email_reg_partner_question: "お客様のお住まいの地域の [Code.org地域パートナー](%{cdo_regional_partner_desc}) と連絡先情報を共有したいですか？地域のプロフェッショナル育成、リソース、イベントについてお知らせできるようになります。"
     share_teacher_email_reg_partner_preference_yes: "はい"
     share_teacher_email_reg_partner_preference_no: "いいえ"
     share_teacher_email_reg_partner_preference_required: "メール設定を指定しなくてはなりません。"
@@ -252,6 +253,7 @@ ja:
       blank_code: "セクションのコードを入力してください"
       cant_join_own_section: "申し訳ありません。あなたはログインすることができません。"
       provider_managed_section: "このセクションは、別のプロバイダーによって管理されているためご参加いただけません。%{provider}経由で追加し、そのセクションを再同期するよう先生に依頼してください。"
+      not_participant_type: "セクションの参加者タイプを満たしていないため、セクション%{section_code}にあなたを追加できませんでした。"
     mail:
       student_disassociated:
         subject: "あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません"
@@ -348,7 +350,9 @@ ja:
       artist_k1: "アーティスト (就学前)\n"
       basketball: 'バスケットボール'
       bounce: 'バウンド'
+      calc: '計算'
       dance: 'ダンスパーティー'
+      eval: '評価'
       flappy: 'フラッピー'
       frozen: 'アナと雪の女王'
       gamelab: 'ゲーム ラボ'
@@ -363,11 +367,14 @@ ja:
       minecraft_hero: "マインクラフト ヒーロー\n"
       playlab: 'プレイラボ'
       playlab_k1: "プレイラボ (就学前)\n"
+      poetry: '詩'
+      poetry_hoc: '詩のアート'
       sports: 'スポーツ'
       spritelab: 'スプライト ラボ'
       starwars: 'スター・ウォーズ'
       starwarsblocks: 'スター ・ ウォーズ (ブロック)'
       starwarsblocks_hour: 'スター ・ ウォーズ (ブロック)'
+      loading: 'ロード中...'
       weblab: 'ウェッブ ラボ'
       view_all: 'すべてのプロジェクトを表示...'
     popup:
@@ -383,6 +390,7 @@ ja:
       prizes_link: '情報をもっと見る'
   teacher:
     answer: 答え
+    dashboard: '先生用のダッシュボード'
     for_teachers_only: 先生のみ
     title:
       one: 'あなたの先生：'
@@ -492,6 +500,7 @@ ja:
     all_students_must_be_in_current_section: "すべての学生は、現在あなたのセクションに在籍している必要があります。"
     already_enrolled_in_new_section: "この先生は既に彼らを別セクションに持っているため、これらの学生は移動できません。"
     third_party_login: "生徒をサードパーティツールと同期しているセクションへ移動できません。"
+    not_correct_participant_type: "これらのユーザーには新しいセクションの参加者権限がないため移動できません。"
   share:
     title: "コード スタジオで学ぶ"
     description: "誰もがコンピュータサイエンスを学ぶことができます。ゲーム、アプリ、アートをコードで作ろう。"
@@ -512,6 +521,7 @@ ja:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org は <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a> ライセンスのp5.play を使用しています｡'
     powered_by_aws: 'Powered by Amazon Web Services'
+    built_on_github: 'マイクロソフトの GitHub 上に構築'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour of Code&reg; は Code.org の商標です'
     copyright: '著作権'
     more: '見る'
@@ -521,12 +531,15 @@ ja:
     tos_short: '利用規約'
     tos: '利用規約'
     privacy: 'プライバシー ポリシー'
+    privacy_updated: 'プライバシーポリシー (更新)'
     secure: '保護されたバージョン'
     report_abuse: '不正を報告'
     built_on_code_studio: 'コードスタジオに構築された'
     make_my_own_app: '自分のアプリを作る'
     how_it_works: '動作の説明'
     try_hour_of_code: 'アワーオブコードを試してみよう！'
+    store: 'ストア'
+    cookie_notice: 'クッキーについての通知'
   reference_area:
     title: '助けが必要ですか？'
     subtitle: 'ビデオやヒントを見る'
@@ -897,8 +910,10 @@ ja:
   pd:
     form_labels:
       email: 'Eメール'
+      school: '学校'
       school_name: '学校名'
       school_city: '学校の市町村名'
+      school_city_district: '学校の市/地域'
       school_country: '学校のある国'
       colombian_school_city: '学校の市町村名'
       colombian_chilean_school_name: '学校名'
@@ -938,3 +953,4 @@ ja:
     text: "**あなたは親または保護者ですか？**このアカウントにあなたのメールをリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！"
     link_your_email: "メールアドレスをリンクさせる"
     not_now: "後で"
+  teacher_feedback: "先生のフィードバック\n"

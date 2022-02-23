@@ -1,6 +1,7 @@
 {
-  "func": "length",
+  "key": "length",
+  "name": "length",
   "category": "Variables",
-  "modeOptionName": "*.length",
-  "type": "property"
+  "category_key": "variables",
+  "syntax": "length"
 }

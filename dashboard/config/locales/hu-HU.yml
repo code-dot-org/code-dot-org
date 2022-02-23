@@ -228,6 +228,9 @@ hu:
     email_preference_yes: Igen
     email_preference_no: Nem
     email_preference_required: Meg kell adnod egy e-mail címet.
+    share_teacher_email_reg_partner_question: Szeretné, ha megosztanánk elérhetőségét
+      az Ön országának [Code.org regionális partnerével](%{cdo_regional_partner_desc})?  Így
+      értesítést kaphat a helyi szakma fejlődéséről, az erőforrásokról és eseményekről?
     share_teacher_email_reg_partner_preference_yes: Igen
     share_teacher_email_reg_partner_preference_no: Nem
     share_teacher_email_reg_partner_preference_required: Meg kell adnod egy e-mail
@@ -385,10 +388,17 @@ hu:
       sections: Szakaszok
       help_support: Súgó és támogatás
       report_bug: Hiba jelentése
+      report_abuse: Visszaélés jelentése
       teacher_community: Tanári közösség
       professional_learning: Professzionális tanulás
       documentation: Dokumentáció
       tutorials: Útmutatók
+      app_lab_documentation: App Lab dokumentáció
+      app_lab_tutorials: App Lab oktatóanyagok
+      game_lab_documentation: Játéklabor dokumentáció
+      game_lab_tutorials: Játék Lab oktatóanyagok
+      sprite_lab_documentation: Sprite Lab dokumentációja
+      sprite_lab_tutorials: Sprite Lab oktatóanyagok
       web_lab_documentation: Web Lab dokumentáció
       educate_overview: Áttekintés oktatóknak
       educate_elementary: Alsó tagozat
@@ -415,6 +425,7 @@ hu:
       help_us: Támogass minket
       teach: Taníts
       about: Rólunk
+      legal: Adatvédelem és jogi
       legal_privacy: Adatvédelmi Elvek
       legal_tos: Feltételek
     user:
@@ -422,6 +433,7 @@ hu:
       district_dashboard: Tankerületi munkafelület
       label: Üdv %{username}
       stats: Kód Stúdió
+      my_projects: Projektek
       settings: Fiók beállítások
       logout: Kijelentkezés
       signin: Bejelentkezés
@@ -456,8 +468,13 @@ hu:
       minecraft_hero: Minecraft Hős
       playlab: Játéklabor
       playlab_k1: Játéklabor (nem olvasó)
+      poetry: Költészet
+      poetry_hoc: Versművészet
       spritelab: Sprite labor
       starwars: Star Wars
+      starwarsblocks: Csillagok háborúja (blokkok)
+      starwarsblocks_hour: Csillagok háborúja (blokkok)
+      loading: Betöltés...
       weblab: Web-Lab
       view_all: Nézd meg az összes projektet...
     popup:
@@ -474,6 +491,7 @@ hu:
       prizes_link: További információk
   teacher:
     answer: Válasz
+    dashboard: Tanári nyitólap
     for_teachers_only: Csak tanároknak
     title:
       one: 'A tanárod:'
@@ -610,6 +628,8 @@ hu:
     choose_next_course: Próbáld ki a Kód Stúdiót, válassz egyet az alábbi tanfolyamok
       közül
     print_certificate: Oklevél nyomtatása
+  certificate_sponsor_message: "%{sponsor_name} tette a nagylelkű ajándékot, hogy
+    szponzorálja a tanulást."
   move_students:
     new_section_dne: Sajnáljuk, de a %{new_section_code} kurzus nem létezik. Próbálkozz
       egy másik kódot beírni!
@@ -664,6 +684,7 @@ hu:
       a GNU LGPL 2.1</a> licenc véd.
     powered_by_aws: 'Az Amazon Web Services és a  “Powered by AWS” logo az Amazon.com,
       Inc. és leányvállalatainak védjegyei az Egyesült Államokban és/vagy más országokban. '
+    built_on_github: A Microsoft GitHubra épül
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, a CODE logó és az
       Kódolás Órája&reg; a Code.org védjegyei."
     copyright: Szerzői jog
@@ -675,12 +696,14 @@ hu:
     tos_short: Felhasználási feltételek
     tos: Feltételek
     privacy: Adatvédelmi Elvek
+    privacy_updated: Adatvédelmi irányelvek (frissítve)
     secure: Biztonságos változat
     report_abuse: Visszaélés jelentése
     built_on_code_studio: Készült a Kód Stúdió segítségével
     make_my_own_app: Készítsd el saját alkalmazásod
     how_it_works: Hogyan működik (Kód megtekintése)
     try_hour_of_code: Próbáld ki a Kódolás Óráját!
+    store: Store
   reference_area:
     title: Segítségre van szükséged?
     subtitle: Nézd meg ezeket a videókat és tippeket
@@ -779,6 +802,8 @@ hu:
       title: Játék Labor
       audience: 13 éves kor felett
       cta: Ismerd meg, hogyan
+    hoc-encryption:
+      title: Egyszerű titkosítás
     weblab:
       audience: 13 éves kor felett
       cta: Ismerd meg, hogyan
@@ -802,6 +827,8 @@ hu:
       title: Minecraft
       body: A Minecraft egy vadonatúj programmal tér vissza a Kódolás Órájára! Utazz
         végig a Minecraft világán kódok segítségével.
+    text-compression:
+      title: Szöveg tömörítése
     unplugged:
       title: Offline tanórák
       audience: 4 éven felettieknek
@@ -990,8 +1017,10 @@ hu:
   pd:
     form_labels:
       email: Email
+      school: Iskola
       school_name: Iskola neve
       school_city: Iskola városa
+      school_city_district: Iskola városa/kerülete
       school_country: Iskola országa
       colombian_school_city: Iskola városa
       colombian_chilean_school_name: Iskola neve
@@ -1021,6 +1050,10 @@ hu:
   cookie_banner:
     accept: Egyetértek
   page_not_found_title: Az oldal nem található
+  page_not_found_header: '404: Az oldal nem található'
+  page_not_found_description: A keresett oldal nem létezik ezen a címen. Ellenőrizze
+    a webcímet, és küldje el újra. Vagy térjen vissza a honlapunkra.
+  page_not_found_button: Hazatérés
   copy: Másol
   confirm: Jóváhagy
   parent_email_banner:
@@ -1030,3 +1063,4 @@ hu:
     not_now: Most nem
   behaviors:
     this_sprite: ez a sprite
+  teacher_feedback: Tanári visszajelzés

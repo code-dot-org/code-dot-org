@@ -1,32 +1,32 @@
 ---
-title: Teacher Resources - Write your first computer program
+title: Materi Pembelajaran Guru - Menulis program komputer pertama Anda
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Write your first computer program: An Hour of Code Tutorial
+# Menulis program komputer pertama Anda: Tutorial Hour of Code
 
 {{ hoc_maze_video }}
 
 [col-50]
 
-## Teacher Resources
+## Materi Pembelajaran Guru
 
-### Lesson Plans:
+### Paket Pelajaran:
 
-- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
+- [Menulis program komputer pertama Anda]({{ hoc_hourofcode_cb_url }})
 
-### Extension Activities:
+### Aktivitas Ekstensi:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Melampaui Hour of Code](http://code.org/learn/beyond)
+- [Dasar-Dasar Ilmu Komputer: Kursus 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Materi Pembelajaran Guru Lainnya:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: Cara Memandu bagi Pendidik](https://hourofcode.com/how-to)
+- [Praktik Terbaik dari Para Pendidik Sukses](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Event Siaran Langsung: [Panduan Pendidik tentang Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,12 +34,12 @@ video_player: true
 
 ## Gambaran
 
-Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
+Pelajari konsep-konsep dasar Ilmu Komputer dengan pemrograman drag dan drop. Ini adalah tutorial mirip game dan sesuai arahan sendiri yang menampilkan kuliah video oleh Bill Gates, Mark Zuckerberg, Angry Birds, dan Plants vs. Zombies. Pelajari repeat-loop, conditional, dan algorithm dasar. Tersedia dalam 37 bahasa.
 
-**Recommended Age Range:** 4-104
+**Rentang Usia yang Dianjurkan:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Persyaratan Teknologi:** Browser modern, smartphone + tablet
 
-<a href="http://studio.code.org/hoc/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/hoc/reset"><button>Coba tutorial</button></a>
 
 [/col-50]

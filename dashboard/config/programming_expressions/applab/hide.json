@@ -1,4 +1,7 @@
 {
-  "func": "hide",
-  "category": "Turtle"
+  "key": "hide",
+  "name": "hide",
+  "category": "Turtle",
+  "category_key": "turtle",
+  "syntax": "hide"
 }

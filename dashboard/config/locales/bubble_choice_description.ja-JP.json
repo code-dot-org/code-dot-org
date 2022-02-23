@@ -81,7 +81,23 @@
         "courseF_variables_madlib": "最初のプロンプトを作成してから、スプライトと動きを加えます。",
         "courseF_variables_madlib_finish": "プロジェクトの仕上げをして、共有しましょう！",
         "ramp_artist_loops6v1_2021": "くり返しを使って、この階段をかいてみましょう。",
-        "international_outbreak_freeplay": "前に見たのと同じブロックを続けましょう！"
+        "international_outbreak_freeplay": "前に見たのと同じブロックを続けましょう！",
+        "helloworld_animals_location": "しばらくしてから、スプライトに新しい動きをはじめさせましょう。",
+        "helloworld_animals_sizes": "スプライトのサイズを変える方法を学びましょう。",
+        "helloworld_emoji_location": "しばらくしてから、スプライトに新しい動きをはじめさせましょう。",
+        "helloworld_emoji_sizes": "スプライトのサイズを変える方法を学びましょう。",
+        "helloworld_food_location": "しばらくしてから、スプライトに新しい動きをはじめさせましょう。",
+        "helloworld_food_sizes": "スプライトのサイズを変える方法を学びましょう。",
+        "helloworld_retro_location": "しばらくしてから、スプライトに新しい動きをさせます。",
+        "helloworld_retro_sizes": "スプライトのサイズを変える方法を学びましょう。",
+        "helloworld_animals_costumes": "スプライトの外観を変える方法を学びます。",
+        "helloworld_animals_sounds": "サウンドを再生する方法を学びます。",
+        "helloworld_emoji_costumes": "スプライトの外観を変える方法を学びます。",
+        "helloworld_emoji_sounds": "サウンドを再生する方法を学びます。",
+        "helloworld_food_costumes": "スプライトの外観を変える方法を学びます。",
+        "helloworld_food_sounds": "サウンドを再生する方法を学びます。",
+        "helloworld_retro_costumes": "スプライトの外観を変える方法を学びます。",
+        "helloworld_retro_sounds": "サウンドを再生する方法を学びます。"
       }
     }
   }

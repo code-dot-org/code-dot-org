@@ -1,0 +1,56 @@
+---
+title: 计算机科学联系
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# 计算机科学联系
+
+我们的最新课程将学习计算机科学与数学、语言艺术、科学和社会研究等其他学科联系起来。 通过计算机科学联系，K-12课堂以令人兴奋的新方式探索他们的常规科目！
+
+## 通过这些编程一小时活动尝试计算机科学联系
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "诗歌艺术", left_description: "表达自我！ 使用代码创建动画诗歌。", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "开始", right_heading: "你好世界", right_description: "从四个有趣的主题中选择，在你创建的世界中为交互式角色编码。", right_specs: "", right_button_url: "/helloworld", right_button_text: "开始"}}
+{{ clearfix }}
+
+## 模块
+
+计算机科学联系模块是一个结构化系列课程，将计算机科学学习集成到核心学科领域，如数学、ELA和科学。 这些模块与各个学科的标准相一致，最终形成一个跨学科项目。
+
+这些资源非常适合有意将计算机科学融入其他学科教案的教师，以及想要巩固学生其他学科的学习内容的计算机科学教师。
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5小时", box_background_color: "rgb(0,0,0,0.4)", right_heading: "诗歌编码", right_description: "将课堂上的计算机科学和诗歌与这一系列课程联系起来。", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "查看模块" }}
+
+## 开放式项目
+
+通过我们的跨学科项目，继续在计算机科学与传统学科之间建立联系。 他们只需要1-2个小时的教学时间来完成，适合任何寻开发特定主题项目来适应现有课程的老师。
+
+<em>提示：这些项目需要对计算机科学基础知识有所了解，所以我们建议在开始之前完成你好世界编程一小时活动！</em>
+
+{{ csc_module, title: "生态系统", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "科学", duration: "1-2小时", description: "利用基本的编码技能，学生创建一个交互式生态系统模型，探索不同的动物、植物和有机体如何相互影响。 该模型也适用于地圈、生物圈、水圈和/或大气层之间的相互作用。", button_text: "了解更多", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "生命周期", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "科学", duration: "1-2小时", description: "在这个项目中，从卵到蝌蚪再到青蛙，学生们使用代码来创建一个科学周期模型 - 就像青蛙的生命周期或能量转移！", button_text: "了解更多", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "角色学习", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2小时", description: "每个行为都有一个反应！ 不，这不是物理学 - 这个项目允许学生使用代码来构建故事中的场景，展示一个角色的行为如何影响事件链。", button_text: "了解更多", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "故事寓意", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2小时", description: "在这之间\"从前\"然后\"结尾？\"学生编写一个交互式应用程序，讲述一个故事及其寓意。 学生可以将这一技能应用于任何故事、民间传说、书籍或寓言。", button_text: "了解更多", url: "https://bit.ly/3wBJbQO"}}
+{{ clearfix }}
+
+## 衔接课程
+
+我们的衔接课程提供一种快速而有趣的方式，在计算机科学与其他学科之间建立联系。 这些课程不需要任何计算机科学的先验知识，因此非常适合任何想要将21世纪的基本学习融入传统课程或用令人兴奋的新方法来激励学生学习老学科的教师。
+
+
+{{ csc_module, title: "蜜蜂拼写", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1小时", description: "有趣！ 在这节课中，学生们使用基本的编码技能来告诉蜜蜂在哪里鸣叫，以在充满字母的网格上拼写单词。", button_text: "了解更多", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "和Laurel一起计数", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "数学", duration: "1小时", description: "这是一次寻宝！ 学生将在进行循环编码时练习计数和加法，以帮助Laurel穿越迷宫网格收集宝石。", button_text: "了解更多", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "人工智能伦理规范", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA或人文学科", duration: "1小时", description: "在研究了人工智能（AI）潜在的伦理缺陷后，学生们共同开发了一个课程\"人工智能伦理规范\"资源。", button_text: "了解更多", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "数据可视化", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "数学", duration: "1小时", description: "本节课向学生介绍应用实验室中的数据可视化工具以及两种重要的图表类型：柱状图和直方图。 在课程中，学生将建立使用这个工具和阅读数据的技能。", button_text: "了解更多", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>完成了计算机科学联系活动和/或正在为你的课堂寻找更多选择？ 请在这里<a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">分享你的反馈</a>和更多课程的想法！</em>

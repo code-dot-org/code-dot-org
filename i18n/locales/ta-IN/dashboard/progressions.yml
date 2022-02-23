@@ -1,8 +1,13 @@
 ta:
   data:
     progressions:
+      AI Machine Learning - Video: AI இயந்திர கற்றல் - வீடியோ
+      'AI: Impact on Society - Video': 'AI: சமூகத்தின் மீதான தாக்கம் - வீடியோ'
+      'AI: Training Data & Bias - Video': 'AI: பயிற்சி தரவு & சார்பு - வீடியோ'
+      App Lab Intro - Video: ஆப் லேப் அறிமுகம் - வீடியோ 
       Artist Project: கலைஞர் திட்டம்
       'Artist: Variables': 'கலைஞர்: மாறிகள்'
+      Assessment: மதிப்பீடு
       Back and Forth: முன்னும் பின்னுமாக
       Bass, Mid, and Treble: பாஸ், மிட் மற்றும் டிரெபிள்
       Code Your Own Flappy Game: உங்கள் சொந்த ஃபிளாப்பி விளையாட்டைக் குறியிடவும்
@@ -10,20 +15,30 @@ ta:
       Debugging: பிழைத்திருத்தம்
       Drawing: வரைதல்
       Events: நிகழ்வுகள்
+      Example: எடுத்துக்காட்டு
+      'Exploration: Rikki''s Poster': 'ஆய்வு: ரிக்கியின் போஸ்டர்'
       Functions: செயல்பாடுகள்
       Get In Formation: உருவாக்கத்திற்கு வருதல்
+      Hello World: வணக்கம் உலகம்
       Learning from Simulations: உருவகப்படுத்துதல்களிலிருந்து கற்றல்
+      Lesson Extras: கூடுதல் பாடங்கள்
+      Levels: நிலைகள்
       Lists: பட்டியல்கள்
       Measures: அளவீடுகள்
       'Mini-Project: Outbreak Simulator': 'சிறு திட்டம்: அவுட்பிரேக் சிமுலேட்டர்'
       More Buttons: மேலும் பொத்தான்கள்
       Overview: கண்ணோட்டம்
+      Programming with Rey and BB-8: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம் 
       Quarter Notes: கால்வாசி குறிப்புகள்
       Review: விமர்சனம்
       Speed it Up, Slow it Down: வேகப்படுத்தவும், வேகம் குறைக்கவும்
       Sprite Lab Project: ஸ்ப்ரைட் லேப் திட்டம்
+      Teach AI a New Word: AIக்கு ஒரு புதிய வார்த்தையைக் கற்றுக்கொடுங்கள் 
       Text Compression: உரை சுருக்க
       Variables: மாறிலிகள்
       Video: காணொளி
+      'Video: "If/Else"': 'வீடியோ: "என்றால்/வேறு"'
+      'Video: Outbreak Simulator: Introduction': 'வீடியோ: அவுட்பிரேக்  சிமுலேட்டர்: அறிமுகம்'
+      'Video: Programming with Rey and BB-8': 'வீடியோ: ரே மற்றும் பிபி-8 உடன் நிரலாக்கம் '
       Welcome to Monster Town: மான்ஸ்டர் டவுனுக்கு வரவேற்கிறோம்
       Where'd They Go?: அவர்கள் எங்கு செல்வார்கள்?

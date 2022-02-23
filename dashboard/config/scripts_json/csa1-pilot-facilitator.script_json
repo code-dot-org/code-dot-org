@@ -4,19 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "is_migrated": true,
       "curriculum_umbrella": "CSA",
-      "weekly_instructional_minutes": 225,
-      "show_calendar": true,
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "has_verified_resources": true,
-      "pilot_experiment": "csa-pilot-facilitators"
+      "is_migrated": true,
+      "pilot_experiment": "csa-pilot-facilitators",
+      "show_calendar": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-23 17:55:24 UTC",
+    "serialized_at": "2022-01-29 01:01:33 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa1-pilot-facilitator"
     }
@@ -594,6 +597,19 @@
       }
     },
     {
+      "key": "da318369-808a-4c23-9c22-4001115c7650",
+      "position": 5,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da318369-808a-4c23-9c22-4001115c7650",
+        "lesson.key": "Classes and Objects",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "2d6c541b-4d81-4034-8666-1a23622e5636",
       "position": 1,
       "properties": {
@@ -630,6 +646,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "d90e0962-245e-4c6b-8ba8-319ceff69f67",
+        "lesson.key": "Calling Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "3d12ac0b-99e6-46b7-add8-00ef6781774e",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d12ac0b-99e6-46b7-add8-00ef6781774e",
         "lesson.key": "Calling Methods",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -678,6 +707,19 @@
       }
     },
     {
+      "key": "1b38aeb7-5ce6-48c7-a23b-51797c609d6f",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1b38aeb7-5ce6-48c7-a23b-51797c609d6f",
+        "lesson.key": "Conditionals and Debugging",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "479a7459-5a12-4d0b-a02c-451e46783778",
       "position": 1,
       "properties": {
@@ -714,6 +756,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "367dced6-2eff-4eaa-84b2-1aac46a89647",
+        "lesson.key": "More with Objects",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "53d189fe-f520-4760-9bee-63d8f7d5e24e",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53d189fe-f520-4760-9bee-63d8f7d5e24e",
         "lesson.key": "More with Objects",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -762,6 +817,19 @@
       }
     },
     {
+      "key": "2073220f-7dff-4b76-841d-ca373982d604",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2073220f-7dff-4b76-841d-ca373982d604",
+        "lesson.key": "While Loops and Practice",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "fbce374a-c90b-4b94-9c91-ef5de3d55901",
       "position": 1,
       "properties": {
@@ -798,6 +866,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "66ef798b-eb4c-4b69-86b7-76779785eaa5",
+        "lesson.key": "More with Conditionals",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "774a2f8a-e060-4baa-81e0-cf09a32ab3e2",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "774a2f8a-e060-4baa-81e0-cf09a32ab3e2",
         "lesson.key": "More with Conditionals",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -846,6 +927,19 @@
       }
     },
     {
+      "key": "d1562120-f00d-4b4a-80be-ac1474af260a",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1562120-f00d-4b4a-80be-ac1474af260a",
+        "lesson.key": "Introduction to Code Reviews",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "02d45caa-738f-446a-8a77-7993ace39fa3",
       "position": 1,
       "properties": {
@@ -882,6 +976,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "79d32c34-fe4c-4cfa-824a-03b7232d810f",
+        "lesson.key": "Inheritance and Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "8eb15b91-ebb2-4f97-8c58-c3768a49555a",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8eb15b91-ebb2-4f97-8c58-c3768a49555a",
         "lesson.key": "Inheritance and Methods",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -930,6 +1037,19 @@
       }
     },
     {
+      "key": "477c54fc-f580-4379-87af-9309d33f488b",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "477c54fc-f580-4379-87af-9309d33f488b",
+        "lesson.key": "More Methods, More Features",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "6a5e20fe-6470-4168-9c10-41c2d1e84f55",
       "position": 1,
       "properties": {
@@ -966,6 +1086,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "5bb17ddf-af02-44c0-8a4e-2184d2c01719",
+        "lesson.key": "Painting Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "ce8515df-f2db-48c9-a070-b4de6d635127",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce8515df-f2db-48c9-a070-b4de6d635127",
         "lesson.key": "Painting Methods",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -1014,6 +1147,19 @@
       }
     },
     {
+      "key": "ef5864c4-c97e-4aa1-86e4-51378c4b268e",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef5864c4-c97e-4aa1-86e4-51378c4b268e",
+        "lesson.key": "SprayPainter",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "a9fadbfc-7e59-47f4-a024-e41b133dd6f9",
       "position": 1,
       "properties": {
@@ -1056,6 +1202,19 @@
       }
     },
     {
+      "key": "92fb1fd9-b913-45a2-8295-63c9f80ebde5",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "92fb1fd9-b913-45a2-8295-63c9f80ebde5",
+        "lesson.key": "StampPainter",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
       "key": "5a05d74d-fa06-4bd8-8d89-90660048ed12",
       "position": 1,
       "properties": {
@@ -1092,6 +1251,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "4b75038a-ebb2-4f7a-b6ac-466f05a6148e",
+        "lesson.key": "Edge Cases",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-pilot-facilitator"
+      }
+    },
+    {
+      "key": "f1174c93-65a7-41be-bac4-5bc426ec760e",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f1174c93-65a7-41be-bac4-5bc426ec760e",
         "lesson.key": "Edge Cases",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-pilot-facilitator"
@@ -1678,7 +1850,7 @@
       "key": "dd3e5c40-40cf-4823-87b4-d24cb5660fe0",
       "position": 2,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is Java video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is Java video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What were some of the apps or video games that were shared in the video that use Java?*\n* *What is the purpose of Java?*\n\n**Discussion Goal:** Students identify apps or video games that use Java that were either presented in the video or that they personally use. Students explain that Java is an object-oriented language that is used in software worldwide.",
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is Java video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What were some of the apps or video games that were shared in the video that use Java?*\n* *What is the purpose of Java?*\n\n**Discussion Goal:** Students identify apps or video games that use Java that were either presented in the video or that they personally use. Students explain that Java is an object-oriented language that is used in software worldwide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1858,7 +2030,7 @@
       "key": "d8e78b72-4ace-439b-82b6-d935e84f9ac6",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class, then have students run the code without the object. Talk through the error messages that are displayed in the Console window.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class, then have students run the code without the object. Talk through the error messages that are displayed in the Console window by explaining that a null reference to call a method or access an instance variable causes a NullPointerException to be thrown.",
         "progression_name": "Investigate the Painter",
         "tips": [
           {
@@ -1959,6 +2131,17 @@
       "seeding_key": {
         "activity_section.key": "e52d853c-1fed-47a4-97b0-2a8f35fce84a",
         "lesson_activity.key": "025f127c-6e8a-4005-855b-9c7541fb75f8"
+      }
+    },
+    {
+      "key": "412ca6e4-1d33-46bb-a617-b1a54fab55dd",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "412ca6e4-1d33-46bb-a617-b1a54fab55dd",
+        "lesson_activity.key": "da318369-808a-4c23-9c22-4001115c7650"
       }
     },
     {
@@ -2144,6 +2327,17 @@
       "seeding_key": {
         "activity_section.key": "a03c3303-6a88-40c3-bf9f-7b5d04fa0250",
         "lesson_activity.key": "d90e0962-245e-4c6b-8ba8-319ceff69f67"
+      }
+    },
+    {
+      "key": "37137cd3-27f3-4d57-977c-337f83538472",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.1\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "37137cd3-27f3-4d57-977c-337f83538472",
+        "lesson_activity.key": "3d12ac0b-99e6-46b7-add8-00ef6781774e"
       }
     },
     {
@@ -2411,6 +2605,17 @@
       }
     },
     {
+      "key": "45c5d397-1092-4f8f-9533-bca2b44bd0f4",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "45c5d397-1092-4f8f-9533-bca2b44bd0f4",
+        "lesson_activity.key": "1b38aeb7-5ce6-48c7-a23b-51797c609d6f"
+      }
+    },
+    {
       "key": "0cdc0b3e-bb0d-4941-96f1-e83b652f7fdd",
       "position": 1,
       "properties": {
@@ -2601,6 +2806,17 @@
       }
     },
     {
+      "key": "67257f31-1e7e-488e-b562-8b04a93fc5e6",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.2\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "67257f31-1e7e-488e-b562-8b04a93fc5e6",
+        "lesson_activity.key": "53d189fe-f520-4760-9bee-63d8f7d5e24e"
+      }
+    },
+    {
       "key": "a3f1dade-5c69-458f-b597-d337283abf5b",
       "position": 1,
       "properties": {
@@ -2764,6 +2980,17 @@
       }
     },
     {
+      "key": "602af9ab-0232-4d52-89c3-e0cf7dd5e118",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n* Topic Questions 9.4\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "602af9ab-0232-4d52-89c3-e0cf7dd5e118",
+        "lesson_activity.key": "2073220f-7dff-4b76-841d-ca373982d604"
+      }
+    },
+    {
       "key": "e2a35b76-10a3-46a0-96b8-aed529d93a8b",
       "position": 1,
       "properties": {
@@ -2878,6 +3105,17 @@
       "seeding_key": {
         "activity_section.key": "44ba2982-f49b-432c-bd58-45173ab7b3ed",
         "lesson_activity.key": "66ef798b-eb4c-4b69-86b7-76779785eaa5"
+      }
+    },
+    {
+      "key": "e2ebd46d-c8ce-44ff-a213-b074d7de24d0",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "e2ebd46d-c8ce-44ff-a213-b074d7de24d0",
+        "lesson_activity.key": "774a2f8a-e060-4baa-81e0-cf09a32ab3e2"
       }
     },
     {
@@ -3105,6 +3343,17 @@
       }
     },
     {
+      "key": "096a8f2f-08d8-43be-b715-27c04a32ffa7",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "096a8f2f-08d8-43be-b715-27c04a32ffa7",
+        "lesson_activity.key": "d1562120-f00d-4b4a-80be-ac1474af260a"
+      }
+    },
+    {
       "key": "2854f507-a0e3-4823-85a1-9f3afc002720",
       "position": 1,
       "properties": {
@@ -3190,10 +3439,33 @@
       }
     },
     {
-      "key": "98016b24-9e88-4f3c-a314-76c7f599e006",
+      "key": "7674786b-dde8-4c70-ad90-f0234059d932",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor."
+      },
+      "seeding_key": {
+        "activity_section.key": "7674786b-dde8-4c70-ad90-f0234059d932",
+        "lesson_activity.key": "c675bcb8-6e7e-4b93-8fb8-02c3890600d7"
+      }
+    },
+    {
+      "key": "f268971f-f5d0-4b29-916b-0965b5c1f0c5",
+      "position": 6,
+      "properties": {
+        "description": "When we write the `PainterPlus` class, we have to write a constructor that calls the superclass constructor. Even though the `PainterPlus` class will inherit all of the attributes and behaviors from the `Painter` class, it will not inherit the constructor. The `PainterPlus` constructor will then call the superclass constructor by using the keyword `super`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f268971f-f5d0-4b29-916b-0965b5c1f0c5",
+        "lesson_activity.key": "c675bcb8-6e7e-4b93-8fb8-02c3890600d7"
+      }
+    },
+    {
+      "key": "98016b24-9e88-4f3c-a314-76c7f599e006",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
         "progression_name": "Creating PainterPlus",
         "tips": [
           {
@@ -3209,11 +3481,12 @@
     },
     {
       "key": "c072ceac-1175-4715-8bb2-d695c87747dc",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? Remember that we want to add the `turnRight()` method. Let's find out how to write our own methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? A subclass is usually designed to have modified (overridden) or additional methods or instance variables. Remember that we want to add the `turnRight()` method. Let's find out how to write our own methods.",
         "duration": "15",
-        "name": "Writing New Methods"
+        "name": "Writing New Methods",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "c072ceac-1175-4715-8bb2-d695c87747dc",
@@ -3222,7 +3495,7 @@
     },
     {
       "key": "1d32cb07-512e-4c07-a8c2-ff739d3db96d",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Methods video.",
         "tips": [
@@ -3239,7 +3512,7 @@
     },
     {
       "key": "91723289-69ae-4c08-a676-09587a93228c",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the syntax for writing methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to write the `turnRight()` method.",
         "progression_name": "PainterPlus: turnRight()"
@@ -3251,7 +3524,7 @@
     },
     {
       "key": "6e82becc-aca1-45d5-8b09-067a12a01244",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Compare and contrast our solution using `Painter` with `turnLeft()` to our solution using `PainterPlus` with `turnRight()`.\n\n**Discussion Goal:** Students realize that the `turnRight()` method makes the code more efficient.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What do you think would happen if we tried to call our new `turnRight()` method on a `Painter` object instead of a `PainterPlus` object?\n\n**Discussion Goal:** Students make predictions about the code, including that potential errors they think will happen or they may think that the code will work as intended.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio. Students test their hypotheses about using a subclass's method on a superclass.",
         "progression_name": "Bug: Calling a Subclass's Method on a Superclass Object"
@@ -3263,7 +3536,7 @@
     },
     {
       "key": "9e09304c-83a8-49b8-a26c-11fc7b47b18f",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you called `turnRight()` on a `Painter` object?*\n\n**Discussion Goal:** Students realize that a `Painter` object cannot use the `turnRight()` method because it has not been defined in the `Painter` class. Students note that the only class that can use the `turnRight()` method is `PainterPlus`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall describing a strategy to identify and fix errors that occur when an object tries to use a method that is not available to them. "
       },
@@ -3295,6 +3568,17 @@
       "seeding_key": {
         "activity_section.key": "9888100d-11b4-4481-a472-3f86144f4dd0",
         "lesson_activity.key": "79d32c34-fe4c-4cfa-824a-03b7232d810f"
+      }
+    },
+    {
+      "key": "6af994b6-0ad9-4825-85fc-ffc713e57ccf",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "6af994b6-0ad9-4825-85fc-ffc713e57ccf",
+        "lesson_activity.key": "8eb15b91-ebb2-4f97-8c58-c3768a49555a"
       }
     },
     {
@@ -3481,6 +3765,17 @@
       }
     },
     {
+      "key": "acd66cde-f24f-491e-b867-867f6ad8300d",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "acd66cde-f24f-491e-b867-867f6ad8300d",
+        "lesson_activity.key": "477c54fc-f580-4379-87af-9309d33f488b"
+      }
+    },
+    {
       "key": "62924917-d1ce-48d3-83af-897ed85433bc",
       "position": 1,
       "properties": {
@@ -3610,6 +3905,17 @@
       }
     },
     {
+      "key": "21a5c5c5-6521-4392-a83d-6e2d28e52f52",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.1\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "21a5c5c5-6521-4392-a83d-6e2d28e52f52",
+        "lesson_activity.key": "ce8515df-f2db-48c9-a070-b4de6d635127"
+      }
+    },
+    {
       "key": "4c70391d-d87e-4632-b5c1-b78b0257336b",
       "position": 1,
       "properties": {
@@ -3734,6 +4040,17 @@
       }
     },
     {
+      "key": "fc30ac6b-1892-41d6-bffb-a821f69d2190",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "fc30ac6b-1892-41d6-bffb-a821f69d2190",
+        "lesson_activity.key": "ef5864c4-c97e-4aa1-86e4-51378c4b268e"
+      }
+    },
+    {
       "key": "679aee57-6c51-40af-ac11-7ee11743a8a7",
       "position": 1,
       "properties": {
@@ -3826,6 +4143,17 @@
       "seeding_key": {
         "activity_section.key": "428770d9-f7ac-4374-bac3-dceac2d4aa39",
         "lesson_activity.key": "cc134417-2986-46ce-bb1d-b64f43f5ff45"
+      }
+    },
+    {
+      "key": "3341ec87-9f41-4257-bc64-5008da9cd058",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "3341ec87-9f41-4257-bc64-5008da9cd058",
+        "lesson_activity.key": "92fb1fd9-b913-45a2-8295-63c9f80ebde5"
       }
     },
     {
@@ -4071,6 +4399,17 @@
       "seeding_key": {
         "activity_section.key": "c7ea62b1-6b8d-496b-956d-0a748974b5ec",
         "lesson_activity.key": "4b75038a-ebb2-4f7a-b6ac-466f05a6148e"
+      }
+    },
+    {
+      "key": "1b1e6d22-1dc1-4a3f-915e-384fc8170b7d",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "1b1e6d22-1dc1-4a3f-915e-384fc8170b7d",
+        "lesson_activity.key": "f1174c93-65a7-41be-bac4-5bc426ec760e"
       }
     },
     {
@@ -6622,6 +6961,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -6644,6 +6986,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -6666,6 +7011,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -7567,8 +7915,8 @@
       "url": "https://docs.google.com/document/d/1ciZ9uffyBgqn4IUV2GwxJy5UyN0r8FeEPiOq7duCn9Y/edit",
       "key": "_key_design_the_neighborhood",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_design_the_neighborhood"
@@ -7579,8 +7927,8 @@
       "url": "https://docs.google.com/document/d/15dvps9I2lTuJwCi_llYXphtMx4Yj1_qxrz3h2On87Nk/edit?usp=sharing",
       "key": "_key_open_source_code",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_open_source_code"
@@ -7591,8 +7939,8 @@
       "url": "https://docs.google.com/presentation/d/1gS9pcxoWkrTALiqdtYFt9kX5c0r5BgQ3Gd8-eC5fOTQ/edit#slide=id.p",
       "key": "_key_parameterized_constructors_guided_notes_optional_",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_parameterized_constructors_guided_notes_optional_"
@@ -7603,8 +7951,8 @@
       "url": "https://docs.google.com/document/d/13LscTyaFhxWJo8Py9z3V0YDHGksH4eftaDiEWqWFj-c/edit?usp=sharing",
       "key": "_key_pixel_picture_puzzle",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_pixel_picture_puzzle"
@@ -7615,8 +7963,8 @@
       "url": "https://docs.google.com/document/d/1HzEcKpwl-M352HDS7UGvKsIX_Hc2Wn_mePDZ0GvsADo/edit?usp=sharing",
       "key": "_key_pseudocode_warm_up",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_pseudocode_warm_up"
@@ -7627,8 +7975,8 @@
       "url": "https://docs.google.com/document/d/16pwSFkypoUhXlXj7yWLgfXDiMUxGV7jaUJ5HIA70UA4/edit?usp=sharing",
       "key": "_key_spraypainter",
       "properties": {
-        "type": "Activity Guide",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "_key_spraypainter"
@@ -7639,8 +7987,8 @@
       "url": "https://docs.google.com/document/d/1D0STv6oMsd2PTqnn_XF4PNUlQ9qaZPYFuquef_fOMCA/edit?usp=sharing",
       "key": "_key_u1l10_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l10_extra_practice"
@@ -7651,8 +7999,8 @@
       "url": "https://docs.google.com/document/d/1wM7jgON5S9vxuMByVcQw1CUvHh2I_Td1qWV2qf1bXV4/edit?usp=sharing",
       "key": "_key_u1l11_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l11_extra_practice"
@@ -7663,8 +8011,8 @@
       "url": "https://docs.google.com/document/d/1YTDck-gFpNQ8ocnddeZAD2LVBQOkRvuSwAMgDNvHfsw/edit?usp=sharing",
       "key": "_key_u1l12_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l12_extra_practice"
@@ -7675,8 +8023,8 @@
       "url": "https://docs.google.com/document/d/1JRSk3qfE5dp-fyeBMgOiTWI8392ov5KKi8M4SQuTRbI/edit?usp=sharing",
       "key": "_key_u1l13_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l13_extra_practice"
@@ -7687,8 +8035,8 @@
       "url": "https://docs.google.com/document/d/1YbslGCWRAah-nYBzhhCkdIZ7V8axG-CK-pr60_Zeq3I/edit?usp=sharing",
       "key": "_key_u1l14_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l14_extra_practice"
@@ -7699,8 +8047,8 @@
       "url": "https://docs.google.com/document/d/1yq6RKtSlJb8h0QA17t_Mgxz3GSbqxeKAQb6jfQRGTBw/edit?usp=sharing",
       "key": "_key_u1l15_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l15_extra_practice"
@@ -7711,8 +8059,8 @@
       "url": "https://docs.google.com/document/d/1ylcTjDVeQwpazU1lZr2KW4Ys-PRChO8u7EqBEwGuG1E/edit",
       "key": "_key_u1l19_frq_day",
       "properties": {
-        "type": "Activity Guide",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "_key_u1l19_frq_day"
@@ -7723,8 +8071,8 @@
       "url": "https://docs.google.com/document/d/1pqowVJKdE8w5cNinhTOsVBv_Z6YyFMlDhJ8TlfK4cRg/edit?usp=sharing",
       "key": "_key_u1l2_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l2_extra_practice"
@@ -7735,8 +8083,8 @@
       "url": "https://docs.google.com/document/d/16iMBKZFWWPpfbAKf8Z3J2AFfONHQpzq1LA_ov1o3NZk/edit?usp=sharing",
       "key": "_key_u1l3_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l3_extra_practice"
@@ -7747,8 +8095,8 @@
       "url": "https://docs.google.com/document/d/180Q56BdGtZI9BsPEfBdVHnNLvJe3g1OEl2CgrQWdMww/edit?usp=sharing",
       "key": "_key_u1l4_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l4_extra_practice"
@@ -7759,8 +8107,8 @@
       "url": "https://docs.google.com/document/d/1Gm5fTDuFOZx7KQkNxZRj7lHNQGhuO-56YzbxveXvTJM/edit?usp=sharing",
       "key": "_key_u1l5_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l5_extra_practice"
@@ -7771,8 +8119,8 @@
       "url": "https://docs.google.com/document/d/1iAIcgu-yojsbNQuHee3m7dyP2V9FBjt4Wpkrx-VRm6Y/edit?usp=sharing",
       "key": "_key_u1l6_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l6_extra_practice"
@@ -7783,8 +8131,8 @@
       "url": "https://docs.google.com/document/d/1XgJ4oksmTf-yyVaXnxLaIvrlHJ0iPeZ7deA67-vDJeI/edit?usp=sharing",
       "key": "_key_u1l7_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l7_extra_practice"
@@ -7795,8 +8143,8 @@
       "url": "https://docs.google.com/document/d/1Cg4l2mxENKZs72oGi05cd-RRw3AuI84bARORUEipq7s/edit?usp=sharing",
       "key": "_key_u1l8_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l8_extra_practice"
@@ -7807,8 +8155,8 @@
       "url": "https://docs.google.com/document/d/1CCuKrAW5JFuwN-J4Ink-8CbhPdv3Ave-fbzhgRXsn04/edit?usp=sharing",
       "key": "_key_u1l9_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u1l9_extra_practice"
@@ -7852,8 +8200,8 @@
       "url": "https://youtu.be/6T1jW9R6YIQ",
       "key": "around_the_world",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "around_the_world"
@@ -7864,9 +8212,9 @@
       "url": "https://docs.google.com/document/d/1zUqv1XmGszrRmP5Y7MuL7mQCHMZITVBkLmwoGWjoZus/edit?usp=sharing",
       "key": "asphalt_art_project_peer_interview_cards",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "asphalt_art_project_peer_interview_cards"
@@ -7877,9 +8225,9 @@
       "url": "https://docs.google.com/document/d/1oBMegm8198TYGgKOF9uWy7sMXyOZ3Myam2fp-AR-AXI/edit?usp=sharing",
       "key": "asphalt_art_project_planning_guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "asphalt_art_project_planning_guide"
@@ -7890,8 +8238,8 @@
       "url": "https://youtu.be/uhcA6K8rWp0",
       "key": "change_the_face_of_computer_science",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "change_the_face_of_computer_science"
@@ -7902,9 +8250,9 @@
       "url": "https://docs.google.com/document/d/1SgyD1rkzI9nPdudVXyem2qjlRwLlmKvfgTOBxXNbHWw/edit#heading=h.q0rmwxki59ku",
       "key": "code_review_practice",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "code_review_practice"
@@ -7915,8 +8263,8 @@
       "url": "https://www.w3schools.com/cssref/css_colors.asp",
       "key": "color_names",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "color_names"
@@ -7927,8 +8275,8 @@
       "url": "https://youtu.be/IM_GcUh3oLA",
       "key": "conditionals",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "conditionals"
@@ -7939,9 +8287,9 @@
       "url": "https://docs.google.com/document/d/14Dfvbwje3LDMkc83wSBElT-VK3zVu1ImH7RzJab0k9s/edit?usp=sharing",
       "key": "create_your_stamp",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "create_your_stamp"
@@ -7952,8 +8300,8 @@
       "url": "https://youtu.be/RdoQv0lUDb0",
       "key": "creating_objects",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "creating_objects"
@@ -7964,9 +8312,9 @@
       "url": "https://docs.google.com/document/d/1t2sGra6awWO0CxODVPqg_5Ba36qq-tLAq8l1YaqT6d8/edit",
       "key": "design_the_neighborhood",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Verified Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "design_the_neighborhood"
@@ -7977,9 +8325,9 @@
       "url": "https://docs.google.com/document/d/1lO5FvjoaFtPR8ptXv9vG3-Jl-ZHz1ELvUcn6A-EUvzA/edit?usp=sharing",
       "key": "harmonica_app_open_source_code",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "harmonica_app_open_source_code"
@@ -7990,8 +8338,8 @@
       "url": "https://youtu.be/A1zMZrt_0yA",
       "key": "if-else_statements",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "if-else_statements"
@@ -8002,8 +8350,8 @@
       "url": "https://youtu.be/mTU-xJ_WhC8",
       "key": "inheritance_and_subclasses",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "inheritance_and_subclasses"
@@ -8014,8 +8362,8 @@
       "url": "https://youtu.be/01wTIQ9bfBM",
       "key": "introduction_to_parameters",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction_to_parameters"
@@ -8026,9 +8374,9 @@
       "url": "https://docs.google.com/document/d/1Y7KaOXNk05eXeGilUvmIQckFTMlC71kOxq0B6eZW-JM/edit?usp=sharing",
       "key": "java_2d_api_open_source_code",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "java_2d_api_open_source_code"
@@ -8039,8 +8387,8 @@
       "url": "https://youtu.be/aDgkQrJWy-Q",
       "key": "methods",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "methods"
@@ -8051,9 +8399,9 @@
       "url": "https://docs.google.com/document/d/10EjoilNMIxIjS3uiD3F0aOVecwpW3EvFz10gR1YT3_w/edit?usp=sharing",
       "key": "minecraft_brigadier_open_source_code",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "minecraft_brigadier_open_source_code"
@@ -8064,9 +8412,9 @@
       "url": "https://docs.google.com/document/d/14j5xdXAnmi8rK8WCgp1LHDaRdd6KdX5UsbuF8QW1zpY/edit?usp=sharing",
       "key": "notes_app_open_source_code",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "notes_app_open_source_code"
@@ -8077,8 +8425,8 @@
       "url": "https://youtu.be/8Wu40UFzFnM",
       "key": "objects_and_classes",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "objects_and_classes"
@@ -8089,8 +8437,8 @@
       "url": "https://docs.google.com/document/d/19MrjfFXD4yZ-euo0OrP-D-08JVUZT6vavyCGNbFb22U/edit?usp=sharing",
       "key": "painter_says",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "painter_says"
@@ -8101,8 +8449,8 @@
       "url": "https://youtu.be/q7d_JtyCq1A",
       "key": "pair_programming",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "pair_programming"
@@ -8113,8 +8461,8 @@
       "url": "https://youtu.be/ZRF6ebbRsA4",
       "key": "parameterized_constructors",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "parameterized_constructors"
@@ -8125,9 +8473,9 @@
       "url": "https://docs.google.com/presentation/d/11TVgOGWgTNxTWhCvrdQnhH1ulCKpGwEiAyN3mVXBaOU/edit#slide=id.p",
       "key": "parameterized_constructors_guided_notes_optional_",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "parameterized_constructors_guided_notes_optional_"
@@ -8138,9 +8486,9 @@
       "url": "https://docs.google.com/document/d/1iq-gm3WWYWftIi639w1iTY41DSC8r2w6PTkisFzJLfg/edit?usp=sharing",
       "key": "pixel_picture_puzzle",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "pixel_picture_puzzle"
@@ -8151,9 +8499,9 @@
       "url": "https://docs.google.com/document/d/1jrC6HhW3t9DDUdzSFs2RmwrNPy7j6XgGEGzzd0_HF7I/edit?usp=sharing",
       "key": "pseudocode_warm_up",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "pseudocode_warm_up"
@@ -8164,8 +8512,8 @@
       "url": "https://docs.google.com/document/d/1kuEbEQMUyGb6W3Mes8R1gwuL2g5zJYV80Vgy4eH48AI/edit?usp=sharing",
       "key": "software_engineering_characteristics",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "software_engineering_characteristics"
@@ -8176,9 +8524,9 @@
       "url": "https://docs.google.com/document/d/1R-UisBPjYu7kZI0CvYNke5cJbXpVZkWPtml_QxyNjj0/edit?usp=sharing",
       "key": "spraypainter",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "spraypainter"
@@ -8189,9 +8537,9 @@
       "url": "https://docs.google.com/document/d/1ztKTD5uMmYvMUsqZI04LOJSMDaD7xoyl2jlesDrgRt4/edit?usp=sharing",
       "key": "u1l10_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l10_extra_practice"
@@ -8202,9 +8550,9 @@
       "url": "https://docs.google.com/document/d/1xko30iUZ2CN-Q32OUom3InkQeVwoZ7NYVHnKdlvRhvw/edit?usp=sharing",
       "key": "u1l11_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l11_extra_practice"
@@ -8215,9 +8563,9 @@
       "url": "https://docs.google.com/document/d/1wA2-SbDxSCJizGezysDQPR3JubZENLC6xAz8U9QVoQ8/edit?usp=sharing",
       "key": "u1l12_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l12_extra_practice"
@@ -8228,9 +8576,9 @@
       "url": "https://docs.google.com/document/d/1rkZe3eW0A7M4yJC8yTKZi8UMcr7uBQcKGRPyQ8YeH08/edit?usp=sharing",
       "key": "u1l13_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l13_extra_practice"
@@ -8241,9 +8589,9 @@
       "url": "https://docs.google.com/document/d/1buHP6wxXR3Hhi-jQz7lM28pecSyarr0weEJRtUj35oY/edit?usp=sharing",
       "key": "u1l14_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l14_extra_practice"
@@ -8254,9 +8602,9 @@
       "url": "https://docs.google.com/document/d/1BPOxhF-_SFmNkv0DEHogOas47KqqQ-QlE0_QGkTLKhw/edit?usp=sharing",
       "key": "u1l15_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l15_extra_practice"
@@ -8267,9 +8615,9 @@
       "url": "https://docs.google.com/document/d/1PFdjUsVR1s7HYnZ7-d2OELm-kc-yDEmI33erPmSRk1E/edit?usp=sharing",
       "key": "u1l19_frq_day",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "u1l19_frq_day"
@@ -8280,8 +8628,8 @@
       "url": "https://docs.google.com/document/d/1Kt72Vuy3AjsiY5zlQ_4ckpqIuPLJnrOjgCA-4eymnMM/edit?usp=sharing",
       "key": "u1l19_print_outs",
       "properties": {
-        "type": "Handout",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l19_print_outs"
@@ -8292,9 +8640,9 @@
       "url": "https://docs.google.com/document/d/1hwWUDiz17B67eERZm5XpPLVObx5_zOvx5taqGxtL3rE/edit?usp=sharing",
       "key": "u1l2_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l2_extra_practice"
@@ -8305,9 +8653,9 @@
       "url": "https://docs.google.com/document/d/1iFOx9ilwOHsR646kOJZx8Q5DpislZO2Qlxk9kM0Ieq0/edit?usp=sharing",
       "key": "u1l3_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l3_extra_practice"
@@ -8318,9 +8666,9 @@
       "url": "https://docs.google.com/document/d/1G4fezONbXkPET7IeGvX_AwVew-PLE04RFzUJ8zTQnCA/edit?usp=sharing",
       "key": "u1l4_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l4_extra_practice"
@@ -8331,9 +8679,9 @@
       "url": "https://docs.google.com/document/d/1JGPUp0nIReSPzxso50OrUL6lwC1IPuobHUKOyinCurs/edit?usp=sharing",
       "key": "u1l5_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l5_extra_practice"
@@ -8344,9 +8692,9 @@
       "url": "https://docs.google.com/document/d/1RFVT9qKxrwDba4-BZ-7BGE1k81Oj0Sff-iIeSoWF1S0/edit?usp=sharing",
       "key": "u1l6_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l6_extra_practice"
@@ -8357,9 +8705,9 @@
       "url": "https://docs.google.com/document/d/1S2L3Zu49PONzW9gP_MbVNPThDIw_OQi0igz3Wn7Ij5A/edit?usp=sharing",
       "key": "u1l7_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l7_extra_practice"
@@ -8370,9 +8718,9 @@
       "url": "https://docs.google.com/document/d/1i4IBjKCoVGNfKulEJSuDbfYs0SoauYDJhkA9SBZ_9cc/edit?usp=sharing",
       "key": "u1l8_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l8_extra_practice"
@@ -8383,9 +8731,9 @@
       "url": "https://docs.google.com/document/d/1-unf7gL0ZfzIuUUf_wfcfqaxBPdkHp5ZjoCyiAVRGEk/edit?usp=sharing",
       "key": "u1l9_extra_practice",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u1l9_extra_practice"
@@ -8396,9 +8744,9 @@
       "url": "https://docs.google.com/document/d/1mxzrZ4TroKVkRfjXWgMO1DethqLFrwzku8tb30Ir1sU/edit?usp=sharing",
       "key": "unit_1_guide",
       "properties": {
-        "type": "Resource",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_1_guide"
@@ -8409,8 +8757,8 @@
       "url": "https://docs.google.com/presentation/d/1MxBjEyODfvHtkHvFiTo2rk1doX6UMqbNn102L77rAiw/edit?usp=sharing",
       "key": "unit_1_presentation_slides",
       "properties": {
-        "type": "Slides",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "unit_1_presentation_slides"
@@ -8421,8 +8769,8 @@
       "url": "https://youtu.be/-gnXVMcg0yk",
       "key": "unity_and_safety_through_street_art_in_norfolk_va",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "unity_and_safety_through_street_art_in_norfolk_va"
@@ -8433,9 +8781,9 @@
       "url": "https://docs.google.com/document/d/1yN3BgqWDCxdbWFY0mHOkDQQCr4kRTdiwNjnZtuOioZg/edit?usp=sharing",
       "key": "vocabulary_draw",
       "properties": {
-        "type": "Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "vocabulary_draw"
@@ -8446,8 +8794,8 @@
       "url": "https://youtu.be/Q8fw0cDpL_k",
       "key": "what_is_java_",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "what_is_java_"
@@ -9027,173 +9375,13 @@
   ],
   "vocabularies": [
     {
-      "key": "software_engineer",
-      "word": "Software Engineer",
-      "definition": "A person who designs, develops, and tests software for home, school, and business use",
+      "key": "actual_parameter",
+      "word": "Actual Parameter",
+      "definition": "The value given to an attribute when initializing an object",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "software_engineer"
-      }
-    },
-    {
-      "key": "object",
-      "word": "Object",
-      "definition": "An instance of a class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "object"
-      }
-    },
-    {
-      "key": "class",
-      "word": "Class",
-      "definition": "A programmer-defined blueprint from which objects are created",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "class"
-      }
-    },
-    {
-      "key": "compile",
-      "word": "Compile",
-      "definition": "A program that translates human-readable source code into computer-executable machine code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "compile"
-      }
-    },
-    {
-      "key": "attribute",
-      "word": "Attribute",
-      "definition": "A characteristic of an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
-      "key": "object_oriented_programming",
-      "word": "Object-Oriented Programming",
-      "definition": "An approach to creating and using models of physical or imagined objects",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "object_oriented_programming"
-      }
-    },
-    {
-      "key": "behavior",
-      "word": "Behavior",
-      "definition": "An action that an object can perform",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "key": "syntax",
-      "word": "Syntax",
-      "definition": "Rules for how code must be entered for a computer to understand",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "syntax"
-      }
-    },
-    {
-      "key": "syntax_error",
-      "word": "Syntax Error",
-      "definition": "Mistakes in the code, such as typos and misspelling, that do not follow the syntax rules of the programming language",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "syntax_error"
-      }
-    },
-    {
-      "key": "method",
-      "word": "Method",
-      "definition": "A named set of instructions to perform a task",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "method"
-      }
-    },
-    {
-      "key": "software",
-      "word": "Software",
-      "definition": "A set of specific instructions that enables a computer to perform a task",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "software"
-      }
-    },
-    {
-      "key": "case_sensitive",
-      "word": "Case-Sensitive",
-      "definition": "Differentiating between lower and uppercase letters",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "case_sensitive"
-      }
-    },
-    {
-      "key": "statement",
-      "word": "Statement",
-      "definition": "Instructions that tell Java what to do",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "statement"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "boolean",
-      "word": "Boolean",
-      "definition": "A data type that can either be `true` or `false`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "boolean"
-      }
-    },
-    {
-      "key": "conditional_statement",
-      "word": "Conditional Statement",
-      "definition": "A statement that only runs under certain conditions",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditional_statement"
-      }
-    },
-    {
-      "key": "logic_error",
-      "word": "Logic Error",
-      "definition": "When the code runs but does not do what was expected",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "logic_error"
+        "vocabulary.key": "actual_parameter"
       }
     },
     {
@@ -9207,6 +9395,36 @@
       }
     },
     {
+      "key": "attribute",
+      "word": "Attribute",
+      "definition": "A characteristic of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "key": "behavior",
+      "word": "Behavior",
+      "definition": "An action that an object can perform",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "boolean",
+      "word": "Boolean",
+      "definition": "A data type that can either be `true` or `false`",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
       "key": "bug",
       "word": "Bug",
       "definition": "An error in the code",
@@ -9217,73 +9435,33 @@
       }
     },
     {
-      "key": "constructor",
-      "word": "Constructor",
-      "definition": "A block of code in the class that tells the computer how to create a new object",
+      "key": "case_sensitive",
+      "word": "Case-Sensitive",
+      "definition": "Differentiating between lower and uppercase letters",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "constructor"
+        "vocabulary.key": "case_sensitive"
       }
     },
     {
-      "key": "initialize",
-      "word": "Initialize",
-      "definition": "Create a new object with a specific name and starting values for its attributes",
+      "key": "class",
+      "word": "Class",
+      "definition": "A programmer-defined blueprint from which objects are created",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "initialize"
+        "vocabulary.key": "class"
       }
     },
     {
-      "key": "constructor_signature",
-      "word": "Constructor Signature",
-      "definition": "The first line of the constructor, which includes the constructor name and lists the object's attributes that can be specified when it is initialized",
+      "key": "class_header",
+      "word": "Class Header",
+      "definition": "Consists of the keyword `class` and the name of the class",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "constructor_signature"
-      }
-    },
-    {
-      "key": "formal_parameter",
-      "word": "Formal Parameter",
-      "definition": "The name of the attribute in the constructor signature",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "formal_parameter"
-      }
-    },
-    {
-      "key": "actual_parameter",
-      "word": "Actual Parameter",
-      "definition": "The value given to an attribute when initializing an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "actual_parameter"
-      }
-    },
-    {
-      "key": "efficiency",
-      "word": "Efficiency",
-      "definition": "Getting the best outcome with the least amount of waste",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "efficiency"
-      }
-    },
-    {
-      "key": "control_structure",
-      "word": "Control Structure",
-      "definition": "Affects the flow of a program using conditional statements or loops",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "control_structure"
+        "vocabulary.key": "class_header"
       }
     },
     {
@@ -9297,6 +9475,96 @@
       }
     },
     {
+      "key": "compile",
+      "word": "Compile",
+      "definition": "A program that translates human-readable source code into computer-executable machine code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "compile"
+      }
+    },
+    {
+      "key": "conditional_statement",
+      "word": "Conditional Statement",
+      "definition": "A statement that only runs under certain conditions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditional_statement"
+      }
+    },
+    {
+      "key": "constructor",
+      "word": "Constructor",
+      "definition": "A block of code in the class that tells the computer how to create a new object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "key": "constructor_signature",
+      "word": "Constructor Signature",
+      "definition": "The first line of the constructor, which includes the constructor name and lists the object's attributes that can be specified when it is initialized",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "key": "control_structure",
+      "word": "Control Structure",
+      "definition": "Affects the flow of a program using conditional statements or loops",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "control_structure"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "edge_case",
+      "word": "Edge Case",
+      "definition": "A situation in a program that produces a different outcome and requires special error handling",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "edge_case"
+      }
+    },
+    {
+      "key": "efficiency",
+      "word": "Efficiency",
+      "definition": "Getting the best outcome with the least amount of waste",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "key": "formal_parameter",
+      "word": "Formal Parameter",
+      "definition": "The name of the attribute in the constructor signature",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
       "key": "inheritance",
       "word": "Inheritance",
       "definition": "An object-oriented programming principle where a subclass inherits the instance variables and methods of a superclass",
@@ -9304,6 +9572,116 @@
       },
       "seeding_key": {
         "vocabulary.key": "inheritance"
+      }
+    },
+    {
+      "key": "initialize",
+      "word": "Initialize",
+      "definition": "Create a new object with a specific name and starting values for its attributes",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "key": "logic_error",
+      "word": "Logic Error",
+      "definition": "When the code runs but does not do what was expected",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "logic_error"
+      }
+    },
+    {
+      "key": "method",
+      "word": "Method",
+      "definition": "A named set of instructions to perform a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "method"
+      }
+    },
+    {
+      "key": "object",
+      "word": "Object",
+      "definition": "An instance of a class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "key": "object_oriented_programming",
+      "word": "Object-Oriented Programming",
+      "definition": "An approach to creating and using models of physical or imagined objects",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "object_oriented_programming"
+      }
+    },
+    {
+      "key": "open_source",
+      "word": "Open Source",
+      "definition": "Code that anyone can inspect, modify, and enhance",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "open_source"
+      }
+    },
+    {
+      "key": "pixel",
+      "word": "Pixel",
+      "definition": "The smallest unit of a digital image",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pixel"
+      }
+    },
+    {
+      "key": "pseudocode",
+      "word": "Pseudocode",
+      "definition": "A simple way of writing an algorithm in English",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pseudocode"
+      }
+    },
+    {
+      "key": "software",
+      "word": "Software",
+      "definition": "A set of specific instructions that enables a computer to perform a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software"
+      }
+    },
+    {
+      "key": "software_engineer",
+      "word": "Software Engineer",
+      "definition": "A person who designs, develops, and tests software for home, school, and business use",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "software_engineer"
+      }
+    },
+    {
+      "key": "statement",
+      "word": "Statement",
+      "definition": "Instructions that tell Java what to do",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "statement"
       }
     },
     {
@@ -9327,43 +9705,23 @@
       }
     },
     {
-      "key": "class_header",
-      "word": "Class Header",
-      "definition": "Consists of the keyword `class` and the name of the class",
+      "key": "syntax",
+      "word": "Syntax",
+      "definition": "Rules for how code must be entered for a computer to understand",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "class_header"
+        "vocabulary.key": "syntax"
       }
     },
     {
-      "key": "edge_case",
-      "word": "Edge Case",
-      "definition": "A situation in a program that produces a different outcome and requires special error handling",
+      "key": "syntax_error",
+      "word": "Syntax Error",
+      "definition": "Mistakes in the code, such as typos and misspelling, that do not follow the syntax rules of the programming language",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "edge_case"
-      }
-    },
-    {
-      "key": "pseudocode",
-      "word": "Pseudocode",
-      "definition": "A simple way of writing an algorithm in English",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "pseudocode"
-      }
-    },
-    {
-      "key": "pixel",
-      "word": "Pixel",
-      "definition": "The smallest unit of a digital image",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "pixel"
+        "vocabulary.key": "syntax_error"
       }
     },
     {
@@ -9375,71 +9733,13 @@
       "seeding_key": {
         "vocabulary.key": "test_driven_development"
       }
-    },
-    {
-      "key": "open_source",
-      "word": "Open Source",
-      "definition": "Code that anyone can inspect, modify, and enhance",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "open_source"
-      }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Welcome to CSA",
-        "vocabulary.key": "software_engineer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classes and Objects",
-        "vocabulary.key": "object"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classes and Objects",
-        "vocabulary.key": "class"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classes and Objects",
-        "vocabulary.key": "compile"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classes and Objects",
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classes and Objects",
-        "vocabulary.key": "object_oriented_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classes and Objects",
-        "vocabulary.key": "behavior"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Calling Methods",
-        "vocabulary.key": "syntax"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Calling Methods",
-        "vocabulary.key": "syntax_error"
+        "vocabulary.key": "case_sensitive"
       }
     },
     {
@@ -9457,37 +9757,55 @@
     {
       "seeding_key": {
         "lesson.key": "Calling Methods",
-        "vocabulary.key": "case_sensitive"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Calling Methods",
         "vocabulary.key": "statement"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals and Debugging",
-        "vocabulary.key": "debugging"
+        "lesson.key": "Calling Methods",
+        "vocabulary.key": "syntax"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals and Debugging",
-        "vocabulary.key": "boolean"
+        "lesson.key": "Calling Methods",
+        "vocabulary.key": "syntax_error"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals and Debugging",
-        "vocabulary.key": "conditional_statement"
+        "lesson.key": "Classes and Objects",
+        "vocabulary.key": "attribute"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Conditionals and Debugging",
-        "vocabulary.key": "logic_error"
+        "lesson.key": "Classes and Objects",
+        "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classes and Objects",
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classes and Objects",
+        "vocabulary.key": "compile"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classes and Objects",
+        "vocabulary.key": "object"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classes and Objects",
+        "vocabulary.key": "object_oriented_programming"
       }
     },
     {
@@ -9499,55 +9817,43 @@
     {
       "seeding_key": {
         "lesson.key": "Conditionals and Debugging",
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals and Debugging",
         "vocabulary.key": "bug"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "More with Objects",
-        "vocabulary.key": "constructor"
+        "lesson.key": "Conditionals and Debugging",
+        "vocabulary.key": "conditional_statement"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "More with Objects",
-        "vocabulary.key": "initialize"
+        "lesson.key": "Conditionals and Debugging",
+        "vocabulary.key": "debugging"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "More with Objects",
-        "vocabulary.key": "constructor_signature"
+        "lesson.key": "Conditionals and Debugging",
+        "vocabulary.key": "logic_error"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "More with Objects",
-        "vocabulary.key": "formal_parameter"
+        "lesson.key": "Edge Cases",
+        "vocabulary.key": "test_driven_development"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "More with Objects",
-        "vocabulary.key": "actual_parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More with Objects",
-        "vocabulary.key": "efficiency"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "While Loops and Practice",
-        "vocabulary.key": "control_structure"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Code Reviews",
-        "vocabulary.key": "code_review"
+        "lesson.key": "Inheritance and Methods",
+        "vocabulary.key": "class_header"
       }
     },
     {
@@ -9570,8 +9876,8 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Inheritance and Methods",
-        "vocabulary.key": "class_header"
+        "lesson.key": "Introduction to Code Reviews",
+        "vocabulary.key": "code_review"
       }
     },
     {
@@ -9588,20 +9894,62 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "StampPainter",
-        "vocabulary.key": "pixel"
+        "lesson.key": "More with Objects",
+        "vocabulary.key": "actual_parameter"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Edge Cases",
-        "vocabulary.key": "test_driven_development"
+        "lesson.key": "More with Objects",
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "vocabulary.key": "initialize"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Software Engineering Wrap Up",
         "vocabulary.key": "open_source"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "StampPainter",
+        "vocabulary.key": "pixel"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSA",
+        "vocabulary.key": "software_engineer"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "While Loops and Practice",
+        "vocabulary.key": "control_structure"
       }
     }
   ],
@@ -9610,103 +9958,13 @@
   ],
   "objectives": [
     {
-      "key": "95a1972e-b7cd-4b40-810d-30e708d6b328",
+      "key": "0ad156dd-4ecd-4e7e-b754-69e74337a9b8",
       "properties": {
-        "description": "Identify the core values of software engineering"
+        "description": "Conduct code reviews to give and receive feedback on program code"
       },
       "seeding_key": {
-        "lesson.key": "Welcome to CSA",
-        "objective.key": "95a1972e-b7cd-4b40-810d-30e708d6b328"
-      }
-    },
-    {
-      "key": "b68aa6eb-f2a9-4fc4-a857-0f3d72bc0ce5",
-      "properties": {
-        "description": "Analyze their own software engineering identity"
-      },
-      "seeding_key": {
-        "lesson.key": "Welcome to CSA",
-        "objective.key": "b68aa6eb-f2a9-4fc4-a857-0f3d72bc0ce5"
-      }
-    },
-    {
-      "key": "863d26de-466e-4520-8ad4-d50503fd4b78",
-      "properties": {
-        "description": "Explain the relationship between a class and an object"
-      },
-      "seeding_key": {
-        "lesson.key": "Classes and Objects",
-        "objective.key": "863d26de-466e-4520-8ad4-d50503fd4b78"
-      }
-    },
-    {
-      "key": "4b6ed12b-2a60-4eec-ab2b-8c2f6a20f59e",
-      "properties": {
-        "description": "Call methods to move the `Painter` and work with paint"
-      },
-      "seeding_key": {
-        "lesson.key": "Calling Methods",
-        "objective.key": "4b6ed12b-2a60-4eec-ab2b-8c2f6a20f59e"
-      }
-    },
-    {
-      "key": "2cc74574-f355-43e2-80cb-c09fed4f4db4",
-      "properties": {
-        "description": "Use correct Java syntax, including case-sensitivity and semicolons"
-      },
-      "seeding_key": {
-        "lesson.key": "Calling Methods",
-        "objective.key": "2cc74574-f355-43e2-80cb-c09fed4f4db4"
-      }
-    },
-    {
-      "key": "b9b83677-b283-4b02-b845-cceb9ba26295",
-      "properties": {
-        "description": "Call `Painter` methods that give a Boolean value"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals and Debugging",
-        "objective.key": "b9b83677-b283-4b02-b845-cceb9ba26295"
-      }
-    },
-    {
-      "key": "5ecd63f6-15c8-44c6-aa42-e52ed1ccad3b",
-      "properties": {
-        "description": "Construct an `if` statement using the `Painter`’s Boolean methods"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals and Debugging",
-        "objective.key": "5ecd63f6-15c8-44c6-aa42-e52ed1ccad3b"
-      }
-    },
-    {
-      "key": "9f3cee55-3ba2-46d2-a289-48117317ce63",
-      "properties": {
-        "description": "Debug basic commands for syntax and logic errors"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals and Debugging",
-        "objective.key": "9f3cee55-3ba2-46d2-a289-48117317ce63"
-      }
-    },
-    {
-      "key": "9f915284-89aa-43e5-9608-fd7f5d5ea023",
-      "properties": {
-        "description": "Identify strategies to debug code"
-      },
-      "seeding_key": {
-        "lesson.key": "Conditionals and Debugging",
-        "objective.key": "9f915284-89aa-43e5-9608-fd7f5d5ea023"
-      }
-    },
-    {
-      "key": "e8660c03-8e55-4e31-a281-25c098e33690",
-      "properties": {
-        "description": "Identify components of a constructor signature"
-      },
-      "seeding_key": {
-        "lesson.key": "More with Objects",
-        "objective.key": "e8660c03-8e55-4e31-a281-25c098e33690"
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "objective.key": "0ad156dd-4ecd-4e7e-b754-69e74337a9b8"
       }
     },
     {
@@ -9720,73 +9978,13 @@
       }
     },
     {
-      "key": "ecc69a8c-784b-475f-8737-22c3e46f6177",
+      "key": "15761ef1-714e-4ade-9a07-d77d741d4d66",
       "properties": {
-        "description": "Create objects by calling constructors with actual parameters based on a signature"
+        "description": "Examine how images shown by computers are made up of pixels"
       },
       "seeding_key": {
-        "lesson.key": "More with Objects",
-        "objective.key": "ecc69a8c-784b-475f-8737-22c3e46f6177"
-      }
-    },
-    {
-      "key": "a1e543c4-abe7-4ea1-a005-084ce65cf0e8",
-      "properties": {
-        "description": "Compare and contrast when to use a no-argument constructor and a parameterized constructor"
-      },
-      "seeding_key": {
-        "lesson.key": "More with Objects",
-        "objective.key": "a1e543c4-abe7-4ea1-a005-084ce65cf0e8"
-      }
-    },
-    {
-      "key": "3dec45df-b516-4aec-8445-e9a634664762",
-      "properties": {
-        "description": "Call `Painter` methods to navigate The Neighborhood"
-      },
-      "seeding_key": {
-        "lesson.key": "While Loops and Practice",
-        "objective.key": "3dec45df-b516-4aec-8445-e9a634664762"
-      }
-    },
-    {
-      "key": "8a4db558-99fb-4273-8c2e-286d31606b03",
-      "properties": {
-        "description": "Use a `while` loop with the `Painter`’s Boolean methods"
-      },
-      "seeding_key": {
-        "lesson.key": "While Loops and Practice",
-        "objective.key": "8a4db558-99fb-4273-8c2e-286d31606b03"
-      }
-    },
-    {
-      "key": "39a80463-457b-427c-9795-b312032135f8",
-      "properties": {
-        "description": "Construct an `if-else` statement using the `Painter`'s Boolean methods"
-      },
-      "seeding_key": {
-        "lesson.key": "More with Conditionals",
-        "objective.key": "39a80463-457b-427c-9795-b312032135f8"
-      }
-    },
-    {
-      "key": "3cfde7d7-164f-411a-b247-9c44f1fb8880",
-      "properties": {
-        "description": "Use the `!` logical operator in program code"
-      },
-      "seeding_key": {
-        "lesson.key": "More with Conditionals",
-        "objective.key": "3cfde7d7-164f-411a-b247-9c44f1fb8880"
-      }
-    },
-    {
-      "key": "49169705-f491-4a4a-a8de-0656f6a0701c",
-      "properties": {
-        "description": "Explain the code review process"
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to Code Reviews",
-        "objective.key": "49169705-f491-4a4a-a8de-0656f6a0701c"
+        "lesson.key": "StampPainter",
+        "objective.key": "15761ef1-714e-4ade-9a07-d77d741d4d66"
       }
     },
     {
@@ -9800,6 +9998,16 @@
       }
     },
     {
+      "key": "2b17d7a7-e4cc-46f7-9a94-45e62aeeb452",
+      "properties": {
+        "description": "Examine open source code"
+      },
+      "seeding_key": {
+        "lesson.key": "Software Engineering Wrap Up",
+        "objective.key": "2b17d7a7-e4cc-46f7-9a94-45e62aeeb452"
+      }
+    },
+    {
       "key": "2bce38b0-dedc-434b-862b-95bd2d31f9c8",
       "properties": {
         "description": "Use comments within code to improve readability"
@@ -9810,123 +10018,13 @@
       }
     },
     {
-      "key": "dfb75b40-9cb9-478e-a2ea-29f4d7c2b8cf",
+      "key": "2cc74574-f355-43e2-80cb-c09fed4f4db4",
       "properties": {
-        "description": "Explain the purpose and functionality of inheritance"
+        "description": "Use correct Java syntax, including case-sensitivity and semicolons"
       },
       "seeding_key": {
-        "lesson.key": "Inheritance and Methods",
-        "objective.key": "dfb75b40-9cb9-478e-a2ea-29f4d7c2b8cf"
-      }
-    },
-    {
-      "key": "f2ee2a06-871a-4881-8b83-43cbb5ed0c18",
-      "properties": {
-        "description": "Write a subclass that extends a superclass"
-      },
-      "seeding_key": {
-        "lesson.key": "Inheritance and Methods",
-        "objective.key": "f2ee2a06-871a-4881-8b83-43cbb5ed0c18"
-      }
-    },
-    {
-      "key": "b5750fdb-a715-43e1-855f-bf938d0d1824",
-      "properties": {
-        "description": "Write a constructor"
-      },
-      "seeding_key": {
-        "lesson.key": "Inheritance and Methods",
-        "objective.key": "b5750fdb-a715-43e1-855f-bf938d0d1824"
-      }
-    },
-    {
-      "key": "85f086f4-79e3-46b3-810d-58f9ddb90758",
-      "properties": {
-        "description": "Write a method"
-      },
-      "seeding_key": {
-        "lesson.key": "Inheritance and Methods",
-        "objective.key": "85f086f4-79e3-46b3-810d-58f9ddb90758"
-      }
-    },
-    {
-      "key": "d4e79109-9136-4222-8bae-3cb77e8ce8fe",
-      "properties": {
-        "description": "Write pseudocode to plan an algorithm"
-      },
-      "seeding_key": {
-        "lesson.key": "More Methods, More Features",
-        "objective.key": "d4e79109-9136-4222-8bae-3cb77e8ce8fe"
-      }
-    },
-    {
-      "key": "4fa12729-c954-48bb-be53-2ddbdd612bc9",
-      "properties": {
-        "description": "Implement three new methods in the `PainterPlus` class."
-      },
-      "seeding_key": {
-        "lesson.key": "More Methods, More Features",
-        "objective.key": "4fa12729-c954-48bb-be53-2ddbdd612bc9"
-      }
-    },
-    {
-      "key": "9098bf3c-bb02-4607-aaf9-318d8ac794c8",
-      "properties": {
-        "description": "Account for edge cases while implementing new methods"
-      },
-      "seeding_key": {
-        "lesson.key": "More Methods, More Features",
-        "objective.key": "9098bf3c-bb02-4607-aaf9-318d8ac794c8"
-      }
-    },
-    {
-      "key": "35d71ae5-f351-4d93-9a3e-a1df82c1b50f",
-      "properties": {
-        "description": "Implement four new methods with parameters in the `PainterPlus` class"
-      },
-      "seeding_key": {
-        "lesson.key": "Painting Methods",
-        "objective.key": "35d71ae5-f351-4d93-9a3e-a1df82c1b50f"
-      }
-    },
-    {
-      "key": "b8b4d01a-0103-4dc7-8368-754d855bf3d7",
-      "properties": {
-        "description": "Conduct a code review to provide constructive feedback on how to improve the given code "
-      },
-      "seeding_key": {
-        "lesson.key": "Painting Methods",
-        "objective.key": "b8b4d01a-0103-4dc7-8368-754d855bf3d7"
-      }
-    },
-    {
-      "key": "57f4f681-3e53-4a12-a735-6c34879fb965",
-      "properties": {
-        "description": "Write a class that includes a method with parameters"
-      },
-      "seeding_key": {
-        "lesson.key": "SprayPainter",
-        "objective.key": "57f4f681-3e53-4a12-a735-6c34879fb965"
-      }
-    },
-    {
-      "key": "d7888d08-40e0-4f3a-a1c9-82a2dafb2862",
-      "properties": {
-        "description": "Create a mural by implementing the `SprayPainter` class"
-      },
-      "seeding_key": {
-        "lesson.key": "SprayPainter",
-        "objective.key": "d7888d08-40e0-4f3a-a1c9-82a2dafb2862"
-      }
-    },
-    {
-      "key": "15761ef1-714e-4ade-9a07-d77d741d4d66",
-      "properties": {
-        "description": "Examine how images shown by computers are made up of pixels"
-      },
-      "seeding_key": {
-        "lesson.key": "StampPainter",
-        "objective.key": "15761ef1-714e-4ade-9a07-d77d741d4d66"
+        "lesson.key": "Calling Methods",
+        "objective.key": "2cc74574-f355-43e2-80cb-c09fed4f4db4"
       }
     },
     {
@@ -9940,53 +10038,73 @@
       }
     },
     {
-      "key": "dc470d4f-e367-4c93-a4f7-613f9e8d7a9a",
+      "key": "2fdde94c-bb72-4e4d-9233-fef1e7196848",
       "properties": {
-        "description": "Implement methods to create shapes and patterns "
+        "description": "Develop a program to create a mural in The Neighborhood"
       },
       "seeding_key": {
-        "lesson.key": "StampPainter",
-        "objective.key": "dc470d4f-e367-4c93-a4f7-613f9e8d7a9a"
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "objective.key": "2fdde94c-bb72-4e4d-9233-fef1e7196848"
       }
     },
     {
-      "key": "9d693db5-bc34-4e60-b3a5-d19e57961976",
+      "key": "35d71ae5-f351-4d93-9a3e-a1df82c1b50f",
       "properties": {
-        "description": "Identify edge cases in code"
+        "description": "Implement four new methods with parameters in the `PainterPlus` class"
       },
       "seeding_key": {
-        "lesson.key": "Edge Cases",
-        "objective.key": "9d693db5-bc34-4e60-b3a5-d19e57961976"
+        "lesson.key": "Painting Methods",
+        "objective.key": "35d71ae5-f351-4d93-9a3e-a1df82c1b50f"
       }
     },
     {
-      "key": "a6d3d828-82aa-4cb8-ad71-ced122a26acc",
+      "key": "38e2957a-15c5-4750-99fe-ef5f66354c17",
       "properties": {
-        "description": "Design tests for edge cases"
+        "description": "Implement methods with parameters based on a given set of specifications"
       },
       "seeding_key": {
-        "lesson.key": "Edge Cases",
-        "objective.key": "a6d3d828-82aa-4cb8-ad71-ced122a26acc"
+        "lesson.key": "FRQ Day",
+        "objective.key": "38e2957a-15c5-4750-99fe-ef5f66354c17"
       }
     },
     {
-      "key": "6fc74517-3b2d-4f2e-9bab-c57a6ac9cf46",
+      "key": "39a80463-457b-427c-9795-b312032135f8",
       "properties": {
-        "description": "Justify decisions for handling edge cases"
+        "description": "Construct an `if-else` statement using the `Painter`'s Boolean methods"
       },
       "seeding_key": {
-        "lesson.key": "Edge Cases",
-        "objective.key": "6fc74517-3b2d-4f2e-9bab-c57a6ac9cf46"
+        "lesson.key": "More with Conditionals",
+        "objective.key": "39a80463-457b-427c-9795-b312032135f8"
       }
     },
     {
-      "key": "2b17d7a7-e4cc-46f7-9a94-45e62aeeb452",
+      "key": "3b901e73-3b6c-4565-8e48-945b05a203bd",
       "properties": {
-        "description": "Examine open source code"
+        "description": "Implement a class that extends `PainterPlus` that adds a new method"
       },
       "seeding_key": {
-        "lesson.key": "Software Engineering Wrap Up",
-        "objective.key": "2b17d7a7-e4cc-46f7-9a94-45e62aeeb452"
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "objective.key": "3b901e73-3b6c-4565-8e48-945b05a203bd"
+      }
+    },
+    {
+      "key": "3cfde7d7-164f-411a-b247-9c44f1fb8880",
+      "properties": {
+        "description": "Use the `!` logical operator in program code"
+      },
+      "seeding_key": {
+        "lesson.key": "More with Conditionals",
+        "objective.key": "3cfde7d7-164f-411a-b247-9c44f1fb8880"
+      }
+    },
+    {
+      "key": "3dec45df-b516-4aec-8445-e9a634664762",
+      "properties": {
+        "description": "Call `Painter` methods to navigate The Neighborhood"
+      },
+      "seeding_key": {
+        "lesson.key": "While Loops and Practice",
+        "objective.key": "3dec45df-b516-4aec-8445-e9a634664762"
       }
     },
     {
@@ -10010,33 +10128,43 @@
       }
     },
     {
-      "key": "d2724079-2dcd-4d64-944c-f03edf673f3f",
+      "key": "49169705-f491-4a4a-a8de-0656f6a0701c",
       "properties": {
-        "description": "Design a class to extend an existing class and implement a new method"
+        "description": "Explain the code review process"
       },
       "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "objective.key": "d2724079-2dcd-4d64-944c-f03edf673f3f"
+        "lesson.key": "Introduction to Code Reviews",
+        "objective.key": "49169705-f491-4a4a-a8de-0656f6a0701c"
       }
     },
     {
-      "key": "5cbe0b9e-02a0-49b9-9ae3-ea8b37e4cf70",
+      "key": "4b6ed12b-2a60-4eec-ab2b-8c2f6a20f59e",
       "properties": {
-        "description": "Develop a program to create asphalt art in The Neighborhood"
+        "description": "Call methods to move the `Painter` and work with paint"
       },
       "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "objective.key": "5cbe0b9e-02a0-49b9-9ae3-ea8b37e4cf70"
+        "lesson.key": "Calling Methods",
+        "objective.key": "4b6ed12b-2a60-4eec-ab2b-8c2f6a20f59e"
       }
     },
     {
-      "key": "2fdde94c-bb72-4e4d-9233-fef1e7196848",
+      "key": "4fa12729-c954-48bb-be53-2ddbdd612bc9",
       "properties": {
-        "description": "Develop a program to create a mural in The Neighborhood"
+        "description": "Implement three new methods in the `PainterPlus` class."
       },
       "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "objective.key": "2fdde94c-bb72-4e4d-9233-fef1e7196848"
+        "lesson.key": "More Methods, More Features",
+        "objective.key": "4fa12729-c954-48bb-be53-2ddbdd612bc9"
+      }
+    },
+    {
+      "key": "57f4f681-3e53-4a12-a735-6c34879fb965",
+      "properties": {
+        "description": "Write a class that includes a method with parameters"
+      },
+      "seeding_key": {
+        "lesson.key": "SprayPainter",
+        "objective.key": "57f4f681-3e53-4a12-a735-6c34879fb965"
       }
     },
     {
@@ -10050,43 +10178,183 @@
       }
     },
     {
-      "key": "0ad156dd-4ecd-4e7e-b754-69e74337a9b8",
+      "key": "5cbe0b9e-02a0-49b9-9ae3-ea8b37e4cf70",
       "properties": {
-        "description": "Conduct code reviews to give and receive feedback on program code"
+        "description": "Develop a program to create asphalt art in The Neighborhood"
       },
       "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "objective.key": "0ad156dd-4ecd-4e7e-b754-69e74337a9b8"
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "objective.key": "5cbe0b9e-02a0-49b9-9ae3-ea8b37e4cf70"
       }
     },
     {
-      "key": "fc753b44-d650-49b7-a5db-f028accb0421",
+      "key": "5ecd63f6-15c8-44c6-aa42-e52ed1ccad3b",
       "properties": {
-        "description": "Develop a program to create a mural design in The Neighborhood"
+        "description": "Construct an `if` statement using the `Painter`’s Boolean methods"
       },
       "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "objective.key": "fc753b44-d650-49b7-a5db-f028accb0421"
+        "lesson.key": "Conditionals and Debugging",
+        "objective.key": "5ecd63f6-15c8-44c6-aa42-e52ed1ccad3b"
       }
     },
     {
-      "key": "3b901e73-3b6c-4565-8e48-945b05a203bd",
+      "key": "6fc74517-3b2d-4f2e-9bab-c57a6ac9cf46",
       "properties": {
-        "description": "Implement a class that extends `PainterPlus` that adds a new method"
+        "description": "Justify decisions for handling edge cases"
       },
       "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "objective.key": "3b901e73-3b6c-4565-8e48-945b05a203bd"
+        "lesson.key": "Edge Cases",
+        "objective.key": "6fc74517-3b2d-4f2e-9bab-c57a6ac9cf46"
       }
     },
     {
-      "key": "db9c6e6e-6680-49a3-94d7-c306026bd89d",
+      "key": "85f086f4-79e3-46b3-810d-58f9ddb90758",
       "properties": {
-        "description": "Reflect on the development process"
+        "description": "Write a method"
       },
       "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "objective.key": "db9c6e6e-6680-49a3-94d7-c306026bd89d"
+        "lesson.key": "Inheritance and Methods",
+        "objective.key": "85f086f4-79e3-46b3-810d-58f9ddb90758"
+      }
+    },
+    {
+      "key": "863d26de-466e-4520-8ad4-d50503fd4b78",
+      "properties": {
+        "description": "Explain the relationship between a class and an object"
+      },
+      "seeding_key": {
+        "lesson.key": "Classes and Objects",
+        "objective.key": "863d26de-466e-4520-8ad4-d50503fd4b78"
+      }
+    },
+    {
+      "key": "8a4db558-99fb-4273-8c2e-286d31606b03",
+      "properties": {
+        "description": "Use a `while` loop with the `Painter`’s Boolean methods"
+      },
+      "seeding_key": {
+        "lesson.key": "While Loops and Practice",
+        "objective.key": "8a4db558-99fb-4273-8c2e-286d31606b03"
+      }
+    },
+    {
+      "key": "9098bf3c-bb02-4607-aaf9-318d8ac794c8",
+      "properties": {
+        "description": "Account for edge cases while implementing new methods"
+      },
+      "seeding_key": {
+        "lesson.key": "More Methods, More Features",
+        "objective.key": "9098bf3c-bb02-4607-aaf9-318d8ac794c8"
+      }
+    },
+    {
+      "key": "95a1972e-b7cd-4b40-810d-30e708d6b328",
+      "properties": {
+        "description": "Identify the core values of software engineering"
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to CSA",
+        "objective.key": "95a1972e-b7cd-4b40-810d-30e708d6b328"
+      }
+    },
+    {
+      "key": "9d693db5-bc34-4e60-b3a5-d19e57961976",
+      "properties": {
+        "description": "Identify edge cases in code"
+      },
+      "seeding_key": {
+        "lesson.key": "Edge Cases",
+        "objective.key": "9d693db5-bc34-4e60-b3a5-d19e57961976"
+      }
+    },
+    {
+      "key": "9f3cee55-3ba2-46d2-a289-48117317ce63",
+      "properties": {
+        "description": "Debug basic commands for syntax and logic errors"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals and Debugging",
+        "objective.key": "9f3cee55-3ba2-46d2-a289-48117317ce63"
+      }
+    },
+    {
+      "key": "9f915284-89aa-43e5-9608-fd7f5d5ea023",
+      "properties": {
+        "description": "Identify strategies to debug code"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals and Debugging",
+        "objective.key": "9f915284-89aa-43e5-9608-fd7f5d5ea023"
+      }
+    },
+    {
+      "key": "a1e543c4-abe7-4ea1-a005-084ce65cf0e8",
+      "properties": {
+        "description": "Compare and contrast when to use a no-argument constructor and a parameterized constructor"
+      },
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "objective.key": "a1e543c4-abe7-4ea1-a005-084ce65cf0e8"
+      }
+    },
+    {
+      "key": "a6d3d828-82aa-4cb8-ad71-ced122a26acc",
+      "properties": {
+        "description": "Design tests for edge cases"
+      },
+      "seeding_key": {
+        "lesson.key": "Edge Cases",
+        "objective.key": "a6d3d828-82aa-4cb8-ad71-ced122a26acc"
+      }
+    },
+    {
+      "key": "b5750fdb-a715-43e1-855f-bf938d0d1824",
+      "properties": {
+        "description": "Write a constructor"
+      },
+      "seeding_key": {
+        "lesson.key": "Inheritance and Methods",
+        "objective.key": "b5750fdb-a715-43e1-855f-bf938d0d1824"
+      }
+    },
+    {
+      "key": "b68aa6eb-f2a9-4fc4-a857-0f3d72bc0ce5",
+      "properties": {
+        "description": "Analyze their own software engineering identity"
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to CSA",
+        "objective.key": "b68aa6eb-f2a9-4fc4-a857-0f3d72bc0ce5"
+      }
+    },
+    {
+      "key": "b8b4d01a-0103-4dc7-8368-754d855bf3d7",
+      "properties": {
+        "description": "Conduct a code review to provide constructive feedback on how to improve the given code "
+      },
+      "seeding_key": {
+        "lesson.key": "Painting Methods",
+        "objective.key": "b8b4d01a-0103-4dc7-8368-754d855bf3d7"
+      }
+    },
+    {
+      "key": "b9b83677-b283-4b02-b845-cceb9ba26295",
+      "properties": {
+        "description": "Call `Painter` methods that give a Boolean value"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals and Debugging",
+        "objective.key": "b9b83677-b283-4b02-b845-cceb9ba26295"
+      }
+    },
+    {
+      "key": "c3efa2a3-4505-43d6-9fb3-cc80b6b55e16",
+      "properties": {
+        "description": "Trace and validate the code of peers"
+      },
+      "seeding_key": {
+        "lesson.key": "FRQ Day",
+        "objective.key": "c3efa2a3-4505-43d6-9fb3-cc80b6b55e16"
       }
     },
     {
@@ -10100,39 +10368,399 @@
       }
     },
     {
-      "key": "38e2957a-15c5-4750-99fe-ef5f66354c17",
+      "key": "d2724079-2dcd-4d64-944c-f03edf673f3f",
       "properties": {
-        "description": "Implement methods with parameters based on a given set of specifications"
+        "description": "Design a class to extend an existing class and implement a new method"
       },
       "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "objective.key": "38e2957a-15c5-4750-99fe-ef5f66354c17"
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "objective.key": "d2724079-2dcd-4d64-944c-f03edf673f3f"
       }
     },
     {
-      "key": "c3efa2a3-4505-43d6-9fb3-cc80b6b55e16",
+      "key": "d4e79109-9136-4222-8bae-3cb77e8ce8fe",
       "properties": {
-        "description": "Trace and validate the code of peers"
+        "description": "Write pseudocode to plan an algorithm"
       },
       "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "objective.key": "c3efa2a3-4505-43d6-9fb3-cc80b6b55e16"
+        "lesson.key": "More Methods, More Features",
+        "objective.key": "d4e79109-9136-4222-8bae-3cb77e8ce8fe"
+      }
+    },
+    {
+      "key": "d7888d08-40e0-4f3a-a1c9-82a2dafb2862",
+      "properties": {
+        "description": "Create a mural by implementing the `SprayPainter` class"
+      },
+      "seeding_key": {
+        "lesson.key": "SprayPainter",
+        "objective.key": "d7888d08-40e0-4f3a-a1c9-82a2dafb2862"
+      }
+    },
+    {
+      "key": "db9c6e6e-6680-49a3-94d7-c306026bd89d",
+      "properties": {
+        "description": "Reflect on the development process"
+      },
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "objective.key": "db9c6e6e-6680-49a3-94d7-c306026bd89d"
+      }
+    },
+    {
+      "key": "dc470d4f-e367-4c93-a4f7-613f9e8d7a9a",
+      "properties": {
+        "description": "Implement methods to create shapes and patterns "
+      },
+      "seeding_key": {
+        "lesson.key": "StampPainter",
+        "objective.key": "dc470d4f-e367-4c93-a4f7-613f9e8d7a9a"
+      }
+    },
+    {
+      "key": "dfb75b40-9cb9-478e-a2ea-29f4d7c2b8cf",
+      "properties": {
+        "description": "Explain the purpose and functionality of inheritance"
+      },
+      "seeding_key": {
+        "lesson.key": "Inheritance and Methods",
+        "objective.key": "dfb75b40-9cb9-478e-a2ea-29f4d7c2b8cf"
+      }
+    },
+    {
+      "key": "e8660c03-8e55-4e31-a281-25c098e33690",
+      "properties": {
+        "description": "Identify components of a constructor signature"
+      },
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "objective.key": "e8660c03-8e55-4e31-a281-25c098e33690"
+      }
+    },
+    {
+      "key": "ecc69a8c-784b-475f-8737-22c3e46f6177",
+      "properties": {
+        "description": "Create objects by calling constructors with actual parameters based on a signature"
+      },
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "objective.key": "ecc69a8c-784b-475f-8737-22c3e46f6177"
+      }
+    },
+    {
+      "key": "f2ee2a06-871a-4881-8b83-43cbb5ed0c18",
+      "properties": {
+        "description": "Write a subclass that extends a superclass"
+      },
+      "seeding_key": {
+        "lesson.key": "Inheritance and Methods",
+        "objective.key": "f2ee2a06-871a-4881-8b83-43cbb5ed0c18"
+      }
+    },
+    {
+      "key": "fc753b44-d650-49b7-a5db-f028accb0421",
+      "properties": {
+        "description": "Develop a program to create a mural design in The Neighborhood"
+      },
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "objective.key": "fc753b44-d650-49b7-a5db-f028accb0421"
       }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Classes and Objects",
+        "lesson.key": "Asphalt Art Project - Day 1",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.B.1"
+        "standard.shortcode": "CON-2.A.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Classes and Objects",
+        "lesson.key": "Asphalt Art Project - Day 1",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.B.2"
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 1",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 2",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project - Day 3",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.B.4"
       }
     },
     {
@@ -10158,6 +10786,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Classes and Objects",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classes and Objects",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Conditionals and Debugging",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.A.2"
@@ -10165,86 +10807,44 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "More with Objects",
+        "lesson.key": "Edge Cases",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.B.1"
+        "standard.shortcode": "MOD-3.D.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "More with Objects",
+        "lesson.key": "FRQ Day",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.B.2"
+        "standard.shortcode": "MOD-3.B.11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "More with Objects",
+        "lesson.key": "FRQ Day",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.1"
+        "standard.shortcode": "MOD-3.B.2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "More with Objects",
+        "lesson.key": "FRQ Day",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.2"
+        "standard.shortcode": "MOD-3.B.4"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "More with Objects",
+        "lesson.key": "FRQ Day",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.3"
+        "standard.shortcode": "MOD-3.B.5"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "While Loops and Practice",
+        "lesson.key": "FRQ Day",
         "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "While Loops and Practice",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More with Conditionals",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.F.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More with Conditionals",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More with Conditionals",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Code Reviews",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Code Reviews",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.2"
+        "standard.shortcode": "MOD-3.B.6"
       }
     },
     {
@@ -10291,6 +10891,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Introduction to Code Reviews",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Code Reviews",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "More Methods, More Features",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-1.E.1"
@@ -10315,6 +10929,62 @@
         "lesson.key": "More Methods, More Features",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.B.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Conditionals",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Conditionals",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Conditionals",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More with Objects",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.3"
       }
     },
     {
@@ -10361,338 +11031,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Edge Cases",
+        "lesson.key": "While Loops and Practice",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.D.1"
+        "standard.shortcode": "CON-2.C.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
+        "lesson.key": "While Loops and Practice",
         "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 1",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 2",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.A.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project - Day 3",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.6"
+        "standard.shortcode": "CON-2.C.4"
       }
     }
   ],

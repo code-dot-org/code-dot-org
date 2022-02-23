@@ -12,9 +12,9 @@ style_min: true
 
 [col-50]
 
-## Teacher Resources
+## ఉపాధ్యాయుల వనరులు
 
-### Lesson Plans:
+### పాఠ్యప్రణాళికలు
 
 - [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
 - [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
@@ -22,23 +22,23 @@ style_min: true
 - [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
 - [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### విస్తరణ యాక్టివిటీలు:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [అవర్ ఆఫ్ కోడ్ దాటి](http://code.org/learn/beyond)
+- [కంప్యూటర్ సైన్స్ ప్రాధమిక అంశాలు: కోర్సు 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### ఉపాధ్యాయుల ఇతర వనరులు:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [అవర్ ఆఫ్ కోడ్: ఉపాధ్యాయుల కోసం హౌ-టు-గైడ్](https://hourofcode.com/how-to)
+- [విజయవంతులైన ఉపాధ్యాయుల నుండి అత్యుత్యమ ప్రాక్టీసులు](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- లైవ్ ఈవెంట్: [అవర్ ఆఫ్ కోడ్ కోసం ఉపాధ్యాయుల గైడ్](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 - [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
-
-[/col-50]
 
 [col-50]
 
-## Overview
+[col-50]
+
+## అవలోకనం
 
 Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
 
@@ -46,6 +46,6 @@ Use blocks of code to take Steve or Alex on an adventure through this Minecraft 
 
 **Technology Requirements:** Modern browsers + tablets
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>ట్యుటోరియల్ ప్రయత్నించండి</button></a>
 
-[/col-50]
+[col-50]

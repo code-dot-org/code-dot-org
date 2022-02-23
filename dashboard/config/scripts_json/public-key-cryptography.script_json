@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:08 UTC",
+    "serialized_at": "2021-11-22 19:57:12 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "public-key-cryptography"
     }
@@ -44,16 +48,50 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "20f368a1-7890-43c5-bbf6-baecd17b1436",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20f368a1-7890-43c5-bbf6-baecd17b1436",
+        "lesson.key": "Public Key Crypto Widgets",
+        "lesson_group.key": "",
+        "script.name": "public-key-cryptography"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "d6e89936-c840-42fd-b14f-0450a7f4d03c",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Modulo Clock"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6e89936-c840-42fd-b14f-0450a7f4d03c",
+        "lesson_activity.key": "20f368a1-7890-43c5-bbf6-baecd17b1436"
+      }
+    },
+    {
+      "key": "c8939e5d-c19c-4324-84d3-dafc03b33e55",
+      "position": 2,
+      "properties": {
+        "name": "Public Key Cryptography Widget",
+        "progression_name": "Public Key Cryptography Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8939e5d-c19c-4324-84d3-dafc03b33e55",
+        "lesson_activity.key": "20f368a1-7890-43c5-bbf6-baecd17b1436"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -68,7 +106,8 @@
         ],
         "lesson.key": "Public Key Crypto Widgets",
         "lesson_group.key": "",
-        "script.name": "public-key-cryptography"
+        "script.name": "public-key-cryptography",
+        "activity_section.key": "d6e89936-c840-42fd-b14f-0450a7f4d03c"
       },
       "level_keys": [
         "The Modulo Clock"
@@ -77,7 +116,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -92,7 +131,8 @@
         ],
         "lesson.key": "Public Key Crypto Widgets",
         "lesson_group.key": "",
-        "script.name": "public-key-cryptography"
+        "script.name": "public-key-cryptography",
+        "activity_section.key": "c8939e5d-c19c-4324-84d3-dafc03b33e55"
       },
       "level_keys": [
         "Public Key Cryptography Widget"
@@ -108,7 +148,8 @@
         ],
         "lesson.key": "Public Key Crypto Widgets",
         "lesson_group.key": "",
-        "script.name": "public-key-cryptography"
+        "script.name": "public-key-cryptography",
+        "activity_section.key": "d6e89936-c840-42fd-b14f-0450a7f4d03c"
       }
     },
     {
@@ -119,7 +160,8 @@
         ],
         "lesson.key": "Public Key Crypto Widgets",
         "lesson_group.key": "",
-        "script.name": "public-key-cryptography"
+        "script.name": "public-key-cryptography",
+        "activity_section.key": "c8939e5d-c19c-4324-84d3-dafc03b33e55"
       }
     }
   ],

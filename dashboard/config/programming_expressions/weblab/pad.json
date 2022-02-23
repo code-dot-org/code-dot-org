@@ -1,0 +1,7 @@
+{
+  "key": "pad",
+  "name": "pad",
+  "category": "CSS Properties",
+  "category_key": "css_properties",
+  "syntax": "padding: value;"
+}

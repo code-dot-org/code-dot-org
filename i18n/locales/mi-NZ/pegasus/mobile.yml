@@ -299,6 +299,12 @@
   coursed-2020_gradelevel: Ngā Tau 7-11
   coursee-2020_gradelevel: Ngā Tau 8-12
   coursef-2020_gradelevel: Ngā Tau 9-13
+  coursea-2021_gradelevel: Ngā Tau 4-7
+  courseb-2021_gradelevel: Ngā Tau 5-8
+  coursec-2021_gradelevel: Ngā Tau 6-10
+  coursed-2021_gradelevel: Ngā Tau 7-11
+  coursee-2021_gradelevel: Ngā Tau 8-12
+  coursef-2021_gradelevel: Ngā Tau 9-13
   accelerated_gradelevel: "Ngā Tau 10-18"
   starwars_shortdescription: "Ako pēhea te whakahaere karetao, me te waihanga i tōhou ake kēmu Star Wars ki tētahi ikarangi tawhiti rawa."
   playlab_shortdescription: "Waihangahia tētahi pūrākau, tētahi kēmu rānei me te Taiwhanga Tākaro!"
@@ -352,7 +358,7 @@
   hoc2018_mc_page_title: "Whakaakoranga Hour of Code Mahimaina"
   hoc2018_mc_details: "He reo i kore | Pūtirotiro, paparorohiko hou | Tau 2+"
   hoc2018_mc_aquatic_announcement: "Waitohuhia mo te akomanga ki te whakamatau i tetahi o nga taumahi 150 neke atu mo te Waa o te Waehere (Tihema 3-9). Me ata titiro ano koe ki o maatau mahi Toihuke hou mo te tau 2018, te Rerenga Moana! Waitohuhia mo to akomanga i tenei ra."
-  hoc2018_mc_aquatic_title: "Toihuke Rerenga Moana"
+  hoc2018_mc_aquatic_title: "Mahimaina Rerenga Moana"
   hoc2018_mc_designer_title: "Pūhoahoa Mahimaina"
   hoc2018_mc_designer_description: "Papatonotia ngā kararehe me ētahi atu koiora o Mahimaina i tāu ake whakaputanga Mahimaina."
   hoc2018_mc_adventurer_title: "Kiri Māia Mahimaina"
@@ -360,8 +366,8 @@
   hoc2018_mc_start: "Tīmata"
   hoc2018_mc_download_adventurer: "Tikina ake te putanga tuimotu o Kiri Māia Mahimaina."
   hoc2018_mc_educators: "Mā ngā kaiwhaako"
-  hoc2018_mc_educators_box1_title: "Waehere ki Toihuke"
-  hoc2018_mc_educators_box1_desc: 'Toihuke: E whakaratohia ana e te Whakaakoranga Mātauranga nga paerewa, nga whakaharatau me nga waehere e pa ana ki te marautanga ​​i te Toihuke.'
+  hoc2018_mc_educators_box1_title: "Waehere ki Te Mahimaina"
+  hoc2018_mc_educators_box1_desc: 'Mahimaina: Putanga Kuranga, E whakaratohia ana e te Whakaakoranga Mātauranga nga paerewa, nga whakaharatau me nga waehere e pa ana ki te marautanga ​​i te Mahimaina.'
   hoc2018_mc_educators_box1_button: "Me timata"
   hoc2018_mc_educators_box2_title: "Tikiake i te Aratohu Kaiwhakahaere"
   hoc2018_mc_educators_box2_desc: "Ka awhina tenei taputapu ki a koe ki te tiaki i te Haora Waehere me te whakauru atu ki o ākonga ki te taiao rorohiko."
@@ -382,10 +388,11 @@
   hoc2018_mc_homepage_watch_video: "Titiro ki to tatou ataata"
   hoc2018_mc_homepage_join_us: "Whakapiri mai"
   hoc2018_mc_homepage_try_it: "Whakamātauria"
+  hoc2018_mc_back: "Kua hoki mai a  Te Mahimaina me tetahi mahi hou mo te Haora Waehere!"
   hoc2018_mc_teacher_guide: "Tirohia te aratohu kaiako"
   hoc2018_mc_short_description: "Me whakamahi i to whakaaro hangarau me nga pukenga whakaoti rapanga ki te kimi taonga me te torotoro i raro moana me te mana o te waehere."
   hoc2018_mc_short_description_shorter: "Me whakamahi i to whakaaro hangarau me nga pukenga whakaoti ki te torotoro, ki te hanga ao ki raro moana i te waehere."
-  hoc2018_mc_journey: "Hāereere ki te ao Toihuke ki te waehere."
+  hoc2018_mc_journey: "Hāereere ki te ao Mahimaina ki te waehere."
   hoc2018_dance_party_main_heading: "Te Pāti Kanikani"
   hoc2018_dance_party_landing_title: "Kanikani"
   hoc2018_dance_party_subheading: "Āwhina mai ki te whakamaoritia i te Pati Kanikani"
@@ -420,6 +427,7 @@
   hoc2018_dance_video2: "Te Pāti Kanikani - Ngā Takunetanga"
   hoc2018_dance_video3: "Te Pāti Kanikani - Ngā Auaha"
   hoc2018_dance_video4: "Te Pāti Kanikani - E mihi ana"
+  hoc2018_mc_thank_microsoft: "Ka nui te mihi ki a Microsoft mo tona tautoko i ta matou tirohanga me ta matou kaupapa ki te whakarite kia whai waahi nga tamariki katoa ki te ako i te Hangarau Matihiko me nga pukenga kia angitu."
   footer_powered_by_aws: "He mea whakahiko e Ratonga Tukutuku Amazon"
   footer_privacy_policy: "Kaupapahere Tūmataitinga"
   footer_about: "Whakamārama"
@@ -427,5 +435,6 @@
   footer_support: "Tautoko"
   footer_terms: "Ngā Ture"
   ai_for_oceans_lesson_plan: "mahere akoranga"
+  ai_microsoft_thanks: "Ka nui te mihi ki a Microsoft mo tona tautoko i ta matou tirohanga me ta matou kaupapa ki te whakarite kia whai waahi nga tamariki katoa ki te ako i te Hangarau Matihiko me nga pukenga kia angitu."
   ai_activity: "Ngohe"
   ai_description: "Whakaahuatanga"

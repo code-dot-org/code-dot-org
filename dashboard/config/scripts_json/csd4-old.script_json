@@ -4,14 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
       "has_verified_resources": true,
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:20 UTC",
+    "serialized_at": "2021-11-22 19:56:25 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd4-old"
     }
@@ -300,16 +304,692 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "7fef4c83-12e9-49ef-bbe5-d64be610a682",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7fef4c83-12e9-49ef-bbe5-d64be610a682",
+        "lesson.key": "Analysis of Design",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "973060d1-a7ef-4275-8d77-49b09f3c0ee6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "973060d1-a7ef-4275-8d77-49b09f3c0ee6",
+        "lesson.key": "Understanding Your User",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "7d0808e4-8954-429e-92c4-552059a4ede4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d0808e4-8954-429e-92c4-552059a4ede4",
+        "lesson.key": "User-Centered Design Micro Activity",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "a00ecf92-ca4b-465d-897f-d5f772b4a4c7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a00ecf92-ca4b-465d-897f-d5f772b4a4c7",
+        "lesson.key": "User Interface and Prototype Testing",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "bfd1262a-e160-458e-8d47-9b1f9ee13a45",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bfd1262a-e160-458e-8d47-9b1f9ee13a45",
+        "lesson.key": "Feedback and Prototypes",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "0bcac8c3-1619-4b1b-90b8-bce682967ea3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0bcac8c3-1619-4b1b-90b8-bce682967ea3",
+        "lesson.key": "Identifying User Needs",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "029b54a4-fcb7-4e52-8282-343a8f75e917",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "029b54a4-fcb7-4e52-8282-343a8f75e917",
+        "lesson.key": "Project - Paper Prototype",
+        "lesson_group.key": "csd4_1",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "4f978873-3d0e-4578-b173-984266b6a8c2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f978873-3d0e-4578-b173-984266b6a8c2",
+        "lesson.key": "Designing Apps for Good",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "76644cf4-62ac-48cb-95bb-134fb3c21213",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "76644cf4-62ac-48cb-95bb-134fb3c21213",
+        "lesson.key": "Market Research",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "dd3b1b5b-85c5-46f4-a162-9d68a568142a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd3b1b5b-85c5-46f4-a162-9d68a568142a",
+        "lesson.key": "Paper Prototypes",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "99c25740-cd35-4891-aa06-85366ea3ddf2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99c25740-cd35-4891-aa06-85366ea3ddf2",
+        "lesson.key": "Prototype Testing",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "259014f0-d72e-41c4-b8b8-20bc5306faaa",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "259014f0-d72e-41c4-b8b8-20bc5306faaa",
+        "lesson.key": "Digital Design",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "14262cc4-fbec-4f65-a3a8-6064319cec71",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "14262cc4-fbec-4f65-a3a8-6064319cec71",
+        "lesson.key": "Event Driven Programming",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "e1bfbc4a-1212-4853-bffc-ad1306583c90",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e1bfbc4a-1212-4853-bffc-ad1306583c90",
+        "lesson.key": "Basic App Functionality",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "aabdc6c5-f331-46b8-a165-6e26c4fb10da",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aabdc6c5-f331-46b8-a165-6e26c4fb10da",
+        "lesson.key": "Testing the App",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "d36ce609-df13-44ac-8c3b-5ad9a6f85e95",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d36ce609-df13-44ac-8c3b-5ad9a6f85e95",
+        "lesson.key": "Improving and Iterating",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-old"
+      }
+    },
+    {
+      "key": "59afaa58-a37a-4964-9f12-38c74e33ee3c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59afaa58-a37a-4964-9f12-38c74e33ee3c",
+        "lesson.key": "App Presentation",
+        "lesson_group.key": "csd4_2",
+        "script.name": "csd4-old"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "75db1a74-0d2e-48a8-a395-9584e46cabd1",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "75db1a74-0d2e-48a8-a395-9584e46cabd1",
+        "lesson_activity.key": "7fef4c83-12e9-49ef-bbe5-d64be610a682"
+      }
+    },
+    {
+      "key": "e46eb62c-6ca7-4b3e-b42b-2c6416d6b502",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e46eb62c-6ca7-4b3e-b42b-2c6416d6b502",
+        "lesson_activity.key": "973060d1-a7ef-4275-8d77-49b09f3c0ee6"
+      }
+    },
+    {
+      "key": "ba890cc4-a9b2-4d79-8931-799b42833a4a",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba890cc4-a9b2-4d79-8931-799b42833a4a",
+        "lesson_activity.key": "7d0808e4-8954-429e-92c4-552059a4ede4"
+      }
+    },
+    {
+      "key": "161872ed-ee95-4ae8-b97a-b7fa06754f81",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "161872ed-ee95-4ae8-b97a-b7fa06754f81",
+        "lesson_activity.key": "a00ecf92-ca4b-465d-897f-d5f772b4a4c7"
+      }
+    },
+    {
+      "key": "537a2841-191e-47b8-bcfa-b1531bc450d3",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "537a2841-191e-47b8-bcfa-b1531bc450d3",
+        "lesson_activity.key": "bfd1262a-e160-458e-8d47-9b1f9ee13a45"
+      }
+    },
+    {
+      "key": "cc12e9ed-0e5f-4945-b3dc-7660c86b2180",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc12e9ed-0e5f-4945-b3dc-7660c86b2180",
+        "lesson_activity.key": "0bcac8c3-1619-4b1b-90b8-bce682967ea3"
+      }
+    },
+    {
+      "key": "706d7013-145d-4644-b9eb-6c27c9ae3447",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "706d7013-145d-4644-b9eb-6c27c9ae3447",
+        "lesson_activity.key": "029b54a4-fcb7-4e52-8282-343a8f75e917"
+      }
+    },
+    {
+      "key": "9befc52e-767d-4124-a1c3-2aa2993c6e2b",
+      "position": 2,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "9befc52e-767d-4124-a1c3-2aa2993c6e2b",
+        "lesson_activity.key": "029b54a4-fcb7-4e52-8282-343a8f75e917"
+      }
+    },
+    {
+      "key": "c5849fc4-9097-43ae-85a5-01a2112d9b62",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5849fc4-9097-43ae-85a5-01a2112d9b62",
+        "lesson_activity.key": "4f978873-3d0e-4578-b173-984266b6a8c2"
+      }
+    },
+    {
+      "key": "13970150-6ea9-4b59-8870-4193c198a6c4",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "13970150-6ea9-4b59-8870-4193c198a6c4",
+        "lesson_activity.key": "76644cf4-62ac-48cb-95bb-134fb3c21213"
+      }
+    },
+    {
+      "key": "095a1abf-a89f-44c1-91d5-0e6331223b5a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "095a1abf-a89f-44c1-91d5-0e6331223b5a",
+        "lesson_activity.key": "dd3b1b5b-85c5-46f4-a162-9d68a568142a"
+      }
+    },
+    {
+      "key": "d596d69c-c419-482d-92cd-d4ae4a46f1cf",
+      "position": 2,
+      "properties": {
+        "progression_name": "Example App Types"
+      },
+      "seeding_key": {
+        "activity_section.key": "d596d69c-c419-482d-92cd-d4ae4a46f1cf",
+        "lesson_activity.key": "dd3b1b5b-85c5-46f4-a162-9d68a568142a"
+      }
+    },
+    {
+      "key": "c0a8f3ee-d866-479d-a8d4-d7023a1ea529",
+      "position": 3,
+      "properties": {
+        "name": "Demo Apps",
+        "progression_name": "Demo Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "c0a8f3ee-d866-479d-a8d4-d7023a1ea529",
+        "lesson_activity.key": "dd3b1b5b-85c5-46f4-a162-9d68a568142a"
+      }
+    },
+    {
+      "key": "1e1d2176-f974-44ef-9eff-669d74c385c6",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e1d2176-f974-44ef-9eff-669d74c385c6",
+        "lesson_activity.key": "99c25740-cd35-4891-aa06-85366ea3ddf2"
+      }
+    },
+    {
+      "key": "2614fdd6-17f6-4017-830f-6200ce2c6db0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "2614fdd6-17f6-4017-830f-6200ce2c6db0",
+        "lesson_activity.key": "259014f0-d72e-41c4-b8b8-20bc5306faaa"
+      }
+    },
+    {
+      "key": "992a1efe-e837-4e7d-8494-12a91b39028d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Building a UI with Design Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "992a1efe-e837-4e7d-8494-12a91b39028d",
+        "lesson_activity.key": "259014f0-d72e-41c4-b8b8-20bc5306faaa"
+      }
+    },
+    {
+      "key": "a6dfe32a-5f84-46a8-8fcd-e00b3d531943",
+      "position": 3,
+      "properties": {
+        "progression_name": "Intro to Design Mode"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6dfe32a-5f84-46a8-8fcd-e00b3d531943",
+        "lesson_activity.key": "259014f0-d72e-41c4-b8b8-20bc5306faaa"
+      }
+    },
+    {
+      "key": "5f792107-5b73-4bfa-b421-19c6f0292cbe",
+      "position": 4,
+      "properties": {
+        "progression_name": "Choosing Good IDs"
+      },
+      "seeding_key": {
+        "activity_section.key": "5f792107-5b73-4bfa-b421-19c6f0292cbe",
+        "lesson_activity.key": "259014f0-d72e-41c4-b8b8-20bc5306faaa"
+      }
+    },
+    {
+      "key": "dd6afcdc-87e9-4391-ba57-a372bfec8986",
+      "position": 5,
+      "properties": {
+        "progression_name": "Designing Screens"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986",
+        "lesson_activity.key": "259014f0-d72e-41c4-b8b8-20bc5306faaa"
+      }
+    },
+    {
+      "key": "a12a25b8-b3d1-4ef4-bb5f-1072a544283d",
+      "position": 6,
+      "properties": {
+        "progression_name": "Design a Screen for your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "a12a25b8-b3d1-4ef4-bb5f-1072a544283d",
+        "lesson_activity.key": "259014f0-d72e-41c4-b8b8-20bc5306faaa"
+      }
+    },
+    {
+      "key": "147c8d06-f4a5-46c5-aa59-ff437eebf218",
+      "position": 7,
+      "properties": {
+        "name": "App Project: Screen Design",
+        "progression_name": "App Project: Screen Design"
+      },
+      "seeding_key": {
+        "activity_section.key": "147c8d06-f4a5-46c5-aa59-ff437eebf218",
+        "lesson_activity.key": "259014f0-d72e-41c4-b8b8-20bc5306faaa"
+      }
+    },
+    {
+      "key": "06fabea5-547b-47a7-9e13-5ba2e028cadb",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "06fabea5-547b-47a7-9e13-5ba2e028cadb",
+        "lesson_activity.key": "14262cc4-fbec-4f65-a3a8-6064319cec71"
+      }
+    },
+    {
+      "key": "baa4da7e-cc35-4b77-8c49-24d260812486",
+      "position": 2,
+      "properties": {
+        "progression_name": "Responding to User Input"
+      },
+      "seeding_key": {
+        "activity_section.key": "baa4da7e-cc35-4b77-8c49-24d260812486",
+        "lesson_activity.key": "14262cc4-fbec-4f65-a3a8-6064319cec71"
+      }
+    },
+    {
+      "key": "feb42299-7885-4e5a-ae92-5845a60b0916",
+      "position": 3,
+      "properties": {
+        "progression_name": "User Input"
+      },
+      "seeding_key": {
+        "activity_section.key": "feb42299-7885-4e5a-ae92-5845a60b0916",
+        "lesson_activity.key": "14262cc4-fbec-4f65-a3a8-6064319cec71"
+      }
+    },
+    {
+      "key": "dbb182d8-1380-4ea6-9b19-0ca8e54139ef",
+      "position": 4,
+      "properties": {
+        "progression_name": "Multi-Screen Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbb182d8-1380-4ea6-9b19-0ca8e54139ef",
+        "lesson_activity.key": "14262cc4-fbec-4f65-a3a8-6064319cec71"
+      }
+    },
+    {
+      "key": "d2752d1b-75ee-412c-a37f-4a4b0678a7b6",
+      "position": 5,
+      "properties": {
+        "progression_name": "Connecting Screens"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2752d1b-75ee-412c-a37f-4a4b0678a7b6",
+        "lesson_activity.key": "14262cc4-fbec-4f65-a3a8-6064319cec71"
+      }
+    },
+    {
+      "key": "06a45505-95fd-418a-b56c-aceb888c7062",
+      "position": 6,
+      "properties": {
+        "progression_name": "Importing Screens"
+      },
+      "seeding_key": {
+        "activity_section.key": "06a45505-95fd-418a-b56c-aceb888c7062",
+        "lesson_activity.key": "14262cc4-fbec-4f65-a3a8-6064319cec71"
+      }
+    },
+    {
+      "key": "a2254b8e-1609-4a3f-88cb-e46c34cdb5c7",
+      "position": 7,
+      "properties": {
+        "name": "App Project: Screen Import",
+        "progression_name": "App Project: Screen Import"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2254b8e-1609-4a3f-88cb-e46c34cdb5c7",
+        "lesson_activity.key": "14262cc4-fbec-4f65-a3a8-6064319cec71"
+      }
+    },
+    {
+      "key": "baf6be9b-f2ee-42a2-aa43-084b8ba76718",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "baf6be9b-f2ee-42a2-aa43-084b8ba76718",
+        "lesson_activity.key": "e1bfbc4a-1212-4853-bffc-ad1306583c90"
+      }
+    },
+    {
+      "key": "c13d1605-2933-4480-beb4-ecde9331d286",
+      "position": 2,
+      "properties": {
+        "progression_name": "Changing Design Elements with Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "c13d1605-2933-4480-beb4-ecde9331d286",
+        "lesson_activity.key": "e1bfbc4a-1212-4853-bffc-ad1306583c90"
+      }
+    },
+    {
+      "key": "07062fb2-3c6f-4782-8557-2783e7891227",
+      "position": 3,
+      "properties": {
+        "progression_name": "Changing Text"
+      },
+      "seeding_key": {
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227",
+        "lesson_activity.key": "e1bfbc4a-1212-4853-bffc-ad1306583c90"
+      }
+    },
+    {
+      "key": "d9c0b823-01fb-4e9f-aa83-ff17c1bc8782",
+      "position": 4,
+      "properties": {
+        "progression_name": "Getting Better User Input"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9c0b823-01fb-4e9f-aa83-ff17c1bc8782",
+        "lesson_activity.key": "e1bfbc4a-1212-4853-bffc-ad1306583c90"
+      }
+    },
+    {
+      "key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e",
+      "position": 5,
+      "properties": {
+        "progression_name": "Other Forms of Input"
+      },
+      "seeding_key": {
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e",
+        "lesson_activity.key": "e1bfbc4a-1212-4853-bffc-ad1306583c90"
+      }
+    },
+    {
+      "key": "9dd74c07-8df2-46d6-bf87-122b3762ee83",
+      "position": 6,
+      "properties": {
+        "progression_name": "Adding Functionality to your App"
+      },
+      "seeding_key": {
+        "activity_section.key": "9dd74c07-8df2-46d6-bf87-122b3762ee83",
+        "lesson_activity.key": "e1bfbc4a-1212-4853-bffc-ad1306583c90"
+      }
+    },
+    {
+      "key": "33201c24-0567-4365-a01f-4f76446f70a2",
+      "position": 7,
+      "properties": {
+        "name": "App Project: Adding Functionality",
+        "progression_name": "App Project: Adding Functionality"
+      },
+      "seeding_key": {
+        "activity_section.key": "33201c24-0567-4365-a01f-4f76446f70a2",
+        "lesson_activity.key": "e1bfbc4a-1212-4853-bffc-ad1306583c90"
+      }
+    },
+    {
+      "key": "7a92c11b-c0f4-4f6c-a114-dc1e8969d2c5",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a92c11b-c0f4-4f6c-a114-dc1e8969d2c5",
+        "lesson_activity.key": "aabdc6c5-f331-46b8-a165-6e26c4fb10da"
+      }
+    },
+    {
+      "key": "9507725e-d1ad-4258-b85f-ab8a671dd4b4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9507725e-d1ad-4258-b85f-ab8a671dd4b4",
+        "lesson_activity.key": "d36ce609-df13-44ac-8c3b-5ad9a6f85e95"
+      }
+    },
+    {
+      "key": "6c1fdb21-36a1-4150-ab73-2a89944e80ef",
+      "position": 2,
+      "properties": {
+        "name": "App Project: Bugs and Features",
+        "progression_name": "App Project: Bugs and Features"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c1fdb21-36a1-4150-ab73-2a89944e80ef",
+        "lesson_activity.key": "d36ce609-df13-44ac-8c3b-5ad9a6f85e95"
+      }
+    },
+    {
+      "key": "355cae9b-3572-44a3-a019-dbfea69be7a5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "355cae9b-3572-44a3-a019-dbfea69be7a5",
+        "lesson_activity.key": "59afaa58-a37a-4964-9f12-38c74e33ee3c"
+      }
+    },
+    {
+      "key": "702af42b-0951-40d8-98a6-ac97bddd4637",
+      "position": 2,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "702af42b-0951-40d8-98a6-ac97bddd4637",
+        "lesson_activity.key": "59afaa58-a37a-4964-9f12-38c74e33ee3c"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -324,7 +1004,8 @@
         ],
         "lesson.key": "Analysis of Design",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "75db1a74-0d2e-48a8-a395-9584e46cabd1"
       },
       "level_keys": [
         "CSD U4L01 SFLP"
@@ -333,7 +1014,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -348,7 +1029,8 @@
         ],
         "lesson.key": "Understanding Your User",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "e46eb62c-6ca7-4b3e-b42b-2c6416d6b502"
       },
       "level_keys": [
         "CSD U4L02 SFLP"
@@ -357,7 +1039,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -372,7 +1054,8 @@
         ],
         "lesson.key": "User-Centered Design Micro Activity",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "ba890cc4-a9b2-4d79-8931-799b42833a4a"
       },
       "level_keys": [
         "CSD U4L03 SFLP"
@@ -381,7 +1064,7 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -396,7 +1079,8 @@
         ],
         "lesson.key": "User Interface and Prototype Testing",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "161872ed-ee95-4ae8-b97a-b7fa06754f81"
       },
       "level_keys": [
         "CSD U4L04 SFLP"
@@ -405,7 +1089,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -420,7 +1104,8 @@
         ],
         "lesson.key": "Feedback and Prototypes",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "537a2841-191e-47b8-bcfa-b1531bc450d3"
       },
       "level_keys": [
         "CSD U4L05 SFLP"
@@ -429,7 +1114,7 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -444,7 +1129,8 @@
         ],
         "lesson.key": "Identifying User Needs",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "cc12e9ed-0e5f-4945-b3dc-7660c86b2180"
       },
       "level_keys": [
         "CSD U4L06 SFLP"
@@ -453,7 +1139,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -468,7 +1154,8 @@
         ],
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "706d7013-145d-4644-b9eb-6c27c9ae3447"
       },
       "level_keys": [
         "CSD U4L07 SFLP"
@@ -477,7 +1164,7 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -492,7 +1179,8 @@
         ],
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "9befc52e-767d-4124-a1c3-2aa2993c6e2b"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U4Ch1"
@@ -501,7 +1189,7 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -516,7 +1204,8 @@
         ],
         "lesson.key": "Designing Apps for Good",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c5849fc4-9097-43ae-85a5-01a2112d9b62"
       },
       "level_keys": [
         "CSD U4L08 SFLP"
@@ -525,7 +1214,7 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -540,7 +1229,8 @@
         ],
         "lesson.key": "Market Research",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "13970150-6ea9-4b59-8870-4193c198a6c4"
       },
       "level_keys": [
         "CSD U4L09 SFLP"
@@ -549,7 +1239,7 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -564,7 +1254,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "095a1abf-a89f-44c1-91d5-0e6331223b5a"
       },
       "level_keys": [
         "CSD U4L10 SFLP"
@@ -573,7 +1264,7 @@
     {
       "chapter": 12,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -588,7 +1279,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d596d69c-c419-482d-92cd-d4ae4a46f1cf"
       },
       "level_keys": [
         "Example App Types"
@@ -597,7 +1289,7 @@
     {
       "chapter": 13,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -612,7 +1304,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c0a8f3ee-d866-479d-a8d4-d7023a1ea529"
       },
       "level_keys": [
         "CSDU4 Quiz App Demo"
@@ -621,7 +1314,7 @@
     {
       "chapter": 14,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -636,7 +1329,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c0a8f3ee-d866-479d-a8d4-d7023a1ea529"
       },
       "level_keys": [
         "CSDU4 Decision App Demo"
@@ -645,7 +1339,7 @@
     {
       "chapter": 15,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -660,7 +1354,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c0a8f3ee-d866-479d-a8d4-d7023a1ea529"
       },
       "level_keys": [
         "CSDU4 List App Demo"
@@ -669,7 +1364,7 @@
     {
       "chapter": 16,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -684,7 +1379,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c0a8f3ee-d866-479d-a8d4-d7023a1ea529"
       },
       "level_keys": [
         "CSDU4 Crowdsource App Demo"
@@ -693,7 +1389,7 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -708,7 +1404,8 @@
         ],
         "lesson.key": "Prototype Testing",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "1e1d2176-f974-44ef-9eff-669d74c385c6"
       },
       "level_keys": [
         "CSD U4L11 SFLP"
@@ -717,7 +1414,7 @@
     {
       "chapter": 18,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -732,7 +1429,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "2614fdd6-17f6-4017-830f-6200ce2c6db0"
       },
       "level_keys": [
         "CSD U4L12 SFLP"
@@ -741,7 +1439,7 @@
     {
       "chapter": 19,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -756,7 +1454,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "992a1efe-e837-4e7d-8494-12a91b39028d"
       },
       "level_keys": [
         "Building a UI with Design Mode"
@@ -765,7 +1464,7 @@
     {
       "chapter": 20,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -780,7 +1479,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "a6dfe32a-5f84-46a8-8fcd-e00b3d531943"
       },
       "level_keys": [
         "CSDU4 Design Mode Video"
@@ -789,7 +1489,7 @@
     {
       "chapter": 21,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -804,7 +1504,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "a6dfe32a-5f84-46a8-8fcd-e00b3d531943"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 15"
@@ -813,7 +1514,7 @@
     {
       "chapter": 22,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -828,7 +1529,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "a6dfe32a-5f84-46a8-8fcd-e00b3d531943"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 4"
@@ -837,7 +1539,7 @@
     {
       "chapter": 23,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -852,7 +1554,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "5f792107-5b73-4bfa-b421-19c6f0292cbe"
       },
       "level_keys": [
         "Choosing Good IDs"
@@ -861,7 +1564,7 @@
     {
       "chapter": 24,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -876,7 +1579,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986"
       },
       "level_keys": [
         "CSD U4 - Design Mode Text"
@@ -885,7 +1589,7 @@
     {
       "chapter": 25,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -900,7 +1604,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986"
       },
       "level_keys": [
         "CSD U4 - Design Mode Input Widgets"
@@ -909,7 +1614,7 @@
     {
       "chapter": 26,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -924,7 +1629,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 21"
@@ -933,7 +1639,7 @@
     {
       "chapter": 27,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -948,7 +1654,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986"
       },
       "level_keys": [
         "CSDU4 - Design Mode Icons"
@@ -957,7 +1664,7 @@
     {
       "chapter": 28,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -972,7 +1679,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 18"
@@ -981,7 +1689,7 @@
     {
       "chapter": 29,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -996,7 +1704,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "a12a25b8-b3d1-4ef4-bb5f-1072a544283d"
       },
       "level_keys": [
         "Design a Screen for your App"
@@ -1005,7 +1714,7 @@
     {
       "chapter": 30,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1020,7 +1729,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "147c8d06-f4a5-46c5-aa59-ff437eebf218"
       },
       "level_keys": [
         "CSD U4 - Design Mode Project"
@@ -1029,7 +1739,7 @@
     {
       "chapter": 31,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1044,7 +1754,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "06fabea5-547b-47a7-9e13-5ba2e028cadb"
       },
       "level_keys": [
         "CSD U4L13 SFLP"
@@ -1053,7 +1764,7 @@
     {
       "chapter": 32,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1068,7 +1779,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "baa4da7e-cc35-4b77-8c49-24d260812486"
       },
       "level_keys": [
         "Responding to User Input"
@@ -1077,7 +1789,7 @@
     {
       "chapter": 33,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1092,7 +1804,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "feb42299-7885-4e5a-ae92-5845a60b0916"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 16"
@@ -1101,7 +1814,7 @@
     {
       "chapter": 34,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1116,7 +1829,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "feb42299-7885-4e5a-ae92-5845a60b0916"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 3"
@@ -1125,7 +1839,7 @@
     {
       "chapter": 35,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1140,7 +1854,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "feb42299-7885-4e5a-ae92-5845a60b0916"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 17"
@@ -1149,7 +1864,7 @@
     {
       "chapter": 36,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1164,7 +1879,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dbb182d8-1380-4ea6-9b19-0ca8e54139ef"
       },
       "level_keys": [
         "Multi-Screen Apps"
@@ -1173,7 +1889,7 @@
     {
       "chapter": 37,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1188,7 +1904,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d2752d1b-75ee-412c-a37f-4a4b0678a7b6"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 19"
@@ -1197,7 +1914,7 @@
     {
       "chapter": 38,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1212,7 +1929,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d2752d1b-75ee-412c-a37f-4a4b0678a7b6"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 20"
@@ -1221,7 +1939,7 @@
     {
       "chapter": 39,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1236,7 +1954,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d2752d1b-75ee-412c-a37f-4a4b0678a7b6"
       },
       "level_keys": [
         "CSDU4 Connecting Screens"
@@ -1245,7 +1964,7 @@
     {
       "chapter": 40,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1260,7 +1979,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d2752d1b-75ee-412c-a37f-4a4b0678a7b6"
       },
       "level_keys": [
         "CSDU4 Connecting Screens Getting Back"
@@ -1269,7 +1989,7 @@
     {
       "chapter": 41,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1284,7 +2004,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "06a45505-95fd-418a-b56c-aceb888c7062"
       },
       "level_keys": [
         "Importing Screens"
@@ -1293,7 +2014,7 @@
     {
       "chapter": 42,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1308,7 +2029,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "a2254b8e-1609-4a3f-88cb-e46c34cdb5c7"
       },
       "level_keys": [
         "CSDU4 Project Import"
@@ -1317,7 +2039,7 @@
     {
       "chapter": 43,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1332,7 +2054,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "baf6be9b-f2ee-42a2-aa43-084b8ba76718"
       },
       "level_keys": [
         "CSD U4L14 SFLP"
@@ -1341,7 +2064,7 @@
     {
       "chapter": 44,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1356,7 +2079,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c13d1605-2933-4480-beb4-ecde9331d286"
       },
       "level_keys": [
         "Changing Design Elements with Code"
@@ -1365,7 +2089,7 @@
     {
       "chapter": 45,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1380,7 +2104,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       },
       "level_keys": [
         "CSDU4 Functionality setText"
@@ -1389,7 +2114,7 @@
     {
       "chapter": 46,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1404,7 +2129,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       },
       "level_keys": [
         "CSDU4 Functionality setText button"
@@ -1413,7 +2139,7 @@
     {
       "chapter": 47,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1428,7 +2154,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       },
       "level_keys": [
         "CSDU4 Functionality setText input"
@@ -1437,7 +2164,7 @@
     {
       "chapter": 48,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1452,7 +2179,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       },
       "level_keys": [
         "CSDU4 Functionality setText quiz 1"
@@ -1461,7 +2189,7 @@
     {
       "chapter": 49,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1476,7 +2204,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       },
       "level_keys": [
         "CSDU4 Functionality setText quiz 2"
@@ -1485,7 +2214,7 @@
     {
       "chapter": 50,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1500,7 +2229,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       },
       "level_keys": [
         "CSDU4 Functionality visible"
@@ -1509,7 +2239,7 @@
     {
       "chapter": 51,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1524,7 +2254,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       },
       "level_keys": [
         "CSDU4 Functionality setText quiz 3"
@@ -1533,7 +2264,7 @@
     {
       "chapter": 52,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1548,7 +2279,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d9c0b823-01fb-4e9f-aa83-ff17c1bc8782"
       },
       "level_keys": [
         "Getting Better User Input"
@@ -1557,7 +2289,7 @@
     {
       "chapter": 53,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1572,7 +2304,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 24"
@@ -1581,7 +2314,7 @@
     {
       "chapter": 54,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1596,7 +2329,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 25"
@@ -1605,7 +2339,7 @@
     {
       "chapter": 55,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1620,7 +2354,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 26"
@@ -1629,7 +2364,7 @@
     {
       "chapter": 56,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1644,7 +2379,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 27"
@@ -1653,7 +2389,7 @@
     {
       "chapter": 57,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1668,7 +2404,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e"
       },
       "level_keys": [
         "CSDU4 - Design Mode - 28"
@@ -1677,7 +2414,7 @@
     {
       "chapter": 58,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1692,7 +2429,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "9dd74c07-8df2-46d6-bf87-122b3762ee83"
       },
       "level_keys": [
         "Adding Functionality to your App"
@@ -1701,7 +2439,7 @@
     {
       "chapter": 59,
       "position": 17,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1716,7 +2454,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "33201c24-0567-4365-a01f-4f76446f70a2"
       },
       "level_keys": [
         "CSDU4 Project Functionality"
@@ -1725,7 +2464,7 @@
     {
       "chapter": 60,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1740,7 +2479,8 @@
         ],
         "lesson.key": "Testing the App",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "7a92c11b-c0f4-4f6c-a114-dc1e8969d2c5"
       },
       "level_keys": [
         "CSD U4L15 SFLP"
@@ -1749,7 +2489,7 @@
     {
       "chapter": 61,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1764,7 +2504,8 @@
         ],
         "lesson.key": "Improving and Iterating",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "9507725e-d1ad-4258-b85f-ab8a671dd4b4"
       },
       "level_keys": [
         "CSD U4L16 SFLP"
@@ -1773,7 +2514,7 @@
     {
       "chapter": 62,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1788,7 +2529,8 @@
         ],
         "lesson.key": "Improving and Iterating",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "6c1fdb21-36a1-4150-ab73-2a89944e80ef"
       },
       "level_keys": [
         "CSDU4 Project Bug Feature"
@@ -1797,7 +2539,7 @@
     {
       "chapter": 63,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1812,7 +2554,8 @@
         ],
         "lesson.key": "App Presentation",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "355cae9b-3572-44a3-a019-dbfea69be7a5"
       },
       "level_keys": [
         "CSD U4L17 SFLP"
@@ -1821,7 +2564,7 @@
     {
       "chapter": 64,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1836,7 +2579,8 @@
         ],
         "lesson.key": "App Presentation",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "702af42b-0951-40d8-98a6-ac97bddd4637"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U4Ch2"
@@ -1852,7 +2596,8 @@
         ],
         "lesson.key": "Analysis of Design",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "75db1a74-0d2e-48a8-a395-9584e46cabd1"
       }
     },
     {
@@ -1863,7 +2608,8 @@
         ],
         "lesson.key": "Understanding Your User",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "e46eb62c-6ca7-4b3e-b42b-2c6416d6b502"
       }
     },
     {
@@ -1874,7 +2620,8 @@
         ],
         "lesson.key": "User-Centered Design Micro Activity",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "ba890cc4-a9b2-4d79-8931-799b42833a4a"
       }
     },
     {
@@ -1885,7 +2632,8 @@
         ],
         "lesson.key": "User Interface and Prototype Testing",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "161872ed-ee95-4ae8-b97a-b7fa06754f81"
       }
     },
     {
@@ -1896,7 +2644,8 @@
         ],
         "lesson.key": "Feedback and Prototypes",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "537a2841-191e-47b8-bcfa-b1531bc450d3"
       }
     },
     {
@@ -1907,7 +2656,8 @@
         ],
         "lesson.key": "Identifying User Needs",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "cc12e9ed-0e5f-4945-b3dc-7660c86b2180"
       }
     },
     {
@@ -1918,7 +2668,8 @@
         ],
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "706d7013-145d-4644-b9eb-6c27c9ae3447"
       }
     },
     {
@@ -1929,7 +2680,8 @@
         ],
         "lesson.key": "Project - Paper Prototype",
         "lesson_group.key": "csd4_1",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "9befc52e-767d-4124-a1c3-2aa2993c6e2b"
       }
     },
     {
@@ -1940,7 +2692,8 @@
         ],
         "lesson.key": "Designing Apps for Good",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c5849fc4-9097-43ae-85a5-01a2112d9b62"
       }
     },
     {
@@ -1951,7 +2704,8 @@
         ],
         "lesson.key": "Market Research",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "13970150-6ea9-4b59-8870-4193c198a6c4"
       }
     },
     {
@@ -1962,7 +2716,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "095a1abf-a89f-44c1-91d5-0e6331223b5a"
       }
     },
     {
@@ -1973,7 +2728,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d596d69c-c419-482d-92cd-d4ae4a46f1cf"
       }
     },
     {
@@ -1984,7 +2740,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c0a8f3ee-d866-479d-a8d4-d7023a1ea529"
       }
     },
     {
@@ -1995,7 +2752,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c0a8f3ee-d866-479d-a8d4-d7023a1ea529"
       }
     },
     {
@@ -2006,7 +2764,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c0a8f3ee-d866-479d-a8d4-d7023a1ea529"
       }
     },
     {
@@ -2017,7 +2776,8 @@
         ],
         "lesson.key": "Paper Prototypes",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c0a8f3ee-d866-479d-a8d4-d7023a1ea529"
       }
     },
     {
@@ -2028,7 +2788,8 @@
         ],
         "lesson.key": "Prototype Testing",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "1e1d2176-f974-44ef-9eff-669d74c385c6"
       }
     },
     {
@@ -2039,7 +2800,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "2614fdd6-17f6-4017-830f-6200ce2c6db0"
       }
     },
     {
@@ -2050,7 +2812,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "992a1efe-e837-4e7d-8494-12a91b39028d"
       }
     },
     {
@@ -2061,7 +2824,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "a6dfe32a-5f84-46a8-8fcd-e00b3d531943"
       }
     },
     {
@@ -2072,7 +2836,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "a6dfe32a-5f84-46a8-8fcd-e00b3d531943"
       }
     },
     {
@@ -2083,7 +2848,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "a6dfe32a-5f84-46a8-8fcd-e00b3d531943"
       }
     },
     {
@@ -2094,7 +2860,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "5f792107-5b73-4bfa-b421-19c6f0292cbe"
       }
     },
     {
@@ -2105,7 +2872,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986"
       }
     },
     {
@@ -2116,7 +2884,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986"
       }
     },
     {
@@ -2127,7 +2896,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986"
       }
     },
     {
@@ -2138,7 +2908,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986"
       }
     },
     {
@@ -2149,7 +2920,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dd6afcdc-87e9-4391-ba57-a372bfec8986"
       }
     },
     {
@@ -2160,7 +2932,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "a12a25b8-b3d1-4ef4-bb5f-1072a544283d"
       }
     },
     {
@@ -2171,7 +2944,8 @@
         ],
         "lesson.key": "Digital Design",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "147c8d06-f4a5-46c5-aa59-ff437eebf218"
       }
     },
     {
@@ -2182,7 +2956,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "06fabea5-547b-47a7-9e13-5ba2e028cadb"
       }
     },
     {
@@ -2193,7 +2968,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "baa4da7e-cc35-4b77-8c49-24d260812486"
       }
     },
     {
@@ -2204,7 +2980,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "feb42299-7885-4e5a-ae92-5845a60b0916"
       }
     },
     {
@@ -2215,7 +2992,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "feb42299-7885-4e5a-ae92-5845a60b0916"
       }
     },
     {
@@ -2226,7 +3004,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "feb42299-7885-4e5a-ae92-5845a60b0916"
       }
     },
     {
@@ -2237,7 +3016,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "dbb182d8-1380-4ea6-9b19-0ca8e54139ef"
       }
     },
     {
@@ -2248,7 +3028,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d2752d1b-75ee-412c-a37f-4a4b0678a7b6"
       }
     },
     {
@@ -2259,7 +3040,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d2752d1b-75ee-412c-a37f-4a4b0678a7b6"
       }
     },
     {
@@ -2270,7 +3052,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d2752d1b-75ee-412c-a37f-4a4b0678a7b6"
       }
     },
     {
@@ -2281,7 +3064,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d2752d1b-75ee-412c-a37f-4a4b0678a7b6"
       }
     },
     {
@@ -2292,7 +3076,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "06a45505-95fd-418a-b56c-aceb888c7062"
       }
     },
     {
@@ -2303,7 +3088,8 @@
         ],
         "lesson.key": "Event Driven Programming",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "a2254b8e-1609-4a3f-88cb-e46c34cdb5c7"
       }
     },
     {
@@ -2314,7 +3100,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "baf6be9b-f2ee-42a2-aa43-084b8ba76718"
       }
     },
     {
@@ -2325,7 +3112,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "c13d1605-2933-4480-beb4-ecde9331d286"
       }
     },
     {
@@ -2336,7 +3124,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       }
     },
     {
@@ -2347,7 +3136,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       }
     },
     {
@@ -2358,7 +3148,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       }
     },
     {
@@ -2369,7 +3160,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       }
     },
     {
@@ -2380,7 +3172,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       }
     },
     {
@@ -2391,7 +3184,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       }
     },
     {
@@ -2402,7 +3196,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "07062fb2-3c6f-4782-8557-2783e7891227"
       }
     },
     {
@@ -2413,7 +3208,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "d9c0b823-01fb-4e9f-aa83-ff17c1bc8782"
       }
     },
     {
@@ -2424,7 +3220,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e"
       }
     },
     {
@@ -2435,7 +3232,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e"
       }
     },
     {
@@ -2446,7 +3244,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e"
       }
     },
     {
@@ -2457,7 +3256,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e"
       }
     },
     {
@@ -2468,7 +3268,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "76a2ae25-b1d2-4b7d-a128-ecec21cb1a6e"
       }
     },
     {
@@ -2479,7 +3280,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "9dd74c07-8df2-46d6-bf87-122b3762ee83"
       }
     },
     {
@@ -2490,7 +3292,8 @@
         ],
         "lesson.key": "Basic App Functionality",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "33201c24-0567-4365-a01f-4f76446f70a2"
       }
     },
     {
@@ -2501,7 +3304,8 @@
         ],
         "lesson.key": "Testing the App",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "7a92c11b-c0f4-4f6c-a114-dc1e8969d2c5"
       }
     },
     {
@@ -2512,7 +3316,8 @@
         ],
         "lesson.key": "Improving and Iterating",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "9507725e-d1ad-4258-b85f-ab8a671dd4b4"
       }
     },
     {
@@ -2523,7 +3328,8 @@
         ],
         "lesson.key": "Improving and Iterating",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "6c1fdb21-36a1-4150-ab73-2a89944e80ef"
       }
     },
     {
@@ -2534,7 +3340,8 @@
         ],
         "lesson.key": "App Presentation",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "355cae9b-3572-44a3-a019-dbfea69be7a5"
       }
     },
     {
@@ -2545,7 +3352,8 @@
         ],
         "lesson.key": "App Presentation",
         "lesson_group.key": "csd4_2",
-        "script.name": "csd4-old"
+        "script.name": "csd4-old",
+        "activity_section.key": "702af42b-0951-40d8-98a6-ac97bddd4637"
       }
     }
   ],

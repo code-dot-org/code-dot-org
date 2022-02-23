@@ -4,6 +4,7 @@ module Pd::Application
   class ApplicationBaseTest < ActiveSupport::TestCase
     include ApplicationConstants
     include Pd::Application::ActiveApplicationModels
+    include Pd::SharedApplicationConstants
 
     freeze_time
 
@@ -17,22 +18,31 @@ module Pd::Application
           'Application type is not included in the list',
           'Application year is not included in the list',
           'Type is required'
-        ],
-        application.errors.full_messages
+        ].sort,
+        application.errors.full_messages.sort
       )
     end
 
     test 'derived classes override type and year' do
-      application = TEACHER_APPLICATION_CLASS.new
+      application = create TEACHER_APPLICATION_FACTORY
       assert_equal TEACHER_APPLICATION, application.application_type
-      assert_equal TEACHER_APPLICATION_CLASS.year, application.application_year
+      assert_equal APPLICATION_CURRENT_YEAR, application.application_year
     end
 
     test 'default status is unreviewed' do
-      application = ApplicationBase.new
+      application = create TEACHER_APPLICATION_FACTORY
 
       assert_equal 'unreviewed', application.status
       assert application.unreviewed?
+    end
+
+    test 'can set a different status from the default' do
+      application = create TEACHER_APPLICATION_FACTORY, status: 'incomplete'
+      application.update_status_timestamp_change_log(nil)
+
+      assert application.incomplete?
+      assert_equal application.sanitize_status_timestamp_change_log.length, 1
+      assert application.sanitize_status_timestamp_change_log[0].value?('incomplete')
     end
 
     test 'can update status' do
@@ -334,7 +344,7 @@ module Pd::Application
     end
 
     test 'formatted_applicant_email uses user account email' do
-      application = create :pd_teacher1920_application
+      application = create :pd_teacher_application
 
       assert application.user.email.present?
 
@@ -347,7 +357,7 @@ module Pd::Application
       teacher_without_email.update_attribute(:email, '')
       teacher_without_email.update_attribute(:hashed_email, '')
 
-      application = create :pd_teacher1920_application, user: teacher_without_email
+      application = create :pd_teacher_application, user: teacher_without_email
 
       assert teacher_without_email.email.blank?
 
@@ -359,8 +369,8 @@ module Pd::Application
       teacher_without_email = create :teacher, :with_school_info, :demigrated
       teacher_without_email.update_attribute(:email, '')
       teacher_without_email.update_attribute(:hashed_email, '')
-      application_hash_without_email = build :pd_teacher1920_application_hash, alternate_email: ''
-      application_without_email = create :pd_teacher1920_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
+      application_hash_without_email = build :pd_teacher_application_hash, alternate_email: ''
+      application_without_email = create :pd_teacher_application, user: teacher_without_email, form_data: application_hash_without_email.to_json
 
       assert teacher_without_email.email.blank?
       assert application_without_email.sanitize_form_data_hash[:alternate_email].blank?

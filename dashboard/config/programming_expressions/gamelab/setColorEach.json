@@ -1,21 +1,12 @@
 {
-  "func": "setColorEach",
+  "key": "setColorEach",
+  "name": "setColorEach",
   "category": "Groups",
-  "paletteParams": [
-    "color"
+  "category_key": "groups",
+  "palette_params": [
+    {
+      "name": "color"
+    }
   ],
-  "params": [
-    "\"blue\""
-  ],
-  "dropdown": {
-    "0": [
-      "\"red\"",
-      "\"green\"",
-      "\"blue\"",
-      "\"yellow\"",
-      "rgb(255, 0, 0)",
-      "rgb(255, 0, 0, 0.5)"
-    ]
-  },
-  "modeOptionName": "*.setColorEach"
+  "syntax": "setColorEach(color)"
 }

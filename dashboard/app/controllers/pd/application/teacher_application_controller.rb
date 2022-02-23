@@ -16,10 +16,17 @@ module Pd::Application
       return render :not_teacher unless current_user.teacher?
       return render :no_teacher_email unless current_user.email.present?
 
-      @application = TEACHER_APPLICATION_CLASS.find_by(user: current_user)
-      return render :submitted if @application
-
       @year = APPLICATION_CURRENT_YEAR
+
+      @application = TEACHER_APPLICATION_CLASS.
+        where(application_year: @year).
+        find_by(user: current_user)
+      if @application
+        return render :submitted unless @application.status == 'incomplete' || @application.status == 'reopened'
+        @application_id = @application.try(:id)
+        @saved_status = @application.try(:status)
+        @form_data = @application.try(:form_data)
+      end
 
       @script_data = {
         props: {
@@ -28,7 +35,10 @@ module Pd::Application
           accountEmail: current_user.email,
           apiEndpoint: '/api/v1/pd/application/teacher',
           userId: current_user.id,
-          schoolId: current_user.school_info&.school&.id
+          schoolId: current_user.school_info&.school&.id,
+          applicationId: @application_id,
+          savedStatus: @saved_status,
+          savedFormData: @form_data
         }.to_json
       }
     end

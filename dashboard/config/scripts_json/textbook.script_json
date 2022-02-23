@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:24 UTC",
+    "serialized_at": "2021-11-22 19:57:17 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "textbook"
     }
@@ -44,16 +48,37 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "3fd1b91a-d0e3-4a63-8741-7aedec3ca2d0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3fd1b91a-d0e3-4a63-8741-7aedec3ca2d0",
+        "lesson.key": "new stage",
+        "lesson_group.key": "",
+        "script.name": "textbook"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "1a04e2d9-8abb-40cd-a4da-0b465d2fb7a4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1a04e2d9-8abb-40cd-a4da-0b465d2fb7a4",
+        "lesson_activity.key": "3fd1b91a-d0e3-4a63-8741-7aedec3ca2d0"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -67,7 +92,8 @@
         ],
         "lesson.key": "new stage",
         "lesson_group.key": "",
-        "script.name": "textbook"
+        "script.name": "textbook",
+        "activity_section.key": "1a04e2d9-8abb-40cd-a4da-0b465d2fb7a4"
       },
       "level_keys": [
         "Test Map Level"
@@ -76,7 +102,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -90,7 +116,8 @@
         ],
         "lesson.key": "new stage",
         "lesson_group.key": "",
-        "script.name": "textbook"
+        "script.name": "textbook",
+        "activity_section.key": "1a04e2d9-8abb-40cd-a4da-0b465d2fb7a4"
       },
       "level_keys": [
         "e_textbook_nested_loops_wrapup"
@@ -99,7 +126,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -113,7 +140,8 @@
         ],
         "lesson.key": "new stage",
         "lesson_group.key": "",
-        "script.name": "textbook"
+        "script.name": "textbook",
+        "activity_section.key": "1a04e2d9-8abb-40cd-a4da-0b465d2fb7a4"
       },
       "level_keys": [
         "courseA_bee_seq1"
@@ -122,7 +150,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -136,7 +164,8 @@
         ],
         "lesson.key": "new stage",
         "lesson_group.key": "",
-        "script.name": "textbook"
+        "script.name": "textbook",
+        "activity_section.key": "1a04e2d9-8abb-40cd-a4da-0b465d2fb7a4"
       },
       "level_keys": [
         "courseA_bee_seq2"
@@ -152,7 +181,8 @@
         ],
         "lesson.key": "new stage",
         "lesson_group.key": "",
-        "script.name": "textbook"
+        "script.name": "textbook",
+        "activity_section.key": "1a04e2d9-8abb-40cd-a4da-0b465d2fb7a4"
       }
     },
     {
@@ -163,7 +193,8 @@
         ],
         "lesson.key": "new stage",
         "lesson_group.key": "",
-        "script.name": "textbook"
+        "script.name": "textbook",
+        "activity_section.key": "1a04e2d9-8abb-40cd-a4da-0b465d2fb7a4"
       }
     },
     {
@@ -174,7 +205,8 @@
         ],
         "lesson.key": "new stage",
         "lesson_group.key": "",
-        "script.name": "textbook"
+        "script.name": "textbook",
+        "activity_section.key": "1a04e2d9-8abb-40cd-a4da-0b465d2fb7a4"
       }
     },
     {
@@ -185,7 +217,8 @@
         ],
         "lesson.key": "new stage",
         "lesson_group.key": "",
-        "script.name": "textbook"
+        "script.name": "textbook",
+        "activity_section.key": "1a04e2d9-8abb-40cd-a4da-0b465d2fb7a4"
       }
     }
   ],

@@ -8,12 +8,19 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   setup do
     @teacher = create(:teacher)
     @student = create(:student)
-    script = Script.find_by_name(Script::COURSE4_NAME)
-    script.lesson_extras_available = true
-    script.save
+    script = create(:script, lesson_extras_available: true)
     create(:section, user: @teacher, script: script)
     @section = create(:section, user: @teacher, script: script)
     create(:follower, section: @section, student_user: @student)
+
+    # give our test script a more-complex internal hierarchy than the one
+    # provided by the factory, so we can test a variety of script_level and
+    # lesson relative positions.
+    script.lesson_groups << create(:lesson_group) do |lesson_group|
+      create_list(:lesson, 3, lesson_group: lesson_group) do |lesson|
+        create_list(:script_level, 3, lesson: lesson, script: script)
+      end
+    end
   end
 
   test 'tracking_pixel_url' do
@@ -57,7 +64,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   test 'get End-of-Lesson experience when enabled' do
     stubs(:current_user).returns(@student)
     script = @section.script
-    script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
+    script_level = script.lessons.first.last_progression_script_level
     @section.lesson_extras = true
     @section.save
     response = {}
@@ -69,7 +76,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
   test 'do not get End-of-Lesson experience when disabled' do
     stubs(:current_user).returns(@student)
     script = @section.script
-    script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
+    script_level = script.lessons.first.last_progression_script_level
     @section.lesson_extras = false
     @section.save
     response = {}
@@ -78,10 +85,22 @@ class ScriptLevelsHelperTest < ActionView::TestCase
     refute response[:redirect].end_with?('extras')
   end
 
-  test 'get End-of-Lesson experience only for end of lesson' do
+  test 'get End-of-Lesson experience only for last script_level of lesson' do
     stubs(:current_user).returns(@student)
     script = @section.script
-    script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 8, false
+    script_level = script.lessons.first.script_levels.first
+    @section.lesson_extras = true
+    @section.save
+    response = {}
+
+    script_level_solved_response(response, script_level)
+    refute response[:redirect].end_with?('extras')
+  end
+
+  test 'do not get End-of-Lesson experience for last script_level' do
+    stubs(:current_user).returns(@student)
+    script = @section.script
+    script_level = script.script_levels.last
     @section.lesson_extras = true
     @section.save
     response = {}
@@ -92,7 +111,7 @@ class ScriptLevelsHelperTest < ActionView::TestCase
 
   test 'get End-of-Lesson experience only for student of teacher' do
     script = @section.script
-    script_level = script.get_script_level_by_relative_position_and_puzzle_position 2, 9, false
+    script_level = script.lessons.first.last_progression_script_level
     @section.lesson_extras = true
     @section.save
     response = {}

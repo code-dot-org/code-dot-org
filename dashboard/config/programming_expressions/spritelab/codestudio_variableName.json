@@ -1,7 +1,8 @@
 {
+  "key": "codestudio_variableName",
+  "name": "variables_get",
   "category": "Variables",
-  "config": {
-    "docFunc": "codestudio_variableName",
-    "func": "variables_get"
-  }
+  "category_key": "variables",
+  "block_name": "variables_get",
+  "syntax": "variables_get"
 }

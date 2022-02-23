@@ -63,6 +63,7 @@ ko:
   previous_page: 이전 페이지
   next_page: 다음 페이지
   next_resource: 다음 자료
+  done_with_module: 이 학습 모듈로 완료
   cancel: "취소"
   okay: "알겠어"
   or: "이거나"
@@ -168,7 +169,15 @@ ko:
     user_type_button: "계정 유형 업데이트"
     user_type_label: "계정 유형"
     user_type_student: "student"
-    user_type_teacher: "선생님"
+    user_type_student_desc: "모든 과정과 활동 탐구:"
+    user_type_student_ability_1: "진도와 프로젝트 저장"
+    user_type_student_ability_2: "교사의 학급 섹션에 가입"
+    user_type_teacher: "교사"
+    user_type_teacher_desc: "학생들이 접근권을 가진 모든 것:"
+    user_type_teacher_ability_1: "학급 섹션 만들기"
+    user_type_teacher_ability_2: "학생 작업 배정 및 추적"
+    user_type_teacher_ability_3: "전문가 학습에 등록"
+    user_type_teacher_ability_4: "교사 포럼 상에서 상호대화"
     field_is_required: "이(가) 필요합니다."
     accept_terms: "계정 만들기에 동의해야 합니다."
     error: "오류가 발생하였습니다."
@@ -177,6 +186,7 @@ ko:
     email_preference_yes: "예"
     email_preference_no: "아니요"
     email_preference_required: "선호하는 이메일 주소를 지정해야 합니다."
+    share_teacher_email_reg_partner_question: "현재 거주하는 주 내 [Code.org 지역 파트너](%{cdo_regional_partner_desc})와 연락처 정보를 공유하여 그들에게서 지역 전문가 개발 및 리소스, 이벤트에 관한 통지를 받고 싶으세요?"
     share_teacher_email_reg_partner_preference_yes: "예"
     share_teacher_email_reg_partner_preference_no: "아니요"
     share_teacher_email_reg_partner_preference_required: "선호하는 이메일 주소를 지정해야 합니다."
@@ -286,6 +296,7 @@ ko:
       provider_managed_section: "이 섹션은 다른 공급자에 의해 관리되고 있으며 가입할 수 없습니다. 교사에게 %{provider}를 통해 귀하를 추가하고 섹션을 다시 동기화해 달라고 요청하세요."
       restricted_section: "섹션이 잠겨있어 %{section_code}섹션에 추가할 수 없습니다.  담당 선생님에게 문의해주세요."
       full_section: "%{section_code} 섹션에는 이미  %{section_capacity} 명의 학생이 가입되어 있어 더이상 추가할 수 없습니다. 담당 선생님께 문의해주세요."
+      not_participant_type: "귀하는 %{section_code} 섹션에 대한 참가자 유형을 충족하지 않으므로 해당 섹션에 추가될 수 없습니다."
     mail:
       student_disassociated:
         subject: "Code.org 알림: %{student_name} 학생은 더이상 등록되어있지 않습니다."
@@ -309,7 +320,7 @@ ko:
   devise:
     registrations:
       user:
-        user_type_change_email_mismatch: "제공하신 이메일 주소가 이 계정에 저장된 주소와 맞지 않습니다."
+        user_type_change_email_mismatch: "제공하신 이메일 주소가 계정에 저장된 주소와 맞지 않습니다."
         personal_login_created_email: '개인 계정을 성공적으로 만들었습니다. 이제 이메일과 비밀번호로 계정에 로그인할 수 있습니다.'
         personal_login_created_username: '개인 계정을 성공적으로 만들었습니다. 이제 사용자 이름(%{username})과 비밀번호로 계정에 로그인할 수 있습니다.'
   nav:
@@ -402,12 +413,15 @@ ko:
       minecraft_hero: '마인크래프트 히어로'
       playlab: 'Play Lab'
       playlab_k1: '플레이 랩 (프리 리더)'
+      poetry: '시'
+      poetry_hoc: '시학'
       scratch: '스크래치'
       sports: '스포츠'
       spritelab: '스프라이트 연구소'
       starwars: '스타워즈'
       starwarsblocks: '스타워즈 (블록)'
       starwarsblocks_hour: '스타워즈 (블록)'
+      loading: 'Loading...'
       weblab: '웹 랩'
       view_all: '모든 프로젝트 보기...'
     popup:
@@ -423,6 +437,7 @@ ko:
       prizes_link: '자세히'
   teacher:
     answer: 응답
+    dashboard: '교사 대시보드'
     for_teachers_only: 선생님 전용
     title:
       one: '선생님 : '
@@ -541,6 +556,7 @@ ko:
     all_students_must_be_in_current_section: "모든 학생이 귀하의 섹션에 등록되어 있어야 합니다."
     already_enrolled_in_new_section: "이 학생들은 이미 새 섹션에 등록되어 있기 때문에 이동할 수 없습니다."
     third_party_login: "학생을 제 3자 툴과 동기화 되어 있는 섹션으로 이동시킬 수 없습니다."
+    not_correct_participant_type: "이 사용자들은 새로운 섹션에 참가자가 될 권한이 없기 때문에 이 사용자들을 이동할 수 없습니다."
   share:
     title: "Code Studio 배우기"
     description: "누구든지 컴퓨터 과학을 배우고, 코드를 이용해서 게임, 앱, 예술을 만들 수 있습니다."
@@ -553,7 +569,7 @@ ko:
     none: '응답 안 함'
   user_type:
     student: 'student'
-    teacher: '선생님'
+    teacher: '교사'
   footer:
     thank_you: '우리는 Code Studio를 만드는데 도움을 주신 <a href="https://code.org/about/donors"> 기증자</a>, <a href="https://code.org/about/partners"> 파트너</a>, <a href="https://code.org/about/team"> 확장된 팀</a>, 비디오 캐스트 및 <a href="https://code.org/about/advisors"> 교육 고문</a> 들의 지원에 감사 드립니다.'
     help_from_html: '특히 이 자료를 만드는 데 도움을 준 구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들을 칭찬하고 싶습니다.'
@@ -574,12 +590,15 @@ ko:
     tos_short: '약관'
     tos: '이용 약관'
     privacy: '개인정보보호 정책'
+    privacy_updated: '개인정보 보호 정책(엡데이트)'
     secure: '보안 버전'
     report_abuse: '악용 사례 신고'
     built_on_code_studio: '코드 스튜디오 내장'
     make_my_own_app: '나만의 앱 만들기'
     how_it_works: '작동하는 방법 (코드 보기)'
     try_hour_of_code: 'Hour of Code 를 해보세요!'
+    store: '스토어'
+    cookie_notice: '쿠키 방침'
   reference_area:
     title: '도움이 필요하신가요?'
     subtitle: '동영상 및 힌트'
@@ -910,6 +929,7 @@ ko:
     instructor_feedback: '교사 피드백'
     peer_feedback: '동료 피드백'
     outdated: '이 피드백은 이전에 제출된 버전에 추가되었습니다.'
+    review_count: '이 단원을 위해 %{review_count} 검토를 완료해야 합니다.'
     peer_review: '동료 검토'
   external_links:
     disclaimer: 고지 사항
@@ -988,12 +1008,18 @@ ko:
       email: '이메일'
       email_alternate: '대체 이메일'
       gender: '성 정체성'
+      school: '학교'
       school_name: '학교 이름'
       school_city: '학교 도시'
+      school_city_district: '학교 도시/학군'
       school_country: '학교 국가'
+      school_department_region: '학교 부서/지역'
       colombian_school_city: '학교 도시'
+      colombian_chilean_school_department: '학교 부서/지역'
       colombian_school_municipality: '학교 도시'
       colombian_chilean_school_name: '학교 이름'
+      chilean_school_commune: '공동체'
+      chilean_school_id: '학교 ID'
       ages: '올해 몇 세 아동을 가르치세요?'
       subjects: '올해 어느 과목을 가르치세요?'
       resources: '다음 CS 교육 리소스 중 어느 것을 사용하세요?'
@@ -1113,3 +1139,4 @@ ko:
     this_sprite: "이 스프라이트"
   unit_prefix: "단원 %{n}"
   code_org_logo_alt: "Cord.org 홈"
+  teacher_feedback: "교사 피드백"

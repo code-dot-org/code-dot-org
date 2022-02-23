@@ -164,7 +164,7 @@
   "dropletBlock_whenTouchTauntaun_description": "Cette fonction s'exécute lorsque le droïde touche un personnage Tauntaun.",
   "dropletBlock_whenTouchProbot_description": "Cette fonction s'exécute lorsque le droïde touche un personnage Droïde Sonde.",
   "dropletBlock_whenUp_description": "Cette fonction s'exécute lorsque tu appuies sur le bouton «  vers le haut ».",
-  "elseCode": "autre",
+  "elseCode": "sinon",
   "emotion": "humeur",
   "endGameWin": "terminer le jeu en victoire",
   "endGameLose": "terminer le jeu en défaite",

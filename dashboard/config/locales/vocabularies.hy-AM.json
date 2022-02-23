@@ -2,6 +2,75 @@
   "hy-AM": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Debugging"
+        },
+        "function/hero/unversioned": {
+          "word": "Ֆունկցիա"
+        },
+        "code/poem-art/2021": {
+          "word": "Կոդ"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Debugging"
+        },
+        "code/artist/unversioned": {
+          "word": "Կոդ"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Debugging"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "conditionals"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "loops"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Debugging"
+        },
+        "code/sports/unversioned": {
+          "word": "Կոդ"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Debugging"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Debugging"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Կոդ"
+        },
         "variable/coursef/2021": {
           "word": "Փոփոխական"
         },
@@ -76,6 +145,24 @@
         },
         "define/coursee/2021": {
           "word": "Սահմանել"
+        },
+        "debugging/csd/2021": {
+          "word": "Debugging"
+        },
+        "variable/csd/2021": {
+          "word": "Փոփոխական"
+        },
+        "conditionals/csd/2021": {
+          "word": "conditionals"
+        },
+        "abstraction/csd/2021": {
+          "word": "աբստրակցիա"
+        },
+        "function/csd/2021": {
+          "word": "Ֆունկցիա"
+        },
+        "copyright/csd/2021": {
+          "word": "հեղինակային իրավունք"
         }
       }
     }

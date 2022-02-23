@@ -100,7 +100,8 @@ module Services
 
         # override
         def crowdin_key
-          Rails.application.routes.url_helpers.script_lesson_url(object.script, object)
+          path = Rails.application.routes.url_helpers.script_lesson_path(object.script, object)
+          URI.join("https://studio.code.org", path)
         end
       end
 
@@ -111,7 +112,8 @@ module Services
 
         # override
         def crowdin_key
-          Rails.application.routes.url_helpers.script_url(object)
+          path = Rails.application.routes.url_helpers.script_path(object)
+          URI.join("https://studio.code.org", path)
         end
       end
     end

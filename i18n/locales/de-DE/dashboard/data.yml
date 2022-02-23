@@ -546,9 +546,33 @@ de:
         codebreak_e04: Code Break 4.0 Informationen mit Mike Krieger und Alice Keeler
         codebreak_e05: 'Code Break 5.0: Simulation & Daten mit Bill Gates'
         csd_how_teamwork_works: Wie Teamarbeit funktioniert
+        codebreak_e10: 'Folge 10.0: Künstliche Intelligenz mit Kat Graham und Kate Park'
         outbreak_mike: CodeBytes Episode 3 mit Mike – Ausbruchssimulator
+        csd_ml_import_model: Importieren eines KI-Modells
         playlab_2021: Einführung ins Spielelabor
         playlab_2021_reader: Einführung ins Spielelabor
+        PL_CSD_TeacherTips_Advise: Tipps für Lehrer – Ratschläge für neue Lehrer
+        PL_CSD_TeacherTips_IntroToCSD: Tipps für Lehrer – Einführung zu "Erkenntnisse aus der Informatik" (CS Discoveries)
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Tipps für Lehrer – Der Problemlösungsprozess
+        PL_CSD_TeacherTips_PairProgramming: Tipps für Lehrer – Paarprogrammierung
+        PL_CSD_TeacherTips_Debugging: Tipps für Lehrer – Debuggen
+        PL_CSD_TeacherTips_LeadLearner: Tipps für Lehrer – Lead Learner
+        poembot-playtest-intro: PoemBot Spiel-Test – Einführung
+        poembot-playtest-sprites: PoemBot Spieltest-Sprites
+        poembot-playtest-events: PoemBot Spieltest-Ereignisse
+        hello_world_intro: Hallo Welt – Willkommen bei Sprite Lab
+        hello_world_events: Hallo Welt – Programmieren mit Ereignissen
+        hello_world_congrats: Hallo Welt – Mach was du willst
+        rough_poemart_intro: v1 Gedichtkunst/Poesie Einführung
+        rough_poemart_events: v1 Gedichtkunst/Poesie Ereignisse
+        rough_poemart_imagery: v1 Gedichtkunst/Poesie Bildliche Sprache
+        rough_poemart_congrats: v1 Gedichtkunst/Poesie Glückwünsche
+        poetry_module_variables: Variablen - Programmieren mit Poesie
+        poetry_module_textandvariables: Text & Variablen - Programmieren mit Poesie
+        poetry_module_planningapp: Plane deine App, die Gedichte schreibt - Programmieren mit Poesie
+        poetry_module_multichoiceprompts: Multiple-Choice-Aufgaben - Programmieren mit Poesie
+        poetry_module_conditionals: Bedingungen - Programmieren mit Poesie
+        poemart_intro: Einführung in die Gedichtkunst
     callout:
       text:
         drag_blocks: Ziehe einen "vorwärts bewegen"-Baustein und lasse ihn unter den anderen Baustein einrasten

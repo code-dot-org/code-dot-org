@@ -1,0 +1,51 @@
+{
+  "category": "Poetry - Effects",
+  "config": {
+    "func": "setForegroundEffect",
+    "blockText": "do {EFFECT} effect",
+    "args": [
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "bubbles",
+            "\"bubbles\""
+          ],
+          [
+            "confetti",
+            "\"confetti\""
+          ],
+          [
+            "hearts",
+            "\"hearts\""
+          ],
+          [
+            "happy emojis",
+            "\"emojis\""
+          ],
+          [
+            "rain",
+            "\"rain\""
+          ],
+          [
+            "starburst",
+            "\"starburst\""
+          ],
+          [
+            "shattering glass",
+            "\"glass\""
+          ],
+          [
+            "twinkling",
+            "\"twinkling\""
+          ]
+        ]
+      }
+    ],
+    "color": [
+      240,
+      0.45,
+      0.65
+    ]
+  }
+}

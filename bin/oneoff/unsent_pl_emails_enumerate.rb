@@ -303,7 +303,7 @@ def get_ids_for_no_workshop_yet
     user = User.find_by_email(contact_email)
 
     # Find the teacher application
-    application = Pd::Application::Teacher1920Application.where(user: user).first
+    application = Pd::Application::TeacherApplication.where(user: user).first
 
     puts "** id: #{poste_id}, email: #{contact_email}, user? #{!user.nil?}, application? #{!application.nil?}"
 
@@ -355,10 +355,10 @@ def get_ids_for_no_principal_approval_no_workshop_yet
     puts "## Contact email: #{contact_email}"
 
     # Find the teacher application that had this principal's email address
-    application = Pd::Application::Teacher1920Application.all.select {|a| (JSON.parse(a.form_data)["principalEmail"] == contact_email)}.first
+    application = Pd::Application::TeacherApplication.all.select {|a| (JSON.parse(a.form_data)["principalEmail"] == contact_email)}.first
 
     if application
-      if Pd::Application::PrincipalApproval1920Application.where(application_guid: application.application_guid).empty?
+      if Pd::Application::PrincipalApprovalApplication.where(application_guid: application.application_guid).empty?
 
         assigned_workshop_id = application.pd_workshop_id
 

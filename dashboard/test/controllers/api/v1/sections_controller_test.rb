@@ -15,17 +15,17 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   setup do
     # place in setup instead of setup_all otherwise course ends up being serialized
     # to a file if levelbuilder_mode is true
-    @unit_group = create(:unit_group, published_state: SharedConstants::PUBLISHED_STATE.beta)
+    @unit_group = create(:unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     @section_with_unit_group = create(:section, user: @teacher, login_type: 'word', course_id: @unit_group.id)
 
-    @script = create(:script, published_state: SharedConstants::PUBLISHED_STATE.preview)
-    @script_in_preview_state = create(:script, published_state: SharedConstants::PUBLISHED_STATE.preview)
+    @script = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @script_in_preview_state = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
     @section_with_script = create(:section, user: @teacher, script: @script_in_preview_state)
     @student_with_script = create(:follower, section: @section_with_script).student_user
 
-    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: SharedConstants::PUBLISHED_STATE.stable)
-    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedConstants::PUBLISHED_STATE.preview)
-    @csp_script = create(:script, name: 'csp1', published_state: SharedConstants::PUBLISHED_STATE.stable)
+    @csp_unit_group = create(:unit_group, name: CSP_COURSE_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+    @csp_unit_group_soft_launched = create(:unit_group, name: CSP_COURSE_SOFT_LAUNCHED_NAME, published_state: SharedCourseConstants::PUBLISHED_STATE.preview)
+    @csp_script = create(:script, name: 'csp1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     create(:unit_group_unit, unit_group: @csp_unit_group, script: @csp_script, position: 1)
     @csp_script.reload
 
@@ -393,16 +393,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal false, returned_section.lesson_extras
   end
 
-  test 'default code_review_enabled value is TRUE' do
-    sign_in @teacher
-    post :create, params: {
-      login_type: Section::LOGIN_TYPE_EMAIL
-    }
-
-    assert returned_json['code_review_enabled']
-    assert returned_section.code_review_enabled
-  end
-
   test 'cannot set lesson_extras to an invalid value' do
     sign_in @teacher
     post :create, params: {
@@ -484,7 +474,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'pilot teacher can assign the pilot course id' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     sign_in pilot_teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
@@ -497,7 +487,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'non pilot teacher cannot assign the pilot course id' do
-    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    pilot_unit_group = create :unit_group, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
@@ -512,7 +502,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'pilot teacher can assign pilot script' do
     pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     sign_in pilot_teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
@@ -525,7 +515,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'non pilot teacher cannot assign a pilot script' do
-    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedConstants::PUBLISHED_STATE.pilot
+    pilot_script = create :script, pilot_experiment: 'my-experiment', published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     sign_in @teacher
     post :create, params: {
       login_type: Section::LOGIN_TYPE_EMAIL,
@@ -1073,5 +1063,99 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in user
     get :require_captcha
     assert_equal(json_response["key"], GOOGLE_PROVIDED_TEST_KEY)
+  end
+
+  test 'can get all code review groups for a section' do
+    sign_in @teacher
+    set_up_code_review_groups
+    get :code_review_groups, params: {id: @code_review_group_section.id}
+    group1_members = [
+      {follower_id: @followers[0].id, name: @followers[0].student_user.name},
+      {follower_id: @followers[1].id, name: @followers[1].student_user.name}
+    ]
+    group2_members = [{follower_id: @followers[2].id, name: @followers[2].student_user.name}]
+    unassigned_members = [
+      {follower_id: @followers[3].id, name: @followers[3].student_user.name},
+      {follower_id: @followers[4].id, name: @followers[4].student_user.name}
+    ]
+    expected_response = {
+      groups: [
+        {id: @group1.id, name: @group1.name, members: group1_members},
+        {id: @group2.id, name: @group2.name, members: group2_members},
+        {unassigned: true, members: unassigned_members}
+      ]
+    }
+    assert_response :success
+    assert_equal(expected_response.as_json, json_response)
+  end
+
+  test 'can post code_review_groups for a valid group' do
+    sign_in @teacher
+    set_up_code_review_groups
+    new_groups = [
+      {name: 'new_group', members: [{follower_id: @followers[0].id}]}
+    ]
+    post :set_code_review_groups, params: {id: @code_review_group_section.id, groups: new_groups}
+    assert_response :success
+  end
+
+  test 'post code_review_groups returns 400 for invalid group' do
+    sign_in @teacher
+    set_up_code_review_groups
+    new_group_name = 'new_group'
+    # delete follower 4 so it becomes invalid
+    invalid_follower_id = @followers[4].id
+    Follower.delete(@followers[4].id)
+    new_groups = [
+      {name: new_group_name, members: [{follower_id: invalid_follower_id}]}
+    ]
+    assert CodeReviewGroup.exists?(@group1.id)
+    post :set_code_review_groups, params: {id: @code_review_group_section.id, groups: new_groups}
+    # check that the original group still exists
+    assert CodeReviewGroup.exists?(@group1.id)
+    assert_response 400
+  end
+
+  test 'can set code review enabled to true' do
+    sign_in @teacher
+    @section.code_review_expires_at = nil
+    @section.save
+    post :set_code_review_enabled, params: {id: @section.id, enabled: true}
+    @section.reload
+    assert_response :success
+    assert_not_nil json_response["expiration"]
+    assert_equal @section.code_review_expires_at, json_response["expiration"]
+  end
+
+  test 'can set code review enabled to false' do
+    sign_in @teacher
+    @section.code_review_expires_at = DateTime.now
+    @section.save
+    post :set_code_review_enabled, params: {id: @section.id, enabled: false}
+    @section.reload
+    assert_response :success
+    assert_nil json_response["expiration"]
+    assert_nil @section.code_review_expires_at
+  end
+
+  private
+
+  def set_up_code_review_groups
+    # create a new section to avoid extra unassigned students
+    @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 5 students
+    @followers = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      @followers << create(:follower, section: @code_review_group_section, student_user: student)
+    end
+
+    # Create 2 code review groups
+    @group1 = create :code_review_group, section: @code_review_group_section
+    @group2 = create :code_review_group, section: @code_review_group_section
+    # put student 0 and 1 in group 1, and student 2 in group 2
+    create :code_review_group_member, follower: @followers[0], code_review_group: @group1
+    create :code_review_group_member, follower: @followers[1], code_review_group: @group1
+    create :code_review_group_member, follower: @followers[2], code_review_group: @group2
   end
 end

@@ -1,12 +1,12 @@
 {
-  "func": "indexOf",
+  "key": "indexOf",
+  "name": "indexOf",
   "category": "Variables",
-  "paletteParams": [
-    "searchValue"
+  "category_key": "variables",
+  "palette_params": [
+    {
+      "name": "searchValue"
+    }
   ],
-  "params": [
-    "\"World\""
-  ],
-  "modeOptionName": "*.indexOf",
-  "type": "value"
+  "syntax": "indexOf(searchValue)"
 }

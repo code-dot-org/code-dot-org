@@ -240,6 +240,9 @@ fr-FR:
   get_a_certificate_message_after: Clique sur le diplôme pour le télécharger ou l'imprimer.
     Maintenant, continue avec nos <a href='http://studio.code.org'>autres cours</a>,
     ou vois plus d'options pour <a href='/learn/beyond'>Apprendre au-delà d'une heure</a>.
+  get_a_certificate_message_after_markdown: Cliquez sur le certificat pour le télécharger
+    ou l'imprimer. Maintenant, continuez avec nos [autres cours] (http://studio.code.org),
+    ou consultez d'autres options pour [Apprendre au-delà d'une heure] (/learn/beyond).
   thanks_for_submitting: Nous te remercions de ta participation !
   if_you_enjoyed: Si tu as aimé apprendre, demande à des amis d’essayer aussi ! Nous
     voulons que le monde entier apprenne.
@@ -260,6 +263,8 @@ fr-FR:
   share_achievement: Partage ta réalisation
   beyond_hour_message: Continue avec nos <a href='http://studio.code.org'>autres cours</a>,
     ou vois plus d'options pour <a href='/learn/beyond'>Apprendre au-delà d'une heure</a>.
+  beyond_hour_message_markdown: Continuez à suivre nos [autres cours] (http://studio.code.org),
+    ou consultez d'autres options pour [Apprendre au-delà d'une heure] (/learn/beyond).
   leaderboards_for_hoc: Classements pour l'Heure de Code.
   support_url: http://support.code.org/
   country: Pays
@@ -348,6 +353,12 @@ fr-FR:
     Mariana Alzate, élève de CM2"
   stats_michael: "«&#160;Je n'ai <b>vraiment jamais</b> vu mes élèves aussi enthousiasmés
     d'apprendre.&#160;» — Michael Clark, enseignant"
+  stats_nina_markdown: "« Chaque jour a donné les mêmes résultats : un engagement
+    à 100 %. » - Nina Nichols Peery, enseignante"
+  stats_student_markdown: "« Je savais que c'était une chance unique dans une vie**. »
+    - Mariana Alzate, élève de 5e année"
+  stats_michael_markdown: "« Je n'ai jamais, jamais** vu mes élèves aussi enthousiastes
+    à l'idée d'apprendre. » - Frank Martinez, enseignant"
   studiobar_title: Explorer <a href='http://studio.code.org'> et les cours de Code.org</a>
   studiobar_title_nolink: Explorer les cours de Code.org
   studiobar_elementary_title: Cours élémentaires
@@ -487,6 +498,8 @@ fr-FR:
     de nos priorités et nous faisons réguliérement des mises à jour de notre politique
     de confidentialité, appliquée depuis le 25 Mai.
   homepage_below_hero_announcement_link_text: En savoir plus
+  homepage_higher_power_body: Code une danse au son de "Higher Power" de Coldplay
+    et tu pourrais avoir l'occasion de voir le groupe en concert!
   contact_form_topic_student: Je suis un élève
   contact_form_topic_parent: Je suis un parent
   contact_form_topic_teacher: Je suis enseignant/éducateur
@@ -531,8 +544,12 @@ fr-FR:
   class_submission_languages_other: Autre(s) langue(s)
   videos_more: Plus de <a href='%{inspiring_videos_playlist}'> vidéos qui inspirent</a>
     et qui font intervenir des modèles de référence et des célébrités
+  videos_more_markdown: Plus de [vidéos inspirantes] (%{inspiring_videos_playlist})
+    mettant en vedette des modèles et des célébrités
   careers_page_more: Plus de <a href='%{careers_url}' target='_blank'> vidéos inspirational</a>
     mettant en vedette les professionnels dans les domaines de la technologie
+  careers_page_more_markdown: Plus [vidéos inspirantes] (%{careers_url}) mettant en
+    vedette des professionnels des domaines technologiques
   playlab_choose_theme: Choisis ton thème de Labo de jeux
   playlab_classic_title: Classique
   playlab_gumball_title: Le monde incroyable de Gumball
@@ -700,17 +717,32 @@ fr-FR:
     quelqu''un qui pourrait <span style="font-family: ''Gotham 7r'', sans-serif;">inspirer</span>
     leurs élèves en leur parlant des nombreuses possibilités qu’offre l''informatique
     (ce qui pourrait se faire par un échange vidéo).'
+  volunteer_engineer_submission_intro_recruit_markdown: Les enseignants aimeraient
+    avoir quelqu'un **passionné par l'enseignement de l'informatique** qui puisse
+    aider en classe, ou pour quelqu'un qui puisse **inspirer** leurs élèves en parlant
+    de l'étendue des possibilités offertes par l'informatique (ce qui pourrait se
+    faire par le biais d'un chat vidéo).
   volunteer_engineer_submission_intro_guide: En savoir plus sur notre <a href="%{volunteer_guide}">
     programme de bénévolat</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Pour en savoir plus sur notre
+    [programme de bénévolat, cliquez ici] (%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Veuillez saisir les informations suivantes
     si vous êtes étudiant en informatique ou professionnel des logiciels. Vous devez
     être âgé d’au moins 18 ans pour vous inscrire en tant que bénévole. Notez que
     toutes les informations que vous fournirez, dans cette section, seront accessibles
     à quiconque consultera la <a href="/volunteer/local">carte des bénévoles</a>.  Les
     champs marqués d'un <span class="form-required-field">*</span> sont obligatoires.
+  volunteer_engineer_submission_intro_signup_markdown: Veuillez saisir les informations
+    suivantes si vous êtes un étudiant en informatique ou un professionnel du logiciel.
+    Vous devez être âgé d'au moins 18 ans pour vous inscrire en tant que bénévole.
+    Notez que tous les champs que vous remplissez dans cette section seront accessibles
+    au public pour tous ceux qui consultent la [carte des bénévoles] (/volunteer/local).
+    Les champs marqués d'un _*_ sont obligatoires.
   volunteer_engineer_submission_intro_links: Êtes-vous un enseignant et cherchez-vous
     des bénévoles ? Trouvez un bénévole près de chez vous sur notre <a href="%{volunteer_local}">carte
     des bénévoles</a>.
+  volunteer_engineer_submission_intro_links_markdown: Vous êtes enseignant à la recherche
+    de bénévoles ? Trouvez un bénévole local sur notre [carte des bénévoles] (%{volunteer_local}).
   volunteer_engineer_submission_update_information: Mettez à jour vos informations
   volunteer_engineer_submission_header_shared: Informations partagées avec les enseignants
     sur la carte des bénévoles
@@ -771,6 +803,10 @@ fr-FR:
   volunteer_engineer_submission_thankyou: Nous vous remercions de vous être inscrit
     en tant que bénévole. Les enseignants utiliseront <a href="%{url}">cette carte</a>
     pour rechercher et contacter des bénévoles comme vous.
+  volunteer_engineer_submission_thankyou_markdown: Merci ! Vos informations de bénévolat
+    ont été soumises avec succès. Les enseignants utiliseront [cette carte] (%{url})
+    pour rechercher et contacter des bénévoles comme vous. Veuillez prévoir 48 heures
+    pour que vos informations apparaissent correctement sur la carte.
   volunteer_engineer_submission_commitment_uncertain: Incertain
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 heure par semaine
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 heures par semaine
@@ -1089,6 +1125,8 @@ fr-FR:
   dashboard_express: 'Cours Express : '
   dashboard_unplugged: Si vous n’avez pas d'ordinateur, <a href='%{unplugged_url}'>Essayez
     ces leçons "débranchées" </a> dans votre classe.
+  dashboard_unplugged_markdown: Si vous n'avez pas d'ordinateur, [essayez ces leçons
+    débranchées] (%{unplugged_url}) dans votre classe.
   dashboard_tools: 'Outils: '
   dashboard_curriculum: Programme
   dashboard_curriculum_overview: Aperçu du programme pour les élèves de primaire
@@ -1346,6 +1384,8 @@ fr-FR:
   iceage_name: L’âge de Glace
   minecraft_name: Minecraft
   starwarsblocks_name: Star Wars (blocs)
+  hoc-impact-study_name: Labyrinthe classique avec sondage
+  flappy-impact-study_name: Flappy Code avec enquête
   hoc-encryption_name: Cryptage simple
   text-compression_name: Compression de texte
   applab_name: Labo des applis
@@ -1439,6 +1479,12 @@ fr-FR:
   coursed-2020_gradelevel: 4ème ou plus
   coursee-2020_gradelevel: De 8 à 12 ans
   coursef-2020_gradelevel: Seconde ou plus
+  coursea-2021_gradelevel: CM2 ou plus
+  courseb-2021_gradelevel: 6ème ou plus
+  coursec-2021_gradelevel: 5ème ou plus
+  coursed-2021_gradelevel: 4ème ou plus
+  coursee-2021_gradelevel: De 8 à 12 ans
+  coursef-2021_gradelevel: Seconde ou plus
   accelerated_gradelevel: De 10 à 18 ans
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
@@ -2259,16 +2305,19 @@ fr-FR:
   header_teacher_community: Communauté des enseignants
   header_help_support: 'Aide et support '
   header_report_bug: Rapporter un problème
+  header_report_abuse: Signaler un abus
+  header_legal: Confidentialité et légal
   header_legal_privacy: Politique de confidentialité
   header_legal_tos: Conditions Générales d'Utilisation
   header_tutorials: Didacticiels
   header_screen_reader_hamburger: Menu
+  header_screen_reader_help: Menu d'aide
   app_lab_documentation: Documentation sur le Labo des Applis
   app_lab_tutorials: Tutoriels du Labo des Applis
   game_lab_documentation: Documentation sur le Labo des Jeux
   game_lab_tutorials: Tutoriels du Labo des Jeux
-  sprite_lab_documentation: Documentation sur le Labo des Lutins
-  sprite_lab_tutorials: Tutoriels du Labo des Lutins
+  sprite_lab_documentation: Documentation sur le Labo des Sprites
+  sprite_lab_tutorials: Tutoriels du Labo des Sprites
   header_documentation: Documentation
   user_header_label: Bonjour %{username}
   user_header_team: Équipe
@@ -2364,6 +2413,11 @@ fr-FR:
     mouvement mondial qui touche des dizaines de millions d'étudiants dans plus de
     180 pays. Quiconque, n'importe où, peut organiser un événement Hour of Code ou
     essayer un des 500 et plus tutoriels d'une heure, disponibles en plus de 45 langues.
+  hoc_overview_subtitle_markdown: L' [Hour of Code] (https://hourofcode.com) est un
+    mouvement mondial qui touche des dizaines de millions d'étudiants dans plus de
+    180 pays. N'importe qui, n'importe où, peut organiser un événement Heure de Code
+    ou essayer l'un des plus de 500 tutoriels d'une heure, disponibles dans plus de
+    45 langues.
   hoc_overview_partner_activities_title: Plus d'activités des partenaires
   hoc_overview_partner_activities_body: Le site Web Hour of Code propose plus de 500
     activités informatiques, pour tous les âges et tous les niveaux d'expérience,
@@ -2568,6 +2622,10 @@ fr-FR:
   hoc2018_dance_video2: Soirée Dansante – Les Événements
   hoc2018_dance_video3: Soirée Dansante – Les Propriétés
   hoc2018_dance_video4: Soirée Dansante - Félicitations
+  dance_box_higher_power_line_1: Codez une danse au son de "Higher Power" de Coldplay
+    et vous pourriez avoir l'occasion de voir le groupe en live!
+  dance_box_higher_power_line_2: Visitez <a href="%{path}">code.org/coldplay</a> pour
+    plus d'infos
   page_not_found_title: Page Introuvable
   page_not_found_header: '404 : Page Introuvable'
   page_not_found_description: La page recherchée n'existe pas à cette adresse. Vérifie
@@ -2593,20 +2651,127 @@ fr-FR:
   homepage_slot_text_link_code_break: Prends une Pause de Code
   homepage_slot_text_link_do_hoc: Fais une Heure de Code
   homepage_slot_text_link_express_course: Essaies  un cours express
+  page_not_available_title: Page non disponible
+  page_not_available_description: Nous sommes désolés, la page que vous avez demandée
+    n'est plus disponible à cette adresse. Si vous avez toujours besoin d'y accéder,
+    veuillez envoyer un e-mail à [support@code.org] (%{support_email_link}).
   page_not_available_button: Retourner à la page d’accueil
+  hoc2020_mc_available_code_org: Disponible sur Code.org
+  hoc2020_mc_available_mee: 'Disponible dans Minecraft : Education Edition'
+  hoc2020_mc_mee_title: Le conte de deux villages Minecraft
+  hoc2020_mc_mee_description: 'Le nouveau didacticiel Minecraft Hour of Code est désormais
+    disponible dans Minecraft : Education Edition pour Windows, Mac, Chromebook et
+    iPad. Apprenez les bases du codage et explorez la diversité et l''inclusion avec
+    vos élèves ! Accédez à des ressources gratuites, notamment un plan de cours, des
+    vidéos, un programme d''informatique, des leçons d''équité et des formations pour
+    les enseignants.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Voyagez dans le temps et apprenez à coder ! Le nouveau
+    didacticiel Minecraft Heure de Code est désormais disponible dans Minecraft :
+    Education Edition pour Windows, Mac, Chromebook et iPad. Commencez avec des ressources,
+    des formations et des vidéos gratuites pour les enseignants.'
+  hoc2021_mc_mee_villages_title: Conte de deux villages
+  hoc2021_mc_mee_villages_description: 'Apprenez les bases du codage et explorez la
+    diversité et l''inclusion avec vos élèves dans Minecraft : Education Edition.'
+  hoc2021_mc_mee_ai_title: AI pour de bon
+  hoc2021_mc_mee_ai_description: 'Explorez l''AI avec vos élèves et apprenez à coder
+    dans Minecraft : Education Edition.'
   footer_powered_by_aws: Fourni par Amazon Web Services
+  footer_built_on_github: Construit sur GitHub de Microsoft
+  codebytes_skinny_banner_title: Rejoignez-nous du 7 au 11 décembre pour nos mini-leçons
+    en direct CodeBytes !
+  codebytes_skinny_banner_description: 'Rejoignez-nous chaque jour de la CS Education
+    Week pour CodeBytes, des leçons interactives d''informatique de 20 minutes. En
+    streaming en direct deux fois par jour, CodeBytes est un excellent moyen pour
+    les étudiants de participer à un #HourOfCode virtuel !'
   codebytes_skinny_banner_english_only: Seulement en anglais
+  codebytes_skinny_banner_learn: Pour en savoir plus, consultez [code.org/codebytes]
+    (%{code_bytes_url}).
   footer_privacy_policy: Politique de confidentialité
+  footer_privacy_policy_updated: Politique de confidentialité (mise à jour)
   footer_about: À propos
   footer_partners: Partenaires
+  footer_blog: Blogue
   footer_donate: Donner
+  footer_store: Magasin
   footer_support: Assistance
   footer_terms: Conditions Générales
   ai_for_oceans: IA pour les Océans
   ai_for_oceans_lesson_plan: plan de cours
+  ai_for_oceans_tile_description: Aidez l'IA à nettoyer les océans en l'entraînant
+    à détecter les déchets ! Apprenez-en davantage sur les données et les biais de
+    formation, et comment l'IA peut résoudre les problèmes mondiaux. Afficher
+  how_ai_works: Comment fonctionne l'IA
+  how_ai_works_tile_description: Découvrez comment fonctionne l'IA et pourquoi elle
+    est importante grâce à cette série de courtes vidéos. Mettant en vedette le PDG
+    de Microsoft, Satya Nadella, et un groupe diversifié d'experts.
+  watch_the_videos: Regardez les vidéos
+  ai_and_ethics: IA et éthique
+  ai_and_ethics_tile_description: Les élèves réfléchissent aux implications éthiques
+    de l'IA, puis travaillent ensemble pour créer une ressource « Code d'éthique de
+    l'IA » pour les créateurs et les législateurs de l'IA du monde entier.
+  view_lesson_plan: Voir le plan de cours
   ai_in_partnership_with: En partenariat avec
   ai_microsoft_thanks: Nous remercions Microsoft du soutien accordé à notre vision
     et notre mission d'offrir à chaque enfant la possibilité d’apprendre l’informatique
     et d’obtenir les compétences nécessaires pour réussir au XXIe siècle.
+  ai_ethics_panel_header: Table ronde « Exploration de l'éthique de l'IA »
+  ai_ethics_panel_description_1: Allez plus loin avec certains de nos experts en IA
+    préférés ! Cette table ronde aborde des questions importantes telles que le biais
+    algorithmique et l'avenir du travail. Associez-le à notre
+  ai_ethics_lesson_plan: Plan de cours sur l'IA et l'éthique
+  ai_ethics_panel_description_2: pour une excellente introduction à l'éthique de l'intelligence
+    artificielle !
+  cs_for_good: CS pour de bon
+  cs_for_good_tile_description: Des ressources pour inciter les élèves à réfléchir
+    en profondeur au rôle que l'informatique peut jouer dans la création d'un monde
+    plus équitable et durable.
+  view_resources: Afficher les ressources
+  imagine_cup_junior: Coupe Imagine Junior
+  imagine_cup_junior_tile_description: Ce défi mondial AI for Good présente aux étudiants
+    les initiatives AI for Good de Microsoft, leur donnant les moyens de résoudre
+    un problème dans le monde grâce à la puissance de l'IA.
   ai_activity: Activité
   ai_description: Description 
+  ai_seeing_ai: Voir l'IA
+  ai_seeing_ai_description: Une application gratuite qui raconte le monde qui vous
+    entoure dans différentes langues.
+  ai_quick_draw: Vite, Draw !
+  ai_quick_draw_description: Un réseau de neurones peut-il apprendre à reconnaître
+    le gribouillage ?
+  ai_teachable_machine: Machine à enseigner
+  ai_teachable_machine_description: Entraînez un ordinateur à reconnaître vos propres
+    images, sons et poses.
+  ai_google: Expériences d'IA avec Google
+  ai_google_description: Commencez à explorer l'apprentissage automatique à travers
+    des images, des dessins, du langage, de la musique et bien plus encore.
+  ai_zooniverse: Zooniverse - Zèbre de montagne instantané
+  ai_zooniverse_description: Aidez à protéger le zèbre du Cap, en voie de disparition,
+    en identifiant les différents animaux sur les images.
+  ai_audience: Public
+  ai_minecraft_description: 'Accédez à des ressources gratuites, notamment un plan
+    de cours, des vidéos, un programme d''informatique et des formations pour enseignants.
+    (Nécessite Minecraft : Education Edition)'
+  ai_k_12_audience: K-12 (lecture requise)
+  ai_microsoft_workshop: Ateliers virtuels gratuits de Microsoft
+  ai_microsoft_workshop_description: Éveillez la curiosité avec des ateliers gratuits
+    sur les STEM et le codage.
+  ai_machine_learning_for_kids: Machine Learning pour enfants
+  ai_machine_learning_for_kids_description: Entraînez un modèle d'apprentissage automatique
+    avec du texte, des chiffres ou des images, et utilisez-le pour créer des jeux
+    dans Scratch.
+  ai_ibm_machine_learning_for_kids: 'IBM : Machine Learning pour les enfants'
+  ai_ecs: 'ECS : Intelligence artificielle (IA)'
+  ai_ecs_description: Une nouvelle unité de cursus alternatif pour le programme Exploring
+    Computer Science (ECS).
+  ai_elements: Eléments de l'IA
+  ai_elements_description: Une série de cours en ligne gratuits créés par Reaktor
+    et l'Université d'Helsinki.
+  ai_cognimates: Cognimates
+  ai_cognimates_description: Une plateforme éducative sur l'IA pour la création de
+    jeux, la programmation de robots et la formation.
+  ai_try_activity: Essayez l'activité
+  outbreak_tile_title: Épidémie
+  outbreak_tile_subtitle: Un virus a infecté Monster Town ! Codez un simulateur d'épidémie
+    et faites des prédictions sur ce qui arrivera aux voisins de Monster Town.
+  footer_cookie_notice: " Utilisation de cookies"

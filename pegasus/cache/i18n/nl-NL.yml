@@ -23,13 +23,23 @@ nl-NL:
   csedweek_banner_teachers_text: Bent u een Informaticadocent? Zie andere bronnen
     voor de CSEdWeek
   n_have_learned_an_hoc: "<h1>Probeer een</h1><h2>'Hour of Code'</h2><h3># geholpen</h3>"
+  try_hoc_num_served: "<h1>Probeer een</h1><h2>uur Code</h2><h3>%{num} geserveerd</h3>"
+  try_hoc_num_served_markdown: |-
+    # Probeer een
+
+    ## uur code
+
+    ### %{num} geserveerd #Try an
   anybody_can_learn: Iedereen kan het leren.
   learn_now: Nu leren
   petition_message: Elke leerling in elke school moet de kans krijgen om informaticawetenschappen
     te leren
   petition_sign_message: 'Ga je akkoord, onderteken dan met je naam. Sluit je aan
     bij # anderen.'
+  petition_sign_message_num: Als u akkoord gaat, ondertekent u uw naam en sluit u
+    aan bij onze mailinglijst samen met %{num} anderen.
   petition_join_others: 'Doe mee met # anderen'
+  petition_join_others_num: Doe mee met %{num} anderen
   name: naam
   email: E-mail
   zipcode: Postcode of land
@@ -42,9 +52,15 @@ nl-NL:
   og_title_here: Het Code Uur is er!
   og_description: Elke leerling op elke school moet de kans krijgen om te leren programmeren.
     Dit verandert alles.
+  og_description_celeb: Probeer de nieuwe tutorials, win een videochat voor beroemdheden
+    voor jezelf of je klas!
   csedweek_og_title: Het Uur Code is hier
   csedweek_og_description: Het Uur Code is een beweging die wereldwijd tientallen
     miljoenen studenten van alle leeftijden in 180+ landen en in meer dan 45 talen.
+  csedweek_og_description_soon: Het uur van de code komt op 3-9 december 2018. Informatica
+    is fundamenteel voor elke student om te leren.
+  csedweek_og_description_here: Het uur van de code is hier. Informatica is fundamenteel
+    voor elke student om te leren.
   hoc2014_heading: Doe mee met de <a href="http://hourofcode.com">Hour of Code</a><br
     />8 - 14 december 2014<br/>
   hoc2014_students: Leerlingen
@@ -55,6 +71,8 @@ nl-NL:
   hoc2014_support: Ondersteun het &#x25BE;
   hoc2014_whatishoc: Wat is het Hour of Code?
   csedweek_map_header: "# CSEdWeek / Uur Code-events over de hele wereld"
+  csedweek_map_header_num: "%{num} CSEdWeek/Hour of Code-evenementen over de hele
+    wereld"
   csedweek_map_signup: Meld jouw event aan
   csedweek_map_search_placeholder: Zoek Uur Code-events
   csedweek_map_search_search: Zoeken
@@ -164,10 +182,24 @@ nl-NL:
     en leer van elkaar!
   third_party_khan_btn_learn: Leer CS met Khan Academy
   third_party_khan_btn_forum: Khan Academy CS Forum
+  third_party_appinv_desc: MIT App Inventor is een op blokken gebaseerde programmeertool
+    waarmee iedereen, zelfs beginners, kan beginnen met programmeren en volledig functionele
+    apps voor Android-apparaten kan bouwen. Nieuwkomers van App Inventor kunnen hun
+    eerste app binnen een uur of minder draaien en kunnen complexere apps programmeren
+    in aanzienlijk minder tijd dan met meer traditionele, op tekst gebaseerde talen.
   third_party_appinv_btn_curriculum: Download App Inventor 2 Curriculum
   third_party_appinv_btn_forum: App Inventor 2 Forum
   third_party_appinv_btn_site: Bezoek App Inventor 2
+  third_party_codehs_desc: CodeHS introduceert de bouwstenen van programmeren met
+    korte video's, voorbeeldcode en veel programmeeroefeningen die programmeren leuk
+    en toegankelijk maken voor beginners. Voor scholen en leerkrachten biedt CodeHS
+    curriculum, leerkrachtenhulpmiddelen en PD. Voor individuele leerlingen kun je
+    onderweg de hulp krijgen die je nodig hebt bij een netwerk van docenten.
   third_party_codehs_btn_try: Intro CS leer meer voor scholen
+  third_party_codecademy_desc: We heroverwegen het onderwijs van onderaf. Het web
+    heeft bijna alles heroverwogen - handel, sociale netwerken, gezondheidszorg en
+    meer. We bouwen aan het onderwijs dat de wereld nodig heeft - het eerste echt
+    netto-moedertaalonderwijs.
   third_party_codecademy_btn_curriculum: Download Codecademy Curriculum
   third_party_codecademy_btn_site: Bezoek Codecademy
   third_party_organization: Organisatie
@@ -198,14 +230,30 @@ nl-NL:
     te printen. Ga verder met onze <a href='http://studio.code.org'>andere cursussen</a>,
     Of kijk naar meer opties voor het leren bij <a href='/learn/beyond'>Verder dan
     een 'Hour of Code'</a>.
+  get_a_certificate_message_after_markdown: Klik op het certificaat om het te downloaden
+    of af te drukken. Ga nu verder met onze [andere cursussen] (http://studio.code.org),
+    of bekijk meer opties voor [Learn beyond an Hour] (/learn/beyond).
   thanks_for_submitting: Bedankt voor het opsturen!
   if_you_enjoyed: Als je het leuk vond dit te leren, vraag je vrienden of ze het ook
     willen proberen! We willen dat de hele wereld dit leert.
   personalize_certificate: Personaliseer je certificaat
+  print_batch_certificates: Een partij certificaten afdrukken
   print_certificates: Print certificaten
+  certificate_sponsor_message: "%{sponsor_name} gaf het gulle geschenk om je leren
+    te sponsoren."
+  print_ice_art_from_frozen: ijskunst afdrukken uit Frozen tutorials
+  want_a_blank_certificate_template: Wilt u een blanco certificaatsjabloon in de namen
+    van uw studenten schrijven?
+  landscape_recommended_certificates: Het wordt aanbevolen om **Landschap** te kiezen
+    wanneer u de certificaten afdrukt.
+  print_one_here_certificates: Druk er hier een af.
+  enter_certificate_names: Voer maximaal 30 namen in, **één per regel**. Er wordt
+    een afdrukbare pagina gegenereerd met gepersonaliseerde %{script_name} certificaten.
   share_achievement: Deel je prestatie
   beyond_hour_message: Ga door met onze  <a href='http://studio.code.org'>andere cursussen</a>,
     of kijk naar meer opties bij <a href='/learn/beyond'>verder dan een 'Hour of Code'</a>.
+  beyond_hour_message_markdown: Ga door met onze [andere cursussen] (http://studio.code.org),
+    of bekijk meer opties voor [Leer meer dan een uur] (/learn/beyond).
   leaderboards_for_hoc: Highscores voor de 'Hour of Code'.
   support_url: http://support.code.org/
   country: Land
@@ -248,8 +296,26 @@ nl-NL:
   learn_back_to_minecraft: Blijf leren met Minecraft
   hoc_is_here: 'Het #HourOfCode is zover - check it out! @codeorg'
   just_did_hoc: 'Ik heb net het #UurCode gedaan - check it out! @codeorg'
+  just_did_course1: Ik ben net klaar met cursus 1 - bekijk het eens! @codeorg
+  just_did_course2: Ik ben net klaar met cursus 2 - bekijk het eens! @codeorg
+  just_did_course3: Ik ben net klaar met cursus 3 - bekijk het eens! @codeorg
+  just_did_course4: Ik ben net klaar met cursus 4 - bekijk het eens! @codeorg
+  just_did_coursea: Ik ben net klaar met cursus A - bekijk het eens! @codeorg
+  just_did_courseb: Ik ben net klaar met cursus B - bekijk het eens! @codeorg
+  just_did_coursec: Ik ben net klaar met cursus C - bekijk het eens! @codeorg
+  just_did_coursed: Ik ben net klaar met cursus D - bekijk het eens! @codeorg
+  just_did_coursee: Ik ben net klaar met cursus E - bekijk het eens! @codeorg
+  just_did_coursef: Ik ben net klaar met cursus F - bekijk het eens! @codeorg
+  just_did_accelerated: Ik ben net klaar met de versnelde cursus - bekijk het eens!
+    @codeorg
   just_did_hoc_donor: 'Ik heb zojuist #HourOfCode gedaan - check it out! (Dankjewel
     %{donor_twitter} voor je steun voor @codeorg)'
+  just_did_course_donor: Ik ben net klaar met %{course} - bekijk het eens! Bedankt
+    %{donor_twitter} voor het ondersteunen van @codeorg
+  twitter_teach_cs: 9 van de 10 mensen zijn het erover eens dat scholen informatica
+    moeten onderwijzen. http://youtu.be/nKIu9yen5nc. Bezoek https://code.org/.
+  twitter_cs_foundational: Informatica is fundamenteel voor elke student om te leren.
+    https://youtu.be/QvyTEx1wyOY.
   learn_hoc: Leer een 'Hour of Code'
   beyond_hoc: Verder dan een Uur Code
   what_gender: Ben je een jongen of een meisje?
@@ -260,6 +326,8 @@ nl-NL:
   lines_of_code: AL MEER DAN <b># REGELS CODE</b> GESCHREVEN.
   lines_of_code_alt: "<b>#</b> REGELS CODE GESCHREVEN DOOR LEERLINGEN"
   who_has_done_hoc: 'Wie heeft het #HourOfCode gedaan? @codeorg'
+  who_has_done_hoc_donor: 'Wie heeft de #HourOfCode gedaan? (Bedankt %{donor_twitter}
+    voor het ondersteunen van @codeorg)'
   hoc_leaderboards: De 'Hour of Code' Highscores
   students_and_lines: "%{students} leerlingen hebben een Uur Code gedaan en %{lines}
     regels code geschreven."
@@ -271,6 +339,12 @@ nl-NL:
     Alzate, groep8-er'
   stats_michael: '"Ik heb <b> nog nooit </b> mijn leerlingen zo enthousiast gezien
     over leren" -Michael Clark, leraar'
+  stats_nina_markdown: "„Elke dag leverde dezelfde resultaten op: 100% betrokkenheid.”
+    - Nina Nichols Peery, leraar"
+  stats_student_markdown: "„Ik wist dat dit een **once-in-a-lifetime** kans was.”
+    - Mariana Alzate, 5e klasser"
+  stats_michael_markdown: "„Ik heb **nooit, ooit ** mijn leerlingen zo enthousiast
+    over leren gezien.” - Frank Martinez, leraar"
   studiobar_title: ontdek <a href='http://studio.code.org'>Code Studio</a>
   studiobar_title_nolink: ontdek Code Studio
   studiobar_elementary_title: Cursussen voor gevorderden
@@ -289,6 +363,13 @@ nl-NL:
   studiobar_donate_body: Eén kind leert voor elke euro die u doneert
   studiobar_shop_title: winkel
   studiobar_shop_body: Breek stereotypes. Draag ons logo met trots.
+  homepage_stats_students: van de Amerikaanse studenten heeft accounts op Code.org
+  homepage_stats_female: van onze studenten zijn vrouwelijk
+  homepage_stats_teachers: leraren gebruiken Code.org
+  homepage_stats_hourofcodde: van de studenten in de wereld hebben het Hour of Code
+    geprobeerd
+  homepage_stats_policy: staten veranderden het beleid ter ondersteuning van informatica
+  homepage_stats_title: We maken een verschil
   homepage_hero_text_malala: "&ldquo;Ik daag meisjes in alle landen uit om één Uur
     Code te leren&rdquo; Malala, winnares Nobelprijs voor de Vrede"
   homepage_hero_text_susan: "&ldquo;Als je technologie kunt veranderen, kun je de
@@ -301,6 +382,10 @@ nl-NL:
     moeten de kans krijgen informatica te leren&rdquo; Sheryl, directeur van Facebook"
   homepage_hero_text_satya: "&ldquo;Informatica geeft je toegang tot de mooiste kansen
     ter wereld.&rdquo; Satya, directeur van Microsoft"
+  homepage_hero_text_satya_new: |-
+    &ldquo;Informatica stelt
+    studenten in staat om de wereld van morgen te creëren.&rdquo;
+    Satya, CEO van Microsoft
   homepage_hero_text_bosh: "&ldquo;Als je programmeert kun je zelf je leven bepalen.&rdquo;
     Chris Bosh"
   homepage_hero_text_student1: |-
@@ -356,6 +441,7 @@ nl-NL:
   homepage_action_text_girlvideo: Inspireer een meisje
   homepage_action_text_learn: Begin met leren
   homepage_action_text_signpetition: Teken de petitie
+  homepage_action_text_wincelebritychat: Win een chat met beroemdheden
   homepage_signpetition_dropdown: Teken onze petitie &#x25BE;
   homepage_signpetition_dropdown_text: Ik ga akkoord
   homepage_diversity_pledge: Doe de diversiteits-belofte
@@ -368,6 +454,8 @@ nl-NL:
   homepage_banner_20k_teachers: 20.000 leraren zijn getraind en doceren nu informatica
     in de klas.
   homepage_banner_20k_teachers_link: Leer meer
+  homepage_banner_emailprivacy: We brengen een belangrijke wijziging aan in de manier
+    waarop we de privacy van studenten ondersteunen.
   homepage_banner_emailprivacy_link: Lees meer
   homepage_banner_40k_teachers_link: Leer meer
   homepage_slot_text_title_hoc: Uur Code
@@ -397,6 +485,7 @@ nl-NL:
   homepage_slot_text_link_buy: Doe mee
   homepage_slot_text_link_donate: Doneer
   homepage_slot_text_link_shop: T-shirts, hoeden, & meer
+  homepage_slot_text_link_administrators: Breng CS naar je school
   homepage_gallery_header: Meer dan %{project_count} miljoen Code.org projecten gemaakt
   homepage_header_donors: Code.org bedankt haar sponsoren
   homepage_donors_seall: Alles weergeven
@@ -444,6 +533,14 @@ nl-NL:
   class_submission_level_college: College
   class_submission_level_vocational: Beroeps
   class_submission_languages_other: Andere taal(en)
+  videos_more: Meer <a href='%{inspiring_videos_playlist}'>inspirerende video's</a>
+    met rolmodellen en beroemdheden
+  videos_more_markdown: Meer [inspirerende video's] (%{inspiring_videos_playlist})
+    met rolmodellen en beroemdheden
+  careers_page_more: Meer <a href='%{careers_url}' target='_blank'>inspirerende video's</a>
+    met professionals op technologisch gebied
+  careers_page_more_markdown: Meer [inspirerende video's] (%{careers_url}) met professionals
+    op technologiegebied
   playlab_choose_theme: Kies jouw speel lab thema
   playlab_classic_title: Standaard
   playlab_gumball_title: Gumball
@@ -466,10 +563,12 @@ nl-NL:
   mc_gradelevel: Leeftijd 6+
   mc_platformtext: Moderne browsers, smartphones, tablets
   mc_specs: Vele talen | Moderne browsers en tablets | Leeftijden 6-106
+  minecraft_agent: De reis van Minecraft Hero
   minecraft_designer: Minecraft Ontwerper
   minecraft_adventurer: Minecraft avonturier
   minecraft_tutorials: Minecraft Code Uur handleidingen
   minecraft_specs: Vele talen | Recente browsers en tablets | Leeftijd 6 - 10
+  minecraft_start_tutorial: Zelfstudie starten
   minecraft_agent_description: Minecraft is terug bij Uur Code met een gloednieuwe
     activiteit! Programmeer om door Minecraft te reizen.
   minecraft_agent_button: Start
@@ -482,6 +581,7 @@ nl-NL:
   minecraft_no_internet: Heeft u geen Internet?
   minecraft_download_adventurer: Download de offline versie van Minecraft avonturier.
   minecraft_subtitle: Minecraft Uur Code
+  minecraft_store_camps: Gratis Minecraft Hour of Code Camps in de Microsoft Store
   minecraft_signup_store_camps: <a href="%{signup_store_camp}">Meld je aan</a> voor
     een gratis Microsoft Code Uur kamp bij een Microsoft winkel in Australië, Canada,
     Puerto Rico of de Verenigde Staten. Leer om je creativiteit te combineren met
@@ -489,13 +589,101 @@ nl-NL:
   minecraft_host_event: Plan een Minecraft Hour of Code Evenement
   minecraft_teach_resources: Hulpmiddelen voor leraren en een lesplan.
   minecraft_leader_guide: Download de hulpmiddelen om een event te plannen en leiden.
+  minecraft_facilitating_event: "<a href='%{minecraft_facilitator_download}', target='_blank'>Download
+    nu</a> facilitator snelstartgids en PowerPoint-presentaties voor jongere en oudere
+    studenten."
+  minecraft_join_online_training: Klaar om je eigen Hour of Code te faciliteren met
+    Minecraft, maar weet je niet waar je moet beginnen? Bekijk ons <a href='%{minecraft_webinar_url}',
+    target='_blank'>on-demand webinar</a>. Je leert best practices, krijgt toegang
+    tot kant-en-klare facilitatormaterialen en krijgt een overzicht van de nieuwe
+    Hero's Journey-tutorial van het Minecraft-team. Maak een voorsprong bij het bedenken
+    van wat je nodig hebt om Hour of Code naar jongeren te brengen tijdens de Informatica-educatieweek
+    (4-10 december) en daarna.
+  minecraft_continue_learning: 'Informatica voor iedereen: meer dan een uur code in
+    de Microsoft Store'
+  minecraft_continue_learning_description: Geen ervaring met informatica vereist!
+    Help ervoor te zorgen dat alle jongeren de waardevolle vaardigheden kunnen leren
+    die zijn opgedaan door informatica onderwijs. Ga met ons mee in de Microsoft Store
+    om deel te nemen aan een gratis reeks van drie workshops van 1 uur waar je coderen
+    in een leuke en stressvrije omgeving, vertrouwd raakt met belangrijke informatica
+    concepten en je klaarmaakt om een Hour of Code te leiden in je klas of gemeenschap.
+    Je hebt dit! <a href='%{minecraft_continue_learning_url}', target='_blank'>Meld
+    je vandaag nog aan</a>.
+  minecraft_future: Help alle jongeren klaar te maken voor de toekomst
+  minecraft_future_description: Ontdek hoe andere scholen en non-profitorganisaties
+    digitale vaardigheden, van digitale geletterdheid tot informatica onderwijs, naar
+    hun gemeenschappen brengen. Overweeg verschillende modellen, krijg tips en trucs
+    en <a href='%{minecraft_future_url}', target='_blank'>krijg toegang tot de bronnen</a>
+    die ze het meest waardevol vonden.
+  minecraft_og_designer: Minecraft is terug met een nieuwe activiteit voor het Hour
+    of Code. Programmeer dieren en andere Minecraft-wezens in je eigen versie van
+    Minecraft.
+  minecraft_og_agent: Minecraft is terug voor het Hour of Code, en jij bent de held!
+    Schrijf code om door Minecraft biomen te reizen.
+  sports_page_title: Uur van Code Sports
+  sports_og_title: Duw jezelf op. Iedereen kan het leren.
+  sports_og_description: Kampioenen en gouden medaillewinnaars moedigen je aan om
+    het Hour of Code te proberen. Codeer je eigen sportspel.
+  sports_title: Codeer je eigen sportspel
   sports_watch_video: Bekijk de video
+  sports_video_title: Duw jezelf op. Iedereen kan het leren.
+  sports_select_theme: Selecteer je zelfstudiethema
+  sports_basketball_title: Maak een basketbalwedstrijd
+  sports_all_sports_title: Mix en match over sporten
+  sports_featured_athletes: Bekijk uitgelichte atleten
+  sports_athletes_title: Uitgelichte atleten
+  sports_athlete_Draymond: Draymond Green, Olympisch gouden medaillewinnaar en NBA-kampioen,
+    Golden State Warriors
+  sports_athlete_Serena: Serena Williams, Olympisch gouden medaillewinnaar en tenniskampioen
+  sports_athlete_Russell: Russell Okung, Super Bowl-kampioen en NFL-speler, Denver
+    Broncos
+  sports_athlete_Sergio: Sergio Ramos, Wereldbekerkampioen en voetbalspeler, Real
+    Madrid
+  sports_athlete_Sue: Sue Bird, Olympisch gouden medaillewinnaar en WNBA-kampioen,
+    Seattle Storm
+  sports_athlete_Alana: Alana Beard, gouden medaillewinnaar en WNBA All-Star, Los
+    Angeles Sparks
+  sports_athlete_Angelo: Angelo Matthews, aanvoerder van het Sri Lankaanse cricketteam
+  sports_athlete_Nneka: Nneka Ogwumike, Gouden medaillewinnaar, WNBA-kampioen en 2016
+    MVP, Los Angeles Sparks
+  sports_athlete_Carmelo: Carmelo Anthony, Olympisch gouden medaillewinnaar en NBA
+    All-Star, New York Knicks
+  sports_athlete_Marco: Marco Belinelli, NBA-kampioen, Charlotte Hornets
+  sports_athlete_Neymar: Neymar Jr., Olympisch gouden medaillewinnaar en voetbal/Futbol-speler,
+    FC Barcelona en het nationale team van Brazilië
+  sports_athlete_Sarah: Sarah Quita Offringa, Kampioen Windsurfen
+  sports_athlete_Marcelo: Marcelo, voetbal/Futbolkampioen, Real Madrid en Brazilië
+    nationaal team
+  sports_athlete_Erika: Erika Olivera, kampioen marathonloper
+  sports_athlete_John: John Wall, NBA All-Star, Washington Wizards
+  sports_athlete_Chris: Chris Bosh, Olympisch gouden medaillewinnaar en NBA-kampioen,
+    Miami Heat
+  sports_athlete_Harrison: Harrison Barnes, Olympisch gouden medaillewinnaar en NBA-kampioen,
+    Dallas Mavericks
   watch_inspirational_videos: Bekijk voor je begint deze inspiratie-video's
   video_title_inspire_girl: Inspireer een meisje
+  video_title_cs_intro: Informatica intro
+  video_title_schools_dont_teach: Wat de meeste scholen niet leren
+  video_title_obama: President Obama over informatica
+  video_title_hoc_is_here: Het uur van de code is hier - Iedereen kan leren
+  video_title_anybody_can_learn: Iedereen kan leren
+  video_title_steph_curry: Uur code met Steph Curry
+  video_title_draymond_green: Codeuur met Draymond Green
+  video_title_russell_okung: Codeuur met Russell Okung
+  video_title_real_madrid: Codeuur met Real Madrid
+  video_title_marco_belinelli: Codeuur met Marco Belinelli
+  video_title_chris_bosh: Chris Bosh over informatica
+  video_title_my_name_is_aracely: Mijn naam is Aracely
+  video_1min: 1 min
+  video_2min: 2 min
+  video_3min: 3 min
+  video_5min: 5 min
   speak_another_language: Spreek je een andere taal?
   help_translate: Help ons met vertalen.
   no_internet: Heeft u geen Internet?
+  download_offline: Download de offline versie.
   are_you_teacher: Bent u een leraar?
+  review_lesson_plan: Bekijk het lesplan en andere bronnen voor docenten.
   volunteer_engineer_submission_title: Inspireer leerlingen en meld je als vrijwilliger
     voor het Uur Code.
   volunteer_engineer_submission_subtitle_generic: '100.000 leerkrachten geven dit
@@ -514,11 +702,26 @@ nl-NL:
     door ze te vertellen over wat je allemaal kan doen met informatie (dat zou via
     videochat kunnen). Als je geen vrijwilliger wil worden, <a href="%{url}">lees
     hier</a> over het organiseren van je eigen Uur Code.'
+  volunteer_engineer_submission_intro_recruit_markdown: Leraren zouden graag iemand
+    hebben die **gepassioneerd is door informaticaonderwijs** die kan helpen in de
+    klas, of voor iemand die **inspireer** hun leerlingen kan door te praten over
+    de brede mogelijkheden met informatica (dat kan via een videochat).
+  volunteer_engineer_submission_intro_guide: Lees hier meer over ons <a href="%{volunteer_guide}">vrijwilligersprogramma</a>.
+  volunteer_engineer_submission_intro_guide_markdown: Lees meer over ons [vrijwilligersprogramma
+    hier] (%{volunteer_guide}).
   volunteer_engineer_submission_intro_signup: Voer de volgende gegevens in als je
     een informaticastudent of software ontwikkelaar bent. Velden met een <span class="form-required-field">*</span>
     zijn verplicht.
+  volunteer_engineer_submission_intro_signup_markdown: Voer de volgende informatie
+    in als u een student informatica of softwareprofessional bent. Je moet minstens
+    18 jaar oud zijn om je als vrijwilliger aan te melden. Houd er rekening mee dat
+    alle velden die u in dit gedeelte invult, openbaar beschikbaar zijn voor iedereen
+    die naar de [vrijwilligerskaart] (/vrijwilliger/local) kijkt. Velden gemarkeerd
+    met een _*_ zijn verplicht.
   volunteer_engineer_submission_intro_links: Ben je op zoek naar vrijwilligers? Vind
     een vrijwilliger op onze <a href="%{volunteer_local}">kaart</a>.
+  volunteer_engineer_submission_intro_links_markdown: Ben je een leraar die vrijwilligers
+    zoekt? Vind een lokale vrijwilliger op onze [vrijwilligerskaart] (%{volunteer_local}).
   volunteer_engineer_submission_update_information: Uw gegevens bijwerken
   volunteer_engineer_submission_header_shared: Informatie gedeeld met docenten op
     de vrijwilligerskaart
@@ -568,10 +771,16 @@ nl-NL:
   volunteer_engineer_submission_checkbox_contact: 'Ik ben het ermee eens dat docenten
     contact met me kunnen opnemen voor vrijwilligerswerk (Let op: je e-mailadres wordt
     niet gedeeld)'
+  volunteer_engineer_submission_checkbox_age_18_plus: Ik verklaar dat ik minstens
+    18 jaar oud ben.
   volunteer_engineer_submission_submit: Insturen
   volunteer_engineer_submission_thankyou: Bedankt voor je beschikbaarheid voor het
     Uur Code. Om je voor te bereiden op het Uur Code en om meer engineers te bereiken,
     <a href="%{url}">lees hier meer.</a>
+  volunteer_engineer_submission_thankyou_markdown: Bedankt! Je vrijwilligersinformatie
+    is met succes ingediend. Docenten zullen [deze kaart] (%{url}) gebruiken om vrijwilligers
+    zoals jij te zoeken en contact op te nemen. Het duurt 48 uur voordat uw informatie
+    correct op de kaart wordt weergegeven.
   volunteer_engineer_submission_commitment_uncertain: Onbekend
   volunteer_engineer_submission_commitment_one_hr_per_week: 1 uur per week
   volunteer_engineer_submission_commitment_three_hrs_per_week: 3 uur per week
@@ -606,6 +815,9 @@ nl-NL:
   volunteer_engineer_submission_type_task_mentor: Ik zoek een mentor om me te helpen
     voorbereiden om met mijn leerlingen te gaan programmeren
   petition_age: Leeftijd
+  dashboard_announce_hoc_scaling_progress: Yikes! We ervaren veel Hour of Code verkeer.
+    We kunnen deze week geen vooruitgang besparen, maar vooruitgang van vóór deze
+    week is nog steeds veilig.
   dashboard_announce_learn_more_button: Leer meer
   dashboard_landing_title: Startpagina voor de leerkracht
   dashboard_landing_welcome: Welkom bij de nieuwe en verbeterde leerkracht dashboard.
@@ -619,6 +831,7 @@ nl-NL:
     voor basisschoolleerlingen.
   dashboard_landing_new_k5courses: Nieuw! Probeer onze cursussen voor basisschoolleerlingen.
   dashboard_landing_useful_links: Andere nuttige links (alleen in het Engels)
+  dashboard_landing_classroom_resources: Hulpmiddelen voor je klas
   dashboard_landing_office_hours: Stel ons persoonlijk een vraag! Bezoek onze maandelijkse
     video kantooruren.
   dashboard_landing_print_certificates: Print certificaten voor leerlingen die deze
@@ -637,6 +850,11 @@ nl-NL:
   dashboard_landing_more_tutorials_desc: Er zijn meer opdrachten <a href="/learn/beyond">van
     onze partners.</a> Leer programmeren met robots, maak webpagina's, maak je eigen
     app of ontdek andere programmeertalen zoals C++, Ruby en Python!
+  dashboard_landing_inspire: Inspireer je leerlingen met posters, video's en meer.
+  dashboard_landing_video_library: Gebruik een video uit de videobibliotheek van computerwetenschappelijke
+    concepten.
+  dashboard_landing_report_bug: Vraag een functie aan of meld een bug.
+  dashboard_landing_teacher_forum: Word lid van de professionele leergemeenschap.
   dashboard_hoc_courses: Het Uur Code voor alle leeftijden
   dashboard_hoc_courses_desc: Probeer een 1-uurs cursus met je leerlingen!
   dashboard_hoc_courses_desc_and_cta: Probeer deze korte lessen van één uur met uw
@@ -683,9 +901,21 @@ nl-NL:
   dashboard_action_done: Voltooid
   dashboard_action_print_certificates: Print certificaten
   dashboard_assessments_view: 'Bekijk evaluaties in:'
+  dashboard_assessments_none: De meeste docenten meten de voortgang van hun leerlingen
+    via het tabblad „Voortgang bekijken”. Als je geïnteresseerd bent om je leerlingen
+    aanvullende beoordelingen te geven, kun je aanbevolen vragen en gebieden vinden
+    in de lesplannen. Deze worden buiten Code.org gedaan.
+  dashboard_assessments_none_part2: Als je een middelbare of middelbare schoolcursus
+    geeft, hebben we beoordelingsvragen beschikbaar als onderdeel van Code.org om
+    je leerlingen te helpen zich voor te bereiden op de AP-test. Om deze beoordelingen
+    te gebruiken, wijst u eerst de cursus toe aan uw klas en kiest u vervolgens de
+    cursus uit de vervolgkeuzelijst hierboven en ziet u de antwoorden van uw leerlingen
+    hier.
   dashboard_assessments_summaries: Evaluatie-samenvattingen
+  dashboard_assessments_answers: Alle antwoorden op de beoordeling
   dashboard_surveys_answers: Enquêtes
   dashboard_percent: Percentage
+  dashboard_filter_by_stage: 'Filteren op fase:'
   dashboard_filter_all: Alle
   dashboard_download_csv: Download CSV
   dashboard_navigation_home_page: Startpagina voor de leerkracht
@@ -697,7 +927,9 @@ nl-NL:
   dashboard_navigation_section_speakers: Informatica <br/> gastsprekers
   dashboard_navigation_all_sections: Leerlingaccounts en vooruitgang
   dashboard_navigation_view_progress: Voortgang
+  dashboard_navigation_view_text_responses: Tekst-reacties
   dashboard_navigation_view_assessments: Evaluaties
+  dashboard_navigation_view_assessments_surveys: Assessments/enquêtes
   dashboard_navigation_add_students: Leerlingen Toevoegen
   dashboard_navigation_manage_students: Beheer Leerlingen
   dashboard_navigation_lesson_plans_resources: Lesplan en middelen
@@ -711,8 +943,18 @@ nl-NL:
   dashboard_progress_completed_perfect: voltooid, perfect
   dashboard_progress_furthest_level_attempted: verste niveau geprobeerd
   dashboard_progress_submitted: verstuurd
+  dashboard_progress_view: 'Bekijk de voortgang in:'
+  dashboard_progress_student_in_script: Voortgangsinformatie voor %{student_name}
+    in %{script_name}
   dashboard_progress_pair_programming: programmeren in Tweetallen
+  dashboard_responses_view: 'Tekstreacties bekijken in:'
+  dashboard_responses_none: De meeste van onze lessen zijn ontworpen om voor jongere
+    leeftijden te werken en vereisen niet dat studenten tekstantwoorden op vragen
+    typen, dus je ziet hier geen tekstreacties. Voor oudere leerlingen in de middelbare
+    en middelbare school kun je hun inzendingen voor vragen over open tekstantwoorden
+    bekijken door de toegewezen cursus te kiezen in de vervolgkeuzelijst hierboven.
   dashboard_sections_new_section: Nieuw onderdeel
+  dashboard_sections_new_google_section: Gedeelte importeren vanuit Google Classroom
   dashboard_sections_jumbotron_instruction: Maak nieuwe groepen aan en voeg er studenten
     aan toe. Groepen helpen u met het verdelen van studenten in kleinere groepen,
     zodat u makkelijker hun vorderingen kunt bijhouden en hun accounts  beheren.
@@ -721,6 +963,7 @@ nl-NL:
   dashboard_sections_table_grade: Cijfer
   dashboard_sections_table_course: Cursus
   dashboard_sections_table_pairing_allowed: Programmeren in Tweetallen
+  dashboard_sections_table_stage_extras: Podiumextra's
   dashboard_sections_table_students: Leerlingen
   dashboard_sections_table_code: Groepscode
   dashboard_sections_name: Groepsnaam
@@ -738,6 +981,11 @@ nl-NL:
     van uw individuele leerlingen, die u kunt ronddelen.
   dashboard_sections_switch_section: 'switch groep:'
   dashboard_sections_close: Afsluiten
+  dashboard_sections_move_students_desc: Selecteer leerlingen om naar een nieuwe sectie
+    te gaan. Bewegende studenten zullen hun voortgang niet duidelijk maken.
+  dashboard_sections_one_per_teacher: Studenten kunnen voor elke docent maar in één
+    sectie zitten. Je studenten worden toegevoegd aan deze nieuwe sectie en verlaten
+    hun oude sectie.
   dashboard_sections_move_to_section: 'Verplaatsen naar sectie:'
   dashboard_sections_enter_code: Voer de sectie code in
   dashboard_sections_code_placeholder: 6-tekencode (ABCDEF)
@@ -745,10 +993,29 @@ nl-NL:
   dashboard_sections_both_sections: Wilt u dat de leerling(en) in beide secties zijn?
   dashboard_sections_yes_both: Ja, ik wil leerling(en) kopiëren om in de huidige EN
     de nieuwe sectie te plaatsen.
+  dashboard_sections_no_move: Nee, ik wil student (s) verplaatsen om alleen in de
+    nieuwe sectie te staan.
   dashboard_sections_move_students: Verplaatsen van studenten
+  dashboard_sections_assign_hoc_script_desc: Deelnemen aan het uur van code?
+  dashboard_sections_assign_hoc_script_msg: Houd er rekening mee dat we de voortgang
+    in deze cursus van 3 tot 11 december niet kunnen opslaan vanwege de hoeveelheid
+    verkeer die onze site ontvangt voor het Uur van Code. Al het andere in deze tutorial
+    zal blijven werken zoals verwacht. Je kunt de cursus nog steeds toewijzen en alle
+    studenten certificaten geven om deel te nemen. (De meeste leraren <a href='%{certificate_url}'>drukken
+    deze van tevoren af</a>.) We zullen de voortgang van studenten opslaan en rapporteren
+    voor elke twee weken van het jaar.
   dashboard_sections_assign_activity: Cursus Toewijzen
+  dashboard_error_none_selected: Je hebt geen studenten geselecteerd om te verhuizen.
+    Selecteer ten minste één student.
+  dashboard_error_other_section: Als je leerlingen tussen je eigen secties verplaatst,
+    selecteer je je sectie in de vervolgkeuzelijst. Selecteer alleen 'Andere sectie'
+    om je leerlingen naar een andere lerarensectie te verplaatsen.
   dashboard_students_add_multiple: 'Typ of plak hier de namen van uw studenten, één
     per regel:'
+  dashboard_students_new_google_classroom_section: Als u leerlingen wilt toevoegen,
+    gebruikt u <a href='http://classroom.google.com' target='_blank'>Google Classroom</a>
+    en klikt u vervolgens op de knop <b>Studenten synchroniseren vanuit Google Classroom</b>
+    hierboven.
   dashboard_students_new_section: U hebt een nieuwe groep gemaakt! Voeg nu uw leerlingen
     toe met behulp van de knoppen <b>leerling toevoegen</b> en <b>meerdere leerlingen</b>
     hierboven.
@@ -760,6 +1027,8 @@ nl-NL:
   dashboard_students_total_lines: regels Code
   dashboard_students_share_section: 'Delen van de inlogpagina van de groep met uw
     leerlingen:'
+  dashboard_students_share_section_secondary: 'U kunt ook de aanmeldingspagina van
+    deze sectie delen met uw leerlingen:'
   dashboard_students_print_info: Print de kaarten met inloggegevens van uw leerlingen.
   dashboard_students_secret_picture_title: Geheime Foto
   dashboard_students_secret_picture: Geheime Foto
@@ -799,6 +1068,13 @@ nl-NL:
   dashboard_coursed: 'Cursus D: '
   dashboard_coursee: 'Cursus E: '
   dashboard_coursef: 'Cursus F: '
+  dashboard_pre-express: 'Pre-reader Express-cursus: '
+  dashboard_express: 'Express-cursus: '
+  dashboard_unplugged: Als je geen computers hebt, probeer dan <a href='%{unplugged_url}'>deze
+    unplugged lessen</a> in je klas lokaal.
+  dashboard_unplugged_markdown: Als je geen computers hebt, [probeer deze unplugged
+    lessen] (%{unplugged_url}) in je klas lokaal.
+  dashboard_tools: 'Gereedschap: '
   dashboard_curriculum: Lesprogramma
   dashboard_curriculum_overview: Basisschool Curriculum overzicht
   dashboard_overview: Overzicht
@@ -816,6 +1092,8 @@ nl-NL:
   dashboard_curriculum_csins: 'Computerwetenschap in de wetenschap:'
   dashboard_curriculum_csp: 'AP ® beginselen van de informatica:'
   dashboard_curriculum_ecs: 'ICT ontdekken:'
+  dashboard_curriculum_csd: 'Ontdekkingen in informatica: '
+  dashboard_curriculum_apcsa: 'AP Computerwetenschappen in Java: '
   dashboard_grade_k: K
   dashboard_grade_other: Anders
   dashboard_login_word: Woord
@@ -826,6 +1104,7 @@ nl-NL:
   dashboard_question: Vraag
   dashboard_response: Antwoord
   dashboard_correctness: Juistheid
+  dashboard_correctness_free_response: Gratis reactie
   dashboard_correctness_unsubmitted: Niet doorgestuurd
   dashboard_correctness_correct: Juist
   dashboard_correctness_incorrect: Incorrect
@@ -835,6 +1114,7 @@ nl-NL:
   dashboard_multi_correct: "# multiple choice correct"
   dashboard_multi_count: "# multiple choice"
   dashboard_multi_correct_percent: "# multiple choice correct"
+  dashboard_submission_timestamp: Tijdstempel voor indiening
   stats_hoc_2013_heading: 'Ongelooflijke statistieken voor de ''Hour of Code'' van
     vorig jaar. In één week alleen al:'
   stats_hoc_2013_image_alt: Statistieken van de 'Hour of Code' van 2013
@@ -857,6 +1137,13 @@ nl-NL:
   code_hoc_coming: Het Uur Code is hier - van 8 -14 december!
   code_sign_up: Meld u aan om deel te nemen tijdens de CS Onderwijs Week
   host_an_hour: Organiseer een uur
+  learn_banner_title: Ga met ons mee voor het uur van de code
+  learn_banner_desc: The Hour of Code is een wereldwijde beweging die meer dan 100
+    miljoen studenten in meer dan 180 landen bereikt. Iedereen, waar dan ook, kan
+    een Hour of Code-evenement organiseren. Help ons elke student de kans te geven
+    informatica te leren! Organisatoren kunnen onze <a href='%{how_to_url}' target='_blank'>how-to
+    gids</a> volgen voor het lesgeven van een uur code en studenten inspireren met
+    <a href='%{videos_url}' target='_blank'>deze video's</a>.
   learn_more: Probeer nu
   learn_sign_up_description: Meld je aan om deel te nemen in het Uur Code tijdens
     de week van het informaticaonderwijs
@@ -899,10 +1186,16 @@ nl-NL:
   carousel_heading_beyond_languages: Handleidingen in andere programmeertalen
   carousel_heading_apps_games: Maak uw eigen apps of spelletjes
   carousel_heading_university: Online Universiteitscursussen
+  carousel_heading_online_university: Universitaire cursussen online beschikbaar
   carousel_heading_webpages: Leer webpagina's te maken
   carousel_heading_robots: Leer robots te programmeren
   carousel_heading_ide: Platformen populair onder docenten
   carousel_heading_desktop: Leer te programmeren op een computer
+  carousel_heading_mobtabelem: Voor telefoons en tablets
+  carousel_heading_prereader: Voor pre-readers
+  carousel_heading_beyondblocks: Ga verder dan blokken - leer een programmeertaal
+  carousel_heading_nointernet: Onbetrouwbaar of geen internet? Installeer deze apps
+    op je computer
   educator_notes: Opvoeder notities
   teach_led_lesson_plans: Uur Code-lesplannen voor leerkrachten
   learn_footer_all_tutorials: Bekijk de <a href="https://code.org/educate/allhourofcode">uitvoerige
@@ -913,6 +1206,8 @@ nl-NL:
   more_resources_educators: Meer middelen voor leraren en opvoeders
   beyond_submission: Wil je lessen indienen voor 'Meer dan een uur'? Bekijk de criteria
     en het antwoordformulier.
+  third_party_submission: Wil je een tutorial indienen om hier vermeld te worden?
+    <a href="%{submission_url}">Zie de criteria en het indieningsformulier.</a>
   participants: Deelnemers
   teachers_notes: Leraar-nota's
   teachers_notes_hoc: 'Leerkrachten: Lees belangrijke nota''s voor leerkrachten hier'
@@ -968,6 +1263,7 @@ nl-NL:
   artist_name: Kunstenaar
   monstercoding_name: Mysterie Eiland Programmeer Zoektocht
   allcancode_name: Ren Marco!
+  csfirst_name: CS eerst
   boxisland_name: Dozen Eiland
   texasinstruments_name: 10 minuten code
   teacherled_name: Uur Code-lesplannen voor leerkrachten
@@ -975,15 +1271,71 @@ nl-NL:
   course2_name: Cursus 2
   course3_name: Cursus 3
   course4_name: Les 4
+  coursea-draft_name: Cursus A
+  coursea_name: Cursus A
+  courseb-draft_name: Cursus B
+  courseb_name: Cursus B
+  coursec-draft_name: Cursus C
+  coursec_name: Cursus C
+  coursed-draft_name: Cursus D
+  coursed_name: Cursus D
+  coursee-draft_name: Cursus E
+  coursee_name: Cursus E
+  coursef-draft_name: Cursus F
+  coursef_name: Cursus F
+  coursea-2017_name: Cursus A (2017)
+  courseb-2017_name: Cursus B (2017)
+  coursec-2017_name: Cursus C (2017)
+  coursed-2017_name: Cursus D (2017)
+  coursee-2017_name: Cursus E (2017)
+  coursef-2017_name: Cursus F (2017)
+  coursea-2018_name: Cursus A (2018)
+  courseb-2018_name: Cursus B (2018)
+  coursec-2018_name: Cursus C (2018)
+  coursed-2018_name: Cursus D (2018)
+  coursee-2018_name: Cursus E (2018)
+  coursef-2018_name: Cursus F (2018)
+  coursea-2019_name: Cursus A (2019)
+  courseb-2019_name: Cursus B (2019)
+  coursec-2019_name: Cursus C (2019)
+  coursed-2019_name: Cursus D (2019)
+  coursee-2019_name: Cursus E (2019)
+  coursef-2019_name: Cursus F (2019)
+  coursea-2020_name: Cursus A (2020)
+  courseb-2020_name: Cursus B (2020)
+  coursec-2020_name: Cursus C (2020)
+  coursed-2020_name: Cursus D (2020)
+  coursee-2020_name: Cursus E (2020)
+  coursef-2020_name: Cursus F (2020)
+  express-2018_name: Express-cursus (2018)
+  pre-express-2018_name: Pre-reader Express-cursus (2018)
+  express-2019_name: Express-cursus (2019)
+  pre-express-2019_name: Pre-reader Express-cursus (2019)
+  express-2020_name: Express-cursus (2020)
+  pre-express-2020_name: Pre-reader Express-cursus (2020)
+  pre-express-2021_name: Pre-reader Express-cursus (2021)
+  csd2_name: 'Eenheid 2: Webontwikkeling'
+  csd3_name: 'Unit 3: Animatie en games'
   accelerated_name: versnelde cursus
+  express_name: Express-cursus
+  pre-express_name: Pre-reader Express-cursus
   20-hour_name: versnelde cursus
+  algebra_name: CS in Algebra Volledige cursus
+  AlgebraA_name: CS in algebra cursus A
+  AlgebraB_name: CS in algebra cursus B
   gumball_name: Gumball
   classicmaze_name: Klassiek doolhof
   iceage_name: Ice Age
   minecraft_name: Minecraft
+  starwarsblocks_name: Star Wars (blokken)
+  hoc-impact-study_name: Klassiek doolhof met enquête
+  flappy-impact-study_name: Flappy Code met enquête
+  hoc-encryption_name: Eenvoudige versleuteling
   text-compression_name: Tekstcompressie
   applab_name: App Lab
   gamelab_name: Game Lab
+  basketball_name: Maak een basketbalwedstrijd
+  sports_name: Codeer je eigen sportspel
   applab_gradelevel: Leeftijd 13+
   applab_shortdescription_congrats: App Lab is een programmeeromgeving waar je eenvoudige
     apps kan maken. Ontwikkel een app, codeer met blokken of JavaScript om het te
@@ -1072,6 +1424,12 @@ nl-NL:
   coursed-2020_gradelevel: Rang 8+
   coursee-2020_gradelevel: Leeftijden 8-12
   coursef-2020_gradelevel: Leeftijden 9-13
+  coursea-2021_gradelevel: Leeftijden 4-7
+  courseb-2021_gradelevel: Leeftijden 5-8
+  coursec-2021_gradelevel: Leeftijden van 6-10
+  coursed-2021_gradelevel: Rang 8+
+  coursee-2021_gradelevel: Leeftijden 8-12
+  coursef-2021_gradelevel: Leeftijden 9-13
   accelerated_gradelevel: Leeftijden 10 + (na cursus 3)
   codeorg_platformtext: Moderne browsers, smartphones, tablets
   codeintl_platformtext: Moderne browsers, smartphones, tablets
@@ -1184,9 +1542,117 @@ nl-NL:
   artist_shortdescription: Teken coole plaatjes en ontwerpen met de Kunstenaar!
   monsterocding_shortdescription: Een kleurrijk zelfstandig programmeer avontuur voor
     kinderen.
+  allcancode_shortdescription: Een meeslepend spel om Marco te begeleiden met een
+    visuele programmeertaal.
+  csfirst_shortdescription: Animeer een verhaal over twee personages op de oceaan.
+    Voeg je eigen stijl toe!
+  boxisland_shortdescription: Maak een coderingstocht op Box Island met de dappere
+    Hiro.
   codesters_shortdescription: Maak je eigen spellen, animaties en ontwerpen met Python.
+  texasinstruments_shortdescription: Leer basiscodering met behulp van de TI-84&#8482;
+    Plus-rekenmachine.
   teacherled_shortdescription: Laat je inspireren om je eigen Uur Code les te maken
     met deze lesplannen.
+  course2_shortdescription_congrats: Voor studenten met basisleesvaardigheid bouwt
+    deze cursus voort op cursus 1. Studenten zullen programma's maken om problemen
+    op te lossen en interactieve spellen of verhalen te ontwikkelen die ze kunnen
+    delen. Aanbevolen voor de klassen 2-5.
+  course3_shortdescription_congrats: Klaar voor het volgende niveau? Studenten zullen
+    dieper ingaan op programmeeronderwerpen die in eerdere cursussen zijn geïntroduceerd
+    om flexibele oplossingen te vinden voor complexere problemen. Aan het einde van
+    deze cursus maken studenten interactieve verhalen en games die ze met iedereen
+    kunnen delen. Aanbevolen voor klassen 4-5.
+  course4_shortdescription_congrats: Klaar om verder te gaan? Studenten zullen dieper
+    ingaan op programmeeronderwerpen die in eerdere cursussen zijn geïntroduceerd
+    om flexibele oplossingen te vinden voor complexere problemen. Aan het einde van
+    deze cursus maken studenten interactieve verhalen en games die ze met iedereen
+    kunnen delen. Aanbevolen voor klassen 4-8.
+  coursea_shortdescription_congrats: Een inleiding tot informatica voor pre-readers.
+  courseb_shortdescription_congrats: Een inleiding tot informatica voor pre-readers.
+    (Vergelijkbaar met cursus A, maar met meer variatie voor oudere studenten.)
+  coursec_shortdescription_congrats: Leer de basisprincipes van informatica en creëer
+    je eigen kunst, verhalen en games.
+  coursed_shortdescription_congrats: Behandel snel concepten uit Cursus C en ga verder
+    met algoritmen, geneste loops, conditionals en meer.
+  coursee_shortdescription_congrats: Behandel snel concepten in Cursus C & D en ga
+    dan verder met functies.
+  coursef_shortdescription_congrats: Leer alle concepten in Informatica Fundamentals
+    en creëer je eigen kunst, verhaal of spel.
+  coursea-2017_shortdescription_congrats: Een inleiding tot informatica voor pre-readers.
+  courseb-2017_shortdescription_congrats: Een inleiding tot informatica voor pre-readers.
+    (Vergelijkbaar met cursus A, maar met meer variatie voor oudere studenten.)
+  coursec-2017_shortdescription_congrats: Leer de basisprincipes van informatica en
+    creëer je eigen kunst, verhalen en games.
+  coursed-2017_shortdescription_congrats: Behandel snel concepten uit Cursus C en
+    ga verder met algoritmen, geneste loops, conditionals en meer.
+  coursee-2017_shortdescription_congrats: Behandel snel concepten in Cursus C & D
+    en ga dan verder met functies.
+  coursef-2017_shortdescription_congrats: Leer alle concepten in Informatica Fundamentals
+    en creëer je eigen kunst, verhaal of spel.
+  coursea-2018_shortdescription_congrats: Een inleiding tot informatica voor pre-readers.
+  courseb-2018_shortdescription_congrats: Een inleiding tot informatica voor pre-readers.
+    (Vergelijkbaar met cursus A, maar met meer variatie voor oudere studenten.)
+  coursec-2018_shortdescription_congrats: Leer de basisprincipes van informatica en
+    creëer je eigen kunst, verhalen en games.
+  coursed-2018_shortdescription_congrats: Behandel snel concepten uit Cursus C en
+    ga verder met algoritmen, geneste loops, conditionals en meer.
+  coursee-2018_shortdescription_congrats: Behandel snel concepten in Cursus C & D
+    en ga dan verder met functies.
+  coursef-2018_shortdescription_congrats: Leer alle concepten in Informatica Fundamentals
+    en creëer je eigen kunst, verhaal of spel.
+  coursea-2019_shortdescription_congrats: Een inleiding tot informatica voor pre-readers.
+  courseb-2019_shortdescription_congrats: Een inleiding tot informatica voor pre-readers.
+    (Vergelijkbaar met cursus A, maar met meer variatie voor oudere studenten.)
+  coursec-2019_shortdescription_congrats: Leer de basisprincipes van informatica en
+    creëer je eigen kunst, verhalen en games.
+  coursed-2019_shortdescription_congrats: Behandel snel concepten uit Cursus C en
+    ga verder met algoritmen, geneste loops, conditionals en meer.
+  coursee-2019_shortdescription_congrats: Behandel snel concepten in Cursus C & D
+    en ga dan verder met functies.
+  coursef-2019_shortdescription_congrats: Leer alle concepten in Informatica Fundamentals
+    en creëer je eigen kunst, verhaal of spel.
+  coursea-2020_shortdescription_congrats: Leer de basisprincipes van informatica en
+    internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal
+    dat je kunt delen.
+  courseb-2020_shortdescription_congrats: Leer de basisprincipes van informatica en
+    internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal
+    dat je kunt delen.
+  coursec-2020_shortdescription_congrats: Maak programma's met sequencing, loops en
+    gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
+    technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van
+    de cursus je eigen spel of verhaal dat je kunt delen!
+  coursed-2020_shortdescription_congrats: Studenten ontwikkelen hun begrip van loops,
+    conditionals en gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
+  coursee-2020_shortdescription_congrats: Begin met coderen met algoritmen, loops,
+    conditionals en gebeurtenissen en daarna ga je verder met functies. Ontwerp en
+    maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
+    met je vrienden en familie.
+  coursef-2020_shortdescription_congrats: Leer verschillende soorten loops, gebeurtenissen,
+    functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+    technieken en bespreek maatschappelijke gevolgen van computergebruik en internet.
+    Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je
+    kunt delen met vrienden en familie.
+  coursea-2021_shortdescription_congrats: Leer de basisprincipes van informatica en
+    internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal
+    dat je kunt delen.
+  courseb-2021_shortdescription_congrats: Leer de basisprincipes van informatica en
+    internetveiligheid. Maak aan het einde van de cursus je eigen spel of verhaal
+    dat je kunt delen.
+  coursec-2021_shortdescription_congrats: Maak programma's met sequencing, loops en
+    gebeurtenissen. Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
+    technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van
+    de cursus je eigen spel of verhaal dat je kunt delen!
+  coursed-2021_shortdescription_congrats: Studenten ontwikkelen hun begrip van loops,
+    conditionals en gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
+  coursee-2021_shortdescription_congrats: Begin met coderen met algoritmen, loops,
+    conditionals en gebeurtenissen en daarna ga je verder met functies. Ontwerp en
+    maak in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
+    met je vrienden en familie.
+  coursef-2021_shortdescription_congrats: Leer verschillende soorten loops, gebeurtenissen,
+    functies en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+    technieken en bespreek maatschappelijke gevolgen van computergebruik en internet.
+    Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject dat je
+    kunt delen met vrienden en familie.
   codeorg_longdescription: Leer de basis concepten van de informatica met drag en
     drop programmeren. Dit is een spelvormig zelfgestuurde cursus met , Angry Birds,
     Plants vs Zombies en video lezingen door onder andere Bill Gates, Mark Zuckerberg.
@@ -1338,9 +1804,39 @@ nl-NL:
   playlab_longdescription: Maak een verhaal of speel een spel met Play Lab! Laat dieren,
     piraten, zombies, ninjas en nog veel meer bewegen, geluiden maken, punten scoren
     en zelfs vuurballen gooien!
+  monstercoding_longdescription: De Mystery Island Coding Quest van Monster Coding
+    biedt een leuk gevuld zelfgeleide avontuur dat kinderen verschillende belangrijke
+    programmeerconcepten leert. Elke op blokken gebaseerde activiteit bouwt voort
+    op de vorige, waarbij kinderen kennis maken met functies, booleaanse waarden,
+    loops, If/Else-verklaringen en arrays, met behulp van kleurrijke geanimeerde afbeeldingen,
+    audio-instructies.
+  allcancode_longdescription: Leerlingen spelen een avonturenspel gebaseerd op een
+    origineel verhaal. Ze begeleiden Marco - de hoofdpersoon - door elk niveau door
+    hem stapsgewijze instructies te geven in de vorm van de visuele programmeertaal
+    die wordt gebruikt door het Uur van Code. Ze maken kennis met sequencing-commando's,
+    iteratie en voorwaarden zonder het zelfs maar op te merken.
   csfirst_longdescription: Maak een verhaal over twee karakters in de zee. Animeer
     het water, pas de omgeving aan en voeg je eigen stijl toe. Gebruik code om het
     verhaal te vertellen zoals jij dat wil vertellen!
+  boxisland_longdescription: Maak een reis op Box Island en help Hiro alle klokken
+    te verzamelen die verspreid zijn in de wildernis! In deze tutorial leer je de
+    basisprincipes van algoritmen, sequenties, loops en conditionals!
+  codesters_longdescription: 'Maak je eigen games, animaties en illustraties met Python.
+    Als je klaar bent, deel ze dan met vrienden! Programma in Python, een echte programmeertaal
+    die elke dag bij bedrijven wordt gebruikt - onze toolkit voor slepen en neerzetten
+    maakt het gemakkelijk om te leren! Probeer een basketbalspel te bouwen, een dans
+    te choreograferen of een geanimeerde kaart te ontwerpen! '
+  texasinstruments_longdescription: 'De 10 Minutes of Code-activiteiten kunnen in
+    de klas worden gebruikt als een manier om studenten interesse te wekken om te
+    coderen met de TI-technologie die ze elke dag in hun rugzakken dragen. Leer de
+    basisprincipes van coderen met behulp van de TI-84&#8482; Plus en begin met programmeren
+    in slechts 10 minuten — geen ervaring nodig!  '
+  teacherled_longdescription: Nu tienduizenden docenten het Hour of Code hebben geprobeerd,
+    zijn veel klaslokalen klaar voor creatiever, minder one-size-fits-all activiteiten
+    die de basisvan informatica onderwijzen. Om leerkrachten te helpen inspiratie
+    te vinden, hebben we een uur door docenten geleide les- en activiteitenplannen
+    verzameld en samengesteld die zijn ontworpen voor verschillende vakgebieden voor
+    veteranen van Hour of Code.
   codeorg_beyond_name: Introductie Informatica (brugklas middelbare school)
   khan_beyond_name: Leer computer programmeren
   tynker_beyond_name: Leer thuis programmeren
@@ -1715,12 +2211,23 @@ nl-NL:
   header_teacher_community: Lerarengemeenschap
   header_help_support: Hulp en ondersteuning
   header_report_bug: Rapporteer bugs
+  header_report_abuse: Misbruik melden
+  header_legal: Privacy & juridisch
   header_legal_privacy: Privacybeleid
   header_legal_tos: Gebruiksvoorwaarden
   header_tutorials: Tutorials
+  header_screen_reader_hamburger: Menu
+  header_screen_reader_help: Help-menu
+  app_lab_documentation: Documentatie van het App Lab
+  app_lab_tutorials: Tutorials voor App Lab
+  game_lab_documentation: Documentatie van Game Lab
+  game_lab_tutorials: Tutorials voor Game Lab
+  sprite_lab_documentation: Documentatie van Sprite Lab
+  sprite_lab_tutorials: Sprite Lab-tutorials
   header_documentation: Documentatie
   user_header_label: Hallo %{username}
   user_header_team: Team
+  user_header_my_projects: Mijn projecten
   user_header_settings: Mijn account
   user_header_logout: Uitloggen
   user_header_signin: Aanmelden
@@ -1730,21 +2237,67 @@ nl-NL:
   user_header_gamelab: Game Lab
   user_header_playlab: Speel Lab
   user_header_dance: Dansfeest
+  user_header_spritelab: Sprite Lab
   user_header_minecraft: Minecraft
   user_header_flappy: Flappy
+  user_header_view_all: Bekijk alle projecten...
   user_header_view_project_gallery: Bekijk projecten
   user_header_view_my_projects: Bekijk mijn projecten
   view_all_sections: Bekijk alle onderdelen
+  view_section: Sectie bekijken
+  view_named_section: Bekijk %{section_name}
+  privacy_doc_explanation: Klik hier voor ons privacydocument dat kan worden gedeeld
+    of afgedrukt voor uw leerlingen.
   signing_in: Aan Het Inloggen
+  sign_in_overview: 'Je leerlingen kunnen zich aanmelden bij hun Code.org-accounts
+    door deze stappen te volgen:'
   sign_in_instruct_website: Ga naar %{code_org_url}.
   sign_in_instruct_code: 'Typ hun sectie code: %{section_code}.'
+  sign_in_instruct_name: Kies hun weergavenaam.
+  sign_in_instruct_secret: Kies hun geheim %{secret}.
+  sign_in_instruct_button: Klik op de knop „Aanmelden”.
   sign_in_overview_cards: Studenten kunnen al deze informatie, waaronder hun geheim(e)
     %{secret}, in de login kaarten hieronder.
   reset_student_password: Studenten paswoorden aan het resetten
+  reset_student_password_instructions: U kunt het geheim <word/picture> voor al uw
+    leerlingen resetten door naar het tabblad „Studenten beheren” voor de sectie te
+    gaan, op de knop „Geheim weergeven” te klikken onder de kolom „Wachtwoord” en
+    op de knop „Geheim opnieuw instellen” te klikken.
+  login_cards: Login Cards
+  print_login_cards: Inlogkaarten afdrukken
+  joining_section: Deelnemen aan je sectie (alleen eenmalig)
+  joining_section_overview: Als een student nog niet lid is geworden van je sectie,
+    vraag hem dan om de volgende stappen te doen. Merk op dat ze dit maar één keer
+    hoeven te doen. Door deel te nemen aan je sectie, kunnen studenten de cursus zien
+    die aan hen is toegewezen en kun je de voortgang volgen van het werk dat ze voltooien
+    terwijl ze zijn ingelogd.
+  joining_section_instruct_website: 'Maak een Code.org-account aan als ze dat nog
+    niet hebben gedaan. Ze kunnen dit doen op https://studio.code.org/users/sign_up.
+    Houd er rekening mee dat ze zich kunnen aanmelden met een e-mailadres en wachtwoord,
+    of zich kunnen aanmelden via Google, Facebook of Microsoft door op een van deze
+    knoppen te klikken:'
+  joining_section_instruct_account: Meld u aan bij hun Code.org-account.
   joining_section_instruct_code: 'Navigeer naar %{code_org_url} en voer de volgende
     klassectie code in: %{section_code}'
+  joining_section_instruct_button: Zodra ze op de „Go” -knop drukken, moeten ze aan
+    je sectie worden toegevoegd.
+  signing_in_single_instruct: Je studenten kunnen zich aanmelden bij hun Code.org-accounts
+    door naar https://code.org/ te gaan en op de knop „Aanmelden” in de rechterbovenhoek
+    te klikken.
+  reset_student_password_email: Als uw student een Code.org-account heeft gemaakt
+    met behulp van zijn e-mailadres en wachtwoord (in plaats van in te loggen via
+    zijn Google-, Facebook-, Microsoft- of Clever-account), kunt u hun wachtwoord
+    opnieuw instellen door naar het tabblad „Studenten beheren” voor de sectie te
+    gaan en op de knop „Wachtwoord opnieuw instellen” te klikken onder de” Kolom Wachtwoord”.
   syncing_students: Studenten aan het synchroniseren
+  syncing_students_instructions: 'Als uw sectie Code.org ooit verouderd is met uw
+    lijst met studenten in Google Classroom, klikt u op de knop „Studenten synchroniseren
+    vanuit Google Classroom” op het tabblad „Studenten beheren”:'
+  google_sign_in_instruct: 'Van daaruit moeten ze de optie „Aanmelden met Google-account”
+    kiezen:'
   hero_name: 'Minecraft: Heldenreis'
+  applab-intro_name: App Lab Intro
+  applab_tile_title: Intro naar App Lab (13+)
   applab_tile_subtitle: Maak je eigen app in JavaScript door blokgebaseerd programmeren.
     Of breng je vaardigheden naar een hoger niveau met tekstgebaseerde programmering.
     (Alleen in het Engels)
@@ -1761,17 +2314,36 @@ nl-NL:
   hoc_overview_dance_2019_subtitle: Codeer een Dance Party om te delen met je vrienden.
     Met Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers,
     Nicki Minaj, en nog eens 34 anderen!
+  hoc_overview_title: Uur van Codeactiviteiten van Code.org
+  hoc_overview_subtitle: De <a href="https://hourofcode.com">Hour of Code</a> is een
+    wereldwijde beweging die tientallen miljoenen studenten bereikt in meer dan 180
+    landen. Iedereen, waar dan ook, kan een Hour of Code-evenement organiseren of
+    een van de meer dan 500+ tutorials van één uur proberen, beschikbaar in meer dan
+    45 talen.
+  hoc_overview_subtitle_markdown: De [Hour of Code] (https://hourofcode.com) is een
+    wereldwijde beweging die tientallen miljoenen studenten in meer dan 180 landen
+    bereikt. Iedereen, waar dan ook, kan een Hour of Code-evenement organiseren of
+    een van de meer dan 500+ tutorials van één uur proberen, beschikbaar in meer dan
+    45 talen.
   hoc_overview_partner_activities_title: Meer activiteiten van onze partners
   hoc_overview_partner_activities_body: De website van Hour of Code heeft meer dan
     100 informatica-activiteiten voor alle leeftijden en ervaringsniveaus, ontwikkeld
     door Code.org en haar partners.
   hoc_overview_partner_activities_link: Activiteiten bekijken
   hoc_overview_start_tutorial: Start
+  hoc_overview_more_resources: Zie onze gids voor het hosten van een [virtueel uur
+    van code] voor meer informatie over hoe u contact kunt maken met uw klaslokaal
+    op afstand (https://hourofcode.com/us/how-to/virtual). Voor studenten met beperkte
+    of geen technologie of connectiviteit, deel dit pakket met [unplugged Hour of
+    Code-activiteiten] (https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Lerarenhandleiding bekijken
   hoc2018_creativity: creativiteit
   hoc2018_creativity_create: Maak
   hoc2018_creativity_hoc_coming: De 'Hour of Code' komt eraan…
   hoc2018_creativity_what_will_you_create: Wat ga jij creëren?
+  hoc2018_creativity_homepage: Geef de verbeelding een vlucht en zorg voor innovatie.
+    Begin met een Hour of Code en je eigen merk creativiteit, wat het ook mag zijn.
+    Bekijk onze video.
   hoc2018_creativity_hoc_about: 'Dit jaar, het Uur Code gaat helemaal over creativiteit. '
   hoc2018_creativity_social_media: 'Het #UurCode van dit jaar gaat over creativiteit.
     Ik doe mee. Jij ook?'
@@ -1780,6 +2352,8 @@ nl-NL:
   hoc2018_creativity_courses: Ga verder met de cursussen van code.org
   hoc2018_creativity_courses_link: Ga verder met de <a href="https://studio.code.org/courses">Code.org
     lessen</a>
+  hoc2018_homepage: Schrijf je klas in om een van de meer dan 150 NIEUWE activiteiten
+    voor het Hour of Code te proberen (3-9 december)!
   hoc2018_mc_page_title: Minecraft Code Uur handleidingen
   hoc2018_mc_details: Vele talen | Recente browsers en tablets | Leeftijd 6 - 10
   hoc2018_mc_aquatic_announcement: Schrijf je klas in om een van de 150 NIEUWE activiteiten
@@ -1789,6 +2363,8 @@ nl-NL:
   hoc2018_mc_aquatic_title: 'Minecraft: Aquatische reis'
   hoc2018_mc_aquatic_description: Minecraft is terug bij Uur Code met een gloednieuwe
     activiteit! Programmeer om door Minecraft te reizen.
+  hoc2019_mc_aquatic_description: Verken en bouw onderwaterwerelden met code.
+  hoc2018_mc_hero_title: De reis van Minecraft Hero
   hoc2018_mc_hero_description: Minecraft is terug bij Uur Code met een gloednieuwe
     activiteit! Programmeer om door Minecraft te reizen.
   hoc2018_mc_designer_title: Minecraft Ontwerper
@@ -1800,14 +2376,46 @@ nl-NL:
   hoc2018_mc_start: Start
   hoc2018_mc_no_internet: Heeft u geen Internet?
   hoc2018_mc_download_adventurer: Download de offline versie van Minecraft avonturier.
+  hoc2018_mc_educators: Voor docenten
   hoc2018_mc_educators_box1_title: Programmeren met Minecraft
+  hoc2018_mc_educators_box1_desc: 'Minecraft: Education Edition biedt op standaarden
+    afgestemd curriculum, training en codering in Minecraft.'
+  hoc2018_mc_educators_box1_button: Aan de slag
+  hoc2018_mc_educators_box2_title: Gids voor facilitator downloaden
+  hoc2018_mc_educators_box2_desc: Deze toolkit helpt je om een Hour of Code te hosten
+    en je studenten te betrekken bij informatica.
   hoc2018_mc_educators_box2_button: Downloaden
+  hoc2018_mc_educators_box3_title: Woon een gratis studentenworkshop bij
+  hoc2018_mc_educators_box3_desc: Bezoek een Microsoft Store bij jou in de buurt voor
+    een gratis Hour of Code-workshop. Voor deelnemers van alle vaardigheidsniveaus,
+    zes jaar en ouder.
+  hoc2018_mc_educators_box3_button: Zoek een workshop
   hoc2018_mc_educators_box4_title: Meer Informatica bronnen
   hoc2018_mc_educators_box4_desc: Meer Infromatica bronnen
+  hoc2018_mc_educators_box4_button: Ontdek bronnen
   hoc2018_mc_watch_videos: Bekijk voor je begint deze inspiratie-video's
+  hoc2018_mc_videos_more: Meer <a href='%{inspiring_videos_playlist}'>inspirerende
+    video's</a> met rolmodellen en beroemdheden
+  hoc2018_mc_careers_more: Meer <a href='%{careers_url}' target='_blank'>inspirerende
+    video's</a> met professionals op technologisch gebied
+  hoc2018_mc_video_1min: 1 min
+  hoc2018_mc_video_2min: 2 min
+  hoc2018_mc_video_3min: 3 min
+  hoc2018_mc_video_5min: 5 min
+  hoc2018_mc_video_title_steph_curry: Uur code met Steph Curry
+  hoc2018_mc_video_title_sports: Duw jezelf op. Iedereen kan het leren.
   hoc2018_mc_video_title_inspire_girl: Inspireer een meisje
+  hoc2018_mc_video_title_cs_intro: Informatica intro
+  hoc2018_mc_video_title_schools_dont_teach: Wat de meeste scholen niet leren
+  hoc2018_mc_video_title_obama: President Obama over informatica
+  hoc2018_mc_video_title_hoc_is_here: Het uur van de code is hier - Iedereen kan leren
+  hoc2018_mc_video_title_anybody_can_learn: Iedereen kan leren
+  hoc2018_mc_video_title_my_name_is_aracely: Mijn naam is Aracely
   hoc2018_mc_homepage_hoc_coming: De Hour of Code komt eraan...
   hoc2018_mc_homepage_what_create: Wat ga jij creëren?
+  hoc2018_mc_homepage_give_flight: Geef de verbeelding een vlucht en zorg voor innovatie.
+    Begin met een Hour of Code en je eigen merk creativiteit, wat het ook mag zijn.
+  hoc2018_mc_homepage_watch_video: Bekijk onze video
   hoc2018_mc_homepage_join_us: Doe mee
   hoc2018_mc_homepage_try_it: Probeer het
   hoc2018_mc_back: Minecraft is terug bij Uur Code met een gloednieuwe activiteit!
@@ -1817,18 +2425,24 @@ nl-NL:
   hoc2018_mc_minecraft_education: Minecraft Opleiding
   hoc2018_mc_continue_learning: Blijf leren met Minecraft.
   hoc2018_mc_go_to_mc_education: Ga naar de Minecraft Opleiding
+  hoc2018_mc_short_description: Gebruik je creativiteit en probleemoplossende vaardigheden
+    om schatten te vinden en onderwaterwerelden te ontdekken met de kracht van code.
   hoc2018_mc_short_description_shorter: Minecraft is terug met een gloednieuwe activiteit
     voor het Codeuur!
   hoc2018_mc_journey: Reis door Minecraft met programmeercode.
   hoc2018_dance_party_main_heading: Dansfeest
+  hoc2018_dance_party_landing_title: Dans
+  hoc2018_dance_party_subheading: Help dansfeest te vertalen
   hoc2018_dance_create_your_own_dance_title: Maak je eigen dansfeest
   hoc2018_dance_party_box_title: Dansfeest
   hoc2018_dance_party_box_description: Programmeer een dansfeest om te delen met je
     vrienden!
+  hoc2018_dance_party_specs: Taal | Formaat | Leeftijd 6-106
   hoc2018_dance_party_button: Start
   hoc2018_dance_keep_on_dancing_box_title: Blijf dansen
   hoc2018_dance_keep_on_dancing_description: Breid de kennis van het eerste uur uit
     met uitgebreide projectideeën.
+  hoc2018_dance_keep_on_dancing_specs: Taal | Formaat | Leeftijd 13+
   hoc2018_dance_keep_on_dancing_button: Start deel 2
   hoc2018_dance_teacher_resources_title: Middelen voor leraren
   hoc2018_dance_teacher_resources_tile1_description: Lesplannen, certificaten en muziekfilters.
@@ -1837,25 +2451,205 @@ nl-NL:
   hoc2018_dance_teacher_resources_tile2_description: Geen computers nodig!  Leer de
     basis van coderen om samen een dansfeest te choreograferen.
   hoc2018_dance_teacher_resources_tile2_button: Unplugged Activiteit
+  hoc2018_dance_featured_student_creations_title: Uitgelichte creaties van studenten
+  hoc2018_dance_videos_section_heading: Laat je inspireren
+  hoc2018_dance_video_title_what_is_creativity: Wat is creativiteit?
+  hoc2018_dance_view_creativity_video_playlist: Wat is creativiteit? Volledige serie
+    bekijken (5 min)
+  hoc2018_dance_amazon_sponsor_section_with_logo_title: In samenwerking met
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: Amazon Future
+    Engineer* is een uitgebreid programma van kindertijd tot carrière om kinderen
+    en jongeren met een laag inkomen en andere kansarme kinderen en jongeren te inspireren,
+    op te leiden en op te leiden om een carrière in de informatica na te streven.
+    <a href='%{amazon_future_engineer_link}' target='_blank'>Meer informatie</a>
+  hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
+    Future Engineer* is een uitgebreid programma van kindertijd tot carrière om kinderen
+    en jongeren met een laag inkomen en andere kansarme kinderen en jongeren te inspireren,
+    op te leiden en op te leiden om een carrière in de informatica na te streven.
+    [Meer informatie] (%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: Als je student of docent
+    bent in Frankrijk, ga dan naar [Amazon Future Engineer - Frankrijk] (%{amazon_future_engineer_france_link})
+  hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Meer informatie
+    over Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_title: Over Amazon Future Engineer
+  hoc2018_dance_amazon_about_future_engineer_description: Lees meer over het programma
+    van kleuterschool tot carrière van Amazon om de toegang tot informatica te vergroten.
+    Vind informatie over hoe je betrokken kunt raken bij onze zomerkampen, CS-lessen
+    op de middelbare school, beurzen, en stages.
   hoc2018_dance_amazon_about_future_engineer_button: Leer meer
+  hoc2018_dance_amazon_try_coding_this_summer_title: Probeer deze zomer te coderen
+  hoc2018_dance_amazon_try_coding_this_summer_description: Doe mee aan de gratis,
+    leuke en inclusieve computerwetenschapskampen van Amazon Future Engineer! Zomerkampen
+    zijn beschikbaar voor studenten van de kleuterschool tot en met de 8e klas op
+    meerdere locaties in de VS voor de zomer van 2019.
+  hoc2018_dance_amazon_try_coding_this_summer_button: Deelnemen aan een kamp
+  hoc2018_dance_amazon_scholarship_programs_title: Scholarship-programma's
+  hoc2018_dance_amazon_scholarship_programs_description: Amazon biedt beurzen van
+    $10.000 per jaar aan voor achtergestelde studenten die met succes een AP CS-cursus
+    hebben afgerond of momenteel zijn ingeschreven en van plan zijn een CS-diploma
+    te studeren aan een 4-jarige hogeschool of universiteit in de Verenigde Staten.
   hoc2018_dance_amazon_scholarship_programs_button: Meld je nu aan
+  hoc2018_dance_amazon_internships_title: Kom stagiair bij Amazon
+  hoc2018_dance_amazon_internships_description: Aanvragen zijn nu open voor Amazon
+    Future Engineer stages in de zomer van 2019. Stagiaires werken samen met een manager,
+    technische mentor en andere stagiaires om te innoveren en nieuwe functies en diensten
+    te creëren namens Amazon-klanten. Stages zijn beschikbaar in de VS en Canada.
+  hoc2018_dance_amazon_internships_button: Zoek een stage
+  hoc2018_dance_amazon_k8_programs_title: K-8-programma's
+  hoc2018_dance_amazon_funding_title: Krijg financiering voor je CS-diploma
+  hoc2018_dance_amazon_future_engineer_footer: "* De artiesten wiens muziek in deze
+    tutorial wordt gebruikt, sponsoren of onderschrijven Amazon niet als onderdeel
+    van het licentiegebruik van hun muziek op Code.org.\n\n"
   hoc2018_dance_measure: Maten
   hoc2018_dance_measure_colon: 'Maten:'
+  hoc2018_aquatic_video1: Minecraft Voyage Aquatic - Introductie
+  hoc2018_aquatic_video2: Minecraft Voyage Aquatic - Loops
+  hoc2018_aquatic_video3: Minecraft Voyage Aquatic - Voorwaarden
+  hoc2018_aquatic_video4: Minecraft Voyage Aquatic - Gefeliciteerd
+  hoc2018_dance_video1: Dansfeest - Introductie
+  hoc2018_dance_video2: Dance Party - Evenementen
+  hoc2018_dance_video3: Dansfeest - Eigenschappen
+  hoc2018_dance_video4: Dansfeest - Gefeliciteerd
   page_not_found_title: Pagina niet gevonden
+  page_not_found_header: '404: Pagina niet gevonden'
+  page_not_found_description: De pagina die je zoekt, bestaat niet op dit adres. Controleer
+    het webadres en dien het opnieuw in. Of ga terug naar onze homepage.
+  page_not_found_button: Terug naar huis
+  hoc2018_mc_with_microsoft: In samenwerking met
   hoc2018_mc_thank_microsoft: "  We danken Microsoft voor het ondersteunen van onze
     visie en missie om ervoor te zorgen dat elk kind de kans krijgt om informatica
     te leren en de vaardigheden om te slagen in de 21e eeuw.  "
+  hoc2019_mc_mee_title: Minecraft AI voorgoed
+  hoc2019_mc_mee_description1: 'De nieuwe Minecraft Hour of Code-zelfstudie is nu
+    beschikbaar in Minecraft: Education Edition voor Windows, Mac en iPad. Leer de
+    basisprincipes van coderen en verken AI met je studenten!'
+  hoc2019_mc_mee_description2: Krijg toegang tot gratis bronnen, waaronder een lesplan,
+    video's, curriculum informatica en lerarentrainingen.
+  hoc2019_mc_more_coding_resources: Meer coderingsbronnen
+  hoc2019_dance_previous_versions: "Op zoek naar een vorige versie van Dance Party?
+    \ \nKlik hier om [Deel 1] (%{dance_2018_link}) en [Deel 2] (%{dance_extras_2018_link})
+    vanaf 2018 te starten."
+  homepage_slot_text_title_at_home: Thuis leren
+  homepage_slot_text_blurb_at_home: Deze middelen maken het makkelijk
+  homepage_slot_text_link_code_break: Neem een codepauze
+  homepage_slot_text_link_do_hoc: Doe een uur code
+  homepage_slot_text_link_express_course: Probeer een express-cursus
+  page_not_available_title: Pagina niet beschikbaar
+  page_not_available_description: Het spijt ons, de door u opgevraagde pagina is niet
+    langer beschikbaar op dit adres. Als je nog steeds toegang nodig hebt, stuur dan
+    een e-mail naar [support@code.org] (%{support_email_link}).
+  page_not_available_button: Terug naar huis
+  hoc2020_mc_available_code_org: Beschikbaar op Code.org
+  hoc2020_mc_available_mee: 'Beschikbaar in Minecraft: Education Edition'
+  hoc2020_mc_mee_title: Minecraft Tale of Two Villages
+  hoc2020_mc_mee_description: 'De nieuwe Minecraft Hour of Code-zelfstudie is nu beschikbaar
+    in Minecraft: Education Edition voor Windows, Mac, Chromebook en iPad. Leer de
+    basisprincipes van coderen en ontdek diversiteit en inclusie met je studenten!
+    Krijg toegang tot gratis bronnen, waaronder een lesplan, video''s, curriculum
+    informatica, equity-lessen en lerarentrainingen.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Reis terug in de tijd en leer coderen! De nieuwe Minecraft
+    Hour of Code-tutorial is nu beschikbaar in Minecraft: Education Edition voor Windows,
+    Mac, Chromebook en iPad. Ga aan de slag met gratis educatieve bronnen, trainingen
+    en video''s.'
+  hoc2021_mc_mee_villages_title: Verhaal van twee dorpen
+  hoc2021_mc_mee_villages_description: 'Leer de basisbeginselen van coderen en verken
+    diversiteit en inclusie met je leerlingen in Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: AI voor goed
+  hoc2021_mc_mee_ai_description: 'Verken AI met je leerlingen en leer coderen in Minecraft:
+    Education Edition.'
   footer_powered_by_aws: Aangedreven door Amazon webservices
+  footer_built_on_github: Gebouwd op GitHub van Microsoft
+  codebytes_skinny_banner_title: Doe mee met ons op 7-11 december voor onze CodeBytes
+    live minilessen!
+  codebytes_skinny_banner_description: 'Bezoek ons elke dag van CS Education Week
+    voor CodeBytes, interactieve informatielessen van 20 minuten. CodeBytes streamen
+    twee keer per dag live, is een geweldige manier voor studenten om deel te nemen
+    aan een virtuele #HourOfCode!'
   codebytes_skinny_banner_english_only: Alleen Engels
+  codebytes_skinny_banner_learn: Meer informatie op [code.org/codebytes] (%{code_bytes_url}).
   footer_privacy_policy: Privacybeleid
+  footer_privacy_policy_updated: Privacybeleid (bijgewerkt)
   footer_about: Over
   footer_partners: Partners
+  footer_blog: Blog
   footer_donate: Doneren
+  footer_store: Winkel
   footer_support: Help en Gemeenschap
   footer_terms: Voorwaarden
+  ai_for_oceans: AI voor oceanen
   ai_for_oceans_lesson_plan: lesplan
+  ai_for_oceans_tile_description: Help A.I. de oceanen schoon te maken door het te
+    trainen om afval te detecteren! Lees meer over trainingsgegevens en vooringenomenheid
+    en hoe AI wereldproblemen kan aanpakken. Bekijk
+  how_ai_works: Hoe AI werkt
+  how_ai_works_tile_description: Lees meer over hoe AI werkt en waarom het belangrijk
+    is met deze reeks korte video's. Met Microsoft CEO Satya Nadella en een diverse
+    cast van experts.
+  watch_the_videos: Bekijk de video's
+  ai_and_ethics: AI en ethiek
+  ai_and_ethics_tile_description: Studenten reflecteren op de ethische implicaties
+    van AI en werken vervolgens samen om een „AI Code of Ethics” -bron te creëren
+    voor AI-makers en wetgevers overal ter wereld.
+  view_lesson_plan: Bekijk het lesplan
+  ai_in_partnership_with: In samenwerking met
   ai_microsoft_thanks: "  We danken Microsoft voor het ondersteunen van onze visie
     en missie om ervoor te zorgen dat elk kind de kans krijgt om informatica te leren
     en de vaardigheden om te slagen in de 21e eeuw.  "
+  ai_ethics_panel_header: Onderzoek naar de ethiek van AI-paneldiscussie
+  ai_ethics_panel_description_1: Ga dieper met enkele van onze favoriete AI-experts!
+    Deze paneldiscussie gaat over belangrijke kwesties zoals algoritmische vooringenomenheid
+    en de toekomst van werk. Combineer het met onze
+  ai_ethics_lesson_plan: Lesplan voor AI & Ethiek
+  ai_ethics_panel_description_2: voor een geweldige kennismaking met de ethiek van
+    kunstmatige intelligentie!
+  cs_for_good: CS voor goed
+  cs_for_good_tile_description: Middelen om studenten te inspireren diep na te denken
+    over de rol die informatica kan spelen bij het creëren van een rechtvaardigere
+    en duurzamere wereld.
+  view_resources: Bronnen bekijken
+  imagine_cup_junior: Imagine Cup Junior
+  imagine_cup_junior_tile_description: Deze wereldwijde AI for Good-uitdaging laat
+    studenten kennismaken met de AI for Good-initiatieven van Microsoft, waardoor
+    ze een probleem in de wereld kunnen oplossen met de kracht van AI.
   ai_activity: Activiteit
   ai_description: Omschrijving
+  ai_seeing_ai: AI zien
+  ai_seeing_ai_description: Een gratis app die de wereld om je heen vertelt in verschillende
+    talen.
+  ai_quick_draw: Snel, tekenen!
+  ai_quick_draw_description: Kan een neuraal netwerk doodling leren herkennen?
+  ai_teachable_machine: Leerbare machine
+  ai_teachable_machine_description: Train een computer om je eigen beelden, geluiden
+    en poses te herkennen.
+  ai_google: AI-experimenten met Google
+  ai_google_description: Begin met het verkennen van machine learning door middel
+    van afbeeldingen, tekeningen, taal, muziek en meer.
+  ai_zooniverse: Zooniverse - Snapshot Berg Zebra
+  ai_zooniverse_description: Help de bedreigde Cape Mountain Zebra te beschermen door
+    de verschillende dieren in de afbeeldingen te identificeren.
+  ai_audience: Publiek
+  ai_minecraft_description: 'Krijg toegang tot gratis bronnen, waaronder een lesplan,
+    video''s, curriculum informatica en lerarentrainingen. (Vereist Minecraft: Education
+    Edition)'
+  ai_k_12_audience: K-12 (lezen vereist)
+  ai_microsoft_workshop: Gratis virtuele workshops van Microsoft
+  ai_microsoft_workshop_description: Wekt nieuwsgierigheid op met gratis STEM- en
+    coderingsworkshops.
+  ai_machine_learning_for_kids: Machine Learning voor kinderen
+  ai_machine_learning_for_kids_description: Train een machine learning-model met tekst,
+    cijfers of afbeeldingen en gebruik het om games in Scratch te maken.
+  ai_ibm_machine_learning_for_kids: 'IBM: Machine Learning voor kinderen'
+  ai_ecs: 'ECS: Kunstmatige intelligentie (AI)'
+  ai_ecs_description: Een nieuwe alternatieve curriculumeenheid voor het curriculum
+    Exploring Computer Science (ECS).
+  ai_elements: Elementen van AI
+  ai_elements_description: Een reeks gratis online cursussen gemaakt door Reaktor
+    en de Universiteit van Helsinki.
+  ai_cognimates: Cognimates
+  ai_cognimates_description: Een AI-educatieplatform voor het bouwen van games, programmeerrobots
+    en training.
+  ai_try_activity: Probeer activiteit
+  outbreak_tile_title: Uitbraak
+  outbreak_tile_subtitle: Een virus heeft Monster Town geïnfecteerd! Codeer een uitbraaksimulator
+    en doe voorspellingen over wat er zal gebeuren met de buren van Monster Town.

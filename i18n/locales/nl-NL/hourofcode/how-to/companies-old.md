@@ -5,7 +5,7 @@ title: Hoe organiseer je een 'Hour of Code' - Bedrijven
 {{ signup_button }}
 
 # Hoe kunt u CodeUur introduceren in uw bedrijf?
-### Find out how you and your employees can inspire students to try computer science!
+### Ontdek hoe u en uw medewerkers studenten kunnen inspireren om informatica te gaan leren.
 
 ***
 

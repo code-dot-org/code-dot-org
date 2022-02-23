@@ -3,9 +3,12 @@ sr:
   data:
     progressions:
       'Artist: Variables': 'Уметник: Променљиве'
+      'Course E: Play Lab Project': 'Курс Е: "Play Lab" пројекат'
+      'Course F: Artist Project': 'Курс Ф: пројекат Уметник'
       Debugging: Отклањање грешака
       Design Mode: Dizajn mod
       Events: Догађаји
+      Example: Пример
       For Loops: Бројачке петље
       Free Play: Free Play
       Functions: Функције

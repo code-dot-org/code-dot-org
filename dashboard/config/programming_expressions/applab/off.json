@@ -1,5 +1,7 @@
 {
-  "func": "off",
+  "key": "off",
+  "name": "off",
   "category": "Circuit",
-  "modeOptionName": "*.off"
+  "category_key": "circuit",
+  "syntax": "off"
 }

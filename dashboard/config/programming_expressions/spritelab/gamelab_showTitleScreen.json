@@ -1,0 +1,8 @@
+{
+  "key": "gamelab_showTitleScreen",
+  "name": "showTitleScreen",
+  "category": "World",
+  "category_key": "world",
+  "block_name": "gamelab_showTitleScreen",
+  "syntax": "showTitleScreen"
+}

@@ -57,6 +57,15 @@ module Api::V1::Pd
       @markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
     end
 
+    # Manually reload application between tests, to work around an unusual bug
+    # here with the interaction of three things:
+    #   1. Rails 6
+    #   2. composite_primary_keys
+    #   3. SetupAllAndTeardownAll
+    teardown do
+      @csp_facilitator_application.reload
+    end
+
     test_redirect_to_sign_in_for :index
     test_redirect_to_sign_in_for :show, params: -> {@test_show_params}
     test_redirect_to_sign_in_for :update, params: -> {@test_update_params}
@@ -670,6 +679,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -713,6 +723,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -756,6 +767,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted'
         application.save!
         application.lock!
@@ -807,6 +819,7 @@ module Api::V1::Pd
         application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
         application.lock!
@@ -851,6 +864,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -893,6 +907,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted'
         application.save!
         application.lock!
@@ -972,33 +987,36 @@ module Api::V1::Pd
         "Current role",
         "Are you completing this application on behalf of someone else?",
         "If yes, please include the full name and role of the teacher and why you are applying on behalf of this teacher.",
-        "Which professional learning program would you like to join for the #{TEACHER_APPLICATION_CLASS.year} school year?",
-        "To which grades does your school plan to offer CS Principles in the #{TEACHER_APPLICATION_CLASS.year} school year?",
+        "Which professional learning program would you like to join for the #{APPLICATION_CURRENT_YEAR} school year?",
+        "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?",
         "How will you offer CS Principles?",
-        "How many minutes will your CS Program class last?",
+        "How many minutes will your CS program class last?",
         "How many days per week will your CS program class be offered to one section of students?",
         "How many weeks during the year will this course be taught to one section of students?",
         "Total course hours",
-        "Do you plan to personally teach this course in the #{TEACHER_APPLICATION_CLASS.year} school year?",
+        "Do you plan to personally teach this course in the #{APPLICATION_CURRENT_YEAR} school year?",
         "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
-        "Which existing course or curriculum will it replace? Mark all that apply.",
+        "Which existing course or curriculum will this CS program replace? Mark all that apply.",
         "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         "Are you committed to participating in the entire Professional Learning Program?",
         "Please indicate which workshops you are able to attend.",
-        "Do you want to be considered for Code.org’s national virtual academic year workshops?",
         "Will your school be able to pay the fee?",
         "Please provide any additional information you'd like to share about why your application should be considered for a scholarship.",
         "Teacher's gender identity",
         "Teacher's race",
         "How did you hear about this program? (Teacher's response)",
         "Principal Approval Form URL",
+        "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
+        "Home street address",
+        "Home city",
+        "Home state",
         "Principal's title (provided by principal)",
         "Principal's first name (provided by principal)",
         "Principal's last name (provided by principal)",
         "Principal's email address (provided by principal)",
         "School name (provided by principal)",
         "School district (provided by principal)",
-        "Do you approve of this teacher participating in Code.org's #{TEACHER_APPLICATION_CLASS.year} Professional Learning Program?",
+        "Do you approve of this teacher participating in Code.org's #{APPLICATION_CURRENT_YEAR} Professional Learning Program?",
         "Total student enrollment",
         "Percent of students who are eligible to receive free or reduced lunch (Principal's response)",
         "Percent of students from underrepresented racial and ethnic groups (Principal's response)",
@@ -1009,7 +1027,7 @@ module Api::V1::Pd
         "Percent of student enrollment by race - Native Hawaiian or other Pacific Islander",
         "Percent of student enrollment by race - American Indian or Native Alaskan",
         "Percent of student enrollment by race - Other",
-        "Are you committed to including this course on the master schedule in #{TEACHER_APPLICATION_CLASS.year} if this teacher is accepted into the program?",
+        "Are you committed to including this course on the master schedule in #{APPLICATION_CURRENT_YEAR} if this teacher is accepted into the program?",
         "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         "Which existing course or curriculum will CS Principles replace?",
         "How will you implement CS Principles at your school?",

@@ -4,12 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSP"
+      "curriculum_umbrella": "CSP",
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:16 UTC",
+    "serialized_at": "2021-11-22 17:07:31 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp3-a"
     }
@@ -46,16 +50,37 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "2b2cef31-ba2e-4683-910d-b4ab2bc9410c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2b2cef31-ba2e-4683-910d-b4ab2bc9410c",
+        "lesson.key": "CSP3A: Using Simple Commands",
+        "lesson_group.key": "csp3_1",
+        "script.name": "csp3-a"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "e55294a8-0d4b-48c3-a1fd-8f65bfc03f29",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e55294a8-0d4b-48c3-a1fd-8f65bfc03f29",
+        "lesson_activity.key": "2b2cef31-ba2e-4683-910d-b4ab2bc9410c"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -69,7 +94,8 @@
         ],
         "lesson.key": "CSP3A: Using Simple Commands",
         "lesson_group.key": "csp3_1",
-        "script.name": "csp3-a"
+        "script.name": "csp3-a",
+        "activity_section.key": "e55294a8-0d4b-48c3-a1fd-8f65bfc03f29"
       },
       "level_keys": [
         "subgoal v2 U3L04 Student Lesson Introduction"
@@ -78,7 +104,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -92,7 +118,8 @@
         ],
         "lesson.key": "CSP3A: Using Simple Commands",
         "lesson_group.key": "csp3_1",
-        "script.name": "csp3-a"
+        "script.name": "csp3-a",
+        "activity_section.key": "e55294a8-0d4b-48c3-a1fd-8f65bfc03f29"
       },
       "level_keys": [
         "subgoal U3L2 Using Simple Commands"
@@ -101,7 +128,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -115,7 +142,8 @@
         ],
         "lesson.key": "CSP3A: Using Simple Commands",
         "lesson_group.key": "csp3_1",
-        "script.name": "csp3-a"
+        "script.name": "csp3-a",
+        "activity_section.key": "e55294a8-0d4b-48c3-a1fd-8f65bfc03f29"
       },
       "level_keys": [
         "subgoal U3 L4 introducing subgoal labels"
@@ -124,7 +152,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -138,7 +166,8 @@
         ],
         "lesson.key": "CSP3A: Using Simple Commands",
         "lesson_group.key": "csp3_1",
-        "script.name": "csp3-a"
+        "script.name": "csp3-a",
+        "activity_section.key": "e55294a8-0d4b-48c3-a1fd-8f65bfc03f29"
       },
       "level_keys": [
         "subgoalU3L2_TurtleSquare_right"
@@ -154,7 +183,8 @@
         ],
         "lesson.key": "CSP3A: Using Simple Commands",
         "lesson_group.key": "csp3_1",
-        "script.name": "csp3-a"
+        "script.name": "csp3-a",
+        "activity_section.key": "e55294a8-0d4b-48c3-a1fd-8f65bfc03f29"
       }
     },
     {
@@ -165,7 +195,8 @@
         ],
         "lesson.key": "CSP3A: Using Simple Commands",
         "lesson_group.key": "csp3_1",
-        "script.name": "csp3-a"
+        "script.name": "csp3-a",
+        "activity_section.key": "e55294a8-0d4b-48c3-a1fd-8f65bfc03f29"
       }
     },
     {
@@ -176,7 +207,8 @@
         ],
         "lesson.key": "CSP3A: Using Simple Commands",
         "lesson_group.key": "csp3_1",
-        "script.name": "csp3-a"
+        "script.name": "csp3-a",
+        "activity_section.key": "e55294a8-0d4b-48c3-a1fd-8f65bfc03f29"
       }
     },
     {
@@ -187,7 +219,8 @@
         ],
         "lesson.key": "CSP3A: Using Simple Commands",
         "lesson_group.key": "csp3_1",
-        "script.name": "csp3-a"
+        "script.name": "csp3-a",
+        "activity_section.key": "e55294a8-0d4b-48c3-a1fd-8f65bfc03f29"
       }
     }
   ],

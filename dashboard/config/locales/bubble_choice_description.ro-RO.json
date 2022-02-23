@@ -4,10 +4,18 @@
       "bubble_choice_description": {
         "courseD_bee_nestedLoops8_2021": "Colectează tot nectarul din fiecare floare și fă miere la fiecare fagure. Folosește o buclă imbricată. ",
         "CourseF_outbreak5": "Ajută-ți spiritele să devină mai buni automat odată cu trecerea timpului!",
-        "CourseF_outbreak6": "Un virus nu este întotdeauna transmis, iar măștile nici ele nu opresc perfect transmiterea. Îmbunătățește simularea, făcând ca infecțiile să se întâmple aleatoriu.",
+        "CourseF_outbreak6": "Un virus nu este întotdeauna transmis, iar măștile nici ele nu opresc perfect transmiterea. Îmbunătățește simularea, făcând ca infecțiile să se întâmple cu o șansă aleatorie.",
         "CourseF_outbreak7": "Împiedică îmbolnăvirea spiritelor tale, dându-le imunitate.",
         "CourseF_outbreak8": "Utilizează proiectul tău pentru a distribui un mesaj. Ce ai vrea ca alții să învețe din asta?\n",
-        "international_outbreak_freeplay": "Continuă cu aceleași blocuri pe care le-ai văzut deja!"
+        "international_outbreak_freeplay": "Continuă cu aceleași blocuri pe care le-ai văzut deja!",
+        "helloworld_animals_costumes": "Învață să schimbi aspectul spiridușilor.",
+        "helloworld_animals_sounds": "Află cum să redai sunete.",
+        "helloworld_emoji_costumes": "Învață să schimbi aspectul spiridușilor.",
+        "helloworld_emoji_sounds": "Află cum să redai sunete.",
+        "helloworld_food_costumes": "Învață să schimbi aspectul spiridușilor.",
+        "helloworld_food_sounds": "Află cum să redai sunete.",
+        "helloworld_retro_costumes": "Învață să schimbi aspectul spiridușilor.",
+        "helloworld_retro_sounds": "Află cum să redai sunete."
       }
     }
   }

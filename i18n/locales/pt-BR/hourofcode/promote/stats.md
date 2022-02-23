@@ -1,14 +1,14 @@
 ---
-title: Blurbs and useful stats
+title: Texto promocional e estatísticas úteis
 ---
 
 <a id="blurb"></a>
 
 {{ signup_button }}
 
-# Blurbs and useful stats
+# Texto promocional e estatísticas úteis
 
-### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
+### Use as seguintes mensagens se estiver em busca de métodos de promoção do Hour of Code nos seus boletins informativos e comunicados.
 
 * * *
 
@@ -16,11 +16,11 @@ title: Blurbs and useful stats
 
 #### Traga a ciência da computação à sua escola. Comece com a Hora do Código!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. Mas menos da metade das escolas ensina ciência da computação! A boa notícia é que estamos a caminho de mudar essa realidade. Se você ouviu falar da Hora do Código do ano passado, sabe que ela marcou a história. Cem milhões de alunos já sabem o quanto a ciência da computação pode ser acessível e divertida, fazendo apenas uma Hora do Código.
+Com a tecnologia em plena mudança, em todos os setores do planeta, os conhecimentos em computação se tornaram parte de um conjunto bem definido de competências. But just half of all schools offer computer science! A boa notícia é que estamos a caminho de mudar essa realidade. Se você ouviu falar da Hora do Código do ano passado, sabe que ela marcou a história. Cem milhões de alunos já sabem o quanto a ciência da computação pode ser acessível e divertida, fazendo apenas uma Hora do Código.
 
-A Hora do Código é uma introdução de uma hora à ciência da computação, criada para desmistificar a programação e mostrar que qualquer pessoa pode aprender os fundamentos básicos desta ciência. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+A Hora do Código é uma introdução de uma hora à ciência da computação, criada para desmistificar a programação e mostrar que qualquer pessoa pode aprender os fundamentos básicos desta ciência. Saiba mais em [http://HourOfCode.com<](http://HourofCode.com), experimente você mesmo uma hora, ou promova um evento do Hour of Code para apresentar a outras pessoas o mundo de computação!
 
-## Messaging for frequently asked questions
+## Mensagens de perguntas frequentes
 
 #### Por que sua escola está fazendo uma Hora do Código?
 
@@ -30,17 +30,17 @@ Esperamos que isso desperte o interesse dos alunos para continuar aprendendo. Al
 
 #### Por que isso é importante?
 
-A tecnologia está transformando todos os setores do planeta. Em 2015, 7 milhões das novas vagas de trabalho nos EUA eram de cargos que valorizam as habilidades em programação — inclusive nas áreas de arte e design. But 53 percent of schools in the U.S. don't teach computer science. Chegou a hora de agirmos de acordo com o século XXI. Sabemos que, independentemente do que nossos alunos venham a fazer quando chegarem à idade adulta, quer optem pela medicina, quer optem pela administração, política ou artes, saber como construir a tecnologia dará a eles confiança, além de uma vantagem competitiva. <br /> <br />
+A tecnologia está transformando todos os setores do planeta. Em 2015, 7 milhões das novas vagas de trabalho nos EUA eram de cargos que valorizam as habilidades em programação — inclusive nas áreas de arte e design. But 49 percent of schools in the U.S. don't offer computer science. Chegou a hora de agirmos de acordo com o século XXI. Sabemos que, independentemente do que nossos alunos venham a fazer quando chegarem à idade adulta, quer optem pela medicina, quer optem pela administração, política ou artes, saber como construir a tecnologia dará a eles confiança, além de uma vantagem competitiva. <br /> <br />
 
-#### A quote you can use in materials
+#### Uma frase que você pode utilizar entre os materiais
 
-"A Hora do Código foi elaborada para desmistificar a programação e mostrar que a ciência da computação não é nada de outro mundo - todos podem aprender seus fundamentos básicos", afirmou Hadi Partovi, fundador e CEO da Code.org. "Mais de 100 milhões de alunos do mundo todo experimentaram uma Hora do Código. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"A Hora do Código foi elaborada para desmistificar a programação e mostrar que a ciência da computação não é nada de outro mundo - todos podem aprender seus fundamentos básicos", afirmou Hadi Partovi, fundador e CEO da Code.org. "Mais de 100 milhões de alunos do mundo todo experimentaram uma Hora do Código. A demanda por formação relevante em ciência da computação no século XXI cruza todas as fronteiras e não conhece limites”. <br /> <br />
 
 #### Sobre a Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+A Code.org é uma organização pública sem fins lucrativos 501c3, dedicada à expansão da participação nas ciências da computação e uma participação cada vez maior de jovens mulheres e estudantes de outros grupos subrepresentados. Sua visão é a de que todos os estudantes em todas as escolas tenham a oportunidade de aprender a programar um computador. Após seu lançamento, em 2013, a Code.org organizou a campanha Hora do Código – que levou a ciência da computação a mais de 100 milhões de alunos – em parceria com 70 distritos de escolas públicas em todo o país para expandir os programas de ciência da computação. A Code.org tem o apoio de doações filantrópicas de empresas, fundações e pessoas generosas, incluindo Microsoft, Facebook, Fundação Infosys EUA, Amazon e outras. Para obter mais informações, visite: [code.org<]({{ codeorg_link }}).
 
-## Share these on social media and in emails
+## Compartilhe nas redes sociais e por e-mail
 
 [![imagem](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagem](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![imagem](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 

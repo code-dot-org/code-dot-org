@@ -1,19 +1,18 @@
 {
-  "func": "rgb",
+  "key": "rgb",
+  "name": "rgb",
   "category": "Drawing",
-  "paramButtons": {
-    "minArgs": 3,
-    "maxArgs": 4
-  },
-  "paletteParams": [
-    "r",
-    "g",
-    "b"
+  "category_key": "drawing",
+  "palette_params": [
+    {
+      "name": "r"
+    },
+    {
+      "name": "g"
+    },
+    {
+      "name": "b"
+    }
   ],
-  "params": [
-    "255",
-    "255",
-    "255"
-  ],
-  "type": "value"
+  "syntax": "rgb(r, g, b)"
 }

@@ -2,38 +2,350 @@
   "vi-VN": {
     "data": {
       "lesson_activities": {
+        "b9709fea-ff75-44f2-83fa-16d7351e17f6": {
+          "name": "Tổng kết"
+        },
+        "ab15beb1-d005-41c6-a156-e4c110c423b8": {
+          "name": "Học thêm"
+        },
+        "1b88e32e-69e1-4d42-a596-b8bf86c3749b": {
+          "name": "Bắt đầu"
+        },
+        "eed86444-00e1-4cb0-aaf8-24b682cc88a6": {
+          "name": "Tổng kết"
+        },
+        "e4041676-353d-409e-a7aa-bcfcc62bab09": {
+          "name": "Học thêm"
+        },
+        "f9bb2168-e488-4008-97a2-bf6a22cf557d": {
+          "name": "Tổng kết"
+        },
+        "ce329650-3549-4f96-8da9-8bc77c162411": {
+          "name": "Học thêm"
+        },
+        "4928afb1-7ade-483d-aeda-aad8e9f2b761": {
+          "name": "Hoạt động chính"
+        },
+        "16f892de-712b-4c95-b063-a6e969bd0aa1": {
+          "name": "Tổng kết"
+        },
+        "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
+          "name": "Bắt đầu"
+        },
+        "0f35ab45-5ea5-4778-8e8d-94a0a08fecab": {
+          "name": "Tổng kết"
+        },
+        "ee59e8a1-0506-46f1-a5eb-537c9daf43ce": {
+          "name": "Đánh giá"
+        },
+        "de1d2662-9c84-4c8c-9aa5-76ecdda9776d": {
+          "name": "Học thêm"
+        },
+        "2fb898b1-d1ac-4a83-8b59-92ad720a4078": {
+          "name": "Bắt đầu"
+        },
+        "e27240af-3b8a-4176-a7fa-5fd56c3ce8df": {
+          "name": "Tổng kết"
+        },
+        "5408728c-7b75-4da5-b4bb-b42cb3c2984b": {
+          "name": "Đánh giá"
+        },
+        "2edff75c-f27e-4059-a0c4-2ab501a43f48": {
+          "name": "Học thêm"
+        },
+        "633ec4e2-ea0b-496f-8878-d4178882a69e": {
+          "name": "Tổng kết"
+        },
+        "f49ce667-e4b7-4a66-88a4-16848365e63a": {
+          "name": "Học thêm"
+        },
+        "c8f3dbb0-9721-4a0e-8dc5-0c6b8af5917b": {
+          "name": "Bắt đầu"
+        },
+        "686ef290-0b5a-48ea-8907-5e2507b4c7fb": {
+          "name": "Tổng kết"
+        },
+        "a1d9b125-849a-4eb9-bd45-7b387ec2cc44": {
+          "name": "Đánh giá"
+        },
+        "d091559f-3ec9-46c5-9e79-a245aadfb146": {
+          "name": "Học thêm"
+        },
+        "88111b93-3762-4109-9f31-2a08ca80ddb5": {
+          "name": "Hoạt động chính"
+        },
+        "6a36e450-dd26-4e9f-b236-a9c77b5041a1": {
+          "name": "Tổng kết"
+        },
+        "12a90414-dae4-4f2b-8598-0b3b9fd6a767": {
+          "name": "Hoạt động chính"
+        },
+        "edab8a37-9fcc-4e69-ae10-b4d09e32ff4d": {
+          "name": "Tổng kết"
+        },
+        "777be184-c917-4732-ad47-bb1fad0a30e4": {
+          "name": "Học thêm"
+        },
+        "ed9bbde3-38d8-410b-a2a6-821fa548a85f": {
+          "name": "Bắt đầu"
+        },
+        "f51b260a-29d4-4136-8a35-c4ac2b0b6f03": {
+          "name": "Tổng kết"
+        },
+        "0e9caf95-fa34-4ffc-b218-0859134ee293": {
+          "name": "Đánh giá"
+        },
+        "6e0020c2-9d9e-488e-bb8d-126ac1760e8b": {
+          "name": "Học thêm"
+        },
+        "a2eb5e99-bebd-4dd0-bd23-2e26b4460f7f": {
+          "name": "Bắt đầu"
+        },
+        "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
+          "name": "Tổng kết"
+        },
+        "48bd058b-2012-4d4a-9fba-52d20d8a922f": {
+          "name": "Hoạt động chính"
+        },
+        "ae872c5e-1b66-4026-b2d7-e26574ff8b57": {
+          "name": "Tổng kết"
+        },
+        "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
+          "name": "Bắt đầu"
+        },
+        "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
+          "name": "Học thêm"
+        },
+        "d42497ec-48f5-404c-90b9-2133dd4759cc": {
+          "name": "Bắt đầu"
+        },
+        "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
+          "name": "Hoạt động"
+        },
+        "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
+          "name": "Gói gọn"
+        },
+        "10b66543-86a4-459e-bc67-a31d688547ce": {
+          "name": "Học thêm"
+        },
+        "32a95e21-140b-4b72-bd7a-b000ff574b18": {
+          "name": "Hoạt động chính"
+        },
+        "e170217a-dcf7-4f4e-9285-cc5f6bdb37a3": {
+          "name": "Tổng kết"
+        },
+        "d3737bd7-bb57-4fae-9cbb-d5faf9c198d2": {
+          "name": "Tổng kết"
+        },
+        "262ad475-1b09-4834-8401-0cf39d3955c5": {
+          "name": "Học thêm"
+        },
+        "37f266a7-4b80-449e-805a-4a06aad37292": {
+          "name": "Bắt đầu"
+        },
+        "4e2ce993-660e-4574-9264-448e234c4bac": {
+          "name": "Học thêm"
+        },
+        "f266050e-62e6-415d-8735-b80cb922587d": {
+          "name": "Bắt đầu"
+        },
+        "308d7e22-610e-46cb-be15-54fab1e436bb": {
+          "name": "Tổng kết"
+        },
+        "408e3cc9-9733-4518-93f3-0a3bb6b6f62d": {
+          "name": "Đánh giá"
+        },
+        "aad5bc18-7988-4acf-be28-9e125e9d930e": {
+          "name": "Học thêm"
+        },
+        "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
+          "name": "Hoạt động"
+        },
+        "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
+          "name": "Tổng kết"
+        },
+        "5c3a2275-a7f9-4e50-a0b4-8f198452a102": {
+          "name": "Hoạt động chính"
+        },
+        "20701fc4-d308-49af-8988-34896fd12713": {
+          "name": "Tổng kết"
+        },
+        "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
+          "name": "Học thêm"
+        },
+        "e7d8c33e-9a74-4c71-88bc-697d78573d4c": {
+          "name": "Bắt đầu"
+        },
+        "8b8d6959-c861-4474-950b-b097aaa9fae3": {
+          "name": "Hoạt động"
+        },
+        "e746d53a-16b6-4748-98ce-e04ed834264b": {
+          "name": "Gói gọn"
+        },
+        "ddc8f987-c000-409d-aaf7-8546464a70d9": {
+          "name": "Học thêm"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Hoạt động chính"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Tổng kết"
+        },
+        "6a240b51-f019-4729-a5df-cbe901844a7e": {
+          "name": "Hoạt động chính"
+        },
+        "4abbf2ec-b39e-4740-a51a-635072063171": {
+          "name": "Tổng kết"
+        },
+        "84ceca2e-7c1f-4c9c-a0fd-33c41e4beb2a": {
+          "name": "Học thêm"
+        },
+        "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
+          "name": "Học thêm"
+        },
+        "dca1904a-ae71-49d2-b77f-708aa02d2707": {
+          "name": "Hoạt động chính"
+        },
+        "d0fc53d4-8f55-4dd9-9c69-c662210b2f5b": {
+          "name": "Tổng kết"
+        },
+        "6df6eb5e-2825-43ef-9e3c-16f3ea4ab499": {
+          "name": "Học thêm"
+        },
+        "42552407-b313-4fc4-9163-e6a8e4a6029d": {
+          "name": "Học thêm"
+        },
+        "239ba7ce-544c-4508-9e5c-e956de964002": {
+          "name": "Tổng kết"
+        },
+        "160cbd69-f567-4fb4-9623-0e69ecec9b3a": {
+          "name": "Hoạt động"
+        },
+        "04400eef-5989-4325-a801-ab4ad451f130": {
+          "name": "Học thêm"
+        },
+        "726b38ad-28ae-43e1-b7d8-08d13ccda1d3": {
+          "name": "Hoạt động chính"
+        },
+        "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
+          "name": "Tổng kết"
+        },
+        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
+          "name": "Hoạt động chính"
+        },
+        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
+          "name": "Tổng kết"
+        },
+        "7c7e6e02-5a61-4723-92c1-7dd5b8c304a2": {
+          "name": "Hoạt động chính"
+        },
+        "4286b9b3-8562-4acf-8967-f6b6b1b18f9e": {
+          "name": "Tổng kết"
+        },
+        "f1dc2f0d-09e0-411a-9b33-31ae70fe191a": {
+          "name": "Đánh giá"
+        },
+        "7e48fd52-decd-48b3-97bf-a71e8dd0f44e": {
+          "name": "Học thêm"
+        },
+        "daa1a660-5d69-4188-a07d-b8ca374cb2cf": {
+          "name": "Khởi động"
+        },
+        "d242b6cc-881c-4f49-acb9-e03383340b0c": {
+          "name": "Hoạt động chính"
+        },
         "e9c5315a-ef0d-488f-b4c2-87096019782b": {
           "name": "Tổng kết"
+        },
+        "8be95f76-3e59-4701-906f-cfa1005ac3a6": {
+          "name": "Khởi động"
+        },
+        "2280825d-5ed7-404f-93b8-ea1fac41b4a4": {
+          "name": "Hoạt động chính"
         },
         "156c9efe-8298-4b5e-9fdc-51dc2879f769": {
           "name": "Tổng kết"
         },
+        "6cd8aaa8-8689-41c8-bbbf-2c396782b090": {
+          "name": "Khởi động"
+        },
+        "eac41bb2-4c60-4d27-b19b-d83afc4c5fa8": {
+          "name": "Hoạt động chính"
+        },
         "a7e3ac02-6a46-4eaf-a50f-d09e000205bb": {
           "name": "Tổng kết"
+        },
+        "29053d1d-251c-4b6a-8212-fbb9ecedad6b": {
+          "name": "Hoạt động chính"
         },
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Tổng kết"
         },
+        "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
+          "name": "Khởi động: Cùng một từ ngữ. Ý nghĩa khác nhau."
+        },
+        "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
+          "name": "Xem: Sức mạnh của ngôn từ"
+        },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": "Điều tra: Vấn đề là gì?"
+        },
+        "f747c55f-efbf-41df-809a-2f2620917e1f": {
+          "name": "Tổng kết: Vượt qua ranh giới"
+        },
+        "86dafe20-4778-4665-94eb-cf837951259b": {
+          "name": "Học thêm"
+        },
+        "a9ccd961-d02e-484a-9d5f-e16bcfce3f58": {
+          "name": "Hoạt động chính"
+        },
         "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
           "name": "Tổng kết"
+        },
+        "385b01c4-de16-401f-bc49-71e637e93ccc": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "0a159287-c2ef-4cfc-b1a3-f9147a79e747": {
+          "name": "Hoạt động chính"
         },
         "6d9977ca-4924-456e-bb2e-ec1ea79a1d81": {
           "name": "Tổng kết"
         },
+        "dd059082-7eee-4f7a-a287-a79748174d64": {
+          "name": "Hoạt động chính"
+        },
         "0fdc25c1-5137-42cf-8c8d-470a1cddc96f": {
           "name": "Tổng kết"
+        },
+        "5326608a-942c-45d8-8527-4844f5f0c3b0": {
+          "name": "Hoạt động chính"
         },
         "8b23d2e3-e4ae-475a-9d08-ab476ae5c9b1": {
           "name": "Tổng kết"
         },
+        "5689bfc0-5bcb-4eff-9bc9-5718b2aaf53a": {
+          "name": "Hoạt động chính"
+        },
         "b416985a-5994-4e14-a68a-c3486e41c008": {
           "name": "Tổng kết"
+        },
+        "f77093dc-7c10-4fac-b5a3-510056ad6c61": {
+          "name": "Hoạt động chính"
         },
         "c5b98b60-7365-4fa7-a36b-b12750624895": {
           "name": "Tổng kết"
         },
+        "8c27f2d2-6cbf-44b8-9696-c81310ee4338": {
+          "name": "Hoạt động chính"
+        },
         "bc176762-51ee-4ed4-baeb-ddb9a0554139": {
           "name": "Tổng kết"
+        },
+        "c4f6b032-07e6-4ff2-93f3-b2b53f7f6dd9": {
+          "name": "Hoạt động chính"
         },
         "757244a2-8803-4a75-af32-3b24bebec03a": {
           "name": "Tổng kết"
@@ -41,8 +353,23 @@
         "5c35a689-64d1-49a2-b19f-688ddf190d1e": {
           "name": "Đánh giá"
         },
+        "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
+          "name": "Học thêm"
+        },
+        "22f02104-4519-48dd-aa08-c532f9e080c9": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "5b774bd6-b243-4d1d-9145-20747f320129": {
+          "name": "Hoạt động chuyển tiếp ­ Chọn một"
+        },
+        "17982c9a-0fc7-457e-95a7-e0852d5f861e": {
+          "name": "Hoạt động chính"
+        },
         "18e03ebe-58a5-4a29-a9a6-f06d7a9abd30": {
           "name": "Tổng kết"
+        },
+        "1360b113-804c-4697-8c6d-a184de310850": {
+          "name": "Hoạt động chính"
         },
         "4b190612-457d-44e9-beab-8997c88be0a1": {
           "name": "Tổng kết"
@@ -53,11 +380,26 @@
         "7e800d16-2b68-4b95-9071-327a7a9ce611": {
           "name": "Tổng kết"
         },
+        "3a4858ae-3857-4ae0-bc29-6b0e3fa421d2": {
+          "name": "Học thêm"
+        },
+        "d01a520e-a4bb-4422-80ae-fc1fe2157446": {
+          "name": "Hoạt động chính"
+        },
         "8fdf7e2e-9fd7-401d-b9af-43736a1a2c8b": {
           "name": "Tổng kết"
         },
+        "e84cb281-8ba4-45ee-9b4e-1766d8acd8e4": {
+          "name": "Hoạt động chính"
+        },
         "3f386349-319f-49fa-a87b-4de41f39f1d4": {
           "name": "Tổng kết"
+        },
+        "5e959966-cfc9-4300-a563-9427222987c8": {
+          "name": "Học thêm"
+        },
+        "d51df268-72e1-4472-8d8e-e3c44c3ba133": {
+          "name": "Hoạt động chính"
         },
         "0aa21975-4a9b-4130-84ed-799e4602fb8e": {
           "name": "Tổng kết"
@@ -65,17 +407,86 @@
         "19c350ea-4420-4a94-a91e-f7d798799cc4": {
           "name": "Đánh giá"
         },
+        "80cbea1a-7c3f-4121-bab6-abd831772020": {
+          "name": "Ngày 1 - Khám phá ý tưởng dự án"
+        },
+        "d3e8770f-3f2d-450a-b605-bd792b3ed687": {
+          "name": "Ngày 2 - Quy trình thiết kế"
+        },
+        "12f4ca9e-9b05-4a99-a6f4-6133b8c0e407": {
+          "name": "Ngày 3 - Xây dựng dự án"
+        },
+        "459d00f2-e296-4205-bca6-eab8d4599354": {
+          "name": "Ngày 4 - Sửa dự án"
+        },
+        "25d5e16a-9db1-441d-a4c4-916612df574b": {
+          "name": "Ngày 5 & 6 - Thuyết trình dự án"
+        },
+        "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
+          "name": "Học thêm"
+        },
+        "be7f52b1-28fe-4ecf-b6dd-10b83614b5c5": {
+          "name": "Xem: Lần theo dấu vết số"
+        },
+        "a9572124-af86-4d97-b4a8-929d761473af": {
+          "name": "Chơi: Lần theo dấu vết động vật"
+        },
+        "de382430-d529-490d-b4fd-a7f020c4802b": {
+          "name": "Ôn lại: Có thể chia sẻ?"
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "Tổng kết: Khoảnh khắc tạm dừng & suy nghĩ"
+        },
+        "add79bbe-c639-4e83-9191-993c430f08e9": {
+          "name": "Học thêm"
+        },
+        "4782266a-9011-4f00-8335-bced225a346d": {
+          "name": "Hoạt động chính"
+        },
         "339d5151-756f-4b66-b647-0f86a1dce7f9": {
           "name": "Gói gọn"
+        },
+        "6f4b672d-72d5-4edf-9e0d-ccaf4845b3fe": {
+          "name": "Học thêm"
+        },
+        "5fbaf40a-2106-4bfd-937a-3f4594b26b81": {
+          "name": "Hoạt động chuyển tiếp ­ Chọn một"
+        },
+        "248075ed-be23-4145-bbe5-f629eb3df448": {
+          "name": "Hoạt động chính"
         },
         "ec7e4b2d-6d77-4493-a10c-6f62f3280d58": {
           "name": "Tổng kết"
         },
+        "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
+          "name": "Học thêm"
+        },
+        "e030be21-480d-40a2-8f97-574492b54aa2": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "bc23554e-190c-44f9-84b1-03b21dd7ef17": {
+          "name": "Hoạt động chuyển tiếp ­ Chọn một"
+        },
+        "0e24dd16-0f94-45cb-85a3-ed4852df7abd": {
+          "name": "Xem trước các bài tập trực tuyến cùng cả lớp"
+        },
+        "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
+          "name": "Hoạt động chính"
+        },
         "8a245dd2-d857-40ab-8120-ef2bd8777377": {
           "name": "Tổng kết"
         },
+        "25e921a3-616c-4b8d-accb-c360ef37c266": {
+          "name": "Học thêm"
+        },
+        "1a0d4eb7-44ac-4f69-8562-7d55a8324950": {
+          "name": "Hoạt động chính"
+        },
         "715995ae-a584-4451-9240-29bbfb084ce2": {
           "name": "Tổng kết"
+        },
+        "288af6d5-c632-4696-a9d4-64bdf7cefdc9": {
+          "name": "Hoạt động chính"
         },
         "240e1172-8a94-4e2b-931b-2d87bef6f364": {
           "name": "Đánh giá"
@@ -83,11 +494,41 @@
         "ee775447-c327-4e95-a523-663a02856cad": {
           "name": "Tổng hợp"
         },
+        "4a617b6e-9d56-472c-8a50-31052d127232": {
+          "name": "Học thêm"
+        },
+        "06b2458e-a834-46c5-842e-385c1fc97bc8": {
+          "name": "Hoạt động chuyển tiếp ­ Chọn một"
+        },
+        "287b6295-2274-4349-a7c3-fab998a09e1c": {
+          "name": "Hoạt động chính"
+        },
         "1e93bc2c-4f03-4b43-8695-529bbfbe53dc": {
           "name": "Tổng kết"
         },
+        "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
+          "name": "Học thêm"
+        },
+        "3ffb2700-4b4c-4deb-a009-856be4b850da": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "3a35e6b5-a46a-47b7-b0b8-99ddadcc8fad": {
+          "name": "Hoạt động chính"
+        },
+        "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
+          "name": "Tổng kết"
+        },
+        "352bcbca-fe70-41d4-8d38-7cfed390e991": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "8227e109-9b6a-448c-a107-e70498299438": {
+          "name": "Hoạt động chính"
+        },
         "ad9b2654-4506-4741-9f53-5699cb20615d": {
           "name": "Tổng kết"
+        },
+        "3ed032b9-b27d-4c86-8aff-1e60ba90a038": {
+          "name": "Cơ hội kết hợp các khóa học"
         },
         "f2c0f599-1a28-40b2-8782-e20d66e889e9": {
           "name": "Hoạt động"
@@ -95,50 +536,185 @@
         "736970ba-195f-4800-b755-e89e87e58590": {
           "name": "Tổng kết"
         },
+        "6b4566b2-8785-4170-bfaf-3f2575da50a0": {
+          "name": "Hoạt động chính"
+        },
         "19f85d4a-d5ea-4069-8f68-bcaab2a90119": {
           "name": "Tổng kết"
         },
         "d8fbee53-640e-4f66-ac46-024f36fd2f54": {
           "name": "Đánh giá"
         },
+        "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
+          "name": "Học thêm"
+        },
+        "e524c263-6ebc-47c9-9d43-3b738a99574b": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "8e77b151-07f6-4404-98ec-473f310fc8b1": {
+          "name": "Hoạt động chuyển tiếp ­ Chọn một"
+        },
+        "b170b2ef-82f1-4067-aadc-add8074acb80": {
+          "name": "Hoạt động chính"
+        },
         "61306f7a-d493-40e5-a6ed-68d2b0e97624": {
           "name": "Tổng kết"
+        },
+        "2672684d-adc1-4050-9d44-d42d9e1a2e0c": {
+          "name": "Học thêm"
+        },
+        "381e6872-ab89-4df5-81a1-36e77c90b9a5": {
+          "name": "Hoạt động chính"
         },
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Tổng kết"
         },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "Xem: Môi trường trực tuyến của tôi"
+        },
+        "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
+          "name": "Đọc: An toàn là trên hết!"
+        },
+        "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
+          "name": "Khám phá: Chuyến đi trên Internet"
+        },
+        "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
+          "name": "Khoảnh khắc tạm dừng & suy nghĩ"
+        },
+        "fb0f3d6c-fdc0-4da1-828e-5d64d1ff16a4": {
+          "name": "Học thêm"
+        },
+        "86881655-9660-42ab-92ea-aa38d08cdeff": {
+          "name": "Hoạt động chính"
+        },
         "de46f4b1-acce-419e-9508-f9e6293b5ba8": {
           "name": "Tổng kết"
+        },
+        "9ef71984-8749-46e9-ada3-889815c8f1b9": {
+          "name": "Học thêm"
+        },
+        "620c06c7-711d-459f-9f67-af3d142eb29c": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "5c519011-7eba-44c2-a3e9-7aeebf8bcf5e": {
+          "name": "Hoạt động chính"
         },
         "3290a55e-fedd-4672-8b81-dfac2115a13b": {
           "name": "Tổng kết"
         },
+        "0915a618-f1c1-47be-b8fb-80664fa62e50": {
+          "name": "Học thêm"
+        },
+        "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975": {
+          "name": "Hoạt động chuyển tiếp ­ Chọn một"
+        },
+        "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
+          "name": "Hoạt động chính"
+        },
         "3f38c955-4e54-4c3b-a446-92f78ed8c109": {
           "name": "Tổng kết"
+        },
+        "519099ff-6a78-427c-91d6-4ef9a2cba286": {
+          "name": "Học thêm"
+        },
+        "774eb8ca-0c20-467c-9f25-0d454403dfc3": {
+          "name": "Hoạt động chính"
         },
         "785c0d5e-8bb0-4e62-b57f-636eb000c961": {
           "name": "Tổng kết"
         },
+        "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
+          "name": "Học thêm"
+        },
+        "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "fe01455d-0a26-4c9c-9031-25490a38f95e": {
+          "name": "Hoạt động chính"
+        },
         "f589d41f-0064-4e89-bc57-b6815763792f": {
           "name": "Tổng kết"
+        },
+        "9e4b93ba-099d-4c47-b962-d47f961599bb": {
+          "name": "Hoạt động chính"
         },
         "bf1be38a-3e18-4158-8364-0de3124ff833": {
           "name": "Tổng kết"
         },
+        "924d773a-f021-4b86-bde2-95ddf2dc12ae": {
+          "name": "Học thêm"
+        },
+        "6008d4fa-44e5-48b8-9a9e-a07541b36f3a": {
+          "name": "Hoạt động chuyển tiếp ­ Chọn một"
+        },
+        "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
+          "name": "Hoạt động chính"
+        },
+        "647827d3-b6a3-4697-9cb8-fec35c819d12": {
+          "name": "Tổng kết"
+        },
+        "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
+          "name": "Học thêm"
+        },
+        "92c5197c-d135-4891-9504-ba1393dd8ca6": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "9513331c-917a-4e11-a63a-9c53ef1e708c": {
+          "name": "Hoạt động chính"
+        },
         "f706eaa2-1f56-468e-b034-b8b4ddb9eddb": {
           "name": "Tổng kết"
+        },
+        "dc4d4171-f55a-4ed3-a799-469b6932d7d7": {
+          "name": "Hoạt động chính"
         },
         "450f879a-a14d-4d47-93fd-2916bbf46caa": {
           "name": "Tổng kết"
         },
+        "d532c41b-fba1-4122-8928-17ec3ef36315": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "9a383162-e9c7-47d0-be4d-582abaef1ae8": {
+          "name": "Hoạt động chính"
+        },
         "10660ca3-5263-479f-a685-3e067185468a": {
           "name": "Tổng kết"
+        },
+        "32810ead-80cc-47b1-863f-ea8d023aaa94": {
+          "name": "Học thêm"
+        },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": "Hoạt động chuyển tiếp – Sự kiện – Chọn một"
+        },
+        "c92853be-b1ed-4b05-afe9-79928330a3a3": {
+          "name": "Hoạt động chính"
         },
         "75370025-0071-498b-8e43-3e57a3ce5a78": {
           "name": "Tổng kết"
         },
+        "98f951f7-63b2-4d62-82c9-d472b3505b68": {
+          "name": "Học thêm"
+        },
+        "71a032af-54cc-494d-8449-f02ce20f8aad": {
+          "name": "Hoạt động chính"
+        },
         "cccafe00-da31-43f0-93cb-a49d10d5be0a": {
           "name": "Tổng kết"
+        },
+        "5feda2e8-7d86-483b-9e66-959252a75a9a": {
+          "name": "Tìm hiểu: Hành vi tiêu cực là gì?"
+        },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": "Thực hiện: Trực tuyến và Trực tiếp"
+        },
+        "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
+          "name": "Khám phá: STOP (DỪNG) hành vi tiêu cực"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "Tổng kết: Khoảnh khắc tạm dừng & suy nghĩ"
+        },
+        "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
+          "name": "Học thêm"
         },
         "15bbd3a3-247c-4e2a-be79-52d802f01920": {
           "name": "Hoạt động"
@@ -146,17 +722,53 @@
         "10dd8520-1410-493c-bd48-5233e4bf2965": {
           "name": "Tổng kết"
         },
+        "d3ccea72-fdca-4a45-a194-3ed4cbcffc38": {
+          "name": "Hoạt động chuyển tiếp - Lập trình"
+        },
+        "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
+          "name": "Xem trước các bài tập trực tuyến cùng cả lớp"
+        },
+        "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
+          "name": "Hoạt động chính"
+        },
         "d582f103-5fb1-4236-80df-100080cc01b9": {
           "name": "Tổng kết"
+        },
+        "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
+          "name": "Học thêm"
+        },
+        "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "62f7dfaa-f865-461e-a17f-6d5c09893246": {
+          "name": "Hoạt động chính"
         },
         "24b3a120-756e-4a3c-8b8e-29e9a3256869": {
           "name": "Tổng kết"
         },
+        "756542f6-213e-4c07-9442-d1cf97e1ff26": {
+          "name": "Học thêm"
+        },
+        "7085e9b6-059c-4118-8970-e38a5d4f5d01": {
+          "name": "Hoạt động chuyển tiếp"
+        },
+        "e0fe20d3-be99-4212-83f8-21599085fcad": {
+          "name": "Hoạt động chính"
+        },
         "8a35ec67-caeb-48fa-95bc-d2c3177f6cf9": {
           "name": "Tổng kết"
         },
+        "440ff812-8ffc-4ac3-a6c8-1ed73872fcdd": {
+          "name": "Hoạt động chính"
+        },
         "5f64e89f-e102-47ee-b219-5e637db83913": {
           "name": "Tổng kết"
+        },
+        "27034f13-f0bf-41c0-a198-385c740be6ab": {
+          "name": "Học thêm"
+        },
+        "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
+          "name": "Cơ hội kết hợp các khóa học"
         },
         "d0c658b7-0ee9-4498-b93c-5bf082cc068e": {
           "name": "Hoạt động"
@@ -164,26 +776,83 @@
         "899be5b5-0668-4472-909d-46a1e44e98e2": {
           "name": "Tổng kết"
         },
+        "c59c2de6-1f30-4303-a65c-f3b3c03e8ef9": {
+          "name": "Học thêm"
+        },
+        "8df58520-6127-4563-b145-8d7d81635bde": {
+          "name": "Hoạt động chuyển tiếp ­ Chọn một"
+        },
+        "e36b6776-3c22-498e-94ef-44fae2c28065": {
+          "name": "Hoạt động chính"
+        },
         "3cf1342b-1aed-4419-a0cf-a26c438f58fa": {
           "name": "Tổng kết"
+        },
+        "d905457a-3a72-4927-a3a6-910b2fba3a53": {
+          "name": "Học thêm"
+        },
+        "84af3892-0fdd-462d-8815-99e6e2edf15f": {
+          "name": "Hoạt động chính"
         },
         "92a24c72-3fd9-4843-b701-ebb3832e29e5": {
           "name": "Tổng kết"
         },
+        "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
+          "name": "Học thêm"
+        },
+        "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "b20f1e20-6bb7-4cfb-9fe5-17928dc3ab60": {
+          "name": "Hoạt động chính"
+        },
         "533abcef-ea93-4b33-902c-7b70e22ffe31": {
           "name": "Tổng kết"
+        },
+        "d96c9108-8707-4345-9f1a-5e69928ca31f": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "4e9e15eb-a14e-4b52-ba13-768f4a7900c3": {
+          "name": "Hoạt động chính"
         },
         "2c76698a-3f76-4cfd-8b21-5ff264c2f1bb": {
           "name": "Tổng kết"
         },
+        "22c904b4-22f6-45b3-8bbd-14a86c3d5fb4": {
+          "name": "Học thêm"
+        },
+        "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9": {
+          "name": "Hoạt động chuyển tiếp ­ Chọn một"
+        },
+        "7ec11452-1367-44ef-afe4-c8cf354bb183": {
+          "name": "Hoạt động chính"
+        },
         "9b5aab20-f47d-48fd-aadc-eaba286d48b5": {
           "name": "Tổng kết"
+        },
+        "7c0129f4-ba20-475d-b304-a85ddd87507e": {
+          "name": "Học thêm"
+        },
+        "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "b0a66dc2-0e44-413c-8364-97799728aa5f": {
+          "name": "Hoạt động chính"
         },
         "7a0a25e1-d2a6-47ec-a890-69a3182d5ef0": {
           "name": "Tổng kết"
         },
+        "cf4ad357-07b4-48e1-bd8f-108301e7aa0a": {
+          "name": "Học thêm"
+        },
+        "e0ae16fd-eea3-47f4-8fa4-3355e57f9894": {
+          "name": "Hoạt động chính"
+        },
         "81828841-d023-4593-896d-b4ce1481da6f": {
           "name": "Tổng kết"
+        },
+        "db2b05a4-6b86-4a5a-bc7c-bef62469a26e": {
+          "name": "Hoạt động chính"
         },
         "e7277b3e-9177-451e-bef9-1e53d41b6131": {
           "name": "Tổng kết"
@@ -191,23 +860,83 @@
         "8667da08-85cd-4d60-a4f1-ff2608e4d240": {
           "name": "Đánh giá"
         },
+        "af629d31-87ab-476d-a2d3-6da008802f3c": {
+          "name": "Học thêm"
+        },
+        "f96503b6-c295-4deb-8e47-c3440041a689": {
+          "name": "Hoạt động chính"
+        },
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Tổng kết"
+        },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Khởi động: Suỵt... Mật khẩu là gì thế?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Đánh giá: Chết rồi! Nếu... Hoặc..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Sáng tạo: Nâng cấp mật khẩu"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Tổng kết: Ghi chú Lời khuyên về mật khẩu"
+        },
+        "e735098e-abab-465e-949c-a7e92e771b84": {
+          "name": "Học thêm"
+        },
+        "523e695a-12e0-443c-bad6-8e816c672adb": {
+          "name": "Hoạt động chính"
         },
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Tổng kết"
         },
+        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
+          "name": "Bài đánh giá không bắt buộc"
+        },
+        "c401b0f4-97af-418d-b58b-a58493c7570c": {
+          "name": "Học thêm"
+        },
+        "6b7f225b-884f-47b3-8390-7226087e8fd1": {
+          "name": "Hoạt động chuyển tiếp – Lập trình"
+        },
+        "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
+          "name": "Hoạt động chính"
+        },
         "09c54a0a-44a3-43f6-b468-9bbf2b718717": {
           "name": "Tổng kết"
+        },
+        "8b62bbe8-a1c9-4288-bb21-9f7a31e96b1e": {
+          "name": "Hoạt động chính"
         },
         "1b4d0af0-9d4a-492b-8c23-2fb711c488d3": {
           "name": "Tổng kết"
         },
+        "da433c13-5e0a-48fe-a697-d2288e831912": {
+          "name": "Học thêm"
+        },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Hoạt động chuyển tiếp – Chọn một"
+        },
+        "d05decb3-7f64-4886-8da0-088e7d73216d": {
+          "name": "Hoạt động chính"
+        },
         "7104b634-df9c-44bd-bc2d-fd226d3a1ee4": {
           "name": "Tổng kết"
         },
+        "04f6a743-e334-43ba-a72c-2b68a8163c0a": {
+          "name": "Hoạt động chính"
+        },
         "592a6eba-5e83-43f7-b622-1c58f47e3dea": {
           "name": "Tổng kết"
+        },
+        "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
+          "name": "Học thêm"
+        },
+        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "2ffe8a66-a950-4b74-91e5-5149b2808279": {
+          "name": "Hoạt động chính"
         },
         "0ba4a78d-b13f-442c-90f2-58125ef3ff64": {
           "name": "Tổng kết"
@@ -215,11 +944,32 @@
         "e96a358f-201b-4474-8950-90dd94426aff": {
           "name": "Tổng kết"
         },
+        "6260dc9f-f1ec-41fb-bb11-c03bbe503e26": {
+          "name": "Hoạt động chính"
+        },
+        "61a173ad-ac68-4680-9a5c-2c9bfd68249c": {
+          "name": "Tổng kết"
+        },
+        "67ee7a3f-50e6-4ace-a40e-438d543a9c45": {
+          "name": "Học thêm"
+        },
+        "9dc5163b-b8e6-4034-8bfc-a3a56f9ea906": {
+          "name": "Hoạt động chính"
+        },
         "ecc6986d-3d86-4f87-96e2-9cf3e8ebe4c8": {
           "name": "Tổng kết"
         },
+        "91b9cf1d-59e2-45e5-93e2-9f916e748dac": {
+          "name": "Hoạt động chính"
+        },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Tổng kết"
+        },
+        "69460e12-7295-400a-8fc1-135a17d25118": {
+          "name": "Khởi động"
+        },
+        "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
+          "name": "Hoạt động chính"
         },
         "9939da92-62ec-4a09-a7be-8e2dd4693cff": {
           "name": "Tổng kết"
@@ -227,155 +977,446 @@
         "544b7b1e-6622-4ce0-b5ed-6c8b8980c832": {
           "name": "Đánh giá"
         },
+        "22ad368d-3a00-4720-a21a-72985c642b8d": {
+          "name": "Học thêm"
+        },
+        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "c351a38f-ac03-4bc3-b2f1-8b5f06903317": {
+          "name": "Hoạt động chính"
+        },
         "386b2a92-c44c-403c-a19e-44bbf2ed7786": {
           "name": "Tổng kết"
+        },
+        "f72b0518-8373-4e23-9798-b4973072e86e": {
+          "name": "Học thêm"
+        },
+        "8448f988-ef04-4c9e-ad7e-6b78991f20e7": {
+          "name": "Hoạt động chính"
         },
         "1887e2d0-98de-4534-8fb3-780ed4e8fe3c": {
           "name": "Tổng kết"
         },
+        "8fce2a3e-4d8d-4b01-9926-bcd5b2f5a3de": {
+          "name": "Học thêm"
+        },
+        "0f1a16f5-93c2-44c5-913c-85ee15b41454": {
+          "name": "Hoạt động chính"
+        },
         "eca2ac69-486f-493b-a1a0-70294bc8573a": {
           "name": "Tổng kết"
+        },
+        "5c23c0c6-f91c-4f07-bdd7-baa4e4b3d715": {
+          "name": "Hoạt động chính"
         },
         "96a24d88-fba0-4caf-ae83-05431cff5aea": {
           "name": "Tổng kết"
         },
+        "ab17495a-39d9-4a16-8158-cdccde270c58": {
+          "name": "Hoạt động chính"
+        },
         "dc2d4163-9868-4d28-be8c-fc39a5aaec58": {
           "name": "Tổng kết"
+        },
+        "2f3b0baf-39cd-426e-9ab5-e1cc3d5a373c": {
+          "name": "Hoạt động chính"
         },
         "160b0f38-c5d3-4b28-b797-981888824dcf": {
           "name": "Tổng kết"
         },
+        "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
+          "name": "Học thêm"
+        },
+        "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "a26761fc-1bdc-4474-a043-307dbef1453a": {
+          "name": "Hoạt động chính"
+        },
         "4a54982d-83d3-4040-b499-46d8dc535774": {
           "name": "Tổng kết"
+        },
+        "4cdf3492-9941-452b-8da8-f2aa6f10df90": {
+          "name": "Học thêm"
+        },
+        "1b0cbf3c-0437-4bc9-a50d-3bd6360cd665": {
+          "name": "Hoạt động chuyển tiếp"
+        },
+        "813fd866-1517-4302-b080-b035a842ae06": {
+          "name": "Hoạt động chính"
         },
         "43620129-a609-440d-80aa-b76ac08ef87e": {
           "name": "Tổng kết"
         },
+        "cf315c97-3c5a-49bf-a6ca-71bbab3a73ca": {
+          "name": "Hoạt động chính"
+        },
         "ab1fc6fb-495e-4ae1-9685-c0c64d5bfa06": {
           "name": "Tổng kết"
+        },
+        "1d75c580-140f-4796-9e75-5863162c676b": {
+          "name": "Học thêm"
+        },
+        "4366b898-b885-48ea-90a8-0316aa3c153f": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "6f7a5fb7-a0f5-4f9b-bc82-dab5f54f90c6": {
+          "name": "Hoạt động chính"
         },
         "3ba524d7-98f9-4c54-a616-1ffb77d3f190": {
           "name": "Tổng kết"
         },
+        "9e0e1792-f9b4-4a5b-a282-e297ccf9d497": {
+          "name": "Hoạt động chính"
+        },
         "6c03cbfc-a38d-4aba-9cab-7e7520800342": {
           "name": "Tổng kết"
+        },
+        "184d2f0c-1709-4440-95bc-9030c4ff73ed": {
+          "name": "Hoạt động chính"
         },
         "70774562-2a5b-4a27-80d4-d731fc280abf": {
           "name": "Tổng kết"
         },
+        "30742072-e383-4bf2-b103-2d9c6209706c": {
+          "name": "Hoạt động chính"
+        },
         "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
           "name": "Tổng kết"
+        },
+        "a75ec06d-15b5-41d1-895c-3b1c3c52276d": {
+          "name": "Cơ hội kết hợp các khóa học"
         },
         "bc6111e2-2d2b-4d09-ba39-ad4f401202c0": {
           "name": "Tổng kết"
         },
+        "f1bf8e7e-997a-4d4b-b37f-5b38e2f0047f": {
+          "name": "Hoạt động chính"
+        },
         "a3dd3aa4-52be-42e3-8093-b5f2bd7441f0": {
           "name": "Tổng kết"
+        },
+        "3392a940-9b70-4634-bfa5-a197b8d2941e": {
+          "name": "Học thêm"
+        },
+        "3582d645-06f9-4bac-8787-2530ccff7f71": {
+          "name": "Hoạt động chính"
         },
         "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
           "name": "Tổng kết"
         },
+        "74cd46ac-1c89-437d-a630-a19c43b6ff41": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "4a006482-722c-43cd-81cd-cfc8b1180f80": {
+          "name": "Hoạt động chính"
+        },
         "3206b220-9995-40b3-ac06-29cdc44b3f03": {
           "name": "Tổng kết"
+        },
+        "08d1726a-8015-44e3-85de-32f581681241": {
+          "name": "Hoạt động chính"
         },
         "d682de82-34c6-4a16-bff5-b40e2abf88c1": {
           "name": "Tổng kết"
         },
+        "4043e8c0-b143-40dc-a8f5-9c8de6b1cc32": {
+          "name": "Hoạt động chính"
+        },
         "8e27bf8f-68a5-42b3-ae4e-c58c2dd2d355": {
           "name": "Tổng kết"
+        },
+        "62694f2e-0bae-4e9d-b285-ce262bc3dfce": {
+          "name": "Học thêm"
+        },
+        "fd8ff4dc-206c-4e0d-a30e-fd0480efaafe": {
+          "name": "Hoạt động chính"
         },
         "00f7b6d4-a585-4d87-ba85-2c780734b876": {
           "name": "Tổng kết"
         },
+        "95494f38-9a95-4778-a3db-bc35cd58cbc0": {
+          "name": "Học thêm"
+        },
+        "daa8b2ed-7ca7-4691-a728-672a7d1ccf90": {
+          "name": "Hoạt động chính"
+        },
         "4c8f291e-8892-44b6-aa97-925faa5554eb": {
           "name": "Tổng kết"
+        },
+        "ddfc1ff7-242d-4f86-bb6d-82d1ad7c1673": {
+          "name": "Hoạt động chính"
         },
         "6b43b84e-bffc-427b-8b1f-983968a21f29": {
           "name": "Tổng kết"
         },
+        "d8254f7a-d3ba-4079-932c-1e0f6e2f03b2": {
+          "name": "Học thêm"
+        },
+        "c2bcd776-9900-4043-99e5-939545175088": {
+          "name": "Hoạt động chính"
+        },
         "13c6871a-b886-4e22-b079-7b4ee6ff6ba4": {
           "name": "Tổng kết"
+        },
+        "1b28c789-cdfc-4565-bf6e-9b522f835bee": {
+          "name": "Hoạt động chính"
         },
         "318a7a4f-83f0-4b32-a712-d74801897a6e": {
           "name": "Tổng kết"
         },
+        "f058e007-0df3-419f-ac78-81469311034f": {
+          "name": "Hoạt động chính"
+        },
         "aad10a4b-0819-4302-88b7-8b6e3e067c47": {
           "name": "Tổng kết"
+        },
+        "cb1cdc21-6fa8-4d95-8989-2eb6542f9018": {
+          "name": "Hoạt động chính"
         },
         "c91f6f2e-3f06-42b8-9733-1bd1b2ccfee1": {
           "name": "Tổng kết"
         },
+        "0f7c86d3-05c8-4faa-9054-4c649cbb7f17": {
+          "name": "Học thêm"
+        },
+        "c3bb8f31-8ec7-461d-bee1-685bc9287527": {
+          "name": "Hoạt động chính"
+        },
         "87223e22-2a4b-4de5-8e15-b14dbaddccc5": {
           "name": "Tổng kết"
+        },
+        "5af971e3-1f0b-40a9-bc25-b2451160aecc": {
+          "name": "Hoạt động chính"
         },
         "d004bd95-f6d5-4659-94ea-00877e3ff3a6": {
           "name": "Tổng kết"
         },
+        "dce03060-72a3-4d6d-a355-fa84b4a3f8dc": {
+          "name": "Hoạt động chính"
+        },
         "8286ea48-0cef-4af7-af6a-007181aa482c": {
           "name": "Tổng kết"
+        },
+        "8cf2e681-004c-4624-90f3-80c1e22ec90f": {
+          "name": "Hoạt động chính"
         },
         "9b90e959-3c5f-4200-af67-56b2a54fa720": {
           "name": "Tổng kết"
         },
+        "1fe3f83f-c34b-4592-9bb6-d29c832a838e": {
+          "name": "Hoạt động chính"
+        },
         "f43312b4-a6ca-47a5-be92-1e6f77b43ff8": {
           "name": "Tổng kết"
+        },
+        "cfadb05d-8467-41a8-9b69-9ce179c53375": {
+          "name": "Hoạt động chính"
         },
         "8ea04c5a-f6d5-45de-b07c-e39b2b94b799": {
           "name": "Tổng kết"
         },
+        "50ece396-6470-4834-8f7f-a09ea19db492": {
+          "name": "Hoạt động chính"
+        },
         "ad1dcf3b-f77c-42da-a554-438231d3393a": {
           "name": "Tổng kết"
+        },
+        "c1ef15c8-3724-45e8-b3a3-238ecb91993b": {
+          "name": "Hoạt động chính"
         },
         "72bef51e-2edb-4bfe-8995-1c1c0c126e11": {
           "name": "Tổng kết"
         },
+        "0ce37c1b-33ce-4d9a-9a0f-1508a3279e5a": {
+          "name": "Học thêm"
+        },
+        "472354f3-e631-40c3-8001-dc5d7f1206db": {
+          "name": "Xem trước các bài tập trực tuyến cùng cả lớp"
+        },
+        "0dbd5d7d-e9b0-4c0c-be01-009191570dc5": {
+          "name": "Hoạt động chính"
+        },
         "514be718-37b6-4bca-9bea-138eac8ae77c": {
           "name": "Tổng kết"
+        },
+        "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
+          "name": "Học thêm"
+        },
+        "a5713eec-33e7-45ba-acc9-fba5383c6355": {
+          "name": "Khởi động: Xem trước Lập trình trong Mê cung"
+        },
+        "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
+          "name": "Hoạt động chính"
         },
         "0396f06e-4a9e-443d-859c-dc77fa229769": {
           "name": "Tổng kết"
         },
+        "3aaee60c-904c-4592-8092-b7abf66d9fac": {
+          "name": "Học thêm"
+        },
+        "b9c2620d-f076-4551-a849-08ba4ad04850": {
+          "name": "Hoạt động chính"
+        },
         "0e6c0fdb-f006-457d-9ded-d3719ac7180e": {
           "name": "Tổng kết"
+        },
+        "077ed20b-2456-412f-b744-33221b7412ac": {
+          "name": "Hoạt động chính"
         },
         "3ca1441d-2369-43e8-b182-8fde56916045": {
           "name": "Tổng kết"
         },
+        "0a77a438-3684-4874-b963-e5a75723888a": {
+          "name": "Hoạt động chính"
+        },
+        "9bb59fc2-2443-4c4d-b4fc-647d4c706241": {
+          "name": "Tổng kết"
+        },
+        "5457f30a-9f1f-45f7-a772-81f44f1189ae": {
+          "name": "Học thêm"
+        },
+        "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
+          "name": "Bài học căn bản trực tuyến: Xem trước Vòng lặp trong Nhà sưu tập"
+        },
+        "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
+          "name": "Hoạt động chính"
+        },
+        "e6a1f5df-d8d4-41a1-8649-d518965997af": {
+          "name": "Tổng kết"
+        },
+        "089afb18-d132-46ab-88ca-2af47333e237": {
+          "name": "Hoạt động chính"
+        },
         "98e73710-a395-4b96-90ac-de9c5a8060e8": {
           "name": "Tổng kết"
+        },
+        "e651df8b-1577-4888-8321-37a135e4df24": {
+          "name": "Hoạt động chính"
         },
         "bcb796e6-f8d8-456a-8e44-e22eb94ed098": {
           "name": "Tổng kết"
         },
+        "602649f9-a35f-49ab-bddf-09ebdf771f17": {
+          "name": "Hoạt động chính"
+        },
         "ad29aebb-c28d-4b6a-9769-4b6b7d62e6d8": {
           "name": "Tổng kết"
+        },
+        "9209915b-655f-4e9e-b106-3843617f4034": {
+          "name": "Học thêm"
+        },
+        "def2e87e-02de-40be-b652-89117499f7a0": {
+          "name": "Hoạt động chính"
         },
         "291b174a-b478-463d-aff6-af66feda095a": {
           "name": "Tổng kết"
         },
+        "403fc603-5eea-490f-943f-0f0e1d4d99f9": {
+          "name": "Học thêm"
+        },
+        "f0a9525c-5225-44d5-9a87-99a70c73b197": {
+          "name": "Hoạt động chính"
+        },
         "b0345ccb-8e3c-4b40-a86e-5b02ac2ab780": {
           "name": "Tổng kết"
+        },
+        "23175482-f558-4d04-aec7-69a02820317e": {
+          "name": "Hoạt động chuyển tiếp"
+        },
+        "7007138d-bc16-4bc0-8d30-252440672814": {
+          "name": "Hoạt động chính"
         },
         "6db6a634-e996-4369-9bc6-b32a570beaff": {
           "name": "Tổng kết"
         },
+        "7ae8b822-0da7-4701-9c2d-068197f8fe14": {
+          "name": "Hoạt động chính"
+        },
         "e43d59a9-ac3a-460a-8344-1ae4a3ca26f8": {
           "name": "Tổng kết"
+        },
+        "1a64d92c-82ce-45e6-a188-a7d88086efd8": {
+          "name": "Khởi động: Siêu anh hùng giấu mặt"
+        },
+        "f642093a-def9-467e-a8cc-8950b21d62c8": {
+          "name": "Tìm hiểu: Trở thành người bênh vực"
+        },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Sáng tạo: Siêu anh hùng công dân số"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "Tổng kết: Bộ truyện tranh Giải cứu thế giới"
+        },
+        "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
+          "name": "Học thêm"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Khởi động: Đứng lên, Ngồi xuống"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Phân tích: Tại sao mọi người chia sẻ?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Phân tích: Riêng tư hay Cá nhân?"
+        },
+        "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
+          "name": "Kết thúc: Câu hỏi tổng kết"
+        },
+        "02429a22-ab18-4df6-9062-d88960fe9ae8": {
+          "name": "Học thêm"
+        },
+        "0177419f-4d26-4ccc-bcf3-ac4275a5fd17": {
+          "name": "Hoạt động chính"
         },
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Tổng kết"
         },
+        "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "077242ad-8c8a-4b24-a139-a5e198abd405": {
+          "name": "Khởi động (Tùy chọn)"
+        },
+        "7ccdedb5-15bf-4d75-9efb-e65349644266": {
+          "name": "Hoạt động chính"
+        },
         "d41159ef-433a-4547-a067-2695e41120ae": {
           "name": "Tổng hợp"
+        },
+        "27b493bd-61be-4305-b021-8b40d59ee55a": {
+          "name": "Học thêm"
+        },
+        "d47466c2-3004-476e-a652-d45c8374b24d": {
+          "name": "Hoạt động chính"
         },
         "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
           "name": "Tổng kết"
         },
+        "dbad5d87-5c18-4c2a-a15a-6567124b4864": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "d8e700f9-bc93-424a-9ab3-3a06b63816b0": {
+          "name": "Hoạt động chính"
+        },
         "aa8015a6-3a2c-401c-a8ff-4d0116ee1358": {
           "name": "Tổng kết"
         },
+        "6354e763-cca6-4b98-b56e-16609de67f85": {
+          "name": "Học thêm"
+        },
+        "8fecfdd9-352e-4816-8964-e4fa6d36c0aa": {
+          "name": "Hoạt động chính"
+        },
         "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
           "name": "Tổng kết"
+        },
+        "388b4557-7534-453f-a760-847055923bc0": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "b4ae143b-f79d-4ab9-9346-dca177438f61": {
+          "name": "Hoạt động chính"
         },
         "6aed97c6-89bd-4bc0-a4dd-ac23af33e065": {
           "name": "Tổng kết"
@@ -383,26 +1424,809 @@
         "a0d784ef-8d53-486a-ac4c-eba8617be681": {
           "name": "Đánh giá"
         },
+        "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
+          "name": "Học thêm"
+        },
+        "6c35971f-0c71-44c4-b6d7-9380216625a5": {
+          "name": "Cơ hội kết hợp các khóa học"
+        },
+        "a80b5d47-5fb8-4557-9fb2-233074caad47": {
+          "name": "Hoạt động chuyển tiếp ­ Chọn một"
+        },
+        "0da29d00-d95a-4538-ac89-116513fba104": {
+          "name": "Hoạt động chính"
+        },
         "151ce93d-fb9d-4e64-89a5-6367fc58fb57": {
           "name": "Tổng kết"
+        },
+        "3f3d661f-eb79-4d76-a889-dad31cd540f2": {
+          "name": "Hoạt động chính"
         },
         "6254961e-5863-4a98-8d8f-7ef4565c1f8f": {
           "name": "Tổng kết"
         },
+        "1a3eff43-27c8-476a-9d18-2e277fa416b9": {
+          "name": "Học thêm"
+        },
+        "c80d72fc-575e-4dc2-bfe7-444acb269cc9": {
+          "name": "Hoạt động chính"
+        },
         "dc47da0d-484b-481e-bfaf-17f9de229688": {
           "name": "Tổng kết"
+        },
+        "3f414667-5259-49ac-a7a3-af4a9ef62fdf": {
+          "name": "Học thêm"
+        },
+        "9db395da-6afb-43e0-9115-6e0604f89208": {
+          "name": "Hoạt động chính"
         },
         "b320db90-d678-4814-9003-f7569a443c19": {
           "name": "Tổng kết"
         },
+        "8026f93e-6bc5-4824-9f7a-d21fa69476ed": {
+          "name": "Học thêm"
+        },
+        "0d2d5e5c-1742-4883-a2d8-73284a6cd40e": {
+          "name": "Hoạt động chính"
+        },
         "ba1bc1f7-f9be-4735-8bcb-de57cc5c2d4a": {
           "name": "Tổng kết"
+        },
+        "c79703f5-9051-4665-95b6-cfae7c304f6d": {
+          "name": "Hoạt động chính"
         },
         "b2227118-727d-4eff-be1c-fafe331297fd": {
           "name": "Tổng kết"
         },
         "49051b73-a04d-4a2b-b99e-9b5fe43d235b": {
           "name": "Dự án tổng kết khóa học"
+        },
+        "430c7fd8-dd67-4fff-924a-e6080df26e8a": {
+          "name": "Ngày 2 - Quy trình thiết kế"
+        },
+        "0cf95f16-6aaa-4ea6-b62b-043b7c299f90": {
+          "name": "Ngày 3 - Xây dựng dự án"
+        },
+        "e8be4727-c687-43bb-a1be-e1b3da780020": {
+          "name": "Ngày 4 & 5 - Thuyết trình dự án"
+        },
+        "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
+          "name": "Học thêm"
+        },
+        "3dd1254c-b1de-486d-803a-cd5b89ea1a47": {
+          "name": "Hoạt động"
+        },
+        "dbda3944-701f-4885-9581-dfb5c9fe8a2d": {
+          "name": "Tổng kết"
+        },
+        "3f5a4bdd-213f-4275-b48e-0cac9c216610": {
+          "name": "Hoạt động"
+        },
+        "9c5227af-c38a-4665-b248-607e62dd5437": {
+          "name": "Tổng kết"
+        },
+        "8118c20a-f8a2-4de0-a5e9-e34b206c5e86": {
+          "name": "Hoạt động"
+        },
+        "977b0c60-7998-4289-9c51-afc005a26b29": {
+          "name": "Tổng kết"
+        },
+        "3dbcce13-3c8e-4eee-a9e5-06d38c3b0d58": {
+          "name": "Hoạt động"
+        },
+        "c39b8cbd-b997-4044-8c9b-f37e4ad734f3": {
+          "name": "Tổng kết"
+        },
+        "da9c162b-7810-4bea-955e-05c213dbf55d": {
+          "name": "Hoạt động"
+        },
+        "3a343e64-c6c5-4268-a2a4-ab4266ee68ad": {
+          "name": "Tổng kết"
+        },
+        "6d1d534e-0aad-47aa-8eef-22cd0a519a83": {
+          "name": "Hoạt động"
+        },
+        "afb9e76f-406e-4c5d-b64f-a09d3d103672": {
+          "name": "Tổng kết"
+        },
+        "d5076b4a-5a03-45cd-b650-5469ab56c98f": {
+          "name": "Hoạt động"
+        },
+        "18e29e94-8700-4962-b45c-65dabcf11b71": {
+          "name": "Tổng kết"
+        },
+        "c83f82b2-742a-4785-8983-14391e0b774f": {
+          "name": "Hoạt động"
+        },
+        "a91d4349-0ba0-4931-87aa-ddca5bbfce8a": {
+          "name": "Tổng kết"
+        },
+        "8e65c08e-13d9-43d5-928b-ca3421f606d8": {
+          "name": "Hoạt động"
+        },
+        "0de4cb27-5d87-44ae-872b-b044d9b1a518": {
+          "name": "Tổng kết"
+        },
+        "473b748b-3eb9-4753-8cdb-7d2b5b02ab1c": {
+          "name": "Hoạt động"
+        },
+        "4dcae509-2234-4694-bb69-f99a44c09e75": {
+          "name": "Tổng kết"
+        },
+        "54db2b83-e7bd-4ca3-9ba7-63ca15b72187": {
+          "name": "Hoạt động"
+        },
+        "b47b54a3-0564-4171-9f71-cada13d2832c": {
+          "name": "Tổng kết"
+        },
+        "ed160324-6429-4ff1-90bb-abd785bb6b53": {
+          "name": "Hoạt động"
+        },
+        "6d2b8730-73fd-411d-a454-375f5b3b0210": {
+          "name": "Tổng kết"
+        },
+        "d007f573-e403-48b9-8178-2922b329c878": {
+          "name": "Hoạt động"
+        },
+        "ef9b74bc-996c-43dc-b87b-cf1c857d60a0": {
+          "name": "Tổng kết"
+        },
+        "31623c1a-bcef-465a-abf4-bd42d0578c3e": {
+          "name": "Hoạt động"
+        },
+        "53a369c4-4de1-4607-99cf-3d538af13c51": {
+          "name": "Tổng kết"
+        },
+        "9720e203-87bf-47f6-9e42-0d63712f4816": {
+          "name": "Hoạt động"
+        },
+        "3b5bca76-2ec0-4cd9-9d2d-9c5bc868128a": {
+          "name": "Tổng kết"
+        },
+        "b12c79ae-36b0-4853-b799-527d520d2d9b": {
+          "name": "Hoạt động"
+        },
+        "46c907b7-d117-4810-be00-a458b3bbb1c3": {
+          "name": "Tổng kết"
+        },
+        "8b5fccc2-132a-4c64-ba9f-a89ee576b760": {
+          "name": "Hoạt động"
+        },
+        "52c3e23a-18e3-461d-89b6-2c8938b77373": {
+          "name": "Tổng kết"
+        },
+        "bcb8ee1c-146e-4442-98de-83ac220d074b": {
+          "name": "Hoạt động"
+        },
+        "603fdc2d-9b96-4476-9db1-c3aebf0ed6c9": {
+          "name": "Tổng kết"
+        },
+        "fbf2d75e-dd6d-416c-8065-67a5e230ac12": {
+          "name": "Hoạt động"
+        },
+        "7f343d7e-fa21-42ad-8e05-e2f28f0d9193": {
+          "name": "Tổng kết"
+        },
+        "4024c757-460a-4c1e-b9ba-0921922e446f": {
+          "name": "Hoạt động"
+        },
+        "b03f2c86-6df7-483a-838c-6a729b695cfe": {
+          "name": "Tổng kết"
+        },
+        "084345cc-db08-4c77-bc28-be51fb79dd0d": {
+          "name": "Hoạt động"
+        },
+        "05f51c50-a05f-4530-8047-36c01d5461a1": {
+          "name": "Tổng kết"
+        },
+        "88f424ec-df8f-42ff-b119-c556008dfea7": {
+          "name": "Hoạt động"
+        },
+        "00c1098e-8dda-4cf2-9e10-7a2428255e2d": {
+          "name": "Tổng kết"
+        },
+        "6ca92cea-d2a1-458e-8db9-709a95333aae": {
+          "name": "Hoạt động"
+        },
+        "f7e5ef43-65ac-4a19-90b2-3b1c9231c3f4": {
+          "name": "Tổng kết"
+        },
+        "f35f26af-8e10-45bd-8c84-89e2e6e20f43": {
+          "name": "Hoạt động"
+        },
+        "a1c54105-2e8b-4c6f-a4dc-1c7fc865bfcc": {
+          "name": "Tổng kết"
+        },
+        "d83211f4-e007-452b-a5e2-f97629f1e597": {
+          "name": "Hoạt động"
+        },
+        "34e38d74-53c5-45f5-94c0-6f381f367946": {
+          "name": "Tổng kết"
+        },
+        "80deb03d-786b-4eaa-aee7-17d734850224": {
+          "name": "Hoạt động"
+        },
+        "67d13ce0-9f73-468a-b218-c66da60286b8": {
+          "name": "Tổng kết"
+        },
+        "0de0afb2-3b1f-420a-aaf6-557b0726539b": {
+          "name": "Tổng kết"
+        },
+        "c50c799f-b401-406a-b4c2-6a01e8f1c548": {
+          "name": "Hoạt động"
+        },
+        "ce07a190-9e9b-4c4d-9e46-07f59f07449b": {
+          "name": "Tổng kết"
+        },
+        "70ec98e0-3066-4f1f-84c7-be9d76266337": {
+          "name": "Hoạt động"
+        },
+        "64f22378-e288-4ae8-b228-a82b9d4a7c20": {
+          "name": "Tổng kết"
+        },
+        "f7e9181a-0686-4d7a-b513-75351c14acb4": {
+          "name": "Hoạt động"
+        },
+        "20b10687-03e5-49d8-9d1d-19417edd5228": {
+          "name": "Tổng kết"
+        },
+        "e1fd553e-ed7e-4eb4-ab51-58017d886b11": {
+          "name": "Hoạt động"
+        },
+        "600c4dd8-9b6f-464a-84f0-7a3dff3322e7": {
+          "name": "Tổng kết"
+        },
+        "4755fcca-85c5-4f39-acba-485c57676f3b": {
+          "name": "Hoạt động"
+        },
+        "80de3e79-0b3c-4715-81e0-8c1df3c55c7a": {
+          "name": "Tổng kết"
+        },
+        "2f24c116-10b3-4af8-bdc5-a51bcf1774da": {
+          "name": "Hoạt động"
+        },
+        "d98004e8-af51-4190-8527-347d4a5efa53": {
+          "name": "Tổng kết"
+        },
+        "72abdb81-0e9a-4df9-9cd0-33e8a24ef31d": {
+          "name": "Hoạt động"
+        },
+        "274c5143-35ee-4d88-b497-a0d4cd5186d9": {
+          "name": "Tổng kết"
+        },
+        "7d2b43ce-ec07-43c9-bd67-39a4b85102c5": {
+          "name": "Hoạt động"
+        },
+        "1fb32eb6-57c6-4255-98b8-a59b2e6fa5cf": {
+          "name": "Tổng kết"
+        },
+        "85dc0809-df8e-4c21-b33c-6525dcc0c747": {
+          "name": "Hoạt động"
+        },
+        "67d735b5-592b-48f4-a289-130bc5167962": {
+          "name": "Tổng kết"
+        },
+        "4e159304-5bcf-4392-8fc4-dec6c0d38c63": {
+          "name": "Hoạt động"
+        },
+        "ab581b34-2229-4b31-995e-820728323297": {
+          "name": "Tổng kết"
+        },
+        "6696a89e-fd41-4622-9305-71a6590ec797": {
+          "name": "Hoạt động"
+        },
+        "bfed8f71-9ea6-4a1b-9f89-bb8c0403f766": {
+          "name": "Tổng kết"
+        },
+        "9bbaadd9-354f-4ff6-b019-700d851293fa": {
+          "name": "Hoạt động"
+        },
+        "2990c114-c979-4ee6-9aef-8da8109a7adb": {
+          "name": "Tổng kết"
+        },
+        "f2cb20fc-4b5e-419f-9e06-45952d3e883a": {
+          "name": "Tổng kết"
+        },
+        "2fff60de-5366-470f-ad77-577397a87071": {
+          "name": "Hoạt động"
+        },
+        "c79a297c-f83f-4bbc-977a-bf17cf4bb658": {
+          "name": "Tổng kết"
+        },
+        "cc88c5f7-4a54-4ec9-b548-194fb175932d": {
+          "name": "Hoạt động"
+        },
+        "9f6fad32-86fa-4b2a-90eb-bfa0882de7a8": {
+          "name": "Tổng kết"
+        },
+        "c9774311-07cd-4d0b-ae5e-c487a5e628c0": {
+          "name": "Hoạt động"
+        },
+        "ab4ccdb8-44eb-47ee-aefd-d7cd635ca363": {
+          "name": "Tổng kết"
+        },
+        "87a42a0e-c065-49e6-a16d-42c7c66a8374": {
+          "name": "Hoạt động"
+        },
+        "9510fed3-bbb9-4c12-8242-537177b47a10": {
+          "name": "Tổng kết"
+        },
+        "994368f3-b53e-4f5a-a1ab-f4a76c265a20": {
+          "name": "Hoạt động"
+        },
+        "31b07dbf-9897-4c43-8233-b44e567d0006": {
+          "name": "Tổng kết"
+        },
+        "a8f87090-0743-4286-86bc-e579a765d277": {
+          "name": "Hoạt động"
+        },
+        "38350fd8-425e-4a88-9d0d-4c6986c36feb": {
+          "name": "Tổng kết"
+        },
+        "4fca3f9a-dd6d-4ac7-8e6a-bd16d9acc664": {
+          "name": "Hoạt động"
+        },
+        "43a9dff6-4565-4408-9623-1f0a529edbb0": {
+          "name": "Tổng kết"
+        },
+        "fe4547e7-73f8-4c7b-a67f-a61b4a10332c": {
+          "name": "Hoạt động"
+        },
+        "594d3531-8212-4241-979a-17ae94cb6d89": {
+          "name": "Tổng kết"
+        },
+        "d43f4114-8c37-45a7-b61b-3aca56ee5790": {
+          "name": "Hoạt động"
+        },
+        "4426fb52-6448-4467-8602-49daf6b12bf1": {
+          "name": "Tổng kết"
+        },
+        "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
+          "name": "Hoạt động"
+        },
+        "4b4cc069-5970-4809-bb0c-b2f8e1aae26c": {
+          "name": "Hoạt động"
+        },
+        "c4a019fc-d25b-486f-adec-c33a5b86ba5d": {
+          "name": "Tổng kết"
+        },
+        "1c6474e1-f1d7-4d13-94a0-2657589894ae": {
+          "name": "Khởi động"
+        },
+        "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
+          "name": "Hoạt động"
+        },
+        "dfb46414-d054-4af9-a6d6-b9c1ae4c5e97": {
+          "name": "Hoạt động"
+        },
+        "b3baf83d-a516-4478-a997-75e530327575": {
+          "name": "Tổng kết"
+        },
+        "b3d78956-5557-4142-bd84-3741cc92fb87": {
+          "name": "Tổng kết"
+        },
+        "c61550fb-464b-4871-92d2-f532c0ec62cf": {
+          "name": "Hoạt động"
+        },
+        "d411cf59-7c5f-4e4e-8aba-845836bc9658": {
+          "name": "Tổng kết"
+        },
+        "0ccf48b9-639c-43b3-b737-74a1bcec7f5b": {
+          "name": "Hoạt động"
+        },
+        "aa25d648-15c2-44b2-b27c-8b4423498b20": {
+          "name": "Tổng kết"
+        },
+        "7ca84cbe-1c13-4126-9078-d6413f5ed5b4": {
+          "name": "Hoạt động"
+        },
+        "bdafdafd-667b-4609-a307-92646bf7e80c": {
+          "name": "Tổng kết"
+        },
+        "6039132d-56d7-42d2-acdb-ef7f1a25738f": {
+          "name": "Hoạt động"
+        },
+        "2884b29c-c047-4ad0-a002-deed110cc32a": {
+          "name": "Tổng kết"
+        },
+        "80de8d2e-b18f-4142-9b64-064cfb8908f8": {
+          "name": "Tổng kết"
+        },
+        "3ab3f540-cdac-498b-b4b5-49dba2a528bf": {
+          "name": "Hoạt động"
+        },
+        "8bf33e47-d789-4d92-b788-f6cf714bdda5": {
+          "name": "Tổng kết"
+        },
+        "cf8ee96e-a948-4c2c-9565-beb1bee1bba1": {
+          "name": "Hoạt động"
+        },
+        "0d629a35-2bfc-413d-bd7a-d7c29d81726a": {
+          "name": "Tổng kết"
+        },
+        "e7fed683-5b06-451a-83b6-44bd6135abba": {
+          "name": "Hoạt động"
+        },
+        "89d015e9-9fce-4748-a2dc-0a59c7fa8e10": {
+          "name": "Tổng kết"
+        },
+        "a7af54f2-f0da-4b17-bddd-88a8ba1390b2": {
+          "name": "Hoạt động"
+        },
+        "364c003c-6567-4148-b6bf-7d18f5034bd5": {
+          "name": "Tổng kết"
+        },
+        "2e669b5a-1c6c-41f0-a5f9-3a79fcbf7fcd": {
+          "name": "Hoạt động"
+        },
+        "94639435-f2c7-4bac-ad1c-0f31c772796c": {
+          "name": "Tổng kết"
+        },
+        "44ae7025-981f-4dae-b225-555618d67b2a": {
+          "name": "Hoạt động"
+        },
+        "ed40a37e-edc1-426c-943e-6cb6094b4795": {
+          "name": "Tổng kết"
+        },
+        "711c240c-07ab-449d-9ebb-b4bc6472d58a": {
+          "name": "Hoạt động"
+        },
+        "49d23cd6-1f02-41fc-9a87-782b74221fc3": {
+          "name": "Tổng kết"
+        },
+        "926cd18a-3e1a-44b9-96df-d0099cbc2ac8": {
+          "name": "Hoạt động"
+        },
+        "440f3a4d-669e-4651-a560-427bcb757de3": {
+          "name": "Tổng kết"
+        },
+        "f99bbd39-3dca-43a4-ac09-0248fea7bf8f": {
+          "name": "Hoạt động"
+        },
+        "94c7c2fe-3c42-4a2c-9b8b-83b6d5a0627c": {
+          "name": "Tổng kết"
+        },
+        "f41592ef-5ee3-4e3e-a31a-57e5984ae0fb": {
+          "name": "Hoạt động"
+        },
+        "4558faf6-f002-434c-b85a-a48087d45341": {
+          "name": "Tổng kết"
+        },
+        "de11024e-5469-41b6-bc28-627c9515eff1": {
+          "name": "Hoạt động"
+        },
+        "558ee427-4fa3-4820-a16b-fe7dbfea3e4a": {
+          "name": "Tổng kết"
+        },
+        "5c0c8ace-b8ec-4ea9-8e2a-6e3b55a93e17": {
+          "name": "Hoạt động"
+        },
+        "7e1b94ab-eb54-41ae-a003-fcbdc79f109c": {
+          "name": "Tổng kết"
+        },
+        "d72bfe99-62ed-4a91-87e0-27d873cc3aa8": {
+          "name": "Hoạt động"
+        },
+        "71aa25b3-9d43-4c6a-b01c-c0dca65cf932": {
+          "name": "Tổng kết"
+        },
+        "20458bdc-a944-45dd-b4a5-ddc0acf2a104": {
+          "name": "Hoạt động"
+        },
+        "0e14ff41-9ad6-4802-a118-4b50a607b384": {
+          "name": "Tổng kết"
+        },
+        "b2692599-66de-4bb5-aeb5-c63a06dd7040": {
+          "name": "Hoạt động"
+        },
+        "ca4d5d58-a1a8-4574-8413-b8e79a0a06d7": {
+          "name": "Tổng kết"
+        },
+        "752eddc2-eb93-48e1-90f0-19932c4f53cd": {
+          "name": "Hoạt động"
+        },
+        "1ba97808-b668-42ed-9ba3-5f2da7b8912b": {
+          "name": "Tổng kết"
+        },
+        "9a78dce2-0812-414f-8c20-1728b4ff1de2": {
+          "name": "Hoạt động"
+        },
+        "207bc633-dfe5-4c4d-b366-c1f5081676c1": {
+          "name": "Tổng kết"
+        },
+        "a2816f13-47a2-43e5-bbfa-0e7d57301037": {
+          "name": "Hoạt động"
+        },
+        "bf836bc8-4853-4f43-b055-a8aa18ddfa9a": {
+          "name": "Tổng kết"
+        },
+        "2e5b6973-dcd9-405c-958d-2366095f4375": {
+          "name": "Hoạt động"
+        },
+        "2edac65a-ce15-4b8c-afc8-a2faebdeb5f4": {
+          "name": "Hoạt động"
+        },
+        "c4cdf9ba-b683-4025-bc79-a6e72c0d4cf3": {
+          "name": "Hoạt động"
+        },
+        "6b3615be-6022-43a7-b634-56545dd94ace": {
+          "name": "Tổng kết"
+        },
+        "81d5093b-fe94-4257-bc54-ca5311532cdc": {
+          "name": "Hoạt động"
+        },
+        "8cc7e493-e930-4f8a-9f43-38e3d9ea0995": {
+          "name": "Tổng kết"
+        },
+        "e22dd0d5-97b3-4829-9d90-3a213360c254": {
+          "name": "Hoạt động"
+        },
+        "f664c4cd-edcd-4afe-b5e6-5e2902ae866f": {
+          "name": "Hoạt động"
+        },
+        "80d10416-519e-40e1-b040-0ab3e3b8a4c3": {
+          "name": "Tổng kết"
+        },
+        "d7b339c7-1053-4301-bba3-6c5befbc61fe": {
+          "name": "Hoạt động"
+        },
+        "9e5054c4-f57d-41fd-aa15-6eedcc5041a1": {
+          "name": "Tổng kết"
+        },
+        "06f944ce-4a81-48b5-a87d-96072d1bfa7b": {
+          "name": "Hoạt động"
+        },
+        "7f760e13-4b60-497a-ae95-c9d54292a9f7": {
+          "name": "Tổng kết"
+        },
+        "ee232401-7aef-488e-b0f1-4b169a7a854e": {
+          "name": "Hoạt động"
+        },
+        "6ad1cd24-169f-4b80-b9a4-8cc111becfd1": {
+          "name": "Tổng kết"
+        },
+        "c56d186e-9346-4a55-b871-3547db946cb0": {
+          "name": "Hoạt động"
+        },
+        "639761f1-fc44-4250-ab0d-0e4b0565f95e": {
+          "name": "Tổng kết"
+        },
+        "22daa03a-31f9-4048-98d6-180a94b49a68": {
+          "name": "Hoạt động"
+        },
+        "c6e39bf8-d155-4322-af89-d5f58cd9b3c0": {
+          "name": "Tổng kết"
+        },
+        "d469a158-6f03-4bb2-a6bb-2fb04adc68bd": {
+          "name": "Hoạt động"
+        },
+        "ec2b845c-4b81-4798-848a-37dd04f0ab69": {
+          "name": "Hoạt động"
+        },
+        "1b7d7bd8-edb9-4d7e-b267-fb05ddf8073b": {
+          "name": "Tổng kết"
+        },
+        "ac036a2c-ddfd-4afa-8990-2c0488a6cac5": {
+          "name": "Hoạt động"
+        },
+        "125cb229-4471-49d1-b3a4-c331c9307b78": {
+          "name": "Tổng kết"
+        },
+        "2f663cbe-39d3-44bc-b3d0-3847de8616ed": {
+          "name": "Hoạt động"
+        },
+        "e44e0ad1-b586-42a4-9be2-75e0eee0cccc": {
+          "name": "Hoạt động"
+        },
+        "e7c14a3d-ad5f-429b-9ad3-a851e1247e58": {
+          "name": "Tổng kết"
+        },
+        "ee6441ac-3fe1-451b-846f-24a977986f9c": {
+          "name": "Hoạt động"
+        },
+        "165ce06e-00dc-48c5-ac86-7b2ca67f7484": {
+          "name": "Tổng kết"
+        },
+        "06cc83f5-66b2-401e-850a-466b164ef104": {
+          "name": "Hoạt động"
+        },
+        "928bd72d-482c-4234-8e05-57b235528194": {
+          "name": "Tổng kết"
+        },
+        "064fad66-35a6-480e-ad60-dff751b5230c": {
+          "name": "Hoạt động"
+        },
+        "06f4dccb-71cc-4afb-907e-2ee69be55359": {
+          "name": "Tổng kết"
+        },
+        "b58f7f0f-78a4-4965-8f0d-9512076d5e0f": {
+          "name": "Hoạt động"
+        },
+        "694fdbc9-0938-41a0-8646-8f04d7fb37fd": {
+          "name": "Tổng kết"
+        },
+        "c8d05b47-5ef6-429d-8162-74d7c1198428": {
+          "name": "Hoạt động"
+        },
+        "28a6cba3-27e6-4129-a08e-57c0fa0ae303": {
+          "name": "Tổng kết"
+        },
+        "9612f586-66a9-4418-8a79-40080b796a76": {
+          "name": "Hoạt động"
+        },
+        "23c77bb1-85ea-4391-a235-0161f782c996": {
+          "name": "Tổng kết"
+        },
+        "004e7885-e515-4aa8-b5b4-230b884cb6b8": {
+          "name": "Hoạt động"
+        },
+        "72440372-3248-4b04-b266-0604ddc73ebe": {
+          "name": "Tổng kết"
+        },
+        "a8aae27a-c021-4027-8ce0-37a888ec37f5": {
+          "name": "Hoạt động"
+        },
+        "cb343ba8-a1d1-442d-a038-3f54c35175c8": {
+          "name": "Tổng kết"
+        },
+        "185f50c6-2c50-4650-91f6-f061d1051c91": {
+          "name": "Hoạt động"
+        },
+        "886dade4-6e12-469f-af94-8afa519f5531": {
+          "name": "Tổng kết"
+        },
+        "faf4b5ae-838a-4a44-bfe5-9450699ab59f": {
+          "name": "Hoạt động"
+        },
+        "19e9e29c-06ec-4f99-bee1-b8ef9c72758f": {
+          "name": "Tổng kết"
+        },
+        "73080877-a97f-4bdc-a8b7-4210cf0f40c7": {
+          "name": "Học thêm"
+        },
+        "a6b60e0a-6bb5-4967-bc4c-eabd863ab97c": {
+          "name": "Hoạt động"
+        },
+        "3288a325-7eb2-47c6-bbc4-9eb0c1686045": {
+          "name": "Tổng kết"
+        },
+        "98ffa01e-f262-4df2-bcca-a7f669b80fec": {
+          "name": "Hoạt động"
+        },
+        "bc72b27d-760e-4e23-aa40-d8141b949e20": {
+          "name": "Tổng kết"
+        },
+        "fd95bfe8-a008-4994-a874-ff3f1ba81d58": {
+          "name": "Hoạt động"
+        },
+        "b02a841f-7769-4fa2-8507-307cea1b01bd": {
+          "name": "Tổng kết"
+        },
+        "0e95e394-2a11-4fab-908d-ed712cd9f6b0": {
+          "name": "Hoạt động"
+        },
+        "6ec491fa-334a-474f-96dd-3ba4550e81fa": {
+          "name": "Tổng kết"
+        },
+        "f7eebe16-f2a3-4e47-b558-a584b1bb2d0c": {
+          "name": "Hoạt động"
+        },
+        "a4b0740b-a9d1-41f7-9d20-00f1d77f878d": {
+          "name": "Tổng kết"
+        },
+        "53d85fa1-fecf-43b6-83f0-bef5454c41ed": {
+          "name": "Hoạt động"
+        },
+        "2682c85b-7410-43b6-bc18-87f0be2e0e86": {
+          "name": "Tổng kết"
+        },
+        "c3347e87-c7d1-4002-aa31-a53dd8deee41": {
+          "name": "Hoạt động"
+        },
+        "abef0d1e-8187-462f-ac08-0130f1499397": {
+          "name": "Tổng kết"
+        },
+        "f2b936fa-d72a-4aa3-a4d8-c1f34ab3aa14": {
+          "name": "Hoạt động"
+        },
+        "68062c41-3e39-40ec-9cae-d096b0bdca24": {
+          "name": "Tổng kết"
+        },
+        "03d57f25-1cca-49af-8487-43c3a7efceb8": {
+          "name": "Hoạt động"
+        },
+        "011f9436-4daa-4a08-8f54-2b767dc556b6": {
+          "name": "Tổng kết"
+        },
+        "9d2f6fef-3722-429e-b4c1-f6d1103c942b": {
+          "name": "Hoạt động"
+        },
+        "2d66b959-ae8c-430d-b72c-fe68923080c5": {
+          "name": "Tổng kết"
+        },
+        "9982617c-045f-447f-8f83-522ea617c3b9": {
+          "name": "Hoạt động"
+        },
+        "442c4f1b-bf6a-4e06-a8a7-92ebb259d010": {
+          "name": "Tổng kết"
+        },
+        "87977467-a47d-46de-90b9-df606358da99": {
+          "name": "Hoạt động"
+        },
+        "c83ce210-dedc-4eec-bdcf-a5a96c75ecdf": {
+          "name": "Tổng kết"
+        },
+        "60f3718d-0319-4213-a83d-3ce3cb6bdd80": {
+          "name": "Hoạt động"
+        },
+        "38e02771-58d3-4d6c-a01a-a7dd0b87bace": {
+          "name": "Tổng kết"
+        },
+        "b3d7133e-335d-4c28-98d8-a61e8fecaab5": {
+          "name": "Hoạt động"
+        },
+        "7899e7b1-0a30-4699-bcae-48dd6a61c8f3": {
+          "name": "Tổng kết"
+        },
+        "30ea67ca-4696-43c4-af86-24edbe8bea45": {
+          "name": "Tổng kết"
+        },
+        "d6982573-b0dc-4c36-a400-b426cb43e2b4": {
+          "name": "Hoạt động"
+        },
+        "4f356bf0-fd92-4065-80a2-21c525b4f1dc": {
+          "name": "Tổng kết"
+        },
+        "50301e64-0051-4071-ab27-c0f0eb834ca5": {
+          "name": "Hoạt động"
+        },
+        "c9582674-40a5-483b-b016-17a03f824858": {
+          "name": "Tổng kết"
+        },
+        "d5dd115f-dd41-4a16-b59f-0f77bb79ed00": {
+          "name": "Hoạt động"
+        },
+        "47478503-0688-4122-8566-0aed5c015b89": {
+          "name": "Tổng kết"
+        },
+        "dd80250a-acb3-4fe7-a9b3-3703faad40ce": {
+          "name": "Hoạt động"
+        },
+        "972e8bec-fac2-49b3-ab29-8d58ddfa01f1": {
+          "name": "Tổng kết"
+        },
+        "54106bc6-dce5-43e9-965a-07567d1856dc": {
+          "name": "Hoạt động"
+        },
+        "f069eb58-8da9-4a3d-a082-89f69e6b8e75": {
+          "name": "Tổng kết"
+        },
+        "8d3448c6-d7e5-44f9-8b60-e207f0026848": {
+          "name": "Hoạt động"
+        },
+        "e600c19e-5d9d-48c3-8e58-0a91b9c93574": {
+          "name": "Tổng kết"
+        },
+        "71440e94-c031-42dd-a79d-3f8cb5056b9f": {
+          "name": "Hoạt động"
+        },
+        "378bdb3f-7f63-4ac5-aeb3-957a4b98a354": {
+          "name": "Tổng kết"
+        },
+        "12d9a87a-588e-43d1-b12d-ad4b83414276": {
+          "name": "Hoạt động"
+        },
+        "c68e1b20-2fee-4a79-8b34-e6f38c9cd672": {
+          "name": "Tổng kết"
+        },
+        "9c7bec47-be70-4024-a4f2-21f687434008": {
+          "name": "Hoạt động"
+        },
+        "6bef749f-9fe6-445c-b873-bb9040b750b2": {
+          "name": "Tổng kết"
+        },
+        "bb408703-11ec-4822-a86b-b8625a121f6f": {
+          "name": "Biểu diễn"
         }
       }
     }

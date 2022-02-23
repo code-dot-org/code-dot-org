@@ -1,6 +1,7 @@
 {
-  "func": "getScaledWidth",
+  "key": "getScaledWidth",
+  "name": "getScaledWidth",
   "category": "Sprites",
-  "modeOptionName": "*.getScaledWidth",
-  "type": "value"
+  "category_key": "sprites",
+  "syntax": "getScaledWidth"
 }

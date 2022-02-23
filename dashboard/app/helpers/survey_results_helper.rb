@@ -21,8 +21,8 @@ module SurveyResultsHelper
   def show_nps_survey?
     return false unless SurveyResultsHelper::NPS_SURVEY_ENABLED
     return false unless current_user
-    # May 2021: only display to teachers with odd ids
-    return false unless current_user.id.odd?
+    # Nov 2021: only display to teachers with even ids
+    return false unless current_user.id.even?
     return false unless language == "en"
     return false if current_user.under_13?
     return false unless country_us?

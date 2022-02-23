@@ -20,11 +20,11 @@ social:
 
 <p>Informatika je zábava, takže si pri nej môžeš pokojne aj oddýchnuť od iných povinností! Vybrať si môžeš z dvanástich <a href="#activities">dielov a aktivít</a>, v rámci ktorých môžeš vytvoriť šifru s Ashtonom Kutcherom, naučiť sa viac o premenných s Yarou Shahidi či dokonca zistiť viac o tom, ako funguje internet, s jeho vynálezcom Vintom Cerfom.</p>
 
-<p>Všetky diely uvádza zakladateľ Code.org <a href="https://code.org/about/leadership/hadi_partovi">Hadi Partovi</a> a môžeš sa v nich tešiť na inšpiratívnych hostí, minilekcie o informatických konceptoch a každotýždennú úlohu, ktorá zaujme všetkých žiakov nezávisle od veku a schopností, dokonca aj tých bez počítačov.</p>
+<p>Všetky diely uvádza zakladateľ Code.org <a href="https://code.org/about/leadership/hadi_partovi">Hadi Partovi</a> a môžeš sa v nich tešiť na inšpiratívnych hostí, minilekcie o informatických konceptoch a každotýždennú úlohu, ktorá zaujme všetkých žiakov nezávisle od veku a schopností – dokonca aj tých bez počítačov!</p>
 
-<a href="#activities"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">Pozrieť diely</button></a>
+<a href="#activities"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">Pozri si diely</button></a>
 
-<p><br>Hoci naše priame prenosy dielov už skončili, stále môžeš pozerať predchádzajúce diely a robiť príslušné aktivity. Ak ťa zaujmú a chceš robiť ešte viac, môžeš vyskúšať niektoré z našich odporúčaných projektov a aktivít určených na <a href="https://code.org/athome">učenie sa z domu</a>.</p>
+<p><br>Hoci naše priame prenosy dielov už skončili, stále môžeš pozerať predchádzajúce diely a robiť príslušné aktivity. Ak ťa zaujmú a budeš chceš robiť ešte viac, môžeš si vyskúšať niektoré z našich odporúčaných projektov a aktivít určených na <a href="https://code.org/athome">učenie sa z domu</a>.</p>
 <br>
 
 <div style="max-width:490px; position:relative;">{{ codebreak_promoreel }}</div>
@@ -35,7 +35,7 @@ social:
 <img src="/images/marketing/code-break-callout-episode-0.jpg" style="max-width:100%">
 <a id="signup"></a>
 <div style="padding:8px 18px 0 8px;">
-<p style="margin: 10px 0 0 0;">Chceš zostať v obraze? Ak sa pridáš na odber našich noviniek, o nových zdrojoch na učenie sa z domu budeš vždy vedieť medzi prvými.</p>
+<p style="margin: 10px 0 0 0;">Chceš zostať v obraze? Ak sa pridáš na odber našich noviniek, o nových materiáloch na učenie sa z domu budeš vždy vedieť medzi prvými.</p>
 <iframe src="http://go.pardot.com/l/153401/2020-03-16/n7j6zc" width="100%" height="305" type="text/html" frameborder="0" allowTransparency="true" style="overflow:hidden"></iframe>
 
 </div></div>
@@ -44,7 +44,7 @@ social:
 <div style="max-width:100%;">
 <h2>Zábavné základy</h2>
 <p>Informatika je <i>neuveriteľná zábava</i>, pretože je tvorivá a hravá. Či už riešia úlohy, programujú umenie alebo navrhujú aplikácie, žiaci pri učení sa uprednostňujú objavovanie pred memorovaním. Žiaci dokonca označujú informatiku za svoj <a href="https://code.org/promote">obľúbený predmet</a> hneď po výtvarnej, hudobnej a tanečnej výchove.</p>
-<p>Informatike je <a href="/promote">základom</a> pre rôznorodé odbory, no keďže na mnohých školách sa zatiaľ nevyučuje, môže ísť o jedinečnú príležitosť podporiť vaše dieťa v tom, aby využili príležitosť naučiť sa niečo nové zábavným spôsobom. <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">Najnovšie výskumy navyše ukazujú</a>, že deťom, ktoré sa učia informatiku, sa lepšie darí aj v iných predmetoch, sú vynikajúce v riešení problémov a majú až o <font color="00adbc"><b>17 % väčšiu pravdepodobnosť, že sa prihlásia na vysokú školu</font></b>.</p></div>
+<p>Informatika je <a href="/promote">základom</a> pre rôznorodé odbory, no keďže na mnohých školách sa zatiaľ poriadne nevyučuje, môže ísť o jedinečnú príležitosť podporiť vaše dieťa v tom, aby využilo príležitosť naučiť sa niečo nové zábavným spôsobom. <a href="https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536">Najnovšie výskumy navyše ukazujú</a>, že deťom, ktoré sa učia informatiku, sa lepšie darí aj v iných predmetoch, sú vynikajúce v riešení problémov a majú až o <font color="00adbc"><b>17 % väčšiu pravdepodobnosť, že sa prihlásia na vysokú školu</font></b>.</p></div>
 
 <div style="clear: both;"></div>
 <a id="activities"></a>
@@ -289,13 +289,13 @@ social:
 
 <a id="episode12"></a>
 <div style="clear: both;"></div>
-<h2>12. diel: Hárdvér (Aloe Blacc, Bret Taylor a Paula Mejia)</h2>
+<h2>12. diel: Hardvér (Aloe Blacc, Bret Taylor a Paula Mejia)</h2>
 <div class="col-33" style="padding-right:20px;">
 <h4 style="background:#00adbc;color:#ffffff; padding:8px;">Pozri si diel z 10. júna</h4>
 <a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>Pozrieť na YouTube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">Pozrieť na Facebooku</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Aktivita na daný týždeň – Hárdvér</h4>
+<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Aktivita na daný týždeň – Hardvér</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Mladší študenti:</span> Bez prihlásenia</p>

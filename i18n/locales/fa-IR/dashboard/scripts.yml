@@ -173,7 +173,7 @@ fa:
           description_short: بیایید از کد نویسی برای پیوستن به آنا و السا وقتی جادو و زیبایی یخ را کشف می کنند استفاده کنیم.
           lessons:
             Artist:
-              name: هنرمند
+              name: کدنویسی با آنا و السا
           student_description: بیا از کدنویسی برای پیوستن آنا و السا استفاده کنیم در حالیکه آنها جادو و زیبایی یخ را مشاهده میکنند. تو با اسکی روی یخ دانه های برف و الگوهایی را رسم خواهی کرد و سرزمین عجایب زمستانی ای خواهی ساخت که می توانی با دوستان خود به اشتراک بگذاری!
         course4:
           title: دوره 4
@@ -285,7 +285,7 @@ fa:
           description_short: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
           lessons:
             Infinity:
-              name: بی نهایت
+              name: آزمایشگاه بازی بی نهایت دیزنی
           student_description: با استفاده از آزمایشگاه بازی برای ایجاد داستان بازی بازیگران شخصیت های دیزنی بی نهایت.
         algebrademo:
           title: نسخه ی نمایشی جبر
@@ -690,17 +690,13 @@ fa:
         starwars:
           lessons:
             Hour of Code 2015:
-              name: ساعت کدنویسی 2015
-        starwarsblocks:
-          lessons:
-            Hour of Code 2015:
-              name: ساعت کدنویسی 2015
+              name: 'ساعت کدنویسی 2015'
         mc:
           description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
           description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
           lessons:
             Hour of Code 2015:
-              name: ساعت کدنویسی 2015
+              name: 'ساعت کدنویسی 2015'
           student_description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
         ScienceP3OLPT3:
           lessons:
@@ -996,10 +992,6 @@ fa:
           lesson_groups:
             required:
               display_name: بررسی اجمالی
-        basketball:
-          lessons:
-            Bounce:
-              name: پریدن
         csd2-2017:
           lessons:
             Lists:
@@ -1397,6 +1389,8 @@ fa:
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'ماینکرافت\: سفر قهرمانان ساعتی با کد'
+            Minecraft Hour of Code:
+              name: 'ماینکرافت: سفر قهرمانان'
           student_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
         course-e-2018:
           lessons:
@@ -2428,6 +2422,10 @@ fa:
               display_name: فهرست‌ها
             csp_loops:
               display_name: حلقه‌ها
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: الگوریتم ها
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2643,3 +2641,188 @@ fa:
           lessons:
             lesson-1:
               name: بررسی اجمالی
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: زنبور عسل هجی کن
+          title: زنبور عسل هجی کن
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: زنبور عسل هجی کن
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+          lesson_groups:
+            lessonGroup-8:
+              display_name: ساعت کد نویسی
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: متغیرها
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: توابع
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: نقشه های شاد
+            'Programming: Happy Maps':
+              name: نقشه های شاد
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
+        express-2022:
+          lessons:
+            Dance Party:
+              name: جشن و رقص
+            lesson-1:
+              name: جشن و رقص
+          lesson_groups:
+            lessonGroup-9:
+              display_name: رویدادها
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_conditionals:
+              display_name: شرطی ها
+            csf_functions:
+              display_name: توابع
+            csf_variables:
+              display_name: متغیرها
+            csf_for_loops:
+              display_name: حلقه های "برای"
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: اشکال‌زدایی
+              key: اشکال‌زدایی
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: متغیرها
+            csp_conditionals:
+              display_name: شرطی ها
+            csp_functions:
+              display_name: توابع
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: فهرست‌ها
+            csp_loops:
+              display_name: حلقه‌ها
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: حرکت کن، حرکت کن
+              key: حرکت کن، حرکت کن
+            Getting Loopy:
+              name: سر گیجه گرفتن
+            'Loops: Getting Loopy':
+              name: سر گیجه گرفتن
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: رویداد بزرگ
+            Binary Bracelets:
+              name: دستبند دودویی
+              key: دستبند دودویی
+            'Events: The Big Event':
+              name: رویداد بزرگ
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
+            Relay Programming:
+              name: برنامه نویسی دست به دست
+              key: برنامه نویسی دست به دست
+            Dance Party:
+              name: جشن و رقص
+              key: جشن و رقص
+            Conditionals with Cards:
+              name: شرطی ها با کارتها
+              key: شرطی ها با کارتها
+            'Algorithms: Graph Paper Programming':
+              name: برنامه نویسی روی کاغذ رسم شطرنجی
+          lesson_groups:
+            lessonGroup-6:
+              display_name: شهروندی دیجیتالی
+            csf_events:
+              display_name: رویدادها
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_conditionals:
+              display_name: شرطی ها
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: ترانه سرایی
+            'Functions: Songwriting':
+              name: ترانه سرایی
+            Conditionals:
+              key: شرطی ها
+          lesson_groups:
+            csf_digcit:
+              display_name: شهروندی دیجیتالی
+            ramp_up:
+              display_name: حلقه های تو در تو
+            csf_functions:
+              display_name: توابع
+            csf_nested_loops:
+              display_name: شرطی ها
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: برای تفریح حلقه ای
+              key: برای تفریح حلقه ای
+            The Internet:
+              name: اینترنت
+            Internet:
+              key: اینترنت
+              name: اینترنت
+          lesson_groups:
+            lessonGroup-7:
+              display_name: شهروندی دیجیتالی
+            lessonGroup-8:
+              display_name: متغیرها
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: حلقه‌ها
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: حلقه‌ها
+            csf_events:
+              display_name: رویدادها
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: شرطی ها
+            lesson-16:
+              name: اشکال‌زدایی
+            lesson-19:
+              name: اشکال‌زدایی
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: حلقه‌ها

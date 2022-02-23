@@ -708,7 +708,8 @@ const STANDARD_INPUT_TYPES = {
   },
   [DROPDOWN_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const dropdown = new blockly.FieldDropdown(inputConfig.options);
+      const options = sanitizeOptions(inputConfig.options);
+      const dropdown = new blockly.FieldDropdown(options);
       currentInputRow
         .appendTitle(inputConfig.label)
         .appendTitle(dropdown, inputConfig.name);
@@ -773,13 +774,14 @@ const STANDARD_INPUT_TYPES = {
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const fieldTextInput = new blockly.FieldTextInput(
+      const BlocklyField = Blockly.getFieldForInputType(inputConfig.type);
+      const field = new BlocklyField(
         '',
         getFieldInputChangeHandler(blockly, inputConfig.type)
       );
       currentInputRow
         .appendTitle(inputConfig.label)
-        .appendTitle(fieldTextInput, inputConfig.name);
+        .appendTitle(field, inputConfig.name);
     },
     generateCode(block, inputConfig) {
       let code = block.getTitleValue(inputConfig.name);
@@ -1070,8 +1072,18 @@ exports.createJsWrapperBlockCreator = function(
           this.setPreviousStatement(true);
         }
 
-        if (miniToolboxBlocks) {
+        // Use window.appOptions, not global appOptions, because the levelbuilder
+        // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
+        // there
+        if (
+          miniToolboxBlocks &&
+          (!window.appOptions || window.appOptions.level.miniToolbox)
+        ) {
           var toggle = new Blockly.FieldIcon('+');
+          if (this.blockSpace.isReadOnly()) {
+            toggle.setReadOnly();
+          }
+
           var miniToolboxXml = '<xml>';
           miniToolboxBlocks.forEach(block => {
             miniToolboxXml += `\n <block type="${block}"></block>`;
@@ -1081,10 +1093,14 @@ exports.createJsWrapperBlockCreator = function(
           this.isMiniFlyoutOpen = false;
           // On button click, open/close the horizontal flyout, toggle button text between +/-, and re-render the block.
           Blockly.bindEvent_(toggle.fieldGroup_, 'mousedown', this, () => {
+            if (this.blockSpace.isReadOnly()) {
+              return;
+            }
+
             if (this.isMiniFlyoutOpen) {
-              toggle.setText('+');
+              toggle.setValue('+');
             } else {
-              toggle.setText('-');
+              toggle.setValue('-');
             }
             this.isMiniFlyoutOpen = !this.isMiniFlyoutOpen;
             this.render();
@@ -1106,18 +1122,11 @@ exports.createJsWrapperBlockCreator = function(
               });
             }
           });
-          // Use window.appOptions, not global appOptions, because the levelbuilder
-          // block page doesn't have appOptions, but we *do* want to show the mini-toolbox
-          // there
-          if (
-            !window.appOptions ||
-            (window.appOptions.level.miniToolbox &&
-              !window.appOptions.readonlyWorkspace)
-          ) {
-            this.appendDummyInput()
-              .appendTitle(toggle)
-              .appendTitle(' ');
-          }
+
+          this.appendDummyInput()
+            .appendTitle(toggle, 'toggle')
+            .appendTitle(' ');
+
           this.initMiniFlyout(miniToolboxXml);
         }
 
@@ -1219,7 +1228,7 @@ exports.createJsWrapperBlockCreator = function(
       if (eventBlock) {
         const nextBlock =
           this.nextConnection && this.nextConnection.targetBlock();
-        let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+        let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
         handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
         if (callbackParams) {
           let params = callbackParams.join(',');
@@ -1315,4 +1324,18 @@ exports.installCustomBlocks = function({
   }
 
   return blocksByCategory;
+};
+
+/**
+ * Adds a second value to options array elements if a second one does not exist.
+ * The second value is used as the generated code for that option.
+ * Required for backwards compatibility with existing blocks that are missing the second value.
+ *
+ * @param  {string[][]| string[]} dropdownOptions
+ * @returns {string[][]} Sanitized array of dropdownOptions, ensuring that both a first and second value exist
+ */
+const sanitizeOptions = function(dropdownOptions) {
+  return dropdownOptions.map(option =>
+    option.length === 1 ? [option[0], option[0]] : option
+  );
 };

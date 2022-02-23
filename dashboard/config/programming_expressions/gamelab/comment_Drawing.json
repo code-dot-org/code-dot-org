@@ -1,6 +1,7 @@
 {
-  "func": "comment_Drawing",
-  "block": "// Comment",
-  "expansion": "// ",
-  "category": "Drawing"
+  "key": "comment_Drawing",
+  "name": "comment_Drawing",
+  "category": "Drawing",
+  "category_key": "drawing",
+  "syntax": "// Comment"
 }

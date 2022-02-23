@@ -2,71 +2,1306 @@
   "ta-IN": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Spotify பிளேலிஸ்ட் (எல்லா வயதினரும்)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "list_of_poems/poem-art/2021": {
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "கவிதை கலை 1 - அறிமுகம் ",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "கலைஞர் அறிமுகம்",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "திருப்பங்கள் மற்றும் கோணங்கள்"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Spotify பிளேலிஸ்ட் (எல்லா வயதினரும்)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "பவுன்ஸ் நிகழ்வுகள் - அவை எப்படி நிகழ்கின்றன?"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "பவுன்ஸ் நிகழ்வுகள் - அவை எப்படி நிகழ்கின்றன?"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Spotify பிளேலிஸ்ட் (எல்லா வயதினரும்)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Spotify பிளேலிஸ்ட் (எல்லா வயதினரும்)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "AI: இயந்திர கற்றல்",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI: சமூகத்தின் தாக்கம்",
+          "url": "https://youtu.be/ng4c1g3COfs"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "AI: பயிற்சி தரவு & சார்பு",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "கவிதைகள் பட்டியல்",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "introducing_sprite_lab/coursef/2021": {
+          "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
+        },
+        "exploring_apps/coursef/2021": {
+          "name": "பயன்பாடுகளை ஆராய்கிறது",
+          "url": "https://docs.google.com/document/d/1CMFO9cWrBa0E97raNZnEXHC5e2WHrprMokSW5jmJzDs/template/preview"
+        },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "url": "https://youtu.be/yd-9xZ275dM"
+        },
+        "exploring_apps_1/coursef/2021": {
+          "name": "பயன்பாடுகளை ஆராய்கிறது",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
+        },
+        "making_sprites/coursef/2021": {
+          "name": "உருவங்களை உருவாக்குதல் ",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "sprites_in_action/coursef/2021": {
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+        },
+        "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "வார்த்தைகளின் சக்தி: பாடம் ஸ்லைடுகள்",
+          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": "வார்த்தைகளின் சக்தி: வார்த்தைகளின் சக்தி",
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2021": {
+          "name": "வார்த்தைகளின் சக்தி: வார்த்தைகள் காயப்படுத்தலாம்",
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
+        },
+        "the_power_of_words_lesson_quiz/coursef/2021": {
+          "name": "வார்த்தைகளின் சக்தி: பாடம் வினாடி வினா",
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
+        },
+        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "name": "வார்த்தைகளின் சக்தி: பாடம் வினாடி வினா",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
+        },
+        "variables_blank_space_stories/coursef/2021": {
+          "name": "மாறிகள்: வெற்று விண்வெளி கதைகள்",
+          "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
+        },
+        "blank_space_stories_-_worksheet/coursef/2021": {
+          "name": "வெற்று விண்வெளி கதைகள்",
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+        },
+        "blank_space_stories/coursef/2021": {
+          "name": "வெற்று விண்வெளி கதைகள்",
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+        },
+        "text_and_prompts/coursef/2021": {
+          "name": "உரை மற்றும் அறிவுறுத்தல்கள்",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
+        },
+        "user_input_programs/coursef/2021": {
+          "name": "பயனர் உள்ளீட்டு திட்டங்கள்",
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+        },
+        "mini_project_user_input_programs/coursef/2021": {
+          "name": "மினி திட்டம்: பயனர் உள்ளீட்டு திட்டங்கள்",
+          "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68"
+        },
+        "teacher_sandbox_level/coursef/2021": {
+          "name": "ஆசிரியர் சாண்ட்பாக்ஸ் நிலை",
+          "url": "https://studio.code.org/levels/27300"
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "மினி திட்டம்: பயனர் உள்ளீட்டு திட்டங்கள்",
+          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview"
+        },
+        "pause_and_think_online/coursef/2021": {
+          "name": "ஆன்லைனில் இடைநிறுத்துங்கள் மற்றும் சிந்தியுங்கள்",
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
+        },
+        "unplugged-video-for-loop-fun/coursef/2021": {
+          "url": "https://youtu.be/mX857v5B4gE"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "லூப் வேடிக்கைக்கு - மதிப்பீட்டு விசை",
+          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
+        },
+        "lesson-in-action-for-loop-fun/coursef/2021": {
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
+        },
+        "csf-for-loop-fun-worksheet/coursef/2021": {
+          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
+        },
+        "activity-answer-for-loop-fun/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
+        },
+        "csf-for-loop-fun-assessment/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
+        },
+        "course-cf-blockly-blocks/coursef/2021": {
+          "name": "இணைக்கப்பட்ட தொகுதிகள் (படிப்புகள் சி-எஃப்)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "running-simulations/coursef/2021": {
+          "name": "இயங்கும் உருவகப்படுத்துதல்கள்",
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
+        },
+        "ai-ml/coursef/2021": {
+          "name": "AI: இயந்திர கற்றல்",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai-training/coursef/2021": {
+          "name": "AI: பயிற்சி தரவு & சார்பு",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "ai-societal/coursef/2021": {
+          "name": "AI: சமூகத்தின் தாக்கம்",
+          "url": "https://youtu.be/ng4c1g3COfs"
+        },
         "unplugged-video-internet/coursef/2021": {
-          "name": "இணையம்"
+          "name": "இணையம்",
+          "url": "https://youtu.be/mFOUbqYv1Sc"
+        },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "ஐபி முகவரி அட்டைகள் மற்றும் டெலிவரி வகை அட்டைகள்",
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
+        },
+        "csf-internet-assessment/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
+        },
+        "assessment-answer-internet/coursef/2021": {
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+        },
+        "get-site-ip-com/coursef/2021": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/"
+        },
+        "design-process/coursef/2021": {
+          "name": "வடிவமைப்பு செயல்முறை",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+        },
+        "final-project-design-worksheet/coursef/2021": {
+          "name": "இறுதி திட்ட வடிவமைப்பு",
+          "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/"
+        },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "CS அடிப்படை இறுதி திட்டம்",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+        },
+        "csta_standards_mapping/coursef/2021": {
+          "name": "CSTA தரநிலை வரைபடம்",
+          "url": "https://studio.code.org/s/coursef-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "பொதுவான கோர் மற்றும் NGSS வழிகாட்டுதல்",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "குறுக்கு-பாடத்திட்ட விரிவாக்க நடவடிக்கைகள்",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursef/2021": {
+          "name": "பாட சொற்களஞ்சியம்",
+          "url": "https://studio.code.org/s/coursef-2021/vocab"
+        },
+        "implementation_guide/coursef/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursef/2021": {
+          "name": "பாடம் வகை வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursef/2021": {
+          "name": "பிழைத்திருத்த வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursef/2021": {
-          "name": "பாடத்திட்ட வழிகாட்டி "
+          "name": "பாடத்திட்ட வழிகாட்டி ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursef/2021": {
+          "name": "2021 பதிவை மாற்று",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursef/2021": {
-          "name": "ஆசிரியர் மன்றம்"
+          "name": "ஆசிரியர் மன்றம்",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "ஸ்பிரைட் ஆய்வக ஆவணம்",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "மெய்நிகர் பாட மாற்றங்கள்",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
+        },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": "டிஜிட்டல் தடங்கள்: பாடம் ஸ்லைடுகள்",
+          "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "டிஜிட்டல் பாதைகள்: டிஜிட்டல் பாதையை பின்பற்றவும்",
+          "url": "https://www.commonsense.org/education/videos/follow-the-digital-trail"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "டிஜிட்டல் பாதைகள்: டிஜிட்டல் பாதை சதுரங்கள்",
+          "url": "https://docs.google.com/document/d/1Ild_AQ98V1kXXvc-ncnC1cTNnIQrZUG_QS-ZiEi4EY8/edit"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": "டிஜிட்டல் தடங்கள்: விலங்கு தடங்கள்",
+          "url": "https://docs.google.com/document/d/1WLUpUXDh1503PwlnJ06DqWr6KaiX7E8KOpDJjrCkLzM/"
+        },
+        "mimi-activity/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1xavPzpNq1GO7zzOzreES0Kl8FPcbjILFzfmORUqttcg/edit"
+        },
+        "mimi-debugging/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1eOrX6kpPKLzUD3GpvGy9XxupnMZJrtaeh2bfe0zOz64/edit"
+        },
+        "mimi-teacher-puzzle/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1bdGOgeZ9Z4MS_yxBLt-Mit2Rhr4rCNWL7HC-i1Qmpi4/edit"
+        },
+        "teacher-video-move-it/courseb/2021": {
+          "url": "http://youtu.be/aV4rqNUG-Jw?list=PL2DhNKNdmOtqBgWyF5kmy2oPh0U-Zfv2G"
+        },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "முகங்களை உணர்கிறது உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling-faces-image/courseb/2021": {
+          "name": "உணரும் முகங்கள்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "jigsaw/courseb/2021": {
+          "name": "இழுத்து மற்றும் கைவிடுதல் பயிற்சி",
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "class-section-video/courseb/2021": {
+          "name": "Code.org இல் வகுப்புப் பிரிவை உருவாக்குவது எப்படி",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "துண்டிக்கப்பட்ட பிளாக்லி பிளாக்ஸ் (கிரேடுகள் K-1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "pair-programming-vid/courseb/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles_-_gonoodle/courseb/2021": {
+          "name": "விக்க்லேஸ் - கோ நூடுல்ஸ் ",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+        },
+        "20_20_20_rule/courseb/2021": {
+          "name": "20/20/20 விதி",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "happy-map-game-pieces/courseb/2021": {
+          "name": "மகிழ்ச்சியான வரைபடம் விளையாட்டு துண்டுகள்",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "compass-rose/courseb/2021": {
+          "name": "திசைகாட்டி உயர்ந்தது",
+          "url": "https://docs.google.com/document/d/1ah3Alc68karxsADBVpCQkzlFAmqO6aTO9QUpZiIQ7BE/edit"
+        },
+        "feeling_faces_-_emotion_image/courseb/2021": {
+          "name": "முகங்களை உணர்கிறேன் - உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "stevie_and_the_big_project/courseb/2021": {
+          "url": "https://drive.google.com/file/d/0B-uvt08wYSQqTUFzaGxKSk45QkU/view"
+        },
+        "unspotted_bugs/courseb/2021": {
+          "url": "https://youtu.be/rah3DYlp5nQ"
+        },
+        "unplugged-video-getting-loopy/courseb/2021": {
+          "url": "https://youtu.be/JoKTqHCni0M"
+        },
+        "csf-getting-loopy-activity-worksheet/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
+        },
+        "csf-getting-loopy-assessment/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit"
+        },
+        "assessment-answer-getting-loopy/courseb/2021": {
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+        },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "CS  அடிப்படை செயல்பாடுகளுக்கான அடிப்படை குறிப்புகள்",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "common-sense-media-pause-think/courseb/2021": {
+          "name": "ஆன்லைனில் இடைநிறுத்துங்கள் மற்றும் சிந்தியுங்கள்",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "the-right-app-scenarios/courseb/2021": {
+          "name": "சரியான ஆப் காட்சிகள்",
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
+        },
+        "unplugged-video-big-event/courseb/2021": {
+          "url": "https://youtu.be/u0WV9shCoak"
+        },
+        "csf-the-big-event-assessment/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+        },
+        "assessment-answer-big-event/courseb/2021": {
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "பெரிய நிகழ்வு (படிப்புகள் A, B)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+        },
+        "play_lab_project_planning_guide/courseb/2021": {
+          "name": "ஆய்வக திட்ட திட்டமிடல் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
+        },
+        "play_lab_project_planning_guide_1/courseb/2021": {
+          "name": "ஆய்வக திட்ட திட்டமிடல் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
+        },
+        "csta_standards_mapping/courseb/2021": {
+          "name": "CSTA தரநிலை வரைபடம்",
+          "url": "https://studio.code.org/s/courseb-2021/standards"
+        },
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "பொதுவான கோர் மற்றும் NGSS வழிகாட்டுதல்",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
+          "name": "குறுக்கு-பாடத்திட்ட விரிவாக்க நடவடிக்கைகள்",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/courseb/2021": {
+          "name": "பாட சொற்களஞ்சியம்",
+          "url": "https://studio.code.org/s/courseb-2021/vocab"
+        },
+        "implementation_guide/courseb/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/courseb/2021": {
+          "name": "பாடம் வகை வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/courseb/2021": {
+          "name": "பிழைத்திருத்த வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/courseb/2021": {
-          "name": "பாடத்திட்ட வழிகாட்டி "
+          "name": "பாடத்திட்ட வழிகாட்டி ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/courseb/2021": {
+          "name": "2021 பதிவை மாற்று",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/courseb/2021": {
-          "name": "ஆசிரியர் மன்றம்"
+          "name": "ஆசிரியர் மன்றம்",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "மெய்நிகர் பாட மாற்றங்கள்",
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "எனது ஆன்லைன் சுற்றுப்புறத்தில் பாதுகாப்பு: பாடம் ஸ்லைடுகள்",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "எனது ஆன்லைன் சுற்றுப்புறத்தில் பாதுகாப்பு: எனது ஆன்லைன் சுற்றுப்பறம்",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "எனது ஆன்லைன் சுற்றுப்புறத்தில் பாதுகாப்பு: பாதுகாப்பு: இது விதிகள்!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "எனது ஆன்லைன் சுற்றுப்புறத்தில் பாதுகாப்பு: இடைநிறுத்தம் மற்றும் சிந்தனை தருணம்",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
+        "pair-programming-vid/coursea/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "20_20_20_rule/coursea/2021": {
+          "name": "20/20/20 விதி",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "wiggles-go_noodle/coursea/2021": {
+          "name": "விக்கிள்ஸ்-கோ நூடுல்ஸ்",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "தொடங்குதல் - வகுப்புப் பிரிவை உருவாக்குதல்",
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
+        },
+        "unplugged-video-happy-maps/coursea/2021": {
+          "url": "https://youtu.be/hrnhiKAQ1_k"
+        },
+        "happy-map-cards/coursea/2021": {
+          "name": "மகிழ்ச்சியான வரைபட அட்டைகள்",
+          "url": "https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "மகிழ்ச்சியான வரைபட அட்டைகள்",
+          "url": "https://docs.google.com/document/d/1faZj8Szk1st2pMg2f_2S0jXgoGXgbfqOFxbJ6f3LnH0/edit"
+        },
+        "happy-map-game-pieces/coursea/2021": {
+          "name": "மகிழ்ச்சியான வரைபடம் விளையாட்டு துண்டுகள்",
+          "url": "https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit"
+        },
+        "feeling_faces_-_emotion_image/coursea/2021": {
+          "name": "முகங்களை உணர்கிறேன் - உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "துண்டிக்கப்பட்ட பிளாக்லி பிளாக்ஸ் (கிரேடுகள் K-1)",
+          "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit"
+        },
+        "20_20_20_rule_1/coursea/2021": {
+          "name": "20/20/20 விதி",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "wiggles_-_gonoodle/coursea/2021": {
+          "name": "விக்க்லேஸ் - கோ நூடுல்ஸ் ",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+        },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "படி பொத்தானைக் கொண்டு பிழைத்திருத்தம்",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+        },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "முகங்களை உணர்கிறது உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "முகங்களை உணர்கிறேன் - உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "மகிழ்ச்சியான வரைபட அட்டைகள் XL",
+          "url": "https://docs.google.com/document/d/1ohSi_DzymdRdN66NVMAI-KI6LuaB3srbUMnpG74aPM8/edit"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "மகிழ்ச்சியான வரைபடம் விளையாட்டு துண்டுகள் போனஸ் பேக்",
+          "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit"
+        },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "முகங்களை உணர்கிறது உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "feeling-faces-image/coursea/2021": {
+          "name": "உணரும் முகங்கள்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pair-programming/coursea/2021": {
+          "name": "ஜோடி-நிரலாக்கம்",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "முகங்களை உணர்கிறது உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "csf_lesson_recommendations/coursea/2021": {
+          "name": "CSF பாடம் பரிந்துரைகள்",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "common-sense-media-pause-think/coursea/2021": {
+          "name": "ஆன்லைனில் இடைநிறுத்துங்கள் மற்றும் சிந்தியுங்கள்",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "முகங்களை உணர்கிறது உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "csf_lesson_recommendations_1/coursea/2021": {
+          "name": "CSF பாடம் பரிந்துரைகள்",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "unplugged-video-big-event/coursea/2021": {
+          "url": "https://youtu.be/u0WV9shCoak"
+        },
+        "csf-the-big-event-assessment/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+        },
+        "assessment-answer-big-event/coursea/2021": {
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "பெரிய நிகழ்வு (படிப்புகள் A, B)",
+          "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
+        },
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "முகங்களை உணர்கிறேன் - உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "CS  அடிப்படை செயல்பாடுகளுக்கான அடிப்படை குறிப்புகள்",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "முகங்களை உணர்கிறேன் - உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "csf_lesson_recommendations_2/coursea/2021": {
+          "name": "CSF பாடம் பரிந்துரைகள்",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "artist_project_planning_guide/coursea/2021": {
+          "name": "கலைஞர் திட்டமிடல் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/16jZwjsALk--UIsqN0i35odey5dei1-uHGCTl8x23B2M/template/preview"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "name": "கலைஞர் திட்டமிடல் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview"
+        },
+        "csta_standards_mapping/coursea/2021": {
+          "name": "CSTA தரநிலை வரைபடம்",
+          "url": "https://studio.code.org/s/coursea-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "பொதுவான கோர் மற்றும் NGSS வழிகாட்டுதல்",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "குறுக்கு-பாடத்திட்ட விரிவாக்க நடவடிக்கைகள்",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursea/2021": {
+          "name": "பாட சொற்களஞ்சியம்",
+          "url": "https://studio.code.org/s/coursea-2021/vocab"
+        },
+        "implementation_guide/coursea/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursea/2021": {
+          "name": "பாடம் வகை வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "பிழைத்திருத்த வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursea/2021": {
-          "name": "பாடத்திட்ட வழிகாட்டி "
+          "name": "பாடத்திட்ட வழிகாட்டி ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "2021 பதிவை மாற்று",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursea/2021": {
-          "name": "ஆசிரியர் மன்றம்"
+          "name": "ஆசிரியர் மன்றம்",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "மெய்நிகர் பாட மாற்றங்கள்",
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+        },
+        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "name": "ஆன்லைன் அர்த்தத்திற்கு ஒரு நிறுத்தத்தை நிறுத்துதல்: பாடம் ஸ்லைடுகள்",
+          "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
+        },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "name": "ஆன்லைன் அர்த்தத்தை நிறுத்துங்கள்: ஆன்லைன் அர்த்தத்தை நிறுத்துங்கள்",
+          "url": "https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit?usp=sharing"
+        },
+        "csf-mrf-cup-spacing/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit"
+        },
+        "csf-mrf-symbol-key/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit"
+        },
+        "unplugged-video-robotic-friends/coursec/2021": {
+          "url": "https://youtu.be/xaW3PAzHxCU"
+        },
+        "csf-mrf-cup-stacking-ideas/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit"
+        },
+        "csf-mrf-paper-trapezoid-template/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit"
+        },
+        "c2-maze-bridge/coursec/2021": {
+          "name": "பிரமை பாலம் பக்கம்",
+          "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
+        },
+        "unplugged-maze-blocks/coursec/2021": {
+          "name": "இணைக்கப்பட்ட பிரமை தொகுதிகள்",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+        },
+        "pair-programming-vid/coursec/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "CS  அடிப்படை செயல்பாடுகளுக்கான அடிப்படை குறிப்புகள்",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "debugging_guide/coursec/2021": {
+          "name": "பிழைத்திருத்த வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
+        },
+        "course-cf-blockly-blocks/coursec/2021": {
+          "name": "இணைக்கப்பட்ட தொகுதிகள் (படிப்புகள் சி-எஃப்)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "csf-artist-intro-video/coursec/2021": {
+          "name": "கலைஞர் அறிமுகம்",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-video/coursec/2021": {
+          "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "csf-turns-angles-doc/coursec/2021": {
+          "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+        },
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "முகங்களை உணர்கிறது உணர்ச்சி படம்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs"
+        },
+        "unplugged-video-big-event/coursec/2021": {
+          "url": "https://youtu.be/u0WV9shCoak"
+        },
+        "csf-the-big-event-assessment/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1lzVlB8JzpMLLGVumwVL8ybsBX42eFCSSucrZ19-N9Tw/edit"
+        },
+        "assessment-answer-big-event/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1VU2rC918ZY6DM2hunN6FsiDUW6Q1vEqyiJAPWQ6aoX8/edit"
+        },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "பெரிய நிகழ்வு (பாடத்திட்டம் சி)",
+          "url": "https://docs.google.com/document/d/1WlrJ6FKqrcvuyDWADnJiGpOo7rfolKcT5QH4W4uEptQ/edit"
+        },
+        "pause_and_think_online/coursec/2021": {
+          "name": "ஆன்லைனில் இடைநிறுத்துங்கள் மற்றும் சிந்தியுங்கள்",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "open-ended_programming_levels/coursec/2021": {
+          "name": "திறந்தநிலை நிரலாக்க நிலைகள்",
+          "url": "https://docs.google.com/document/d/1cJ_FIgqGEt1OikBc53bEJGhFFOLrppJ2pRWAw-bmV0k/view"
+        },
+        "open-ended_programming_levels_1/coursec/2021": {
+          "name": "திறந்தநிலை நிரலாக்க நிலைகள்",
+          "url": "https://docs.google.com/document/d/14WiSwDT88XDVVoUn5tuFDI0muLj4FUYN_NqcOCXIAp4/view"
+        },
+        "right-app-scenarios/coursec/2021": {
+          "name": "ப்ளே லேபிலிருந்து தரவை கிராஃபிங் செய்கிறது",
+          "url": "https://docs.google.com/document/d/177NVkzjc--XVvd5jssO5TZolUTzz9SD5pAw1DazflQ8/edit#heading=h.v577cjs0yrx5"
+        },
+        "csf-bit-byte-video/coursec/2021": {
+          "name": "பிட்களுக்கு எதிராக பைட்டுகள்",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
+        },
+        "unplugged-video-binary-bracelets/coursec/2021": {
+          "url": "https://youtu.be/3S2YfoO4_CM"
+        },
+        "lesson-in-action-binary-bracelets/coursec/2021": {
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
+        },
+        "csf-binary-bracelets-activity/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit"
+        },
+        "csf-binary-bracelets-assessment/coursec/2021": {
+          "url": "https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit"
+        },
+        "assessment-answer-binary-bracelets/coursec/2021": {
+          "url": "https://docs.google.com/document/d/1EaTbrdNbGpY_mI-FfV0GZ2uHSfcQIGuAkXqd1qFkUbE/edit"
+        },
+        "play-lab-project-planning-guide-exemplar/coursec/2021": {
+          "name": "லேப் ப்ராஜெக்ட் திட்டமிடல் கையேடு (முன்மாதிரி)",
+          "url": "https://docs.google.com/document/d/1CKzMi1JfhUpwfu8JMllUvKwlgJZaw7RQ6pLp6fu0H_I/edit?usp=sharing"
+        },
+        "play-lab-project-guide/coursec/2021": {
+          "name": "ஆய்வக திட்ட திட்டமிடல் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1qT5Zz1Pec5wuvLSTRfSMJSW5r1LjmWKqoK75Lz1ZYTs/edit"
+        },
+        "csta_standards_mapping/coursec/2021": {
+          "name": "CSTA தரநிலை வரைபடம்",
+          "url": "https://studio.code.org/s/coursec-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "பொதுவான கோர் மற்றும் NGSS வழிகாட்டுதல்",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
+        },
+        "cross-curricular_extension_activities/coursec/2021": {
+          "name": "குறுக்கு-பாடத்திட்ட விரிவாக்க நடவடிக்கைகள்",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursec/2021": {
+          "name": "பாட சொற்களஞ்சியம்",
+          "url": "https://studio.code.org/s/coursec-2021/vocab"
+        },
+        "implementation_guide/coursec/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursec/2021": {
+          "name": "பாடம் வகை வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide_1/coursec/2021": {
+          "name": "பிழைத்திருத்த வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursec/2021": {
-          "name": "பாடத்திட்ட வழிகாட்டி "
+          "name": "பாடத்திட்ட வழிகாட்டி ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursec/2021": {
+          "name": "2021 பதிவை மாற்று",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursec/2021": {
-          "name": "ஆசிரியர் மன்றம்"
+          "name": "ஆசிரியர் மன்றம்",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "மெய்நிகர் பாட மாற்றங்கள்",
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
+        },
+        "password_power-up_lesson_slides/coursed/2021": {
+          "name": "கடவுச்சொல் பவர்-அப்: பாடம் ஸ்லைடுகள்",
+          "url": "https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit"
+        },
+        "password_power-up_power-up_your_password/coursed/2021": {
+          "name": "கடவுச்சொல் பவர்-அப்: உங்கள் கடவுச்சொல்லை பவர்-அப் செய்யவும்",
+          "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit"
+        },
+        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
+          "name": "கடவுச்சொல் பவர்-அப்: உங்கள் கடவுச்சொல்லை பவர்-அப் செய்யவும்",
+          "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit"
+        },
+        "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "கடவுச்சொல் பவர்-அப்: பாடம் வினாடி வினா",
+          "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
+        },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "கடவுச்சொல் பவர்-அப்: பாடம் வினாடி வினா",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
+        },
+        "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "கடவுச்சொல் பவர்-அப்: இருந்தால் ... பிறகு ... காட்சிகள்",
+          "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
+        },
+        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "கடவுச்சொல் பவர்-அப்: இருந்தால் ... பிறகு ... காட்சிகள்",
+          "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "graph-paper-programming/coursed/2021": {
-          "name": "வரைதாள் செய்நிரல்"
+          "name": "வரைதாள் செய்நிரல்",
+          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "வரைதாள் செய்நிரல்"
+          "name": "வரைதாள் செய்நிரல்",
+          "url": "https://youtu.be/Y_paSrH2ffw"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "வரைதாள் செய்நிரல்"
+          "name": "வரைதாள் செய்நிரல்",
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "வரைதாள் செய்நிரல்"
+          "name": "வரைதாள் செய்நிரல்",
+          "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "வரைதாள் செய்நிரல்"
+          "name": "வரைதாள் செய்நிரல்",
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "வரைதாள் செய்நிரல்"
+          "name": "வரைதாள் செய்நிரல்",
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+        },
+        "pair-programming-vid/coursed/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "relay-programming-assessment-answer-key/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit"
+        },
+        "relay-assessment/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit"
+        },
+        "relay-programming-teacher-debugging/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
+        },
+        "unplugged-video-relay-programming/coursed/2021": {
+          "url": "https://youtu.be/l5MKkXbzOsk"
+        },
+        "teacher-video-relay-programming-2/coursed/2021": {
+          "url": "https://youtu.be/ZULpfAVJOBo"
+        },
+        "csf-relay-programming-activity-packet/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit"
+        },
+        "course-cf-blockly-blocks/coursed/2021": {
+          "name": "இணைக்கப்பட்ட தொகுதிகள் (படிப்புகள் சி-எஃப்)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "பவுன்ஸ் நிகழ்வுகள் - அவை எப்படி நிகழ்கின்றன?",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
+        },
+        "pause_and_think_online/coursed/2021": {
+          "name": "ஆன்லைனில் இடைநிறுத்துங்கள் மற்றும் சிந்தியுங்கள்",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "open-ended_programming_levels/coursed/2021": {
+          "name": "திறந்தநிலை நிரலாக்க நிலைகள்",
+          "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view"
+        },
+        "open-ended_programming_levels_1/coursed/2021": {
+          "name": "திறந்தநிலை நிரலாக்க நிலைகள்",
+          "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view"
+        },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "டான்ஸ் பார்ட்டி திட்ட வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+        },
+        "dance-party-playlist/coursed/2021": {
+          "name": "Spotify பிளேலிஸ்ட் (எல்லா வயதினரும்)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance_party_unplugged/coursed/2021": {
+          "name": "டான்ஸ் பார்ட்டி: இணைக்கப்பட்டது",
+          "url": "https://curriculum.code.org/hoc/unplugged/4/"
+        },
+        "open-ended_programming_levels_2/coursed/2021": {
+          "name": "திறந்தநிலை நிரலாக்க நிலைகள்",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
+        },
+        "feeling-faces-image/coursed/2021": {
+          "name": "உணரும் முகங்கள்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "pause_and_think_online_1/coursed/2021": {
+          "name": "ஆன்லைனில் இடைநிறுத்துங்கள் மற்றும் சிந்தியுங்கள்",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "unplugged-video-conditionals-cards/coursed/2021": {
+          "url": "https://youtu.be/UymN4lTL50s"
+        },
+        "lesson-in-action-conditional-cards/coursed/2021": {
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
+        },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "அட்டைகள் மாதிரி திட்டத்துடன் நிபந்தனைகள்",
+          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
+        },
+        "csf-conditionals-with-cards-assessment/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
+        },
+        "conditionals-with-cards-assessment-video/coursed/2021": {
+          "url": "https://youtu.be/TbUaEnAYPjI"
+        },
+        "assessment-answer-conditionals-cards/coursed/2021": {
+          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
+        },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "CSF  பாடத்திட்டம் D பாடத்திட்ட திட்டமிடல் வழிகாட்டியின் முடிவு",
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
+        },
+        "csta_standards_mapping/coursed/2021": {
+          "name": "CSTA தரநிலை வரைபடம்",
+          "url": "https://studio.code.org/s/coursed-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "பொதுவான கோர் மற்றும் NGSS வழிகாட்டுதல்",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "name": "குறுக்கு-பாடத்திட்ட விரிவாக்க நடவடிக்கைகள்",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursed/2021": {
+          "name": "பாட சொற்களஞ்சியம்",
+          "url": "https://studio.code.org/s/coursed-2021/vocab"
+        },
+        "implementation_guide/coursed/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2021": {
+          "name": "பாடம் வகை வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursed/2021": {
+          "name": "பிழைத்திருத்த வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursed/2021": {
-          "name": "பாடத்திட்ட வழிகாட்டி "
+          "name": "பாடத்திட்ட வழிகாட்டி ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursed/2021": {
+          "name": "2021 பதிவை மாற்று",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "ஆசிரியர் மன்றம்"
+          "name": "ஆசிரியர் மன்றம்",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "மெய்நிகர் பாட மாற்றங்கள்",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+        },
+        "unplugged_maze_blocks/express/2021": {
+          "name": "இணைக்கப்பட்ட பிரமை தொகுதிகள்",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
+        },
+        "pair_programming/express/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blocks_courses_c-f_/express/2021": {
+          "name": "இணைக்கப்பட்ட தொகுதிகள் (படிப்புகள் சி-எஃப்)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "artist_introduction/express/2021": {
+          "name": "கலைஞர் அறிமுகம்",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "turns_angles/express/2021": {
+          "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "turns_angles_1/express/2021": {
+          "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+        },
+        "swimming_fish_teacher_sandbox/express/2021": {
+          "name": "நீச்சல் மீன் ஆசிரியர் சாண்ட்பாக்ஸ்",
+          "url": "https://studio.code.org/levels/18623"
+        },
+        "sprite_lab_documentation/express/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "making_sprites/express/2021": {
+          "name": "உருவங்களை உருவாக்குதல் ",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "sprites_in_action/express/2021": {
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
+        },
+        "pause_and_think_online/express/2021": {
+          "name": "ஆன்லைனில் இடைநிறுத்துங்கள் மற்றும் சிந்தியுங்கள்",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "dance-party-project-guide/express/2021": {
+          "name": "டான்ஸ் பார்ட்டி திட்ட வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
+        },
+        "dance-party-playlist/express/2021": {
+          "name": "Spotify பிளேலிஸ்ட் (எல்லா வயதினரும்)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "open-ended_programming_levels/express/2021": {
+          "name": "திறந்தநிலை நிரலாக்க நிலைகள்",
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
+        },
+        "pair_programming_video/express/2021": {
+          "name": "ஜோடி நிரலாக்க வீடியோ ",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blocks_courses_c-f__1/express/2021": {
+          "name": "இணைக்கப்பட்ட தொகுதிகள் (படிப்புகள் சி-எஃப்)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__2/express/2021": {
+          "name": "இணைக்கப்பட்ட தொகுதிகள் (படிப்புகள் சி-எஃப்)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__3/express/2021": {
+          "name": "இணைக்கப்பட்ட தொகுதிகள் (படிப்புகள் சி-எஃப்)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__4/express/2021": {
+          "name": "இணைக்கப்பட்ட தொகுதிகள் (படிப்புகள் சி-எஃப்)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__5/express/2021": {
+          "name": "இணைக்கப்பட்ட தொகுதிகள் (படிப்புகள் சி-எஃப்)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "text_and_prompts/express/2021": {
+          "name": "உரை மற்றும் அறிவுறுத்தல்கள்",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
-          "name": "மாறிலிகள்"
+          "name": "மாறிலிகள்",
+          "url": "https://youtu.be/DI7DprN4FtE"
+        },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "name": "CSF பாடத்திட்டத்தின் திட்டமிடல் வழிகாட்டியின் விரைவான முடிவு",
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "CS அடிப்படை இறுதி திட்டம்",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+        },
+        "csta_standards_mapping/express/2021": {
+          "name": "CSTA தரநிலை வரைபடம்",
+          "url": "https://studio.code.org/s/express-2021/standards"
+        },
+        "course_vocabulary_1/express/2021": {
+          "name": "பாட சொற்களஞ்சியம்",
+          "url": "https://studio.code.org/s/express-2021/vocab"
         },
         "teacher_forum_1/express/2021": {
-          "name": "ஆசிரியர் மன்றம்"
+          "name": "ஆசிரியர் மன்றம்",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "debugging_guide/express/2021": {
+          "name": "பிழைத்திருத்த வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "pair-programming-vid/pre-express/2021": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "class-section-video/pre-express/2021": {
+          "name": "Code.org இல் வகுப்புப் பிரிவை உருவாக்குவது எப்படி",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
+        "feeling-faces-image/pre-express/2021": {
+          "name": "உணரும் முகங்கள்",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
+        },
+        "20_20_20_rule/pre-express/2021": {
+          "name": "20/20/20 விதி",
+          "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35"
+        },
+        "wiggles_-_go_noodle/pre-express/2021": {
+          "name": "விக்கிள்ஸ் - கோ நூடுல்ஸ்",
+          "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
+        },
+        "common-sense-media-pause-think/pre-express/2021": {
+          "name": "ஆன்லைனில் இடைநிறுத்துங்கள் மற்றும் சிந்தியுங்கள்",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "csta_standards_mapping/pre-express/2021": {
+          "name": "CSTA தரநிலை வரைபடம்",
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
+        },
+        "course_vocabulary/pre-express/2021": {
+          "name": "பாட சொற்களஞ்சியம்",
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
-          "name": "ஆசிரியர் மன்றம்"
+          "name": "ஆசிரியர் மன்றம்",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "debugging_guide/pre-express/2021": {
+          "name": "பிழைத்திருத்த வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "follow_the_algorithm/coursee/2021": {
+          "name": "அல்காரிதம் பின்பற்றவும்",
+          "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
+        },
+        "swimming-fish-teacher-sandbox/coursee/2021": {
+          "name": "நீச்சல் மீன் ஆசிரியர் சாண்ட்பாக்ஸ்",
+          "url": "https://studio.code.org/levels/18623"
+        },
+        "sprite_lab_documentation/coursee/2021": {
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "ஒரு சூப்பர் டிஜிட்டல் குடிமகனாக இருங்கள்: பாட ஸ்லைடுகள்",
+          "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": "ஒரு சூப்பர் டிஜிட்டல் குடிமகனாக இருங்கள்: சூப்பர் டிஜிட்டல் குடிமகன்",
+          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
+        },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "தனிப்பட்ட மற்றும் தனிப்பட்ட தகவல்: பாடம் ஸ்லைடுகள்",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "தனியார் மற்றும் தனிப்பட்ட தகவல்: தனியார் மற்றும் தனிப்பட்ட தகவல்",
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
+        },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "தனிப்பட்ட மற்றும் தனிப்பட்ட தகவல்: டிக்கெட்டிலிருந்து வெளியேறு",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+        },
+        "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "தனிப்பட்ட மற்றும் தனிப்பட்ட தகவல்: பாட வினாடி வினா",
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
+        },
+        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "தனிப்பட்ட மற்றும் தனிப்பட்ட தகவல்: பாட வினாடி வினா",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
+        },
+        "common-sense-media-pause-think/coursee/2021": {
+          "name": "ஆன்லைனில் இடைநிறுத்துங்கள் மற்றும் சிந்தியுங்கள்",
+          "url": "https://youtu.be/X_duZ-1LApg"
+        },
+        "about_me_planning_guide/coursee/2021": {
+          "name": "என்னை பற்றி திட்டமிடல் கையேடு",
+          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
+        },
+        "digital-sharing-lesson/coursee/2021": {
+          "name": "டிஜிட்டல் பகிர்வு பாடம் திட்டம்",
+          "url": "https://docs.google.com/document/d/1YZCCjahQ9_3jYaCeZU4J4-Y_e7_6xP_XMJ7bNw1au1w/edit?usp=sharing"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "name": "டிஜிட்டல் பகிர்வு நெறிமுறைகள் (வீடியோ)",
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
+        },
+        "csf-turns-angles-doc/coursee/2021": {
+          "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
+          "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
+        },
+        "csf-turns-angles-video/coursee/2021": {
+          "name": "திருப்பங்கள் மற்றும் கோணங்கள்",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "unplugged-video-songwriting-functions/coursee/2021": {
+          "name": "செயல்பாடுகளுடன் பாடல் எழுதுதல்",
+          "url": "https://youtu.be/5iDCKkI6y2Y"
+        },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "பிரித்தெடுக்கப்படாத செயல்பாடுகள்: பாடல் எழுதுதல்",
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": "பிரித்தெடுக்கப்படாத செயல்பாடுகள்: பாடல் எழுதுதல்",
+          "url": "https://docs.google.com/document/d/130ah2vRMrvuEj6Y-t1ThAHrHSVvLMnd94Qv9TLgZPMM/edit"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": "பிரித்தெடுக்கப்படாத செயல்பாடுகள்: பாடல் எழுதுதல்",
+          "url": "https://docs.google.com/document/d/1rtEJBrVNR2R09wAETeJTJLm6QENJGDujJ0HJc1mZBSA/edit"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": "பிரித்தெடுக்கப்படாத செயல்பாடுகள்: பாடல் எழுதுதல்",
+          "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
+        },
+        "course-cf-blockly-blocks/coursee/2021": {
+          "name": "இணைக்கப்பட்ட தொகுதிகள் (படிப்புகள் சி-எஃப்)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "designing_for_accessibility_1/coursee/2021": {
+          "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview"
+        },
+        "types_of_disabilities/coursee/2021": {
+          "name": "குறைபாடு வகைகள்",
+          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/"
+        },
+        "end-of-course-project-guide/coursee/2021": {
+          "name": "பாடத்திட்டத்தின் முடிவு திட்ட வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1W3k1Hj7FRDCf1qJsgYxnnjZBCXcGGtVbIK-BSGqd3ko/edit"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "CS அடிப்படை இறுதி திட்டம்",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
+        },
+        "design-process/coursee/2021": {
+          "name": "வடிவமைப்பு செயல்முறை",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
+        },
+        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "உங்கள் மாணவர்களுக்குத் தெரிந்ததைக் காட்ட 72 ஆக்கப்பூர்வமான வழிகள்",
+          "url": "http://minds-in-bloom.com/72-creative-ways-for-students-to-show/"
+        },
+        "csta_standards_mapping/coursee/2021": {
+          "name": "CSTA தரநிலை வரைபடம்",
+          "url": "https://studio.code.org/s/coursee-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "பொதுவான கோர் மற்றும் NGSS வழிகாட்டுதல்",
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
+        },
+        "cross-curricular_extension_activities/coursee/2021": {
+          "name": "குறுக்கு-பாடத்திட்ட விரிவாக்க நடவடிக்கைகள்",
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "course_vocabulary/coursee/2021": {
+          "name": "பாட சொற்களஞ்சியம்",
+          "url": "https://studio.code.org/s/coursee-2021/vocab"
+        },
+        "implementation_guide/coursee/2021": {
+          "name": "செயல்படுத்தும் வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursee/2021": {
+          "name": "பாடம் வகை வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "பிழைத்திருத்த வழிகாட்டி",
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
         },
         "curriculum_guide_1/coursee/2021": {
-          "name": "பாடத்திட்ட வழிகாட்டி "
+          "name": "பாடத்திட்ட வழிகாட்டி ",
+          "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
+        },
+        "2021_change_log/coursee/2021": {
+          "name": "2021 பதிவை மாற்று",
+          "url": "https://docs.google.com/document/d/1jYqOAMM7TPAscoSBSQmUt76F0Uid5t9UqpDnHS19z9I/preview"
         },
         "teacher_forum_1/coursee/2021": {
+          "name": "ஆசிரியர் மன்றம்",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "ஸ்பிரைட் ஆய்வக ஆவணம்",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "மெய்நிகர் பாட மாற்றங்கள்",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: பயிற்சி தரவு & சார்பு",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "teacher_forum/csd/2021": {
           "name": "ஆசிரியர் மன்றம்"
+        },
+        "functions_2/csd/2021": {
+          "name": "செயல்பாடுகள்"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "வீடியோ: இயந்திரவழிக் கற்றல்",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "variables_1/csd/2021": {
+          "name": "மாறிலிகள்"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "செயல்பாடுகள்"
+        },
+        "functions_1/csd/2021": {
+          "name": "செயல்பாடுகள்"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "ஆசிரியர் மன்றம்"
+        },
+        "lists/csd/2021": {
+          "name": "பட்டியல்கள்"
         }
       }
     }

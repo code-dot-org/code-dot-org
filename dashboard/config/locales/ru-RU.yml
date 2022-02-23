@@ -215,9 +215,19 @@ ru:
     additional_information: Чтобы продолжить регистрацию, нам нужна дополнительная
       информация.
     user_type_button: Обновление типа учетной записи
-    user_type_label: Тип Учётной Записи
+    user_type_label: Тип учётной Записи
     user_type_student: Ученик
+    user_type_student_desc: 'Пройдите все наши курсы и виды деятельности, плюс
+
+'
+    user_type_student_ability_1: Сохраните ваш прогресс и проекты
+    user_type_student_ability_2: Присоединитесь к классной секции вашего учителя
     user_type_teacher: Учитель
+    user_type_teacher_desc: Все студенты имеют доступ к, плюс
+    user_type_teacher_ability_1: Создать новые классы
+    user_type_teacher_ability_2: Назначить и отслеживать работы студентов
+    user_type_teacher_ability_3: Запишитесь на профессиональное обучение
+    user_type_teacher_ability_4: Общайтесь на нашем форуме для учителей
     field_is_required: требуется
     accept_terms: Вы должны принять условия перед созданием учетной записи
     error: Произошла ошибка.
@@ -228,6 +238,9 @@ ru:
     email_preference_yes: Да
     email_preference_no: Нет
     email_preference_required: Необходимо указать предпочтение электронной почте.
+    share_teacher_email_reg_partner_question: Не хотели чтобы мы поделились вашей
+      контактной информацией с [Code.org regional partner](%{cdo_regional_partner_desc}),
+      чтобы мы могли уведомлять вас о профессиональной разработке, ресурсах, и мероприятиях?
     share_teacher_email_reg_partner_preference_yes: Да
     share_teacher_email_reg_partner_preference_no: Нет
     share_teacher_email_reg_partner_preference_required: Необходимо указать предпочтение
@@ -330,6 +343,7 @@ ru:
     invite_sent: Приглашение отправлено
     added_teacher: "%{name} добавлен как твой учитель"
     registered: Вы зарегистрированы в %{section_name}.
+    captcha_required: Пожалуйста, заполните КАПЧУ чтобы присоединиться к сессии.
     already_exists: Вы уже присоединились к классу %{section_name}.
     error:
       signed_in: Прежде чем продолжить, выйдите из системы
@@ -344,6 +358,12 @@ ru:
       provider_managed_section: Этот раздел добавлен другим провайдер и не может быть
         добавлен. Пожалуйста, попросите Вашего учителя, что он добавил Вас через %{provider},
         и перезагрузите раздел.
+      restricted_section: Мы не можем присоединить вас к сессии %{section_code} потому
+        что она закрыта. Пожалуйста свяжитесь с вашим учителем для помощи.
+      full_section: Мы не можем пустить вас в сессию %{section_code} потому что в
+        ней уже %{section_capacity}. Пожалуйста свяжитесь с вашим учителем для помощи.
+      not_participant_type: Мы не можем присоединить вас к разделу %{section_code},
+        поскольку вы не соответствуете типу участника для этого раздела.
     mail:
       student_disassociated:
         subject: 'Уведомление от Code.org: %{student_name} больше не является вашим
@@ -465,11 +485,12 @@ ru:
       playlab: Лаборатория игр
       playlab_k1: Лаборатория игр (для дошкольников)
       scratch: Scratch
-      sports: Спорт
+      sports: Виды спорта
       spritelab: Лаборатория Спрайтов
       starwars: Звездные войны
       starwarsblocks: Звездные войны (блоки)
       starwarsblocks_hour: Звездные войны (блоки)
+      loading: ЗАГРУЗКА...
       weblab: Веб-лаборатория
       view_all: Смотреть все проекты...
     popup:
@@ -485,6 +506,7 @@ ru:
       prizes_link: Дополнительная информация
   teacher:
     answer: Ответ
+    dashboard: Панель управления учителя
     for_teachers_only: Только для учителей
     title:
       one: 'Ваш учитель:'
@@ -510,6 +532,7 @@ ru:
       worked_with: Работал с
       update_lock_settings: Обновите настройки блокировки здесь.
       clear_response: Очистить ответ
+    student_code_view_diabled: Код студента не может быть показан для данного действия.
   user:
     email_confirm_needed: 'Адрес электронной почты не был подтвержден:'
     email_confirm_needed_required: 'Адрес вашей электронной почты %{email} не был
@@ -651,6 +674,8 @@ ru:
       что этот учитель зарегистрировал их в другой группе.
     third_party_login: Вы не можете перемещать студентов на секцию которая синхронизированна
       при помоши третьей стороны.
+    not_correct_participant_type: Вы не можете переместить этих пользователей, так
+      как у вас нет разрешений на то, чтобы быть участниками в новом разделе.
   share:
     title: Учиться в студии кода
     description: Каждый может изучать информатику. Создавайте игры, приложения и произведения
@@ -695,6 +720,8 @@ ru:
       <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       GNU LGPL 2.1</a>.
     powered_by_aws: Создано с помощью Amazon Web Services
+    google_copyright: С разрешения &copy; Google Inc. Google Classroom является торговой
+      маркой Google Inc.
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, логотип CODE и Час
       кода&reg; являются товарными знаками Code.org."
     copyright: Авторские права
@@ -712,6 +739,7 @@ ru:
     make_my_own_app: Создать своё собственное приложение
     how_it_works: Как это работает
     try_hour_of_code: Попробуйте Час кода!
+    cookie_notice: Уведомление о cookie
   reference_area:
     title: Нужна помощь?
     subtitle: Смотрите эти видео и подсказки
@@ -850,7 +878,7 @@ ru:
       body: Возвращение Minecraft с новыми возможностями на «Час кода»! Путешествие
         по миру программирования с Minecraft.
     sports:
-      title: Спорт
+      title: Виды спорта
       body: Создай баскетбольную игру или сочетай различные спортивные игры.
     text-compression:
       title: Сжатие текста
@@ -1147,6 +1175,7 @@ ru:
     instructor_feedback: Обратная связь с инструктором
     peer_feedback: Отзывы однокурсников
     outdated: Этот отзыв был добавлен для ранее отправленной версии
+    review_count: Вы должны выполнить %{review_count} отзывов для этого юнита
     peer_review: Рецензирование
   external_links:
     disclaimer: Отказ от ответственности
@@ -1245,12 +1274,18 @@ ru:
       email: Электронная почта
       email_alternate: Дополнительный адрес электронной почты
       gender: Гендерная принадлежность
+      school: Факультет
       school_name: Название школы
       school_city: Город, где находится школа
+      school_city_district: Город школы/Округ
       school_country: Страна твоей школы
+      school_department_region: Отдел образования/Регион
       colombian_school_city: Город, где находится школа
+      colombian_chilean_school_department: Отдел образования/Регион
       colombian_school_municipality: Муниципальные школы
       colombian_chilean_school_name: Название школы
+      chilean_school_commune: Коммуна
+      chilean_school_id: ID Школы
       ages: Какие возраста вы обучали в этом году?
       subjects: Каким предметам вы обучали в этом году?
       resources: Какой из следующих образовательных ресурсов CS вы используете?
@@ -1287,6 +1322,7 @@ ru:
         malaysia: Малайзия
         mexico: Мексика
         thailand: Таиланд
+        uzbekistan: Узбекистан
       ages:
         ages_under_6: "< 6 лет"
         ages_7_8: 7-8 лет
@@ -1399,6 +1435,7 @@ ru:
       error_invalid_user: Неверный идентификатор пользователя. Пожалуйста, попробуйте
         войти в систему ещё раз.
       error_no_code: Пожалуйста, введите ваш логин.
+      confirm_login: Выберите "Подтвердить" чтобы войти через свой Google аккаунт.
   parent_email_banner:
     text: "**Вы родитель или опекун?**Привяжите свою электронную почту к этому аккаунту
       и будьте всегда в курсе прогресса и проектов вашего ребенка!"
@@ -1407,3 +1444,5 @@ ru:
   behaviors:
     this_sprite: этот спрайт
   unit_prefix: Блок %{n}
+  code_org_logo_alt: Code.org Home
+  teacher_feedback: Оценки учителя

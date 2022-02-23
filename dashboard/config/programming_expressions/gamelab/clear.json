@@ -1,5 +1,7 @@
 {
-  "func": "clear",
+  "key": "clear",
+  "name": "clear",
   "category": "Groups",
-  "modeOptionName": "*.clear"
+  "category_key": "groups",
+  "syntax": "clear"
 }

@@ -45,7 +45,51 @@
             "'sound://category_background/ocean_waves.mp3'"
           ],
           [
-            "dolphin clicks",
+            "beach ripple",
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'"
+          ],
+          [
+            "bubble",
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'"
+          ],
+          [
+            "bear",
+            "'sound://category_animals/bear.mp3'"
+          ],
+          [
+            "cat",
+            "'sound://category_animals/cat.mp3'"
+          ],
+          [
+            "cow",
+            "'sound://category_animals/cow.mp3'"
+          ],
+          [
+            "pig",
+            "'sound://category_animals/pig.mp3'"
+          ],
+          [
+            "sheep",
+            "'sound://category_animals/sheep.mp3'"
+          ],
+          [
+            "goat",
+            "'sound://category_animals/goat.mp3'"
+          ],
+          [
+            "chicken",
+            "'sound://category_animals/chicken.mp3'"
+          ],
+          [
+            "rooster",
+            "'sound://category_animals/rooster.mp3'"
+          ],
+          [
+            "elephant",
+            "'sound://category_animals/elephant.mp3'"
+          ],
+          [
+            "dolphin",
             "'sound://category_animals/dolphin.mp3'"
           ],
           [
@@ -53,15 +97,15 @@
             "'sound://category_nature/thunderstorm_1.mp3'"
           ],
           [
-            "bird tweet",
+            "chick",
             "'sound://category_animals/chick.mp3'"
           ],
           [
-            "dog bark",
+            "dog",
             "'sound://category_animals/dog.mp3'"
           ],
           [
-            "tiger roar",
+            "tiger",
             "'sound://category_animals/tiger.mp3'"
           ],
           [
@@ -73,15 +117,15 @@
             "'sound://category_instrumental/harpe_pluck_1.mp3'"
           ],
           [
-            "bright",
+            "tap",
             "'sound://category_tap/vibrant_positive_tap_1.mp3'"
           ],
           [
-            "mystical",
+            "tonal hit",
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'"
           ],
           [
-            "robot voice",
+            "robotic transition",
             "'sound://category_transition/trippy_robotic_transition.mp3'"
           ],
           [
@@ -89,7 +133,7 @@
             "'sound://category_transition/star_dust_particle_10.mp3'"
           ],
           [
-            "space ship",
+            "alien ship",
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'"
           ],
           [
@@ -97,11 +141,11 @@
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'"
           ],
           [
-            "ping",
+            "select",
             "'sound://category_retro/retro_game_ui_select_6.mp3'"
           ],
           [
-            "sci fi",
+            "quirky bass",
             "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'"
           ],
           [

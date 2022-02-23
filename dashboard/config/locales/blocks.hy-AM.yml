@@ -205,6 +205,14 @@ hy:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": ճռճռոց
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": պղպջակ
+            "'sound://category_animals/cat.mp3'": կատու
+            "'sound://category_animals/cow.mp3'": կով
+            "'sound://category_animals/pig.mp3'": խող
+            "'sound://category_animals/sheep.mp3'": ոչխար
+            "'sound://category_animals/chicken.mp3'": ճուտիկ
+            "'sound://category_animals/elephant.mp3'": փիղ
+            "'sound://category_animals/dog.mp3'": շուն
             "'sound://category_digital/jump_7.mp3'": ցատկել
       gamelab_randColor:
         text: կամայական գույն
@@ -343,6 +351,33 @@ hy:
             '"down"': ներքեւ arrow
             '"left"': ձախ arrow
             '"right"': ճիշտ arrow
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': hearts
+            '"rainbow"': ծիածան
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': գիշեր
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': զանգ
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': պղպջակ
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ցատկել
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': ամպամած
+            '"hearts"': hearts
+          PALETTE:
+            '"rainbow"': ծիածան
+            '"winter"': Ձմեռ
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': hearts
       RyanLab_moveForward:
         text: առաջ ընթանալ
       RyanLab_turnLeft:

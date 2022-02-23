@@ -4,7 +4,7 @@ title: Руководство по Часу Кода для районов
 
 {{ signup_button }}
 
-# How to involve your entire school district
+# Как вовлечь администрацию школы?
 
 ### Каждая школа в твоем районе может поучаствовать в самом крупном учебном событии в истории.
 
@@ -14,7 +14,7 @@ title: Руководство по Часу Кода для районов
 
 ### 1. Привлеките местные школы 
 
-Share [this email]({{ promote/sample_emails }}) and [teacher how to guide]({{ urls/how_to_guide }}), or include a [short blurb]({{ promote/stats_url }}) in newsletters/district communications. <br />
+**Привлекайте соседние школы.** Поделитесь [этим информационным бюллетенем](%= resolve_url('/promote/resources#sample-emails') %) и [инструкцией для учителей.](%= resolve_url('/how-to') %)Также можно разослать копию [данного письма](%= resolve_url('/promote/stats') %) на сайты/форумы Вашего района или в местные газеты. <br />
 
 ### 2. Provide a sample logistics plan for schools
 

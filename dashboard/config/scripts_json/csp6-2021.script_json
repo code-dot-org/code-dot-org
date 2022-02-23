@@ -4,22 +4,24 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "student_detail_progress_view": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:25 UTC",
+    "serialized_at": "2022-02-23 18:06:43 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -30,11 +32,23 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 6: Algorithms",
+        "display_name": "Algorithms",
         "description": "### Unit Philosophy and Pedagogy\n\n\n* **A Break from Programming:** This unit is intentionally designed as a short respite from programming. After three units and a major hackathon project, it is a great opportunity to get away from screens for a while before the final programming push that leads to the Create PT.\n\n* **Just Enough Math:** This unit includes some mathematical concepts which enrich students' understanding of how algorithms are analyzed, which might at first be a little intimidating to some students (and teachers!). The mathematical topics included in this unit are only those necessary to provide a solid foundation in algorithmic analysis to the depth described in the CS Principles framework. If you are a teacher with a strong mathematical background, check carefully that you do not needlessly add complexity to a unit that might already prove challenging for some students. All teachers should keep an eye out for the ways visuals, hands-on examples, and patterns in presentation style are used to ensure a consistent presentation of these mathematical topics.\n\n\n### Major Assessment and Projects\n\nThis unit does not conclude with a major project. Students will complete an end-of-unit assessment that is aligned with CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n* AAP-2: The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.\n* AAP-4: There exist problems that computers cannot solve, and even when a computer can solve a problem, it may not be able to do so in a reasonable amount of time.\n* CSN-2: Parallel and distributed computing leverage multiple computers to more quickly solve complex problems or process large data sets.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 3.9 Developing Algorithms\n* 3.11 Binary Search\n* 3.17 Algorithmic Efficiency\n* 3.18 Undecidable Problems\n* 4.3 Parallel and Distributed Computing"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp6-2021"
       }
     }
@@ -163,12 +177,40 @@
         "lesson_group.key": "csp_unit6_2020",
         "script.name": "csp6-2021"
       }
+    },
+    {
+      "key": "lesson-1",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp6-2021"
+      }
     }
   ],
   "lesson_activities": [
     {
-      "key": "b4f047df-4825-4768-9530-99bac0151e6e",
+      "key": "370009ac-d610-4fe8-8def-f2797f2ec13b",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "370009ac-d610-4fe8-8def-f2797f2ec13b",
+        "lesson.key": "Algorithms Solve Problems",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "b4f047df-4825-4768-9530-99bac0151e6e",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm  Up"
@@ -182,7 +224,7 @@
     },
     {
       "key": "23f2b699-2e3c-4388-b8be-8daa5b33461e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -196,7 +238,7 @@
     },
     {
       "key": "7dd23833-8a55-4793-9c9e-fe62ae5bdc18",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -210,7 +252,7 @@
     },
     {
       "key": "8b328d0f-5443-4037-9d6a-1d772a87fa48",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -221,8 +263,21 @@
       }
     },
     {
-      "key": "d064627e-8910-4445-96ec-978318a5f0f6",
+      "key": "6b608008-3e30-43cd-bcad-7b2339e6ff63",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b608008-3e30-43cd-bcad-7b2339e6ff63",
+        "lesson.key": "Algorithm Efficiency",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "d064627e-8910-4445-96ec-978318a5f0f6",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm  Up"
@@ -236,7 +291,7 @@
     },
     {
       "key": "be11c3cd-6296-4e6b-b193-7d7e372c50c1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -250,7 +305,7 @@
     },
     {
       "key": "80d1ad27-83b8-4f8c-b308-aaae5695df1c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -264,7 +319,7 @@
     },
     {
       "key": "dad81c91-ad02-4d43-9a5c-62a1fdcfd0aa",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -275,8 +330,21 @@
       }
     },
     {
-      "key": "0cebaff7-4730-4254-ae11-7cc1919be24a",
+      "key": "aa5775e9-4ee4-4126-92f1-73e7edca6fa5",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa5775e9-4ee4-4126-92f1-73e7edca6fa5",
+        "lesson.key": "Unreasonable Time",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "0cebaff7-4730-4254-ae11-7cc1919be24a",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm  Up"
@@ -290,7 +358,7 @@
     },
     {
       "key": "a8998c86-0e02-449e-b105-1317c771b8f5",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -304,7 +372,7 @@
     },
     {
       "key": "7903d194-5b9f-4d0c-ab60-c05c8121b17a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -318,7 +386,7 @@
     },
     {
       "key": "a88a648a-28b4-4def-8065-2cf5c5aa0cb2",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -329,8 +397,21 @@
       }
     },
     {
-      "key": "26e73f35-8ea9-4750-ac47-92b44b825415",
+      "key": "49d42cb2-9bf8-43a9-afcf-302f53c87b35",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "49d42cb2-9bf8-43a9-afcf-302f53c87b35",
+        "lesson.key": "The Limits of Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "26e73f35-8ea9-4750-ac47-92b44b825415",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm  Up"
@@ -344,7 +425,7 @@
     },
     {
       "key": "ab969ef1-3c6d-491e-8b9b-d281ea82feb4",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -358,7 +439,7 @@
     },
     {
       "key": "255171a6-1638-4105-b586-3fe04b18bba4",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -372,7 +453,7 @@
     },
     {
       "key": "211e7b5a-5607-494e-941d-d078fbd4b60f",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -383,8 +464,21 @@
       }
     },
     {
-      "key": "7e883a55-82bf-4132-a037-dd29927314d1",
+      "key": "0ac95d16-ff6d-478b-a42b-2bfcc9f40710",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ac95d16-ff6d-478b-a42b-2bfcc9f40710",
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "7e883a55-82bf-4132-a037-dd29927314d1",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm  Up"
@@ -398,7 +492,7 @@
     },
     {
       "key": "983970a1-4d49-4dc6-96a2-706be3ea2b5e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -412,7 +506,7 @@
     },
     {
       "key": "b751df7f-1666-445d-b1d0-f363baad1754",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -426,7 +520,7 @@
     },
     {
       "key": "32e5b327-d8d9-4335-965f-c929e23a8b66",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -437,8 +531,21 @@
       }
     },
     {
-      "key": "2c9089d7-422a-4043-8347-25aed301d98b",
+      "key": "cd506237-a58d-46df-9789-bf9ef7591379",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd506237-a58d-46df-9789-bf9ef7591379",
+        "lesson.key": "Lesson 6: Assessment Day",
+        "lesson_group.key": "csp_unit6_2020",
+        "script.name": "csp6-2021"
+      }
+    },
+    {
+      "key": "2c9089d7-422a-4043-8347-25aed301d98b",
+      "position": 2,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -452,7 +559,7 @@
     },
     {
       "key": "be99363e-ee2e-40a2-acf3-f12faec40b15",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -466,7 +573,7 @@
     },
     {
       "key": "dceaaa4f-bef1-4a1d-a534-c4d6ce0c35d1",
-      "position": 3,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -475,9 +582,32 @@
         "lesson_group.key": "csp_unit6_2020",
         "script.name": "csp6-2021"
       }
+    },
+    {
+      "key": "ac894ed7-56d7-4f99-82b8-bd6acff2ed45",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac894ed7-56d7-4f99-82b8-bd6acff2ed45",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp6-2021"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "4b14c8b9-6426-4fa8-8e40-4e4f9512fcef",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1NOrv8vcuPS_vyQfwgFuX7CO8B7-YoZouad-tOmPHsEA/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "4b14c8b9-6426-4fa8-8e40-4e4f9512fcef",
+        "lesson_activity.key": "370009ac-d610-4fe8-8def-f2797f2ec13b"
+      }
+    },
     {
       "key": "88a741b7-9186-48b2-abcc-d316064077a4",
       "position": 1,
@@ -670,6 +800,17 @@
       "seeding_key": {
         "activity_section.key": "df4bd8b8-dcc9-466f-aac5-338f4cb65dfe",
         "lesson_activity.key": "8b328d0f-5443-4037-9d6a-1d772a87fa48"
+      }
+    },
+    {
+      "key": "c548b844-b786-4f79-8a60-7708077c245c",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1s80csrpfYOQvUxhewgprBdVah2IGB82INCRDsrIg-hE/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "c548b844-b786-4f79-8a60-7708077c245c",
+        "lesson_activity.key": "6b608008-3e30-43cd-bcad-7b2339e6ff63"
       }
     },
     {
@@ -994,6 +1135,17 @@
       }
     },
     {
+      "key": "324c1ce8-1e09-4321-b482-0653082a9ab1",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ZLSCtv8JxO541rupzxYdZxRQ_kFVa9u4fjF00CxuVxI/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "324c1ce8-1e09-4321-b482-0653082a9ab1",
+        "lesson_activity.key": "aa5775e9-4ee4-4126-92f1-73e7edca6fa5"
+      }
+    },
+    {
       "key": "a1dee69e-0914-4035-97ad-7aab30413277",
       "position": 1,
       "properties": {
@@ -1219,6 +1371,17 @@
       }
     },
     {
+      "key": "0282d47f-8dd3-40af-b0ae-f3ce93317625",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/18GA3yy-ErT85wnWSl1bwhL-1Xh7N8FzTcFNR7Oa0W8k/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "0282d47f-8dd3-40af-b0ae-f3ce93317625",
+        "lesson_activity.key": "49d42cb2-9bf8-43a9-afcf-302f53c87b35"
+      }
+    },
+    {
       "key": "6a6ede20-50c7-4950-8b16-87e10c0bb4a2",
       "position": 1,
       "properties": {
@@ -1440,6 +1603,17 @@
       "seeding_key": {
         "activity_section.key": "8facf313-a2a2-4fe3-82a9-506ba61f7e24",
         "lesson_activity.key": "211e7b5a-5607-494e-941d-d078fbd4b60f"
+      }
+    },
+    {
+      "key": "d85b2554-4973-447c-b4fa-afa4f4b64c50",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1bICfUoNnKzTlx1yTm9ceGpPKJkXMKOe28KeMA6-HHVo/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "d85b2554-4973-447c-b4fa-afa4f4b64c50",
+        "lesson_activity.key": "0ac95d16-ff6d-478b-a42b-2bfcc9f40710"
       }
     },
     {
@@ -1688,6 +1862,17 @@
       }
     },
     {
+      "key": "1ebbe689-591a-4f44-a6a4-40b2632a0994",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1lM-NmSSIqwOmUhrd9DgwfUFLY_z7eMkdgWFkE56koaA/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "1ebbe689-591a-4f44-a6a4-40b2632a0994",
+        "lesson_activity.key": "cd506237-a58d-46df-9789-bf9ef7591379"
+      }
+    },
+    {
       "key": "45fda808-fbed-42fc-a5d5-bcb365642709",
       "position": 1,
       "properties": {
@@ -1724,6 +1909,23 @@
       "seeding_key": {
         "activity_section.key": "b165ef75-8c53-401f-8a22-27d1c0b7debc",
         "lesson_activity.key": "dceaaa4f-bef1-4a1d-a534-c4d6ce0c35d1"
+      }
+    },
+    {
+      "key": "0cfb9742-a565-4468-a5ff-e306f5635a52",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0cfb9742-a565-4468-a5ff-e306f5635a52",
+        "lesson_activity.key": "ac894ed7-56d7-4f99-82b8-bd6acff2ed45"
       }
     }
   ],
@@ -2052,6 +2254,31 @@
       "level_keys": [
         "CSP Unit 6 AP-Style Assessment _2021"
       ]
+    },
+    {
+      "chapter": 14,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp6-2021",
+        "activity_section.key": "0cfb9742-a565-4468-a5ff-e306f5635a52"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2210,6 +2437,18 @@
         "script.name": "csp6-2021",
         "activity_section.key": "b165ef75-8c53-401f-8a22-27d1c0b7debc"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp6-2021",
+        "activity_section.key": "0cfb9742-a565-4468-a5ff-e306f5635a52"
+      }
     }
   ],
   "resources": [
@@ -2240,8 +2479,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -2252,8 +2491,8 @@
       "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
       "key": "csp_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -2264,8 +2503,8 @@
       "url": "https://docs.google.com/presentation/d/1gL5WpBPqyrQqATGO8IIP5DsI3T0xLfCZE-jG5mBxS1o/edit?usp=sharing",
       "key": "csp_unit_6_-_algorithms",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_6_-_algorithms"
@@ -2276,8 +2515,8 @@
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
@@ -2288,8 +2527,8 @@
       "url": "https://youtu.be/VyHbd6sx5Po",
       "key": "the_halting_problem_the_unsolvable_problem",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the_halting_problem_the_unsolvable_problem"
@@ -2300,9 +2539,9 @@
       "url": "https://docs.google.com/document/d/13VSFGtFwbJT73aYr4VnNJrsbnbyZBTDiSImVkqJGc5w/edit?usp=sharing",
       "key": "unreasonable-time-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "unreasonable-time-activity-guide"
@@ -2313,8 +2552,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -2337,6 +2576,12 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: Assessment Day",
+        "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
         "resource.key": "csp_unit_6_-_algorithms"
       }
     },
@@ -2417,16 +2662,6 @@
   ],
   "objectives": [
     {
-      "key": "e46f9a38-a79b-4a32-88ad-ad65132850e5",
-      "properties": {
-        "description": "Explain the formal definitions of a problem, an algorithm, sequencing, selection, and iteration."
-      },
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "objective.key": "e46f9a38-a79b-4a32-88ad-ad65132850e5"
-      }
-    },
-    {
       "key": "18da1a07-ba79-4b00-94b4-0d13c68dc1b7",
       "properties": {
         "description": "Explain that some problems may look different but be similar or look similar but be different."
@@ -2434,36 +2669,6 @@
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
         "objective.key": "18da1a07-ba79-4b00-94b4-0d13c68dc1b7"
-      }
-    },
-    {
-      "key": "f55db6b5-e5bd-4bdb-b63f-499bcf9af1c7",
-      "properties": {
-        "description": "Explain that some algorithms may look or operate differently but still solve the same problem."
-      },
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "objective.key": "f55db6b5-e5bd-4bdb-b63f-499bcf9af1c7"
-      }
-    },
-    {
-      "key": "e79bea78-5b06-4648-bd0c-bc0d2a3eb71d",
-      "properties": {
-        "description": "Use Linear Search to determine if a number is in a list"
-      },
-      "seeding_key": {
-        "lesson.key": "Algorithm Efficiency",
-        "objective.key": "e79bea78-5b06-4648-bd0c-bc0d2a3eb71d"
-      }
-    },
-    {
-      "key": "b8f2d496-5779-4895-8d40-ed1eb3e392de",
-      "properties": {
-        "description": "Use Binary Search to determine if a number is in a list"
-      },
-      "seeding_key": {
-        "lesson.key": "Algorithm Efficiency",
-        "objective.key": "b8f2d496-5779-4895-8d40-ed1eb3e392de"
       }
     },
     {
@@ -2477,33 +2682,13 @@
       }
     },
     {
-      "key": "956905f6-487b-45b3-a1a2-bef4c1df1d26",
+      "key": "330796cd-ace1-42dc-9608-f68f25fa852f",
       "properties": {
-        "description": "Explain the difference between problems that run in a reasonable time and those that do not"
+        "description": "Calculate the speedup of a parallel solution to a problem"
       },
       "seeding_key": {
-        "lesson.key": "Unreasonable Time",
-        "objective.key": "956905f6-487b-45b3-a1a2-bef4c1df1d26"
-      }
-    },
-    {
-      "key": "5c4e571e-d6bb-4deb-a331-6558750b7561",
-      "properties": {
-        "description": "Explain how both formal mathematical reasoning and informal measurement can be used to determine an algorithms efficiency"
-      },
-      "seeding_key": {
-        "lesson.key": "Unreasonable Time",
-        "objective.key": "5c4e571e-d6bb-4deb-a331-6558750b7561"
-      }
-    },
-    {
-      "key": "536a7303-8822-4131-a076-6a62d1ed2a4d",
-      "properties": {
-        "description": "Determine if an algorithm runs in unreasonable time."
-      },
-      "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
-        "objective.key": "536a7303-8822-4131-a076-6a62d1ed2a4d"
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "objective.key": "330796cd-ace1-42dc-9608-f68f25fa852f"
       }
     },
     {
@@ -2517,13 +2702,13 @@
       }
     },
     {
-      "key": "67627eba-d070-423a-bd7b-774fad35a986",
+      "key": "536a7303-8822-4131-a076-6a62d1ed2a4d",
       "properties": {
-        "description": "Distinguish between decision problems and optimization problems. "
+        "description": "Determine if an algorithm runs in unreasonable time."
       },
       "seeding_key": {
         "lesson.key": "The Limits of Algorithms",
-        "objective.key": "67627eba-d070-423a-bd7b-774fad35a986"
+        "objective.key": "536a7303-8822-4131-a076-6a62d1ed2a4d"
       }
     },
     {
@@ -2537,6 +2722,16 @@
       }
     },
     {
+      "key": "5c4e571e-d6bb-4deb-a331-6558750b7561",
+      "properties": {
+        "description": "Explain how both formal mathematical reasoning and informal measurement can be used to determine an algorithms efficiency"
+      },
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "objective.key": "5c4e571e-d6bb-4deb-a331-6558750b7561"
+      }
+    },
+    {
       "key": "5d5a9cd3-2c10-4f3d-a8c5-c04ed262c634",
       "properties": {
         "description": "Explain the difference between sequential, parallel, and distributed computing."
@@ -2547,13 +2742,63 @@
       }
     },
     {
-      "key": "330796cd-ace1-42dc-9608-f68f25fa852f",
+      "key": "67627eba-d070-423a-bd7b-774fad35a986",
       "properties": {
-        "description": "Calculate the speedup of a parallel solution to a problem"
+        "description": "Distinguish between decision problems and optimization problems. "
       },
       "seeding_key": {
-        "lesson.key": "Parallel and Distributed Algorithms",
-        "objective.key": "330796cd-ace1-42dc-9608-f68f25fa852f"
+        "lesson.key": "The Limits of Algorithms",
+        "objective.key": "67627eba-d070-423a-bd7b-774fad35a986"
+      }
+    },
+    {
+      "key": "956905f6-487b-45b3-a1a2-bef4c1df1d26",
+      "properties": {
+        "description": "Explain the difference between problems that run in a reasonable time and those that do not"
+      },
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "objective.key": "956905f6-487b-45b3-a1a2-bef4c1df1d26"
+      }
+    },
+    {
+      "key": "b8f2d496-5779-4895-8d40-ed1eb3e392de",
+      "properties": {
+        "description": "Use Binary Search to determine if a number is in a list"
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "objective.key": "b8f2d496-5779-4895-8d40-ed1eb3e392de"
+      }
+    },
+    {
+      "key": "e46f9a38-a79b-4a32-88ad-ad65132850e5",
+      "properties": {
+        "description": "Explain the formal definitions of a problem, an algorithm, sequencing, selection, and iteration."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "objective.key": "e46f9a38-a79b-4a32-88ad-ad65132850e5"
+      }
+    },
+    {
+      "key": "e79bea78-5b06-4648-bd0c-bc0d2a3eb71d",
+      "properties": {
+        "description": "Use Linear Search to determine if a number is in a list"
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "objective.key": "e79bea78-5b06-4648-bd0c-bc0d2a3eb71d"
+      }
+    },
+    {
+      "key": "f55db6b5-e5bd-4bdb-b63f-499bcf9af1c7",
+      "properties": {
+        "description": "Explain that some algorithms may look or operate differently but still solve the same problem."
+      },
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "objective.key": "f55db6b5-e5bd-4bdb-b63f-499bcf9af1c7"
       }
     },
     {
@@ -2568,90 +2813,6 @@
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.G.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.J.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithm Efficiency",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithm Efficiency",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-11"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Algorithm Efficiency",
@@ -2724,79 +2885,86 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Unreasonable Time",
+        "lesson.key": "Algorithm Efficiency",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Unreasonable Time",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.A.4"
+        "standard.shortcode": "AAP-2.A.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Unreasonable Time",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.A.7"
+        "standard.shortcode": "AAP-2.A.2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.A.2"
+        "standard.shortcode": "AAP-2.A.3"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.A.8"
+        "standard.shortcode": "AAP-2.A.4"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.A.9"
+        "standard.shortcode": "AAP-2.B.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.B.1"
+        "standard.shortcode": "AAP-2.G.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.B.2"
+        "standard.shortcode": "AAP-2.J.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Limits of Algorithms",
+        "lesson.key": "Algorithms Solve Problems",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-4.B.3"
+        "standard.shortcode": "AAP-2.L.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Parallel and Distributed Algorithms",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-11"
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-2.L.5"
       }
     },
     {
@@ -2881,6 +3049,83 @@
         "lesson.key": "Parallel and Distributed Algorithms",
         "framework.shortcode": "csp2021",
         "standard.shortcode": "CSN-2.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.9"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "AAP-4.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
       }
     }
   ],

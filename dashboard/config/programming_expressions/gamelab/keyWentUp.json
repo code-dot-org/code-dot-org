@@ -1,21 +1,12 @@
 {
-  "func": "keyWentUp",
-  "paletteParams": [
-    "code"
-  ],
-  "params": [
-    "\"up\""
-  ],
-  "dropdown": {
-    "0": [
-      "\"up\"",
-      "\"down\"",
-      "\"left\"",
-      "\"right\"",
-      "\"space\"",
-      "\"a\""
-    ]
-  },
+  "key": "keyWentUp",
+  "name": "keyWentUp",
   "category": "World",
-  "type": "value"
+  "category_key": "world",
+  "palette_params": [
+    {
+      "name": "code"
+    }
+  ],
+  "syntax": "keyWentUp(code)"
 }

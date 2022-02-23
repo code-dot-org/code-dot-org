@@ -1,12 +1,15 @@
 {
-  "func": "textInput",
+  "key": "textInput",
+  "name": "textInput",
   "category": "UI controls",
-  "paletteParams": [
-    "id",
-    "text"
+  "category_key": "ui_controls",
+  "palette_params": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "text"
+    }
   ],
-  "params": [
-    "\"id\"",
-    "\"text\""
-  ]
+  "syntax": "textInput(id, text)"
 }

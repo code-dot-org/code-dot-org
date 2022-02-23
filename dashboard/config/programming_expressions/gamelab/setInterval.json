@@ -1,16 +1,15 @@
 {
-  "func": "setInterval",
+  "key": "setInterval",
+  "name": "setInterval",
   "category": "Control",
-  "type": "either",
-  "paletteParams": [
-    "callback",
-    "ms"
+  "category_key": "control",
+  "palette_params": [
+    {
+      "name": "callback"
+    },
+    {
+      "name": "ms"
+    }
   ],
-  "params": [
-    "function() {\n  \n}",
-    "1000"
-  ],
-  "allowFunctionDrop": {
-    "0": true
-  }
+  "syntax": "setInterval(callback, ms)"
 }

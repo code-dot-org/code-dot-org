@@ -17,7 +17,10 @@ describe('UploadImageDialog', () => {
     );
 
     const fetchStub = sinon.stub(window, 'fetch').resolves();
-    wrapper.instance().handleChange({target: {files: ['filedata']}});
+    wrapper
+      .find('input')
+      .first()
+      .simulate('change', {target: {files: ['filedata']}});
 
     expect(fetchStub.callCount).to.equal(1);
 
@@ -38,14 +41,84 @@ describe('UploadImageDialog', () => {
         uploadImage={uploadImage}
       />
     );
-    wrapper.setState({imgUrl: 'http://example.com/img.png'});
+    const returnData = {newAssetUrl: 'http://example.com/img.png'};
+    const fetchStub = sinon
+      .stub(window, 'fetch')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
+
+    wrapper
+      .find('input')
+      .first()
+      .simulate('change', {target: {files: ['filedata']}});
+    expect(
+      wrapper
+        .find('input')
+        .first()
+        .props().disabled
+    ).to.be.true;
+    expect(
+      wrapper
+        .find('Button')
+        .last()
+        .props().disabled
+    ).to.be.true;
+    expect(wrapper.find('FontAwesome').length).to.equal(1);
 
     expect(handleClose.callCount).to.equal(0);
     expect(uploadImage.callCount).to.equal(0);
-    wrapper.instance().handleCloseAndSave();
 
-    expect(handleClose.callCount).to.equal(1);
-    expect(uploadImage.callCount).to.equal(1);
-    expect(uploadImage.calledWith('http://example.com/img.png')).to.equal(true);
+    return new Promise(resolve => setImmediate(resolve)).then(() => {
+      wrapper
+        .find('Button')
+        .last()
+        .simulate('click');
+      expect(handleClose.callCount).to.equal(1);
+      expect(uploadImage.callCount).to.equal(1);
+      expect(uploadImage.calledWith('http://example.com/img.png')).to.be.true;
+      fetchStub.restore();
+    });
+  });
+
+  it('doesnt try to upload undefined image', () => {
+    const handleClose = sinon.fake();
+    const uploadImage = sinon.fake();
+    const wrapper = shallow(
+      <UploadImageDialog
+        isOpen={true}
+        handleClose={handleClose}
+        uploadImage={uploadImage}
+      />
+    );
+    const returnData = {newAssetUrl: 'http://example.com/img.png'};
+    const fetchStub = sinon
+      .stub(window, 'fetch')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
+
+    wrapper
+      .find('input')
+      .first()
+      .simulate('change', {target: {files: ['filedata']}});
+    expect(
+      wrapper
+        .find('input')
+        .first()
+        .props().disabled
+    ).to.be.true;
+    expect(
+      wrapper
+        .find('Button')
+        .last()
+        .props().disabled
+    ).to.be.true;
+    expect(wrapper.find('FontAwesome').length).to.equal(1);
+
+    return new Promise(resolve => setImmediate(resolve)).then(() => {
+      wrapper
+        .find('input')
+        .first()
+        .simulate('change', {target: {files: []}});
+      expect(fetchStub.callCount).equals(1);
+      fetchStub.restore();
+    });
   });
 });

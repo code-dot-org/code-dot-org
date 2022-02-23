@@ -3,16 +3,24 @@ it:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" con l''Ape'
+      AI Machine Learning - Video: 'Apprendimento automatico IA: video'
+      'AI: Impact on Society - Video': 'IA: impatto sulla società - Video'
+      'AI: Training Data & Bias - Video': 'IA: dati di training e bias - video'
       Accelerometer Events: Eventi Accelerometro
       Adding Images: Aggiungere Immagini
       Adding Screens: Aggiungere Schermate
       Alien Defender: Difensore Alieno
       Animate Your Scene: Animare la Tua Scena
+      App Lab Intro - Video: 'App di Introduzione al Laboratorio: video'
+      'App Project: Bugs and Features': 'App Project: Malfunzionamenti e Funzionalità'
+      'App Project: Linking Screens': 'App Project: Linking Screens'
+      'App Project: Screen Import': 'App Project: Importazione videata'
       Arrays: Insiemi
       Artist Intro with JR Hildebrand: Introduzione Artistica con JR Hildebrand
       Artist Intro with JR Hildebrande: Introduzione artistica con JR Hildebrande
       Artist Project: Progetto Artisti
       'Artist: Variables': 'Artista: Variabili'
+      Assessment: Valutazione
       Attribution: Attribuzione
       Back and Forth: Avanti e indietro!
       Basic Conditionals: Condizionali di Base
@@ -60,6 +68,7 @@ it:
       Events: Eventi
       Events and Linking Screens: Eventi e Collegare Schermate
       Events and Properties: Eventi e Proprietà
+      Example: Esempio
       Example projects: Progetti d'esempio
       Expanding Personal Website: Espandere il Sito Web Personale
       Expanding Your Website: Espandere il Tuo Sito Web
@@ -67,6 +76,7 @@ it:
       Exploration: Esplorazione
       Explore HTML: Esplora HTML
       Exploring more CSS: Esplorare altri CSS
+      Extra: Supplementare
       Finish a Screen: Concludi una Schermata
       Finish the Prototype: Finisci un Prototipo
       Finishing Functions: Finire le Funzioni
@@ -84,6 +94,7 @@ it:
       Get In Formation: Tutti in formazione!
       HTML Tags: Tag HTML
       Headings in HTML: Intestazioni in HTML
+      Hello World: Ciao Mondo
       How to Create a Simple Function: Come Creare una Semplice Funzione
       How to Make a Sprite: Come creare un personaggio
       Ice Age Loops: Cicli dell'Era Glaciale
@@ -103,6 +114,7 @@ it:
       Learning from Simulations: Imparare dalle simulazioni
       Lesson Extras: Esercizi Supplementari
       Lesson Overview: Panoramica della Lezione
+      Levels: Esercizi
       Light Show: Spettacolo di Luci
       Lists: Liste
       Loops with the Artist: Cicli con l'Artista
@@ -114,6 +126,7 @@ it:
       'Maze Intro: Programming with Blocks': 'Introduzione al Labirinto: Programmare
         con i Blocchi'
       Measures: Battute
+      'Minecraft: Hero''s Journey': 'Minecraft: Il viaggio dell''eroe'
       'Mini-Project: Alien Dance Moves': 'Mini Progetto: Mosse di Ballo dell''Alieno'
       'Mini-Project: Alien Dance Party': 'Mini progetto: Festa da Ballo dell''Alieno'
       'Mini-Project: Outbreak Simulator': Mini progetto - Simulatore di pandemia
@@ -201,6 +214,7 @@ it:
       Styling Text: Stilizzare il Testo
       Styling with Classes: Stilizzare con le Classi
       Styling your Website: Stilizzare il tuo Sito Web
+      Teach AI a New Word: 'Apprendimento automatico IA: video'
       Text Compression: Compressione del testo
       The Animation Tab: The Animation Tab
       The Artist in Code Studio: L'Artista in Code Studio
@@ -231,6 +245,7 @@ it:
       'Video: Intro to Web Lab - Part 1': 'Video: Introduzione a Web Lab - Parte 1'
       'Video: Intro to Web Lab - Part 2': 'Video: Introduzione a Web Lab - Parte 2'
       'Video: Introduction to Arrays': 'Video: introduzione agli Insiemi'
+      'Video: Outbreak Simulator: Introduction': 'Video: Outbreak Simulator: Introduzione'
       'Video: Problem Solving Process': 'Video: Processo di Risoluzione di Problemi'
       'Video: What Makes a Computer, a Computer?': 'Video: Che cosa rende un Computer,
         un Computer?'

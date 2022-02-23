@@ -1,22 +1,21 @@
 <Javalab>
   <config><![CDATA[{
-  "properties": {
-    "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "CSA U5L5 Template",
-    "long_instructions": "check dessert quantities",
-    "mini_rubric": "false",
-    "submittable": "false",
-    "hide_share_and_remix": "false",
-    "csa_view_mode": "console"
-  },
   "game_id": 68,
-  "published": true,
   "created_at": "2021-09-22T18:03:11.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-22 18:03:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "CSA U5L5 Template",
+    "long_instructions": "In `Owner.java`, write the method `findQuantities()` that counts and returns the number of food trucks that have quantities of desserts greater than or equal to the specified amount.\r\n\r\nIn `MyFoodTruck.java`, call the method and print the result to inform the owner how many food trucks have enough inventory. For example, `\"There are 2 food trucks that have enough inventory.\"`.\r\n\r\n```\r\npublic int findQuantities(int quantity) {\r\n\r\n   // TO DO: Count and return the number of food\r\n   // trucks that have quantities of desserts greater\r\n   // than or equal to quantity.\r\n\r\n}",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tNbdileYNenivhpx3ry\nrDQTWEJZz3IS7VND0m4Gm/IQnos5uZN8mXS1q5eZ10dHnNs=\n",
+    "contained_level_names": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-09-22 18:03:13 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-15 14:14:17 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-15 14:41:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-15 14:43:55 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

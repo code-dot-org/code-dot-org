@@ -226,6 +226,10 @@ cs:
     email_preference_yes: Ano
     email_preference_no: Ne
     email_preference_required: Musíte vyplnit nastavení e-mailové komunikace.
+    share_teacher_email_reg_partner_question: Chtěli byste, abychom sdíleli vaše kontaktní
+      údaje s partnerem [Code.org regional partner](%{cdo_regional_partner_desc})
+      ve vašem státě, aby vás mohl informovat o místních příležitostech, akcích a zdrojích
+      profesního rozvoje?
     share_teacher_email_reg_partner_preference_yes: Ano
     share_teacher_email_reg_partner_preference_no: Ne
     share_teacher_email_reg_partner_preference_required: Musíte vyplnit nastavení
@@ -387,10 +391,17 @@ cs:
       sections: Sekce
       help_support: Pomoc a podpora
       report_bug: Nahlásit chybu
+      report_abuse: Nahlásit zneužití
       teacher_community: Komunita učitelů
       professional_learning: Odborné vzdělání
       documentation: Dokumentace
       tutorials: Návody
+      app_lab_documentation: Dokumentace v aplikačním
+      app_lab_tutorials: Výukové programy aplikace Lab
+      game_lab_documentation: Dokumentace herní laboratoře
+      game_lab_tutorials: Výukové programy pro herní laboratoř
+      sprite_lab_documentation: Dokumentace laboratoře Sprite
+      sprite_lab_tutorials: Výukové programy Sprite Lab
       web_lab_documentation: Dokumentace k Web Lab
       educate_overview: Pedagogův přehled
       educate_elementary: Základní škola
@@ -417,6 +428,7 @@ cs:
       help_us: Pomozte nám
       teach: Učit
       about: O nás
+      legal: Ochrana osobních údajů a právní
       legal_privacy: Zásady ochrany osobních údajů
       legal_tos: Podmínky
     user:
@@ -441,7 +453,9 @@ cs:
       artist_k1: Umělec (předškolák)
       basketball: Basketbal
       bounce: Bounce
+      calc: Calc
       dance: Taneční večírek
+      eval: Eval
       flappy: Flappy
       frozen: Frozen
       gamelab: Game Lab
@@ -457,11 +471,15 @@ cs:
       minecraft_hero: Minecraft Hero
       playlab: Play Lab
       playlab_k1: Play Lab (předškolák)
+      poetry: Poezie
+      poetry_hoc: Básnické umění
       scratch: Scratch
       sports: Sporty
+      spritelab: Laboratoř Sprite
       starwars: Hvězdné války
       starwarsblocks: Hvězdné války (kostky)
       starwarsblocks_hour: Hvězdné války (kostky)
+      loading: Načítání...
       weblab: Web Lab
       view_all: Ukázat všechny projekty...
     popup:
@@ -477,6 +495,7 @@ cs:
       prizes_link: Více informací
   teacher:
     answer: Odpověď
+    dashboard: Katedra učitele
     for_teachers_only: Pouze pro učitele
     title:
       one: 'Tvůj učitel:'
@@ -624,6 +643,8 @@ cs:
     no_primary_course: Zkuste Code Studio kurz
     choose_next_course: Zkuste kurz Code Studio výběrem níže
     print_certificate: Vytisknout certifikát
+  certificate_sponsor_message: "%{sponsor_name} udělal štědrý dar sponzorovat vaše
+    učení."
   move_students:
     new_section_dne: Je nám líto, ale sekce %{new_section_code} neexistuje. Zadej
       jiný kód sekce.
@@ -681,6 +702,7 @@ cs:
     code_from_html: Code.org používá p5.play, který je licencován pod <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Poháněn Amazon Web Services
+    built_on_github: Postavený na GitHubu od Microsoftu
     google_copyright: "&copy; Google Inc. používáno se svolením. Třída Google (Google
       Classroom) je obchodní známka společnosti Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo a Hour
@@ -694,12 +716,14 @@ cs:
     tos_short: Podmínky
     tos: Podmínky
     privacy: Zásady ochrany osobních údajů
+    privacy_updated: Zásady ochrany osobních údajů (aktualizovány)
     secure: Zabezpečená verze
     report_abuse: Ohlásit urážlivý příspěvek
     built_on_code_studio: Postavenn na Code Studio
     make_my_own_app: Vytvořit svou vlastní app
     how_it_works: Jak to funguje
     try_hour_of_code: Vyzkoušejte Hodinu kódu!
+    store: Obchod
   reference_area:
     title: Potřebuješ pomoc?
     subtitle: Podívej se na tato videa a tipy
@@ -1200,8 +1224,13 @@ cs:
       email: E-mail
       email_alternate: Alternativní e-mail
       gender: Rod
+      school: Škola
       school_name: Název školy
+      school_city: Město, kde škola sídlí
+      school_city_district: Město / školní obvod
       school_country: Země školy
+      school_department_region: Školní okrsek / region
+      colombian_school_city: Město, kde škola sídlí
       colombian_chilean_school_department: Školní okrsek / region
       colombian_school_municipality: Školní městský obvod
       colombian_chilean_school_name: Název školy
@@ -1319,6 +1348,9 @@ cs:
     accept: Souhlasím
   page_not_found_title: Stránka nebyla nalezena
   page_not_found_header: 404 - Stránka nebyla nalezena
+  page_not_found_description: Stránka, kterou hledáte, na této adrese neexistuje.
+    Zkontrolujte webovou adresu a znovu odešlete. Nebo se vraťte na naši domovskou
+    stránku.
   page_not_found_button: Zpět domů
   copy: Kopírovat
   confirm: Potvrdit
@@ -1333,3 +1365,5 @@ cs:
   behaviors:
     this_sprite: tento sprajt
   unit_prefix: Jednotka %{n}
+  code_org_logo_alt: Hlavní strana Code.org
+  teacher_feedback: Zpětná vazba učitele

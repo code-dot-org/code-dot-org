@@ -2,6 +2,2350 @@
   "hu-HU": {
     "data": {
       "activity_sections": {
+        "a83aa93a-e382-4a7a-80dd-651e7b10976e": {
+          "name": "Bevezető"
+        },
+        "a7790fa7-eacb-4851-8f98-3f236bd70fac": {
+          "tips": [
+            null
+          ]
+        },
+        "1f7acf41-57a9-4dc5-8cbb-945faffbdc41": {
+          "progression_name": "Alakzatba állás"
+        },
+        "d6973268-2630-4056-8169-81c3d5a34041": {
+          "progression_name": "Hová tűntek?"
+        },
+        "67bbe0f1-5e68-4669-a12b-d1ab6f3a527c": {
+          "progression_name": "Tánccsapatok"
+        },
+        "4ff44f8e-3e97-47b2-9a6e-25e7e5836896": {
+          "progression_name": "Negyedek"
+        },
+        "2ab803d8-6973-49d0-b987-e023b6780b6b": {
+          "progression_name": "Basszus, közép- és magashangok"
+        },
+        "0cb1e680-8c08-4e85-bedf-0f968f52052c": {
+          "progression_name": "Gyorsítás, lassítás"
+        },
+        "33f43c10-0c86-45d3-9e95-eebe75e72ac0": {
+          "name": "A Kódolás óráján túl"
+        },
+        "563d9088-3ce6-48c1-aa79-6f673e089247": {
+          "name": "Bevezető"
+        },
+        "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
+          "tips": [
+            null
+          ]
+        },
+        "f52f53ac-e12f-4277-acba-f1e3fa2ad611": {
+          "tips": [
+            null
+          ]
+        },
+        "75d779c4-24f7-40be-bf92-b0c094c16d11": {
+          "name": "Minecraft Kódolás órája tervező"
+        },
+        "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
+          "tips": [
+            null
+          ]
+        },
+        "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
+          "name": "A Kódolás óráján túl"
+        },
+        "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
+          "tips": [
+            null
+          ]
+        },
+        "4fd098be-b798-4e23-b091-e90c95344d97": {
+          "tips": [
+            null
+          ]
+        },
+        "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
+          "name": "Minecraft: Hős utazás"
+        },
+        "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
+          "tips": [
+            null
+          ]
+        },
+        "34238f3b-6699-4e27-b77a-54bcd8d57459": {
+          "progression_name": "Minecraft: Hős utazás"
+        },
+        "147a2b22-0cba-4505-81ef-770b81eee73e": {
+          "name": "A Kódolás óráján túl"
+        },
+        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
+          "description": "#### Színpadra állítás\n\nÜdvözöld a tanulókat az osztályban, és ismertesd a napi tevékenységet.",
+          "tips": [
+            "A Kódolás órája bevezetésének egyik módja, ha nem nagyon ismered a kódolást, hogy bemutatod az egyik [ösztönző videónkat](https://hourofcode.com/promote/resources#videos). Válaszd ki azt, amelyikről úgy gondolod, hogy diákjaid inspirálónak találják, és oszd meg most. A középiskolások számára a [Itt a kódolás órája](https://youtu.be/FC5FbmsH4fw) című videót javasoljuk."
+          ]
+        },
+        "9e8e36dc-d11e-463e-b628-c1cbcf994aac": {
+          "description": "Ma a kreativitásunkat fogjuk használni, miközben kódolni tanulunk. Sokféleképpen lehetünk kreatívak. Ti milyen módon szerettek kreatívak lenni? "
+        },
+        "29252927-11c0-44cc-b471-dfa8b1792c2b": {
+          "description": "Bátorítsd a tanulókat, hogy mondják el, hogyan fejezik ki kreativitásukat, például művészettel, tánccal, zenével vagy írással. Következő kérdésként kérdezd meg a tanulókat, hogy mi inspirálja őket kreativitásukban. "
+        },
+        "b9115c85-6495-49eb-b0e4-cd4fb06dc81d": {
+          "description": "\\*\\* Olvassatok együtt verset:\\*\\* Olvassatok el együtt [néhány verset](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing), és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
+        },
+        "84d5098f-4108-42e8-bc45-4793ac42e81a": {
+          "name": "Versművészet",
+          "description": "#### Általános támogatás\n\nA tevékenység végére a tanulóknak lesz egy animált versük, amely az általuk választott vers vizuális értelmezését mutatja be. Ez a lecke arra szolgál, hogy a tanulóknak lehetőséget adjon arra, hogy játszadozzanak a kódjukkal, és megtalálják a nekik legjobban tetsző vizuális hatásokat. \n\nA terem körbejárása közben bátorítsa a tanulókat:\n\n-   **Ne siessetek:** A legtöbb szinten a tanulóknak meg kell találniuk a vers hangulatának értelmezéséhez illő, tökéletes effekteket. A szinten maradás és a kódjukkal való játszadozás kifejezetten javasolt.\n\n-   **Keress egy verset, ami tetszik neked:** A diák számára megjelenő vers az új szinten csak egy javaslat. A játékterület tetején található egy legördülő menü előre betöltött versekkel. Kérd meg a tanulókat, hogy olvassanak el néhányat, és találjanak egyet, amelyik megszólítja őket. Ezután elkezdhetik a kiválasztott verset kóddal animálni. \n\n-   **Mutass meg egy teljesített szintet:** Minden olyan szintbuborék, amely teljesen zöld, azt jelenti, hogy a tanuló sikeresen teljesítette az adott szint összes követelményét. Kérd meg a tanulót, hogy kattintson egy zöld buborékra, hogy megmutassa, mit alkotott. \n\nAzokra az esetekre, amikor a tanuló úgy érzi, elakadt: \n\n-   **Olvasd el az instrukciókat:** Az instrukciók felsorolásszerűen tartalmazzák a szint teljesítésének módját. Ha egy tanuló úgy érzi, hogy elakadt, kérd meg, hogy olvassa fel hangosan az instrukciókat, és kérd meg, hogy saját szavaival ismételje el, amit az instrukciók tartalmaznak. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> A tanulók a szövegről-beszédre ikonra is kattinthatnak, hogy meghallgassák az instrukciókat hangosan felolvasva.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nézd meg a tippeket**: A legtöbb szint legalább egy tippet tartalmaz, amely több részleteket tartalmaz a szint teljesítésének módjáról. \n-   **Dicsérd a hibákat:** A kódolás természetes része, hogy a kódodban hiba keletkezik. Ha a program nem azt csinálja, amit vártak, kérje meg a tanulót, hogy először mondja el, mit szeretne, hogy történjen, kattintson a futtatás gombra, hogy megfigyelje, mi történik valójában, majd keresse meg a kódjában azt a helyet, amely az eltérést okozta. Ne feledd megdicsérni a hibák megtalálásáért és kijavításáért. A hiba megtalálása azt jelenti, hogy a tanulók nagyszerű munkát végeznek egy összetettebb program megalkotásában. "
+        },
+        "950807e2-afa0-4c26-9459-4682b3f49602": {
+          "progression_name": "Példa"
+        },
+        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
+          "progression_name": "Példa"
+        },
+        "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "a93e96cb-27d2-4d92-8321-57accd5addde": {
+          "description": "Ha élvezted a mai kódolás tanulást, a code.org/learn oldalon folytathatod a tanulást. Ha szeretnéd megosztani barátaiddal és a családoddal, amit készítettél, kattints a \"Megosztás\" gombra, és küldd el a linket annak, akinek szeretnéd!"
+        },
+        "eea48561-0080-4e47-8d51-048ab2d07048": {
+          "description": "#### (választható) Értékelés: A megértés ellenőrzése (4 perc)\n\nOssz ki diákonként két öntapadós jegyzetlapot."
+        },
+        "5d1d0d21-ffdd-489e-b09e-d90ba9627182": {
+          "description": "Két öntapadós jegyzetlapotok van. Az egyikre írjatok egy dolgot, amit ma tanultatok a kódolásról. \nA másikra írjatok egy dolgot, amit ma a költészetről tanultatok. \n\nKézfelemeléssel, osszátok meg az egész osztállyal: Mit szeretnétek a legközelebb tanulni a kódolásról és az informatikáról?"
+        },
+        "aced2726-6ed1-4645-9fd2-eccfe982584f": {
+          "tips": [
+            null
+          ]
+        },
+        "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
+          "name": "Flappy kód"
+        },
+        "47fe47af-9de3-4ba5-8193-1f489bef9544": {
+          "tips": [
+            null
+          ]
+        },
+        "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
+          "name": "A Kódolás óráján túl"
+        },
+        "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
+          "tips": [
+            null
+          ]
+        },
+        "199e20e7-a0e1-4eff-a830-4984a3fa4ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "9aba0e85-a709-43f5-8cfb-251671159b3a": {
+          "name": "Labirintus"
+        },
+        "524f2e35-6286-4585-879e-96e7286e8a6d": {
+          "tips": [
+            null
+          ]
+        },
+        "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
+          "name": "A Kódolás óráján túl"
+        },
+        "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
+          "tips": [
+            null
+          ]
+        },
+        "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
+          "tips": [
+            null
+          ]
+        },
+        "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
+          "name": "Kódolás Annával és Elsával"
+        },
+        "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
+          "tips": [
+            null
+          ]
+        },
+        "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
+          "name": "A Kódolás óráján túl"
+        },
+        "fc04ef5f-0d78-418b-9311-e12201106453": {
+          "tips": [
+            null
+          ]
+        },
+        "c628ba28-35c2-4ded-a19d-74079377b309": {
+          "name": "Jégkorszak játéklabor"
+        },
+        "548dc37b-f338-4a52-a77e-7380794c64f2": {
+          "tips": [
+            null
+          ]
+        },
+        "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
+          "name": "A Kódolás óráján túl"
+        },
+        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "tips": [
+            "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
+          ]
+        },
+        "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
+          "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás](https://youtu.be/vgkahOzFH2Q) segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
+        },
+        "f6a21949-1c94-4269-acae-98046f6a9052": {
+          "name": "Helló világ",
+          "progression_name": "Helló világ"
+        },
+        "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
+        },
+        "f95b4eed-639e-483e-bef7-ead9abf4808e": {
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
+        },
+        "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
+          "tips": [
+            null
+          ]
+        },
+        "dd7bde99-d360-4587-8d30-75383b930808": {
+          "tips": [
+            null
+          ]
+        },
+        "88489303-1952-49c3-914a-2cfa7a138778": {
+          "name": "Bevezető"
+        },
+        "75db60fb-671b-4740-80ae-0b13f4c09897": {
+          "name": "Művész"
+        },
+        "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
+          "tips": [
+            null
+          ]
+        },
+        "0e395269-9740-4229-a7ac-b18b9f4eced9": {
+          "name": "Gumball Játéklabor"
+        },
+        "eea63453-59c2-4c48-8d04-d6612d379584": {
+          "tips": [
+            null
+          ]
+        },
+        "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
+          "name": "A Kódolás óráján túl"
+        },
+        "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
+          "name": "Bevezető"
+        },
+        "acc2ced5-83ed-4926-9830-f5bd846136a1": {
+          "tips": [
+            null
+          ]
+        },
+        "c5d3d108-b29a-4955-a63b-e8a35d2b57a1": {
+          "tips": [
+            null
+          ]
+        },
+        "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "tips": [
+            null
+          ]
+        },
+        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "tips": [
+            "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
+          ]
+        },
+        "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
+          "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás](https://youtu.be/vgkahOzFH2Q) segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
+        },
+        "c721eddb-4cfb-4237-a031-0730bbfdc926": {
+          "name": "Helló világ",
+          "progression_name": "Helló világ"
+        },
+        "8341212e-8528-4ad8-9c02-22066467054b": {
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
+        },
+        "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
+        },
+        "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
+          "name": "Bevezető"
+        },
+        "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
+          "tips": [
+            null
+          ]
+        },
+        "8a8adcaf-4f83-4a1e-b734-ae29d9c5f627": {
+          "tips": [
+            null
+          ]
+        },
+        "91cc858b-9f90-4134-b890-237f457e8423": {
+          "name": "Minecraft: Tengeri utazás"
+        },
+        "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
+          "tips": [
+            null
+          ]
+        },
+        "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
+          "name": "A Kódolás óráján túl"
+        },
+        "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
+          "tips": [
+            null
+          ]
+        },
+        "b4a270c7-538c-4278-a88e-d074a04fafb4": {
+          "tips": [
+            null
+          ]
+        },
+        "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
+          "tips": [
+            null
+          ]
+        },
+        "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
+          "tips": [
+            null
+          ]
+        },
+        "7219d891-31ac-454e-8060-eb84a3a0d1df": {
+          "tips": [
+            null
+          ]
+        },
+        "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
+          "tips": [
+            null
+          ]
+        },
+        "c694a6e6-b265-4802-bfca-bbc9180c8407": {
+          "tips": [
+            null
+          ]
+        },
+        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "tips": [
+            "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
+          ]
+        },
+        "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
+          "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás](https://youtu.be/vgkahOzFH2Q) segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
+        },
+        "893dba56-7c8e-4897-949b-de514de76011": {
+          "name": "Helló világ",
+          "progression_name": "Helló világ"
+        },
+        "05ad915a-32e0-4799-90a2-2a53efb937f1": {
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
+        },
+        "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
+        },
+        "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
+          "tips": [
+            null
+          ]
+        },
+        "a69a3310-4b81-4e04-8313-51044489351a": {
+          "name": "Star Wars: A galaxis építése kódolássa"
+        },
+        "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
+          "tips": [
+            null
+          ]
+        },
+        "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
+          "name": "A Kódolás óráján túl"
+        },
+        "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
+          "name": "Bevezető"
+        },
+        "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
+          "tips": [
+            null
+          ]
+        },
+        "a37be15a-4375-4e7a-b2a8-b5da2ab33590": {
+          "tips": [
+            null
+          ]
+        },
+        "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
+          "name": "Minecraft kaland",
+          "tips": [
+            null
+          ]
+        },
+        "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
+          "name": "A Kódolás óráján túl"
+        },
+        "2c9a4cbc-51ba-45a3-80f6-cb27e681f4ba": {
+          "tips": [
+            null
+          ]
+        },
+        "64df1a91-0ed0-44d3-a04d-ea8d2fee7dd2": {
+          "name": "Játéklabor"
+        },
+        "d430e170-dccc-4c02-bcfe-5084169a154b": {
+          "tips": [
+            null
+          ]
+        },
+        "8531cf05-6363-4654-b20a-455e85fa16a0": {
+          "name": "A Kódolás óráján túl"
+        },
+        "bdbf2184-a699-461e-b766-8b3e35e1a5e8": {
+          "name": "Bevezető",
+          "progression_name": "Bevezetés az App Lab világába - videó"
+        },
+        "5b40c5f2-78be-4c56-95b7-4da5703e2514": {
+          "tips": [
+            null
+          ]
+        },
+        "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
+          "progression_name": "Tervező mód"
+        },
+        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "tips": [
+            "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
+          ]
+        },
+        "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
+          "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás](https://youtu.be/vgkahOzFH2Q) segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": "Helló világ",
+          "progression_name": "Helló világ"
+        },
+        "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
+        },
+        "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
+        },
+        "88f6ccc1-0efa-4c60-985c-971a235d5645": {
+          "tips": [
+            null
+          ]
+        },
+        "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
+          "tips": [
+            null
+          ]
+        },
+        "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
+          "name": "A Kódolás óráján túl"
+        },
+        "f5f6ef34-367d-424d-af63-a8a04c146c34": {
+          "tips": [
+            null
+          ]
+        },
+        "540e3c12-987d-44de-8efc-5e6e12fed295": {
+          "tips": [
+            null
+          ]
+        },
+        "9e4304e5-944c-4b21-88eb-708558b2b82f": {
+          "progression_name": "Szöveg tömörítése"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Bevezető"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "21f43e64-dea3-4abc-8284-e055480370ce": {
+          "name": "Bevezető",
+          "tips": [
+            null
+          ]
+        },
+        "e7a740e5-690b-408c-b647-fb6f47cc2d3d": {
+          "tips": [
+            null
+          ]
+        },
+        "5eddd5c3-23b2-453b-83fa-e0cda19ad4c3": {
+          "tips": [
+            null
+          ]
+        },
+        "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "name": "Értékelés",
+          "tips": [
+            null
+          ]
+        },
+        "6874de98-8778-447b-8453-0138809b2c7e": {
+          "tips": [
+            null
+          ]
+        },
+        "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
+          "name": "Disney Infinity játéklabor"
+        },
+        "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
+          "tips": [
+            null
+          ]
+        },
+        "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
+          "name": "A Kódolás óráján túl"
+        },
+        "8295d7d8-acb1-4cc1-b178-8d89613aa6b6": {
+          "name": "Bevezető",
+          "tips": [
+            null
+          ]
+        },
+        "6b27ea94-da11-4c56-99c0-48e35ac5fbda": {
+          "tips": [
+            null
+          ]
+        },
+        "720eaa7d-2623-4fab-bd98-ee2dda7831fc": {
+          "tips": [
+            null
+          ]
+        },
+        "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
+          "name": "Értékelés",
+          "tips": [
+            null
+          ]
+        },
+        "bfdf9e27-6c04-46fc-8539-1d87d7e507dd": {
+          "tips": [
+            null
+          ]
+        },
+        "ef068b27-a180-4c77-8254-b150c8499acb": {
+          "progression_name": "Előre és hátra"
+        },
+        "efd37169-ddb7-4ef6-8049-36da981ea0f6": {
+          "progression_name": "Több gomb"
+        },
+        "72e0b520-4c05-4c32-84c3-1a51fd86daad": {
+          "progression_name": "Alakzatba állás"
+        },
+        "d3123d53-f986-4095-a3d7-b9db9ea32c36": {
+          "progression_name": "Hová tűntek?"
+        },
+        "221fbe2a-57a8-43d4-9674-5815273512dc": {
+          "progression_name": "Tánccsapatok"
+        },
+        "7c943749-994a-44b2-a116-f33f70d2df95": {
+          "progression_name": "Negyedek"
+        },
+        "d4e671fd-e312-4461-b97b-50e6e05c9cf1": {
+          "progression_name": "Basszus, közép- és magashangok"
+        },
+        "501df195-7991-40ad-bad9-df715484240b": {
+          "progression_name": "Gyorsítás, lassítás"
+        },
+        "bf5697ad-2b9a-4960-b5a7-98a1d3fa9ac1": {
+          "tips": [
+            null
+          ]
+        },
+        "e1243ccf-be45-4f8e-a138-54953ea12f92": {
+          "tips": [
+            null
+          ]
+        },
+        "79a5c039-7ca6-41bb-acb5-ec5e0e29b122": {
+          "tips": [
+            null
+          ]
+        },
+        "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Mesterséges intelligencia gépi tanulás - videó"
+        },
+        "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
+          "tips": [
+            null
+          ]
+        },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "progression_name": "Mesterséges intelligencia: adatok és előítéletek - videó"
+        },
+        "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
+          "tips": [
+            null
+          ]
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "progression_name": "Mesterséges intelligencia: a társadalomra gyakorolt hatás - videó"
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "progression_name": "Mesterséges intelligencia tanítása egy új világnak"
+        },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Fő tevékenység (régi)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Fő tevékenység (új)"
+        },
+        "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "tips": [
+            "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
+          ]
+        },
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás][0] segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
+        },
+        "1634ab74-919f-40fb-b2dc-8cd5701655a2": {
+          "name": "Helló világ"
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn][0] oldalon kipróbálhatnak egy másik leckét is."
+        },
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections][0] oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára][1] kiadványunkat."
+        },
+        "23e04aed-1959-463f-bdd4-1398b64e398a": {
+          "progression_name": "Inspiráció!"
+        },
+        "a593d801-99a6-44fa-b594-2d22970f3a9e": {
+          "name": "Sprite labor példa projekt",
+          "progression_name": "Sprite labor példa projekt"
+        },
+        "6ae1ea7c-bf0f-4440-a421-25fc28d42922": {
+          "progression_name": "Tanfolyam F Művész projekt"
+        },
+        "9565749d-6042-4c51-b97c-adaffac0821b": {
+          "name": "Tanfolyam F Sprite labor projekt",
+          "progression_name": "Tanfolyam F Sprite labor projekt"
+        },
+        "91028fb5-cf2d-44b4-a3f7-fd2ffeecade0": {
+          "progression_name": "Tekintsd át a Művész projektet"
+        },
+        "26fd2e5e-b3ca-430e-aa20-71894b02d35c": {
+          "progression_name": "Inspiráció!"
+        },
+        "4f2b4a2e-9ff5-4acd-9e2f-12a01cc9937d": {
+          "name": "Sprite labor példa projekt",
+          "progression_name": "Sprite labor példa projekt"
+        },
+        "4d9007a8-97c4-4fce-8a9d-6335809d2984": {
+          "progression_name": "Tanfolyam F Művész projekt"
+        },
+        "a1bcf4c7-c1f4-489f-87d4-a79ae40fb010": {
+          "name": "Tanfolyam F Sprite labor projekt",
+          "progression_name": "Tanfolyam F Sprite labor projekt"
+        },
+        "e25773a7-d511-4a6a-b6f8-eab077b87f3f": {
+          "progression_name": "Tekintsd át a Művész projektet"
+        },
+        "6acd03d7-f7a3-41d7-99c3-24716299335b": {
+          "progression_name": "Tanfolyam E Művész projekt"
+        },
+        "bcae00ac-4d05-444e-bfb3-77d3463c259d": {
+          "name": "Tanfolyam E Sprite labor projekt",
+          "progression_name": "Tanfolyam E Sprite labor projekt"
+        },
+        "80638f32-a3e0-46c4-99fa-74d740d9ff1d": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "b9d672f4-d86c-45ef-9203-d62f69ebf28b": {
+          "name": "Síkidomok rajzolása",
+          "progression_name": "Síkidomok rajzolása"
+        },
+        "5e520688-3496-4589-958b-0e5560b783c1": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "2bc2e284-7c4e-4db0-93e1-557ee7ef6c7a": {
+          "progression_name": "Bevezetés a játéklaborba"
+        },
+        "b44b4f32-2417-442d-812d-10bba9a6edc0": {
+          "progression_name": "Rajz"
+        },
+        "30e26a1c-2b7f-4b80-994a-5e08ad6edd81": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "d3dd0108-0a50-46d8-b7b7-60086d0a8dda": {
+          "progression_name": "Véletlen számok"
+        },
+        "9e27bc30-da9e-4c16-bd78-2054de52f91a": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "c27c28bc-8307-4ca5-a34b-8e05ba178c8b": {
+          "progression_name": "változók"
+        },
+        "e5594ed8-85f5-46f0-843d-2fc3422825aa": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "7b0d3ea8-0ebd-4893-b63a-f7e106350484": {
+          "progression_name": "Videó: bevezető a sprite-okhoz"
+        },
+        "c80f8122-e556-478a-be0d-6188d67453ce": {
+          "progression_name": "Sprite-ok létrehozása"
+        },
+        "be2d8bd4-15d7-421c-9a7b-ffd13ab3f274": {
+          "progression_name": "Sprite helyzetek"
+        },
+        "61e3ec44-af7c-436f-aca6-4e46a91f6542": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "9fcb88d4-d160-48f1-839b-a859098936ba": {
+          "progression_name": "Sprite tulajdonságok"
+        },
+        "707ace55-660a-436d-aabd-9a63ca2b00d8": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "527c1d13-d743-4279-9b52-a36c9f5ebb54": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "7eab9cf8-7227-4f4a-bf8e-43e7d8575b36": {
+          "progression_name": "Videó: mozgó sprite"
+        },
+        "c519bcfe-03e6-4b78-837b-d419778b96ab": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "0b14318c-d452-4f73-b056-b136c7eed4ca": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "c0f1c77a-067b-4e32-bf05-b7ba156a844e": {
+          "progression_name": "Ha nyilatkozatok"
+        },
+        "e6c5c748-85ce-4220-b6f8-35da6acb1894": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "88edaa56-2d58-4888-9762-ac044884b679": {
+          "progression_name": "Képek szerkesztése"
+        },
+        "29dc442e-bb0f-46a4-97b7-3f803dd2ea7d": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "8ca97900-8855-4bb6-9717-d9e403b12fb0": {
+          "progression_name": "Video: feltételes utasítások"
+        },
+        "5598ea09-433e-405f-81b7-4ea132b43c9d": {
+          "progression_name": "Ha-egyébként nyilatkozatok"
+        },
+        "68142075-7449-406e-b2b2-4370bd7243b9": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "b0c0ede6-283c-423f-b2ab-1382696dd0dd": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "ee3d1adc-422a-4894-8dd4-168545e1abb2": {
+          "progression_name": "Videó: sebesség"
+        },
+        "1a160c3c-6d5d-475d-a32b-10beea6380cd": {
+          "progression_name": "Sprite sebesség"
+        },
+        "84021691-71af-4214-b414-d85de602e92f": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "595c8625-0286-43fd-8489-e968bbeb1f85": {
+          "progression_name": "Minta játék"
+        },
+        "f6edd166-54e2-4bff-857f-be13d6cd7c67": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "75a15f95-d9ab-486e-8ef5-7701fabe63a1": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "e2e981d3-4478-498c-969b-631482c788ce": {
+          "progression_name": "Sprite interakciók"
+        },
+        "c89e71b3-2eef-4943-a34b-32e5074a4808": {
+          "progression_name": "Sprite interakciók áttekintése"
+        },
+        "bbaf2c50-a1db-4497-9238-aee27d5e8095": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "59c2bc8f-30d3-47e5-a5c7-1ad0bb4f022b": {
+          "progression_name": "funkciók"
+        },
+        "cf0e3aa7-6158-4763-928b-e8e1ea28c231": {
+          "progression_name": "Függvények áttekintése"
+        },
+        "03859b57-0593-4ee9-8e02-bb71caba9c7f": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "74c2ffd9-d39f-40f6-b86a-b3b22f0430d3": {
+          "progression_name": "Minta játék"
+        },
+        "62a65044-e84a-4423-87c4-58a1a284f13f": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "b7fc5b92-e8ac-47be-9485-56c6b7e41a2d": {
+          "progression_name": "Ugró nyuszi"
+        },
+        "d34a6f96-546f-42ce-9e9e-8aef4d0ec1e6": {
+          "name": "Javíts a játékodon",
+          "progression_name": "Javíts a játékodon"
+        },
+        "dc433b08-56bf-4f84-8a15-0646cf34b298": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "3713a54a-d7a0-43e5-9e78-6fd2938d98eb": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "96dd6f2e-0a60-40fc-b9b7-40773ccc4039": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "c26ef3cd-6946-42be-9cbb-abb4cc3db2a2": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "bdc9e135-0201-44b1-bfa8-8820560157d8": {
+          "progression_name": "Áramkör játszótér: LED-EK"
+        },
+        "6fb95756-4b20-412c-a5df-848f7b80e049": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "02bc2d8a-8b66-456d-8e5b-8a6e607f50b6": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "ae40b937-a438-41f6-a84c-2d68bd235ab0": {
+          "progression_name": "Gombok és kapcsolók"
+        },
+        "cfefce54-acc4-412c-9893-c0cac2db3c8e": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "e8b780b1-3086-401c-aabc-74dfb7e3a08c": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "17d9e588-8fc8-413a-acba-32158ed4ca67": {
+          "progression_name": "Analóg szenzorok"
+        },
+        "da4957f8-80b5-4343-9894-a34f3ec5e371": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "90e014bf-0211-4fa7-afab-c8754efde892": {
+          "progression_name": "Példa program"
+        },
+        "91f5dac9-f136-45ec-bdb7-885007431336": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "90bc9191-8e68-41bd-b8e9-8291930dca38": {
+          "progression_name": "Események"
+        },
+        "bb7c5b8b-e429-48e3-a3a2-e282059f2889": {
+          "progression_name": "funkciók"
+        },
+        "6a0ccd11-ca1f-4359-afcc-5f21e110f4c6": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "35734cd2-ff72-4a9d-a076-967d8efd458b": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "506bee98-9e9c-4e9f-8472-81ad24a5b890": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "bca84870-d563-4903-b1d9-51253cbbfc90": {
+          "progression_name": "Számláló ciklusok"
+        },
+        "724e3555-1cae-4fbf-9ee2-2a36f04c4784": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "88f514f4-56a0-4cf3-9d36-b51826452be9": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "d03a5e1d-7252-4cd1-aea7-0bd0a228f9b0": {
+          "progression_name": "Paraméteres függvények"
+        },
+        "e54420ed-5a14-4b3c-837f-1b388f8f2e65": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "9970bff6-49d5-4c0d-9ce6-4dfd66cdc24a": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "0f9b16a0-ff0f-4201-afb3-463ca1e88103": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "89dafb9d-8470-4451-815d-4132f1235cd3": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "3c49856d-1ff0-4ef5-8b0d-3c568f3c529c": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "c11a9ba3-e60d-4788-8123-a230b936e92f": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "5ebaa6a5-00fe-4fd1-9ea7-ff1b1e987f2a": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "19d294ee-d319-4f1c-b2b1-6892c54a7118": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "6a46d21d-6961-486b-a56f-cbb94df0e318": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "54ac0f9e-97de-400c-9e06-30225b854909": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "31f8c584-7b06-4c9e-9ea3-934ff86dd1bc": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "84094cea-b1f9-4ed8-8a56-6111ed7b3f64": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "f0220f3d-8a24-434d-890e-db4ece0db768": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "c557c0e1-456c-4fa7-9d4b-aeb699b92982": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "053cd782-5fe7-4438-b780-a79fb441d383": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "0b21869f-fed5-4d9a-ae12-336c623bf20f": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "f1461b1f-02bf-4335-83d4-24056f5bdfc3": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "5c41d9b3-d4cc-4069-b143-2df7d9e2e91f": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "d12b6a27-450e-4303-aced-5b5afaa46ded": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "616ed9df-acfd-4d46-a31e-fa90d445a811": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "495e84b1-119a-44b8-bd88-00577d712cf8": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "c2a2092c-eb08-41b3-8ac9-84128ac8be50": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "6298ce64-0661-47f4-9791-13b6614d6e54": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "a4623595-d214-48e4-8ee3-f2b29355d3c3": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "cafa43d0-0778-487c-ba39-9a6863a2468b": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "c4cfb4a9-1174-486a-a636-b8c7d1e9aa0c": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "37c289c0-8359-41dd-a93c-ffc4ebbddc3d": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "693d0047-31b1-4f2d-814d-0a6be1d7f088": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "7e903fc5-cd8d-4a89-aa4f-c86e16782d30": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "932f56f3-0737-4a5c-a254-4f71a2339b47": {
+          "progression_name": "Bevezető a Tervező módhoz"
+        },
+        "ae32291b-bce5-4e45-ac78-5e24b891f867": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "ed742835-e65c-4038-9db0-9ec1c5d540eb": {
+          "progression_name": "Események"
+        },
+        "f6b89fa1-ffd1-4383-8143-a88af48dd9a9": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "fdef8a20-922a-4fd6-932c-7892300881a0": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "fdff4065-d692-460e-bff6-c93c80bf58aa": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "a8669b83-40c9-4ca2-b06a-c9c8a84d3ce6": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "c7d20caa-7535-4a80-aa80-d366665477b9": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "0b825c84-5262-4bcd-87b1-ee718df381fa": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "1759aec3-522b-4157-b4ba-dc298a147b0d": {
+          "progression_name": "Fedezd fel a HTML-t"
+        },
+        "b9bf59c9-5de3-4ad8-b284-450f4f3c6a1b": {
+          "progression_name": "HTML-címkék"
+        },
+        "199e3a87-bc48-4d97-853e-6d1dca077afb": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "bcc27c68-f369-4469-a472-2047c24ee541": {
+          "progression_name": "Páros programozás"
+        },
+        "cb58c4fe-0f83-42a9-ab3b-96dbdcb676fb": {
+          "progression_name": "HTML címsorok"
+        },
+        "c3f41c2b-e482-413f-9e6f-8c5c2c131f50": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "c097d94c-9bcd-4dae-9377-8317a715350b": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "35ccf024-6c5d-495e-83ce-00b1e89cecd9": {
+          "progression_name": "Listák"
+        },
+        "925c414c-8c3d-458d-8a67-499347d94aa0": {
+          "progression_name": "HTML listák"
+        },
+        "85a327d0-99bd-4c18-84d3-0a00f6a5742c": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "92b79761-2b2d-4c02-8d03-1b6bc34363c3": {
+          "progression_name": "Creative Commons keresés"
+        },
+        "aeb15f17-5d0f-4f95-aae8-656189b2a833": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "0eb10caa-d6c3-4afd-bba1-c28694a1128a": {
+          "progression_name": "Hibakeresés"
+        },
+        "a2d9b8f3-db4f-498e-8863-4166544c053b": {
+          "progression_name": "HTML formázás"
+        },
+        "43f5caa8-4b58-4af6-9425-6b642fa30743": {
+          "name": "Kihívás",
+          "progression_name": "Kihívás"
+        },
+        "1565f22f-1429-48f2-adbe-58eb4da1f25b": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "d0482660-cd4b-442d-9b3a-1dccc9ee2318": {
+          "progression_name": "Hiperhivatkozások"
+        },
+        "45f7fc97-a66c-4d0d-b4e7-f4e7c3539806": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "3ca4c341-2ba0-43f1-be89-70a8b39c7013": {
+          "progression_name": "Felfedezés: stílus hozzáadása"
+        },
+        "c91cfc83-448f-4433-b4f1-75b6e93f4761": {
+          "progression_name": "Videó: bevezetés a CSS-be"
+        },
+        "a48b4c57-af89-422b-85a3-80ef49c8aad6": {
+          "progression_name": "CSS és stílus lapok"
+        },
+        "2b0bd338-26c7-4d8f-99c1-f39b6db422aa": {
+          "progression_name": "CSS szöveg tulajdonságok"
+        },
+        "00a09a1a-54bd-4d0b-ac59-59f7b4d37fd5": {
+          "progression_name": "Videó: bevezetés a CSS-be, 2. rész"
+        },
+        "e7f76ba3-6d3f-4359-8b44-3157c190df54": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "f2401167-442f-4229-82ec-3fe0b8b23048": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "3867e760-c07d-4701-a35c-6c9febe527e6": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "fb99e7e1-6a64-479a-b8ac-266017608d91": {
+          "progression_name": "RGB widget"
+        },
+        "a718ba21-525e-4e71-9152-8a72012f2c2f": {
+          "progression_name": "CSS osztályok"
+        },
+        "0187b1e1-39ec-460e-9249-17e433dddd3b": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "9efcf40a-96ec-411f-a949-f7fe6c1625d2": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "4833dc04-10ed-4ef8-9a5d-7b4cccd543dc": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "263c3f1e-aef0-426b-8156-f63c02ad2fec": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "bcb20113-8db3-41fd-8c84-9f89183d40c6": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "d54996dd-6f8f-4988-b7c6-523f4f4e04a0": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "24d93d62-4797-475e-ba96-f89c1a4da2f5": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "830da5c9-473c-4d57-a398-b5855090a18c": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "26d8a252-c82a-4fa5-a3cc-bc6542f4eef0": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "3fea4a8d-84f4-4f63-a8d2-7085c77b4fef": {
+          "progression_name": "Páros programozás"
+        },
+        "c23ccdc3-4f91-4719-8ad1-ae870fbb0b66": {
+          "progression_name": "Kihívás"
+        },
+        "647fb9ef-1f2f-4552-8785-1a3b2a5850cb": {
+          "progression_name": "Programozás Rey és BB-8 segítségével"
+        },
+        "3328d13e-655b-460a-888b-94567abfe169": {
+          "progression_name": "Kihívás"
+        },
+        "96a3f354-7b69-41e7-9100-4523dc83acaf": {
+          "progression_name": "Kihívás"
+        },
+        "928e8522-a5d1-4172-9981-7c812394708d": {
+          "progression_name": "Kihívás"
+        },
+        "c1a9472c-1033-4660-8314-6d5c9789ae58": {
+          "progression_name": "Kihívás"
+        },
+        "3ead06ef-2d2b-49b0-b62b-ededeff21bcb": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "372e55a3-82dc-4e92-b50d-242dc2f7328d": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "282dad48-141f-46bb-9675-9f0629dab0fc": {
+          "progression_name": "Páros programozás"
+        },
+        "24ac3487-2bac-447f-a644-c97ed06eb7bc": {
+          "progression_name": "Kihívás"
+        },
+        "4a9bb659-a861-4fae-8024-300307f55af4": {
+          "progression_name": "Kihívás"
+        },
+        "9b25a500-d3ff-45b0-8e4e-e105361c1f70": {
+          "progression_name": "Kihívás"
+        },
+        "80de6acc-e6ab-48b7-ac35-192fd30fa831": {
+          "progression_name": "Kihívás"
+        },
+        "99e3dad7-98a9-4f93-86a3-e78793215495": {
+          "progression_name": "Kihívás"
+        },
+        "ff0bdda6-cf62-4449-a308-76b365386a4c": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "8eeabef8-20df-4bea-ba8d-10376953fb46": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "1ebe2c8c-ee7d-405e-927f-cae153b2a188": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "07193199-5792-4f3b-a082-cb2a6e3e3688": {
+          "progression_name": "Kihívás"
+        },
+        "87fb67e1-deff-4108-87f9-bda43f69ddf0": {
+          "progression_name": "Kihívás"
+        },
+        "eaf5aad1-3ca8-4a7a-82a9-0e62b210afb6": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "cdd48ff9-10dc-4f20-be98-28178ec9d7f6": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "0ce7c02f-f05a-40cf-a5be-87946f72027d": {
+          "progression_name": "Kihívás"
+        },
+        "38d68221-32e8-4984-8a39-69073466459f": {
+          "progression_name": "Kihívás"
+        },
+        "5f04ced8-6ae3-4d10-aaec-f9ceb4684d69": {
+          "progression_name": "Kihívás"
+        },
+        "b7b86177-be53-4ffc-af33-74c5f28cf41c": {
+          "progression_name": "Kihívás"
+        },
+        "deb064fb-e848-49e3-8fce-76f6ea0b85ad": {
+          "progression_name": "Kihívás"
+        },
+        "15c133ad-c9de-4a2c-8bc3-8dc5ea07f83e": {
+          "progression_name": "Kihívás"
+        },
+        "6a5e000e-9713-4ba5-a455-501c3806ec4e": {
+          "progression_name": "Kihívás"
+        },
+        "0914c4d0-b269-4072-a1b7-ed41eb2b7224": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "3c1c493d-0ff2-4b95-a772-669f86180408": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "76fe9ba2-dbf2-4b31-a6f1-b35c3c4d2963": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "ee39051b-426b-40d9-b61f-1f180cae8717": {
+          "progression_name": "Hogyan készítsünk sprite-ot"
+        },
+        "18e78998-a305-4084-83a3-df1cd05da78f": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "71c84958-5cc4-467d-8c97-f2f63123c47d": {
+          "progression_name": "Videó"
+        },
+        "2a412b4f-68cb-417f-bd40-716a3cfdf0ff": {
+          "progression_name": "Kihívás"
+        },
+        "0948dcbc-ac22-48af-a16e-2c03c5b0d317": {
+          "progression_name": "Kihívás"
+        },
+        "b365d5bf-c5bc-462c-895c-3cca05ad79f6": {
+          "progression_name": "Kihívás"
+        },
+        "b6a63f32-8007-4b17-ae9b-718652243e78": {
+          "progression_name": "Művész: változók"
+        },
+        "caf6bd1c-dbcf-4747-93e5-dcae7eab1896": {
+          "progression_name": "Kihívás"
+        },
+        "3b6fb751-1751-4a04-9d40-73b9356aa8f6": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "25103086-3dd2-4f4a-b8ba-11d66d826e34": {
+          "progression_name": "Kihívás"
+        },
+        "26da0974-cf83-41fe-b6d8-b6c9f7a29c03": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "4ab09fad-0ce3-4895-9507-c6661641a4f8": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "2e631519-0aa2-4dbf-be3b-7c0c62ff4311": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "9c91866c-ab25-464c-a9ff-8155b888b147": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "30f90504-21cc-4713-949c-c5bcdb5c3288": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
+          "progression_name": "Szereplő Lab Projekt"
+        },
+        "919ce65a-2a03-4e80-9108-6243b5dd733f": {
+          "name": "Művész-projekt",
+          "progression_name": "Művész-projekt"
+        },
+        "b53b7eb1-3aab-44fb-bda0-e658142a7093": {
+          "progression_name": "Kihívás"
+        },
+        "b77b5637-ea90-4ae9-bfb9-22810b90bf92": {
+          "progression_name": "Kihívás"
+        },
+        "b9a00091-4e59-451c-9be6-c9311e4a4543": {
+          "progression_name": "Kihívás"
+        },
+        "acb1431e-7cdb-4448-bf6d-1876d561952e": {
+          "progression_name": "Kihívás"
+        },
+        "4fc6e6fd-3688-4fb0-8985-3aa4cbdf8d18": {
+          "progression_name": "Hogyan készítsünk sprite-ot"
+        },
+        "fe9fe0d9-b57c-45ff-ac09-b7b3cdbd4303": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "345e2136-8d60-4513-a0d9-f7db80faff4a": {
+          "progression_name": "Videó"
+        },
+        "a7fbfcf7-5c63-4f6d-a1c4-21540179724d": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "9f1d586c-1d97-46de-9fe5-6bad58413cb9": {
+          "progression_name": "Kihívás"
+        },
+        "26d010c0-aeef-49ad-85f9-f06ce1daaa31": {
+          "progression_name": "Videó"
+        },
+        "269b42b4-fc3f-4a60-828f-0e6b2f73b0c6": {
+          "progression_name": "Kihívás"
+        },
+        "1405ae48-2e0c-4a36-878f-668639ba0f51": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "55bf14c5-94b0-4b92-91b6-f49a15ed6342": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "5db96562-98cc-4fa4-972d-ff37bcd76287": {
+          "progression_name": "Kihívás"
+        },
+        "1437cbd2-75ab-42e4-99c1-a1db6e0f446c": {
+          "progression_name": "Kihívás"
+        },
+        "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
+          "progression_name": "Szereplő Lab Projekt"
+        },
+        "22ed3900-dd2a-4eec-99c1-69f131286de6": {
+          "name": "Művész-projekt",
+          "progression_name": "Művész-projekt"
+        },
+        "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
+          "progression_name": "Szereplő Lab Projekt"
+        },
+        "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
+          "name": "Művész-projekt",
+          "progression_name": "Művész-projekt"
+        },
+        "f72e471d-ff91-41d4-9f97-3302b73b5ec5": {
+          "progression_name": "Kihívás"
+        },
+        "dec15e5a-6919-45fb-b36a-b009ddc2ea0e": {
+          "progression_name": "Kihívás"
+        },
+        "c7cc745e-db84-4914-abff-fba5821a6d51": {
+          "progression_name": "Kihívás"
+        },
+        "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
+          "name": "Lecke Extrák",
+          "progression_name": "Lecke Extrák"
+        },
+        "62eb4fa5-496a-4d2d-ad6a-1618bc2be7f0": {
+          "progression_name": "Kihívás"
+        },
+        "e0d3988c-bdb0-45b1-9512-354e87118d64": {
+          "progression_name": "Programozás Rey és BB-8 segítségével"
+        },
+        "f42d7b9f-5cd2-4a12-a75d-67af88c45947": {
+          "progression_name": "Kihívás"
+        },
+        "21c1076a-87ae-4316-bd9a-3f6a7c43cba2": {
+          "progression_name": "Kihívás"
+        },
+        "5b1c525c-13c6-4dad-b882-d351f0fcd634": {
+          "progression_name": "Kihívás"
+        },
+        "84b14f6c-d011-4e52-8664-233fda16599e": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "7922a128-215c-4076-9a6a-b0c22a626d92": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "a4dd80f8-6d8c-4475-af2e-762cc3b7c8ed": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "31ea1300-575e-4f67-9fba-ffccd705a373": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "495fcc03-4c32-4a02-8104-dde4ba8e64a8": {
+          "progression_name": "Bevezetés a játéklaborba"
+        },
+        "9c9cd7c5-d796-4eaa-9788-f6235478e387": {
+          "progression_name": "Rajz"
+        },
+        "aab19774-0354-4f84-a520-13001ae57f63": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "06529421-f2f5-4ecc-b960-e5ad918d55a5": {
+          "progression_name": "Véletlen számok"
+        },
+        "2d59194a-6738-49ec-8bbb-3e13f3648cc3": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "13d78339-15e3-4fa2-9b87-22412794083d": {
+          "progression_name": "változók"
+        },
+        "1960545a-d5c7-4738-b4da-ca3ffc7fb13a": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "6ba9de0a-29fa-4fd8-98c8-0d85178ea684": {
+          "progression_name": "Videó: bevezető a sprite-okhoz"
+        },
+        "f6d7282f-7990-4372-b4da-29a52f9604e5": {
+          "progression_name": "Sprite-ok létrehozása"
+        },
+        "0bb0b37f-e6d5-4d39-928f-4fbbbd791fde": {
+          "progression_name": "Sprite helyzetek"
+        },
+        "220fbb14-03e2-4b6b-966d-0fb9607a7c0d": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "89860dc5-98ff-4e81-b72c-56732f2f2b0a": {
+          "progression_name": "Sprite tulajdonságok"
+        },
+        "b4370a4e-d466-4b6c-bdc9-68f07f5f64ec": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "f64980e6-afa2-45c6-81f8-088e368e6b4d": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "7c5a52f2-32ef-436a-b0e9-f93a8d9c9584": {
+          "progression_name": "Videó: mozgó sprite"
+        },
+        "19da345a-dda1-4675-8b38-f7bdee89e704": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "4c16744c-1a83-430d-ac8a-37a3462c327f": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "a9b9fce8-85e2-4551-8072-03cbbb1cfa0e": {
+          "progression_name": "Ha nyilatkozatok"
+        },
+        "d931093d-6622-4dce-ac74-0100af4d54dd": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "0a03b724-0c9b-4478-81d1-b5b6200271ee": {
+          "progression_name": "Képek szerkesztése"
+        },
+        "666f054a-0fd9-47a8-bd33-ce3ed2022fda": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "cc18fe27-30a0-4964-8e5b-bd68143aa5db": {
+          "progression_name": "Video: feltételes utasítások"
+        },
+        "b2a850a8-032a-492a-95ef-e0a6bba8cb1e": {
+          "progression_name": "Ha-egyébként nyilatkozatok"
+        },
+        "a1ea6e8e-5c0b-4ef8-ba2a-77e38b52ce42": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "0681b389-5a39-4eac-bbb4-5d6ad935c500": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "4621b404-8aa5-49c3-8e09-ff0800ac533f": {
+          "progression_name": "Videó: sebesség"
+        },
+        "af49e38b-3d80-44e9-ab3b-2c9572a7ba9b": {
+          "progression_name": "Sprite sebesség"
+        },
+        "913cf6d5-1934-4e19-8cfd-c86e320bd941": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "4cac98b5-f2cf-43ab-aff1-8ef692d29ca7": {
+          "progression_name": "Minta játék"
+        },
+        "b6e4bb5f-1e91-4775-b76e-a5ebc30d8cde": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "ee04a576-ec75-46c7-b9ec-1c34503b7215": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "4c8ea5f8-8077-4f3b-adb4-b5f3f23ca61d": {
+          "progression_name": "Sprite interakciók"
+        },
+        "d89bab25-a5ce-496a-bc55-a0e421c94e1b": {
+          "progression_name": "Sprite interakciók áttekintése"
+        },
+        "36340995-7f3c-4c0c-8cc9-25a4e255eff8": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "5b940af6-d4a1-44a8-b849-05fb591c9c9d": {
+          "progression_name": "funkciók"
+        },
+        "707a377a-3f80-4021-b0f2-65384b8a95c0": {
+          "progression_name": "Függvények áttekintése"
+        },
+        "4f152c63-7605-4029-97f4-d9c319f0ff73": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "2f731ea3-9491-42f0-aebe-4d8bfb9f8af4": {
+          "progression_name": "Minta játék"
+        },
+        "2f8ac29c-474f-4fc2-bbbc-9df38f3c5bf9": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "af6d4719-0d53-4475-b501-8fe0d77a3487": {
+          "progression_name": "Ugró nyuszi"
+        },
+        "87acf7e3-8fa0-4952-a0e4-734aac023056": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "5dd1bd9a-be39-46a3-aea2-9ec7b6961490": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "40126f59-fdc2-4864-9154-08d2b57c5f9c": {
+          "progression_name": "Áramkör játszótér: LED-EK"
+        },
+        "cf95f157-f262-4fe1-ba28-7030991e0d50": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "8206e28d-c2bd-40cb-b877-a698068350f5": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "d30bb8ee-5d3e-4d3b-8f09-1e97b762af33": {
+          "progression_name": "Gombok és kapcsolók"
+        },
+        "2b5ea015-46c5-43df-9f66-1ad8d9af2bfd": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "66bf67ad-2a7b-4761-9fd3-22676a49e417": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "49edfef0-606a-428e-ae2a-5e5d14105bb5": {
+          "progression_name": "Analóg szenzorok"
+        },
+        "9a5a3a6b-6da8-4507-bb3f-c4bbee06d427": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "e38ff572-805c-4b0d-8cf6-103f7d71e9cd": {
+          "progression_name": "Példa program"
+        },
+        "a5ed9361-2183-4cf1-b889-12dca09e8e45": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "de9506b3-18cc-45c8-a490-9f9b49505977": {
+          "progression_name": "Események"
+        },
+        "1034ed9f-3647-40e8-a0c3-6ccf577ed385": {
+          "progression_name": "funkciók"
+        },
+        "23e07b5e-74e2-457a-980d-bc2dee3dd8bf": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "3ef54536-29e9-41f1-8700-9b86917cce83": {
+          "progression_name": "Videó: bevezető a Tömbök-höz"
+        },
+        "b4751d9c-d441-474e-b57b-14faecc70960": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "7f68d007-84ee-4c4c-82d2-6dae16224252": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "2088c73b-0667-4407-8f79-182ae09a3db2": {
+          "progression_name": "Videó: Ciklusok"
+        },
+        "d6edc1c1-8e4b-47d8-821a-718c5007dfc6": {
+          "progression_name": "Számláló ciklusok"
+        },
+        "85366b36-d42b-4f82-a1e1-9a84f36ac7ea": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "898932d7-711c-44de-a4b6-9556201f10b8": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "1ea8ae38-1276-4214-9baa-667d745ca47c": {
+          "progression_name": "Paraméteres függvények"
+        },
+        "1897e82b-84c2-4f33-80bb-23c9392fdb3a": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "2a2384f0-4484-4c89-ab53-0ad76e3ea3d6": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "0bd68424-df94-4120-9a38-b4bbdc1c9491": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "34de3b3b-5477-4d03-b4ba-becdbdf242cc": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "22c57f44-a6bb-4d3b-a340-29be0e0e37ec": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "58158f4d-dc55-4374-81fc-f409780c2c3b": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "2fbb1d6c-500e-4482-92b8-374a376b90c3": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "ce1c7bf6-fcdf-437a-8540-69f770a47813": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "0fd3f4c1-645b-42dd-95f4-c09144987e40": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "b1fd42fb-ce26-4f73-a86e-c28d04369c4e": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "93000ebc-e023-42b6-b4ea-2feaba1ad6a8": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "eff7ec16-202b-4aed-99e6-6ca40c40f67b": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "463ab77e-51c4-410e-80ff-f4e4e58ccbbe": {
+          "progression_name": "Bevezető a Tervező módhoz"
+        },
+        "99d617bc-9759-4d6d-928e-948f53a627f8": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "ad21eed5-278f-403c-8dfb-128c30342dab": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "5da5c4dc-a023-4ff8-b528-e98ab11ef228": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "8b812433-4e2c-464c-ba2e-7924f27a68b7": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "a17f73b3-11f1-499b-873e-0543c661ec9b": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "40007e09-694e-460e-ab13-163957027c62": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "1bb8c5f5-a9e1-4a84-973d-a2ae89090b29": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "6201931c-36b8-45a1-8ce9-48c53f418a29": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "682050de-bfb6-467f-9e31-3723a5ce0b70": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "74a6211b-44bb-4dfa-8c12-1d20eb6c07ab": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "fd41d547-a8d5-4a2a-ba10-f0c1949f8615": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "ab754ae8-ecf8-4997-91c7-2b0223eab31e": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "5e7a9580-cd1c-4700-a7d9-084b7b7eea02": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "3f01a269-b29b-4fa9-a9a4-a332d5378dbf": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "7f64afe2-30a0-47d0-8c46-2a6451d392d7": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "ed2725a9-55f8-4cc0-8004-c096461fd666": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "2828d915-f212-40c7-bd63-19ae9d2e9ac9": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "9c3c7a0c-9b29-42f2-bf0f-ce3676516542": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "11df93d2-fda9-467b-bb01-71f213fe5346": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "61a58ec5-2c40-477b-a460-d1b997966a16": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "3a415e02-cd6f-4a28-9928-4d612a90fb22": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "f955d78f-49f5-4915-a28c-766c62ab277c": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "a09b7024-395a-4f08-aca7-58786551fdee": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "0ee5210f-6f63-46fc-a10b-aa23c7dc7528": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "39bd7199-1d64-4d15-86e7-c038ca4fc357": {
+          "progression_name": "Fedezd fel a HTML-t"
+        },
+        "28e77263-87a7-47ad-a222-a4751bb6dafa": {
+          "progression_name": "HTML-címkék"
+        },
+        "3301a127-c982-46a9-8280-14b318701aa8": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db": {
+          "progression_name": "Páros programozás"
+        },
+        "0baf0b6a-4bf6-4e7e-9eac-75d23fb486b5": {
+          "progression_name": "HTML címsorok"
+        },
+        "4a6905c1-5b88-4beb-af1a-9b5d90235006": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "b268b7d7-903b-4f3b-8ffc-fe89a1dceb48": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "96c1880e-e7f9-43dd-a4e8-d89a104289cc": {
+          "progression_name": "Listák"
+        },
+        "f0d0bab0-1583-48e8-ad7b-194e498fcece": {
+          "progression_name": "HTML listák"
+        },
+        "a97be019-18c2-445a-a713-d4fade4af9e2": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "43cd8249-3d88-496c-b52f-6a03f5380029": {
+          "progression_name": "Creative Commons keresés"
+        },
+        "75510b66-6276-4220-82e4-b0d28453127b": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "9b99bbac-c605-4a93-a573-277dbf0d31fe": {
+          "progression_name": "Hibakeresés"
+        },
+        "2315317c-9f63-4980-95ac-9e2c25658fef": {
+          "progression_name": "HTML formázás"
+        },
+        "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6": {
+          "name": "Kihívás",
+          "progression_name": "Kihívás"
+        },
+        "736313a5-2b8b-4290-bda7-c60ae0ffd965": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "90332559-0ced-42cf-b103-e30e0fc60e83": {
+          "progression_name": "Hiperhivatkozások"
+        },
+        "5df340df-5ad6-48a7-8a71-0e4fc7c1ebcc": {
+          "progression_name": "Webhelyének közzététele"
+        },
+        "fda3726d-3496-4e33-90c6-cb20afa549f3": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "bcf6fb6e-2324-4127-ba60-222522b9fb8e": {
+          "progression_name": "Felfedezés: stílus hozzáadása"
+        },
+        "678c8582-c423-4275-906d-3d274c819ba3": {
+          "progression_name": "Videó: bevezetés a CSS-be"
+        },
+        "0d59897a-ae98-46f2-837b-8a7b0d1342ab": {
+          "progression_name": "CSS és stílus lapok"
+        },
+        "c60f092c-2f98-4aaf-b2b7-931df50e8aaa": {
+          "progression_name": "CSS szöveg tulajdonságok"
+        },
+        "22000d8e-1492-45fa-8a30-1f07493663a9": {
+          "progression_name": "Videó: bevezetés a CSS-be, 2. rész"
+        },
+        "4a7ed6a2-f245-466b-9905-654053dfae20": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "2682cf14-5543-4e2c-b9d0-72f37f11b0ce": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "51011585-64b1-4bbb-94db-e1f9ebbae76b": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "801d256e-1027-4bfd-8073-8ae4dd1a59c1": {
+          "progression_name": "RGB widget"
+        },
+        "011ef4d6-4373-4beb-ab13-e77d1fa25dc5": {
+          "progression_name": "CSS osztályok"
+        },
+        "fb4df271-45ec-4fb0-8247-0dfebe05cbd1": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "da39537c-01a9-4613-bc81-c20b9baf0747": {
+          "progression_name": "Tanfolyam végi projektek"
+        },
+        "cf810bf2-e1cf-492f-bf3f-b7a337cfa8ff": {
+          "progression_name": "Tanfolyam végi projektek"
+        },
+        "f147a0c8-7d8f-4acd-a8d7-feb39d52e0ab": {
+          "progression_name": "Földönkívüli támadás"
+        },
+        "a78fef77-4dfa-4b0a-9034-948d959a70a9": {
+          "name": "Tanfolyam E Művész projekt",
+          "progression_name": "Tanfolyam E Művész projekt"
+        },
+        "0d50aac7-6c49-46ce-b513-0f94f6b36024": {
+          "progression_name": "Tanfolyam végi projektek"
+        },
+        "74674f27-4080-468a-b72c-5eedcd9b0148": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "6c3fca58-2c3c-4b29-9ec3-ba3426ab48cf": {
+          "progression_name": "Bevezetés a játéklaborba"
+        },
+        "2af454bc-9b55-4205-b0fd-247af66b3d13": {
+          "progression_name": "Rajz"
+        },
+        "aaec28b5-6d69-44c7-a70d-37dcba2745b6": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "5c5b77bf-37ff-4f79-ba93-bbcb7be5001c": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "8b2d6e79-7e2d-44c6-b048-e458f01608c8": {
+          "progression_name": "Véletlen számok"
+        },
+        "62752d2a-eb7b-46eb-80b3-96001b0f729b": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "505f40d0-4200-4936-8a93-37a4d405ae3d": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "d87c3f4d-7c7b-421d-bd17-7428e0a5bccd": {
+          "progression_name": "változók"
+        },
+        "d7ef1e6d-9ab7-448f-8aca-80b5b3239b85": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "61be109c-b19e-448d-b19f-81224b39d6e9": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "21279214-0c29-48a8-8158-7d3f96726320": {
+          "progression_name": "Videó: bevezető a sprite-okhoz"
+        },
+        "3f7ce7b1-04b4-4172-b252-5a6b3e2dc8a7": {
+          "progression_name": "Sprite-ok létrehozása"
+        },
+        "64957b25-c71b-4b9c-ab40-16fc9845944d": {
+          "progression_name": "Sprite helyzetek"
+        },
+        "3d8197af-4652-485f-9f96-a5a2c78bb3d6": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "bd35dacd-835c-497c-a32c-7ec91b544e3f": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "6d500881-4394-4b38-9bbb-56b73d897b83": {
+          "progression_name": "Sprite tulajdonságok"
+        },
+        "bb202266-76ce-425e-83e1-fa5ccee34421": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "1f24df11-4b2c-4582-b9a7-68ecdd1cefa8": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "3b02b34e-516a-4aad-8a54-2739e0c1de33": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "1ba362fd-4067-4ccf-85f8-77a739513e6a": {
+          "progression_name": "Videó: mozgó sprite"
+        },
+        "7e89c3a6-7df0-4c79-95e0-c9d3bde52013": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "6f23279f-c5ca-4778-824c-84262aea0a1e": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "8e0c2b54-68da-464f-8193-c58a44bea45a": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "e8435c3f-8689-4689-887f-ea764c3cf6c1": {
+          "progression_name": "Ha nyilatkozatok"
+        },
+        "88f47fb8-346f-4fba-8ed1-ee4550344298": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "a2736472-bcca-4186-a363-199e85261660": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "f0b21c2b-eb9c-4108-a1b5-ec2b4db23296": {
+          "progression_name": "Képek szerkesztése"
+        },
+        "970e0d56-a8de-4dde-a5ab-a2597f95aa1d": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "02bab66c-8258-4c4d-bfd9-07d80b4c94a9": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "7b10d24c-5e4b-49cb-a89c-e659288c3731": {
+          "progression_name": "Video: feltételes utasítások"
+        },
+        "ecb006e6-b739-4392-8d5d-2278b7ada266": {
+          "progression_name": "Ha-egyébként nyilatkozatok"
+        },
+        "af0c5a51-2804-4dd1-996f-de522aa7b283": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "10190642-0377-4c55-8765-98079f117209": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "cfaf16c5-a59a-4bbe-8816-a308958366da": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "42b7b5b9-af50-496f-924a-78551218dd1e": {
+          "progression_name": "Videó: sebesség"
+        },
+        "98b5d2e7-ac67-456b-9fd9-0d916afa1f25": {
+          "progression_name": "Sprite sebesség"
+        },
+        "3c2057a7-5065-43b6-9b53-bef50c2f9f3c": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "f1bd014d-ca41-4c47-a35f-0fe4c780a9a4": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "e83e02d2-126b-4a00-96df-ca09f4408ca2": {
+          "progression_name": "Minta játék"
+        },
+        "53169820-0257-4ae6-9c9a-9bc618b8f16b": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "dd8f2058-1a14-401a-878a-f21f66f4a671": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "fa0cb5a5-111c-4d06-ba91-66d4bf49daac": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "a809028d-5066-4fd4-bad2-6a3c0abe979f": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "58f5da81-795d-466d-99dd-9f0102089130": {
+          "progression_name": "Sprite interakciók"
+        },
+        "58632e38-6d7e-4f2e-b871-e1abb79fbf62": {
+          "progression_name": "Sprite interakciók áttekintése"
+        },
+        "744fd0ee-23fb-497a-a32e-edd8c31ffe13": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "33b05e2a-9a74-425e-a948-f80ff7bc83e8": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "6ab5af14-9b04-48d9-8ca9-8f6f99ebd20b": {
+          "progression_name": "funkciók"
+        },
+        "d831e37b-1630-4982-99bc-4ea5ce219204": {
+          "progression_name": "Függvények áttekintése"
+        },
+        "887f45bd-2611-4441-860d-ac358b2e0d04": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "c4785657-6ce2-4e51-9906-e0e59b4fe461": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "46103cd2-4b16-40b6-8d34-4d6b489b0997": {
+          "progression_name": "Minta játék"
+        },
+        "1586b613-84ab-4c64-96cc-2f18a1228596": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "d14b365a-aae7-4859-b565-b467ce296180": {
+          "progression_name": "Ugró nyuszi"
+        },
+        "86e3401e-2dbd-44ad-8543-49b4dcf51632": {
+          "name": "Javíts a játékodon",
+          "progression_name": "Javíts a játékodon"
+        },
+        "16b79375-6e47-4ee4-8365-b12e696ff9ae": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "9788e225-92b9-4d11-8bc7-987573ba1b45": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "38c450dd-db4d-4662-b493-c40b418d561a": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "88ac33a5-ac45-42ee-9c0a-50ccba0d8dee": {
+          "progression_name": "Áramkör játszótér: LED-EK"
+        },
+        "48b45eb6-9188-4e20-b1cb-e5dda0c055de": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "6be2b193-1ea5-4e40-a9c0-00e3469f1b5b": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "9e2c3efe-f050-4a20-8a47-d447e5491a18": {
+          "progression_name": "Gombok és kapcsolók"
+        },
+        "608a2e2e-0571-4e76-aa25-9163dbbc6853": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "29234441-d464-42bc-8363-b3244d68d0ce": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "851eccb4-1413-4364-8a74-0f5d7c0c584b": {
+          "progression_name": "Analóg szenzorok"
+        },
+        "789a4fe7-cd01-4903-bdd7-a617734ac389": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "a9308f2f-a6fb-4a3a-b4be-6beda7bd9bb9": {
+          "progression_name": "Példa program"
+        },
+        "568e51fc-e7d7-40ff-9d57-f347d05f8c65": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "14876891-4b0e-4960-878d-f5c7b5771261": {
+          "progression_name": "Események"
+        },
+        "470f48a9-4ea6-404a-8b41-9d36a5e9fa9a": {
+          "progression_name": "funkciók"
+        },
+        "4d5acf5c-ee90-4c90-aedd-1d5d2f5ccad1": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "8cb493b4-b973-4508-9509-be8d035d0023": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "7b508386-4ba1-4653-86bb-781e9669a9ac": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "ffe0d2ab-7af9-4415-8af0-48c88e6a0693": {
+          "progression_name": "Számláló ciklusok"
+        },
+        "2b5209d7-f495-4e26-b2af-8b639c085bca": {
+          "progression_name": "Számláló ciklusok"
+        },
+        "a024a232-f555-4c1d-8b3c-86b766246686": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "9eb53d89-cdac-4e24-9ac6-e165e3abed0f": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "41a48a88-144d-417d-a903-a09df11b7f9c": {
+          "progression_name": "Paraméteres függvények"
+        },
+        "2f8b307a-66ba-4d70-be75-f0cd1a1cceb0": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "aed682ed-9861-4d1d-a9f5-21ee3c69d68d": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "812cc4f7-4fec-46e3-900b-807efdf05bda": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "a35f53b0-111a-45f1-bfdb-73526ec7ffe5": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "0d50b717-9980-44bd-b6ea-bc0eb94d867b": {
+          "progression_name": "Fedezd fel a HTML-t"
+        },
+        "0a8ea325-6f90-4c8a-b2e1-42582a42a044": {
+          "progression_name": "HTML-címkék"
+        },
+        "6dbf04b5-8bcc-4f46-a3f0-6e4c8bfc04bb": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "322f42db-5491-4424-9d7b-b64af0b54703": {
+          "progression_name": "Páros programozás"
+        },
+        "a3ffb577-3bba-4e37-8327-23c0ef4ec42b": {
+          "progression_name": "HTML címsorok"
+        },
+        "79b3bea8-73e0-4378-badf-b239d4889c59": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "606fd2c3-61a9-4e80-aa77-f524f735061b": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "617bb683-840e-46f3-bfaf-72dea5842d0f": {
+          "progression_name": "Listák"
+        },
+        "9b3c9550-ffd2-4e71-b964-3dd6b47d77c3": {
+          "progression_name": "HTML listák"
+        },
+        "fd69d3d3-7739-47fb-a41e-586291d17bba": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "a99d76c7-f450-46d6-ac24-13cc17620581": {
+          "progression_name": "Creative Commons keresés"
+        },
+        "acda466a-ee2f-4402-a8d7-3be68a220563": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "3fcf676a-373f-41b3-8cf1-ecb10c28ec23": {
+          "progression_name": "Hibakeresés"
+        },
+        "5f08ec78-a44e-44bd-9088-19287dba106b": {
+          "progression_name": "HTML formázás"
+        },
+        "22367590-f0a2-4c03-8600-8598926280b8": {
+          "name": "Kihívás",
+          "progression_name": "Kihívás"
+        },
+        "74b89378-b7af-4b21-9fb5-e11d2718a24b": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "8827ab7e-b9de-478f-bd04-0897af746bc3": {
+          "progression_name": "Hiperhivatkozások"
+        },
+        "5b4e2a2e-7dc0-42ba-b0b4-ec49111003db": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "416cea70-7edb-40e6-8da6-9dddc3e0d8f2": {
+          "progression_name": "Felfedezés: stílus hozzáadása"
+        },
+        "17bfe3b7-843e-4de0-b08e-63379f9f2932": {
+          "progression_name": "Videó: bevezetés a CSS-be"
+        },
+        "501f1b42-a950-4eed-9adf-de1191060c3c": {
+          "progression_name": "CSS és stílus lapok"
+        },
+        "ba8d10dd-97a2-4db5-b7ca-a369535aeed8": {
+          "progression_name": "CSS szöveg tulajdonságok"
+        },
+        "41661c20-7dda-48e5-98ed-59d62f2cb7e5": {
+          "progression_name": "Videó: bevezetés a CSS-be, 2. rész"
+        },
+        "99e6e72d-fce8-410b-8cb6-f5dbcc1cd311": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "bee8af93-c716-4623-9efd-5bddf4f0f0af": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "dc411fe9-5e84-4ab9-bac1-fc38a3492e2d": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "16b3b6ef-58f7-43e4-89b8-610459a61bb9": {
+          "progression_name": "RGB widget"
+        },
+        "0b5bd0f5-7877-44d7-a983-b44ce18b5507": {
+          "progression_name": "CSS osztályok"
+        },
+        "ac0762bb-e573-4bfb-9296-977eed04ebae": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "cf87e421-b4e3-4640-a51f-45aa9189baad": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "85258b0c-6c4d-4620-ba2e-7ce446ffaa82": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "da3fea8c-db9e-44db-aaa1-dd5738881557": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "f22c7ed8-df75-4a9c-b662-2249a801534f": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "e0c497c0-6ea2-40be-b50b-4e8392e5d659": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "b5a126a8-1a3c-4fc6-b10d-a0c7ec8a0ed1": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "e8e8a64f-6df6-4a3c-9dbc-193bbed5bc2c": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "5b8227da-9aab-4d49-80aa-688539a47b62": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "6cfd6d7c-10b3-4118-9e17-ed278adbab4a": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "f27d38b3-9892-47dd-8bdb-e1442286128d": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "12c9917f-a60c-46d3-9f30-ed8281586c01": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "04a67b2e-496e-49bb-9134-ce6fb086560c": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "5873dc9a-474c-4f76-bab6-9c4795733165": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "c4174fc9-a3ee-4295-9ebc-e7759cc27251": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "095bd460-b24f-44b2-b807-acdf71759f73": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "85e6dc1d-2751-4551-9624-c0e8c5b44984": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "f51c0d31-75b2-4b97-a7f4-0ebfba1a962f": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "11c25022-a283-488e-9952-4d58bd243a7e": {
+          "progression_name": "Összefoglaló"
+        },
+        "54b046af-de7a-4f1c-96e8-8f35bc6ee2f3": {
+          "progression_name": "Összefoglaló"
+        },
+        "71a82859-6091-4931-8e65-9609a5248896": {
+          "name": "Összefoglaló",
+          "progression_name": "Összefoglaló"
+        },
+        "6cbd55ba-116e-493c-8bea-b71096dd0a05": {
+          "progression_name": "Összefoglaló"
+        },
+        "9f01af5f-25ad-4296-beaf-a93d5604daa7": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "6198b0c4-29b7-43ec-a0e7-d5c3d0bd729b": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "d9761b72-84cb-4981-b4ea-06c2006e0a5a": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "54ff3bb8-d56f-40db-8ac2-c1590cd00cea": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "e592f5f2-366c-4356-9bc5-638d46d85467": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "657b952f-db9c-4c43-992b-3fbde501b39d": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "9acd3b15-05fd-41a6-a995-2a23d4615c17": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "4586de08-093a-49de-ab6c-c0975178eb41": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "6f8f6475-93f8-4c8d-91e0-258ecf76ac6f": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "a76af1db-3ebd-4dc2-a60d-a543f9986324": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "0a3bebfc-6c1f-457b-996d-ffd3365c45b2": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "45ec05ff-a316-4da6-8857-f4e39c4f55a8": {
+          "progression_name": "Bevezető a Tervező módhoz"
+        },
+        "8dcb2f89-a876-4734-ae35-72624eb8a806": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "2462e46e-2f0c-48e2-b59d-bd3bb61ab202": {
+          "progression_name": "Események"
+        },
+        "34608f70-83c4-4c03-899b-43b445955d50": {
+          "name": "Lecke áttekintése",
+          "progression_name": "Lecke áttekintése"
+        },
+        "75d12c32-b61b-4463-97cd-d625e9c775c7": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "a89020d1-a341-4dc6-88b0-63cc0e160f5e": {
+          "progression_name": "Lecke áttekintése"
+        },
+        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "#### Színpadra állítás\n\nÜdvözöld a tanulókat az osztályban, és ismertesd a napi tevékenységet.",
+          "tips": [
+            "A Kódolás órája bevezetésének egyik módja, ha nem nagyon ismered a kódolást, hogy bemutatod az egyik [ösztönző videónkat](https://hourofcode.com/promote/resources#videos). Válaszd ki azt, amelyikről úgy gondolod, hogy diákjaid inspirálónak találják, és oszd meg most. A középiskolások számára a [Itt a kódolás órája](https://youtu.be/FC5FbmsH4fw) című videót javasoljuk."
+          ]
+        },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": "Ma a kreativitásunkat fogjuk használni, miközben kódolni tanulunk. Sokféleképpen lehetünk kreatívak. Ti milyen módon szerettek kreatívak lenni? "
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": "Bátorítsd a tanulókat, hogy mondják el, hogyan fejezik ki kreativitásukat, például művészettel, tánccal, zenével vagy írással. Következő kérdésként kérdezd meg a tanulókat, hogy mi inspirálja őket kreativitásukban. "
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": "Tudtad, hogy az informatika nagyon kreatív tud lenni? Valójában kóddal művészetet is létre lehet hozni. Emlékeztetőül: a kód olyan utasítások összessége, amelyeket a számítógép képes megérteni. Ahogyan a festék színeinek kiválasztása, úgy a kód megírása is lehetőséget adhat a kreativitásod kifejezésére! \n\nMa a költészetet fogjuk használni a kreatív kódolás ösztönzésére. Tudja valaki, mi az a költészet? Van kedvenc verse vagy költője? "
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": "\\*\\* Olvassatok együtt verset:\\*\\* Olvassatok el együtt [néhány verset](https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing), és gyakoroljátok az egyes versek hangulatának szavakba foglalását. Bátorítsd a tanulókat, hogy osszák meg értelmezésüket, még akkor is, ha az eltér valaki másétól."
+        },
+        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "Versművészet",
+          "description": "#### Általános támogatás\n\nA tevékenység végére a tanulóknak lesz egy animált versük, amely az általuk választott vers vizuális értelmezését mutatja be. Ez a lecke arra szolgál, hogy a tanulóknak lehetőséget adjon arra, hogy játszadozzanak a kódjukkal, és megtalálják a nekik legjobban tetsző vizuális hatásokat. \n\nA terem körbejárása közben bátorítsa a tanulókat:\n\n-   **Ne siessetek:** A legtöbb szinten a tanulóknak meg kell találniuk a vers hangulatának értelmezéséhez illő, tökéletes effekteket. A szinten maradás és a kódjukkal való játszadozás kifejezetten javasolt.\n\n-   **Keress egy verset, ami tetszik neked:** A diák számára megjelenő vers az új szinten csak egy javaslat. A játékterület tetején található egy legördülő menü előre betöltött versekkel. Kérd meg a tanulókat, hogy olvassanak el néhányat, és találjanak egyet, amelyik megszólítja őket. Ezután elkezdhetik a kiválasztott verset kóddal animálni. \n\n-   **Mutass meg egy teljesített szintet:** Minden olyan szintbuborék, amely teljesen zöld, azt jelenti, hogy a tanuló sikeresen teljesítette az adott szint összes követelményét. Kérd meg a tanulót, hogy kattintson egy zöld buborékra, hogy megmutassa, mit alkotott. \n\nAzokra az esetekre, amikor a tanuló úgy érzi, elakadt: \n\n-   **Olvasd el az instrukciókat:** Az instrukciók felsorolásszerűen tartalmazzák a szint teljesítésének módját. Ha egy tanuló úgy érzi, hogy elakadt, kérd meg, hogy olvassa fel hangosan az instrukciókat, és kérd meg, hogy saját szavaival ismételje el, amit az instrukciók tartalmaznak. \n    -   <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> A tanulók a szövegről-beszédre ikonra is kattinthatnak, hogy meghallgassák az instrukciókat hangosan felolvasva.\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nézd meg a tippeket**: A legtöbb szint legalább egy tippet tartalmaz, amely több részleteket tartalmaz a szint teljesítésének módjáról. \n-   **Dicsérd a hibákat:** A kódolás természetes része, hogy a kódodban hiba keletkezik. Ha a program nem azt csinálja, amit vártak, kérje meg a tanulót, hogy először mondja el, mit szeretne, hogy történjen, kattintson a futtatás gombra, hogy megfigyelje, mi történik valójában, majd keresse meg a kódjában azt a helyet, amely az eltérést okozta. Ne feledd megdicsérni a hibák megtalálásáért és kijavításáért. A hiba megtalálása azt jelenti, hogy a tanulók nagyszerű munkát végeznek egy összetettebb program megalkotásában. "
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": "#### Szintenkénti támogatás\n\n**1. szint:** Bátorítsd a tanulókat, hogy olvassák végig a verset. Ezután kérd meg a tanulókat, hogy találjanak olyan háttérszínt vagy hatást, amely megfelel az általuk választott vers hangulatának.\n\n**2. szint:** Ebben a példában a tanulók először olvassák el a verset egyedül, majd nyomják meg a Futtatás gombot. Megkérdezheted a tanulót, hogy a programozó által választott hang és effektek illeszkednek-e a vers hangulatához. Kérd meg a tanulókat, hogy fejtsék ki véleményüket.\n\n**3. szint:** Ez a szint a hangokat mutatja be, a tanulók használhatnak fejhallgatót, ha van. \n\n**4. szint:** Kérd meg a tanulókat, hogy olvassák el a verset, és keressék meg azt a sort, ahol a vers hangulata megváltozik, vagy ahol a költő új képet vezet be. Az eseményblokk segítségével adjanak megfelelő effekteket a vers azonosított soraihoz.\n\n**5. szint:** Ebben a példában a tanulók először olvassák el a verset egyedül, majd nyomják meg a Futtatás gombot. Kérdezd meg a tanulót, hogy a képek illeszkednek-e a vers szavaihoz. Kérd meg őket, hogy fejtsék ki véleményüket.\n\n**6., 7., 8. szint:** Lásd az \"Dicsérd a hibákat\" című részt az Általános támogatás szakaszban. Bátorítsd a tanulókat, hogy az eseményblokkokkal egynél több átmenetet tartalmazó programokat építsenek.\n\n**9. szint:** Bátorítsd a tanulókat, hogy olvassák végig a legördülő menüben található összes verset, hogy találjanak egyet, amelyik tetszik nekik. Mondd el a tanulóknak, hogy ezen az utolsó szinten elkészített verseiket megoszthatják barátaikkal és családtagjaikkal. Itt az ideje, hogy összerakjuk a kódolási és az ELA készségeket! "
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": "Ha élvezted a mai kódolás tanulást, a code.org/learn oldalon folytathatod a tanulást. Ha szeretnéd megosztani barátaiddal és a családoddal, amit készítettél, kattints a \"Megosztás\" gombra, és küldd el a linket annak, akinek szeretnéd!"
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": "#### (választható) Értékelés: A megértés ellenőrzése (4 perc)\n\nOssz ki diákonként két öntapadós jegyzetlapot."
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": "Két öntapadós jegyzetlapotok van. Az egyikre írjatok egy dolgot, amit ma tanultatok a kódolásról. \nA másikra írjatok egy dolgot, amit ma a költészetről tanultatok. \n\nKézfelemeléssel, osszátok meg az egész osztállyal: Mit szeretnétek a legközelebb tanulni a kódolásról és az informatikáról?"
+        },
+        "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
+          "tips": [
+            null
+          ]
+        },
+        "3d7433c7-ff8a-4cf9-b462-83ce39322c67": {
+          "name": "Kirakós játék"
+        },
+        "6610529a-20b8-4b76-83d1-1215f72ed51b": {
+          "tips": [
+            null
+          ]
+        },
+        "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
+          "progression_name": "Szintek"
+        },
         "1c9607e7-ed92-4303-bfef-550b7c561cce": {
           "name": "Bevezető"
         },
@@ -1521,6 +3865,3289 @@
         },
         "a277a288-e8d5-4788-aef0-cb7851045427": {
           "name": "Egyéb"
+        },
+        "1d222524-316a-4988-b206-b1f948cfbee7": {
+          "tips": [
+            null
+          ]
+        },
+        "aa866b7f-747f-49e4-9578-f937dbef61e4": {
+          "tips": [
+            null
+          ]
+        },
+        "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
+          "tips": [
+            null
+          ]
+        },
+        "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
+          "tips": [
+            null
+          ]
+        },
+        "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
+          "tips": [
+            null
+          ]
+        },
+        "57d8014b-4da5-4981-b5aa-bd5feb656548": {
+          "tips": [
+            null
+          ]
+        },
+        "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
+          "tips": [
+            null
+          ]
+        },
+        "c407d4d5-d82f-47d8-a814-76756c052cc5": {
+          "tips": [
+            null
+          ]
+        },
+        "8791201e-af87-456b-8f93-1c4cb8c10099": {
+          "tips": [
+            null
+          ]
+        },
+        "6ca0b1c3-d106-4e70-bdf5-ee0ed4f7dad6": {
+          "tips": [
+            null
+          ]
+        },
+        "48b299c7-bdd4-453e-aa47-d9d2c7622ee8": {
+          "tips": [
+            null
+          ]
+        },
+        "aa9a6902-38d1-4613-8535-7b515b0f7e04": {
+          "tips": [
+            null
+          ]
+        },
+        "1060fa91-ba3a-4d55-9a85-493f9b08e027": {
+          "tips": [
+            null
+          ]
+        },
+        "ec6a94fb-4529-40b5-bee7-42c5d06822e1": {
+          "tips": [
+            null
+          ]
+        },
+        "12acd4ea-a900-4ea1-a353-601a72b83c80": {
+          "tips": [
+            null
+          ]
+        },
+        "4cb7a9fe-2e72-4730-a3e8-5aaca89653e9": {
+          "tips": [
+            null
+          ]
+        },
+        "f25eef96-e4b8-46eb-8187-2f05676a8b22": {
+          "tips": [
+            null
+          ]
+        },
+        "77fbbd0c-9cd9-4764-a872-ac8da9a7871e": {
+          "tips": [
+            null
+          ]
+        },
+        "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
+          "tips": [
+            null
+          ]
+        },
+        "d0b76b9b-7d00-488a-9c55-38ef54a4be8d": {
+          "tips": [
+            null
+          ]
+        },
+        "187961bf-44e5-4407-81d7-a47884e32eb6": {
+          "tips": [
+            null
+          ]
+        },
+        "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
+          "tips": [
+            null
+          ]
+        },
+        "cbf336bc-c75f-4710-9ba5-d30782360222": {
+          "tips": [
+            null
+          ]
+        },
+        "42f29ce9-a2d0-4e8a-a60c-870858ba5847": {
+          "tips": [
+            null
+          ]
+        },
+        "948494c6-f9ab-422f-a5e5-1ba0dd2bb690": {
+          "tips": [
+            null
+          ]
+        },
+        "bde096a8-755f-4d46-8e37-2b7c22c6112d": {
+          "tips": [
+            null
+          ]
+        },
+        "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
+          "tips": [
+            null
+          ]
+        },
+        "73ce1ded-8856-4156-bfc4-c114b2bae063": {
+          "tips": [
+            null
+          ]
+        },
+        "9a6a30be-65eb-4ba0-ac15-d35a4120f163": {
+          "tips": [
+            null
+          ]
+        },
+        "0d89923e-93b3-4a03-b79e-b262c4a71f72": {
+          "tips": [
+            null
+          ]
+        },
+        "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
+          "tips": [
+            null
+          ]
+        },
+        "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
+          "tips": [
+            null
+          ]
+        },
+        "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
+          "tips": [
+            null
+          ]
+        },
+        "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
+          "tips": [
+            null
+          ]
+        },
+        "79f35dc1-bf5e-47ca-b1eb-b726b15859a8": {
+          "tips": [
+            null
+          ]
+        },
+        "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
+          "tips": [
+            null
+          ]
+        },
+        "43756539-5123-4890-8fb8-651dbb6ee4b2": {
+          "tips": [
+            null
+          ]
+        },
+        "e4ff1e67-0f17-46a7-8d03-26f8a65238c2": {
+          "tips": [
+            null
+          ]
+        },
+        "0f2e1a2e-8982-4393-9048-8910a592aa88": {
+          "tips": [
+            null
+          ]
+        },
+        "db8f4d62-af34-4871-993d-281cacf5ff29": {
+          "tips": [
+            null
+          ]
+        },
+        "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "tips": [
+            null
+          ]
+        },
+        "6dc2399a-dad6-46a3-8124-e6b3d100d4fe": {
+          "tips": [
+            null
+          ]
+        },
+        "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "tips": [
+            null
+          ]
+        },
+        "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
+          "tips": [
+            null
+          ]
+        },
+        "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
+          "tips": [
+            null
+          ]
+        },
+        "aedb156c-9f9c-4214-94aa-a664ce875b23": {
+          "tips": [
+            null
+          ]
+        },
+        "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
+          "tips": [
+            null
+          ]
+        },
+        "2ac899a0-cd0e-4440-89e1-ef4de87b930f": {
+          "tips": [
+            null
+          ]
+        },
+        "209eff96-d559-411e-b8cf-bd6a84923473": {
+          "tips": [
+            null
+          ]
+        },
+        "183a63a0-a03c-4739-8f29-fed89378086e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "8ded89d7-85cd-4bba-883e-7c4981ce3078": {
+          "tips": [
+            null
+          ]
+        },
+        "61bfa751-8587-4118-84e1-b3870975fad4": {
+          "progression_name": "Kihívás"
+        },
+        "b39acb79-1fad-4acd-b3e4-789f32636f46": {
+          "tips": [
+            null
+          ]
+        },
+        "1f38b581-970b-4050-9a0b-b899978773d7": {
+          "tips": [
+            null
+          ]
+        },
+        "e2e484bb-64dd-4917-b336-741e743a8814": {
+          "tips": [
+            null
+          ]
+        },
+        "5d7ce86b-abab-41a9-a0a1-b7954bed02af": {
+          "tips": [
+            null
+          ]
+        },
+        "221c0911-a3eb-4409-be91-e665b43e3fc9": {
+          "tips": [
+            null
+          ]
+        },
+        "5b59847e-71f7-481a-a5ca-aa9ec4511289": {
+          "tips": [
+            null
+          ]
+        },
+        "0c7a96aa-61a7-4cbc-a8e4-36aec7260700": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "4e10be5f-60ad-4bae-913d-7a157e519447": {
+          "tips": [
+            null
+          ]
+        },
+        "c5595f82-fa56-4a48-a7f6-65b97947a7e9": {
+          "tips": [
+            null
+          ]
+        },
+        "4efb646c-4ce2-45f5-bb76-f444af86a9b4": {
+          "tips": [
+            null
+          ]
+        },
+        "a4bd3c09-bdc9-45a3-bcdd-6f54e3d19471": {
+          "tips": [
+            null
+          ]
+        },
+        "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
+          "tips": [
+            null
+          ]
+        },
+        "38761f3b-2e5b-4626-8f10-3a562e8d0c3b": {
+          "tips": [
+            null
+          ]
+        },
+        "bb1e1371-d01e-43c2-913a-5fe680de2bf4": {
+          "tips": [
+            null
+          ]
+        },
+        "c0c1d052-3e33-4066-a541-356b552d5ec7": {
+          "tips": [
+            null
+          ]
+        },
+        "0fac2a39-1a1e-4c53-a3eb-ef5ababb25f4": {
+          "tips": [
+            null
+          ]
+        },
+        "1ebb0840-0b5b-4ec9-9f95-1ccae266fe92": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
+          "name": "Kérdőív"
+        },
+        "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
+          "tips": [
+            null
+          ]
+        },
+        "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
+          "tips": [
+            null
+          ]
+        },
+        "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
+          "tips": [
+            null
+          ]
+        },
+        "72daa1e4-2bc1-49f2-b46e-9e007cf78597": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "0644a5d2-d3ae-4dea-8777-47a522955b21": {
+          "tips": [
+            null
+          ]
+        },
+        "97535dd4-2332-47bc-af09-9571d848068d": {
+          "tips": [
+            null
+          ]
+        },
+        "8da670fc-d91b-438b-af07-2227156fdbcd": {
+          "tips": [
+            null
+          ]
+        },
+        "1b28522d-bf63-4f09-94a2-a80833819a38": {
+          "tips": [
+            null
+          ]
+        },
+        "9492e63b-28f6-41b5-89b9-5f1d611186a1": {
+          "name": "Tevékenység"
+        },
+        "5b3b512d-42b8-4c2f-bbb3-7ebad7908e62": {
+          "tips": [
+            null
+          ]
+        },
+        "fc716fb8-1b76-44d6-9565-f114f18721f1": {
+          "tips": [
+            null
+          ]
+        },
+        "3bc8e042-f19f-4233-bebc-baccef07881b": {
+          "tips": [
+            null
+          ]
+        },
+        "dc5dddbb-40bf-41e0-be7e-51b41edf1337": {
+          "tips": [
+            null
+          ]
+        },
+        "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a": {
+          "tips": [
+            null
+          ]
+        },
+        "15cc22f5-50bf-4102-843a-7f9246727869": {
+          "tips": [
+            null
+          ]
+        },
+        "9819f2db-593b-4631-96e8-ad45aba59e08": {
+          "tips": [
+            null
+          ]
+        },
+        "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
+          "tips": [
+            null
+          ]
+        },
+        "e90bcc9b-7ad0-4e59-9c21-3e80d85c08f4": {
+          "tips": [
+            null
+          ]
+        },
+        "9a00392e-73f9-4bf0-9ca9-fc29a07a6bf1": {
+          "tips": [
+            null
+          ]
+        },
+        "8accf144-8730-45d6-a806-475e5164395c": {
+          "tips": [
+            null
+          ]
+        },
+        "d567345f-60b1-4c26-b5b7-d78d4e4ca1e9": {
+          "tips": [
+            null
+          ]
+        },
+        "aed2c64f-4f98-4bf6-adf7-f7cd80ab941a": {
+          "tips": [
+            null
+          ]
+        },
+        "b1931821-27e8-4550-98c6-ffc17f93cb62": {
+          "tips": [
+            null
+          ]
+        },
+        "d9db5d0e-f332-4e7f-8526-6bf166cae8a7": {
+          "tips": [
+            null
+          ]
+        },
+        "f5c05e62-80c7-422f-b578-b9ba663db140": {
+          "tips": [
+            null
+          ]
+        },
+        "ceaa3d86-c33a-4a0a-b56c-75b2b938786f": {
+          "name": "Meghatározás",
+          "tips": [
+            null
+          ]
+        },
+        "a400fd77-feee-4d7d-8be6-7ceb8e378cd0": {
+          "tips": [
+            null
+          ]
+        },
+        "11e8295e-4b2e-4844-91cd-3d02533f89ce": {
+          "tips": [
+            null
+          ]
+        },
+        "6c2b2e0f-0ca5-4f49-b7a4-e90ddc47860d": {
+          "tips": [
+            null
+          ]
+        },
+        "0e79724e-4dc4-491d-ac17-f4839c30ce19": {
+          "tips": [
+            null
+          ]
+        },
+        "ef056da0-16f9-479a-95ea-42f70ae6a9aa": {
+          "tips": [
+            null
+          ]
+        },
+        "667167ce-9c2f-4059-9a2a-71bdd0adccbc": {
+          "tips": [
+            null
+          ]
+        },
+        "8f2a96ab-2fe4-4799-bf45-5d850c830f97": {
+          "tips": [
+            null
+          ]
+        },
+        "8a310d03-4c27-4b18-b8f7-994c23971fdd": {
+          "tips": [
+            null
+          ]
+        },
+        "889b61a1-6e88-49a4-9250-5e48853f289c": {
+          "tips": [
+            null
+          ]
+        },
+        "6519fc7c-05b3-464d-a3ea-3cd9b239a023": {
+          "tips": [
+            null
+          ]
+        },
+        "b7a9b018-0728-4b91-935e-b3ec7c723623": {
+          "tips": [
+            null
+          ]
+        },
+        "45553c85-cb2b-4763-8875-484919a56ced": {
+          "tips": [
+            null
+          ]
+        },
+        "18ddafa9-e84c-403f-a417-d4516a1ae6a7": {
+          "tips": [
+            null
+          ]
+        },
+        "c5dbb48d-d120-4560-b671-bd507f1685b0": {
+          "tips": [
+            null
+          ]
+        },
+        "2ee54cfb-c1d2-4524-86c2-6ef303a598ea": {
+          "tips": [
+            null
+          ]
+        },
+        "2c2e61bd-0e80-4e8a-8377-5680d0d95f90": {
+          "tips": [
+            null
+          ]
+        },
+        "4a408d6d-8d2f-481e-aafe-e5d81da03a43": {
+          "tips": [
+            null
+          ]
+        },
+        "3fef28ad-87b4-4154-b80f-12b358f2e031": {
+          "tips": [
+            null
+          ]
+        },
+        "1715dc9b-df4c-4292-8b4a-f5cc8aea73a4": {
+          "tips": [
+            null
+          ]
+        },
+        "69cdfd66-ff99-4e25-b8e7-e6d920f36fb1": {
+          "tips": [
+            null
+          ]
+        },
+        "47fe69d8-300c-488d-94ac-616b6fb2fbb8": {
+          "tips": [
+            null
+          ]
+        },
+        "37a98989-bd44-40e0-8606-da8c32dde749": {
+          "tips": [
+            null
+          ]
+        },
+        "0b2efd87-9305-4f69-b54f-ad720a636f39": {
+          "name": "Első lépések"
+        },
+        "a23e57c3-d624-46df-bc76-87d7e4c16ad9": {
+          "tips": [
+            null
+          ]
+        },
+        "54a5e672-f71d-4cd7-9bb7-db4ad99104f5": {
+          "tips": [
+            null
+          ]
+        },
+        "8672a531-0212-4a3a-9831-5c522d710bd4": {
+          "tips": [
+            null
+          ]
+        },
+        "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400": {
+          "tips": [
+            null
+          ]
+        },
+        "beeb8da7-5283-44e8-a1b5-0eb3987e226b": {
+          "tips": [
+            null
+          ]
+        },
+        "a97b7f87-b7d9-4a8d-a68e-35cd489345e2": {
+          "tips": [
+            null
+          ]
+        },
+        "86647112-ffd2-4c41-84b4-1ea040590a32": {
+          "tips": [
+            null
+          ]
+        },
+        "233defe7-9977-4539-8a42-7e146979db0e": {
+          "tips": [
+            null
+          ]
+        },
+        "f5bad206-6147-4a6c-af88-bf15c41f6469": {
+          "tips": [
+            null
+          ]
+        },
+        "d12014de-c29c-4d8d-891b-2dca9c37974f": {
+          "tips": [
+            null
+          ]
+        },
+        "eb20582a-3ffa-45d7-8ce4-5505dc1e9f17": {
+          "tips": [
+            null
+          ]
+        },
+        "f8a14811-8528-45d2-970e-71e4c4cdd40e": {
+          "tips": [
+            null
+          ]
+        },
+        "9519ba5f-1e9a-41a3-91a5-10dcaa31b00d": {
+          "tips": [
+            null
+          ]
+        },
+        "99a48707-5d94-418b-a63e-120ef2178c88": {
+          "tips": [
+            null
+          ]
+        },
+        "61333e8c-4c43-4cb8-8a5f-56153ff20170": {
+          "tips": [
+            null
+          ]
+        },
+        "ac59be9d-db06-4340-a5f3-2f74f4d22f72": {
+          "tips": [
+            null
+          ]
+        },
+        "7e704d36-1603-46a8-be78-8f13dcdae93f": {
+          "tips": [
+            null
+          ]
+        },
+        "9e5d6c76-47cf-4853-8bfb-ebfa6005ca71": {
+          "tips": [
+            null
+          ]
+        },
+        "43484e40-619c-44a7-97e1-2612ae402193": {
+          "tips": [
+            null
+          ]
+        },
+        "d7947c4f-5f7c-4011-a004-6fb9cc228706": {
+          "tips": [
+            null
+          ]
+        },
+        "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
+          "tips": [
+            null
+          ]
+        },
+        "69c31664-67a3-406f-aef7-9be5281299ee": {
+          "tips": [
+            null
+          ]
+        },
+        "4aec71fb-6cbe-4811-ab72-128f739c84a7": {
+          "tips": [
+            null
+          ]
+        },
+        "580b0187-b553-4031-b073-fa6790bd6f48": {
+          "tips": [
+            null
+          ]
+        },
+        "9e88ce3c-497f-47c8-88b9-717c5747ca41": {
+          "tips": [
+            null
+          ]
+        },
+        "34f8346c-af88-4f9e-b676-566a5aab39d2": {
+          "tips": [
+            null
+          ]
+        },
+        "9073a9fc-550e-48f5-9f00-55bd0c2abf6a": {
+          "tips": [
+            null
+          ]
+        },
+        "4defcbc5-28b7-46a2-81b0-5e1c923dc036": {
+          "tips": [
+            null
+          ]
+        },
+        "bcbc8736-9513-438c-b118-87470fc5f545": {
+          "tips": [
+            null
+          ]
+        },
+        "5299e79c-fbf7-422a-962a-8adee224fd98": {
+          "tips": [
+            null
+          ]
+        },
+        "2974a2b8-24cd-4a3c-bd66-04e92209110b": {
+          "tips": [
+            null
+          ]
+        },
+        "52705132-ae81-4c78-8704-9ffd36b9e5cb": {
+          "tips": [
+            null
+          ]
+        },
+        "9ac26727-d92c-474f-8a18-271e7f494132": {
+          "tips": [
+            null
+          ]
+        },
+        "2e5264db-0d1d-4fc1-adf1-c5bf13967af5": {
+          "tips": [
+            null
+          ]
+        },
+        "648adba7-4a69-4bce-9109-9d50e9d71087": {
+          "tips": [
+            null
+          ]
+        },
+        "3ae6c2fa-0e47-40a3-894b-b1995fe98c91": {
+          "tips": [
+            null
+          ]
+        },
+        "5a82120d-9538-4fd6-b631-86b6d0e8bfc6": {
+          "tips": [
+            null
+          ]
+        },
+        "cc78f5f7-002f-44ed-9f5f-2518a19953e7": {
+          "tips": [
+            null
+          ]
+        },
+        "311288e0-9ddf-4681-a8f2-31ae7d196423": {
+          "tips": [
+            null
+          ]
+        },
+        "045c4fbc-83bd-4cce-a007-ed7ed6ac48bf": {
+          "tips": [
+            null
+          ]
+        },
+        "2f4c69e6-995a-4646-ac24-53f224ef9dd7": {
+          "tips": [
+            null
+          ]
+        },
+        "aec4a036-761c-4015-bdd0-e138372c1847": {
+          "tips": [
+            null
+          ]
+        },
+        "ff9510f7-5db2-48e7-906e-2289e52db678": {
+          "tips": [
+            null
+          ]
+        },
+        "75d3dcbc-e41c-4063-b598-facb3bdc9bcb": {
+          "tips": [
+            null
+          ]
+        },
+        "cda83683-b629-4ed3-a3ee-944691693739": {
+          "tips": [
+            null
+          ]
+        },
+        "1fb9839f-ccd0-4f02-b7b9-44e8ff7ab095": {
+          "tips": [
+            null
+          ]
+        },
+        "66a0329e-9fa3-4294-ba1a-ac918f0e8408": {
+          "tips": [
+            null
+          ]
+        },
+        "24d188db-fc22-41a3-bba4-8ef59a0ddc53": {
+          "tips": [
+            null
+          ]
+        },
+        "14254f0c-651f-4902-88ae-509fe2b77f7e": {
+          "tips": [
+            null
+          ]
+        },
+        "7f6c261c-5cd3-4215-ba2d-bb0db7014f0c": {
+          "tips": [
+            null
+          ]
+        },
+        "ba1c96c9-ff95-432b-8d22-5138a319f4b4": {
+          "tips": [
+            null
+          ]
+        },
+        "f7bad8f1-8f27-48a7-bd98-70d03a7ddf81": {
+          "tips": [
+            null
+          ]
+        },
+        "0e136518-de25-4ad4-a786-e9736f9b4354": {
+          "tips": [
+            null
+          ]
+        },
+        "e4c15ff3-00e4-45d9-b9ad-78e5b332b058": {
+          "tips": [
+            null
+          ]
+        },
+        "9ab8fce2-b661-425e-a015-a671e382a411": {
+          "tips": [
+            null
+          ]
+        },
+        "8c475adc-0786-43a2-9f57-fde314fd24ad": {
+          "tips": [
+            null
+          ]
+        },
+        "b25121aa-b946-4bea-9fdd-6a874ffb4bd7": {
+          "tips": [
+            null
+          ]
+        },
+        "8b41cd86-ab6d-4cc1-b24f-70a9534ba318": {
+          "tips": [
+            null
+          ]
+        },
+        "2e7e6d2b-ce4c-48ee-ab67-a7002104dad7": {
+          "tips": [
+            null
+          ]
+        },
+        "a96b40dd-a27b-4fc0-8c1e-db5584a87c4e": {
+          "tips": [
+            null
+          ]
+        },
+        "fe5c3b17-fe61-4487-97d0-c8cb1c2641c8": {
+          "tips": [
+            null
+          ]
+        },
+        "0b73f454-275c-431b-8325-06c9a32000d1": {
+          "tips": [
+            null
+          ]
+        },
+        "5eb3c3e2-7ebd-4824-b769-14d1244e412b": {
+          "tips": [
+            null
+          ]
+        },
+        "dfe65c27-9f06-4c6f-857e-06f4ae98dcd1": {
+          "tips": [
+            null
+          ]
+        },
+        "b5282123-46f9-411e-ba2c-d6f5ab3b4ea7": {
+          "tips": [
+            null
+          ]
+        },
+        "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
+          "tips": [
+            null
+          ]
+        },
+        "f14cc941-af61-4deb-8c16-be730ded1849": {
+          "tips": [
+            null
+          ]
+        },
+        "fe4404fa-4e67-4c56-b117-6aa3dd7fd8ef": {
+          "tips": [
+            null
+          ]
+        },
+        "053cf5c9-1dd1-4da7-8fca-82dd5780c4b0": {
+          "tips": [
+            null
+          ]
+        },
+        "8cb231b2-ab63-4868-a949-bc91e701ea7d": {
+          "tips": [
+            null
+          ]
+        },
+        "dafc849e-b1f0-4767-aa97-69090169177e": {
+          "tips": [
+            null
+          ]
+        },
+        "9fc2aec4-9f01-4726-82a7-306e613d936e": {
+          "tips": [
+            null
+          ]
+        },
+        "1890c047-5983-4093-99a8-08fcb099c0e0": {
+          "tips": [
+            null
+          ]
+        },
+        "bc4c9c62-accc-4be6-a733-2a6acf678ec7": {
+          "tips": [
+            null
+          ]
+        },
+        "b297e101-f4cd-4ddd-ae0f-42e87ed683d0": {
+          "tips": [
+            null
+          ]
+        },
+        "c932e879-ed85-4226-b025-a1dbb22da379": {
+          "tips": [
+            null
+          ]
+        },
+        "4c3af8fe-b972-410f-a839-00f38e6a51ce": {
+          "tips": [
+            null
+          ]
+        },
+        "7091d49a-c4ac-4c04-aaa4-290efb0ee705": {
+          "tips": [
+            null
+          ]
+        },
+        "2224615d-c083-4694-b797-4b3c8e8d84da": {
+          "tips": [
+            null
+          ]
+        },
+        "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
+          "tips": [
+            null
+          ]
+        },
+        "f5a1e7d6-5715-4050-bfed-a5e0663486c4": {
+          "tips": [
+            null
+          ]
+        },
+        "ef9ec42f-f86e-4636-a45b-5da0d208b714": {
+          "tips": [
+            null
+          ]
+        },
+        "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "0d9ecf02-4bac-4dc3-86c4-ba83c96e8a14": {
+          "tips": [
+            null
+          ]
+        },
+        "75c3755e-3860-4965-b2df-a459e020a7a8": {
+          "progression_name": "Példa program"
+        },
+        "01addbef-11df-4c62-a099-ae69c66c7c1c": {
+          "tips": [
+            null
+          ]
+        },
+        "33168786-d600-4b6c-a947-045b8a466d7c": {
+          "tips": [
+            null
+          ]
+        },
+        "8259e743-5c84-4516-8f31-300f06de6ab0": {
+          "tips": [
+            null
+          ]
+        },
+        "9afdcdd9-6cf6-481c-86b4-312da18c7cc3": {
+          "progression_name": "Események"
+        },
+        "b919f5c1-5152-4baa-bddb-112275d049ac": {
+          "progression_name": "funkciók"
+        },
+        "316f977f-5ad8-4565-b6d1-1c62507ba565": {
+          "tips": [
+            null
+          ]
+        },
+        "701df007-2fc2-4907-bdae-63ea39ea0649": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Videó: bevezető a Tömbök-höz"
+        },
+        "528b9a48-dd5d-4f52-b455-be650f9ed180": {
+          "tips": [
+            null
+          ]
+        },
+        "3f472ce9-f1fe-4be7-8849-5ba3155f2d11": {
+          "tips": [
+            null
+          ]
+        },
+        "78b871d6-dd5f-4ad8-b32b-97df938ae849": {
+          "tips": [
+            null
+          ]
+        },
+        "0d6b1fbb-59d1-4a90-a5f7-e6fdbabcdfb6": {
+          "tips": [
+            null
+          ]
+        },
+        "4563c715-0a30-419a-9eca-d5b41089e165": {
+          "tips": [
+            null
+          ]
+        },
+        "28fb99c8-886a-4ed6-859a-1fb1a813c484": {
+          "tips": [
+            null
+          ]
+        },
+        "eb895db7-aeb1-4efe-9eb8-c314cd7a2621": {
+          "tips": [
+            null
+          ]
+        },
+        "0874692e-8e17-4b1d-9232-f11c61106af0": {
+          "tips": [
+            null
+          ]
+        },
+        "d5b2ea3b-4370-4cf8-a9ed-670e789d812f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Videó: Ciklusok"
+        },
+        "2aed74d8-d9e0-4c5d-b0bc-7bc5e90ce0df": {
+          "progression_name": "Számláló ciklusok"
+        },
+        "4eae7990-8111-4f59-a7ef-212acf9f054f": {
+          "tips": [
+            null
+          ]
+        },
+        "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
+          "tips": [
+            null
+          ]
+        },
+        "88fbe9b6-7233-4617-a579-4eea7041c1b0": {
+          "tips": [
+            null
+          ]
+        },
+        "83dadfe8-ec04-4986-9e4b-8fcb301bce51": {
+          "tips": [
+            null
+          ]
+        },
+        "61efbeb1-5fcd-4dec-9265-4628f24745de": {
+          "tips": [
+            null
+          ]
+        },
+        "de64b098-e02d-4a21-9965-1e7217f40ebd": {
+          "progression_name": "Paraméteres függvények"
+        },
+        "02b60bab-d184-4bce-859c-5438c9e37cc4": {
+          "tips": [
+            null
+          ]
+        },
+        "3b0572f2-01eb-48b0-96a1-43739f98575a": {
+          "tips": [
+            null
+          ]
+        },
+        "38e26d5e-b651-4c50-b791-10455112e4ba": {
+          "tips": [
+            null
+          ]
+        },
+        "c814528c-f376-440e-849f-19d8790e7d92": {
+          "tips": [
+            null
+          ]
+        },
+        "8521f45a-fff7-43d7-bd5a-d32077c26151": {
+          "tips": [
+            null
+          ]
+        },
+        "420da788-7b37-45e7-b940-ae08c8f90b25": {
+          "tips": [
+            null
+          ]
+        },
+        "672d26f8-cbd5-46ea-8482-d84b0be3e335": {
+          "tips": [
+            null
+          ]
+        },
+        "a3f5dca7-56ea-4d7e-9f37-b1ae9f46aef5": {
+          "tips": [
+            null
+          ]
+        },
+        "0516be14-10b2-4124-af7c-3d76c5177d95": {
+          "tips": [
+            null
+          ]
+        },
+        "44000645-7870-4e71-b27e-75cd70b6dbb9": {
+          "tips": [
+            null
+          ]
+        },
+        "a76a28bd-8ddb-4b39-8ce7-6663e81bfd1b": {
+          "name": "Megosztás",
+          "tips": [
+            null
+          ]
+        },
+        "a237ce6e-b99e-4117-afee-b384cfd9fc4f": {
+          "tips": [
+            null
+          ]
+        },
+        "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
+          "tips": [
+            null
+          ]
+        },
+        "7e296c41-f0fb-4d31-8b13-31f6e7abe2f5": {
+          "tips": [
+            null
+          ]
+        },
+        "98a216a1-8aa6-4216-ad6e-b7ab5abca491": {
+          "tips": [
+            null
+          ]
+        },
+        "addfcb6c-dafa-4e9d-b5fc-8d2c400714aa": {
+          "tips": [
+            null
+          ]
+        },
+        "05ef09a7-e47c-4238-b280-31aeb3b4dc00": {
+          "tips": [
+            null
+          ]
+        },
+        "cc06e6ea-b748-4c9d-b201-ccb10cd77cf6": {
+          "tips": [
+            null
+          ]
+        },
+        "cbce24b3-baeb-42f3-978b-e4262e9e38b7": {
+          "tips": [
+            null
+          ]
+        },
+        "d324e413-50c5-4135-97ad-610430cd5a97": {
+          "tips": [
+            null
+          ]
+        },
+        "bb61bac7-12c5-4854-9cce-2450dae006fb": {
+          "tips": [
+            null
+          ]
+        },
+        "604675cc-016d-4706-ad48-32d1547d7a74": {
+          "tips": [
+            null
+          ]
+        },
+        "8aadfdde-40ea-48c0-b369-3e9a0213c31b": {
+          "tips": [
+            null
+          ]
+        },
+        "0cb3b9f4-af2b-43e0-bdaa-4ce6ff013a37": {
+          "tips": [
+            null
+          ]
+        },
+        "2f614323-09fc-4fc3-949a-d8326ea2dedf": {
+          "tips": [
+            null
+          ]
+        },
+        "17536ac7-f578-4492-9a2b-034697748108": {
+          "tips": [
+            null
+          ]
+        },
+        "143b040a-8c9e-4653-92d4-f58ea9ffef72": {
+          "tips": [
+            null
+          ]
+        },
+        "85c49ae4-5b52-40ad-96eb-424f02d8539e": {
+          "tips": [
+            null
+          ]
+        },
+        "7383a881-4001-478a-8e89-5169fc76e2fb": {
+          "tips": [
+            null
+          ]
+        },
+        "5e396df7-105a-46f4-8083-63f1c708ca2a": {
+          "tips": [
+            null
+          ]
+        },
+        "c71003ba-e08d-4d77-b308-5cc6ee941091": {
+          "tips": [
+            null
+          ]
+        },
+        "30ef889b-387b-4dbd-b6bc-96ca25489944": {
+          "tips": [
+            null
+          ]
+        },
+        "59dffdf2-728b-4b66-a29b-7635c858be00": {
+          "tips": [
+            null
+          ]
+        },
+        "5ab922e3-8512-4c62-83c7-e17aa282377d": {
+          "tips": [
+            null
+          ]
+        },
+        "1282f8e7-0fd9-47bc-b7b4-75b4025eedb5": {
+          "tips": [
+            null
+          ]
+        },
+        "13abae06-0500-42e9-a486-940684c9ba87": {
+          "tips": [
+            null
+          ]
+        },
+        "a4df917c-be45-4977-bc95-fbe945f3c3cf": {
+          "tips": [
+            null
+          ]
+        },
+        "38324708-63cb-4738-92c9-af06aed187f7": {
+          "tips": [
+            null
+          ]
+        },
+        "95c12363-142c-4e82-bed6-76541ed021c4": {
+          "tips": [
+            null
+          ]
+        },
+        "2c09cb98-721d-4c28-add5-bc717980da1e": {
+          "tips": [
+            null
+          ]
+        },
+        "e5d5e7ac-2362-41f9-a3ba-b78deaee4edc": {
+          "tips": [
+            null
+          ]
+        },
+        "bc476ecb-65ea-4f30-a970-81feb995c71c": {
+          "tips": [
+            null
+          ]
+        },
+        "112b54ac-5751-4635-8275-23e6acc5947c": {
+          "tips": [
+            null
+          ]
+        },
+        "1fcec88e-f931-4ece-95d2-966a9ce0d0eb": {
+          "tips": [
+            null
+          ]
+        },
+        "317d7606-342d-4068-939d-b4abefb7867f": {
+          "tips": [
+            null
+          ]
+        },
+        "4e8ecb03-3abf-412e-96bb-102eb61294aa": {
+          "tips": [
+            null
+          ]
+        },
+        "c74f28dc-8f61-443c-b03a-4943b65c8824": {
+          "tips": [
+            null
+          ]
+        },
+        "928ac428-64ef-4359-ad63-12d175fa700e": {
+          "name": "Meghatározás"
+        },
+        "d19d7358-a136-4eae-a082-fb508284fb50": {
+          "tips": [
+            null
+          ]
+        },
+        "2cd98702-4332-403a-8ce9-01db36e361ab": {
+          "tips": [
+            null
+          ]
+        },
+        "fae06660-56ad-41e5-8af3-bbfbe36ebb97": {
+          "tips": [
+            null
+          ]
+        },
+        "cb6b53c4-832b-4488-b7d8-e235460c633c": {
+          "tips": [
+            null
+          ]
+        },
+        "4701e66f-6c37-4ae3-a6d9-b94b4c45704c": {
+          "tips": [
+            null
+          ]
+        },
+        "28dfd4cd-0d62-4c35-bed0-d6038adf4813": {
+          "tips": [
+            null
+          ]
+        },
+        "2bd9ece8-996d-4561-9ff9-b702ac019d12": {
+          "tips": [
+            null
+          ]
+        },
+        "b22284df-c9d1-4046-93d8-4cd7339b1ec0": {
+          "tips": [
+            null
+          ]
+        },
+        "b65a936d-eb48-4c6f-a0bf-751bb0829269": {
+          "tips": [
+            null
+          ]
+        },
+        "a6b0da50-c2de-4f78-98e0-5f01500c1845": {
+          "tips": [
+            null
+          ]
+        },
+        "a8280172-5d5d-4d29-b6ec-bc98ae0e3e08": {
+          "tips": [
+            null
+          ]
+        },
+        "c72ef18c-8a87-40ab-9a07-260f89fad275": {
+          "tips": [
+            null
+          ]
+        },
+        "45d58868-a7ed-43a5-ae94-c64de3cc4dd5": {
+          "tips": [
+            null
+          ]
+        },
+        "46bfc542-d2d8-4124-a4cd-d7e53fff618e": {
+          "tips": [
+            null
+          ]
+        },
+        "501ce03f-e483-4e6d-bbc8-dc26c9a3a265": {
+          "tips": [
+            null
+          ]
+        },
+        "3cf5b5f5-208d-4801-b616-a877e120f6ca": {
+          "tips": [
+            null
+          ]
+        },
+        "c3c51f8c-dafe-485c-9fb6-9e10a686097d": {
+          "tips": [
+            null
+          ]
+        },
+        "456fda46-f469-47e7-991c-6fd3efb1c0f6": {
+          "tips": [
+            null
+          ]
+        },
+        "1d7c5ce3-6ee6-408f-9723-8fdfb8b2fda3": {
+          "tips": [
+            null
+          ]
+        },
+        "400536e8-3e68-4e2e-a1cb-15abe6e78255": {
+          "tips": [
+            null
+          ]
+        },
+        "1fd332bf-4d3a-4fb3-8585-11aa036c87ff": {
+          "tips": [
+            null
+          ]
+        },
+        "1d708064-9b0b-4a56-bccf-715c91c2cf6d": {
+          "tips": [
+            null
+          ]
+        },
+        "a367b3e1-6f45-49c0-8429-9e2b607560a2": {
+          "tips": [
+            null
+          ]
+        },
+        "e4a6519f-4954-49e6-8914-83043cd945d7": {
+          "tips": [
+            null
+          ]
+        },
+        "e84d2260-141b-4899-971d-0e0e33eb12d2": {
+          "tips": [
+            null
+          ]
+        },
+        "caccc30a-07e9-465a-a077-65788e7b4f1b": {
+          "tips": [
+            null
+          ]
+        },
+        "83b2e7f4-a01c-491f-a3e1-29ac12d01a13": {
+          "tips": [
+            null
+          ]
+        },
+        "f6b744db-baed-4e9d-bdf4-1f1399bf716a": {
+          "tips": [
+            null
+          ]
+        },
+        "85bda82c-51d9-4b18-a377-4ecd142855c0": {
+          "tips": [
+            null
+          ]
+        },
+        "8ff48983-ab23-42db-8ad0-d0d690bafad5": {
+          "tips": [
+            null
+          ]
+        },
+        "7d58d643-efce-44e7-a3e4-7b3492c72250": {
+          "tips": [
+            null
+          ]
+        },
+        "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
+          "tips": [
+            null
+          ]
+        },
+        "914c565c-fb6d-490c-a14a-b289ac56d720": {
+          "tips": [
+            null
+          ]
+        },
+        "4ed5db10-7aec-4ab8-802b-10ccc9710ed5": {
+          "tips": [
+            null
+          ]
+        },
+        "92b13324-8ae5-4796-9071-694683704daa": {
+          "tips": [
+            null
+          ]
+        },
+        "7c5c8f29-ab7a-4891-b135-182f4222a591": {
+          "tips": [
+            null
+          ]
+        },
+        "375e017e-8620-4d95-a1f5-89fda22729ac": {
+          "tips": [
+            null
+          ]
+        },
+        "24a8f1ab-d8eb-4738-b114-0534be713085": {
+          "tips": [
+            null
+          ]
+        },
+        "ff9b8b39-860d-427b-9a2d-80c537bc539f": {
+          "tips": [
+            null
+          ]
+        },
+        "4bc50ef6-5978-4a80-943a-49fc0cffb23e": {
+          "tips": [
+            null
+          ]
+        },
+        "2d923b7c-56a0-462a-b7c4-5350cfe28ac0": {
+          "tips": [
+            null
+          ]
+        },
+        "92566744-182e-416d-b7c7-2f5b2a92026b": {
+          "tips": [
+            null
+          ]
+        },
+        "ec94d489-2b99-408d-bcce-782db2cdba44": {
+          "tips": [
+            null
+          ]
+        },
+        "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
+          "tips": [
+            null
+          ]
+        },
+        "d4d92cde-d8c2-4f5d-89bb-6aac7ec2de59": {
+          "progression_name": "Síkidomok rajzolása"
+        },
+        "e82622fb-a1cf-45c8-a0f2-7929503c4bfe": {
+          "tips": [
+            null
+          ]
+        },
+        "2725045e-4a46-449e-9a1e-ecf266e6755d": {
+          "tips": [
+            null
+          ]
+        },
+        "3c78bafa-e216-4280-a965-d982d319d15a": {
+          "tips": [
+            null
+          ]
+        },
+        "a929ea0c-ccdf-4e2c-9751-3012d428dcd6": {
+          "tips": [
+            null
+          ]
+        },
+        "0a01de04-3b8f-4025-864a-8a2f48f9fd09": {
+          "tips": [
+            null
+          ]
+        },
+        "b0b45a9e-53a8-4d5e-a248-7a7d042dd2b8": {
+          "tips": [
+            null
+          ]
+        },
+        "935fb22e-ea0b-4c9b-92fc-61c39895fca9": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Bevezetés a játéklaborba"
+        },
+        "9663d7f7-168d-4f85-8f8a-cc2d6f86efa3": {
+          "tips": [
+            null
+          ]
+        },
+        "c838ee44-b6fd-467e-8733-9b52d9727b08": {
+          "tips": [
+            null
+          ]
+        },
+        "9612456b-5030-4f4c-a11b-893694130773": {
+          "tips": [
+            null
+          ]
+        },
+        "ea1a9294-f250-4c26-8032-c497088f8206": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "897f445d-23b2-4083-8982-ec4ea7cecbec": {
+          "tips": [
+            null
+          ]
+        },
+        "1f66ca37-97c5-48be-9f14-d7f4938b2632": {
+          "tips": [
+            null
+          ]
+        },
+        "11f4055c-bcd6-4b74-8f9a-5d69502955f2": {
+          "tips": [
+            null
+          ]
+        },
+        "ef33e6f2-c5d9-4d5d-85fc-4434062b105f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "a09c360f-651e-4539-94b3-620914e17cf2": {
+          "tips": [
+            null
+          ]
+        },
+        "5485407f-b2b9-433e-86a4-6da5afa523f5": {
+          "tips": [
+            null
+          ]
+        },
+        "9e754b3d-83a4-4fb3-bdf5-331c02667465": {
+          "tips": [
+            null
+          ]
+        },
+        "df26b7e2-cb48-40b2-b360-d0e9770b8802": {
+          "tips": [
+            null
+          ]
+        },
+        "a14285ec-28bc-4b44-a63c-204c0034c19f": {
+          "tips": [
+            null
+          ]
+        },
+        "58908247-dbee-4578-8155-09f7d934c017": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "e13128cb-3a56-488b-86db-0a2edd7aff6d": {
+          "tips": [
+            null
+          ]
+        },
+        "61d2c0ea-b465-4fe7-8906-7b4d6a8820cd": {
+          "tips": [
+            null
+          ]
+        },
+        "dfafff33-7c5b-4a4a-9d38-647e60b34160": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "e3a151f2-e5d3-4a66-9eed-6bc74f6adecb": {
+          "tips": [
+            null
+          ]
+        },
+        "04061607-035b-48a3-ad8e-33fed692aa2b": {
+          "tips": [
+            null
+          ]
+        },
+        "f52c22d8-72a7-44d1-91d2-66aacf92c1a8": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Videó: bevezető a sprite-okhoz"
+        },
+        "8f56a7b9-e17b-4173-bae9-c996824270b4": {
+          "tips": [
+            null
+          ]
+        },
+        "234316a5-009b-44bd-a51d-fdcb54cc8903": {
+          "name": "Értékelés",
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "2057627a-c665-4a63-8aed-c1123ce9796a": {
+          "tips": [
+            null
+          ]
+        },
+        "5989291d-e9d4-4f14-bdf6-399b69b96cec": {
+          "tips": [
+            null
+          ]
+        },
+        "34fcaf28-d278-49ff-877f-a5f79f77af59": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "f455bf72-f2c8-4bf2-970f-af533ef80342": {
+          "tips": [
+            null
+          ]
+        },
+        "2d0fc04c-aa1b-4148-9efd-06764f14c100": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "7e2e7a3e-fd91-4ab5-8b46-f8ae96c91169": {
+          "tips": [
+            null
+          ]
+        },
+        "67d8c4d5-fda2-47c0-a7a3-164eb669718f": {
+          "name": "Felülvizsgálat"
+        },
+        "0b250aa0-f3fa-4530-bef8-e328e4d93620": {
+          "tips": [
+            null
+          ]
+        },
+        "d4865d33-6382-4b57-b532-6949d5621973": {
+          "progression_name": "Sprite helyzetek"
+        },
+        "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
+          "tips": [
+            null
+          ]
+        },
+        "760b0216-8c5d-4954-ac35-fd42c527ac66": {
+          "tips": [
+            null
+          ]
+        },
+        "c490c403-c5dc-4755-a03b-1532565b1119": {
+          "tips": [
+            null
+          ]
+        },
+        "6cf8f316-c11f-4cc5-85a3-1596303e4317": {
+          "tips": [
+            null
+          ]
+        },
+        "18bcf449-d684-4e93-abbd-5af4e82d1e7b": {
+          "tips": [
+            null
+          ]
+        },
+        "fcb22a6b-b548-4ea4-b2bf-23f3db9dde29": {
+          "tips": [
+            null
+          ]
+        },
+        "d1f93971-c590-43fb-be4d-a3ced983e77a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "c2703579-0081-4ecf-8aa2-500ed370fb99": {
+          "tips": [
+            null
+          ]
+        },
+        "4e97aa36-b285-40f3-83cb-383e83158dc5": {
+          "tips": [
+            null
+          ]
+        },
+        "b8ce874f-8e09-4a78-aa14-7b32de942c69": {
+          "tips": [
+            null
+          ]
+        },
+        "a6ebae49-e1ca-4918-9d7f-4c0e33cdf00e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Videó: mozgó sprite"
+        },
+        "bccfd2b8-dd73-4be5-ab15-2dfa4024312b": {
+          "progression_name": "Értékelés"
+        },
+        "06cad4ef-4d60-42e4-829c-02fd3364c31e": {
+          "tips": [
+            null
+          ]
+        },
+        "eb0d27fe-7158-49fe-9e96-bbc70d2fa158": {
+          "name": "Felülvizsgálat"
+        },
+        "a5361b9b-6e15-4bba-9b35-ae31a1e1b525": {
+          "tips": [
+            null
+          ]
+        },
+        "fa1f1ad4-aadd-49d1-9138-887450893813": {
+          "tips": [
+            null
+          ]
+        },
+        "f54152bb-4d02-459d-beea-ceeb422be02a": {
+          "tips": [
+            null
+          ]
+        },
+        "fbcd5bf0-4c6e-4142-934d-e4f4ebe17ad2": {
+          "tips": [
+            null
+          ]
+        },
+        "8ed5e3eb-5ffa-473f-b166-3ea936d0c9e7": {
+          "tips": [
+            null
+          ]
+        },
+        "02bcc907-1476-4a48-90ea-a56c5c91e6d4": {
+          "name": "Feltételek"
+        },
+        "230cf2d8-bf75-4b73-aa29-4e468f203e78": {
+          "tips": [
+            null
+          ]
+        },
+        "030bb18c-bfaf-4c13-8ca7-9b251c26c162": {
+          "tips": [
+            null
+          ]
+        },
+        "b3b4d1e4-17c7-4933-8ba6-03ac7a46839a": {
+          "tips": [
+            null
+          ]
+        },
+        "461492e7-43b9-4c58-9ee4-b63b716dbded": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "2b5e9944-1e90-4362-98e9-ef74a8d1d48b": {
+          "tips": [
+            null
+          ]
+        },
+        "0ee8704d-9ad3-4a31-816f-555813322a78": {
+          "tips": [
+            null
+          ]
+        },
+        "9345c305-ff75-4d36-a595-b0b7a69c094f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "e016d4b6-9ebd-4c6c-9697-b368a0c90bd8": {
+          "tips": [
+            null
+          ]
+        },
+        "48c9aa57-b904-4660-b629-e49bf606fad7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Video: feltételes utasítások"
+        },
+        "991be916-6a79-484c-95a2-0e6f753d9ac8": {
+          "tips": [
+            null
+          ]
+        },
+        "fb40596d-a877-43f3-87b7-325a2fd79c37": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "b9716428-aedc-4578-8328-379b70cb0d50": {
+          "tips": [
+            null
+          ]
+        },
+        "09884749-ea7e-4df2-94f7-f73308052d81": {
+          "tips": [
+            null
+          ]
+        },
+        "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
+          "tips": [
+            null
+          ]
+        },
+        "4bfb9e2c-557b-464a-9a07-7190bc4dce87": {
+          "tips": [
+            null
+          ]
+        },
+        "a2fda764-6cf6-419d-a9cb-7d62a2749660": {
+          "tips": [
+            null
+          ]
+        },
+        "42d0eae6-06b2-4aa6-a8f6-6081ce2fa560": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Videó: sebesség"
+        },
+        "e8b8a1b0-89e9-4b09-978f-11db835db760": {
+          "tips": [
+            null
+          ]
+        },
+        "a0ba31d0-91f2-4271-aacb-bf5c614aabc3": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "864f7c7f-a19d-4470-8d53-52e790f5e783": {
+          "tips": [
+            null
+          ]
+        },
+        "28c72532-e347-4f43-81ea-7b83a4e336d1": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Minta játék"
+        },
+        "57411d29-c010-41c3-82bc-be6b7025c796": {
+          "tips": [
+            null
+          ]
+        },
+        "da7336ee-33fe-4542-970c-9cf2e888859e": {
+          "progression_name": "Minta játék"
+        },
+        "49cfe240-7090-4fbd-9e61-ef725f8bddb1": {
+          "tips": [
+            null
+          ]
+        },
+        "ef8e8137-1524-4b5d-9e2a-6c6d535cda60": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "1e949591-d103-4f64-9c54-eeac71cc51d3": {
+          "tips": [
+            null
+          ]
+        },
+        "3d9ddc58-7bda-43a0-8944-fd8c622b3d70": {
+          "progression_name": "Sprite interakciók"
+        },
+        "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
+          "tips": [
+            null
+          ]
+        },
+        "c87f7c08-8f60-4810-9e6f-10ae69319288": {
+          "tips": [
+            null
+          ]
+        },
+        "96cef9d3-a478-4852-9dff-061a5fa5dc79": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "443eb6ca-6406-4399-b140-a4d6ec3f0bca": {
+          "tips": [
+            null
+          ]
+        },
+        "136ec817-6a58-41db-aae8-3238b015ce63": {
+          "tips": [
+            null
+          ]
+        },
+        "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
+          "tips": [
+            null
+          ]
+        },
+        "4c0ed738-4808-45b2-aaae-965d536ffc6a": {
+          "tips": [
+            null
+          ]
+        },
+        "0d8cc1e7-4e01-4315-a98c-87fcc7031ca7": {
+          "tips": [
+            null
+          ]
+        },
+        "6b47f10d-a466-436e-ad48-25f2404ae07a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "d2cc216a-b098-4754-bb18-087f42007b46": {
+          "tips": [
+            null
+          ]
+        },
+        "93c86b2f-aeb2-48d2-b34d-8213761ae09c": {
+          "progression_name": "Sprite interakciók"
+        },
+        "40b22769-f206-4725-b2f4-fd3f71c15101": {
+          "tips": [
+            null
+          ]
+        },
+        "52d53651-705c-47ec-a68f-d014f3499a99": {
+          "tips": [
+            null
+          ]
+        },
+        "085e06bd-a991-42ec-b8e2-2e27712cf7dd": {
+          "tips": [
+            null
+          ]
+        },
+        "e4283f2d-5933-4812-80df-341067426cc8": {
+          "tips": [
+            null
+          ]
+        },
+        "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "3dfe6414-c583-4af9-a55d-7da0d06783ef": {
+          "tips": [
+            null
+          ]
+        },
+        "9fba4c16-6103-4cb5-88a4-1a250ec8abdb": {
+          "tips": [
+            null
+          ]
+        },
+        "e068a067-ade8-4f5c-bfad-661fdff103ed": {
+          "tips": [
+            null
+          ]
+        },
+        "b38b9687-9ab2-490a-8306-5e0655d51863": {
+          "progression_name": "Sprite interakciók"
+        },
+        "d0d85465-a081-4c09-ae83-8b454e76c2ff": {
+          "tips": [
+            null
+          ]
+        },
+        "4304b5c8-73c0-44c3-bd18-3ec32f1e947d": {
+          "tips": [
+            null
+          ]
+        },
+        "70b55a3a-e9cd-435d-a426-ab6e80a725cb": {
+          "tips": [
+            null
+          ]
+        },
+        "79ced720-4977-4d65-9163-acd0147f2552": {
+          "tips": [
+            null
+          ]
+        },
+        "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
+          "tips": [
+            null
+          ]
+        },
+        "7e64a6bf-73b9-4cd3-be58-402b3da57768": {
+          "tips": [
+            null
+          ]
+        },
+        "686b638e-1a29-49cc-8711-191165d251b9": {
+          "tips": [
+            null
+          ]
+        },
+        "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
+          "tips": [
+            null
+          ]
+        },
+        "d1ae9072-39e7-4cd7-81eb-6434e0b2e39d": {
+          "name": "Megosztás"
+        },
+        "b44faa8f-43ae-4899-b299-888d85f57d48": {
+          "tips": [
+            null
+          ]
+        },
+        "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
+          "tips": [
+            null
+          ]
+        },
+        "1dca60be-eb7f-40ef-8b91-8ca231c1b14a": {
+          "tips": [
+            null
+          ]
+        },
+        "1c951438-4727-4ea5-84d9-560f7dac9204": {
+          "tips": [
+            null
+          ]
+        },
+        "37d397d0-785f-4dc7-b172-2b51e5757ba3": {
+          "tips": [
+            null
+          ]
+        },
+        "5166952d-961b-4ba8-b379-c4101d84b4de": {
+          "tips": [
+            null
+          ]
+        },
+        "79ffacab-f428-4e4f-8f85-e9409b2e43a3": {
+          "tips": [
+            null
+          ]
+        },
+        "6470c3f3-0547-4d23-bede-dbac0704a029": {
+          "tips": [
+            null
+          ]
+        },
+        "e1fdc61e-61b5-4b5d-b46a-62a26f7cca05": {
+          "tips": [
+            null
+          ]
+        },
+        "82378234-dc3a-4578-a458-e237d6b9b729": {
+          "tips": [
+            null
+          ]
+        },
+        "10aec291-0c45-453c-8609-5386783ff20e": {
+          "tips": [
+            null
+          ]
+        },
+        "11b483ae-c3f6-467d-85c3-9427203e2488": {
+          "tips": [
+            null
+          ]
+        },
+        "d7edf595-a13a-4992-b963-58a034f34112": {
+          "tips": [
+            null
+          ]
+        },
+        "7accdcb0-3787-4a97-9ac5-4044890f8c12": {
+          "tips": [
+            null
+          ]
+        },
+        "555a0b86-988d-4c75-ad9a-e3fc127d44c3": {
+          "tips": [
+            null
+          ]
+        },
+        "7e307eaa-f893-47b4-94ce-38801b41592a": {
+          "tips": [
+            null
+          ]
+        },
+        "c21034e8-cca8-4197-9819-081e4114ef36": {
+          "tips": [
+            null
+          ]
+        },
+        "06af5ad1-d9b6-4834-b94a-12f5c46232c7": {
+          "tips": [
+            null
+          ]
+        },
+        "ec21fe96-de6c-4818-bf1a-c02c1f4b66ff": {
+          "tips": [
+            null
+          ]
+        },
+        "ecb7626b-e9dc-4011-b1a2-54f138d54872": {
+          "tips": [
+            null
+          ]
+        },
+        "5733d57d-7dc2-45ba-885b-e223a44ad2af": {
+          "tips": [
+            null
+          ]
+        },
+        "900764b3-0256-4cc9-b88f-1b8c4992e653": {
+          "tips": [
+            null
+          ]
+        },
+        "e623c176-d684-43c0-ad4b-9f33a3acc00f": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "396fe142-472b-4c62-976b-578e5ff5bff0": {
+          "tips": [
+            null
+          ]
+        },
+        "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
+          "tips": [
+            null
+          ]
+        },
+        "e606d7d3-d552-4db3-91b7-c26f98da237c": {
+          "tips": [
+            null
+          ]
+        },
+        "f1388388-8631-479b-bca9-ffe97206edf8": {
+          "tips": [
+            null
+          ]
+        },
+        "ce77f101-8880-4264-bf0e-b2d95e40c080": {
+          "tips": [
+            null
+          ]
+        },
+        "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
+          "tips": [
+            null
+          ]
+        },
+        "4d905d80-5cc4-4017-88ab-904e5092fe0c": {
+          "tips": [
+            null
+          ]
+        },
+        "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
+          "tips": [
+            null
+          ]
+        },
+        "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
+          "tips": [
+            null
+          ]
+        },
+        "95323c16-49dc-4c54-9bf5-c351b458beb7": {
+          "tips": [
+            null
+          ]
+        },
+        "ed3fc57d-be54-4625-bae7-5cac4680d615": {
+          "tips": [
+            null
+          ]
+        },
+        "071466cb-7d6b-4e91-93bb-261e508f89dc": {
+          "tips": [
+            null
+          ]
+        },
+        "9c0439ca-8ac8-463f-889c-47df291b32d9": {
+          "tips": [
+            null
+          ]
+        },
+        "59845bd6-dedc-4283-9cbd-f3c574fd99ab": {
+          "tips": [
+            null
+          ]
+        },
+        "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
+          "tips": [
+            null
+          ]
+        },
+        "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
+          "tips": [
+            null
+          ]
+        },
+        "40b16a1c-add1-445a-81de-c281c495fe6f": {
+          "tips": [
+            null
+          ]
+        },
+        "254a27b6-75fb-4f5f-bdf1-2ac909f01f75": {
+          "tips": [
+            null
+          ]
+        },
+        "e7394c68-613b-4772-90c8-dcf1228ba5dc": {
+          "tips": [
+            null
+          ]
+        },
+        "6a60775b-f641-46a0-820d-f6895dd26fed": {
+          "tips": [
+            null
+          ]
+        },
+        "709fc018-84ca-4c5c-af4e-bae11c2867b1": {
+          "tips": [
+            null
+          ]
+        },
+        "06fa61d8-63d0-49d0-b9d1-77ec59c88d72": {
+          "tips": [
+            null
+          ]
+        },
+        "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
+          "tips": [
+            null
+          ]
+        },
+        "68d48a87-2999-499a-962e-a0a177e1c4e6": {
+          "tips": [
+            null
+          ]
+        },
+        "f51c4e46-0b95-4035-bbef-921e12d33e3c": {
+          "tips": [
+            null
+          ]
+        },
+        "922ac8cd-6633-48ac-bcb7-85fb1d2e711a": {
+          "tips": [
+            null
+          ]
+        },
+        "f3726d11-0690-46a9-b742-f48b4a80ab33": {
+          "tips": [
+            null
+          ]
+        },
+        "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
+          "tips": [
+            null
+          ]
+        },
+        "caf7880a-40b3-4252-865e-a81d22f30d07": {
+          "tips": [
+            null
+          ]
+        },
+        "04f7b740-ae5f-4f12-9867-27f7b08eff1e": {
+          "tips": [
+            null
+          ]
+        },
+        "c55fae38-7795-4027-b469-a3238f34efe5": {
+          "tips": [
+            null
+          ]
+        },
+        "418d731c-d516-4e49-8547-9313763526ca": {
+          "tips": [
+            null
+          ]
+        },
+        "c941f0ac-38f6-4828-9ca4-e8b600868807": {
+          "tips": [
+            null
+          ]
+        },
+        "c209191d-c268-4f8e-b40c-93a5de206b76": {
+          "tips": [
+            null
+          ]
+        },
+        "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
+          "tips": [
+            null
+          ]
+        },
+        "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
+          "tips": [
+            null
+          ]
+        },
+        "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
+          "tips": [
+            null
+          ]
+        },
+        "01c916af-970c-4e2f-a98e-38cbc436eefc": {
+          "tips": [
+            null
+          ]
+        },
+        "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
+          "tips": [
+            null
+          ]
+        },
+        "9823b27f-66ca-4ea1-860d-3472e5317340": {
+          "tips": [
+            null
+          ]
+        },
+        "77c22840-b9e9-4426-9894-30f101f2c00e": {
+          "tips": [
+            null
+          ]
+        },
+        "b452ecde-f660-4d52-9ab7-8b33989681f0": {
+          "tips": [
+            null
+          ]
+        },
+        "f5570fab-fdee-464e-b569-ec19142fc35d": {
+          "tips": [
+            null
+          ]
+        },
+        "661c94ca-9d68-45ee-afca-2ff357684bf3": {
+          "tips": [
+            null
+          ]
+        },
+        "bc8e4c54-e3ca-42f2-b613-2b383783dad8": {
+          "tips": [
+            null
+          ]
+        },
+        "f25bdc7d-2ab6-493a-a4e7-e46dbeaa01c4": {
+          "tips": [
+            null
+          ]
+        },
+        "48dcb032-0dad-4177-89a7-066d60d785f5": {
+          "tips": [
+            null
+          ]
+        },
+        "7ce61da1-8486-4987-a971-d02802cf3223": {
+          "tips": [
+            null
+          ]
+        },
+        "be784b81-94c2-46a8-9f54-6eb72fa47020": {
+          "tips": [
+            null
+          ]
+        },
+        "90e3e011-8930-435c-8840-88bcb72a94b1": {
+          "tips": [
+            null
+          ]
+        },
+        "e550c27b-967f-46f1-a1bf-96eb4e4ccc2e": {
+          "tips": [
+            null
+          ]
+        },
+        "05109520-cc5d-4422-8447-09b5e315232c": {
+          "tips": [
+            null
+          ]
+        },
+        "8e2e9def-edb6-462f-b068-2be956dcc3c0": {
+          "tips": [
+            null
+          ]
+        },
+        "9844b63f-04a1-4011-87f7-eec3c63a5496": {
+          "tips": [
+            null
+          ]
+        },
+        "59cd3f12-f9b1-4cbd-bf6b-3507adc264bc": {
+          "tips": [
+            null
+          ]
+        },
+        "ed9353fe-9f41-42ef-9c2e-2e07231422ab": {
+          "tips": [
+            null
+          ]
+        },
+        "9ceef85f-40f8-4692-bcb4-1a689968a685": {
+          "tips": [
+            null
+          ]
+        },
+        "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "248256b0-de8c-4fcf-8f60-58492ef07802": {
+          "tips": [
+            null
+          ]
+        },
+        "f6a64a6e-ab8a-4258-b3cc-57707696fd6c": {
+          "tips": [
+            null
+          ]
+        },
+        "3af02eab-916a-4774-8a13-5a420dd53fc5": {
+          "tips": [
+            null
+          ]
+        },
+        "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7": {
+          "tips": [
+            null
+          ]
+        },
+        "08e81098-b771-4c82-bb64-9108ece6c97c": {
+          "tips": [
+            null
+          ]
+        },
+        "693d5350-e425-4ae5-926e-85984858fb31": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Fedezd fel a HTML-t"
+        },
+        "470c3268-f70d-43ac-831f-b37c3103531b": {
+          "tips": [
+            null
+          ]
+        },
+        "1d5ddfcc-e375-4d04-9822-019d51c5272d": {
+          "tips": [
+            null
+          ]
+        },
+        "73435ea5-4c6f-4317-b21a-4fc9c732a4bf": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "579df0b6-aebc-48d8-9ac3-427a2c04e61f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Kihívás"
+        },
+        "7d15a1cb-357e-419d-b469-608585606064": {
+          "tips": [
+            null
+          ]
+        },
+        "83d7613a-c741-4d4a-9dcd-993ab08aa61d": {
+          "tips": [
+            null
+          ]
+        },
+        "970d404e-3aef-4384-88d6-da840d2bd8ca": {
+          "tips": [
+            null
+          ]
+        },
+        "ec491dbb-ef99-4e6e-9abf-f1f90c22e838": {
+          "name": "Páros programozás",
+          "tips": [
+            null
+          ]
+        },
+        "8ae3516e-e6e2-4401-afc1-4ddfb1f1312b": {
+          "tips": [
+            null
+          ]
+        },
+        "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1": {
+          "tips": [
+            null
+          ]
+        },
+        "27e7e382-bef2-4576-94b2-15f081c1c260": {
+          "tips": [
+            null
+          ]
+        },
+        "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
+          "tips": [
+            null
+          ]
+        },
+        "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
+          "tips": [
+            null
+          ]
+        },
+        "d3b01200-6f32-4a93-be82-df50df4e8221": {
+          "progression_name": "Értékelés"
+        },
+        "1db390c3-2d64-4581-a038-c4dd0f7226ee": {
+          "tips": [
+            null
+          ]
+        },
+        "016877a1-d391-46b7-998e-fbe9a7c12703": {
+          "tips": [
+            null
+          ]
+        },
+        "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
+          "tips": [
+            null
+          ]
+        },
+        "b9efce7e-87cf-466d-8916-1ef98f26db40": {
+          "name": "A digitális lábnyomod"
+        },
+        "ec53cc7b-755c-461d-a075-16cf2ca7f1dd": {
+          "tips": [
+            null
+          ]
+        },
+        "e9ffa025-70b3-4fdf-a55e-b9324e0470f2": {
+          "tips": [
+            null
+          ]
+        },
+        "69dde422-3372-406e-9efe-b1df46472d00": {
+          "tips": [
+            null
+          ]
+        },
+        "3412213d-9a22-470e-859c-66b9a752d6bb": {
+          "tips": [
+            null
+          ]
+        },
+        "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
+          "tips": [
+            null
+          ]
+        },
+        "029f4c9c-3f40-458c-8480-b677aee2c5f5": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
+          "tips": [
+            null
+          ]
+        },
+        "3d52ed72-b57b-4d05-902a-c9daceffadc6": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "3a9a8696-72e3-4e6f-9812-59e180a16192": {
+          "tips": [
+            null
+          ]
+        },
+        "727aa204-0664-456f-b5fc-1f6409b65e88": {
+          "tips": [
+            null
+          ]
+        },
+        "39d79388-46f2-4f41-839d-c2bc3002d969": {
+          "tips": [
+            null
+          ]
+        },
+        "4662cf38-bec5-4f63-9f2d-237617407f0f": {
+          "tips": [
+            null
+          ]
+        },
+        "36889d4b-1b66-4a46-bd52-8e5464d17f96": {
+          "tips": [
+            null
+          ]
+        },
+        "8c10515f-4ba5-4629-b5e0-e44975336298": {
+          "tips": [
+            null
+          ]
+        },
+        "3356cda1-c8fe-4475-aaf6-1361379c848f": {
+          "tips": [
+            null
+          ]
+        },
+        "fe6c8d53-4cc0-4bbb-8ffe-8cc1432e522b": {
+          "tips": [
+            null
+          ]
+        },
+        "f8a65f45-b4db-4f6f-9a20-b4ef89910159": {
+          "tips": [
+            null
+          ]
+        },
+        "957ba0ee-6412-418d-bb42-811c2ea546cc": {
+          "tips": [
+            null
+          ]
+        },
+        "353b9fc5-832d-4961-ab5e-4c59f80c104d": {
+          "tips": [
+            null
+          ]
+        },
+        "6ff6d697-74a4-41a2-91a3-4ef817ceff84": {
+          "tips": [
+            null
+          ]
+        },
+        "2c7139b2-bd78-402d-9d57-1191bfcf3d3c": {
+          "tips": [
+            null
+          ]
+        },
+        "42f4e940-4ca1-41ce-9efc-c9147fb84229": {
+          "tips": [
+            null
+          ]
+        },
+        "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52": {
+          "tips": [
+            null
+          ]
+        },
+        "168bbc11-2203-44d6-88fc-e6be6c05180b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "59343467-2b51-47a0-a2af-2f1357b5e3ba": {
+          "tips": [
+            null
+          ]
+        },
+        "bf7e752c-b96b-4416-b4cd-f3af71a59035": {
+          "tips": [
+            null
+          ]
+        },
+        "f694e569-1f2b-40ac-8e46-0439d6b12551": {
+          "tips": [
+            null
+          ]
+        },
+        "15cd087e-202a-4116-9feb-708690d683a2": {
+          "tips": [
+            null
+          ]
+        },
+        "0c2abb8a-e980-4137-bca7-7af46bb7b629": {
+          "tips": [
+            null
+          ]
+        },
+        "c816e4df-5e8b-4408-844a-1346d1f42700": {
+          "tips": [
+            null
+          ]
+        },
+        "60bf9811-2a1c-4ff5-8986-082f04512e85": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "0bb5cdfb-1e6b-44df-9d3f-7a1f0bfcab33": {
+          "tips": [
+            null
+          ]
+        },
+        "cc6a79fc-1951-4e82-8952-39b9a662aca5": {
+          "tips": [
+            null
+          ]
+        },
+        "b363e7a6-4522-46c8-99b8-c7a1db5936b7": {
+          "tips": [
+            null
+          ]
+        },
+        "710ee97e-1fb7-429d-a724-cb0a92f72425": {
+          "tips": [
+            null
+          ]
+        },
+        "793b6091-27f6-48c5-9b0c-b02534f8bc79": {
+          "tips": [
+            null
+          ]
+        },
+        "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
+          "tips": [
+            null
+          ]
+        },
+        "f82407b3-02da-446b-9c56-6e11c8f2df36": {
+          "tips": [
+            null
+          ]
+        },
+        "21f831a9-7123-4982-b5fb-d37eadd0df25": {
+          "progression_name": "Webhelyének közzététele"
+        },
+        "10b08619-0a72-442e-a75e-13b6cead2e90": {
+          "tips": [
+            null
+          ]
+        },
+        "20f18101-28c1-43ff-835a-9b098f7a5b9c": {
+          "tips": [
+            null
+          ]
+        },
+        "887eb66a-9701-4ec2-961e-2df7358980f6": {
+          "tips": [
+            null
+          ]
+        },
+        "d2fbc09d-cec0-4514-ba77-b635cc9379d5": {
+          "tips": [
+            null
+          ]
+        },
+        "286dd512-4c7c-42ec-8028-428a89833572": {
+          "tips": [
+            null
+          ]
+        },
+        "f410b7cd-fcb4-42ac-9ba6-517b2a8db144": {
+          "tips": [
+            null
+          ]
+        },
+        "f8ec8428-8030-4f3d-a42a-ace8a6526a70": {
+          "tips": [
+            null
+          ]
+        },
+        "d328ac00-0ae4-43b4-ac6b-09b544bdf673": {
+          "tips": [
+            null
+          ]
+        },
+        "fe322a4b-9393-40e7-92fe-8314928d0203": {
+          "tips": [
+            null
+          ]
+        },
+        "4e9b0621-b725-4913-8938-757f111a9ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "43da857d-e2ac-4797-b205-4bc8e5b274c8": {
+          "tips": [
+            null
+          ]
+        },
+        "52a7434e-fca4-48af-9aa8-61086949bb98": {
+          "tips": [
+            null
+          ]
+        },
+        "4145fe6b-15f3-4528-91b5-726f4cffd9b5": {
+          "tips": [
+            null
+          ]
+        },
+        "49bb4251-eaa1-423c-9bfd-ec0f6113f83e": {
+          "tips": [
+            null
+          ]
+        },
+        "229abe84-ae59-45f1-915e-681805560ab1": {
+          "tips": [
+            null
+          ]
+        },
+        "73c708b0-4bce-4d0c-8aef-d4383cbb24f5": {
+          "tips": [
+            null
+          ]
+        },
+        "136308c1-5aa0-4820-afe0-a16252ba6c74": {
+          "tips": [
+            null
+          ]
+        },
+        "c986ac31-a9e4-4fbb-8203-f8dd207cfed9": {
+          "tips": [
+            null
+          ]
+        },
+        "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Értékelés"
+        },
+        "ada4d5c1-50ee-446a-85c6-d61dd4d3221f": {
+          "tips": [
+            null
+          ]
+        },
+        "05ee8316-106b-4b34-9138-d1ceca375a8f": {
+          "name": "Összefoglaló"
+        },
+        "410e0287-5cfd-4bc9-945a-4c1d330d795e": {
+          "tips": [
+            null
+          ]
+        },
+        "754d0467-6e5e-45c8-8692-2fab52c45548": {
+          "tips": [
+            null
+          ]
+        },
+        "85c3804b-17da-40f8-a088-0627011b36e7": {
+          "tips": [
+            null
+          ]
+        },
+        "c78f2804-62f0-4fe5-842f-0ed415de05fc": {
+          "name": "Web-Lab"
+        },
+        "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
+          "tips": [
+            null
+          ]
+        },
+        "c881299c-2798-4137-ac19-ba5e05d59340": {
+          "tips": [
+            null
+          ]
+        },
+        "4c27a0e8-612a-478a-a854-aa5a966c8245": {
+          "tips": [
+            null
+          ]
+        },
+        "e1f6d250-92c8-4b01-b970-698a4eb24f7b": {
+          "name": "Web-Lab"
+        },
+        "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497": {
+          "tips": [
+            null
+          ]
+        },
+        "35722166-2159-4038-8c7e-7a6cc0580812": {
+          "tips": [
+            null
+          ]
+        },
+        "aca795d4-18ad-434c-91f8-cc29e3d5a96c": {
+          "tips": [
+            null
+          ]
+        },
+        "938b93c7-1d09-4893-a312-181b8a14a4db": {
+          "tips": [
+            null
+          ]
+        },
+        "cef1dcf2-8240-4b77-b667-040c16bc6526": {
+          "progression_name": "Páros programozás"
+        },
+        "26c63e40-009a-4255-bb94-f38466a11e15": {
+          "progression_name": "Kihívás"
+        },
+        "27ded5c7-5ee2-4201-8278-9f66603558a1": {
+          "progression_name": "Kihívás"
+        },
+        "78559eec-193a-43db-89bd-bd50ee1dd4c7": {
+          "progression_name": "Kihívás"
+        },
+        "46706589-fffc-42b0-9f99-580224a061e2": {
+          "progression_name": "Kihívás"
+        },
+        "aff2e264-4572-45c0-a518-91d3a41145e3": {
+          "progression_name": "Kihívás"
+        },
+        "eed9001e-67f2-44d8-8704-1f8fd9cf4897": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "fbfcd848-6942-4978-81d3-3a9c70938d3c": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "6099eea1-c9b0-4572-889e-1bdcc45f9835": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "be735a9d-be60-4dd7-ae2d-969cd5d768fb": {
+          "progression_name": "Kihívás"
+        },
+        "8f76a97c-6f79-459e-b3ce-4c78f4354c6e": {
+          "progression_name": "Kihívás"
+        },
+        "c0ced3bc-751b-4626-90df-e7037256bf81": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "723796e5-0838-430f-95b2-5fff018731ef": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "83b5ca79-12e5-4d68-a965-4bed0681e331": {
+          "progression_name": "Események"
+        },
+        "4da75e07-81b7-447e-90d4-5253a241a850": {
+          "progression_name": "Ütem"
+        },
+        "a9494fa0-0b2b-4c5a-939e-c440bb5f4717": {
+          "progression_name": "Tulajdonságok"
+        },
+        "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
+          "progression_name": "Összefoglaló"
+        },
+        "29a36d4b-797c-4517-970d-7ba25fe9f9a4": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "7f80f442-f41e-48a6-ba87-b2e0f50419ae": {
+          "progression_name": "Kihívás"
+        },
+        "5123721b-64b2-41fd-b004-5c971dd870da": {
+          "progression_name": "Kihívás"
+        },
+        "91d7659d-e976-4340-afe4-9ed9fe55e127": {
+          "progression_name": "Kihívás"
+        },
+        "86d8c418-70b9-47fb-be38-1e1bfd42aafa": {
+          "progression_name": "Kihívás"
+        },
+        "c20aa2e0-c032-4ccb-9b00-900781538703": {
+          "progression_name": "Kihívás"
+        },
+        "9b8d3fd1-8308-4d91-91ce-150d9ffc82b4": {
+          "progression_name": "Kihívás"
+        },
+        "906a9824-0a68-4149-bfab-c59f5f759cec": {
+          "progression_name": "Kihívás"
+        },
+        "d82614b6-8420-4d3f-83c7-b7fb9d353453": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "4f8e01e3-039b-4253-992b-d0d3e8343559": {
+          "progression_name": "Kihívás"
+        },
+        "c33df6ec-bd36-44de-9f41-dad3fb245d43": {
+          "progression_name": "Kihívás"
+        },
+        "37feb4fc-9e9d-411b-b911-229c85aaa55a": {
+          "progression_name": "Kihívás"
+        },
+        "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
+          "name": "Lecke Extrák",
+          "progression_name": "Lecke Extrák"
+        },
+        "c523e5e0-fe37-4dd6-a9e6-35cfc26415d3": {
+          "progression_name": "Kihívás"
+        },
+        "61e56a64-227e-422a-9c65-62c927caed06": {
+          "progression_name": "Programozás Rey és BB-8 segítségével"
+        },
+        "63724599-1670-4897-9314-ea0a2e237540": {
+          "progression_name": "Kihívás"
+        },
+        "4b80ee70-8904-4d2a-8383-b37230de7971": {
+          "progression_name": "Kihívás"
+        },
+        "9a523c20-cd9a-4c87-a0d3-94049b24f97f": {
+          "progression_name": "Kihívás"
+        },
+        "8131dce7-4fb6-4612-aef7-24ffa0c07804": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "78cd35d9-e60c-4add-b041-78ad1104a479": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "08f9c234-1d3f-4d54-a1bf-878c064dd68d": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "64524570-9c1b-4db9-932b-c23bfbf9bddd": {
+          "progression_name": "Kihívás"
+        },
+        "b5e93dd6-0f17-4fe0-9628-dd5521588550": {
+          "progression_name": "Kihívás"
+        },
+        "66d2de03-1370-4d34-a429-53cd7d0c2d81": {
+          "progression_name": "Kihívás"
+        },
+        "34f0eff5-b0dd-4bfc-9629-0b4d87f178b9": {
+          "progression_name": "Kihívás"
+        },
+        "31d7ef1b-967a-40cc-a027-7b4e0e09dc4e": {
+          "progression_name": "Hogyan készítsünk sprite-ot"
+        },
+        "4280e340-3549-4814-9afe-d6c9fe291025": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "3d63e945-be66-4203-91e4-d4780e318ace": {
+          "progression_name": "Videó"
+        },
+        "84c7f95c-006b-46bc-ba15-67e59c540a18": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "e1faa5c5-ee21-4108-87ff-c5fd38664034": {
+          "progression_name": "Kihívás"
+        },
+        "b8c86684-ebd8-441f-ba6e-669457575120": {
+          "progression_name": "Videó"
+        },
+        "0ddbc582-20ae-4047-8764-565895eed729": {
+          "progression_name": "Kihívás"
+        },
+        "08cf29e4-2239-4519-b813-5d66842379ae": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "f578d2c6-5557-4872-8505-2ee73c254d6e": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "a24eea9c-ab22-4155-a800-7bc6eaffebb9": {
+          "progression_name": "Kihívás"
+        },
+        "2b6efab0-59d9-4da3-ac2d-06f2f76dd473": {
+          "progression_name": "Kihívás"
+        },
+        "600a7d5e-a862-4d84-bd9f-0ec3ec9f8223": {
+          "progression_name": "Páros programozás"
+        },
+        "250712fa-af9b-47dd-820d-946f29752fac": {
+          "progression_name": "Kihívás"
+        },
+        "598993a6-e64b-48e3-8002-c617aae9cdab": {
+          "progression_name": "Programozás Rey és BB-8 segítségével"
+        },
+        "bac8e1cc-75c9-4903-be20-67ef3f908699": {
+          "progression_name": "Kihívás"
+        },
+        "5971ebbb-7513-4e17-941f-a9b19e7866d3": {
+          "progression_name": "Kihívás"
+        },
+        "3958ad66-9ec0-4261-8daf-a7914f33756f": {
+          "progression_name": "Kihívás"
+        },
+        "a221d837-f004-414a-83e6-daf171d2b173": {
+          "progression_name": "Kihívás"
+        },
+        "9f9f6cf1-1591-4de2-9a70-4e190059f0fe": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "103b8d99-b691-4dea-a207-36eaacacbfcb": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "1f1bd2f3-0410-4c52-b995-f664007c6ec5": {
+          "name": "Ingyenes Játék",
+          "progression_name": "Ingyenes Játék"
+        },
+        "51a140d6-441e-487b-9e1f-313e842b78c3": {
+          "progression_name": "Hogyan készítsünk sprite-ot"
+        },
+        "0d749e3d-cf8b-4e7e-bb6e-104a1812a49f": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "54fa7040-6612-4012-b595-1f4745f1479d": {
+          "progression_name": "Videó"
+        },
+        "fca63890-3cc5-4821-b6d4-69e65dc80b05": {
+          "progression_name": "Kihívás"
+        },
+        "5b6e8418-e430-4ed1-ada4-20de1eaa51da": {
+          "progression_name": "Kihívás"
+        },
+        "380a484d-948a-4421-bfe6-5bb303c54971": {
+          "progression_name": "Kihívás"
+        },
+        "fd7fee3b-f3b5-4866-a223-18e2c76385eb": {
+          "progression_name": "Művész: változók"
+        },
+        "2a9b62a9-5da7-4fb4-8bf5-97f1f0d21dae": {
+          "progression_name": "Kihívás"
+        },
+        "d3262ee6-45e9-4506-a341-94177402f767": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "f12b431c-0b07-4843-9986-d0947ba8ce6b": {
+          "progression_name": "Kihívás"
+        },
+        "d0c8bc0d-00a5-4a23-98f1-36d9b6dd43b9": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "bd909077-76b1-4f89-a833-62cb66c95d2c": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "5ce15fb0-b81e-4daf-9a26-d382aa1450d2": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "844a1727-43ab-47a8-9b55-14c924ee9345": {
+          "progression_name": "Ingyenes Játék"
+        },
+        "20614514-4e5f-4737-8071-c17f2ae6f1e4": {
+          "progression_name": "Ingyenes Játék"
         }
       }
     }

@@ -6,7 +6,6 @@ require 'cdo/script_constants'
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
-  include ScriptConstants
   include VersionRedirectOverrider
 
   # Default s-maxage to use for script level pages which are configured as
@@ -75,7 +74,7 @@ class ScriptLevelsController < ApplicationController
     redirect_to(path) && return
   end
 
-  use_database_pool show: :persistent
+  use_reader_connection_for_route(:show)
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
@@ -113,21 +112,19 @@ class ScriptLevelsController < ApplicationController
     # will be true if the user is in any unarchived section where tts autoplay is enabled
     @tts_autoplay_enabled = current_user&.sections_as_student&.where({hidden: false})&.map(&:tts_autoplay_enabled)&.reduce(false, :|)
 
-    configure_caching(@script)
+    @public_caching = configure_caching(@script)
 
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
-    authorize! :read, @script_level, params.slice(:login_required)
+    # If we have a signed out user for any of these cases we will want to redirect them to sign in
+    authenticate_user! if !can?(:read, @script) || @script.login_required? || (!params.nil? && params[:login_required] == "true")
+    return render 'levels/no_access' unless can?(:read, @script_level)
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
       render 'levels/_hidden_lesson'
       return
     end
-
-    # If the lesson is not released yet (visible_after is in the future) then don't
-    # let a user go to the script_level page in that lesson
-    return head(:forbidden) unless @script_level.lesson.published?(current_user)
 
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
@@ -155,9 +152,10 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    load_user
-    return if performed?
-    load_section
+    if current_user
+      load_user
+      load_section
+    end
 
     @level = select_level
     return if redirect_under_13_without_tos_teacher(@level)
@@ -332,8 +330,10 @@ class ScriptLevelsController < ApplicationController
       max_age = DCDO.get('public_max_age', DEFAULT_PUBLIC_CLIENT_MAX_AGE)
       proxy_max_age = DCDO.get('public_proxy_max_age', DEFAULT_PUBLIC_PROXY_MAX_AGE)
       response.headers['Cache-Control'] = "public,max-age=#{max_age},s-maxage=#{proxy_max_age}"
+      return true
     else
       prevent_caching
+      return false
     end
   end
 
@@ -396,13 +396,11 @@ class ScriptLevelsController < ApplicationController
     @last_attempt = level_source.try(:data)
   end
 
+  # Sets @user to the user object corresponding to the 'user_id' request
+  # param if the current_user is allowed to view the page as the requested
+  # user. This method should only be called when current_user is present.
   def load_user
     return if params[:user_id].blank?
-
-    if current_user.nil?
-      render html: I18n.t('teacher.student_code_view_diabled'), layout: true
-      return
-    end
 
     # Grab bubble choice level that will be shown (if any),
     # so we can check whether a student should be able to view
@@ -514,9 +512,15 @@ class ScriptLevelsController < ApplicationController
       )
     end
 
-    @code_review_enabled = @level.is_a?(Javalab) &&
-      current_user.present? &&
-      (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+    @code_review_enabled_for_level = if DCDO.get('code_review_groups_enabled', false)
+                                       @level.is_a?(Javalab) &&
+                                        current_user.present? &&
+                                        (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
+                                     else
+                                       @level.is_a?(Javalab) &&
+                                         current_user.present? &&
+                                         (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+                                     end
 
     view_options(
       full_width: true,
@@ -524,12 +528,13 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
-      useGoogleBlockly: params[:blocklyVersion] == "Google",
+      blocklyVersion: params[:blocklyVersion],
       azure_speech_service_voices: azure_speech_service_options[:voices],
       authenticity_token: form_authenticity_token,
       disallowed_html_tags: disallowed_html_tags
     )
-    readonly_view_options if @level.channel_backed? && params[:version]
+
+    readonly_view_options if @level.channel_backed? && params[:version].present?
 
     # Add video generation URL for only the last level of Dance
     # If we eventually want to add video generation for other levels or level

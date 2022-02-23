@@ -1,0 +1,56 @@
+---
+title: Informatica interdisciplinare
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Informatica interdisciplinare
+
+Questo nostro nuovissimo curriculum crea delle connessioni tra l'apprendimento dell'informatica e altre materie, come matematica, scienze, letteratura e arte. Attraverso il percorso Informatica interdisciplinare, gli studenti (da 5 a 19 anni) hanno l'opportunità di esplorare le loro consuete materie di studio in modi nuovi ed entusiasmanti!
+
+## Prova il curriculum Informatica interdisciplinare con queste attività dell'Ora del Codice
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "L'arte della poesia", left_description: "Esprimi te stesso! Usa il codice per creare animare delle poesie.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Inizia", right_heading: "Ciao Mondo", right_description: "Scegli tra quattro divertenti temi per programmare personaggi interattivi in un mondo creato da te.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Inizia"}}
+{{ clearfix }}
+
+## Corsi
+
+Il curriculum Informatica interdisciplinare è costituito da una serie di lezioni che integrano l'apprendimento dell'informatica con le principali materie di studio, come matematica, letteratura e scienze. Questi corsi sono allineati agli standard di riferimento di queste materie e culminano in un progetto interdisciplinare.
+
+Sono perfette per gli insegnanti che vorrebbero inserire l'informatica all'interno del programma di studio di altre materie, così come per i docenti di informatica che intendono appoggiarsi a ciò che gli studenti stanno studiando in altre materie.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "da 8 anni", subject: "Letteratura e arte", duration: "5 ore", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Programmare con la poesia", right_description: "Crea un collegamento tra l'informatica e la poesia con questa serie di lezioni.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Visualizza le lezioni" }}
+
+## Progetti aperti
+
+Continua a creare collegamenti tra l'informatica e le materie tradizionali con i nostri progetti interdisciplinari. Ognuna di queste attività richiede 1-2 ore di lezione. Sono ideali per gli insegnanti che cercano di sviluppare progetti su un argomento specifico, da inserire nel programma della loro materia.
+
+<em>Nota: questi progetti richiedono delle conoscenze base di informatica, consigliamo quindi di iniziare con l'Ora del Codice "Ciao Mondo"!</em>
+
+{{ csc_module, title: "Ecosistemi", image: "/images/csc/landing/project_ecosystems.png", grades: "da 8 anni", subject: "Scienze", duration: "1-2 ore", description: "Utilizzando competenze di base di programmazione, gli studenti creano un modello interattivo di un ecosistema, per simulare come gli animali, le piante e altri organismi interagiscono tra loro. Questo modello potrebbe anche essere adattato nelle interazioni tra geosfera, biosfera, idrosfera e/o atmosfera.", button_text: "Scopri di più", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Il ciclo della vita", image: "/images/csc/landing/project_cycles.png", grades: "da 8 anni", subject: "Scienze", duration: "1-2 ore", description: "In questo progetto si parte dalle uova per arrivare al girino e poi alla rana, gli studenti usano il codice per creare un modello di un ciclo scientifico, come il ciclo della vita di una rana o il trasferimento di energia!", button_text: "Scopri di più", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Studio dei personaggi", image: "/images/csc/landing/project_characterstudy.png", grades: "da 8 anni", subject: "Letteratura e arte", duration: "1-2 ore", description: "A ogni azione corrisponde una reazione! No, questa non è fisica, questo progetto consente agli studenti di usare il codice per costruire una scena partendo da una storia che mostra come le azioni di un personaggio influiscono sulla catena degli eventi.", button_text: "Scopri di più", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Le morali delle storie", image: "/images/csc/landing/project_storymorals.jpg", grades: "da 8 anni", subject: "Letteratura e arte", duration: "1-2 ore", description: "Cosa accade tra \"C'era una volta\" e \"Fine?\". Gli studenti programmano un'app interattiva che racconta una storia e la sua morale. Gli studenti possono mettere in scena qualsiasi storia, leggenda popolare, libro o fiaba.", button_text: "Scopri di più", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Attività ponte
+
+Le nostre attività ponte rappresentano un modo rapido e interessante per creare un collegamento tra l'informatica e le altre materie. Queste lezioni non richiedono delle conoscenze pregresse di informatica, quindi sono perfette per qualsiasi insegnante che desideri integrare una materia così importante nel 21° secolo nel piano di studi della propria materia tradizionale o motivare gli studenti con nuovi entusiasmanti metodi per imparare le altre materie.
+
+
+{{ csc_module, title: "L'ortografia con l'ape", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "da 5 anni", subject: "Letteratura e arte", duration: "1 ora ", description: "D-I-V-E-R-T-I-M-E-N-T-O! In questa lezione, gli studenti useranno elementari concetti di programmazione per dire all'ape dove R-O-N-Z-A-R-E per sillabare le parole in una griglia piena di lettere.", button_text: "Scopri di più", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Conta con Laura", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "da 5 anni", subject: "Matematica", duration: "1 ora", description: "È una caccia al tesoro! Gli studenti fanno pratica con le addizioni per programmare i cicli che permettono a Laura di raccogliere i diamanti in un labirinto.", button_text: "Scopri di più", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Il codice etico dell'IA", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "da 14 anni", subject: "Scienze umane", duration: "1 ora", description: "Dopo aver cercato le potenziali insidie etiche dell'Intelligenza Artificiale (AI), gli studenti lavoreranno insieme per creare una risorsa di classe.", button_text: "Scopri di più", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Visualizzazione dei dati", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "da 11 anni", subject: "Matematica", duration: "1 ora", description: "Questa lezione introduce gli studenti allo strumento \"Visualizzazione dei dati\" nell'ambiente Sviluppo app ed anche a due importanti tipologie di grafici: il grafico a barre e l'istogramma. Nel corso della lezione gli studenti acquisiranno competenze nell'utilizzo di questo strumento e nella lettura dei dati.", button_text: "Scopri di più", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Hai terminato un'attività del curriculum Informatica interdisciplinare e/o stai cercando altre risorse per la tua classe? <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">Condividi i tuoi commenti</a> ed eventuali idee per nuove lezioni!</em>

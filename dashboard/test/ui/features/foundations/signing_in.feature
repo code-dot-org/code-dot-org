@@ -7,13 +7,13 @@ Scenario: Student sign in from code.org
   And I sign out
   Given I am on "http://code.org/"
   And I reload the page
-  Then I wait to see ".header_user"
-  Then I click ".header_user"
+  Then I wait to see "#header_user_signin"
+  Then I click "#header_user_signin"
   And I wait to see "#signin"
   And I fill in username and password for "Bob"
   And I click "#signin-button" to load a new page
   Then I wait until I am on "http://studio.code.org/home"
-  Then I wait to see ".user_menu"
+  Then I wait to see "#header_user_menu"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Bob"
 
@@ -22,13 +22,13 @@ Scenario: Student sign in from studio.code.org
   And I sign out
   Given I am on "http://studio.code.org/"
   And I reload the page
-  Then I wait to see ".header_user"
-  Then I click ".header_user"
+  Then I wait to see "#header_user_signin"
+  Then I click "#header_user_signin"
   And I wait to see "#signin"
   And I fill in username and password for "Alice"
   And I click "#signin-button" to load a new page
   Then I wait until I am on "http://studio.code.org/home"
-  Then I wait to see ".user_menu"
+  Then I wait to see "#header_user_menu"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Alice"
 
@@ -37,13 +37,13 @@ Scenario: Student sign in from studio.code.org in the eu
   And I sign out
   Given I am on "http://studio.code.org/"
   And I reload the page
-  Then I wait to see ".header_user"
-  Then I click ".header_user"
+  Then I wait to see "#header_user_signin"
+  Then I click "#header_user_signin"
   And I wait to see "#signin"
   And I fill in username and password for "Alice"
   And I click "#signin-button" to load a new page
   Then I wait until I am on "http://studio.code.org/home"
-  Then I wait to see ".user_menu"
+  Then I wait to see "#header_user_menu"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Alice"
 
@@ -52,13 +52,13 @@ Scenario: Teacher sign in from studio.code.org
   And I sign out
   Given I am on "http://studio.code.org/"
   And I reload the page
-  Then I wait to see ".header_user"
-  Then I click ".header_user"
+  Then I wait to see "#header_user_signin"
+  Then I click "#header_user_signin"
   And I wait to see "#signin"
   And I fill in username and password for "Casey"
   And I click "#signin-button" to load a new page
   Then I wait until I am on "http://studio.code.org/home"
-  Then I wait to see ".user_menu"
+  Then I wait to see "#header_user_menu"
   And I wait until element ".display_name" is visible
   And element ".display_name" contains text "Casey"
 

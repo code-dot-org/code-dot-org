@@ -391,6 +391,69 @@
         },
         "Underground Iron_2021": {
           "craft_what_is_iron": "Εξόρυξε αυτόν τον σίδηρο!"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ*!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ*!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Νέο μπλοκ*!",
+          "hello_world_new_block": "Νέο μπλοκ*!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Νέο μπλοκ*!",
+          "poetry_foreground": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Νέο μπλοκ*!",
+          "poetry_multiple_sprites": "Νέο μπλοκ*!",
+          "poetry_new_block": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Νέο μπλοκ*!",
+          "poetry_music": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Νέο μπλοκ*!",
+          "poetry_sprite_stops": "Νέο μπλοκ*!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Νέο μπλοκ*!",
+          "poetry_remove_sprite": "Νέο μπλοκ*!"
         }
       }
     }

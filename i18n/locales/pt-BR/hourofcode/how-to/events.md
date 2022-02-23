@@ -4,25 +4,25 @@ title: Guia para fazer um evento da Hora do Código
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Como organizar uma montagem ou evento no Hour of Code
 
-### Get your entire school or community involved in an Hour of Code!
+### Envolva toda a sua escola ou comunidade em um Hour of Code!
 
 * * *
 
 ## 1. Prepare-se para seu evento
 
 - Defina um local, data e hora.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
+- Envie <a href=”https://hourofcode.com/promote/resources#sample-emails”>uma carta</a> para o prefeito da sua cidade, um membro do Congresso, o governador ou um empresário influentes e convide-os para dar uma palestra. Confira o nosso <a href="{{ localized_files/elected_official }}”>kit de ferramentas iniciais</a> se você for o anfitrião de um político em um evento do Hour of Code, para obter mais informações.
+- Convide profissionais de mídia/imprensa, p. ex., de uma estação de notícias local, um jornal, ou bloggers das áreas de educação/tecnologia. Veja o nosso <a href="{{ promote/press_kit_url }}”>kit de imprensa<</a> para obter ajuda.
 
 ## 2. Durante seu evento
 
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
+- Abra o seu evento com um dos nossos <a href="{{ promote/vídeos }}”>vídeos inspiradores</a>.
+- Ofereça uma visão geral introdutória sobre a importância da ciência da computação, utilizando estas [estatísticas e infográficos]({{ promote/stats_url }}).   
       
     
-- **Other event ideas**: 
+- **Outras ideias para eventos**: 
     - Convide um líder da indústria local para discutir seu trabalho envolvendo ciência da computação.
     - Convide um político local e peça para que os alunos o ensinem a programar.
     - Peça para um grupo de alunos demonstrar uma atividade off-line.
@@ -31,21 +31,21 @@ title: Guia para fazer um evento da Hora do Código
 
 ## 3. Compartilhe como foi o evento
 
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
+Compartilhe fotos do seu evento no Facebook e no Twitter e use a hashtag **#HourOfCode**.
 
 * * *
 
 ## Sedie uma Noite do Código da Família com a Hora do Código e convide os pais para participarem
 
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. Essa é uma ótima forma de envolver a comunidade e incentivar o apoio dos pais para a ciência da computação na sua escola. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [Clique aqui para baixar o Kit do Evento](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+Considere a possibilidade de promover um evento K-5 à noite e convide os pais para se juntarem aos seus filhos estudantes por uma hora sobre ciência da computação. Essa é uma ótima forma de envolver a comunidade e incentivar o apoio dos pais para a ciência da computação na sua escola. Nossos parceiros na Family Code Night desenvolveram um kit tudo-em-um par eventos, com um roteiro de planejamento, discursos para apresentadores, e-mails de convite, apresentações no PowerPoint, e muito mais, para você realizar seu evento. [Clique aqui para baixar o Kit do Evento](http://www.familycodenight.org/DownloadCodeDotOrg.html).
 
 * * *
 
-## Example plan for a school assembly or event
+## Um exemplo de plano para uma montagem ou evento em uma escola
 
 **Evento:** abertura da Semana da Educação em Ciência da Computação para toda a escola
 
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
+**Data:** {{ campaign/start_short }} (inícion da Semana de Educação em Ciência da Computação)
 
 **Hora:** durante o horário escolar. Preferência para o meio da manhã. Aproximadamente 1 hora de duração.
 
@@ -55,8 +55,8 @@ Consider hosting a K-5 evening event and invite parents to join their students f
 
 | Hora          | Ação                                                                                                                                                           |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10h00 - 10h05 | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                             |
-| 10h05 - 10h15 | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                          |
+| 10h00 - 10h05 | Comece o evento com um dos nossos <a href="{{ promote/vídeos }}”>vídeos inspiradores</a>.                                                                      |
+| 10h05 - 10h15 | O diretor oferece uma visão geral introdutória sobre a importância da ciência da computação. Use estas [estatísticas e infográficos]({{ promote/stats_url }}). |
 | 10h15 - 10h30 | Um convidado especial falará sobre sua experiência e sobre como a tecnologia e a ciência da computação desempenham um importante papel em sua vida cotidiana.  |
 | 10h30 - 10h40 | Os alunos farão uma demonstração da Hora do Código para a escola. Inversão de papéis: eles deverão ensinar o diretor, representante político ou outros alunos! |
 | 10h40 - 11h00 | Os alunos farão a demonstração de uma atividade off-line para mostrar como a ciência da computação pode ser ensinada sem o uso de computadores.                |

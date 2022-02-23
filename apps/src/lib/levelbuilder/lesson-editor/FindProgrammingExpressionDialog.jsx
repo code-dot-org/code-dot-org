@@ -217,5 +217,5 @@ export class FindProgrammingExpressionDialog extends Component {
 }
 
 export default connect(state => ({
-  programmingEnvironments: state.programmingEnvironments
+  programmingEnvironments: state.levelSearchingInfo.programmingEnvironments
 }))(FindProgrammingExpressionDialog);

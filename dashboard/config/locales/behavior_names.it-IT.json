@@ -1679,7 +1679,9 @@
           "swimming left and right2": "nuotata sinistra-destra 2",
           "moving north2": "spostamento verso nord 2",
           "jittering2": "pulsazione 2",
-          "patrolling2": "pattugliamento 2"
+          "patrolling2": "pattugliamento 2",
+          "moving with arrow keys2": "movimento con tasti freccia2",
+          "driving with arrow keys2": "guida con tasti freccia2"
         },
         "courseF_apps_card": {
           "driving with arrow keys": "guida con tasti freccia",
@@ -1695,7 +1697,8 @@
           "moving south": "spostamento verso sud",
           "moving west": "spostamento verso ovest",
           "spinning right": "rotazione oraria",
-          "spinning left": "rotazione anti-oraria"
+          "spinning left": "rotazione anti-oraria",
+          "blocking movement": "movimento di blocco"
         },
         "courseF_apps_chatbot": {
           "driving with arrow keys": "guida con tasti freccia",
@@ -1723,7 +1726,10 @@
           "moving north2": "spostamento verso nord 2",
           "jittering2": "pulsazione 2",
           "moving west2": "spostamento verso ovest 2",
-          "patrolling2": "pattugliamento 2"
+          "patrolling2": "pattugliamento 2",
+          "blocking movement": "movimento di blocco",
+          "moving with arrow keys2": "movimento con tasti freccia2",
+          "driving with arrow keys2": "guida con tasti freccia2"
         },
         "courseF_apps_collector": {
           "wandering": "movimento casuale",
@@ -1751,7 +1757,10 @@
           "swimming left and right2": "nuotata sinistra-destra 2",
           "moving north2": "spostamento verso nord 2",
           "jittering2": "pulsazione 2",
-          "patrolling2": "pattugliamento 2"
+          "patrolling2": "pattugliamento 2",
+          "flying west and looping": "in volo verso ovest e ciclo",
+          "moving with arrow keys2": "movimento con tasti freccia2",
+          "driving with arrow keys2": "guida con tasti freccia2"
         },
         "courseF_apps_madlib": {
           "wandering": "movimento casuale",
@@ -1806,7 +1815,8 @@
           "moving south": "spostamento verso sud",
           "moving west": "spostamento verso ovest",
           "spinning right": "rotazione oraria",
-          "spinning left": "rotazione anti-oraria"
+          "spinning left": "rotazione anti-oraria",
+          "blocking movement": "movimento di blocco"
         },
         "courseF_editable_chatbot": {
           "driving with arrow keys": "guida con tasti freccia",
@@ -1822,7 +1832,8 @@
           "moving south": "spostamento verso sud",
           "moving west": "spostamento verso ovest",
           "spinning right": "rotazione oraria",
-          "spinning left": "rotazione anti-oraria"
+          "spinning left": "rotazione anti-oraria",
+          "blocking movement": "movimento di blocco"
         },
         "courseF_editable_madlib": {
           "wandering": "movimento casuale",
@@ -1857,7 +1868,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "pattugliamento",
@@ -1872,7 +1884,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "pattugliamento",
@@ -1889,7 +1902,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "pattugliamento",
@@ -1906,7 +1920,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_events_conflict": {
           "patrolling": "pattugliamento",
@@ -1922,7 +1937,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_events_freeplay_air": {
           "moving west and looping": "spostamento verso ovest e ciclo",
@@ -2035,7 +2051,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_events_practice_reorder": {
           "moving east": "spostamento verso est",
@@ -2054,7 +2071,8 @@
           "driving with arrow keys": "guida con tasti freccia",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_events_predict": {
           "mystery behavior": "comportamento misterioso",
@@ -2087,7 +2105,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_events_ship": {
           "patrolling": "pattugliamento",
@@ -2104,7 +2123,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_events_stops": {
           "moving east": "spostamento verso est",
@@ -2120,7 +2140,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_events_time": {
           "patrolling": "pattugliamento",
@@ -2137,7 +2158,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_label_predict": {
           "moving east": "spostamento verso est",
@@ -2412,7 +2434,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_text_choice_color": {
           "patrolling": "pattugliamento",
@@ -2428,7 +2451,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_text_choice_conversation": {
           "wandering": "movimento casuale",
@@ -2544,7 +2568,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_text_concat": {
           "patrolling": "pattugliamento",
@@ -2560,7 +2585,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_text_events": {
           "patrolling": "pattugliamento",
@@ -2576,7 +2602,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_text_print": {
           "patrolling": "pattugliamento",
@@ -2592,7 +2619,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_text_prompts": {
           "patrolling": "pattugliamento",
@@ -2608,7 +2636,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_text_review": {
           "patrolling": "pattugliamento",
@@ -2624,7 +2653,8 @@
           "spinning left": "rotazione anti-oraria",
           "fluttering": "ondeggiamento",
           "moving west and looping": "spostamento verso ovest e ciclo",
-          "moving east and looping": "spostamento verso est e ciclo"
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
         },
         "courseF_variables_card": {
           "wandering": "movimento casuale",
@@ -2791,6 +2821,518 @@
           "moving west": "spostamento verso ovest",
           "patrolling": "pattugliamento",
           "moving with arrow keys": "movimento con tasti freccia"
+        },
+        "helloworld_animals_backgrounds": {
+          "swimming left and right": "nuotata sinistra-destra",
+          "shrinking": "contrazione",
+          "patrolling": "pattugliamento",
+          "wandering": "movimento casuale",
+          "growing": "crescita",
+          "jittering": "pulsazione",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "spinning left": "rotazione anti-oraria",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_animals_behaviors": {
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "swimming left and right": "nuotata sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_animals_costumes": {
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "helloworld_animals_events": {
+          "patrolling": "pattugliamento",
+          "growing": "crescita",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "jittering": "pulsazione",
+          "wandering": "movimento casuale",
+          "shrinking": "contrazione",
+          "spinning left": "rotazione anti-oraria",
+          "fluttering": "ondeggiamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
+        },
+        "helloworld_animals_sounds": {
+          "swimming left and right": "nuotata sinistra-destra",
+          "shrinking": "contrazione",
+          "patrolling": "pattugliamento",
+          "wandering": "movimento casuale",
+          "growing": "crescita",
+          "jittering": "pulsazione",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "spinning left": "rotazione anti-oraria",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_emoji_backgrounds": {
+          "swimming left and right": "nuotata sinistra-destra",
+          "shrinking": "contrazione",
+          "patrolling": "pattugliamento",
+          "wandering": "movimento casuale",
+          "growing": "crescita",
+          "jittering": "pulsazione",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "spinning left": "rotazione anti-oraria",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_emoji_behaviors": {
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "swimming left and right": "nuotata sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_emoji_costumes": {
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "helloworld_emoji_events": {
+          "patrolling": "pattugliamento",
+          "growing": "crescita",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "jittering": "pulsazione",
+          "wandering": "movimento casuale",
+          "shrinking": "contrazione",
+          "spinning left": "rotazione anti-oraria",
+          "fluttering": "ondeggiamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
+        },
+        "helloworld_emoji_sounds": {
+          "swimming left and right": "nuotata sinistra-destra",
+          "shrinking": "contrazione",
+          "patrolling": "pattugliamento",
+          "wandering": "movimento casuale",
+          "growing": "crescita",
+          "jittering": "pulsazione",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "spinning left": "rotazione anti-oraria",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_food_backgrounds": {
+          "swimming left and right": "nuotata sinistra-destra",
+          "shrinking": "contrazione",
+          "patrolling": "pattugliamento",
+          "wandering": "movimento casuale",
+          "growing": "crescita",
+          "jittering": "pulsazione",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "spinning left": "rotazione anti-oraria",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_food_costumes": {
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "helloworld_food_events": {
+          "patrolling": "pattugliamento",
+          "growing": "crescita",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "jittering": "pulsazione",
+          "wandering": "movimento casuale",
+          "shrinking": "contrazione",
+          "spinning left": "rotazione anti-oraria",
+          "fluttering": "ondeggiamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
+        },
+        "helloworld_food_sounds": {
+          "swimming left and right": "nuotata sinistra-destra",
+          "shrinking": "contrazione",
+          "patrolling": "pattugliamento",
+          "wandering": "movimento casuale",
+          "growing": "crescita",
+          "jittering": "pulsazione",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "spinning left": "rotazione anti-oraria",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_retro_backgrounds": {
+          "swimming left and right": "nuotata sinistra-destra",
+          "shrinking": "contrazione",
+          "patrolling": "pattugliamento",
+          "wandering": "movimento casuale",
+          "growing": "crescita",
+          "jittering": "pulsazione",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "spinning left": "rotazione anti-oraria",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_retro_behaviors": {
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "swimming left and right": "nuotata sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_retro_costumes": {
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "helloworld_retro_events": {
+          "patrolling": "pattugliamento",
+          "growing": "crescita",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "jittering": "pulsazione",
+          "wandering": "movimento casuale",
+          "shrinking": "contrazione",
+          "spinning left": "rotazione anti-oraria",
+          "fluttering": "ondeggiamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving forward": "movimento in avanti"
+        },
+        "helloworld_retro_sounds": {
+          "swimming left and right": "nuotata sinistra-destra",
+          "shrinking": "contrazione",
+          "patrolling": "pattugliamento",
+          "wandering": "movimento casuale",
+          "growing": "crescita",
+          "jittering": "pulsazione",
+          "moving east": "spostamento verso est",
+          "moving north": "spostamento verso nord",
+          "moving south": "spostamento verso sud",
+          "moving west": "spostamento verso ovest",
+          "spinning right": "rotazione oraria",
+          "spinning left": "rotazione anti-oraria",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "swimming left and right": "nuotata sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo",
+          "moving north and looping": "spostamento verso nord e ciclo",
+          "moving south and looping": "spostamento verso sud e ciclo"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "swimming left and right": "nuotata sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "swimming left and right": "nuotata sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "swimming left and right": "nuotata sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "swimming left and right": "nuotata sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "swimming left and right": "nuotata sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "movimento casuale",
+          "moving east": "spostamento verso est",
+          "spinning left": "rotazione anti-oraria",
+          "spinning right": "rotazione oraria",
+          "shrinking": "contrazione",
+          "growing": "crescita",
+          "moving south": "spostamento verso sud",
+          "swimming left and right": "nuotata sinistra-destra",
+          "moving north": "spostamento verso nord",
+          "jittering": "pulsazione",
+          "moving west": "spostamento verso ovest",
+          "patrolling": "pattugliamento",
+          "moving with arrow keys": "movimento con tasti freccia",
+          "driving with arrow keys": "guida con tasti freccia",
+          "fluttering": "ondeggiamento",
+          "wobbling": "barcollamento",
+          "moving west and looping": "spostamento verso ovest e ciclo",
+          "moving east and looping": "spostamento verso est e ciclo"
         }
       }
     }

@@ -3,6 +3,7 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JsonApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
+  skip_before_action :load_user, only: [:current]
 
   def load_user
     user_id = params[:user_id]
@@ -10,6 +11,25 @@ class Api::V1::UsersController < Api::V1::JsonApiController
       raise CanCan::AccessDenied
     end
     @user = current_user
+  end
+
+  # GET /api/v1/users/current
+  def current
+    prevent_caching
+    if current_user
+      render json: {
+        id: current_user.id,
+        username: current_user.username,
+        user_type: current_user.user_type,
+        is_signed_in: true,
+        short_name: current_user.short_name,
+        is_verified_instructor: current_user.verified_instructor?
+      }
+    else
+      render json: {
+        is_signed_in: false
+      }
+    end
   end
 
   # GET /api/v1/users/<user_id>/school_name
@@ -66,6 +86,11 @@ class Api::V1::UsersController < Api::V1::JsonApiController
   # GET /api/v1/users/<user_id>/school_donor_name
   def get_school_donor_name
     render json: @user.school_donor_name.nil? ? 'null' : @user.school_donor_name.inspect
+  end
+
+  # GET /api/v1/users/<user_id>/tos_version
+  def get_tos_version
+    render json: @user.terms_of_service_version.nil? ? -1 : @user.terms_of_service_version.inspect
   end
 
   # POST /api/v1/users/<user_id>/using_text_mode

@@ -4,7 +4,7 @@ he:
     script:
       category:
         csf_category_name: יסודות מדעי המחשב
-        hoc_category_name: שעה של קוד
+        hoc_category_name: שעת הקוד
         math_category_name: מתמטיקה
         other_category_name: אחר
       name:
@@ -15,11 +15,11 @@ he:
           description_audience: גילאי 4-6
           lessons:
             'Artist: Loops':
-              name: 'אמן: לולאות'
+              name: 'אומן: לולאות'
             'Artist: Sequence':
-              name: 'אמן: רצף'
+              name: 'אומן: רצף'
             'Artist: Shapes':
-              name: 'אמן: צורות'
+              name: 'אומן: צורות'
             'Bee: Loops':
               name: 'דבורה: לולאות'
             'Bee: Sequence':
@@ -54,13 +54,13 @@ he:
           description_audience: גילאי 6+ (קריאה נדרשת)
           lessons:
             'Artist: Debugging':
-              name: 'אמן: איתור באגים'
+              name: 'אומן: איתור באגים'
             'Artist: Loops':
-              name: 'אמן: לולאות'
+              name: 'אומן: לולאות'
             'Artist: Nested Loops':
-              name: 'אמן: לולאות מקוננות'
+              name: 'אומן: לולאות מקוננות'
             'Artist: Sequence':
-              name: 'אמן: רצף'
+              name: 'אומן: רצף'
             'Bee: Conditionals':
               name: 'דבורה: התניות'
             'Bee: Debugging':
@@ -97,13 +97,13 @@ he:
           description_audience: גילאי 8-18
           lessons:
             Artist:
-              name: אמן
+              name: אומן
             'Artist: Functions':
-              name: 'אמן: פונקציות'
+              name: 'אומן: פונקציות'
             'Artist: Nested Loops':
-              name: 'אמן: לולאות מקוננות'
+              name: 'אומן: לולאות מקוננות'
             'Artist: Patterns':
-              name: 'אמן: תבניות'
+              name: 'אומן: תבניות'
             'Bee: Conditionals':
               name: 'דבורה: התניות'
             'Bee: Debugging':
@@ -140,13 +140,13 @@ he:
               name: מעבדת הצעצועים
           student_description: צור סיפור או משחק בעזרת מעבדת הצעצועים!
         artist:
-          title: אמן
-          description: ציירו תמונות מגניבות ועיצובים עם האמן!
-          description_short: ציירו תמונות מגניבות ועיצובים עם האמן!
+          title: אומן
+          description: ציירו תמונות מגניבות ועיצובים עם האומן!
+          description_short: ציירו תמונות מגניבות ועיצובים עם האומן!
           lessons:
             Artist:
-              name: אמן
-          student_description: ציירו תמונות מגניבות ועיצובים עם האמן!
+              name: אומן
+          student_description: ציירו תמונות מגניבות ועיצובים עם האומן!
         hourofcode:
           title: מבוך קלאסי
           description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד זומבים וסקראט מעידן הקרח!
@@ -156,13 +156,13 @@ he:
               name: מבוך
           student_description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד זומבים וסקראט מעידן הקרח!
         frozen:
-          title: תכנתו עם אנה ואלזה
-          description: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
+          title: לתכנת עם אנה ואלזה
+          description: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את זה עם חבריכם!
           description_short: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם והיופי של קרח.
           lessons:
             Artist:
-              name: אמן
-          student_description: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
+              name: לתכנת עם אנה ואלזה
+          student_description: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את זה עם חבריכם!
         course4:
           title: מסלול 4
           description: קורס 4 מיועד עבור תלמידים אשר למדו את קורס 2 ו-3. תלמידים ילמדו לפתור חידות עם מורכבות מוגברת כאשר ילמדו איך לשלב מספר עקרונות כשפותרים כל אתגר. כאשר הקורס יסתיים, התלמידים יצרו תוכניות אשר יאפשרו להם לתרגל מספר מיומנויות הכוללים בין היתר לולאות ופונקציות עם פרמטרים. מומלץ לכיתות ד-ו.
@@ -170,15 +170,15 @@ he:
           description_audience: גילאי 9-18
           lessons:
             Artist:
-              name: אמן
+              name: אומן
             Artist Binary:
-              name: אמן בינארי
+              name: אומן בינארי
             'Artist: For Loops':
-              name: 'אמן: לולאות For'
+              name: 'אומן: לולאות For'
             'Artist: Functions':
-              name: 'אמן: פונקציות'
+              name: 'אומן: פונקציות'
             'Artist: Functions with Parameters':
-              name: 'אמן: פונקציות עם פרמטרים'
+              name: 'אומן: פונקציות עם פרמטרים'
             'Artist: Variables':
               name: 'אמן: משתנים'
             'Bee: For Loops':
@@ -203,13 +203,13 @@ he:
         Course4pre:
           lessons:
             'Artist: Functions':
-              name: 'אמן: פונקציות'
+              name: 'אומן: פונקציות'
             'Artist: Loops':
-              name: 'אמן: לולאות'
+              name: 'אומן: לולאות'
             'Artist: Nested Loops':
-              name: 'אמן: לולאות מקוננות'
+              name: 'אומן: לולאות מקוננות'
             'Artist: Sequence':
-              name: 'אמן: רצף'
+              name: 'אומן: רצף'
             'Bee: Conditionals':
               name: 'דבורה: התניות'
             'Bee: Debugging':
@@ -251,12 +251,12 @@ he:
               name: המשחק הגדול - משתנים
         infinity:
           title: מעבדת הצעצועים עם דיסני אינסוף
-          description: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני.
-          description_short: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני.
+          description: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות מתוך "דיסני אינסוף".
+          description_short: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות מתוך "דיסני אינסוף".
           lessons:
             Infinity:
-              name: אינסוף
-          student_description: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני.
+              name: מעבדת הצעצועים עם דיסני אינסוף
+          student_description: בעזרת מעבדת הצעצועים, צרו סיפור או משחק שבו מככבות דמויות מתוך "דיסני אינסוף".
         algebrademo:
           lessons:
             Defining Simple Functions:
@@ -350,13 +350,13 @@ he:
               name: סטודיו
           student_description: אירועים
         flappy:
-          title: קוד מתנופף
-          description: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
+          title: צרו משחק עם פלאפי
+          description: רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך קוד ההתעופפות שלנו!
           description_short: כתוב משחק פלאפי משלך תוך פחות מ-10 דקות!
           lessons:
             Flappy Code:
-              name: קוד מתנופף
-          student_description: רוצה לכתוב משחק משלך בפחות מ10 דקות?נסה את מדריך קוד ההתעופפות שלנו!
+              name: צרו משחק עם פלאפי
+          student_description: רוצים לכתוב משחק משלכם בפחות מעשר דקות? נסו את מדריך קוד ההתעופפות שלנו!
         jigsaw:
           title: פאזל
           lessons:
@@ -458,7 +458,7 @@ he:
         allthethings:
           lessons:
             Artist:
-              name: אמן
+              name: אומן
             Bee:
               name: דבורה
             Bounce:
@@ -477,6 +477,8 @@ he:
               name: סטודיו
             Web Lab:
               name: מעבדת האתרים
+            Java Lab: {}
+            lesson-47: {}
         algebraPD2b:
           lessons:
             Defining Variables:
@@ -609,12 +611,12 @@ he:
           description_audience: גילאי 10-18
         iceage:
           title: עידן הקרח Play Lab
-          description: צור סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
-          description_short: צור סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
+          description: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
+          description_short: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
           lessons:
             Ice Age Play Lab:
               name: עידן הקרח Play Lab
-          student_description: צור סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
+          student_description: צרו סיפור או משחק עם עידן הקרח במעבדת הצעצועים!
         cspunit3temp:
           lessons:
             While Loops:
@@ -628,21 +630,23 @@ he:
               name: מעבדת הצעצועים עם גמבול
           student_description: צור סיפור או משחק עם מעבדת הצעצועים גמבול!
         starwars:
-          description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
-          description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
+          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
+          description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם, בגלקסיה רחוקה רחוקה...
+          description_short: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם, בגלקסיה רחוקה רחוקה...
           lessons:
             Hour of Code 2015:
               name: שעת קוד 2015
-          student_description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
+          student_description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם, בגלקסיה רחוקה רחוקה...
         starwarsblocks:
-          description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
-          description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
+          title: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
+          description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם, בגלקסיה רחוקה רחוקה...
+          description_short: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם, בגלקסיה רחוקה רחוקה...
           lessons:
             Hour of Code 2015:
-              name: שעת קוד 2015
-          student_description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
+              name: 'מלחמת הכוכבים: בונים גלקסיה באמצעות קוד (בלוקים)'
+          student_description: למדו כיצד לתכנת דרואידים וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם, בגלקסיה רחוקה רחוקה...
         mc:
-          title: 'שעת הקוד: גרסת מיינקראפט'
+          title: 'מיינקראפט: יוצאים להרפתקה'
           description: השתמשו בבלוקים של קודים וצאו עם סטיב או אלכס להרפתקה בעולם של מיינקראפט.
           description_short: גלה את העולם של מיינקראפט באמצעות קוד
           lessons:
@@ -816,7 +820,7 @@ he:
             'Bee: Functions (Course 3)':
               name: 'דבורה: פונקציות (קורס 3)'
             'New Artist: Functions':
-              name: 'אמן חדש: פונקציות'
+              name: 'אומן חדש: פונקציות'
             Songwriting:
               name: כתיבת שירים
         grade1:
@@ -834,9 +838,9 @@ he:
           description_audience: גילאי 10-110
           lessons:
             'Artist: For Loops':
-              name: 'אמן: לולאות For'
+              name: 'אומן: לולאות For'
             'Artist: Functions with Parameters':
-              name: 'אמן: פונקציות עם פרמטרים'
+              name: 'אומן: פונקציות עם פרמטרים'
             'Artist: Variables':
               name: 'אמן: משתנים'
             'Bee: For Loops':
@@ -864,7 +868,7 @@ he:
             " Bee: Conditionals":
               name: 'דבורה: התניות'
             'Artist: Nested Loops':
-              name: 'אמן: לולאות מקוננות'
+              name: 'אומן: לולאות מקוננות'
             Bounce:
               name: להקפיץ
             'Farmer: While Loops':
@@ -953,10 +957,7 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
-        basketball:
-          lessons:
-            Bounce:
-              name: להקפיץ
+        basketball: {}
         hoc-encryption: {}
         csd2-2017:
           lesson_groups:
@@ -991,16 +992,16 @@ he:
               display_name: סקר שלאחר הקורס
         minecraft:
           title: מעצבי מיינקראפט
-          description_short: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
-          description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
+          description_short: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
+          description: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
           lessons:
             Minecraft Hour of Code Designer:
               name: מעצבי מיינקראפט
-          student_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
+          student_description: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
         flappy-impact-study:
           lessons:
             Flappy Code:
-              name: קוד מתנופף
+              name: צרו משחק עם פלאפי
         coursea-draft:
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -1036,7 +1037,7 @@ he:
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
             Artist Binary:
-              name: אמן בינארי
+              name: אומן בינארי
             Introduction:
               name: מבוא
         coursee-draft:
@@ -1044,6 +1045,7 @@ he:
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
+            Functions in Farmer: {}
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
             Internet:
@@ -1061,7 +1063,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
             Introduction:
@@ -1326,7 +1328,7 @@ he:
               name: 'מעבר לתכנות: תמונות בינאריות'
               description_teacher: אומנם רוב האנשים חושבים שהמשמעות של בינארי זה רק אפסים ואחדות, התלמידים ילמדו על הרעיון שמידע יכול להיות מיוצג בעזרת מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Artist Binary:
-              name: אמן בינארי
+              name: אומן בינארי
         coursee-2017:
           lesson_groups:
             csf_e_1:
@@ -1348,7 +1350,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
             Conditionals:
@@ -1376,7 +1378,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Functions with Parameters in Bee:
               description_teacher: שיעור זה משתמש בסביבת הדבורה, וממשיך בלימוד הרעיון של שימוש בפונקציות עם פרמטרים אשר נלמד בשלב האמן הקודם. התלמידים יתרגלו כתיבה ושימוש בפונקציות כדי ללכת בנתיבים מורכבים ובאיסוף תבניות של צוף ודבש.
             Sequence in Maze:
@@ -1452,7 +1454,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
             Conditional Loops in Maze:
@@ -1522,7 +1524,7 @@ he:
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
             Artist Binary:
-              name: אמן בינארי
+              name: אומן בינארי
             Loops in Ice Age:
               name: לולאות בעידן הקרח
         csp3-a:
@@ -1540,7 +1542,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
         new-stages-sept-2017: {}
@@ -1583,7 +1585,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
         csd5-old:
@@ -1612,13 +1614,17 @@ he:
             cspAssessment:
               display_name: הערכה לפרק
         pwc: {}
-        allthesurveys: {}
+        allthesurveys:
+          lessons:
+            lesson-20: {}
         k1hoc2017: {}
         hero:
           title: 'מיינקראפט: המסע של הירו'
           lessons:
+            'Minecraft\: Hero''s Journey Hour of Code':
+              name: 'מיינקראפט: המסע של הירו - שעת הקוד'
             Minecraft Hour of Code:
-              name: 'שעת הקוד: גרסת מיינקראפט'
+              name: 'מיינקראפט: המסע של הירו'
         applab-intro-staging: {}
         csp-explore-2017:
           lesson_groups:
@@ -1653,6 +1659,7 @@ he:
               name: רצף במבוך
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
+            Loops in Artist: {}
             Introduction:
               name: מבוא
             Conditionals:
@@ -1683,7 +1690,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Songwriting with Parameters:
               name: כתיבת שירים
         csd6-old:
@@ -1997,7 +2004,7 @@ he:
             Conditionals with Cards:
               name: התניות עם כרטיסים
             Minecraft Hour of Code:
-              name: 'שעת הקוד: גרסת מיינקראפט'
+              name: 'מיינקראפט: יוצאים להרפתקה'
         coursef-2018:
           lesson_groups:
             csf_f_1:
@@ -2326,23 +2333,28 @@ he:
         frozen-2018:
           lessons:
             Artist:
-              name: אמן
+              name: אומן
         frozen-2018-test:
           lessons:
             Artist:
-              name: אמן
+              name: אומן
         dance:
           title: מסיבת ריקודים (2018)
+          description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           lessons:
             Dance Party:
               name: מסיבת ריקודים
+          student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         frozen-2018-test-b:
           lessons:
             Artist:
-              name: אמן
+              name: אומן
         aquatic:
           title: 'מיינקראפט: מסע ימי'
           description_short: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות ולבנות עולמות תת-ימיים עם קוד!
+          lessons:
+            Aquatic:
+              name: 'מיינקראפט: מסע ימי'
         sconyers: {}
         dance--draft:
           lessons:
@@ -2551,7 +2563,7 @@ he:
               name: צמידים בינארים
             'Unplugged: Binary': {}
             Artist Binary:
-              name: אמן בינארי
+              name: אומן בינארי
             Internet:
               name: אינטרנט
             Crowdsourcing: {}
@@ -3122,7 +3134,9 @@ he:
             CS Discoveries Post Course survey: {}
             Sprite Properties:
               name: מאפייני ספרייט
-        csd-bugs: {}
+        csd-bugs:
+          lessons:
+            Game Lab Bugs: {}
         maddie-test:
           lessons:
             stage 1:
@@ -3218,9 +3232,11 @@ he:
             'Earthquake Detector: Processing with Events': {}
         dance-2019:
           title: מסיבת ריקודים (2019)
+          description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
           lessons:
             Dance Party:
               name: מסיבת ריקודים
+          student_description: קודדו מסיבת ריקודים משלכם ושתפו עם חברים!
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
@@ -3254,8 +3270,6 @@ he:
         dance-extras-2019:
           title: המשיכו לרקוד (2019)
           description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
-          lessons:
-            Dance Party - Go Further: {}
           student_description: המשיכו מעבר לשעה הראשונה עם רעיונות לפרויקטים נוספים.
         csp10-pilot: {}
         csp4-preview:
@@ -3633,7 +3647,7 @@ he:
             For Loops in Bee:
               name: לולאות עבור עם הדבורה
             For Loops in Artist:
-              name: לולאות עבור עם האמן
+              name: לולאות עבור עם האומן
             Learning Sprites with Sprite Lab: {}
             Alien Dance Party with Sprite Lab: {}
             Editing Behaviors: {}
@@ -3877,10 +3891,12 @@ he:
           lessons:
             Virus Simulation for Code Bytes:
               name: קידוד של סימולציה
+            Outbreak:
+              name: קידוד של סימולציה
           lesson_groups:
             outbreak:
               display_name: סימולציית התפרצות
-          title: סימולטור התפרצות
+          title: לנצח את הקורונה
           description_short: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           name: התפרצות
@@ -3888,6 +3904,8 @@ he:
         apps-for-good: {}
         2021drafting:
           lessons:
+            Sprite Lab: {}
+            lesson-4: {}
             Virus Simulation for Code Bytes:
               name: קידוד של סימולציה
           lesson_groups:
@@ -3896,7 +3914,7 @@ he:
             lessonGroup-3:
               display_name: משתנים
             outbreak:
-              display_name: סימולטור התפרצות
+              display_name: לנצח את הקורונה
             debugging:
               display_name: מציאת טעויות
         csd1-2021:
@@ -3914,6 +3932,7 @@ he:
           lessons:
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
+            lesson-1: {}
           lesson_groups:
             cspSurvey:
               display_name: סקר
@@ -3939,6 +3958,7 @@ he:
               name: פונקציות
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
+            lesson-1: {}
           lesson_groups:
             csd3_1:
               display_name: 'פרק 1: תמונות ואנימציות'
@@ -3950,6 +3970,7 @@ he:
           lessons:
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
+            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             csd4_1:
               display_name: 'פרק 1: עיצוב מכוון משתמש'
@@ -3966,6 +3987,7 @@ he:
               name: ייצוג ASCII וייצוג בינארי
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
+            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             csd5_1:
               display_name: 'פרק 1: ייצוג מידע'
@@ -3983,6 +4005,7 @@ he:
               name: פונקציות ופרמטרים
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
+            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             csd6_1:
               display_name: 'פרק 1: תכנות עם חומרה'
@@ -4016,6 +4039,8 @@ he:
             csp_project:
               display_name: פּרוֹיֶקט
         csp5-2021:
+          lessons:
+            lesson-1: {}
           lesson_groups:
             csp_lists:
               display_name: רשימות
@@ -4023,13 +4048,40 @@ he:
               display_name: חזרות
             csp_project:
               display_name: פּרוֹיֶקט
-        csp6-2021: {}
-        csp7-2021: {}
+            lessonGroup-5:
+              display_name: סקר שלאחר הקורס
+        csp6-2021:
+          lessons:
+            lesson-1: {}
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: אלגוריתמים
+            lessonGroup-2:
+              display_name: סקר שלאחר הקורס
+        csp7-2021:
+          lessons:
+            lesson-1: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר
         csp8-2021:
           lessons:
-            lesson-4: {}
-        csp9-2021: {}
-        csp10-2021: {}
+            lesson-1: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: סקר
+        csp9-2021:
+          lessons:
+            lesson-1: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
+        csp10-2021:
+          lessons:
+            lesson-1: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: סקר
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -4115,7 +4167,7 @@ he:
               name: תמונות בינאריות
               description_teacher: אומנם רוב האנשים חושבים שהמשמעות של בינארי זה רק אפסים ואחדות, התלמידים ילמדו על הרעיון שמידע יכול להיות מיוצג בעזרת מספר דרכים. השיעור הזה לוקח את הרעיון צעד נוסף קדימה על-ידי הדמיה כיצד המחשב שומר מידע מורכב יותר (כמו תמונות וצבעים) גם בצורה בינארית.
             Artist Binary:
-              key: אמן בינארי
+              key: אומן בינארי
           lesson_groups:
             csf_events:
               display_name: אירועים
@@ -4145,6 +4197,8 @@ he:
           lessons:
             Nested Loops in the Maze:
               name: לולאות מקוננות במבוך
+            AI for Oceans:
+              name: בינה מלאכותית למען האוקיינוסים
             Internet:
               key: אינטרנט
               name: האינטרנט
@@ -4154,7 +4208,9 @@ he:
             For Loops in Bee:
               key: לולאות עבור עם הדבורה
             For Loops in Artist:
-              key: לולאות עבור עם האמן
+              key: לולאות עבור עם האומן
+            lesson-5:
+              name: התפרצות
           lesson_groups:
             ramp_up:
               display_name: דמויות
@@ -4265,7 +4321,9 @@ he:
               display_name: 'פרק 2: פתרון בעיות נתונים'
             cspSurvey:
               display_name: סקר
-        testtess: {}
+        testtess:
+          lessons:
+            new lesson: {}
         contagion-pilot:
           description_short: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
           description: השתמשו במעבדת הדמויות כדי לתכנת סימולציה של התפרצות וירוסים.
@@ -4275,17 +4333,56 @@ he:
         csa1-pilot:
           lessons:
             lesson-21: {}
+            lesson-24: {}
+            lesson-22: {}
+            lesson-23: {}
         csa2-pilot:
           lessons:
             lesson-1: {}
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
         csa3-pilot:
           lessons:
             lesson-16: {}
-        csa4-pilot: {}
-        csa5-pilot: {}
-        csa6-pilot: {}
-        csa7-pilot: {}
-        csa8-pilot: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
+        csa4-pilot:
+          lessons:
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19: {}
+            lesson-20: {}
+        csa5-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa6-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa7-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa8-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
         csa9-pilot: {}
         k5-onlinepd-2021:
           lessons:
@@ -4343,6 +4440,7 @@ he:
         csd7-2021:
           lessons:
             Post-Unit Survey: {}
+            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             lessonGroup-4:
               display_name: סקר
@@ -4396,11 +4494,6 @@ he:
         self-paced-pl-csd5-2021:
           lessons:
             lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
-            lesson-4: {}
-            lesson-5: {}
-            lesson-6: {}
             lesson-7: {}
         self-paced-pl-csd6-2021:
           lessons:
@@ -4430,7 +4523,8 @@ he:
         poembot:
           lessons:
             lesson-1: {}
-        outbreak-module: {}
+        outbreak-module:
+          title: התפרצות
         csa1-exemplars:
           lessons:
             lesson-1: {}
@@ -4510,7 +4604,9 @@ he:
         poster-experiment:
           lessons:
             lesson-1: {}
-        tesspltest: {}
+        tesspltest:
+          lessons:
+            lesson-1: {}
         tesspl2: {}
         sb-pt-cont:
           lessons:
@@ -4611,32 +4707,37 @@ he:
         csa1-pilot-facilitator:
           lessons:
             Unit 1 Pilot Survey: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-21: {}
         csa2-pilot-facilitator:
           lessons:
             Unit 2 Pilot Survey: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-1: {}
         csa3-pilot-facilitator:
           lessons:
             Unit 3 Pilot Survey: {}
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
             lesson-16: {}
         csa4-pilot-facilitator:
           lessons:
+            lesson-1: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
             lesson-10: {}
+            lesson-2: {}
         csa5-pilot-facilitator:
           lessons:
-            Reversing Elements: {}
-            Shifting Elements: {}
-            Finding Duplicates: {}
-            Searching for Elements: {}
-            A Sustainable Neighborhood Project - Day 1: {}
-            A Sustainable Neighborhood Project - Day 2: {}
-            A Sustainable Neighborhood Project - Day 3: {}
-            FRQ Day: {}
-            Assessment Day: {}
+            lesson-1: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -4646,6 +4747,10 @@ he:
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
         poetry-hoc:
           lessons:
             lesson-1: {}
@@ -4673,8 +4778,7 @@ he:
               name: פּרוֹיֶקט
             lesson-20: {}
         hello-world-food:
-          lessons:
-            lesson-1: {}
+          title: 'שלום, עולם: אוכל'
         csa-u7-dev:
           lessons:
             lesson-1: {}
@@ -4698,15 +4802,20 @@ he:
               display_name: שיעורים
             lessonGroup-3:
               display_name: פּרוֹיֶקט
+        tesstest921: {}
         hello-world-animals:
           lessons:
             lesson-1: {}
+          title: 'שלום, עולם: חיות'
         hello-world-emoji:
           lessons:
             lesson-1: {}
+          title: 'שלום, עולם: אמוג''י'
         hello-world-retro:
           lessons:
             lesson-1: {}
+          name: 'שלום, עולם: רטרו'
+          title: 'שלום, עולם: רטרו'
         hello-world-batman:
           lessons:
             lesson-1: {}
@@ -4728,6 +4837,561 @@ he:
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+            lesson-16: {}
         csc-things:
+          lessons:
+            lesson-1: {}
+        poetry-hoc2:
+          lessons:
+            lesson-1: {}
+        poetry-hoc3:
+          lessons:
+            lesson-1:
+              name: אווירת לימוד
+          name: שירה - שעת הקוד 3
+          title: שירה - שעת הקוד גרסה 3
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1: {}
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: ווידג'טים
+            lesson-2:
+              name: כלים
+            lesson-3: {}
+        poem-art:
+          lessons:
+            lesson-1:
+              name: אומנות השירה
+          title: אומנות השירה
+        poetry:
+          lessons:
+            lesson-1:
+              name: אומנות השירה
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: תחרות איות
+          title: תחרות איות
+        outbreak-csc:
+          title: התפרצות
+        explore-data-1: {}
+        counting-csc: {}
+        csa5-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+        csa-examples-21:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: סקר שלאחר הקורס
+        csa-pl-test: {}
+        csa-pl-module-1-test: {}
+        csa-pl-module-2-test: {}
+        csa-pl-module-3-test: {}
+        csa6-pilot-facilitator:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-1: {}
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: אומנות השירה
+            lesson-1:
+              name: אומנות השירה
+          title: אומנות השירה
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: אומנות השירה
+            lesson-1:
+              name: אומנות השירה
+        hello-world-food-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: אוכל'
+          title: 'שלום, עולם: אוכל'
+        hello-world-emoji-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: אמוג''י'
+            lesson-1: {}
+          title: 'שלום, עולם: אמוג''י'
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: חיות'
+            lesson-1: {}
+          title: 'שלום, עולם: חיות'
+        hello-world-retro-2021:
+          lessons:
+            Hello World:
+              name: 'שלום, עולם: רטרו'
+            lesson-1: {}
+          title: 'שלום, עולם: רטרו'
+          name: 'שלום, עולם: רטרו 2021'
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: תחרות איות
+        explore-data-1-2021: {}
+        counting-csc-2021: {}
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: שיעור
+        csa6-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+        2022drafting:
+          lessons:
+            lesson-2: {}
+            lesson-4:
+              name: לנצח את הקורונה
+            lesson-5: {}
+            lesson-6: {}
+            Programming with the Bee:
+              name: לולאות מקוננות במבוך
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+            'Hello World: Food':
+              name: 'שלום, עולם: אוכל'
+          lesson_groups:
+            lessonGroup-8:
+              display_name: שעת הקוד
+        csa7-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+        csf-2022-pilot:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: דמויות
+            lessonGroup-3:
+              display_name: משתנים
+        csd6-pilot-2022:
+          lessons:
+            lesson-2: {}
+            Functions with Parameters:
+              name: פונקציות
+        csa8-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+        alltheselfpacedplthings:
+          lessons:
+            Instructor In Training Levels: {}
+            Dani Test Lesson 2: {}
+        csa7-pilot-facilitator:
+          lessons:
+            Unit 7 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa8-pilot-facilitator:
+          lessons:
+            Unit 8 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa9-pilot-facilitator: {}
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: מפות שמחות
+            Loops with Scrat:
+              name: לולאות עם סקראט
+            Ocean Scene with Loops:
+              description_teacher: בחזרה ללולאות, תלמידים לומדים לצייר תמונות עם התניות של רצפים פשוטים של הוראות. בשיעור הקודם, השתמשנו בלולאות לנווט במבוך ולאסוף אוצרות. כאן, לולאות יוצרות רצפים. בסוף השלב, תלמידים יוכלו לקבל הזדמנות ליצור תמונות משלהם בעזרת לולאות.
+            'Mini-Project: On the Move with Play Lab':
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+            'Programming: Happy Maps':
+              name: מפות שמחות
+            Loops in Ice Age:
+              key: לולאות בעידן הקרח
+              name: לולאות עם סקראט
+            Events in Play Lab:
+              description_teacher: בפעילות הזו, תלמידים יוכלו ללמוד כיצד להשתמש באירועים במעבדת הצעצועים ולהשתמש בכל מיומנויות התכנות שהם רכשו כדי לייצר משחק אנימציה. זה הזמן להיות יצירתי וליצור סיפור במעבדת הצעצועים!
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+              key: תכנות עם ציפורים כועסות
+            Debugging in Maze:
+              name: איתור באגים במבוך
+            Dance Party:
+              name: מסיבת ריקודים
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
+              key: לולאות מקוננות במבוך
+            Until Loops in Maze:
+              name: לולאות "עד" במבוך
+              key: לולאות "עד" במבוך
+            Debugging with Scrat:
+              key: ניפוי שגיאות עם סקראט
+              name: איתור באגים במבוך
+            lesson-1:
+              name: מסיבת ריקודים
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            lessonGroup-9:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+            csf_functions:
+              display_name: פונקציות
+            csf_variables:
+              display_name: משתנים
+            csf_for_loops:
+              display_name: בשביל לולאות
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey: {}
+          lesson_groups:
+            cspSurvey:
+              display_name: סקר
+        csp2-2022: {}
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: מציאת טעויות
+              key: מציאת טעויות
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: משתנים
+            csp_conditionals:
+              display_name: תנאים
+            csp_functions:
+              display_name: פונקציות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: רשימות
+            csp_loops:
+              display_name: חזרות
+            csp_project:
+              display_name: פּרוֹיֶקט
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: זוזו, זוזו
+              key: זוזו, זוזו
+            Sequencing with Angry Birds:
+              name: יצירת רצפים עם ציפורים כועסות
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Getting Loopy:
+              name: עוברים ללולאות
+            Sequencing in Maze:
+              name: יצירת רצפים עם ציפורים כועסות
+            Programming in Maze:
+              key: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
+            'Loops: Getting Loopy':
+              name: עוברים ללולאות
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        coursec-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: תכנות עם ציפורים כועסות
+            Debugging in Maze:
+              name: איתור באגים במבוך
+              key: איתור באגים במבוך
+            The Big Event:
+              name: האירוע הגדול
+            Binary Bracelets:
+              name: צמידים בינארים
+              key: צמידים בינארים
+            Programming in Maze:
+              key: תכנות במבוך
+              name: תכנות עם ציפורים כועסות
+            'Events: The Big Event':
+              name: האירוע הגדול
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        csp6-2022: {}
+        csp7-2022: {}
+        csp8-2022: {}
+        csp9-2022: {}
+        csp10-2022: {}
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: תכנות לנייר משבצות
+            Introduction to Online Puzzles:
+              name: היכרות עם חידות מבוכים
+              description_teacher: 'בקבוצת החידות הזו, תלמידים יתחילו עם היכרות (או חזרה על החומר, תלוי בניסיון הכיתה שלך) עם סביבת הפיתוח של Code.org. יהיו סרטונים המציגים את הפונקציונלית הבסיסית של סביבת העבודה כולל הכפתורים "הרץ", "אפס", ו-"צעד". עוד יעלה בסרטונים: גרירת הבלוקים, מחיקת בלוקים וחיבור בלוקים. לאחר מכן, תלמידים יתרגלו את כישוריהם ב _רצפים_ ו _איתור באגים_ במבוך. משם, תלמידים יראו דוגמאות חדשות של חידות כמו האוסף, האמן והקוצר כאשר הם ילמדו את השלב הבסיסי של _לולאות_.'
+              key: היכרות עם חידות מבוכים
+            Relay Programming:
+              name: הרץ פעולה בשנית
+              key: הרץ פעולה בשנית
+            Debugging with Laurel:
+              name: ניפוי שגיאות עם לורל
+            Dance Party:
+              name: מסיבת ריקודים
+              key: מסיבת ריקודים
+            Loops in Ice Age:
+              name: לולאות בעידן הקרח
+              key: לולאות בעידן הקרח
+            Nested Loops in Maze:
+              name: לולאות מקוננות במבוך
+            Conditionals with Cards:
+              name: התניות עם כרטיסים
+              key: התניות עם כרטיסים
+            Until Loops in Maze:
+              name: לולאות "עד" במבוך
+              key: לולאות "עד" במבוך
+            'Algorithms: Graph Paper Programming':
+              name: תכנות לנייר משבצות
+            Debugging in Collector:
+              name: ניפוי שגיאות עם לורל
+            Nested Loops in Bee:
+              name: לולאות מקוננות במבוך
+          lesson_groups:
+            csf_events:
+              display_name: אירועים
+            csf_loops:
+              display_name: חזרות
+            csf_conditionals:
+              display_name: תנאים
+          title: קורס ד' (2021)
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: כתיבת שירים
+            Conditionals with the Farmer:
+              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
+            'Functions: Songwriting':
+              name: כתיבת שירים
+            Conditionals:
+              key: תנאים
+              description_teacher: שיעור זה מכיר לתלמידים את לולאות 'עד' ופקודת 'אם/אחרת'. _לולאות עד_ הן לולאות אשר ממשיכות את הפקודות שבתוכן כל עוד התנאי שלהם מתקיים (אמת). תכניתן ישתמש בלולאות עד כאשר הוא לא יודע מראש כמה פעמים הפקודות יצטרכו לחזור על עצמם, אבל הוא כן יודע מהו התנאי שצריך להתקיים בכדי להמשיך את הלולאה. פקודת 'אם/אחרת' מאפשרת דינאמיות בתכנות על-ידי הרצת קטע קוד רק אם תנאי מתקיים (יהיה אמת), אחרת הוא יריץ קטע קוד אחר.
+          lesson_groups:
+            csf_sprites:
+              display_name: דמויות
+            csf_functions:
+              display_name: פונקציות
+            csf_nested_loops:
+              display_name: תנאים
+        coursef-2022:
+          lessons:
+            Programming with the Bee:
+              name: לולאות מקוננות במבוך
+            For Loop Fun:
+              name: כיף עם לולאת "עבור"
+              key: כיף עם לולאת "עבור"
+            Outbreak:
+              name: התפרצות
+            AI For Oceans:
+              name: בינה מלאכותית למען האוקיינוסים
+            The Internet:
+              name: האינטרנט
+            lesson-6: {}
+            Nested Loops in the Maze:
+              name: לולאות מקוננות במבוך
+            For Loops in Bee:
+              key: לולאות עבור עם הדבורה
+            For Loops in Artist:
+              key: לולאות עבור עם האומן
+            lesson-5: {}
+            AI for Oceans:
+              name: בינה מלאכותית למען האוקיינוסים
+            Internet:
+              key: אינטרנט
+              name: האינטרנט
+          lesson_groups:
+            ramp_up:
+              display_name: דמויות
+            lessonGroup-8:
+              display_name: משתנים
+        csp-post-survey-2021:
+          lessons:
+            lesson-1: {}
+        csa1-2022:
+          lessons:
+            lesson-2: {}
+            lesson-3: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9:
+              name: חזרות
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+        pre-express-2022:
+          lessons:
+            Learn to Drag and Drop: {}
+            Sequencing with Scrat: {}
+            Programming with Angry Birds:
+              key: תכנות עם ציפורים כועסות
+              name: תכנות עם ציפורים כועסות
+            Programming with Rey and BB-8: {}
+            Programming with Harvester: {}
+            Loops with Scrat:
+              key: לולאות עם סקראט
+              name: לולאות עם סקראט
+            Loops with Laurel: {}
+            Ocean Scene with Loops: {}
+            Drawing Gardens with Loops: {}
+            On the Move with Events: {}
+            A Royal Battle with Events: {}
+          lesson_groups:
+            csf_loops:
+              display_name: חזרות
+            csf_events:
+              display_name: אירועים
+        csa2-2022: {}
+        csa3-2022: {}
+        tessplayground: {}
+        cs4all-invasive-species:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12:
+              name: תנאים
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+            lesson-16:
+              name: מציאת טעויות
+            lesson-17: {}
+            lesson-18: {}
+            lesson-19:
+              name: מציאת טעויות
+            lesson-20: {}
+        csa4-2022: {}
+        csa5-2022: {}
+        tess-test-csa: {}
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: חזרות
+        pltess: {}
+        self-paced-pl-csa1-2022: {}
+        self-paced-pl-csa3-2022: {}
+        csa7-pilot-extra:
+          lessons:
+            Unit 7 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa8-pilot-extra:
+          lessons:
+            Unit 8 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa-backpack-2022:
           lessons:
             lesson-1: {}

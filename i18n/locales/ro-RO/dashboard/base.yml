@@ -177,6 +177,7 @@ ro:
     email_preference_yes: "Da"
     email_preference_no: "Nu"
     email_preference_required: "Trebuie să specificaţi un email preferat."
+    share_teacher_email_reg_partner_question: "Dorești să împărtășim datele tale de contact cu [Code.org regional partner](%{cdo_regional_partner_desc}) din statul tău pentru a putea să îți trimită notificări despre dezvoltarea profesională locală, resurse și evenimente?"
     share_teacher_email_reg_partner_preference_yes: "Da"
     share_teacher_email_reg_partner_preference_no: "Nu"
     share_teacher_email_reg_partner_preference_required: "Trebuie să specificaţi un email preferat."
@@ -319,10 +320,17 @@ ro:
       sections: "Secțiuni"
       help_support: "Ajutor şi suport"
       report_bug: "Raportare problemă"
+      report_abuse: "Raportează abuz"
       teacher_community: "Comunitate profesori"
       professional_learning: "Dezvoltare profesională"
       documentation: "Documentație"
       tutorials: "Tutoriale"
+      app_lab_documentation: "Documentația Laboratorului Web"
+      app_lab_tutorials: "Tutoriale  Laborator Web"
+      game_lab_documentation: "Documentația Laboratorului Web"
+      game_lab_tutorials: "Tutoriale  Laborator Web"
+      sprite_lab_documentation: "Documentație Sprite Lab"
+      sprite_lab_tutorials: "Tutoriale Sprite Lab"
       web_lab_documentation: "Documentația Laboratorului Web"
       educate_overview: "Prezentare profesor"
       educate_elementary: "Şcoala elementară"
@@ -349,6 +357,7 @@ ro:
       help_us: "Ajutați-ne"
       teach: "Predați"
       about: "Despre"
+      legal: "Confidențialitate&Legalitate"
       legal_privacy: "Politică de confidențialitate"
       legal_tos: "Termeni şi condiţii de utilizare"
     user:
@@ -356,6 +365,7 @@ ro:
       district_dashboard: 'Tabel de instrumente pe zonă districtuală'
       label: 'Salut %{username}'
       stats: 'Studio-ul Code'
+      my_projects: 'Proiectele mele'
       settings: 'Contul meu'
       logout: 'Deloghează-te'
       signin: 'Autentificare'
@@ -390,13 +400,17 @@ ro:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Laborator de Joacă'
       playlab_k1: 'Play Lab (Pre-cititor)'
+      poetry: 'Poezie'
+      poetry_hoc: 'Arta Poeziei'
       scratch: 'Scratch'
       sports: 'Sporturi (Sports)'
       spritelab: 'Laborator Sprite'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blocuri)'
       starwarsblocks_hour: 'Star Wars (blocuri)'
+      loading: 'Se încarcă...'
       weblab: 'Laboratorul de web'
+      view_all: 'Vezi toate proiectele...'
     popup:
       progress_for_user: "Progresul lui %{name}"
       progress: 'Progresul tău'
@@ -410,6 +424,7 @@ ro:
       prizes_link: 'Mai multe informaţii'
   teacher:
     answer: Răspuns
+    dashboard: 'Tabloul de bord al profesorilor'
     for_teachers_only: Doar pentru profesori
     title:
       one: 'Profesorul tău:'
@@ -518,6 +533,7 @@ ro:
     no_primary_course: "Încearcă un curs cu Atelierul de programare"
     choose_next_course: "Încearcă un curs cu Atelierul de programare alegând unul de mai jos"
     print_certificate: "Tipărește certificatul"
+  certificate_sponsor_message: "%{sponsor_name} a făcut darul generos de a vă sponsoriza învățarea."
   move_students:
     new_section_dne: "Ne pare rău, dar secțiunea %{new_section_code} nu există. Vă rugăm să introduceţi un cod aferent unei secţiuni diferite."
     section_code_cant_be_current_section: "Secţiunea curentă nu poate fi la fel ca o secţiune nouă."
@@ -677,10 +693,12 @@ ro:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft s-a întors pentru Ora de Codare cu o activitate nou-nouță! Călătorie prin Minecraft cu cod."
     sports:
       title: "Sporturi (Sports)"
       body: "Creați un joc de basketball sau un \"mix and match\" din toate sporturile."
     text-compression:
+      title: "Comprimare de text"
       body: "În această lecție, elevii vor folosi Widget-ul de comprimare de text pentru a comprima textul prin înlocuirea modelelor cu simboluri."
     unplugged:
       title: "Lecţii offline"
@@ -966,8 +984,10 @@ ro:
       email: 'E-mail'
       email_alternate: 'Email alternativ'
       gender: 'Identitate de gen'
+      school: 'Școală'
       school_name: 'Numele școlii'
       school_city: 'Orașul în care se află școala'
+      school_city_district: 'Orașul/Sectorul Școlii'
       school_country: 'Țara școlii'
       colombian_school_city: 'Orașul în care se află școala'
       colombian_school_municipality: 'Municipiul Școlar'
@@ -1085,3 +1105,4 @@ ro:
   behaviors:
     this_sprite: "acest spirit"
   unit_prefix: "Unitate %{n}"
+  teacher_feedback: "Punctele de vedere ale profesorului"

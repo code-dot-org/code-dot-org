@@ -10,6 +10,7 @@ ko:
       binary: 2진
       birds: 새들
       cats: 모든 고양이
+      codeName: 코드이름
       color: 색깔
       counter: counter
       dogs: 모든 개
@@ -20,11 +21,14 @@ ko:
       left: 왼쪽으로
       length: length
       level: 레벨
+      myName: 저이름
       name: 맵 이름
       nectar: 꽃꿀의 양
       planet: 행성
       points: 점수
       random: random(랜덤)
+      red1: 빨간1
+      red2: 빨간2
       repeat: 반복
       right: 오른쪽으로
       score: 점수

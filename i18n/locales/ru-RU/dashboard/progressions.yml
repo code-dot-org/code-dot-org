@@ -1,133 +1,419 @@
 ru:
   data:
     progressions:
-      '"If/Else" with the Bee': '"If/Else" с Пчёлкой'
+      '"If/Else" with the Bee': '«Если/Иначе» с Пчёлкой'
+      AI Machine Learning - Video: 'Искусственный интеллект: машинное обучение - видео'
+      'AI: Impact on Society - Video': 'Искусственный интеллект: воздействие на общество - видео'
+      'AI: Training Data & Bias - Video': 'Искусственный интеллект: обучающие данные и искажения - видео'
       Accelerometer Events: События акселерометра
       Adding Images: Добавление изображений
       Adding Screens: Добавление экранов
       Alien Defender: Война с чужими
       Animate Your Scene: Анимируйте свою сцену
+      App Lab Intro - Video: Введение в Лабораторию приложений - видео
+      'App Project: Screen Design': 'Проектное решение для приложения: компоновка окна'
+      Artist Intro with JR Hildebrand: Дж. Р. Хильдебранд представляет инструмент «Художник»
+      Artist Intro with JR Hildebrande: Дж. Р. Хильдебранд представляет инструмент «Художник»
       Artist Project: Проект "Художник"
       'Artist: Variables': 'Художник: Переменные'
+      Assessment: Оценка
+      Attribution: Присваивание атрибутов
       Back and Forth: Туда-сюда
+      Basic Conditionals: Основные условные операторы
       Bass, Mid, and Treble: Басовые, средние и высокие
+      Be a Super Digital Citizen: Быть Цифровым супергражданином
+      Begin planning your project: Начните планировать свой проект
+      Begin planning your project_2018: Начните планировать свой project_2018
+      Binary Bracelets - Unplugged Activity: Двоичные браслеты — Урок без компьютера
       Binary Numbers: Двоичные числа
+      Board Events: События на доске
+      Board Input and Output: Ввод и вывод на доске
+      Boolean Comparison: Булево сравнение
+      Build a Platform Jumper: Создать «Platform Jumper»
+      Build a Screen: Создать окно
+      Building a UI with Design Mode: Создание пользовательского интерфейса с помощью режима проектирования
+      Building an App: Создание приложения
       'Bunny ': "Кролик\n"
+      Button Circuits: Схемы кнопок
+      CS Discoveries Post-Course Survey: 'Занимательная информатика: опрос по окончании курса'
+      CS Discoveries Post-course Survey: 'Занимательная информатика: опрос по окончании курса'
+      CSD U3 Interactive Card Exemplar: CSD U3 Образец интерактивной карты
+      CSD U3 platform intro: Вводная информация о платформе CSD U3
+      'CSD: For Loop': 'CSD: цикл «for»'
       CSS Classes: CSS классы
       CSS Text Properties: Свойства CSS текста
       CSS and Style Sheets: CSS и таблицы стилей
-      Challenge: Испытание
+      Challenge: Задание
+      Challenge Levels: Уровни задания
+      Challenges: Задания
+      Change: Изменить
       Changing Screens: Изменение экранов
+      Checking for a Winner: Проверка победителя
+      Choose Your Own Adventure: Выбери свое собственное приключение
+      Choosing Good IDs: Выбор правильных идентификаторов
+      Code Your Own Flappy Game: Создайте свою собственную игру «Порхающая птичка»
+      Collector Game: Игра «Собиратель»
       Collision Detection: Обнаружение столкновений
+      Collisions: Столкновения
+      Collisions in Games: Столкновения в играх
+      Color LEDs: Цветные светодиоды
+      Combining Projects: Комбинирование проектов
+      Combining Representations: Комбинирование представлений
+      Conditionals with Cards - Unplugged Activity: Условные операторы с картами — Урок без компьютера
       'Conditionals: If Statements': ' Операторы Если'
+      'Conditionals: If and If/Else Statements': 'Условные операторы: операторы «Если» и «Если/Иначе»'
       Course E Artist Project: Курс E. Проект "Художник"
       Course E Sprite Lab Project: "Курс Д: проект в Лаборатории спрайтов\n"
+      'Course E: Play Lab Project': 'Курс E: проект в Лаборатории игр'
       Course F Artist Project: 'Курс Е: проект в среде Художника'
       Course F Sprite Lab Project: 'Курс Е: проект в Лаборатории спрайтов'
+      'Course F: Artist Project': 'Курс F: проект в среде Художника'
+      'Course F: Artist Project - Revise': 'Курс F: проект в среде Художника – Пересмотр'
+      'Course F: Play Lab Project': 'Курс F: проект в Лаборатории игр'
+      'Course F: Play Lab Project - Revise': 'Курс F: проект в Лаборатории игр – Пересмотр'
+      Crack Random Substitution: Взломать случайный шифр подстановки
+      Crack a Caesar Cipher: Взломать шифр Цезаря
+      Create Your Own Animation: Создайте свою собственную анимацию
+      Create a Story: Создайте рассказ
+      Create your project: Создай свой проект
       Creative Commons Search: Поиск Creative Commons
+      Customize: Индивидуальная настройка
       Dance Crews: Танцевальные коллективы
+      Data Visualization: Визуализация данных
+      De-bugging with the Step Button: Отладка с помощью кнопки «Шаг»
       Debugging: Отладка
+      Debugging with the Step Button: Отладка с помощью кнопки «Шаг»
+      Demo Apps: Демонстрационные приложения
       Design Mode: Режим дизайна
+      Design Your Game: Разработайте свою игру
+      Design Your Prototype: Разработайте свой прототип
+      Design a Screen for your App: Разработайте окно для своего приложения
+      Designing for Accessibility: Разработка для обеспечения доступности
+      Digital Sharing - Unplugged Activity: Публикация цифровых произведений — Урок без компьютера
       Dogger Example: "Пример доггера\n"
       Drawing: Рисование
       Editing Images: Редактирование изображений
       End of Course Projects: Конец проектов курса
+      Escape Room Example: Пример побега из комнаты
       Events: События
+      Events and Linking Screens: События и связывание окон
+      Events and Properties: События и свойства
+      Example: Пример
+      Example App Types: Примеры типов приложений
+      Example Projects: Примеры проектов
+      Example projects: Примеры проектов
+      Exemplar Personal Websites: Примеры персональных веб-сайтов
+      Expanding Personal Website: Расширение персонального веб-сайта
+      Expanding Your Website: Расширение своего веб-сайта
+      Experiment with Web Lab: Экспериментирование с Веб-лабораторией
       Exploration: Исследование
       'Exploration: Adding Style': 'Добавление стиля'
-      'Exploration: For Loops': ' Циклы с параметром'
+      'Exploration: For Loops': 'Исследование: Циклы «for»'
+      'Exploration: Sample Apps': 'Исследование: примеры приложений'
+      'Exploration: Sample Programs': 'Исследование: Примеры программ'
+      'Exploration: Sample Project': 'Исследование: Пример проекта'
       Explore HTML: Изучаем HTML
+      Exploring CS in Entertainment: Исследование информатики в развлекательной манере
+      Exploring more CSS: Более подробное изучение CSS
+      Extra: Дополнительно
       Final Personal Website: Персональный веб-сайт
+      Final Room Escape App: Финальное приложение «Побег из комнаты»
+      Find the Wizard: Найти мастера
+      Finish a Screen: Завершить работу с окном
+      Finish the Prototype: Завершить работу с прототипом
+      Finishing Functions: Завершение работы с функциями
+      Finishing Touches: Завершить работу со штрихами
+      Flyer Game: Игра «Flyer»
+      Follow the Algorithm - Unplugged Activity: Следуй алгоритму — Урок без компьютера
+      Follow the Mouse: Следуй за мышью
+      Fonts and Style: Шрифты и стиль
+      For Loop Fun - Unplugged Activity: Игры с циклами «for» – Урок без компьютера
       For Loops: Циклы с параметром
+      For Loops and Color LEDs: Циклы «for» и цветные светодиоды
+      For Loops and Repeat Blocks: Циклы «for» и блоки «повторения»
       Formatting HTML: Форматирование HTML
       Free Play: Свободная игра
+      'Free Play: Make a Scene': 'Свободная игра: Создай сцену'
+      'Free Play: Make an Interactive Scene': 'Свободная игра: Создай интерактивную сцену'
       Functions: функции
       Functions with Parameters: Процедуры с параметрами
       Geometric Sun: "Геометрическое солнце\n"
       Get In Formation: Давайте установим порядок
+      Getting Properties: Обретение свойств
+      Graph Paper Programming - Unplugged Activity: Программирование на бумаге в клеточку — Урок без компьютера
+      Guess The Number: Угадай число
       HTML Tags: HTML тэги
+      Headings: Заголовки
       Headings in HTML: Загловки в HTML
+      Hello World: Привет, мир
+      How to Create a Simple Function: Как создать простую функцию
       How to Make a Sprite: Как создать спрайт?
       Hyperlinks: Гиперссылки
+      Ice Age Loops: Циклы «Ледникового периода»
       If Statements: Операторы Если
       If-Else Statements: Операторы "если-иначе"
+      Images and Sounds: Изображения и звуки
       Importing Screens: Импорт экранов
       Improve Your Game: Улучшите вашу игру
+      Innovation Research: Инновационное исследование
+      Input Examples: Примеры ввода
+      Input with If-Else: Ввод с «если/иначе»
       Inspiration!: Вдохновение!
+      Intro to For Loops: Введение в циклы «for»
+      Intro to Sprites: Введение в спрайты
+      Intro to Variables: Введение в переменные
       Introducing Sprite Lab: Представляем Лабораторию спрайтов
       Introduction to Arrays: Введение в массивы
+      Iteration and Parameters: Итерация и параметры
+      Keep On Dancing!: Продолжай танцевать!
+      Keeping Data Secret: Сохранение данных в тайне
+      Keyboard Input: Ввод с клавиатуры
+      LED Apps: Приложения СИД
       Layout Properties: Свойства макета
+      Layout with CSS: Компоновка с CSS
       Learning from Simulations: Обучение по симуляторам
       Lesson Extras: Дополнения к уроку
       Lesson Overview: Обзор урока
+      Level Overview: Обзор уровня
+      Levels: Уровни
+      Light Show: Световое шоу
+      Linking Pages: Связывание страниц
+      Linking Screens: Связывание окон
       Lists: Списки
       Lists in HTML: Списки в HTML
+      Loops with the Artist: Циклы с Художником
+      Make a Prediction: Сделай прогноз
+      Make it Interactive: Сделай программу интерактивной
+      Making Scenes: Создание сцен
+      Making Songs: Создание песен
+      Making Sounds: Создание звуков
+      Making an Interactive Card: Создание интерактивной карты
+      'Maze Intro: Programming with Blocks': 'Лабиринт, введение: программирование с помощью блоков'
       Measures: Такты
-      'Mini-Project: Outbreak Simulator': ' Симулятор эпидемии'
+      'Minecraft: Hero''s Journey': 'Майнкрафт: Путешествие Героя'
+      'Mini-Project: About Me': 'Мини-проект: Обо мне'
+      'Mini-Project: Alien Dance Moves': 'Мини-проект: Танцевальные движения пришельцев'
+      'Mini-Project: Alien Dance Party': 'Мини-проект: Танцевальная вечеринка пришельцев'
+      'Mini-Project: Create a Virtual Pet': 'Мини-проект: Создай виртуального питомца'
+      'Mini-Project: Outbreak Simulator': 'Мини-проект: Симуляция эпидемии'
+      'Mini-Project: Royal Battle': 'Мини-проект: Королевская битва'
+      "Mini-Project: Snowflake #1": "Мини-проект: Снежинка № 1"
+      "Mini-Project: Snowflake #2": "Мини-проект: Снежинка № 2"
+      'Mini-Project: Swimming Fish': 'Мини-проект: Плавающая рыбка'
+      'Mini-Project: Swimming Fish (continued)': 'Мини-проект: Плавающая рыбка (продолжение)'
+      'Mini-Project: User Input Programs': 'Мини-проект: Программы с пользовательским вводом'
+      'Mini-Project: Virtual Pet': 'Мини-проект: Виртуальный питомец'
+      'Mini-project: Chase Game': 'Мини-проект: Игра в погоню'
+      'Mini-project: Flappy Game': 'Мини-проект: игра «Порхающая птичка»'
+      'Mini-project: Interactive Poster': 'Мини-проект: Интерактивный постер'
+      'Mini-project: Jorge the Dog': 'Мини-проект: Пес по кличке Хорхе'
+      'Mini-project: Sticker Art': 'Мини-проект: Художественные наклейки'
+      'Mini-project: Sticker Design': 'Мини-проект: Оформление наклеек'
+      Modify simulation variables: Изменение переменных симуляции
       Modifying Arrays: Изменение и создание массивов
       Modifying and Creating Arrays: Изменение и создание массивов
       More Buttons: Больше кнопок
+      More Input: Еще больше вводных данных
+      More Parameters: Еще больше параметров
+      Motorcycle: Мотоцикл
+      Move It Move it Video  - Unplugged Activity: Видео «Вперед, вперед» – Урок без компьютера
+      Movement with the Counter Pattern: Движение с шаблоном Счетчика
+      Multiframe Animations: Многокадровые анимации
+      Musical Arrays: Музыкальные композиции
+      My Loopy Robotic Friends - Unplugged Activity: Мои циклические друзья-роботы — Урок без компьютера
       My Online Neighborhood: Мой Онлайн-Район
+      My Robotic Friends - Unplugged Activity: Мои друзья роботы — Урок без компьютера
       Naming Variables: Именование переменных
+      Nested Loops with the Bee: Вложенные циклы с Пчелой
+      New Challenge Introduction: Новая задача, введение
+      New Shapes: Новые фигуры
+      Orientation: Ориентация
       Overview: Краткий обзор
+      'Overview: Design Mode': 'Обзор: Режим проектирования'
+      'Overview: If Statements': 'Обзор: Операторы «если»'
+      'Overview: Images': 'Обзор: Изображения'
+      'Overview: onEvent': 'Обзор: onEvent'
+      'Overview: setPosition': 'Обзор: setPosition'
       Pair Programming: Программирование в парах
       Picturing Data: Изображение данных
+      Plan Your Project: Спланируйте свой проект
       Planning: Планирование
+      Platform Jumper - Background and Variables: Platform Jumper - Исходные данные и переменные
+      Platform Jumper - Items: Platform Jumper - Элементы
+      Platform Jumper - Platforms: Platform Jumper - Платформы
+      Platform Jumper - Player: Platform Jumper - Игрок
+      Playing Notes: Игра в Notes
+      Playing with Notes: Игра с Notes
       Polling Events: Опросы
+      Post-Course Survey Instructions: Опрос после окончания курса, инструкции
       Practice: Практика
-      Programming with Rey and BB-8: Программирование с Рееем и BB-8
+      Predict: Предсказать
+      Prediction: Предсказание
+      Prepare for your presentation: Подготовьтесь к своей презентации
+      Prepare for your presentation_2018: Подготовьтесь к своей презентации_2018
+      Problem Solving: Решение проблем
+      Problem Solving Process for Programming: Процесс решения проблем для программирования
+      Programming with Rey and BB-8: Программирование с Реем и BB-8
+      Programs that Repeat: Программы, которые повторяются
       Project: Проект
+      Project - Background and Variables: Проект - Исходные данные и переменные
+      Project - Sprites and Interactions: Проект - Спрайты и взаимодействия
+      Project Guide: Руководство по проекту
+      Project Work: Работа над проектом
       Properties: Свойства
+      Publishing Your Website: Публикация своего веб-сайта
       Quarter Notes: Четвертные ноты
+      RGB Exploration: Исследование RGB
       RGB Widget: RGB Widget
       Random Numbers: Случайные числа
-      Reflection: Рефлексия
+      Reading Sensors: Считывание показаний датчиков
+      Reflection: Размышление
+      Relay Programming - Unplugged Activity: Эстафетное программирование — Урок без компьютера
+      Repeat Blocks: Блоки «повторения»
+      Repeat Blocks with BB-8: Блоки «повторения» с BB-8
+      Repeat Blocks with the Artist: Блоки «повторения» с Художником
+      Repeat Unit Statements: Операторы «повторить единицу»
+      Repeat Until Statements: Операторы «повторять до тех пор, пока»
       Representing Images: Представление изображений
       Review: Обзор
       Revise Artist Project: Отредактируй проект в среде Художника
       Revise Sprite Lab Project: Отредактируй проект в Лаборатории спрайтов
       Robot Doodle: "Робот Дудль\n"
+      Run a simulation: Запуск симуляции
       Sample Game: Пример игры
+      Sample Programs: Примеры программ
+      Screen Design: Разработка окна
+      Sensor Events: События датчиков
+      Sensors to Colors: Датчики цветов
+      Setting Properties: Задание свойств
+      Shapes and the Draw Loop: Фигуры и цикл рисования
+      Share Your App: Поделись своим приложением
+      Side Scroller: Боковая прокрутка
+      Simple Circuits: Простые цепи
       Skill Building: Формирование навыков
+      Skill-Building: Формирование навыков
+      Sliders: Слайдеры
+      Smart Bike - Blinkers: '«Умный» велосипед - мигающие фонарики'
+      Songwriting - Functions Unplugged Activity: Написание песен — Функции Урок без компьютера
       Speed it Up, Slow it Down: Ускорить, замедлить
       Sprite Lab Example Project: Пример проекта в Лаборатории спрайтов
       Sprite Lab Project: Проект в Лаборатории спрайтов
+      Sprites and the Draw Loop: Спрайты и цикл рисования
+      Styling Text: Стилизация текста
+      Styling with Classes: Стилизация с помощью занятий
+      Styling your Website: Стилизация своего веб-сайта
+      Teach A.I. a new word: Обучите ИИ новому слову
+      Teach AI a New Word: Обучите ИИ новому слову
+      'Technique: Frequency Analysis': 'Прием: Частотный анализ'
+      Terminology Recap: Терминологическая справка
       Text Compression: Сжатие текста
       The Animation Tab: Вкладка Анимация
+      The Artist in Code Studio: Художник в Студии кода
+      The Big Event - Unplugged Activity: Большое событие — Урок без компьютера
       The Body Element: Элемент body
+      The Buzzer: Игра Buzzer
+      The Collector: Игра Collector
       The Harvester: Харвестер
+      The Internet - Unplugged Activity: Интернет - активность без подключения к сети
+      The Power of Words - Unplugged Activity: Сила слов — Урок без компьютера
+      The Right App - Unplugged Activity: Правильное приложение — Урок без компьютера
+      Top Websites: Лучшие веб-сайты
+      Train AI to Clean the Ocean: Обучите ИИ очищать океан
+      UI Element Properties: Свойства элементов пользовательского интерфейса
+      Unit 5 Lesson 1 Overview: Часть 5 Урок 1 Обзор
       User Interface: Интерфейс пользователя
+      Using Getters and Setters: Применение методов получения значения и методов записи значения
+      Using HTML Tags: Использование HTML-тегов
+      Using Random Numbers: Использование случайных чисел
+      Using Training Data: Использование обучающих данных
+      Using the LED: Использование СИД
       Using the Repeat Block: Использование блока Повтор
+      Using the Switch: Использование переключателя
       Variables: Переменные
       Velocity: Скорость
+      Velocity and the Counter Pattern: Скорость и шаблон Счетчика
       Video: Видео
+      Video - Encryption and Public Keys: Видео - Шифрование и открытые ключи
+      'Video - Maze Intro: Programming with Blocks': 'Видео – Лабиринт, введение: Программирование с помощью блоков'
+      'Video:  Debugging with the Step Button': 'Видео: Отладка с помощью кнопки «Шаг»'
+      'Video:  Minecraft - The Agent': 'Видео: Minecraft — Агент'
+      'Video:  Text  and Prompts': 'Видео: Текст и запросы на ввод'
+      'Video: AI: What is Machine Learning?': 'Видео: ИИ: Что такое машинное обучение?'
+      'Video: Artist Intro with JR Hildebrand': 'Видео: Дж. Р. Хильдебранд представляет инструмент «Художник»'
+      'Video: Artist Intro with JR Hildebrande': 'Видео: Дж. Р. Хильдебранд представляет инструмент «Художник»'
       'Video: CS Matters': "Видео: \"Важность информатики\"\n"
-      'Video: Conditionals: If Statements': '  Операторы Если'
+      'Video: Code Your Own Flappy Game': 'Видео: Создайте свою собственную игру «Порхающая птичка»'
+      'Video: Conditionals: If Statements': 'Видео: Условные операторы: операторы «если»'
+      'Video: Conditionals: If and If/Else Statements': 'Видео: Условные операторы: операторы «Если» и «Если/Иначе»'
+      'Video: Dance Party Events': 'Видео: Танцевальная вечеринка События'
+      'Video: Dance Party Measures': 'Видео: Танцевальная вечеринка Такты'
+      'Video: Dance Party Party On!': 'Видео: Танцевальная вечеринка Вечеринка началась!'
+      'Video: Dance Party Properties': 'Видео: Танцевальная вечеринка Свойства'
+      'Video: Dance Party Warm Up': 'Видео: Танцевальная вечеринка Разминка'
+      'Video: De-bugging with the Step Button': 'Видео: Отладка с помощью кнопки «Шаг»'
+      'Video: Debugging with Scrat ': 'Видео: Отладка со Скратом'
+      'Video: Debugging with the Step Button': 'Видео: Отладка с помощью кнопки «Шаг»'
       'Video: Events': ' События'
+      'Video: Follow The Digital Trail': 'Видео: Идите по Цифровому следу'
       'Video: Getting Loopy': ' Зацикливание'
+      'Video: Happy Maps - Unplugged Activity': 'Видео: Весёлые карты - Урок без компьютера'
+      'Video: Harvesting with Conditionals': 'Видео: Сбор урожая с условными операторами'
+      'Video: How to Create a Simple Function': 'Видео: Как создать простую функцию'
       'Video: How to Make a Sprite': ' Как создать спрайт?'
+      'Video: Ice Age Loops': 'Видео: Циклы «Ледникового периода»'
+      'Video: Impacts on Society': 'Видео: Влияние на общество'
       'Video: Intro to Web Lab - Part 1': 'Введение в Web Lab - Часть 1'
       'Video: Intro to Web Lab - Part 2': 'Введение в Web Lab - Часть 2'
       'Video: Introducing Sprite Lab': ' Представляем Лабораторию спрайтов'
-      'Video: Introduction to Play Lab': ' Лаборатория игр. Введение'
+      'Video: Introduction to Play Lab': 'Видео: Лаборатория игр. Введение'
       'Video: Loops in Artist': ' Циклы в исполнителе Художник'
+      'Video: Loops with the Artist': 'Видео: Циклы с Художником'
+      'Video: Maze Intro - Programming with Blocks': 'Видео: Лабиринт, введение — Программирование с помощью блоков'
+      'Video: Maze Intro - Programming with Blocks ': 'Видео: Лабиринт, введение — Программирование с помощью блоков'
+      'Video: Maze Intro: Programming with Blocks': 'Видео: Лабиринт, введение: Программирование с помощью блоков'
       'Video: Measures': ' Такты'
-      'Video: Minecraft - Congratulations': ' Minecraft - поздравляем'
+      'Video: Minecraft - Congratulations': 'Видео: Minecraft — Поздравления'
+      'Video: Minecraft - Functions': 'Видео: Minecraft — Функции'
+      'Video: Minecraft - Repeat Loops': 'Видео: Minecraft — Циклы «повтора»'
+      'Video: Minecraft - The Agent': 'Видео: Minecraft — Агент'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Видео: Minecraft: Водное путешествие. Условные операторы'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Видео: Minecraft: Водное путешествие. Поздравляем!'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Видео: Minecraft: Водное путешествие. Введение'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Видео: Minecraft: Водное путешествие. Операторы цикла с условием завершения'
       'Video: Nested Loops': ' Вложенные циклы'
-      'Video: Pair Programming': ' Программирование в парах'
-      'Video: Pair Programming ': ' Программирование в парах '
-      'Video: Programming with Rey and BB-8': ' Программирование с Рееем и BB-8'
-      'Video: Properties': ' Свойства'
+      'Video: Nested Loops with the Bee': 'Видео: Вложенные циклы с Пчелой'
+      'Video: Outbreak Simulator: Introduction': 'Видео: Большое количество спрайтов'
+      'Video: Pair Programming': 'Видео: Программирование в парах'
+      'Video: Pair Programming ': 'Видео: Программирование в парах'
+      'Video: Programming with Blocks': 'Видео: Программирование с использованием блоков'
+      'Video: Programming with Rey and BB-8': 'Видео: Программирование с Реем и BB-8'
+      'Video: Properties': 'Видео: Свойства'
+      'Video: Repeat Blocks': 'Видео: Повторяющиеся блоки'
+      'Video: Repeat Blocks with BB-8': 'Видео: Повторяющиеся блоки с BB-8'
+      'Video: Repeat Blocks with the Artist': 'Видео: Повторяющиеся блоки с Художником'
+      'Video: Repeat Until Blocks': 'Видео: Блок «повторять до тех пор, пока»'
+      'Video: Repeat Until Statements': 'Видео: операторы цикла с условием завершения'
       'Video: Sprites in Action': ' Спрайты в действии'
       'Video: Star Wars Project': ' Проект Звёздные войны'
-      'Video: The Harvester': ' Харвестер'
+      'Video: Text and Prompts': 'Видео: Текст и запросы на ввод'
+      'Video: The Artist in Code Studio': 'Видео: Художник в Студии кода'
+      'Video: The Big Event - Unplugged Activity': 'Видео: Большое событие — Урок без компьютера'
+      'Video: The Collector': 'Видео: Собиратель'
+      'Video: The Harvester': 'Видео: Сборщица урожая'
+      'Video: Training Data & Bias': 'Видео: Обучающие данные и предубеждение'
+      'Video: Unplugged Variables in Envelopes': 'Видео: Офлайн-переменные в конвертах'
       'Video: Using the Repeat Block': ' Использование блока Повтор'
+      'Video: Variables in Artist': 'Видео: переменные в инструменте «Художник»'
       'Video: Velocity': 'Видео: скорость'
+      'Video: Warm Up': 'Видео: Разминка'
       'Video: What Makes a Computer, a Computer?': 'Видео: Что Делает Компьютер Компьютером?'
+      'Video: While Loops with the Farmer': 'Видео: Циклы «пока» со Сборщицей урожая'
       'Video: Wrap-up': ' Итоги'
-      Warm Up: Подготовка
+      Warm Up: Разминка
+      Website Project: Проект веб-сайта
       Welcome to Monster Town: Добро пожаловать в Город Монстров
       Where'd They Go?: Куда они исчезли?
-      While Loops with the Farmer: Цикл while в Фермере
+      While Loops with the Farmer: Циклы «пока» со Сборщицей урожая
+      'Widget: Text Compression': 'Виджет: Сжатие текста'
       Wrap-up: Итоги
       Your Personal Website: Ваш личный веб-сайт

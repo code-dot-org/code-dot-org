@@ -1,0 +1,24 @@
+{
+  "category": "Poetry - Sprites",
+  "config": {
+    "func": "setSize",
+    "docFunc": "gamelab_setProp_dropdown",
+    "color": [
+      355,
+      ".7",
+      ".7"
+    ],
+    "blockText": "set {SPRITE} size to {VAL}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "VAL",
+        "type": "Number",
+        "field": true
+      }
+    ]
+  }
+}

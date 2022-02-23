@@ -1,7 +1,7 @@
 {
-  "func": "draw",
-  "block": "function draw() {}",
-  "expansion": "function draw() {\n  __;\n}",
+  "key": "draw",
+  "name": "draw",
   "category": "World",
-  "noAutocomplete": true
+  "category_key": "world",
+  "syntax": "function draw() {}"
 }

@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:09 UTC",
+    "serialized_at": "2021-11-22 19:55:47 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "artist-and-bb8"
     }
@@ -209,16 +213,290 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "212c2dac-7bc7-4c1e-8efb-3c8ac7c33b3c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "212c2dac-7bc7-4c1e-8efb-3c8ac7c33b3c",
+        "lesson.key": "Programming with BB-8",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "c8f16089-7826-4229-87ad-c7913ed4b049",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8f16089-7826-4229-87ad-c7913ed4b049",
+        "lesson.key": "Loops with BB-8",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "10251ae8-243f-4a1a-a67b-a39db0a8bcd7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "10251ae8-243f-4a1a-a67b-a39db0a8bcd7",
+        "lesson.key": "C9 Artist Loops",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "90e8fdea-6001-4058-a3a8-ced44856ca89",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "90e8fdea-6001-4058-a3a8-ced44856ca89",
+        "lesson.key": "D7 to Laurel",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "b2042c79-83ae-40d2-9b71-3e7d7e0c935f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b2042c79-83ae-40d2-9b71-3e7d7e0c935f",
+        "lesson.key": "D6 Frozen Artist",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "f793b835-da3f-4e0f-a31a-9f41a7f915f4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f793b835-da3f-4e0f-a31a-9f41a7f915f4",
+        "lesson.key": "F5 Minecraft",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "093d1099-dac8-4f28-98e4-b6544e1b0e54",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "093d1099-dac8-4f28-98e4-b6544e1b0e54",
+        "lesson.key": "F7 add Conditionals",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "1f1573e9-5337-4882-80fb-1148a24838a0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f1573e9-5337-4882-80fb-1148a24838a0",
+        "lesson.key": "D13 no If/While",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "30de496a-44af-4d4a-ade6-001af87284c3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "30de496a-44af-4d4a-ade6-001af87284c3",
+        "lesson.key": "Ice Age Play Lab",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "fa14bde7-8782-4608-aec1-bcd8a927ab06",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa14bde7-8782-4608-aec1-bcd8a927ab06",
+        "lesson.key": "Bounce",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "88632b9f-9788-4141-842c-3366dd03736f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "88632b9f-9788-4141-842c-3366dd03736f",
+        "lesson.key": "NewBounce",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    },
+    {
+      "key": "1a78f7da-af31-4b3f-8fac-e67de74615b9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a78f7da-af31-4b3f-8fac-e67de74615b9",
+        "lesson.key": "F PlayLab Variables",
+        "lesson_group.key": "",
+        "script.name": "artist-and-bb8"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "a2eb3afc-438f-4a33-a291-731cbbb418b7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7",
+        "lesson_activity.key": "212c2dac-7bc7-4c1e-8efb-3c8ac7c33b3c"
+      }
+    },
+    {
+      "key": "d527aa3a-5042-4800-b69e-861605853351",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351",
+        "lesson_activity.key": "c8f16089-7826-4229-87ad-c7913ed4b049"
+      }
+    },
+    {
+      "key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d",
+        "lesson_activity.key": "10251ae8-243f-4a1a-a67b-a39db0a8bcd7"
+      }
+    },
+    {
+      "key": "c8f63088-ae02-4f29-975f-731efc0d84fa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa",
+        "lesson_activity.key": "90e8fdea-6001-4058-a3a8-ced44856ca89"
+      }
+    },
+    {
+      "key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8",
+        "lesson_activity.key": "b2042c79-83ae-40d2-9b71-3e7d7e0c935f"
+      }
+    },
+    {
+      "key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b",
+        "lesson_activity.key": "f793b835-da3f-4e0f-a31a-9f41a7f915f4"
+      }
+    },
+    {
+      "key": "51001cf0-d5fe-4124-9140-70d211db2015",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015",
+        "lesson_activity.key": "093d1099-dac8-4f28-98e4-b6544e1b0e54"
+      }
+    },
+    {
+      "key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d",
+        "lesson_activity.key": "1f1573e9-5337-4882-80fb-1148a24838a0"
+      }
+    },
+    {
+      "key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6",
+        "lesson_activity.key": "30de496a-44af-4d4a-ade6-001af87284c3"
+      }
+    },
+    {
+      "key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9",
+        "lesson_activity.key": "fa14bde7-8782-4608-aec1-bcd8a927ab06"
+      }
+    },
+    {
+      "key": "912091c6-234a-454c-939f-4323875339a1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1",
+        "lesson_activity.key": "88632b9f-9788-4141-842c-3366dd03736f"
+      }
+    },
+    {
+      "key": "75c159f5-80e0-428f-9c9a-3900817bb165",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165",
+        "lesson_activity.key": "1a78f7da-af31-4b3f-8fac-e67de74615b9"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -232,7 +510,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog1"
@@ -241,7 +520,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -255,7 +534,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog2"
@@ -264,7 +544,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -278,7 +558,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog3"
@@ -287,7 +568,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -301,7 +582,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog4"
@@ -310,7 +592,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -324,7 +606,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog5"
@@ -333,7 +616,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -347,7 +630,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog6"
@@ -356,7 +640,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -370,7 +654,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog7"
@@ -379,7 +664,7 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -393,7 +678,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog8"
@@ -402,7 +688,7 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -416,7 +702,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog9"
@@ -425,7 +712,7 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -439,7 +726,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog10"
@@ -448,7 +736,7 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -462,7 +750,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       },
       "level_keys": [
         "courseB_starWars_prog11"
@@ -471,7 +760,7 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -485,7 +774,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops1"
@@ -494,7 +784,7 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -508,7 +798,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops1_predict1"
@@ -517,7 +808,7 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -531,7 +822,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops2"
@@ -540,7 +832,7 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -554,7 +846,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops4"
@@ -563,7 +856,7 @@
     {
       "chapter": 16,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -577,7 +870,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops5"
@@ -586,7 +880,7 @@
     {
       "chapter": 17,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -600,7 +894,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops6"
@@ -609,7 +904,7 @@
     {
       "chapter": 18,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -623,7 +918,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops7"
@@ -632,7 +928,7 @@
     {
       "chapter": 19,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -646,7 +942,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops8"
@@ -655,7 +952,7 @@
     {
       "chapter": 20,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -669,7 +966,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops9"
@@ -678,7 +976,7 @@
     {
       "chapter": 21,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -692,7 +990,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops10"
@@ -701,7 +1000,7 @@
     {
       "chapter": 22,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -715,7 +1014,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops10_predict2"
@@ -724,7 +1024,7 @@
     {
       "chapter": 23,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -738,7 +1038,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       },
       "level_keys": [
         "courseC_starWars_loops11"
@@ -747,7 +1048,7 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -761,7 +1062,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loopsPrePre1a"
@@ -770,7 +1072,7 @@
     {
       "chapter": 25,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -784,7 +1086,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loopsPre1a"
@@ -793,7 +1096,7 @@
     {
       "chapter": 26,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -807,7 +1110,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loop1"
@@ -816,7 +1120,7 @@
     {
       "chapter": 27,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -830,7 +1134,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loops1a"
@@ -839,7 +1144,7 @@
     {
       "chapter": 28,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -853,7 +1158,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loops2a"
@@ -862,7 +1168,7 @@
     {
       "chapter": 29,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -876,7 +1182,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loops3a"
@@ -885,7 +1192,7 @@
     {
       "chapter": 30,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -899,7 +1206,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loops4a"
@@ -908,7 +1216,7 @@
     {
       "chapter": 31,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -922,7 +1230,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loops5a"
@@ -931,7 +1240,7 @@
     {
       "chapter": 32,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -945,7 +1254,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loops5b"
@@ -954,7 +1264,7 @@
     {
       "chapter": 33,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -968,7 +1278,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loops6a"
@@ -977,7 +1288,7 @@
     {
       "chapter": 34,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -991,7 +1302,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loops7a"
@@ -1000,7 +1312,7 @@
     {
       "chapter": 35,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1014,7 +1326,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       },
       "level_keys": [
         "courseC_artist_loops8a"
@@ -1023,7 +1336,7 @@
     {
       "chapter": 36,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1037,7 +1350,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_video_debugging"
@@ -1046,7 +1360,7 @@
     {
       "chapter": 37,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1060,7 +1374,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_collector_debugging1"
@@ -1069,7 +1384,7 @@
     {
       "chapter": 38,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1083,7 +1398,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_collector_debugging2"
@@ -1092,7 +1408,7 @@
     {
       "chapter": 39,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1106,7 +1422,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_collector_debugging3"
@@ -1115,7 +1432,7 @@
     {
       "chapter": 40,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1129,7 +1446,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_collector_debugging4"
@@ -1138,7 +1456,7 @@
     {
       "chapter": 41,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1152,7 +1470,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_collector_debugging5"
@@ -1161,7 +1480,7 @@
     {
       "chapter": 42,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1175,7 +1494,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_collector_debugging6"
@@ -1184,7 +1504,7 @@
     {
       "chapter": 43,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1198,7 +1518,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_collector_debugging7"
@@ -1207,7 +1528,7 @@
     {
       "chapter": 44,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1221,7 +1542,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_collector_debugging8"
@@ -1230,7 +1552,7 @@
     {
       "chapter": 45,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1244,7 +1566,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_collector_debugging9"
@@ -1253,7 +1576,7 @@
     {
       "chapter": 46,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1267,7 +1590,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       },
       "level_keys": [
         "courseD_collector_debugging10_predict1"
@@ -1276,7 +1600,7 @@
     {
       "chapter": 47,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1290,7 +1614,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       },
       "level_keys": [
         "courseD_artist_project1"
@@ -1299,7 +1624,7 @@
     {
       "chapter": 48,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1313,7 +1638,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       },
       "level_keys": [
         "courseD_artist_project2"
@@ -1322,7 +1648,7 @@
     {
       "chapter": 49,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1336,7 +1662,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       },
       "level_keys": [
         "courseD_artist_project3"
@@ -1345,7 +1672,7 @@
     {
       "chapter": 50,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1359,7 +1686,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       },
       "level_keys": [
         "courseD_artist_project4"
@@ -1368,7 +1696,7 @@
     {
       "chapter": 51,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1382,7 +1710,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       },
       "level_keys": [
         "courseD_artist_project5"
@@ -1391,7 +1720,7 @@
     {
       "chapter": 52,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1405,7 +1734,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       },
       "level_keys": [
         "courseD_artist_project1a"
@@ -1414,7 +1744,7 @@
     {
       "chapter": 53,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1428,7 +1758,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       },
       "level_keys": [
         "courseD_artist_project2a"
@@ -1437,7 +1768,7 @@
     {
       "chapter": 54,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1451,7 +1782,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       },
       "level_keys": [
         "courseD_artist_project3a"
@@ -1460,7 +1792,7 @@
     {
       "chapter": 55,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1474,7 +1806,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       },
       "level_keys": [
         "courseD_artist_project4a"
@@ -1483,7 +1816,7 @@
     {
       "chapter": 56,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1497,7 +1830,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Overworld Move to Sheep"
@@ -1506,7 +1840,7 @@
     {
       "chapter": 57,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1520,7 +1854,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Overworld Chop Tree"
@@ -1529,7 +1864,7 @@
     {
       "chapter": 58,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1543,7 +1878,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Overworld Shear Sheep"
@@ -1552,7 +1888,7 @@
     {
       "chapter": 59,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1566,7 +1902,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Overworld Chop Trees"
@@ -1575,7 +1912,7 @@
     {
       "chapter": 60,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1589,7 +1926,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Overworld Place Wall"
@@ -1598,7 +1936,7 @@
     {
       "chapter": 61,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1612,7 +1950,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Overworld House Frame Chosen"
@@ -1621,7 +1960,7 @@
     {
       "chapter": 62,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1635,7 +1974,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Overworld Plant Crops"
@@ -1644,7 +1984,7 @@
     {
       "chapter": 63,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1658,7 +1998,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Overworld Avoid Monsters"
@@ -1667,7 +2008,7 @@
     {
       "chapter": 64,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1681,7 +2022,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Underground Mining Coal"
@@ -1690,7 +2032,7 @@
     {
       "chapter": 65,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1704,7 +2046,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Underground Iron"
@@ -1713,7 +2056,7 @@
     {
       "chapter": 66,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1727,7 +2070,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Underground Avoiding Lava"
@@ -1736,7 +2080,7 @@
     {
       "chapter": 67,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1750,7 +2094,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Underground If Statements"
@@ -1759,7 +2104,7 @@
     {
       "chapter": 68,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1773,7 +2118,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Overworld Powered Minecart"
@@ -1782,7 +2128,7 @@
     {
       "chapter": 69,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1796,7 +2142,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       },
       "level_keys": [
         "Overworld Free Play 20x20"
@@ -1805,7 +2152,7 @@
     {
       "chapter": 70,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1819,7 +2166,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       },
       "level_keys": [
         "courseF_playlab_variables1a"
@@ -1828,7 +2176,7 @@
     {
       "chapter": 71,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1842,7 +2190,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       },
       "level_keys": [
         "courseF_playlab_variables2b"
@@ -1851,7 +2200,7 @@
     {
       "chapter": 72,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1865,7 +2214,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       },
       "level_keys": [
         "courseF_playlab_variables3b_josh"
@@ -1874,7 +2224,7 @@
     {
       "chapter": 73,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1888,7 +2238,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       },
       "level_keys": [
         "courseF_playlab_variables4c_predictive1"
@@ -1897,7 +2248,7 @@
     {
       "chapter": 74,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1911,7 +2262,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       },
       "level_keys": [
         "courseF_playlab_variables4b"
@@ -1920,7 +2272,7 @@
     {
       "chapter": 75,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1934,7 +2286,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       },
       "level_keys": [
         "courseF_playlab_variables5c"
@@ -1943,7 +2296,7 @@
     {
       "chapter": 76,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1957,7 +2310,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       },
       "level_keys": [
         "courseF_playlab_variables6c"
@@ -1966,7 +2320,7 @@
     {
       "chapter": 77,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1980,7 +2334,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       },
       "level_keys": [
         "courseF_playlab_variables7c"
@@ -1989,7 +2344,7 @@
     {
       "chapter": 78,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2003,7 +2358,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       },
       "level_keys": [
         "courseF_playlab_variables8c"
@@ -2012,7 +2368,7 @@
     {
       "chapter": 79,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2026,7 +2382,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       },
       "level_keys": [
         "courseF_playlab_variables7b"
@@ -2035,7 +2392,7 @@
     {
       "chapter": 80,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2049,7 +2406,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops1"
@@ -2058,7 +2416,7 @@
     {
       "chapter": 81,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2072,7 +2430,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops2"
@@ -2081,7 +2440,7 @@
     {
       "chapter": 82,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2095,7 +2454,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops3"
@@ -2104,7 +2464,7 @@
     {
       "chapter": 83,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2118,7 +2478,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops4"
@@ -2127,7 +2488,7 @@
     {
       "chapter": 84,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2141,7 +2502,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops5"
@@ -2150,7 +2512,7 @@
     {
       "chapter": 85,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2164,7 +2526,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops6"
@@ -2173,7 +2536,7 @@
     {
       "chapter": 86,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -2188,7 +2551,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops7"
@@ -2197,7 +2561,7 @@
     {
       "chapter": 87,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2211,7 +2575,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops8"
@@ -2220,7 +2585,7 @@
     {
       "chapter": 88,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2234,7 +2599,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops9"
@@ -2243,7 +2609,7 @@
     {
       "chapter": 89,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -2257,7 +2623,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops9_predict1"
@@ -2266,7 +2633,7 @@
     {
       "chapter": 90,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2280,7 +2647,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops_challenge1"
@@ -2289,7 +2657,7 @@
     {
       "chapter": 91,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2303,7 +2671,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       },
       "level_keys": [
         "courseD_farmer_condLoops_challenge2"
@@ -2312,7 +2681,7 @@
     {
       "chapter": 92,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2326,7 +2695,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_video_IceAgeIntro"
@@ -2335,7 +2705,7 @@
     {
       "chapter": 93,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2349,7 +2719,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_1"
@@ -2358,7 +2729,7 @@
     {
       "chapter": 94,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2372,7 +2743,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_2"
@@ -2381,7 +2753,7 @@
     {
       "chapter": 95,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2395,7 +2767,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_3"
@@ -2404,7 +2777,7 @@
     {
       "chapter": 96,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2418,7 +2791,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_4"
@@ -2427,7 +2801,7 @@
     {
       "chapter": 97,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2441,7 +2815,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_video_iceAgeRepeat"
@@ -2450,7 +2825,7 @@
     {
       "chapter": 98,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2464,7 +2839,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_5"
@@ -2473,7 +2849,7 @@
     {
       "chapter": 99,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2487,7 +2863,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_video_IceAgeEvents"
@@ -2496,7 +2873,7 @@
     {
       "chapter": 100,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2510,7 +2887,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_6"
@@ -2519,7 +2897,7 @@
     {
       "chapter": 101,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2533,7 +2911,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_7"
@@ -2542,7 +2921,7 @@
     {
       "chapter": 102,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2556,7 +2935,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_8"
@@ -2565,7 +2945,7 @@
     {
       "chapter": 103,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2579,7 +2959,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_9"
@@ -2588,7 +2969,7 @@
     {
       "chapter": 104,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2602,7 +2983,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_10"
@@ -2611,7 +2993,7 @@
     {
       "chapter": 105,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2625,7 +3007,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       },
       "level_keys": [
         "courseF_IceAge_11"
@@ -2634,7 +3017,7 @@
     {
       "chapter": 106,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2648,7 +3031,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       },
       "level_keys": [
         "bounce_1"
@@ -2657,7 +3041,7 @@
     {
       "chapter": 107,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2671,7 +3055,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       },
       "level_keys": [
         "bounce_2"
@@ -2680,7 +3065,7 @@
     {
       "chapter": 108,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2694,7 +3079,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       },
       "level_keys": [
         "bounce_3"
@@ -2703,7 +3089,7 @@
     {
       "chapter": 109,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2717,7 +3103,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       },
       "level_keys": [
         "bounce_4"
@@ -2726,7 +3113,7 @@
     {
       "chapter": 110,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2740,7 +3127,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       },
       "level_keys": [
         "bounce_5"
@@ -2749,7 +3137,7 @@
     {
       "chapter": 111,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2763,7 +3151,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       },
       "level_keys": [
         "bounce_6"
@@ -2772,7 +3161,7 @@
     {
       "chapter": 112,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2786,7 +3175,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       },
       "level_keys": [
         "bounce_7"
@@ -2795,7 +3185,7 @@
     {
       "chapter": 113,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2809,7 +3199,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       },
       "level_keys": [
         "bounce_10"
@@ -2818,7 +3209,7 @@
     {
       "chapter": 114,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2832,7 +3223,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       },
       "level_keys": [
         "bounce_11"
@@ -2841,7 +3233,7 @@
     {
       "chapter": 115,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2855,7 +3247,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       },
       "level_keys": [
         "bounce_12"
@@ -2864,7 +3257,7 @@
     {
       "chapter": 116,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2878,7 +3271,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       },
       "level_keys": [
         "courseD_bounce_events1s"
@@ -2887,7 +3281,7 @@
     {
       "chapter": 117,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2901,7 +3295,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       },
       "level_keys": [
         "courseD_bounce_events2s"
@@ -2910,7 +3305,7 @@
     {
       "chapter": 118,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2924,7 +3319,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       },
       "level_keys": [
         "courseD_bounce_events5s"
@@ -2933,7 +3329,7 @@
     {
       "chapter": 119,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2947,7 +3343,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       },
       "level_keys": [
         "courseD_bounce_events6s"
@@ -2956,7 +3353,7 @@
     {
       "chapter": 120,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2970,7 +3367,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       },
       "level_keys": [
         "courseD_bounce_events7s"
@@ -2979,7 +3377,7 @@
     {
       "chapter": 121,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2993,7 +3391,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       },
       "level_keys": [
         "courseD_bounce_events10s"
@@ -3002,7 +3401,7 @@
     {
       "chapter": 122,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3016,7 +3415,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       },
       "level_keys": [
         "courseD_bounce_events11s"
@@ -3025,7 +3425,7 @@
     {
       "chapter": 123,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3039,7 +3439,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       },
       "level_keys": [
         "courseD_bounce_events12s"
@@ -3048,7 +3449,7 @@
     {
       "chapter": 124,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3062,7 +3463,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_PlayLab_vars1"
@@ -3071,7 +3473,7 @@
     {
       "chapter": 125,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3085,7 +3487,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_video_PlayLab_vars"
@@ -3094,7 +3497,7 @@
     {
       "chapter": 126,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3108,7 +3511,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_PlayLab_vars2"
@@ -3117,7 +3521,7 @@
     {
       "chapter": 127,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3131,7 +3535,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_PlayLab_vars3"
@@ -3140,7 +3545,7 @@
     {
       "chapter": 128,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3154,7 +3559,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_PlayLab_vars4"
@@ -3163,7 +3569,7 @@
     {
       "chapter": 129,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3177,7 +3583,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_PlayLab_vars5"
@@ -3186,7 +3593,7 @@
     {
       "chapter": 130,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3200,7 +3607,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_PlayLab_vars6"
@@ -3209,7 +3617,7 @@
     {
       "chapter": 131,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3223,7 +3631,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_PlayLab_vars7"
@@ -3232,7 +3641,7 @@
     {
       "chapter": 132,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3246,7 +3655,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_PlayLab_vars8"
@@ -3255,7 +3665,7 @@
     {
       "chapter": 133,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3269,7 +3679,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_PlayLab_vars9"
@@ -3278,7 +3689,7 @@
     {
       "chapter": 134,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3292,7 +3703,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       },
       "level_keys": [
         "CourseF_PlayLab_vars10"
@@ -3308,7 +3720,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3319,7 +3732,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3330,7 +3744,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3341,7 +3756,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3352,7 +3768,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3363,7 +3780,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3374,7 +3792,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3385,7 +3804,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3396,7 +3816,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3407,7 +3828,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3418,7 +3840,8 @@
         ],
         "lesson.key": "Programming with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "a2eb3afc-438f-4a33-a291-731cbbb418b7"
       }
     },
     {
@@ -3429,7 +3852,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3440,7 +3864,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3451,7 +3876,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3462,7 +3888,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3473,7 +3900,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3484,7 +3912,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3495,7 +3924,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3506,7 +3936,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3517,7 +3948,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3528,7 +3960,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3539,7 +3972,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3550,7 +3984,8 @@
         ],
         "lesson.key": "Loops with BB-8",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "d527aa3a-5042-4800-b69e-861605853351"
       }
     },
     {
@@ -3561,7 +3996,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3572,7 +4008,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3583,7 +4020,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3594,7 +4032,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3605,7 +4044,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3616,7 +4056,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3627,7 +4068,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3638,7 +4080,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3649,7 +4092,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3660,7 +4104,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3671,7 +4116,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3682,7 +4128,8 @@
         ],
         "lesson.key": "C9 Artist Loops",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "5beaff48-e87b-4324-ad9e-644bcc7ce37d"
       }
     },
     {
@@ -3693,7 +4140,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3704,7 +4152,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3715,7 +4164,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3726,7 +4176,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3737,7 +4188,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3748,7 +4200,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3759,7 +4212,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3770,7 +4224,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3781,7 +4236,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3792,7 +4248,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3803,7 +4260,8 @@
         ],
         "lesson.key": "D7 to Laurel",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "c8f63088-ae02-4f29-975f-731efc0d84fa"
       }
     },
     {
@@ -3814,7 +4272,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       }
     },
     {
@@ -3825,7 +4284,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       }
     },
     {
@@ -3836,7 +4296,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       }
     },
     {
@@ -3847,7 +4308,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       }
     },
     {
@@ -3858,7 +4320,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       }
     },
     {
@@ -3869,7 +4332,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       }
     },
     {
@@ -3880,7 +4344,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       }
     },
     {
@@ -3891,7 +4356,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       }
     },
     {
@@ -3902,7 +4368,8 @@
         ],
         "lesson.key": "D6 Frozen Artist",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "3ebcfb83-3a8a-4b19-8de4-73bec3b14cc8"
       }
     },
     {
@@ -3913,7 +4380,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -3924,7 +4392,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -3935,7 +4404,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -3946,7 +4416,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -3957,7 +4428,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -3968,7 +4440,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -3979,7 +4452,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -3990,7 +4464,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -4001,7 +4476,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -4012,7 +4488,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -4023,7 +4500,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -4034,7 +4512,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -4045,7 +4524,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -4056,7 +4536,8 @@
         ],
         "lesson.key": "F5 Minecraft",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "35d400e9-4a3e-40a2-bf6e-77dc098bc59b"
       }
     },
     {
@@ -4067,7 +4548,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       }
     },
     {
@@ -4078,7 +4560,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       }
     },
     {
@@ -4089,7 +4572,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       }
     },
     {
@@ -4100,7 +4584,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       }
     },
     {
@@ -4111,7 +4596,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       }
     },
     {
@@ -4122,7 +4608,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       }
     },
     {
@@ -4133,7 +4620,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       }
     },
     {
@@ -4144,7 +4632,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       }
     },
     {
@@ -4155,7 +4644,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       }
     },
     {
@@ -4166,7 +4656,8 @@
         ],
         "lesson.key": "F7 add Conditionals",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "51001cf0-d5fe-4124-9140-70d211db2015"
       }
     },
     {
@@ -4177,7 +4668,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4188,7 +4680,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4199,7 +4692,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4210,7 +4704,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4221,7 +4716,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4232,7 +4728,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4243,7 +4740,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4254,7 +4752,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4265,7 +4764,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4276,7 +4776,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4287,7 +4788,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4298,7 +4800,8 @@
         ],
         "lesson.key": "D13 no If/While",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "e5e58aef-6eea-4e2e-b9c7-a649cd04471d"
       }
     },
     {
@@ -4309,7 +4812,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4320,7 +4824,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4331,7 +4836,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4342,7 +4848,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4353,7 +4860,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4364,7 +4872,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4375,7 +4884,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4386,7 +4896,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4397,7 +4908,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4408,7 +4920,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4419,7 +4932,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4430,7 +4944,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4441,7 +4956,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4452,7 +4968,8 @@
         ],
         "lesson.key": "Ice Age Play Lab",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "f8632ea5-a74b-42ed-81e7-cd05ed27c6e6"
       }
     },
     {
@@ -4463,7 +4980,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       }
     },
     {
@@ -4474,7 +4992,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       }
     },
     {
@@ -4485,7 +5004,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       }
     },
     {
@@ -4496,7 +5016,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       }
     },
     {
@@ -4507,7 +5028,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       }
     },
     {
@@ -4518,7 +5040,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       }
     },
     {
@@ -4529,7 +5052,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       }
     },
     {
@@ -4540,7 +5064,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       }
     },
     {
@@ -4551,7 +5076,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       }
     },
     {
@@ -4562,7 +5088,8 @@
         ],
         "lesson.key": "Bounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "bad1683f-cbe7-430b-a24b-db0f127fa9d9"
       }
     },
     {
@@ -4573,7 +5100,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       }
     },
     {
@@ -4584,7 +5112,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       }
     },
     {
@@ -4595,7 +5124,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       }
     },
     {
@@ -4606,7 +5136,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       }
     },
     {
@@ -4617,7 +5148,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       }
     },
     {
@@ -4628,7 +5160,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       }
     },
     {
@@ -4639,7 +5172,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       }
     },
     {
@@ -4650,7 +5184,8 @@
         ],
         "lesson.key": "NewBounce",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "912091c6-234a-454c-939f-4323875339a1"
       }
     },
     {
@@ -4661,7 +5196,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     },
     {
@@ -4672,7 +5208,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     },
     {
@@ -4683,7 +5220,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     },
     {
@@ -4694,7 +5232,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     },
     {
@@ -4705,7 +5244,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     },
     {
@@ -4716,7 +5256,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     },
     {
@@ -4727,7 +5268,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     },
     {
@@ -4738,7 +5280,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     },
     {
@@ -4749,7 +5292,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     },
     {
@@ -4760,7 +5304,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     },
     {
@@ -4771,7 +5316,8 @@
         ],
         "lesson.key": "F PlayLab Variables",
         "lesson_group.key": "",
-        "script.name": "artist-and-bb8"
+        "script.name": "artist-and-bb8",
+        "activity_section.key": "75c159f5-80e0-428f-9c9a-3900817bb165"
       }
     }
   ],

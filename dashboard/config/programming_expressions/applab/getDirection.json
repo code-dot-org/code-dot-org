@@ -1,5 +1,7 @@
 {
-  "func": "getDirection",
+  "key": "getDirection",
+  "name": "getDirection",
   "category": "Turtle",
-  "type": "value"
+  "category_key": "turtle",
+  "syntax": "getDirection"
 }

@@ -1,0 +1,7 @@
+{
+  "key": "tempSensor.F",
+  "name": "tempSensor.F",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "syntax": "tempSensor.F"
+}

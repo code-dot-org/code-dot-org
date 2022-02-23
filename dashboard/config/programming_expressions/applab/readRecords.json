@@ -1,18 +1,18 @@
 {
-  "func": "readRecords",
+  "key": "readRecords",
+  "name": "readRecords",
   "category": "Data",
-  "paletteParams": [
-    "table",
-    "terms",
-    "callback"
+  "category_key": "data",
+  "palette_params": [
+    {
+      "name": "table"
+    },
+    {
+      "name": "terms"
+    },
+    {
+      "name": "callback"
+    }
   ],
-  "params": [
-    "\"mytable\"",
-    "{}",
-    "function(records) {\n  for (var i =0; i < records.length; i++) {\n    console.log(records[i].id + ': ' + records[i].name);\n  }\n}"
-  ],
-  "allowFunctionDrop": {
-    "2": true,
-    "3": true
-  }
+  "syntax": "readRecords(table, terms, callback)"
 }

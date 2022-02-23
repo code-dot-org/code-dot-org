@@ -173,7 +173,7 @@ class Documents < Sinatra::Base
       # This is similar to the lazy loading we need to do for Haml:
       # https://github.com/code-dot-org/code-dot-org/blob/8a49e0f39e1bc98aac462a3eb049d0eeb6af3e06/lib/cdo/pegasus/text_render.rb#L82-L97
       require 'cdo/pegasus/actionview_sinatra'
-      ActionViewSinatra::Base.new(self)
+      ActionViewSinatra.create_view(self)
     end
 
     update_actionview_assigns
@@ -399,12 +399,29 @@ class Documents < Sinatra::Base
           uri = split[0]
 
           # Parse the parameters.  Adapted from https://stackoverflow.com/a/23612782.
+          #
+          # Most notably: because these parameters are being read from
+          # templates that we allow anonymous third parties to make
+          # unsupervised edits to, we need to be extremely careful to prevent
+          # code injection. Specifically, we sanitize the parameters to prevent
+          # against HTML injection and examine the template being rendered to
+          # ensure that we never pass parameters to templates which are capable
+          # of serverside database or filesystem access (ie, **never under any
+          # circumstances** ERB or HAML).
           locals = split[1].scan(/("(?:\\.|[^"])*"|[^\s]*):\s*("(?:\\.|[^"])*"|[^\s]*)/).
             map(&:compact).
             to_h.
-            transform_values(&:undump)
+            transform_values {|v| @actionview.sanitize(v.delete_prefix('"').delete_suffix('"').gsub('\"', '"'))}
 
-          view(uri, locals)
+          if locals.present?
+            path = resolve_view_template(uri)
+            template_is_only_html = MultipleExtnameFileUtils.all_extnames(path).all?('.html')
+            raise "Only HTML Partials may be passed parameters; got #{locals.inspect} for #{path.inspect}" unless template_is_only_html
+          end
+
+          result = view(uri)
+          locals.each {|k, v| result.gsub!("%#{k}%", v)}
+          result
         rescue
           ''
         end
@@ -599,9 +616,14 @@ class Documents < Sinatra::Base
       metadata
     end
 
-    def view(uri, locals={})
+    def resolve_view_template(uri)
       path = resolve_template('views', settings.template_extnames, uri.to_s)
       raise "View '#{uri}' not found." unless path
+      return path
+    end
+
+    def view(uri, locals={})
+      path = resolve_view_template(uri)
       render_template(path, locals)
     end
 

@@ -63,7 +63,8 @@ id:
   previous_page: Halaman sebelumnya
   next_page: Halamat berikutnya
   next_resource: Sumber selanjutnya
-  cancel: "Batal"
+  done_with_module: Selesaikan Module ini
+  cancel: "Batalkan"
   okay: "Oke"
   or: "atau"
   heading_x_of_y: "%{heading} (halaman %{x} dari %{y})"
@@ -82,7 +83,7 @@ id:
   stage_number: "Tahapan %{number}"
   puzzle: "Teka-teki"
   trophies: "Piala"
-  courses: 'Kursus'
+  courses: 'Nama Kursus'
   courses_page:
     title_student: "Belajar Ilmu Komputer"
     title_teacher: "Ajarkan Ilmu Komputer"
@@ -173,7 +174,7 @@ id:
     user_type_student_ability_2: "Bergabung dengan bagian kelas guru"
     user_type_teacher: "Guru"
     user_type_teacher_desc: "Setiap siswa memiliki akses ke, ditambah:"
-    user_type_teacher_ability_1: "Membuat bagian kelas"
+    user_type_teacher_ability_1: "Tambahkan Bagian Ruang Kelas"
     user_type_teacher_ability_2: "Menetapkan dan melacak pekerjaan siswa"
     user_type_teacher_ability_3: "Mendaftar dalam pembelajaran profesional"
     user_type_teacher_ability_4: "Berinteraksi dalam forum guru kami"
@@ -185,6 +186,7 @@ id:
     email_preference_yes: "Ya"
     email_preference_no: "Tidak"
     email_preference_required: "Anda harus menentukan preferensi email."
+    share_teacher_email_reg_partner_question: "Apakah Anda ingin kami membagikan informasi kontak Anda dengan [mitra regional Code.org](%{cdo_regional_partner_desc}) di negara bagian Anda agar mereka dapat memberi tahu Anda tentang pengembangan profesi, sumber daya, dan event lokal Anda?"
     share_teacher_email_reg_partner_preference_yes: "Ya"
     share_teacher_email_reg_partner_preference_no: "Tidak"
     share_teacher_email_reg_partner_preference_required: "Anda harus menentukan preferensi email."
@@ -292,6 +294,7 @@ id:
       provider_managed_section: "Bagian ini dikelola oleh penyedia yang lain dan tidak dapat digabungkan. Mintalah guru Anda untuk menambahkan Anda melalui %{provider} dan sinkronkan bagian mereka."
       restricted_section: "Kami tidak bisa menambahkan anda ke bagian %{section_code} karena ini terkunci.Silahkan kontak guru anda untuk bantuan."
       full_section: "Kami tidak bisa nenambahkan anda %{section_code} karena sudah ada siswa %{section_capacity} didalamnya. Silahkan kontak guru anda untuk bantuan."
+      not_participant_type: "Kami tidak dapat menambahkan Anda ke bagian %{section_code} karena Anda tidak memenuhi tipe peserta untuk bagian ini."
     mail:
       student_disassociated:
         subject: "Pemberitahuan Code.org : %{student_name} tidak lagi terdaftar sebagai siswa Anda."
@@ -322,7 +325,7 @@ id:
     header:
       finished_hoc: "Saya selesai!"
       sign_in_to_save: 'Masuk untuk mencatat kemajuan belajar'
-      my_dashboard: "Dasbor saya"
+      my_dashboard: "Dashboard Saya"
       course_catalog: "Katalog Kursus"
       project_gallery: "Proyek"
       sections: "Bagian"
@@ -408,12 +411,15 @@ id:
       minecraft_hero: 'Pahlawan Minecraft'
       playlab: 'Lab Permainan'
       playlab_k1: 'Lab bermain (pra-pembaca)'
+      poetry: 'Puisi'
+      poetry_hoc: 'Seni Puisi'
       scratch: 'Scratch'
       sports: 'Olahraga'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star wars(blok)'
       starwarsblocks_hour: 'Star wars(blok)'
+      loading: 'Memuat...'
       weblab: 'Web lab'
       view_all: 'Lihat semua proyek...'
     popup:
@@ -429,6 +435,7 @@ id:
       prizes_link: 'Info lebih lanjut'
   teacher:
     answer: Jawaban
+    dashboard: 'Dashboard untuk Guru'
     for_teachers_only: Hanya Untuk Guru
     title:
       one: 'Guru anda:'
@@ -445,7 +452,7 @@ id:
       student: 'siswa'
       viewing_solution: 'Melihat Solusi'
       try_it_yourself: 'Cobalah sendiri'
-      section: 'Sesi'
+      section: 'Bagian'
       example: 'Contoh Solusi'
       example_with_number: 'Contoh Solusi %{solution_number}'
       submitted_on: 'Dikirimkan pada:'
@@ -547,6 +554,7 @@ id:
     all_students_must_be_in_current_section: "Seluruh murid saat ini harus terdaftar di bagian Anda."
     already_enrolled_in_new_section: "Anda tidak dapat memindahkan para murid ini karena mereka sudah dalam bagian baru."
     third_party_login: "Anda tidak bisa memindahkan murid ke bagian yang disinkronkan dengan alat pihak ketiga."
+    not_correct_participant_type: "Anda tidak dapat memindahkan pengguna ini karena mereka tidak memiliki izin untuk menjadi peserta dalam bagian baru."
   share:
     title: "Belajar di Code Studio"
     description: "Siapa pun bisa belajar ilmu komputer. Membuat permainan, aplikasi dan seni dengan kode."
@@ -574,7 +582,7 @@ id:
     copyright: 'Hak cipta'
     more: 'Selengkapnya'
     feedback: 'Berikan pendapat'
-    translate: 'Bantu kami menerjemahkan ke bahasa anda'
+    translate: 'Jadi Relawan untuk Terjemahan'
     support: 'Bantuan dan komunitas'
     support_url: 'http://support.code.org'
     tos_short: 'Ketentuan'
@@ -588,6 +596,7 @@ id:
     how_it_works: 'Cara Kerjanya (Lihat Code)'
     try_hour_of_code: 'Cobalah Hour of Code!'
     store: 'Toko'
+    cookie_notice: 'Informasi Cookie'
   reference_area:
     title: 'Perlu bantuan?'
     subtitle: 'Lihat video ini dan tips lainnya'
@@ -649,7 +658,7 @@ id:
       body: "App Lab adalah sebuah lingkungan pemrograman untuk membuat berbagai aplikasi sederhana. Buat desain sebuah aplikasi, tulis codenya dengan blok atau JavaScript agar dapat bekerja, lalu bagikan aplikasi tersebut dalam hitungan detik."
       body_short: "Buat desain sebuah aplikasi, tulis codenya dengan blok atau JavaScript agar dapat bekerja, lalu bagikan aplikasi tersebut dalam hitungan detik."
       audience: 'Usia 13+'
-      cta: 'Pelajari caranya'
+      cta: 'Pelajari cara'
     dance:
       title: 'Pesta Tari'
     dance-2019:
@@ -674,7 +683,7 @@ id:
       title: "Game Lab"
       body: "Game Lab adalah sebuah lingkungan pemrograman untuk membuat animasi dan permainan sederhana berisikan objek dan karakter yang berinteraksi satu sama lain."
       audience: "Usia 13+"
-      cta: "Pelajari caranya"
+      cta: "Pelajari cara"
     hoc-encryption:
       title: "Enkripsi sederhana"
       body: "Murid akan mempelajari teknik membuat dan mengurai pesan terenkripsi."
@@ -682,7 +691,7 @@ id:
       title: "Web Lab (beta)"
       body: "Web Lab adalah lingkungan pemrograman untuk membuat halaman web sederhana menggunakan HTML dan CSS. Rancang halaman web Anda dan bagikan situs Anda dalam hitungan detik."
       audience: "Usia 13+"
-      cta: "Pelajari caranya"
+      cta: "Pelajari cara"
     frozen:
       title: "Frozen"
     starwars:
@@ -719,7 +728,7 @@ id:
       title: "Widget"
       body: "Murid dapat menjelajahi aneka konsep dari kursus Prinsip-Prinsip Ilmu Komputer kami secara langsung menggunakan alat-alat digital. Gunakan widget sendiri, atau buat pelajaran konsep tunggal untuk kelas Anda."
       audience: "Usia 14+"
-      cta: "Pelajari caranya"
+      cta: "Pelajari cara"
   landing:
     prerelease_tutorial: "Tutorial ini dalam versi **beta**.  Tutorial ini bisa direvisi kapan saja saat masukan diterima dan perbaikan dibuat."
     report_bug: "Laporkan Bug"
@@ -785,7 +794,7 @@ id:
     startover_title: "Kamu yakin ingin memulainya dari awal?"
     startover_body: "Ini akan mengembalikan puzzle ke kondisi awal dan mengatur ulang semua data yang Anda tambahkan atau ubah."
     startover_ok: "Mulai kembali"
-    startover_cancel: "Batal"
+    startover_cancel: "Batalkan"
   time:
     hour: '1 jam'
     day: 'hari'
@@ -914,6 +923,7 @@ id:
     instructor_feedback: 'Umpan balik instruktur'
     peer_feedback: 'Masukan Sejawat'
     outdated: 'Masukan ini ditambahkan untuk versi yang dikirim sebelumnya'
+    review_count: 'Kamu harus selesaikan %{review_count} ulasan untuk unit ini'
     peer_review: 'Penelaahan Sejawat'
   external_links:
     disclaimer: Penafian
@@ -992,9 +1002,12 @@ id:
       email: 'email'
       email_alternate: 'Email Alternatif'
       gender: 'Identitas Gender'
+      school: 'Sekolah'
       school_name: 'Nama Sekolah'
       school_city: 'Kota sekolah'
+      school_city_district: 'Kota/Distrik Sekolah'
       school_country: 'Negara Sekolah'
+      school_department_region: 'Departemen sekolah/wilayah'
       colombian_school_city: 'Kota sekolah'
       colombian_chilean_school_department: 'Departemen sekolah/wilayah'
       colombian_school_municipality: 'Kotamadya sekolah'
@@ -1120,3 +1133,4 @@ id:
     this_sprite: "Sprite ini"
   unit_prefix: "Unit %{n}"
   code_org_logo_alt: "Home Code.org"
+  teacher_feedback: "Umpan Balik Guru"

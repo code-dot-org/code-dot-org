@@ -16,7 +16,7 @@ import _ from 'lodash';
  * @param {number} lesson - the lesson we're querying
  * @param {object} state - State of our entire redux store
  * @param {ViewType} viewAs - Are we interested in whether the lesson is viewable
- *   for students or teachers
+ *   for participants or instructors
  * @returns {boolean} True if the provided lesson is visible
  */
 export function lessonIsVisible(lesson, state, viewAs) {
@@ -32,18 +32,18 @@ export function lessonIsVisible(lesson, state, viewAs) {
     sectionId,
     lesson.id
   );
-  return !isHidden || viewAs === ViewType.Teacher;
+  return !isHidden || viewAs === ViewType.Instructor;
 }
 
 /**
  * Treat the lesson as locked if either
  * (a) it is locked for this user (in the case of a student)
- * (b) non-verified teacher
+ * (b) non-verified instructor
  * (c) signed out user
  * @param {number} lesson - the lesson we're querying
  * @param {object} state - State of our entire redux store
  * @param {ViewType} viewAs - Are we interested in whether the lesson is viewable
- *   for students or teachers
+ *   for participants or instructors
  * @returns {boolean} True if the provided lesson is visible
  */
 export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
@@ -54,9 +54,9 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
   if (!state.currentUser.userId) {
     // Signed out user
     return true;
-  } else if (viewAs === ViewType.Teacher) {
+  } else if (viewAs === ViewType.Instructor) {
     return !state.lessonLock.lockableAuthorized;
-  } else if (viewAs === ViewType.Student) {
+  } else if (viewAs === ViewType.Participant) {
     return lessonLocked(levels);
   }
   return true;

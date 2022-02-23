@@ -1,5 +1,5 @@
 ---
-title: Teacher Resources - Star Wars
+title: Ressources pour les enseignants - Star Wars
 nav: hoc_teacher_resources_nav
 theme: responsive
 style_min: true
@@ -14,21 +14,21 @@ video_player: true
 
 ## Ressources pour les enseignants
 
-### Lesson Plans:
+### Plans de cours :
 
 - [Star Wars : Construire une galaxie avec du code]({{ hoc_starwars_cb_url }})
-- [Answer Sheet and Teacher Tips](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
+- [Feuille de réponses et conseils pour les enseignants ](https://docs.google.com/document/d/1BzdwxHsmFMt7ib1HLW7dL24W3sSCLhTklkj4wZ9I26c/edit?usp=sharing)
 
-### Extension Activities:
+### Activités supplémentaires :
 
 - [Après avoir fait Une Heure de Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Fondamentaux de l'informatique : cours 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Autres ressources pour les enseignants :
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Heure de code : Guide pratique pour les éducateurs](https://hourofcode.com/how-to)
+- [Meilleures pratiques des éducateurs qui réussissent](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Événement en direct : [Guide de l'éducateur sur l'Heure de code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -38,10 +38,10 @@ video_player: true
 
 Apprends à programmer des droïdes et crée ton propre jeu Star Wars dans une galaxie très très lointaine.
 
-**Recommended Age Range:** 6+
+**Tranche d’âge recommandée :** Au moins 6 ans
 
-**Technology Requirements:** Modern browsers + tablets
+**Exigences technologiques :** Navigateurs modernes + tablettes 
 
-<a href="/starwars"><button>Try the tutorial</button></a>
+<a href="/starwars"><button>Essayez le tutoriel</button></a>
 
 [/col-50]

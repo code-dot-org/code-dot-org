@@ -1,23 +1,15 @@
 {
-  "func": "radioButton",
+  "key": "radioButton",
+  "name": "radioButton",
   "category": "UI controls",
-  "paramButtons": {
-    "minArgs": 2,
-    "maxArgs": 3
-  },
-  "paletteParams": [
-    "id",
-    "checked"
+  "category_key": "ui_controls",
+  "palette_params": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "checked"
+    }
   ],
-  "params": [
-    "\"id\"",
-    "false",
-    "\"group\""
-  ],
-  "dropdown": {
-    "1": [
-      "true",
-      "false"
-    ]
-  }
+  "syntax": "radioButton(id, checked)"
 }

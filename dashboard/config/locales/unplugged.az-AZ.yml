@@ -5,27 +5,31 @@ az:
       Unplug1:
         title: İnformatikaya giriş
         desc: Bu dərs Informatika haqda ilkin anlayışı təqdim edərək onun əslində
-          nə etdiyini izah edəcək. Bu, həmçinin tələbələrə kompüter bilicisinin hansı
-          rola malik olduğunu təsəvvür etməyə də şans yaradacaq. Çalışmalar və tapşırıqlar
-          bitənə qədər, hər bir tələbəyə nə öyrəndiyinə dair qısa məzmunlu xatirlatmalar
-          ediləcək. Dərslərlə birbaşa əlaqəli olan lüğət sözlərinin tədrisini etməməyin
-          tərəfdarı ola  bilərsiniz, amma daha yüksək nailiyyətləri gözləməkdənsə,
-          həmin sözləri daha əyləncəli yolla təqdim etmək daha məhsuldar və faydalı
-          hesab olunur.
+          nə etdiyini izah edəcək. Bu, həmçinin tələbələrə informatikin hansı rola
+          malik olduğunu təsəvvür etməyə də şans yaradacaq. Çalışmalar və tapşırıqlar
+          bitənə qədər, hər bir tələbəyə nə öyrəndiyinə dair qısa məzmunlu xatırlatmalar
+          ediləcək. Siz kiçik uşaqlara dərslərlə əlaqəli lüğət sözlərini öyrətməməyin
+          tərəfdarı ola bilərsiniz, amma indi onları əyləncəli işıqda təqdim etmək
+          daha qabaqcıl imkanları gözləməkdən çox daha faydalıdır.
       Unplug2:
         title: Hesablama təfəkkürü
         desc: Yanlız kağız və keçəli qələm ilə şagirdlər hesablayıcı fikirləşmənin
-          dörd addımını öyrənəcək. qısa başlanğıcdan sonra şagirdlər qruplara paylana
-          bilər haradaki onlar başqa şagirdlərin müəyyən canavarı çəkməsi üçün(qabaqcadan
-          secilmiş canavarların kataloqundan) istiqamət yaratmalı olacaqlar. bütün
-          tapşırıq çürümüş olmalıdır, sonra komandalar canavarlardan mücərrəd muxtəlif
-          detalları, nümunə üçün kataloqdakı bütün canavarları analiz edecek, sonra
-          həmin informasiyani başqa bir komandanın müəyyən canavarı çəkməsi üçün alqoritm
-          (istiqamət) yaratmağa istifadə edəcək. komandalar sonra alqoritmləri başqa
-          bir qrup ilə döndərəcək və alqoritmin bildirişindən qaynaqlanan canavarı
-          çəkəcək. şəkil əsl komandanın hədəflədiyidir?
+          dörd addımını öyrənəcək. Qısa başlanğıcdan sonra şagirdlər başqa şagirdlərin
+          müəyyən canavarı çəkməsi üçün(qabaqcadan secilmiş canavarların kataloqundan)
+          istiqamət yaradacaqları qruplara bölünməlidirlər. Bütün tapşırıq ayrılmalıdır,
+          sonra komandalar canavarlardan mücərrəd müxtəlif detalları, nümunə üçün
+          kataloqdakı bütün canavarları analiz edəcək, sonra həmin informasiyani başqa
+          bir komandanın müəyyən canavarı çəkməsi üçün alqoritm (istiqamət) yaratmağa
+          istifadə edəcək. Komandalar sonra alqoritmləri başqa bir qrup ilə dəyişdirəcək
+          və alqoritmin göstərişindən qaynaqlanan canavarı çəkəcək. Şəkil əsl komandanın
+          istədiyi kimidir?
       Unplug3:
         title: Millimetrlik kağızda proqramlaşdırma
+        desc: "Bir-birilərini şəkil çəkmək üçün proqramlayaraq şagirdlər proqramlaşdırmanın
+          əslində nə barədə olduğunu anlamağa başlayacaqlar. Sinif mövcud olan şəkli
+          yenidən yaratmaq məqsədilə şagirdlərin bir-birinə qrafik kağızı üzərindəki
+          kvadratları rəngləmələrini təlimat verməklə başlayacaq. Əgər vaxt qalsa,
+          dərs \nşagirdlərin özləri yaratdığı şəkillərlə sonlandırıla bilər.\n"
       Unplug4:
         title: Alqoritmlər
         desc: Bu dərs alqoritmləri əhatə edir. Tangram şəkilləri və qrafik kağızdan
@@ -36,20 +40,40 @@ az:
           az qatlamalı olduğunu incələyir.
       Unplug5:
         title: funksiyalar
+        desc: Bu dərsdə şagirdlər ip, muncuq və xüsusi bir kulondan günəştutan kristallar
+          hazırlayacaqlar. Şagirdlər bir seriya təkrarlanan addımları həyata keçirəcək,
+          sonra bir neçə dəfə təkrarlanmış müəyyən "bacarıqlar" yığınını tapacaqlar.
+          Bu bacarıqlar müəyyən olunduqdan sonra onlar əsas proqramdan çağırılacaq
+          və bütün qəşəng hazırlama prosesi bir səhifədə qeyd olunacaq. Yekun proqram
+          ip, muncuq və kulon formasından asılı olmayaraq bütün sinfə yönləndiriləcək.
+          Buna effektiv şəkildə imkan yaratmaq üçün şagirdlərin xüsusi materiallardakı
+          detalları ayırmağa və bir fərdin ləvazimatları üçün qeyri-müəyyən terminlər
+          yaratmağa ehtiyacları olacaq. Ümumi yertutucuların bu istifadəsi dəyişənlərə
+          əla girişdir.
       Unplug6:
         title: Şərti ifadələr
       Unplug7:
         title: Mahnı bəstələmə
       Unplug8:
         title: Mücərrədlik
+        desc: Bu fəaliyyət sizin şagirdlərinizin gündəlik rejimlərini birləşdirir
+          və Mad-Lib (boşluqları doldurma oyunu) tərzində düşüncə sizin sinfinizə
+          mücərrədliyin effekti barədə öyrənməyə kömək edir.
       Unplug9:
         title: Estafet proqramlaşdırması
+        desc: Bu dərs əvvəlki fəaliyyətdən (4. Qrafik vərəqi proqramlaşdırma) ideya
+          götürəcək və həmin bacarıqlardan proqramları sıra ilə idarə edən və "səhvlər"
+          üçün tez-tez onları yoxlayan proqramları bitirmənin əhəmiyyətini vurğulamaq
+          üçün istifadə edəcək.
       Unplug10:
         title: İnternet
         desc: Bu dərsdə tələbələr veb ünvanları, IP və DNS-lər haqqında məlumat əldə
           edərkən İnternet vasitəsilə hərəkət etdiklərini iddia edəcəklər.
       Unplug11:
         title: Yekun
+        desc: İlk 20 saatlıq seriyanın yekunu kompüter elmləri macərasını davam etdirməkdə
+          maraqlıdırlarsa, şagirdlərə ata biləcəkləri növbəti addımları öyrədərkən  sinfə
+          bütün sevimli xatirələri yenidən yaşamağa kömək edəcək.
       UnplugHappyMaps:
         title: Şən xəritələr
         desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
@@ -66,10 +90,18 @@ az:
           yetirir.
       BuildingAFoundation:
         title: Təməl qurmaq
+      GettingLoopy:
+        desc: Bu dərs rəqs fəaliyyəti vasitəsilə loopların proqramlaşdırma konsepsiyasını
+          (təkrarlanan təlimatlar) təqdim edir. Tələbələr sadə xoreoqrafiyanı öyrənəcək,
+          sonra onu təkrarlamaq tapşırılacaq.
       RelayProgramming:
         title: Estafet proqramlaşdırması
       Conditionals:
         title: Şərti ifadələr
+      BigEvent:
+        title: Böyük hadisə
+      GoingPlacesSafely:
+        title: " Yerlərə  Sağ-salamat Gediş"
       GraphPaperProgramming:
         title: Millimetrlik kağızda proqramlaşdırma
       ComputationalThinking:
@@ -91,20 +123,37 @@ az:
           metodlarını təmsil edən ismarışlar göndərirlər.
       DigitalCitizenship:
         title: Rəqəmsal vətəndaşlıq
+      ForLoopFun:
+        desc: Döngələrin hər şeyi təkrar -təkrar etməyə imkan verdiyini bilirik, amma
+          indi əlavə quruluşlu döngələrdən necə istifadə edəcəyimizi öyrənəcəyik.
+      SongwritingWithParameters:
+        title: Parametrlərlə mahnı yazmaq
       BinaryImages:
         title: İkilik təsvirlər
       VideoGamesCoordinatePlanes:
         title: video oyunlar və koordinat təyyarələri
+      DesignRecipe:
+        title: Dizayn resepti
+      courseA_unplugged_loops:
+        desc: Bu dərsdə dövrlər haqqında öyrənəcəksiniz.
       courseB_unplugged_MRF:
         title: Sərbəst fəaliyyət
+        desc: Bu dərsdə dostlarınızı 'proqramlaşdırmağı' öyrənəcəksiniz!
       courseB_unplugged_loopyMRF:
         title: Sərbəst fəaliyyət
+        desc: '"Mənim Robotik Dostlarım"-da olduğu kimi  siz dostlarınızı "proqramlaşdıracaqsınız",
+          amma bu səfər dövrlər ilə.'
       courseC_Unplugged_ScreenOutTheMean:
         title: Sərbəst fəaliyyət
+        desc: Bu gün siz biri internetdə kobud olsa nə etməli olduğunuzu öyrənəcəksiniz.
       courseD_unplugged_digitalCitizenship:
         title: Sərbəst fəaliyyət
+        desc: Bu gün Rəqəmsal Sakin olmağın nə olduğunu öyrənəcəksiniz.
+      courseE_unplugged_privateInformation:
+        desc: Siz bu gün özəl və şəxsi informasiya arasındaki fərqi öyrənəcəksiniz.
       courseF_unplugged_powerOfWords:
         title: Sərbəst fəaliyyət
+        desc: Bu gün siz biri internetdə kobud olsa nə etməli olduğunuzu öyrənəcəksiniz.
       courseAB_unplugged_plantASeed:
         title: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
         desc: Bu dərs alqoritmləri gündəlik həyatımızda istifadə etməyə, nümunə olaraq
@@ -115,12 +164,22 @@ az:
         title: Şən xəritələr
         desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
           üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
+      courseA_unplugged_goingPlacesSafely:
+        title: " Yerlərə  Sağ-salamat Gediş"
+      courseABC_unplugged_bigEvent:
+        title: Böyük hadisə
       courseC_unplugged_buildingAFoundation:
         title: Təməl qurmaq
+      courseC_unplugged_gettingLoopy:
+        desc: Bu dərs rəqs fəaliyyəti vasitəsilə loopların proqramlaşdırma konsepsiyasını
+          (təkrarlanan təlimatlar) təqdim edir. Tələbələr sadə xoreoqrafiyanı öyrənəcək,
+          sonra onu təkrarlamaq tapşırılacaq.
       courseD_unplugged_graphPaperProgramming:
         title: Millimetrlik kağızda proqramlaşdırma
       courseD_unplugged_relayProgramming:
         title: Estafet proqramlaşdırması
+      courseD_unplugged_conditionalsCards:
+        title: Kartlarla şərtlər
       courseD_unplugged_binaryImages:
         title: İkilik təsvirlər
       courseE_unplugged_diceRace:
@@ -128,6 +187,7 @@ az:
           Bunun bir hissəsi olaraq, tələbələr bir zər yarış oyunu üçün alqoritmi müəyyənləşdirəcək
           və yazacaqlar.
       courseE_unplugged_songwritingParameters:
+        title: Parametrlərlə mahnı yazmaq
         desc: Şagirdlər funksiyaları təyin etmə və çağırmağı öyrənmək üçün bir mahnıda
           xor konsepsiyasından istifadə edirlər.
       courseE_unplugged_internet:
@@ -138,6 +198,13 @@ az:
         title: Mahnı yazma
         desc: Şagirdlər funksiyaları təyin etmə və çağırmağı öyrənmək üçün bir mahnıda
           xor konsepsiyasından istifadə edirlər.
+      courseF_unplugged_forLoopFun:
+        desc: Döngələrin hər şeyi təkrar -təkrar etməyə imkan verdiyini bilirik, amma
+          indi əlavə quruluşlu döngələrdən necə istifadə edəcəyimizi öyrənəcəyik.
+      courseF_unplugged_songwritingParameters:
+        title: Parametrlərlə mahnı yazmaq
+      courseB_unplugged_MRF_2018:
+        title: Mənim robot dostlarım
       PlantASeed_2018:
         title: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
         desc: Bu dərs alqoritmləri gündəlik həyatımızda istifadə etməyə, nümunə olaraq
@@ -148,20 +215,36 @@ az:
         title: Şən xəritələr
         desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
           üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
+      GoingPlacesSafely_2018:
+        title: " Yerlərə  Sağ-salamat Gediş"
+      courseA_unplugged_loops_2018:
+        desc: Bu dərsdə dövrlər haqqında öyrənəcəksiniz.
+      BigEvent_2018:
+        title: Böyük hadisə
       GraphPaperProgramming_2018:
         title: Millimetrlik kağızda proqramlaşdırma
       courseD_unplugged_digitalCitizenship_2018:
         title: Sərbəst fəaliyyət
+        desc: Bu gün Rəqəmsal Sakin olmağın nə olduğunu öyrənəcəksiniz.
       courseC_Unplugged_ScreenOutTheMean_2018:
         title: Sərbəst fəaliyyət
+        desc: Bu gün siz biri internetdə kobud olsa nə etməli olduğunuzu öyrənəcəksiniz.
       Conditionals_2018:
         title: Şərti ifadələr
       BinaryImages_2018:
         title: İkilik təsvirlər
+      GettingLoopy_2018:
+        desc: Bu dərs rəqs fəaliyyəti vasitəsilə loopların proqramlaşdırma konsepsiyasını
+          (təkrarlanan təlimatlar) təqdim edir. Tələbələr sadə xoreoqrafiyanı öyrənəcək,
+          sonra onu təkrarlamaq tapşırılacaq.
       MoveItMoveIt_2018:
         title: Hərəkət et
+      courseE_unplugged_CnC_2018:
+        title: Rəqəmsal paylaşım
       RelayProgramming_2018:
         title: Estafet proqramlaşdırması
+      courseB_unplugged_MRF_2019:
+        title: Mənim robot dostlarım
       Conditionals_2019:
         title: Şərti ifadələr
       GraphPaperProgramming_2019:
@@ -170,10 +253,22 @@ az:
         title: Estafet proqramlaşdırması
       courseD_unplugged_digitalCitizenship_2019:
         title: Sərbəst fəaliyyət
+        desc: Bu gün Rəqəmsal Sakin olmağın nə olduğunu öyrənəcəksiniz.
       BinaryImages_2019:
         title: İkilik təsvirlər
+      courseE_unplugged_privateInformation_2019:
+        title: Özəl və şəxsi informasiya
+      courseE_unplugged_CnC_2019:
+        title: Rəqəmsal paylaşım
+      GettingLoopy_2019:
+        desc: Bu dərs rəqs fəaliyyəti vasitəsilə loopların proqramlaşdırma konsepsiyasını
+          (təkrarlanan təlimatlar) təqdim edir. Tələbələr sadə xoreoqrafiyanı öyrənəcək,
+          sonra onu təkrarlamaq tapşırılacaq.
       courseC_Unplugged_ScreenOutTheMean_2019:
         title: Sərbəst fəaliyyət
+        desc: Bu gün siz biri internetdə kobud olsa nə etməli olduğunuzu öyrənəcəksiniz.
+      BigEvent_2019:
+        title: Böyük hadisə
       PlantASeed_2019:
         title: 'Həqiqi həyat alqoritmləri: Bir toxum əkin'
         desc: Bu dərs alqoritmləri gündəlik həyatımızda istifadə etməyə, nümunə olaraq
@@ -184,7 +279,15 @@ az:
         title: Şən xəritələr
         desc: Şagirdlər bir əmrdən istifadə edərək bir labirentdən bir xarakter keçmək
           üçün sadə alqoritmlər (təlimat dəstləri) yaradırlar.
+      GoingPlacesSafely_2019:
+        title: " Yerlərə  Sağ-salamat Gediş"
+      courseA_unplugged_loops_2019:
+        desc: Bu dərsdə dövrlər haqqında öyrənəcəksiniz.
       MoveItMoveIt_2019:
         title: Hərəkət et
+      courseE_simon_says_2019:
+        title: Simon söyləyir
+      courseB_unplugged_passwords_2019:
+        title: Güclü Şifrələr
       timeforcs_demo_conditionals:
         title: Şərti ifadələr

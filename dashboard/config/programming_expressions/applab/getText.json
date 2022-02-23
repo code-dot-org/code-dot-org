@@ -1,11 +1,12 @@
 {
-  "func": "getText",
+  "key": "getText",
+  "name": "getText",
   "category": "UI controls",
-  "paletteParams": [
-    "id"
+  "category_key": "ui_controls",
+  "palette_params": [
+    {
+      "name": "id"
+    }
   ],
-  "params": [
-    "\"id\""
-  ],
-  "type": "value"
+  "syntax": "getText(id)"
 }

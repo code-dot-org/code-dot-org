@@ -1,21 +1,18 @@
 {
-  "func": "drawChart",
+  "key": "drawChart",
+  "name": "drawChart",
   "category": "Data",
-  "paramButtons": {
-    "minArgs": 3,
-    "maxArgs": 5
-  },
-  "paletteParams": [
-    "chartId",
-    "chartType",
-    "chartData"
+  "category_key": "data",
+  "palette_params": [
+    {
+      "name": "chartId"
+    },
+    {
+      "name": "chartType"
+    },
+    {
+      "name": "chartData"
+    }
   ],
-  "params": [
-    "\"chartId\"",
-    "\"bar\"",
-    "[\n\t{ label: \"Row 1\", value: 1 },\n\t{ label: \"Row 2\", value: 2 }\n]"
-  ],
-  "allowFunctionDrop": {
-    "4": true
-  }
+  "syntax": "drawChart(chartId, chartType, chartData)"
 }

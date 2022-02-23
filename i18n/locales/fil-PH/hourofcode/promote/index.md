@@ -4,28 +4,28 @@ title: Ipamalita ito
 
 {{ signup_button }}
 
-# Isangkot ang iyong kumonidad sa Hour of Code
+# Isangkot ang kumonidad mo sa Hour of Code
 
-## 1. Palaganapin ang salita
+## 1. Palaganapin ang balita
 
-Sabihan ang iyong mga kaibigan tungkol sa **#HourOfCode**!
+Sabihan ang mga kaibigan mo tungkol sa **#HourOfCode**!
 
 {{ promote/share_buttons }}
 
-## 2. Hingin sa inyong buong paaralan na mag-alok ng Hour of Code
+## 2. Hilingin sa buong paaralan mo na mag-alok ng Hour of Code
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[Ipadala itong email](%= resolve_url('/promote/resources#sample-emails') %) sa punong-guro at hamunin ang bawat silid-aralan sa paaralan mo upang mag-sign up.
 
-## 3. Hilingin sa iyong employer na makibahagi
+## 3. Hilingin sa employer mo na makibahagi
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[Ipadala itong email]({{ promote/sample_emails }}) sa manedyer o CEO ng kompanya mo.
 
-## 4. Ilunsad ang Hour of Code sa iyong kumonidad
+## 4. Ilunsad ang Hour of Code sa kumonidad mo
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Hindi mo kailangang pumasok ng paaralan para matuto ng bagong kasanayan. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[Kumalap ng lokal na grupo]({{ promote/sample_emails }})— lalaki/babae scout club, simbahan, unibersidad, grupo ng mga beterano, labor union, o kahit ang ilang mga kaibigan. Hindi mo kailangang pumasok ng paaralan para matuto ng bagong kasanayan. Gamitin itong [mga poster, bandera, mga sticker, video at higit pa](/promote/resources) para sa sarili mong event.
 
 ## 5. Hingin sa isang lokal na opisyal na sumuporta sa Hour of Code
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Makakatulong itong bumuo ng suporta para sa computet science sa inyong lugar ng higit sa isang oras.
+[Ipadala itong email]({{ promote/sample_emails }}) sa lokal na kinatawan mo, konsehal ng lungsod, o school board at imbitahin silang bumisita sa paaralan mo para sa Hour of Code. Makakatulong itong bumuo ng suporta para sa computet science sa inyong lugar ng higit sa isang oras.
 
 {{ signup_button }}

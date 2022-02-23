@@ -301,13 +301,29 @@ sk:
       5:
         text: "Vo videohrách sa nachádza udalosť nazývaná \"Update\" (obnov) a opakuje sa 30 alebo 60 krát za sekundu. Pre programátorov videohier je možno dôležitejšia ako udalosť gombíka či joysticku."
       6:
+        text: "Hlavnou udalosťou, ktorú tu sledujeme, je to, či dochádza k zaškrtnutiu „Aktualizovať“. A následne skontrolujeme joystick pri zaškrtnutí. Hovoríme si: \"Stlačil niekto tlačidlo na tejto snímke? Áno či nie?\" Bez udalostí by sa hráč nemohol pohyhovať, nemohli by ste skákať, nemohli by ste schopní kontrolovať čo sa deje. Videohra by nemohla nič animovať."
     C1_building_foundation:
       1:
+        text: "Pri sochách z piesku si musíte uvedomiť, že zlyhanie je súčasťou programu. Ale ak vytrváte, bude sa to iba zlepšovať a bude to pre vás stále viac vzrušujúce. Názvom hry je Vytrvalosť. Zostaňte pri tom, zamilujete si to."
       2:
         text: "Táto lekcia sa volá budovanie základov. V tejto lekcii budeme pracovať na úlohe, ktorá má byť skutočne zložitá. Musíte prísť na to, ako postaviť štruktúru vysokú aspoň ako jeden z týchto pohárov, a musí byť dosť silná nato, aby udržala váhu knihy."
       3:
+        text: "Niekedy sa môže stať, že sa náš výtvor nepodarí. Môže sa tiež stať, že budeme frustrovaní a budeme to chcieť vzdať. Takýchto momentov môže byť veľa. Ale ak budeme pokračovať vo svojom snažení, znova a znova do toho dávať len to najlepšie zo seba, potom sa do toho určite čoskoro dostaneme. "
       4:
+        text: "Vytrvalosť je o tom - vydržať, aj keď už to chcete naozaj vzdať. Keď chcete vytvoriť čosi nové, čosi iné, po ceste celkom isto narazíte na veľa zlyhaní."
       5:
+        text: "Trik ako vytrvať je v tom, rozhodnúť sa pokračovať a učiť sa zo svojich zlyhaní - namiesto toho, aby ste s tým skončili, pretože ste frustrovaní. Frustrácia v skutočnosti znamená, že už za rohom vás čaká niečo úžasné. Takže neprestávajte, kým sa k tomu nedostanete."
+    C1_getting_loopy:
+      1:
+        text: "Ahoj, volám sa Miral Kotb a som zakladateľka iLuminate. V mojej práci je čosi, čo využívame tak pri tancovaní, ako aj pri programovaní. Sú to slučky! Slučky / cykly sú opakovaním nejakej akcie stále dookola, znova a znova. "
+      2:
+        text: "Keď čosi opakujeme viac krát za sebou, napríklad ako ja keď točím hula hoop obručou, vytvárame vlastne z tejto akcie slučku. Toto je slučka, Toto je slučka. A toto je slučka."
+      3:
+        text: "Dnes budeme mať tanečnú párty. S novým tancom si predvedieme slučky. Iterácia - opakovanie. Naučíme sa o slučkách pomocou tanca. Naučíte sa pár jednoduchých krokov a budete ich ich dookola opakovať, znova a znova, aby ste tanec dokončili."
+      4:
+        text: "Toto sú kroky ktoré sa potrebujete naučiť: Tlesknite rukami. Dajte si ruky za hlavu. Dajte si ruky na pás. Zdvihnite ľavú ruku. Zdvihnite pravú ruku. Celkom jednoduché, však? Zistíte, že si cestu môžete skrátiť vložením niekoľkých tanečných krokov do slučiek."
+      5:
+        text: "Pri našom tancovaní v skutočnosti používame slučky/cykly. Tanečníci majú na sebe počítače, všetky zapojené v jednej sieti. Svetlá by som mohla opakovane točiť k tým istým tanečníkom, stále znova a znova. V slučke by som mohla mať iteráciu - opakovanie, kde by som povedala že chcem točiť svetlá dookola cez týchto šiestich tanečníkov, znova a znova, a že v rámci tejto slučky chcem zvyšovať rýchlosť svetla. A to všetko je vytvorené pomocou slučiek. Slučky/cykly sú v informatike veľmi dôležité, pretože nám uľahčujú a skracujú našu prácu."
     C1_happy_maps_unplugged:
       1:
         text: "Táto lekcia sa volá Veselé mapy. Dnes budeme pomáhať našej malej chlpatej kamarátke Flurb na ceste ku jej ovociu."
@@ -323,23 +339,45 @@ sk:
       1:
         text: "Hľadanie a odstraňoanie chýb (anglicky DEBUGGING) môžeme robiť rôznymi spôsobmi. Jedným z najľahších je ísť krok po kroku až kým nenarazíš na miesto, kde program funguje inak, ako si plánoval. Tu sa snažím spraviť premet vzad na stožiari, no vždy padnem."
       2:
+        text: "Prešla som si každú časť, krok po kroku a uvedomila som si, kde som spravila chybu. Nepokladala som ruky na kladinu správnym spôsobom. Tak som skúsila na kladine ďalší premet vzad, tentokrát s novou pozíciou rúk a podarilo sa mi to. Bola som naozaj rada, že sa mi podarilo \"debuggovať\" môj premet vzad (nájsť a odstrániť v ňom chybu)."
       3:
+        text: "Aby sme sa naučili viac o odstraňovaní chýb, začneme so sadou blokov, ktoré tu už máme umiestnené. Všimnete si, že tieto bloky nás nedostanú k nášmu cieľu. Potrebujeme debugovať toto riešenie (hľadať a odstrániť chyby z riešenia) a napraviť to. Čo bolo nesprávne? Všimnete si, že by sme sa potrebovali pohnúť ešte o jeden blok viac na západ (doľava)."
       4:
+        text: "Opravme to pridaním ešte jedného bloku smerujúceho na západ (doľava) a stlačme \"Spustiť\", aby sme videli, či už je to správne. Jéj, máme to!"
+    C1_maze_intro_sequencing:
+      1:
+        text: "V rámci tejto úlohy budeš musieť vtáčika dostať k prasiatku. Pozri na to a zváž, ktorým smerom by sa vtáčik mal vybrať."
+      2:
+        text: "Potrebuješ presunúť bloky z panela nástrojov na pracovnú plochu. Usiti sa, že presunuté bloky sú umiestnené pod \"When run\" blokom. Keď už myslíš, že máš pripravené správne riešenie, klikni na tlačidlo \"Run\" (spustiť) a presvedč sa, či sa vtáčik dostane k prasiatku."
+    C1_maze_loops:
+      1:
+        text: "Jedna z vecí, v ktorých sú počítače skutočne dobré, je opakovanie príkazov. Človek by ste sa asi naozaj unudil, keby musel robiť to isté veľmi veľa krát za sebou. Počítač však dokáže tú istú vec urobiť milióny alebo dokonca miliardy krát za sebou, bez toho aby sa nudil a je schopný celé to zvládnuť ozaj dobre."
+      2:
+        text: "Ak by som napríklad chcel všetkým na Facebooku popriať všetko najlepšie k narodeninám odoslaním e -mailu, mohlo by mi trvať viac ako storočie, kým by som všetky tieto e -maily skutočne každému napísal. Ale stačí iba s niekoľko riadkov kódu a môžem nechať systém poslať každému na Facebooku e -mail s prianím všetkého najlepšieho k narodeninám."
+      3:
+        text: "Aby si dostal vtáčika k prasiatku v tomto leveli... namiesto toho aby si presúval na pracovnú plochu tri bloky smerujúce na sever (hore), použi blok \"Opakuj\" a vlož číslo 3. Následne presuň blok \"Pohni sa na sever\" do bloku \"Opakuj\" a stlač tlačidlo \"Spusti\", aby si sa presvedčil či to máš správne. Gratulujeme, máš to!"
     C1_moveitmoveit_unplugged:
       1:
         text: "Táto lekcia sa volá \"Pohni sa, pohni sa\". Spolu v nej napíšeme program, vďaka ktorému sa náš kamarát presunie zo začiatočného bodu s kompasom ku cieľu, na ktorom je smajlík."
       2:
+        text: "Ale smajlík je  tvárou nadol a len jedna osoba vie, ako sa tam dostať. Začnime s týmto programom."
       3:
+        text: "Program je algoritmus, ktorý bol nakódovaný do niečoho, čo môže byť spustené strojom. Väčšina z nás si pod programom predstaví niečo, čo napíšeme pre počítač. Programy sú na to skutočne dobré, ale sú užitočné aj v iných oblastiach. Môžeš si vytvoriť vlastnú hru alebo dokonca naprogramovať robota, aby robil veci za teba."
     C1_going_places_safely:
       1:
         text: "Volám sa Jeremiah. Ahoj! Mám sedem rokov. Rád sa hrám na maminom počítači, ale najprv musím dostať povolenie. \"Mami, môžem ísť na počítač? Iste zlatko!\""
       2:
+        text: "Milujem mamim počítač, pretože môžem ísť na internet. Internet je niečo ako tvoje okolie. Môžeš navštíviť skvelé miesta, môžeš hovodiť s rodinou a kamarátmi a môžeš sa naučiť kopu nových vecí."
       3:
         text: "Včera som navštívil zoologickú záhradu, je blízko môjho domu. Videl som tam žriebätko zebry. Odfotil som si ho, zmenil som mu farbu pruhov, pridal klobúk a zaradil ho do svojej kolekcie nezvyčajných zvierat. Úžasné! Neskôr som šiel na veľmi vzdialené miesto. Navštívil som Keňu. Je to krajina v Afrike. Žije tu mnoho zebier."
       4:
+        text: "Niekedy sa cez internet rozprávam s ľuďmi, ktorých poznám, ako napríklad s mojou starkou, ktorá býva v inom štáte. Ahoj starká! Pečie mi koláčiky, ktoré mi pošle k narodeninám. \"Mňam, keby sa tak aj vôňa dala poslať cez internet!\" Cez internet sa môžem rozprávať aj s inými ľuďmi, napríklad s bratrancom/sesternicou, ale bavím sa iba s ľuďmi ktorých poznám."
       5:
+        text: "Na interente sa mi najviac páči, že môžem hrať zábavné hry. Gól! Tiež rád kreslím a tvorím nové veci a zdieľam ich so svojimi kamarátmi. Super! Niekedy navštevujem webstránky, kde sa učím nové veci, ale vždy sa držím webových stránok, ktoré sú pre mňa to správne určené. Wau, dinosaury!"
       6:
+        text: "Internet je super zábavné miesto. Ale rovnako ako keď prechádzaš cez cestu vo svojom susedstve, tiež musíš byť opatrný keď ideš online. Tu sú tri pravidlá, ktoré si treba zapamätať. Pravidlo číslo 1: Vždy sa najprv opýtaj rodičov. Pravidlo číslo 2: Rozprávaj sa iba s ľuďmi, ktorých poznáš. Pravidlo číslo 3: Drž sa miest, ktorú sú pre teba správne určené."
       7:
+        text: "Wau, to bola zábava! Je čas večerať. Teraz sa odhlásim. Nemôžem sa dočkať, ako sa znova prihlásim, aby som zistil čo môžem navštíviť najbližšie. "
     C1_pair_programming:
       1:
         text: "Dnes sa naučíme niečo o párovom programovaní. Pri párovom programovaní pracujete ako tím. Pýtate sa, prečo by mali dvaja ľudia používať jeden počítač? Pretože - viac hláv, viac rozumu. Pri párovom programovaní si ty a tvoj partner sadnete za jeden počítač a budete pracovať na spoločnom projekte. "
@@ -349,6 +387,17 @@ sk:
         text: "Komunikácia je pri párovom programovaní kľúčom k úspechu. Neurážaj svojho partnera. Rešpektujte sa. Nesnaž sa byť nadriadeným navigátorom. Po celý čas komunikujte so svojím partnerom o tom, čo robíte. Vodič vysvetľuje, čo robí. Navigátor môže navrhovať ďalšie kroky."
       4:
         text: "Navigátor by mal premýšľať o úlohe komplexne a vodič sa zameriava na detaily. Obe úlohy sú dôležité. Párové programovanie je o tímovej spolupráci."
+    C1_planting_seed:
+      1:
+        text: "Táto lekcia má názov \"zasadiť semiačko\" a pomôže nám pochopiť algoritmy. Algoritmy sú presné pokyny, ktoré vysvetľujú poradie, v akom je treba niečo spraviť. Aj každodenné veci ako jedenie raňajok alebo umývanie zubov sú vlastne algoritmy, ktoré si vyžadujú malé kroky pre splnenie úlohy."
+      2:
+        text: "Počítače môžu byť naozaj chytré, ale porozumejú ti iba vtedy, ak im krok za krokom povieš, čo presne od nich chceš. Na algoritmoch je skvelé, že ak sa budeš riadiť pokynmi v uvedenom poradí, môžeš urobiť niečo, čo si predtým nevedel. Je to ako postupovať podľa receptu. "
+      3:
+        text: "Dnes si zasadíme semienka s využitím algoritmu. Vytvor si vlastný algoritmus rozstrihaním obrázkov. Vyber obrázky, ktoré znázorňujú kroky pri sadení semiačok a zoraď tieto obrázky do správneho poradia."
+      4:
+        text: "Teraz je čas, aby si sa presvedčil, či tvoj algoritmus funguje. Pozorne nasleduj jednotlivé kroky v algoritme. Sú v správnom poradí? Podarilo sa ti zasadiť semiačko podľa algoritmu? Je to ako programovanie s obrázkami!"
+      5:
+        text: "Keď chceme vyrobiť čokoládu, proces tvorí veľa veľkých krokov a každý z týchto veľkých krokov má ešte sadu menších krokov. Tiež sú tam aj rôzne recepty alebo algoritmy, v závislosti od toho akú chuť čokolády chceme dosiahnuť. Každý krok je dôležitý, aj tie malé, takže bez jedného kroku tie zvyšné nemôžu byť dokončené. Vytváranie takých algoritmov, ktorým druhí dokážu porozumieť, je naozaj dôležité. Preto každý krok musí byť dobre popísaný, takže bez ohľadu na to, kto krok vykonáva, výsledok bude rovnaký."
     C1_playlab_storytelling:
       1:
         text: "Je čas byť kreatívny a použiť tvoje kódovacie zručnosti na vyrozprávanie príbehu. Tvoj príbeh bude mať aktérov a ty budeš môcť prinútiť týchto aktérov rozprávať a interagovať medzi sebou. Začni rozmýšľať nad tým, aký príbeh chceš rozpovedať. "
@@ -358,6 +407,22 @@ sk:
         text: "Toto je tlačidlo \"keď sa aktéri zrazia\", ktoré môžeš prepojiť s ďalšími blokmi. "
       4:
         text: "Ja som prikázala psovi prísť a povedať \"Ahoj\", ale potom sa mačka vyľakala a utiekla. \"Ahh\". Ak by bolo viac času, príbeh by mal šťastný koniec. Koniec!"
+    C1_spelling_bee_intro:
+      1:
+        text: "Toto je včeličkový hláskovací level. Použi kúsky skladačky aby si pohol včielkou. Ako sa bude hýbať, bude zbierať písmená a hláskovať slová."
+      2:
+        text: "Pozri, či vieš vyhláskovať slovo, ktoré je dané v časti pod obrázkom. Ale buď opatrný! Pohyb nesprávnym smerom pridá písmená, ktoré nechceš."
+    C1_zuck_repeat_loop:
+      1:
+        text: "Jedna z vecí, v ktorých sú počítače skutočne dobré, je opakovanie príkazov. Človek by ste sa asi naozaj unudil, keby musel robiť to isté veľmi veľa krát za sebou. Počítač však dokáže tú istú vec urobiť milióny alebo dokonca miliardy krát za sebou, bez toho aby sa nudil a je schopný celé to zvládnuť ozaj dobre."
+      2:
+        text: "Ak by som napríklad chcel všetkým na Facebooku popriať všetko najlepšie k narodeninám odoslaním e -mailu, mohlo by mi trvať viac ako storočie, kým by som všetky tieto e -maily skutočne každému napísal. Ale stačí iba s niekoľko riadkov kódu a môžem nechať systém poslať každému na Facebooku e -mail s prianím všetkého najlepšieho k narodeninám."
+      3:
+        text: "V tomto príklade je tvojím cieľom pohnúť vtáčika tak, aby sa dostal k prasiatku. Teraz budeme môcť použiť blok \"Opakuj\", aby sme to vedeli spraviť veľmi jednoducho. Môžeš to spraviť buď tak, že dáš počítaču povel pre pohyb vpred päť krát za sebou - aby si postupne po krokoch priblížil vtáčika k prasiatku, alebo to môžeš počítaču povedať naraz, tak že mu povieš aby zopakoval pohyb vpred päť krát - a spraví tú istú vec."
+      4:
+        text: "Aby si to spravil, presuň príkaz \"Pohyb vpred\" a vlož ho do bloku \"Opakuj\". Keď na blok klikneš, zadáš tam koľko krát chceš aby sa blok opakoval - teda povieš, koľko krokov vpred má spraviť."
+      5:
+        text: "Ďalšia vec je, že do bloku \"Opakuj\" môžeš vložiť toľko príkazov, koľko len chceš. Takže v tomto príklade hovoríš, aby sa pohol vpred a otočil doľava, čo sa celé zopakuje päť krát. Veľa zábavy!"
     C2_artist_intro:
       1:
         text: "Na preteky sa ani nedostanete, ak nemáte v tíme ľudí, ktorí sú zdatní v informatike - a to práve pre množstvo dát zbieraných autami. Títo ľudia tiež vytvárajú programy, ktoré pretekárom pomáhajú byť dlhodobo výkonnými."
@@ -369,6 +434,24 @@ sk:
         text: "Iný blok v tejto úlohe hovorí \"otoč sa vpravo o 90 stupňov\". Použitím tohto bloku sa umelec otočí o nejakú časť kruhu. Môžeš sa pohrať s tým, o koľko stupňov sa má umelec otočiť. Toto je otočka o 90 stupňov."
       5:
         text: "A toto je otočka o 120 stupňov. Nezabudni - to, o koľko sa umelec posunie či otočí, \nmeníš šípkami vedľa hodnôt pixelov a stupňov. Veľa zábavy pri kreslení!"
+    C2_bee_conditionals:
+      1:
+        text: "Toto je blok s podmienkou. Hovorí o tom, že AK je nektár alebo med menší ako, rovný aleno väčší ako nejaké číslo, POTOM sa niečo spraví. "
+      2:
+        text: "Toto je užitočné v prípade, kedy nevieš koľko nektáru alebo medu dostaneš, ako vidíme tu s týmto otáznikom. "
+      3:
+        text: "V tomto príklade povieme, že AK má fialový kvietok viac nektáru ako 0, je možné zbierať nektár. To povie našej včielke, aby pokračovala v zbieraní nektáru, kým tam nejaký je. Ta-dá! "
+    C2_conditionals_with_cards:
+      1:
+        text: "Táto lekcia má názov \"Podmienky s kartami\" Každý deň robíš rozhodnutia na základe toho, čo vidíš a počuješ. "
+      2:
+        text: "Chcem sa ísť poprechádzať do parku, ale najprv sa musím rozhodnúť, či si mám zobrať dáždnik alebo nie. Tak sa pozriem z okna. Ak je zamračené, zoberiem si dáždnik. V iných prípadoch si vezmem slnečné okuliare. Myslím, že radšej si vezmem dáždnik. To čo vidím a čo počujem určuje, čo si so sebou vezmem do parku. "
+      3:
+        text: "Podmienky sa využívajú aj v hrách. Dnes si precvičíme používanie podmienok v hre s kartami. Pri tejto hre, to čo nakreslím na kartu určuje, čo majú moji kamaráti spraviť. Ak nakreslím sedmičku, všetci zatlieskajú.  V iných prípadoch všetci povedia \"Aaaa\". Poďme to vyskúšať! \"Aaaa\""
+      4:
+        text: "Stavím sa, že by si vedel vymyslieť hry s ešte zábavnejšími podmienkami. Skús to! Podmienky sú to, čo robí počítače chytrými. A počítačový program, ktorý obsahuje podmienky, vie reagovať na používateľa a meniť na základe toho svoj postup. "
+      5:
+        text: "Zamysli sa nad svojou obľúbenou videohrou. Nazbieraš za niektoré akcie viac bodov ako za iné? Toto sa deje preto, že počitač používa podmienky. Je to spôsob, akým počítač robí rozhodnutie. Ako keď napríklad trafíš cieľ, získaš desať bodov. Ak nie, stratíš tri body. Keď už vieš ako podmienky fungujú, môžeš vytvárať všetky možné vzrušujúce hry. "
     C2_artist_debugging:
       1:
       2:
@@ -421,6 +504,13 @@ sk:
         text: "Keď vložíme (ponoríme) cyklus do iného cyklu, hovoríme tomu vnorené cykly. Napríklad tu máme kód, ktorým kreslíme trojuholník so stranami 100 pixelov použitím opakovacieho bloku s 3 opakovaniami. Jedno opakovanie pre každú stranu trojuholníka."
       2:
         text: "Ale my chceme nakresliť 6 trojuholníkov. Preto celý teno kód vložíme do vnútra ďalšieho opakovacieho bloku. Super, však?"
+    C3_bee_conditionals:
+      1:
+        text: "Toto je blok s podmienkou. Hovorí o tom, že AK je nektár alebo med menší ako, rovný aleno väčší ako nejaké číslo, POTOM sa niečo spraví. "
+      2:
+        text: "Toto je užitočné v prípade, kedy nevieš koľko nektáru alebo medu dostaneš, ako vidíme tu s týmto otáznikom. "
+      3:
+        text: "V tomto príklade povieme, že AK má fialový kvietok viac nektáru ako 0, je možné zbierať nektár. To povie našej včielke, aby pokračovala v zbieraní nektáru, kým tam nejaký je. Ta-dá! "
     C3_bee_debugging:
       1:
         text: "Počul si už niekedy o ladení programu? Týmto spôsobom zistíš čo nefunguje. Keď ladíš kód, identifikuješ a odstraňuješ chyby."
@@ -1383,3 +1473,26 @@ sk:
         text: "Alebo niečo úplne iné?"
       7:
         text: "Na konci lekcie môžeš zdieľať odkaz na svoj výtvor s kamarátmi. Potráp svoju predstavivosť a hlavne si to uži!"
+    poemart_intro:
+      1:
+        image: 'notes/hoc_poem_art_2021_introduction_01.jpg'
+      2:
+        image: 'notes/hoc_poem_art_2021_introduction_02.jpg'
+      3:
+        image: 'notes/hoc_poem_art_2021_introduction_03.jpg'
+      4:
+        image: 'notes/hoc_poem_art_2021_introduction_04.jpg'
+      5:
+        image: 'notes/hoc_poem_art_2021_introduction_05.jpg'
+      6:
+        image: 'notes/hoc_poem_art_2021_introduction_06.jpg'
+      7:
+        image: 'notes/hoc_poem_art_2021_introduction_07.jpg'
+      8:
+        image: 'notes/hoc_poem_art_2021_introduction_08.jpg'
+      9:
+        image: 'notes/hoc_poem_art_2021_introduction_09.jpg'
+      10:
+        image: 'notes/hoc_poem_art_2021_introduction_10.jpg'
+      11:
+        image: 'notes/hoc_poem_art_2021_introduction_11.jpg'

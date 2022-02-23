@@ -23,7 +23,6 @@ import SendLesson from './SendLesson';
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {
     lesson: lessonType.isRequired,
-    lessonUrl: PropTypes.string,
     onClickStudentLessonPlan: PropTypes.func,
 
     // redux provided
@@ -74,8 +73,7 @@ class ProgressLessonTeacherInfo extends React.Component {
       hiddenLessonState,
       hasNoSections,
       lockableAuthorized,
-      lesson,
-      lessonUrl
+      lesson
     } = this.props;
 
     const sectionId = (section && section.id.toString()) || '';
@@ -86,11 +84,12 @@ class ProgressLessonTeacherInfo extends React.Component {
       isLessonHiddenForSection(hiddenLessonState, sectionId, lesson.id);
     const courseId =
       (section && section.code && parseInt(section.code.substring(2))) || null;
-    const loginRequiredLessonUrl = lessonUrl + '?login_required=true';
+    const loginRequiredLessonStartUrl =
+      lesson.lessonStartUrl + '?login_required=true';
     const shouldRender =
       lesson.lesson_plan_html_url ||
       (lesson.lockable && !hasNoSections) ||
-      lessonUrl ||
+      loginRequiredLessonStartUrl ||
       showHiddenForSectionToggle;
     if (!shouldRender) {
       return null;
@@ -128,10 +127,10 @@ class ProgressLessonTeacherInfo extends React.Component {
         {lesson.lockable && lockableAuthorized && !hasNoSections && (
           <LessonLock lesson={lesson} />
         )}
-        {lessonUrl && !(lesson.lockable && !lockableAuthorized) && (
+        {lesson.lessonStartUrl && !(lesson.lockable && !lockableAuthorized) && (
           <div style={styles.buttonContainer}>
             <SendLesson
-              lessonUrl={loginRequiredLessonUrl}
+              lessonUrl={loginRequiredLessonStartUrl}
               lessonTitle={lesson.name}
               courseid={courseId}
               analyticsData={JSON.stringify(this.firehoseData())}
@@ -169,7 +168,7 @@ export default connect(
   state => ({
     section:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed,
+    unitAllowsHiddenLessons: state.hiddenLesson.hideableLessonsAllowed || false,
     hiddenLessonState: state.hiddenLesson,
     unitName: state.progress.scriptName,
     lockableAuthorized: state.lessonLock.lockableAuthorized,

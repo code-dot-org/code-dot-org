@@ -1,6 +1,7 @@
 {
-  "func": "comment_Math",
-  "block": "// Comment",
-  "expansion": "// ",
-  "category": "Math"
+  "key": "comment_Math",
+  "name": "comment_Math",
+  "category": "Math",
+  "category_key": "math",
+  "syntax": "// Comment"
 }

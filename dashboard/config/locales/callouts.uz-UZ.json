@@ -1502,6 +1502,152 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Barcha bloklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Ishga tushirish\" tugmachasini bosing."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_collector": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_pet": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Yangi blok!",
+          "hello_world_new_block": "Yangi blok!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Yangi blok!",
+          "hello_world_new_block": "Yangi blok!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Yangi blok!",
+          "hello_world_new_block": "Yangi blok!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Yangi blok!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Yangi blok!",
+          "poetry_foreground": "Yangi blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Yangi blok!",
+          "poetry_multiple_sprites": "Yangi blok!",
+          "poetry_new_block": "Yangi blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Yangi blok!",
+          "poetry_music": "Yangi blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Yangi blok!",
+          "poetry_sprite_stops": "Yangi blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Yangi blok!",
+          "poetry_remove_sprite": "Yangi blok!"
+        },
+        "CSD U3 Variables Predict Where X": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U3 Variables Predict Where X_2018": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U3 Variables Predict Where X_2019": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U6 tugowar variables 1": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "CSD U6 tugowar variables 1_2018": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "CSD U6 tugowar variables 1_2019": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "New Frozen Project": {
+          "snowflake_dropdown": "Ushbu dropdaun menyudan turli xil qor parchalarini yaratish uchun foydalaning!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Play Lab Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "startGame funksiyasini shu yerda sozlang"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Bu yerda sonni o'zgartirish"
         }
       }
     }

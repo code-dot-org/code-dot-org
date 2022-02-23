@@ -1,10 +1,12 @@
 {
-  "func": "clearTimeout",
+  "key": "clearTimeout",
+  "name": "clearTimeout",
   "category": "Control",
-  "paletteParams": [
-    "__"
+  "category_key": "control",
+  "palette_params": [
+    {
+      "name": "__"
+    }
   ],
-  "params": [
-    "__"
-  ]
+  "syntax": "clearTimeout(__)"
 }

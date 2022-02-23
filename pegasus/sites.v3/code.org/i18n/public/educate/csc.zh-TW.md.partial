@@ -1,0 +1,56 @@
+---
+title: 電腦科學聯繫
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# 電腦科學聯繫
+
+我們的最新課程將學習電腦科學與數學、語言藝術、科學和社會研究等其他學科聯繫起來。 通過電腦科學聯繫，K-12課堂以令人興奮的新方式探索他們的常規科目！
+
+## 通過這些一小時玩程式活動嘗試電腦科學聯繫
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "詩歌藝術", left_description: "表達自我！ 使用代碼創建動畫詩歌。", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "開始", right_heading: "你好世界", right_description: "從四個有趣的主題中選擇，在你創建的世界中為互動式角色編碼。", right_specs: "", right_button_url: "/helloworld", right_button_text: "開始"}}
+{{ clearfix }}
+
+## 模組
+
+電腦科學聯繫模組是一個結構化系列課程，將電腦科學學習集成到核心學科領域，如數學、ELA和科學。 這些模組與各個學科的標準相一致，最終形成一個跨學科項目。
+
+這些資源非常適合有意將電腦科學融入其他學科教案的教師，以及想要鞏固學生其他學科的學習內容的電腦科學教師。
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5小時", box_background_color: "rgb(0,0,0,0.4)", right_heading: "詩歌編碼", right_description: "將課堂上的電腦科學和詩歌與這一系列課程聯繫起來。", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "查看模組" }}
+
+## 開放式項目
+
+通過我們的跨學科項目，繼續在電腦科學與傳統學科之間建立聯繫。 他們只需要1-2個小時的教學時間來完成，適合任何尋開發特定主題項目來適應現有課程的老師。
+
+<em>提示：這些項目需要對電腦科學基礎知識有所瞭解，所以我們建議在開始之前完成你好世界一小時玩程式活動！</em>
+
+{{ csc_module, title: "生態系統", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "科學", duration: "1-2小時", description: "利用基本的編碼技能，學生創建一個互動式生態系統模型，探索不同的動物、植物和有機體如何相互影響。 該模型也適用於地圈、生物圈、水圈和/或大氣層之間的相互作用。", button_text: "瞭解更多", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "生命週期", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "科學", duration: "1-2小時", description: "在這個項目中，從卵到蝌蚪再到青蛙，學生們使用代碼來創建一個科學週期模型 - 就像青蛙的生命週期或能量轉移！", button_text: "瞭解更多", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "角色學習", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2小時", description: "每個行為都有一個反應！ 不，這不是物理學 - 這個項目允許學生使用代碼來構建故事中的場景，展示一個角色的行為如何影響事件鏈。", button_text: "瞭解更多", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "故事寓意", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2小時", description: "在這之間\"從前\"然後\"結尾？\"學生編寫一個互動式應用程式，講述一個故事及其寓意。 學生可以將這一技能應用於任何故事、民間傳說、書籍或寓言。", button_text: "瞭解更多", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## 銜接課程
+
+我們的銜接課程提供一種快速而有趣的方式，在電腦科學與其他學科之間建立聯繫。 這些課程不需要任何電腦科學的先驗知識，因此非常適合任何想要將21世紀的基本學習融入傳統課程或用令人興奮的新方法來激勵學生學習老學科的教師。
+
+
+{{ csc_module, title: "蜜蜂拼寫", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1小時", description: "有趣！ 在這節課中，學生們使用基本的編碼技能來告訴蜜蜂在哪裡鳴叫，以在充滿字母的網格上拼寫單詞。", button_text: "瞭解更多", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "和Laurel一起計數", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "數學", duration: "1小時", description: "這是一次尋寶！ 學生將在進行迴圈編碼時練習計數和加法，以幫助Laurel穿越迷宮網格收集寶石。", button_text: "瞭解更多", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "人工智慧倫理規範", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA或人文學科", duration: "1小時", description: "在研究了人工智慧（AI）潛在的倫理缺陷後，學生們共同開發了一個課程\"人工智慧倫理規範\"資源。", button_text: "瞭解更多", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "數據視覺化", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "數學", duration: "1小時", description: "本節課向學生介紹應用實驗室中的資料視覺化工具以及兩種重要的圖表類型：柱狀圖和長條圖。 在課程中，學生將建立使用這個工具和閱讀資料的技能。", button_text: "瞭解更多", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>完成了電腦科學聯繫活動和/或正在為你的課堂尋找更多選擇？ 請在這裡<a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">分享你的回饋</a>和更多課程的想法！</em>

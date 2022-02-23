@@ -1,6 +1,7 @@
 {
-  "func": "comment",
-  "block": "// Comment",
-  "expansion": "// ",
-  "category": "Functions"
+  "key": "comment",
+  "name": "comment",
+  "category": "Functions",
+  "category_key": "functions",
+  "syntax": "// Comment"
 }

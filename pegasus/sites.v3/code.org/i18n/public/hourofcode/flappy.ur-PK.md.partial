@@ -1,45 +1,45 @@
 ---
-title: Teacher Resources - Make a Flappy Game
+title: اساتذہ کے لیے ذرائع - ایک فلاپی گیم بنائیں
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# ایک فلاپی گیم بنائیں: آور آف کوڈ ٹیوٹوریل
 
 {{ hoc_flappy_video }}
 
 [col-50]
 
-## Teacher Resources
+## اساتذہ کے لیے ذرائع
 
-### Lesson Plans:
+### سبق پلانز:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [ایک فلاپی گیم بنائیں]({{ hoc_flappy_cb_url }})
 
-### Extension Activities:
+### توسیعی سرگرمیاں:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [آور آف کوڈ کے اُس پار](http://code.org/learn/beyond)
+- [کمپیوٹر سائنس کے بنیادی اصول: کورس 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### اساتذہ کے لیے دیگر ذرائع:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [آور آف کوڈ: معلمین کے لیے کیسے کریں گائیڈ](https://hourofcode.com/how-to)
+- [کامیاب معلمین کی بہترین پریکٹس](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- لائیو ایونٹ: [آور آف کوڈ کے لیے ایک معلم کا گائیڈ](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## عمومی جائزہ
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+اپنی خود کی فلاپی برڈ گیم بنانے کے لیے گھسیٹ کر لائیں اور چھوڑ دیں پروگرامنگ کو استعمال کریں، اور اسے مختلف دکھائی دینے کے لیے (فلیپی شارک، فلاپی سانٹا، جو بھی ہو) اپنی مرضی کے مطابق بنائیں۔. ایک کلک میں گیم کو اپنے فون میں شامل کریں۔.
 
-**Recommended Age Range:** 4-104
+**سفارش کردہ عمر کی حد:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**ٹیکنالوجی کے تقاضے:** جدید براؤزرز، اسمارٹ فونز + ٹیبلٹس
 
-<a href="http://studio.code.org/s/flappy/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/flappy/reset"><button>ٹیوٹوریل کو آزمائیں</button></a>
 
 [/col-50]

@@ -1,7 +1,7 @@
 {
-  "func": "listLength",
-  "block": "list.length",
+  "key": "listLength",
+  "name": "listLength",
   "category": "Variables",
-  "noAutocomplete": true,
-  "type": "property"
+  "category_key": "variables",
+  "syntax": "list.length"
 }

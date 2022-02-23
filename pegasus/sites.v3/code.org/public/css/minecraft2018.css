@@ -32,15 +32,25 @@
   height: 314px;
 }
 
+.mc-img-half {
+  width: 478px;
+  max-width: 100%;
+  height: 314px
+}
+
 .mc-h1-second-box {
   margin-top: 30px;
+}
+
+.mc-h1-half-box {
+  margin-top: 8px;
 }
 
 .img-container-wide .mc-h1-second-box {
   margin-top: 100px;
 }
 
-.white-text, .mc-h1-second-box, .mc-tutorial-description, .mc-tutorial-specs {
+.white-text, .mc-h1-second-box, .mc-h1-half-box, .mc-tutorial-description, .mc-tutorial-specs {
   color: white;
 }
 
@@ -106,13 +116,17 @@
   .mc-tutorial-info-wide {
     width: 360px;
   }
+
+  .desktop-margin-right {
+    margin-right: 14px;
+  }
 }
 
 @media screen and (min-width: 0px) and (max-width: 970px) {
   #minecraft-mobile-image {
     background-image: url(/images/fill-520x800/mc/minecraft_teacher_background.jpg);
   }
-  
+
   .tutorial-box {
     margin-bottom: 15px;
     padding-left: 10px;

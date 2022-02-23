@@ -8,17 +8,17 @@ title: Guía para las actividades
   }
 </style>
 
-# Directrices para la creación y envío de tutoriales y lecciones de la Hora del Código™ y la Semana por la Educación en Ciencias de la Computación
+# Instrucciones para crear y enviar tutoriales y lecciones para La Hora del Código™ y la Semana de la Enseñanza en Ciencias de la Computación
 
 Code.org organiza diversas actividades, lecciones y videos de la Hora del Código™ en los sitios web de Code.org, la Hora del Código y CSEdWeek. El listado actualizado está en [hourofcode.com/learn]({{ urls/learn }}).
 
 Code.org organiza diversas actividades, lecciones y videos de la Hora del Código™ en los sitios web de Code.org, la Hora del Código y CSEdWeek. El listado actualizado está en [hourofcode.com/learn]({{ urls/learn }}).
 
-Después de leer las pautas, puede enviar el tutorial a través de nuestra [Página de la Hora del Código ™ de entrega de actividades](https://goo.gl/kNrV3l) Puedes enviar una actividad en cualquier momento; pero la línea final para la inclusión de las mismas es el 1ro de Octubre. (Por ejemplo, cualquier actividad recibida después del 1ro de Octubre {{ campaign_date/year }} no será enlistada para la Hora del Código de {{ campaign_date/year }}.) La fecha límite de envío para solicitar una revisión de calidad [(detalles abajo)](#earlyreview) es el 16 de agosto.</strong> Si tienes preguntas sobre el envío de actividades, por favor contáctanos via support@code.org.
+**Después de leer las normas, puedes presentar tu actividad a través de nuestra [Página de presentación de actividades de La Hora del Código™](https://forms.gle/z8ARSLcJCFdNPVJS8). Puedes enviar una actividad en cualquier momento, pero la fecha límite para su inclusión en cualquier año natural es el 1 de octubre. (Por ejemplo, cualquier actividad recibida después del 1ro de Octubre {{ campaign_date/year }} no será enlistada para la Hora del Código de {{ campaign_date/year }}.) La fecha límite de envío para solicitar una revisión de calidad [(detalles abajo)](#earlyreview) es el 16 de agosto.** Si tienes preguntas sobre el envío de actividades, por favor contáctanos via support@code.org.
 
 Algunos consejos:
 
-1. **Envía más de una actividad**: si has creado actividades para diferentes niveles, diferentes edades u otras categorías, enumeramos tus actividades por separado para que cada docente pueda encontrar lo correcto para su clase. Envia cada tutorial o actividad de forma individual. Dado el número de envíos que hemos tenido en los últimos años, tendremos la oportunidad de revisar **hasta cinco actividades** por miembro. Posteriormente realizaremos nuestro mejor esfuerzo para revisar tantas como nos sea posible antes de que Hora de código comience.
+1. **Envía más de una actividad**: si has creado actividades para diferentes niveles, diferentes edades u otras categorías, enumeramos tus actividades por separado para que cada docente pueda encontrar lo correcto para su clase. Envía cada tutorial o actividad por separado. Teniendo en cuenta el número de solicitudes que hemos visto en los últimos años, tendremos tiempo de revisar **hasta cinco actividades** por persona. Después, nos esforzaremos por revisar el mayor número posible antes de que comience la Hora del Código.
 
 2. **Más allá de las lecciones para principiantes**: además de las lecciones para docentes y estudiantes que aprenden ciencias de la computación por primera vez, ¡incluimos las experiencias de aprendizaje para aulas con conocimientos de ciencias de la computación que quieren ir un poco más allá! ¿Quieres ayudarnos? Envía lecciones para clases que ya han aprendido los conceptos básicos.
 
@@ -36,7 +36,7 @@ Algunos consejos:
 - [Directrices de marca registrada](#design)
 - [Pixel de seguimiento](#tm)
 - [Promoción de tu actividad, la Semana por la Educación en Ciencias de la Computación y la Hora del Código](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Promociona tu actividad, Semana de la Educación en Informática (CSEdWeek) y La Hora del Código](#promote)
 
 <a id="whatsubmit"></a>
 
@@ -105,7 +105,7 @@ Qué necesitas:
 * Nombre de la actividad (no puede incluir "Hora del Código" en el nombre)
 * URL para la actividad
 * Descripciones de la actividad 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+    * Por favor, incluye en la descripción si es principalmente una actividad dirigida por el estudiante o por el profesor. Además, algunas escuelas están interesadas en conocer si las actividades de la Hora del Código abordan los estándares comunes o avanzados de la ciencia. Si la actividad aborda estándares específicos, considera incluir esta información.
 * Niveles de grado recomendados para los usuarios previstos. Puedes consultar \[los estándares K-12 de la Computer Science Teachers’ Association\] (https://k12cs.org/framework-statements-by-grade-band/) para ver los conceptos de las ciencias de la computación adecuados para cada grado. Algunos ejemplos de niveles de grado: 
     * Jardín de infantes - Grado 1 (4 a 6 años)
     * Grados 2-5 (7 a 10 años)
@@ -119,12 +119,12 @@ Qué necesitas:
     * 1 hora solamente
     * 1 hora con curso de seguimiento
     * 2 a 6 horas (pueden ser varias lecciones)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Una lista de adaptaciones de accesibilidad, si su actividad las tiene. Entre ellas se encuentran la compatibilidad con lectores de pantalla, las funciones de conversión de texto a voz, el uso de colores de alto contraste o cualquier otra adaptación realizada para alumnos con discapacidad.
 
 #### Cosas adicionales que necesitarás cuando envíes planes de lecciones
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service. 
-* Enlace a tu plan de lecciones. Puede ser una página web, un enlace a dropbox, google drive u otro servicio similar. Nothing?)
+* Enlace a tu plan de estudios. Puede ser una página web, un enlace de Dropbox, Google Drive o un servicio similar. 
+* ¿Qué software y/o hardware necesitará el profesor para realizar su plan de estudios (Scratch? ¿Robots? ¿Ninguno?)
 
 #### Otras cosas que necesitarás cuando envíes actividades en línea
 
@@ -139,14 +139,14 @@ Qué necesitas:
         * Android Chrome (optimizado para dispositivos móviles)
     * Sin conexión: especificar la plataforma para el código nativo (Mac, Win, iOS, Android, xBox, otra)
     * Sin conexión
-* Captura de pantalla o imagen de marketing de la actividad de la Hora del Código. Envía al menos una imagen con dimensiones 4:3. Debe tener al menos 520 por 390 pixeles. Si no se proporciona una imagen adecuada, podremos tomar una captura de pantalla de tu tutorial O no incluirlo en la lista. Todas las imágenes deben enviarse como un enlace a un archivo .jpg, .jpeg o .png. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
+* Captura de pantalla o imagen de marketing de la actividad de la Hora del Código. Envía al menos una imagen con dimensiones 4:3. Debe tener al menos 520 por 390 pixeles. Si no se proporciona una imagen adecuada, podremos tomar una captura de pantalla de tu tutorial O no incluirlo en la lista. Todas las imágenes deben enviarse como un enlace a un archivo .jpg, .jpeg o .png. Todas las imágenes deben ser enviadas como un enlace URL a un .jpg, .jpeg o .png.
 * Para poder realizar un seguimiento más preciso de la participación, los tutoriales de la Hora del Código de los socios deben incluir imágenes de seguimiento de 1 pixel en la primera página. Coloca una imagen de pixel inicial en la página de inicio.
 * Una vez que finalizan tu actividad, los usuarios serán dirigidos a [code.org/api/hour/finish](https://code.org/api/hour/finish), donde podrán: 
     * Decir en las redes sociales que han completado la Hora del Código
     * Recibir un certificado que dice que completaron la Hora del Código
     * Ver tablas con los países y ciudades que tienen las mayores tasas de participación en las actividades de la Hora del Código
     * Para los usuarios que pasan una hora en tu actividad y no la completan, incluye un botón que diga "Terminé mi Hora del Código" y que también lleve a <http://code.org/api/hour/finish>.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
+* (Opcional) Podemos hacer un seguimiento con un enlace a una encuesta/formulario en línea solicitando un informe de las siguientes métricas de actividad: 
     * Para actividades en línea (especialmente aplicaciones para smartphones y tablets): 
         * Número de usuarios
         * Cuántos completaron la tarea
@@ -293,4 +293,4 @@ IMG SRC = <http://code.org/api/hour/begin_appinventor.png>
 
 [**Volver al principio**](#top)
 
-{{ signup_button }}
+{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

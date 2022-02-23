@@ -4,7 +4,11 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "exclude_csf_column_in_legend": true,
+      "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
       "student_detail_progress_view": true,
       "teacher_resources": [
         [
@@ -24,19 +28,16 @@
           "https://curriculum.code.org/csd-18/unit1/standards/"
         ]
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2018",
-      "is_stable": true,
-      "project_sharing": true,
-      "curriculum_umbrella": "CSD",
-      "family_name": "csd1",
-      "hideable_lessons": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csd1",
-    "serialized_at": "2021-08-03 22:47:31 UTC",
+    "serialized_at": "2021-11-22 17:07:48 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd1-2018"
     }
@@ -217,16 +218,259 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "07c990d5-b301-4bf6-b84c-9ffeee7ef887",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07c990d5-b301-4bf6-b84c-9ffeee7ef887",
+        "lesson.key": "CS Discoveries Pre-survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csd1-2018"
+      }
+    },
+    {
+      "key": "750880fd-7e0b-4edf-83e0-85f116036b05",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "750880fd-7e0b-4edf-83e0-85f116036b05",
+        "lesson.key": "Intro to Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2018"
+      }
+    },
+    {
+      "key": "c4ce11be-ca4e-44ef-a797-f8eb1a43919a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c4ce11be-ca4e-44ef-a797-f8eb1a43919a",
+        "lesson.key": "The Problem Solving Process",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2018"
+      }
+    },
+    {
+      "key": "49635379-e06b-4ed5-a539-6f20958aaa44",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "49635379-e06b-4ed5-a539-6f20958aaa44",
+        "lesson.key": "Exploring Problem Solving",
+        "lesson_group.key": "csd1_1",
+        "script.name": "csd1-2018"
+      }
+    },
+    {
+      "key": "f8025a3d-f72e-4645-9e2e-9d9351656166",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f8025a3d-f72e-4645-9e2e-9d9351656166",
+        "lesson.key": "What is a Computer?",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2018"
+      }
+    },
+    {
+      "key": "dd98ab38-28de-4e39-bb70-8d6db60154ab",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd98ab38-28de-4e39-bb70-8d6db60154ab",
+        "lesson.key": "Input and Output",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2018"
+      }
+    },
+    {
+      "key": "557c53e9-8666-450e-849e-8e80cb104642",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "557c53e9-8666-450e-849e-8e80cb104642",
+        "lesson.key": "Processing",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2018"
+      }
+    },
+    {
+      "key": "ccc80ca4-b87a-4af2-989c-e986024c6c52",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ccc80ca4-b87a-4af2-989c-e986024c6c52",
+        "lesson.key": "Apps and Storage",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2018"
+      }
+    },
+    {
+      "key": "c9e75767-bd6f-409e-b3b4-a81b39f673b6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9e75767-bd6f-409e-b3b4-a81b39f673b6",
+        "lesson.key": "Project - Propose an App",
+        "lesson_group.key": "csd1_2",
+        "script.name": "csd1-2018"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "ecb1ceaa-a2c6-4aab-ac44-f547af41ade3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ecb1ceaa-a2c6-4aab-ac44-f547af41ade3",
+        "lesson_activity.key": "07c990d5-b301-4bf6-b84c-9ffeee7ef887"
+      }
+    },
+    {
+      "key": "9efcf40a-96ec-411f-a949-f7fe6c1625d2",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9efcf40a-96ec-411f-a949-f7fe6c1625d2",
+        "lesson_activity.key": "750880fd-7e0b-4edf-83e0-85f116036b05"
+      }
+    },
+    {
+      "key": "4833dc04-10ed-4ef8-9a5d-7b4cccd543dc",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "4833dc04-10ed-4ef8-9a5d-7b4cccd543dc",
+        "lesson_activity.key": "c4ce11be-ca4e-44ef-a797-f8eb1a43919a"
+      }
+    },
+    {
+      "key": "263c3f1e-aef0-426b-8156-f63c02ad2fec",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "263c3f1e-aef0-426b-8156-f63c02ad2fec",
+        "lesson_activity.key": "49635379-e06b-4ed5-a539-6f20958aaa44"
+      }
+    },
+    {
+      "key": "bcb20113-8db3-41fd-8c84-9f89183d40c6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "bcb20113-8db3-41fd-8c84-9f89183d40c6",
+        "lesson_activity.key": "f8025a3d-f72e-4645-9e2e-9d9351656166"
+      }
+    },
+    {
+      "key": "a4ef1044-88f1-4275-9e38-d5cfdbae11c6",
+      "position": 2,
+      "properties": {
+        "name": "Video: What Makes a Computer, a Computer?",
+        "progression_name": "Video: What Makes a Computer, a Computer?"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4ef1044-88f1-4275-9e38-d5cfdbae11c6",
+        "lesson_activity.key": "f8025a3d-f72e-4645-9e2e-9d9351656166"
+      }
+    },
+    {
+      "key": "d54996dd-6f8f-4988-b7c6-523f4f4e04a0",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "d54996dd-6f8f-4988-b7c6-523f4f4e04a0",
+        "lesson_activity.key": "dd98ab38-28de-4e39-bb70-8d6db60154ab"
+      }
+    },
+    {
+      "key": "24d93d62-4797-475e-ba96-f89c1a4da2f5",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "24d93d62-4797-475e-ba96-f89c1a4da2f5",
+        "lesson_activity.key": "557c53e9-8666-450e-849e-8e80cb104642"
+      }
+    },
+    {
+      "key": "830da5c9-473c-4d57-a398-b5855090a18c",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "830da5c9-473c-4d57-a398-b5855090a18c",
+        "lesson_activity.key": "ccc80ca4-b87a-4af2-989c-e986024c6c52"
+      }
+    },
+    {
+      "key": "26d8a252-c82a-4fa5-a3cc-bc6542f4eef0",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "26d8a252-c82a-4fa5-a3cc-bc6542f4eef0",
+        "lesson_activity.key": "c9e75767-bd6f-409e-b3b4-a81b39f673b6"
+      }
+    },
+    {
+      "key": "1ae21f40-f50a-43a6-9a5d-9418ce1f461d",
+      "position": 2,
+      "properties": {
+        "name": "Reflection",
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ae21f40-f50a-43a6-9a5d-9418ce1f461d",
+        "lesson_activity.key": "c9e75767-bd6f-409e-b3b4-a81b39f673b6"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -240,7 +484,8 @@
         ],
         "lesson.key": "CS Discoveries Pre-survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "ecb1ceaa-a2c6-4aab-ac44-f547af41ade3"
       },
       "level_keys": [
         "csd-pre-survey-2017-levelgroup_2018"
@@ -249,7 +494,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -264,7 +509,8 @@
         ],
         "lesson.key": "Intro to Problem Solving",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "9efcf40a-96ec-411f-a949-f7fe6c1625d2"
       },
       "level_keys": [
         "CSD U1L01 TFMD_2018"
@@ -273,7 +519,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -288,7 +534,8 @@
         ],
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "4833dc04-10ed-4ef8-9a5d-7b4cccd543dc"
       },
       "level_keys": [
         "CSD U1L02 TFMD_2018"
@@ -297,7 +544,7 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -312,7 +559,8 @@
         ],
         "lesson.key": "Exploring Problem Solving",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "263c3f1e-aef0-426b-8156-f63c02ad2fec"
       },
       "level_keys": [
         "CSD U1L03 TFMD_2018"
@@ -321,7 +569,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -336,7 +584,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "bcb20113-8db3-41fd-8c84-9f89183d40c6"
       },
       "level_keys": [
         "CSD U1L04 TFMD_2018"
@@ -345,7 +594,7 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -360,7 +609,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "a4ef1044-88f1-4275-9e38-d5cfdbae11c6"
       },
       "level_keys": [
         "CSD What Makes a Computer a Computer Video_2018"
@@ -369,7 +619,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -384,7 +634,8 @@
         ],
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "d54996dd-6f8f-4988-b7c6-523f4f4e04a0"
       },
       "level_keys": [
         "CSD U1L05 TFMD_2018"
@@ -393,7 +644,7 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -408,7 +659,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "24d93d62-4797-475e-ba96-f89c1a4da2f5"
       },
       "level_keys": [
         "CSD U1L06 TFMD_2018"
@@ -417,7 +669,7 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -432,7 +684,8 @@
         ],
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "830da5c9-473c-4d57-a398-b5855090a18c"
       },
       "level_keys": [
         "CSD U1L07 TFMD_2018"
@@ -441,7 +694,7 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -456,7 +709,8 @@
         ],
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "26d8a252-c82a-4fa5-a3cc-bc6542f4eef0"
       },
       "level_keys": [
         "CSD U1L09 TFMD_2018"
@@ -465,7 +719,7 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -480,7 +734,8 @@
         ],
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "1ae21f40-f50a-43a6-9a5d-9418ce1f461d"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U1Ch2_2018"
@@ -496,7 +751,8 @@
         ],
         "lesson.key": "CS Discoveries Pre-survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "ecb1ceaa-a2c6-4aab-ac44-f547af41ade3"
       }
     },
     {
@@ -507,7 +763,8 @@
         ],
         "lesson.key": "Intro to Problem Solving",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "9efcf40a-96ec-411f-a949-f7fe6c1625d2"
       }
     },
     {
@@ -518,7 +775,8 @@
         ],
         "lesson.key": "The Problem Solving Process",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "4833dc04-10ed-4ef8-9a5d-7b4cccd543dc"
       }
     },
     {
@@ -529,7 +787,8 @@
         ],
         "lesson.key": "Exploring Problem Solving",
         "lesson_group.key": "csd1_1",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "263c3f1e-aef0-426b-8156-f63c02ad2fec"
       }
     },
     {
@@ -540,7 +799,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "bcb20113-8db3-41fd-8c84-9f89183d40c6"
       }
     },
     {
@@ -551,7 +811,8 @@
         ],
         "lesson.key": "What is a Computer?",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "a4ef1044-88f1-4275-9e38-d5cfdbae11c6"
       }
     },
     {
@@ -562,7 +823,8 @@
         ],
         "lesson.key": "Input and Output",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "d54996dd-6f8f-4988-b7c6-523f4f4e04a0"
       }
     },
     {
@@ -573,7 +835,8 @@
         ],
         "lesson.key": "Processing",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "24d93d62-4797-475e-ba96-f89c1a4da2f5"
       }
     },
     {
@@ -584,7 +847,8 @@
         ],
         "lesson.key": "Apps and Storage",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "830da5c9-473c-4d57-a398-b5855090a18c"
       }
     },
     {
@@ -595,7 +859,8 @@
         ],
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "26d8a252-c82a-4fa5-a3cc-bc6542f4eef0"
       }
     },
     {
@@ -606,7 +871,8 @@
         ],
         "lesson.key": "Project - Propose an App",
         "lesson_group.key": "csd1_2",
-        "script.name": "csd1-2018"
+        "script.name": "csd1-2018",
+        "activity_section.key": "1ae21f40-f50a-43a6-9a5d-9418ce1f461d"
       }
     }
   ],

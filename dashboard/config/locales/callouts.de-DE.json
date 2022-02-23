@@ -517,7 +517,8 @@
         },
         "New Artist Project": {
           "New Artist Project_callout2": "Drücke \"Ausführen\" um dein Programm zu speichern und auszuführen",
-          "sign_in_to_save_project": "Möchtest du später auf dein Projekt zugreifen? Melde dich an, um dieses Projekt in deinem Konto zu speichern!"
+          "sign_in_to_save_project": "Möchtest du später auf dein Projekt zugreifen? Melde dich an, um dieses Projekt in deinem Konto zu speichern!",
+          "New Artist Project_callout1": "Klicke auf die Kategorien, um die Bausteine in deinem Werkzeugkasten zu sehen! Ziehe Bausteine in den Arbeitsbereich um sie zu deinem Programm hinzuzufügen"
         },
         "New Frozen Project": {
           "snowflake_dropdown": "Verwende dieses Dropdown-Menü, um verschiedene Schneeflocken zu erstellen!"
@@ -1894,6 +1895,435 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Ziehe Bausteine aus der Toolbox in Ihren Arbeitsbereich."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Neuer Block!",
+          "hello_world_new_block": "Neuer Baustein!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Neuer Block!",
+          "hello_world_new_block": "Neuer Block!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Neuer Block!",
+          "hello_world_new_block": "Neuer Block!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Neuer Block!",
+          "hello_world_new_block": "Neuer Block!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Neuer Block!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Neuer Block!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Neuer Block!",
+          "poetry_foreground": "Neuer Block!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Neuer Block!",
+          "poetry_multiple_sprites": "Neuer Block!",
+          "poetry_new_block": "Neuer Block!",
+          "poetry_selector": "Wähle irgendein Gedicht aus oder gib dein eigenes Gedicht ein!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Neuer Block!",
+          "poetry_music": "Neuer Block!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Neuer Block!",
+          "poetry_sprite_stops": "Neuer Block!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Neuer Block!",
+          "poetry_remove_sprite": "Neuer Block!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Klicke hier, um neue Kostüme zu deinem Projekt hinzuzufügen!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Klicke hier, um neue Kostüme zu deinem Projekt hinzuzufügen!"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Du kannst dein Programm hier verlangsamen."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Versuche, deinen Code Block für Block durchzugehen."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Drücke zuerst die Run-Taste!",
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Drücke zuerst die Run-Taste!",
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Drücke zuerst die Run-Taste!",
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Drücke zuerst die Run-Taste!",
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Versuche, „wenn“ in „während“ zu ändern."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Es gibt neue Blöcke!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Verwende den neuen Ereignisblock, den du hier findest."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Dieser Block befindet sich in der falschen Reihenfolge."
+        },
+        "courseF_events_time": {
+          "events_category": "Klicke hier, um die Kategorie Ereignisse zu öffnen."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Untersuche den nachfolgenden Code unter diesem Punkt."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Klicke hier, um die Kategorie Verhaltensweisen zu öffnen."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Klicke hier, um die Kategorie Sprites zu öffnen."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Klicke hier, um die Kategorie Standorte zu öffnen."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Hier findest du einen neuen Block."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Hier findest du einen neuen Block!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Hat sich die Farbe des Hintergrunds geändert, als du die Frage beantwortet hast? Wenn ja, drücke auf \"Fertigstellen\". Wenn nicht, drücke 'Reset', ändere deinen Code und drücke erneut 'Run'."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Bist du fertig? Wenn ja, drücke auf \"Fertigstellen\". Wenn nicht, drücke 'Zurücksetzen', ändere deinen Code und drücke erneut 'Ausführen'."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Hier findest du zwei neue Blöcke!",
+          "text_answer_finish": "Wurde ein Titelbildschirm für 3 Sekunden angezeigt? Wenn ja, drücke auf \"Beenden\". Wenn nicht, drücke 'Zurücksetzen', ändere deinen Code und drücke erneut 'Ausführen'."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Hier findest du neue Blöcke!"
+        },
+        "courseF_text_events": {
+          "events_category": "Klicke hier, um die Kategorie Ereignisse zu öffnen."
+        },
+        "courseF_text_print": {
+          "print_block": "Hier findest du den Block \"Drucken\"!",
+          "text_print_finish": "Wurde deine Nachricht oben gedruckt? Wenn ja, drücke auf \"Fertigstellen\". Wenn nicht, drücke 'Zurücksetzen', ändere deinen Code und drücke erneut 'Ausführen'."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Hier findest du den Block \"Aufforderung\"!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Untersuche den nachfolgenden Code unter diesem Punkt."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Lege mit diesem Baustein einen neuen Hintergrund fest."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Verwende diesen Baustein mit einem der folgenden Verhaltensweisen."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Klicke hier, um den Code auszuführen."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Füge diesen Baustein in deinem Arbeitsbereich hinzu."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Klicke hier, um Kostüme zu deinem Projekt hinzuzufügen."
+        },
+        "helloworld_animals_location": {
+          "pin": "Pin"
+        },
+        "helloworld_animals_multi": {
+          "pin": "Pin"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Verwende diesen Baustein, um Sprites sprechen zu lassen.",
+          "hello_world_make_sprite": "Verwende diesen Baustein, um Sprites zu erstellen."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Lege mit diesem Baustein einen neuen Hintergrund fest."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Verwende diesen Baustein mit einem der folgenden Verhaltensweisen."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Klicke hier, um den Code auszuführen."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Füge diesen Baustein in deinem Arbeitsbereich hinzu."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Klicke hier, um Kostüme zu deinem Projekt hinzuzufügen."
+        },
+        "helloworld_emoji_location": {
+          "pin": "Pin"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "Pin"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Verwende diesen Baustein, um Sprites sprechen zu lassen.",
+          "hello_world_make_sprite": "Verwende diesen Baustein, um Sprites zu erstellen."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Lege mit diesem Baustein einen neuen Hintergrund fest."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Verwende diesen Baustein mit einem der folgenden Verhaltensweisen."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Klicke hier, um den Code auszuführen."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Füge diesen Baustein in deinem Arbeitsbereich hinzu."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Klicke hier, um Kostüme zu deinem Projekt hinzuzufügen."
+        },
+        "helloworld_food_location": {
+          "pin": "Pin"
+        },
+        "helloworld_food_multi": {
+          "pin": "Pin"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Verwende diesen Baustein, um Sprites sprechen zu lassen.",
+          "hello_world_make_sprite": "Verwende diesen Baustein, um Sprites zu erstellen."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Lege mit diesem Baustein einen neuen Hintergrund fest."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Verwende diesen Baustein mit einem der folgenden Verhaltensweisen."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Klicke hier, um den Code auszuführen."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Füge diesen Baustein in deinem Arbeitsbereich hinzu."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Klicke hier, um Kostüme zu deinem Projekt hinzuzufügen."
+        },
+        "helloworld_retro_location": {
+          "pin": "Pin"
+        },
+        "helloworld_retro_multi": {
+          "pin": "Pin"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Verwende diesen Baustein, um Sprites sprechen zu lassen.",
+          "hello_world_make_sprite": "Verwende diesen Baustein, um Sprites zu erstellen."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Die Code-Bausteine findest du hier. ",
+          "pause_button": "Überprüfe deine Animation mit dieser Schaltfläche. ",
+          "run_button": "Überprüfe deine Animation mit dieser Schaltfläche. "
+        },
+        "CSD U3 Boolean Predict_2021": {
+          "": "Dieses Programm wird hier ein Ergebnis anzeigen"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
+          "": " "
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Hier klicken um das Raster anzuzeigen."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Ändere die Zahl hier"
+        },
+        "CSD U3 abstraction accelerateX_2021": {
+          "CSD_U3_L11_S6_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 abstraction accelerateY_2021": {
+          "CSD_U3_L11_S7_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 abstraction jump_2021": {
+          "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
+        },
+        "CSD U3 abstraction looping_2021": {
+          "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
+        },
+        "CSD U3 abstraction rotation control_2021": {
+          "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
+        },
+        "CSD U3 abstraction tumbleweed_2021": {
+          "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
+        },
+        "CSD U3 abstraction velocityX if-statements_2021": {
+          "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
+        },
+        "CSD U3 abstraction velocityX_2021": {
+          "CSD_U3_L11_S4_C1": "Füge hier deinen Block hinzu."
+        },
+        "CSD U3 abstraction velocityY control_2021": {
+          "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
+        },
+        "CSD U3 abstraction velocityY_2021": {
+          "CSD_U3_L11_S5_C1": "Füge hier deinen Block hinzu."
+        },
+        "CSD U3 collisions isTouching intro_2021": {
+          "CSD_U3_L12_S2_C1": "Füge hier deinen Block hinzu."
+        },
+        "CSD U3 collisions types2_2021": {
+          "CSD_U3_L13_S6_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 collisions types3_2021": {
+          "CSD_U3_L13_S6_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 collisions types4_2021": {
+          "CSD_U3_L13_S6_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 collisions types_2021": {
+          "CSD_U3_L13_S6_C1": "Füge hier deinen Code hinzu."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 game backgrounds_2021": {
+          "CSD_U3_L18_S4_C2": "Funktionensbereich"
+        },
+        "CSD U3 game variables_2021": {
+          "CSD_U3_S18_L3_C1": "Dieser Baustein erstellt eine neue Variable.",
+          "CSD_U3_L18_S3_C2": "Variablenbereich"
+        },
+        "CSD U3 platform scoreboard_2021": {
+          "CSD_U3_L17_S7_C1": "Die Punktzahl wird hier ausgegeben."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Hier ist der Code",
+          "CSD_U3_rect_c2": "Ziehe diesen Baustein in den Codebereich."
+        },
+        "CSD U6 getProperty input_2021": {
+          "CSD_U6L06P03": "Füge hier deinen Block hinzu."
+        },
+        "CSD games sidescroll background_2021": {
+          "CSD_U3_L11_S17_C1": "Sieh dir diese if-Anweisung an"
+        },
+        "CSD games velocity bee_2021": {
+          "CSD_U3_L11_S5_C1": "Schaue dir diesen Code an."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Ändere die Zahl hier"
         }
       }
     }

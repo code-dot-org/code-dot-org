@@ -90,6 +90,10 @@ ka:
         options:
           UNIT:
             '"seconds"': წამები
+          OP:
+            '">"': ">"
+            '"<"': "<"
+            '"="': "="
       Dancelab_jumpTo:
         options:
           LOCATION:
@@ -183,6 +187,26 @@ ka:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           LAYOUT:
             '"diamond"': ბრილიანტი
             '"circle"': წრე
@@ -342,11 +366,22 @@ ka:
           STRING:
             '"diamond"': ბრილიანტი
             '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
             '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"2"': '2'
+            '"3"': '3'
             '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
             '"8"': '8'
+            '"9"': '9'
       Dancelab_whenKey:
         options:
           KEY:
@@ -357,13 +392,34 @@ ka:
             '"space"': კოსმოსი
             '"enter"': შეიყვანეთ
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
             '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
             '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
+            '"0"': '0'
+            '"2"': '2'
+            '"3"': '3'
             '"4"': '4'
+            '"5"': '5'
+            '"6"': '6'
+            '"7"': '7'
             '"8"': '8'
+            '"9"': '9'
       Dancelab_whenPeak:
         options:
           RANGE:
@@ -410,6 +466,19 @@ ka:
         options:
           UNIT:
             '"seconds"': წამები
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -419,11 +488,25 @@ ka:
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
             '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
             '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
       gamelab_keyPressed:
         options:
           CONDITION:
@@ -436,11 +519,25 @@ ka:
             '"right"': მარჯვნივ
             '"space"': კოსმოსი
             '"a"': a
+            '"b"': b
+            '"c"': c
             '"d"': d
+            '"e"': e
+            '"f"': f
+            '"g"': g
+            '"h"': h
+            '"j"': j
+            '"k"': k
+            '"l"': l
+            '"m"': m
             '"s"': s
+            '"t"': t
+            '"u"': u
+            '"v"': v
             '"w"': w
             '"x"': x
             '"y"': 'y'
+            '"z"': z
       gamelab_locationModifier:
         options:
           DIRECTION:
@@ -479,6 +576,11 @@ ka:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": ხრაშუნი
+            "'sound://category_animals/cat.mp3'": კატა
+            "'sound://category_animals/cow.mp3'": ძროხა
+            "'sound://category_animals/sheep.mp3'": ცხვარი
+            "'sound://category_animals/chicken.mp3'": ქათამი
+            "'sound://category_animals/dog.mp3'": ძაღლი
             "'sound://category_digital/jump_7.mp3'": ახტომა
       gamelab_pointInDirection:
         options:
@@ -537,6 +639,14 @@ ka:
             '"scale"': ზომა
             '"width"': სიგრძე
             '"height"': სიმაღლე
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': ნელი
+            '5': ჩვეულებრივი
+            '7': ჩქარი
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -757,10 +867,52 @@ ka:
             '"down"': ქვედა ისარი
             '"left"': მარცხენა ისარი
             '"right"': მარჯვენა ისარი
-      PoemBot_setBackgroundEffect:
+      Poetry_addFrame:
         options:
+          BRUSH:
+            '"hearts"': გულები
+            '"rainbow"': ცისარტყელა
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': წვიმა
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': ღამე
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': ნელი
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': ახტომა
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': ღრუბლიანი
+            '"hearts"': გულები
+            '"rain"': წვიმა
           PALETTE:
             '"rainbow"': ცისარტყელა
+            '"winter"': ზამთარი
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': გულები
+            '"rain"': წვიმა
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: წინ გადაადგილება
       RyanLab_turnLeft:
@@ -817,23 +969,56 @@ ka:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          თუ გზა არის {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": წინ
       craft_ifStandingOn:
+        text: |-
+          თუ დგახარ {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": ლურჯი მარჯანი
+            "'redCoralBlock'": წითელი მარჯანი
             "'sand'": ქვიშა
+            "'wool_blue'": ღრმა წყალი
             "'planksOak'": მუხის ფიცრები
+            "'seaLantern'": ზღვის სანათი
       craft_ifStandingOnLimit:
+        text: |-
+          თუ დგახარ {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": ქვიშა
+            "'seaLantern'": ზღვის სანათი
       craft_moveForward:
         text: წინ გადაადგილება
+      craft_placeBlock:
+        text: მოათავსე {blockType}
+        options:
+          blockType:
+            '"seaLantern"': ზღვის სანათი
+      craft_placePrismarine:
+        text: პრიზმარინის მოთავსება
       craft_placeTorch:
         text: ჩირაღდნის დაყენება
+      craft_repeatUntilConduit:
+        text: |-
+          გაიმეორე არხის დასრულებამდე
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          მიზნამდე გაიმეორე
+          {STATEMENT}
+      craft_spawnEntity:
+        text: შექმენი {ENTITY}
       craft_turn:
+        text: მობრუნდი {DIR}
         options:
           DIR:
             right: მარჯვნივ ↻
+            left: მარცხნივ ↺

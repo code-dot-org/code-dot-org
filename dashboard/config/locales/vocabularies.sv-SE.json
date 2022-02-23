@@ -2,6 +2,99 @@
   "sv-SE": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Felsökning"
+        },
+        "function/hero/unversioned": {
+          "word": "Funktion"
+        },
+        "code/poem-art/2021": {
+          "word": "Kod",
+          "definition": "(v) att skriva instruktioner för en dator."
+        },
+        "line/poem-art/2021": {
+          "word": "Rad",
+          "definition": "(poesi) – en underavdelning av en dikt ordnad i en rad som slutar i högermarginalen."
+        },
+        "mood/poem-art/2021": {
+          "word": "Stämning",
+          "definition": "uttrycket av en känsla, atmosfär eller sinnesrörelse i konst eller skrift."
+        },
+        "program/poem-art/2021": {
+          "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Felsökning"
+        },
+        "code/artist/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Felsökning"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Villkor"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "loopar"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Felsökning"
+        },
+        "code/sports/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Felsökning"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Felsökning"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kod",
+          "definition": "(v) att skriva instruktioner för en dator."
+        },
+        "program/poem-art/unversioned": {
+          "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Stämning",
+          "definition": "uttrycket av en känsla, atmosfär eller sinnesrörelse i konst eller skrift."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Rad",
+          "definition": "(poesi) – en underavdelning av en dikt ordnad i en rad som slutar i högermarginalen."
+        },
         "behavior/coursef/2021": {
           "word": "Beteende"
         },
@@ -10,6 +103,9 @@
         },
         "internet/coursef/2021": {
           "word": "Internet"
+        },
+        "url/coursef/2021": {
+          "word": "URL"
         },
         "define/coursef/2021": {
           "word": "Definiera"
@@ -76,6 +172,24 @@
         },
         "define/coursee/2021": {
           "word": "Definiera"
+        },
+        "debugging/csd/2021": {
+          "word": "Felsökning"
+        },
+        "variable/csd/2021": {
+          "word": "Variabel"
+        },
+        "conditionals/csd/2021": {
+          "word": "Villkor"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraktion"
+        },
+        "function/csd/2021": {
+          "word": "Funktion"
+        },
+        "copyright/csd/2021": {
+          "word": "Copyright"
         }
       }
     }

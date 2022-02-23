@@ -10,7 +10,7 @@
 #  level_num             :string(255)
 #  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
-#  properties            :text(16777215)
+#  properties            :text(4294967295)
 #  type                  :string(255)
 #  md5                   :string(255)
 #  published             :boolean          default(FALSE), not null
@@ -81,6 +81,10 @@ class Flappy < Blockly
         moving: false,
       }
     JS
+  end
+
+  def uses_google_blockly?
+    true
   end
 
   def toolbox(type)

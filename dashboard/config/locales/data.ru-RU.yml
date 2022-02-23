@@ -850,8 +850,56 @@ ru:
           Макклейн'
         codebreak_e12: 'Code Break 12.0: железо с Алоэ Блэсс, Брет Тейлор и Паола
           Мехиа'
+        csf21pilot_events: 'Лаборатория Спроайтов: спрайты в действии'
+        csf21pilot_prompts: 'Лаборатория спрайтов: текст и подсказки'
+        outbreak_mike: CodeBytes Эпизод 3 с Майком - Симулятор вспышки
+        poembot-pilot-prompts: Боты Haiku - подсказка с выбором [PILOT]
+        poembot-pilot-text: Боты Haiku - Сохранение текста [PILOT]
+        poembot-pilot-haiku: Боты Haiku - Покажите ваших Haiku [PILOT]
+        csd_ml_intro_to_ai_lab: Введение в AI лаборатории
+        csd_ml_import_model: Импортирование в AI модели
+        csf_lots_of_sprites: 'Лаборатория Спрайтов: Много Спрайтов'
         playlab_2021: Лаборатория игр. Введение
         playlab_2021_reader: Лаборатория игр. Введение
+        csp_defining_calling_functions: Определение и вызов функций
+        csp_tutorial_datatab: Вкладка "Данные" в App Lab
+        csp_tutorial_libraries: Библиотеки в App Lab
+        PL-Video-21: Добро пожаловать в профессиональное обучение Code.org!
+        csp_tutorial_datavis1: Визуализатор данных в App Lab - Часть 1
+        csp_tutorial_datavis2: Визуализатор данных в App Lab - Часть 2
+        csd_ml_intro_ai_lab_july2021: Введение в AI лаборатории
+        csd_ml_training_testing_ai_lan: Тренировка и Тесты в AI Lab
+        csd_ml_model_cards_july2021: Карточки моделей в AI Lab
+        Gettting_Started_Progress: Прогресс, Обратная связь и оценка
+        Gettting_Started_ClassSection: Создание Классной Сессии
+        Gettting_Started_StudentExperience: Опыт студента
+        Getting_Started_BasicFeatures: Базовые возможности Code.org
+        PL_overview_CSD: Какие есть открытия в области информатики?
+        PL_CSD_TeacherTips_Advise: Подсказки учителя - Напутствие новым Учителям
+        PL_CSD_TeacherTips_IntroToCSD: Подсказки учителя - Введение в открытия CS
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Подсказки Учителя - Процесс Решения
+          Проблем
+        PL_CSD_TeacherTips_PairProgramming: Подсказки Учителя - Парное Программирование
+        PL_CSD_TeacherTips_Debugging: Подсказки учителя - Дебаггинг
+        PL_CSD_TeacherTips_LeadLearner: Подсказки учителя - Ведущий Ученик
+        poembot-playtest-intro: Игровой тест PoemBot - введение
+        poembot-playtest-sprites: Игровой тест PoemBot - спрайты
+        poembot-playtest-events: Игровой тест PoemBot - события
+        hello_world_intro: Привет, мир - Добро пожаловать в Sprite Lab
+        hello_world_events: Привет, мир - Программирование с событиями
+        hello_world_congrats: Привет, мир - Делайте, что вам хочется
+        rough_poemart_intro: v1 Poem Art Введение
+        rough_poemart_events: v1 Poem Art События
+        rough_poemart_imagery: v1 Poem Art Изображение
+        rough_poemart_congrats: v1 Poem Art Поздравления
+        poetry_module_variables: Переменные - Кодирование и поэзия
+        poetry_module_textandvariables: Текст и переменные - Кодирование и поэзия
+        poetry_module_planningapp: Планирование приложения Poem Generator - Кодирование
+          и поэзия
+        poetry_module_multichoiceprompts: Подсказки с несколькими вариантами - Кодирование
+          и поэзия
+        poetry_module_conditionals: Условные операторы - Кодирование и поэзия
+        poemart_intro: Введение в поэтическое искусство
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

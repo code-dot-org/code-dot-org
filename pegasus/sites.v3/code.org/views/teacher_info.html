@@ -1,0 +1,49 @@
+<style>
+  .teacher-info-container {
+    background-color: #949CA2;
+    color: white;
+    padding: 10px 20px 20px 0px;
+    border-radius: 2px;
+  }
+  .teacher-info-inner-container {
+    padding: 0px 0px 0px 20px;
+  }
+  .teacher-info-tag {
+    background-color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #5a5f62;
+    border-radius: 0px 2px 2px 0px;
+  }
+
+  html[dir= 'rtl'] .teacher-info-container {
+    padding: 10px 0px 20px 20px;
+  }
+  html[dir= 'rtl'] .teacher-info-inner-container {
+    padding: 0px 20px 0px 0px;
+  }
+  html[dir= 'rtl'] .teacher-info-tag {
+    border-radius: 2px 0px 0px 2px;
+  }
+</style>
+<div style="width: 100%; padding: 10px; margin-top: 40px">
+  <div class="teacher-info-container">
+    <div class="teacher-info-tag">
+      <i class="fa fa-fw fa-graduation-cap"/>
+      %heading%
+    </div>
+    <div class="teacher-info-inner-container">
+      <div style="font-size: 24px; line-height: 1.5em; margin-top: 10px;">
+        %title%
+      </div>
+      <div>
+        %description%
+      </div>
+      <a href="%url%" target="_self">
+        <button>
+          %button_text%
+        </button>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+{
+  "key": "group.isTouching",
+  "name": "group.isTouching",
+  "category": "Groups",
+  "category_key": "groups",
+  "palette_params": [
+    {
+      "name": "target"
+    }
+  ],
+  "syntax": "group.isTouching(target)"
+}

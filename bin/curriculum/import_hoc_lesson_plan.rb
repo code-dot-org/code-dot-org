@@ -102,20 +102,6 @@ def main(options)
     cb_lesson_json = fetch(url)
     cb_lesson = JSON.parse(cb_lesson_json)
 
-    # has_lesson_plan must be enabled in order for curriculum writers to edit
-    # the unlaunched code studio lesson plans once they are imported. however,
-    # we can't just set it blindly, because that will make a broken View Lesson
-    # Plan button appear for end users. Therefore, prompt the caller to set up
-    # the View Lesson Plan button to point to the existing lesson plan.
-    unless unit.lessons.first.has_lesson_plan
-      raise <<~MSG
-        hoc unit #{unit.name.dump} lesson 1 must have has_lesson_plan enabled. Before trying again, please do the following:
-        1. create pegasus/sites.v3/code.org/public/curriculum/#{unit.name}/1/Teacher.moved pointing to https://curriculum.code.org#{options.lesson_path}
-        2. as a levelbuilder, go to /s/#{unit.name}/edit and set has_lesson_plan for this lesson
-        3. as a levelbuilder or teacher, and go to /s/#{unit.name}/ and verify that the View Lesson Plan button goes to the right lesson plan
-      MSG
-    end
-
     next if options.dry_run
 
     LessonImportHelper.update_lesson(lesson, options.models, cb_lesson)
@@ -128,8 +114,18 @@ def main(options)
       )
     end
 
+    unit.lessons.first.update!(has_lesson_plan: true)
+
+    Dir.chdir("#{Rails.root}/../pegasus/sites.v3/code.org/public/curriculum") do
+      filename = "#{unit_name}/1/Teacher.moved"
+      unless File.exist?(filename)
+        log "creating #{`pwd`.strip}/#{filename}"
+        raise unless system("mkdir -p #{unit_name}/1")
+        File.write(filename, "https://curriculum.code.org#{options.lesson_path}/")
+      end
+    end
+
     unit.fix_script_level_positions
-    unit.write_script_dsl
     unit.write_script_json
 
     puts "successfully updated unit #{unit.name}"

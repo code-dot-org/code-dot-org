@@ -4,12 +4,18 @@ import PropTypes from 'prop-types';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import {KeyCodes} from '@cdo/apps/constants';
-import {appendInputLog, clearConsoleLogs} from './javalabRedux';
+import {
+  appendInputLog,
+  clearConsoleLogs,
+  closePhotoPrompter
+} from './javalabRedux';
+import {DisplayTheme} from './DisplayTheme';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
   PaneSection,
   PaneButton
 } from '@cdo/apps/templates/PaneHeader';
+import PhotoSelectionView from './components/PhotoSelectionView';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -34,6 +40,7 @@ function moveCaretToEndOfDiv(element) {
 class JavalabConsole extends React.Component {
   static propTypes = {
     onInputMessage: PropTypes.func.isRequired,
+    onPhotoPrompterFileSelected: PropTypes.func.isRequired,
     bottomRow: PropTypes.element,
     style: PropTypes.object,
 
@@ -41,7 +48,10 @@ class JavalabConsole extends React.Component {
     consoleLogs: PropTypes.array,
     appendInputLog: PropTypes.func,
     clearConsoleLogs: PropTypes.func,
-    isDarkMode: PropTypes.bool
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
+    isPhotoPrompterOpen: PropTypes.bool,
+    closePhotoPrompter: PropTypes.func,
+    photoPrompterPromptText: PropTypes.string
   };
 
   state = {
@@ -91,7 +101,7 @@ class JavalabConsole extends React.Component {
 
   // Returns a rendering of the console log.  It includes the input field following the final
   // content, taking up the remaining width of the line.
-  renderConsoleLogs(isDarkMode) {
+  renderConsoleLogs(displayTheme) {
     const lines = this.getConsoleLines();
 
     return lines.map((line, index) => {
@@ -105,7 +115,9 @@ class JavalabConsole extends React.Component {
               spellCheck="false"
               style={{
                 ...styles.input,
-                ...(isDarkMode ? styles.darkModeInput : styles.lightModeInput)
+                ...(displayTheme === DisplayTheme.DARK
+                  ? styles.darkModeInput
+                  : styles.lightModeInput)
               }}
               onKeyDown={this.onInputKeyDown}
               aria-label="console input"
@@ -118,6 +130,35 @@ class JavalabConsole extends React.Component {
         return <div key={index}>{line.length === 0 ? ' ' : line}</div>;
       }
     });
+  }
+
+  renderConsoleBody() {
+    const {
+      isPhotoPrompterOpen,
+      photoPrompterPromptText,
+      onPhotoPrompterFileSelected,
+      closePhotoPrompter,
+      displayTheme
+    } = this.props;
+
+    if (isPhotoPrompterOpen) {
+      return (
+        <PhotoSelectionView
+          promptText={photoPrompterPromptText}
+          style={styles.photoPrompter}
+          onPhotoSelected={file => {
+            onPhotoPrompterFileSelected(file);
+            closePhotoPrompter();
+          }}
+        />
+      );
+    } else {
+      return (
+        <div onClick={this.onLogsClick} style={styles.logs}>
+          {this.renderConsoleLogs(displayTheme)}
+        </div>
+      );
+    }
   }
 
   onInputKeyDown = e => {
@@ -146,35 +187,46 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
-    const {isDarkMode, style, bottomRow, clearConsoleLogs} = this.props;
+    const {displayTheme, style, bottomRow, clearConsoleLogs} = this.props;
 
     return (
       <div style={style}>
         <PaneHeader id="pane-header" style={styles.header} hasFocus>
-          <PaneButton
-            id="javalab-console-clear"
-            headerHasFocus
-            isRtl={false}
-            onClick={() => {
-              clearConsoleLogs();
-            }}
-            iconClass="fa fa-eraser"
-            label={javalabMsg.clearConsole()}
+          <PaneSection
+            className={'pane-header-section pane-header-section-left'}
           />
-          <PaneSection>{javalabMsg.console()}</PaneSection>
+          <PaneSection
+            className={'pane-header-section pane-header-section-center'}
+          >
+            {javalabMsg.console()}
+          </PaneSection>
+          <PaneSection
+            className={'pane-header-section pane-header-section-right'}
+          >
+            <PaneButton
+              id="javalab-console-clear"
+              headerHasFocus
+              isRtl={false}
+              onClick={() => {
+                clearConsoleLogs();
+              }}
+              iconClass="fa fa-eraser"
+              label={javalabMsg.clearConsole()}
+            />
+          </PaneSection>
         </PaneHeader>
         <div style={styles.container}>
           <div
             style={{
               ...styles.console,
-              ...(isDarkMode ? styles.darkMode : styles.lightMode)
+              ...(displayTheme === DisplayTheme.DARK
+                ? styles.darkMode
+                : styles.lightMode)
             }}
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
           >
-            <div onClick={this.onLogsClick} style={styles.logs}>
-              {this.renderConsoleLogs(isDarkMode)}
-            </div>
+            {this.renderConsoleBody()}
           </div>
           {bottomRow && [
             {...bottomRow, key: 'bottom-row'},
@@ -189,11 +241,14 @@ class JavalabConsole extends React.Component {
 export default connect(
   state => ({
     consoleLogs: state.javalab.consoleLogs,
-    isDarkMode: state.javalab.isDarkMode
+    displayTheme: state.javalab.displayTheme,
+    isPhotoPrompterOpen: state.javalab.isPhotoPrompterOpen,
+    photoPrompterPromptText: state.javalab.photoPrompterPromptText
   }),
   dispatch => ({
     appendInputLog: log => dispatch(appendInputLog(log)),
-    clearConsoleLogs: () => dispatch(clearConsoleLogs())
+    clearConsoleLogs: () => dispatch(clearConsoleLogs()),
+    closePhotoPrompter: () => dispatch(closePhotoPrompter())
   })
 )(JavalabConsole);
 
@@ -226,12 +281,14 @@ const styles = {
     flexGrow: 2,
     overflowY: 'auto',
     padding: 5,
-    fontFamily: 'monospace'
+    display: 'flex',
+    flexDirection: 'column'
   },
   logs: {
     lineHeight: 'normal',
     cursor: 'text',
-    whiteSpace: 'pre-wrap'
+    whiteSpace: 'pre-wrap',
+    fontFamily: 'monospace'
   },
   logLine: {
     display: 'flex'
@@ -243,7 +300,8 @@ const styles = {
     padding: 0,
     fontFamily: 'monospace',
     flexGrow: 1,
-    marginTop: -2
+    marginTop: -2,
+    fontSize: 13
   },
   spacer: {
     width: 8
@@ -252,10 +310,14 @@ const styles = {
     position: 'absolute',
     textAlign: 'center',
     lineHeight: '30px',
-    width: '100%'
+    width: '100%',
+    display: 'flex'
   },
   log: {
     padding: 0,
     margin: 0
+  },
+  photoPrompter: {
+    flexGrow: 1
   }
 };

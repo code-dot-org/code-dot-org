@@ -80,22 +80,31 @@ az:
         text: "Salam, mən Kətiyəm! İnformatikanın ən həyəcanlı cəhətlərindən biri odur ki, kompüter proqramı interaktiv ola bilər."
       2:
         image: 'notes/flappy02.jpg'
+        text: "İstənilən vaxt kompüter və telefonda  yazdiqda və yaxud hansısa bir düyməni sıxdıqda, əməliyyat icra olunur, və bu zaman kod əməlliyyat icra olduğu halda nə baş verəcəyinə qərar verir."
       3:
         image: 'notes/flappy03.jpg'
+        text: "Məsəl üçün, sizin event holder siçana toxunulduğu zamanda səs verməsini deyə bilər."
       4:
         image: 'notes/flappy04.jpg'
+        text: "FlappyBird oyunu haqqında eşitmisiniz? Event handlerdən istifadə edərək, biz öz FlappyBirdə oxşar oyunumuzu düzəltməyi öyrənəcik."
       5:
         image: 'notes/flappy05.jpg'
+        text: "Sizin yazacağınız kod komputerə blokları sürüşdürüb buraxmaq üçün əmrlər yazmaqdan ibarətdir. Arxa planda, hər bir blok əsl kod ilə təmsil olunur."
       6:
         image: 'notes/flappy06.jpg'
+        text: "Yaxından baxdıqda, burada sizin üçün doldurulmuş yaşıl bloklar var. Bunlar event handlers lərdi."
       7:
         image: 'notes/flappy07.jpg'
+        text: "Əgər siz quşun siçana toxunduğu zaman qanad çalmasını istəyirsinizsə, bunu flap bloku düzgün event holderə tikərək edə bilərsiniz. Beləliklə siz siçana toxunduğunuz zaman quş qanad çalacaq."
       8:
         image: 'notes/flappy08.jpg'
+        text: " Bu fəaliyyətin hər bir tapmacasında, iş sahəsinə yaşıl bloklar kimi yeni hadisə növləri təqdim edəcəyik və bu hadisələrə cavab olaraq əlavə etmək üçün uyğun bloklara qərar verə bilərsiniz."
       9:
         image: 'notes/flappy09.jpg'
+        text: "Belə bir açılan ox gördüyünüz zaman, bu, ayarları dəyişdirə biləcəyiniz deməkdir - uçan quş yerə çırpıldıqda səslənən səs kimi."
       10:
         image: 'notes/flappy10.jpg'
+        text: "Son tapmacada öz oyununuzu yarada və dostlarınızla paylaşa biləcəksiniz. Əylənin!"
     loop_times:
       1:
         image: 'notes/hoc2_1.jpg'
@@ -260,36 +269,549 @@ az:
       1:
         text: "Salam, mənim adım Lindsidir. Mən model və aktrisayam, həm də özüm tətbiqi proqramlar yazıram. Gəlin, buzun sehri və gözəlliyini kəşf edən Anna və Elzaya qoşulmaq üçün proqramlaşdırmadan istifadə edək."
       2:
+        text: " Konki sürərkən siz qar dənəcikləri və naxışlar yaradacaqsınız və sonra dostlarınızla paylaşa biləcəyiniz qış möcüzələr diyarını yaradacaqsınız."
       3:
+        text: "Növbəti saatda siz kodlaşdırmanın əsaslarını öyrənəcəksiniz. Ənənəvi proqramlaşdırma adətən mətndir, lakin biz proqramları yazmaq üçün sürükləyib buraxa biləcəyiniz vizual bloklardan istifadə edən Blockly-dən istifadə edəcəyik. Hətta kollec tələbələri belə əsasları öyrənirlər. Siz hələ də başlıq altında kod yaradırsınız. "
+      4:
+        text: "Proqram kompüterə nə edəcəyini bildirən təlimatlar toplusudur. Elzaya sadə bir xətt yaratmağa kömək edəcək bir kod və ya proqram yaradaq. Bundan sonra daha mürəkkəb nümunələr yaratmaq üçün istifadə edəcəyik. "
+      5:
+        text: "Ekranınız üç əsas hissəyə bölünür. Solda, proqramınızı işlədəcəyiniz buz səthi var. Hər səviyyə üçün təlimatlar yalnız səthin altında yazılmışdır. "
+      6:
+        text: "Bu orta sahə alətlər qutusudur və bu blokların hər biri Elsa və Annanın edə biləcəyi bir hərəkətdir."
+      7:
+        text: "Sağdakı ağ hissə iş sahəsi adlanır və burada biz proqramımızı yaradacayıq. Buz səthi ətrafında hərəkət etmək üçün siz \"İrəli Get\" blokundan istifadə edəcəksiniz."
+      8:
+        text: "Burada \"İrəli get\" blokunda \"100 piksel irəli get\" yazılır. \"İcra et\" düyməsini basdıqda nə olur? Elza ekranda müəyyən qədər irəliləyir, əslində 100 piksel! Piksellər, sadə dillə desək, kompüterinizin ekranındakı çox xırda kvadratlardır. "
+      9:
+        text: "Bu tapmacanın digər blokunda \"90 dərəcə sağa dön\" deyilir. Və biz bu \"Sağa dönün\" blokundan istifadə etdiyimiz zaman Elzanın müəyyən miqdarda fırlanmasını təmin edir. Elzanın getməsini istədiyiniz qədər oynaya bilərsiniz. Bucaq Elzanın qarşısındakı yoldan ölçülür. Beləliklə, bu 90 dərəcə dönüşdür. Və bu 120 dərəcə dönmədir. "
+      10:
+        text: "Unutmayın ki, siz piksellərin və dərəcələrin sayını onların yanındakı oxlara klikləməklə dəyişə bilərsiniz."
+    frozen_loops:
+      1:
+        text: "Salam, mən Paula! Kompüterlər təkrarlamağı çox yaxşı bacarır. 10, 20 və ya 100-ə qədər deyə bilərsiniz. Ancaq bir kompüter bir milyarda və ya bir adama qədər saya bilər. Darıxdırıcı olmur və yalnız bir neçə saniyə çəkir. O, hətta saymaq, çəkmək və ya hər hansı bir şey haqqında təkrarlaya bilər. "
+      2:
+        text: "Proqramlaşdırmada biz buna dövr deyirik. Dövr proqramınızı təkrar-təkrar yenidən icra etməyin yoludur. Növbəti tapmacada tapşırığınız Annanın \"təkrar et\" bloku ilə kvadrat düzəltməsinə kömək etməkdir."
+      3:
+        text: "\"Təkrar et\" blokuna daxil etdiyiniz hər hansı kod blokları sıra ilə, istədiyiniz qədər təkrarlanacaq."
+      4:
+        text: "Kvadrat çəkmək üçün \"İrəli get\" və \"Sağa dönün\" blokundan 4 dəfə istifadə edə bilərsiniz. Ancaq daha asan yol, kompüterə bir dəfə \"İrəli hərəkət et\" və \"90 dərəcə sağa dönün\" demək və bu ikiqat hərəkəti 4 dəfə təkrarlamaqdır. Bunu etmək üçün \"İrəli gedin\" və \"Sağa dönün\" bloklarını \"Təkrar et\" blokunun içinə qoymalısınız. "
+      5:
+        text: "Remember, you can change the number in the \"Repeat\" block to anything, and it will repeat what's inside the block that many times. "
+    frozen_functions:
+      1:
+        text: "Salam, mən Chris Bosh. Mən peşəkar basketbolçuyam və kollecdə kod yazmışam."
+      2:
+        text: "Unutmayın ki, siz \"Təkrar et\" blokundakı nömrəni istənilənə dəyişə bilərsiniz və o, blokun məzmununu dəfələrlə təkrarlayacaq. "
+      3:
+        text: " Bir kompüterə bu skriptdən istifadə edərək bir hərəkəti necə etməyi öyrətdikdən sonra, bu hərəkətin daha sonra təkrarlanması üçün öz adınızı yarada bilərsiniz. Öz əmrinizi təyin etdiyiniz və ona ad verdiyiniz zaman ona funksiya deyilir."
+      4:
+        text: "Salam, mən Jess. Bloklarla proqramlaşdırarkən, dəfələrlə istifadə etmək istədiyiniz bir sıra hərəkətlər varsa, funksiyalardan istifadə edərdiniz. Məsələn, kvadrat yaratmaq üçün kod yazmısınız."
+      5:
+        text: "Bu funksiyanı  \"kvadrat yaratmaq\" kimi təyin edə bilərsiniz."
+      6:
+        text: "İndi, bir neçə kvadrat yaratmaq üçün bir neçə dəfə istifadə edə biləcəyiniz yeni blokunuz var."
+      7:
+        text: "Daha mürəkkəb naxışlar yaratmaq üçün çoxlu sadə formalardan istifadə etmək olar. Növbəti tapmacada, bir dairə etmək üçün bu yaxınlarda yazdığınız kod, fərqli ölçülərdə dairələr yarada bilən yeni bir funksiya olaraq sizin üçün əlçatandır. Elzaya qarda mürəkkəb və gözəl naxışlar yaratmağa kömək etmək üçün ondan istifadə edə bilərsinizmi?"
+    playlab_intro:
+      1:
+        text: "Play Lab istifadə edərək oyunlar yaradacağıq. Yaxşı oyunların bir hekayəsi var və hər hekayənin aktyorları var. Biz cadugərlər, yadplanetlilər və heyvanlar kimi aktyorlarımızı bir-birləri ilə danışmağa, hərəkət etməyə və qarşılıqlı əlaqə qurmağa necə öyrədəcəyik. Bu təlimatın sonunda siz sıfırdan bir oyun qura və onu dostlarınızla paylaşa bilərsiniz."
+      2:
+        text: "Ekranınız 3 əsas hissəyə bölünür. Solda proqramınızın işləyəcəyi oyun sahəsi var. Hər səviyyə üçün təlimatlar aşağıda yazılmışdır."
+      3:
+        text: "Orta sahə alətlər qutusudur və bu blokların hər biri bir kod parçasıdır. Sağdakı ağ sahə isə iş sahəsi adlandırılır və bura bizim proqramımızı quracağımız yerdir."
+      4:
+        text: "Başlamaq üçün bloklarınızı narıncı \"işləyərkən\" blokuna bağlamalısınız. Sarı xətti görənə qədər çoxlu blokları sürükləyərək bir -birinə bağlaya bilərsiniz və sonra birlikdə yapışacaqlar."
+      5:
+        text: "Bu ilk tapmacada aktyorumuz bir pinqvindir və biz onu \"Salam!\" Deməyə məcbur edəcəyik. dey blokunu kənara sürükləyərək, onu işlədiyi zaman bloku ilə əlaqələndirərək və \"Salam\" yazaraq. Biz həmçinin sağa və sol blokları hərəkət etdirərək pinqvini hərəkət etdirə bilərik. Bloklarınızı yerləşdirdikdən sonra proqramlaşdırdığınızı görmək üçün qaçış düyməsini vurun."
+      6:
+        text: "İlk addımı atın və axırda siz öz oyununuzu düzəldə biləcəksiniz. Cürbəcür oyunçular qarşılıqlı ünsiyyət qura, xoşbəxt və ya qəmli ola, xallar qazana və ya alov topları ata, hətta bir birini məhv edə biləcəklər. Hamısı sizdən və düzəltmək istədiyiniz oyundan asılıdır."
+    playlab_events:
+      1:
+        text: "İndi isə biz bütün oyun proqramçılarının gündəlik istifadə etdikləri bir aləti öyrənəcəyik. Ona hadisə deyilir. Bir hadisə, hər hansı bir hərəkət müşaidə edildikdə, proqramınızdan həmin hərəkətə diqqət yetirməsini tələb edir və nəticə etibarı ilə həmin anda proqramınız hərəkətə keçir."
+      2:
+        text: "Hadisələrin bəzi nümunələri siçanın kliklənməsini, ox düyməsini və ya ekranda toxunuşu dinləməkdir."
+      3:
+        text: "Burada oyunçu ona klik etdikdə kosmik botun dünyalıları salamlamasını təmin edəcəyik. Biz \"kliklənəndə\" blokundan istifadə edəcəyik və ona \"say\" blokunu əlavə edəcəyik. Oyunçu kosmik botun üzərinə kliklədikdə, bu \"kliklənəndə\" hadisə blokuna əlavə edilmiş hər şey yerinə yetiriləcək. Yadplanetliniz nə deyir?"
+      4:
+        text: "\"Zaman oxu\" blokları da var. \"Hərəkət\" bloklarını bunlara bağlasanız, aktyorlarınızı yuxarı, aşağı, sola və ya sağa hərəkət etdirməyə başlaya bilərsiniz. Addım -addım, oyununuz daha interaktiv olur."
+    playlab_repeat_forever:
+      1:
+        text: "Bu \"sonsuza qədər təkrar et\" blokudur. Bu blokda olan hər şey oyunda əbədi olaraq baş verəcək."
+      2:
+        text: "Bir aktyorun bir şeyi təkrar etməsini istəyiriksə, oyunçunun heç bir şey etməsinə ehtiyac qalmadan, o blokları \"sonsuza qədər təkrar et\" blokunun içinə qoyacağıq."
+      3:
+        text: "Bu növbəti tapmacada məqsədimiz, sehrbazın səltənətin sərhədlərini sola və sağa davamlı olaraq keşik çəkməsinə kömək etməkdir. Təkrar əmrlərin necə işlədiyini öyrənmək, öz oyununuzu qurduqdan sonra bir çox vaxtınıza qənaət edəcək."
+    C1_artist_intro:
+      1:
+        text: "Bunlar çəkmə bloklarınızdır. Rəssamı boz xətləri doldurmaq üçün getməli olduğu yerə köçürmək üçün düzgün olanı istifadə edin."
+      2:
+        text: "Bunlar hoppanmaq bloklarıdır.Sən bunları istifadə etdikdə rəssam hərəkət edir,lakin şəkil çəkmir, belə ki, hoppanmaq blokunu növbəti boz xətdə istifadə et."
+    C1_bee_level_intro:
+      1:
+        text: "Arılar möhtəşəm deyilmi? Bu növbəti tapmacalarda məqsədiniz, arının çiçəklərə çatmasına və çiçəklərdən nektar almasına və bal hazırlamaq üçün pətəyin üzərinə uçmasına kömək etməkdir. Bu məşq üçün \"nektar al\" və \"bal hazırla\" bloklarından istifadə etməlisən."
+      2:
+        text: "Hər çiçəyin fərqli sayda nektarı var: 1, 2, 3 və ya daha çox. Qırmızı çiçəklərdə nə qədər nektar olduğunu küncdəki az sayda bilirik. İrəli getməzdən əvvəl çiçəyin bütün nektarını aldığınızdan əmin olun. Həm də hər bal pətəyi yalnız bu qədər bal tuta bilər: 1, 2, 3 və ya daha çox. Odur ki, pətəyin tuta biləcəyi qədər bal hazırlayın."
+      3:
+        text: "Bütün nektarı əldə edib bütün balı hazırlaya bilirsinizsə, uğur qazanırsınız və növbəti səviyyəyə keçirsiniz. Əks təqdirdə, bu tapmacanı yenidən sınamalısınız. Bir müddət oynayın və bir proqramçıya \"arı\" olmaq nə hiss etdiyini görün!"
+    C1_bee_loops:
+      1:
+        text: "Bir döngə, fəaliyyətin təkrarlanmasıdır. Yoxlamaq üçün bir kovana girərək bir çərçivəyə baxıram və sonra geri qoyuram, buna görə eyni hərəkəti dəfələrlə təkrarlayıram. Eyni hərəkəti bir neçə dəfə yerinə yetirir."
+      2:
+        text: "Bu səviyyədə arının çiçəyin üç nektarını toplamasını istəyirik. Üç \"nektar\" bloku istifadə etmək əvəzinə, üç dəfə nektar əldə etmək üçün təkrar blokdan istifadə edəcəksiniz. \"Qaç\" düyməsini vurun və düzgün başa düşdüyünüzə baxın. Gözəl!"
+    C1_bigevent_unplugged:
+      1:
+        text: "Bu dərs böyük hadisə adlanır. Bu, proqramlarımızı necə idarə edə biləcəyimiz və bir düyməni basmaq və ya siçanın klik etməsi kimi hadisələrdən istifadə edərək proqramın necə işlədiyini dəyişə biləcəyimizlə bağlıdır."
+      2:
+        text: "Bu dərs üçün bir kağız uzaqdan idarəetmə ilə idarə olunacaqsınız. Sanki canlı bir video oyunu kimidir."
+      3:
+        text: "Bir hadisə hər hansı bir prosesin baş verməsinə səbəb olan hərəkətdir. Necəki siz siçan düyməsini sıxırsınız və bir veb səhifəsi yüklənir. Bu bir hadisədir. Planşetdə ekranı sürüşdürmək üçün ekrana toxunsunuz. Bu da bir hadisədir. Hadisələr, istifadəçiyə ehtiyac duyduğu və ya istədiyi zamanda proqramınızı yönləndirməsinə imkan yaratmaq üçün əla vasitələrdir."
+      4:
+        text: "Hər gün hamımızın cavab verəcəyi bəzi hadisələr baş verir. Özümüzü ac hiss edirik və soyuducuya gedirik. Poçtalyonun gəldiyini eşidirik və o, poçtumuzu poçt qutusuna atır, sonra bizdə gedib poçtumuzu alırıq. Bunlar bir düyməni basmaq və ya bir joystick hərəkət etdirmək kimi olan hadisələrə bənzəyir. Hadisələr bizi hərəkət etməyə sövq edən şeylərdir."
+      5:
+        text: "Video oyunlarında \"Yeniləmə\" adlı bir hadisə var və saniyədə 30 və ya 60 dəfə olur. Video oyun proqramçıları üçün düymələrdən və ya joystikdən daha çox hadisə kimi əhəmiyyətlidir."
+      6:
+        text: "Gözlədiyimiz əsas hadisə \"Yeniləmə\" işarəsinin olmasıdır. Və sonra gənədəki joysticki yoxlayırıq. Buna görə də \"Oh, kimsə bu çərçivəni düyməyə basdı? Bəli ya yox?\" Hadisələr olmasaydı, oyunçu yerindən tərpənə bilməzdi, atlaya bilməzsən, baş verənləri idarə edə bilməyəcəksən. Video oyunu heç nə canlandıra bilməz."
+    C1_building_foundation:
+      1:
+        text: "Qum heykəltəraşlığında uğursuzluğun proqramın bir hissəsi olduğunu bilməlisən. Ancaq israr etsəniz, sizin üçün daha yaxşı və daha həyəcanlı bir şey əldə etməyəcəksiniz. Davamlılıq oyunun adıdır. Bununla qalın, bəyənəcəksiniz."
+      2:
+        text: "Bu dərsə təməl qurmaq deyilir. Bu dərsdə həqiqətən çətin olması nəzərdə tutulan bir vəzifə üzərində işləyəcəyik. Ən azı bu kuboklardan biri qədər hündür bir quruluşun necə olacağını anlayacaqsınız və bir kitabın ağırlığını saxlayacaq qədər güclü olmalıdır."
+      3:
+        text: "Elə vaxtlar olur ki, bizim yaradıcılığımız nəticə vermir. Əsəbiləşdiyimiz və imtina etmək istədiyimiz vaxtlar ola bilər. O anlar çox ola bilər. Ancaq sınamağa davam etsək, ən yaxşısını dəfələrlə versək, çox keçmədən əldə edəcəyimizə əminik.\n"
+      4:
+        text: "İnadkarlıq, həqiqətən imtina etmək istədiyiniz zaman orada asılmaqdır. Yeni və fərqli bir şey yaratmaq istəyirsinizsə, bu yolda bir çox uğursuzluq olacaq."
+      5:
+        text: "İnadkarlığın hiyləsi, məyus olduğunuz üçün işdən çıxmaq əvəzinə davam etməyi və uğursuzluqlarınızdan öyrənməyi seçməkdir. Əsəbiləşmə əslində künc ətrafında çox gözəl bir şeyin olduğunun göstəricisidir. Odur ki, buna çatmadan işinizdən əl çəkməyin. Vay!"
+    C1_getting_loopy:
+      1:
+        text: "Salam, adım Miral Kotb və Iluminate -in yaradıcısıyam. İşimdə həm rəqslərdə, həm də kostyum proqramlaşdırmada istifadə etdiyimiz bir şey var. Və bu döngələrdir! Döngələr bir hərəkəti dəfələrlə təkrarlayır."
+      2:
+        text: "Hula halqanın fırlanmaması üçün etdiyim hərəkətlərim kimi bir şeyi dəfələrlə təkrarladığınızda, bu hərəkətin bir döngəsini yerinə yetirirəm. Bu bir döngədir. Bu bir döngədir. Və bu bir döngədir."
+      3:
+        text: "Bu gün bir rəqs partiyamız olacaq. Yeni bir rəqslə döngələr oynayacağıq. Yenidənqurma. Bir rəqs istifadə edərək döngələr haqqında öyrənəcəyik. Rəqsi tamamlamaq üçün bir neçə asan addımı öyrənəcək və onları dəfələrlə təkrarlayacaqsınız."
+      4:
+        text: "Öyrənməli olduğunuz addımlar burada. Alqışlayın. Əllərinizi başınızın arxasına qoyun. Əllərinizi belinizə qoyun. Sol əlinizi yuxarı qaldırın. Sağ əlinizi yuxarı qaldırın. Çox sadə, elə deyilmi? Bəzi rəqs addımlarını döngələrə qoyaraq istiqamətləri qısalda biləcəyinizi öyrənəcəksiniz."
+      5:
+        text: "Əslində rəqs edərkən dövrlərdən istifadə edirik. Rəqqaslar hamısı eyni şəbəkədə birləşmiş kompüter geyinirlər. İşıqları təkrar-təkrar eyni rəqqasların üzərində dövri yandıra bilərəm. Dövrün içində bu altı rəqqasdan təkrar-təkrar keçmək istədiyinizi söyləyəcəyim bir təkrarlama ola bilər və sonra dövrün içərisində işığın sürətini artırmaq istəyə bilərsiniz. Bunların hamısı dövrlər vasitəsilə yaradılmışdır. Dövrlər informatikada vacibdir, çünki, işimizi daha qısa və asan edir."
+    C1_happy_maps_unplugged:
+      1:
+        text: "Bu dərsin adı Şən xəritələrdir. Bu gün biz balaca tüklü dostumuz Flurba meyvəsinə yetişməkdə kömək edəsiyik."
+      2:
+        text: "Flurb'unuzu meyvələrinizə aparın. Bunu etmək üçün siz Flurb-un hansı yolla getməli olduğunu anlamalı və oxlarla onu istiqamətləndirməlisiniz. Flurbun almaya çatması üçün Flurb hansı istiqamətə getməlidir? Onu yuxarı qaldırmaq üçün xətt."
+      3:
+        text: "Oraya çatmaq üçün onun getməli olduğu istiqaməti çevrələyin."
+      4:
+        text: "Həll etməyə çalışdığınız xəritənin yanında oxları yapışdıraraq alqoritminizi yaradın. İkincisi də eynidir, amma aşağı düşür"
+      5:
+        text: "Bu, kağızla proqramlaşdırmaq kimidir. Və bu qədər!"
+    C1_maze_debugging:
+      1:
+        text: "Sazlama problemləri tapmaq və aradan qaldırmaqdır. Problemləri aradan qaldırmağın bir çox yolu var. Ən asanlarından biri, bir şeyin səhv getdiyini tapana qədər addım-addım hərəkət etməkdir. Burada mən şüa üzərində arxa əl yay etməyə çalışıram, amma yıxılıram."
+      2:
+        text: "Hər hissəni addım -addım gəzdim və səhvimin harada olduğunu başa düşdüm. Əllərimi şüaya düzgün qoymadım. Beləliklə, yeni əl mövqeyimlə şüa üzərində başqa bir arxa əl yayını sınadım və onu aldım. Arxa əl yayınımdakı qüsurları aradan qaldırdığım üçün çox sevindim."
+      3:
+        text: "Sazlama haqqında məlumat əldə etmək üçün artıq səhnədə olan bir sıra bloklardan başlayırıq. Bu blokların sizi məqsədə çatdırmayacağını görəcəksiniz. Biz həlli debug etməli və onu düzəltməliyik. Nə səhv oldu? Bir məhəllə daha qərbə getməli olduğunuzu görəcəksiniz."
+      4:
+        text: "Gəlin bunu başqa bir qərb bloku əlavə edərək və düzgün başa düşdüyünüzü görmək üçün qaçış düyməsini vuraraq düzəldək. Başa düşdün!"
+    C1_maze_intro_sequencing:
+      1:
+        text: "Bu tapmaca üçün quşu donuza çatdırmaq lazımdır. Tapmacaya baxın və onun hansı istiqamətlərə getməsi lazım olduğuna baxın."
+      2:
+        text: "Blokları alətlər qutusundan iş sahəsinə sürükləməlisiniz. Bunun \"qaçarkən\" blokunun altında olduğuna əmin olun və düzgün həll yolunu tapdığınızı düşündüyünüz zaman, \"Çalış\" düyməsini klikləyərək quşun donuza getməsini izləyə bilərsiniz."
+    C1_maze_loops:
+      1:
+        text: "Kompüterlərin yaxşı bacardığı bir digər hərəkət isə əmrləri təkrarlamaqdır. Eyni prosesi ardıcıl olaraq dəfələrlə tamamlamaq məcburiyyətində qalsanız, bir insan olaraq canınız çox sıxılar. Ancaq bir kompüter eyni əməliyyatı milyonlarla, hətta milyardlarla dəfə təkrar edə bilər , canı sıxılmaz, və bunu çox gözəl bir şəkildə yerinə yetirər."
+      2:
+        text: "Məsələn, Facebook-da ki hər bir şəxsin doğum gününü e-məktub vasitəsilə təbrik etmək istəsəm, bütün bu e-məktubları hər kəsə yazıb göndərmək bir əsrdən çox vaxt ala bilər. Ancaq bir neçə kod xətti ilə, Facebook-da olan hamıya təbrik e -məktubu göndərən bir sistem yarada bilərəm."
+      3:
+        text: "Quşu bu səviyyədə donuza çatdırmaq üçün ... üç Şimali bloku iş sahəsinə sürükləmək yerinə \"təkrar\" blokundan istifadə edəcəksiniz. \"Təkrar\" blokunu iş sahəsinə sürükləyin və 3 rəqəmini daxil edin. Sonra \"Şimala hərəkət\" blokunu \"təkrar\" blokuna sürükləyin və düzgün başa düşdüyünüzü görmək üçün \"Çalış\" düyməsini basın. Təbrik edirik, başa düşdün!"
+    C1_moveitmoveit_unplugged:
+      1:
+        text: "Bu dərs hərəkət adlanır, onu köçürün. Birlikdə dostlarımızı pusula ilə gülümsəyən üz hədəfinə yüksəltmək üçün bir proqram yazacağıq."
+      2:
+        text: "Amma gülüş üzü aşağıdır və ora necə çatacağını yalnız bir nəfər bilir. Gəlin bu proqramı işə salaq."
+      3:
+        text: "Proqram bir maşın tərəfindən işlədilə bilən bir şeyə kodlaşdırılmış bir alqoritmdir. Çoxumuz proqramı kompüter üçün yazdığımız bir şey kimi düşünürük. Proqramlar bunun üçün həqiqətən yaxşıdır, lakin başqa yerlərdə də faydalıdırlar. Özünüz üçün bir oyun hazırlaya bilərsiniz və ya sizin üçün bir şey etmək üçün bir robot da proqramlaşdıra bilərsiniz."
+    C1_going_places_safely:
+      1:
+        text: "Mənim adım Yeremyadır. salam! Yeddi yaşım var. Mən anamın kompüterində oynamağı sevirəm, amma həmişə icazə alıram. \"Ana, kompüterə girə bilərəmmi? Əlbəttə balım!\""
+      2:
+        text: "Mən anamın kompüterini sevirəm,çünki mən İnternetə daxil ola bilirəm.İnternet sənin qonşun kimidir.Sən gözəl yerlərə səyahət edə bilərsən,sən ailən və dostların ilə danışa bilərsən və sən çoxlu yeni məlumatlar öyrənə bilərsən."
+      3:
+        text: "Dünən evimin yaxınlığında olan zooparka baş çəkdim. Mən körpə zebra gördüm. Mən onun şəklini çəkdim və zolaqlarının rəngini dəyişdim, sonra bir papaq əlavə etdim və ağılsız heyvanlar kolleksiyama əlavə etdim. Möhtəşəm! Daha sonra çox uzaq bir yerə getdim. Keniyaya səfər etdim. Bu Afrikada bir ölkədir. Orada çoxlu zebralar yaşayır."
+      4:
+        text: "Bəzən İnternetdə başqa əyalətdə yaşayan nənəm kimi tanıdığım insanlarla danışıram. Salam nənə! Mənə ad günüm üçün göndərəcəyi peçenyelər hazırlayır. \"Dadlı, kaş İnternetdə smellorama olsaydı!\" Mən əmim oğlu kimi internetdə müxtəlif insanlarla danışa bilərəm, ancaq tanıdığım insanlarla danışıram."
+      5:
+        text: "İnterentdə ən çox bəyəndiyim şey əyləncəli oyunlar oynamağımdır. Hesab! Mən də rəsm çəkməyi, yeni şeylər yaratmağı və dostlarımla paylaşmağı xoşlayıram. Əla! Bəzən yeni şeylər öyrəndiyim saytlara baş çəkirəm, amma həmişə mənim üçün uyğun olan saytlara yapışıram. Vau, dinozavrlar!"
+      6:
+        text: "İnternet super əyləncəli yerdir. Amma qonşuluqda küçəni keçəndə olduğu kimi, internetə girəndə də diqqətli olmalısan. Burada yadda saxlamaq üçün üç qayda var. Qayda nömrəsi 1: Həmişə ilk növbədə valideynlərinizdən soruşun. Qayda №2: Yalnız tanıdığınız insanlarla danışın. Qayda №3: Sizin üçün uyğun olan yerlərə yapışın."
+      7:
+        text: "Vay, əyləncəli idi! Nahar vaxtı. Mən indi hesabdan çıxıram. Növbəti harada ziyarət edə biləcəyimi görmək üçün yenidən daxil olmağı səbirsizliklə gözləyirəm."
+    C1_pair_programming:
+      1:
+        text: "Bu gün Cüt Proqramlaşdırma haqqında öyrənəcəyik. Cüt proqramlaşdırmada siz bir komanda kimi işləyirsiniz. Niyə iki nəfər bir kompüterdən istifadə etməlidir? Çünki ağıl ağıldan üstündür. Cüt proqramlaşdırmada siz və tərəfdaşınız bir kompüterdə birlikdə oturacaqsınız və hər ikiniz eyni layihə üzərində işləyəcəksiniz."
+      2:
+        text: "401 / 5000\nTranslation results\nCüt proqramlaşdırmada bir nəfər sürücü, digər şəxs isə naviqatordur, avtomobil idarə etmək kimidir. Sürücü - kompüterdə oturur, və klaviatura, siçan və ya toxunma ekranından istifadə edən və kompüterin əsas hərəkətlərini idarə edən şəxsdir. Digər şəxs isə naviqatordur. Naviqator sürücünün suallarını cavablandırmaq və potensial problemləri və ya səhvləri göstərməklə sürücüyə kömək edir. "
+      3:
+        text: "Ünsiyyət uğurlu cüt proqramlaşdırmanın açarıdır. Təhqir etməyin, hörmətli olun, baş naviqator olmayın, çünki heç kim arxa oturacaq sürücüsünü sevmir. Siz və ortağınız həmişə danışmalısınız. Sürücü onun nə etdiyini izah edə bilər. Və naviqator bundan sonra nə edəcəyinizi təklif etməyə kömək edə bilər."
+      4:
+        text: "Naviqator böyük mənzərə haqqında düşünməli, sürücü isə detallara diqqət yetirməlidir. Hər iki rol vacibdir. Cüt proqramlaşdırma komanda şəklində birlikdə işləməkdən ibarətdir."
+    C1_planting_seed:
+      1:
+        text: "Bu dərs toxum əkmək adlanır və alqoritmləri anlamağımıza kömək edəcək. Alqoritmlər bir şeyin yerinə yetirilməsi qaydasını izah edən xüsusi göstərişlərdir. Hətta səhər yeməyi yemək və ya dişlərinizi fırçalamaq kimi gündəlik işlər də bir işi görmək üçün kiçik addımlar tələb edən alqoritmlərdir."
+      2:
+        text: "Kompüterlər həqiqətən ağıllı ola bilər, ancaq onlara nə istədiyinizi addım-addım söyləsəniz, sizi başa düşə bilərlər. Alqoritmlərin üstün cəhəti ondan ibarətdir ki, əgər siz təlimatları ardıcıllıqla yerinə yetirsəniz, necə edəcəyinizi əvvəlcədən bilmədiyiniz bir şeyi edə bilərsiniz. Bu reseptə əməl etmək kimidir."
+      3:
+        text: "Bu gün bir alqoritmdən istifadə edərək öz toxumlarımızı əkəcəyik. Şəkilləri kəsərək öz alqoritminizi yaradın. Toxum əkilməsinin mərhələlərini göstərən şəkilləri seçin və həmin şəkilləri düzgün ardıcıllıqla düzün."
+      4:
+        text: "İndi alqoritminizin işlədiyini görmək vaxtıdır. Alqoritmdəki addımları çox diqqətlə izləyin. Onlar düzgün qaydadadırlar? Alqoritmə əməl edərək toxum əkməyi bacardınızmı? Bu, şəkillərlə proqramlaşdırmaya bənzəyir!"
+      5:
+        text: "Şokolad hazırlamaq istədiyimiz zaman, bu proses üçün bir çox böyük addımlar var və bu böyük addımların hər birinin daha kiçik addımlar dəsti var və şokoladın necə dad almasını istədiyimizdən asılı olaraq müxtəlif reseptlər və ya alqoritmlər var. Hər bir addım, hətta kiçik addımlar da vacibdir ki, bir addım olmadan qalanlarını tamamlamaq mümkün deyil. Başqalarının anlaya biləcəyi alqoritmlər yaratmaq həqiqətən vacibdir. Ona görə də hər addımı yazmaq lazımdır ki, kimin etməsindən asılı olmayaraq, nəticə eyni olsun."
+    C1_playlab_storytelling:
+      1:
+        text: "Yaradıcı olmaq və hekayə danışmaq üçün kodlaşdırma bacarıqlarınızdan istifadə etmək vaxtıdır. Hekayənizdə aktyorlar olacaq və siz bu aktyorları bir-biri ilə danışmağa və qarşılıqlı əlaqə qurmağa məcbur edə biləcəksiniz. Hansı hekayəni danışmaq istədiyinizi düşünməyə başlayın."
+      2:
+        text: "Pişik həmişə itdən qorxurdu və əgər pişik itin gözəl olmağa çalışdığını anlasa nə olar? \"When run\" bloku hər şeyi başlayır. \"Hərəkət\" bloku xarakterinizi hərəkət etdirəcək və \"demək\" bloku xarakterinizi yazdığınız hər şeyi deməyə vadar edəcək."
+      3:
+        text: "Bu, digər bloklara qoşula biləcəyiniz \"aktyorlar toqquşduqda\" blokudur."
+      4:
+        text: "Mən iti yaxınlaşdırıb \"Salam\" deməyə məcbur edirdim, amma sonra pişik qorxdu və qaçdı. \"Ahh\" Daha çox vaxt olsaydı, xoşbəxt son olardı. Son!"
+    C1_spelling_bee_intro:
+      1:
+        text: "Bu yazım arı səviyyəsidir. Arını hərəkət etdirmək üçün tapmaca parçalarından istifadə edin. Hərəkət etdikcə sözləri hecalamaq üçün hərfləri toplayacaq."
+      2:
+        text: "Səhnənin altındakı qutuda sizə verdikləri sözü yaza bildiyinizə baxın. Ancaq arı diqqətli olun! Səhv istiqamətdə hərəkət etmək istəmədiyiniz hərfləri əlavə edəcək."
+    C1_zuck_repeat_loop:
+      1:
+        text: "Kompüterlərin yaxşı bacardığı bir digər hərəkət isə əmrləri təkrarlamaqdır. Eyni prosesi ardıcıl olaraq dəfələrlə tamamlamaq məcburiyyətində qalsanız, bir insan olaraq canınız çox sıxılar. Ancaq bir kompüter eyni əməliyyatı milyonlarla, hətta milyardlarla dəfə təkrar edə bilər , canı sıxılmaz, və bunu çox gözəl bir şəkildə yerinə yetirər."
+      2:
+        text: "Məsələn, Facebook-da ki hər bir şəxsin doğum gününü e-məktub vasitəsilə təbrik etmək istəsəm, bütün bu e-məktubları hər kəsə yazıb göndərmək bir əsrdən çox vaxt ala bilər. Ancaq bir neçə kod xətti ilə, Facebook-da olan hamıya təbrik e -məktubu göndərən bir sistem yarada bilərəm."
+      3:
+        text: "Bu nümunədə məqsədiniz donuzu almaq üçün quşu hərəkət etdirmək olacaq. İndi bunu çox asanlıqla edə bilmək üçün təkrar blokundan istifadə edə biləcəyik. Siz quşu hər dəfə donuza doğru bir addım irəliləmək üçün kompüterə beş dəfə irəli hərəkət əmri verməklə bunu edə bilərsiniz və ya kompüterə sadəcə bir dəfə irəli getməsini söyləyə və sonra bunu beş dəfə təkrarlamasını və eyni şeyi edəcək."
+      4:
+        text: "Bunu etmək üçün siz irəli hərəkət əmrinizi sürükləyirsiniz və sonra onu təkrar blokunun içərisinə qoyursunuz. Siz üzərinə klikləyərək bloku neçə dəfə təkrarlayacağınızı deyə bilərsiniz ki, ona neçə addım atmaq istədiyinizi söyləyin."
+      5:
+        text: "Daha bir şey odur ki, təkrar blokunun içərisinə istədiyiniz qədər əmr qoya bilərsiniz. Beləliklə, bu misalda siz ona irəli getməyi və sola dönməyi söyləyirsiniz, bunu beş dəfə edəcək. Əylənin!"
+    C2_artist_intro:
+      1:
+        text: "Maşınların nə qədər məlumat topladığına və necə davam etdiyinizi anlamaq üçün proqramlar yaza bilən insanların olması zərurətinə görə kompüter elmində təcrübəli insanlarınız olmasa, yarışa belə vəsiqə qazana bilməzsiniz. performansın necə qurulacağını anlayın."
+      2:
+        text: "Bu tapmacalarda siz müxtəlif fiqurlar çəkmək üçün karandaşdan istifadə edən bir rəssam olacaqsınız. Rəssamınız haraya getsə, arxasınca bir xətt çəkəcək."
+      3:
+        text: "Kətan ətrafında hərəkət etmək üçün siz irəliləmə blokundan istifadə edəcəksiniz. Burada irəliləmə bloku 100 piksel irəli getməyi bildirir. Biz qaçanda nə baş verir? Rəssam müəyyən bir miqdar irəliləyir və bu məbləğ 100 pikseldir. Piksellər əsasən kompüterinizin ekranında çox kiçik kvadratlardır."
+      4:
+        text: "Bu tapmacada əlimizdə olan digər blok 90 dərəcə sağa dönün deyir. Və biz onu çıxartdıqda, bu, sənətçimizi müəyyən bir miqdar çevirməyə məcbur edir. Beləliklə, sənətçinin nə qədər uzaqlaşmasını istədiyinizlə oynaya bilərsiniz. Bu 90 dərəcə dönmədir."
+      5:
+        text: "Və bu 120 dərəcə dönüşdür. Unutmayın ki, siz piksel və dərəcələr üçün rəqəmlərin yanındakı oxlara klikləməklə bu dəyərləri dəyişə bilərsiniz. Rəssamla rəsm çəkməkdən həzz alın!"
+    C2_bee_conditionals:
+      1:
+        text: "Bu şərti blokdur. Orada deyilir ki, əgər bir ədəddən az, bərabər və ya ondan çox olan nektar və ya bal varsa, onda bir şey edin."
+      2:
+        text: "Bu sual işarəsi ilə burada gördüyümüz kimi, nə qədər nektar və ya bal alacağımızı bilmədiyimiz zaman faydalıdır."
+      3:
+        text: "Bu misalda biz deyəcəyik ƏGƏR bənövşəyi çiçəkdə 0-dan çox nektar varsa, nektar alın. Bu, arımıza orada olduğu müddətdə nektar almağa davam etməsini söyləyəcək. Ta-dah!"
+    C2_binary_bracelets:
+      1:
+        text: "Bu ikili bilərziklər dərsidir. Biz taxa biləcəyimiz və bütün dostlarımıza göstərə biləcəyimiz bilərzikdə baş hərflərimizi kodlayacağıq!"
+      2:
+        text: "Binary, yalnız iki variantdan istifadə edərək məlumatı təmsil etmək üsuludur. Bəzən insanlar bunu yalnız 1-lər və 0-lar kimi düşünürlər. Ancaq siz ikiliyi on və ya söndür, yuxarı və aşağı, daxil və xaric və ya hər hansı əksliklər dəsti ilə təmsil edə bilərsiniz."
+      3:
+        text: "Salam, mən Orionam və mən burada Play-im-də robot proqramlaşdırıram. Bütün kompüter və robot beyinləri ən fundamental səviyyədə kiçik elektron qapılardır. Qapı açıq olduqda elektrik cərəyanı keçə bilər, bağlı olduqda isə elektrik keçə bilməz."
+      4:
+        text: "Robotdakı binarın nümunəsi robotun gözləridir. Robotun gözləri LED-lərdir və bunlar ya yanan və ya sönən işıqlardır. Bu ikili sistemdir, biri və ya digəri. İkili ədədləri təmsil etmək üçün işıqlardan istifadə edə bilərik. Əgər bir sıra robotlarımız varsa, deyə bilərik ki, birinci robot 1-ci yer və ikinci robot 2-ci yer, üçüncü robot 4-cü yer və s. İkili ədədi belə təmsil edirsiniz. Robotlar bunu ikili gözləri ilə edəcək və sizin üçün hesablayacaqlar."
+    C2_conditionals_with_cards:
+      1:
+        text: "Bu dərs kartlarla şərti cümlələr adlanır. Hər gün gördükləriniz və eşitdikləriniz əsasında qərarlar verirsiniz."
+      2:
+        text: "Parka piyada getmək istəyirəm, amma əvvəlcə çətir götürüb-gətirməməyimə qərar verməliyəm. Ona görə də pəncərədən baxıram. Hava buludlu olsa, mən çətirimi götürəcəyəm. Əks halda, bir neçə gün eynəyi götürəcəm. Məncə, çətiri götürsəm yaxşı olar. Gördüklərim və eşitdiklərim parka aparacağımı müəyyənləşdirir."
+      3:
+        text: "Şərtlər oyunlarda da istifadə olunur. Bu gün biz kart oyunu ilə şərtlərdən istifadə edərək məşq edəcəyik. Bu oyunda mənim çəkdiyim kart dostlarımın nə edəcəyini müəyyənləşdirir. Yeddi çəksəm, hamı əl çalır. Əks halda hamı “awww” deyir. Gəlin cəhd edək! \"Awww\" \"sağol\""
+      4:
+        text: "Əminəm ki, şərtlərlə daha da əyləncəli oyunlar yarada bilərsiniz. Bir cəhd edin! Şərtlər kompüterləri ağıllı edən şeylərdir. Şərtləri ehtiva edən kompüter proqramı istifadəçiyə reaksiya verə və onun hərəkət istiqamətini dəyişə bilər."
+      5:
+        text: "Sevimli video oyununuzu düşünün. Bəzi hərəkətlər üçün digərlərinə görə daha çox xal qazanırsınız? Bu, kompüterin şərti istifadə etdiyi üçün baş verir. Bu, kompüterin qərar vermə üsuludur. Necə deyərlər, hədəfi vursan, on xal qazanarsan. Əks təqdirdə üçü itirəcəksiniz. Şərtlərin necə işlədiyini bildiyiniz zaman hər cür maraqlı oyunları yarada bilərsiniz."
+    C2_artist_debugging:
+      1:
+        text: "Burada artıq iş yerimizdə bəzi bloklar var. Ancaq səhv bir şey var."
+      2:
+        text: "Sürəti yavaşlatmaqla və hər blokdan addım-addım keçərkən onu izləməklə bu kodu sazlayaq."
+      3:
+        text: "Oh, problem var! Pişiyin bığlarının uzunluğu 25 deyil, 75 pikseldir."
+    C2_bee_debugging:
+      1:
+        text: "Heç bir proqramın sazlanması haqqında eşitmisiniz? Bu, nəyin işləmədiyini anlamağın yoludur. Kodu sazladığınız zaman səhvləri müəyyən edib aradan qaldırırsınız."
+      2:
+        text: "Burada artıq iş yerimizdə bir neçə blok verilir. Bunun düzgün həll olub-olmadığını və onu harada düzəltməli olduğumuzu görmək üçün addım-addım bloklar arasında gəzmək üçün addım düyməsini istifadə edəcəyik."
+      3:
+        text: "Deyəsən bizim problemimiz var! Bizə daha bir irəliləmə bloku lazımdır. Addım düyməsi səhvin harada olduğunu müəyyən etməklə problemimizi həll etməyə kömək edir ki, biz onu düzəldə bilək."
+    C2_digital_footprint:
+      1:
+        text: "Başınızın üstündə papağınızı tutursunuz və ağıllılarınız sizə harada olduğunuzu və zoopark haqqında düşünməyinizi söyləyəcək və sizə və sizə salam göndərəcək! Onlayn olarkən başınızdan istifadə edin ki, özünüzə məxsus olanı beyninizdə saxlayın və necə təhlükəsiz olmağı, həyatınıza bir qədər şəxsi yer bəxş etməyi öyrənin! Başınızdan ayaq barmaqlarınıza qədər ara verin, bu barədə düşünün. Ayaqlarınızdan burnunuza qədər fasilə verin və onlayn düşünün!"
+      2:
+        text: "Böyümək və böyümək, özünüzə sağlam bir parıltı vermək və sevgililər günü etmək üçün ürəyinizi istifadə edin, kiməsə mənim olacağınızı söyləyin! İnternetdə olduğunuz zaman ürəyinizdən istifadə edin, nəyin doğru olduğunu hiss edin və həmişə mehriban olun və dostlarınıza hörmət göstərin, İnternetdə ədalətli və xoş davranın. Başınızdan ayaq barmaqlarınıza qədər ara verin, bu barədə düşünün. Ayaqlarınızdan burnunuza qədər fasilə verin və onlayn düşünün!"
+      3:
+        text: "Ev heyvanınızı qucaqlamaq, paltarınızın islanmasının qarşısını almaq, sevdiyiniz qolları geyinmək və uçmağınıza və inanmağınıza kömək etmək üçün əllərinizi istifadə edin. Onlayn olduğunuz zaman qollarınızı istifadə edin, fasilə verin və vaxtınızı tarazlayın, texnologiyanızı geridə qoyun və özünüzə dırmaşmaq üçün bir ağac tapın. Başınızdan ayaq barmaqlarınıza qədər ara verin, bu barədə düşünün. Ayaqlarınızdan burnunuza qədər fasilə verin və onlayn düşünün!"
+      4:
+        text: "Yeməyinizi saxlamaq və onun gurultulu əhvalını dinləmək, qarın şişkinliyi yaratmaq və qazlı içkidə qazı hiss etmək üçün bağırsaqlarınızı istifadə edin. Onlayn olduğunuz zaman bağırsaqlarınızı istifadə edin, müəyyən əlamətlərə diqqət yetirmək və onun sizə yol göstərməsinə icazə vermək və yaxşı olmadığı zaman sizə xəbər vermək. Başınızdan ayaq barmaqlarınıza qədər ara verin, bu barədə düşünün. Ayaqlarınızdan burnunuza qədər fasilə verin və onlayn düşünün!"
+      5:
+        text: "Beləliklə, başınızla düşünün və ürəyinizlə hiss edin, qollarınızla tarazlayın, bağırsaqlarınızı onlayn dinləyin. Qaçmaq və təpikləmək, poqo çubuqunda tullanmaq və sıçrayış etmək, blokun ətrafında rəqs etmək və iyli corablarınızla tullanmaq üçün ayaqlarınızı istifadə edin. İnternetdə olduğunuz zaman ayaqlarınızdan istifadə edin, sərhədi keçən zorbalara qarşı durun və hündür dayanmağı unutmayın, böyük və kiçik canlılarla yaxşı davranın."
+      6:
+        text: "Başınızdan ayaq barmaqlarınıza qədər ara verin, bu barədə düşünün. Ayaqlarınızdan burnunuza qədər fasilə verin və onlayn düşünün! Odur ki, başınızla düşünün və ürəyinizlə hiss edin, qollarınızla tarazlayın, bağırsaqlarınızı dinləyin, ayaqlarınızla ayağa qalxın. Başınızdan ayaq barmaqlarınıza qədər ara verin, bu barədə düşünün. Ayaqlarınızdan burnunuza qədər fasilə verin və onlayn düşünün!"
+    C2_digital_footprint_v2:
+      1:
+        text: "Hər dəfə internetə girdiyiniz zaman siz axtarılan, kopyalana bilən, paylaşıla bilən, yayımlana bilən və daimi olan iz buraxırsınız. Hansı rəqəmsal iz buraxırsınız? Hansı rəqəmsal iz buraxmaq istərdiniz?"
+    C2_graph_paper:
+      1:
+        text: "Bu dərs \"Qrafik Kağız Proqramlaşdırması\" adlanır və hər şey alqoritmlərə aiddir. Bu gün biz yalnız əl ilə çəkilmiş oxlardan istifadə edərək sadə ağ-qara şəkilləri necə yenidən yaratmağı bir-birinə göstərən proqramları necə yazmağı öyrənəcəyik."
+      2:
+        text: "Alqoritm bir tapşırığı yerinə yetirmək üçün təlimatların siyahısıdır. Kassanı hazırlamaq üçün bu təlimatlara əməl edəcəyik. Bir şeyi necə edəcəyinizi başa düşmək üçün başqasına ehtiyacınız olduqda alqoritmlər həqiqətən faydalıdır."
+      3:
+        text: "Əgər siz kompüter üçün alqoritm yazırsınızsa, onu kiçik addımlara bölmək lazımdır. Beləliklə, bu sıranı bitirin və növbəti, sonra növbəti birinə keçin və işiniz bitəcək."
+      4:
+        text: "İşimdə alqoritmlərdən istifadə edirəm. Əgər bütün addımları yazsam, həmin əsəri yenidən yarada bilərəm və ya başqasına bunu etməyi öyrədə bilərəm. Şüşəni sobaya qoyun, birlikdə əridin, qabı hazırlamaq üçün qalan təlimatlara əməl edin. Alqoritmlər sizə bir iş görmək üçün yol xəritəsi verir."
+    C2_artist_loops:
+      1:
+        text: "Burada biz rəssamımızı proqramlaşdırarkən addımları qənaət etmək üçün təkrar blokundan istifadə edəcəyik. Artıq səhnəmizdə bəzi bloklar var, lakin onlar bizi işə başlamaq üçün oradadırlar."
+      2:
+        text: "Bütün kvadratı çəkmək üçün bu blokları dörd dəfə döndərmək üçün biz sadəcə təkrar blokunu kənara sürükləyirik və irəli hərəkət edirik və təkrar blokun içərisində sağ blokları döndəririk. Qaçış düyməsini vurduğumuz zaman rəssam kvadratı tamamlamaq üçün bu addımları dörd dəfə təkrarlayacaq."
+    C2_bee_loops:
+      1:
+        text: "Döngə fəaliyyətin təkrarıdır. Yoxlamaq üçün pətəyə girib çərçivəyə baxıram, sonra onu geri qoyuram. Eyni hərəkəti dəfələrlə təkrar edirəm. O, ətrafında fırlanır, eyni fəaliyyəti dəfələrlə edir."
+      2:
+        text: "Bu təkrar blokdur. Təkrar blokunun içərisinə nə qoysanız, bu hərəkətləri ona dediyiniz sayda təkrarlayacaqdır. Məsələn, bu səviyyədə, üç dəfə irəli sürükləmək və nektar almaq əvəzinə, biz onları hər birində bir dəfə sürükləyib hərəkəti üç dəfə təkrarlayacağıq. Bu asanlaşdırdı!"
+    C2_maze_intro:
+      1:
+        text: "Adətən proqramlaşdırma mətndə olur, lakin biz proqramları yazmaq üçün sürükləyib buraxdığınız vizual bloklardan istifadə edən Blockly-dən istifadə edəcəyik. Başlıq altında siz hələ də kod yaradırsınız. Başlamaq üçün biz bu Angry Bird-ə yumurtalarını oğurlayan pis donuzlara çatmaq üçün labirintdən keçməyə kömək edəcək proqram üçün kod hazırlayacağıq."
+      2:
+        text: "Blockly üç əsas hissəyə bölünür. Solda proqramınızın işləyəcəyi quş labirintidir. Hər səviyyə üçün təlimatlar labirint altında yazılmışdır. Bu orta sahə alətlər qutusudur və bu blokların hər biri quşun başa düşə biləcəyi bir əmrdir. Sağdakı ağ boşluq iş sahəsi adlanır və proqramımızı burada quracağıq."
+      3:
+        text: "Köçürmə blokunu iş məkanımıza sürükləsəm və \"Çalış\" düyməsini sıxsam, nə olar? Quş torda bir qutu irəliləyir. Bir qutu irəlilədikdən sonra quşun bir şey etməsini istəsəm nə olar? Proqramımıza daha bir blok əlavə edə bilərəm."
+      4:
+        text: "Mən \"sağa dön\" blokunu seçəcəyəm və sarı ox görünənə qədər onu hərəkət blokumun altına sürükləyəcəm. Sonra onu atacağam və iki blok bir-birinə yapışacaq. Mən yenidən \"Çalış\" düyməsini basdığımda quş iş məkanımızda yuxarıdan aşağıya yığılmış əmrləri yerinə yetirəcək."
+      5:
+        text: "Əgər nə vaxtsa bloku silmək istəsəniz, onu yığından çıxarın və zibil qutusuna sürükləyin. Qaçış düyməsini vurduqdan sonra quşu başlanğıc vəziyyətinə qaytarmaq üçün hər zaman sıfırlama düyməsini basa bilərsiniz. İndi o donuzları alaq!"
+    C2_paper_airplanes:
+      1:
+        text: "Bu dərs Real Həyat Alqoritmləri adlanır. Alqoritmlər insanların hər gün etdikləri işləri təsvir edir. Peçenye reseptləri və quş evi tikmək üçün istiqamətlər həm gündəlik alqoritmlərdir."
+      2:
+        text: "Bu gün biz kağız təyyarə üçün alqoritm yaradacaq, yaradacaq və sınaqdan keçirəcəyik. Ancaq əvvəlcə bu böyük layihəni izləmək üçün asan kiçik addımlara bölmək lazımdır. Kağızdan bir təyyarə hazırlamaq üçün hansı addımların atılacağına və hansı ardıcıllıqla atılacağına qərar verməliyik."
+      3:
+        text: "Bu gün biz kağız üzərində alqoritm yaradacaq, yaradacaq və sınaqdan keçirəcəyik. Ancaq bu böyük layihəni izləmək üçün asan kiçik addımlara bölmək lazımdır. Kağızdan bir yemək üçün hansı addımların atılacağına və hansı qaydada qərar veriləcəyinə qərar verməlidir."
+      4:
+        text: "Şokolad hazırlamaq istədikdə, bu proses üçün çox böyük addımlar var. Və bu böyük addımların hər birinin öz kiçik addımları var. Və şokoladın necə dadını istədiyimizdən asılı olaraq müxtəlif reseptlər və ya alqoritmlər var. Hər addım, hətta kiçik addımlar da vacibdir. Beləliklə, bir addım olmadan, qalanlarını tamamlamaq mümkün deyil. Başqalarının anlaya biləcəyi alqoritmlər yaratmaq həqiqətən vacibdir. Ona görə də hər bir addım yazılmalıdır, ona görə də kimin etməsindən asılı olmayaraq, nəticə eynidir."
+    C2_relay_programming:
+      1:
+        text: "Bu gün biz relay proqramlaşdırma ilə məşğul olacağıq. Hər şey təzyiq altında proqramlaşdırma və bəzən həqiqətən tez və ya komandalarla işlədiyiniz zaman baş verən səhvləri aradan qaldırmaqdan ibarətdir. Kodlaşdırmanı simulyasiya etmək üçün qrafik kağız proqramlaşdırmadan istifadə edəcəyik və son tarixə sahib olmaq üçün estafet yarışlarından istifadə edəcəyik."
+      2:
+        text: "Estafet proqramlaşdırmasında komandalar qrafik kağız proqramını bitirmək üçün yarışacaqlar. Siz komanda yoldaşınızın işini yoxlamalı və ya onu sazlamalı, səhv olarsa, onu düzəltməli, oxunu əlavə etməli və geri qaçıb komanda yoldaşını işarələməlisiniz."
+      3:
+        text: "Proqramçılar alqoritmlərində və ya kodundakı problemləri tapmaq və düzəltmək üçün sazlamadan çox istifadə edirlər. Problemləri aradan qaldırmağın bir çox yolu var. Ən asanlarından biri, bir şeyin səhv getdiyini tapana qədər addım-addım hərəkət etməkdir, sonra onu düzəltməkdir."
+      4:
+        text: "Budur, mən arxa əl yaylamağa çalışıram, amma yıxılıram. Hər hissəni addım-addım gəzirəm və səhvimin harada olduğunu anlayıram. Məşqçim mənə əllərimi şüaya düzgün qoymadığımı göstərdi. Beləliklə, mən yeni əl mövqeyimlə şüa üzərində başqa bir arxa əl yayını sınadım və onu yapışdırdım! Arxa əl yayınımdakı qüsurları aradan qaldırdığım üçün çox sevindim. Biz başa düşdük! Sazlama problemləri tapmaq və aradan qaldırmaqdır. Əla, yaxşı iş!"
+    C2_zuck_repeat_loop:
+      1:
+        text: "Kompüterlərin həqiqətən yaxşı olduğu bir şey əmrləri təkrarlamaqdır. Bir insan olaraq, eyni şeyi ardıcıl olaraq dəfələrlə etmək məcburiyyətində qalsanız, həqiqətən sıxılacaqsınız. Ancaq bir kompüter eyni şeyi milyonlarla, hətta milyardlarla dəfə edə bilər və darıxmaz və bunu həqiqətən yaxşı yerinə yetirə bilər."
+      2:
+        text: "Məsələn, əgər mən Facebook-da hər kəsə e-poçt göndərməklə ad gününü təbrik etmək istəsəm, bu e-poçtların hamısını hər kəsə yazmaq mənə bir əsrdən çox vaxt apara bilər. Ancaq bir neçə sətir kodla sistemin Facebook-dakı hər kəsə ad günü münasibətilə təbrik məktubu göndərməsini təmin edə bilərəm. Beləliklə, döngələr budur və nə üçün qiymətlidirlər və kompüterlərin çox yaxşı edə biləcəyi bir şeydir."
+      3:
+        text: "Bu nümunədə məqsədiniz donuzu almaq üçün quşu hərəkət etdirmək olacaq. İndi biz bunu çox asanlıqla edə bilmək üçün \"təkrar\" blokundan istifadə edə biləcəyik. Siz quşu hər dəfə donuza doğru bir addım irəliləmək üçün kompüterə beş dəfə \"irəli hərəkət et\" əmri verməklə bunu edə bilərsiniz."
+      4:
+        text: "Yaxud kompüterə bir dəfə “irəli hərəkət et” deyə bilərsən, sonra da 5 dəfə “təkrar et” deyə bilərsən, o da eyni şeyi edəcək. Beləliklə, bunu etmək üçün siz \"irəli hərəkət et\" əmrinizi sürükləyirsiniz və sonra onu \"təkrar et\" blokunun içərisinə qoyursunuz. Və siz üzərinə klikləyərək bloku neçə dəfə təkrarlamaq istədiyinizi deyə bilərsiniz. onun irəli atılmasını istədiyiniz addımlar."
+      5:
+        text: "İndi daha bir şey odur ki, \"təkrar\" blokunun içərisinə istədiyiniz qədər əmr qoya bilərsiniz. Beləliklə, bu nümunədə siz ona irəli getməyi və sola dönməyi söyləyirsiniz, bunu beş dəfə edəcək. Yaxşı, yaxşı iş və əylənin!"
+    C3_artist_functions:
+      1:
+        text: "Kompüter proqramlaşdırmasındakı ən yaxşı şeylərdən biri, kompüterə bir hərəkət etməyi öyrətdikdən sonra bu funksiyanı yenidən çağıra bilərsiniz. Siz ona bir ad verin və sonra zəng edə bilərsiniz. Bu, həqiqətən də dili genişləndirmək kimidir."
+      2:
+        text: "Qurduğumuz proqramda dörd dəfə hərəkət edərək və dönərək kvadrat çəkməyi öyrəndik. Biz o funksiyanı götürüb ona ad verə bilərik, kvadrat çəkə bilərik ki, bunu etmək istədiyimiz zaman sadəcə kvadrat çək deyirik və o, geri qayıdıb həmin funksiyanı, həmin kodu işə salır. Bizim üçün həyata keçiriləcək. Biz bu konsepsiyanı proqramlaşdırma dilimizə əlavə etdik."
+    C3_artist_intro:
+      1:
+        text: "Maşınların nə qədər məlumat topladığına və necə davam etdiyinizi anlamaq üçün proqramlar yaza bilən insanların olması zərurətinə görə kompüter elmində təcrübəli insanlarınız olmasa, yarışa belə vəsiqə qazana bilməzsiniz. performansın necə qurulacağını anlayın."
+      2:
+        text: "Bu tapmacalarda siz müxtəlif fiqurlar çəkmək üçün karandaşdan istifadə edən bir rəssam olacaqsınız. Rəssamınız haraya getsə, arxasınca bir xətt çəkəcək."
+      3:
+        text: "Kətan ətrafında hərəkət etmək üçün siz irəliləmə blokundan istifadə edəcəksiniz. Burada irəliləmə bloku 100 piksel irəli getməyi bildirir. Biz qaçanda nə baş verir? Rəssam müəyyən bir miqdar irəliləyir və bu məbləğ 100 pikseldir. Piksellər əsasən kompüterinizin ekranında çox kiçik kvadratlardır."
+      4:
+        text: "Bu tapmacada əlimizdə olan digər blok 90 dərəcə sağa dönün deyir. Və biz onu çıxartdıqda, bu, sənətçimizi müəyyən bir miqdar çevirməyə məcbur edir. Beləliklə, sənətçinin nə qədər uzaqlaşmasını istədiyinizlə oynaya bilərsiniz. Bu 90 dərəcə dönmədir."
+      5:
+        text: "Və bu 120 dərəcə dönüşdür. Unutmayın ki, siz piksel və dərəcələr üçün rəqəmlərin yanındakı oxlara klikləməklə bu dəyərləri dəyişə bilərsiniz. Rəssamla rəsm çəkməkdən həzz alın!"
+    C3_artist_nested_loops:
+      1:
+        text: "Başqa bir döngənin içərisinə bir döngə qoyduğunuzda, biz onu iç-içə döngə adlandırırıq. Məsələn, burada bizə artıq üçbucağın hər tərəfi üçün bir dəfə olmaqla üçə təyin edilmiş təkrar vaxt blokundan istifadə edərək, tərəfləri 100 piksel uzunluğunda bir üçbucaq çəkmək kodu verilmişdir."
+      2:
+        text: "Amma biz altı üçbucaq çəkmək istəyirik. Bunu etmək üçün biz həmin döngəni götürüb başqa təkrar vaxt blokunun içərisinə yerləşdirəcəyik. Olduqca sərin!"
+    C3_bee_conditionals:
+      1:
+        text: "Bu şərti blokdur. Orada deyilir ki, əgər bir ədəddən az, bərabər və ya ondan çox olan nektar və ya bal varsa, onda bir şey edin."
+      2:
+        text: "Bu sual işarəsi ilə burada gördüyümüz kimi, nə qədər nektar və ya bal alacağımızı bilmədiyimiz zaman faydalıdır."
+      3:
+        text: "Bu misalda biz deyəcəyik ƏGƏR bənövşəyi çiçəkdə 0-dan çox nektar varsa, nektar alın. Bu, arımıza orada olduğu müddətdə nektar almağa davam etməsini söyləyəcək. Ta-dah!"
+    C3_bee_debugging:
+      1:
+        text: "Heç bir proqramın sazlanması haqqında eşitmisiniz? Bu, nəyin işləmədiyini anlamağın yoludur. Kodu sazladığınız zaman səhvləri müəyyən edib aradan qaldırırsınız."
+      2:
+        text: "Burada artıq iş yerimizdə bir neçə blok verilir. Bunun düzgün həll olub-olmadığını və onu harada düzəltməli olduğumuzu görmək üçün addım-addım bloklar arasında gəzmək üçün addım düyməsini istifadə edəcəyik."
+      3:
+        text: "Deyəsən bizim problemimiz var! Bizə daha bir irəliləmə bloku lazımdır. Addım düyməsi səhvin harada olduğunu müəyyən etməklə problemimizi həll etməyə kömək edir ki, biz onu düzəldə bilək."
+    C3_bee_functions:
+      1:
+        text: "Kompüter elmində ən vacib anlayışlardan biri yeni əmrləri necə təyin etmək, öz sözlərini kompüter dilinə necə əlavə etməkdir. Əksər kompüter dillərində yalnız yüzə yaxın söz və ya əmr var. Sənət və sehr bu tikinti bloklarından öz yeni sözlərinizi müəyyən etməkdədir."
+      2:
+        text: "İdmanda bunu hər zaman edirik. Məsələn, basketbolda siz driblinq, lay-up, ribaund etməyi öyrənməklə başlayırsınız. Bu, həqiqətən, əsas hərəkətləri öyrəndikdən sonra, yeni hərəkətlər öyrənirsiniz və bu tikinti bloklarını bir yerə yığırsınız, məsələn, götür və yuvarla və ya ver və get. Daha sonra daha mürəkkəb oyunlar oynamaq üçün oradan gedə bilərsiniz. Bu oyunu öyrəndikdən və ona ad verəndən sonra komandadakı hər kəs bunu necə edəcəyini bilir."
+      3:
+        text: "Eynilə, bu əmrlər ardıcıllığından istifadə edərək bir dəfə kompüterə hər hansı bir hərəkəti necə etməyi öyrətdikdən sonra həmin hərəkət üçün öz adınızı yarada bilərsiniz ki, onu daha sonra təkrarlamaq asan olsun. Öz əmrinizi təyin etdiyiniz və ona ad verdiyiniz zaman buna funksiya deyilir. İndi arıya kömək etmək üçün funksiyalardan istifadə edəcəyik."
+      4:
+        text: "Bu nümunədə bizim funksiyamız 2 nektar almaq adlanır, bu yaşıl blok buradadır. Biz 2 nektarın nə etdiyini funksiya tərifi olan bu boz qutuya baxaraq bilirik. Oradan içəri baxsaq, 2 nektar alan nektar alacaq, sonra yenidən nektar alacaq. Həmişə boz qutunun içərisində nə olduğuna baxın ki, bu yaşıl funksiya bloklarının nə edə biləcəyini biləsiniz."
+    C3_bee_nested_loops:
+      1:
+        text: "İndi biz arı ilə iç içə döngələrdən istifadə edəcəyik. Bizə arının irəli getməsini və üç dəfə nektar almasını və sonra sağa dönməsini söyləyən bəzi başlanğıc kodu verilir. Gəlin bütün kod parçasını götürək və onu başqa bir təkrar blokun içərisinə yerləşdirək və üç dəfə təkrar etməyə təyin edək. Bitdi!"
+    C3_bounce:
+      1:
+        text: "Dostlarınızla paylaşa biləcəyiniz öz sıçrayış oyununuzu yaradacaqsınız! Nə gözəl!"
+      2:
+        text: "Başlamaq üçün avar idarəetmələrini klaviaturamızdakı ox düymələri ilə əlaqələndirməliyik."
+      3:
+        text: "Biz bunu zaman sol ox blokunu hərəkət sol blokuna və zaman sağ ox blokunu sağa hərəkət bloku ilə əlaqələndirməklə edə bilərik. Bir yol verin və heç vaxt öz sıçrayış oyununuzu proqramlaşdıracaqsınız!"
+    C3_computational_thinking:
+      1:
+        text: "Bu dərs hesablama düşüncəsidir. Bəzən yeni bir oyunu öyrənmək çətin ola bilər, elə deyilmi? Əvvəlcə bu, həqiqətən çaşdırıcı görünə bilər və bəzən sizə qaydaları öyrədəcək heç kim yoxdur, ona görə də bunu özünüz başa düşməlisiniz."
+      2:
+        text: "Yaxşı xəbər budur ki, bir neçə düşüncə hiyləsini bildiyiniz zaman hər şeyi özünüz həll etməkdə daha yaxşı ola bilərsiniz. Bu fəndlər problemlərə baxmaq və həll etmək üçün unikal üsullardır. Bu dərsdə siz dörd fənd haqqında öyrənəcək və oyunun qaydalarını anlamaq üçün onları dostlarınızla məşq edəcəksiniz."
+      3:
+        text: "Böyük bir problemi kiçik parçalara ayırdığınız zaman beyninizi böyük problemi parçalamaq üçün istifadə edirsiniz. Böyük problemi bir neçə kiçik problemə parçaladıqdan sonra nümunə uyğunluğu adlanan növbəti hiyləmizə keçə bilərik."
+      4:
+        text: "O zaman biz şeylər arasında oxşarlıq axtarırıq. Eyni şeyləri tapdıqdan sonra nəyin fərqli olduğunu anlaya bilərəm. Mən bu fərqləri aradan qaldıranda buna abstraksiya deyilir."
+      5:
+    C3_maze_level_4:
+      1:
+        text: "Bu nümunədə sənin hədəfin zombini günəbaxana çatdırmaqdı.Biz 5 irəli hərəkət et blokundan istifadə edə və ya kompüterə irəli hərəkət et və bu bir blokun istifadəsini 5 dəfə təkrarla deyə bilərik."
+      2:
+        text: "Bu zaman itkisinin qarşısını alır və həlli asan edir.Bunu etmək üçün yalnız irəli hərəkət et blokunu təkrarla blokunun içərisinə daxil etmək lazımdır.Qaça bas və zombi ləzzətli günəbaxana doğru 5 dəfə hərəkətə keçəcək."
+    C3_songwriting_with_parameters:
+      1:
+        text: "Bu mahnı yazmaq dərsidir.Mahnı daha çox kompüter proqramlarına oxşayır.Yazılmış notlar və sözlər musiqiçiyə məhz nə etməli olduğunu deyir. Mahnının bəzi hissələri təkrar və təkrar istifadə olunur."
+      2:
+      3:
+    C4_function_edit:
+      1:
+        text: "Kompüter proqramlaşdırmasındakı ən yaxşı şeylərdən biri, kompüterə bir hərəkət etməyi öyrətdikdən sonra bu funksiyanı yenidən çağıra bilərsiniz. Siz ona bir ad verin və sonra zəng edə bilərsiniz. Bu, həqiqətən də dili genişləndirmək kimidir."
+      2:
+      3:
+      4:
+    C4_intro:
+      1:
+        text: "Adətən proqramlaşdırma mətndə olur, lakin biz proqramları yazmaq üçün sürükləyib buraxdığınız vizual bloklardan istifadə edən Blockly-dən istifadə edəcəyik. Başlıq altında siz hələ də kod yaradırsınız. Başlamaq üçün biz bu Angry Bird-ə yumurtalarını oğurlayan pis donuzlara çatmaq üçün labirintdən keçməyə kömək edəcək proqram üçün kod hazırlayacağıq."
+      2:
+        text: "Blockly üç əsas hissəyə bölünür. Solda proqramınızın işləyəcəyi quş labirintidir. Hər səviyyə üçün təlimatlar labirint altında yazılmışdır. Bu orta sahə alətlər qutusudur və bu blokların hər biri quşun başa düşə biləcəyi bir əmrdir. Sağdakı ağ boşluq iş sahəsi adlanır və proqramımızı burada quracağıq."
+      3:
+      4:
+      5:
+        text: "Əgər nə vaxtsa bloku silmək istəsəniz, onu yığından çıxarın və zibil qutusuna sürükləyin. Qaçış düyməsini vurduqdan sonra quşu başlanğıc vəziyyətinə qaytarmaq üçün hər zaman sıfırlama düyməsini basa bilərsiniz. İndi o donuzları alaq!"
+    starwars_congrats:
+      1:
+      2:
+      3:
+      4:
+      5:
+        text: "Oyununu qurub-bitirdikdən sonra paylaşmağı seç və aldığın linki dostalarınla paylaş və ya öz oyununu öz telefonunda oyna. Xoş əyləncələr!"
+    starwars_blocks_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "Sağdakı ağ boş hissə iş ərazisi adlanır və bura bizim proqramı quracağımız yerdir. "
+      7:
+      8:
+      9:
+      10:
+    starwars_blocks_events:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+      7:
+        text: "Addım-addım sənin oyunun daha cəlbedici olur."
+    starwars_blocks_congrats:
+      1:
+      2:
+      3:
+      4:
+      5:
+        text: "Oyununu qurub-bitirdikdən sonra paylaşmağı seç və aldığın linki dostalarınla paylaş və ya öz oyununu öz telefonunda oyna. Xoş əyləncələr!"
+    mc_congrats_share:
+      1:
+        text: "Təbriklər! Sən indicə kompüter elmlərində bloklar tikməyin əsaslarını öyrəndin."
+      2:
+      3:
+      4:
+    mc_congrats_no_share:
+      1:
+        text: "Təbriklər! Sən indicə kompüter elmlərində bloklar tikməyin əsaslarını öyrəndin."
+      2:
+      3:
+      4:
+        text: "İndi sən nə istəsən qura bilərsən. Xoş əyləncələr!"
+    mc_2016_intro:
+      1:
+      2:
+      3:
+      4:
+      5:
+      6:
+        text: "Əgər nə edəcəyini unutdunsa, hər səviyyə üçün təlimatlar yuxarıdadır."
+      7:
+      8:
+      9:
+    mc_2016_events:
+      1:
+      2:
+        text: "Sensorlu ekrandan istifadə edirsinizsə, hərəkət etmək üçün yuxarı, aşağı, sola və sağa sürüşdürün. Sonra qarşınızdakı elementdən istifadə etmək üçün oyuna toxunun."
+      3:
+      4:
+    mc_2017_agent_intro:
+      1:
+      2:
+        text: "Biraz gözlə - yolda çuxur var! (qışqırıq)"
+      3:
+      4:
+      5:
+        text: "Oh , tamam , ey, mən əsl dünyadayam hal-hazırda.Mən Minecraftın ofislərini tapmağa çalışacam."
+      6:
+      7:
+      8:
+      9:
+      10:
+      11:
+        text: "Əgər nə edəcəyini unutdunsa, hər səviyyə üçün təlimatlar yuxarıdadır."
+      12:
+    mc_2017_repeat:
+      1:
+      2:
+      3:
+        text: "Mən elə hiss edirəm ki,  sanki mən yenidən \"Minecraft\"-yam.Salam. Necəsən?  Salam?"
       4:
       5:
       6:
       7:
       8:
       9:
-      10:
-    frozen_loops:
+    mc_2017_congratulations:
       1:
+        text: "Preston: Təbriklər!"
       2:
-        text: "Proqramlaşdırmada biz buna dövr deyirik. Dövr proqramınızı təkrar-təkrar yenidən icra etməyin yoludur. Növbəti tapmacada tapşırığınız Annanın \"təkrar et\" bloku ilə kvadrat düzəltməsinə kömək etməkdir."
+        text: "Lizzy:Təbriklər!"
       3:
-      4:
-      5:
-    playlab_intro:
-      1:
-      2:
-      3:
+        text: "Stampy: Təbriklər, sən bunu bacardın!"
       4:
       5:
       6:
-        text: "İlk addımı atın və axırda siz öz oyununuzu düzəldə biləcəksiniz. Cürbəcür oyunçular qarşılıqlı ünsiyyət qura, xoşbəxt və ya qəmli ola, xallar qazana və ya alov topları ata, hətta bir birini məhv edə biləcəklər. Hamısı sizdən və düzəltmək istədiyiniz oyundan asılıdır."
-    C1_happy_maps_unplugged:
-      1:
-        text: "Bu dərsin adı Şən xəritələrdir. Bu gün biz balaca tüklü dostumuz Flurba meyvəsinə yetişməkdə kömək edəsiyik."
-      2:
-      3:
-      4:
-      5:
+      7:
+      8:
     hoc_dance_warmup:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Qızışma"
@@ -333,11 +855,45 @@ az:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Şənlik davam edir!"
       2:
+        text: "Təbriklər! Siz indicə kompüter elmlərinin əsaslarını öyrəndiniz. İndi siz bu bloklardan istifadə edərək öz dizaynızı dostlarınız ilə paylaşa biləyəcəyiniz rəqs partisi yarada bilərsiniz."
       3:
       4:
       5:
       6:
       7:
+    mc_2018_intro:
+      1:
+      2:
+      3:
+        text: "Solda siz Minecraft dünyasını görəcəksiniz."
+      4:
+      5:
+      6:
+      7:
+      8:
+      9:
+        text: "Əgər yenidən cəhd etmək istəyirsinizsə, \"sıfırla\" düyməsinə basaraq geriyə-başladığınız yerə qayıda bilərsiniz."
+      10:
+      11:
+    mc_2018_closing:
+      1:
+      2:
+      3:
+        text: "Netty: Sən bunu bacardın! Təbriklər."
+      4:
+        text: "Tomohawk: Təbriklər!"
+      5:
+      6:
+      7:
+      8:
+      9:
+    teaching_csf_how_it_works:
+      1:
+        text: "Bu kurs bir neçə mərhələlərə bölünüb."
+      2:
+        text: "İlk bir neçə mərhələ sizə kompüter elmlərinin nə olduğunu təqdim edəcək, həmçinin bəzi açar lüğəti."
+      3:
+      4:
     hoc_dance_warmup_2019:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Qızışma"
@@ -357,8 +913,10 @@ az:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Hadisələr"
       2:
+        text: "Mənim adım Erindir və mən Code.org-da proqram təminatı mühəndisiyəm və mən Rəqs Partisini qurmağa kömək etmişəm."
       3:
       4:
+        text: "Hadisələrin bəzi nümunələri siçanın kliklənməsini, ox düyməsini və ya ekranda toxunuşu dinləməkdir."
       5:
       6:
       7:
@@ -379,6 +937,7 @@ az:
       1:
         text: "Kod Saatı | Rəqs şənliyi: Şənlik davam edir!"
       2:
+        text: "Təbriklər! Siz indicə kompüter elmlərinin əsaslarını öyrəndiniz. İndi siz bu bloklardan istifadə edərək öz dizaynızı dostlarınız ilə paylaşa biləyəcəyiniz rəqs partisi yarada bilərsiniz."
       3:
       4:
       5:

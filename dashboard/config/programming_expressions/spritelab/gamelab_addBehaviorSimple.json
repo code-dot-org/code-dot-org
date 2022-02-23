@@ -1,0 +1,8 @@
+{
+  "key": "gamelab_addBehaviorSimple",
+  "name": "addBehaviorSimple",
+  "category": "Behaviors",
+  "category_key": "behaviors",
+  "block_name": "gamelab_addBehaviorSimple",
+  "syntax": "addBehaviorSimple"
+}

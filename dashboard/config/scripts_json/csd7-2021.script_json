@@ -4,30 +4,33 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "curriculum_umbrella": "CSD",
-      "project_sharing": true,
-      "is_migrated": true,
-      "hideable_lessons": true,
-      "weekly_instructional_minutes": 225,
-      "has_verified_resources": true,
-      "show_calendar": true,
-      "include_student_lesson_plans": true,
       "announcements": [
         {
           "notice": "Supports for Teaching CS Discoveries",
           "details": "In addition to our curriculum, Code.org offers self-paced and facilitator-led professional learning courses for teachers who wish to implement CS Discoveries in their classrooms.",
-          "link": "https://code.org/educate/professional-development-online",
+          "link": "https://code.org/educate/professional-learning/middle-high",
           "type": "information",
           "visibility": "Teacher-only"
         }
       ],
-      "tts": true
+      "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "tts": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-22 15:42:09 UTC",
+    "serialized_at": "2022-01-13 15:44:17 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd7-2021"
     }
@@ -83,6 +86,15 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1. **Apply the Problem Solving Process to train a computer to solve a problem**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
@@ -103,6 +115,15 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1) **Describe the differences between supervised and unsupervised learning.**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called \"Green Glass Door\" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.\n\n**Question of the Day:** What are different types of machine learning?",
@@ -124,8 +145,17 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1) **Describe how Artificial Intelligence is having an impact on society**\n\n\tSee the activity guide for this lesson as a way to measure each step of the problem solving process.",
-        "overview": "In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.",
+        "overview": "In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.\n\n**Question of the Day:** How is AI helping to solve problems around the world?",
         "preparation": "- Print copies of the activity guide for each student\n- Prepare to digitally distribute the AI Research Areas resource to students. ",
         "student_overview": "Research different examples of how Artificial Intelligence is being used to solve problems in the world."
       },
@@ -483,16 +513,16 @@
       }
     },
     {
-      "key": "Post-Unit Survey",
-      "name": "Post-Unit Survey",
+      "key": "CS Discoveries Post-Course Survey",
+      "name": "CS Discoveries Post-Course Survey",
       "absolute_position": 22,
-      "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 22,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Post-Unit Survey",
+        "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd7-2021"
       }
@@ -1706,13 +1736,13 @@
       }
     },
     {
-      "key": "e8cac1db-ac28-4f42-8e94-6e06003053b2",
+      "key": "df5a9a85-f94d-4abf-951b-090d0793629c",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "e8cac1db-ac28-4f42-8e94-6e06003053b2",
-        "lesson.key": "Post-Unit Survey",
+        "lesson_activity.key": "df5a9a85-f94d-4abf-951b-090d0793629c",
+        "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd7-2021"
       }
@@ -3756,7 +3786,7 @@
       "key": "6c43539f-8ba5-43e6-93fa-9bc34d0e4d75",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how human's can influence the machine learning process?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how humans can influence the machine learning process?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -8091,13 +8121,20 @@
       }
     },
     {
-      "key": "76029f86-bc3c-4320-b7c1-952a7d44b15b",
+      "key": "9819f2db-593b-4631-96e8-ad45aba59e08",
       "position": 1,
       "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students.\n\n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "76029f86-bc3c-4320-b7c1-952a7d44b15b",
-        "lesson_activity.key": "e8cac1db-ac28-4f42-8e94-6e06003053b2"
+        "activity_section.key": "9819f2db-593b-4631-96e8-ad45aba59e08",
+        "lesson_activity.key": "df5a9a85-f94d-4abf-951b-090d0793629c"
       }
     }
   ],
@@ -9931,24 +9968,25 @@
       "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD survey_placeholder_levelgroup"
-        ]
+          "csd-post-survey-markdown-with-link-to-survey_2021"
+        ],
+        "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD survey_placeholder_levelgroup"
+          "csd-post-survey-markdown-with-link-to-survey_2021"
         ],
-        "lesson.key": "Post-Unit Survey",
+        "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd7-2021",
-        "activity_section.key": "76029f86-bc3c-4320-b7c1-952a7d44b15b"
+        "activity_section.key": "9819f2db-593b-4631-96e8-ad45aba59e08"
       },
       "level_keys": [
-        "CSD survey_placeholder_levelgroup"
+        "csd-post-survey-markdown-with-link-to-survey_2021"
       ]
     }
   ],
@@ -10831,14 +10869,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD survey_placeholder_levelgroup",
+        "level.key": "csd-post-survey-markdown-with-link-to-survey_2021",
         "script_level.level_keys": [
-          "CSD survey_placeholder_levelgroup"
+          "csd-post-survey-markdown-with-link-to-survey_2021"
         ],
-        "lesson.key": "Post-Unit Survey",
+        "lesson.key": "CS Discoveries Post-Course Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd7-2021",
-        "activity_section.key": "76029f86-bc3c-4320-b7c1-952a7d44b15b"
+        "activity_section.key": "9819f2db-593b-4631-96e8-ad45aba59e08"
       }
     }
   ],
@@ -10860,8 +10898,8 @@
       "url": "https://docs.google.com/document/d/1eRaCraF6eSL25qBph4cxZTxLMsdtxHQADApfxKs3TOI/edit",
       "key": "_key_-_numerical_data_in_ai_lab",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_-_numerical_data_in_ai_lab"
@@ -10872,8 +10910,8 @@
       "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
       "key": "_key_classification_models",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_classification_models"
@@ -10884,8 +10922,8 @@
       "url": "https://docs.google.com/document/d/1NtS2vGqt_4uvDpGn1-u5AR2o_Iza_Oi4whtpq41eNt0/edit",
       "key": "_key_numerical_accuracy",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_numerical_accuracy"
@@ -10896,8 +10934,8 @@
       "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
       "key": "_key_training_a_model_in_ai_lab",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_training_a_model_in_ai_lab"
@@ -10908,8 +10946,8 @@
       "url": "https://docs.google.com/document/d/1Oz8_h4DT9gIjt0SgFsEle0BZzDlRocl63hcPKHSLclc/view",
       "key": "_key_zoo_models",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_zoo_models"
@@ -10920,8 +10958,8 @@
       "url": "https://docs.google.com/presentation/d/18OGQCoNKsi63ArkV0jECeHWsS_accFDoYcDh9871ejk/edit",
       "key": "_template_5_why_s",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "_template_5_why_s"
@@ -10932,8 +10970,8 @@
       "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
       "key": "accuracy_in_ai_lab",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "accuracy_in_ai_lab"
@@ -10944,8 +10982,8 @@
       "url": "https://docs.google.com/presentation/d/1jpT_cSs45ZwAz7NMYTn6vhefu3ImndFWfGubS_5wkGw/copy",
       "key": "ai_code_of_ethics",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "ai_code_of_ethics"
@@ -10968,9 +11006,9 @@
       "url": "https://docs.google.com/document/d/19vF4UVAcJa6UsqkdKynWzSR80Mlnb2G3coBoWNxpIYc/edit?usp=sharing",
       "key": "ai_ethics_research_reflection",
       "properties": {
-        "type": "Student Handout",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Student Handout"
       },
       "seeding_key": {
         "resource.key": "ai_ethics_research_reflection"
@@ -10981,9 +11019,9 @@
       "url": "https://youtu.be/x2mRoFNm22g",
       "key": "ai_training_data_bias",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4"
+        "download_url": "https://videos.code.org/levelbuilder/02-ai-trainingdata-sm-mp4.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai_training_data_bias"
@@ -10994,9 +11032,9 @@
       "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk",
       "key": "ai_what_is_machine_learning_",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ai_what_is_machine_learning_"
@@ -11062,9 +11100,9 @@
       "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
       "key": "classification_models",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "classification_models"
@@ -11075,8 +11113,8 @@
       "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/copy",
       "key": "classification_models_1",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "classification_models_1"
@@ -11087,9 +11125,9 @@
       "url": "https://docs.google.com/document/d/1Vfp8rokk4JzTGhkUw3LkhyHAD5gLm0hct5N6CDjkNSI/view",
       "key": "classifying_fish",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "classifying_fish"
@@ -11100,11 +11138,23 @@
       "url": "https://www.youtube.com/watch?v=w8w-AosDcN8",
       "key": "cleaning_survey_data",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "cleaning_survey_data"
+      }
+    },
+    {
+      "name": "Create an ML App",
+      "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+      "key": "create_an_ml_app",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "create_an_ml_app"
       }
     },
     {
@@ -11124,8 +11174,8 @@
       "url": "https://drive.google.com/file/d/1L8WM8UEpOUW7rY1DaGImAco2BGzj6J_y/view?usp=sharing",
       "key": "creating_a_survey",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "creating_a_survey"
@@ -11136,8 +11186,8 @@
       "url": "https://docs.google.com/presentation/d/1D6EZitkNOVznhERKFHT1uD0DCVa8aOvengtVf2C2LDQ/copy",
       "key": "creating_an_app",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "creating_an_app"
@@ -11148,8 +11198,8 @@
       "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
       "key": "csd_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_curriculum_guide"
@@ -11180,8 +11230,8 @@
       "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
       "key": "csd_implementation_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csd_implementation_guide"
@@ -11192,8 +11242,8 @@
       "url": "https://docs.google.com/presentation/d/1EaYhIdYec-meNd2rrDnqrM76CYxNU54WDghIb0PCLks/copy",
       "key": "customizing_apps",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "customizing_apps"
@@ -11204,8 +11254,8 @@
       "url": "https://docs.google.com/presentation/d/1VOiSzm2soXCy2PhOHfgxiuqmwtKJJrxGQ6xhJlwPfCY/copy",
       "key": "design_an_ai_app",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "design_an_ai_app"
@@ -11224,12 +11274,24 @@
       }
     },
     {
+      "name": "Design an AI App",
+      "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+      "key": "design_an_ai_app_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "design_an_ai_app_1"
+      }
+    },
+    {
       "name": "Ethics & AI: Equal Access and Algorithmic Bias",
       "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
       "key": "ethics_ai_equal_access_and_algorithmic_bias",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "ethics_ai_equal_access_and_algorithmic_bias"
@@ -11273,8 +11335,8 @@
       "url": "https://www.youtube.com/watch?v=yTsspi6AQag",
       "key": "finding_patterns_in_data",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "finding_patterns_in_data"
@@ -11285,9 +11347,9 @@
       "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
       "key": "fruit_veggie_cards",
       "properties": {
-        "type": "Resource",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "fruit_veggie_cards"
@@ -11298,8 +11360,8 @@
       "url": "https://www.youtube.com/watch?v=0oG3Wck2fRU",
       "key": "if-statements_in_app_lab",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "if-statements_in_app_lab"
@@ -11310,8 +11372,8 @@
       "url": "https://drive.google.com/file/d/1xxtJnmayTnjT_0KdcaQp5buxBsVJnbsu/view?usp=sharing",
       "key": "importing_a_model_in_app_lab",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "importing_a_model_in_app_lab"
@@ -11322,8 +11384,8 @@
       "url": "https://docs.google.com/presentation/d/1gkngAaMoJdp-8q2S9zomxHukJcdChkxtC38EA4dWvc0/copy",
       "key": "importing_models_in_app_lab",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "importing_models_in_app_lab"
@@ -11334,8 +11396,8 @@
       "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
       "key": "innovations_in_ai",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "innovations_in_ai"
@@ -11369,8 +11431,8 @@
       "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/copy",
       "key": "introduction_to_ai_lab",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "introduction_to_ai_lab"
@@ -11381,8 +11443,8 @@
       "url": "https://www.youtube.com/watch?v=bs3slynHTvc",
       "key": "introduction_to_ai_lab_1",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction_to_ai_lab_1"
@@ -11393,8 +11455,8 @@
       "url": "https://docs.google.com/presentation/d/1uT4weLbovBliCfxnkCERfjXWlWWRAYiJQ7brwfYP22U/copy",
       "key": "introduction_to_machine_learning",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "introduction_to_machine_learning"
@@ -11416,8 +11478,8 @@
       "url": "https://docs.google.com/presentation/d/11vB9jz1WAIcz2NFEJNMrl5IT87DfVfEPWgTxHG2_7Z4/copy",
       "key": "issue_statements",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "issue_statements"
@@ -11439,8 +11501,8 @@
       "url": "https://docs.google.com/presentation/d/1SDcwI7zrjM9G6H8ncufxiJXBZoozWk7SwvKl_GOMle4/copy",
       "key": "make_a_machine_learning_app",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "make_a_machine_learning_app"
@@ -11451,8 +11513,8 @@
       "url": "https://docs.google.com/presentation/d/1voKIV3MzBgU33ah0bjEsUGL-Eue53mtmwAlt2oIHwbA/view",
       "key": "model_card_-_digital_template",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "model_card_-_digital_template"
@@ -11463,8 +11525,8 @@
       "url": "https://docs.google.com/presentation/d/1Pg5gCzLLzv_I8jxPhTrdgL76gYPEJtFpAE1NN2bt8xI/view",
       "key": "model_card_-_printable_template",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "model_card_-_printable_template"
@@ -11475,8 +11537,8 @@
       "url": "https://docs.google.com/presentation/d/1KLPpUnpn_gu5KqS0S5rVAjr3pqv6kBSeZ3V7ngydz4E/copy",
       "key": "model_cards",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "model_cards"
@@ -11487,9 +11549,9 @@
       "url": "https://docs.google.com/document/d/1vdmL2UnG7KaMMenq5UsnsC4wbkuQZVP1OxVuT5WJvk0/edit#",
       "key": "model_cards_1",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "model_cards_1"
@@ -11500,8 +11562,8 @@
       "url": "https://www.youtube.com/watch?v=_iAGDFmZhYI",
       "key": "model_cards_in_ai_lab",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "model_cards_in_ai_lab"
@@ -11512,8 +11574,8 @@
       "url": "https://docs.google.com/presentation/d/1q_9LV_tmFEEqwCMuMo77heheFEyhATwMWYyVg6tn2HE/copy",
       "key": "model_cards_in_app_lab",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "model_cards_in_app_lab"
@@ -11525,8 +11587,8 @@
       "key": "numerical_accuracy_-_activity_guide",
       "properties": {
         "audience": "Student",
-        "type": "Activity Guide",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "numerical_accuracy_-_activity_guide"
@@ -11537,8 +11599,8 @@
       "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
       "key": "numerical_data_in_ai_lab",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "numerical_data_in_ai_lab"
@@ -11549,9 +11611,9 @@
       "url": "https://docs.google.com/document/d/1moMxuz91OA5THt6SxJm0AGyJKG69r1oz2FzeJ_NWeww/edit#",
       "key": "numerical_data_in_ai_lab_1",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "numerical_data_in_ai_lab_1"
@@ -11562,8 +11624,8 @@
       "url": "https://www.youtube.com/watch?v=Po4i_EtpDWI",
       "key": "numerical_data_in_ai_lab_2",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "numerical_data_in_ai_lab_2"
@@ -11574,8 +11636,8 @@
       "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
       "key": "numerical_models",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "numerical_models"
@@ -11586,8 +11648,8 @@
       "url": "https://docs.google.com/presentation/d/1SJEXpTCKwf5fbDy5GuDjDGAsuUrkI9QfxKF-1pMSndg/edit?usp=sharing",
       "key": "our_ai_code_of_ethics_template_",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "our_ai_code_of_ethics_template_"
@@ -11598,8 +11660,8 @@
       "url": "https://docs.google.com/presentation/d/1FabWi7tB1SI-YjqiPPfgU3Yljb3lJpoD1mFRmzUJiI8/copy",
       "key": "patterns_in_data",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "patterns_in_data"
@@ -11610,9 +11672,9 @@
       "url": "https://docs.google.com/document/d/1bOLsuDQuPdMEY3gwNEmGSL-vM_Twpllj-6Toq9qicrU/view",
       "key": "patterns_in_data_1",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "patterns_in_data_1"
@@ -11623,8 +11685,8 @@
       "url": "https://docs.google.com/document/d/1VyPGDJPygjGWgfjMJZR7rhwggk3mDz8HYJMm1KrAPzw/view",
       "key": "patterns_in_data_3",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "patterns_in_data_3"
@@ -11635,8 +11697,8 @@
       "url": "https://docs.google.com/presentation/d/1M9dxiG9GmZfoYxe2QYE7nQs3vs9T1knh0qxA9tOTtf8/copy",
       "key": "saving_models_in_ai_lab",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "saving_models_in_ai_lab"
@@ -11647,8 +11709,8 @@
       "url": "https://www.youtube.com/watch?v=DybczED-GKE",
       "key": "seeing_ai",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "seeing_ai"
@@ -11659,8 +11721,8 @@
       "url": "https://drive.google.com/file/d/1iCd0-YM5JK2Bk1u3XgEY6o0xcGwJdkau/view?usp=sharing",
       "key": "selecting_a_label",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "selecting_a_label"
@@ -11671,8 +11733,8 @@
       "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
       "key": "selecting_features",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "selecting_features"
@@ -11683,8 +11745,8 @@
       "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform",
       "key": "shoe_survey",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "shoe_survey"
@@ -11695,8 +11757,8 @@
       "url": "https://docs.google.com/presentation/d/1DhTshRLCTnVkQHEkpThwedSXL5NEXKtjwATlQIJk33w/copy",
       "key": "survey_data_in_ai_lab",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "survey_data_in_ai_lab"
@@ -11707,8 +11769,8 @@
       "url": "https://docs.google.com/presentation/d/1OOvhcw8TjjItSk8j40LauRLaKicLb2uNb-OCSs6fyX4/copy",
       "key": "survey_planning",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "survey_planning"
@@ -11742,9 +11804,9 @@
       "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
       "key": "training_a_model_in_ai_lab",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "training_a_model_in_ai_lab"
@@ -11755,8 +11817,8 @@
       "url": "https://www.youtube.com/watch?v=Pm70TO--ee4",
       "key": "training_and_testing_in_ai_lab",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "training_and_testing_in_ai_lab"
@@ -11767,8 +11829,8 @@
       "url": "https://docs.google.com/presentation/d/1LUkDD4PMefznEJh27EZruk6V8343JrYBpMZ3ThjmcLA/copy",
       "key": "troubleshooting_models",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "troubleshooting_models"
@@ -11791,8 +11853,8 @@
       "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/copy",
       "key": "types_of_machine_learning",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "types_of_machine_learning"
@@ -11803,9 +11865,9 @@
       "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
       "key": "types_of_machine_learning_1",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "types_of_machine_learning_1"
@@ -11816,8 +11878,8 @@
       "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
       "key": "types_of_machine_learning_2",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "types_of_machine_learning_2"
@@ -11828,8 +11890,8 @@
       "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
       "key": "using_data_with_categorical_features",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "using_data_with_categorical_features"
@@ -11840,8 +11902,8 @@
       "url": "https://drive.google.com/file/d/1gDKIbkvicZqyXlyj2a5InXaU9_lcxVlU/view?usp=sharing",
       "key": "using_data_with_numerical_features",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "using_data_with_numerical_features"
@@ -11852,8 +11914,8 @@
       "url": "https://www.youtube.com/watch?v=J0Avopx7FpM",
       "key": "view_and_download_survey_data",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "view_and_download_survey_data"
@@ -11865,8 +11927,8 @@
       "key": "zombie_prediction_-_activity_guide",
       "properties": {
         "audience": "Student",
-        "type": "Activity Guide",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "zombie_prediction_-_activity_guide"
@@ -11889,9 +11951,9 @@
       "url": "https://docs.google.com/document/d/1ORggvwa-uMH4HUUFEJL6g5v-mYR1948LhKAmHhmJxGc/edit",
       "key": "zoo_models",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "zoo_models"
@@ -11986,6 +12048,12 @@
     {
       "seeding_key": {
         "lesson.key": "Design an AI App",
+        "resource.key": "design_an_ai_app_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
         "resource.key": "exemplar_-_design_an_ai_app"
       }
     },
@@ -12137,6 +12205,12 @@
       "seeding_key": {
         "lesson.key": "Issue Statements",
         "resource.key": "issue_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "resource.key": "create_an_ml_app"
       }
     },
     {
@@ -12441,13 +12515,43 @@
   ],
   "vocabularies": [
     {
-      "key": "machine_learning",
-      "word": "Machine Learning",
-      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "key": "bias",
+      "word": "Bias",
+      "definition": "When a decision favors some things and de-prioritizes or excludes others",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "machine_learning"
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "key": "categorical_data",
+      "word": "Categorical Data",
+      "definition": "data that can be separated into groups",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "categorical_data"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "Classification",
+      "definition": "predicting a category based on other features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "key": "ethics",
+      "word": "Ethics",
+      "definition": "guidelines for good behavior.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ethics"
       }
     },
     {
@@ -12471,6 +12575,16 @@
       }
     },
     {
+      "key": "machine_learning",
+      "word": "Machine Learning",
+      "definition": "How computers recognize patterns and make decisions without being explicitly programmed",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "machine_learning"
+      }
+    },
+    {
       "key": "model",
       "word": "Model",
       "definition": "a computer program designed to make a decision",
@@ -12478,6 +12592,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "model"
+      }
+    },
+    {
+      "key": "numerical_data",
+      "word": "Numerical Data",
+      "definition": "data that can be counted or measured",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "numerical_data"
       }
     },
     {
@@ -12509,63 +12633,43 @@
       "seeding_key": {
         "vocabulary.key": "unsupervised_learning"
       }
-    },
-    {
-      "key": "categorical_data",
-      "word": "Categorical Data",
-      "definition": "data that can be separated into groups",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "categorical_data"
-      }
-    },
-    {
-      "key": "classification",
-      "word": "Classification",
-      "definition": "predicting a category based on other features",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "classification"
-      }
-    },
-    {
-      "key": "bias",
-      "word": "Bias",
-      "definition": "When a decision favors some things and de-prioritizes or excludes others",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bias"
-      }
-    },
-    {
-      "key": "numerical_data",
-      "word": "Numerical Data",
-      "definition": "data that can be counted or measured",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "numerical_data"
-      }
-    },
-    {
-      "key": "ethics",
-      "word": "Ethics",
-      "definition": "guidelines for good behavior.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "ethics"
-      }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
+        "lesson.key": "AI Code of Ethics",
+        "vocabulary.key": "ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "vocabulary.key": "categorical_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Introduction to Machine Learning",
         "vocabulary.key": "machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Numerical Data in AI Lab",
+        "vocabulary.key": "numerical_data"
       }
     },
     {
@@ -12603,39 +12707,30 @@
         "lesson.key": "Types of Machine Learning",
         "vocabulary.key": "unsupervised_learning"
       }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "vocabulary.key": "categorical_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "vocabulary.key": "classification"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards",
-        "vocabulary.key": "bias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "vocabulary.key": "numerical_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "vocabulary.key": "ethics"
-      }
     }
   ],
   "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "addPair"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "declareAssign_x"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "getPrediction"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Importing Models in App Lab",
@@ -12659,27 +12754,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "declareAssign_x"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "getPrediction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "programming_environment.name": "applab",
-        "programming_expression.key": "addPair"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Model Cards in App Lab",
         "programming_environment.name": "applab",
         "programming_expression.key": "ifBlock"
@@ -12688,116 +12762,6 @@
   ],
   "objectives": [
     {
-      "key": "56d03b70-1f5b-408c-a3d4-bd8439cc372e",
-      "properties": {
-        "description": "Apply the Problem Solving Process to train a computer to solve a problem"
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
-        "objective.key": "56d03b70-1f5b-408c-a3d4-bd8439cc372e"
-      }
-    },
-    {
-      "key": "3160fb3d-404e-41b2-b8dc-ad2f4baf630c",
-      "properties": {
-        "description": "Describe the differences between supervised and unsupervised learning."
-      },
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "objective.key": "3160fb3d-404e-41b2-b8dc-ad2f4baf630c"
-      }
-    },
-    {
-      "key": "5e9ca97a-3af9-4a06-bab7-09e6831a6070",
-      "properties": {
-        "description": "Describe how Artificial Intelligence is having an impact on society"
-      },
-      "seeding_key": {
-        "lesson.key": "Innovations in AI",
-        "objective.key": "5e9ca97a-3af9-4a06-bab7-09e6831a6070"
-      }
-    },
-    {
-      "key": "83f51427-8851-4311-b7d6-bc2dc72898f0",
-      "properties": {
-        "description": "Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)"
-      },
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "objective.key": "83f51427-8851-4311-b7d6-bc2dc72898f0"
-      }
-    },
-    {
-      "key": "554a2d22-308b-4e01-be9d-b8bd9287a065",
-      "properties": {
-        "description": "Look for patterns in data to help make a decision"
-      },
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "objective.key": "554a2d22-308b-4e01-be9d-b8bd9287a065"
-      }
-    },
-    {
-      "key": "8870551e-1d9f-4c03-b78e-e1ac184cba86",
-      "properties": {
-        "description": "Explain how computers can separate data to make a decision"
-      },
-      "seeding_key": {
-        "lesson.key": "Classification Models",
-        "objective.key": "8870551e-1d9f-4c03-b78e-e1ac184cba86"
-      }
-    },
-    {
-      "key": "aa76cd8b-eb6b-48ee-92f9-e48af49997c0",
-      "properties": {
-        "description": "Use AI Lab to select features to train a model"
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "objective.key": "aa76cd8b-eb6b-48ee-92f9-e48af49997c0"
-      }
-    },
-    {
-      "key": "7d06da51-46a7-4210-9366-091598d8f8cf",
-      "properties": {
-        "description": "Use data visualization tools to decide which features to include when training a model"
-      },
-      "seeding_key": {
-        "lesson.key": "Introduction to AI Lab",
-        "objective.key": "7d06da51-46a7-4210-9366-091598d8f8cf"
-      }
-    },
-    {
-      "key": "49f91ded-6e10-4292-81c0-bf90fdd0de99",
-      "properties": {
-        "description": "Create an app that uses machine learning"
-      },
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "objective.key": "49f91ded-6e10-4292-81c0-bf90fdd0de99"
-      }
-    },
-    {
-      "key": "1d44b50f-9b7f-4fd8-819b-7f62f60fda8a",
-      "properties": {
-        "description": "Add screens and events in App Lab"
-      },
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "objective.key": "1d44b50f-9b7f-4fd8-819b-7f62f60fda8a"
-      }
-    },
-    {
-      "key": "a22e4c3d-2f63-4fbc-972c-6bbec9d73c64",
-      "properties": {
-        "description": "Read a model card and use it to evaluate a model"
-      },
-      "seeding_key": {
-        "lesson.key": "Model Cards",
-        "objective.key": "a22e4c3d-2f63-4fbc-972c-6bbec9d73c64"
-      }
-    },
-    {
       "key": "02f51780-cf77-4ecd-874b-df34b3770de9",
       "properties": {
         "description": "Use data visualizations and feature iteration to train machine learning models"
@@ -12805,36 +12769,6 @@
       "seeding_key": {
         "lesson.key": "Saving Models in AI Lab",
         "objective.key": "02f51780-cf77-4ecd-874b-df34b3770de9"
-      }
-    },
-    {
-      "key": "58409d45-e5cc-431d-9cfb-2a2f3ec482d5",
-      "properties": {
-        "description": "Create model cards in AI Lab to save machine learning models"
-      },
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "objective.key": "58409d45-e5cc-431d-9cfb-2a2f3ec482d5"
-      }
-    },
-    {
-      "key": "b73d7232-626e-4e25-a777-fc943cff4870",
-      "properties": {
-        "description": "Use a model card to update the user interface of an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "objective.key": "b73d7232-626e-4e25-a777-fc943cff4870"
-      }
-    },
-    {
-      "key": "edb72a9b-c1d3-4e52-87bc-1c16a42fc404",
-      "properties": {
-        "description": "Use if-statements to change the behavior of an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "objective.key": "edb72a9b-c1d3-4e52-87bc-1c16a42fc404"
       }
     },
     {
@@ -12848,86 +12782,6 @@
       }
     },
     {
-      "key": "8d138ce3-323a-4285-b76d-9fdc215610d4",
-      "properties": {
-        "description": "Explain how accuracy calculation for numerical data is different from categorical data"
-      },
-      "seeding_key": {
-        "lesson.key": "Similarity Models",
-        "objective.key": "8d138ce3-323a-4285-b76d-9fdc215610d4"
-      }
-    },
-    {
-      "key": "382925be-583d-4458-a749-9039780ebfed",
-      "properties": {
-        "description": "Use data visualizations to find patterns in numerical data"
-      },
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "objective.key": "382925be-583d-4458-a749-9039780ebfed"
-      }
-    },
-    {
-      "key": "5a207f71-9052-4460-810f-b0118f6067ea",
-      "properties": {
-        "description": "Compare and contrast categorical data versus numerical data"
-      },
-      "seeding_key": {
-        "lesson.key": "Numerical Data in AI Lab",
-        "objective.key": "5a207f71-9052-4460-810f-b0118f6067ea"
-      }
-    },
-    {
-      "key": "6d340248-8d1c-472f-8e0a-ceba9d233246",
-      "properties": {
-        "description": "Use the Model Card to create new input elements for a machine learning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Customizing Apps",
-        "objective.key": "6d340248-8d1c-472f-8e0a-ceba9d233246"
-      }
-    },
-    {
-      "key": "e7f59f67-a615-43b9-acc3-39dc2ebda34a",
-      "properties": {
-        "description": "Update the default model code to use new inputs in a machine learning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Customizing Apps",
-        "objective.key": "e7f59f67-a615-43b9-acc3-39dc2ebda34a"
-      }
-    },
-    {
-      "key": "1bc4557b-5ff1-4f9f-ae5f-1ff202f2084c",
-      "properties": {
-        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
-      },
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "objective.key": "1bc4557b-5ff1-4f9f-ae5f-1ff202f2084c"
-      }
-    },
-    {
-      "key": "88f6eb6d-2837-4d90-be14-132d823a3ab1",
-      "properties": {
-        "description": "Describe at least one example of an ethical issue pertaining to AI, along with its impact on society."
-      },
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "objective.key": "88f6eb6d-2837-4d90-be14-132d823a3ab1"
-      }
-    },
-    {
-      "key": "173089ae-6d54-457a-a391-0a8f5510aaca",
-      "properties": {
-        "description": "Create at least one guiding principle that addresses an AI ethics issue."
-      },
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "objective.key": "173089ae-6d54-457a-a391-0a8f5510aaca"
-      }
-    },
-    {
       "key": "105797c1-c68c-4ff9-af1f-4381a25459b0",
       "properties": {
         "description": "Develop a problem observation into a core issue using brainstorming strategies"
@@ -12935,36 +12789,6 @@
       "seeding_key": {
         "lesson.key": "Issue Statements",
         "objective.key": "105797c1-c68c-4ff9-af1f-4381a25459b0"
-      }
-    },
-    {
-      "key": "3fef29ac-2dd7-4d6c-983d-b8f8c16fd7bd",
-      "properties": {
-        "description": "Develop survey questions that can be used to create a machine learning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "objective.key": "3fef29ac-2dd7-4d6c-983d-b8f8c16fd7bd"
-      }
-    },
-    {
-      "key": "7c5f2ec7-d487-49a3-9db3-df016dfac686",
-      "properties": {
-        "description": "Use a template to create a Google Form survey"
-      },
-      "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "objective.key": "7c5f2ec7-d487-49a3-9db3-df016dfac686"
-      }
-    },
-    {
-      "key": "1d298ad1-82f0-4e55-ad7b-62ccfa360119",
-      "properties": {
-        "description": "Download a csv file from Google Sheets"
-      },
-      "seeding_key": {
-        "lesson.key": "Survey Data in AI Lab",
-        "objective.key": "1d298ad1-82f0-4e55-ad7b-62ccfa360119"
       }
     },
     {
@@ -12978,6 +12802,206 @@
       }
     },
     {
+      "key": "173089ae-6d54-457a-a391-0a8f5510aaca",
+      "properties": {
+        "description": "Create at least one guiding principle that addresses an AI ethics issue."
+      },
+      "seeding_key": {
+        "lesson.key": "AI Code of Ethics",
+        "objective.key": "173089ae-6d54-457a-a391-0a8f5510aaca"
+      }
+    },
+    {
+      "key": "1bc4557b-5ff1-4f9f-ae5f-1ff202f2084c",
+      "properties": {
+        "description": "Define artificial intelligence (AI) in their own words, using technologies they encounter in their daily lives as examples."
+      },
+      "seeding_key": {
+        "lesson.key": "AI Code of Ethics",
+        "objective.key": "1bc4557b-5ff1-4f9f-ae5f-1ff202f2084c"
+      }
+    },
+    {
+      "key": "1d298ad1-82f0-4e55-ad7b-62ccfa360119",
+      "properties": {
+        "description": "Download a csv file from Google Sheets"
+      },
+      "seeding_key": {
+        "lesson.key": "Survey Data in AI Lab",
+        "objective.key": "1d298ad1-82f0-4e55-ad7b-62ccfa360119"
+      }
+    },
+    {
+      "key": "1d44b50f-9b7f-4fd8-819b-7f62f60fda8a",
+      "properties": {
+        "description": "Add screens and events in App Lab"
+      },
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "objective.key": "1d44b50f-9b7f-4fd8-819b-7f62f60fda8a"
+      }
+    },
+    {
+      "key": "3160fb3d-404e-41b2-b8dc-ad2f4baf630c",
+      "properties": {
+        "description": "Describe the differences between supervised and unsupervised learning."
+      },
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "objective.key": "3160fb3d-404e-41b2-b8dc-ad2f4baf630c"
+      }
+    },
+    {
+      "key": "382925be-583d-4458-a749-9039780ebfed",
+      "properties": {
+        "description": "Use data visualizations to find patterns in numerical data"
+      },
+      "seeding_key": {
+        "lesson.key": "Numerical Data in AI Lab",
+        "objective.key": "382925be-583d-4458-a749-9039780ebfed"
+      }
+    },
+    {
+      "key": "3fef29ac-2dd7-4d6c-983d-b8f8c16fd7bd",
+      "properties": {
+        "description": "Develop survey questions that can be used to create a machine learning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "objective.key": "3fef29ac-2dd7-4d6c-983d-b8f8c16fd7bd"
+      }
+    },
+    {
+      "key": "49f91ded-6e10-4292-81c0-bf90fdd0de99",
+      "properties": {
+        "description": "Create an app that uses machine learning"
+      },
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "objective.key": "49f91ded-6e10-4292-81c0-bf90fdd0de99"
+      }
+    },
+    {
+      "key": "554a2d22-308b-4e01-be9d-b8bd9287a065",
+      "properties": {
+        "description": "Look for patterns in data to help make a decision"
+      },
+      "seeding_key": {
+        "lesson.key": "Patterns in Data",
+        "objective.key": "554a2d22-308b-4e01-be9d-b8bd9287a065"
+      }
+    },
+    {
+      "key": "56d03b70-1f5b-408c-a3d4-bd8439cc372e",
+      "properties": {
+        "description": "Apply the Problem Solving Process to train a computer to solve a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "objective.key": "56d03b70-1f5b-408c-a3d4-bd8439cc372e"
+      }
+    },
+    {
+      "key": "58409d45-e5cc-431d-9cfb-2a2f3ec482d5",
+      "properties": {
+        "description": "Create model cards in AI Lab to save machine learning models"
+      },
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
+        "objective.key": "58409d45-e5cc-431d-9cfb-2a2f3ec482d5"
+      }
+    },
+    {
+      "key": "5a207f71-9052-4460-810f-b0118f6067ea",
+      "properties": {
+        "description": "Compare and contrast categorical data versus numerical data"
+      },
+      "seeding_key": {
+        "lesson.key": "Numerical Data in AI Lab",
+        "objective.key": "5a207f71-9052-4460-810f-b0118f6067ea"
+      }
+    },
+    {
+      "key": "5e9ca97a-3af9-4a06-bab7-09e6831a6070",
+      "properties": {
+        "description": "Describe how Artificial Intelligence is having an impact on society"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "objective.key": "5e9ca97a-3af9-4a06-bab7-09e6831a6070"
+      }
+    },
+    {
+      "key": "6d340248-8d1c-472f-8e0a-ceba9d233246",
+      "properties": {
+        "description": "Use the Model Card to create new input elements for a machine learning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Customizing Apps",
+        "objective.key": "6d340248-8d1c-472f-8e0a-ceba9d233246"
+      }
+    },
+    {
+      "key": "7c5f2ec7-d487-49a3-9db3-df016dfac686",
+      "properties": {
+        "description": "Use a template to create a Google Form survey"
+      },
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "objective.key": "7c5f2ec7-d487-49a3-9db3-df016dfac686"
+      }
+    },
+    {
+      "key": "7d06da51-46a7-4210-9366-091598d8f8cf",
+      "properties": {
+        "description": "Use data visualization tools to decide which features to include when training a model"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "objective.key": "7d06da51-46a7-4210-9366-091598d8f8cf"
+      }
+    },
+    {
+      "key": "83f51427-8851-4311-b7d6-bc2dc72898f0",
+      "properties": {
+        "description": "Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)"
+      },
+      "seeding_key": {
+        "lesson.key": "Patterns in Data",
+        "objective.key": "83f51427-8851-4311-b7d6-bc2dc72898f0"
+      }
+    },
+    {
+      "key": "8870551e-1d9f-4c03-b78e-e1ac184cba86",
+      "properties": {
+        "description": "Explain how computers can separate data to make a decision"
+      },
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "objective.key": "8870551e-1d9f-4c03-b78e-e1ac184cba86"
+      }
+    },
+    {
+      "key": "88f6eb6d-2837-4d90-be14-132d823a3ab1",
+      "properties": {
+        "description": "Describe at least one example of an ethical issue pertaining to AI, along with its impact on society."
+      },
+      "seeding_key": {
+        "lesson.key": "AI Code of Ethics",
+        "objective.key": "88f6eb6d-2837-4d90-be14-132d823a3ab1"
+      }
+    },
+    {
+      "key": "8d138ce3-323a-4285-b76d-9fdc215610d4",
+      "properties": {
+        "description": "Explain how accuracy calculation for numerical data is different from categorical data"
+      },
+      "seeding_key": {
+        "lesson.key": "Similarity Models",
+        "objective.key": "8d138ce3-323a-4285-b76d-9fdc215610d4"
+      }
+    },
+    {
       "key": "90487953-eb66-44f3-918e-2395a9fa6379",
       "properties": {
         "description": "Analyze and clean data in Google Sheets"
@@ -12985,16 +13009,6 @@
       "seeding_key": {
         "lesson.key": "Survey Data in AI Lab",
         "objective.key": "90487953-eb66-44f3-918e-2395a9fa6379"
-      }
-    },
-    {
-      "key": "bac73557-0d4b-4836-8b56-1d0d5b2257ef",
-      "properties": {
-        "description": "Explain how choices in data collection can lead to issues when training a machine learning model"
-      },
-      "seeding_key": {
-        "lesson.key": "Troubleshooting Models",
-        "objective.key": "bac73557-0d4b-4836-8b56-1d0d5b2257ef"
       }
     },
     {
@@ -13016,77 +13030,81 @@
         "lesson.key": "Design an AI App",
         "objective.key": "9bcee94b-4d0a-4a92-a6a7-142e0ecdc6fa"
       }
+    },
+    {
+      "key": "a22e4c3d-2f63-4fbc-972c-6bbec9d73c64",
+      "properties": {
+        "description": "Read a model card and use it to evaluate a model"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Cards",
+        "objective.key": "a22e4c3d-2f63-4fbc-972c-6bbec9d73c64"
+      }
+    },
+    {
+      "key": "aa76cd8b-eb6b-48ee-92f9-e48af49997c0",
+      "properties": {
+        "description": "Use AI Lab to select features to train a model"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "objective.key": "aa76cd8b-eb6b-48ee-92f9-e48af49997c0"
+      }
+    },
+    {
+      "key": "b73d7232-626e-4e25-a777-fc943cff4870",
+      "properties": {
+        "description": "Use a model card to update the user interface of an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Cards in App Lab",
+        "objective.key": "b73d7232-626e-4e25-a777-fc943cff4870"
+      }
+    },
+    {
+      "key": "bac73557-0d4b-4836-8b56-1d0d5b2257ef",
+      "properties": {
+        "description": "Explain how choices in data collection can lead to issues when training a machine learning model"
+      },
+      "seeding_key": {
+        "lesson.key": "Troubleshooting Models",
+        "objective.key": "bac73557-0d4b-4836-8b56-1d0d5b2257ef"
+      }
+    },
+    {
+      "key": "e7f59f67-a615-43b9-acc3-39dc2ebda34a",
+      "properties": {
+        "description": "Update the default model code to use new inputs in a machine learning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Customizing Apps",
+        "objective.key": "e7f59f67-a615-43b9-acc3-39dc2ebda34a"
+      }
+    },
+    {
+      "key": "edb72a9b-c1d3-4e52-87bc-1c16a42fc404",
+      "properties": {
+        "description": "Use if-statements to change the behavior of an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Cards in App Lab",
+        "objective.key": "edb72a9b-c1d3-4e52-87bc-1c16a42fc404"
+      }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-ii.3-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iv.3-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Machine Learning",
+        "lesson.key": "AI Code of Ethics",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-IC-21"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-i.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Types of Machine Learning",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-i.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Innovations in AI",
+        "lesson.key": "AI Code of Ethics",
         "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-20"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-ii.K-2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.K-2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Patterns in Data",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-DA-09"
+        "standard.shortcode": "3A-IC-24"
       }
     },
     {
@@ -13108,6 +13126,167 @@
         "lesson.key": "Classification Models",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating an App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating an App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating an App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Customizing Apps",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Customizing Apps",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Customizing Apps",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Design an AI App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Importing Models in App Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
       }
     },
     {
@@ -13161,23 +13340,121 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Machine Learning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Issue Statements",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Issue Statements",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards in App Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards in App Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Cards in App Lab",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-13"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
+        "lesson.key": "Model Cards in App Lab",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Importing Models in App Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-21"
+        "standard.shortcode": "2-AP-19"
       }
     },
     {
@@ -13224,97 +13501,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.3-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Saving Models in AI Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards in App Lab",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Similarity Models",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-ii.3-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Similarity Models",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iii.3-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Similarity Models",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-12"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Numerical Data in AI Lab",
         "framework.shortcode": "ai4k12-2021",
         "standard.shortcode": "3-A-iii.6-8"
@@ -13343,135 +13529,86 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Customizing Apps",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Customizing Apps",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Customizing Apps",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "AI Code of Ethics",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "lesson.key": "Patterns in Data",
         "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-ii.9-12"
+        "standard.shortcode": "3-A-ii.K-2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mini-Project: Make a Machine Learning App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Issue Statements",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iv.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Issue Statements",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iv.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Survey Planning",
+        "lesson.key": "Patterns in Data",
         "framework.shortcode": "ai4k12-2021",
         "standard.shortcode": "3-C-i.K-2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Survey Planning",
+        "lesson.key": "Patterns in Data",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
         "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-iii.6-8"
+        "standard.shortcode": "3-A-iii.6-8"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Survey Planning",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-15"
+        "lesson.key": "Saving Models in AI Lab",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.3-5"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Survey Planning",
+        "lesson.key": "Saving Models in AI Lab",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
         "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-22"
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Saving Models in AI Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Similarity Models",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Similarity Models",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Similarity Models",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
       }
     },
     {
@@ -13520,12 +13657,47 @@
       "seeding_key": {
         "lesson.key": "Survey Data in AI Lab",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-12"
+        "standard.shortcode": "2-IC-22"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Survey Data in AI Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iv.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.K-2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Survey Planning",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-IC-22"
       }
@@ -13574,114 +13746,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Creating an App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating an App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Creating an App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
+        "lesson.key": "Types of Machine Learning",
         "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-ii.9-12"
+        "standard.shortcode": "3-A-i.6-8"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Design an AI App",
+        "lesson.key": "Types of Machine Learning",
         "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-A-iv.9-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-i.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "ai4k12-2021",
-        "standard.shortcode": "3-C-iii.6-8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-13"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-19"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-DA-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Design an AI App",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-DA-05"
+        "standard.shortcode": "3-A-i.9-12"
       }
     }
   ],

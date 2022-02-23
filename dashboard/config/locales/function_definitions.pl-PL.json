@@ -1114,20 +1114,23 @@
             "parameters": {
               "points": "punkty",
               "length": "długość"
-            }
+            },
+            "description": "narysuj gwiazdę o danej liczbie ramion i ich długości"
           },
           "draw a circle": {
             "name": "narysuj okrąg",
             "parameters": {
               "radius": "promień"
-            }
+            },
+            "description": "narysuj okrąg o danym promieniu"
           },
           "draw a pinwheel": {
             "parameters": {
               "sides": "boki",
               "length": "długość",
               "repeat": "powtarzaj"
-            }
+            },
+            "name": "narysuj rozetę"
           },
           "draw a triangle": {
             "name": "narysuj trójkąt",
@@ -1139,7 +1142,8 @@
             "parameters": {
               "sides": "boki",
               "length": "długość"
-            }
+            },
+            "name": "narysuj wielokąt foremny"
           },
           "draw a house": {
             "name": "narysuj dom",
@@ -1160,14 +1164,16 @@
             "parameters": {
               "height": "wysokość",
               "actor": "postać"
-            }
+            },
+            "description": "blok funkcji skoku z parametrami wysokości i aktora"
           },
           "patrol": {
             "description": "funkcja patrolu, która ma parametr aktora i prędkości",
             "parameters": {
               "actor": "postać",
               "speed": "prędkość"
-            }
+            },
+            "name": "patroluj"
           }
         },
         "Standalone_Artist_7": {
@@ -4062,6 +4068,9 @@
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions3_2021": {
@@ -4173,6 +4182,9 @@
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          },
+          "draw ear stems": {
+            "name": "narysuj łodygi"
           }
         },
         "courseE_artist_functions_predict2_2021": {
@@ -4361,6 +4373,19 @@
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
             "name": "narysuj kwadrat"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "zresetuj grę"
+          }
+        },
+        "New Minecraft Hero Project": {
+          "function 1": {
+            "name": "funkcja 1"
+          },
+          "function 2": {
+            "name": "funkcja 2"
           }
         }
       }

@@ -11,7 +11,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # POST api/v1/ml_models/save
   # Save a trained ML model to S3 and a reference to it in the database.
   def save
-    model_id = generate_id
+    model_id = UserMlModel.generate_id
     model_data = params["ml_model"]
     return head :bad_request if model_data.nil? || model_data == ""
     # If there's a PII/profanity API error, we rescue the exception and the save
@@ -32,7 +32,7 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
           user_id: current_user&.id,
           data_json: model_data.except(:trainedModel).to_json
         }
-        )
+      )
     end
     if profanity_or_pii
       render json: {id: model_id, status: "piiProfanity"}
@@ -65,9 +65,26 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   # GET api/v1/ml_models/:id
   # Retrieve a trained ML model from S3
   def show
-    model = download_from_s3(params[:id])
-    return head :not_found unless model
-    render json: model
+    valid_model_id = UserMlModel.valid_model_id?(params[:id])
+    # Before attempting to fetch a model from s3, check that the id param
+    # matches the expected format. If the id is invalid, log it to investigate.
+    if valid_model_id
+      model = download_from_s3(params[:id])
+      return head :not_found unless model
+      render json: model
+    else
+      FirehoseClient.instance.put_record(
+        :analysis,
+        {
+          study: 'ai-ml',
+          study_group: 'show-model',
+          event: 'invalid_model_id',
+          user_id: current_user&.id,
+          data_json: params[:id]
+        }
+      )
+      return head :not_found
+    end
   end
 
   # DELETE api/v1/ml_models/:id
@@ -83,10 +100,6 @@ class Api::V1::MlModelsController < Api::V1::JsonApiController
   end
 
   private
-
-  def generate_id
-    SecureRandom.alphanumeric(12)
-  end
 
   def upload_to_s3(model_id, trained_model)
     AWS::S3.upload_to_bucket(S3_BUCKET, model_id, trained_model, no_random: true)

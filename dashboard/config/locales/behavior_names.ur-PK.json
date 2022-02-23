@@ -155,6 +155,84 @@
           "recovering": "ریکور کرتے ہوئے",
           "moving left and right": "دائیں اور بائیں حرکت کرنا",
           "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "helloworld_animals_behaviors": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "helloworld_emoji_behaviors": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "helloworld_retro_behaviors": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "helloworld_animals_sounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "helloworld_emoji_sounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "helloworld_food_sounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "helloworld_retro_sounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "helloworld_food_behaviors": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "poetry_hoc_spriteSizes": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "poetry_hoc_addSprites": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "poetry_hoc_exemplar1": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "poetry_hoc_exemplar2": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "poetry_hoc_freeplay": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "تیر یعنی arrow کے بٹنوں کے ساتھ حرکت",
+          "moving north and looping": "شمال کی طرف بڑھنا اور لوپ کرنا",
+          "moving south and looping": "جنوب کی طرف بڑھنا اور لوپ کرنا"
         }
       }
     }

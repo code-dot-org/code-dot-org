@@ -3998,7 +3998,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud",
               "sides": "lados"
@@ -4049,7 +4049,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -4099,7 +4099,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -4149,7 +4149,7 @@
             }
           },
           "draw a square": {
-            "name": "Dibuje un cuadrado",
+            "name": "Dibuja un cuadrado",
             "parameters": {
               "length": "longitud"
             }
@@ -4157,7 +4157,7 @@
         },
         "CourseF_app_computer": {
           "reset game": {
-            "name": "reiniciar el juego"
+            "name": "reinicia el juego"
           }
         },
         "Function intro Ryan_2021": {
@@ -4238,7 +4238,7 @@
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
             "name": "dibujar patillas"
@@ -4293,7 +4293,7 @@
         },
         "courseE_artist_functions8a_2021": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "do something": {
             "name": "hacer algo"
@@ -4370,7 +4370,7 @@
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
-            "name": "Dibuje un cuadrado"
+            "name": "Dibuja un cuadrado"
           },
           "draw ear stems": {
             "name": "dibujar patillas"
@@ -4494,7 +4494,7 @@
         },
         "courseF_apps_collector": {
           "end game": {
-            "name": "final del juego"
+            "name": "terminar el juego"
           }
         },
         "courseF_bee_for_challenge1_2021": {

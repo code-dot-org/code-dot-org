@@ -4,10 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "2018",
-      "has_lesson_plan": true,
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/coursed/{LESSON}",
-      "is_stable": true,
+      "curriculum_umbrella": "CSF",
+      "hideable_lessons": true,
+      "is_course": true,
+      "is_migrated": true,
+      "lesson_extras_available": true,
+      "supported_locales": [
+        "it-IT",
+        "sk-SK"
+      ],
       "teacher_resources": [
         [
           "lessonPlans",
@@ -26,21 +32,17 @@
           "https://curriculum.code.org/csf-18/coursed/standards/"
         ]
       ],
-      "supported_locales": [
-        "it-IT",
-        "sk-SK"
-      ],
-      "curriculum_umbrella": "CSF",
-      "family_name": "coursed",
       "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "is_course": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "2018"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-08-03 22:47:27 UTC",
+    "serialized_at": "2021-11-22 19:56:04 UTC",
     "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursed-2018"
     }
@@ -351,16 +353,451 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "5f817cf8-3bb5-4940-814f-5fefdfc58fef",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f817cf8-3bb5-4940-814f-5fefdfc58fef",
+        "lesson.key": "Algorithms: Graph Paper Programming",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "4b6ca8c1-01b0-4637-882c-72b89a2c5d87",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b6ca8c1-01b0-4637-882c-72b89a2c5d87",
+        "lesson.key": "Introduction to Online Puzzles",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "6cf23aac-bde4-47ae-955a-946acfee24b3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6cf23aac-bde4-47ae-955a-946acfee24b3",
+        "lesson.key": "Relay Programming",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "c576b46a-eaa9-404d-b884-a34880cf043f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c576b46a-eaa9-404d-b884-a34880cf043f",
+        "lesson.key": "Debugging in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "596ce842-9c7e-4508-931b-5f7c8aa99bca",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "596ce842-9c7e-4508-931b-5f7c8aa99bca",
+        "lesson.key": "Events in Bounce",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "2fdb2a87-d91c-456f-9ea4-c38bafe22ad4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2fdb2a87-d91c-456f-9ea4-c38bafe22ad4",
+        "lesson.key": "Loops in Ice Age",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "20720fd3-56e8-4572-a25b-57b6d74f2ee9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20720fd3-56e8-4572-a25b-57b6d74f2ee9",
+        "lesson.key": "Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "35805a48-5711-4b54-ace6-227a595b246b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "35805a48-5711-4b54-ace6-227a595b246b",
+        "lesson.key": "Nested Loops in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "26954466-a49e-406c-a8d0-1e4efd346647",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26954466-a49e-406c-a8d0-1e4efd346647",
+        "lesson.key": "Nested Loops in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "1a646c60-587b-4603-84db-4c705b171247",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a646c60-587b-4603-84db-4c705b171247",
+        "lesson.key": "Nested Loops in Frozen",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "21d2202f-9f32-46a9-a5b6-86d687d370ee",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "21d2202f-9f32-46a9-a5b6-86d687d370ee",
+        "lesson.key": "While Loops in Farmer",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "2c862845-7908-4fa2-9c6f-9e4879aae717",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c862845-7908-4fa2-9c6f-9e4879aae717",
+        "lesson.key": "Until Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "1ea7ea07-e448-4e71-9aab-138d51e675c6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ea7ea07-e448-4e71-9aab-138d51e675c6",
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "e118f32b-805e-4c25-83d9-52d2c4c57fcc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e118f32b-805e-4c25-83d9-52d2c4c57fcc",
+        "lesson.key": "Conditionals in Bee",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "060043fa-1ace-4d3e-91c1-c680c880e9d7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "060043fa-1ace-4d3e-91c1-c680c880e9d7",
+        "lesson.key": "Conditionals & Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "e389d701-bbfc-4921-baf9-2923a7d1598e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e389d701-bbfc-4921-baf9-2923a7d1598e",
+        "lesson.key": "Digital Citizenship",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "b0346378-c377-4bd3-a610-f567c3e7160d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b0346378-c377-4bd3-a610-f567c3e7160d",
+        "lesson.key": "Build a Play Lab Game",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "04152f9a-e604-4e2b-9065-068adede86fb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04152f9a-e604-4e2b-9065-068adede86fb",
+        "lesson.key": "Unplugged: Binary",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    },
+    {
+      "key": "0260b3e4-811b-4ecf-904e-54534902ff06",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0260b3e4-811b-4ecf-904e-54534902ff06",
+        "lesson.key": "Artist Binary",
+        "lesson_group.key": "",
+        "script.name": "coursed-2018"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "1c4a4e57-71c2-4359-88dc-50abaa28f54e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1c4a4e57-71c2-4359-88dc-50abaa28f54e",
+        "lesson_activity.key": "5f817cf8-3bb5-4940-814f-5fefdfc58fef"
+      }
+    },
+    {
+      "key": "d38054de-828f-4ce3-8f35-13ba619ce633",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633",
+        "lesson_activity.key": "4b6ca8c1-01b0-4637-882c-72b89a2c5d87"
+      }
+    },
+    {
+      "key": "d04082c3-2de5-4806-807a-4e43afefaeb5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d04082c3-2de5-4806-807a-4e43afefaeb5",
+        "lesson_activity.key": "6cf23aac-bde4-47ae-955a-946acfee24b3"
+      }
+    },
+    {
+      "key": "f80b5e10-81ac-4d9d-9c98-9228085be33b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b",
+        "lesson_activity.key": "c576b46a-eaa9-404d-b884-a34880cf043f"
+      }
+    },
+    {
+      "key": "8870661c-6f16-4523-99d0-037ca8a50ec3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3",
+        "lesson_activity.key": "596ce842-9c7e-4508-931b-5f7c8aa99bca"
+      }
+    },
+    {
+      "key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd",
+        "lesson_activity.key": "2fdb2a87-d91c-456f-9ea4-c38bafe22ad4"
+      }
+    },
+    {
+      "key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d",
+        "lesson_activity.key": "20720fd3-56e8-4572-a25b-57b6d74f2ee9"
+      }
+    },
+    {
+      "key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a",
+        "lesson_activity.key": "35805a48-5711-4b54-ace6-227a595b246b"
+      }
+    },
+    {
+      "key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62",
+        "lesson_activity.key": "26954466-a49e-406c-a8d0-1e4efd346647"
+      }
+    },
+    {
+      "key": "a1f59442-9a33-4146-931c-1855f37d2c33",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33",
+        "lesson_activity.key": "1a646c60-587b-4603-84db-4c705b171247"
+      }
+    },
+    {
+      "key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d",
+        "lesson_activity.key": "21d2202f-9f32-46a9-a5b6-86d687d370ee"
+      }
+    },
+    {
+      "key": "c9423677-4461-44c5-aaaf-07dd0f3351cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb",
+        "lesson_activity.key": "2c862845-7908-4fa2-9c6f-9e4879aae717"
+      }
+    },
+    {
+      "key": "bffa726a-7564-4350-b1e3-c91653bdef3c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bffa726a-7564-4350-b1e3-c91653bdef3c",
+        "lesson_activity.key": "1ea7ea07-e448-4e71-9aab-138d51e675c6"
+      }
+    },
+    {
+      "key": "e8da6759-d479-4697-8cf0-14fe83559f25",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25",
+        "lesson_activity.key": "e118f32b-805e-4c25-83d9-52d2c4c57fcc"
+      }
+    },
+    {
+      "key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6",
+        "lesson_activity.key": "060043fa-1ace-4d3e-91c1-c680c880e9d7"
+      }
+    },
+    {
+      "key": "d4f22306-fb3b-4d30-9171-3a4f5203a131",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d4f22306-fb3b-4d30-9171-3a4f5203a131",
+        "lesson_activity.key": "e389d701-bbfc-4921-baf9-2923a7d1598e"
+      }
+    },
+    {
+      "key": "6135149f-fce8-435b-9340-c1f8229ebb77",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77",
+        "lesson_activity.key": "b0346378-c377-4bd3-a610-f567c3e7160d"
+      }
+    },
+    {
+      "key": "1e541589-2940-4b3b-ad19-e8bd120e2bc9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1e541589-2940-4b3b-ad19-e8bd120e2bc9",
+        "lesson_activity.key": "04152f9a-e604-4e2b-9065-068adede86fb"
+      }
+    },
+    {
+      "key": "d5997c44-aef5-4ab9-aa27-431a71451a76",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76",
+        "lesson_activity.key": "0260b3e4-811b-4ecf-904e-54534902ff06"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -374,7 +811,8 @@
         ],
         "lesson.key": "Algorithms: Graph Paper Programming",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "1c4a4e57-71c2-4359-88dc-50abaa28f54e"
       },
       "level_keys": [
         "GraphPaperProgramming_2018"
@@ -383,7 +821,7 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -397,7 +835,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       },
       "level_keys": [
         "courseD_video_ramp1_2018"
@@ -406,7 +845,7 @@
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -420,7 +859,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       },
       "level_keys": [
         "courseD_maze_ramp1_2018"
@@ -429,7 +869,7 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -443,7 +883,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       },
       "level_keys": [
         "courseD_maze_ramp2_2018"
@@ -452,7 +893,7 @@
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -466,7 +907,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       },
       "level_keys": [
         "courseD_maze_ramp3_2018"
@@ -475,7 +917,7 @@
     {
       "chapter": 6,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -489,7 +931,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       },
       "level_keys": [
         "courseD_maze_ramp4_2018"
@@ -498,7 +941,7 @@
     {
       "chapter": 7,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -512,7 +955,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       },
       "level_keys": [
         "courseD_maze_ramp5_2018"
@@ -521,7 +965,7 @@
     {
       "chapter": 8,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -535,7 +979,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       },
       "level_keys": [
         "courseD_maze_ramp5a_2018"
@@ -544,7 +989,7 @@
     {
       "chapter": 9,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -559,7 +1004,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       },
       "level_keys": [
         "courseD_maze_ramp5b_2018"
@@ -568,7 +1014,7 @@
     {
       "chapter": 10,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -582,7 +1028,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       },
       "level_keys": [
         "courseD_maze_ramp5c_2018"
@@ -591,7 +1038,7 @@
     {
       "chapter": 11,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -605,7 +1052,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       },
       "level_keys": [
         "courseD_maze_ramp5d_2018"
@@ -614,7 +1062,7 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -628,7 +1076,8 @@
         ],
         "lesson.key": "Relay Programming",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d04082c3-2de5-4806-807a-4e43afefaeb5"
       },
       "level_keys": [
         "RelayProgramming_2018"
@@ -637,7 +1086,7 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -651,7 +1100,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       },
       "level_keys": [
         "courseD_video_debugging_2018"
@@ -660,7 +1110,7 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -674,7 +1124,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       },
       "level_keys": [
         "courseD_collector_debugging1a_2018"
@@ -683,7 +1134,7 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -697,7 +1148,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       },
       "level_keys": [
         "courseD_collector_debugging2a_2018"
@@ -706,7 +1158,7 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -720,7 +1172,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       },
       "level_keys": [
         "courseD_collector_debugging3a_2018"
@@ -729,7 +1182,7 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -743,7 +1196,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       },
       "level_keys": [
         "courseD_collector_debugging4a_2018"
@@ -752,7 +1206,7 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -766,7 +1220,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       },
       "level_keys": [
         "courseD_collector_debugging5a_2018"
@@ -775,7 +1230,7 @@
     {
       "chapter": 19,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -790,7 +1245,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       },
       "level_keys": [
         "courseD_collector_debugging6a_2018"
@@ -799,7 +1255,7 @@
     {
       "chapter": 20,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -813,7 +1269,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       },
       "level_keys": [
         "courseD_collector_debugging8a_2018"
@@ -822,7 +1279,7 @@
     {
       "chapter": 21,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -836,7 +1293,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       },
       "level_keys": [
         "courseD_collector_debugging9a_2018"
@@ -845,7 +1303,7 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -859,7 +1317,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       },
       "level_keys": [
         "courseD_bounce_events1s_2018"
@@ -868,7 +1327,7 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -882,7 +1341,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       },
       "level_keys": [
         "courseD_bounce_events2s_2018"
@@ -891,7 +1351,7 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -905,7 +1365,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       },
       "level_keys": [
         "courseD_bounce_events5s_2018"
@@ -914,7 +1375,7 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -928,7 +1389,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       },
       "level_keys": [
         "courseD_bounce_events6s_2018"
@@ -937,7 +1399,7 @@
     {
       "chapter": 26,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -951,7 +1413,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       },
       "level_keys": [
         "courseD_bounce_events7s_2018"
@@ -960,7 +1423,7 @@
     {
       "chapter": 27,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -974,7 +1437,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       },
       "level_keys": [
         "courseD_bounce_events10s_2018"
@@ -983,7 +1447,7 @@
     {
       "chapter": 28,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -997,7 +1461,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       },
       "level_keys": [
         "courseD_bounce_events11s_2018"
@@ -1006,7 +1471,7 @@
     {
       "chapter": 29,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1020,7 +1485,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       },
       "level_keys": [
         "courseD_bounce_events12s_2018"
@@ -1029,7 +1495,7 @@
     {
       "chapter": 30,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1043,7 +1509,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops1"
@@ -1052,7 +1519,7 @@
     {
       "chapter": 31,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1066,7 +1533,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops2"
@@ -1075,7 +1543,7 @@
     {
       "chapter": 32,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1089,7 +1557,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "scrat_loops_C-F_video"
@@ -1098,7 +1567,7 @@
     {
       "chapter": 33,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1112,7 +1581,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops3"
@@ -1121,7 +1591,7 @@
     {
       "chapter": 34,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1135,7 +1605,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops4"
@@ -1144,7 +1615,7 @@
     {
       "chapter": 35,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1158,7 +1629,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops6"
@@ -1167,7 +1639,7 @@
     {
       "chapter": 36,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1181,7 +1653,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops7"
@@ -1190,7 +1663,7 @@
     {
       "chapter": 37,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1204,7 +1677,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops8"
@@ -1213,7 +1687,7 @@
     {
       "chapter": 38,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1227,7 +1701,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops9"
@@ -1236,7 +1711,7 @@
     {
       "chapter": 39,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -1251,7 +1726,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops10"
@@ -1260,7 +1736,7 @@
     {
       "chapter": 40,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1274,7 +1750,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops11"
@@ -1283,7 +1760,7 @@
     {
       "chapter": 41,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1297,7 +1774,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       },
       "level_keys": [
         "courseD_iceage_loops12"
@@ -1306,7 +1784,7 @@
     {
       "chapter": 42,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1320,7 +1798,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_video_artistIntro_2018"
@@ -1329,7 +1808,7 @@
     {
       "chapter": 43,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1343,7 +1822,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_artist_loops1_2018"
@@ -1352,7 +1832,7 @@
     {
       "chapter": 44,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1366,7 +1846,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_artist_loops2_2018"
@@ -1375,7 +1856,7 @@
     {
       "chapter": 45,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1389,7 +1870,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_video_loopsArtist_2018"
@@ -1398,7 +1880,7 @@
     {
       "chapter": 46,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1412,7 +1894,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_artist_loops3_2018"
@@ -1421,7 +1904,7 @@
     {
       "chapter": 47,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1435,7 +1918,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_artist_loops4_2018"
@@ -1444,7 +1928,7 @@
     {
       "chapter": 48,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1458,7 +1942,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_artist_loops5_2018"
@@ -1467,7 +1952,7 @@
     {
       "chapter": 49,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1481,7 +1966,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_artist_loops6_2018"
@@ -1490,7 +1976,7 @@
     {
       "chapter": 50,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1504,7 +1990,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_artist_loops7_2018"
@@ -1513,7 +2000,7 @@
     {
       "chapter": 51,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -1528,7 +2015,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_artist_loops8_2018"
@@ -1537,7 +2025,7 @@
     {
       "chapter": 52,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1551,7 +2039,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       },
       "level_keys": [
         "ramp_artist_loops9_2018"
@@ -1560,7 +2049,7 @@
     {
       "chapter": 53,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1574,7 +2063,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_bee_nestedLoops1a_2018"
@@ -1583,7 +2073,7 @@
     {
       "chapter": 54,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1597,7 +2087,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_bee_nestedLoops1_2018"
@@ -1606,7 +2097,7 @@
     {
       "chapter": 55,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1620,7 +2111,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_video_nestedLoops_2018"
@@ -1629,7 +2121,7 @@
     {
       "chapter": 56,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1643,7 +2135,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_bee_nestedLoops2_predict1_2018"
@@ -1652,7 +2145,7 @@
     {
       "chapter": 57,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1666,7 +2159,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_bee_nestedLoops2_2018"
@@ -1675,7 +2169,7 @@
     {
       "chapter": 58,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1689,7 +2183,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_maze_nestedLoops3_2018"
@@ -1698,7 +2193,7 @@
     {
       "chapter": 59,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1712,7 +2207,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_maze_nestedLoops4_2018"
@@ -1721,7 +2217,7 @@
     {
       "chapter": 60,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1735,7 +2231,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_maze_nestedLoops5_2018"
@@ -1744,7 +2241,7 @@
     {
       "chapter": 61,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1758,7 +2255,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_maze_nestedLoops6_2018"
@@ -1767,7 +2265,7 @@
     {
       "chapter": 62,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -1782,7 +2280,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_bee_nestedLoops7_2018"
@@ -1791,7 +2290,7 @@
     {
       "chapter": 63,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1805,7 +2304,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_bee_nestedLoops8_2018"
@@ -1814,7 +2314,7 @@
     {
       "chapter": 64,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1828,7 +2328,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_bee_nestedLoops9_2018"
@@ -1837,7 +2338,7 @@
     {
       "chapter": 65,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1851,7 +2352,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_bee_nestedLoops9_predict2_2018"
@@ -1860,7 +2362,7 @@
     {
       "chapter": 66,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1874,7 +2376,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_harvester_nested_loops_challenge1_2018"
@@ -1883,7 +2386,7 @@
     {
       "chapter": 67,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1897,7 +2400,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       },
       "level_keys": [
         "courseD_collector_nested_loops_challenge2_2018"
@@ -1906,7 +2410,7 @@
     {
       "chapter": 68,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1920,7 +2424,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops1_2018"
@@ -1929,7 +2434,7 @@
     {
       "chapter": 69,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1943,7 +2448,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops1a_2018"
@@ -1952,7 +2458,7 @@
     {
       "chapter": 70,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1966,7 +2472,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_video_nestedLoopsArtist_2018"
@@ -1975,7 +2482,7 @@
     {
       "chapter": 71,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1989,7 +2496,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops2_2018"
@@ -1998,7 +2506,7 @@
     {
       "chapter": 72,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2012,7 +2520,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops3_2018"
@@ -2021,7 +2530,7 @@
     {
       "chapter": 73,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2035,7 +2544,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops4_2018"
@@ -2044,7 +2554,7 @@
     {
       "chapter": 74,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2058,7 +2568,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops5_2018"
@@ -2067,7 +2578,7 @@
     {
       "chapter": 75,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2081,7 +2592,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops7_2018"
@@ -2090,7 +2602,7 @@
     {
       "chapter": 76,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2104,7 +2616,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops8_2018"
@@ -2113,7 +2626,7 @@
     {
       "chapter": 77,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -2128,7 +2641,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops9_2018"
@@ -2137,7 +2651,7 @@
     {
       "chapter": 78,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2151,7 +2665,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops10_2018"
@@ -2160,7 +2675,7 @@
     {
       "chapter": 79,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2174,7 +2689,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops9_predict1_2018"
@@ -2183,7 +2699,7 @@
     {
       "chapter": 80,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2197,7 +2713,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoopsFP_2018"
@@ -2206,7 +2723,7 @@
     {
       "chapter": 81,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2220,7 +2737,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops_challenge1_2018"
@@ -2229,7 +2747,7 @@
     {
       "chapter": 82,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2243,7 +2761,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       },
       "level_keys": [
         "courseD_artist_nestedLoops_challenge2_2018"
@@ -2252,7 +2771,7 @@
     {
       "chapter": 83,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2266,7 +2785,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       },
       "level_keys": [
         "courseD_artist_1_2018"
@@ -2275,7 +2795,7 @@
     {
       "chapter": 84,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2289,7 +2809,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       },
       "level_keys": [
         "courseD_artist_2_2018"
@@ -2298,7 +2819,7 @@
     {
       "chapter": 85,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2312,7 +2833,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       },
       "level_keys": [
         "courseD_artist_3_2018"
@@ -2321,7 +2843,7 @@
     {
       "chapter": 86,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2335,7 +2857,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       },
       "level_keys": [
         "courseD_artist_4_2018"
@@ -2344,7 +2867,7 @@
     {
       "chapter": 87,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2358,7 +2881,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       },
       "level_keys": [
         "courseD_artist_5_2018"
@@ -2367,7 +2891,7 @@
     {
       "chapter": 88,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2381,7 +2905,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       },
       "level_keys": [
         "courseD_artist_6_2018"
@@ -2390,7 +2915,7 @@
     {
       "chapter": 89,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2404,7 +2929,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while1_2018"
@@ -2413,7 +2939,7 @@
     {
       "chapter": 90,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2427,7 +2953,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while2_2018"
@@ -2436,7 +2963,7 @@
     {
       "chapter": 91,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2450,7 +2977,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while3_2018"
@@ -2459,7 +2987,7 @@
     {
       "chapter": 92,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2473,7 +3001,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_video_whileIntro_2018"
@@ -2482,7 +3011,7 @@
     {
       "chapter": 93,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2496,7 +3025,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while4_predict1_2018"
@@ -2505,7 +3035,7 @@
     {
       "chapter": 94,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2519,7 +3049,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while4_2018"
@@ -2528,7 +3059,7 @@
     {
       "chapter": 95,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2542,7 +3073,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while5_2018"
@@ -2551,7 +3083,7 @@
     {
       "chapter": 96,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2565,7 +3097,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while6_2018"
@@ -2574,7 +3107,7 @@
     {
       "chapter": 97,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2588,7 +3121,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while7_2018"
@@ -2597,7 +3131,7 @@
     {
       "chapter": 98,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -2612,7 +3146,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while8_2018"
@@ -2621,7 +3156,7 @@
     {
       "chapter": 99,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2635,7 +3170,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while9_2018"
@@ -2644,7 +3180,7 @@
     {
       "chapter": 100,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2658,7 +3194,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while10_2018"
@@ -2667,7 +3204,7 @@
     {
       "chapter": 101,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2681,7 +3218,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while10_predict2_2018"
@@ -2690,7 +3228,7 @@
     {
       "chapter": 102,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2704,7 +3242,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       },
       "level_keys": [
         "courseD_farmer_while_challenge1_2018"
@@ -2713,7 +3252,7 @@
     {
       "chapter": 103,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2727,7 +3266,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_maze_until1_2018"
@@ -2736,7 +3276,7 @@
     {
       "chapter": 104,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2750,7 +3290,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_video_repeatUntil_2018"
@@ -2759,7 +3300,7 @@
     {
       "chapter": 105,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2773,7 +3314,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_maze_until2_predict1_2018"
@@ -2782,7 +3324,7 @@
     {
       "chapter": 106,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2796,7 +3338,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_maze_until3_2018"
@@ -2805,7 +3348,7 @@
     {
       "chapter": 107,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2819,7 +3362,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_maze_until4_2018"
@@ -2828,7 +3372,7 @@
     {
       "chapter": 108,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2842,7 +3386,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_maze_until5_2018"
@@ -2851,7 +3396,7 @@
     {
       "chapter": 109,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2865,7 +3410,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_maze_until6_2018"
@@ -2874,7 +3420,7 @@
     {
       "chapter": 110,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2888,7 +3434,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_maze_until7_2018"
@@ -2897,7 +3444,7 @@
     {
       "chapter": 111,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -2912,7 +3459,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_maze_until9_2018"
@@ -2921,7 +3469,7 @@
     {
       "chapter": 112,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2935,7 +3483,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_maze_until10_2018"
@@ -2944,7 +3493,7 @@
     {
       "chapter": 113,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2958,7 +3507,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       },
       "level_keys": [
         "courseD_maze_until10_predict2_2018"
@@ -2967,7 +3517,7 @@
     {
       "chapter": 114,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2981,7 +3531,8 @@
         ],
         "lesson.key": "Conditionals with Cards",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "bffa726a-7564-4350-b1e3-c91653bdef3c"
       },
       "level_keys": [
         "Conditionals_2018"
@@ -2990,7 +3541,7 @@
     {
       "chapter": 115,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3004,7 +3555,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionalsVid1_2018"
@@ -3013,7 +3565,7 @@
     {
       "chapter": 116,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3027,7 +3579,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals1_predict1_2018"
@@ -3036,7 +3589,7 @@
     {
       "chapter": 117,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3050,7 +3603,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals2_2018"
@@ -3059,7 +3613,7 @@
     {
       "chapter": 118,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3073,7 +3627,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals3_2018"
@@ -3082,7 +3637,7 @@
     {
       "chapter": 119,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3096,7 +3651,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals4_2018"
@@ -3105,7 +3661,7 @@
     {
       "chapter": 120,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3119,7 +3675,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals5_2018"
@@ -3128,7 +3685,7 @@
     {
       "chapter": 121,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3142,7 +3699,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals6_2018"
@@ -3151,7 +3709,7 @@
     {
       "chapter": 122,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3165,7 +3723,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionalsVidIfElse_2018"
@@ -3174,7 +3733,7 @@
     {
       "chapter": 123,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3188,7 +3747,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals7_2018"
@@ -3197,7 +3757,7 @@
     {
       "chapter": 124,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3211,7 +3771,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals7_predict2_2018"
@@ -3220,7 +3781,7 @@
     {
       "chapter": 125,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -3235,7 +3796,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals8_2018"
@@ -3244,7 +3806,7 @@
     {
       "chapter": 126,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3258,7 +3820,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals9_2018"
@@ -3267,7 +3830,7 @@
     {
       "chapter": 127,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3281,7 +3844,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals10_2018"
@@ -3290,7 +3854,7 @@
     {
       "chapter": 128,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3304,7 +3868,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals_challenge1_2018"
@@ -3313,7 +3878,7 @@
     {
       "chapter": 129,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3327,7 +3892,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       },
       "level_keys": [
         "courseD_bee_conditionals_challenge2_2018"
@@ -3336,7 +3902,7 @@
     {
       "chapter": 130,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3350,7 +3916,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "harvester_skinOverview_video"
@@ -3359,7 +3926,7 @@
     {
       "chapter": 131,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3373,7 +3940,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops1_2018"
@@ -3382,7 +3950,7 @@
     {
       "chapter": 132,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3396,7 +3964,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops2_2018"
@@ -3405,7 +3974,7 @@
     {
       "chapter": 133,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3419,7 +3988,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops3_2018"
@@ -3428,7 +3998,7 @@
     {
       "chapter": 134,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3442,7 +4012,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops4_2018"
@@ -3451,7 +4022,7 @@
     {
       "chapter": 135,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3465,7 +4036,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops5_2018"
@@ -3474,7 +4046,7 @@
     {
       "chapter": 136,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3488,7 +4060,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops6_2018"
@@ -3497,7 +4070,7 @@
     {
       "chapter": 137,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -3512,7 +4085,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops7_2018"
@@ -3521,7 +4095,7 @@
     {
       "chapter": 138,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3535,7 +4109,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops8_2018"
@@ -3544,7 +4119,7 @@
     {
       "chapter": 139,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3558,7 +4133,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops9_2018"
@@ -3567,7 +4143,7 @@
     {
       "chapter": 140,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3581,7 +4157,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops9_predict1_2018"
@@ -3590,7 +4167,7 @@
     {
       "chapter": 141,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3604,7 +4181,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops_challenge1_2018"
@@ -3613,7 +4191,7 @@
     {
       "chapter": 142,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3627,7 +4205,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       },
       "level_keys": [
         "courseD_farmer_condLoops_challenge2_2018"
@@ -3636,7 +4215,7 @@
     {
       "chapter": 143,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3650,7 +4229,8 @@
         ],
         "lesson.key": "Digital Citizenship",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d4f22306-fb3b-4d30-9171-3a4f5203a131"
       },
       "level_keys": [
         "courseD_unplugged_digitalCitizenship_2018"
@@ -3659,7 +4239,7 @@
     {
       "chapter": 144,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3673,7 +4253,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       },
       "level_keys": [
         "courseD_playLab_cond1_2018"
@@ -3682,7 +4263,7 @@
     {
       "chapter": 145,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3696,7 +4277,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       },
       "level_keys": [
         "courseD_playLab_cond2_2018"
@@ -3705,7 +4287,7 @@
     {
       "chapter": 146,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3719,7 +4301,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       },
       "level_keys": [
         "courseD_playLab_cond3_2018"
@@ -3728,7 +4311,7 @@
     {
       "chapter": 147,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3742,7 +4325,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       },
       "level_keys": [
         "courseD_playLab_cond3a_2018"
@@ -3751,7 +4335,7 @@
     {
       "chapter": 148,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3765,7 +4349,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       },
       "level_keys": [
         "courseD_playLab_cond4_2018"
@@ -3774,7 +4359,7 @@
     {
       "chapter": 149,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3788,7 +4373,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       },
       "level_keys": [
         "courseD_playLab_cond5_2018"
@@ -3797,7 +4383,7 @@
     {
       "chapter": 150,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3811,7 +4397,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       },
       "level_keys": [
         "courseD_playLab_cond6_2018"
@@ -3820,7 +4407,7 @@
     {
       "chapter": 151,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3834,7 +4421,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       },
       "level_keys": [
         "courseD_playLab_cond6a_2018"
@@ -3843,7 +4431,7 @@
     {
       "chapter": 152,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3857,7 +4445,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       },
       "level_keys": [
         "courseD_playLab_condFP_2018"
@@ -3866,7 +4455,7 @@
     {
       "chapter": 153,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3880,7 +4469,8 @@
         ],
         "lesson.key": "Unplugged: Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "1e541589-2940-4b3b-ad19-e8bd120e2bc9"
       },
       "level_keys": [
         "BinaryImages_2018"
@@ -3889,7 +4479,7 @@
     {
       "chapter": 154,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3903,7 +4493,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_external_binary1_2018"
@@ -3912,7 +4503,7 @@
     {
       "chapter": 155,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3926,7 +4517,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary1_2018"
@@ -3935,7 +4527,7 @@
     {
       "chapter": 156,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3949,7 +4541,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary2_2018"
@@ -3958,7 +4551,7 @@
     {
       "chapter": 157,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3972,7 +4565,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary3_2018"
@@ -3981,7 +4575,7 @@
     {
       "chapter": 158,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -3995,7 +4589,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary4_2018"
@@ -4004,7 +4599,7 @@
     {
       "chapter": 159,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4018,7 +4613,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary5_2018"
@@ -4027,7 +4623,7 @@
     {
       "chapter": 160,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4041,7 +4637,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary6_2018"
@@ -4050,7 +4647,7 @@
     {
       "chapter": 161,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4064,7 +4661,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary7_2018"
@@ -4073,7 +4671,7 @@
     {
       "chapter": 162,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4087,7 +4685,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary8_2018"
@@ -4096,7 +4695,7 @@
     {
       "chapter": 163,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4110,7 +4709,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary8_predict1_2018"
@@ -4119,7 +4719,7 @@
     {
       "chapter": 164,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4133,7 +4733,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binaryFP_2018"
@@ -4142,7 +4743,7 @@
     {
       "chapter": 165,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4156,7 +4757,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary_challenge1_2018"
@@ -4165,7 +4767,7 @@
     {
       "chapter": 166,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4179,7 +4781,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       },
       "level_keys": [
         "courseD_artist_binary_challenge2_2018"
@@ -4195,7 +4798,8 @@
         ],
         "lesson.key": "Algorithms: Graph Paper Programming",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "1c4a4e57-71c2-4359-88dc-50abaa28f54e"
       }
     },
     {
@@ -4206,7 +4810,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       }
     },
     {
@@ -4217,7 +4822,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       }
     },
     {
@@ -4228,7 +4834,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       }
     },
     {
@@ -4239,7 +4846,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       }
     },
     {
@@ -4250,7 +4858,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       }
     },
     {
@@ -4261,7 +4870,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       }
     },
     {
@@ -4272,7 +4882,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       }
     },
     {
@@ -4283,7 +4894,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       }
     },
     {
@@ -4294,7 +4906,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       }
     },
     {
@@ -4305,7 +4918,8 @@
         ],
         "lesson.key": "Introduction to Online Puzzles",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d38054de-828f-4ce3-8f35-13ba619ce633"
       }
     },
     {
@@ -4316,7 +4930,8 @@
         ],
         "lesson.key": "Relay Programming",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d04082c3-2de5-4806-807a-4e43afefaeb5"
       }
     },
     {
@@ -4327,7 +4942,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       }
     },
     {
@@ -4338,7 +4954,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       }
     },
     {
@@ -4349,7 +4966,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       }
     },
     {
@@ -4360,7 +4978,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       }
     },
     {
@@ -4371,7 +4990,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       }
     },
     {
@@ -4382,7 +5002,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       }
     },
     {
@@ -4393,7 +5014,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       }
     },
     {
@@ -4404,7 +5026,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       }
     },
     {
@@ -4415,7 +5038,8 @@
         ],
         "lesson.key": "Debugging in Collector",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "f80b5e10-81ac-4d9d-9c98-9228085be33b"
       }
     },
     {
@@ -4426,7 +5050,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       }
     },
     {
@@ -4437,7 +5062,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       }
     },
     {
@@ -4448,7 +5074,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       }
     },
     {
@@ -4459,7 +5086,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       }
     },
     {
@@ -4470,7 +5098,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       }
     },
     {
@@ -4481,7 +5110,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       }
     },
     {
@@ -4492,7 +5122,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       }
     },
     {
@@ -4503,7 +5134,8 @@
         ],
         "lesson.key": "Events in Bounce",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "8870661c-6f16-4523-99d0-037ca8a50ec3"
       }
     },
     {
@@ -4514,7 +5146,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4525,7 +5158,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4536,7 +5170,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4547,7 +5182,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4558,7 +5194,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4569,7 +5206,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4580,7 +5218,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4591,7 +5230,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4602,7 +5242,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4613,7 +5254,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4624,7 +5266,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4635,7 +5278,8 @@
         ],
         "lesson.key": "Loops in Ice Age",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "cb0613c1-4610-435d-bfe6-a91bfb04d9fd"
       }
     },
     {
@@ -4646,7 +5290,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4657,7 +5302,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4668,7 +5314,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4679,7 +5326,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4690,7 +5338,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4701,7 +5350,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4712,7 +5362,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4723,7 +5374,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4734,7 +5386,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4745,7 +5398,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4756,7 +5410,8 @@
         ],
         "lesson.key": "Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c73c7082-e140-4c50-a7bb-eb0ba2fca64d"
       }
     },
     {
@@ -4767,7 +5422,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4778,7 +5434,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4789,7 +5446,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4800,7 +5458,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4811,7 +5470,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4822,7 +5482,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4833,7 +5494,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4844,7 +5506,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4855,7 +5518,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4866,7 +5530,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4877,7 +5542,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4888,7 +5554,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4899,7 +5566,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4910,7 +5578,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4921,7 +5590,8 @@
         ],
         "lesson.key": "Nested Loops in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "646e53cd-c79e-46ac-bcd4-91bfc80f6b6a"
       }
     },
     {
@@ -4932,7 +5602,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -4943,7 +5614,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -4954,7 +5626,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -4965,7 +5638,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -4976,7 +5650,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -4987,7 +5662,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -4998,7 +5674,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -5009,7 +5686,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -5020,7 +5698,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -5031,7 +5710,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -5042,7 +5722,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -5053,7 +5734,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -5064,7 +5746,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -5075,7 +5758,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -5086,7 +5770,8 @@
         ],
         "lesson.key": "Nested Loops in Artist",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e4d25af9-6dfa-47a3-ac32-3c2aaa263a62"
       }
     },
     {
@@ -5097,7 +5782,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       }
     },
     {
@@ -5108,7 +5794,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       }
     },
     {
@@ -5119,7 +5806,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       }
     },
     {
@@ -5130,7 +5818,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       }
     },
     {
@@ -5141,7 +5830,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       }
     },
     {
@@ -5152,7 +5842,8 @@
         ],
         "lesson.key": "Nested Loops in Frozen",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "a1f59442-9a33-4146-931c-1855f37d2c33"
       }
     },
     {
@@ -5163,7 +5854,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5174,7 +5866,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5185,7 +5878,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5196,7 +5890,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5207,7 +5902,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5218,7 +5914,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5229,7 +5926,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5240,7 +5938,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5251,7 +5950,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5262,7 +5962,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5273,7 +5974,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5284,7 +5986,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5295,7 +5998,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5306,7 +6010,8 @@
         ],
         "lesson.key": "While Loops in Farmer",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "426d15cd-7ad0-4411-a2e4-c004c5d0cb5d"
       }
     },
     {
@@ -5317,7 +6022,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5328,7 +6034,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5339,7 +6046,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5350,7 +6058,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5361,7 +6070,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5372,7 +6082,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5383,7 +6094,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5394,7 +6106,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5405,7 +6118,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5416,7 +6130,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5427,7 +6142,8 @@
         ],
         "lesson.key": "Until Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "c9423677-4461-44c5-aaaf-07dd0f3351cb"
       }
     },
     {
@@ -5438,7 +6154,8 @@
         ],
         "lesson.key": "Conditionals with Cards",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "bffa726a-7564-4350-b1e3-c91653bdef3c"
       }
     },
     {
@@ -5449,7 +6166,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5460,7 +6178,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5471,7 +6190,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5482,7 +6202,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5493,7 +6214,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5504,7 +6226,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5515,7 +6238,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5526,7 +6250,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5537,7 +6262,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5548,7 +6274,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5559,7 +6286,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5570,7 +6298,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5581,7 +6310,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5592,7 +6322,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5603,7 +6334,8 @@
         ],
         "lesson.key": "Conditionals in Bee",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "e8da6759-d479-4697-8cf0-14fe83559f25"
       }
     },
     {
@@ -5614,7 +6346,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5625,7 +6358,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5636,7 +6370,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5647,7 +6382,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5658,7 +6394,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5669,7 +6406,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5680,7 +6418,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5691,7 +6430,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5702,7 +6442,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5713,7 +6454,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5724,7 +6466,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5735,7 +6478,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5746,7 +6490,8 @@
         ],
         "lesson.key": "Conditionals & Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "3bea9cf4-39a6-47b2-82f3-99652b36cec6"
       }
     },
     {
@@ -5757,7 +6502,8 @@
         ],
         "lesson.key": "Digital Citizenship",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d4f22306-fb3b-4d30-9171-3a4f5203a131"
       }
     },
     {
@@ -5768,7 +6514,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       }
     },
     {
@@ -5779,7 +6526,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       }
     },
     {
@@ -5790,7 +6538,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       }
     },
     {
@@ -5801,7 +6550,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       }
     },
     {
@@ -5812,7 +6562,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       }
     },
     {
@@ -5823,7 +6574,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       }
     },
     {
@@ -5834,7 +6586,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       }
     },
     {
@@ -5845,7 +6598,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       }
     },
     {
@@ -5856,7 +6610,8 @@
         ],
         "lesson.key": "Build a Play Lab Game",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "6135149f-fce8-435b-9340-c1f8229ebb77"
       }
     },
     {
@@ -5867,7 +6622,8 @@
         ],
         "lesson.key": "Unplugged: Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "1e541589-2940-4b3b-ad19-e8bd120e2bc9"
       }
     },
     {
@@ -5878,7 +6634,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5889,7 +6646,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5900,7 +6658,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5911,7 +6670,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5922,7 +6682,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5933,7 +6694,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5944,7 +6706,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5955,7 +6718,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5966,7 +6730,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5977,7 +6742,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5988,7 +6754,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -5999,7 +6766,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     },
     {
@@ -6010,7 +6778,8 @@
         ],
         "lesson.key": "Artist Binary",
         "lesson_group.key": "",
-        "script.name": "coursed-2018"
+        "script.name": "coursed-2018",
+        "activity_section.key": "d5997c44-aef5-4ab9-aa27-431a71451a76"
       }
     }
   ],

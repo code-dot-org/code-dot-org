@@ -1,4 +1,59 @@
 {
   "name": "gamelab",
-  "editorType": "droplet"
+  "description": "Game Lab is a programming environment where you can make exciting games and animations. Draw your characters, code with blocks or JavaScript to make it work, then share your game in seconds.",
+  "editor_type": "droplet",
+  "title": "Game Lab",
+  "image_url": "https://studio.code.org/shared/images/courses/logo_gamelab_square.png",
+  "categories": [
+    {
+      "key": "sprites",
+      "name": "Sprites",
+      "color": "#f78183"
+    },
+    {
+      "key": "groups",
+      "name": "Groups",
+      "color": "#f78183"
+    },
+    {
+      "key": "drawing",
+      "name": "Drawing",
+      "color": "#4dd0e1"
+    },
+    {
+      "key": "control",
+      "name": "Control",
+      "color": "#64B5F6"
+    },
+    {
+      "key": "math",
+      "name": "Math",
+      "color": "#FFB74D"
+    },
+    {
+      "key": "variables",
+      "name": "Variables",
+      "color": "#BB77C7"
+    },
+    {
+      "key": "functions",
+      "name": "Functions",
+      "color": "#68D995"
+    },
+    {
+      "key": "world",
+      "name": "World",
+      "color": "#fff176"
+    },
+    {
+      "key": "animations",
+      "name": "Animations",
+      "color": "#f78183"
+    },
+    {
+      "key": "ui_controls",
+      "name": "UI controls",
+      "color": "#fff176"
+    }
+  ]
 }

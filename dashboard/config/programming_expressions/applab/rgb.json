@@ -1,21 +1,21 @@
 {
-  "func": "rgb",
+  "key": "rgb",
+  "name": "rgb",
   "category": "UI controls",
-  "paramButtons": {
-    "minArgs": 3,
-    "maxArgs": 4
-  },
-  "paletteParams": [
-    "r",
-    "g",
-    "b",
-    "a"
+  "category_key": "ui_controls",
+  "palette_params": [
+    {
+      "name": "r"
+    },
+    {
+      "name": "g"
+    },
+    {
+      "name": "b"
+    },
+    {
+      "name": "a"
+    }
   ],
-  "params": [
-    "250",
-    "0",
-    "75",
-    "0.5"
-  ],
-  "type": "value"
+  "syntax": "rgb(r, g, b, a)"
 }

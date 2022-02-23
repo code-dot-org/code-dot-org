@@ -558,6 +558,11 @@ eu:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": karraska
+            "'sound://category_animals/cat.mp3'": katua
+            "'sound://category_animals/cow.mp3'": behia
+            "'sound://category_animals/sheep.mp3'": ardia
+            "'sound://category_animals/chicken.mp3'": oilaskoa
+            "'sound://category_animals/dog.mp3'": txakurra
             "'sound://category_digital/jump_7.mp3'": salto egin
       gamelab_randColor:
         text: ausazko kolorea
@@ -605,6 +610,14 @@ eu:
           PROPERTY:
             '"scale"': tamaina
             '"height"': Altuera
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': arrunta
+            '7': fast
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -782,6 +795,37 @@ eu:
             '"down"': behera gezia
             '"left"': ezker gezia
             '"right"': eskuin gezia
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': bihotzak
+            '"rainbow"': ostadarra
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': euria
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': gaua
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': salto egin
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': lainotua
+            '"hearts"': bihotzak
+            '"rain"': euria
+          PALETTE:
+            '"rainbow"': ostadarra
+            '"winter"': negua
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': bihotzak
+            '"rain"': euria
       RyanLab_moveForward:
         text: mugitu aurrera
       RyanLab_turnLeft:

@@ -5,7 +5,9 @@ id:
       jittering: gugup
       moving east: bergerak ke timur
       moving north: bergerak ke utara
+      moving north and looping: bergerak ke utara dan berulang
       moving south: bergerak ke selatan
+      moving south and looping: bergerak ke selatan dan berulang
       moving west: bergerak ke barat
       moving with arrow keys: bergerak dengan tanda panah
       patrolling: perondaan

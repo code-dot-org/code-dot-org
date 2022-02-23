@@ -839,6 +839,12 @@
   coursed-2020_gradelevel: Lớp 8 +
   coursee-2020_gradelevel: 8-12 tuổi
   coursef-2020_gradelevel: 9-13 tuổi
+  coursea-2021_gradelevel: Tuổi từ 4-7
+  courseb-2021_gradelevel: 5-8 tuổi
+  coursec-2021_gradelevel: 6-10 tuổi
+  coursed-2021_gradelevel: Lớp 8 +
+  coursee-2021_gradelevel: 8-12 tuổi
+  coursef-2021_gradelevel: 9-13 tuổi
   accelerated_gradelevel: "Lứa tuổi 10 + (sau khóa học 3)"
   thinkersmithspanish_platformtext: "Không dùng máy tính"
   thinkersmith_platformtext: "Không dùng máy tính"
@@ -1136,6 +1142,12 @@
   hoc2020_mc_available_code_org: "Có trên Code.org"
   hoc2020_mc_available_mee: 'Có trong Minecraft: Education Edition'
   hoc2020_mc_mee_description: 'Hướng dẫn Giờ lập trình Minecraft hiện đã có mặt trên Minecraft: Education Edition dành cho Windows, Mac, Chromebook và iPad. Hãy tìm hiểu những căn bản về viết mã lệnh và khám phá sự đa dạng cũng như hòa nhập của các em học sinh! Hãy truy cập những nguồn hỗ trợ miễn phí, bao gồm thời khóa biểu, video, chương trình đào tạo khoa học máy tính, bài học về sự công bằng và các khóa đào tạo giáo viên.'
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Du hành ngược thời gian và học cách code! Hướng dẫn Giờ Lập Trình Minecraft mới hiện đã có trong Minecraft: Education Edition (Minecraft: Phiên bản giáo dục) dành cho Windows, Mac, Chromebook và iPad. Bắt đầu với các tài nguyên, tài liệu đào tạo và video miễn phí dành cho giáo viên.'
+  hoc2021_mc_mee_villages_title: "Tale of Two Villages (Câu chuyện về hai ngôi làng)"
+  hoc2021_mc_mee_villages_description: 'Tìm hiểu kiến thức cơ bản về lập trình và khám phá sự đa dạng và hòa nhập với học viên của bạn trong Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: "AI For Good (AI vì những điều tốt đẹp)"
+  hoc2021_mc_mee_ai_description: 'Khám phá AI với học viên của bạn và học cách viết code trong Minecraft: Education Edition.'
   footer_powered_by_aws: "Amazon Web Services và biểu tượng “Được hỗ trợ bởi AWS” là các nhãn hiệu của Amazon.com, Inc. hoặc các chi nhánh của Amazon tại Hoa Kỳ và / hoặc các quốc gia khác."
   footer_privacy_policy: "Chính sách bảo mật"
   footer_about: "về chúng tôi"
@@ -1190,3 +1202,6 @@
   ai_cognimates: "Cognimates"
   ai_cognimates_description: "Nền tảng giáo dục AI để làm game, lập trình robot và đào tạo."
   ai_try_activity: "Thử hoạt động"
+  outbreak_tile_title: "Dịch bệnh bùng phát"
+  outbreak_tile_subtitle: "Một loại virus đã lây nhiễm bệnh cho Thị Trấn Quái Vật! Hãy code một trình mô phỏng ổ dịch và đưa ra dự đoán về những gì sẽ xảy ra với những người hàng xóm của Thị Trấn Quái Vật."
+  footer_cookie_notice: "Thông báo về cookie"

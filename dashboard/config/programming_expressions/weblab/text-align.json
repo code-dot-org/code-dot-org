@@ -1,0 +1,7 @@
+{
+  "key": "text-align",
+  "name": "text-align",
+  "category": "CSS Properties",
+  "category_key": "css_properties",
+  "syntax": "text-align: value;"
+}

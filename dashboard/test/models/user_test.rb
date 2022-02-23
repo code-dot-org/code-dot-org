@@ -46,6 +46,10 @@ class UserTest < ActiveSupport::TestCase
     @user = create :user
     @teacher = create :teacher
     @student = create :student
+    @facilitator = create :facilitator
+    @universal_instructor = create :universal_instructor
+    @plc_reviewer = create :plc_reviewer
+    @levelbuilder = create :levelbuilder
   end
 
   test 'from_identifier finds user by id' do
@@ -2782,25 +2786,62 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_pair?
   end
 
-  test "authorized teacher" do
+  test "verified teacher" do
     # you can't just create your own authorized teacher account
     assert @teacher.teacher?
-    refute @teacher.authorized_teacher?
+    refute @teacher.verified_teacher?
 
     # you have to be in a cohort
     real_teacher = create(:teacher)
     real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
     assert real_teacher.teacher?
-    assert real_teacher.authorized_teacher?
+    assert real_teacher.verified_teacher?
 
     # or you have to be in a plc course
     create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
     assert plc_teacher.teacher?
-    assert plc_teacher.authorized_teacher?
+    assert plc_teacher.verified_teacher?
+  end
 
-    # admins should be authorized teachers too
+  test "verified instructor" do
+    # normal teacher accounts are not automatically verified instructors
+    assert @teacher.teacher?
+    refute @teacher.verified_instructor?
+
+    # you need to be given the verified permission
+    real_teacher = create(:teacher)
+    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
+    assert real_teacher.teacher?
+    assert real_teacher.verified_instructor?
+
+    # or you have to be in a plc course
+    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
+    assert plc_teacher.teacher?
+    assert plc_teacher.verified_instructor?
+
+    # admins are not verified instructorsg
     assert @admin.teacher?
-    assert @admin.authorized_teacher?
+    refute @admin.verified_instructor?
+
+    # facilitators should be verified instructors too
+    assert @facilitator.teacher?
+    assert @facilitator.verified_instructor?
+
+    # universal instructors should be verified instructors too
+    assert @universal_instructor.teacher?
+    assert @universal_instructor.verified_instructor?
+
+    #plc reviewers should be verified instructors too
+    assert @plc_reviewer.teacher?
+    assert @plc_reviewer.verified_instructor?
+
+    #levelbuilders should be verified instructors too
+    assert @levelbuilder.teacher?
+    assert @levelbuilder.verified_instructor?
+
+    #students should not be verified instructors
+    refute @student.teacher?
+    refute @student.verified_instructor?
   end
 
   test 'terms_of_service_version for teacher without version' do
@@ -3058,13 +3099,13 @@ class UserTest < ActiveSupport::TestCase
 
   test 'deleting user deletes dependent pd applications' do
     teacher = create :teacher
-    application = create :pd_teacher1819_application, user: teacher
+    application = create :pd_teacher_application, user: teacher
     assert_equal application.id, teacher.pd_applications.first.id
 
     teacher.destroy
 
     assert teacher.reload.deleted?
-    refute Pd::Application::Teacher1819Application.exists?(application.id)
+    refute Pd::Application::TeacherApplication.exists?(application.id)
   end
 
   test 'deleting teacher deletes dependent sections and followers' do
@@ -3224,13 +3265,13 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', published_state: SharedConstants::PUBLISHED_STATE.beta
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.any_visible_assigned_scripts?
     end
 
     test "it checks for assigned scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script', published_state: SharedConstants::PUBLISHED_STATE.stable
+      visible_script = create :script, name: 'visible-script', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
       @student.assign_script(visible_script)
       assert @student.any_visible_assigned_scripts?
     end
@@ -3240,13 +3281,13 @@ class UserTest < ActiveSupport::TestCase
     end
 
     test "it checks for assigned courses and scripts, assigned hidden script" do
-      hidden_script = create :script, name: 'hidden-script', published_state: SharedConstants::PUBLISHED_STATE.beta
+      hidden_script = create :script, name: 'hidden-script', published_state: SharedCourseConstants::PUBLISHED_STATE.beta
       @student.assign_script(hidden_script)
       refute @student.assigned_course_or_script?
     end
 
     test "it checks for assigned courses and scripts, assigned visible script" do
-      visible_script = create :script, name: 'visible-script', published_state: SharedConstants::PUBLISHED_STATE.preview
+      visible_script = create :script, name: 'visible-script', published_state: SharedCourseConstants::PUBLISHED_STATE.preview
       @student.assign_script(visible_script)
       assert @student.assigned_course_or_script?
     end
@@ -3279,6 +3320,10 @@ class UserTest < ActiveSupport::TestCase
               'csd' => {
                 'title' => 'Computer Science Discoveries',
                 'description_short' => 'CSD short description',
+              },
+              'pl-csd' => {
+                'title' => 'Computer Science Discoveries PL Course',
+                'description_short' => 'PL CSD short description',
               }
             }
           },
@@ -3287,6 +3332,10 @@ class UserTest < ActiveSupport::TestCase
               'other' => {
                 'title': 'Script Other',
                 'description_short' => 'other-description'
+              },
+              'pl-other' => {
+                'title': 'PL Script Other',
+                'description_short' => 'pl-other-description'
               }
             }
           }
@@ -3296,7 +3345,8 @@ class UserTest < ActiveSupport::TestCase
       I18n.backend.store_translations test_locale, custom_i18n
 
       @student = create :student
-      teacher = create :teacher
+      @teacher = create :teacher
+      facilitator = create :facilitator
 
       unit_group = create :unit_group, name: 'csd'
       create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'csd1'), position: 1
@@ -3305,12 +3355,22 @@ class UserTest < ActiveSupport::TestCase
       other_script = create :script, name: 'other'
       @student.assign_script(other_script)
 
-      section = create :section, user_id: teacher.id, unit_group: unit_group
-      Follower.create!(section_id: section.id, student_user_id: @student.id, user: teacher)
+      section = create :section, user_id: @teacher.id, unit_group: unit_group
+      Follower.create!(section_id: section.id, student_user_id: @student.id, user: @teacher)
+
+      pl_unit_group = create :unit_group, name: 'pl-csd', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      create :unit_group_unit, unit_group: pl_unit_group, script: (create :script, name: 'pl-csd1', instructor_audience: nil, participant_audience: nil), position: 1
+      create :unit_group_unit, unit_group: pl_unit_group, script: (create :script, name: 'pl-csd2', instructor_audience: nil, participant_audience: nil), position: 2
+
+      other_pl_script = create :script, name: 'pl-other', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      @teacher.assign_script(other_pl_script)
+
+      pl_section = create :section, user_id: facilitator.id, unit_group: pl_unit_group, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      Follower.create!(section_id: pl_section.id, student_user_id: @teacher.id, user: facilitator)
     end
 
-    test "it returns both courses and scripts" do
-      courses_and_scripts = @student.recent_courses_and_scripts(false)
+    test "it returns both student courses and student scripts" do
+      courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
       assert_equal 'csd', courses_and_scripts[0][:name]
@@ -3324,32 +3384,57 @@ class UserTest < ActiveSupport::TestCase
       assert_equal '/s/other', courses_and_scripts[1][:link]
     end
 
-    test "it does not return scripts that are in returned courses" do
+    test "it returns both pl courses and pl scripts" do
+      courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
+      assert_equal 2, courses_and_scripts.length
+
+      assert_equal 'pl-csd', courses_and_scripts[0][:name]
+      assert_equal 'Computer Science Discoveries PL Course', courses_and_scripts[0][:title]
+      assert_equal 'PL CSD short description', courses_and_scripts[0][:description]
+      assert_equal '/courses/pl-csd', courses_and_scripts[0][:link]
+
+      assert_equal 'pl-other', courses_and_scripts[1][:name]
+      assert_equal 'PL Script Other', courses_and_scripts[1][:title]
+      assert_equal 'pl-other-description', courses_and_scripts[1][:description]
+      assert_equal '/s/pl-other', courses_and_scripts[1][:link]
+    end
+
+    test "it does not return student scripts that are in returned student courses" do
       script = Script.find_by_name('csd1')
       @student.assign_script(script)
 
-      courses_and_scripts = @student.recent_courses_and_scripts(false)
+      courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
       assert_equal ['Computer Science Discoveries', 'Script Other'], courses_and_scripts.map {|cs| cs[:title]}
     end
 
-    test "it optionally does not return primary course in returned courses" do
+    test "it does not return pl scripts that are in returned pl courses" do
+      script = Script.find_by_name('pl-csd1')
+      @teacher.assign_script(script)
+
+      courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
+      assert_equal 2, courses_and_scripts.length
+
+      assert_equal ['Computer Science Discoveries PL Course', 'PL Script Other'], courses_and_scripts.map {|cs| cs[:title]}
+    end
+
+    test "it optionally does not return primary course in returned student courses" do
       student = create :student
       teacher = create :teacher
 
-      unit_group = create :unit_group, name: 'testcourse', published_state: SharedConstants::PUBLISHED_STATE.stable
-      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1', published_state: SharedConstants::PUBLISHED_STATE.stable), position: 1
-      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2', published_state: SharedConstants::PUBLISHED_STATE.stable), position: 2
+      unit_group = create :unit_group, name: 'testcourse', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+      unit_group_unit1 = create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript1', published_state: SharedCourseConstants::PUBLISHED_STATE.stable), position: 1
+      create :unit_group_unit, unit_group: unit_group, script: (create :script, name: 'testscript2', published_state: SharedCourseConstants::PUBLISHED_STATE.stable), position: 2
       create :user_script, user: student, script: unit_group_unit1.script, started_at: (Time.now - 1.day)
 
-      other_script = create :script, name: 'otherscript', published_state: SharedConstants::PUBLISHED_STATE.stable
+      other_script = create :script, name: 'otherscript', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
       create :user_script, user: student, script: other_script, started_at: (Time.now - 1.hour)
 
       section = create :section, user_id: teacher.id, unit_group: unit_group
       Follower.create!(section_id: section.id, student_user_id: student.id, user: teacher)
 
-      courses_and_scripts = student.recent_courses_and_scripts(true)
+      courses_and_scripts = student.recent_student_courses_and_units(true)
 
       assert_equal 1, courses_and_scripts.length
 
@@ -3731,7 +3816,7 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, progress, hidden' do
       student = create :student
       teacher = create :teacher
-      script = create(:script, :with_levels, levels_count: 3)
+      script = create(:script, :with_levels, lessons_count: 3, levels_count: 1)
 
       # User completed the first lesson
       script.lessons[0].script_levels.each do |sl|
@@ -3757,7 +3842,7 @@ class UserTest < ActiveSupport::TestCase
     test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, first hidden' do
       student = create :student
       teacher = create :teacher
-      script = create(:script, :with_levels, levels_count: 3)
+      script = create(:script, :with_levels, lessons_count: 3, levels_count: 1)
 
       refute_empty student.visible_script_levels(script)
 
@@ -4514,5 +4599,120 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     user.increment_section_attempts
     assert_equal 1, user.properties['section_attempts']
+  end
+
+  test 'school_info_school returns the school associated with the user' do
+    school = create :school
+    school_info = create :school_info, school: school
+    user = create :teacher, school_info: school_info
+
+    assert_equal school.id, user.school_info_school.id
+  end
+
+  test 'school_info_school returns nil if user has no school association' do
+    user = create :teacher
+    assert_nil user.school_info_school
+  end
+
+  test 'marketing_segment_data returns nil if user is not a teacher' do
+    student = create :student
+    assert_nil student.marketing_segment_data
+  end
+
+  test 'marketing_segment_data returns expected account age for teacher' do
+    teacher = create :teacher, created_at: 20.months.ago
+    # 20 months = 1.66 years rounds to 2 years
+    assert_equal 2, teacher.marketing_segment_data[:account_age_in_years]
+  end
+
+  test 'marketing_segment_data returns expected locale' do
+    locale = "en-US"
+    teacher = create :teacher, locale: locale
+    assert_equal locale, teacher.marketing_segment_data[:locale]
+  end
+
+  test 'marketing_segment_data returns expected grades for teacher with sections' do
+    teacher = create :teacher
+    create :section, user: teacher, grade: "6"
+    create :section, user: teacher, grade: "6"
+    create :section, user: teacher, grade: "7"
+
+    expected_grades = ["6", "7"]
+    marketing_segment_grades = JSON.parse(teacher.marketing_segment_data[:grades])
+    assert_equal expected_grades.sort, marketing_segment_grades.sort
+  end
+
+  test 'marketing_segment_data does not return grades for teacher with no sections' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:grades]
+  end
+
+  test 'marketing_segment_data returns expected curriculums for teacher with sections' do
+    teacher = create :teacher
+    csf_script = create :csf_script
+    csd_script = create :csd_script
+    create :section, user: teacher, script: csf_script
+    create :section, user: teacher, script: csd_script
+
+    expected_curriculums = ["CSF", "CSD"]
+    marketing_segment_curriculums = JSON.parse(teacher.marketing_segment_data[:curriculums])
+    assert_equal expected_curriculums.sort, marketing_segment_curriculums.sort
+  end
+
+  test 'marketing_segment_data does not return curriculums for teacher with no sections' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:curriculums]
+  end
+
+  test 'marketing_segment_data returns expected value for has_attended_pd' do
+    teacher = create :teacher
+    create :pd_attendance, teacher: teacher
+    assert teacher.marketing_segment_data[:has_attended_pd]
+  end
+
+  test 'marketing_segment_data returns expected value for within_us' do
+    teacher = create :teacher
+    create :user_geo, country: "United States", user: teacher
+    assert teacher.marketing_segment_data[:within_us]
+  end
+
+  test 'marketing_segment_data returns expected value for school_percent_frl_40_plus' do
+    frl_eligible_total = 45
+    school = create :school
+    create :school_stats_by_year, school: school, frl_eligible_total: frl_eligible_total, students_total: 100
+    school_info = create :school_info, school: school
+    teacher = create :teacher, school_info: school_info
+    assert teacher.marketing_segment_data[:school_percent_frl_40_plus]
+  end
+
+  test 'marketing_segment_data returns expected value for school_percent_frl_40_plus when no school stats' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:school_percent_frl_40_plus]
+  end
+
+  test 'marketing_segment_data returns expected value for school_title_i' do
+    title_i_status = '5'
+    school = create :school
+    create :school_stats_by_year, school: school, title_i_status: title_i_status
+    school_info = create :school_info, school: school
+    teacher = create :teacher, school_info: school_info
+    assert_equal title_i_status, teacher.marketing_segment_data[:school_title_i]
+  end
+
+  test 'marketing_segment_data returns expected value for school_state when there is a school and state' do
+    school = create :school, state: 'WA'
+    school_info = create :school_info, school: school
+    teacher = create :teacher, school_info: school_info
+    assert_equal 'WA', teacher.marketing_segment_data[:school_state]
+  end
+
+  test 'marketing_segment_data returns expected value for school_state when there is no school' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:school_state]
+  end
+
+  test "marketing_segment_data returns the same keys as marketing_segment_data_keys" do
+    teacher = create :teacher
+    assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
   end
 end

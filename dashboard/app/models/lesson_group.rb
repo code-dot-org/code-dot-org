@@ -54,7 +54,7 @@ class LessonGroup < ApplicationRecord
   # for that key matches the already saved display name
   # 3. PLC courses use certain lesson group keys for module types. We reserve those
   # keys so they can only map to the display_name for their PLC purpose
-  def self.add_lesson_groups(raw_lesson_groups, script, new_suffix, editor_experiment)
+  def self.add_lesson_groups(raw_lesson_groups, script)
     lesson_group_position = 0
 
     counters = Counters.new(0, 0, 0, 0)
@@ -92,9 +92,7 @@ class LessonGroup < ApplicationRecord
       end
 
       new_lessons =
-        script.is_migrated ?
-          Lesson.update_lessons_in_migrated_unit(script, lesson_group, raw_lesson_group[:lessons], counters) :
-          Lesson.add_lessons(script, lesson_group, raw_lesson_group[:lessons], counters, new_suffix, editor_experiment)
+        Lesson.update_lessons_in_migrated_unit(script, lesson_group, raw_lesson_group[:lessons], counters)
       lesson_group.lessons = new_lessons
       lesson_group.save!
 

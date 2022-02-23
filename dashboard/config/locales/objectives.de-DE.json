@@ -2,17 +2,197 @@
   "de-DE": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "Veranschaulichung von veränderten Stimmungen in einem Gedicht."
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "Bildliche und wörtliche Sprache in einem Text darstellen."
+        },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "Teile ein kreatives Artefakt mit anderen Schülern."
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "Teile ein kreatives Artefakt mit anderen Schülern."
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Veranschaulichung von veränderten Stimmungen in einem Gedicht."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Bildliche und wörtliche Sprache in einem Text darstellen."
+        },
+        "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
+          "description": "Erkenne, was erwartet wird, wenn SchülerInnen den Computerraum betreten."
+        },
+        "d3adc58a-17d0-4cf1-9afa-ccfde96544ef": {
+          "description": "Verwende eine angemessene Terminologie, wenn du dich auf eine Computermaus, ein Trackpad oder einen Touchscreen beziehst."
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Eine Variable deklarieren"
         },
+        "28d3cc79-4aea-431d-a445-745e75e747d8": {
+          "description": "Benutze Variablen, zur Übertragung von Worten und Sätzen."
+        },
+        "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
+          "description": "Benutze Variablen, zur Übertragung von Worten und Sätzen."
+        },
+        "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "5936ef50-add4-4fbb-a911-224d5c1e9fcc": {
+          "description": "Differenzieren zwischen Befehlen die in Schleifen wiederholt werden müssen, und Befehlen die einzeln eingesetzt werden."
+        },
+        "8cba8ac9-820e-48fd-b726-f7926ecf3348": {
+          "description": "Ordne Werte an bestehende Variablen zu."
+        },
+        "550ac608-922b-468f-a69d-08cc1f20799e": {
+          "description": "Innerhalb eines Programms, benutze Variablen anstatt von wiederholten Werten."
+        },
+        "ab00e2d4-a6f0-4bdf-80fd-3d1d63a4b80f": {
+          "description": "Benutze Variablen, um Werte innerhalb einer Schleife abzuändern."
+        },
+        "dd570e3f-8340-4838-8ba1-de856546f834": {
+          "description": "Unterteile komplexe Aufgaben in kleinere und wiederholbare Abschnitte."
+        },
+        "12412b47-e83e-43a9-ad42-e98cba364913": {
+          "description": "Erkenne größere, wiederholte Muster als das Resultat von kleineren, wiederholten Mustern."
+        },
+        "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
+          "description": "Übersetze URLs in IP-Adressen."
+        },
+        "12c53e25-70d7-4192-a97a-da08dd673338": {
+          "description": "Lerne eine Planung im Vorhinein zu machen, für fortwährende Aufgaben"
+        },
+        "b76f1811-9865-416d-bd06-601301120384": {
+          "description": "Sei in der Lage zu erklären, wie Systembegrenzungen das Design eines Projekts beeinflussen können."
+        },
+        "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
+          "description": "Beschreibe wie ein Kompromiss dabei helfen kann, ein Projekt zu fördern und Kreativität zu erwecken."
+        },
+        "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
+          "description": "Verdeutliche den Entwicklungsprozess, und wie dieser Gestalt an das fertige Projekt gegeben hat."
+        },
+        "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
+          "description": "Vorbildliches Verhalten im Computerraum"
+        },
+        "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
+          "description": "Experimentiere mit standardmäßigen blockbasierten Programmieraktionen wie: Klicken, Drag and Drop, etc."
+        },
+        "fae372cb-4b72-4b35-abd6-e2424e54d791": {
+          "description": "Übersetzte Bewegungen in eine Reihe von Befehlen."
+        },
+        "4576e06e-56f1-4e32-a81d-7bbfea125273": {
+          "description": "Übersetzte Bewegungen in eine Reihe von Befehlen."
+        },
+        "d5f927b9-727a-423e-90d3-80faad21aa34": {
+          "description": "Identifiziere und lokalisiere Bugs in einem Programm."
+        },
+        "6c67256a-a8d5-4a57-9744-092686fb01a0": {
+          "description": "Wiederhole die Aktionen, welche durch den Lehrer veranlasst wurden."
+        },
+        "368e8edc-290d-4737-a616-a543e5298c66": {
+          "description": "Übersetzte ein Bildprogramm in einen Tanz der echten Welt."
+        },
+        "ddb96aa7-a52d-41d7-b253-8f0d1533e093": {
+          "description": "Konvertiere eine Reihe von mehrfachen Aktionen in eine einzige Schleife."
+        },
+        "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
+          "description": "Brich eine lange Sequenz von Anweisungen in die kleinstmögliche wiederholbare Sequenz herunter."
+        },
+        "8293f536-510e-44a0-880b-397b3f97deeb": {
+          "description": "Schreibe ein Programm für eine bestimmte Aufgabe, dass eine Reihe von Befehlen wiederholt."
+        },
+        "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
+          "description": "Benutze eine Kombination von sequenziellen und in Schleifen gefasste Befehle, um das Ende eines Labyrinths zu erreichen."
+        },
+        "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
+          "description": "Brich eine lange Sequenz von Anweisungen in die kleinstmögliche wiederholbare Sequenz herunter."
+        },
+        "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
+          "description": "Zähle die Anzahl, wie oft eine Aktion wiederholt werden soll und stelle sie als Schleife dar."
+        },
+        "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
+          "description": "Zerlege eine Form in ihre größte wiederholbare Sequenz."
+        },
+        "61329a99-1c0a-414f-9694-78f7f9c81372": {
+          "description": "Erstelle ein Programm, das komplexe Formen durch Wiederholung einfacher Sequenzen zeichnet."
+        },
+        "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
+          "description": "Wiederhole Kommandos, die von einem Instruktor gegeben werden."
+        },
+        "3997dff6-b815-412c-b3b5-52d4bd1fc019": {
+          "description": "Erkenne Aktionen des Lehrers als Signale, um Kommandos einzuleiten."
+        },
+        "86c93634-0b7d-46de-82dd-50b86576bd56": {
+          "description": "Übe die Unterscheidung zwischen vordefinierten Aktionen und ereignisgesteuerten Aktionen."
+        },
+        "a1e2ab93-1f36-45df-b7f2-d936689e195c": {
+          "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
+        },
+        "3b0b8dc7-7ac9-4604-9bee-5e6c7f58acda": {
+          "description": "Erstelle eine animierte, interaktive Geschichte, unter Nutzung von Sequenzen und Ereignisprozeduren."
+        },
+        "c7c29345-8b72-4c4f-8fb1-2aa7f90d9bfc": {
+          "description": "Teile ein kreatives Artefakt mit anderen Schülern."
+        },
+        "8023306a-d106-4097-8205-5bc1e92ffade": {
+          "description": "Wende Informatik-Konzepte in einem offenen Projekt an."
+        },
+        "ae68c8b9-0188-48da-a066-b89a819b67e2": {
+          "description": "Überwinde Hindernisse wie Zeitbeschränkungen oder Bugs."
+        },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
-          "description": "Entdecke, dass das Internet genutzt werden kann, um ferne Orte zu besuchen und neue Dinge zu lernen."
+          "description": "Entdecken, dass das Internet genutzt werden kann, um ferne Orte zu besuchen und neue Dinge zu lernen."
         },
         "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
-          "description": "Vergleiche, wie sicher du online bist und wie sicher du in der realen Welt bist."
+          "description": "Vergleichen, wie die Sicherheit im Internet der Sicherheit in der realen Welt ähnelt."
         },
         "ba49206c-c099-4994-be57-1f8744273eaf": {
-          "description": "Erkläre Regeln für sicheres Reisen im Internet."
+          "description": "Die Regeln für sicheres Navigieren im Internet erklären."
         },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Erkenne, was erwartet wird, wenn SchülerInnen den Computerraum betreten."
@@ -21,13 +201,13 @@
           "description": "Verwende eine angemessene Terminologie, wenn du dich auf eine Computermaus, ein Trackpad oder einen Touchscreen beziehst."
         },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
-          "description": "Übersetze einen Algorithmus in ein Programm"
+          "description": "Einen Algorithmus in ein Programm übersetzen"
         },
         "95ef707d-603d-4106-955e-3138f0f16a5d": {
-          "description": "Dekodiere und führe ein von jemand anderem erstelltes Programm aus"
+          "description": "Ein von jemand anderem erstelltes Programm dekodieren und ausführen "
         },
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
-          "description": "Identifiziere und behebe Bugs oder Fehler in sequenzierten Anweisungen"
+          "description": "Fehler in sequenzierten Anweisungen erkennen und lösen"
         },
         "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
           "description": "Vorbildliches Verhalten im Computerraum"
@@ -36,31 +216,31 @@
           "description": "Experimentiere mit standardmäßigen blockbasierten Programmieraktionen wie: Klicken, Drag and Drop, etc."
         },
         "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
-          "description": "Konstruiere ein Programm, indem du sequenzielle Bewegungen reorganisierst"
+          "description": "Ein Programm durch Umorganisieren sequenzieller Bewegungen entwerfen."
         },
         "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
-          "description": "Ein Computerprogramm aus einer Reihe von schriftlichen Anweisungen erstellen"
+          "description": "Ein Computerprogramm aus einer Reihe schriftlicher Anweisungen erstellen"
         },
         "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
-          "description": "Geeignete Debugging-Praktiken beim Lösen von Problemen wählen"
+          "description": "Geeignete Praktiken zur Fehlersuche beim Lösen von Problemen auswählen"
         },
         "199aed02-347c-4892-9e98-d7571ae64c9d": {
-          "description": "Ordne die Befehle in einer logischen Reihenfolge an."
+          "description": "Befehle in einer logischen Reihenfolge anordnen."
         },
         "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
-          "description": "Erkenne Probleme oder \"Bugs\" in einem Programm und entwickle einen Plan, um die Probleme zu beheben."
+          "description": "Probleme oder \"Fehler\" in einem Programm entdecken und einen Plan entwickeln, um die Probleme zu beheben."
         },
         "407c5a4d-9337-4218-92d5-018597e41e19": {
-          "description": "Identifiziere sich wiederholenden Code und verkürze mehrere Aktionen zu einer einzigen Schleife."
+          "description": "Identifiziere Code, der sich wiederholt, und verkürze mehrere Aktionen zu einer einzigen Schleife."
         },
         "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
           "description": "Interpretiere ein Programm mit Schleifen als eine Serie von mehreren Aktionen."
         },
         "cb7cab91-20ca-495a-a429-621631cb0507": {
-          "description": "Konstruiere ein Programm mit Strukturen, die Bereiche des Codes wiederholen"
+          "description": "Ein Programm mit Strukturen entwickeln, die Teile des Codes wiederholen"
         },
         "381b89ab-336f-41cd-b755-78142a1f1f90": {
-          "description": "Verbessere bestehenden Code, indem du Bereiche mit Wiederholungen findest und sie in Schleifenstrukturen verschiebst"
+          "description": "Bestehenden Code durch Identifizieren von Bereiche mit Wiederholungen und Verschieben in Schleifenstrukturen verbessern "
         },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
           "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
@@ -101,14 +281,323 @@
         "0f72a34c-2667-4593-8f6f-ff11b0a92ec8": {
           "description": "Überwinde Hindernisse wie Zeitbeschränkungen oder Bugs."
         },
+        "0adaa1bc-6086-48ba-b99b-59ef1f4b0c69": {
+          "description": "Passe auf die Genauigkeit auf, während der Erstellung von Anweisungen."
+        },
         "26392005-5f64-4707-b38b-847d1f009a29": {
-          "description": "Identifiziere und behebe Bugs oder Fehler in sequenzierten Anweisungen"
+          "description": "Fehler in sequenzierten Anweisungen erkennen und lösen"
+        },
+        "560e14ee-7390-4244-aee5-a0c2737112e5": {
+          "description": "Übersetzte Bewegungen in eine Reihe von Befehlen."
+        },
+        "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
+          "description": "Identifiziere und lokalisiere Bugs in einem Programm."
+        },
+        "ce53a40d-db75-451a-a901-93f93226306a": {
+          "description": "Sage voraus wann ein Programm scheitern wird."
+        },
+        "3ad547f9-c577-4953-88d5-41f7ac1ab710": {
+          "description": "Modifizieren ein bestehendes Programm zur Lösung von Fehlern."
+        },
+        "367c7a8a-4dea-494f-87c7-77cba03711a1": {
+          "description": "Denke nach über den Debugging-Prozess, in einer für das Alter angemessene Weise."
+        },
+        "991aa440-0e71-40b0-8354-da04e3ad125b": {
+          "description": "Arrangierte Bewegungsbefehle, als sequenzielle Schritte in einem Programm."
+        },
+        "a48e07da-5c86-4377-8738-4a6a06633e1d": {
+          "description": "Präsentiere einen Algorithmus als ein Computerprogramm."
+        },
+        "d50f34e0-2613-485c-9381-7b63832dbd0a": {
+          "description": "Entwickle deine Fähigkeiten, in der Lösung von Problemen und kritischem Denken, durch eine wiederholte Durchsicht der Praktiken beim Debugging."
+        },
+        "ffef0ecc-334c-45c7-82af-3d63bbbe3e9f": {
+          "description": "Identifiziere wiederholte Muster in dem Code, die mit einer Schleife ersetzt werden könnten."
+        },
+        "bad7a754-67f5-40db-bd28-b191d6a5b4d8": {
+          "description": "Schreibe Anweisungen, die Schleifen für wiederholte Muster benutzen"
+        },
+        "46288097-dbab-437f-897c-4e14352ae388": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
+          "description": "Teile eine lange Sequenz von Anweisungen in die größte, wiederholbare Sequenz."
+        },
+        "8e76410f-b4db-446b-88c0-00013d9c05bd": {
+          "description": "Benutze eine Kombination von sequenziellen und in Schleifen gefasste Befehle, um das Ende eines Labyrinths zu erreichen."
+        },
+        "ff15ce2c-8445-442a-89f0-7a50e741850a": {
+          "description": "Schreibe ein Programm für eine bestimmte Aufgabe, dass einen einzigen Befehl wiederholt."
+        },
+        "757d864e-38a3-4b30-8617-b9a4174c8b08": {
+          "description": "Identifiziere eine Schleife, welche zur Vereinfachung einer wiederholten Aktion benutzt werden kann."
+        },
+        "94ed661c-bf8f-41fe-866d-86f09b4ef4ad": {
+          "description": "Benutze eine Kombination von sequenziellen und in Schleifen gefasste Befehle, um Aktionen zu bewegen und auszuführen."
+        },
+        "bf154cd9-0914-43c2-b895-030de92d1427": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
+          "description": "Differenzieren zwischen Befehlen die in Schleifen wiederholt werden müssen, und Befehlen die einzeln eingesetzt werden."
+        },
+        "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
+          "description": "Wiederhole Kommandos, die von einem Instruktor gegeben werden."
+        },
+        "529f5b68-c1dc-494b-bfa9-1ada0412cf78": {
+          "description": "Erkenne Bewegungen des Lehrers, als Signale zur Aktivierung von Befehlen."
+        },
+        "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
+          "description": "Übe die Unterscheidung zwischen vordefinierten Aktionen und ereignisgesteuerten Aktionen."
+        },
+        "6c461f48-eb24-4fee-94f3-eb987d8f4fe9": {
+          "description": "Ordne Blocks einem geeigneten Event-Handler zu."
+        },
+        "a8e453ad-ae3a-489a-b652-5f26ea11853a": {
+          "description": "Erstelle ein Spiel, unter Einsatz von Event-Handler."
+        },
+        "5f5877b9-cf72-4bb8-8700-341d33658a7c": {
+          "description": "Teile ein kreatives Artefakt mit anderen Schülern."
+        },
+        "15e9cb30-5d79-4344-a82e-a98f6f29c397": {
+          "description": "Erstelle eine animiertes, interaktives Spiel, unter Nutzung von Sequenzen und Ereignisprozeduren."
+        },
+        "c0757733-5e14-4797-9615-11b61d8d490f": {
+          "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
+        },
+        "9a785141-1fe6-4728-996c-2fbb8781b62c": {
+          "description": "Kodiere Buchstaben in die Binärform."
+        },
+        "e972d59a-b86f-49ec-91ef-39c5ea6d9353": {
+          "description": "Dekodiere binäre Zeichen zurück in Buchstaben."
+        },
+        "ce1f4117-76f3-4359-a554-683a878f82cb": {
+          "description": "Erkläre die Beziehung, zwischen der Idee Buchstaben auf Papier zu speichern, und der Idee einer Speicherung von Informationen in einem Computer."
+        },
+        "a5834224-d1d8-47e2-b203-dc8e6935aa53": {
+          "description": "Überwinde Hindernisse wie Zeitbeschränkungen oder Bugs."
+        },
+        "3c4b51d5-b72f-42df-a55a-86c146214424": {
+          "description": "Strukturiere eine Sequenz von Schritten um, zu einem codierten Programm."
+        },
+        "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
+          "description": "Erkläre die Begrenzungen, bei der Übersetzung von Problemen aus einer menschlichen Sprache."
+        },
+        "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
+          "description": "Arrangierte Bewegungsbefehle, als sequenzielle Schritte in einem Programm."
+        },
+        "ca5f69c3-0626-4e28-bfcf-f4ad872ab87a": {
+          "description": "Modifizieren ein bestehendes Programm zur Lösung von Fehlern."
+        },
+        "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
+          "description": "Teile eine lange Sequenz von Anweisungen in die größte, wiederholbare Sequenz."
+        },
+        "8a0addda-b47f-4551-8c82-9115be3c130d": {
+          "description": "Definiere Ideen, unter Einsatz von Code und Symbolen."
+        },
+        "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
+          "description": "Verifizieren die Arbeit die durch Teamkollegen erledigt wurde."
+        },
+        "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
+          "description": "Lese und verstehe einen zur Verfügung gestellten Code."
+        },
+        "71cede4e-3e93-41d6-a422-f2443f756a61": {
+          "description": "Identifiziere ein Bug und die Probleme, die es in einem Programm verursacht."
+        },
+        "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
+          "description": "Beschreibung und implementierte einen Plan, zum Debugging eines Programms."
+        },
+        "3b4a2468-e182-4060-861f-2a922730445b": {
+          "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
+        },
+        "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
+          "description": "Teile ein kreatives Artefakt mit anderen Schülern."
+        },
+        "bafea2a8-7a23-4046-9360-77d760c54c2b": {
+          "description": "Erstelle eine animiertes, interaktives Spiel, unter Nutzung von Sequenzen und Ereignisprozeduren."
+        },
+        "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
+          "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
         },
         "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
-          "description": "Konstruiere ein Programm mit Strukturen, die Bereiche des Codes wiederholen"
+          "description": "Ein Programm mit Strukturen entwickeln, die Teile des Codes wiederholen"
         },
         "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
-          "description": "Verbessere bestehenden Code, indem du Bereiche mit Wiederholungen findest und sie in Schleifenstrukturen verschiebst"
+          "description": "Bestehenden Code durch Identifizieren von Bereiche mit Wiederholungen und Verschieben in Schleifenstrukturen verbessern "
+        },
+        "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "079d7fb4-c8a7-4319-80d6-53037ad705eb": {
+          "description": "Differenzieren zwischen Befehlen die in Schleifen wiederholt werden müssen, und Befehlen die einzeln eingesetzt werden."
+        },
+        "3a50aae3-6e0f-4821-9539-d06669eba0b1": {
+          "description": "Unterteile komplexe Aufgaben in kleinere und wiederholbare Abschnitte."
+        },
+        "a19b271e-27b4-410c-bd3f-20c07f3ce2f0": {
+          "description": "Erkenne größere, wiederholte Muster als das Resultat von kleineren, wiederholten Mustern."
+        },
+        "673ddc56-5217-45a9-919c-b42024f7de2b": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "fd3464fd-5921-4873-a850-c0799c55eecd": {
+          "description": "Definiere die Umstände, unter denen bestimmte Teile eines Programms in Betrieb sein sollten, und unter welchen Umständen sie außer Betrieb sein sollten."
+        },
+        "494526f8-7392-4788-9126-b2e2dd53b241": {
+          "description": "Stelle fest, ob ein bedingter Befehl auf Kriterien basiert ist."
+        },
+        "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
+          "description": "Durchlauf ein Programm und sage voraus, was das Resultat unter vorgegebenen Bedingungen sein wird."
+        },
+        "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
+          "description": "Definiere die Umstände, unter denen bestimmte Teile eines Programms in Betrieb sein sollten, und unter welchen Umständen sie außer Betrieb sein sollten."
+        },
+        "83b6020a-2273-4966-abd6-0049afa1eb4e": {
+          "description": "Stelle fest, ob ein bedingter Befehl auf Kriterien basiert ist."
+        },
+        "4a1dcde3-13a7-47d1-859a-b29ade558f5d": {
+          "description": "Übersetze gesprochene, bedingte Befehle in ein Programm."
+        },
+        "b9f29764-7d0f-4dfc-9400-9277f0ad9e4f": {
+          "description": "Löse Rätsel durch den Einsatz einer Kombination von Schleifen, die Sequenzen enthalten, und bedingten Befehlen."
+        },
+        "f06bf36a-d520-4a73-b194-6d1e131a07ec": {
+          "description": "Erkläre den Unterschied zwischen Schleifen, die für eine gewisse Anzahl wiederholt werden, und Schleifen die sich wiederholen, solange wie eine Bedingung wahr ist."
+        },
+        "38cd04a9-3d07-4df9-b22d-18e39369e387": {
+          "description": "Benutze eine 'while'-Schleife für die Erstellung eines Programms welches Probleme mit unbekannten Werten lösen kann."
+        },
+        "fd7ce60d-0e0f-403e-85a4-cf0d7e5eeac3": {
+          "description": "Bauprogramme auf, die ein Verständnis zeigen, der verschiedenen Strategien zur Implementierung von bedingten Befehlen. "
+        },
+        "630e79db-15ec-49fd-804c-060b8adf40ea": {
+          "description": "Übersetze gesprochene, bedingte Befehle und Schleifen in ein Programm."
+        },
+        "92ad0a98-e2e5-4104-8a9f-1dee9409f300": {
+          "description": "Überwinde Hindernisse wie Zeitbeschränkungen oder Bugs."
+        },
+        "8c021568-46ed-4243-a4d1-f2037138c01a": {
+          "description": "Übersetzte Bewegungen in eine Reihe von Befehlen."
+        },
+        "0b8dec87-ba78-4165-9d84-f91dc1fbc6df": {
+          "description": "Identifiziere und lokalisiere Bugs in einem Programm."
+        },
+        "f0852e8e-a4ab-49a6-8fc4-0c805f14999a": {
+          "description": "Sage voraus wann ein Programm scheitern wird."
+        },
+        "857073db-dcda-4868-8be6-e0fba5f981d7": {
+          "description": "Modifizieren ein bestehendes Programm zur Lösung von Fehlern."
+        },
+        "600f66d5-9725-4f4d-bd15-ba25f428d5cd": {
+          "description": "Denke nach über den Debugging-Prozess, in einer für das Alter angemessene Weise."
+        },
+        "4d4f7faa-e380-483d-b873-b04e114e077e": {
+          "description": "Arrangierte Bewegungsbefehle, als sequenzielle Schritte in einem Programm."
+        },
+        "6a4a4515-9250-4ad0-b943-afef3d26df68": {
+          "description": "Präsentiere einen Algorithmus als ein Computerprogramm."
+        },
+        "48b6e566-4a4b-424e-b104-33ce83bd2184": {
+          "description": "Entwickle deine Fähigkeiten, in der Lösung von Problemen und kritischem Denken, durch eine wiederholte Durchsicht der Praktiken beim Debugging."
+        },
+        "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
+          "description": "Teile eine lange Sequenz von Anweisungen in die größte, wiederholbare Sequenz."
+        },
+        "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
+          "description": "Benutze eine Kombination von sequenziellen und in Schleifen gefasste Befehle, um das Ende eines Labyrinths zu erreichen."
+        },
+        "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "32250c07-4872-43ce-9968-33e17f779cf3": {
+          "description": "Differenzieren zwischen Befehlen die in Schleifen wiederholt werden müssen, und Befehlen die einzeln eingesetzt werden."
+        },
+        "06be5715-7c67-4b13-816d-acb7253a13b2": {
+          "description": "Unterteile komplexe Aufgaben in kleinere und wiederholbare Abschnitte."
+        },
+        "b884b12d-1247-42f3-a907-652dd25566f2": {
+          "description": "Erkenne größere, wiederholte Muster als das Resultat von kleineren, wiederholten Mustern."
+        },
+        "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "f35a3857-a630-4783-98c3-c0e6304af48f": {
+          "description": "Unterteile Code in wiederholbare Sequenzen, durch die Nutzung von Schleifen und geschachtelten schleifen."
+        },
+        "10a74fb8-26fd-4a7c-84f4-1b868f042670": {
+          "description": "Erkenne den Unterschied zwischen der Nutzung einer Schleife und einer geschachtelten Schleife."
+        },
+        "d1ca506b-d694-4c2b-bcc5-38af2ce425dd": {
+          "description": "Beschreibe wann eine Schleife, eine geschachtelte Schleife, oder überhaupt keine Schleife benötigt ist."
+        },
+        "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6": {
+          "description": "Definiere die Umstände, unter denen bestimmte Teile eines Programms in Betrieb sein sollten, und unter welchen Umständen sie außer Betrieb sein sollten."
+        },
+        "feac1e8e-b6f7-466e-9727-d62bdfaf4f09": {
+          "description": "Stelle fest, ob ein bedingter Befehl auf Kriterien basiert ist."
+        },
+        "7002da51-158a-4849-b733-48282a764b82": {
+          "description": "Übersetze gesprochene, bedingte Befehle in ein Programm."
+        },
+        "08f476a4-492c-47ee-8291-a435761059ac": {
+          "description": "Löse Rätsel durch den Einsatz einer Kombination von Schleifen, die Sequenzen enthalten, und bedingten Befehlen."
+        },
+        "e85d8d23-86c2-4644-9449-94af8b02f763": {
+          "description": "Erkläre den Unterschied zwischen Schleifen, die für eine gewisse Anzahl wiederholt werden, und Schleifen die sich wiederholen, solange wie eine Bedingung wahr ist."
+        },
+        "8bee7277-31d3-4032-a8ea-2d2c820425ec": {
+          "description": "Benutze eine 'while'-Schleife für die Erstellung eines Programms welches Probleme mit unbekannten Werten lösen kann."
+        },
+        "e6f6f67a-369a-4a9d-8197-e3abf61af68e": {
+          "description": "Definiere die Umstände, unter denen bestimmte Teile eines Programms in Betrieb sein sollten, und unter welchen Umständen sie außer Betrieb sein sollten."
+        },
+        "b932c234-ce5d-429e-9c70-cf6d0b28570c": {
+          "description": "Stelle fest, ob ein bedingter Befehl auf Kriterien basiert ist."
+        },
+        "ed2d18ce-a51e-4d24-b821-05c631de2b55": {
+          "description": "Bauprogramme auf, die ein Verständnis zeigen, der verschiedenen Strategien zur Implementierung von bedingten Befehlen. "
+        },
+        "8c19055d-8287-441c-8c20-c0bb9e68aba3": {
+          "description": "Übersetze gesprochene, bedingte Befehle und Schleifen in ein Programm."
+        },
+        "8107c1bb-a8ed-4cb4-9f5e-1a21126a4700": {
+          "description": "Verschachtelte bedingte Befehle, zur Kanalisierung von mehreren Wertbedingungen und unter Einsatz der Logik von 'if', 'else if' und 'else'."
+        },
+        "0174cd8f-0a91-423b-b643-2b8a0290fcff": {
+          "description": "Verbinde Schleifen und bedingte Befehle miteinander.."
+        },
+        "1ece8579-425f-4324-a041-8f47ce736f42": {
+          "description": "Benutze Funktionen, um komplexe Programme zu vereinfachen."
+        },
+        "4f16bc65-a8b7-485b-b34e-5b67c0c68259": {
+          "description": "Benutze vorgegebene Funktionen, um häufig wiederholte Aufgaben abzuarbeiten."
+        },
+        "ae435e31-012f-4ad5-aeb4-028f25f5671d": {
+          "description": "Kategorisiere und für allgemeinere deinen Code zu nützlichen Funktionen."
+        },
+        "36a2f4e1-f9df-4115-a898-a7d96ee60c27": {
+          "description": "Erkenne wo und wann eine Funktion behilflich sein könnte, um ein Programm zu vereinfachen."
+        },
+        "22b69133-d5b3-407a-9c18-7b4841daffa7": {
+          "description": "Erkenne wo und wann eine Funktion behilflich sein könnte, um ein Programm zu vereinfachen."
+        },
+        "5bbd5970-dd02-4100-b9c4-6d051ec9bba2": {
+          "description": "Benutze vorgegebene Funktionen, um häufig wiederholte Aufgaben abzuarbeiten."
+        },
+        "16854174-125c-4c79-9a42-064ef84535e3": {
+          "description": "Ordne Werte an bestehende Variablen zu."
+        },
+        "4fe2cf70-9f34-41b0-bae1-9c5af60706de": {
+          "description": "Innerhalb eines Programms, benutze Variablen anstatt von wiederholten Werten."
+        },
+        "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4": {
+          "description": "Benutze Variablen, um Werte innerhalb einer Schleife abzuändern."
+        },
+        "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
+          "description": "Überwinde Hindernisse wie Zeitbeschränkungen oder Bugs."
         },
         "14f085e6-a0a8-4218-9060-00d7b0dfbf07": {
           "description": "Erkenne, was erwartet wird, wenn SchülerInnen den Computerraum betreten."
@@ -116,26 +605,158 @@
         "d1485387-01e4-484d-9935-75f7c14b9d76": {
           "description": "Verwende eine angemessene Terminologie, wenn du dich auf eine Computermaus, ein Trackpad oder einen Touchscreen beziehst."
         },
+        "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
+          "description": "Vorbildliches Verhalten im Computerraum"
+        },
+        "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
+          "description": "Experimentiere mit standardmäßigen blockbasierten Programmieraktionen wie: Klicken, Drag and Drop, etc."
+        },
+        "a5a52414-42a7-4b32-897b-819a70572328": {
+          "description": "Übersetzte Bewegungen in eine Reihe von Befehlen."
+        },
         "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
-          "description": "Konstruiere ein Programm, indem du sequenzielle Bewegungen reorganisierst"
+          "description": "Ein Programm durch Umorganisieren sequenzieller Bewegungen entwerfen."
         },
         "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
-          "description": "Ein Computerprogramm aus einer Reihe von schriftlichen Anweisungen erstellen"
+          "description": "Ein Computerprogramm aus einer Reihe schriftlicher Anweisungen erstellen"
         },
         "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
-          "description": "Ordne die Befehle in einer logischen Reihenfolge an."
+          "description": "Befehle in einer logischen Reihenfolge anordnen."
         },
         "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
-          "description": "Erkenne Probleme oder \"Bugs\" in einem Programm und entwickle einen Plan, um die Probleme zu beheben."
+          "description": "Probleme oder \"Fehler\" in einem Programm entdecken und einen Plan entwickeln, um die Probleme zu beheben."
+        },
+        "620da514-ad6e-4049-a9d3-d189a79af01e": {
+          "description": "Übersetzte Bewegungen in eine Reihe von Befehlen."
+        },
+        "adabe26f-78e0-47f4-92b2-535a38f53f15": {
+          "description": "Identifiziere und lokalisiere Bugs in einem Programm."
         },
         "38f34964-ca2d-4d03-ab82-e937fc487d2a": {
-          "description": "Konstruiere ein Programm mit Strukturen, die Bereiche des Codes wiederholen"
+          "description": "Ein Programm mit Strukturen entwickeln, die Teile des Codes wiederholen"
         },
         "b6f41a7c-0967-4986-b7b6-910819b28396": {
-          "description": "Verbessere bestehenden Code, indem du Bereiche mit Wiederholungen findest und sie in Schleifenstrukturen verschiebst"
+          "description": "Bestehenden Code durch Identifizieren von Bereiche mit Wiederholungen und Verschieben in Schleifenstrukturen verbessern "
+        },
+        "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
+          "description": "Brich eine lange Sequenz von Anweisungen in die kleinstmögliche wiederholbare Sequenz herunter."
+        },
+        "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
+          "description": "Zähle die Anzahl, wie oft eine Aktion wiederholt werden soll und stelle sie als Schleife dar."
+        },
+        "6aac3c12-4427-43d1-877c-727d0665ab49": {
+          "description": "Zerlege eine Form in ihre größte wiederholbare Sequenz."
+        },
+        "6dbab2fb-7a17-4269-885e-84768be03a1f": {
+          "description": "Erstelle ein Programm, das komplexe Formen durch Wiederholung einfacher Sequenzen zeichnet."
+        },
+        "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
+          "description": "Zähle die Anzahl, wie oft eine Aktion wiederholt werden soll und stelle sie als Schleife dar."
+        },
+        "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
+          "description": "Zerlege eine Form in ihre größte wiederholbare Sequenz."
+        },
+        "dc83123d-d493-40aa-a543-9daa1421c2c8": {
+          "description": "Erstelle ein Programm, das komplexe Formen durch Wiederholung einfacher Sequenzen zeichnet."
+        },
+        "15115c43-46c8-4ab4-93e4-947e2fd42703": {
+          "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
         },
         "2fa04500-f1d4-4924-aa39-70292711d432": {
           "description": "Erstelle eine animierte, interaktive Geschichte mit Sequenz- und Event-Handlern."
+        },
+        "22d77ea2-3a62-4e21-b71f-f484fe90ec39": {
+          "description": "Teile ein kreatives Artefakt mit anderen Schülern."
+        },
+        "8295b4b6-f9ac-4b43-b271-b7bd9e6829f3": {
+          "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
+        },
+        "70e87cab-0d62-4974-9061-425a179bcb2d": {
+          "description": "Erstelle eine animierte, interaktive Geschichte, unter Nutzung von Sequenzen und Ereignisprozeduren."
+        },
+        "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
+          "description": "Teile ein kreatives Artefakt mit anderen Schülern."
+        },
+        "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
+          "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
+        },
+        "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
+          "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
+        },
+        "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
+          "description": "Differenzieren zwischen Befehlen die in Schleifen wiederholt werden müssen, und Befehlen die einzeln eingesetzt werden."
+        },
+        "70f5581b-eb40-4ba7-9a34-3eb09e0f5ea8": {
+          "description": "Benutze geschachtelte Schleifen, um einfache Formen in komplexe Designs zu kombinieren."
+        },
+        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
+          "description": "Zähle die Anzahl, wie oft eine Aktion wiederholt werden soll und stelle sie als Schleife dar."
+        },
+        "5b77c883-5479-4cfe-a31a-605957dd083d": {
+          "description": "Unterteile komplexe Aufgaben in kleinere und wiederholbare Abschnitte."
+        },
+        "6174da85-eb3a-4c0e-925d-360b04604fdb": {
+          "description": "Beschreibe wann eine Schleife, eine geschachtelte Schleife, oder überhaupt keine Schleife benötigt ist."
+        },
+        "90591bd7-cbd5-46c4-95dc-59e16e5a949c": {
+          "description": "Erkenne den Unterschied zwischen der Nutzung einer Schleife und einer geschachtelten Schleife."
+        },
+        "5c73217a-9e91-4d3f-8dac-ebbdc2c8b25d": {
+          "description": "Unterteile Code in wiederholbare Sequenzen, durch die Nutzung von Schleifen und geschachtelten schleifen."
+        },
+        "e26d818e-81fd-43c6-8558-fc69835e693a": {
+          "description": "Lokalisiere wiederholte Phrasen in einem Liedtext."
+        },
+        "815c91bc-4848-43ba-a234-d1b184ab120b": {
+          "description": "Identifiziere Abschnitte ein Liedes das in eine Funktion gezogen werden soll."
+        },
+        "77ee523c-1e51-4c99-beda-c0e53812a1e7": {
+          "description": "Beschreibe, wie Funktionen es einfacher machen ein Programm zu schreiben."
+        },
+        "4a6b973a-63cc-4c8d-8e25-e10648ccaa20": {
+          "description": "Benutze Funktionen, um komplexe Programme zu vereinfachen."
+        },
+        "763f0ac3-d0b3-487a-b83d-151e2b3bee94": {
+          "description": "Benutze vorgegebene Funktionen, um häufig wiederholte Aufgaben abzuarbeiten."
+        },
+        "fbae45e8-1bd0-4b7d-9ae3-431c11cf0c56": {
+          "description": "Kategorisiere und für allgemeinere deinen Code zu nützlichen Funktionen."
+        },
+        "75ef4b25-6f64-4795-9a13-f0d27662040e": {
+          "description": "Erkenne wo und wann eine Funktion behilflich sein könnte, um ein Programm zu vereinfachen."
+        },
+        "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
+          "description": "Definiere die Umstände, unter denen bestimmte Teile eines Programms in Betrieb sein sollten, und unter welchen Umständen sie außer Betrieb sein sollten."
+        },
+        "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
+          "description": "Stelle fest, ob ein bedingter Befehl auf Kriterien basiert ist."
+        },
+        "9c7ff713-c208-4acf-9691-da7a4a152565": {
+          "description": "Definiere die Umstände, unter denen bestimmte Teile eines Programms in Betrieb sein sollten, und unter welchen Umständen sie außer Betrieb sein sollten."
+        },
+        "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
+          "description": "Stelle fest, ob ein bedingter Befehl auf Kriterien basiert ist."
+        },
+        "dc1b604a-9814-45f4-aed5-b76776ad818c": {
+          "description": "Erkenne wo und wann eine Funktion behilflich sein könnte, um ein Programm zu vereinfachen."
+        },
+        "cff52f84-5090-495e-a37b-02cf8b666ad6": {
+          "description": "Benutze vorgegebene Funktionen, um häufig wiederholte Aufgaben abzuarbeiten."
+        },
+        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
+          "description": "Lerne eine Planung im Vorhinein zu machen, für fortwährende Aufgaben"
+        },
+        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
+          "description": "Erkläre wie Systembegrenzungen das Design eines Projekts beeinflussen können."
+        },
+        "45927b72-922a-4845-8b40-2458a92372f5": {
+          "description": "Beschreibe wie ein Kompromiss dabei helfen kann, ein Projekt zu fördern und Kreativität zu erwecken."
+        },
+        "2594052b-3b87-4d83-9038-56175058c1c2": {
+          "description": "Verdeutliche den Entwicklungsprozess, und wie dieser Gestalt an das fertige Projekt gegeben hat."
         }
       }
     }

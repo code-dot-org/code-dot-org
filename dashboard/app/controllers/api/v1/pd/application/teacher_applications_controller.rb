@@ -11,6 +11,26 @@ module Api::V1::Pd::Application
       )
     end
 
+    # PATCH /api/v1/pd/application/teacher/<applicationId>
+    def update
+      form_data_hash = params.try(:[], :form_data)
+      if form_data_hash
+        form_data_json = form_data_hash.to_unsafe_h.to_json.strip_utf8mb4
+        @application.form_data_hash = JSON.parse(form_data_json)
+      end
+
+      status = params.try(:[], :status)
+      if status
+        @application.status = status
+      end
+
+      if @application.save
+        render json: @application, status: :ok
+      else
+        return render json: {errors: @application.errors.full_messages}, status: :bad_request
+      end
+    end
+
     def send_principal_approval
       if @application.allow_sending_principal_email?
         @application.queue_email :principal_approval, deliver_now: true

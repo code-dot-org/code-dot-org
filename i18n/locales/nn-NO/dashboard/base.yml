@@ -395,6 +395,7 @@ nn:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (blokker)'
       starwarsblocks_hour: 'Star Wars (blokker)'
+      loading: 'Lastar...'
       weblab: 'Nett-lab'
       view_all: 'Sjå alle prosjekt...'
     popup:
@@ -410,6 +411,7 @@ nn:
       prizes_link: 'Meir informasjon'
   teacher:
     answer: Svar
+    dashboard: 'Lærarmodus'
     for_teachers_only: Kun for lærarar
     title:
       one: 'Din lærar:'
@@ -948,6 +950,7 @@ nn:
       email: 'E-post'
       email_alternate: 'Alternativ e-post'
       gender: 'Kjønnsidentitet'
+      school: 'Skule'
       school_name: 'Namn på skule'
       school_city: 'Skulen sin poststad'
       school_country: 'Landet til skulen'
@@ -1047,3 +1050,4 @@ nn:
   page_not_found_button: "Gå heim"
   copy: 'Kopier'
   confirm: 'Bekreft'
+  teacher_feedback: "Tilbakemeldingar frå lærarar"

@@ -1,103 +1,400 @@
 ja:
   data:
     progressions:
+      '"If/Else" with the Bee': 'ミツバチと学ぶ「If/Else」'
+      AI Machine Learning - Video: AI （人工知能）機械学習 - ビデオ
+      'AI: Impact on Society - Video': '人工知能（AI）：社会への影響 - ビデオ'
+      'AI: Training Data & Bias - Video': '人工知能（AI）：トレーニングデータとバイアス - ビデオ'
+      Accelerometer Events: 加速度計イベント
+      Adding Images: 画像の追加
+      Adding Screens: 画面の追加
       Alien Defender: エイリアンをまもれ
+      Animate Your Scene: シーンのアニメーション化
+      App Lab Intro - Video: アプリラボのイントロダクション - ビデオ
+      'App Project: Screen Design': 'アプリプロジェクト：スクリーンデザイン'
+      Artist Intro with JR Hildebrand: JRヒルデブランドと学ぶアーティストイントロダクション
+      Artist Intro with JR Hildebrande: JRヒルデブランドと学ぶアーティストイントロダクション
       Artist Project: アーティスト プロジェクト
       'Artist: Variables': 'アーティスト：変数（へんすう）'
+      Assessment: "評価\n"
+      Attribution: 属性
       Back and Forth: バック&フォース（行ったり来たり）
+      Basic Conditionals: 基本条件文
       Bass, Mid, and Treble: ベース、ミドル、トレブル
+      Be a Super Digital Citizen: スーパーデジタルシティズンになる
+      Begin planning your project: 計画を立てることから始める
+      Begin planning your project_2018: プロジェクト_2018の計画を立てることから始める
+      Binary Bracelets - Unplugged Activity: '「バイナリブレスレット」 - アンプラグドアクティビティ'
       Binary Numbers: 2進数
       Board Events: ボードイベント
+      Board Input and Output: ボード入出力
+      Boolean Comparison: ブール比較
+      Build a Platform Jumper: プラットフォームジャンパーの構築
+      Build a Screen: スクリーンの構築
+      Building a UI with Design Mode: デザインモードを使ったUIの構築
+      Building an App: アプリケーションの構築
       'Bunny ': 'Bunny '
+      Button Circuits: ボタンサーキット
       CS Discoveries Post-Course Survey: CS発見 コース後アンケート
+      CS Discoveries Post-course Survey: CSディスカバリー コース後アンケート
+      CSD U3 Interactive Card Exemplar: CSD U3インタラクティブカード見本
+      CSD U3 platform intro: CSD U3プラットフォームイントロダクション
+      'CSD: For Loop': 'CSD：Forループ'
+      Cake Defender: ケーキディフェンダー
+      Cake Survey: ケーキ アンケート
+      Challenge: チャレンジ
+      Challenge Levels: チャレンジレベル
+      Challenges: チャレンジ
+      Change: 変更
+      Checking for a Winner: 勝者のチェック
+      Choose Your Own Adventure: 独自のアドベンチャーを選択
+      Choosing Good IDs: 適切な ID の選択
+      Code Your Own Flappy Game: 自分だけの「パタパタゲーム」をコーディングする
+      Collector Game: コレクターゲーム
       Collisions: 衝突
+      Collisions in Games: ゲーム内での衝突
+      Color LEDs: カラーLED
+      Combining Projects: プロジェクトの組み合わせ
       Combining Representations: 表現を組み合わせる
+      Conditionals with Cards - Unplugged Activity: '「トランプで学ぶ条件文」 - アンプラグドアクティビティ'
+      'Conditionals: If Statements': '条件文：「If」ステートメント'
+      'Conditionals: If and If/Else Statements': '条件文：「If」および「If/Else」ステートメント'
       Course E Artist Project: コースE アーティスト
       Course E Sprite Lab Project: Course E Sprite Lab Project
+      'Course E: Play Lab Project': 'コースE：プレイラボプロジェクト'
       Course F Artist Project: コースF アーティスト
       Course F Sprite Lab Project: コースF スプライト ラボ
+      'Course F: Artist Project': 'コースF：アーティストプロジェクト'
+      'Course F: Artist Project - Revise': 'コースF：アーティストプロジェクト - 修正'
+      'Course F: Play Lab Project': 'コースF：プレイラボプロジェクト'
+      'Course F: Play Lab Project - Revise': 'コースF：プレイラボプロジェクト - 修正'
+      Crack Random Substitution: ランダム置換のクラック
+      Crack a Caesar Cipher: シーザー暗号のクラック
+      Create Your Own Animation: 独自のアニメーションを作成する
+      Create a Story: "ストーリーを作成\n"
+      Create your project: プロジェクトを作成
+      Customize: カスタマイズ
       Dance Crews: ダンスクルー
+      Data Visualization: データの視覚化
+      De-bugging with the Step Button: ステップボタンでデバッグする
       Debugging: デバッギング
+      Debugging with the Step Button: ステップボタンでデバッグする
+      Demo Apps: デモアプリ
       Design Mode: 設計モード
+      Design Your Game: ゲームを設計する
+      Design Your Prototype: プロトタイプを設計する
+      Design a Screen for your App: アプリの画面をデザインする
       Designing for Accessibility: アクセシビリティのための設計
+      Digital Sharing - Unplugged Activity: '「デジタルシェアリング」 - アンプラグドアクティビティ'
       Dogger Example: Dogger Example
       Drawing: "グラフィック\n"
       End of Course Projects: 付録
+      Escape Room Example: '「部屋から抜け出そう」の例'
       Events: イベント
+      Events and Linking Screens: イベントおよびリンク画面
+      Events and Properties: イベントとプロパティ
+      Example: 例
+      Example App Types: アプリタイプの例
       Example Projects: プロジェクトの例
+      Example projects: プロジェクトの例
+      Exemplar Personal Websites: 個人ウェブサイトの例
+      Expanding Personal Website: 個人ウェブサイトの拡張
+      Expanding Your Website: ウェブサイトの拡張
+      Experiment with Web Lab: ウェブラボを使った実験
       Exploration: 探究
+      'Exploration: For Loops': '探索：Forループ'
+      'Exploration: Rikki''s Poster': '探検：リッキのポスター'
       'Exploration: Sample Apps': ' サンプルアプリ'
+      'Exploration: Sample Programs': '探索 - プログラムのサンプル'
+      'Exploration: Sample Project': '探索：サンプルプロジェクト'
+      Exploring CS in Entertainment: エンターテイメントにおけるCSを探究する
+      Exploring more CSS: さらにCSSを探究する
+      Extra: 追加
+      Final Room Escape App: 最終的な「部屋から抜け出そう」のアプリ
+      Find the Wizard: ウィザードを見つけましょう
+      Finish a Screen: 画面を閉じる
+      Finish the Prototype: プロトタイプを閉じる
+      Finishing Functions: 関数の完成
+      Finishing Touches: 最後の仕上げ
+      Flyer Game: フライヤーゲーム
+      Follow the Algorithm - Unplugged Activity: '「アルゴリズムに従う」 - アンプラグドアクティビティ'
+      Follow the Mouse: ネズミを追跡
+      Fonts and Style: フォントとスタイル
+      FoodFight: フードファイト（FoodFight）
+      For Loop Fun - Unplugged Activity: '「Forループを楽しむ」- アンプラグドアクティビティ'
       For Loops: ループ用
+      For Loops and Color LEDs: ForループとカラーLED
+      For Loops and Repeat Blocks: Forループと繰り返しブロック
+      Free Play: じゆうあそび
+      'Free Play: Make a Scene': 'じゆうあそび：シーンを作る'
+      'Free Play: Make an Interactive Scene': 'じゆうあそび：インタラクティブなシーンを作る'
       Functions: 関数(かんすう) 
       Functions with Parameters: パラメーター付き関数
       Geometric Sun: Geometric Sun
       Get In Formation: フォーメーションにつきます
       Getters and Setters: ゲッターとセッター
       Getting Properties: プロパティの取得
+      Graph Paper Programming - Unplugged Activity: '「グラフ用紙プログラミング」- アンプラグドアクティビティ'
+      Guess The Number: 数を推測する
       Headings: 見出し
+      Hello World: ハローワールド
+      How to Create a Simple Function: 簡単な関数の作り方
       How to Make a Sprite: スプライトの作り方
+      Ice Age Loops: アイスエイジのループ
+      Images and Sounds: 画像と音
+      Innovation Research: イノベーション研究
+      Input Examples: 例を入力する
+      Input with If-Else: '「If/Else」を入力する'
       Inspiration!: インスピレーション！
+      InspirationalArtwork: インスピレーションあふれるアートワーク
+      Intro to For Loops: Forループ入門
+      Intro to Sprites: スプライト入門
+      Intro to Variables: 変数入門
       Introducing Sprite Lab: スプライトラボの紹介
       Introduction to Arrays: Introduction to Arrays
+      Iteration and Parameters: イテレーションとパラメータ
+      Keep On Dancing!: ダンスを続けましょう！
       Keeping Data Secret: データの秘密を守る
       Keyboard Input: キーボード入力
+      LED Apps: LEDアプリ
+      Layout with CSS: CSSを使用したレイアウト
+      Learning from Simulations: シミュレーションから学習する
       Lesson Extras: "追加レッスン\n"
+      Level Overview: レベル概要
+      Levels: "レベル\n"
+      Light Show: ライトショー
       Linking Pages: ページのリンク
       Linking Screens: 画面のリンク
       Lists: リスト
+      Loops with the Artist: アーティストで学ぶループ
+      Make a Prediction: 予測する
+      Make it Interactive: インタラクティブにする
+      Making Scenes: シーンを作る
+      Making Songs: 歌を作る
+      Making Sounds: 音を鳴らす
+      Making an Interactive Card: インタラクティブなカードを作る
+      'Maze Intro: Programming with Blocks': '迷路イントロ：ブロックを使うプログラミング'
       Measures: 小節
+      'Minecraft: Hero''s Journey': 'マインクラフト: ヒーローの旅'
       'Mini-Project: About Me': 'スプライトラボについて'
+      'Mini-Project: Alien Dance Moves': " ミニプロジェクト：エイリアンダンスの動き　\n"
       'Mini-Project: Alien Dance Party': ' エイリアンダンスパーティー'
+      'Mini-Project: Create a Virtual Pet': 'ミニプロジェクト：バーチャルペットを作成する'
+      'Mini-Project: Outbreak Simulator': 'ミニプロジェクト：大発生シュミレーター'
+      'Mini-Project: Royal Battle': 'ミニプロジェクト：ロイヤルバトル'
+      "Mini-Project: Snowflake #1": "ミニプロジェクト：雪のもよう #1"
+      "Mini-Project: Snowflake #2": "ミニプロジェクト：雪のもよう #2 "
+      'Mini-Project: Swimming Fish': 'ミニプロジェクト：泳ぐ魚'
+      'Mini-Project: Swimming Fish (continued)': 'ミニプロジェクト：泳ぐ魚（つづき）'
+      'Mini-Project: User Input Programs': 'ミニプロジェクト：ユーザーインプットプログラム'
       'Mini-Project: Virtual Pet': ' バーチャルペット'
+      'Mini-project: Chase Game': 'ミニプロジェクト: 追跡ゲーム'
+      'Mini-project: Flappy Game': 'ミニプロジェクト: フラッピーゲーム'
+      'Mini-project: Interactive Poster': 'プロジェクト：インタラクティブなポスター'
+      'Mini-project: Jorge the Dog': 'ミニプロジェクト：犬のホルヘ'
+      'Mini-project: Sticker Art': 'ミニプロジェクト：ステッカーアート'
+      'Mini-project: Sticker Design': 'ミニプロジェクト：ステッカーデザイン'
+      Modify simulation variables: シミュレーションの変数を変更する
       More Buttons: 追加のボタン
+      More Input: 追加入力
+      More Parameters: 追加のパラメータ
+      Motorcycle: オートバイ
+      Move It Move it Video  - Unplugged Activity: '「うごかせ、うごかせ」ビデオ - アンプラグドアクティビティ'
+      Movement with the Counter Pattern: カウンターパターンを使った動き
+      Multiframe Animations: マルチフレームのアニメーション
+      Musical Arrays: ミュージカル配列
+      My Loopy Robotic Friends - Unplugged Activity: '「ループの達人 ロボットのお友だち」 - アンプラグドアクティビティ'
       My Online Neighborhood: 私のオンラインネイバーフッド
+      My Robotic Friends - Unplugged Activity: '「ロボットのお友だち」 - アンプラグドアクティビティ'
+      Nested Loops with the Bee: ミツバチと学ぶ入り子のループ
+      New Challenge Introduction: 新しいチャレンジ イントロダクション
+      New Shapes: 新しい形状
+      Orientation: 向き
       Overview: 概要
+      'Overview: Design Mode': 'デザインモードの概要'
+      'Overview: If Statements': '「If」ステートメントの概要'
+      'Overview: Images': '画像の概要'
+      'Overview: onEvent': 'イベントの概要'
+      'Overview: setPosition': '位置設定の概要'
       Pair Programming: ペアプログラミング
       Picturing Data: データで予測
+      Plan Your Project: プロジェクトの計画
       Planning: 計画
+      Platform Jumper - Background and Variables: プラットフォームジャンパー - 背景（はいけい）と変数（へんすう）
+      Platform Jumper - Items: プラットフォームジャンパー - アイテム
+      Platform Jumper - Platforms: プラットフォームジャンパー - プラットフォーム
+      Platform Jumper - Player: プラットフォームジャンパー - プレイヤー
+      Playing Notes: 音符で遊ぶ
+      Playing with Notes: 音符で遊ぶ
+      Post-Course Survey Instructions: コース後アンケートの説明
+      Practice: 練習
+      Predict: 予測
+      Prediction: 予測
+      Prepare for your presentation: 発表の準備
+      Prepare for your presentation_2018: 発表_2018の準備
+      Problem Solving: 問題解決
+      Problem Solving Process for Programming: プログラミングの問題解決プロセス
       Programming with Rey and BB-8: レイとBB-8と学ぶプログラミング
+      Programs that Repeat: 繰り返しのあるプログラム
       Project: プロジェクト
+      Project - Background and Variables: プロジェクト - 背景（はいけい）と変数（へんすう）
+      Project - Sprites and Interactions: プロジェクト - スプライトとインタラクション
+      Project Guide: プロジェクトガイド
+      Project Work: プロジェクト作品
       Properties: プロパティ
+      Publishing Your Website: ウェブサイトの公開
       Quarter Notes: 四分音符
+      RGB Exploration: RGB（赤、緑、青）の探究
+      Reading Sensors: 読み取りセンサー
       Reflection: 復習
+      Relay Programming - Unplugged Activity: '「リレープログラミング」 - アンプラグドアクティビティ'
+      Repeat Blocks: 繰り返しブロック
+      Repeat Blocks with BB-8: ビデオ：BB-8と学ぶブロックの繰り返し
+      Repeat Blocks with the Artist: アーティストで学ぶブロックの繰り返し
+      Repeat Unit Statements: '「Until」ステートメントの繰り返し'
+      Repeat Until Statements: '「Until」ステートメントの繰り返し'
       Representing Images: 画像の表現
       Review: 確認する
       Revise Artist Project: アーティストの復習
       Revise Sprite Lab Project: スプライト ラボの復習
       Robot Doodle: Robot Doodle
+      Run a simulation: シミュレーションの実行
+      Sample Programs: サンプルプログラム
+      Screen Design: 画面デザイン
+      Sensor Events: センサーイベント
+      Sensors to Colors: 色のセンサー
+      Setting Properties: プロパティの設定
+      Shapes and the Draw Loop: 形状と描画ループ
+      Share Your App: アプリをシェアする
+      Side Scroller: スライドスクローラー
+      Simple Circuits: シンプルサーキット
       Skill Building: スキル構築
+      Skill-Building: スキル構築
+      Sliders: スライダー
+      Smart Bike - Blinkers: スマートバイク - ブリンカー
+      Social Sleuth: 社会的な警告
+      Songwriting - Functions Unplugged Activity: '「ソングライティング」 - 関数アンプラグドアクティビティ'
       Speed it Up, Slow it Down: スピードアップ、スローダウン
       Sprite Lab Example Project: スプライト ラボのサンプル
       Sprite Lab Project: スプライトラボプロジェクト
+      Sprite Movement: スプライトの動き
+      Sprites and the Draw Loop: スプライトと描画ループ
+      Star Chaser: スターチェイサー
+      Styling Text: テキストの様式設定
+      Styling with Classes: クラスでの様式設定
+      Styling your Website: ウェブサイト様式設定
+      Teach A.I. a new word: 人工知能（A.I. ）に新しい言葉を教える
+      Teach AI a New Word: 人工知能（A.I. ）に新しい言葉を教える
+      'Technique: Frequency Analysis': '頻度分析のテクニック'
+      Terminology Recap: 用語の要約
       Text Compression: テキスト圧縮
       The Animation Tab: '[アニメーション] タブ'
+      The Artist in Code Studio: コードスタジオにおけるアーティスト
+      The Big Event - Unplugged Activity: '「ビッグイベント」 - アンプラグドアクティビティ'
+      The Buzzer: ブザー
+      The Collector: コレクタ
       The Harvester: 収穫機
+      The Internet - Unplugged Activity: インターネット - アンプラグドアクティビティ
+      The Power of Words - Unplugged Activity: '「言葉の力」 - アンプラグドアクティビティ'
+      The Right App - Unplugged Activity: 正しいアプリ - アンプラグドアクティビティ
+      Top Websites: トップウェブサイト
+      Train AI to Clean the Ocean: 人工知能（AI）をトレーニングして海をきれいにする
+      UI Element Properties: UI要素のプロパティ
+      Unit 5 Lesson 1 Overview: ユニット5レッスン1の概要
+      User Interface: ユーザーインタフェース
+      Using Getters and Setters: ゲッターとセッターの使用
+      Using HTML Tags: HTMLタグの使用
+      Using Random Numbers: 乱数の使用
+      Using Training Data: トレーニングデータの使用
+      Using the LED: LEDの使用
       Using the Repeat Block: 繰り返しブロックの使用
+      Using the Switch: スイッチの使用
       Variables: 変数（へんすう）
       Velocity: 速度
+      Velocity and the Counter Pattern: 速度とカウンターパターン
       Video: ビデオ
+      Video - Encryption and Public Keys: ビデオ：暗号化と公開鍵
+      'Video - Maze Intro: Programming with Blocks': 'ビデオ - 迷路イントロ：ブロックでプログラミング'
+      'Video:  Debugging with the Step Button': 'ビデオ：ステップボタンでデバッグする'
+      'Video:  Minecraft - The Agent': 'ビデオ：マインクラフト - エージェント'
+      'Video:  Text  and Prompts': 'ビデオ：テキストとプロンプト'
+      'Video: "If/Else"': 'ビデオ：「If/Else」'
+      'Video: AI: What is Machine Learning?': "ビデオ：人工知能（AI）：機械学習とは？\n"
+      'Video: Artist Intro with JR Hildebrand': 'ビデオ：JRヒルデブランドと学ぶアーティスト'
+      'Video: Artist Intro with JR Hildebrande': 'ビデオ：JRヒルデブランドと学ぶアーティストイントロダクション'
       'Video: CS Matters': 'Video: コンピュータ科学の問題'
+      'Video: Code Your Own Flappy Game': 'ビデオ：自分だけのフラッピーゲームをコーディングする'
+      'Video: Conditionals: If Statements': 'ビデオ：条件：「If」ステートメント'
+      'Video: Conditionals: If and If/Else Statements': 'ビデオ：条件：「If」および「If/Else」ステートメント'
+      'Video: Dance Party Events': 'ビデオ：ダンスパーティーイベント'
+      'Video: Dance Party Measures': 'ビデオ：ダンスパーティー小節'
+      'Video: Dance Party Party On!': 'ビデオ：盛り上がろう、ダンスパーティー！'
+      'Video: Dance Party Properties': 'ビデオ：ダンスパーティープロパティ'
+      'Video: Dance Party Warm Up': 'ビデオ：ダンスパーティーウォームアップ'
+      'Video: De-bugging with the Step Button': 'ビデオ：ステップボタンでデバッグする'
       'Video: Debugging with Scrat ': ' スクラットと学ぶデバッグ '
+      'Video: Debugging with the Step Button': 'ビデオ：ステップボタンでデバッグする'
       'Video: Events': ' イベント'
+      'Video: Follow The Digital Trail': ' ビデオ：デジタル証跡をたどる'
       'Video: Getting Loopy': ' ルーピーをゲット'
+      'Video: Happy Maps - Unplugged Activity': 'ビデオ：「ハッピーマップ」 - アンプラグドアクティビティ'
       'Video: Harvesting with Conditionals': ' 農夫と学ぶ条件文'
+      'Video: How to Create a Simple Function': 'ビデオ：簡単な関数の作り方'
       'Video: How to Make a Sprite': ' スプライトの作り方'
+      'Video: Ice Age Loops': ' ビデオ：「アイスエイジ」のループ'
+      'Video: Impacts on Society': 'ビデオ：社会への影響'
       'Video: Introducing Sprite Lab': ' スプライトラボの紹介'
       'Video: Introduction to Play Lab': ' Playラボの概要'
       'Video: Loops in Artist': ' アーティストくりかえし'
+      'Video: Loops with the Artist': ' ビデオ：アーティストで学ぶループ'
+      'Video: Maze Intro - Programming with Blocks': 'ビデオ：迷路イントロ - ブロックを使うプログラミング'
+      'Video: Maze Intro - Programming with Blocks ': 'ビデオ：迷路イントロ - ブロックを使うプログラミング '
+      'Video: Maze Intro: Programming with Blocks': 'ビデオ - 迷路イントロ：ブロックを使うプログラミング'
+      'Video: Measures': 'ビデオ：小節'
       'Video: Minecraft - Congratulations': ' Minecraft - クリア'
+      'Video: Minecraft - Functions': 'ビデオ：マインクラフト - 関数'
+      'Video: Minecraft - Repeat Loops': 'ビデオ：マインクラフト - 繰り返しループ'
+      'Video: Minecraft - The Agent': 'ビデオ：マインクラフト - エージェント'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'ビデオ：マインクラフト：ボヤージュ・アクアティック条件文'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'ビデオ：マインクラフト：ボヤージュ・アクアティック・クリア'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'ビデオ：マインクラフト：ボヤージュ・アクアティック・イントロダクション'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'ビデオ：マインクラフト：ボヤージュ・アクアティック「Until（まで）」の繰り返し'
       'Video: Nested Loops': ' 入れ子のループ'
+      'Video: Nested Loops with the Bee': 'ビデオ：ミツバチと学ぶ入り子のループ'
+      'Video: Outbreak Simulator: Introduction': 'ビデオ：たくさんのスプライト'
       'Video: Pair Programming': ' ペアプログラミング'
       'Video: Pair Programming ': ' ペアプログラミング '
       'Video: Problem Solving Process': 'ビデオ：問題解決の手順'
+      'Video: Programming with Blocks': 'ビデオ：ブロックを使うプログラミング'
       'Video: Programming with Rey and BB-8': ' レイとBB-8と学ぶプログラミング'
       'Video: Properties': ' プロパティ'
+      'Video: Repeat Blocks': 'ビデオ：繰り返しブロック'
+      'Video: Repeat Blocks with BB-8': 'ビデオ：BB-8と学ぶブロックの繰り返し'
+      'Video: Repeat Blocks with the Artist': 'ビデオ：アーティストで学ぶブロックの繰り返し'
+      'Video: Repeat Until Blocks': 'ビデオ：「Until（まで）」ブロックの繰り返し'
+      'Video: Repeat Until Statements': 'ビデオ：「Until」ステートメントの繰り返し'
       'Video: Sprites in Action': ' 実行中のスプライト'
+      'Video: Star Wars Project': 'ビデオ：スター ・ウォーズプロジェクト'
+      'Video: Text and Prompts': 'ビデオ：テキストとプロンプト'
+      'Video: The Artist in Code Studio': 'ビデオ：コードスタジオにおけるアーティスト'
+      'Video: The Big Event - Unplugged Activity': 'ビデオ：「ビッグイベント」 - アンプラグドアクティビティ'
+      'Video: The Collector': 'ビデオ：コレクター'
       'Video: The Harvester': ' 収穫機'
+      'Video: Training Data & Bias': 'ビデオ：トレーニングデータとバイアス'
+      'Video: Unplugged Variables in Envelopes': 'ビデオ：封筒の中のアンプラグド変数（へんすう）'
       'Video: Using the Repeat Block': ' 繰り返しブロックの使用'
       'Video: Variables in Artist': ' アーティストと学ぶ変数'
+      'Video: Warm Up': 'ビデオ：ウォームアップ'
       'Video: While Loops with the Farmer': ' 農夫と学ぶWhileループ'
+      'Video: Wrap-up': 'ビデオ：まとめ'
       Warm Up: ウォームアップ
+      Website Project: ウェブサイトプロジェクト
+      Welcome to Monster Town: モンスタータウンへようこそ
       Where'd They Go?: どこへ行った？
       While Loops with the Farmer: 農夫と学ぶWhileループ
+      'Widget: Text Compression': 'ウィジェット - テキスト圧縮'
       Wrap-up: ラップアップ
+      Your Personal Website: パーソナルウェブサイト
+      getText vs getNumber: テキスト受信 vs 番号受信
+      isTouching: isTouching
+      setProperty: プロパティを設定

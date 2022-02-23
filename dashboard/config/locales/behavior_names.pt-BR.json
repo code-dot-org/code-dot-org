@@ -1246,7 +1246,12 @@
           "wandering2": "vagando2",
           "shrinking2": "encolhendo2",
           "spinning left2": "girando para a esquerda2",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "CourseE_Project_SpriteLab_examples_2021": {
           "moving west": "movendo para o oeste",
@@ -1273,7 +1278,12 @@
           "wandering2": "vagando2",
           "shrinking2": "encolhendo2",
           "spinning left2": "girando para a esquerda2",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
           "wandering": "vagando",
@@ -1288,7 +1298,12 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "CourseF_outbreak1": {
           "recovering": "recuperando-se",
@@ -1518,7 +1533,12 @@
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "Virtual Pet 2_2021": {
           "wandering": "vagando",
@@ -1573,7 +1593,8 @@
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
-          "patrolling": "patrulhando"
+          "patrolling": "patrulhando",
+          "wobbling": "balançando"
         },
         "courseE_aboutme_2_2021": {
           "wandering": "vagando",
@@ -1656,7 +1677,11 @@
           "swimming left and right2": "nadando para a esquerda e para a direita2",
           "moving north2": "movendo para o norte2",
           "jittering2": "tremendo2",
-          "patrolling2": "patrulhando2"
+          "patrolling2": "patrulhando2",
+          "wobbling": "balançando",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "moving with arrow keys2": "movimentando com as teclas de setas2",
+          "driving with arrow keys2": "dirigindo com as teclas de setas2"
         },
         "courseF_apps_card": {
           "moving with arrow keys": "utilizando as setas",
@@ -1671,7 +1696,9 @@
           "moving south": "movendo para o sul",
           "moving west": "movendo para o oeste",
           "spinning right": "girando para a direita",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "blocking movement": "bloqueando movimento",
+          "driving with arrow keys": "dirigindo com as teclas de setas"
         },
         "courseF_apps_chatbot": {
           "moving with arrow keys": "utilizando as setas",
@@ -1698,7 +1725,11 @@
           "moving north2": "movendo para o norte2",
           "jittering2": "tremendo2",
           "moving west2": "movendo para o oeste2",
-          "patrolling2": "patrulhando2"
+          "patrolling2": "patrulhando2",
+          "blocking movement": "bloqueando movimento",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "moving with arrow keys2": "movimentando com as teclas de setas2",
+          "driving with arrow keys2": "dirigindo com as teclas de setas2"
         },
         "courseF_apps_collector": {
           "wandering": "vagando",
@@ -1724,7 +1755,11 @@
           "swimming left and right2": "nadando para a esquerda e para a direita2",
           "moving north2": "movendo para o norte2",
           "jittering2": "tremendo2",
-          "patrolling2": "patrulhando2"
+          "patrolling2": "patrulhando2",
+          "fluttering": "tremulando",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "moving with arrow keys2": "movimentando com as teclas de setas2",
+          "driving with arrow keys2": "dirigindo com as teclas de setas2"
         },
         "courseF_apps_madlib": {
           "wandering": "vagando",
@@ -1739,7 +1774,11 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_apps_pet": {
           "patrolling": "patrulhando",
@@ -1754,7 +1793,12 @@
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_editable_card": {
           "moving with arrow keys": "utilizando as setas",
@@ -1769,7 +1813,9 @@
           "moving south": "movendo para o sul",
           "moving west": "movendo para o oeste",
           "spinning right": "girando para a direita",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "blocking movement": "bloqueando movimento",
+          "driving with arrow keys": "dirigindo com as teclas de setas"
         },
         "courseF_editable_chatbot": {
           "moving with arrow keys": "utilizando as setas",
@@ -1784,7 +1830,9 @@
           "moving south": "movendo para o sul",
           "moving west": "movendo para o oeste",
           "spinning right": "girando para a direita",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "blocking movement": "bloqueando movimento",
+          "driving with arrow keys": "dirigindo com as teclas de setas"
         },
         "courseF_editable_madlib": {
           "wandering": "vagando",
@@ -1799,7 +1847,11 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_choice_conflict": {
           "patrolling": "patrulhando",
@@ -1812,7 +1864,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_choice_conflict2": {
           "patrolling": "patrulhando",
@@ -1824,7 +1879,10 @@
           "moving south": "movendo para o sul",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_choice_penguin": {
           "patrolling": "patrulhando",
@@ -1837,7 +1895,11 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "wobbling": "balançando",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_choice_pufferfish": {
           "patrolling": "patrulhando",
@@ -1850,7 +1912,11 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "wobbling": "balançando",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_conflict": {
           "patrolling": "patrulhando",
@@ -1863,7 +1929,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_freeplay_air": {
           "moving east": "movendo para o leste",
@@ -1875,7 +1944,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_events_freeplay_animals": {
           "moving east": "movendo para o leste",
@@ -1887,7 +1960,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_events_freeplay_aquatic": {
           "moving east": "movendo para o leste",
@@ -1899,7 +1976,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_events_freeplay_blank": {
           "moving east": "movendo para o leste",
@@ -1911,7 +1992,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_events_freeplay_food": {
           "moving east": "movendo para o leste",
@@ -1923,7 +2008,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_events_freeplay_space": {
           "moving east": "movendo para o leste",
@@ -1935,7 +2024,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_events_key": {
           "patrolling": "patrulhando",
@@ -1948,7 +2041,11 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "wobbling": "balançando",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_practice_reorder": {
           "moving east": "movendo para o leste",
@@ -1962,7 +2059,12 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "wobbling": "balançando",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_predict": {
           "mystery behavior": "comportamento misterioso",
@@ -1991,7 +2093,11 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "wobbling": "balançando",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_ship": {
           "patrolling": "patrulhando",
@@ -2004,7 +2110,11 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "wobbling": "balançando",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_stops": {
           "moving east": "movendo para o leste",
@@ -2017,7 +2127,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_events_time": {
           "patrolling": "patrulhando",
@@ -2030,7 +2143,11 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "wobbling": "balançando",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_label_predict": {
           "moving east": "movendo para o leste",
@@ -2057,7 +2174,11 @@
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
-          "moving west": "movendo para o oeste"
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_sprites_behaviors": {
           "moving east": "movendo para o leste",
@@ -2079,7 +2200,11 @@
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
-          "moving west": "movendo para o oeste"
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_sprites_desert": {
           "moving east": "movendo para o leste",
@@ -2090,7 +2215,11 @@
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
-          "moving west": "movendo para o oeste"
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_sprites_freeplay_air": {
           "moving east": "movendo para o leste",
@@ -2102,7 +2231,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_sprites_freeplay_animals": {
           "moving east": "movendo para o leste",
@@ -2114,7 +2247,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_sprites_freeplay_aquatic": {
           "moving east": "movendo para o leste",
@@ -2126,7 +2263,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_sprites_freeplay_blank": {
           "moving east": "movendo para o leste",
@@ -2138,7 +2279,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_sprites_freeplay_food": {
           "moving east": "movendo para o leste",
@@ -2150,7 +2295,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_sprites_freeplay_space": {
           "moving east": "movendo para o leste",
@@ -2162,7 +2311,11 @@
           "growing": "crescendo",
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
-          "jittering": "tremendo"
+          "jittering": "tremendo",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "fluttering": "tremulando",
+          "wobbling": "balançando"
         },
         "courseF_sprites_make": {
           "moving east": "movendo para o leste",
@@ -2173,7 +2326,11 @@
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
-          "moving west": "movendo para o oeste"
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_sprites_moreSprites": {
           "moving east": "movendo para o leste",
@@ -2184,7 +2341,11 @@
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
-          "moving west": "movendo para o oeste"
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_sprites_positioning": {
           "moving east": "movendo para o leste",
@@ -2195,7 +2356,11 @@
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
-          "moving west": "movendo para o oeste"
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_sprites_predict": {
           "moving east": "movendo para o leste",
@@ -2222,7 +2387,11 @@
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
-          "moving west": "movendo para o oeste"
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_sprites_ship": {
           "moving east": "movendo para o leste",
@@ -2233,7 +2402,11 @@
           "moving south": "movendo para o sul",
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
-          "moving west": "movendo para o oeste"
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_answer": {
           "patrolling": "patrulhando",
@@ -2246,7 +2419,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_choice_color": {
           "patrolling": "patrulhando",
@@ -2259,7 +2435,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_choice_conversation": {
           "wandering": "vagando",
@@ -2274,7 +2453,12 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_choice_events": {
           "wandering": "vagando",
@@ -2289,7 +2473,12 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_choice_freeplay": {
           "wandering": "vagando",
@@ -2304,7 +2493,12 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_choice_interview": {
           "wandering": "vagando",
@@ -2319,7 +2513,12 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_choice_multiprompt": {
           "wandering": "vagando",
@@ -2334,7 +2533,12 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_choice_title": {
           "patrolling": "patrulhando",
@@ -2347,7 +2551,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_concat": {
           "patrolling": "patrulhando",
@@ -2360,7 +2567,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_events": {
           "patrolling": "patrulhando",
@@ -2373,7 +2583,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_print": {
           "patrolling": "patrulhando",
@@ -2386,7 +2599,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_prompts": {
           "patrolling": "patrulhando",
@@ -2399,7 +2615,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_text_review": {
           "patrolling": "patrulhando",
@@ -2412,7 +2631,10 @@
           "jittering": "tremendo",
           "wandering": "vagando",
           "shrinking": "encolhendo",
-          "spinning left": "girando para a esquerda"
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_variables_card": {
           "wandering": "vagando",
@@ -2427,7 +2649,11 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_variables_card_finish": {
           "wandering": "vagando",
@@ -2442,7 +2668,11 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_variables_chatbot": {
           "wandering": "vagando",
@@ -2457,7 +2687,11 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_variables_chatbot_finish": {
           "wandering": "vagando",
@@ -2472,7 +2706,11 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_variables_madlib": {
           "wandering": "vagando",
@@ -2487,7 +2725,11 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_variables_madlib_finish": {
           "wandering": "vagando",
@@ -2502,7 +2744,11 @@
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "courseF_variables_predict": {
           "moving east": "movendo para o leste",
@@ -2533,7 +2779,12 @@
           "moving north": "movendo para o norte",
           "jittering": "tremendo",
           "moving west": "movendo para o oeste",
-          "moving with arrow keys": "utilizando as setas"
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
         },
         "international_outbreak_freeplay": {
           "recovering": "recuperando-se",
@@ -2550,6 +2801,526 @@
           "moving west": "movendo para o oeste",
           "patrolling": "patrulhando",
           "moving with arrow keys": "utilizando as setas"
+        },
+        "helloworld_animals_backgrounds": {
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "shrinking": "encolhendo",
+          "patrolling": "patrulhando",
+          "wandering": "vagando",
+          "growing": "crescendo",
+          "jittering": "tremendo",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_animals_behaviors": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_animals_costumes": {
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
+        },
+        "helloworld_animals_events": {
+          "patrolling": "patrulhando",
+          "growing": "crescendo",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "jittering": "tremendo",
+          "wandering": "vagando",
+          "shrinking": "encolhendo",
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
+        },
+        "helloworld_animals_sounds": {
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "shrinking": "encolhendo",
+          "patrolling": "patrulhando",
+          "wandering": "vagando",
+          "growing": "crescendo",
+          "jittering": "tremendo",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_emoji_backgrounds": {
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "shrinking": "encolhendo",
+          "patrolling": "patrulhando",
+          "wandering": "vagando",
+          "growing": "crescendo",
+          "jittering": "tremendo",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_emoji_behaviors": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_emoji_costumes": {
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
+        },
+        "helloworld_emoji_events": {
+          "patrolling": "patrulhando",
+          "growing": "crescendo",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "jittering": "tremendo",
+          "wandering": "vagando",
+          "shrinking": "encolhendo",
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
+        },
+        "helloworld_emoji_sounds": {
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "shrinking": "encolhendo",
+          "patrolling": "patrulhando",
+          "wandering": "vagando",
+          "growing": "crescendo",
+          "jittering": "tremendo",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_food_backgrounds": {
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "shrinking": "encolhendo",
+          "patrolling": "patrulhando",
+          "wandering": "vagando",
+          "growing": "crescendo",
+          "jittering": "tremendo",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_food_costumes": {
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
+        },
+        "helloworld_food_events": {
+          "patrolling": "patrulhando",
+          "growing": "crescendo",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "jittering": "tremendo",
+          "wandering": "vagando",
+          "shrinking": "encolhendo",
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
+        },
+        "helloworld_food_sounds": {
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "shrinking": "encolhendo",
+          "patrolling": "patrulhando",
+          "wandering": "vagando",
+          "growing": "crescendo",
+          "jittering": "tremendo",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_retro_backgrounds": {
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "shrinking": "encolhendo",
+          "patrolling": "patrulhando",
+          "wandering": "vagando",
+          "growing": "crescendo",
+          "jittering": "tremendo",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_retro_behaviors": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_retro_costumes": {
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
+        },
+        "helloworld_retro_events": {
+          "patrolling": "patrulhando",
+          "growing": "crescendo",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "jittering": "tremendo",
+          "wandering": "vagando",
+          "shrinking": "encolhendo",
+          "spinning left": "girando para a esquerda",
+          "fluttering": "tremulando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop"
+        },
+        "helloworld_retro_sounds": {
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "shrinking": "encolhendo",
+          "patrolling": "patrulhando",
+          "wandering": "vagando",
+          "growing": "crescendo",
+          "jittering": "tremendo",
+          "moving east": "movendo para o leste",
+          "moving north": "movendo para o norte",
+          "moving south": "movendo para o sul",
+          "moving west": "movendo para o oeste",
+          "spinning right": "girando para a direita",
+          "spinning left": "girando para a esquerda",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "vagando",
+          "moving east": "movendo para o leste",
+          "spinning left": "girando para a esquerda",
+          "spinning right": "girando para a direita",
+          "shrinking": "encolhendo",
+          "growing": "crescendo",
+          "moving south": "movendo para o sul",
+          "swimming left and right": "nadando para a esquerda e para a direita",
+          "moving north": "movendo para o norte",
+          "jittering": "tremendo",
+          "moving west": "movendo para o oeste",
+          "patrolling": "patrulhando",
+          "moving with arrow keys": "utilizando as setas",
+          "driving with arrow keys": "dirigindo com as teclas de setas",
+          "fluttering": "tremulando",
+          "wobbling": "balançando",
+          "moving west and looping": "movendo-se para o Oeste em loop",
+          "moving east and looping": "movendo-se para o Leste em loop",
+          "moving north and looping": "movendo-se para o Norte em loop",
+          "moving south and looping": "movendo-se para o Sul em loop"
         }
       }
     }

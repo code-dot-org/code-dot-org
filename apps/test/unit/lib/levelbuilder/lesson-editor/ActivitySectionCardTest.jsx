@@ -13,7 +13,8 @@ import {Provider} from 'react-redux';
 import resourceTestData from './resourceTestData';
 import {sampleActivities, searchOptions} from './activitiesTestData';
 import reducers, {
-  init
+  initActivities,
+  initLevelSearching
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
   initResources
@@ -49,7 +50,13 @@ describe('ActivitySectionCard', () => {
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions, [], false));
+    store.dispatch(initActivities(sampleActivities));
+    store.dispatch(
+      initLevelSearching({
+        searchOptions: searchOptions,
+        programmingEnvironments: []
+      })
+    );
     store.dispatch(initResources('lessonResource', resourceTestData));
     store.dispatch(initVocabularies([]));
 

@@ -1,6 +1,12 @@
 {
+  "addAComment": "Fikr bildirish",
+  "authorLabel": "muallif\n",
+  "allFilesCompile": "Hamma fayllar joylandi",
+  "backpackSaveErrorMessage": "Iltimos yana urinib kuring",
   "cancel": "Bekor qilish",
   "delete": "O'chirish",
+  "genericErrorMessage": "Iltimos yana urinib kuring",
   "import": "import",
+  "rename": "Qayta nomlash",
   "saving": "Saqlash ..."
 }

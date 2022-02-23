@@ -551,6 +551,28 @@ tr:
         outbreak_mike: Mike ile CodeBytes Bölüm 3 - Salgın Simülatörü
         playlab_2021: Oyun laboratuarı için giriş
         playlab_2021_reader: Oyun laboratuarı için giriş
+        PL_CSD_TeacherTips_Advise: Öğretmen İpuçları - Yeni Öğretmenlere Tavsiyeler
+        PL_CSD_TeacherTips_IntroToCSD: Öğretmen İpuçları - BB Keşiflerine Giriş
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Öğretmen İpuçları - Problem Çözme Süreci
+        PL_CSD_TeacherTips_PairProgramming: Öğretmen İpuçları - Eşli Programlama
+        PL_CSD_TeacherTips_Debugging: Öğretmen İpuçları - Hata Ayıklama
+        PL_CSD_TeacherTips_LeadLearner: Öğretmen İpuçları - Lider Öğrenci
+        poembot-playtest-intro: ŞiirBot Test Giriş
+        poembot-playtest-sprites: ŞiirBot Test Hareketli Nesneler
+        poembot-playtest-events: ŞiirBot Test Etkinlikler
+        hello_world_intro: Merhaba Dünya - Hareketli Nesneler Laboratuvarına Hoş Geldiniz
+        hello_world_events: Merhaba Dünya - Olaylarla Programlama
+        hello_world_congrats: Merhaba Dünya - Dilediğinizi Yapın
+        rough_poemart_intro: v1 Şiir Sanatı Girişi
+        rough_poemart_events: v1 Şiir Sanatı Etkinlikleri
+        rough_poemart_imagery: v1 Şiir Sanatı Görüntüleri
+        rough_poemart_congrats: v1 Şiir Sanatı Tebrikleri
+        poetry_module_variables: Değişkenler - Şiirle Kodlama
+        poetry_module_textandvariables: Metin ve Değişkenler - Şiirle Kodlama
+        poetry_module_planningapp: Şiir Oluşturucu Uygulamanızı Planlama - Şiirle Kodlama
+        poetry_module_multichoiceprompts: Çoktan Seçmeli İstemler - Şiirle Kodlama
+        poetry_module_conditionals: Koşullar - Şiirle Kodlama
+        poemart_intro: Şiir Sanatına Giriş
     callout:
       text:
         drag_blocks: '"taşı" bloğunu tutup diğer bloğun altına yapıştırın'

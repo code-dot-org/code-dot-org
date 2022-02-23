@@ -9,6 +9,7 @@
 import {trySetLocalStorage} from '../utils';
 import Cookie from 'js-cookie';
 import trackEvent from './trackEvent';
+import DCDO from '@cdo/apps/dcdo';
 
 const queryString = require('query-string');
 
@@ -27,15 +28,17 @@ experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
   'teacher-dashboard-section-buttons';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
   'teacher-dashboard-section-buttons-alternate-text';
+experiments.TEACHER_APPLICATION_SAVING_REOPENING =
+  'teacher-application-saving-reopening';
 experiments.FINISH_DIALOG_METRICS = 'finish-dialog-metrics';
-experiments.I18N_TRACKING = 'i18n-tracking';
+experiments.I18N_TRACKING = 'frontend-i18n-tracking';
 experiments.TIME_SPENT = 'time-spent';
 experiments.BYPASS_DIALOG_POPUP = 'bypass-dialog-popup';
 experiments.SPECIAL_TOPIC = 'special-topic';
-experiments.POEM_BOT = 'poemBot';
 experiments.CLEARER_SIGN_UP_USER_TYPE = 'clearerSignUpUserType';
 experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
-experiments.MULTISELECT = 'multiselect';
+experiments.JAVALAB_UNIT_TESTS = 'javalabUnitTests';
+experiments.STUDIO_CERTIFICATE = 'studioCertificate';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
@@ -119,6 +122,9 @@ experiments.isEnabled = function(key) {
       window.appOptions.experiments &&
       window.appOptions.experiments.includes(key)
     );
+  // Check DCDO to see if this experiment is enabled.
+  // User experiment flags and cookie experiment flags take higher priority over DCDO experiments.
+  enabled = enabled || !!DCDO.get(key, false);
 
   const query = queryString.parse(this.getQueryString_());
   const enableQuery = query['enableExperiments'];

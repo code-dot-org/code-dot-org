@@ -206,7 +206,8 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "teacher_markdown": "When the button on the screen is clicked, the code will turn on a small red LED near the USB plug of the circuit playground. Students may have expected one of the larger LED lights to turn on, so they may not immediately notice the smaller red LED. "
   },
   "game_id": 41,
   "published": true,
@@ -214,7 +215,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-30T22:37:29.822+00:00\",\"changed\":[\"cloned from \\\"CSD U6 predict LED button_2021\\\"\"],\"cloned_from\":\"CSD U6 predict LED button_2021\"},{\"changed_at\":\"2021-08-30 22:37:43 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-08-30T22:37:29.822+00:00\",\"changed\":[\"cloned from \\\"CSD U6 predict LED button_2021\\\"\"],\"cloned_from\":\"CSD U6 predict LED button_2021\"},{\"changed_at\":\"2021-08-30 22:37:43 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-10-29 21:35:02 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

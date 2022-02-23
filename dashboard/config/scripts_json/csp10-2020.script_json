@@ -4,33 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSP",
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit10/{LESSON}",
-      "project_sharing": true,
-      "hideable_lessons": true,
-      "teacher_resources": [
-        [
-          "lessonPlans",
-          "https://curriculum.code.org/csp-20/unit10/"
-        ],
-        [
-          "standardMappings",
-          "https://curriculum.code.org/csp-20/unit10/standards/"
-        ]
-      ],
-      "is_stable": true,
-      "script_announcements": [
-        {
-          "notice": "",
-          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
-          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
       "announcements": [
         {
           "notice": "",
@@ -60,12 +33,33 @@
           "type": "feedback",
           "visibility": "Student-only"
         }
-      ]
+      ],
+      "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit10/{LESSON}",
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
+      "teacher_resources": [
+        [
+          "lessonPlans",
+          "https://curriculum.code.org/csp-20/unit10/"
+        ],
+        [
+          "standardMappings",
+          "https://curriculum.code.org/csp-20/unit10/standards/"
+        ]
+      ],
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:57 UTC",
+    "serialized_at": "2021-11-22 17:08:25 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp10-2020"
     }
@@ -324,16 +318,521 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "7c1e9cc1-d659-42c7-a507-58546d68bed3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7c1e9cc1-d659-42c7-a507-58546d68bed3",
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "dfce5c10-5085-4933-8145-82808fc1396e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dfce5c10-5085-4933-8145-82808fc1396e",
+        "lesson.key": "Project - Innovation Simulation Part 2",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "75105581-89fb-4fc6-8753-d86b97e63510",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75105581-89fb-4fc6-8753-d86b97e63510",
+        "lesson.key": "Data Policies and Privacy",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "e4ff3867-a172-4e13-be01-0544a70c2ee2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e4ff3867-a172-4e13-be01-0544a70c2ee2",
+        "lesson.key": "The Value of Privacy",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "7aeca62b-0a25-4474-b258-946b4e0fdf67",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7aeca62b-0a25-4474-b258-946b4e0fdf67",
+        "lesson.key": "Project - Innovation Simulation Part 3",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "63572da1-6ced-4d0f-93bc-b13570f7fb86",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "63572da1-6ced-4d0f-93bc-b13570f7fb86",
+        "lesson.key": "Security Risks Part 1",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "65e82c61-0779-4951-a468-1a2745fdb1d2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "65e82c61-0779-4951-a468-1a2745fdb1d2",
+        "lesson.key": "Security Risks Part 2",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "0698b25b-6409-4851-96c7-097c70c94398",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0698b25b-6409-4851-96c7-097c70c94398",
+        "lesson.key": "Project: Innovation Simulation Part 4",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "a0e56aab-05aa-447e-a3c6-cdb2fab61daa",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a0e56aab-05aa-447e-a3c6-cdb2fab61daa",
+        "lesson.key": "Protecting Data Part 1",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "c2fc17be-c9c6-4fad-9631-c33244f9439f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c2fc17be-c9c6-4fad-9631-c33244f9439f",
+        "lesson.key": "Protecting Data Part 2",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "bb447252-a12e-4d8a-ad52-48420418121e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb447252-a12e-4d8a-ad52-48420418121e",
+        "lesson.key": "Project: Innovation Simulation Part 5",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "f9e5b628-5a00-440e-8134-787fba362dca",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f9e5b628-5a00-440e-8134-787fba362dca",
+        "lesson.key": "Project: Innovation Simulation Part 6",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "d21bbe68-b732-4f66-83fb-b9d945116fd8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d21bbe68-b732-4f66-83fb-b9d945116fd8",
+        "lesson.key": "Project: Innovation Simulation Part 7",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "4ba58ffc-3ce3-4080-b50b-6e3023e8ce6b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4ba58ffc-3ce3-4080-b50b-6e3023e8ce6b",
+        "lesson.key": "Lesson 14: Unit Assessment Day",
+        "lesson_group.key": "csp_unit10_2020",
+        "script.name": "csp10-2020"
+      }
+    },
+    {
+      "key": "4b9134e6-4f5f-4dcf-81b1-170a93bcc464",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b9134e6-4f5f-4dcf-81b1-170a93bcc464",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey2020",
+        "script.name": "csp10-2020"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "063f0dc6-7703-43ca-9cd8-21fe3db8162d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "063f0dc6-7703-43ca-9cd8-21fe3db8162d",
+        "lesson_activity.key": "7c1e9cc1-d659-42c7-a507-58546d68bed3"
+      }
+    },
+    {
+      "key": "3c71802d-9bb6-4de8-8fce-f6c8ee5bf207",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c71802d-9bb6-4de8-8fce-f6c8ee5bf207",
+        "lesson_activity.key": "7c1e9cc1-d659-42c7-a507-58546d68bed3"
+      }
+    },
+    {
+      "key": "2f97271f-d394-482a-bb41-de5c2dce8d04",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f97271f-d394-482a-bb41-de5c2dce8d04",
+        "lesson_activity.key": "dfce5c10-5085-4933-8145-82808fc1396e"
+      }
+    },
+    {
+      "key": "37d2f2db-df3b-42df-b4d5-387b52a944cc",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "37d2f2db-df3b-42df-b4d5-387b52a944cc",
+        "lesson_activity.key": "dfce5c10-5085-4933-8145-82808fc1396e"
+      }
+    },
+    {
+      "key": "24324794-2987-435d-84fd-695eac4276d7",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "24324794-2987-435d-84fd-695eac4276d7",
+        "lesson_activity.key": "75105581-89fb-4fc6-8753-d86b97e63510"
+      }
+    },
+    {
+      "key": "629c781f-c7d5-49bb-8411-0fdd190f5a8c",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "629c781f-c7d5-49bb-8411-0fdd190f5a8c",
+        "lesson_activity.key": "75105581-89fb-4fc6-8753-d86b97e63510"
+      }
+    },
+    {
+      "key": "a24d6b2f-f39d-430c-90af-11972c2d3ac5",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "a24d6b2f-f39d-430c-90af-11972c2d3ac5",
+        "lesson_activity.key": "e4ff3867-a172-4e13-be01-0544a70c2ee2"
+      }
+    },
+    {
+      "key": "28e1b957-e340-412f-9b01-c1a7feb81790",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "28e1b957-e340-412f-9b01-c1a7feb81790",
+        "lesson_activity.key": "7aeca62b-0a25-4474-b258-946b4e0fdf67"
+      }
+    },
+    {
+      "key": "9db3e77f-4e28-480a-9b01-ac3f98549c6a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9db3e77f-4e28-480a-9b01-ac3f98549c6a",
+        "lesson_activity.key": "63572da1-6ced-4d0f-93bc-b13570f7fb86"
+      }
+    },
+    {
+      "key": "a93dac0c-d298-4583-b909-dec2a71ace69",
+      "position": 2,
+      "properties": {
+        "progression_name": "Keylogging"
+      },
+      "seeding_key": {
+        "activity_section.key": "a93dac0c-d298-4583-b909-dec2a71ace69",
+        "lesson_activity.key": "63572da1-6ced-4d0f-93bc-b13570f7fb86"
+      }
+    },
+    {
+      "key": "0997c6a6-ad21-4b2f-89f1-9ab881206705",
+      "position": 3,
+      "properties": {
+        "progression_name": "Phishing"
+      },
+      "seeding_key": {
+        "activity_section.key": "0997c6a6-ad21-4b2f-89f1-9ab881206705",
+        "lesson_activity.key": "63572da1-6ced-4d0f-93bc-b13570f7fb86"
+      }
+    },
+    {
+      "key": "e3122b96-23ef-4d26-be8c-dfd1717c1e97",
+      "position": 4,
+      "properties": {
+        "progression_name": "Malware"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3122b96-23ef-4d26-be8c-dfd1717c1e97",
+        "lesson_activity.key": "63572da1-6ced-4d0f-93bc-b13570f7fb86"
+      }
+    },
+    {
+      "key": "38860d87-099f-4789-9937-44f829605933",
+      "position": 5,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "38860d87-099f-4789-9937-44f829605933",
+        "lesson_activity.key": "63572da1-6ced-4d0f-93bc-b13570f7fb86"
+      }
+    },
+    {
+      "key": "44ea89b9-6459-43d7-ad71-371e152d3d72",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "44ea89b9-6459-43d7-ad71-371e152d3d72",
+        "lesson_activity.key": "65e82c61-0779-4951-a468-1a2745fdb1d2"
+      }
+    },
+    {
+      "key": "a6daafaf-57b0-42d9-adfa-e70d0a4ba441",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6daafaf-57b0-42d9-adfa-e70d0a4ba441",
+        "lesson_activity.key": "65e82c61-0779-4951-a468-1a2745fdb1d2"
+      }
+    },
+    {
+      "key": "1762502b-18a8-4168-8f58-f3b3fe886534",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "1762502b-18a8-4168-8f58-f3b3fe886534",
+        "lesson_activity.key": "0698b25b-6409-4851-96c7-097c70c94398"
+      }
+    },
+    {
+      "key": "eac3512a-2b86-48a4-935f-c59a1f5495f2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "eac3512a-2b86-48a4-935f-c59a1f5495f2",
+        "lesson_activity.key": "a0e56aab-05aa-447e-a3c6-cdb2fab61daa"
+      }
+    },
+    {
+      "key": "93bf5331-41a3-4e99-846a-aa092cd3cc64",
+      "position": 2,
+      "properties": {
+        "progression_name": "Encryption Widgets"
+      },
+      "seeding_key": {
+        "activity_section.key": "93bf5331-41a3-4e99-846a-aa092cd3cc64",
+        "lesson_activity.key": "a0e56aab-05aa-447e-a3c6-cdb2fab61daa"
+      }
+    },
+    {
+      "key": "df5fca6d-1c58-4c40-b054-6c2fb17dea78",
+      "position": 3,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "df5fca6d-1c58-4c40-b054-6c2fb17dea78",
+        "lesson_activity.key": "a0e56aab-05aa-447e-a3c6-cdb2fab61daa"
+      }
+    },
+    {
+      "key": "9de8ba52-0c52-45c5-aef6-d3d5e3770e83",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9de8ba52-0c52-45c5-aef6-d3d5e3770e83",
+        "lesson_activity.key": "c2fc17be-c9c6-4fad-9631-c33244f9439f"
+      }
+    },
+    {
+      "key": "eb4d686d-0eb3-4691-aa01-1f79012f218f",
+      "position": 2,
+      "properties": {
+        "name": "Check For Understanding",
+        "progression_name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb4d686d-0eb3-4691-aa01-1f79012f218f",
+        "lesson_activity.key": "c2fc17be-c9c6-4fad-9631-c33244f9439f"
+      }
+    },
+    {
+      "key": "e419584a-44a5-4a7c-b3be-cfd1bcc6ca54",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "e419584a-44a5-4a7c-b3be-cfd1bcc6ca54",
+        "lesson_activity.key": "bb447252-a12e-4d8a-ad52-48420418121e"
+      }
+    },
+    {
+      "key": "5996928a-1b52-4186-a345-a558583f85a4",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "5996928a-1b52-4186-a345-a558583f85a4",
+        "lesson_activity.key": "f9e5b628-5a00-440e-8134-787fba362dca"
+      }
+    },
+    {
+      "key": "3985cb71-1419-443b-b76a-7476818545a0",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "3985cb71-1419-443b-b76a-7476818545a0",
+        "lesson_activity.key": "d21bbe68-b732-4f66-83fb-b9d945116fd8"
+      }
+    },
+    {
+      "key": "fc627c77-e114-4584-b75c-5b417e6defd5",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc627c77-e114-4584-b75c-5b417e6defd5",
+        "lesson_activity.key": "4ba58ffc-3ce3-4080-b50b-6e3023e8ce6b"
+      }
+    },
+    {
+      "key": "a6016406-2501-4456-bfb1-7b0f404b756f",
+      "position": 2,
+      "properties": {
+        "name": "Unit 10 Exam",
+        "progression_name": "Unit 10 Exam"
+      },
+      "seeding_key": {
+        "activity_section.key": "a6016406-2501-4456-bfb1-7b0f404b756f",
+        "lesson_activity.key": "4ba58ffc-3ce3-4080-b50b-6e3023e8ce6b"
+      }
+    },
+    {
+      "key": "e3a7d73e-ac6d-4f34-a107-780bc6ba874f",
+      "position": 1,
+      "properties": {
+        "name": "Post-Course Survey Instructions",
+        "progression_name": "Post-Course Survey Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3a7d73e-ac6d-4f34-a107-780bc6ba874f",
+        "lesson_activity.key": "4b9134e6-4f5f-4dcf-81b1-170a93bcc464"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -348,7 +847,8 @@
         ],
         "lesson.key": "Project - Innovation Simulation Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "063f0dc6-7703-43ca-9cd8-21fe3db8162d"
       },
       "level_keys": [
         "CSP U10L1 SFLP 20-21"
@@ -357,7 +857,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -372,7 +872,8 @@
         ],
         "lesson.key": "Project - Innovation Simulation Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "3c71802d-9bb6-4de8-8fce-f6c8ee5bf207"
       },
       "level_keys": [
         "U10 L01 CFU innovations"
@@ -381,7 +882,7 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -396,7 +897,8 @@
         ],
         "lesson.key": "Project - Innovation Simulation Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "2f97271f-d394-482a-bb41-de5c2dce8d04"
       },
       "level_keys": [
         "CSP U10L2 SFLP 20-21"
@@ -405,7 +907,7 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -420,7 +922,8 @@
         ],
         "lesson.key": "Project - Innovation Simulation Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "37d2f2db-df3b-42df-b4d5-387b52a944cc"
       },
       "level_keys": [
         "U10 L02 CFU innovations part 2"
@@ -429,7 +932,7 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -444,7 +947,8 @@
         ],
         "lesson.key": "Data Policies and Privacy",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "24324794-2987-435d-84fd-695eac4276d7"
       },
       "level_keys": [
         "CSP U10L3 SFLP 20-21"
@@ -453,7 +957,7 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -468,7 +972,8 @@
         ],
         "lesson.key": "Data Policies and Privacy",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "629c781f-c7d5-49bb-8411-0fdd190f5a8c"
       },
       "level_keys": [
         "U10L3 CFU Why Collect PII"
@@ -477,7 +982,7 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -492,7 +997,8 @@
         ],
         "lesson.key": "The Value of Privacy",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "a24d6b2f-f39d-430c-90af-11972c2d3ac5"
       },
       "level_keys": [
         "CSP U10L4 SFLP 20-21"
@@ -501,7 +1007,7 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -516,7 +1022,8 @@
         ],
         "lesson.key": "Project - Innovation Simulation Part 3",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "28e1b957-e340-412f-9b01-c1a7feb81790"
       },
       "level_keys": [
         "CSP U10L5 SFLP 20-21"
@@ -525,7 +1032,7 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -540,7 +1047,8 @@
         ],
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "9db3e77f-4e28-480a-9b01-ac3f98549c6a"
       },
       "level_keys": [
         "CSP U10L6 SFLP 20-21"
@@ -549,7 +1057,7 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -564,7 +1072,8 @@
         ],
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "a93dac0c-d298-4583-b909-dec2a71ace69"
       },
       "level_keys": [
         "CSP 20-21 Keylogging"
@@ -573,7 +1082,7 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -588,7 +1097,8 @@
         ],
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "0997c6a6-ad21-4b2f-89f1-9ab881206705"
       },
       "level_keys": [
         "CSP 20-21 Phishing"
@@ -597,7 +1107,7 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -612,7 +1122,8 @@
         ],
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "e3122b96-23ef-4d26-be8c-dfd1717c1e97"
       },
       "level_keys": [
         "CSP 20-21 Rogue Access Points"
@@ -621,7 +1132,7 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -636,7 +1147,8 @@
         ],
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "38860d87-099f-4789-9937-44f829605933"
       },
       "level_keys": [
         "U10 L07 CFU security risks"
@@ -645,7 +1157,7 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -660,7 +1172,8 @@
         ],
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "44ea89b9-6459-43d7-ad71-371e152d3d72"
       },
       "level_keys": [
         "CSP U10L7 SFLP 20-21"
@@ -669,7 +1182,7 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -684,7 +1197,8 @@
         ],
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "a6daafaf-57b0-42d9-adfa-e70d0a4ba441"
       },
       "level_keys": [
         "U10 L08 CFU security risks"
@@ -693,7 +1207,7 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -708,7 +1222,8 @@
         ],
         "lesson.key": "Project: Innovation Simulation Part 4",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "1762502b-18a8-4168-8f58-f3b3fe886534"
       },
       "level_keys": [
         "CSP U10L8 SFLP 20-21"
@@ -717,7 +1232,7 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -732,7 +1247,8 @@
         ],
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "eac3512a-2b86-48a4-935f-c59a1f5495f2"
       },
       "level_keys": [
         "CSP U10L9 SFLP 20-21"
@@ -741,7 +1257,7 @@
     {
       "chapter": 18,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -756,7 +1272,8 @@
         ],
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "93bf5331-41a3-4e99-846a-aa092cd3cc64"
       },
       "level_keys": [
         "Crack a Caesar Cipher_2020"
@@ -765,7 +1282,7 @@
     {
       "chapter": 19,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -780,7 +1297,8 @@
         ],
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "93bf5331-41a3-4e99-846a-aa092cd3cc64"
       },
       "level_keys": [
         "Crack Random Substitution_2020"
@@ -789,7 +1307,7 @@
     {
       "chapter": 20,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -804,7 +1322,8 @@
         ],
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "df5fca6d-1c58-4c40-b054-6c2fb17dea78"
       },
       "level_keys": [
         "U10L9 CFU public key"
@@ -813,7 +1332,7 @@
     {
       "chapter": 21,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -828,7 +1347,8 @@
         ],
         "lesson.key": "Protecting Data Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "9de8ba52-0c52-45c5-aef6-d3d5e3770e83"
       },
       "level_keys": [
         "CSP U10L10 SFLP 20-21"
@@ -837,7 +1357,7 @@
     {
       "chapter": 22,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -852,7 +1372,8 @@
         ],
         "lesson.key": "Protecting Data Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "eb4d686d-0eb3-4691-aa01-1f79012f218f"
       },
       "level_keys": [
         "U10L10 CFU MFA"
@@ -861,7 +1382,7 @@
     {
       "chapter": 23,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -876,7 +1397,8 @@
         ],
         "lesson.key": "Project: Innovation Simulation Part 5",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "e419584a-44a5-4a7c-b3be-cfd1bcc6ca54"
       },
       "level_keys": [
         "CSP U10L11 SFLP 20-21"
@@ -885,7 +1407,7 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -900,7 +1422,8 @@
         ],
         "lesson.key": "Project: Innovation Simulation Part 6",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "5996928a-1b52-4186-a345-a558583f85a4"
       },
       "level_keys": [
         "CSP U10L12 SFLP 20-21"
@@ -909,7 +1432,7 @@
     {
       "chapter": 25,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -924,7 +1447,8 @@
         ],
         "lesson.key": "Project: Innovation Simulation Part 7",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "3985cb71-1419-443b-b76a-7476818545a0"
       },
       "level_keys": [
         "CSP U10L13 SFLP 20-21"
@@ -933,7 +1457,7 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -948,7 +1472,8 @@
         ],
         "lesson.key": "Lesson 14: Unit Assessment Day",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "fc627c77-e114-4584-b75c-5b417e6defd5"
       },
       "level_keys": [
         "CSP U10L14 SFLP 20-21"
@@ -957,7 +1482,7 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -972,7 +1497,8 @@
         ],
         "lesson.key": "Lesson 14: Unit Assessment Day",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "a6016406-2501-4456-bfb1-7b0f404b756f"
       },
       "level_keys": [
         "CSP 20-21 Unit 10 Assessment"
@@ -981,7 +1507,7 @@
     {
       "chapter": 28,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -996,7 +1522,8 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "e3a7d73e-ac6d-4f34-a107-780bc6ba874f"
       },
       "level_keys": [
         "csp-post-survey-2020-markdown-with-link-to-survey"
@@ -1012,7 +1539,8 @@
         ],
         "lesson.key": "Project - Innovation Simulation Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "063f0dc6-7703-43ca-9cd8-21fe3db8162d"
       }
     },
     {
@@ -1023,7 +1551,8 @@
         ],
         "lesson.key": "Project - Innovation Simulation Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "3c71802d-9bb6-4de8-8fce-f6c8ee5bf207"
       }
     },
     {
@@ -1034,7 +1563,8 @@
         ],
         "lesson.key": "Project - Innovation Simulation Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "2f97271f-d394-482a-bb41-de5c2dce8d04"
       }
     },
     {
@@ -1045,7 +1575,8 @@
         ],
         "lesson.key": "Project - Innovation Simulation Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "37d2f2db-df3b-42df-b4d5-387b52a944cc"
       }
     },
     {
@@ -1056,7 +1587,8 @@
         ],
         "lesson.key": "Data Policies and Privacy",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "24324794-2987-435d-84fd-695eac4276d7"
       }
     },
     {
@@ -1067,7 +1599,8 @@
         ],
         "lesson.key": "Data Policies and Privacy",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "629c781f-c7d5-49bb-8411-0fdd190f5a8c"
       }
     },
     {
@@ -1078,7 +1611,8 @@
         ],
         "lesson.key": "The Value of Privacy",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "a24d6b2f-f39d-430c-90af-11972c2d3ac5"
       }
     },
     {
@@ -1089,7 +1623,8 @@
         ],
         "lesson.key": "Project - Innovation Simulation Part 3",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "28e1b957-e340-412f-9b01-c1a7feb81790"
       }
     },
     {
@@ -1100,7 +1635,8 @@
         ],
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "9db3e77f-4e28-480a-9b01-ac3f98549c6a"
       }
     },
     {
@@ -1111,7 +1647,8 @@
         ],
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "a93dac0c-d298-4583-b909-dec2a71ace69"
       }
     },
     {
@@ -1122,7 +1659,8 @@
         ],
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "0997c6a6-ad21-4b2f-89f1-9ab881206705"
       }
     },
     {
@@ -1133,7 +1671,8 @@
         ],
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "e3122b96-23ef-4d26-be8c-dfd1717c1e97"
       }
     },
     {
@@ -1144,7 +1683,8 @@
         ],
         "lesson.key": "Security Risks Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "38860d87-099f-4789-9937-44f829605933"
       }
     },
     {
@@ -1155,7 +1695,8 @@
         ],
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "44ea89b9-6459-43d7-ad71-371e152d3d72"
       }
     },
     {
@@ -1166,7 +1707,8 @@
         ],
         "lesson.key": "Security Risks Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "a6daafaf-57b0-42d9-adfa-e70d0a4ba441"
       }
     },
     {
@@ -1177,7 +1719,8 @@
         ],
         "lesson.key": "Project: Innovation Simulation Part 4",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "1762502b-18a8-4168-8f58-f3b3fe886534"
       }
     },
     {
@@ -1188,7 +1731,8 @@
         ],
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "eac3512a-2b86-48a4-935f-c59a1f5495f2"
       }
     },
     {
@@ -1199,7 +1743,8 @@
         ],
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "93bf5331-41a3-4e99-846a-aa092cd3cc64"
       }
     },
     {
@@ -1210,7 +1755,8 @@
         ],
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "93bf5331-41a3-4e99-846a-aa092cd3cc64"
       }
     },
     {
@@ -1221,7 +1767,8 @@
         ],
         "lesson.key": "Protecting Data Part 1",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "df5fca6d-1c58-4c40-b054-6c2fb17dea78"
       }
     },
     {
@@ -1232,7 +1779,8 @@
         ],
         "lesson.key": "Protecting Data Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "9de8ba52-0c52-45c5-aef6-d3d5e3770e83"
       }
     },
     {
@@ -1243,7 +1791,8 @@
         ],
         "lesson.key": "Protecting Data Part 2",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "eb4d686d-0eb3-4691-aa01-1f79012f218f"
       }
     },
     {
@@ -1254,7 +1803,8 @@
         ],
         "lesson.key": "Project: Innovation Simulation Part 5",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "e419584a-44a5-4a7c-b3be-cfd1bcc6ca54"
       }
     },
     {
@@ -1265,7 +1815,8 @@
         ],
         "lesson.key": "Project: Innovation Simulation Part 6",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "5996928a-1b52-4186-a345-a558583f85a4"
       }
     },
     {
@@ -1276,7 +1827,8 @@
         ],
         "lesson.key": "Project: Innovation Simulation Part 7",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "3985cb71-1419-443b-b76a-7476818545a0"
       }
     },
     {
@@ -1287,7 +1839,8 @@
         ],
         "lesson.key": "Lesson 14: Unit Assessment Day",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "fc627c77-e114-4584-b75c-5b417e6defd5"
       }
     },
     {
@@ -1298,7 +1851,8 @@
         ],
         "lesson.key": "Lesson 14: Unit Assessment Day",
         "lesson_group.key": "csp_unit10_2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "a6016406-2501-4456-bfb1-7b0f404b756f"
       }
     },
     {
@@ -1309,7 +1863,8 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey2020",
-        "script.name": "csp10-2020"
+        "script.name": "csp10-2020",
+        "activity_section.key": "e3a7d73e-ac6d-4f34-a107-780bc6ba874f"
       }
     }
   ],

@@ -1,12 +1,12 @@
 {
-  "func": "overlap",
+  "key": "overlap",
+  "name": "overlap",
   "category": "Sprites",
-  "paletteParams": [
-    "target"
+  "category_key": "sprites",
+  "palette_params": [
+    {
+      "name": "target"
+    }
   ],
-  "params": [
-    "target"
-  ],
-  "modeOptionName": "*.overlap",
-  "type": "either"
+  "syntax": "overlap(target)"
 }

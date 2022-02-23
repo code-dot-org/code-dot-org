@@ -928,7 +928,7 @@
             "name": "ვარსკვლავის დახატვა",
             "parameters": {
               "points": "ქულები",
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a circle": {
@@ -937,32 +937,32 @@
           "draw a pinwheel": {
             "name": "ბზრიალას დახატვა",
             "parameters": {
-              "length": "სიგრძე",
+              "length": "ხანგრძლივობა",
               "repeat": "გაიმეორეთ"
             }
           },
           "draw a triangle": {
             "name": "სამკუთხედის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a shape": {
             "name": "ფორმის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a house": {
             "name": "სახლის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           },
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "სიგრძე"
+              "length": "ხანგრძლივობა"
             }
           }
         },
@@ -3026,16 +3026,22 @@
             "parameters": {
               "points": "ქულები",
               "length": "ხანგრძლივობა"
-            }
+            },
+            "description": "დახატეთ ვარსკვლავი მოცემული წერტილებით და გვერდების მოცემული სიგრძით"
           },
           "draw a circle": {
-            "name": "წრის დახატვა"
+            "name": "წრის დახატვა",
+            "description": "დახატეთ წრე მოცემული რადიუსით",
+            "parameters": {
+              "radius": "რადიუსი"
+            }
           },
           "draw a pinwheel": {
             "name": "ბზრიალას დახატვა",
             "parameters": {
               "length": "ხანგრძლივობა",
-              "repeat": "გაიმეორეთ"
+              "repeat": "გაიმეორეთ",
+              "sides": "გვერდები"
             }
           },
           "draw a triangle": {
@@ -3047,7 +3053,8 @@
           "draw a shape": {
             "name": "ფორმის დახატვა",
             "parameters": {
-              "length": "ხანგრძლივობა"
+              "length": "ხანგრძლივობა",
+              "sides": "გვერდები"
             }
           },
           "draw a house": {
@@ -3059,8 +3066,12 @@
           "draw a square": {
             "name": "კვადრატის დახატვა",
             "parameters": {
-              "length": "ხანგრძლივობა"
+              "length": "ხანგრძლივობა",
+              "sides": "გვერდები"
             }
+          },
+          "small flower": {
+            "name": "პატარა ყვავილი"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -3473,6 +3484,38 @@
         "courseF_apps_collector": {
           "end game": {
             "name": "თამაშის დასრულება"
+          }
+        },
+        "MC_HOC_2017_10_RETRY": {
+          "fix long path": {
+            "name": "გრძელი გზის შეკეთება"
+          },
+          "fix short path": {
+            "name": "მოკლე გზის შეკეთება"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2019": {
+          "fix long path": {
+            "name": "გრძელი გზის შეკეთება"
+          },
+          "fix short path": {
+            "name": "მოკლე გზის შეკეთება"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2020": {
+          "fix long path": {
+            "name": "გრძელი გზის შეკეთება"
+          },
+          "fix short path": {
+            "name": "მოკლე გზის შეკეთება"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "გრძელი გზის შეკეთება"
+          },
+          "fix short path": {
+            "name": "მოკლე გზის შეკეთება"
           }
         }
       }

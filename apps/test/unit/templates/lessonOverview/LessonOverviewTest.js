@@ -12,7 +12,7 @@ import {
   fakeTeacherAnnouncement
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 describe('LessonOverview', () => {
   let defaultProps;
@@ -96,10 +96,10 @@ describe('LessonOverview', () => {
       },
       activities: [],
       announcements: [],
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       isSignedIn: true,
       hasVerifiedResources: false,
-      isVerifiedTeacher: false
+      isVerifiedInstructor: false
     };
   });
 
@@ -153,7 +153,7 @@ describe('LessonOverview', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
   });
 
-  it('has provided teacher announcements if necessary', () => {
+  it('has provided instructor announcements if necessary', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
@@ -166,22 +166,22 @@ describe('LessonOverview', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
   });
 
-  it('shows verified resources warning if teacher is not verified and lesson has verified resources', () => {
+  it('shows verified resources warning if instructor is not verified and lesson has verified resources', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        isVerifiedTeacher={false}
+        isVerifiedInstructor={false}
         hasVerifiedResources={true}
       />
     );
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('does not show verified resources warning if teacher is verified', () => {
+  it('does not show verified resources warning if instructor is verified', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        isVerifiedTeacher={true}
+        isVerifiedInstructor={true}
         hasVerifiedResources={true}
       />
     );
@@ -192,18 +192,18 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        isVerifiedTeacher={false}
+        isVerifiedInstructor={false}
         hasVerifiedResources={false}
       />
     );
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
   });
 
-  it('has student announcement if viewing as student', () => {
+  it('has participant announcement if viewing as participant', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         announcements={[fakeStudentAnnouncement]}
       />
     );
@@ -313,6 +313,28 @@ describe('LessonOverview', () => {
     expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Lesson Plan',
       'Print Handouts'
+    ]);
+  });
+
+  it('renders dropdown button with lessonPlanPdf if no scriptResourcesPdfUrl provided and not pilot or in development', () => {
+    const lesson = {
+      ...defaultProps.lesson,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: null
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper
+      .find(DropdownButton)
+      .first()
+      .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/lesson_plan.pdf'
+    ]);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Lesson Plan'
     ]);
   });
 

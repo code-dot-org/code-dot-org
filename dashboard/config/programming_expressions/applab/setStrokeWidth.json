@@ -1,10 +1,12 @@
 {
-  "func": "setStrokeWidth",
+  "key": "setStrokeWidth",
+  "name": "setStrokeWidth",
   "category": "Canvas",
-  "paletteParams": [
-    "width"
+  "category_key": "canvas",
+  "palette_params": [
+    {
+      "name": "width"
+    }
   ],
-  "params": [
-    "3"
-  ]
+  "syntax": "setStrokeWidth(width)"
 }

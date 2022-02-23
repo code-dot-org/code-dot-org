@@ -38,8 +38,8 @@ es:
         NetSim: Simulador de Internet
         Custom: Artista
         CustomStudio: Laboratorio de juegos
-        Gamelab: Laboratorio de juegos
-        Spritelab: Laboratorio de sprites
+        Gamelab: Laboratorio de Juegos
+        Spritelab: Laboratorio de Sprites
     trophy:
       name:
         Bronze: Bronce
@@ -354,7 +354,7 @@ es:
         C4_unplugged_parameters: Composicion musical con parámetros
         C4_unplugged_binary: Binario
         CSF_a_b_artist_loops: Loops en Artista
-        CSF_artist_angles: Ángulos en Artist
+        CSF_artist_angles: Ángulos en Artista
         CSF_collector_k1_blocks: 'Fundamentos de las Ciencias de la Computación: El Recolector'
         CSF_collector_repeat_loops: Bucles de repetición del Recolector
         CSF_collector_text_blocks: 'Fundamentos de las Ciencias de la Computación: El Recolector'
@@ -444,7 +444,7 @@ es:
         iceage_intro: Hora de Code Era del Hielo - Introducción
         iceage_events: Hora de Code Era del Hielo - Eventos
         iceage_repeat: Hora de Code Era del Hielo - Repetir comando
-        mc_2016_intro: Hora de Code de Minecraft - Introducción
+        mc_2016_intro: Hora del Código de Minecraft - Introducción
         mc_2016_loops: Hora del Código de Minecraft - Bucles
         mc_2016_events: Hora del Código de Minecraft - Eventos
         mc_2016_spawn: Hora del Código de Minecraft - Generar
@@ -454,14 +454,14 @@ es:
         applab_hoc_onevent: Hora del Código del Laboratorio de aplicaciones - onEvent
         applab_hoc_designmode: Hora del Código del Laboratorio de aplicaciones - Modo de diseño
         applab_hoc_share: Hora del Código del Laboratorio de aplicaciones - Compartir
-        mc_2017_agent_intro: Hora del Código de Minecraft - El agente
+        mc_2017_agent_intro: Hora del Código de Minecraft - El Agente
         mc_2017_repeat: Hora del Código de Minecraft - Bucles repetir
         mc_2017_functions: Hora del Código de Minecraft - Funciones
         mc_2017_congratulations: Hora del Código de Minecraft - Felicitaciones
-        mc_2017_puzzle_1: Hora del Código de Minecraft - El agente
+        mc_2017_puzzle_1: Hora del Código de Minecraft - El Agente
         mc_2017_puzzle_3: Hora del Código de Minecraft - Bucles repetir
         mc_2017_puzzle_8: Hora del Código de Minecraft - Funciones
-        mc_2017_puzzle_12: Hora del Código de Minecraft - Juego libre
+        mc_2017_puzzle_12: Hora del Código de Minecraft - Juego Libre
         hint_videos_d_11_3_first: 'Videos sugeridos: D.11.3 Primero'
         hint_videos_d_11_3_last: 'Videos sugeridos: D.11.3 Último'
         hint_videos_d_11_4_first: 'Videos sugeridos: D.11.4 Primero'
@@ -508,8 +508,8 @@ es:
         mc_2018_closing: 'Minecraft: felicitaciones en viaje acuático'
         hoc_dance_warmup: Fiesta de baile - Calentamiento
         hoc_dance_events: Fiesta de baile - Eventos
-        hoc_dance_properties: Fiesta de baile - Propiedades
-        hoc_dance_congrats: Fiesta de baile - ¡Que comience la fiesta!
+        hoc_dance_properties: Fiesta de Baile - Propiedades
+        hoc_dance_congrats: Fiesta de baile - ¡Que siga la fiesta!
         c_and_c_great_to_create: Crear y jugar limpio es lo mejor
         c_and_c_digital_sharing: Colaboración digital
         teaching_csf_how_it_works: 'Enseñanza de Fundamentos de Ciencias de la Computación: cómo funciona el curso'
@@ -547,11 +547,11 @@ es:
         oceans_machine_learning: Aprendizaje automático
         oceans_training_data: Datos de entrenamiento
         oceans_societal_implications: Implicaciones para la sociedad
-        hoc_dance_congrats_2019: Fiesta de baile - ¡Que comience la fiesta!
+        hoc_dance_congrats_2019: Fiesta de baile - ¡Que siga la fiesta!
         hoc_dance_warmup_2019: Fiesta de baile - Calentamiento
         hoc_dance_events_2019: Fiesta de baile - Eventos
-        hoc_dance_measures_2019: 'Fiesta de baile 2019: Medidas'
-        hoc_dance_properties_2019: Fiesta de baile - Propiedades
+        hoc_dance_measures_2019: 'Fiesta de Baile: Compaces'
+        hoc_dance_properties_2019: Fiesta de Baile - Propiedades
         csd_what_computers_do: '¿Qué hacen los ordenadores?'
         csf_my_online_neighborhood_2020: Mi barrio en línea
         csf_follow_the_digital_trail: Sigue el rastro digital
@@ -583,11 +583,55 @@ es:
         playlab_2021: Introducción al laboratorio de juegos
         playlab_2021_reader: Introducción al laboratorio de juegos
         csp_defining_calling_functions: Definiendo y Llamando a Funciones
+        csp_tutorial_datatab: Pestaña de Datos en Laboratorio de Aplicaciones
+        csp_tutorial_libraries: Bibliotecas en Laboratorio de Aplicaciones
         PL-Video-21: Bienvenido al Aprendizaje Profesional Virtual de Code.org
+        csp_tutorial_datavis1: Visualizador de Datos en Laboratorio de Aplicaciones - Parte 1
+        csp_tutorial_datavis2: Visualizador de Datos en Laboratorio de Aplicaciones - Parte 2
         csd_ml_intro_ai_lab_july2021: Introducción al Laboratorio de Inteligencia Artificial
+        csd_ml_training_testing_ai_lan: Entrenamiento y Pruebas en Laboratorio de Inteligencia Artificial
+        csd_ml_model_cards_july2021: Tarjetas Modelo en Laboratorio de Inteligencia Artificial
         csd_ml_numerical_ai_lab: Datos Numéricos en el Laboratorio de Inteligencia Artificial
+        Gettting_Started_Progress: Progreso, Experiencia y Evaluación
         Gettting_Started_ClassSection: Creación de una Sección de Clase
         Gettting_Started_StudentExperience: Experiencia estudiantil
+        Getting_Started_BasicFeatures: Características Básicas de Code.org
+        PL_overview_CSD: '¿Qué son los Descubrimientos Informáticos?'
+        PL_CSD_TeacherTips_Advise: Consejos al Profesor - Asesoramiento a Nuevos Profesores
+        PL_CSD_TeacherTips_IntroToCSD: Consejos al Profesor - Introducción a Descubrimientos de Informática
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Consejos al Profesor - El Proceso de Resolución de Problemas
+        PL_CSD_TeacherTips_PairProgramming: Consejos al Profesor - Programación en Parejas
+        PL_CSD_TeacherTips_Debugging: Consejos al Profesor - Depuración
+        PL_CSD_TeacherTips_LeadLearner: Consejos al Profesor - Aprendiz de Líder
+        poembot-playtest-intro: PoemBot Prueba de Juego Introducción
+        poembot-playtest-sprites: PoemBot Prueba del Juego Sprites
+        poembot-playtest-events: PoemBot Prueba de Juego Eventos
+        hello_world_intro: Hola Mundo - Bienvenido a  Laboratorio Sprite
+        hello_world_events: Hola Mundo - Programación con Eventos
+        hello_world_congrats: Hello World - Haz lo que quieras
+        csp_global_vs_local: Depuración Global vs. Variables Locales
+        rough_poemart_intro: v1 Arte del Poema Introducción
+        rough_poemart_events: v1 Arte del Poema Eventos
+        rough_poemart_imagery: v1 Arte del Poema Imágenes
+        rough_poemart_congrats: v1 Arte del Poema Felicidades
+        poetry_module_variables: Variables - Codificación con Poesía
+        poetry_module_textandvariables: Texto y Variables - Codificación con Poesía
+        poetry_module_planningapp: Planificación de tu Aplicación Generadora de Poemas - Codificación con Poesía
+        poetry_module_multichoiceprompts: Preguntas de Elección Múltiple - Codificación con Poesía
+        poetry_module_conditionals: Condicionales - Codificación con Poesía
+        poemart_intro: Arte del Poema  Introducción
+        poemart_events: Arte del Poema Eventos
+        poemart_imagery: Arte del Poema Imágenes
+        poemart_celebration: Arte del Poema  Celebración
+        csd_u6_variables_part2: Variables - Parte 2
+        csd_ml_ethics_ai: 'La Ética en la Inteligencia Artificial'
+        outbreak_intro: 'Simulación de brote epidémico: Introducción'
+        outbreak_events: 'Simulación de brote epidémico: Eventos'
+        outbreak_scientist: 'Simulación de brote epidémico: Pensando como científicos'
+        outbreak_outro: 'Simulación de brote epidémico: Juego libre'
+        PL_overview_CSP: '¿Qué son los Principios de la Informática?'
+        PL_CSP_EIPMOverview: Guía de Lecciones de EIPM
+        tesstest: Prueba Tess
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

@@ -1,6 +1,7 @@
 {
-  "func": "getTime",
-  "block": "getTime()",
+  "key": "getTime",
+  "name": "getTime",
   "category": "Control",
-  "type": "value"
+  "category_key": "control",
+  "syntax": "getTime()"
 }

@@ -1,0 +1,15 @@
+{
+  "key": "buzzer.note",
+  "name": "buzzer.note",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "palette_params": [
+    {
+      "name": "note"
+    },
+    {
+      "name": "duration"
+    }
+  ],
+  "syntax": "buzzer.note(note, duration)"
+}

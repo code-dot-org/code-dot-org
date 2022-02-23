@@ -1,8 +1,6 @@
 name 'CSA U2 Assessment q6'
 height 'auto'
 
-question ‘What will be printed when the following code segment is run? ’
-
 wrong ‘![](https://images.code.org/9cfa220c922b5706cdb301dc2c1f8b76-image-1626729296216.png)’
 wrong ‘![](https://images.code.org/35a3b40c82aed09ae5ebacfc5fb0fc4a-image-1626729553418.png)’
 wrong ‘![](https://images.code.org/46e317ee167fd44e6b509336f6198990-image-1626729680822.png)’

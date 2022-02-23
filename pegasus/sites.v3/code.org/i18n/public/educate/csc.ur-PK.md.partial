@@ -1,0 +1,56 @@
+---
+title: کمپیوٹر سائنس (CS) کنکشنز
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# کمپیوٹر سائنس کنکشنز
+
+ہمارا نیا نصاب کمپیوٹر سائنس سیکھنے اور دوسرے مضامین جیسے ریاضی، زبان کے فنون، سائنس اور سماجی علوم کے درمیان ربط پیدا کرتا ہے۔ CS کنکشنز کے ذریعے، K-12 کلاس رومز اپنے معمول کے مضامین کو دلچسپ نئے طریقوں سے دریافت کرتے ہیں!
+
+## Hour of Code کے لیے ان سرگرمیوں کے ساتھ CS کنکشنز آزمائیں۔
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "نظم کا فن", left_description: "اپنی بات کا اظہار کریں! متحرک نظمیں تخلیق کرنے کے لیے کوڈ کا استعمال کریں", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Hello World", right_description: "چار مزیدار تھیمز میں سے ایک کا انتخاب کر کے اپنی تخلیق کردہ دنیا میں انٹریکٹیو کیرکٹر بنائیں.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
+{{ clearfix }}
+
+## ماڈیولز
+
+CS کنکشنز ماڈیول اسباق کا ایک منظم سلسلہ ہے جو کمپیوٹر سائنس سیکھنے کو بنیادی مضامین جیسے ریاضی، ELA اور سائنس میں ضم کرتا ہے۔ یہ ماڈیول تمام مضامین کے معیارات سے منسلک ہیں اور ایک کراس کریکولر پروجیکٹ میں اختتام پذیر ہوتے ہیں۔
+
+وہ ان اساتذہ کے لیے بہترین ہیں جو کمپیوٹر سائنس کو دوسرے مضامین کے لیے اپنے اسباق کے پلانز میں شامل کرنا چاہتے ہیں، ساتھ ہی ساتھ CS اساتذہ کے لیے جو طلباء دوسرے مضامین میں جو کچھ سیکھ رہے ہیں کو تقویت دینا چاہتے ہیں۔
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "انگریزی زبان کے فنون", duration: "5 گھنٹے", box_background_color: "rgb(0,0,0,0.4)", right_heading: "شاعری کے ساتھ کوڈ لکھنا", right_description: "اسباق کے اس سلسلے کے ساتھ اپنے کلاس روم میں کمپیوٹر سائنس اور شاعری کو کنکٹ کر لیں.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "ماڈیول دیکھ لیں" }}
+
+## اوپن اینڈڈ پروجیکٹس
+
+ہمارے کراس کریکولر پروجیکٹس کے ساتھ کمپیوٹر سائنس اور روایتی مضامین کے درمیان رابطہ قائم کرنا جاری رکھیں۔ انہیں مکمل ہونے میں صرف 1-2 تدریسی گھنٹے لگتے ہیں اور یہ کسی بھی استاتذہ کے لیے مثالی ہیں جو موضوع کے مطابق مخصوص پروجیکٹ تیار کرنا چاہتے جو ان کے موجودہ نصاب میں فٹ آتے ہیں۔
+
+<em>تجویز: ان پروجیکٹس کے لیے کمپیوٹر سائنس کی بنیادی باتوں کو سمجھنے کی ضرورت ہے، اس لیے ہم تجویز کرتے ہیں کہ شروع کرنے سے پہلے اپنی ہیلو ورلڈ آور آف کوڈ سرگرمی کو مکمل کر لیں۔</em>
+
+{{ csc_module, title: "ماحولیاتی نظام", image: "/images/csc/landing/project_ecosystems.png", grades: "3+"، subject: "سائنس"، duration: "1-2 گھنٹے"، description: " بنیادی کوڈنگ کی مہارتوں کا استعمال کرتے ہوئے، طلباء ایک ماحولیاتی نظام کا ایک انٹرایکٹو ماڈل بناتے ہیں جس میں اس بات کی کھوج کی جاتی ہے کہ مختلف جانور، پودے، اور جاندار ایک دوسرے کو کیسے متاثر کرتے ہیں۔.  اس ماڈل کو حیاتیاتی کرہ، ہائیڈروسفیئر، اور/یا فضا کے درمیان تعاملات میں بھی ڈھالا جا سکتا ہے۔", button_text: "مزید جانیں"، url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "مدار زندگی", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "سائنس", duration: "1-2 گھنٹے", description: "اس پراجیکٹ میں مینڈک کے انڈے سے بچے اور آگے مینڈک تک جائیں، اور اسطرح طلباء سائنسی مدار زندگی کا ماڈل بناتے ہیں - جیسے مینڈک کی زندگی کا مدار یا انرجی کا انتقال!", button_text: "مزید جانیں"، url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module، title: "کردار کا مطالعہ"، image: "/images/csc/landing/project_characterstudy.png"، grades: "3+"، subject: "ELA"، duration: "1-2 گھنٹے"، description: "ہر عمل کا ردعمل ہوتا ہے! نہیں، یہ فزکس نہیں ہے - یہ پروجیکٹ طالب علموں کو کہانی سے ایک منظر بنانے کے لیے کوڈ استعمال کرنے کی اجازت دیتا ہے جو یہ دکھاتا ہے کہ ایک کردار کے اعمال واقعات کے سلسلے کو کیسے متاثر کرتے ہیں۔"، button_text: "مزید جانیں", url: "https:// bit.ly/3wFlpTX" }}
+{{ csc_module، title: "کہانی کے اخلاقی اسباق"، image: "/images/csc/landing/project_storymorals.jpg"، grades: "3+"، subject: "انگریزی زبان کے فنون"، duration: "1-2 گھنٹے"، description: "\"ایک دفعہ کا ذکر ہے\" اور \"اختتام\" کے درمیان کیا ہے؟ طلباء ایک انٹریکٹیو ایپلیکیشن بناتے ہیں جو یہ کہانی اور اس کے اخلاقی درس بیان کرتی ہے۔ طلباء اس مہارت کو کسی بھی کہانی، لوک کہانی، کتاب، یا افسانے پر لاگو کر سکتے ہیں۔، button_text: "مزید جانیں"، url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## ارتباطی درسیں
+
+ہمارے ارتباطی اسباق کمپیوٹر سائنس اور دیگر مضامین کے درمیان رابطہ قائم کرنے کا ایک تیز اور دلچسپ طریقہ فراہم کرتے ہیں۔ ان اسباق کو کمپیوٹر سائنس کے بارے میں کسی پیشگی علم کی ضرورت نہیں ہے، اس لیے یہ کسی بھی استاد کے لیے بہترین ہیں جو 21ویں صدی کے ضروری علم کو روایتی نصاب میں شامل کرنا چاہتا ہے یا پرانے مضامین کو سیکھنے کے نئے دلچسپ طریقوں کے ساتھ طلبہ کی حوصلہ افزائی کرنا چاہتا ہے۔
+
+
+{{ csc_module, title: "مکھی کے ساتھ سپلنگ", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "انگریزی زبان کے فنون", duration: "1 گھنٹہ", description: "تفریح! اس سبق میں، طلباء مکھی کو یہ بتانے کے لیے بنیادی کوڈنگ کی مہارتیں استعمال کرتے ہیں کہ حروف سے بھرے گرڈ پر الفاظ کے ہجے کرنے کے لیے کہاں BUZZ کرنا ہے۔"، button_text: "مزید جانیں"، url: "https://studio.code.org/s /spelling-bee-2021/lesons/1" }}
+{{ csc_module, title: "لارل کے ساتھ گنتی"، image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "ریاضی", duration: "1 گھنٹہ", description: "یہ خزانہ ڈھونڈنے کی مہم ہے! طلباء گنتی کی مشق کریں گے اور لوپس (loops) کے ساتھ کوڈ کریں گے تاکہ لارل کے میز گرڈ میں سے ہیرے اکھٹے کرنے میں مدد کریں۔", button_text: "Learn more", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "مصنوعی ذہانت (AI) کے لیے اخلاقی کوڈ", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "انگریزی زبان کے فنون یا علوم انسانی", duration: "1 گھنٹہ", description: "مصنوعی ذہانت () کے ممکنہ اخلاقی خطرات کے بارے میں تحقیق کرنے کے بعد، طلباء اکھٹے کام کرتے ہوئے \"مصنوعی ذہانت کے لیے اخلاقی کوڈ\" کے نام سے کلاس کے وسائل بنائیں"، button_text: "مزید جانیں"، url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Data Visualization", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "ریاضی", duration: "1 گھنٹہ", description: "اس سبق مین App Lab میں ڈاٹا کو تصویری شکل دینے کا ٹول Data Visualizer اور ساتھ چارٹ کے دو اہم اقسام، بار چارٹ اور ہسٹوگرام (histogram) کا تعارف کرے گا. اس سبق کے دوران، طلباء اس ٹول کو استعمال کرنے اور ڈاٹا پڑھنے کی مہارت بڑھائیں گے."، button_text: "مزید جانیں", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>کیا آپ کمپیوٹر سائنس کنکشنز کی سرگرمی ختم کر لی ہے اور/یا اپنے کلاس روم کے لیے مزید آپشنز ڈھونڈ رہے ہیں؟ مہربانی کر کے<a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">اپنی رائے </a> اور مزید اسباق کے لیے اپنے افکار شریک کریں!</em>

@@ -70,7 +70,11 @@
             "name": "右足を かく"
           },
           "draw body and arms": {
-            "name": "からだ と うで を かく"
+            "name": "からだ と うで を かく",
+            "parameters": {
+              "armlength": "アーム長",
+              "bodylength": "身長"
+            }
           },
           "draw a head": {
             "name": "あたまを かく"
@@ -422,19 +426,27 @@
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "蜜を5つ取る"
+            "name": "蜜を5つ取る",
+            "parameters": {
+              "direction": "方向"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "蜜を5つ取る"
+            "name": "蜜を5つ取る",
+            "parameters": {
+              "direction": "方向"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "ミツを集めるハチミツを作る",
             "parameters": {
-              "honey": "ハチミツ"
+              "honey": "ハチミツ",
+              "direction": "方向",
+              "nectars": "花のミツ"
             }
           }
         },
@@ -471,20 +483,25 @@
         "Course 4 Play Lab Params 4": {
           "do something": {
             "name": "何かしてください"
+          },
+          "patrol": {
+            "name": "パトロール"
           }
         },
         "Course 4 Play Lab Params 5": {
           "patrol": {
             "parameters": {
               "actor": "キャラ"
-            }
+            },
+            "name": "パトロール"
           }
         },
         "Course 4 Play Lab Params 6": {
           "patrol": {
             "parameters": {
               "actor": "キャラ"
-            }
+            },
+            "name": "パトロール"
           }
         },
         "Course 4 Play Lab Params 7": {
@@ -492,7 +509,8 @@
             "parameters": {
               "actor": "キャラ",
               "speed": "スピード"
-            }
+            },
+            "name": "パトロール"
           }
         },
         "Course 4 Play Lab Params 8": {
@@ -500,7 +518,8 @@
             "parameters": {
               "actor": "キャラ",
               "speed": "スピード"
-            }
+            },
+            "name": "パトロール"
           }
         },
         "Course 4 Play Lab Params 9": {
@@ -671,13 +690,15 @@
           "n-sided shape": {
             "name": "n-sided shape",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a loop": {
             "name": "draw a loop",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw spiral circle": {
@@ -691,7 +712,8 @@
           "draw a loop": {
             "name": "draw a loop",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "n-sided shape": {
@@ -886,13 +908,15 @@
           "draw a polygon": {
             "name": "多角形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "do something": {
             "name": "何かしてください",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           }
         },
@@ -900,7 +924,8 @@
           "draw a polygon": {
             "name": "多角形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           }
         },
@@ -908,7 +933,8 @@
           "draw a polygon": {
             "name": "多角形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           }
         },
@@ -916,7 +942,8 @@
           "draw a polygon": {
             "name": "多角形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           }
         },
@@ -924,7 +951,8 @@
           "draw a spiral edge": {
             "name": "うずまき模様をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           }
         },
@@ -934,19 +962,22 @@
             "parameters": {
               "points": "ポイント",
               "length": "長さ"
-            }
+            },
+            "description": "決められた点と、決められた長さの辺を使って星をかきます"
           },
           "draw a circle": {
             "name": "円 を かく",
             "parameters": {
               "radius": "半径"
-            }
+            },
+            "description": "決められた半径の円をかきます"
           },
           "draw a pinwheel": {
             "name": "風車をかく",
             "parameters": {
               "length": "長さ",
-              "repeat": "くりかえし"
+              "repeat": "くりかえし",
+              "sides": "辺"
             }
           },
           "draw a triangle": {
@@ -958,7 +989,8 @@
           "draw a shape": {
             "name": "図形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a house": {
@@ -970,7 +1002,8 @@
           "draw a square": {
             "name": "正方形 を かく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           }
         },
@@ -1057,7 +1090,8 @@
           "draw a polygon": {
             "name": "多角形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           }
         },
@@ -1067,13 +1101,15 @@
             "parameters": {
               "height": "高さ",
               "actor": "キャラ"
-            }
+            },
+            "description": "高さとキャラのパラメータがあるジャンプ機能ブロック"
           },
           "patrol": {
             "parameters": {
               "actor": "キャラ",
               "speed": "スピード"
-            }
+            },
+            "name": "パトロール"
           }
         },
         "New Artist Project": {
@@ -1082,16 +1118,22 @@
             "parameters": {
               "points": "ポイント",
               "length": "長さ"
-            }
+            },
+            "description": "決められた点と、決められた長さの辺を使って星をかきます"
           },
           "draw a circle": {
-            "name": "円 を かく"
+            "name": "円 を かく",
+            "description": "決められた半径の円をかきます",
+            "parameters": {
+              "radius": "半径"
+            }
           },
           "draw a pinwheel": {
             "name": "風車をかく",
             "parameters": {
               "length": "長さ",
-              "repeat": "くりかえし"
+              "repeat": "くりかえし",
+              "sides": "辺"
             }
           },
           "draw a triangle": {
@@ -1103,7 +1145,8 @@
           "draw a shape": {
             "name": "図形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a house": {
@@ -1133,13 +1176,16 @@
             "parameters": {
               "height": "高さ",
               "actor": "キャラ"
-            }
+            },
+            "description": "高さとキャラのパラメータがあるジャンプ機能ブロック"
           },
           "patrol": {
             "parameters": {
               "actor": "キャラ",
               "speed": "スピード"
-            }
+            },
+            "name": "パトロール",
+            "description": "キャラとスピードのパラメータがあるパトロール機能"
           }
         },
         "Robot Doodle": {
@@ -1300,7 +1346,10 @@
             }
           },
           "draw a polygon": {
-            "name": "多角形をかく"
+            "name": "多角形をかく",
+            "parameters": {
+              "sides": "辺"
+            }
           },
           "draw a square 20": {
             "name": "正方形をかく"
@@ -3187,7 +3236,8 @@
           "draw a polygon": {
             "name": "多角形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           }
         },
@@ -3195,7 +3245,8 @@
           "draw a polygon": {
             "name": "多角形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           }
         },
@@ -3203,7 +3254,8 @@
           "draw a spiral edge": {
             "name": "うずまき模様をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           }
         },
@@ -3212,7 +3264,8 @@
             "name": "うずまき模様をかく",
             "parameters": {
               "length": "長さ",
-              "min": "最小（さいしょう）"
+              "min": "最小（さいしょう）",
+              "sides": "辺"
             }
           }
         },
@@ -3221,7 +3274,8 @@
             "name": "うずまき模様をかく",
             "parameters": {
               "length": "長さ",
-              "min": "最小（さいしょう）"
+              "min": "最小（さいしょう）",
+              "sides": "辺"
             }
           }
         },
@@ -3231,19 +3285,22 @@
             "parameters": {
               "points": "ポイント",
               "length": "長さ"
-            }
+            },
+            "description": "決められた点と、決められた長さの辺を使って星をかきます"
           },
           "draw a circle": {
             "name": "円 を かく",
             "parameters": {
               "radius": "半径"
-            }
+            },
+            "description": "決められた半径の円をかきます"
           },
           "draw a pinwheel": {
             "name": "風車をかく",
             "parameters": {
               "length": "長さ",
-              "repeat": "くりかえし"
+              "repeat": "くりかえし",
+              "sides": "辺"
             }
           },
           "draw a triangle": {
@@ -3255,7 +3312,8 @@
           "draw a shape": {
             "name": "図形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a house": {
@@ -3274,7 +3332,8 @@
             "name": "うずまき模様をかく",
             "parameters": {
               "length": "長さ",
-              "min": "最小（さいしょう）"
+              "min": "最小（さいしょう）",
+              "sides": "辺"
             }
           }
         },
@@ -3286,7 +3345,10 @@
             }
           },
           "draw a polygon": {
-            "name": "多角形をかく"
+            "name": "多角形をかく",
+            "parameters": {
+              "sides": "辺"
+            }
           },
           "draw a square 20": {
             "name": "正方形をかく"
@@ -3662,19 +3724,22 @@
             "parameters": {
               "points": "ポイント",
               "length": "長さ"
-            }
+            },
+            "description": "決められた点と、決められた長さの辺を使って星をかきます"
           },
           "draw a circle": {
             "name": "円 を かく",
             "parameters": {
               "radius": "半径"
-            }
+            },
+            "description": "決められた半径の円をかきます"
           },
           "draw a pinwheel": {
             "name": "風車をかく",
             "parameters": {
               "length": "長さ",
-              "repeat": "くりかえし"
+              "repeat": "くりかえし",
+              "sides": "辺"
             }
           },
           "draw a triangle": {
@@ -3686,7 +3751,8 @@
           "draw a shape": {
             "name": "図形をかく",
             "parameters": {
-              "length": "長さ"
+              "length": "長さ",
+              "sides": "辺"
             }
           },
           "draw a house": {
@@ -4265,6 +4331,28 @@
         "CourseF_app_computer": {
           "reset game": {
             "name": "ゲームをリセットする"
+          }
+        },
+        "Course 4 Bee Params 3": {
+          "get 3 nectar": {
+            "parameters": {
+              "direction": "方向"
+            }
+          }
+        },
+        "Course 4 Bee Params 4": {
+          "get 3 nectar": {
+            "parameters": {
+              "direction": "方向"
+            }
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "parameters": {
+              "direction": "方向",
+              "nectars": "花のミツ"
+            }
           }
         }
       }

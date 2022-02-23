@@ -1,0 +1,37 @@
+---
+title: Programování s Poezií
+theme: responsive
+set_dir: true
+social:
+  og:title: Coding with Poetry
+  twitter:title: Coding with Poetry
+  og:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  twitter:description: Students learn about computer science concepts and writing poetry in this CS Connections module.
+  og:image: https://code.org/images/social-media/poetry-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/poetry-og-image-1200x630.png
+---
+
+# Programování s Poezií
+
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Umění k básni", left_description: "Přidejte umělecké dílo a animaci ke klasické básni v této aktivitě hodiny programování!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Začít", right_heading: "Programování s poezií", right_description: "Propojte ve své třídě počítačovou vědu a poezii díky této sérii lekcí.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021?viewAs=Teacher", right_button_text: "Zobrazit modul" }}
+
+## Zjistěte si více o programování s Poezií
+
+V modulu Kódování s poezií výukového plánu Propojení informatiky se studenti setkají se dvěma předměty – informatikou a poezií – novým způsobem. V průběhu čtyř lekcí budou studenti 4. až 8. třídy budovat program generující básně k recitování různých verzí poezie, které napsali. Pak studenti se svými spolužáky vyzkouší své programy a dokončí projekt sdílením svých uživatelsky vytvořených básní v kruhu poezie.
+
+Budováním generátoru básní se mohou studenti dozvědět více o tom, jak počítače přijímají vstup od uživatele, ukládají jej do paměti a na výstup dávají požadovaný produkt. Psaním svých vlastních básní budou studenti moci zkoumat prvky poezie jako gramatiku, náladu a výběr slov.
+
+<em>Naše aktivita Básnické umění v Hodině kódu je zároveň první lekcí modulu Kódování s poezií našeho výukového plánu Propojení informatiky. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Zaregistrujte se zde na speciální lekci CodeBytes</a> v úterý 7. prosince v 10:00 dopoledne východního času a znovu v 10:00 dopoledne Pacifického času. Ukážeme studentům, jak mohou začít s aktivitou Básnické umění z Hodiny kódu.</em>
+
+{{ teacher_info, heading: "Informace učitele", title: "Jak můžete pokračovat v učení po Programování s poezií", description: "V našich nových osnovách počítačových věd můžete prozkoumat další aktivity kombinující anglosaské literární a jiné umění a počítačovou vědu a podívat se na ještě další spojení mezi počítačovou vědou a dalšími předměty, jako je matematika, věda a společenské vědy, které můžete přinést do své třídy.", button_text: "Zjistěte si více", url: "/educate/csc" }}
+
+## Právě uváděné výtvory studentů
+
+{{ featured_project, title: "Odpoledne", author: "M", age: "13 nebo více let", image: "images/csc/poetry/cscpoetry_afternoon.gif", url: "https://studio.code.org/projects/poetry_hoc/s____JHnjOEbsnZDxh4taek1sSVd-mNVGqjt5dxyx4g" }}
+{{ featured_project, title: "Cloud", author: "D", age: "8 a více let", image: "images/csc/poetry/cscpoetry_cloud.gif", url: "https://studio.code.org/projects/poetry_hoc/LYtB5mpvemKdVlza_kC3AUHSGdVHh_KjWFQfv9mJdw8" }}
+{{ featured_project, title: "Hvězda", author: "B", age: "18 a více let", image: "images/csc/poetry/cscpoetry_star.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocyS8UULutWk0lZfbK7-o41e4" }}
+{{ featured_project, title: "Zpívejte", author: "W", age: "13 a více let", image: "images/csc/poetry/cscpoetry_sing.gif", url: "https://studio.code.org/projects/poetry_hoc/Hg58X9wWRl1vZMh_bVocye7a3gSe86YxTcGwWjCfOX8" }}
+{{ clearfix }}

@@ -280,6 +280,7 @@ in:
       provider_managed_section: crwdns88682:0%{provider}crwdne88682:0
       restricted_section: crwdns2546984:0%{section_code}crwdne2546984:0
       full_section: crwdns2547480:0%{section_code}crwdnd2547480:0%{section_capacity}crwdne2547480:0
+      not_participant_type: crwdns2864049:0%{section_code}crwdne2864049:0
     mail:
       student_disassociated:
         subject: crwdns4337:0%{student_name}crwdne4337:0
@@ -396,12 +397,15 @@ in:
       minecraft_hero: crwdns404156:0crwdne404156:0
       playlab: crwdns245574:0crwdne245574:0
       playlab_k1: crwdns404158:0crwdne404158:0
+      poetry: crwdns2713527:0crwdne2713527:0
+      poetry_hoc: crwdns2713529:0crwdne2713529:0
       scratch: crwdns404160:0crwdne404160:0
       sports: crwdns404162:0crwdne404162:0
       spritelab: crwdns271598:0crwdne271598:0
       starwars: crwdns404164:0crwdne404164:0
       starwarsblocks: crwdns404166:0crwdne404166:0
       starwarsblocks_hour: crwdns404168:0crwdne404168:0
+      loading: crwdns2715439:0crwdne2715439:0
       weblab: crwdns404170:0crwdne404170:0
       view_all: crwdns245580:0crwdne245580:0
     popup:
@@ -417,6 +421,7 @@ in:
       prizes_link: crwdns2970:0crwdne2970:0
   teacher:
     answer: crwdns50991:0crwdne50991:0
+    dashboard: crwdns2857753:0crwdne2857753:0
     for_teachers_only: crwdns50992:0crwdne50992:0
     title:
       one: crwdns4363:0crwdne4363:0
@@ -535,6 +540,7 @@ in:
     all_students_must_be_in_current_section: crwdns56527:0crwdne56527:0
     already_enrolled_in_new_section: crwdns56528:0crwdne56528:0
     third_party_login: crwdns134927:0crwdne134927:0
+    not_correct_participant_type: crwdns2864051:0crwdne2864051:0
   share:
     title: crwdns45291:0crwdne45291:0
     description: crwdns45292:0crwdne45292:0
@@ -576,6 +582,7 @@ in:
     how_it_works: crwdns55146:0crwdne55146:0
     try_hour_of_code: crwdns55879:0crwdne55879:0
     store: crwdns2689313:0crwdne2689313:0
+    cookie_notice: crwdns2864053:0crwdne2864053:0
   reference_area:
     title: crwdns2625:0crwdne2625:0
     subtitle: crwdns3090:0crwdne3090:0
@@ -1029,9 +1036,12 @@ in:
       email: crwdns136838:0crwdne136838:0
       email_alternate: crwdns136839:0crwdne136839:0
       gender: crwdns136840:0crwdne136840:0
+      school: crwdns2696065:0crwdne2696065:0
       school_name: crwdns136841:0crwdne136841:0
       school_city: crwdns136842:0crwdne136842:0
+      school_city_district: crwdns2696067:0crwdne2696067:0
       school_country: crwdns136843:0crwdne136843:0
+      school_department_region: crwdns2696069:0crwdne2696069:0
       colombian_school_city: crwdns2462256:0crwdne2462256:0
       colombian_chilean_school_department: crwdns2689315:0crwdne2689315:0
       colombian_school_municipality: crwdns2462260:0crwdne2462260:0
@@ -1157,3 +1167,4 @@ in:
     this_sprite: crwdns2465554:0crwdne2465554:0
   unit_prefix: crwdns2465940:0%{n}crwdne2465940:0
   code_org_logo_alt: crwdns2481346:0crwdne2481346:0
+  teacher_feedback: crwdns2859059:0crwdne2859059:0

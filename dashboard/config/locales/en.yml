@@ -306,6 +306,7 @@ en:
       provider_managed_section: "This section is managed by another provider and cannot be joined. Please ask your teacher to add you via %{provider} and re-sync their section."
       restricted_section: "We couldn't add you to section %{section_code} because it is locked. Please contact your teacher for help."
       full_section: "We couldn't add you to section %{section_code} because there are already %{section_capacity} students in it. Please contact your teacher for help."
+      not_participant_type: "We couldn't add you to section %{section_code} because you do not meet the participant type for the section."
     mail:
       student_disassociated:
         subject: "Code.org notification: %{student_name} is no longer associated as your student."
@@ -423,12 +424,15 @@ en:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Play Lab'
       playlab_k1: 'Play Lab (Pre-reader)'
+      poetry: 'Poetry'
+      poetry_hoc: 'Poem Art'
       scratch: 'Scratch'
       sports: 'Sports'
       spritelab: 'Sprite Lab'
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
+      loading: 'Loading...'
       weblab: 'Web Lab'
       view_all: 'View all projects...'
 
@@ -445,6 +449,7 @@ en:
       prizes_link: 'more info'
   teacher:
     answer: Answer
+    dashboard: 'Teacher Dashboard'
     for_teachers_only: For Teachers Only
     title:
       one: 'Your teacher:'
@@ -563,6 +568,7 @@ en:
     all_students_must_be_in_current_section: "All the students must currently be enrolled in your section."
     already_enrolled_in_new_section: "You cannot move these students because they are already in the new section."
     third_party_login: "You cannot move students to a section that is synced with a third party tool."
+    not_correct_participant_type: "You cannot move these users because they do not have permissions to be participants in the new section."
   share:
     title: "Learn on Code Studio"
     description: "Anyone can learn computer science. Make games, apps and art with code."
@@ -604,6 +610,7 @@ en:
     how_it_works: 'How it Works (View Code)'
     try_hour_of_code: 'Try an Hour of Code!'
     store: 'Store'
+    cookie_notice: 'Cookie Notice'
   reference_area:
     title: 'Need help?'
     subtitle: 'See these videos and hints'
@@ -1017,6 +1024,8 @@ en:
   no_course_access_teacher: "You don't have access to this course. If you believe you should have access to this course, please write to support@code.org so that we can fix the situation."
   no_script_access_student: "You don't have access to this unit. Please ask your teacher which unit you should be on."
   no_script_access_teacher: "You don't have access to this unit. If you believe you should have access to this unit, please write to support@code.org so that we can fix the situation."
+  no_level_access_student: "You don't have access to this level. Please ask your teacher which level you should be on."
+  no_level_access_teacher: "You don't have access to this level. If you believe you should have access to this level, please write to support@code.org so that we can fix the situation."
   return_unit_overview: 'Go to unit overview'
   return_course_overview: 'Go to course overview'
   view_all_units: 'View all units'
@@ -1057,9 +1066,12 @@ en:
       email: 'Email'
       email_alternate: 'Alternate Email'
       gender: 'Gender Identity'
+      school: 'School'
       school_name: 'School Name'
       school_city: 'School City'
+      school_city_district: 'School City/District'
       school_country: 'School Country'
+      school_department_region: 'School Department/Region'
       colombian_school_city: 'School City'
       colombian_chilean_school_department: 'School Department/Region'
       colombian_school_municipality: 'School Municipality'
@@ -1185,3 +1197,4 @@ en:
     this_sprite: "this sprite"
   unit_prefix: "Unit %{n}"
   code_org_logo_alt: "Code.org Home"
+  teacher_feedback: "Teacher Feedback"

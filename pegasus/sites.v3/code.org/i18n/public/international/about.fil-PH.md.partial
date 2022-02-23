@@ -1,20 +1,20 @@
 ---
-title: About
+title: Tungkol
 theme: responsive
 video_player: true
 ---
 
-# About Us
+# Tungkol Sa Amin
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry, or algebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+  Ang Code.org® ay isang nonprofit na nakatuon sa pagpapalawak ng pag-access sa computer science sa mga paaralan at pagpapataas ng partisipasyon ng mga batang babae at mga mag-aaral mula sa ibang mga grupo na kulang sa representasyon. Ang aming pananaw ay ang bawat mag-aaral sa bawat paaralan na magkaroon ng pagkakataong matuto ng computer science, tulad ng biology, chemistry, o algebra. Nagbibigay kami ng pinakamalawak na ginagamit na kurikulum para sa pagtuturo ng computer science sa paaralang elementarya at sekondarya at inaayos din ang taunang <a href="https://hourofcode.com">Hour of Code</a> na kampanya, na may 10% ng lahat ng estudyante sa mundo. Ang Code.org ay sinusuportahan ng mga mapagbigay na donor kabilang ang Amazon, Facebook, Google, ang Infosys Foundation, Microsoft, at <a href="/about/donors">marami pa</a>.
 </div>
 
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
   
-  <font size="4" color="#FFFFFF"><b>Code.org courses are used by tens of millions of students and by one million teachers all around the world.</b></font>
+  <font size="4" color="#FFFFFF"><b>Ang mga kurso sa Code.org ay ginagamit ng sampu-sampung milyong estudyante at ng isang milyong guro sa buong mundo.</b></font>
  
 </div>
 
@@ -22,33 +22,33 @@ video_player: true
 
 <div style="clear:both"></div>
 
-## History
+## Kasaysayan
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
+Noong 2013, ang Code.org ay inilunsad ng magkakambal na sina Hadi at Ali Partovi na may [na video na nagsusulong ng computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). Ang video na ito ay naging #1 sa YouTube sa loob ng isang araw, at 15,000 paaralan ang umabot sa amin para sa tulong. Simula noon, lumawak kami mula sa isang naka-bootstrap na tauhan ng mga boluntaryo para bumuo ng isang buong organisasyon na sumusuporta sa isang pandaigdigang kilusan. Naniniwala kami na ang isang de-kalidad na edukasyon sa computer science ay dapat na available sa bawat bata, hindi lamang ng masuwerteng iilan.
 <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## What We Do
+## Ang Ginagawa Namin
 
-We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
+Gumagawa kami sa buong saklaw ng edukasyon: pagdidisenyo ng [aming sariling mga kurso](https://studio.code.org/courses) o pakikipagsosyo sa iba, pagsasanay ng mga guro, pakikipagsosyo sa malalaking distrito ng paaralan, pagtulong sa pagbabago mga patakaran ng pamahalaan, pagpapalawak sa buong mundo sa pamamagitan ng pakikipagsosyo, at marketing para masira ang mga stereotype o estereotipo. Naitatayo ang aming trabaho dahil sa mga dekada ng pagsisikap, ng hindi mabilang na mga organisasyon at indibidwal na tumulong sa pagtatatag, pagpopondo, at pagpapalaganap ng edukasyon sa computer science. Nagpapasalamat kami sa walang sawang gawain ng mas malawak na komunidad ng edukasyon sa computer science, at nagpapasalamat kami sa lahat ng mga kasosyo at indibidwal na nagpalawak ng aming epekto sa mga nakaraang taon.
 
-## Code.org's International Reach
+## Internasyonal na Pag-abot ng Code.org
 
-Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
+Mahigit sa 40% ng aming trapiko sa website ay nagmumula sa labas ng United States at ang bilang na iyon ay patuloy na tumataas. Para mapalawak ang pandaigdigang pag-access sa computer science, ang aming pangkat ay nakikipagtulungan nang malapit sa [higit sa 100 internasyonal na mga kasosyo](/about/partners), na tinutulungan silang isulong ang Hour of Code, itaguyod ang pagbabago ng patakaran, at magsanay ng mga guro. Ginagawa namin ang computer science na bahagi ng internasyunal na diskurso sa edukasyon sa pamamagitan ng pakikipagsosyo sa mga ministeryo ng edukasyon mula sa buong mundo at pakikipagtulungan sa mga internasyonal na organisasyon tulad ng Organization for Economic Co-operation and Development at United Nations Educational, Scientific and Cultural Organization.
 
-<img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%" />
+<img alt="Mga Internasyonal na Kasosyo ng Code.org" src="/images/international/international_partners.jpg" width="100%" />
 
-## Translation
+## Pagsasalin
 
-Want to have a direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Take a look at our [translation guide](/translate) for more information.
+Gusto mo bang magkaroon ng direktang epekto sa mga mag-aaral sa iyong bansa? Tulungan kaming gawing available ang nilalaman ng Code.org sa kanilang sariling wika! Kung boluntaryo kang tumulong sa pagsasalin ng aming mga pagtuturo at mga aralin, makakasali ka sa isang komunidad ng higit sa 7,000 na mga tagasalin na tumutulong sa pagdadala ng edukasyon sa computer science sa mga mag-aaral sa buong mundo. Tingnan ang aming [translation guide](/translate) para sa karagdagang impormasyon.
 
-## Our commitment to free curriculum and open source technology
+## Ang aming pangako sa libreng kurikulum at open source na teknolohiya
 
-All curriculum resources and tutorials we create will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+Ang lahat ng mga mapagkukunan ng curriculum at mga pagtuturo na gagawin namin ay malayang magagamit at bukas na lisensyado sa ilalim ng lisensya ng [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) na lisensya, na nagpapahintulot sa iba na gumawa ng derivative na mapagkukunan ng edukasyon para sa mga di-komersyal na layunin. Kung interesado kang lisensyahan ang aming mga materyales para sa komersyal na layunin, [contact us](/contact). Ang aming mga kurso ay isinalin para sa pandaigdigang paggamit o ng mga nagsasalita ng iba't ibang wika. Ang aming teknolohiya ay binuo bilang isang [open source project](https://github.com/code-dot-org/code-dot-org).
 
-<img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%" />
+<img alt="Mga mag-aaral na may laptop" src="/images/international/group_computer.jpg" width="100%" />
 
-## Follow us
+## I-follow kami
 
-[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+[Mag-sign up para makatanggap ng mga update sa katayuan](/about/hear-from-us) tungkol sa progreso ng K-12 computer science movement at tungkol sa gawain ng Code.org. O i-follow ang Code.org sa social media:
 
 {{ social_media_codeorg }}

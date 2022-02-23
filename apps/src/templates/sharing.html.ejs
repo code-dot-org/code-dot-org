@@ -6,14 +6,16 @@
   <div class="sharing-content no-image">
 <% } %>
 
-
 <% if (options.shareLink) { %>
   <% if (options.appStrings && options.appStrings.sharingText) { %>
     <div><%= options.appStrings.sharingText %></div>
   <% } %>
 
-  <div>
+  <div id="sharing-input-container">
     <input type="text" id="sharing-input" value=<%= options.shareLink %> readonly>
+    <button id="sharing-input-copy-button">
+      <i class="fa fa-clipboard fa-lg"></i>
+    </button>
   </div>
   <div class='social-buttons'>
     <% if (options.facebookUrl) { -%>
@@ -30,7 +32,7 @@
         </button>
       </a>
     <% } -%>
-    <% if (!options.onMainPage && !options.disablePrinting) { %>
+    <% if (!options.onMainPage && options.enablePrinting) { %>
       <button id="print-button">
         <i class="fa fa-print fa-lg"></i>
       </button>

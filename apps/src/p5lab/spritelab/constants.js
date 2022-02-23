@@ -1,9 +1,9 @@
 /** @file Sprite Lab constants */
 var utils = require('@cdo/apps/utils');
 
-module.exports.LocationPickerMode = utils.makeEnum('IDLE', 'SELECTING');
+export const LocationPickerMode = utils.makeEnum('IDLE', 'SELECTING');
 
-module.exports.SpritelabReservedWords = [
+export const SpritelabReservedWords = [
   // p5 globals
   'CENTER',
   'World',
@@ -52,3 +52,47 @@ module.exports.SpritelabReservedWords = [
   'yLocationOf',
   'setupSim'
 ];
+
+export const valueTypeTabShapeMap = function(blockly) {
+  return {
+    [blockly.BlockValueType.SPRITE]: 'angle',
+    [blockly.BlockValueType.BEHAVIOR]: 'rounded',
+    [blockly.BlockValueType.LOCATION]: 'square'
+  };
+};
+
+// The metadata for a single costume and a single background for previews. This can be used to render
+// previews for a thumbnail or when a whole list of sprites aren't needed.
+export const exampleSprites = {
+  orderedKeys: [
+    '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2',
+    '8ca751af-ef34-4fd4-9e96-6e985f93f4c2'
+  ],
+  propsByKey: {
+    '2223bab1-0b27-4ad1-ad2e-7eb3dd0997c2': {
+      name: 'bear',
+      sourceUrl:
+        'https://studio.code.org/api/v1/animation-library/spritelab/wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp/category_animals/bear.png',
+      frameSize: {x: 254, y: 333},
+      frameCount: 1,
+      looping: true,
+      frameDelay: 2,
+      version: 'wAQoTe9lNAp19q.JxOmT6hRtv1GceGwp',
+      categories: ['animals']
+    },
+    '8ca751af-ef34-4fd4-9e96-6e985f93f4c2': {
+      name: 'cave',
+      sourceUrl:
+        'https://studio.code.org/api/v1/animation-library/spritelab/3LUT4MZxHDWhZbAtYtEmQD1ZrfwQ7jFG/category_backgrounds/background_cave.png',
+      frameSize: {
+        x: 400,
+        y: 400
+      },
+      frameCount: 1,
+      looping: true,
+      frameDelay: 2,
+      version: '3LUT4MZxHDWhZbAtYtEmQD1ZrfwQ7jFG',
+      categories: ['backgrounds']
+    }
+  }
+};

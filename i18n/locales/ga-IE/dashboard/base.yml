@@ -399,6 +399,7 @@ ga:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blocanna)'
       starwarsblocks_hour: 'Star Wars (Blocanna)'
+      loading: 'Á lódáil...'
       weblab: 'Saotharlann an Ghréasáin'
       view_all: 'Gach Tionscadal...'
     popup:
@@ -414,6 +415,7 @@ ga:
       prizes_link: 'tuilleadh eolais'
   teacher:
     answer: Freagra
+    dashboard: 'Painéal na Múinteoirí'
     for_teachers_only: Do Mhúinteoirí Amháin
     title:
       one: 'Do mhúinteoir:'
@@ -959,6 +961,7 @@ ga:
       email: 'Ríomhphost'
       email_alternate: 'Seoladh r-phoist malartach'
       gender: 'Féiniúlacht Inscne'
+      school: 'Scoil'
       school_name: 'Ainm na Scoile'
       school_city: 'Cathair na Scoile'
       school_country: 'Tír na Scoile'
@@ -1071,3 +1074,4 @@ ga:
     text: "**An tuismitheoir nó caomhnóir thú?** Ceangail do sheoladh r-phoist leis an gcuntas seo chun fanacht cothrom le dáta le dul chun cinn do pháiste!"
     link_your_email: "Ceangail do sheoladh r-phoist"
     not_now: "Ná ceangail anois"
+  teacher_feedback: "Aiseolas ó Mhúinteoirí"

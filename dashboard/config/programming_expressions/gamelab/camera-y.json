@@ -1,0 +1,7 @@
+{
+  "key": "camera.y",
+  "name": "camera.y",
+  "category": "World",
+  "category_key": "world",
+  "syntax": "camera.y"
+}

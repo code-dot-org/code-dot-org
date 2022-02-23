@@ -2,6 +2,99 @@
   "hu-HU": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "function/hero/unversioned": {
+          "word": "Függvény"
+        },
+        "code/poem-art/2021": {
+          "word": "Kód",
+          "definition": "(v) instrukciók írása számítógéphez."
+        },
+        "line/poem-art/2021": {
+          "word": "Sor",
+          "definition": "(költészet) - egy vers kisebb, sorba rendezett egysége, amely a jobb lapszélen végződik."
+        },
+        "mood/poem-art/2021": {
+          "word": "Hangulat",
+          "definition": "érzés, atmoszféra vagy érzelem kifejezése művészetben vagy írásban"
+        },
+        "program/poem-art/2021": {
+          "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "code/artist/unversioned": {
+          "word": "Kód"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Feltételek"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "hurkok"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "code/sports/unversioned": {
+          "word": "Kód"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Hibakeresés"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kód",
+          "definition": "(v) instrukciók írása számítógéphez."
+        },
+        "program/poem-art/unversioned": {
+          "definition": "Lépések sorozata, amelyeket valami olyasmivé kódoltak, ami egy gép által lefuttatható."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Hangulat",
+          "definition": "érzés, atmoszféra vagy érzelem kifejezése művészetben vagy írásban"
+        },
+        "line/poem-art/unversioned": {
+          "word": "Sor",
+          "definition": "(költészet) - egy vers kisebb, sorba rendezett egysége, amely a jobb lapszélen végződik."
+        },
         "behavior/coursef/2021": {
           "word": "Viselkedés"
         },
@@ -97,6 +190,27 @@
         },
         "define/coursee/2021": {
           "word": "Meghatározás"
+        },
+        "debugging/csd/2021": {
+          "word": "Hibakeresés"
+        },
+        "variable/csd/2021": {
+          "word": "Változó"
+        },
+        "conditionals/csd/2021": {
+          "word": "Feltételek"
+        },
+        "abstraction/csd/2021": {
+          "word": "Absztrakció"
+        },
+        "function/csd/2021": {
+          "word": "Függvény"
+        },
+        "input/csd/2021": {
+          "word": "Bemenet"
+        },
+        "copyright/csd/2021": {
+          "word": "Szerzői jog"
         }
       }
     }

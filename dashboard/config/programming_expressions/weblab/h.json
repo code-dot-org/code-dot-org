@@ -1,5 +1,7 @@
 {
-  "func": "h",
+  "key": "h",
+  "name": "h",
   "category": "HTML Tags",
+  "category_key": "html_tags",
   "syntax": "<h1></h1>"
 }

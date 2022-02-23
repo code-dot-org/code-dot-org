@@ -5,30 +5,32 @@ pt:
   language: Português (Brasil)
   front_title: Junte-se ao maior evento de aprendizagem da história, %{campaign_date}
   coming_soon: Em breve
-  campaign_date_start_short: 4 de dez.
-  campaign_date_start_long: 4 de dezembro
+  campaign_date_start_short: 6 de dez.
+  campaign_date_start_long: 6 de dezembro
   campaign_date_short: 7-13 de dezembro
-  campaign_date_full: 7 a 13 de dezembro
-  campaign_date_year: '2020'
-  campaign_date_full_year: 7-13 de dezembro de 2020
+  campaign_date_full: 6 a 12 de dezembro
+  campaign_date_year: '2021'
+  campaign_date_full_year: 6-12 de dezembro de 2021
   latam_campaign_date_start_short: Oct. 1
   latam_campaign_date_start_long: October 1
   latam_campaign_date_short: Oct. 1 - Dec. 12
   latam_campaign_date_full: October 1 - December 12
-  latam_campaign_date_year: '2020'
+  latam_campaign_date_year: '2021'
   latam_campaign_date_full_year: October 1, 2021 - December 12, 2021
-  europe_campaign_date_start_short: Oct. 9
-  europe_campaign_date_start_long: October 9
-  europe_campaign_date_short: Oct. 9-24
-  europe_campaign_date_full: October 9-24
-  europe_campaign_date_year: '2020'
-  europe_campaign_date_full_year: October 9-24, 2021
-  africa_campaign_date_start_short: Oct. 1
-  africa_campaign_date_start_long: October 1
-  africa_campaign_date_short: Oct. 1-31
-  africa_campaign_date_full: October 1-31
-  africa_campaign_date_year: '2020'
-  africa_campaign_date_full_year: October 1-31, 2021
+  europe_campaign_date_start_short: 6 de dez.
+  europe_campaign_date_start_long: 6 de dezembro
+  europe_campaign_date_short: 7-13 de dezembro
+  europe_campaign_date_full: 6 a 12 de dezembro
+  europe_campaign_date_year: '2021'
+  europe_campaign_date_full_year: 6-12 de dezembro de 2021
+  africa_campaign_date_start_short: 6 de dez.
+  africa_campaign_date_start_long: 6 de dezembro
+  africa_campaign_date_short: 7-13 de dezembro
+  africa_campaign_date_full: 6 a 12 de dezembro
+  africa_campaign_date_year: '2021'
+  africa_campaign_date_full_year: 6-12 de dezembro de 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
   hoc2020_header_with_line_break_markdown: |-
     Learn today,
@@ -55,13 +57,14 @@ pt:
     Help them get started. #CSforGood'
   social_hoc2019_learn_computer_science: 'Learn computer science. Change the world.
     #CSforGood #HourOfCode'
-  social_hoc_is_coming: The Hour of Code is coming!
+  social_hoc_is_coming: A Hora do Código está chegando
   social_hoc2019_hoc_is_about_csforgood: 'The #HourOfCode is about #CSforGood. Learn
     computer science. Change the world.'
   social_hoc2019_coming_dates: The Hour of Code is coming December 9-15, 2019. Computer
     science is foundational for every student to learn.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: AI for Oceans
   oceans_landing_description: Learn about machine learning and ethical use of AI.
   cs_for_good_hashtag: "#CSforGood"
@@ -132,6 +135,9 @@ pt:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -149,6 +155,12 @@ pt:
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: What is AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
@@ -215,10 +227,17 @@ pt:
     organizar um evento Hora do Código. Tutoriais de uma hora em 45 idiomas. Nenhuma
     experiência necessária.
   hourofcode_homepage_hoc2018_header_line2: Idades de 4 a 104.
+  codeorg_homepage_hoc_is_coming: A Hora do Código está chegando
+  codeorg_homepage_celebrate_cse: Celebre a ciência da computação onde quer que esteja!
+  codeorg_homepage_csc: A ciência da computação se encontra com a linguística, a matemática
+    e muito mais nas Conexões CS
+  codeorg_homepage_csc_long: Veja como a ciência da computação se encontra com a literatura,
+    a matemática e muito mais no nosso currículo!
+  codeorg_homepage_csc_title: Conexões de CS
   hoc2018_tutorial_mchoc_description: Use blocos de programação para levar Alex ou
     Steve a uma aventura nesse mundo de Minecraft.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -588,11 +607,17 @@ pt:
   meta_tag_twitter_description: A Hora do Código é um movimento global que atinge
     dezenas de milhões de estudantes de todas as idades em mais de 180 países e mais
     de 45 idiomas.
+  meta_tag_og_title_cs_movement: 'Hour of Code: Join the Computer Science Movement'
+  meta_tag_og_description_campaign: The Hour of Code is a global campaign reaching
+    and inspiring tens of millions of students of all ages to learn computer science
+    in 180+ countries and over 45 languages.
   twitter_default_text: 'Vou participar da #HoraDoCodigo deste ano, e você? @codeorg'
   twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
     (Thanks %{random_donor} for supporting @codeorg)'
   twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
     Are you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_default_text_donor: 'I''m participating in this year''s #HourOfCode, are
+    you? (Thanks %{random_donor} for supporting @codeorg)'
   hoc_faq_title: Perguntas frequentes
   hoc_faq_what_is_hoc_q: O que é a Hora do Código?
   hoc_faq_what_is_hoc_a: A Hora do Código começou como uma introdução de uma hora
@@ -604,13 +629,14 @@ pt:
     os <a href='%{tutorials}'>tutoriais e atividades</a>. Esta campanha popular é
     apoiada por mais de <a href='%{partners}'>400 parceiros</a> e 200 mil educadores
     no mundo todo.
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a_markdown: O Hour of Code começou como uma introdução à ciência
+    da computação de uma hora de duração, projetada para desmistificar os “códigos”,
+    para mostrar que qualquer pessoa pode aprender o básico e expandir sua participação
+    na área de ciência da computação. Desde então, tornou-se uma iniciativa mundial
+    de celebrar a ciência da computação, começando com atividades de codificação de
+    uma hora de duração, mas expandindo-se para todos os tipos de iniciativa da comunidade.
+    Confira os [tutoriais e atividades](%{tutorials}). Esta campanha popular tem o
+    apoio de mais de [400 parceiros](%{partners}) e 200.000 educadores em todo o mundo.
   hoc_faq_last_year: Experimente os tutoriais
   hoc_faq_when_is_hoc_q: Quando acontece a Hora do Código?
   hoc_faq_when_is_hoc_a: A Hora do Código é realizada todo ano durante a <a href='%{csedweek_url}'>Semana
@@ -620,43 +646,44 @@ pt:
     em Ciência da Computação é realizada anualmente, em reconhecimento ao aniversário
     da pioneira da computação, a <a href='%{grace_hopper}'>Almirante Grace Murray
     Hopper</a> (9 de dezembro de 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: O Hour of Code ocorre anualmente, durante a [Semana
+    da Educação em Ciência da Computação](%{csedweek_url}). A Semana de Educação em
+    Ciência da Computação de %{campaign_date_year} será em %{campaign_date_full},
+    mas você pode manter o Hour of Code ativo o ano inteiro. A Semana de Educação
+    em Ciência da Computação ocorre anualmente, comemorando o aniversário do pioneiro
+    da computação [Almirante Grace Murray Hopper](%{grace_hopper}) (9 de dezembro
+    de 1906).
   hoc_faq_why_cs_q: Por que ciência da computação?
   hoc_faq_why_cs_a: "<i>Todo</i> aluno deveria ter a oportunidade de aprender ciência
     da computação, pois ela ajuda a desenvolver habilidades de resolução de problemas,
     lógica e criatividade. Começando cedo, os alunos terão uma base importante para
     serem bem-sucedidos em qualquer carreira do século XXI. Veja mais dados estatísticos
     <a href='%{stats_url}'>aqui</a>."
-  hoc_faq_why_cs_a_markdown: _Every_ student should have the opportunity to learn
-    computer science. It helps nurture problem-solving skills, logic and creativity.
-    By starting early, students will have a foundation for success in any 21st-century
-    career path. See more stats [here](%{stats_url}).
+  hoc_faq_why_cs_a_markdown: _Todos os_ estudantes devem ter a oportunidade de aprender
+    a ciência da computação. Ela ajuda a desenvolver habilidades na solução de problemas,
+    lógica e criatividade. Quando começam ainda jovens, os estudantes têm uma base
+    para o sucesso em qualquer carreira do século XXI. Veja mais estatísticas [aqui](%{stats_url}).
   hoc_faq_how_participate_q: Como participar da Hora do Código?
   hoc_faq_how_participate_a: "<a href='/how-to'>Comece a planejar aqui</a>, leia nosso
     guia prático. Você pode organizar um evento da Hora do Código na sua escola ou
     na sua comunidade &mdash; como em um clube de atividades extracurriculares, uma
     instituição sem fins lucrativos ou no trabalho. Ou, apenas experimente você mesmo
     quando %{campaign_date} chegar."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "[Comece a se programar aqui](%{howto}) lendo
+    nosso guia de instruções. Você pode organizar um evento no Hour of Code na sua
+    escola ou na sua comunidade – como em um clube de atividades extracurriculares,
+    uma organização sem fins lucrativos ou no seu trabalho. Ou apenas experimentar
+    por conta própria quando a %{campaign_date} se iniciar."
   hoc_faq_behind_hoc_q: De quem é a ideia da Hora do Código?
   hoc_faq_behind_hoc_a: A Hora do Código é gerenciada pelos <a href='%{partner_url}'>Comitês
     de Assessoria e Revisão</a> da Semana da Educação em Ciência da Computação e da
     Hora do Código, assim como por uma sem precedentes coalizão de parceiros que se
     uniu para apoiar a Hora do Código &mdash; dentre eles a Microsoft, Apple, Amazon,
     Boys and Girls Clubs of America e College Board.
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is driven by the Hour of Code and
-    Computer Science Education Week [Advisory and Review Committees](%{partner_url})
-    as well as an unprecedented coalition of partners that have come together to support
-    the Hour of Code — including Microsoft, Apple, Amazon, Boys and Girls Clubs of
-    America and the College Board.
+  hoc_faq_behind_hoc_a_markdown: O Hour of Code é promovido pela Hour of Code e pela
+    Semana de Educação em Ciência da Computação [Comitês de Assessoria e Análise](%{partner_url}),
+    bem como uma coalisão inédita de parceiros que se uniram em apoio ao Hour of Code
+    – incluindo Microsoft, Apple, Amazon, clubes de jovens dos EUA e o Conselho Universitário.
   hoc_faq_host_q: Não sei nada sobre programação. Ainda assim posso sediar um evento?
   hoc_faq_host_a: Pode, sim! As atividades da Hora do Código são autoexplicativas.
     Tudo o que você precisa fazer é <a href='%{codeorg_url}/learn'>experimentar nossos
@@ -664,11 +691,11 @@ pt:
     Também temos opções para diferentes idades e níveis de experiência - a partir
     do jardim de infância. Comece a planejar seu evento, leia nosso <a href='/how-to'>Guia
     prático</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: É claro! As atividades do Hour of Code são auto-orientadas.
+    Tudo o que você precisa fazer é [experimentar nossos tutoriais atuais](%{codeorg_url}/learn),
+    escolher o tutorial e o horário desejados – nós cuidamos do resto. Nós também
+    temos opções para todas as idades e níveis de experiência, a partir do jardim
+    de infância. Comece a planejar seu evento lendo nosso [guia de instruções](%{howto}).
   hoc_faq_devices_q: Que dispositivos eu devo usar para meus alunos?
   hoc_faq_devices_a: Os tutoriais da Code.org funcionam em todos os dispositivos e
     navegadores. Você pode ver mais informações sobre os requisitos tecnológicos dos
@@ -677,11 +704,12 @@ pt:
     href='%{codeorg_url}/learn'>%{partner_url}/learn</a> na descrição específica do
     tutorial. Não se esqueça de que também temos  <a href='%{unplugged_url}'>atividades
     off-line</a>, caso sua escola não possa fornecer estrutura para os tutoriais on-line!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Os tutoriais do Code.org funcionam em todos os dispositivos
+    e navegadores. Para obter mais informações sobre as demandas técnicas dos tutoriais
+    do Code.org, clique [aqui](%{codeorg_url}/educate/it). As demandas tecnológicas
+    para tutoriais fora do Code.org podem ser encontradas no site [%{partner_url}/learn](%{codeorg_url}/learn)
+    na descrição específica do tutorial. Não se esqueça que também oferecemos [atividades
+    off-line](%{unplugged_url}) se a sua escola não tiver meios para exibir os tutoriais!
   hoc_faq_need_computers_q: É necessário um computador para cada participante?
   hoc_faq_need_computers_a: Não. Temos tutoriais da Hora do Código que funcionam em
     computadores, smartphones, tablets e alguns que não exigem computador! Você pode
@@ -695,42 +723,47 @@ pt:
     desafios ou para responder a perguntas. <li><b>Atividades off-line.</b> Oferecemos
     <a href='%{unplugged_url}'>tutoriais que não precisam de computador</a> em momento
     algum. </ul>
-  hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
-
-    _Here are a few options:_
-
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+  hoc_faq_need_computers_a_markdown: Não. Temos tutoriais do Hour of Code que funcionam
+    em PCs, smartphones, tablets e alguns que não exigem um computador! Você pode
+    assistir onde quer que estja, com qualquer dispositivo que tiver. _Veja algumas
+    opções:_ - **Trabalho em duplas.*[Eventos de pesquisa](%{pair_programming_research})
+    os estudantes aprendem melhor com [programação em duplas](%{pair_programming_video}),
+    compartilhando um computador e trabalhando em conjunto. Incentive seus alunos
+    a trabalharem em duplas. - **Use uma tela projetada.*Se você tiver um projetor
+    e uma tela com um computador conectado à internet, todo o grupo pode participar
+    do Hour of Code junto. Assista a seções dos vídeos juntos e faça um rodízio para
+    solucionar os enigmas ou responder às perguntas. - **Trabalhe off-line.*Oferecemos
+    [tutoriais que não exigem um computador](%{unplugged_url}).
   hoc_faq_international_q: Eu sou do <country>. Como posso participar internacionalmente?
   hoc_faq_international_a: Qualquer pessoa pode organizar um evento da Hora do Código,
     em qualquer lugar do mundo. No ano passado, estudantes de todo o mundo se juntaram
     para a Hora do Código. Saiba mais <a href='/promote'>aqui</a>.
-  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
-    in the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more [here](%{promote}).
+  hoc_faq_international_a_markdown: Qualquer pessoa pode organizar um evento no Hour
+    of Code, em qualquer lugar no mundo. No ano passado, estudantes de todo o mundo
+    se reuniram no Hour of Code. Descubra mais [aqui](%{promote}).
   hoc_faq_tutorial_q: Como posso fazer um tutorial da Hora do Código?
   hoc_faq_tutorial_a: Se estiver interessado em se tornar um parceiro de tutorial,
     <a href='/tutorial-guidelines'>confira nossas diretrizes e instruções</a>. Gostaríamos
     de disponibilizar uma variedade de opções atrativas, mas nosso objetivo principal
     é melhorar a experiência de alunos e professores que são novos no campo da ciência
     da computação.
-  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
-    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
-    a variety of engaging options, but the primary goal is to optimize the experience
-    for students and teachers who are new to computer science.
+  hoc_faq_tutorial_a_markdown: Se você estiver interessado em se tornar um parceiro
+    nos tutoriais, [leia nossas diretrizes e instruções](%{tutorial_guidelines}).
+    Noss intuito é manter uma variedade de opções de envolvimento, mas a meta principal
+    é otimizar a experiência dos estudantes e professores novos na área de ciência
+    da computação.
   hoc_faq_account_q: Os alunos precisam acessar usando uma conta?
   hoc_faq_account_a: Não. Não é necessário nenhum registro ou login para os alunos
     experimentarem a Hora do Código. A maioria dos <a href='%{codeorg_url}/learn/beyond'>cursos
     complementares</a> exige a criação de conta para salvar o progresso do aluno.
     Além disso, o cadastro para a Hora do Código NÃO cria uma conta no Code Studio
     automaticamente. Se você quiser criar contas para seus alunos, siga essas <a href='https://youtu.be/_smelV_KISE'>instruções</a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](https://youtu.be/_smelV_KISE).
+  hoc_faq_account_a_markdown: Não. Absolutamente nenhum tipo de inscrição ou acesso
+    é necessário para os alunos experimentarem o Hour of Code. A maioria dos [cursos
+    de acompanhamento](%{codeorg_url}/learn/beyond) exigem a abertura de uma conta
+    para salvar o avanço dos alunos. A assinatura do Hour of Code também NÃO cria
+    automaticamente uma conta no Code Studio. Mas se você quiser abrir uma conta para
+    os seus alunos, siga estas [instruções](https://youtu.be/_smelV_KISE).
   hoc_faq_high_school_q: Qual atividade devo fazer com alunos do Ensino Médio?
   hoc_faq_high_school_a: Nossos tutoriais sobre Star Wars e Minecraft são ótimos para
     alunos do Ensino Médio, especialmente a versão JavaScript de Star Wars e a atividade
@@ -739,13 +772,14 @@ pt:
     como o tutorial com Angry Birds ou com Anna e Elsa. Um aluno do Ensino Médio deve
     conseguir terminar um desses tutoriais em 30 minutos, e depois pode tentar completar
     um tutorial mais avançado em JavaScript, como Khan Academy ou CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: Nossos tutoriais Star Wars e Minecraft são ótimos
+    para alunos do ensino médio, principalmente a versão em JavaScript do Star Wars
+    e o nível de ação livre de ambos os tutoriais. Alternativamente, recomendamos
+    experimentar um dos tutoriais para novatos no site [%{partner_url}/learn](%{codeorg_url}/learn)
+    para começar, como o tutorial com os Angry Birds ou com Anna e Elsa. Um estudante
+    do ensino médio deve se capaz de concluir um desses tutoriais em 30 minutos, e
+    poderá experimentar um tutorial mais avançado em JavaScript, como o Khan Academy
+    ou o CodeHS.
   hoc_faq_scratch_q: Vou usar o Scratch na Hora do Código, o que devo fazer se meus
     alunos tiverem iPads em vez de laptops?
   hoc_faq_scratch_a: O Scratch não funciona em tablets. Se seus alunos são novinhos,
@@ -753,10 +787,11 @@ pt:
     ler). Veja nossos tutoriais em <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>,
     lá você encontrará os tutoriais que funcionam em iPads - da Code.org, Tynker,
     Lightbot, ou CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: O Scratch não pode ser executado em tablets. Se seus
+    alunos forem jovens, eles podem utilizar o aplicativo ScratchJR para iPad (para
+    leitores iniciantes). Se você olhar nos tutoriais em [%{partner_url}/learn](%{codeorg_url}/learn),
+    você pode encontrar outros tutoriais que funcionam em iPads - em Code.org, Tynker,
+    Lightbot ou CodeSpark.
   hoc_faq_count_hoc_q: Como podemos contar as Horas do Código?
   hoc_faq_map_q: Por que não vejo meu ponto no mapa?
   hoc_faq_map_a: Lamentamos se você não pode ver seu evento no mapa da Hora do Código.
@@ -766,23 +801,24 @@ pt:
     e seu evento estará nessa lista. Além disso, dado que milhares de pessoas se cadastram
     na Hora do Código, o mapa e a lista de eventos normalmente levam 48 horas para
     serem atualizados. Verifique novamente em alguns dias!
-  hoc_faq_map_a_markdown: We're so sorry you aren't seeing your event on the Hour
-    of Code map. Because of the tens of thousands of organizers who sign up, the map
-    aggregates the data and displays one point for several events. If you click the
-    [events page](%{events_url}) link below the map you will be directed to a list
-    of all events by state and can find your event listed there. Additionally, given
-    the thousands of people signing up for the Hour of Code, the map and event list
-    usually takes 48 hours to update. Check back in a few days!
+  hoc_faq_map_a_markdown: Pedimos desculpas se você não estiver vendo seu evento no
+    mapa do Hour of Code. Porque entre as dezenas de milhares de organizadores que
+    se cadastram, o mapa agrega os dados exibe um só ponto para diversos eventos.
+    Se você clicar no link da [página de eventos](%{events_url})  abaixo, o mapa será
+    direcionado a uma lista de todos os eventos por estado e você poderá localizar
+    seu evento nessa lista. Além disto, como milhares de pessoas estão se inscrevendo
+    no Hour of Code, o mapa e a lista de eventos geralmente levam 48 horas para serem
+    atualizados. Verifique novamente em alguns dias!
   hoc_faq_count_hoc_a: O rastreador da Hora do Código não apresenta uma medida exata
     de uso. Não computamos IDs únicos dos alunos ao rastrear a participação na Hora
     do Código, especialmente porque não exigimos que eles façam login ou se cadastrem.
     Consequentemente, contabilizamos participantes a menos e a mais ao mesmo tempo.
     Veja todos os detalhes <a href='%{codeorg_url}/loc'>aqui</a>.
-  hoc_faq_count_hoc_a_markdown: The Hour of Code tracker isn't an exact measurement
-    of usage. We do not count unique student IDs perfectly when tracking participation
-    in the Hour of Code, especially because we don't require students to log in or
-    register. As a result, we both over-count and under-count participants at the
-    same time. Read all the details [here](%{codeorg_url}/loc).
+  hoc_faq_count_hoc_a_markdown: O rastreador do Hour of Code não é uma medida exata
+    da utilização. Não consideramos as IDs de cada estudante individualmente ao rastrear
+    a participação no Hour of Code, particularmente porque não exigimos que os estudantes
+    se conectem para se inscrever. Consequentemente, a contagem de participantes pode
+    ser tanto abaixo quanto acima do número correto. Leia os detalhes [aqui](%{codeorg_url}/loc).
   hoc_faq_one_hour_q: Quanto pode-se aprender em uma hora?
   hoc_faq_one_hour_a: O objetivo da Hora do Código não é ensinar as pessoas a serem
     experts em ciência da computação em uma hora. Uma hora é suficiente apenas para
@@ -803,44 +839,60 @@ pt:
     percebem que a ciência da computação é algo que seus alunos querem aprender e
     que seus professores são capazes de ensinar. <br/><br/> Acima de tudo, o que todos
     os participantes podem aprender em uma hora é que somos capazes de fazer isso.
-  hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender and ethnic and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
-
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
-
-    Above all, what all participants can learn in an hour is that we can do this.
+  hoc_faq_one_hour_a_markdown: "A meta do Hour of Code não é ensinar qualquer pessoa
+    a se tornar um cientista da computação especialista em uma hora. Uma hora é suficiente
+    apenas para aprender que a ciência da computação é divertida e criativa, que é
+    acessível para todas as idades e todos os estudantes, não importa qual seja seu
+    histórico. A medida do sucesso dessa campanha não está em quanto cada estudante
+    aprende sobre CC – o sucesso se reflete na ampla participação de membros de todos
+    os gêneros, etnias e níveis socioeconômicos, bem como no aumento no número de
+    inscrições resultante que percebemos nos curso de CC em todos os níveis diferentes.
+    Milhões do professores e estudantes participantes decidiram ir além de uma hora
+    – para aprenderem por um dia inteiro ou uma semana inteira, ou mais, e muitos
+    deles decidiram de matricular em um curso completo (ou até em um curso universitário)
+    em decorrência disso. \n\nAlém dos estudantes, outro “aprendiz\" é o próprio educador,
+    que ganha a confiança, depois de uma hora, de que podem lecionar ciência da computação
+    mesmo que não tenham nível superior na área de ciência da computação. Dezenas
+    de milhares de professores decidem comprar módulos adicionais de ciência da computação,
+    participando de cursos de DP ou oferecendo cursos de acompanhamento on-line, ou
+    ambos. E isto se aplica também a administradores de escolas, que chegam à conclusão
+    de que a ciência da computação é algo que seus alunos desejam e de que seus professores
+    são capazes. \n\nAcima de tudo, o que todos os participantes podem aprender em
+    uma hora é que podemos fazer isso."
   hoc_faq_more_questions_q: Ainda tem mais perguntas?
   hoc_faq_more_questions_a: Tente encontrar uma resposta em nosso <a href='http://support.code.org'>fórum
     de suporte</a>.
-  hoc_faq_more_questions_a_markdown: Try finding an answer in our [support forum](http://support.code.org).
+  hoc_faq_more_questions_a_markdown: Tente encontrar uma resposta no nosso [fórum
+    de suporte](http://support.code.org).
   hoc_faq_keep_learning_q: Como eu continuo aprendendo depois de uma Hora do Código?
   hoc_faq_keep_learning_a: Qualquer pessoa pode promover uma Hora do Código a qualquer
     momento. Os tutoriais ficam disponíveis o ano todo. Você pode esperar que todos
     os nossos tutoriais e nosso currículo fiquem sempre disponíveis em nosso site.
     Acesse <a href='/promote'>nossos recursos</a> para ver guias práticos e outros
     recursos que ajudam a fazer do seu evento da Hora do Código um sucesso.
-  hoc_faq_keep_learning_a_markdown: Anyone can host an Hour of Code at any time. The
-    tutorials stay up year-round. You can expect all our tutorials and curriculum
-    to be available on our site in perpetuity. Please go to [our resources](%{promote})
-    for event how-to guides and other resources to help make your Hour of Code event
-    a success.
+  hoc_faq_keep_learning_a_markdown: Qualquer pessoa pode ser anfitriã de um Hour of
+    Code, a qualquer momento. Os tutoriais mantê-se ativos o ano inteiro. Você pode
+    contar com a disponibilidade de todos os nossos tutoriais e currículos no nosso
+    site permanentemente. Acesse [nossos recursos](%{promote}) para ver o guia de
+    instruções de eventos e outros recursos para ajudar a tornar seu evento no Hour
+    of Code um sucesso.
   hoc_faq_certificates_q: Onde posso imprimir certificados para os meus alunos?
   hoc_faq_certificates_a: Acesse nossa <a href='%{codeorg_url}/certificates'>página
     de certificados</a>, na qual você pode imprimir antecipadamente os certificados
     de toda a sua turma. Você também pode imprimir <a href='%{codeorg_url}/certificates?course=mc'>certificados
     especiais</a> para os alunos que fizerem o tutorial do Minecraft.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Acesse nossa [página de certificados](%{codeorg_url}/certificates)
+    onde você pode imprimir certificados para todos os seus alunos antecipadamente.
+    Você também pode imprimir [certificados especiais](%{codeorg_url}/certificates?course=mc)
+    para estudantes que estão fazendo o tutorial Minecraft.
   hoc_faq_logo_q: Existem restrições sobre como eu posso usar o logotipo ou nome da
     Hour of Code?
   hoc_faq_logo_a: Hour of Code é uma marca registrada. Não queremos impedir seu uso,
     mas sim garantir que ele esteja de acordo com alguns limites. Veja <a href='https://support.code.org/hc/en-us/articles/215831637-Are-there-limitations-of-how-I-can-use-the-Hour-of-Code-logo-'>essas
     diretrizes de uso</a>.
-  hoc_faq_logo_a_markdown: Hour of Code is trademarked. We don't want to prevent its
-    usage, but we want to make sure its usage fits within a few limits. Please see
-    [these guidelines for usage](%{logo_url}).
+  hoc_faq_logo_a_markdown: O Hour of Code é uma marca registrada. Não queremos impedir
+    sua utilização, mas queremos nos certificar de que ela se manterá dentro de alguns
+    limites. Leia [estas diretrizes de utilização](%{logo_url}).
   stats_hoc_2013_image_alt: Estatísticas da Hora do Código de 2013
   stats_growth: Foi o mais rápido a chegar a 15 milhões de usuários.
   stats_i18n: Os alunos estão aprendendo em mais de 45 idiomas
@@ -983,6 +1035,7 @@ pt:
   footer_menu_support: Suporte
   footer_menu_terms: Termos
   footer_menu_privacy: Política de Privacidade
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HORA do CÓDIGO
   learn_banner_blurb: Experimente um tutorial de uma hora projetado para pessoas de
     todas as idades em mais de 45 idiomas. Junte-se a milhões de estudantes e professores
@@ -1578,7 +1631,7 @@ pt:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -5452,9 +5505,9 @@ pt:
     que o levarão a adivinhar algumas regras e aprender com seus próprios erros.
   tutorial_codecombatozaria_longdescription: Enter the world of Ozaria where you become
     a hero in an epic adventure. You must use the power of coding to defeat a darkness
-    that has taken over the world! Along the way, you'll meet interesting characters
+    that has taken over the world! Along the way, you’ll meet interesting characters
     and travel to different lands, practicing coding concepts like sequences, loops,
-    debugging, and decomposition. In the end, you'll design a playable game that you
+    debugging, and decomposition. In the end, you’ll design a playable game that you
     can share with your friends!
   tutorial_vidcodedate_longdescription: 'The Climate Clock project is a culturally
     relevant intersection of math, environmental science, and computer science. In
@@ -5473,8 +5526,9 @@ pt:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -5859,801 +5913,6 @@ pt:
     o poder do código para unir as duas vilas. Os jogadores terão empatia e compaixão
     por seus vizinhos, aprenderão a colaborar e incluir, e abraçarão a diversidade
     que nos torna exclusivamente especiais.
-  tutorial_dance2019_language: Arabic, Chinese, Czech, Danish, Dutch, English, Finnish,
-    French, German, Greek, Hindi, Hungarian, Indonesian, Italian, Japanese, Korean,
-    Malay, Polish, Portuguese, and 10 more!
-  tutorial_danceparty_language: Vários idiomas
-  tutorial_chibitronics_language: Português (Brasil)
-  tutorial_athlete_language: Inglês, Francês, Espanhol, Italiano, Português (Brasil)
-  tutorial_moana_language: Inglês, Árabe, Chinês (simplificado), Chinês (tradicional),
-    Dinamarquês, Holandês, Finlandês, Francês, Alemão, Indonésio, Italiano, Japonês,
-    Coreano, Norueguês, Polonês, Polinésio (Samoano), Português, Russo, Espanhol,
-    Sueco, Turco, Ucraniano, Vietnamita
-  tutorial_star-wars_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês,
-    Holandês, Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês,
-    Coreano, Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco,
-    Turco, Ucraniano e outros 19 idiomas
-  tutorial_gumadventure_language: Somente inglês
-  tutorial_mchoc_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano
-    e outros 19 idiomas
-  tutorial_vidnews_language: Somente inglês
-  tutorial_kodable-pre_language: Inglês, Árabe, Azeri, Alemão, Grego, Espanhol, Persa,
-    Francês, Indonésio, Islandês, Italiano, Coreano, Holandês, Norueguês, Polonês,
-    Português, Romeno, Russo, Sérvio, Sueco, Turco, Ucraniano, Chinês
-  tutorial_highseas_language: Somente inglês
-  tutorial_capython_language: Somente inglês
-  tutorial_frzn_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano
-    e outros 19 idiomas
-  tutorial_cocom_language: Inglês, Árabe, Búlgaro, Chinês, Tcheco, Dinamarquês, Holandês,
-    Francês, Alemão, Grego, Hebraico, Húngaro, Indonésio, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Russo, Espanhol, Sueco, Turco, Ucraniano,
-    Vietnamita e outros 9 idiomas
-  tutorial_play-lab_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês,
-    Holandês, Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês,
-    Coreano, Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco,
-    Turco, Ucraniano e outros 19 idiomas
-  tutorial_boxisland_language: Inglês, Chinês, Croata, Tcheco, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Húngaro, Islandês, Indonésio, Italiano, Japonês,
-    Coreano, Norueguês, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco,
-    Ucraniano, Vietnamita
-  tutorial_textcomp_language: Somente inglês
-  tutorial_encryption_language: Somente inglês
-  tutorial_kanopixel_language: Somente inglês
-  tutorial_foos_language: Português
-  tutorial_tynkerdd_language: Somente inglês
-  tutorial_tynkerana_language: Somente inglês
-  tutorial_vidcard_language: Somente inglês
-  tutorial_spritebox_language: Inglês, Português (Brasil)
-  tutorial_tynkerch_language: Somente inglês
-  tutorial_lightbot_language: Inglês, Chinês, Croata, Tcheco, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Hindi, Húngaro, Indonésio, Italiano, Japonês,
-    Coreano, Malaio, Norueguês, Polonês, Português, Romeno, Russo, Eslovaco, Esloveno,
-    Espanhol, Sueco, Tailandês
-  tutorial_hoc_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano
-    e outros 19 idiomas
-  tutorial_code_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano
-    e outros 19 idiomas
-  tutorial_tinspire_language: Somente inglês
-  tutorial_itchbounceball_language: Somente inglês
-  tutorial_vidclim_language: Somente inglês
-  tutorial_matlab_language: Somente inglês
-  tutorial_flap_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano
-    e outros 19 idiomas
-  tutorial_galaxy_language: Inglês, Albanês, Árabe, Bósnio, Chinês, Croata, Tcheco,
-    Dinamarquês, Holandês, Francês, Alemão, Hebraico, Indonésio, Italiano, Japonês,
-    Coreano, Persa, Polonês, Português, Romeno, Russo, Esloveno, Espanhol, Sueco,
-    Turco, Vietnamita
-  tutorial_inf_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano
-    e outros 19 idiomas
-  tutorial_tynkersol_language: Somente inglês
-  tutorial_itchg_language: Somente inglês
-  tutorial_como_language: Inglês, Árabe, Chinês, Tcheco, Francês, Alemão, Grego, Hebraico,
-    Japonês, Cazaque, Lituano, Polonês, Português, Russo, Sérvio, Espanhol, Turco,
-    Ucraniano
-  tutorial_processfound_language: Somente inglês
-  tutorial_tynkerhomo_language: Somente inglês
-  tutorial_art_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano
-    e outros 19 idiomas
-  tutorial_tynkerbrick_language: Somente inglês
-  tutorial_itchbio_language: Somente inglês
-  tutorial_itchj_language: Somente inglês
-  tutorial_tickleo_language: Inglês, Chinês (tradicional), Dinamarquês, Francês, Japonês
-  tutorial_hopgeo_language: Somente inglês
-  tutorial_tynkermult_language: Somente inglês
-  tutorial_monster_language: Inglês, Espanhol, Português, Italiano, Francês, Alemão,
-    Polonês, Turco
-  tutorial_tynkerapp_language: Somente inglês
-  tutorial_tynkerpup_language: Somente inglês
-  tutorial_livecode_language: Somente inglês
-  tutorial_cocomgame_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Tcheco, Dinamarquês,
-    Holandês, Finlandês, Francês, Alemão, Grego, Hebraico, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano,
-    Vietnamita e outros 8 idiomas
-  tutorial_tynkerspin_language: Somente inglês
-  tutorial_code-avengers_language: Inglês, Espanhol, Búlgaro, Dinamarquês, Grego,
-    Finlandês, Japonês, entre outros
-  tutorial_tynkercq_language: Somente inglês
-  tutorial_cmgame_language: Somente inglês
-  tutorial_codesters_language: Somente inglês
-  tutorial_qrm_language: Inglês, Alemão
-  tutorial_texas-instruments_language: Somente inglês
-  tutorial_cajava_language: Somente inglês
-  tutorial_codehs_language: Somente inglês
-  tutorial_hopemo_language: Somente inglês
-  tutorial_tynkercm_language: Somente inglês
-  tutorial_codesterswintergreet_language: Inglês, Espanhol
-  tutorial_codestersc_language: Somente inglês
-  tutorial_codestersturtle_language: Somente inglês
-  tutorial_penjee_language: Somente inglês
-  tutorial_trinket_language: Chinês (simplificado), Inglês, Coreano, Espanhol
-  tutorial_frogger_language: Inglês, Espanhol, Italiano, Francês, Alemão e Holandês
-  tutorial_tynkereco_language: Somente inglês
-  tutorial_mitedarc_language: Somente inglês
-  tutorial_khan_language: Inglês, Espanhol, Português, Sérvio, Polonês
-  tutorial_tynkerd_language: Somente inglês
-  tutorial_cdmy_language: Somente inglês
-  tutorial_codestersdance_language: Somente inglês
-  tutorial_codestersbasketball_language: Somente inglês
-  tutorial_nclkarel_language: Vários idiomas
-  tutorial_buildpong_language: Somente inglês
-  tutorial_tynkerdrones_language: Somente inglês
-  tutorial_carla_language: Somente inglês
-  tutorial_zulama_language: Somente inglês
-  tutorial_capost_language: Somente inglês
-  tutorial_marco_language: Vários idiomas
-  tutorial_codestersflappybike_language: Somente inglês
-  tutorial_kanopong_language: Somente inglês
-  tutorial_tynkerright_language: Somente inglês
-  tutorial_touchdevelop_language: Somente inglês
-  tutorial_tynkercc_language: Somente inglês
-  tutorial_bamboo_language: Somente inglês
-  tutorial_robojav_language: Somente inglês
-  tutorial_roboba_language: Vários idiomas
-  tutorial_knodsnake_language: Somente inglês
-  tutorial_soccharater_language: Somente inglês
-  tutorial_silent_language: Vários idiomas
-  tutorial_robomesh_language: Somente inglês
-  tutorial_amaze_language: Somente inglês
-  tutorial_codestersds_language: Somente inglês
-  tutorial_knodtext_language: Somente inglês
-  tutorial_alicegar_language: Somente inglês
-  tutorial_codesterstransform_language: Somente inglês
-  tutorial_flexfrog_language: Vários idiomas
-  tutorial_codemoji_language: Somente inglês
-  tutorial_robobii_language: Vários idiomas
-  tutorial_robobm_language: Vários idiomas
-  tutorial_codingrobots_language: Vários idiomas
-  tutorial_robob_language: Vários idiomas
-  tutorial_coders_language: Inglês, Francês
-  tutorial_tynkerhw_language: Somente inglês
-  tutorial_tynkermh_language: Somente inglês
-  tutorial_caphoto_language: Somente inglês
-  tutorial_mozillahw_language: Somente inglês
-  tutorial_ticklep_language: Chinês (tradicional), Dinamarquês, Inglês, Francês, Japonês
-  tutorial_bbot_language: Holandês, Suomi, Inglês
-  tutorial_scratchg_language: Somente inglês
-  tutorial_sjforest_language: Somente inglês
-  tutorial_sjgreet_language: Somente inglês
-  tutorial_sjsunset_language: Somente inglês
-  tutorial_fufafrenz_language: Somente inglês
-  tutorial_bbcgeo_language: Somente inglês
-  tutorial_chspixel_language: Somente inglês
-  tutorial_hummingbird_language: Somente inglês
-  tutorial_recoloring_language: Somente inglês
-  tutorial_bbcchem_language: Somente inglês
-  tutorial_floalgo_language: Somente inglês
-  tutorial_flocond_language: Somente inglês
-  tutorial_floloops_language: Somente inglês
-  tutorial_pgts_language: Somente inglês
-  tutorial_ozo_language: Somente inglês
-  tutorial_bbcla_language: Somente inglês
-  tutorial_bbcsci_language: Somente inglês
-  tutorial_tlctour_language: Somente inglês
-  tutorial_codesterstj_language: Somente inglês
-  tutorial_tlclocked_language: Somente inglês
-  tutorial_baubles_language: Somente inglês
-  tutorial_bbcart_language: Somente inglês
-  tutorial_tlcknight_language: Somente inglês
-  tutorial_fufafit_language: Somente inglês
-  tutorial_ozodance_language: Somente inglês
-  tutorial_codingrobotics_language: Somente inglês
-  tutorial_box_language: Vários idiomas
-  tutorial_hopgame_language: Somente inglês
-  tutorial_icontrol_language: Somente inglês
-  tutorial_cocomteach_language: Somente inglês
-  tutorial_bbcmathii_language: Somente inglês
-  tutorial_bbcphys_language: Somente inglês
-  tutorial_bitsbox_language: Somente inglês
-  tutorial_tlcemo_language: Somente inglês
-  tutorial_crd_language: Somente inglês
-  tutorial_bbcbio_language: Somente inglês
-  tutorial_ticklebb8_language: Chinês (traditional), Dinamarquês, Holandês, Inglês,
-    Francês
-  tutorial_grok_language: Somente inglês
-  tutorial_ijournalist_language: Somente inglês
-  tutorial_bbcmusic_language: Somente inglês
-  tutorial_secretcodes_language: Somente inglês
-  tutorial_tlchex_language: Somente inglês
-  tutorial_tickles_language: Vários idiomas
-  tutorial_ozogame_language: Somente inglês
-  tutorial_vidcodeio_language: Somente inglês
-  tutorial_tlcbrain_language: Somente inglês
-  tutorial_hopquiz_language: Somente inglês
-  tutorial_unfortunate_language: Somente inglês
-  tutorial_cha_language: Somente inglês
-  tutorial_elaseq_language: Somente inglês
-  tutorial_bbcmathi_language: Somente inglês
-  tutorial_tlcpixel_language: Somente inglês
-  tutorial_introrobo_language: Somente inglês
-  tutorial_tlcinvis_language: Somente inglês
-  tutorial_tlcjflap_language: Somente inglês
-  tutorial_procolor_language: Somente inglês
-  tutorial_spiralsfinch_language: Somente inglês
-  tutorial_ozoi_language: Somente inglês
-  tutorial_ticklel_language: Vários idiomas
-  tutorial_spiralsdash_language: Somente inglês
-  tutorial_ghdebug_language: Somente inglês
-  tutorial_tlckk_language: Somente inglês
-  tutorial_firstcomp_language: Somente inglês
-  tutorial_mazefinch_language: Somente inglês
-  tutorial_tlccc_language: Somente inglês
-  tutorial_tlcdoodle_language: Somente inglês
-  tutorial_tlcpunch_language: Somente inglês
-  tutorial_finchfract_language: Somente inglês
-  tutorial_tlcmind_language: Somente inglês
-  tutorial_tlctelebot_language: Somente inglês
-  tutorial_tlcaus_language: Somente inglês
-  tutorial_tlcmicro_language: Somente inglês
-  tutorial_imathematician_language: Somente inglês
-  tutorial_tlcmagic_language: Somente inglês
-  tutorial_scratchmus_language: Inglês, Catalão, Alemão, Italiano, Norueguês, Português,
-    Espanhol
-  tutorial_scratchanim_language: Inglês, Francês, Alemão, Italiano, Norueguês, Português,
-    Espanhol
-  tutorial_scratchfly_language: Inglês, Catalão, Italiano, Norueguês, Português
-  tutorial_tynkerarc_language: Somente inglês
-  tutorial_grokffpython_language: Somente inglês
-  tutorial_grokffblock_language: Somente inglês
-  tutorial_grokeliza_language: Somente inglês
-  tutorial_tynkercan_language: Somente inglês
-  tutorial_grokflags_language: Somente inglês
-  tutorial_robomind_language: Inglês, Holandês
-  tutorial_adventureq_language: Chinês (simplificado), Inglês
-  tutorial_khan-es_language: Espanhol
-  tutorial_kpt_language: Português
-  tutorial_kpl_language: Polonês
-  tutorial_khe_language: Hebraico
-  tutorial_kfr_language: Francês
-  tutorial_app-inventor_language: Somente inglês
-  tutorial_blockly_language: Espanhol, Francês, entre outros
-  tutorial_tynker_language: Somente inglês
-  tutorial_baypt_language: Português
-  tutorial_code-combat_language: Vários idiomas
-  tutorial_mky_language: Vários idiomas
-  tutorial_pirates_language: Inglês, Dinamarquês, Alemão
-  tutorial_csfirst_language: Somente inglês
-  tutorial_loopedy_language: Somente inglês
-  tutorial_dsw_language: Somente inglês
-  tutorial_dswb_language: Somente inglês
-  tutorial_ssw_language: Somente inglês
-  tutorial_sswb_language: Somente inglês
-  tutorial_kodable-unplugged_language: Somente inglês
-  tutorial_scratch_language: Somente inglês
-  tutorial_bayes_language: Espanhol
-  tutorial_gumball_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês,
-    Holandês, Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês,
-    Coreano, Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco,
-    Turco, Ucraniano e outros 19 idiomas
-  tutorial_hrm_language: Vários idiomas
-  tutorial_ice-age_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês,
-    Holandês, Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês,
-    Coreano, Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco,
-    Turco, Ucraniano e outros 19 idiomas
-  tutorial_koapp_language: Vários idiomas
-  tutorial_lightbot-intl_language: Francês, Russo, Português (Brasil)
-  tutorial_rmc_language: Russo
-  tutorial_smc_language: Somente inglês
-  tutorial_minecraft-2016_language: Vários idiomas
-  tutorial_thinkersmith-es_language: Espanhol
-  tutorial_pixie_language: Espanhol
-  tutorial_play_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano
-    e outros 19 idiomas
-  tutorial_robomind-nl_language: Holandês
-  tutorial_spheroi_language: Somente inglês
-  tutorial_spherol_language: Somente inglês
-  tutorial_spherov_language: Somente inglês
-  tutorial_swb_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês, Holandês,
-    Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês, Coreano,
-    Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco, Turco, Ucraniano
-    e outros 19 idiomas
-  tutorial_build-a-galaxy_language: Inglês, Árabe, Búlgaro, Chinês, Croata, Dinamarquês,
-    Holandês, Finlandês, Francês, Alemão, Grego, Islandês, Indonésio, Italiano, Japonês,
-    Coreano, Norueguês, Persa, Polonês, Português, Romeno, Russo, Espanhol, Sueco,
-    Turco, Ucraniano e outros 19 idiomas
-  tutorial_alicesims_language: Somente inglês
-  tutorial_tchr_language: Somente inglês
-  tutorial_robogame_language: Somente inglês
-  tutorial_tap_language: Somente inglês
-  tutorial_cintl_language: Azeri, Sérvio
-  tutorial_itchstop_language: Somente inglês
-  tutorial_tynkerpn_language: Somente inglês
-  tutorial_tynkerpd_language: Somente inglês
-  tutorial_persistence_language: Somente inglês
-  tutorial_getloopy_language: Somente inglês
-  tutorial_createface_language: Somente inglês
-  tutorial_happymaps_language: Somente inglês
-  tutorial_moveit_language: Somente inglês
-  tutorial_bigevent_language: Somente inglês
-  tutorial_gpp_language: Somente inglês
-  tutorial_foosgame_language: Inglês, Árabe, Alemão, Espanhol, Francês, Japonês, Coreano,
-    Holandês, Português, Português (Brasil), Romeno, Turco, Chinês tradicional, Chinês
-    simplificado, Grego, Italiano, Polonês
-  tutorial_solopython_language: Somente inglês
-  tutorial_kodableint_language: Somente inglês
-  tutorial_kodableadv_language: Somente inglês
-  tutorial_tynkertj_language: Somente inglês
-  tutorial_wolframa_language: Somente inglês
-  tutorial_wolframm_language: Somente inglês
-  tutorial_wolframspi_language: Somente inglês
-  tutorial_wolframsph_language: Somente inglês
-  tutorial_wolframp_language: Somente inglês
-  tutorial_wolframn_language: Somente inglês
-  tutorial_soloweb_language: Somente inglês
-  tutorial_khanweb_language: Inglês, Espanhol, Português, Sérvio, Polonês
-  tutorial_khandata_language: Inglês, Espanhol, Português, Sérvio, Polonês
-  tutorial_googlelogo_language: Somente inglês
-  tutorial_playtune_language: Somente inglês
-  tutorial_computeit_language: Inglês, Francês, Alemão, Indonésio, Italiano, Português,
-    Romeno, Espanhol
-  tutorial_codesterssj_language: Inglês, Chinês (Tradicional), Espanhol
-  tutorial_cmchat_language: Somente inglês
-  tutorial_tynkerdb_language: Chinês (Simplificado), Inglês, Francês, Alemão, Japonês,
-    Espanhol
-  tutorial_cmbuild_language: Chinês (Simplificado), Inglês, Hebraico, Japonês
-  tutorial_robotrattle_language: Somente inglês
-  tutorial_codestersh_language: Chinês (Tradicional), Inglês, Espanhol
-  tutorial_codehsdigipixel_language: Somente inglês
-  tutorial_ccbinary_language: Somente inglês
-  tutorial_codehsturtle_language: Somente inglês
-  tutorial_grokhd_language: Somente inglês
-  tutorial_grokem_language: Somente inglês
-  tutorial_kodmaze_language: Somente inglês
-  tutorial_codestersa_language: Chinês (Tradicional), Inglês, Espanhol
-  tutorial_cmdodo_language: Inglês, Hebraico
-  tutorial_tynkerspace_language: Chinês (Simplificado), Inglês, Francês, Alemão, Japonês,
-    Espanhol
-  tutorial_gfbloons_language: Somente inglês
-  tutorial_raspipong_language: Somente inglês
-  tutorial_codehsvr_language: Somente inglês
-  tutorial_codesterstp_language: Chinês (Simplificado), Inglês, Espanhol
-  tutorial_codestersbb_language: Chinês (Tradicional), Inglês, Espanhol
-  tutorial_gfcrossyroad_language: Somente inglês
-  tutorial_googleww_language: Somente inglês
-  tutorial_codehsjsapp_language: Somente inglês
-  tutorial_gfmihi_language: Somente inglês
-  tutorial_hopdropphone_language: Somente inglês
-  tutorial_techfaa_language: Somente inglês
-  tutorial_codehsjsgraph_language: Somente inglês
-  tutorial_thunkable_language: Vários idiomas
-  tutorial_hopcrossyroad_language: Somente inglês
-  tutorial_switchglitch_language: Somente inglês
-  tutorial_codecar_language: Somente inglês
-  tutorial_codesterscp_language: Chinês (Tradicional), Inglês, Espanhol
-  tutorial_grokpetblock_language: Somente inglês
-  tutorial_techbim_language: Somente inglês
-  tutorial_techfpp_language: Somente inglês
-  tutorial_codesterscr_language: Chinês (Tradicional), Inglês, Espanhol
-  tutorial_grokdisease_language: Somente inglês
-  tutorial_techec_language: Somente inglês
-  tutorial_rgbegin_language: Somente inglês
-  tutorial_myradream_language: Somente inglês
-  tutorial_thinkfun_language: Somente inglês
-  tutorial_hopfireworks_language: Somente inglês
-  tutorial_grokspace_language: Somente inglês
-  tutorial_codehspython_language: Somente inglês
-  tutorial_codehsjava_language: Somente inglês
-  tutorial_techioda_language: Somente inglês
-  tutorial_grokmonster_language: Somente inglês
-  tutorial_techmjs_language: Somente inglês
-  tutorial_techga_language: Somente inglês
-  tutorial_techioan_language: Somente inglês
-  tutorial_techiogsr_language: Somente inglês
-  tutorial_groktunnel_language: Somente inglês
-  tutorial_stemcod_language: Somente inglês
-  tutorial_techikb_language: Somente inglês
-  tutorial_kanostreet_language: Somente inglês
-  tutorial_codemojijs_language: Somente inglês
-  tutorial_techapf_language: Somente inglês
-  tutorial_techfpjs_language: Somente inglês
-  tutorial_techlinq_language: Somente inglês
-  tutorial_gpbcatapult_language: Somente inglês
-  tutorial_quorumastro_language: Somente inglês
-  tutorial_alicewonder_language: Somente inglês
-  tutorial_rginter_language: Somente inglês
-  tutorial_cssgrid_language: Vários idiomas
-  tutorial_jshero_language: Inglês, Alemão
-  tutorial_codemojipy_language: Somente inglês
-  tutorial_nclabdrone_language: Somente inglês
-  tutorial_gpbcircle_language: Somente inglês
-  tutorial_gpbpaint_language: Somente inglês
-  tutorial_cocomarcade_language: Vários idiomas
-  tutorial_beetik_language: Somente inglês
-  tutorial_codedj_language: Inglês, Francês
-  tutorial_rgadvan_language: Somente inglês
-  tutorial_codehsrn_language: Somente inglês
-  tutorial_codehswd_language: Somente inglês
-  tutorial_turtlerobot_language: Somente inglês
-  tutorial_ozoevo_language: Somente inglês
-  tutorial_ozoexped_language: Somente inglês
-  tutorial_ozojourney_language: Somente inglês
-  tutorial_ozocodes_language: Somente inglês
-  tutorial_ozoeclipse_language: Somente inglês
-  tutorial_ozosimulator_language: Somente inglês
-  tutorial_ozoalgorithm_language: Somente inglês
-  tutorial_ozotimer_language: Somente inglês
-  tutorial_ozohabits_language: Somente inglês
-  tutorial_ozoprogram_language: Somente inglês
-  tutorial_ozopair_language: Somente inglês
-  tutorial_codesnoopy_language: Inglês, Chinês, Holandês, Francês, Alemão, Italiano,
-    Coreano, Malaio, Português, Espanhol, Sueco, Tailandês
-  tutorial_applabintro_language: Somente inglês
-  tutorial_cslartist_language: Somente inglês
-  tutorial_cslscratchjr_language: Somente inglês
-  tutorial_floevents_language: Somente inglês
-  tutorial_florobot_language: Somente inglês
-  tutorial_isavesanta_language: Somente inglês
-  tutorial_iorder_language: Somente inglês
-  tutorial_ianimate_language: Somente inglês
-  tutorial_iloveada_language: Somente inglês
-  tutorial_kodflash_language: Somente inglês
-  tutorial_kodchoose_language: Somente inglês
-  tutorial_kodpizzapre_language: Somente inglês
-  tutorial_kodpizza_language: Somente inglês
-  tutorial_kodwomen_language: Somente inglês
-  tutorial_tfunplug_language: Somente inglês
-  tutorial_lbvariables_language: Somente inglês
-  tutorial_lbfunctions_language: Somente inglês
-  tutorial_lblogic_language: Somente inglês
-  tutorial_lbworld_language: Somente inglês
-  tutorial_lbloops_language: Somente inglês
-  tutorial_lbtug_language: Somente inglês
-  tutorial_lbpotato_language: Somente inglês
-  tutorial_lbguitar_language: Somente inglês
-  tutorial_lbio_language: Somente inglês
-  tutorial_wonpuppy_language: Somente inglês
-  tutorial_woncue_language: Somente inglês
-  tutorial_wonzoo_language: Somente inglês
-  tutorial_wontrip_language: Somente inglês
-  tutorial_woncollect_language: Somente inglês
-  tutorial_wonsecret_language: Somente inglês
-  tutorial_hsscience_language: Somente inglês
-  tutorial_popculture_language: Somente inglês
-  tutorial_legorobust_language: Somente inglês
-  tutorial_legoplants_language: Somente inglês
-  tutorial_legopark_language: Somente inglês
-  tutorial_legodetect_language: Somente inglês
-  tutorial_legolight_language: Somente inglês
-  tutorial_alexa_language: Somente inglês
-  tutorial_grokpetmicro_language: Somente inglês
-  tutorial_pirateplunder_language: Somente inglês
-  tutorial_cadj_language: Somente inglês
-  tutorial_cacrazy_language: Somente inglês
-  tutorial_cajump_language: Somente inglês
-  tutorial_carest_language: Somente inglês
-  tutorial_accai_language: Inglês, Francês, Italiano e Holandês
-  tutorial_vceclipse_language: Somente inglês
-  tutorial_pmzero_language: Somente inglês
-  tutorial_hsela_language: Somente inglês
-  tutorial_ticklear_language: Somente inglês
-  tutorial_bcrobot_language: Chinês, Inglês, Francês, Alemão, Norueguês, Esloveno,
-    Espanhol
-  tutorial_bcsnow_language: Chinês, Inglês, Francês, Alemão, Norueguês, Esloveno,
-    Espanhol
-  tutorial_ifly_language: Somente inglês
-  tutorial_idowedo_language: Somente inglês
-  tutorial_diggindwarf_language: Somente inglês
-  tutorial_spheroit_language: Somente inglês
-  tutorial_gameofcodes_language: Somente inglês
-  tutorial_blocklygames_language: Espanhol, Francês, entre outros
-  tutorial_spherohello_language: Somente inglês
-  tutorial_spheroarcade_language: Chinês (Simplificado), Inglês, Francês, Alemão,
-    Japonês, Espanhol
-  tutorial_bcpy1_language: Somente inglês
-  tutorial_bcpy2_language: Somente inglês
-  tutorial_bcjs1_language: Somente inglês
-  tutorial_bcjs2_language: Somente inglês
-  tutorial_3dbearmars_language: Português (Brasil)
-  tutorial_bitsboxyak_language: Português (Brasil)
-  tutorial_blockscadbargraphs_language: Chinese (Simplified), English, French, German,
-    Japanese, Norwegian (Bokmål), Serbian (Cyrillic), Spanish (Spain), Swedish
-  tutorial_blockscadbirdhouses_language: Chinese (Simplified), English, French, German,
-    Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish
-  tutorial_blockscadclock_language: Chinese (Simplified), English, French, German,
-    Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish
-  tutorial_blockscaddinner_language: Chinese (Simplified), English, French, German,
-    Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish
-  tutorial_blockscadicecream_language: Chinese (Simplified), English, French, German,
-    Japanese, Norwegian (Bokmål), Slovenian, Spanish (Spain), Swedish
-  tutorial_blockscadpizza_language: Chinês, Inglês, Francês, Alemão, Japonês, Norueguês,
-    Esloveno, Espanhol, Sueco
-  tutorial_blockscadsugar_language: Chinês, Holandês, Inglês, Francês, Japonês, Norueguês,
-    Esloveno, Espanhol, Sueco
-  tutorial_bsgridlight_language: Português (Brasil)
-  tutorial_bpartscratch_language: Português (Brasil)
-  tutorial_bpartvid_language: Português (Brasil)
-  tutorial_bpenglishscratch_language: Português (Brasil)
-  tutorial_bpenglishvid_language: Português (Brasil)
-  tutorial_bphealthscratch_language: Português (Brasil)
-  tutorial_bphealthvid_language: Português (Brasil)
-  tutorial_bpmathscratch_language: Português (Brasil)
-  tutorial_bpmathvid_language: Português (Brasil)
-  tutorial_bpmlkscratch_language: Português (Brasil)
-  tutorial_bpmlkvid_language: Português (Brasil)
-  tutorial_bpsafetyscratch_language: Português (Brasil)
-  tutorial_bpsafetyvid_language: Português (Brasil)
-  tutorial_bpsciencescratch_language: Português (Brasil)
-  tutorial_bpsciencevid_language: Português (Brasil)
-  tutorial_bptechscratch_language: Português (Brasil)
-  tutorial_bptechvid_language: Português (Brasil)
-  tutorial_caflags_language: Português (Brasil)
-  tutorial_matariki_language: Português (Brasil)
-  tutorial_carestaurant_language: Português (Brasil)
-  tutorial_casea_language: Português (Brasil)
-  tutorial_cashield_language: Português (Brasil)
-  tutorial_ccwslimer_language: Português (Brasil)
-  tutorial_codinggalaxy_language: Chinês, Inglês
-  tutorial_boatrace_language: Árabe, Chinês (Simplificado), Checo, Dinamarquês, Holandês,
-    Francês, Alemão, Grego, Hebraico, Hindi, Italiano, Japonês, Coreano, Outro, Polaco,
-    Romeno, Sérvio (Cirílico), Espanhol, Ucraniano
-  tutorial_ccplay_language: Português (Brasil)
-  tutorial_grinch_language: Português (Brasil)
-  tutorial_codehsart_language: Português (Brasil)
-  tutorial_codehsbitcoin_language: Português (Brasil)
-  tutorial_codehsblockchain_language: Português (Brasil)
-  tutorial_codehscipher_language: Português (Brasil)
-  tutorial_codehscollision_language: Português (Brasil)
-  tutorial_codehsmath_language: Português (Brasil)
-  tutorial_codehsmusic_language: Português (Brasil)
-  tutorial_codehssports_language: Português (Brasil)
-  tutorial_codemojipizza_language: Português (Brasil)
-  tutorial_moonlander_language: Português (Brasil)
-  tutorial_sushicards_language: Português (Brasil)
-  tutorial_codesparkcreate_language: Português
-  tutorial_hardvsoft_language: Português (Brasil)
-  tutorial_codestersecard_language: Chinês, Inglês, Espanhol
-  tutorial_codesterslogo_language: Chinês, Inglês, Espanhol
-  tutorial_codesterstshirt_language: Chinês, Inglês, Espanhol
-  tutorial_codewards_language: Inglês, Francês, Russo, Espanhol, Turco
-  tutorial_olympics_language: Inglês, Francês, Russo, Espanhol
-  tutorial_codinismhero_language: Português (Brasil)
-  tutorial_discovery_language: Inglês, Espanhol (México)
-  tutorial_csfirstname_language: Inglês, Espanhol (México)
-  tutorial_edisonmove_language: Português (Brasil)
-  tutorial_edisonspider_language: Português (Brasil)
-  tutorial_edisonspotlight_language: Português (Brasil)
-  tutorial_firiapython_language: Português (Brasil)
-  tutorial_gamefrootsquid_language: Português (Brasil)
-  tutorial_duckpiano_language: Português (Brasil)
-  tutorial_gpsound_language: Português (Brasil)
-  tutorial_groklearningpython_language: Português (Brasil)
-  tutorial_htmltimetravel_language: Português (Brasil)
-  tutorial_hp_flappy_language: Português (Brasil)
-  tutorial_appytappin_language: Português (Brasil)
-  tutorial_icipher_language: Português (Brasil)
-  tutorial_iguess_language: Português (Brasil)
-  tutorial_imake_language: Português (Brasil)
-  tutorial_imorse_language: Português (Brasil)
-  tutorial_kanohp_language: Português (Brasil)
-  tutorial_khanwebpages_language: Inglês, Espanhol, Português, Sérvio, Polonês
-  tutorial_kibobowl_language: Português (Brasil)
-  tutorial_kibodance_language: Português (Brasil)
-  tutorial_buildcharacters_language: Português (Brasil)
-  tutorial_designgames_language: Português (Brasil)
-  tutorial_makelevels_language: Português (Brasil)
-  tutorial_wizard_language: Português (Brasil)
-  tutorial_mbscratchcards_language: Português (Brasil)
-  tutorial_mbswiftplaygrounds_language: Português (Brasil)
-  tutorial_mbbuttons_language: Português (Brasil)
-  tutorial_meteor_language: Português (Brasil)
-  tutorial_ballbounce_language: Português (Brasil)
-  tutorial_mitcodi_language: Português (Brasil)
-  tutorial_mitdoodle_language: Português (Brasil)
-  tutorial_talktome_language: Português (Brasil)
-  tutorial_mobilecspmap_language: Português (Brasil)
-  tutorial_ozorandom_language: Português (Brasil)
-  tutorial_ozotroll_language: Português (Brasil)
-  tutorial_peblioart_language: Português (Brasil)
-  tutorial_astropi_language: Arabic, Danish, Dutch, English, Finnish, French, German,
-    Greek, Hungarian, Italian, Norwegian (Nynorsk), Other, Polish, Spanish, Swedish
-  tutorial_rgart_language: Português (Brasil)
-  tutorial_rgengineer_language: Português (Brasil)
-  tutorial_rgmath_language: Português (Brasil)
-  tutorial_rgscience_language: Português (Brasil)
-  tutorial_rgtech_language: Português (Brasil)
-  tutorial_robotmagic3d_language: Português (Brasil)
-  tutorial_robotmagicflappy_language: Português (Brasil)
-  tutorial_scratchadventure_language: Somente inglês
-  tutorial_scratchtalk_language: Somente inglês
-  tutorial_scratchjrstory_language: Português (Brasil)
-  tutorial_scratchjrtwinkle_language: Português (Brasil)
-  tutorial_spherocomm_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherocommunity_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherofunctions_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroinfrared_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherolightsensor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheromansion_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_roadblocks_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext2_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext3_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spherotext4_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_spheroraptor_language: Arabic, Chinese, English, French, German, Hebrew,
-    Italian, Japanese, Korean, Norwegian, Spanish, Swedish
-  tutorial_stempiday_language: Português (Brasil)
-  tutorial_stemplanetoids_language: Português (Brasil)
-  tutorial_stempong_language: Português (Brasil)
-  tutorial_algobot_language: Português (Brasil)
-  tutorial_thunkableapps_language: Português (Brasil)
-  tutorial_toxicodedot_language: English, French, German, Indonesian, Italian, Portuguese,
-    Romanian, Spanish, Turkish
-  tutorial_gcactions_language: Português (Brasil)
-  tutorial_gccomparators_language: Português (Brasil)
-  tutorial_gcconditions_language: Português (Brasil)
-  tutorial_gccreate_language: Inglês, Francês
-  tutorial_gcevents_language: Português (Brasil)
-  tutorial_gcloops_language: Português (Brasil)
-  tutorial_gcvariables_language: Português (Brasil)
-  tutorial_beanything_language: Português (Brasil)
-  tutorial_change_language: Português (Brasil)
-  tutorial_cooking_language: Português (Brasil)
-  tutorial_crystal_language: Português (Brasil)
-  tutorial_landscape_language: Português (Brasil)
-  tutorial_pets_language: Português (Brasil)
-  tutorial_petvet_language: Português (Brasil)
-  tutorial_superhero_language: Português (Brasil)
-  tutorial_vidcodeplastic_language: Português (Brasil)
-  tutorial_vidcodetypeface_language: Português (Brasil)
-  tutorial_washustorm_language: Português (Brasil)
-  tutorial_activitypackets_language: Português (Brasil)
-  tutorial_googlerookie_language: Português (Brasil)
-  tutorial_tommyturtle_language: Português (Brasil)
-  tutorial_mazyad_language: Arabic, English
-  tutorial_gamemaker_language: Português (Brasil)
-  tutorial_duckrace_language: Inglês, Alemão
-  tutorial_allcancodeapps_language: Português (Brasil)
-  tutorial_n2y_language: Português (Brasil)
-  tutorial_microsoftarcade_language: Português (Brasil)
-  tutorial_csfirstunplugged_language: Inglês, Espanhol (México)
-  tutorial_toxicodepython_language: dinamarquês, holandês, inglês, inglês (Reino Unido),
-    estoniano, francês, alemão, indonésio, italiano, outro, polonês, português (Brasil),
-    português (Portugal), romeno, espanhol (Espanha), espanhol (México ), sueco, turco
-  tutorial_codecombatozaria_language: English, English (UK), Chinese (Simplified),
-    Spanish (Spain), Spanish (Mexico)
-  tutorial_vidcodedate_language: Português (Brasil)
-  tutorial_codemonkeyspace_language: English, English (UK), Hebrew
-  tutorial_codespeakhappy_language: Português (Brasil)
-  tutorial_grokimage_language: English, English (UK)
-  tutorial_icomputelearn_language: Português (Brasil)
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
-  tutorial_bsdcause_language: Português (Brasil)
-  tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_bsdinspire_language: Português (Brasil)
-  tutorial_tttractor_language: Português (Brasil)
-  tutorial_codeillusionmickey_language: Português (Brasil)
-  tutorial_scigirlsquest_language: Português (Brasil)
-  tutorial_codespeakbreathe_language: Português (Brasil)
-  tutorial_vidcodeface_language: Português (Brasil)
-  tutorial_educodemaze_language: English, English (UK)
-  tutorial_educoderace_language: English, English (UK)
-  tutorial_codespeakchatbot_language: Português (Brasil)
-  tutorial_gamefrootgames_language: Português (Brasil)
-  tutorial_codespeakgrandparent_language: Português (Brasil)
-  tutorial_educodekingdom_language: English, English (UK)
-  tutorial_codehsdata_language: Português (Brasil)
-  tutorial_educodecake_language: English, English (UK)
-  tutorial_ttsecond_language: Português (Brasil)
-  tutorial_bsdtrivia_language: Português (Brasil)
-  tutorial_csfirstdialogue_language: Inglês, Espanhol (México)
-  tutorial_codemonkeybeaver_language: Arabic, Chinese (Simplified), English, Hebrew,
-    Japanese, Spanish (Spain), Spanish (Mexico)
-  tutorial_codestersdistance_language: Português (Brasil)
-  tutorial_itchspace_language: Português (Brasil)
-  tutorial_vidcodemagic_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_vidcodemagices_language: English, Spanish (Spain), Spanish (Mexico)
-  tutorial_codespeakmeal_language: Português (Brasil)
-  tutorial_itchfish_language: Português (Brasil)
-  tutorial_bsdwebsite_language: Português (Brasil)
-  tutorial_codespeaktime_language: Português (Brasil)
-  tutorial_itchwebcam_language: Português (Brasil)
-  tutorial_itchball_language: Português (Brasil)
-  tutorial_ttrace_language: Português (Brasil)
-  tutorial_plethora_language: Arabic, Chinese (Simplified), English, French, Hebrew,
-    Portuguese (Brazil), Spanish
-  tutorial_educodesecret_language: English, English (UK)
-  tutorial_itchshapes_language: Português (Brasil)
-  tutorial_codeguppytext_language: Português (Brasil)
-  tutorial_vidcodeplastiche_language: Inglês, Hebraico
-  tutorial_educativechatbot_language: Português (Brasil)
-  tutorial_educodebasics_language: English, English (UK)
-  tutorial_codehsdesign_language: Português (Brasil)
-  tutorial_htmlacademyphp_language: Português (Brasil)
-  tutorial_gamefrootdistance_language: Português (Brasil)
-  tutorial_codesterscovid_language: Português (Brasil)
-  tutorial_ttbunker_language: Português (Brasil)
-  tutorial_cuttle_language: Português (Brasil)
-  tutorial_bsdjokes_language: Português (Brasil)
-  tutorial_rptree_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
-  tutorial_codestersunity_language: Português (Brasil)
-  tutorial_codesterssoccer_language: Português (Brasil)
-  tutorial_breakoutlock_language: Português (Brasil)
-  tutorial_thunkablemask_language: Português (Brasil)
-  tutorial_cafarming_language: Português (Brasil)
-  tutorial_blocksmithyeti_language: Português (Brasil)
-  tutorial_codecapture_language: English, English (UK)
-  tutorial_codehslitter_language: English, English (UK)
-  tutorial_bsdocean_language: Português (Brasil)
-  tutorial_itchplatformer_language: Português (Brasil)
-  tutorial_codejika_language: English, English (UK)
-  tutorial_gamefrootclicker_language: Português (Brasil)
-  tutorial_rmagicequity_language: English, English (UK)
-  tutorial_ttfreestyle_language: Português (Brasil)
-  tutorial_ozobotcolor2_language: Português (Brasil)
-  tutorial_ozobotcolor3_language: Português (Brasil)
-  tutorial_clcarbon_language: English, English (UK)
-  tutorial_kodablebasics_language: Português (Brasil)
-  tutorial_scigirlscc_language: Inglês, Espanhol (México)
-  tutorial_irobotpicture_language: Português (Brasil)
-  tutorial_kcjmyself_language: Inglês, Francês
-  tutorial_nearpodalgorithms_language: Português (Brasil)
-  tutorial_kibodrop_language: English, English (UK)
-  tutorial_ozobotcolor1_language: Português (Brasil)
-  tutorial_scigirlspixels_language: Inglês, Espanhol (México)
-  tutorial_kcjheroines_language: Inglês, Francês
-  tutorial_ozobotvalue_language: Português (Brasil)
-  tutorial_icodebytes_language: Português (Brasil)
-  tutorial_clfashion2_language: English, English (UK)
-  tutorial_ai4all_language: Português (Brasil)
-  tutorial_cldata_language: English, English (UK)
-  tutorial_spheroinputs_language: Português (Brasil)
-  tutorial_edisoncount_language: Português (Brasil)
-  tutorial_spheroloops_language: Português (Brasil)
-  tutorial_kiboprogram_language: English, English (UK)
-  tutorial_hellorubycsin60_language: English, English (UK)
-  tutorial_clfashion1_language: English, English (UK)
-  tutorial_irobottraffic_language: Português (Brasil)
-  tutorial_edisonmystery_language: Português (Brasil)
-  tutorial_microbitseaturtles_language: English, English (UK)
-  tutorial_ozobotknow_language: Português (Brasil)
-  tutorial_imagilabs_language: English, English (UK)
-  tutorial_irobotsimulator_language: Português (Brasil)
-  tutorial_irobotkind_language: English, English (UK)
-  tutorial_firiavirtual_language: English, English (UK)
-  tutorial_irobotguesscode_language: Português (Brasil)
-  tutorial_ozobotnouns_language: Português (Brasil)
-  tutorial_nasa3d_language: Português (Brasil)
-  tutorial_blupants_language: Português (Brasil)
-  tutorial_legodance_language: Português (Brasil)
-  tutorial_nearpodcoding_language: Português (Brasil)
-  tutorial_kcjplastic_language: Inglês, Francês
-  tutorial_legojourney_language: Português (Brasil)
-  tutorial_legohopper_language: Português (Brasil)
-  tutorial_catrobatembroidery_language: Árabe, bengali, bósnio, chinês simplificado,
-    croata, tcheco, inglês, inglês (RU), francês, alemão, hindi, indonésio, italiano,
-    japonês, coreano, norueguês (nynorsk), outro, polonês, português (Brasil), português
-    ( Portugal), russo, sérvio (cirílico), sérvio (latino), eslovaco, espanhol (Espanha,
-    México), suaíli, sueco, tâmil, tailandês, turco, urdu (Paquistão), vietnamita
-  tutorial_irobotphone_language: English, English (UK)
-  tutorial_codeguppydraw_language: English, English (UK)
-  tutorial_codejumper_language: Português (Brasil)
-  tutorial_meeempathy_language: Português (Brasil)
   tutorial_dance2019_string_detail_grades: A partir do 2º ano
   tutorial_danceparty_string_detail_grades: A partir do 2º ano
   tutorial_chibitronics_string_detail_grades: Crianças que estão aprendendo a ler
@@ -6661,7 +5920,7 @@ pt:
   tutorial_athlete_string_detail_grades: A partir do 2º ano
   tutorial_moana_string_detail_grades: A partir do 2º ano
   tutorial_star-wars_string_detail_grades: A partir do 2º ano
-  tutorial_gumadventure_string_detail_grades: Do 6º ao 8º ano
+  tutorial_gumadventure_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_mchoc_string_detail_grades: A partir do 2º ano
   tutorial_vidnews_string_detail_grades: A partir do 6º ano
   tutorial_kodable-pre_string_detail_grades: Crianças que estão aprendendo a ler até
@@ -6700,7 +5959,7 @@ pt:
   tutorial_art_string_detail_grades: A partir do 2º ano
   tutorial_tynkerbrick_string_detail_grades: A partir do 2º ano
   tutorial_itchbio_string_detail_grades: A partir do 6º ano
-  tutorial_itchj_string_detail_grades: Do 6º ao 8º ano
+  tutorial_itchj_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_tickleo_string_detail_grades: A partir do 2º ano
   tutorial_hopgeo_string_detail_grades: Do 2º ao 8º ano
   tutorial_tynkermult_string_detail_grades: Do 2º ao 8º ano
@@ -6731,7 +5990,7 @@ pt:
   tutorial_trinket_string_detail_grades: A partir do 2º ano
   tutorial_frogger_string_detail_grades: A partir do 6º ano
   tutorial_tynkereco_string_detail_grades: Do 2º ao 8º ano
-  tutorial_mitedarc_string_detail_grades: Do 6º ao 8º ano
+  tutorial_mitedarc_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_khan_string_detail_grades: A partir do 6º ano
   tutorial_tynkerd_string_detail_grades: A partir do 6º ano
   tutorial_cdmy_string_detail_grades: A partir do 9º ano
@@ -6745,7 +6004,7 @@ pt:
   tutorial_capost_string_detail_grades: A partir do 6º ano
   tutorial_marco_string_detail_grades: Do 2º ao 8º ano
   tutorial_codestersflappybike_string_detail_grades: A partir do 6º ano
-  tutorial_kanopong_string_detail_grades: Do 6º ao 8º ano
+  tutorial_kanopong_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_tynkerright_string_detail_grades: Do 2º ao 8º ano
   tutorial_touchdevelop_string_detail_grades: não exibir
   tutorial_tynkercc_string_detail_grades: A partir do 6º ano
@@ -6753,26 +6012,26 @@ pt:
     ano
   tutorial_robojav_string_detail_grades: A partir do 6º ano
   tutorial_roboba_string_detail_grades: A partir do 6º ano
-  tutorial_knodsnake_string_detail_grades: Do 6º ao 8º ano
+  tutorial_knodsnake_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_soccharater_string_detail_grades: A partir do 6º ano
   tutorial_silent_string_detail_grades: A partir do 6º ano
   tutorial_robomesh_string_detail_grades: A partir do 2º ano
   tutorial_amaze_string_detail_grades: A partir do 2º ano
   tutorial_codestersds_string_detail_grades: A partir do 2º ano
-  tutorial_knodtext_string_detail_grades: Do 6º ao 8º ano
+  tutorial_knodtext_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_alicegar_string_detail_grades: A partir do 6º ano
   tutorial_codesterstransform_string_detail_grades: A partir do 6º ano
   tutorial_flexfrog_string_detail_grades: A partir do 6º ano
   tutorial_codemoji_string_detail_grades: não exibir
   tutorial_robobii_string_detail_grades: A partir do 6º ano
-  tutorial_robobm_string_detail_grades: Do 6º ao 8º ano
+  tutorial_robobm_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_codingrobots_string_detail_grades: A partir do 2º ano
   tutorial_robob_string_detail_grades: A partir do 6º ano
   tutorial_coders_string_detail_grades: A partir do 9º ano
   tutorial_tynkerhw_string_detail_grades: Do 2º ao 8º ano
   tutorial_tynkermh_string_detail_grades: Do 2º ao 8º ano
   tutorial_caphoto_string_detail_grades: A partir do 6º ano
-  tutorial_mozillahw_string_detail_grades: Do 6º ao 8º ano
+  tutorial_mozillahw_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_ticklep_string_detail_grades: não exibir
   tutorial_bbot_string_detail_grades: A partir do 2º ano
   tutorial_scratchg_string_detail_grades: A partir do 6º ano
@@ -6815,22 +6074,22 @@ pt:
   tutorial_bbcphys_string_detail_grades: não exibir
   tutorial_bitsbox_string_detail_grades: Do 2º ao 8º ano
   tutorial_tlcemo_string_detail_grades: Do 2º ao 8º ano
-  tutorial_crd_string_detail_grades: Do 6º ao 8º ano
+  tutorial_crd_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_bbcbio_string_detail_grades: não exibir
   tutorial_ticklebb8_string_detail_grades: A partir do 2º ano
   tutorial_grok_string_detail_grades: não exibir
   tutorial_ijournalist_string_detail_grades: Do 2º ao 8º ano
   tutorial_bbcmusic_string_detail_grades: não exibir
-  tutorial_secretcodes_string_detail_grades: Do 6º ao 8º ano
+  tutorial_secretcodes_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_tlchex_string_detail_grades: A partir do 6º ano
   tutorial_tickles_string_detail_grades: A partir do 2º ano
   tutorial_ozogame_string_detail_grades: Todas as idades
   tutorial_vidcodeio_string_detail_grades: A partir do 2º ano
   tutorial_tlcbrain_string_detail_grades: A partir do 6º ano
-  tutorial_hopquiz_string_detail_grades: Do 6º ao 8º ano
+  tutorial_hopquiz_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_unfortunate_string_detail_grades: Crianças que estão aprendendo a ler até
     5º ano
-  tutorial_cha_string_detail_grades: Do 6º ao 8º ano
+  tutorial_cha_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_elaseq_string_detail_grades: Crianças que estão aprendendo a ler até 5º
     ano
   tutorial_bbcmathi_string_detail_grades: não exibir
@@ -6981,8 +6240,8 @@ pt:
   tutorial_gfbloons_string_detail_grades: A partir do 9º ano
   tutorial_raspipong_string_detail_grades: A partir do 9º ano
   tutorial_codehsvr_string_detail_grades: A partir do 6º ano
-  tutorial_codesterstp_string_detail_grades: Do 6º ao 8º ano
-  tutorial_codestersbb_string_detail_grades: Do 6º ao 8º ano
+  tutorial_codesterstp_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_codestersbb_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_gfcrossyroad_string_detail_grades: A partir do 9º ano
   tutorial_googleww_string_detail_grades: A partir do 9º ano
   tutorial_codehsjsapp_string_detail_grades: A partir do 6º ano
@@ -6995,8 +6254,8 @@ pt:
   tutorial_switchglitch_string_detail_grades: Crianças que estão aprendendo a ler
     até 5º ano
   tutorial_codecar_string_detail_grades: A partir do 6º ano
-  tutorial_codesterscp_string_detail_grades: Do 6º ao 8º ano
-  tutorial_grokpetblock_string_detail_grades: Do 6º ao 8º ano
+  tutorial_codesterscp_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_grokpetblock_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_techbim_string_detail_grades: Universidade
   tutorial_techfpp_string_detail_grades: Universidade
   tutorial_codesterscr_string_detail_grades: Do 2º ao 8º ano
@@ -7031,7 +6290,7 @@ pt:
   tutorial_quorumastro_string_detail_grades: A partir do 6º ano
   tutorial_alicewonder_string_detail_grades: Crianças que estão aprendendo a ler até
     5º ano
-  tutorial_rginter_string_detail_grades: Do 6º ao 8º ano
+  tutorial_rginter_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_cssgrid_string_detail_grades: A partir do 6º ano
   tutorial_jshero_string_detail_grades: A partir do 9º ano
   tutorial_codemojipy_string_detail_grades: Crianças que estão aprendendo a ler até
@@ -7040,7 +6299,7 @@ pt:
   tutorial_gpbcircle_string_detail_grades: A partir do 6º ano
   tutorial_gpbpaint_string_detail_grades: A partir do 6º ano
   tutorial_cocomarcade_string_detail_grades: A partir do 6º ano
-  tutorial_beetik_string_detail_grades: Do 6º ao 8º ano
+  tutorial_beetik_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_codedj_string_detail_grades: A partir do 6º ano
   tutorial_rgadvan_string_detail_grades: A partir do 6º ano
   tutorial_codehsrn_string_detail_grades: A partir do 9º ano
@@ -7081,7 +6340,7 @@ pt:
   tutorial_kodpizza_string_detail_grades: Crianças que estão aprendendo a ler até
     5º ano
   tutorial_kodwomen_string_detail_grades: Do 2º ao 8º ano
-  tutorial_tfunplug_string_detail_grades: Do 6º ao 8º ano
+  tutorial_tfunplug_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_lbvariables_string_detail_grades: Do 2º ao 8º ano
   tutorial_lbfunctions_string_detail_grades: Do 2º ao 8º ano
   tutorial_lblogic_string_detail_grades: A partir do 2º ano
@@ -7108,9 +6367,9 @@ pt:
   tutorial_legodetect_string_detail_grades: A partir do 6º ano
   tutorial_legolight_string_detail_grades: A partir do 6º ano
   tutorial_alexa_string_detail_grades: A partir do 9º ano
-  tutorial_grokpetmicro_string_detail_grades: Do 6º ao 8º ano
+  tutorial_grokpetmicro_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_pirateplunder_string_detail_grades: Do 2º ao 8º ano
-  tutorial_cadj_string_detail_grades: Do 6º ao 8º ano
+  tutorial_cadj_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_cacrazy_string_detail_grades: Do 2º ao 8º ano
   tutorial_cajump_string_detail_grades: Do 2º ao 8º ano
   tutorial_carest_string_detail_grades: Do 2º ao 8º ano
@@ -7143,8 +6402,8 @@ pt:
   tutorial_blockscaddinner_string_detail_grades: Crianças que estão aprendendo a ler
     até 5º ano
   tutorial_blockscadicecream_string_detail_grades: A partir do 6º ano
-  tutorial_blockscadpizza_string_detail_grades: Do 6º ao 8º ano
-  tutorial_blockscadsugar_string_detail_grades: Do 6º ao 8º ano
+  tutorial_blockscadpizza_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_blockscadsugar_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_bsgridlight_string_detail_grades: A partir do 2º ano
   tutorial_bpartscratch_string_detail_grades: A partir do 6º ano
   tutorial_bpartvid_string_detail_grades: A partir do 6º ano
@@ -7156,13 +6415,13 @@ pt:
     até 5º ano
   tutorial_bpmathvid_string_detail_grades: A partir do 6º ano
   tutorial_bpmlkscratch_string_detail_grades: Do 2º ao 8º ano
-  tutorial_bpmlkvid_string_detail_grades: Do 6º ao 8º ano
+  tutorial_bpmlkvid_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_bpsafetyscratch_string_detail_grades: Crianças que estão aprendendo a ler
     até 5º ano
-  tutorial_bpsafetyvid_string_detail_grades: Do 6º ao 8º ano
+  tutorial_bpsafetyvid_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_bpsciencescratch_string_detail_grades: Crianças que estão aprendendo a
     ler até 5º ano
-  tutorial_bpsciencevid_string_detail_grades: Do 6º ao 8º ano
+  tutorial_bpsciencevid_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_bptechscratch_string_detail_grades: A partir do 6º ano
   tutorial_bptechvid_string_detail_grades: A partir do 6º ano
   tutorial_caflags_string_detail_grades: A partir do 6º ano
@@ -7193,7 +6452,7 @@ pt:
     até 5º ano
   tutorial_hardvsoft_string_detail_grades: Crianças que estão aprendendo a ler até
     5º ano
-  tutorial_codestersecard_string_detail_grades: Do 6º ao 8º ano
+  tutorial_codestersecard_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_codesterslogo_string_detail_grades: A partir do 6º ano
   tutorial_codesterstshirt_string_detail_grades: A partir do 6º ano
   tutorial_codewards_string_detail_grades: Do 2º ao 8º ano
@@ -7243,7 +6502,7 @@ pt:
   tutorial_talktome_string_detail_grades: A partir do 6º ano
   tutorial_mobilecspmap_string_detail_grades: A partir do 6º ano
   tutorial_ozorandom_string_detail_grades: A partir do 2º ano
-  tutorial_ozotroll_string_detail_grades: Do 6º ao 8º ano
+  tutorial_ozotroll_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_peblioart_string_detail_grades: A partir do 9º ano
   tutorial_astropi_string_detail_grades: A partir do 6º ano
   tutorial_rgart_string_detail_grades: Crianças que estão aprendendo a ler até 5º
@@ -7268,7 +6527,7 @@ pt:
   tutorial_spherocommunity_string_detail_grades: Crianças que estão aprendendo a ler
     até 5º ano
   tutorial_spherofunctions_string_detail_grades: A partir do 6º ano
-  tutorial_spheroinfrared_string_detail_grades: Do 6º ao 8º ano
+  tutorial_spheroinfrared_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_spherolightsensor_string_detail_grades: Do 2º ao 8º ano
   tutorial_spheromansion_string_detail_grades: Do 2º ao 8º ano
   tutorial_roadblocks_string_detail_grades: Do 2º ao 8º ano
@@ -7319,7 +6578,7 @@ pt:
   tutorial_microsoftarcade_string_detail_grades: A partir do 2º ano
   tutorial_csfirstunplugged_string_detail_grades: Do 2º ao 8º ano
   tutorial_toxicodepython_string_detail_grades: A partir do 6º ano
-  tutorial_codecombatozaria_string_detail_grades: A partir do 6º ano
+  tutorial_codecombatozaria_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_vidcodedate_string_detail_grades: A partir do 6º ano
   tutorial_codemonkeyspace_string_detail_grades: Do 2º ao 8º ano
   tutorial_codespeakhappy_string_detail_grades: Do 2º ao 8º ano
@@ -7359,11 +6618,11 @@ pt:
   tutorial_codespeaktime_string_detail_grades: Do 2º ao 8º ano
   tutorial_itchwebcam_string_detail_grades: A partir do 6º ano
   tutorial_itchball_string_detail_grades: Do 2º ao 8º ano
-  tutorial_ttrace_string_detail_grades: Do 6º ao 8º ano
+  tutorial_ttrace_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_plethora_string_detail_grades: A partir do 2º ano
   tutorial_educodesecret_string_detail_grades: A partir do 6º ano
   tutorial_itchshapes_string_detail_grades: A partir do 6º ano
-  tutorial_codeguppytext_string_detail_grades: Do 6º ao 8º ano
+  tutorial_codeguppytext_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_vidcodeplastiche_string_detail_grades: A partir do 6º ano
   tutorial_educativechatbot_string_detail_grades: A partir do 9º ano
   tutorial_educodebasics_string_detail_grades: A partir do 6º ano
@@ -7371,9 +6630,9 @@ pt:
   tutorial_htmlacademyphp_string_detail_grades: A partir do 6º ano
   tutorial_gamefrootdistance_string_detail_grades: A partir do 2º ano
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
-  tutorial_ttbunker_string_detail_grades: Do 6º ao 8º ano
+  tutorial_ttbunker_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_cuttle_string_detail_grades: A partir do 6º ano
-  tutorial_bsdjokes_string_detail_grades: Do 6º ao 8º ano
+  tutorial_bsdjokes_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_rptree_string_detail_grades: A partir do 6º ano
   tutorial_codestersunity_string_detail_grades: A partir do 6º ano
   tutorial_codesterssoccer_string_detail_grades: A partir do 6º ano
@@ -7382,13 +6641,13 @@ pt:
   tutorial_cafarming_string_detail_grades: Do 2º ao 8º ano
   tutorial_blocksmithyeti_string_detail_grades: A partir do 9º ano
   tutorial_codecapture_string_detail_grades: A partir do 6º ano
-  tutorial_codehslitter_string_detail_grades: Do 6º ao 8º ano
-  tutorial_bsdocean_string_detail_grades: Do 6º ao 8º ano
+  tutorial_codehslitter_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_bsdocean_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_itchplatformer_string_detail_grades: A partir do 6º ano
   tutorial_codejika_string_detail_grades: A partir do 6º ano
-  tutorial_gamefrootclicker_string_detail_grades: Do 6º ao 8º ano
-  tutorial_rmagicequity_string_detail_grades: Do 6º ao 8º ano
-  tutorial_ttfreestyle_string_detail_grades: Do 6º ao 8º ano
+  tutorial_gamefrootclicker_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_rmagicequity_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_ttfreestyle_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_ozobotcolor2_string_detail_grades: A partir do 2º ano
   tutorial_ozobotcolor3_string_detail_grades: A partir do 2º ano
   tutorial_clcarbon_string_detail_grades: A partir do 6º ano
@@ -7420,8 +6679,8 @@ pt:
   tutorial_clfashion1_string_detail_grades: A partir do 6º ano
   tutorial_irobottraffic_string_detail_grades: Crianças que estão aprendendo a ler
     até 5º ano
-  tutorial_edisonmystery_string_detail_grades: Do 6º ao 8º ano
-  tutorial_microbitseaturtles_string_detail_grades: Do 6º ao 8º ano
+  tutorial_edisonmystery_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_microbitseaturtles_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_ozobotknow_string_detail_grades: A partir do 2º ano
   tutorial_imagilabs_string_detail_grades: Do 2º ao 8º ano
   tutorial_irobotsimulator_string_detail_grades: Do 2º ao 8º ano
@@ -7433,14 +6692,14 @@ pt:
     5º ano
   tutorial_nasa3d_string_detail_grades: A partir do 6º ano
   tutorial_blupants_string_detail_grades: A partir do 6º ano
-  tutorial_legodance_string_detail_grades: Do 6º ao 8º ano
+  tutorial_legodance_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_nearpodcoding_string_detail_grades: A partir do 9º ano
   tutorial_kcjplastic_string_detail_grades: A partir do 2º ano
   tutorial_legojourney_string_detail_grades: Do 2º ao 8º ano
   tutorial_legohopper_string_detail_grades: Do 2º ao 8º ano
   tutorial_catrobatembroidery_string_detail_grades: A partir do 6º ano
   tutorial_irobotphone_string_detail_grades: Do 2º ao 8º ano
-  tutorial_codeguppydraw_string_detail_grades: Do 6º ao 8º ano
+  tutorial_codeguppydraw_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_codejumper_string_detail_grades: Do 2º ao 8º ano
   tutorial_meeempathy_string_detail_grades: A partir do 2º ano
   tutorial_dance2019_string_platforms: Todos os navegadores modernos, tablet Android,
@@ -8208,7 +7467,8 @@ pt:
   tutorial_grokimage_string_platforms: Todos os navegadores modernos, tablet Android,
     iPad
   tutorial_icomputelearn_string_platforms: Todos os navegadores modernos
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: Todos os navegadores modernos, tablet Android,
+    iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: Todos os navegadores modernos, tablet
     Android, iPad
@@ -10203,106 +9463,6 @@ pt:
   tutorial_ai-oceans_longdescription: Computer science is about so much more than
     coding! Learn about AI, machine learning, training data, and bias, while exploring
     ethical issues and how AI can be used to address world problems.
-  tutorial_scratchimagine_language: Somente inglês
-  tutorial_codesterspsa_language: Português (Brasil)
-  tutorial_googlehero_language: Somente inglês
-  tutorial_codestersbball_language: Português (Brasil)
-  tutorial_scratchcartoon_language: Somente inglês
-  tutorial_codemonkeyjr_language: Português (Brasil)
-  tutorial_bananatales_language: Português (Brasil)
-  tutorial_scratchtales_language: Somente inglês
-  tutorial_msemoji_language: Português (Brasil)
-  tutorial_cacolor_language: Português (Brasil)
-  tutorial_kodablebeach_language: English, Other
-  tutorial_tynkeren_language: Português (Brasil)
-  tutorial_tynkerjavapro_language: Português (Brasil)
-  tutorial_grasshopperhack_language: Português (Brasil)
-  tutorial_pbskids_language: Somente inglês
-  tutorial_nclabdata_language: Português (Brasil)
-  tutorial_grasshopperphoto_language: Português (Brasil)
-  tutorial_tynkerpyland_language: Português (Brasil)
-  tutorial_codeitimages_language: Inglês, Alemão
-  tutorial_hyperpadenemy_language: Português (Brasil)
-  tutorial_tynkerpro_language: Português (Brasil)
-  tutorial_trashtag_language: Português (Brasil)
-  tutorial_casiege_language: Português (Brasil)
-  tutorial_thunkableyeet_language: Português (Brasil)
-  tutorial_vidcodedeal_language: Português (Brasil)
-  tutorial_codehsgeno_language: Português (Brasil)
-  tutorial_hyperpadpong_language: Português (Brasil)
-  tutorial_tynkerland_language: Português (Brasil)
-  tutorial_trinketgirl_language: Português (Brasil)
-  tutorial_rpimosquito_language: Português (Brasil)
-  tutorial_tynkermars_language: Português (Brasil)
-  tutorial_cityx_language: Chinese (Traditional), English
-  tutorial_vidcodemap_language: Português (Brasil)
-  tutorial_robotmagicfarm_language: Português (Brasil)
-  tutorial_codehstriangle_language: Português (Brasil)
-  tutorial_ttwhitehouse_language: Português (Brasil)
-  tutorial_modulo_language: Português (Brasil)
-  tutorial_codingtown_language: Português (Brasil)
-  tutorial_kanoart_language: Português (Brasil)
-  tutorial_dragonscript_language: Português (Brasil)
-  tutorial_uwcloud_language: Português (Brasil)
-  tutorial_htmlmuffin_language: Português (Brasil)
-  tutorial_microsoftpizza_language: Português (Brasil)
-  tutorial_stemc_blckhole_language: Português (Brasil)
-  tutorial_careconfigure_language: Português (Brasil)
-  tutorial_rpiscratch_language: Português (Brasil)
-  tutorial_ozaria_language: Somente inglês
-  tutorial_ttovum_language: Português (Brasil)
-  tutorial_ttpassage_language: Português (Brasil)
-  tutorial_tynkerhtmlen_language: Português (Brasil)
-  tutorial_ttfrog_language: Português (Brasil)
-  tutorial_codemojijava_language: Português (Brasil)
-  tutorial_ccfirewall_language: Português (Brasil)
-  tutorial_htmljs_language: Português (Brasil)
-  tutorial_ttaqueducts_language: Português (Brasil)
-  tutorial_vtgame_language: Português (Brasil)
-  tutorial_baroborav_language: Português (Brasil)
-  tutorial_baroboobstacle_language: Português (Brasil)
-  tutorial_pbstorytelling_language: Português (Brasil)
-  tutorial_kibosnow_language: Português (Brasil)
-  tutorial_kibohappy_language: Português (Brasil)
-  tutorial_rubylove_language: Português (Brasil)
-  tutorial_spherosmiles_language: Português (Brasil)
-  tutorial_spherobaby_language: Português (Brasil)
-  tutorial_toxarchitect_language: Português (Brasil)
-  tutorial_idodge_language: Português (Brasil)
-  tutorial_firiacodebot_language: Português (Brasil)
-  tutorial_modlighthouse_language: Português (Brasil)
-  tutorial_spherogreen_language: Português (Brasil)
-  tutorial_ozopopstar_language: Português (Brasil)
-  tutorial_eddesign_language: Português (Brasil)
-  tutorial_edshapeup_language: Português (Brasil)
-  tutorial_ozocolor_language: Português (Brasil)
-  tutorial_icomputeeggs_language: Português (Brasil)
-  tutorial_rootunplugged_language: Português (Brasil)
-  tutorial_rgtreasure_language: Português (Brasil)
-  tutorial_peblioportraits_language: Português (Brasil)
-  tutorial_rootcodebreak_language: Português (Brasil)
-  tutorial_microbit14_language: Português (Brasil)
-  tutorial_barobomoon_language: Português (Brasil)
-  tutorial_eddog_language: Português (Brasil)
-  tutorial_microbit15_language: Português (Brasil)
-  tutorial_unity_language: Português (Brasil)
-  tutorial_blockscadtarget_language: Português (Brasil)
-  tutorial_tcadicicles_language: Português (Brasil)
-  tutorial_blockscadscale_language: Português (Brasil)
-  tutorial_tcadloops_language: Português (Brasil)
-  tutorial_phidgets_language: Português (Brasil)
-  tutorial_modvariables_language: Português (Brasil)
-  tutorial_codestersmicro_language: Português (Brasil)
-  tutorial_codestersdata_language: Português (Brasil)
-  tutorial_ikodexmas_language: Português (Brasil)
-  tutorial_rpisensehat_language: Português (Brasil)
-  tutorial_mee_language: Inglês (Estados Unidos), Inglês (Reino Unido), Alemão, Espanhol
-    (Espanha), Espanhol (México), Francês (França), Francês (Canadá), italiano, japonês,
-    coreano, português (Brasil), Português (Portugal), Russo, Chinês (Simplificado),
-    Chinês (Tradicional), Turco, Polonês, indonésio, ucraniano, grego, búlgaro, húngaro,
-    finlandês, dinamarquês, sueco, norueguês, eslovaco, checo, holandês
-  tutorial_kuborobo_language: Somente inglês
-  tutorial_ai-oceans_language: Português (Brasil)
   tutorial_scratchimagine_string_detail_grades: A partir do 2º ano
   tutorial_codesterspsa_string_detail_grades: A partir do 6º ano
   tutorial_googlehero_string_detail_grades: Do 2º ao 8º ano
@@ -10334,7 +9494,7 @@ pt:
   tutorial_hyperpadpong_string_detail_grades: A partir do 9º ano
   tutorial_tynkerland_string_detail_grades: Do 2º ao 8º ano
   tutorial_trinketgirl_string_detail_grades: A partir do 6º ano
-  tutorial_rpimosquito_string_detail_grades: Do 6º ao 8º ano
+  tutorial_rpimosquito_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_tynkermars_string_detail_grades: A partir do 6º ano
   tutorial_cityx_string_detail_grades: A partir do 6º ano
   tutorial_vidcodemap_string_detail_grades: A partir do 6º ano
@@ -10348,8 +9508,8 @@ pt:
     ano
   tutorial_dragonscript_string_detail_grades: A partir do 9º ano
   tutorial_uwcloud_string_detail_grades: A partir do 2º ano
-  tutorial_htmlmuffin_string_detail_grades: Do 6º ao 8º ano
-  tutorial_microsoftpizza_string_detail_grades: Do 6º ao 8º ano
+  tutorial_htmlmuffin_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_microsoftpizza_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_stemc_blckhole_string_detail_grades: A partir do 9º ano
   tutorial_careconfigure_string_detail_grades: A partir do 6º ano
   tutorial_rpiscratch_string_detail_grades: Crianças que estão aprendendo a ler até
@@ -10359,10 +9519,10 @@ pt:
   tutorial_ttpassage_string_detail_grades: Do 2º ao 8º ano
   tutorial_tynkerhtmlen_string_detail_grades: A partir do 2º ano
   tutorial_ttfrog_string_detail_grades: Do 2º ao 8º ano
-  tutorial_codemojijava_string_detail_grades: Do 6º ao 8º ano
+  tutorial_codemojijava_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_ccfirewall_string_detail_grades: A partir do 6º ano
-  tutorial_htmljs_string_detail_grades: Do 6º ao 8º ano
-  tutorial_ttaqueducts_string_detail_grades: Do 6º ao 8º ano
+  tutorial_htmljs_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_ttaqueducts_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_vtgame_string_detail_grades: A partir do 6º ano
   tutorial_baroborav_string_detail_grades: A partir do 6º ano
   tutorial_baroboobstacle_string_detail_grades: A partir do 2º ano
@@ -10403,8 +9563,8 @@ pt:
   tutorial_tcadloops_string_detail_grades: Do 6º ao 8º ano
   tutorial_phidgets_string_detail_grades: A partir do 9º ano
   tutorial_modvariables_string_detail_grades: A partir do 6º ano
-  tutorial_codestersmicro_string_detail_grades: Do 6º ao 8º ano
-  tutorial_codestersdata_string_detail_grades: Do 6º ao 8º ano
+  tutorial_codestersmicro_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_codestersdata_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
   tutorial_ikodexmas_string_detail_grades: Crianças que estão aprendendo a ler até
     5º ano
   tutorial_rpisensehat_string_detail_grades: A partir do 6º ano
@@ -10738,6 +9898,941 @@ pt:
   tutorial_kuborobo_string_detail_programming_languages: Tagtiles that students piece
     together
   tutorial_ai-oceans_string_detail_programming_languages: AI and Machine Learning
+  tutorial_hello_name: Hello World
+  tutorial_raspispace_name: 'Space Talk: Launch into Scratch coding'
+  tutorial_codemonkeyjump_name: 'Blocks Jumper: Game Creation'
+  tutorial_poemart_name: Poem Art
+  tutorial_kodablehero_name: Design your Hero
+  tutorial_cacloud_name: Operation Cloud
+  tutorial_blocksmithbot_name: Bot is sus?!
+  tutorial_hatchmario_name: 'Mario''s Secret Adventure: Build Your Own 3D Mario Game'
+  tutorial_microsoftforest_name: Save the Forest!
+  tutorial_blackbirdscreen_name: Screen Saver
+  tutorial_toxicodecompute2_name: Descubra Python com Compute it
+  tutorial_minecrafttimecraft_name: Minecraft Timecraft
+  tutorial_blackbirdtether_name: Tetherball
+  tutorial_ob_name: Outbreak Simulator
+  tutorial_codeartportrait_name: Code Your Self-Portrait
+  tutorial_shelly_name: 'Shelly: Learn programming by drawing!'
+  tutorial_weavly_name: 'Weavly: Activities at Home'
+  tutorial_codespeakpassword_name: Program a Strong Password Generator in Python
+  tutorial_kodableshapes_name: Make Shapes with Code
+  tutorial_nasabinary_name: 'Binary Code: How to Talk to a Spacecraft'
+  tutorial_3dmaker_name: 3D Maker
+  tutorial_itchstart_name: 'iTCHcode: Scratch 5 Block Starter'
+  tutorial_hopsub_name: Build Subway Surfers with a Friend
+  tutorial_itchmundos_name: Los mundos en mi mundo_E2
+  tutorial_itchtenacity_name: Tenacity
+  tutorial_kcjskiing_name: 'Sport + Code: Skiing'
+  tutorial_groksecurity_name: 'Cyber Security: Defence Against the Dark Hats'
+  tutorial_creaticode_name: 3D Programming with Scratch Blocks
+  tutorial_kcjhockey_name: 'Sport + Code: Hockey'
+  tutorial_ttdungeon_name: Binary Dungeon
+  tutorial_ccai_name: Caminho para a Liga AI
+  tutorial_bsdai_name: AI Webcam Image Classifier
+  tutorial_stemdata_name: 'Data Science: Earth Day'
+  tutorial_thunkableinfo_name: Build an Informational App on Thunkable
+  tutorial_educodespace_name: Space Solo
+  tutorial_kcjtennis_name: 'Sport + Code: Tennis'
+  tutorial_robotmagictower_name: Hanoi Tower Game - recursive functions
+  tutorial_ttdragons_name: Dragon's Apprentice Chapter 1
+  tutorial_kcjarchery_name: 'Sport + Code: Archery'
+  tutorial_ttsprouts_name: Crowded Sprouts
+  tutorial_ttmaze_name: The Maze
+  tutorial_codetribe_name: 'Code Tribe: 10 Minute Program'
+  tutorial_ttcanyon_name: 'The Canyon: Battle Arena'
+  tutorial_kcjxtrail_name: 'Sport + Code: Xtrail'
+  tutorial_codespeakroad_name: Build a Road Game in Scratch
+  tutorial_educodelair_name: Chiroptera's Lair
+  tutorial_ibmhourofz_name: IBM Hour of Z
+  tutorial_gamefrootbacteria_name: Coding Bacteria with Gamefroot
+  tutorial_educodeforest_name: The Frosted Forest
+  tutorial_educodehorus_name: Temple of Horus
+  tutorial_codespeakpokemon_name: Code a Pokemon Evolution Game
+  tutorial_stemholiday_name: Code a Virtual Holiday Card
+  tutorial_codespeakpixel_name: Code a Pixel Art Editor in Bitsbox
+  tutorial_codespellsnexus_name: 'CodeSpells: The Nexus'
+  tutorial_carnegieslime_name: Super Slime Battle
+  tutorial_ozotown_name: 'Ozobot Blockly Challenge: OzoTown'
+  tutorial_milnedash_name: Dash Joins a Dance Circle
+  tutorial_microbitpet_name: Mascote micro:bit
+  tutorial_spherotriad_name: CIA Triad and Cybersecurity
+  tutorial_spheropassword_name: Password Security and Protection
+  tutorial_codequilt_name: CodeQuilt
+  tutorial_ozoshape1_name: 'Ozobot Blockly Challenge: ShapeTracer 1'
+  tutorial_ozoshape2_name: 'Ozobot Blockly Challenge: ShapeTracer 2'
+  tutorial_hopescape_name: Can You Escape? Build an Escape Room with Hopscotch
+  tutorial_ozorace_name: 50 cm Race
+  tutorial_ozoequestrian_name: Equestrian Event
+  tutorial_irobotpizza_name: Robot Pizza Party
+  tutorial_ai4alldance_name: 'AI4ALL: AI & Dance'
+  tutorial_ai4allneural_name: How Convolutional Neural Networks Work
+  tutorial_spheroinout_name: Inputs and Outputs
+  tutorial_edisonblueprint_name: Edison the Blueprint Designer
+  tutorial_edisonmaze_name: Edison the Maze Racer
+  tutorial_milnefunctions_name: Dash Joins a Dance Circle (with Functions)
+  tutorial_sasmap_name: 'Show With Code: Features on a Map'
+  tutorial_firstrobotics_name: FIRST Tech Challenge Simulator
+  tutorial_sasdata_name: Building Data Fundamentals
+  tutorial_carnegiesensabot_name: Sensabot Challenge
+  tutorial_robotical4_name: Hour of Code Activity 4 - Getting Started with MartyBlocks
+  tutorial_kinderadd_name: Adding and Subtracting with KIBO
+  tutorial_imagipython_name: Creative Coding in Python
+  tutorial_robotical2_name: Hour of Code Activity 2 - the Marty Controller
+  tutorial_robotical3_name: Hour of Code Activity 3 - Getting Started with Marty Blocks
+    Jr
+  tutorial_blockscadvirus_name: Modeling a Virus with Code
+  tutorial_robotical1_name: Hour of Code Activity 1 - Marty Unplugged
+  tutorial_irobotshapes_name: 'Robotics for K-2: Robot Shapes'
+  tutorial_irobotparts_name: 'Robotics for K-2: Robot Parts'
+  tutorial_irobottools_name: 'Robotics for K-2: Robot Tools'
+  tutorial_kindercar_name: Create Your Dream Car with KIBO
+  tutorial_caavatar_name: 'AVATAR: Big Data & Digital Footprints'
+  tutorial_hello_longdescription: Learn the basics of computer science by programming
+    in Sprite Lab. You will create and animate sprites, and make your own interactive
+    scenes.
+  tutorial_raspispace_longdescription: Create a space scene with characters that 'emote'
+    to share their thoughts or feelings using sounds, colours, and actions. Use Scratch
+    blocks to code your characters with graphic effects, costume animation, speech
+    bubbles and sound effects.
+  tutorial_codemonkeyjump_longdescription: Create games and projects with block coding!
+    In this short course students will learn to create a simple jumper game using
+    basic event and function blocks.
+  tutorial_poemart_longdescription: Illustrate the mood of a poem with code.
+  tutorial_kodablehero_longdescription: Welcome to Bug World! The Kodable fuzzFamily
+    needs your coding help. Use your real-life heroes and your imagination to design
+    a character who will protect the fuzzFamily. You'll choose the properties your
+    hero possesses and put their strength to the test against the buggy slimes of
+    Bug World!
+  tutorial_cacloud_longdescription: Felix posts a seemingly innocent photo of Juno
+    on social media. She desperately wants it removed. Max, her friend, is quick to
+    turn the situation into a secret mission. Join them as they learn about cloud
+    computing and try to track down the photo on a server, stored in an ultra secure
+    data centre. Is there anyway to locate and destroy the photo?
+  tutorial_blocksmithbot_longdescription: Lasers, traps and marvelous mazes! Help
+    Bot0 escape before she gets ejected! Bot0 is a friendly, harmless helper robot.
+    Or is she? Her teammates believe otherwise. Program Bot0 to make her way through
+    the underbelly of the space ship and escape before they find her.
+  tutorial_hatchmario_longdescription: Build your very own 3D Mario game, while learning
+    the basics of programming. Learn about the fundamentals of game development; form
+    an understanding of motion in 3D space; learn to add score, lives and cool sound
+    effects to your game, all in less than an hour. And the best part, you can share
+    your game with your family and friends in just one click and play with them on
+    any device in your home.
+  tutorial_microsoftforest_longdescription: Code a game with Microsoft MakeCode Arcade
+    that recreates the conditions for a forest fire, and then code your fire-fighting
+    airtanker plane to spray water and put out the flames!
+  tutorial_blackbirdscreen_longdescription: Learn how to use conditional statements
+    to create a cool 90s style screen saver.
+  tutorial_toxicodecompute2_longdescription: Vamos trocar de papéis. Desta vez, VOCÊ
+    é o computador! Leia e interprete os programas para encontrar a trajetória certa
+    e vencer os desafios. Você terá que se concentrar e usar suas habilidades intuitivas
+    para compreender alguns dos principais conceitos do Python.
+  tutorial_minecrafttimecraft_longdescription: 'Travel back in time to save the future
+    in this free Hour of Code lesson in Minecraft: Education Edition. Students will
+    choose their own adventure and learn basic coding concepts to correct mysterious
+    mishaps throughout history. Along the way, they''ll connect with great innovators
+    and inventions in science, architecture, music, engineering, and more.'
+  tutorial_blackbirdtether_longdescription: Learn to use objects to program a fun,
+    physics-based game.
+  tutorial_ob_longdescription: Write code to create and run your own simulation of
+    the virus outbreak at Monster Town. A simulation is a computer model of a process
+    or system. Learn to code and make predictions about what will happen to the neighbors
+    of Monster Town.
+  tutorial_codeartportrait_longdescription: 'Learn to program your portrait using
+    p5.js. Express yourself creatively through code by incorporating your favorite
+    artistic styles and personal touches to create a true masterpiece! You may be
+    eligible to submit your finished project to Code/Art’s CodeYourSelf competition
+    for U.S. girls in grades 3-12. '
+  tutorial_shelly_longdescription: Shelly is a programming language for drawing. Drawing
+    is done by issuing instructions to a turtle. The turtle draws lines and shapes
+    as it moves, using various colors and styles. Challenge and creative modes are
+    available. The challenge mode includes a step-by-step tutorial, which introduces
+    the basics of the Shelly language and of programming in general.
+  tutorial_weavly_longdescription: In these short activities, go on a series of missions,
+    from exploring planets, to visiting animals on a safari, to hunting for sunken
+    treasure!
+  tutorial_codespeakpassword_longdescription: Learn to code a password generator in
+    Python and stay safe against hackers.
+  tutorial_kodableshapes_longdescription: 'Math is a part of our lives everywhere.
+    Use math and coding skills to make your own maze and then try to solve it. Start
+    with a basic square and then see how many different shapes you can include in
+    your maze designs! '
+  tutorial_nasabinary_longdescription: Learn how we use binary code to talk to a spacecraft,
+    and then try it yourself by translating your name into binary code on a name tag,
+    bracelet, pin, or even sound.
+  tutorial_3dmaker_longdescription: Make your own really cool, rotatable, 3D objects
+    fast and easily.
+  tutorial_itchstart_longdescription: This lesson is a good entry point for kids grade
+    2 or 3 that are just trying out Scratch for the very first time. They will get
+    to start with a set of 5 blocks that they need to put together to make their character
+    perform some actions.
+  tutorial_hopsub_longdescription: Learn how to pair program with a friend or classmate,
+    and create your own subway surfer with Hopscotch characters!
+  tutorial_itchmundos_longdescription: Conocerán Scratch, una herramienta para programar.
+    Agregarán objetos y fondos, usarán bloques de eventos y apariencia para dar vida
+    a su programa.
+  tutorial_itchtenacity_longdescription: En este proyecto programan en Scratch el
+    simulador de un robot que limpia las aguas marinas.
+  tutorial_kcjskiing_longdescription: 'It''s all fun and games until someone crashes
+    into a tree… or IS that the fun part? Strap on those skis and bend at the knees
+    as you guide your character down a hill of frozen obstacles using code in this
+    Scratch activity. Design the course, add movement and sensing, plus a bit of collision-interaction
+    and boom - you''ve got yourself a mountain of fun. '
+  tutorial_groksecurity_longdescription: Put your cyber-sleuthing hat on in this short
+    introduction to staying safe online. You'll learn about secure passwords, phishing,
+    security settings, social media and more!
+  tutorial_creaticode_longdescription: Learn to build stunning 3D projects using Scratch
+    blocks!
+  tutorial_kcjhockey_longdescription: You shoot, you SCORE - the crowd goes wild!
+    No need to lace up your skates when building this game, but be ready to sharpen
+    your coding skills! Learn how to code your own hockey game and test our skills
+    against an npc goalie in Scratch. Using movement, sensing, and variables, your
+    digital player can dodge and glide the puck to score the winning goal.
+  tutorial_ttdungeon_longdescription: The evil wizard Nullonor poses a grave threat
+    to the realm, and only you have the power to banish them forever. However, Nullonor
+    is as cunning as he is dangerous. He hides in his magical tower of ever-shifting
+    rooms, and no hero has successfully reached the top floor yet. As the champion
+    of the Index Knights, do you have what it takes to find and defeat Nullonor?
+  tutorial_ccai_longdescription: 'A codificação competitiva nunca foi tão épica! Sem
+    experiência de codificação ... Sem problemas. Entre na masmorra onde você aumentará
+    o nível de seus poderes de programação, aprendendo as estratégias e táticas de
+    codificação necessárias para competir. Depois de passar pela masmorra, você estará
+    pronto para enfrentar programadores de todo o mundo na arena de esportes do CodeCombat
+    AI League! '
+  tutorial_bsdai_longdescription: There is a specific set of neural networks and algorithms
+    that we call machine learning. In this project, we will explore an Artificial
+    Intelligence (AI) Image Recognition tool and learn how AI sees images, makes predictions,
+    and how we can make sure that those predictions are accurate and free of bias.
+  tutorial_stemdata_longdescription: Create a simple model for the climate where you
+    live and then use it to understand how a few degrees of increased temperature
+    can have a significant impact on the natural world. Includes an option to download
+    the data to a spreadsheet for further analysis.
+  tutorial_thunkableinfo_longdescription: Learn how to build an informational app
+    with code blocks and a data table
+  tutorial_educodespace_longdescription: The people of planet Allegrus have lost their
+    ancestral songs. Follow this tutorial to build your own musical side-scrolling
+    game and recover the lost melodies. Customize every aspect of the game, while
+    learning the basics of game development, physics and collisions. No coding or
+    musical knowledge required.
+  tutorial_kcjtennis_longdescription: Serve up a challenge and go head-to-head with
+    your own AI opponent in this digital tennis match. Using Scratch, this activity
+    will teach you how to code back-and-forth sprite interactions through broadcasting,
+    variables, and movement. Incorporate win/loss conditionals and kiss your 'love'
+    score good bye. Complete this project by yourself or with support from a grown
+    up.
+  tutorial_robotmagictower_longdescription: Learn about the Hanoi Tower game and how
+    to use recursive functions to solve problems.
+  tutorial_ttdragons_longdescription: 'An evil force has spread its way across the
+    land of Ovun and is threatening to destroy this peaceful city. Explore hidden
+    temples, learn magic runes that let you program and control the elements around
+    you, and battle the shadow fiends. Find all the keys in the Dragon Temples to
+    awaken the dragon. Be the hero that Ovun needs! '
+  tutorial_kcjarchery_longdescription: Stay on target and guide your arrow to the
+    bullseye using code! Learn how to code your own archery game using Scratch and
+    our step-by-step instructions. With the help of colour-sensing sprites, costume
+    changes, and motion sequences, you too can aim for gold and code your way to victory
+    - plus, add a score counter to up the ante. Complete this project by yourself
+    or with support from a grown up.
+  tutorial_ttsprouts_longdescription: Gardening is a full-time job! Start with just
+    a single bench of pots and tend to the plants within a greenhouse by accessing
+    an array. As you seed, water, and harvest each plant, earn money for all your
+    fruits and veggies! Use an increasingly complicated multidimensional array to
+    locate each pot as the greenhouse gets crowded.
+  tutorial_ttmaze_longdescription: You have landed on an alien planet in a pocket
+    universe and must find a way to escape so you can continue on your journey. Explore
+    the ruins of an advanced robotic civilization, navigate your way through mazes
+    and puzzles and fight off enemy robots. With the help of your trusty sidekick
+    F3lix, learn and use new programming concepts to hack your way to victory.
+  tutorial_codetribe_longdescription: A great intro to coding using HTML, CSS and
+    JavaScript. Code a few lines, and create your first application to verify the
+    age of people attending your party.
+  tutorial_ttcanyon_longdescription: You are trapped on an alien planet and must survive
+    the Arena, an endless fight with alien monsters! Use your hacking blaster to change
+    the programming of your sidekick, your opponents, and your environment. Your trusty
+    feline sidekick F3lix can help heal and support you, while you can reprogram enemies
+    and traps to disable them or fight each other.
+  tutorial_kcjxtrail_longdescription: Hit the trails with this cross country biking
+    activity using code and Scratch. Utilizing colour sensing blocks and movement,
+    you will design your course, integrate stops and interactions along the way, and
+    track your progress by coding a score keeper with functions. Don't forget your
+    helmet because we could be in for a wild ride! Complete this project by yourself
+    or with support from a grown up.
+  tutorial_codespeakroad_longdescription: Create a game where the user plays the role
+    of a civil engineer to plan out a road.
+  tutorial_educodelair_longdescription: George is being chased in Chiroptera's Lair
+    and needs your help to escape! Design your own complete 2D puzzle game by following
+    this tutorial and learning the basics of game development. Code your way out of
+    our level, or make your own to challenge your friends!
+  tutorial_ibmhourofz_longdescription: 'Have you ever withdrawn money from an ATM?
+    Used a credit card to pay for something? All these actions have one thing in common:
+    they all start with a simple click. But what''s really happening behind that click?
+    That''s Enterprise Computing. Get started learning more about how enterprise computing
+    works today with IBM Hour of Z.'
+  tutorial_gamefrootbacteria_longdescription: 'Students learn about the conditions
+    in which salmonella bacteria can survive while coding a fun simulation game in
+    Gamefroot! This activity is designed for science teachers AND Digital Technologies
+    teachers looking to engage their students in multiple subject areas. '
+  tutorial_educodeforest_longdescription: Alex has been trapped in the Frosted Forest
+    for a while. Can you help them escape? This easy-to-follow tutorial teaches you
+    how to build and customize a complete puzzle game that runs in any modern browser.
+    Try to beat our level, or create your own to challenge your friends!
+  tutorial_educodehorus_longdescription: Help Lisa solve Horus's enigma and escape
+    his temple. Follow this tutorial to code and customize your very own puzzle game
+    in a few steps. Try to beat our level, or edit it to make it as easy or challenging
+    as you want. Learn the basics of game development while playing!
+  tutorial_codespeakpokemon_longdescription: Code your favorite Pokemon to level up
+    and evolve.
+  tutorial_stemholiday_longdescription: STEMscopes Coding powered by BitsBox allows
+    students to build and share their own virtual holiday card using typed JavaScript
+    code. Our program is easy to use and requires no prior coding experience. We offer
+    embedded support throughout the program, and students can easily figure it out
+    on their own. Get excited to code your own virtual card to share with friends
+    and family this holiday season!
+  tutorial_codespeakpixel_longdescription: Learn to create a pixel art editor to create
+    your own custom character designs and art.
+  tutorial_codespellsnexus_longdescription: Under the mentorship of a mysterious sock
+    puppet, you must infiltrate and reprogram a super-intelligent 'Learn to Code'
+    app that seeks global domination. Solve puzzles. Learn to code. Hack the Nexus.
+  tutorial_carnegieslime_longdescription: Super Slime Battle is a game that was co-designed
+    between researchers at Carnegie Mellon University and students from the Boys and
+    Girls Clubs of Western PA where students and their (co)robot partners must defend
+    their candy stash from oncoming baddies.
+  tutorial_ozotown_longdescription: The Ozobot Blockly OzoTown will teach advanced
+    sequencing as students utilize logic, reasoning, and computer science skills to
+    navigate real life scenarios. No bot needed!
+  tutorial_milnedash_longdescription: Dash wants to learn how to dance! Can you help
+    her drive in and out and show her stuff in the middle? This activity is student-directed
+    and will teach the user about sequencing and loops.
+  tutorial_microbitpet_longdescription: Programa o código da tua mascote eletrónica
+    e personaliza-a para que seja única. A coluna de som incorporada no novo micro:bit
+    torna-o ainda mais divertido com os novos sons expressivos.
+  tutorial_spherotriad_longdescription: 'Explore what each of the fundamental principles
+    of cybersecurity mean and learn how to find a balance to achieve a secure system
+    that works for all users. '
+  tutorial_spheropassword_longdescription: Explore how to make strong password combinations
+    using littleBits inventions and coding.
+  tutorial_codequilt_longdescription: Reflect on who gets to code and what can be
+    made with code while becoming familiar with Scratch.
+  tutorial_ozoshape1_longdescription: The Ozobot Blockly ShapeTracer will teach sequencing
+    and debugging skills. Students will utilize logic, reasoning, and computer science
+    skills. No bot needed!
+  tutorial_ozoshape2_longdescription: The Ozobot Blockly ShapeTracer 2 will teach
+    advanced sequencing and looping skills. Students will utilize logic, reasoning,
+    and computer science skills. No bot needed!
+  tutorial_hopescape_longdescription: Code an open-ended logic escape room game, and
+    learn about concepts such as iteration and other important game design elements.
+  tutorial_ozorace_longdescription: Students will plan and execute a program with
+    a variety of parameters, practice measurement, sequencing and debugging as they
+    create a racetrack for Ozobot.
+  tutorial_ozoequestrian_longdescription: Students will use Color Codes to program
+    their mount (Evo) to complete a course.
+  tutorial_irobotpizza_longdescription: Looking to make coding a collaborative, social
+    and super fun experience at your school?  In this out-of-the-box digital event
+    kit, we provide all the tools you'll need to host the perfect family code challenge.
+    At the iRobot Pizza Party, families come together to share a meal and code virtual
+    robots to complete challenges, designed for both beginners and advanced coders.
+  tutorial_ai4alldance_longdescription: In this short, fun byte of AI, students explore
+    how AI tools can help humans innovate, and how human innovators can help improve
+    AI.
+  tutorial_ai4allneural_longdescription: This curriculum is an introductory hands-on
+    deep dive into the technical details about how some AI systems can find objects
+    in images, or other patterns in context. In the end, students will teach others
+    what they have learned. If your students did AI & Dance, they may want to check
+    this out after to learn how that system worked.
+  tutorial_spheroinout_longdescription: indi is ready to learn more about how it and
+    other computers work. In this lesson, discover inputs and outputs through this
+    hands-on exploration.
+  tutorial_edisonblueprint_longdescription: Can you program Edison to drive in different
+    shapes so that the robot can draw different blueprints?
+  tutorial_edisonmaze_longdescription: Let's get the Edison robot to race along a
+    Euler Path shape!
+  tutorial_milnefunctions_longdescription: Dash wants to learn how to dance! Can you
+    help her drive in and out and show her stuff in the middle? This activity is student-directed
+    and will teach the user about sequencing, loops and functions.
+  tutorial_sasmap_longdescription: 'In this lesson, students will use code to demonstrate
+    an understanding of the difference between human and physical features on a map.
+    They will identity a path through a grid of math features such that a robot will
+    land only on human features. Students will then work in teams to write code that
+    will navigate their robot along the correct path. '
+  tutorial_firstrobotics_longdescription: Learn to code with FTC Sim, an online block-based
+    programming language that includes a live simulator so students can instantly
+    see the robot moving based on the code that they have written.
+  tutorial_sasdata_longdescription: Engage students with data through quick polls
+    that generate real-time interactive data visualizations. Students will identify,
+    interpret and communicate about data– important foundational skills for understanding
+    our data-rich world.
+  tutorial_carnegiesensabot_longdescription: Learn how to program a virtual EV3 robot
+    to complete the real-world Sensabot challenge in this activity the Carnegie Mellon
+    Robotics Academy.
+  tutorial_robotical4_longdescription: MartyBlocks is put together in a vertical format,
+    which is more common for writing code. Learners will be presented with a larger
+    workspace and greater functionality for controlling Marty and eventually having
+    them interact with the environment. This lesson will familiarize learners with
+    the sections, layout, comparing this new environment with MartyBlocks Jr.
+  tutorial_kinderadd_longdescription: In this lesson, students will use algorithms
+    and moving robots to model mathematical concepts. KIBO will travel along a physical
+    number line to model counting, addition, and subtraction. Students will create
+    algorithms (optionally including repeat loops) to solve problems, just like programmers
+    do at work!
+  tutorial_imagipython_longdescription: Join the world's first social network for
+    pre-teens who like to code. Design your first colorful project in minutes with
+    the free imagi app.
+  tutorial_robotical2_longdescription: Learners will create a sequence of steps to
+    allow a partner to travel a route to a goal, making use of the Marty Controller.
+    Each of the directional symbols has an attached movement; in this lesson, learners
+    will be encouraged to experiment with the directional arrows but the focus will
+    be on the forward arrow.
+  tutorial_robotical3_longdescription: Learners will explore the new interface for
+    Marty, where their instructions will stay on the device screen. Learners will
+    be estimating how many steps they think Marty will need to reach a goal.
+  tutorial_blockscadvirus_longdescription: 'Use a 3D design platform to model a virus
+    and learn about how our bodies use geometry to fight these invaders. '
+  tutorial_robotical1_longdescription: Learners will see Marty the Robot moving with
+    the Unplugged color cards. Learners will then guide a partner to move forward
+    and stop, making use of colored paper. Each of Robotical's colored cards has an
+    instruction built into it, that Marty understands, without the need to write or
+    arrange any code.
+  tutorial_irobotshapes_longdescription: Learn about different shapes through pattern
+    recognition and sequencing in this unplugged, printable robot-themed workbook!
+  tutorial_irobotparts_longdescription: Learn about the different pieces used to build
+    a robot through exploring your senses and practicing math basics.
+  tutorial_irobottools_longdescription: This workbook explores all of the different
+    kinds of tools used when building a robot through matching, counting, scavenger
+    hunts and measuring activities,
+  tutorial_kindercar_longdescription: Students will become engineers, learning the
+    steps of the Engineering Design Process. Inspired by the book 'If I Built a Car'
+    by Chris Van Dusen, students will follow the engineering design process to create
+    their own dream cars out of craft and recycled materials. They will scan a short
+    programming sequence to get their cars moving!
+  tutorial_caavatar_longdescription: 'AVATAR is the latest interactive attraction
+    at ThrillVille theme park. Sakura and Nikau can''t wait to visit it and experience
+    the world of tomorrow! In this interactive short course, the learner joins Sakura
+    and Nikau to learn about data, digital footprints, the Internet of things, Big
+    Data, and the implications these have for us as people, and our future.   '
+  tutorial_hello_language: Bulgarian, Corsican, Danish, Dutch, English, English (UK),
+    Estonian, French, Georgian, German, Hungarian, Icelandic, Indonesian, Irish, Japanese,
+    Nepali, Norwegian (Bokmål), Norwegian (Nynorsk), Other, Pashto, Portuguese (Portugal),
+    Romanian, Serbian (Cyrillic), Spanish (Spain), Spanish (Mexico), Turkish, Vietnamese
+  tutorial_raspispace_language: Arabic, Dutch, English, English (UK), French, Greek
+  tutorial_codemonkeyjump_language: Português (Brasil)
+  tutorial_poemart_language: Bulgarian, Corsican, Danish, Dutch, English, Estonian,
+    French, Georgian, German, Hungarian, Icelandic, Indonesian, Irish, Japanese, Nepali,
+    Norwegian (Bokmål), Norwegian (Nynorsk), Other, Pashto, Portuguese (Brazil), Portuguese
+    (Portugal), Romanian, Serbian (Cyrillic), Spanish (Spain), Spanish (Mexico), Turkish,
+    Vietnamese
+  tutorial_kodablehero_language: Português (Brasil)
+  tutorial_cacloud_language: English, English (UK)
+  tutorial_blocksmithbot_language: Português (Brasil)
+  tutorial_hatchmario_language: Português (Brasil)
+  tutorial_microsoftforest_language: Português (Brasil)
+  tutorial_blackbirdscreen_language: Português (Brasil)
+  tutorial_toxicodecompute2_language: Português (Brasil)
+  tutorial_minecrafttimecraft_language: Bulgarian, Chinese (Simplified), Chinese (Traditional),
+    Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hungarian, Indonesian,
+    Italian, Japanese, Korean, Norwegian (Bokmål), Norwegian (Nynorsk), Polish, Portuguese
+    (Brazil), Portuguese (Portugal), Russian, Slovenian, Spanish (Spain), Spanish
+    (Mexico), Swedish, Turkish, Ukrainian
+  tutorial_blackbirdtether_language: Português (Brasil)
+  tutorial_ob_language: Arabic, Chinese (Simplified), Chinese (Traditional), Czech,
+    Danish, Dutch, English, French, German, Greek, Hindi, Indonesian, Italian, Japanese,
+    Korean, Malay, Other, Portuguese (Brazil), Portuguese (Portugal), Romanian, Serbian
+    (Cyrillic), Slovenian, Spanish (Spain), Spanish (Mexico), Swedish, Tamil, Thai,
+    Turkish, Ukrainian, Urdu (Pakistan), Vietnamese
+  tutorial_codeartportrait_language: Português (Brasil)
+  tutorial_shelly_language: English, Polish
+  tutorial_weavly_language: Português (Brasil)
+  tutorial_codespeakpassword_language: Português (Brasil)
+  tutorial_codecombatozaria_language: English, English (UK), Spanish (Spain), Spanish
+    (Mexico)
+  tutorial_kodableshapes_language: Português (Brasil)
+  tutorial_nasabinary_language: Português (Brasil)
+  tutorial_3dmaker_language: Português (Brasil)
+  tutorial_itchstart_language: Português (Brasil)
+  tutorial_hopsub_language: Chinese (Simplified), English, Spanish (Spain), Spanish
+    (Mexico)
+  tutorial_itchmundos_language: Spanish (Mexico)
+  tutorial_itchtenacity_language: Spanish (Mexico)
+  tutorial_kcjskiing_language: English, French
+  tutorial_groksecurity_language: Português (Brasil)
+  tutorial_creaticode_language: Chinese (Simplified), Chinese (Traditional), English
+  tutorial_kcjhockey_language: English, French
+  tutorial_ttdungeon_language: Português (Brasil)
+  tutorial_ccai_language: Árabe, búlgaro, catalão, chinês (simplificado), chinês (tradicional),
+    tcheco, dinamarquês, holandês, inglês, inglês (Reino Unido), finlandês, francês,
+    galego, alemão, grego, hebraico, húngaro, indonésio, italiano, japonês, coreano
+    , Lituano, macedônio (FRYOM), malaio, norueguês (Bokmål), norueguês (Nynorsk),
+    polonês, português (Brasil), português (Portugal), romeno, russo, sérvio (cirílico),
+    esloveno, espanhol (Espanha), espanhol ( México), sueco, tailandês, turco, ucraniano,
+    vietnamita
+  tutorial_bsdai_language: English, English (UK)
+  tutorial_stemdata_language: Português (Brasil)
+  tutorial_thunkableinfo_language: Português (Brasil)
+  tutorial_educodespace_language: Português (Brasil)
+  tutorial_kcjtennis_language: English, French
+  tutorial_robotmagictower_language: Português (Brasil)
+  tutorial_ttdragons_language: Português (Brasil)
+  tutorial_kcjarchery_language: English, French
+  tutorial_ttsprouts_language: Português (Brasil)
+  tutorial_ttmaze_language: Português (Brasil)
+  tutorial_codetribe_language: English, English (UK)
+  tutorial_ttcanyon_language: Português (Brasil)
+  tutorial_kcjxtrail_language: English, French
+  tutorial_codespeakroad_language: Português (Brasil)
+  tutorial_educodelair_language: Português (Brasil)
+  tutorial_ibmhourofz_language: English, English (UK)
+  tutorial_gamefrootbacteria_language: Português (Brasil)
+  tutorial_educodeforest_language: Português (Brasil)
+  tutorial_educodehorus_language: Português (Brasil)
+  tutorial_codespeakpokemon_language: Português (Brasil)
+  tutorial_stemholiday_language: Português (Brasil)
+  tutorial_codespeakpixel_language: Português (Brasil)
+  tutorial_codespellsnexus_language: Português (Brasil)
+  tutorial_carnegieslime_language: Português (Brasil)
+  tutorial_ozotown_language: Português (Brasil)
+  tutorial_milnedash_language: Português (Brasil)
+  tutorial_microbitpet_language: Inglês, Espanhol, Francês, Croata, Coreano, Português
+    (Brasil), Português (Portugal), Sérvio, Chinês (Simplificado)
+  tutorial_spherotriad_language: Português (Brasil)
+  tutorial_spheropassword_language: Português (Brasil)
+  tutorial_codequilt_language: Português (Brasil)
+  tutorial_ozoshape1_language: Português (Brasil)
+  tutorial_ozoshape2_language: Português (Brasil)
+  tutorial_hopescape_language: Chinese (Simplified), English, Spanish (Spain), Spanish
+    (Mexico)
+  tutorial_ozorace_language: Português (Brasil)
+  tutorial_ozoequestrian_language: Português (Brasil)
+  tutorial_irobotpizza_language: Português (Brasil)
+  tutorial_ai4alldance_language: Português (Brasil)
+  tutorial_ai4allneural_language: Português (Brasil)
+  tutorial_spheroinout_language: Português (Brasil)
+  tutorial_edisonblueprint_language: Português (Brasil)
+  tutorial_edisonmaze_language: Português (Brasil)
+  tutorial_milnefunctions_language: Português (Brasil)
+  tutorial_sasmap_language: Português (Brasil)
+  tutorial_firstrobotics_language: Português (Brasil)
+  tutorial_sasdata_language: Português (Brasil)
+  tutorial_carnegiesensabot_language: Português (Brasil)
+  tutorial_robotical4_language: Português (Brasil)
+  tutorial_kinderadd_language: English, English (UK)
+  tutorial_imagipython_language: English, Swedish
+  tutorial_robotical2_language: Português (Brasil)
+  tutorial_robotical3_language: Português (Brasil)
+  tutorial_blockscadvirus_language: Português (Brasil)
+  tutorial_robotical1_language: Português (Brasil)
+  tutorial_irobotshapes_language: Português (Brasil)
+  tutorial_irobotparts_language: Português (Brasil)
+  tutorial_irobottools_language: Português (Brasil)
+  tutorial_kindercar_language: English, English (UK)
+  tutorial_caavatar_language: English, English (UK)
+  tutorial_hello_string_detail_grades: A partir do 2º ano
+  tutorial_raspispace_string_detail_grades: Do 2º ao 8º ano
+  tutorial_codemonkeyjump_string_detail_grades: Do 2º ao 8º ano
+  tutorial_poemart_string_detail_grades: Do 2º ao 8º ano
+  tutorial_kodablehero_string_detail_grades: Crianças que estão aprendendo a ler até
+    5º ano
+  tutorial_cacloud_string_detail_grades: A partir do 6º ano
+  tutorial_blocksmithbot_string_detail_grades: Do 2º ao 8º ano
+  tutorial_hatchmario_string_detail_grades: A partir do 2º ano
+  tutorial_microsoftforest_string_detail_grades: A partir do 2º ano
+  tutorial_blackbirdscreen_string_detail_grades: A partir do 6º ano
+  tutorial_toxicodecompute2_string_detail_grades: A partir do 2º ano
+  tutorial_minecrafttimecraft_string_detail_grades: A partir do 2º ano
+  tutorial_blackbirdtether_string_detail_grades: A partir do 6º ano
+  tutorial_ob_string_detail_grades: A partir do 2º ano
+  tutorial_codeartportrait_string_detail_grades: A partir do 6º ano
+  tutorial_shelly_string_detail_grades: Do 2º ao 8º ano
+  tutorial_weavly_string_detail_grades: Do 2º ao 8º ano
+  tutorial_codespeakpassword_string_detail_grades: A partir do 2º ano
+  tutorial_kodableshapes_string_detail_grades: Crianças que estão aprendendo a ler
+    até 5º ano
+  tutorial_nasabinary_string_detail_grades: A partir do 6º ano
+  tutorial_3dmaker_string_detail_grades: Do 2º ao 8º ano
+  tutorial_itchstart_string_detail_grades: Do 2º ao 8º ano
+  tutorial_hopsub_string_detail_grades: Do 2º ao 8º ano
+  tutorial_itchmundos_string_detail_grades: A partir do 2º ano
+  tutorial_itchtenacity_string_detail_grades: A partir do 2º ano
+  tutorial_kcjskiing_string_detail_grades: A partir do 2º ano
+  tutorial_groksecurity_string_detail_grades: A partir do 6º ano
+  tutorial_creaticode_string_detail_grades: A partir do 6º ano
+  tutorial_kcjhockey_string_detail_grades: A partir do 2º ano
+  tutorial_ttdungeon_string_detail_grades: A partir do 6º ano
+  tutorial_ccai_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_bsdai_string_detail_grades: A partir do 6º ano
+  tutorial_stemdata_string_detail_grades: A partir do 9º ano
+  tutorial_thunkableinfo_string_detail_grades: A partir do 6º ano
+  tutorial_educodespace_string_detail_grades: A partir do 6º ano
+  tutorial_kcjtennis_string_detail_grades: A partir do 2º ano
+  tutorial_robotmagictower_string_detail_grades: A partir do 6º ano
+  tutorial_ttdragons_string_detail_grades: A partir do 6º ano
+  tutorial_kcjarchery_string_detail_grades: A partir do 2º ano
+  tutorial_ttsprouts_string_detail_grades: A partir do 2º ano
+  tutorial_ttmaze_string_detail_grades: A partir do 6º ano
+  tutorial_codetribe_string_detail_grades: Do 2º ao 8º ano
+  tutorial_ttcanyon_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_kcjxtrail_string_detail_grades: Do 2º ao 8º ano
+  tutorial_codespeakroad_string_detail_grades: Do 2º ao 8º ano
+  tutorial_educodelair_string_detail_grades: A partir do 6º ano
+  tutorial_ibmhourofz_string_detail_grades: A partir do 9º ano
+  tutorial_gamefrootbacteria_string_detail_grades: A partir do 6º ano
+  tutorial_educodeforest_string_detail_grades: A partir do 6º ano
+  tutorial_educodehorus_string_detail_grades: A partir do 6º ano
+  tutorial_codespeakpokemon_string_detail_grades: A partir do 6º ano
+  tutorial_stemholiday_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_codespeakpixel_string_detail_grades: A partir do 6º ano
+  tutorial_codespellsnexus_string_detail_grades: A partir do 6º ano
+  tutorial_carnegieslime_string_detail_grades: Do 2º ao 8º ano
+  tutorial_ozotown_string_detail_grades: A partir do 2º ano
+  tutorial_milnedash_string_detail_grades: Crianças que estão aprendendo a ler
+  tutorial_microbitpet_string_detail_grades: Do 2º ao 8º ano
+  tutorial_spherotriad_string_detail_grades: A partir do 2º ano
+  tutorial_spheropassword_string_detail_grades: Do 2º ao 8º ano
+  tutorial_codequilt_string_detail_grades: A partir do 6º ano
+  tutorial_ozoshape1_string_detail_grades: A partir do 2º ano
+  tutorial_ozoshape2_string_detail_grades: A partir do 2º ano
+  tutorial_hopescape_string_detail_grades: A partir do 2º ano
+  tutorial_ozorace_string_detail_grades: Crianças que estão aprendendo a ler até 5º
+    ano
+  tutorial_ozoequestrian_string_detail_grades: Crianças que estão aprendendo a ler
+    até 5º ano
+  tutorial_irobotpizza_string_detail_grades: Do 2º ao 8º ano
+  tutorial_ai4alldance_string_detail_grades: A partir do 6º ano
+  tutorial_ai4allneural_string_detail_grades: A partir do 6º ano
+  tutorial_spheroinout_string_detail_grades: Crianças que estão aprendendo a ler até
+    5º ano
+  tutorial_edisonblueprint_string_detail_grades: A partir do 6º ano
+  tutorial_edisonmaze_string_detail_grades: Do 2º ao 8º ano
+  tutorial_milnefunctions_string_detail_grades: Do 6º ao 8º anos (11 a 13 anos)
+  tutorial_sasmap_string_detail_grades: Crianças que estão aprendendo a ler até 5º
+    ano
+  tutorial_firstrobotics_string_detail_grades: A partir do 6º ano
+  tutorial_sasdata_string_detail_grades: A partir do 2º ano
+  tutorial_carnegiesensabot_string_detail_grades: Do 2º ao 8º ano
+  tutorial_robotical4_string_detail_grades: Crianças que estão aprendendo a ler até
+    5º ano
+  tutorial_kinderadd_string_detail_grades: Crianças que estão aprendendo a ler até
+    5º ano
+  tutorial_imagipython_string_detail_grades: Do 2º ao 8º ano
+  tutorial_robotical2_string_detail_grades: Crianças que estão aprendendo a ler até
+    5º ano
+  tutorial_robotical3_string_detail_grades: Crianças que estão aprendendo a ler até
+    5º ano
+  tutorial_blockscadvirus_string_detail_grades: A partir do 6º ano
+  tutorial_robotical1_string_detail_grades: Crianças que estão aprendendo a ler até
+    5º ano
+  tutorial_irobotshapes_string_detail_grades: Crianças que estão aprendendo a ler
+  tutorial_irobotparts_string_detail_grades: Crianças que estão aprendendo a ler
+  tutorial_irobottools_string_detail_grades: Crianças que estão aprendendo a ler
+  tutorial_kindercar_string_detail_grades: Crianças que estão aprendendo a ler
+  tutorial_caavatar_string_detail_grades: A partir do 6º ano
+  tutorial_hello_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
+  tutorial_raspispace_string_platforms: Todos os navegadores modernos, tablet Android,
+    iPad
+  tutorial_codemonkeyjump_string_platforms: Todos os navegadores modernos
+  tutorial_poemart_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone, Game console app, Screen reader
+  tutorial_kodablehero_string_platforms: Todos os navegadores modernos, iPad, iPhone
+  tutorial_cacloud_string_platforms: Todos os navegadores modernos
+  tutorial_blocksmithbot_string_platforms: Todos os navegadores modernos
+  tutorial_hatchmario_string_platforms: Todos os navegadores modernos
+  tutorial_microsoftforest_string_platforms: Todos os navegadores modernos
+  tutorial_blackbirdscreen_string_platforms: Chrome
+  tutorial_toxicodecompute2_string_platforms: Todos os navegadores modernos
+  tutorial_minecrafttimecraft_string_platforms: iPad, Computers (Windows PC, Mac),
+    Android (Chromebooks), iPad, Screen reader
+  tutorial_blackbirdtether_string_platforms: Chrome
+  tutorial_ob_string_platforms: Todos os navegadores modernos
+  tutorial_codeartportrait_string_platforms: Todos os navegadores modernos, tablet
+    Android, iPad
+  tutorial_shelly_string_platforms: Todos os navegadores modernos
+  tutorial_weavly_string_platforms: Todos os navegadores modernos
+  tutorial_codespeakpassword_string_platforms: Todos os navegadores modernos
+  tutorial_kodableshapes_string_platforms: Todos os navegadores modernos, iPad, iPhone
+  tutorial_nasabinary_string_platforms: Unplugged, Screen reader
+  tutorial_3dmaker_string_platforms: All modern browsers, Android tablet, iPad, Windows
+    phone, Android phone, iPhone
+  tutorial_itchstart_string_platforms: Todos os navegadores modernos, iPad, sem conexão
+  tutorial_hopsub_string_platforms: iPad, iPhone
+  tutorial_itchmundos_string_platforms: Todos os navegadores modernos, tablet Android,
+    iPad
+  tutorial_itchtenacity_string_platforms: Todos os navegadores modernos, tablet Android,
+    iPad
+  tutorial_kcjskiing_string_platforms: Todos os navegadores modernos
+  tutorial_groksecurity_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_creaticode_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_kcjhockey_string_platforms: Todos os navegadores modernos
+  tutorial_ttdungeon_string_platforms: Chrome, Firefox
+  tutorial_ccai_string_platforms: Todos os navegadores modernos
+  tutorial_bsdai_string_platforms: Chrome, Firefox
+  tutorial_stemdata_string_platforms: Todos os navegadores modernos, iPad, sem conexão
+  tutorial_thunkableinfo_string_platforms: Chrome, Safari
+  tutorial_educodespace_string_platforms: Todos os navegadores modernos
+  tutorial_kcjtennis_string_platforms: Todos os navegadores modernos
+  tutorial_robotmagictower_string_platforms: Todos os navegadores modernos
+  tutorial_ttdragons_string_platforms: Chrome, Firefox
+  tutorial_kcjarchery_string_platforms: Todos os navegadores modernos
+  tutorial_ttsprouts_string_platforms: Chrome, Firefox
+  tutorial_ttmaze_string_platforms: Chrome, Firefox
+  tutorial_codetribe_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_ttcanyon_string_platforms: Chrome, Firefox
+  tutorial_kcjxtrail_string_platforms: Todos os navegadores modernos
+  tutorial_codespeakroad_string_platforms: Chrome
+  tutorial_educodelair_string_platforms: Todos os navegadores modernos, iPad, sem
+    conexão
+  tutorial_ibmhourofz_string_platforms: Chrome, Firefox, Android phone, iPhone
+  tutorial_gamefrootbacteria_string_platforms: Todos os navegadores modernos
+  tutorial_educodeforest_string_platforms: Todos os navegadores modernos, iPad, sem
+    conexão
+  tutorial_educodehorus_string_platforms: Todos os navegadores modernos, iPad, sem
+    conexão
+  tutorial_codespeakpokemon_string_platforms: Todos os navegadores modernos
+  tutorial_stemholiday_string_platforms: Chrome
+  tutorial_codespeakpixel_string_platforms: Todos os navegadores modernos
+  tutorial_codespellsnexus_string_platforms: Chrome, Firefox
+  tutorial_carnegieslime_string_platforms: Todos os navegadores modernos
+  tutorial_ozotown_string_platforms: Todos os navegadores modernos
+  tutorial_milnedash_string_platforms: Todos os navegadores modernos
+  tutorial_microbitpet_string_platforms: Todos os navegadores modernos
+  tutorial_spherotriad_string_platforms: Android tablet, iPad, Android phone, iPhone,
+    Windows 10, macOS, ChromeOS
+  tutorial_spheropassword_string_platforms: All modern browsers, Android tablet, iPad,
+    Windows phone, Android phone, iPhone
+  tutorial_codequilt_string_platforms: Todos os navegadores modernos
+  tutorial_ozoshape1_string_platforms: Todos os navegadores modernos
+  tutorial_ozoshape2_string_platforms: Todos os navegadores modernos
+  tutorial_hopescape_string_platforms: iPad, iPhone
+  tutorial_ozorace_string_platforms: Todos os navegadores modernos
+  tutorial_ozoequestrian_string_platforms: Todos os navegadores modernos
+  tutorial_irobotpizza_string_platforms: Off-line
+  tutorial_ai4alldance_string_platforms: Todos os navegadores modernos
+  tutorial_ai4allneural_string_platforms: Todos os navegadores modernos
+  tutorial_spheroinout_string_platforms: Off-line
+  tutorial_edisonblueprint_string_platforms: Todos os navegadores modernos
+  tutorial_edisonmaze_string_platforms: Todos os navegadores modernos
+  tutorial_milnefunctions_string_platforms: Todos os navegadores modernos
+  tutorial_sasmap_string_platforms: All modern browsers, iPad, Screen reader
+  tutorial_firstrobotics_string_platforms: Todos os navegadores modernos
+  tutorial_sasdata_string_platforms: Todos os navegadores modernos
+  tutorial_carnegiesensabot_string_platforms: Todos os navegadores modernos
+  tutorial_robotical4_string_platforms: Todos os navegadores modernos
+  tutorial_kinderadd_string_platforms: Off-line
+  tutorial_imagipython_string_platforms: Chrome, Firefox, Android tablet, iPad, Android
+    phone, iPhone
+  tutorial_robotical2_string_platforms: Off-line
+  tutorial_robotical3_string_platforms: Todos os navegadores modernos
+  tutorial_blockscadvirus_string_platforms: Todos os navegadores modernos
+  tutorial_robotical1_string_platforms: Off-line
+  tutorial_irobotshapes_string_platforms: Off-line
+  tutorial_irobotparts_string_platforms: Off-line
+  tutorial_irobottools_string_platforms: Off-line
+  tutorial_kindercar_string_platforms: Off-line
+  tutorial_caavatar_string_platforms: Todos os navegadores modernos, tablet Android,
+    iPad
+  tutorial_hello_string_detail_platforms: ''
+  tutorial_raspispace_string_detail_platforms: ''
+  tutorial_codemonkeyjump_string_detail_platforms: ''
+  tutorial_poemart_string_detail_platforms: ''
+  tutorial_kodablehero_string_detail_platforms: ''
+  tutorial_cacloud_string_detail_platforms: ''
+  tutorial_blocksmithbot_string_detail_platforms: Internet Explorer 11, Microsoft
+    Edge, Chrome, Firefox, Safari
+  tutorial_hatchmario_string_detail_platforms: ''
+  tutorial_microsoftforest_string_detail_platforms: ''
+  tutorial_blackbirdscreen_string_detail_platforms: ''
+  tutorial_toxicodecompute2_string_detail_platforms: Todos os navegadores modernos
+  tutorial_minecrafttimecraft_string_detail_platforms: ''
+  tutorial_blackbirdtether_string_detail_platforms: ''
+  tutorial_ob_string_detail_platforms: ''
+  tutorial_codeartportrait_string_detail_platforms: ''
+  tutorial_shelly_string_detail_platforms: ''
+  tutorial_weavly_string_detail_platforms: ''
+  tutorial_codespeakpassword_string_detail_platforms: Chrome, Firefox, Safari
+  tutorial_kodableshapes_string_detail_platforms: ''
+  tutorial_nasabinary_string_detail_platforms: ''
+  tutorial_3dmaker_string_detail_platforms: ''
+  tutorial_itchstart_string_detail_platforms: ''
+  tutorial_hopsub_string_detail_platforms: ''
+  tutorial_itchmundos_string_detail_platforms: ''
+  tutorial_itchtenacity_string_detail_platforms: ''
+  tutorial_kcjskiing_string_detail_platforms: ''
+  tutorial_groksecurity_string_detail_platforms: ''
+  tutorial_creaticode_string_detail_platforms: ''
+  tutorial_kcjhockey_string_detail_platforms: ''
+  tutorial_ttdungeon_string_detail_platforms: ''
+  tutorial_ccai_string_detail_platforms: ''
+  tutorial_bsdai_string_detail_platforms: ''
+  tutorial_stemdata_string_detail_platforms: ''
+  tutorial_thunkableinfo_string_detail_platforms: ''
+  tutorial_educodespace_string_detail_platforms: ''
+  tutorial_kcjtennis_string_detail_platforms: ''
+  tutorial_robotmagictower_string_detail_platforms: ''
+  tutorial_ttdragons_string_detail_platforms: ''
+  tutorial_kcjarchery_string_detail_platforms: ''
+  tutorial_ttsprouts_string_detail_platforms: ''
+  tutorial_ttmaze_string_detail_platforms: ''
+  tutorial_codetribe_string_detail_platforms: ''
+  tutorial_ttcanyon_string_detail_platforms: ''
+  tutorial_kcjxtrail_string_detail_platforms: ''
+  tutorial_codespeakroad_string_detail_platforms: ''
+  tutorial_educodelair_string_detail_platforms: ''
+  tutorial_ibmhourofz_string_detail_platforms: ''
+  tutorial_gamefrootbacteria_string_detail_platforms: Todos os navegadores modernos
+  tutorial_educodeforest_string_detail_platforms: ''
+  tutorial_educodehorus_string_detail_platforms: ''
+  tutorial_codespeakpokemon_string_detail_platforms: ''
+  tutorial_stemholiday_string_detail_platforms: ''
+  tutorial_codespeakpixel_string_detail_platforms: Chrome, Firefox, Safari
+  tutorial_codespellsnexus_string_detail_platforms: ''
+  tutorial_carnegieslime_string_detail_platforms: ''
+  tutorial_ozotown_string_detail_platforms: Ozobot
+  tutorial_milnedash_string_detail_platforms: Robô Dash
+  tutorial_microbitpet_string_detail_platforms: micro:bit
+  tutorial_spherotriad_string_detail_platforms: Sphero Bolt
+  tutorial_spheropassword_string_detail_platforms: littleBits STEAM+ Coding Kit
+  tutorial_codequilt_string_detail_platforms: ''
+  tutorial_ozoshape1_string_detail_platforms: Ozobot
+  tutorial_ozoshape2_string_detail_platforms: Ozobot
+  tutorial_hopescape_string_detail_platforms: ''
+  tutorial_ozorace_string_detail_platforms: Ozobot
+  tutorial_ozoequestrian_string_detail_platforms: Ozobot
+  tutorial_irobotpizza_string_detail_platforms: ''
+  tutorial_ai4alldance_string_detail_platforms: ''
+  tutorial_ai4allneural_string_detail_platforms: ''
+  tutorial_spheroinout_string_detail_platforms: Sphero indi
+  tutorial_edisonblueprint_string_detail_platforms: Edison robot
+  tutorial_edisonmaze_string_detail_platforms: Edison robots
+  tutorial_milnefunctions_string_detail_platforms: Robô Dash
+  tutorial_sasmap_string_detail_platforms: iPad, the free app and one robot. Supports
+    BOLT, SPRK+, Sphero Mini, SPRK, Sphero, and Ollie robots.
+  tutorial_firstrobotics_string_detail_platforms: ''
+  tutorial_sasdata_string_detail_platforms: ''
+  tutorial_carnegiesensabot_string_detail_platforms: ''
+  tutorial_robotical4_string_detail_platforms: Marty the Robot
+  tutorial_kinderadd_string_detail_platforms: KIBO Robot Kit
+  tutorial_imagipython_string_detail_platforms: ''
+  tutorial_robotical2_string_detail_platforms: Marty the Robot
+  tutorial_robotical3_string_detail_platforms: Marty the Robot
+  tutorial_blockscadvirus_string_detail_platforms: ''
+  tutorial_robotical1_string_detail_platforms: Marty the Robot
+  tutorial_irobotshapes_string_detail_platforms: ''
+  tutorial_irobotparts_string_detail_platforms: ''
+  tutorial_irobottools_string_detail_platforms: ''
+  tutorial_kindercar_string_detail_platforms: KIBO Robot Kit
+  tutorial_caavatar_string_detail_platforms: ''
+  tutorial_hello_string_detail_programming_languages: Blocos
+  tutorial_raspispace_string_detail_programming_languages: Blocos, Scratch
+  tutorial_codemonkeyjump_string_detail_programming_languages: Blocos
+  tutorial_poemart_string_detail_programming_languages: Blocos
+  tutorial_kodablehero_string_detail_programming_languages: JavaScript, iOS/Swift,
+    Language independent (can be taught in multiple languages)
+  tutorial_cacloud_string_detail_programming_languages: Theory Based
+  tutorial_blocksmithbot_string_detail_programming_languages: JavaScript
+  tutorial_hatchmario_string_detail_programming_languages: Blocos
+  tutorial_microsoftforest_string_detail_programming_languages: Blocos
+  tutorial_blackbirdscreen_string_detail_programming_languages: JavaScript
+  tutorial_toxicodecompute2_string_detail_programming_languages: Python
+  tutorial_minecrafttimecraft_string_detail_programming_languages: Blocos, Python
+  tutorial_blackbirdtether_string_detail_programming_languages: JavaScript
+  tutorial_ob_string_detail_programming_languages: Blocos
+  tutorial_codeartportrait_string_detail_programming_languages: JavaScript, p5.js
+  tutorial_shelly_string_detail_programming_languages: A Logo-like language
+  tutorial_weavly_string_detail_programming_languages: Blocos
+  tutorial_codespeakpassword_string_detail_programming_languages: Python
+  tutorial_kodableshapes_string_detail_programming_languages: JavaScript, Language
+    independent (can be taught in multiple languages)
+  tutorial_nasabinary_string_detail_programming_languages: Binary code
+  tutorial_3dmaker_string_detail_programming_languages: Blocos
+  tutorial_itchstart_string_detail_programming_languages: Blocos
+  tutorial_hopsub_string_detail_programming_languages: Hopscotch
+  tutorial_itchmundos_string_detail_programming_languages: Blocos
+  tutorial_itchtenacity_string_detail_programming_languages: Blocos
+  tutorial_kcjskiing_string_detail_programming_languages: Blocos
+  tutorial_groksecurity_string_detail_programming_languages: None - no programming
+    required
+  tutorial_creaticode_string_detail_programming_languages: Blocos
+  tutorial_kcjhockey_string_detail_programming_languages: Blocos
+  tutorial_ttdungeon_string_detail_programming_languages: Algorithms
+  tutorial_ccai_string_detail_programming_languages: JavaScript, Python, Lua, CoffeScript
+  tutorial_bsdai_string_detail_programming_languages: HTML, CSS and JavaScript
+  tutorial_stemdata_string_detail_programming_languages: JavaScript, Includes option
+    to download and analyze data in Google Sheets and Excel
+  tutorial_thunkableinfo_string_detail_programming_languages: Blocos
+  tutorial_educodespace_string_detail_programming_languages: JavaScript
+  tutorial_kcjtennis_string_detail_programming_languages: Blocos
+  tutorial_robotmagictower_string_detail_programming_languages: Blocos, JavaScript
+  tutorial_ttdragons_string_detail_programming_languages: Blocos, JavaScript
+  tutorial_kcjarchery_string_detail_programming_languages: Blocos
+  tutorial_ttsprouts_string_detail_programming_languages: JavaScript, C#
+  tutorial_ttmaze_string_detail_programming_languages: JavaScript
+  tutorial_codetribe_string_detail_programming_languages: JavaScript, HTML and CSS.
+  tutorial_ttcanyon_string_detail_programming_languages: Blocos, JavaScript
+  tutorial_kcjxtrail_string_detail_programming_languages: Blocos
+  tutorial_codespeakroad_string_detail_programming_languages: Blocos
+  tutorial_educodelair_string_detail_programming_languages: JavaScript
+  tutorial_ibmhourofz_string_detail_programming_languages: Python, COBOL
+  tutorial_gamefrootbacteria_string_detail_programming_languages: Blocos
+  tutorial_educodeforest_string_detail_programming_languages: JavaScript
+  tutorial_educodehorus_string_detail_programming_languages: JavaScript
+  tutorial_codespeakpokemon_string_detail_programming_languages: Blocos
+  tutorial_stemholiday_string_detail_programming_languages: JavaScript, HTML5
+  tutorial_codespeakpixel_string_detail_programming_languages: JavaScript
+  tutorial_codespellsnexus_string_detail_programming_languages: Blocks, JavaScript,
+    Racket
+  tutorial_carnegieslime_string_detail_programming_languages: Blocos
+  tutorial_ozotown_string_detail_programming_languages: Blocos
+  tutorial_milnedash_string_detail_programming_languages: Blocos
+  tutorial_microbitpet_string_detail_programming_languages: Editor MakeCode ou Python
+  tutorial_spherotriad_string_detail_programming_languages: Blocos
+  tutorial_spheropassword_string_detail_programming_languages: Blocos
+  tutorial_codequilt_string_detail_programming_languages: Blocos
+  tutorial_ozoshape1_string_detail_programming_languages: Blocos
+  tutorial_ozoshape2_string_detail_programming_languages: Blocos
+  tutorial_hopescape_string_detail_programming_languages: Blocks, Hopscotch
+  tutorial_ozorace_string_detail_programming_languages: Ozobot Color Codes
+  tutorial_ozoequestrian_string_detail_programming_languages: Color Codes
+  tutorial_irobotpizza_string_detail_programming_languages: Blocos
+  tutorial_ai4alldance_string_detail_programming_languages: No programming required.
+  tutorial_ai4allneural_string_detail_programming_languages: No programming required.
+  tutorial_spheroinout_string_detail_programming_languages: None - color tiles
+  tutorial_edisonblueprint_string_detail_programming_languages: Blocos
+  tutorial_edisonmaze_string_detail_programming_languages: Blocos
+  tutorial_milnefunctions_string_detail_programming_languages: Blocos
+  tutorial_sasmap_string_detail_programming_languages: Blocos
+  tutorial_firstrobotics_string_detail_programming_languages: Blocks, OnbotJava
+  tutorial_sasdata_string_detail_programming_languages: 'No programming languages. '
+  tutorial_carnegiesensabot_string_detail_programming_languages: Blocos
+  tutorial_robotical4_string_detail_programming_languages: Blocos
+  tutorial_kinderadd_string_detail_programming_languages: Tangible KIBO blocks
+  tutorial_imagipython_string_detail_programming_languages: Python
+  tutorial_robotical2_string_detail_programming_languages: This makes use of a paper
+    printout of the Marty Controller
+  tutorial_robotical3_string_detail_programming_languages: Blocos
+  tutorial_blockscadvirus_string_detail_programming_languages: Blocos
+  tutorial_robotical1_string_detail_programming_languages: Language independent (can
+    be taught in multiple languages), Color cards are used to command the device featured
+    in the video and to instruct partners.
+  tutorial_irobotshapes_string_detail_programming_languages: pre-reader computational
+    thinking activity
+  tutorial_irobotparts_string_detail_programming_languages: pre-reader computational
+    thinking activity
+  tutorial_irobottools_string_detail_programming_languages: pre-reader computational
+    thinking activity
+  tutorial_kindercar_string_detail_programming_languages: KIBO tangible blocks
+  tutorial_caavatar_string_detail_programming_languages: CS Conceptual so no language
+    needed
+  tutorial_icomputefireworks_name: 'Fireworks Display: Created with Code'
+  tutorial_icomputefireworks_longdescription: Create your own fireworks display using
+    code.
+  tutorial_icomputefireworks_language: English, English (UK)
+  tutorial_icomputefireworks_string_detail_grades: Crianças que estão aprendendo a
+    ler até 5º ano
+  tutorial_icomputefireworks_string_platforms: Todos os navegadores modernos
+  tutorial_icomputefireworks_string_detail_platforms: ''
+  tutorial_icomputefireworks_string_detail_programming_languages: Blocos
   school_not_found_heading: Não conseguimos encontrar a sua escola. Por favor insira
     mais informações.
   school_name: Nome da escola
@@ -10798,3 +10893,86 @@ pt:
   all: Todos
   dont_know: Eu não sei
   language_label: Language
+  ar: Arabic
+  az: Azerbaijani
+  bg: Bulgarian
+  bn: Bangla
+  br: Breton
+  bs: Bosnian
+  ca: Catalan
+  cs: Czech
+  cs-cz: Czech (Czechia)
+  da: Danish
+  da-dk: Danish (Denmark)
+  de: German
+  de-de: German (Germany)
+  el: Greek
+  el-gr: Greek (Greece)
+  en: Português (Brasil)
+  en-gb: English (United Kingdom)
+  es: Spanish
+  es-es: Spanish (Spain)
+  es-mx: Spanish (Mexico)
+  et: Estonian
+  eu: Basque
+  fa: Persian
+  fa-ir: Persian (Iran)
+  fi: Finnish
+  fi-fi: Finnish (Finland)
+  fil-ph: Filipino (Philippines)
+  fr: French
+  gl: Galician
+  he: Hebrew
+  hi: Hindi
+  hi-in: Hindi (India)
+  hr: Croatian
+  hu: Hungarian
+  ia: Interlingua (International Auxiliary Language Association)
+  id: Bahasa Indonesian
+  is: Icelandic
+  it: Italian
+  it-it: Italian (Italy)
+  ja: Japanese
+  ja-jp: Japanese (Japan)
+  ka: Georgian
+  kk: Kazakh
+  ko: Korean
+  lt: Lithuanian
+  lv: Latvian
+  mk: Macedonian
+  mr: Marathi
+  ms: Malay
+  my: Burmese
+  nl: Dutch
+  nl-nl: Dutch (Netherlands)
+  nn: Norwegian (Nynorsk)
+  false: Norwegian
+  pl: Polish
+  pl-pl: Polish (Poland)
+  pt: Portuguese
+  pt-br: Portuguese (Brazil)
+  pt-pt: Portuguese (Portugal)
+  ro: Romanian
+  ru: Russian
+  sk: Slovak
+  sl: Slovenian
+  sq: Albanian
+  sr: Serbian
+  sv: Swedish
+  sv-se: Swedish (Sweden)
+  sw: Kiswahili
+  ta: Tamil
+  te: Telugu
+  th: Thai
+  tl: Tagalog
+  tr: Turkish
+  uk: Ukrainian
+  ur: Urdu
+  ur-in: Urdu (India)
+  ur-pk: Urdu (Islamic Republic of Pakistan)
+  vi: Vietnamese
+  zh: Chinese (Simplified)
+  zh-cn: Chinese (Simplified, People's Republic of China)
+  zh-hans: Chinese (Simplified) (zh-Hans)
+  zh-hant: Chinese (Traditional) (zh-Hant)
+  zh-tw: Chinese (Traditional, Taiwan)

@@ -1,5 +1,7 @@
 {
-  "func": "destroyEach",
+  "key": "destroyEach",
+  "name": "destroyEach",
   "category": "Groups",
-  "modeOptionName": "*.destroyEach"
+  "category_key": "groups",
+  "syntax": "destroyEach"
 }

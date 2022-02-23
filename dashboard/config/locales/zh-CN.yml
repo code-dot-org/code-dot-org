@@ -54,6 +54,7 @@ zh-CN:
   previous_page: 上一页
   next_page: 下一页
   next_resource: 下一个资源
+  done_with_module: 完成本学习模块
   cancel: 取消
   okay: 好吧
   or: 或
@@ -180,6 +181,7 @@ zh-CN:
     email_preference_yes: 对
     email_preference_no: 不
     email_preference_required: 你必须指定一个电子邮件地址。
+    share_teacher_email_reg_partner_question: 您是否希望我们与您所在州的[Code.org区域合作伙伴](%{cdo_regional_partner_desc})共享您的联系信息，以便他们向您告知当地的专业开发、资源和活动？
     share_teacher_email_reg_partner_preference_yes: 对
     share_teacher_email_reg_partner_preference_no: 不
     share_teacher_email_reg_partner_preference_required: 你必须指定一个电子邮件地址。
@@ -288,6 +290,8 @@ zh-CN:
       cant_join_own_section: 对不起，不能加入自己的小组。
       provider_managed_section: 这个小组是通过其它网站进行管理的，而且不能加入。请询问你的老师通过 %{provider} 将你加入，并重新同步该小组。
       restricted_section: 我们无法将您添加到%{section_code}小组，因为它被锁定。请联系你的老师寻求帮助。
+      full_section: 我们无法将您添加到%{section_code}部分，因为其中已经有%{section_capacity}个学生。请联系你的老师寻求帮助。
+      not_participant_type: 我们无法将您添加到%{section_code}部分，因为您不满足该部分的参与者类型。
     mail:
       student_disassociated:
         subject: Code.org 提醒：%{student_name} 已不再是您的学生。
@@ -404,12 +408,15 @@ zh-CN:
       minecraft_hero: "《我的世界》英雄"
       playlab: 游戏实验室
       playlab_k1: 剧本实验室（学龄前）
+      poetry: 诗歌
+      poetry_hoc: 诗歌艺术
       scratch: Scratch
       sports: 运动
       spritelab: 精灵图实验室
       starwars: 星球大战
       starwarsblocks: 星球大战(块)
       starwarsblocks_hour: 星球大战(块)
+      loading: 正在载入...​​​
       weblab: 网络实验室
       view_all: 查看所有项目……
     popup:
@@ -425,6 +432,7 @@ zh-CN:
       prizes_link: 更多信息
   teacher:
     answer: 回答
+    dashboard: 教师的仪表板
     for_teachers_only: 仅限教师
     title:
       one: 你的老师：
@@ -550,6 +558,7 @@ zh-CN:
     all_students_must_be_in_current_section: 所有的学生都必须注册到小组中。
     already_enrolled_in_new_section: 无法移动这些学生，因为他们已经在这个新的小组里了。
     third_party_login: 不能将从第三方工具同步的学生移动到另一个小组。
+    not_correct_participant_type: 您无法移动这些用户，因为他们没有成为新部分的参与者的权限。
   share:
     title: 在代码工作室学习
     description: 任何人都可以学习计算机科学。用代码制作游戏、 应用程序和艺术作品。
@@ -602,6 +611,7 @@ zh-CN:
     how_it_works: 它是如何工作的（查看代码）
     try_hour_of_code: 试试《编程一小时》！
     store: 商店
+    cookie_notice: Cookie通知
   reference_area:
     title: 需要帮助吗？
     subtitle: 看看这些视频和提示
@@ -937,6 +947,7 @@ zh-CN:
     instructor_feedback: 教师反馈
     peer_feedback: 同伴反馈
     outdated: 这个反馈是添加给以前提交的版本
+    review_count: 您必须完成本单元的%{review_count}审核
     peer_review: 互相检查
   external_links:
     disclaimer: 免责声明
@@ -1017,12 +1028,18 @@ zh-CN:
       email: 电子邮件
       email_alternate: 备用电子邮件
       gender: 性别
+      school: 学校
       school_name: 学校名称
       school_city: 学校所在城市
+      school_city_district: 学校城市/区
       school_country: 学校所在国家
+      school_department_region: 学校部门/地区
       colombian_school_city: 学校所在城市
+      colombian_chilean_school_department: 学校部门/地区
       colombian_school_municipality: 学校政府
       colombian_chilean_school_name: 学校名称
+      chilean_school_commune: 社群
+      chilean_school_id: 学校编号
       ages: 今年将教什么年纪的学生？
       subjects: 今年教的科目是什么？
       resources: 您使用以下哪种计算机科学教育资源？
@@ -1049,6 +1066,7 @@ zh-CN:
         malaysia: 马来西亚
         mexico: 墨西哥
         thailand: 泰国
+        uzbekistan: 乌兹别克斯坦
       ages:
         ages_under_6: 6岁以下
         ages_7_8: 7-8岁
@@ -1143,3 +1161,4 @@ zh-CN:
     this_sprite: 这个精灵
   unit_prefix: 单位%{n}
   code_org_logo_alt: Code.org首页
+  teacher_feedback: 老师反馈

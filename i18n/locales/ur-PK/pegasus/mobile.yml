@@ -276,7 +276,12 @@
   playlab_iceage_title: "برفانی عہد - جلد آ رہا ہے"
   playlab_iceage_title_live: "برفانی عہد"
   starwars_subtitle: "ایک کہکشاں کی کوڈ کے ساتھ تعمیر"
+  starwars_javascript_title: "جاوا اسکرپٹ"
+  starwars_javascript_description: "ڈریگ-ڈراپ بلاکس اور جاوا اسکرپٹ استعمال کریں۔"
+  starwars_javascript_specs: "صرف انگریزی | جدید براؤزرز | عمر 11+"
   starwars_blocks_title: "مسدود کرتا ہے"
+  starwars_blocks_description: "ڈریگ-ڈراپ بلاکس استعمال کریں۔"
+  starwars_blocks_specs: "کئی زبانیں | جدید براؤزر، اسمارٹ فونز، ٹیبلٹس | عمر 6-106"
   mc_name: "Minecraft کوڈ کی گھڑی"
   mc_gradelevel: "Ages 6-106\n"
   minecraft_agent_button: "شروع کریں"
@@ -393,6 +398,7 @@
   pre-express_name: پری ریڈر ایکسپریس کورس
   20-hour_name: تیز کردہ کورس
   iceage_name: "برفانی عہد"
+  starwarsblocks_name: "اسٹار وارز (بلاکس)"
   codeorg_gradelevel: "عمر 4-104"
   codeintl_gradelevel: "عمر 4-104"
   tynker_gradelevel: "Ages 5-13\n"
@@ -464,6 +470,12 @@
   coursed-2020_gradelevel: عمر 7-11
   coursee-2020_gradelevel: "Ages 8-12\n"
   coursef-2020_gradelevel: "Ages 9-13\n"
+  coursea-2021_gradelevel: عمر 4-7
+  courseb-2021_gradelevel: "Ages 5-8\n"
+  coursec-2021_gradelevel: "Ages 6-10\n"
+  coursed-2021_gradelevel: عمر 7-11
+  coursee-2021_gradelevel: "Ages 8-12\n"
+  coursef-2021_gradelevel: "Ages 9-13\n"
   accelerated_gradelevel: "Ages 10-18\n"
   thinkersmithspanish_platformtext: "پلگ نکالا ہوا"
   thinkersmith_platformtext: "پلگ نکالا ہوا"
@@ -474,6 +486,7 @@
   frozen_platformtext: "ماڈرن براؤزر + ٹیبلٹس"
   starwars_platformtext: "ماڈرن براؤزر + ٹیبلٹس"
   frozen_shortdescription: "آئیں کوڈ کو استعمال کریں تاکہ اینا اور ایلسا کو جوائن کرسکیں کہ میجک اینڈ بیوٹی آف آئس کو وہ کیسے ایکسپلور کر رہی ہیں۔"
+  starwars_shortdescription: "ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں اپنی اسٹار وارز گیم بنائیں۔"
   coursea_shortdescription_congrats: "پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔"
   courseb_shortdescription_congrats: "پری ریڈرز کے لیے کمپیوٹر سائنس کا تعارف۔ (کورس A سے مشابہ، لیکن بڑی عمر کے طلباء کے لیے مزید ورائٹی کے ساتھ۔)"
   coursed_shortdescription_congrats: "کورس C سے تصورات کا تیزی سے احاطہ کریں، پھر الگورتھمز، نیسٹڈ لوپس، کنڈیشنلز، اور مزید کے ساتھ آگے بڑھیں۔"
@@ -497,6 +510,7 @@
   thinkersmith2_longdescription: "سٹوڈنٹس آن اینڈ آف فنکشن کے زریعے حروف کو binary کوڈ میں محفوظ کرنا  سیکھتے ہیں۔ یہاں تک کے تمام کلاس اپنے initials انکوڈ کرنا سیکھ لیتے ہیں۔ "
   hourofcode_longdescription: "Apna pehla Computer ka Program likhiye"
   frozen_longdescription: "آئیں کوڈ کو استعمال کریں اور اینا اور ایلسا کے ساتھ میجک اینڈ بیوٹی آف آئس کو ایکسپلور کریں۔ آپ آئس-اسکیٹنگ کرتے ہوۓ سنوفلیکس اور پیٹرنز تخلیق کریں گے اور ایسا ونٹر ونڈرلینڈ بنائیں گے جو آپ اپنے دوستوں کو بھی دکھا سکیں گے۔"
+  starwars_longdescription: "ڈروئیڈز کو پروگرام کرنا سیکھیں، اور بہت دور، دور کہکشاں میں اپنی اسٹار وارز گیم بنائیں۔"
   tynker_beyond_name: "گھر بیٹھے پروگرامنگ سیکھیے"
   codeorg_beyond_gradelevel: "عمر 4-104"
   tynker_beyond_gradelevel: "Ages 5-13\n"
@@ -534,6 +548,7 @@
   user_header_signin: "سائن ان کریں"
   user_header_create: 'تخلیق کریں '
   user_header_dance: "ڈانس پارٹی"
+  user_header_flappy: "فلاپی"
   user_header_view_project_gallery: "تمام منصوبوں کو دیکھیں"
   user_header_view_my_projects: "تمام منصوبوں کو دیکھیں"
   view_all_sections: "تمام سیکشن دیکھیں"
@@ -566,6 +581,13 @@
   hoc2018_dance_measure: "پیمائش"
   hoc2018_dance_measure_colon: 'پیمائش:'
   hoc2018_mc_thank_microsoft: "ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری بصیرت اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں سیکھنے کا موقع فراہم ہو کی حمایت کی."
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'وقت میں واپس سفر کریں اور کوڈ بنانا سیکھیں! نیا Minecraft آور آف کوڈ ٹیوٹوریل اب Minecraft میں دستیاب ہے: ونڈوز، میک، کروم بک، اور آئی پیڈ کے لیے تعلیمی ایڈیشن۔ مفت معلم وسائل، تربیت اور ویڈیوز کے ساتھ شروع کریں۔'
+  hoc2021_mc_mee_villages_title: "دو گاؤں کی کہانی"
+  hoc2021_mc_mee_villages_description: 'کوڈنگ کی بنیادی باتیں سیکھیں اور Minecraft میں اپنے طلباء کے ساتھ تنوع اور شمولیت دریافت کریں: تعلیمی ایڈیشن۔'
+  hoc2021_mc_mee_ai_title: "AI ہمیشہ کے لیے"
+  hoc2021_mc_mee_ai_description: 'اپنے طلباء کے ساتھ AI کو دریافت کریں اور Minecraft میں کوڈ سیکھیں: تعلیمی ایڈیشن۔'
+  codebytes_skinny_banner_english_only: "صرف انگریزی"
   footer_privacy_policy: "رازداری کی پالیسی"
   footer_about: "متعلق"
   footer_donate: "عطیہ کریں"
@@ -573,3 +595,5 @@
   ai_microsoft_thanks: "ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری بصیرت اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں سیکھنے کا موقع فراہم ہو کی حمایت کی."
   ai_activity: "سرگرمی"
   ai_description: "تفصیل"
+  outbreak_tile_title: "وباء کا پھیلنا"
+  outbreak_tile_subtitle: "ایک وائرس نے مونسٹر ٹاؤن کو متاثر کیا ہے! ایک وبا پھیلنے کا سمیولیٹر کوڈ کریں اور اس بارے میں پیشین گوئیاں کریں کہ مونسٹر ٹاؤن کے پڑوسیوں کے ساتھ کیا ہوگا۔"

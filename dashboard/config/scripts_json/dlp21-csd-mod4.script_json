@@ -5,14 +5,17 @@
     "login_required": true,
     "properties": {
       "is_migrated": true,
-      "professional_learning_course": "2021 CS Discoveries Deeper Learning",
       "peer_reviews_to_complete": 6,
+      "professional_learning_course": "2021 CS Discoveries Deeper Learning",
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-28 17:10:16 UTC",
+    "serialized_at": "2022-01-21 15:36:30 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "plc_reviewer",
+    "participant_audience": "facilitator",
     "seeding_key": {
       "script.name": "dlp21-csd-mod4"
     }

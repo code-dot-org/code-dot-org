@@ -1,6 +1,7 @@
 {
-  "func": "minDepth",
+  "key": "minDepth",
+  "name": "minDepth",
   "category": "Groups",
-  "modeOptionName": "*.minDepth",
-  "type": "value"
+  "category_key": "groups",
+  "syntax": "minDepth"
 }

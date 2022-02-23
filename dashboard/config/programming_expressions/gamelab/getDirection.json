@@ -1,6 +1,7 @@
 {
-  "func": "getDirection",
+  "key": "getDirection",
+  "name": "getDirection",
   "category": "Sprites",
-  "modeOptionName": "*.getDirection",
-  "type": "value"
+  "category_key": "sprites",
+  "syntax": "getDirection"
 }

@@ -2169,6 +2169,387 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "模块可以从工具区拖到你的工作区。"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "新模块！",
+          "hello_world_new_block": "新模块！"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "新模块！",
+          "hello_world_new_block": "新模块！"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "新模块！",
+          "hello_world_new_block": "新模块！"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "新模块！"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "新模块！",
+          "hello_world_new_block": "新模块！"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "新模块！"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "新模块！"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "新模块！",
+          "poetry_foreground": "新模块！"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "新模块！",
+          "poetry_multiple_sprites": "新模块！",
+          "poetry_new_block": "新模块！",
+          "poetry_selector": "选择任何诗歌，或输入你自己的！"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "新模块！",
+          "poetry_music": "新模块！"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "新模块！",
+          "poetry_sprite_stops": "新模块！"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "新模块！",
+          "poetry_remove_sprite": "新模块！"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "使用这个模块来设置一个新背景。"
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "将此模块与下面的其中一个行为一起使用。"
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "点击这里运行代码。"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "将此事件模块添加到工作区。"
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "点击这里为你的项目添加服装。"
+        },
+        "helloworld_animals_location": {
+          "pin": "针脚"
+        },
+        "helloworld_animals_multi": {
+          "pin": "针脚"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "使用这个模块让精灵图说话。",
+          "hello_world_make_sprite": "使用这个模块创建精灵图。"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "使用这个模块来设置一个新背景。"
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "将此模块与下面的其中一个行为一起使用。"
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "点击这里运行代码。"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "将此事件模块添加到工作区。"
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "点击这里为你的项目添加服装。"
+        },
+        "helloworld_emoji_location": {
+          "pin": "针脚"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "针脚"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "使用这个模块让精灵图说话。",
+          "hello_world_make_sprite": "使用这个模块创建精灵图。"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "使用这个模块来设置一个新背景。"
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "将此模块与下面的其中一个行为一起使用。"
+        },
+        "helloworld_food_click": {
+          "hw_Run": "点击这里运行代码。"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "将此事件模块添加到工作区。"
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "点击这里为你的项目添加服装。"
+        },
+        "helloworld_food_location": {
+          "pin": "针脚"
+        },
+        "helloworld_food_multi": {
+          "pin": "针脚"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "使用这个模块让精灵图说话。",
+          "hello_world_make_sprite": "使用这个模块创建精灵图。"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "使用这个模块来设置一个新背景。"
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "将此模块与下面的其中一个行为一起使用。"
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "点击这里运行代码。"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "将此事件模块添加到工作区。"
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "点击这里为你的项目添加服装。"
+        },
+        "helloworld_retro_location": {
+          "pin": "针脚"
+        },
+        "helloworld_retro_multi": {
+          "pin": "针脚"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "使用这个模块让精灵图说话。",
+          "hello_world_make_sprite": "使用这个模块创建精灵图。"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "在这里寻找代码模块。",
+          "run_button": "用这个按钮测试动画。"
+        },
+        "CSD U3 - conditionals - transition_2021": {
+          "CSD_U3_L8_S6_C1": "将控制台日志语句放到这里"
+        },
+        "CSD U3 Boolean Predict_2021": {
+          "": "程序会在这里打印结果"
+        },
+        "CSD U3 Sprites anitab 1_2021": {
+          "anicallout": "点击打开动画标签页"
+        },
+        "CSD U3 Sprites intro sprites_2021": {
+          "": "用这个模块来创建精灵图"
+        },
+        "CSD U3 Sprites text_2021": {
+          "": "使用此模块在屏幕上放置文本"
+        },
+        "CSD U3 UP_ARROW_2021": {
+          "": "添加如果语句，并将移动的代码放在里面"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "点击这里显示网格。"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "改动这里的数字"
+        },
+        "CSD U3 abstraction accelerateX_2021": {
+          "CSD_U3_L11_S6_C1": "在此处添加代码."
+        },
+        "CSD U3 abstraction accelerateY_2021": {
+          "CSD_U3_L11_S7_C1": "在此处添加代码."
+        },
+        "CSD U3 abstraction jump_2021": {
+          "CSD_U3_L11_S17_C1": "看看这个如果语句",
+          "CSD_U3_L11_S17_C2": "让青蛙落回这里"
+        },
+        "CSD U3 abstraction jumping_2021": {
+          "CSD_U3_L13_S8_C1": "在这里设置速度"
+        },
+        "CSD U3 abstraction looping_2021": {
+          "CSD_U3_L11_S17_C1": "看看这个如果语句"
+        },
+        "CSD U3 abstraction rotation control_2021": {
+          "CSD_U3_L11_S5_C1": "看看代码。"
+        },
+        "CSD U3 abstraction rotation_2021": {
+          "CSD_U3_L11_S4_C1": "在这里使用 rotationSpeed 模块"
+        },
+        "CSD U3 abstraction tumbleweed_2021": {
+          "CSD_U3_L11_S17_C1": "看看这个如果语句"
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "CSD_U3_L11_S5_C1": "看看代码。"
+        },
+        "CSD U3 abstraction velocityX if-statements_2021": {
+          "CSD_U3_L11_S5_C1": "看看代码。"
+        },
+        "CSD U3 abstraction velocityX_2021": {
+          "CSD_U3_L11_S4_C1": "在这里添加模块."
+        },
+        "CSD U3 abstraction velocityY control_2021": {
+          "CSD_U3_L11_S5_C1": "看看代码。"
+        },
+        "CSD U3 abstraction velocityY_2021": {
+          "CSD_U3_L11_S5_C1": "在这里添加模块."
+        },
+        "CSD U3 collisions isTouching intro_2021": {
+          "CSD_U3_L12_S2_C1": "在这里添加模块."
+        },
+        "CSD U3 collisions try blocks_2021": {
+          "CSD_U3_L13_S6_C1": "改变模块"
+        },
+        "CSD U3 collisions types2_2021": {
+          "CSD_U3_L13_S6_C1": "在此处添加代码."
+        },
+        "CSD U3 collisions types3_2021": {
+          "CSD_U3_L13_S6_C1": "在此处添加代码."
+        },
+        "CSD U3 collisions types4_2021": {
+          "CSD_U3_L13_S6_C1": "在此处添加代码."
+        },
+        "CSD U3 collisions types_2021": {
+          "CSD_U3_L13_S6_C1": "在此处添加代码."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 game backgrounds_2021": {
+          "CSD_U3_S18_L4_C1": "这个模块用来调用函数。",
+          "CSD_U3_L18_S4_C2": "函数区域"
+        },
+        "CSD U3 game variables_2021": {
+          "CSD_U3_S18_L3_C1": "这个模块用来创建新变量。",
+          "CSD_U3_L18_S3_C2": "变量区域"
+        },
+        "CSD U3 keydown conditional_2021": {
+          "": "将模块加到下面的如果语句里"
+        },
+        "CSD U3 platform background1_2021": {
+          "CSD_U3_L16_S3_C1": "此函数会画出背景",
+          "CSD_U3_L16_S3_C2": "这是调用函数的代码",
+          "CSD_U3_L16_S3_C3": "改动这个函数。"
+        },
+        "CSD U3 platform platform1_2021": {
+          "CSD_U3_S17_L8_C1": "此模块用来创建新的精灵图。"
+        },
+        "CSD U3 platform scoreboard_2021": {
+          "CSD_U3_L17_S7_C1": "分数显示在这里。"
+        },
+        "CSD U3 platform variable1_2021": {
+          "callout": "这个模块用来创建变量。"
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "这是代码"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "这是代码",
+          "CSD_U3_rect_c2": "拖动此模块放到代码区域。"
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "在此处添加代码"
+        },
+        "CSD U6 getProperty input_2021": {
+          "CSD_U6L06P03": "在这里添加模块."
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "这条线是做什么用的？"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "在此处定义 开始游戏"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "在这里定义 移动玩家 ()"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "检查玩家是否赢了"
+        },
+        "CSD games sidescroll background_2021": {
+          "CSD_U3_L11_S17_C1": "看看这个如果语句"
+        },
+        "CSD games velocity bee_2021": {
+          "CSD_U3_L11_S5_C1": "看看代码。"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "改动这里的数字"
+        },
+        "CSD web text size_2021": {
+          "": "使用此模块在屏幕上放置文本"
         }
       }
     }

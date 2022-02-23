@@ -11,6 +11,7 @@ uk:
       Artist Intro with JR Hildebrand: Художник Вступ з JR Хільдебранд
       Artist Intro with JR Hildebrande: Художник Вступ з JR Хільдебранде
       'Artist: Variables': 'Художник: змінні'
+      Assessment: Оцінка
       Attribution: Присвоєння
       Back and Forth: Назад і вперед
       Basic Conditionals: Основні умовні умови
@@ -23,7 +24,7 @@ uk:
       Building an App: Створення програми
       Buttons and Switch: Кнопки та перемикач
       CS Discoveries Post-Course Survey: Опитування після курсу Відкриття інформатики
-      CS Discoveries Post-course Survey: CS відкриття після курсу опитування
+      CS Discoveries Post-course Survey: Опитування після курсу Відкриття інформатики
       CSS Classes: Класи CSS
       CSS Text Properties: Властивості тексту CSS
       CSS and Style Sheets: CSS та таблиці стилів
@@ -67,12 +68,15 @@ uk:
       Events: Події
       Events and Linking Screens: Події та зв'язування екранів
       Events and Properties: Події та властивості
+      Example: Приклад
       Example projects: Приклади проектів
       Expanding Personal Website: Розширення особистого веб-сайту
       Expanding Your Website: Розширення вашого веб-сайту
       Experiment with Web Lab: Експеримент з Web Lab
+      'Exploration: Adding Style': 'Дослідження: Додавання стилю'
       Explore HTML: Досліджуйте HTML
       Exploring more CSS: Вивчення більш CSS
+      Extra: Додатково
       Finish a Screen: Завершення екрана
       Finish the Prototype: Закінчити прототип
       Fonts and Style: Шрифти та стиль
@@ -189,7 +193,13 @@ uk:
       Using the Repeat Block: Використання блоку повторів
       Variables: Змінні
       Velocity: Швидкість
+      'Video: Intro to CSS': 'Відео: Вступ до CSS'
+      'Video: Intro to Web Lab - Part 1': |2-
+
+        Відео: Вступ до веб-лабораторії - частина 1
+      'Video: Intro to Web Lab - Part 2': 'Відео: Вступ до Web Lab - частина 2'
       'Video: Problem Solving Process': 'Відео: Процес вирішення проблем'
+      'Video: What Makes a Computer, a Computer?': 'Відео: Що робить комп''ютер комп''ютером?'
       Warm Up: Розминка
       Website Project: Проект сайту
       Welcome to Monster Town: Ласкаво просимо до Монстро-міста

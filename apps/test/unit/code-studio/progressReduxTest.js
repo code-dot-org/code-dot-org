@@ -11,7 +11,6 @@ import reducer, {
   mergeResults,
   mergePeerReviewProgress,
   disablePostMilestone,
-  setIsHocScript,
   setIsAge13Required,
   setIsSummaryView,
   setStudentDefaultsSummaryView,
@@ -338,24 +337,10 @@ describe('progressReduxTest', () => {
       assert.equal(nextState.postMilestoneDisabled, true);
     });
 
-    it('initially sets isHocScript to null', () => {
-      assert.equal(initialState.isHocScript, null);
-    });
-
-    it('can update isHocScript', () => {
-      const isHocScript = reducer(initialState, setIsHocScript(true));
-      assert.equal(isHocScript.isHocScript, true);
-
-      const isNotHocScript = reducer(initialState, setIsHocScript(false));
-      assert.equal(isNotHocScript.isHocScript, false);
-    });
-
     it('can update isAge13Required', () => {
+      assert.equal(initialState.isAge13Required, false);
       const state = reducer(initialState, setIsAge13Required(true));
       assert.equal(state.isAge13Required, true);
-
-      const nextState = reducer(initialState, setIsHocScript(false));
-      assert.equal(nextState.isAge13Required, false);
     });
 
     it('can update isSummaryView', () => {
@@ -391,12 +376,12 @@ describe('progressReduxTest', () => {
     // stuff like updating query param. We just want to test the core action
     // it ultimately dispatches.
     describe('setViewType', () => {
-      it('toggles to detail view when setting viewAs to Teacher', () => {
+      it('toggles to detail view when setting viewAs to instructor', () => {
         const state = {
           ...initialState,
           isSummaryView: true
         };
-        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
       });
 
@@ -406,7 +391,7 @@ describe('progressReduxTest', () => {
           studentDefaultsSummaryView: true,
           isSummaryView: false
         };
-        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
       });
 
@@ -416,7 +401,7 @@ describe('progressReduxTest', () => {
           studentDefaultsSummaryView: false,
           isSummaryView: true
         };
-        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
       });
     });
@@ -1359,7 +1344,7 @@ describe('progressReduxTest', () => {
 
     it('requests user progress and dispatches appropriate actions', () => {
       const responseData = {
-        isVerifiedTeacher: true,
+        isVerifiedInstructor: true,
         teacherViewingStudent: true,
         professionalLearningCourse: false,
         focusAreaLessonIds: [1, 2],
@@ -1375,9 +1360,8 @@ describe('progressReduxTest', () => {
 
       const expectedDispatchActions = [
         'progress/CLEAR_RESULTS',
-        'verifiedTeacher/SET_VERIFIED',
+        'verifiedInstructor/SET_VERIFIED',
         'progress/SET_IS_SUMMARY_VIEW',
-        'progress/SHOW_TEACHER_INFO',
         'progress/UPDATE_FOCUS_AREAS',
         'lessonLock/AUTHORIZE_LOCKABLE',
         'progress/SET_UNIT_COMPLETED',

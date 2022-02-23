@@ -1,4 +1,7 @@
 {
-  "func": "stop",
-  "category": "Circuit"
+  "key": "stop",
+  "name": "stop",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "syntax": "stop"
 }

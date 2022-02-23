@@ -202,7 +202,7 @@ hr:
             dok istražuju čaroliju i ljepotu leda.
           lessons:
             Artist:
-              name: Umjetnik
+              name: Kodiraj s Annom i Elsom
           student_description: Iskoristimo programiranje da bi se pridružili Anni
             i Elsi dok istražuju čarobnu ljepotu leda. Kližući po ledu napravit ćeš
             pahuljice i druge uzorke i tako stvoriti zimsku čaroliju koju možeš podijeliti
@@ -335,7 +335,7 @@ hr:
             s likovima iz Disney Infinity.
           lessons:
             Infinity:
-              name: Beskonačnost
+              name: Disney Infinity Laboratorij igara
           student_description: Koristi Laboratorij igara za stvaranje priče ili igre
             s likovima iz Disney Infinity.
         algebrademo:
@@ -683,9 +683,6 @@ hr:
             ratovi u galaksiji daleko, daleko odavde.
           description_short: Nauči programirati droide i kreiraj vlastitu igricu Zvjezdani
             ratovi u galaksiji daleko, daleko odavde.
-          lessons:
-            Hour of Code 2015:
-              name: Sat kodiranja 2015
           student_description: Nauči programirati droide i kreiraj vlastitu igricu
             Zvjezdani ratovi u galaksiji daleko, daleko odavde.
         mc:
@@ -943,10 +940,6 @@ hr:
           lesson_groups:
             required:
               display_name: Pregled
-        basketball:
-          lessons:
-            Bounce:
-              name: Odskok
         csd2-2017:
           lessons:
             Lists:
@@ -1347,10 +1340,6 @@ hr:
           lessons:
             What is a Computer?:
               name: Što je računalo?
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Sat Kodiranja
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -2345,6 +2334,10 @@ hr:
           lessons:
             CS Discoveries:
               name: RZ otkrića
+        ml-playground:
+          lessons:
+            intro-categorical:
+              name: Uvod u AI laboratorij
         2021drafting:
           lesson_groups:
             introduction:
@@ -2399,6 +2392,10 @@ hr:
               display_name: Liste
             csp_loops:
               display_name: Petlje
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmi
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -2570,6 +2567,14 @@ hr:
               display_name: Uvod
             Introduction:
               display_name: Uvod
+        aiml-2021:
+          lessons:
+            lesson5:
+              name: Uvod u AI laboratorij
+        csd7-2021:
+          lessons:
+            Introduction to AI Lab:
+              name: Uvod u AI laboratorij
         csa-videos:
           lesson_groups:
             lessonGroup-2:
@@ -2600,3 +2605,194 @@ hr:
           lessons:
             lesson-1:
               name: Pregled
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Slovkanje
+          title: Slovkanje
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Slovkanje
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: For Petlja Zabava
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Hour of Code
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Likovi
+            lessonGroup-3:
+              display_name: Varijable
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funkcije
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Vesele karte
+            'Programming: Happy Maps':
+              name: Vesele karte
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        express-2022:
+          lesson_groups:
+            csf_sprites:
+              display_name: Likovi
+            lessonGroup-9:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+            csf_functions:
+              display_name: Funkcije
+            csf_variables:
+              display_name: Varijable
+            csf_for_loops:
+              display_name: Petlja brojača
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Otklanjanje pogriješaka
+              key: Otklanjanje pogriješaka
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Varijable
+            csp_conditionals:
+              display_name: Uvjeti
+            csp_functions:
+              display_name: Funkcije
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Petlje
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Pomakni, pomakni
+              key: Pomakni, pomakni
+            Getting Loopy:
+              name: Zapetljancije
+            'Loops: Getting Loopy':
+              name: Zapetljancije
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Veliki događaj
+            Binary Bracelets:
+              name: Binarne narukvice
+              key: Binarne narukvice
+            'Events: The Big Event':
+              name: Veliki događaj
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: Strojno učenje
+            Machine Learning and Bias:
+              name: Strojno učenje
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Grafičko programiranje
+            Relay Programming:
+              name: Odnosno programiranje
+              key: Odnosno programiranje
+            Conditionals with Cards:
+              name: Uvjeti s kartama
+              key: Uvjeti s kartama
+            'Algorithms: Graph Paper Programming':
+              name: Grafičko programiranje
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalno građanstvo
+            csf_events:
+              display_name: Događaji
+            csf_loops:
+              display_name: Petlje
+            csf_conditionals:
+              display_name: Uvjeti
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Pisanje pjesama
+            'Functions: Songwriting':
+              name: Pisanje pjesama
+            Conditionals:
+              key: Uvjeti
+          lesson_groups:
+            csf_sprites:
+              display_name: Likovi
+            csf_digcit:
+              display_name: Digitalno građanstvo
+            ramp_up:
+              display_name: Ugniježđene petlje
+            csf_functions:
+              display_name: Funkcije
+            csf_nested_loops:
+              display_name: Uvjeti
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: For Petlja Zabava
+              key: For Petlja Zabava
+            The Internet:
+              name: Internet
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            ramp_up:
+              display_name: Likovi
+            lessonGroup-7:
+              display_name: Digitalno građanstvo
+            lessonGroup-8:
+              display_name: Varijable
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Petlje
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Petlje
+            csf_events:
+              display_name: Događaji
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Uvjeti
+            lesson-16:
+              name: Otklanjanje pogriješaka
+            lesson-19:
+              name: Otklanjanje pogriješaka
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Petlje

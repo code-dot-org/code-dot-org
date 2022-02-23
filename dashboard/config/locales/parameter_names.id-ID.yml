@@ -5,13 +5,17 @@ id:
       actor: Pemain
       color: warna
       counter: Pencacah
+      dir: dir
       height: tinggi
       honey: madu
       left: kiri
       length: panjang
       min: min
+      nectar units: unit nektar
       nectars: Madu
+      numOctagons: numOctagons
       points: poin
       size: ukuran
       speed: kecepatan
+      theGuess: theGuess
       width: lebar

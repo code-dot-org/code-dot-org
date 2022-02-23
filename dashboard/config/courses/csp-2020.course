@@ -14,10 +14,11 @@
     "csp-post-survey-2020"
   ],
   "published_state": "stable",
+  "instruction_type": "teacher_led",
   "properties": {
-    "version_year": "2020",
     "family_name": "csp",
-    "has_verified_resources": true
+    "has_verified_resources": true,
+    "version_year": "2020"
   },
   "resources": [
 

@@ -978,7 +978,7 @@ id-ID:
   dashboard_sections_table_secret: Jenis login
   dashboard_sections_table_grade: Kelas
   dashboard_sections_table_course: Kursus
-  dashboard_sections_table_pairing_allowed: Pemrograman berpasangan
+  dashboard_sections_table_pairing_allowed: Pair Programming
   dashboard_sections_table_stage_extras: Tahapan Tambahan
   dashboard_sections_table_students: Siswa
   dashboard_sections_table_code: Kode Sesi
@@ -1350,6 +1350,7 @@ id-ID:
   iceage_name: Zaman Es
   minecraft_name: Minecraft
   starwarsblocks_name: Star wars(blok)
+  hoc-impact-study_name: Labirin Klasik dengan Survei
   flappy-impact-study_name: Flappy Code dengan survey
   hoc-encryption_name: Enkripsi sederhana
   text-compression_name: kompresi Teks
@@ -1446,6 +1447,12 @@ id-ID:
   coursed-2020_gradelevel: Kelas 8+
   coursee-2020_gradelevel: Usia 8-12
   coursef-2020_gradelevel: Usia 9-13
+  coursea-2021_gradelevel: Usia 4-7
+  courseb-2021_gradelevel: Usia 5-8
+  coursec-2021_gradelevel: Usia 6-10
+  coursed-2021_gradelevel: Kelas 8+
+  coursee-2021_gradelevel: Usia 8-12
+  coursef-2021_gradelevel: Usia 9-13
   accelerated_gradelevel: Usia 10 + (setelah Kursus 3)
   codeorg_platformtext: Browser modern, smartphone, tablet
   codeintl_platformtext: Browser modern, smartphone, tablet
@@ -2211,8 +2218,8 @@ id-ID:
     Anda bisa mencoba melihat halaman, akan tetapi functionality mungkin tidak bekerja.
   flappy_shortcode: kepakkan
   header_home: Beranda
-  header_my_dashboard: Dasbor saya
-  header_courses: Kursus
+  header_my_dashboard: Dashboard Saya
+  header_courses: Nama Kursus
   header_course_catalog: Katalog Kursus
   header_project_gallery: Proyek
   header_sections: Bagian
@@ -2498,6 +2505,8 @@ id-ID:
     Future Engineer * adalah program anak-anak-hingga-karier yang lengkap untuk menginspirasi,
     mendidik, dan melatih anak-anak dan kaum muda dengan penghasilan rendah dan kurang
     beruntung untuk mengejar karir di bidang ilmu komputer. [Learn more](%{amazon_future_engineer_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: Jika Anda seorang siswa
+    atau guru di Perancis, kunjungi [Amazon Future Engineer - France] (%{amazon_future_engineer_france_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Pelajari lebih
     lanjut tentang Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Tentang ahli teknik masa depan
@@ -2578,6 +2587,17 @@ id-ID:
     dasar koding dan eksplor keragaman dan  penyertaan dengan temanmu! Akses sumber
     gratis termasuk rencana pembelajaran,video, kurikulum ilmu komputer, ekuitas pelajaran,
     dan pelatihan guru.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Ayo balik ke masa lalu dan belajar meng-code! Tutorial
+    Minecraft Hour of Code yang baru kini tersedia di Minecraft: Edisi Pendidikan
+    untuk Windows, Mac, Chromebook, dan iPad. Mulai dengan materi pembelajaran, pelatihan,
+    dan video pendidik gratis.'
+  hoc2021_mc_mee_villages_title: Kisah Dua Kampung
+  hoc2021_mc_mee_villages_description: 'Pelajari dasar-dasar coding dan telusuri keragaman
+    dan inklusi bersama murid-murid Anda di Minecraft: Edisi Pendidikan.'
+  hoc2021_mc_mee_ai_title: AI Untuk Kebaikan
+  hoc2021_mc_mee_ai_description: 'Telusuri AI bersama murid-murid Anda dan belajar
+    meng-code di Minecraft: Edisi Pendidikan.'
   footer_powered_by_aws: Didukung oleh Amazon Web Services
   footer_built_on_github: Bawaan GitHub dari Microsoft
   codebytes_skinny_banner_title: Bergabunglah dengan kami pada Desember 7-11  untuk  pelajaran
@@ -2608,12 +2628,69 @@ id-ID:
     beragam pemeran ahli.
   watch_the_videos: Tonton video
   ai_and_ethics: AI dan Etika
+  ai_and_ethics_tile_description: Siswa merefleksikan implikasi etis AI, kemudian
+    bekerja sama untuk menciptakan sumber daya “AI Code of Ethics” bagi pencipta AI
+    dan legislator di mana-mana.
   view_lesson_plan: Lihat Rencana Pelajaran
   ai_in_partnership_with: Bermitra dengan
   ai_microsoft_thanks: Kami berterima kasih kepada Mikrosoft atas dukungan visi dan
     misi kami untuk memastikan setiap anak memiliki kesempatan untuk belajar ilmu
     komputer dan keterampilan untuk sukses di abad ke 21.
   ai_ethics_panel_header: Mengeksplor Etika dari diskusi panel AI
+  ai_ethics_panel_description_1: Pergilah lebih dalam dengan beberapa ahli AI favorit
+    kami! Diskusi panel ini menyentuh isu-isu penting seperti bias algoritmik dan
+    masa depan pekerjaan. Pasangkan dengan kami
   ai_ethics_lesson_plan: AI & rencana pelajaran etika
+  ai_ethics_panel_description_2: untuk pengenalan yang bagus untuk etika kecerdasan
+    buatan!
+  cs_for_good: CS untuk Baik
+  cs_for_good_tile_description: Sumber daya untuk menginspirasi siswa untuk berpikir
+    mendalam tentang peran ilmu komputer dapat bermain dalam menciptakan dunia yang
+    lebih adil dan berkelanjutan.
+  view_resources: Lihat Sumber Daya
+  imagine_cup_junior: Bayangkan Piala Junior
+  imagine_cup_junior_tile_description: AI for Good Challenge global ini memperkenalkan
+    siswa ke AI Microsoft untuk inisiatif Baik, memberdayakan mereka untuk memecahkan
+    masalah di dunia dengan kekuatan AI.
   ai_activity: Kegiatan
   ai_description: Deskripsi
+  ai_seeing_ai: Melihat AI
+  ai_seeing_ai_description: Sebuah aplikasi gratis yang menceritakan dunia di sekitar
+    Anda dalam berbagai bahasa.
+  ai_quick_draw: Cepat, Draw!
+  ai_quick_draw_description: Bisakah jaringan saraf belajar mengenali corat-coret?
+  ai_teachable_machine: Mesin yang Dapat Diajar
+  ai_teachable_machine_description: Melatih komputer untuk mengenali gambar, suara,
+    dan pose Anda sendiri.
+  ai_google: AI Eksperimen dengan Google
+  ai_google_description: Mulai menjelajahi pembelajaran mesin melalui gambar, gambar,
+    bahasa, musik, dan banyak lagi.
+  ai_zooniverse: Zooniverse - Foto Gunung Zebra
+  ai_zooniverse_description: Membantu melindungi terancam punah Cape Mountain Zebra
+    dengan mengidentifikasi hewan yang berbeda dalam gambar.
+  ai_audience: Audiens
+  ai_minecraft_description: 'Akses sumber daya gratis termasuk rencana pelajaran,
+    video, kurikulum ilmu komputer, dan pelatihan guru. (Membutuhkan Minecraft: Edisi
+    Pendidikan)'
+  ai_k_12_audience: K-12 (Membaca diperlukan)
+  ai_microsoft_workshop: Lokakarya virtual gratis dari Microsoft
+  ai_microsoft_workshop_description: Spark rasa ingin tahu dengan STEM gratis dan
+    lokakarya coding.
+  ai_machine_learning_for_kids: Pembelajaran Mesin untuk Anak-Anak
+  ai_machine_learning_for_kids_description: Melatih model pembelajaran mesin dengan
+    teks, angka, atau gambar, dan gunakan untuk membuat permainan di Scratch.
+  ai_ibm_machine_learning_for_kids: 'IBM: Pembelajaran Mesin untuk Anak-Anak'
+  ai_ecs: 'ECS: Kecerdasan Buatan (AI)'
+  ai_ecs_description: Unit kurikulum alternatif baru untuk kurikulum Exploring Computer
+    Science (ECS).
+  ai_elements: Unsur AI
+  ai_elements_description: Serangkaian kursus online gratis yang dibuat oleh Reaktor
+    dan University of Helsinki.
+  ai_cognimates: Kognimat
+  ai_cognimates_description: Platform pendidikan AI untuk membangun game, robot pemrograman
+    dan pelatihan.
+  ai_try_activity: Coba aktivitas
+  outbreak_tile_subtitle: Virus telah menginfeksi Monster Town! Buat code simulator
+    kejadian dan buat prediksi tentang dampak yang akan timbul terhadap kota-kota
+    di sekitar Monster Town.
+  footer_cookie_notice: Informasi Cookie

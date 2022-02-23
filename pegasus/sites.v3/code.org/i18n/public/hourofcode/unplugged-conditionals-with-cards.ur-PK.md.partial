@@ -1,46 +1,46 @@
 ---
-title: Teacher Resources - Conditionals with Cards
+title: اساتذہ کے لیے ذرائع - کارڈز کے ساتھ کنڈیشنلز
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# کارڈز کے ساتھ کنڈیشنلز: آور آف کوڈ ٹیوٹوریل
 
 {{ hoc_unplugged_video }}
 
 [col-50]
 
-## Teacher Resources
+## اساتذہ کے لیے ذرائع
 
-### Lesson Plans:
+### سبق پلانز:
 
-- [Conditionals with Cards](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- [کارڈز کے ساتھ کنڈیشنلز](/files/ConditionalsHoC.pdf)
+- ویڈیو: [اپنے کلاس روم میں کارڈز کے ساتھ کنڈیشنلز کو کیسے سہل بنائیں](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### توسیعی سرگرمیاں:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [آور آف کوڈ کے اُس پار](http://code.org/learn/beyond)
+- [کمپیوٹر سائنس کے بنیادی اصول: کورس 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### اساتذہ کے لیے دیگر ذرائع:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [آور آف کوڈ: معلمین کے لیے کیسے کریں گائیڈ](https://hourofcode.com/how-to)
+- [کامیاب معلمین کی بہترین پریکٹس](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- لائیو ایونٹ: [آور آف کوڈ کے لیے ایک معلم کا گائیڈ](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## عمومی جائزہ
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+کارڈز کے ڈیک کو استعمال کرتے ہوئے اس "ان پلگڈ" سرگرمی میں الگورتھمز اور کنڈیشنلز بیانات کے بارے میں جانیں۔. طلباء یہ سرگرمی ٹیموں کی صورت میں کرتے ہیں، اور انہیں فی ٹیم کارڈ کے ایک ڈیک کی ضرورت ہوتی ہے۔.
 
-**Recommended Age Range:** 8-12
+**سفارش کردہ عمر کی حد:** 8-12
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**ٹیکنالوجی کے تقاضے:** کوئی نہیں! یہ ایک "ان پلگڈ" سرگرمی ہے جس میں کارڈز کے ڈیک سے زیادہ کچھ نہیں سکھایا جا سکتا ہے۔.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>سرگرمی ڈاؤن لوڈ کریں</button></a>
 
 [/col-50]

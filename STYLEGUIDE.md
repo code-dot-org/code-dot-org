@@ -248,7 +248,7 @@ var component = (
 var styles = {
   root: {
     color: 'red',
-    display: 'block
+    display: 'block'
   },
   child: {
     color: 'blue',
@@ -288,7 +288,7 @@ var styles = {
     width: '100px',
     height: '100px'
   }
-}'
+}
 
 // Good
 var styles = {
@@ -321,12 +321,13 @@ var component = (
   </MyComponent>
 );
 ```
+
 * <a name="jsx-child-elements-on-own-line"></a>
 Since JSX [removes newlines before rendering to HTML](http://andrewhfarmer.com/how-whitespace-works-in-jsx/)
 you can and should put child elements on their own line, instead of putting
 them on the same line to avoid extra spaces.
 
-```
+```jsx
 // good
 <Component
   prop1="prop1"

@@ -1,12 +1,12 @@
 {
-  "func": "bounce",
+  "key": "bounce",
+  "name": "bounce",
   "category": "Sprites",
-  "paletteParams": [
-    "target"
+  "category_key": "sprites",
+  "palette_params": [
+    {
+      "name": "target"
+    }
   ],
-  "params": [
-    "target"
-  ],
-  "modeOptionName": "*.bounce",
-  "type": "either"
+  "syntax": "bounce(target)"
 }

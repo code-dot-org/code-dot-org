@@ -1381,6 +1381,168 @@
         },
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_1": "For-løkka finn du her!"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Ny blokk!",
+          "hello_world_new_block": "Ny blokk!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Ny blokk!",
+          "hello_world_new_block": "Ny blokk!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Ny blokk!",
+          "hello_world_new_block": "Ny blokk!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Ny blokk!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Ny blokk!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Ny blokk!",
+          "poetry_foreground": "Ny blokk!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Ny blokk!",
+          "poetry_multiple_sprites": "Ny blokk!",
+          "poetry_new_block": "Ny blokk!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Ny blokk!",
+          "poetry_music": "Ny blokk!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Ny blokk!",
+          "poetry_sprite_stops": "Ny blokk!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Ny blokk!",
+          "poetry_remove_sprite": "Ny blokk!"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Klikk her for å vise rutenettet."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Endre nummeret her"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Her er koden"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Her er koden",
+          "CSD_U3_rect_c2": "Dra denne blokka inn i kodeområdet."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Legg til koden din her"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Hva gjør denne linjen?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Definér startSpel her"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Definér flyttSpelar() her"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Sjekk om spelaren har vunne"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Endre nummeret her"
         }
       }
     }

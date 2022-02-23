@@ -110,11 +110,17 @@
         "2-3 Artist Functions 2": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "2-3 Artist Functions 3": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "2-3 Artist Functions 4": {
@@ -317,24 +323,36 @@
         },
         "Course 4 Bee Params 5": {
           "get 5 nectar": {
-            "name": "собрать нектар х5"
+            "name": "собрать нектар х5",
+            "parameters": {
+              "direction": "направление"
+            }
           }
         },
         "Course 4 Bee Params 6": {
           "get 5 nectar": {
-            "name": "собрать нектар х5"
+            "name": "собрать нектар х5",
+            "parameters": {
+              "direction": "направление"
+            }
           }
         },
         "Course 4 Bee Params 7": {
           "get many nectar": {
-            "name": "собрать много нектара"
+            "name": "собрать много нектара",
+            "parameters": {
+              "direction": "направление",
+              "nectars": "нектары"
+            }
           }
         },
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "name": "собери нектар сделай мед",
             "parameters": {
-              "honey": "мед"
+              "honey": "мед",
+              "direction": "направление",
+              "nectars": "нектары"
             }
           }
         },
@@ -852,17 +870,17 @@
               "points": "очки",
               "length": "длина"
             },
-            "description": "нарисуйте звезду по заданным точкам и со сторонами заданной длины"
+            "description": "нарисуй звезду по заданным точкам и со сторонами заданной длины"
           },
           "draw a circle": {
             "name": "нарисовать круг",
-            "description": "нарисуйте круг заданного радиуса",
+            "description": "нарисуй круг заданного радиуса",
             "parameters": {
               "radius": "радиус"
             }
           },
           "draw a pinwheel": {
-            "name": "нарисовать вертушку",
+            "name": "нарисуй вертушку",
             "parameters": {
               "length": "длина",
               "repeat": "повторить",
@@ -876,7 +894,7 @@
             }
           },
           "draw a shape": {
-            "name": "нарисовать фигуру",
+            "name": "нарисуй фигуру",
             "parameters": {
               "length": "длина",
               "sides": "стороны"
@@ -1010,17 +1028,17 @@
               "points": "очки",
               "length": "длина"
             },
-            "description": "нарисуйте звезду по заданным точкам и со сторонами заданной длины"
+            "description": "нарисуй звезду по заданным точкам и со сторонами заданной длины"
           },
           "draw a circle": {
             "name": "нарисовать круг",
-            "description": "нарисуйте круг заданного радиуса",
+            "description": "нарисуй круг заданного радиуса",
             "parameters": {
               "radius": "радиус"
             }
           },
           "draw a pinwheel": {
-            "name": "нарисовать вертушку",
+            "name": "нарисуй вертушку",
             "parameters": {
               "length": "длина",
               "repeat": "повторить",
@@ -1034,7 +1052,7 @@
             }
           },
           "draw a shape": {
-            "name": "нарисовать фигуру",
+            "name": "нарисуй фигуру",
             "parameters": {
               "length": "длина",
               "sides": "стороны"
@@ -1108,7 +1126,7 @@
         },
         "Standalone_Artist_8": {
           "draw a shape": {
-            "name": "нарисовать фигуру"
+            "name": "нарисуй фигуру"
           }
         },
         "Standalone_Artist_9": {
@@ -1826,26 +1844,41 @@
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions2_2018": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions2_2019": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions2_2020": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions3_2018": {
@@ -2157,26 +2190,41 @@
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict1_2018": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict1_2019": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict1_2020": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict1_copy": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict2": {
@@ -2809,17 +2857,17 @@
               "points": "очки",
               "length": "длина"
             },
-            "description": "нарисуйте звезду по заданным точкам и со сторонами заданной длины"
+            "description": "нарисуй звезду по заданным точкам и со сторонами заданной длины"
           },
           "draw a circle": {
             "name": "нарисовать круг",
-            "description": "нарисуйте круг заданного радиуса",
+            "description": "нарисуй круг заданного радиуса",
             "parameters": {
               "radius": "радиус"
             }
           },
           "draw a pinwheel": {
-            "name": "нарисовать вертушку",
+            "name": "нарисуй вертушку",
             "parameters": {
               "length": "длина",
               "repeat": "повторить",
@@ -2833,7 +2881,7 @@
             }
           },
           "draw a shape": {
-            "name": "нарисовать фигуру",
+            "name": "нарисуй фигуру",
             "parameters": {
               "length": "длина",
               "sides": "стороны"
@@ -3237,7 +3285,7 @@
         "CourseD_EOC_artist": {
           "draw a star": {
             "name": "нарисовать звезду",
-            "description": "нарисуйте звезду по заданным точкам и со сторонами заданной длины",
+            "description": "нарисуй звезду по заданным точкам и со сторонами заданной длины",
             "parameters": {
               "points": "очки",
               "length": "длина"
@@ -3245,13 +3293,13 @@
           },
           "draw a circle": {
             "name": "нарисовать круг",
-            "description": "нарисуйте круг заданного радиуса",
+            "description": "нарисуй круг заданного радиуса",
             "parameters": {
               "radius": "радиус"
             }
           },
           "draw a pinwheel": {
-            "name": "нарисовать вертушку",
+            "name": "нарисуй вертушку",
             "parameters": {
               "sides": "стороны",
               "length": "длина",
@@ -3265,7 +3313,7 @@
             }
           },
           "draw a shape": {
-            "name": "нарисовать фигуру",
+            "name": "нарисуй фигуру",
             "parameters": {
               "sides": "стороны",
               "length": "длина"
@@ -3344,6 +3392,12 @@
               "length": "длина",
               "sides": "стороны"
             }
+          },
+          "LOGIC FLOWERS2": {
+            "name": "ЛОГИЧЕСКИЕ ЦВЕТЫ2"
+          },
+          "LOGIC FLOWER": {
+            "name": "ЛОГИЧЕСКИЕ ЦВЕТЫ"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -3562,16 +3616,25 @@
           },
           "draw hexagon": {
             "name": "нарисовать шестиугольник"
+          },
+          "draw line of hexagons": {
+            "name": "нарисовать ряд шестиугольников"
           }
         },
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions2_dani": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions3_2021": {
@@ -3608,6 +3671,9 @@
           },
           "draw square": {
             "name": "нарисовать квадрат"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -3624,6 +3690,9 @@
           },
           "do something": {
             "name": "выполнить что-то"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions8c_2021": {
@@ -3635,6 +3704,9 @@
           },
           "staggered squares": {
             "name": "квадраты в шахматном порядке\n"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions9_2021": {
@@ -3643,6 +3715,9 @@
           },
           "draw triangle": {
             "name": "нарисовать треугольник"
+          },
+          "draw line of triangles": {
+            "name": "нарисовать линию из треугольников"
           }
         },
         "courseE_artist_functionsProj_2021": {
@@ -3654,26 +3729,44 @@
           },
           "draw square": {
             "name": "нарисовать квадрат"
+          },
+          "draw line of hexagons": {
+            "name": "нарисовать ряд шестиугольников"
+          },
+          "draw a line of squares": {
+            "name": "нарисовать линию из квадратов"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "выполнить что-то"
+          },
+          "my design": {
+            "name": "мой проект"
           }
         },
         "courseE_artist_functions_predict1_2021": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict1_dani": {
           "draw a square": {
             "name": "нарисовать квадрат"
+          },
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         },
         "courseE_artist_functions_predict2_2021": {
@@ -3797,6 +3890,40 @@
         "CourseF_app_computer": {
           "reset game": {
             "name": "сбросить игру"
+          }
+        },
+        "Course 4 Bee Params 3": {
+          "get 3 nectar": {
+            "parameters": {
+              "direction": "направление"
+            }
+          }
+        },
+        "Course 4 Bee Params 4": {
+          "get 3 nectar": {
+            "parameters": {
+              "direction": "направление"
+            }
+          }
+        },
+        "2-3 Artist Functions 1": {
+          "draw ear stems": {
+            "name": "нарисуй беруши"
+          }
+        },
+        "courseE_artist_functions1": {
+          "draw ear stems": {
+            "name": "нарисуй беруши"
+          }
+        },
+        "courseE_artist_functions1_copy": {
+          "draw ear stems": {
+            "name": "нарисуй беруши"
+          }
+        },
+        "courseE_artist_functions1_dani": {
+          "draw ear stems": {
+            "name": "нарисуй беруши"
           }
         }
       }

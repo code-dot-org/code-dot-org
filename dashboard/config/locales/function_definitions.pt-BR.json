@@ -458,7 +458,8 @@
           "get 5 nectar": {
             "name": "pegar 5 néctares",
             "parameters": {
-              "direction": "direção"
+              "direction": "direção",
+              "nectar units": "unidades de néctar"
             }
           }
         },
@@ -590,7 +591,8 @@
           "get nectar": {
             "name": "obtenha néctar",
             "parameters": {
-              "counter": "contador"
+              "counter": "contador",
+              "dir": "dir"
             }
           }
         },
@@ -604,7 +606,10 @@
             "name": "desenhar um quadrado 20"
           },
           "draw octagons": {
-            "name": "desenhar octógonos"
+            "name": "desenhar octógonos",
+            "parameters": {
+              "numOctagons": "numOctogonos"
+            }
           },
           "draw an octagon": {
             "name": "desenhar um octógono"
@@ -738,7 +743,7 @@
           "check guess": {
             "name": "checar palpite",
             "parameters": {
-              "theGuess": "o palpite"
+              "theGuess": "palpite"
             }
           }
         },
@@ -747,13 +752,15 @@
             "name": "forma de n lados",
             "description": "A forma muda de acordo com o número de lados que ela possui. Os dois parâmetros envolvidos são: comprimento e número de lados.",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw a loop": {
             "name": "desenhar uma repetição",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw spiral circle": {
@@ -767,7 +774,8 @@
           "draw a loop": {
             "name": "desenhar uma repetição",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "n-sided shape": {
@@ -975,13 +983,15 @@
           "draw a polygon": {
             "name": "desenhar um polígono",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "do something": {
             "name": "faça algo",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -989,7 +999,8 @@
           "draw a polygon": {
             "name": "desenhar um polígono",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -997,7 +1008,8 @@
           "draw a polygon": {
             "name": "desenhar um polígono",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -1005,7 +1017,8 @@
           "draw a polygon": {
             "name": "desenhar um polígono",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -1013,7 +1026,8 @@
           "draw a spiral edge": {
             "name": "desenhar uma borda espiral",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -1023,16 +1037,22 @@
             "parameters": {
               "points": "pontos",
               "length": "comprimento"
-            }
+            },
+            "description": "desenhe uma estrela com determinadas pontas e lados de determinado comprimento"
           },
           "draw a circle": {
-            "name": "desenhar um círculo"
+            "name": "desenhar um círculo",
+            "description": "desenhe um círculo de um determinado raio",
+            "parameters": {
+              "radius": "raio"
+            }
           },
           "draw a pinwheel": {
             "name": "desenhar um cata-vento",
             "parameters": {
               "length": "comprimento",
-              "repeat": "repita"
+              "repeat": "repita",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -1044,7 +1064,8 @@
           "draw a shape": {
             "name": "desenhar uma forma",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw a house": {
@@ -1056,7 +1077,8 @@
           "draw a square": {
             "name": "desenhar um quadrado",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -1147,7 +1169,8 @@
           "draw a polygon": {
             "name": "desenhar um polígono",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -1173,16 +1196,22 @@
             "parameters": {
               "points": "pontos",
               "length": "comprimento"
-            }
+            },
+            "description": "desenhe uma estrela com determinadas pontas e lados de determinado comprimento"
           },
           "draw a circle": {
-            "name": "desenhar um círculo"
+            "name": "desenhar um círculo",
+            "description": "desenhe um círculo de um determinado raio",
+            "parameters": {
+              "radius": "raio"
+            }
           },
           "draw a pinwheel": {
             "name": "desenhar um cata-vento",
             "parameters": {
               "length": "comprimento",
-              "repeat": "repita"
+              "repeat": "repita",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -1194,7 +1223,8 @@
           "draw a shape": {
             "name": "desenhar uma forma",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw a house": {
@@ -1392,7 +1422,10 @@
             }
           },
           "draw a polygon": {
-            "name": "desenhar um polígono"
+            "name": "desenhar um polígono",
+            "parameters": {
+              "sides": "lados"
+            }
           },
           "draw a square 20": {
             "name": "desenhar um quadrado 20"
@@ -3281,7 +3314,8 @@
           "draw a polygon": {
             "name": "desenhar um polígono",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -3289,7 +3323,8 @@
           "draw a polygon": {
             "name": "desenhar um polígono",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -3297,7 +3332,8 @@
           "draw a spiral edge": {
             "name": "desenhar uma borda espiral",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -3306,7 +3342,8 @@
             "name": "desenhar uma borda espiral",
             "parameters": {
               "length": "comprimento",
-              "min": "min"
+              "min": "min",
+              "sides": "lados"
             }
           }
         },
@@ -3315,7 +3352,8 @@
             "name": "desenhar uma borda espiral",
             "parameters": {
               "length": "comprimento",
-              "min": "min"
+              "min": "min",
+              "sides": "lados"
             }
           }
         },
@@ -3325,16 +3363,22 @@
             "parameters": {
               "points": "pontos",
               "length": "comprimento"
-            }
+            },
+            "description": "desenhe uma estrela com determinadas pontas e lados de determinado comprimento"
           },
           "draw a circle": {
-            "name": "desenhar um círculo"
+            "name": "desenhar um círculo",
+            "description": "desenhe um círculo de um determinado raio",
+            "parameters": {
+              "radius": "raio"
+            }
           },
           "draw a pinwheel": {
             "name": "desenhar um cata-vento",
             "parameters": {
               "length": "comprimento",
-              "repeat": "repita"
+              "repeat": "repita",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -3346,7 +3390,8 @@
           "draw a shape": {
             "name": "desenhar uma forma",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw a house": {
@@ -3365,7 +3410,8 @@
             "name": "desenhar uma borda espiral",
             "parameters": {
               "length": "comprimento",
-              "min": "min"
+              "min": "min",
+              "sides": "lados"
             }
           }
         },
@@ -3377,7 +3423,10 @@
             }
           },
           "draw a polygon": {
-            "name": "desenhar um polígono"
+            "name": "desenhar um polígono",
+            "parameters": {
+              "sides": "lados"
+            }
           },
           "draw a square 20": {
             "name": "desenhar um quadrado 20"
@@ -3753,16 +3802,22 @@
             "parameters": {
               "points": "pontos",
               "length": "comprimento"
-            }
+            },
+            "description": "desenhe uma estrela com determinadas pontas e lados de determinado comprimento"
           },
           "draw a circle": {
-            "name": "desenhar um círculo"
+            "name": "desenhar um círculo",
+            "description": "desenhe um círculo de um determinado raio",
+            "parameters": {
+              "radius": "raio"
+            }
           },
           "draw a pinwheel": {
             "name": "desenhar um cata-vento",
             "parameters": {
               "length": "comprimento",
-              "repeat": "repita"
+              "repeat": "repita",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -3774,7 +3829,8 @@
           "draw a shape": {
             "name": "desenhar uma forma",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw a house": {
@@ -3801,16 +3857,22 @@
             "parameters": {
               "points": "pontos",
               "length": "comprimento"
-            }
+            },
+            "description": "desenhe uma estrela com determinadas pontas e lados de determinado comprimento"
           },
           "draw a circle": {
-            "name": "desenhar um círculo"
+            "name": "desenhar um círculo",
+            "description": "desenhe um círculo de um determinado raio",
+            "parameters": {
+              "radius": "raio"
+            }
           },
           "draw a pinwheel": {
             "name": "desenhar um cata-vento",
             "parameters": {
               "length": "comprimento",
-              "repeat": "repita"
+              "repeat": "repita",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -3822,7 +3884,8 @@
           "draw a shape": {
             "name": "desenhar uma forma",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw a house": {
@@ -3834,7 +3897,8 @@
           "draw a square": {
             "name": "desenhar um quadrado",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           }
         },
@@ -3844,16 +3908,22 @@
             "parameters": {
               "points": "pontos",
               "length": "comprimento"
-            }
+            },
+            "description": "desenhe uma estrela com determinadas pontas e lados de determinado comprimento"
           },
           "draw a circle": {
-            "name": "desenhar um círculo"
+            "name": "desenhar um círculo",
+            "description": "desenhe um círculo de um determinado raio",
+            "parameters": {
+              "radius": "raio"
+            }
           },
           "draw a pinwheel": {
             "name": "desenhar um cata-vento",
             "parameters": {
               "length": "comprimento",
-              "repeat": "repita"
+              "repeat": "repita",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -3865,7 +3935,8 @@
           "draw a shape": {
             "name": "desenhar uma forma",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw a house": {
@@ -3887,16 +3958,22 @@
             "parameters": {
               "points": "pontos",
               "length": "comprimento"
-            }
+            },
+            "description": "desenhe uma estrela com determinadas pontas e lados de determinado comprimento"
           },
           "draw a circle": {
-            "name": "desenhar um círculo"
+            "name": "desenhar um círculo",
+            "description": "desenhe um círculo de um determinado raio",
+            "parameters": {
+              "radius": "raio"
+            }
           },
           "draw a pinwheel": {
             "name": "desenhar um cata-vento",
             "parameters": {
               "length": "comprimento",
-              "repeat": "repita"
+              "repeat": "repita",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -3908,7 +3985,8 @@
           "draw a shape": {
             "name": "desenhar uma forma",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw a house": {
@@ -3930,16 +4008,22 @@
             "parameters": {
               "points": "pontos",
               "length": "comprimento"
-            }
+            },
+            "description": "desenhe uma estrela com determinadas pontas e lados de determinado comprimento"
           },
           "draw a circle": {
-            "name": "desenhar um círculo"
+            "name": "desenhar um círculo",
+            "description": "desenhe um círculo de um determinado raio",
+            "parameters": {
+              "radius": "raio"
+            }
           },
           "draw a pinwheel": {
             "name": "desenhar um cata-vento",
             "parameters": {
               "length": "comprimento",
-              "repeat": "repita"
+              "repeat": "repita",
+              "sides": "lados"
             }
           },
           "draw a triangle": {
@@ -3951,7 +4035,8 @@
           "draw a shape": {
             "name": "desenhar uma forma",
             "parameters": {
-              "length": "comprimento"
+              "length": "comprimento",
+              "sides": "lados"
             }
           },
           "draw a house": {

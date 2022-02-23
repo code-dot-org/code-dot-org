@@ -637,6 +637,9 @@ sk:
         csp_applab_functions_parameters: Funkcie s parametrami
         csp_applab_loops: Cykly
         csp_cs_is_changing_everything: Informatika mení svet okolo nás
+        csp_internetsimulator_1: Internetový simulátor - Časť 1
+        csp_internetsimulator_2: Internetový simulátor - Časť 2
+        csp_internetsimulator_3: Internetový simulátor - Časť 3
         starwars_intro: 'Star Wars: Budovanie Galaxie pomocou kódu - Úvod'
         starwars_typing: 'Star Wars: Budovanie Galaxie pomocou kódu - JavaScript'
         starwars_events: 'Star Wars: Budovanie Galaxie pomocou kódu - Udalosti'
@@ -727,7 +730,7 @@ sk:
           kurz'
         elem_pd_2: Informatika pre prvý stupeň - PD video 2/2
         what_is_cs: Čo je informatika?
-        repeat_block: Používanie bloku opakuj
+        repeat_block: 'Video: Používanie bloku „opakuj“'
         lesson_planning: Plánovanie hodín
         opd_closing: 'Učenie základov IT: ukončovanie & ďalšie kroky'
         why_unplugged_lessons: Práca bez počítača
@@ -744,7 +747,7 @@ sk:
         csd_applab_parameters: Funkcie s parametrami
         csd_applab_loops: Cykly v App Labe
         csd_problem_solving_process: Proces riešenia problémov
-        CSF_Going_Places_Safely: Moja internetová štvrť
+        CSF_Going_Places_Safely: Moja online štvrť
         CSF_SpriteLab_Intro_v2: Predstavenie Sprite Labu
         CSF_Spritelab_MakeSprite_v2: Ako vytvoriť postavu
         CSF_SpriteLab_SpritesInAction_v2: Postavy v akcii
@@ -769,7 +772,7 @@ sk:
         hoc_dance_measures_2019: Tanečná párty 2019 - Rozmery
         hoc_dance_properties_2019: Tanečná Párty 2019 - Vlastnosti
         csd_what_computers_do: Čo robia počítače?
-        csf_my_online_neighborhood_2020: Moja internetová štvrť
+        csf_my_online_neighborhood_2020: Moja online štvrť
         csf_follow_the_digital_trail: Sleduj digitálnu stopu
         csf_private_and_personal_information: Súkromné a osobné údaje
         csd_what_computers_are: Čo je počítač?
@@ -790,7 +793,7 @@ sk:
         codebreak_e11: 'Code Break 11.0: Abstrakcia (Susan Wojcicki & China Anne McClain)'
         codebreak_e12: 'Code Break 12.0: Hardware (Aloe Blacc, Bret Taylor & Paula
           Mejia)'
-        csf21pilot_events: 'Sprite Lab: Objekty sprite v akcii'
+        csf21pilot_events: 'Sprite Lab: Sprajty v akcii'
         csf21pilot_prompts: 'Sprite Lab: Text a výzvy'
         outbreak_mike: CodeBytes epizóda 3 s Mikom - Simulátor vypuknutia nákazy
         poembot-pilot-prompts: Haiku Boti - Výzvy s možnosťou voľby [PILOT]
@@ -798,7 +801,7 @@ sk:
         poembot-pilot-haiku: Haiku Boti - Ukáž svoju Haiku
         csd_ml_intro_to_ai_lab: Úvod do UI Labu
         csd_ml_import_model: Importovanie modelu UI
-        csf_lots_of_sprites: 'Sprite Lab: Veľa objektov sprite'
+        csf_lots_of_sprites: 'Sprite Lab: Veľa sprajtov'
         playlab_2021: Úvod do Play Lab
         playlab_2021_reader: Úvod do Play Lab
         csp_defining_calling_functions: Definovanie a volanie funkcií
@@ -806,6 +809,32 @@ sk:
         csp_tutorial_libraries: Knižnice v App Labe
         PL-Video-21: Vitaj v profesionálnom vzdelávaní Code.org!
         csd_ml_intro_ai_lab_july2021: Úvod do UI Labu
+        PL_CSD_TeacherTips_Advise: Tipy pre učiteľa – Rady pre nových učiteľov
+        PL_CSD_TeacherTips_IntroToCSD: Tipy pre učiteľa – Úvod ku kurzu Objavujeme
+          informatiku
+        PL_CSD_TeacherTips_ProblemSolvingProcess: Tipy pre učiteľa - Proces riešenia
+          problémov
+        PL_CSD_TeacherTips_PairProgramming: Tipy pre učiteľa – Programovanie vo dvojici
+        PL_CSD_TeacherTips_Debugging: Tipy pre učiteľa – Ladenie
+        PL_CSD_TeacherTips_LeadLearner: Tipy pre učiteľa – Najlepší žiak
+        poembot-playtest-intro: Testovanie poetického bota – Úvod
+        poembot-playtest-sprites: Testovanie poetického bota – Postavičky
+        poembot-playtest-events: Testovanie poetického bota – Udalosti
+        hello_world_intro: Ahoj svet – vitaj v laboratóriu postáv
+        hello_world_events: Ahoj svet – programovanie s udalosťami
+        hello_world_congrats: Ahoj svet – rob si, čo chceš
+        rough_poemart_intro: v1 Umenie poézie Úvod
+        rough_poemart_events: v1 Umenie poézie Podujatia
+        rough_poemart_imagery: v1 Umenie poézie Obraznosť
+        rough_poemart_congrats: v1 Umenie poézie Gratulujeme
+        poetry_module_variables: Premenné - programovanie s poéziou
+        poetry_module_textandvariables: Text a premenné - programovanie s poéziou
+        poetry_module_planningapp: Plánovanie aplikácie generátora básní – programovanie
+          s poéziou
+        poetry_module_multichoiceprompts: Nápovedy s viacerými možnosťami - programovanie
+          s poéziou
+        poetry_module_conditionals: Podmienené - programovanie s poéziou
+        poemart_intro: Úvod do umenia básne
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

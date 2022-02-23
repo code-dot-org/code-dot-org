@@ -1,13 +1,15 @@
 {
-  "func": "removeItem",
+  "key": "removeItem",
+  "name": "removeItem",
   "category": "Variables",
-  "paletteParams": [
-    "list",
-    "index"
+  "category_key": "variables",
+  "palette_params": [
+    {
+      "name": "list"
+    },
+    {
+      "name": "index"
+    }
   ],
-  "params": [
-    "list",
-    "0"
-  ],
-  "dontMarshal": true
+  "syntax": "removeItem(list, index)"
 }

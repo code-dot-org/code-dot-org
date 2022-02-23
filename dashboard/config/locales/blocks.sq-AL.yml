@@ -125,6 +125,26 @@ sq:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           LAYOUT:
             '"diamond"': diamant
             '"row"': klasë
@@ -248,6 +268,19 @@ sq:
         options:
           UNIT:
             '"seconds"': sekondat
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -291,6 +324,13 @@ sq:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": përtyp
+            "'sound://category_animals/cat.mp3'": mace
+            "'sound://category_animals/cow.mp3'": lopë
+            "'sound://category_animals/pig.mp3'": derr
+            "'sound://category_animals/sheep.mp3'": dele
+            "'sound://category_animals/chicken.mp3'": pulë
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/dog.mp3'": qen
             "'sound://category_digital/jump_7.mp3'": hidhu
       gamelab_randColor:
         text: ngjyrë e rastësishme
@@ -455,6 +495,47 @@ sq:
             '"down"': shigjetë drejtuar poshtë
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"brick"': tullë
+            '"hearts"': zemrat
+            '"rainbow"': ylber
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': natë
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': zile
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': hidhu
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': " re"
+            '"hearts"': zemrat
+          PALETTE:
+            '"rainbow"': ylber
+            '"winter"': dimër
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': zemrat
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: lëviz përpara
       RyanLab_turnLeft:

@@ -2,20 +2,47 @@
 title: Completar una Hora del Código con tecnología asistida
 ---
 
-# Completar una Hora del Código con tecnología asistida
+<h1>Completar una Hora del Código con tecnología asistida</h1>
 
-Cualquiera puede probar una Hora del Código durante la Semana por la Educación en Ciencias de la Computación.
+<p>Cualquiera puede probar una Hora del Código durante la Semana por la Educación en Ciencias de la Computación.</p>
 
-## Uso de lectores de pantalla
+<h2>Uso de lectores de pantalla</h2>
 
-Si utilizas un lector de pantalla, el [tutorial de Quorum para principiantes](https://quorumlanguage.com/hourofcode/astro1.html) o [tutorial de Quorum para estudiantes más avanzados](https://quorumlanguage.com/hourofcode/part1.html) son buenos puntos para empezar una Hora del Código. Quorum comenzó como un lenguaje interpretado, diseñado originalmente para ser accesible a través de lectores de pantalla. Se ha convertido en un lenguaje de programación general diseñado para cualquier usuario. Si quieres ir más allá de una Hora del Código, el equipo de Quorum tiene otros planes de estudios y herramientas.
+<p>The Hour of Code activities page now includes a <a href="https://hourofcode.com/us/learn?platform=screenreader" target="_blank">filter for activities compatible with screen readers</a>.</p>
 
-[![Tutorial para principiantes](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial para estudiantes avanzadas](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+<p>If you use a screen reader, the <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">Quorum tutorial for beginners</a> or the <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">Quorum tutorial for comfortable students</a> are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. Si quieres ir más allá de una Hora del Código, el equipo de Quorum tiene otros planes de estudios y herramientas.</p>
 
-## Tutoriales de Code.org sin sonido
+<p>If you use a screen reader and are interested in robotics, try the <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">Dash Joins a Dance Circle activity</a> (for grades K-5) or the <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">Dash Joins a Dance Circle with Functions activity</a> (for grades 6-8) from Lauren Milne.</p>
 
-Los [tutoriales de Code.org ](https://studio.code.org/courses) se pueden ver con o sin sonido. Todos los videos tienen subtítulos.
+<br />
 
-## Programación en parejas
+<div class="row">
+    <div class="col-xs-4">
+        <a href="https://quorumlanguage.com/hourofcode/astro1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225/tutorials/hoc2017/quorum_astronomy.jpg" alt="Tutorial for beginners">
+        </a>
+    </div>
+    <div class="col-xs-4">
+        <a href="https://quorumlanguage.com/hourofcode/part1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225/quorum.jpg" alt="Tutorial for comfortable students">
+        </a>
+    </div>
+    <div class="col-xs-4">
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">
+        <img src="https://code.org/images/fill-300x225//tutorials/hoc2021/milne_dash.jpg" alt="Robotics tutorial for beginners">
+        </a>
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle1.html" target="_blank">For grades K-5</a>
+        <br>
+        <a href="https://milnel2.github.io/blocks4alliOS/danceCircle2.html" target="_blank">For grades 6-8</a>
+    </div>
+</div>
 
-La programación en parejas es una herramienta que los científicos de la computación utilizan para resolver problemas en parejas o equipos. Prueba trabajar en los desafíos de la Hora del Código con amigos o compañeros de clase. No olvides [ver este video](https://www.youtube.com/watch?v=vgkahOzFH2Q) para aprender las mejores técnicas de la programación en parejas.
+<div style="clear: both"></div>
+
+<h2>Tutoriales de Code.org sin sonido</h2>
+
+<p>The <a href="https://studio.code.org/courses" target="_blank">Code.org tutorials</a> can all be used with or without sound. All the videos have captions.</p>
+
+<h2>Programación en parejas</h2>
+
+<p>Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" target="_blank">check out this video</a> to learn the best techniques for pair programming.</p>

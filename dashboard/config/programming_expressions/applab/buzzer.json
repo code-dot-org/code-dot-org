@@ -1,6 +1,7 @@
 {
-  "func": "buzzer",
+  "key": "buzzer",
+  "name": "buzzer",
   "category": "Circuit",
-  "type": "readonlyproperty",
-  "noAutocomplete": true
+  "category_key": "circuit",
+  "syntax": "buzzer"
 }

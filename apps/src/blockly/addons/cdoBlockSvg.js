@@ -23,6 +23,12 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
     super.mixin(mixinObj, true);
   }
 
+  isUnused() {
+    const isTopBlock = this.previousConnection === null;
+    const hasParentBlock = !!this.parentBlock_;
+    return !(isTopBlock || hasParentBlock);
+  }
+
   isVisible() {
     // TODO (eventually), but all Flappy blocks are visible, so this won't be a problem
     // until we convert other labs
@@ -35,7 +41,7 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
 
   customContextMenu(menuOptions) {
     // Only show context menu for levelbuilders
-    if (Blockly.editBlocks) {
+    if (Blockly.isStartMode) {
       const deletable = {
         text: this.deletable_
           ? 'Make Undeletable to Users'
@@ -125,5 +131,9 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
 
   setHSV(h, s, v) {
     return super.setColour(Blockly.utils.colour.hsvToHex(h, s, v * 255));
+  }
+
+  getHexColour() {
+    return super.getColour();
   }
 }

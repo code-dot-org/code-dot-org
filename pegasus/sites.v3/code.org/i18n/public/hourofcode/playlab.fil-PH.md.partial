@@ -1,45 +1,45 @@
 ---
-title: Teacher Resources - Play Lab
+title: Mga Mapagkukunan ng Guro - Play Lab
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Play Lab: An Hour of Code Tutorial
+# Play Lab: Isang Hour of Code na Tutorial
 
 {{ hoc_playlab_video }}
 
 [col-50]
 
-## Teacher Resources
+## Mga Mapagkukunan ng Guro
 
-### Lesson Plans:
+### Mga Lesson Plan:
 
 - [Play Lab]({{ hoc_playlab_cb_url }})
 
-### Extension Activities:
+### Mga Extension na Aktibidad:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Lampas sa isang Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Ika-2 na Kurso](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Iba pang Mapagkukunan ng Guro:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: Paano Gumabay para sa mga Educator o Tagapagturo](https://hourofcode.com/how-to)
+- [Pinakamahuhusay na Mga Kasanayan mula sa Mga Matagumpay na Educator](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live na Kaganapan: [Isang Gabay ng Educator sa Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Pangkalahatang-ideya
 
-Create a story or make a game with Play Lab! Make animals, pirates, zombies, ninjas, and many more characters move, make sounds, score points, and even throw fireballs!
+Lumikha ng kwento o gumawa ng laro gamit ang Play Lab! Gumawa ng mga hayop, pirata, zombie, ninja, at marami pang karakter na gumalaw, gumawa ng mga tunog, puntos, at maghagis din ng mga fireball!
 
-**Recommended Age Range:** 4-104
+**Inirerekomendang Saklaw ng Edad:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Mga Kinakailangan sa Teknolohiya:** Mga modernong browser, smartphone + tablet
 
-<a href="http://studio.code.org/s/playlab/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/playlab/reset"><button>Subukan ang tutorial</button></a>
 
 [/col-50]

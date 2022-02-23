@@ -38,6 +38,7 @@ import {
   ValidScores as FacilitatorValidScores
 } from '@cdo/apps/generated/pd/facilitatorApplicationConstants';
 import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
+import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import _ from 'lodash';
 import {
   getApplicationStatuses,
@@ -66,7 +67,7 @@ export class DetailViewContents extends React.Component {
     canLock: PropTypes.bool,
     applicationId: PropTypes.string.isRequired,
     applicationData: PropTypes.shape({
-      course: PropTypes.oneOf(['csf', 'csd', 'csp']),
+      course: PropTypes.oneOf(Object.values(CourseKeyMap)),
       course_name: PropTypes.string.isRequired,
       regional_partner_name: PropTypes.string,
       update_emails_sent_by_system: PropTypes.bool,
@@ -598,9 +599,13 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
-    const statuses = getApplicationStatuses(
-      this.props.viewType,
-      this.props.applicationData.update_emails_sent_by_system
+    // Nobody is able to set an application status to incomplete from detail view
+    const statuses = _.omit(
+      getApplicationStatuses(
+        this.props.viewType,
+        this.props.applicationData.update_emails_sent_by_system
+      ),
+      ['incomplete']
     );
     const selectControl = (
       <div>
@@ -680,7 +685,7 @@ export class DetailViewContents extends React.Component {
   renderHeader = () => {
     const rubricURL =
       this.props.applicationData.application_type === ApplicationTypes.teacher
-        ? 'https://drive.google.com/file/d/1UAlJ8zuM8pPza1OPewFrWpnvRo3h8k5W/view'
+        ? 'https://docs.google.com/document/d/19oolyeensn9oX8JAnIeT2M6HbNZQkZqlPhwcaIDx-Us/view'
         : 'https://docs.google.com/document/u/1/d/e/2PACX-1vTqUgsTTGeGMH0N1FTH2qPzQs1pVb8OWPf3lr1A0hzO9LyGLa27J9_Fsg4RG43ok1xbrCfQqKxBjNsk/pub';
 
     return (

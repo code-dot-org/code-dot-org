@@ -1,28 +1,28 @@
 ---
-title: Blurbs and useful stats
+title: Flapteksten en nuttige statistieken
 ---
 
 <a id="blurb"></a>
 
 {{ signup_button }}
 
-# Blurbs and useful stats
+# Flapteksten en nuttige statistieken
 
-### Use the following messaging if you're looking for ways to promote the Hour of Code in your newsletters and communications.
+### Gebruik de volgende teksten als u op zoek bent naar manieren om uw 'Hour of Code'-evenement te promoten in uw nieuwsbrieven en communicatie.
 
 * * *
 
 ## Gebruik deze korte beschrijving in nieuwsbrieven
 
-#### Bring computer science to your school. Start with an Hour of Code!
+#### Laat uw school kennis maken met informatica. Begin met een 'Hour of Code'!
 
-With technology changing every industry on the planet, computing knowledge has become part of a well-rounded skill set. But fewer than half of all schools teach computer science! Het goede nieuws is dat we zijn op weg om dit te veranderen. Als je over de Uur Code van vorig jaar hebt gehoord, weet u misschien dat het geschiedenis heeft geschreven. 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+Doordat technologie elke sector ter wereld aan het veranderen is, is kennis over computers onderdeel geworden van een veelzijdige set aan vaardigheden. But just half of all schools offer computer science! Het goede nieuws is dat we zijn op weg om dit te veranderen. Als u vorig jaar over 'Hour of Code' hebt gehoord, dan weet u misschien dat het geschiedenis heeft geschreven. 100 miljoen studenten hebben nu ontdekt hoe toegankelijk en leuk informatica kan zijn door slechts één 'Hour of Code'.
 
-The Hour of Code is a one-hour introduction to computer science, designed to demystify code and show that anybody can learn the basics. Learn more at [http://HourOfCode.com](http://HourofCode.com), try an hour yourself, or host an Hour of Code event to introduce others to the world of computing!
+De 'Hour of Code' is een één uur durende introductie tot informatica, ontworpen om aan te tonen dat programmeren niet zo moeilijk is en iedereen de basis kan aanleren. Ga voor meer informatie naar [http://HourOfCode.com](http://HourofCode.com), en probeer het een uur lang voor uzelf, of host een 'Hour of Code'-evenment om anderen kennis te laten maken met de wereld van informatica.
 
-## Messaging for frequently asked questions
+## Antwoorden voor veelgestelde vragen
 
-#### Waarom doet uw school mee aan CodeUur?
+#### Waarom doet uw school mee aan 'Hour of Code'?
 
 We weten allemaal dat het belangrijk is dat leerlingen wegwijs worden in onze digitale wereld. Veel leraren hebben weinig ervaring met informatica en weten niet waar ze moeten beginnen. Dit evenement is een kans voor ons allemaal om te zien wat informatica inhoudt.
 
@@ -30,23 +30,23 @@ We hopen dat leerlingen de smaak te pakken krijgen en blijven leren. Onderzoek t
 
 #### Waarom is dit belangrijk?
 
-Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open banen in de VS—inclusief kunst en design—die programmeervaardigheden nodig hadden. But 53 percent of schools in the U.S. don't teach computer science. Het wordt tijd dat we aansluiten bij de 21e eeuw. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen. <br /> <br />
+Technologie verandert elke industrie op de planeet. In 2015, 7 miljoen open banen in de VS — inclusief kunst en design— die programmeervaardigheden nodig hadden. But 49 percent of schools in the U.S. don't offer computer science. Het wordt tijd dat we aansluiten bij de 21e eeuw. We weten dat wat onze leerlingen ook gaan doen wanneer ze groot worden, of ze nu medicijnen, het bedrijfsleven, de politiek of de kunst in gaan, als ze weten hoe ze op technologie kunnen bouwen geeft ze dat de zelfverzekerdheid en know-how om te slagen. <br /> <br />
 
-#### A quote you can use in materials
+#### Een citaat dat u in materiaal kunt gebruiken.
 
-"Het CodeUur is ontworpen om code te ontrafelen en te laten zien dat informatica geen hocus pocus is: iedereen kan de grondbeginselen leren," aldus Hadi Partovi, oprichter en directeur van Code.org. "Meer dan 100 miljoen leerlingen wereldwijd hebben meegedaan aan een CodeUur. The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+"'Hour of Code' is ontworpen om code te ontrafelen en te laten zien dat informatica geen hocus pocus is: iedereen kan de grondbeginselen leren," aldus Hadi Partovi, oprichter en directeur van Code.org. "Meer dan 100 miljoen leerlingen wereldwijd hebben meegedaan aan een 'Hour of Code'. De vraag naar informatica in het onderwijs in de 21e eeuw kent geen regels of grenzen." <br /> <br />
 
 #### Over Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. Na de lancering in 2013, organiseerde Code.org het CodeUur campagne – die meer dan 100 miljoen studenten geïntroduceerd heeft aan programmeren - en heeft meer dan 70 openbare schooldistricten landelijk als partners om programmeren te verspreiden. Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ codeorg_link }}).
+Code.org is een publieke non-profit organisatie gericht op het uitbreiden van deelname aan informatica en het vegroten van deelname door jonge vrouwen en studenten uit groepen die ondervertegenwoordigd zijn. Code.org heeft als visie dat elke student in elke school de kans moet krijgen om te leren programmeren. Na de lancering in 2013, organiseerde Code.org de 'Hour of Code'-campagne – die meer dan 100 miljoen studenten geïntroduceerd heeft aan programmeren - en heeft meer dan 70 openbare schooldistricten landelijk als partners om programmeren te verspreiden. Code.org wordt ondersteund door filantropische donaties van bedrijf, stichtingen en genereuze individuen, waaronder Microsoft, Facebook, Infosys Foundation USA, Amazon, en anderen. Ga voor meer informatie naar [code.org]({{ codeorg_link }}).
 
-## Share these on social media and in emails
+## Deel dit op sociale media en in e-mailberichten.
 
 [![afbeelding](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![afbeelding](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="infographics"></a>
 
-## Afbeeldingen die informatie uitbeelden en verklaren
+## Infographics
 
 {{ stats_carousel }}
 

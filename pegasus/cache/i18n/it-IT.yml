@@ -1386,6 +1386,8 @@ it-IT:
   iceage_name: L'Era Glaciale
   minecraft_name: Minecraft
   starwarsblocks_name: Guerre Stellari (Blocchi)
+  hoc-impact-study_name: Labirinto classico con Survey
+  flappy-impact-study_name: Codice Flappy con sondaggio
   hoc-encryption_name: Crittografia semplice
   text-compression_name: Compressione del testo
   applab_name: Sviluppo App
@@ -1479,6 +1481,12 @@ it-IT:
   coursed-2020_gradelevel: Da 7 a 11 anni
   coursee-2020_gradelevel: Da 8 a 12 anni
   coursef-2020_gradelevel: Da 9 a 13 anni
+  coursea-2021_gradelevel: Da 4 a 7 anni
+  courseb-2021_gradelevel: Da 5 a 8 anni
+  coursec-2021_gradelevel: Da 6 a 10 anni
+  coursed-2021_gradelevel: Da 7 a 11 anni
+  coursee-2021_gradelevel: Da 8 a 12 anni
+  coursef-2021_gradelevel: Da 9 a 13 anni
   accelerated_gradelevel: Da 10 anni in su (dopo il Corso 3)
   codeorg_platformtext: Browser moderni, smartphone, tablet
   codeintl_platformtext: Browser moderni, smartphone, tablet
@@ -2634,19 +2642,110 @@ it-IT:
     e iPad. Impara i fondamenti della programmazione e esplora la diversità e l''inclusione
     con i tuoi studenti! Accedi alle risorse gratuite tra cui un piano delle lezioni,
     video, curriculum di informatica, lezioni di equità e addestramenti degli insegnanti.'
+  hoc2021_mc_mee_title: Minecraft TimeCraft
+  hoc2021_mc_mee_description: 'Viaggia indietro nel tempo e impara a programmare!
+    Il nuovo tutorial Minecraft Hour of Code è ora disponibile in Minecraft: Education
+    Edition per Windows, Mac, Chromebook e iPad. Inizia con le risorse per gli educatori,
+    i corsi di formazione e i video gratuiti.'
+  hoc2021_mc_mee_villages_title: Racconto di due villaggi
+  hoc2021_mc_mee_villages_description: 'Impara le basi del coding ed esplora la diversità
+    e l''inclusione con i tuoi studenti in Minecraft: Education Edition.'
+  hoc2021_mc_mee_ai_title: AI per sempre
+  hoc2021_mc_mee_ai_description: 'Esplora l''AI con i tuoi studenti e impara a codificare
+    in Minecraft: Education Edition.'
   footer_powered_by_aws: Eseguito su Amazon Web Services
+  footer_built_on_github: Costruito su GitHub di Microsoft
+  codebytes_skinny_banner_title: Unisciti a noi dal 7 all'11 dicembre per le nostre
+    mini-lezioni dal vivo CodeBytes!
+  codebytes_skinny_banner_description: 'Unisciti a noi ogni giorno della CS Education
+    Week for CodeBytes, lezioni interattive di informatica di 20 minuti. Streaming
+    live due volte al giorno, CodeBytes è un ottimo modo per gli studenti di partecipare
+    a un #HourOfCode virtuale!'
   codebytes_skinny_banner_english_only: Solo in inglese
+  codebytes_skinny_banner_learn: Scopri di più su [code.org/codebytes] (%{code_bytes_url}).
   footer_privacy_policy: Informativa sulla privacy
+  footer_privacy_policy_updated: Informativa sulla privacy (aggiornata)
   footer_about: Informazioni
   footer_partners: Partner
+  footer_blog: Blog
   footer_donate: Sostienici
+  footer_store: Negozio
   footer_support: Help and Community
   footer_terms: Condizioni
   ai_for_oceans: L'Intelligenza Artificiale per il mare
   ai_for_oceans_lesson_plan: piano di lavoro della lezione
+  ai_for_oceans_tile_description: Aiuta l'intelligenza artificiale a pulire gli oceani
+    addestrandola a rilevare la spazzatura! Scopri i dati di allenamento e i pregiudizi
+    e come l'intelligenza artificiale può risolvere i problemi del mondo. Visualizza
+  how_ai_works: Come funziona l'IA
+  how_ai_works_tile_description: Scopri come funziona l'IA e perché è importante con
+    questa serie di brevi video. Con il CEO di Microsoft Satya Nadella e un cast diversificato
+    di esperti.
+  watch_the_videos: Guarda i video
+  ai_and_ethics: AI ed etica
+  ai_and_ethics_tile_description: Gli studenti riflettono sulle implicazioni etiche
+    dell'IA, quindi lavorano insieme per creare una risorsa «Codice etico dell'IA»
+    per i creatori e i legislatori dell'IA in tutto il mondo.
+  view_lesson_plan: Visualizza il piano delle lezioni
   ai_in_partnership_with: In collaborazione con
   ai_microsoft_thanks: Ringraziamo Microsoft per il supporto che dà alla nostra missione
     per garantire che ogni bambino abbia l'opportunità di imparare l'informatica e
     le competenze per avere successo nel XXI secolo.
+  ai_ethics_panel_header: Esplorazione della tavola rotonda sull'etica dell'IA
+  ai_ethics_panel_description_1: Approfondisci con alcuni dei nostri esperti di intelligenza
+    artificiale preferiti! Questa tavola rotonda tocca questioni importanti come il
+    bias algoritmico e il futuro del lavoro. Abbinalo al nostro
+  ai_ethics_lesson_plan: Piano delle lezioni di intelligenza artificiale ed etica
+  ai_ethics_panel_description_2: per una grande introduzione all'etica dell'intelligenza
+    artificiale!
+  cs_for_good: CS per il bene
+  cs_for_good_tile_description: Risorse per ispirare gli studenti a riflettere profondamente
+    sul ruolo che l'informatica può svolgere nella creazione di un mondo più equo
+    e sostenibile.
+  view_resources: Visualizza risorse
+  imagine_cup_junior: Immagina la Coppa Junior
+  imagine_cup_junior_tile_description: Questa sfida globale AI for Good introduce
+    gli studenti alle iniziative AI for Good di Microsoft, consentendo loro di risolvere
+    un problema nel mondo con la potenza dell'IA.
   ai_activity: Attività
   ai_description: Descrizione
+  ai_seeing_ai: Vedere l'IA
+  ai_seeing_ai_description: Un'app gratuita che racconta il mondo che ti circonda
+    in una varietà di lingue.
+  ai_quick_draw: Veloce, disegna!
+  ai_quick_draw_description: Una rete neurale può imparare a riconoscere gli scarabocchiamenti?
+  ai_teachable_machine: Macchina didattica
+  ai_teachable_machine_description: Addestra un computer a riconoscere le tue immagini,
+    suoni e pose.
+  ai_google: Esperimenti di intelligenza artificiale con Google
+  ai_google_description: Inizia a esplorare l'apprendimento automatico attraverso
+    immagini, disegni, lingua, musica e altro ancora.
+  ai_zooniverse: Zooniverse - Snapshot Mountain Zebra
+  ai_zooniverse_description: Aiuta a proteggere la Zebra di Cape Mountain in via di
+    estinzione identificando i diversi animali nelle immagini.
+  ai_audience: Pubblico
+  ai_minecraft_description: 'Accedi a risorse gratuite tra cui un programma di lezioni,
+    video, curriculum di informatica e corsi di formazione per insegnanti. (Richiede
+    Minecraft: Education Edition)'
+  ai_k_12_audience: K-12 (lettura richiesta)
+  ai_microsoft_workshop: Workshop virtuali gratuiti di Microsoft
+  ai_microsoft_workshop_description: Accendi la curiosità con workshop STEM e coding
+    gratuiti.
+  ai_machine_learning_for_kids: Machine Learning per bambini
+  ai_machine_learning_for_kids_description: Addestra un modello di apprendimento automatico
+    con testo, numeri o immagini e usalo per creare giochi in Scratch.
+  ai_ibm_machine_learning_for_kids: 'IBM: Machine Learning per bambini'
+  ai_ecs: 'ECS: Intelligenza artificiale (AI)'
+  ai_ecs_description: Una nuova unità di curriculum alternativa per il curriculum
+    Exploring Computer Science (ECS).
+  ai_elements: Elementi di AI
+  ai_elements_description: Una serie di corsi online gratuiti creati da Reaktor e
+    dall'Università di Helsinki.
+  ai_cognimates: Cognimates
+  ai_cognimates_description: Una piattaforma di formazione AI per la creazione di
+    giochi, la programmazione di robot e la formazione.
+  ai_try_activity: Prova l'attività
+  outbreak_tile_title: Epidemia
+  outbreak_tile_subtitle: Un virus ha infettato Monster Town! Codifica un simulatore
+    di epidemia e fai previsioni su ciò che accadrà ai vicini di Monster Town.
+  footer_cookie_notice: Informativa sui cookie

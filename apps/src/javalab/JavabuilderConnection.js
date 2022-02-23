@@ -1,11 +1,13 @@
 import {
   WebSocketMessageType,
   StatusMessageType,
-  STATUS_MESSAGE_PREFIX
+  STATUS_MESSAGE_PREFIX,
+  ExecutionType
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 import javalabMsg from '@cdo/javalab/locale';
+import {onTestResult} from './testResultHandler';
 
 // Creates and maintains a websocket connection with javabuilder while a user's code is running.
 export default class JavabuilderConnection {
@@ -16,7 +18,10 @@ export default class JavabuilderConnection {
     serverLevelId,
     options,
     onNewlineMessage,
-    setIsRunning
+    setIsRunning,
+    setIsTesting,
+    executionType,
+    miniAppType
   ) {
     this.channelId = project.getCurrentId();
     this.javabuilderUrl = javabuilderUrl;
@@ -26,6 +31,9 @@ export default class JavabuilderConnection {
     this.options = options;
     this.onNewlineMessage = onNewlineMessage;
     this.setIsRunning = setIsRunning;
+    this.setIsTesting = setIsTesting;
+    this.executionType = executionType;
+    this.miniAppType = miniAppType;
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -49,7 +57,10 @@ export default class JavabuilderConnection {
         channelId: this.channelId,
         projectVersion: project.getCurrentSourceVersionId(),
         levelId: this.levelId,
-        options: this.options
+        options: this.options,
+        executionType: this.executionType,
+        useDashboardSources: true,
+        miniAppType: this.miniAppType
       }
     })
       .done(result => this.establishWebsocketConnection(result.token))
@@ -80,7 +91,7 @@ export default class JavabuilderConnection {
     this.miniApp?.onCompile?.();
   }
 
-  onStatusMessage(messageKey) {
+  onStatusMessage(messageKey, detail) {
     let message;
     let lineBreakCount = 0;
     switch (messageKey) {
@@ -96,13 +107,39 @@ export default class JavabuilderConnection {
         message = javalabMsg.running();
         lineBreakCount = 2;
         break;
-      case StatusMessageType.GENERATING_RESULTS:
-        message = javalabMsg.generatingResults();
+      case StatusMessageType.GENERATING_PROGRESS:
+        message = javalabMsg.generatingProgress({
+          progressTime: detail.progressTime
+        });
         lineBreakCount = 1;
+        break;
+      case StatusMessageType.SENDING_VIDEO:
+        message = javalabMsg.sendingVideo({totalTime: detail.totalTime});
+        lineBreakCount = 1;
+        break;
+      case StatusMessageType.TIMEOUT_WARNING:
+        message = javalabMsg.timeoutWarning();
+        lineBreakCount = 1;
+        break;
+      case StatusMessageType.TIMEOUT:
+        message = javalabMsg.timeout();
+        // This should be the last message that Javalab receives,
+        // so add an extra line break to separate status messages
+        // from consecutive runs.
+        lineBreakCount = 2;
+        this.onTimeout();
         break;
       case StatusMessageType.EXITED:
         this.onNewlineMessage();
         this.onExit();
+        break;
+      case StatusMessageType.RUNNING_PROJECT_TESTS:
+        message = javalabMsg.runningProjectTests();
+        lineBreakCount = 2;
+        break;
+      case StatusMessageType.RUNNING_VALIDATION:
+        message = javalabMsg.runningValidation();
+        lineBreakCount = 2;
         break;
       default:
         break;
@@ -119,10 +156,14 @@ export default class JavabuilderConnection {
     const data = JSON.parse(event.data);
     switch (data.type) {
       case WebSocketMessageType.STATUS:
-        this.onStatusMessage(data.value);
+        this.onStatusMessage(data.value, data.detail);
         break;
       case WebSocketMessageType.SYSTEM_OUT:
         this.onOutputMessage(data.value);
+        break;
+      case WebSocketMessageType.TEST_RESULT:
+        onTestResult(data, this.onOutputMessage);
+        this.onNewlineMessage();
         break;
       case WebSocketMessageType.NEIGHBORHOOD:
       case WebSocketMessageType.THEATER:
@@ -130,9 +171,9 @@ export default class JavabuilderConnection {
         this.miniApp.handleSignal(data);
         break;
       case WebSocketMessageType.EXCEPTION:
+        this.onNewlineMessage();
         handleException(data, this.onOutputMessage);
         this.onNewlineMessage();
-        this.onExit();
         break;
       case WebSocketMessageType.DEBUG:
         if (window.location.hostname.includes('localhost')) {
@@ -157,7 +198,7 @@ export default class JavabuilderConnection {
   }
 
   onExit() {
-    if (this.miniApp) {
+    if (this.miniApp && this.executionType === ExecutionType.RUN) {
       // miniApp on close should handle setting isRunning state as it
       // may not align with actual program execution. If mini app does
       // not have on close we won't toggle back automatically.
@@ -169,8 +210,7 @@ export default class JavabuilderConnection {
         `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
       );
       this.onNewlineMessage();
-      // Set isRunning to false
-      this.setIsRunning(false);
+      this.handleExecutionFinished();
     }
   }
 
@@ -179,9 +219,12 @@ export default class JavabuilderConnection {
       'We hit an error connecting to our server. Try again.'
     );
     this.onNewlineMessage();
-    // Set isRunning to false
-    this.setIsRunning(false);
+    this.handleExecutionFinished();
     console.error(`[error] ${error.message}`);
+  }
+
+  onTimeout() {
+    this.setIsRunning(false);
   }
 
   // Send a message across the websocket connection to Javabuilder
@@ -195,6 +238,17 @@ export default class JavabuilderConnection {
   closeConnection() {
     if (this.socket) {
       this.socket.close();
+    }
+  }
+
+  handleExecutionFinished() {
+    switch (this.executionType) {
+      case ExecutionType.RUN:
+        this.setIsRunning(false);
+        break;
+      case ExecutionType.TEST:
+        this.setIsTesting(false);
+        break;
     }
   }
 }

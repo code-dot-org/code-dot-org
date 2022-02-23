@@ -269,7 +269,7 @@ ka:
         personal_login_created_username: 'თქვენ წარმატებით შექმენით პერსონალური ანგარიში. ახლა თქვენ შეგიძლიათ ანგარიშში შესვლა სახელით (%{username}) და პაროლით'
   nav:
     header:
-      finished_hoc: "დავასრულე \"კოდის წერის 1 საათი\""
+      finished_hoc: "დავასრულე!"
       sign_in_to_save: 'დარეგისტრირება და პროგრესის შენახვა'
       my_dashboard: "ჩემი მთავარი პანელი"
       course_catalog: "კურსების კატალოგი"
@@ -277,10 +277,17 @@ ka:
       sections: "განყოფილებები"
       help_support: "დახმარება და მხარდაჭერა"
       report_bug: "მოგვახსენეთ ტექნიკური ხარვეზის შესახებ"
+      report_abuse: "ბოროტად გამოყენების შესახებ"
       teacher_community: "მასწავლებელთა კოლექტივი"
       professional_learning: "პროფესიონალთაშორისი სწავლება"
       documentation: "დოკუმენტაცია"
       tutorials: "ტუტორიალები"
+      app_lab_documentation: "აპლიკაციის ლაბორატორია დოკუმენტაცია"
+      app_lab_tutorials: "App ლაბორატორია გაკვეთილები"
+      game_lab_documentation: "თამაშის ლაბორატორია დოკუმენტაცია"
+      game_lab_tutorials: "თამაშის ლაბორატორია გაკვეთილები"
+      sprite_lab_documentation: "Sprite ლაბორატორია დოკუმენტაცია"
+      sprite_lab_tutorials: "Sprite ლაბორატორია გაკვეთილები"
       educate_overview: "პედაგოგის მიმოხილვა"
       educate_elementary: "დაწყებითი სკოლა"
       educate_middle: "საშუალო სკოლა"
@@ -306,6 +313,7 @@ ka:
       help_us: "დაგვეხმარე"
       teach: "ასწავლე"
       about: "გაიცანით"
+      legal: "კონფიდენციალურობა და იურიდიული"
       legal_privacy: "კონფიდენციალურობის პოლიტიკა"
       legal_tos: "მომსახურების პირობები"
     user:
@@ -313,6 +321,7 @@ ka:
       district_dashboard: 'განყოფილების მართვის პანელი'
       label: 'გამარჯობა %{username}'
       stats: 'კოდის სტუდია'
+      my_projects: 'ჩემი პროექტები'
       settings: 'ანგარიშის პარამეტრები'
       logout: 'გასვლა'
       signin: 'შესვლა'
@@ -345,10 +354,13 @@ ka:
       playlab_k1: 'თამაშების ლაბორატორია (სკოლამდელი)'
       scratch: 'Scratch'
       sports: 'სპორტი'
+      spritelab: 'სპრიტის ლაბორატორია'
       starwars: 'ვარსკვლავური ომები'
       starwarsblocks: 'ვარსკვალვური ომები (ბლოკები)'
       starwarsblocks_hour: 'ვარსკვალვური ომები (ბლოკები)'
+      loading: 'იტვირთება...'
       weblab: 'ვებ ლაბორატორია'
+      view_all: 'ყველა პროექტის ნახვა...'
     popup:
       progress_for_user: "%{name}-ს პროგრესი"
       progress: 'თქვენი პროგრესი'
@@ -362,6 +374,7 @@ ka:
       prizes_link: 'მეტი ინფორმაცია'
   teacher:
     answer: პასუხი
+    dashboard: 'მასწავლებლის მართვის პანელი'
     for_teachers_only: მხოლოდ მასწავლებლებისთვის
     title:
       one: 'თქვენი მასწავლებელი:'
@@ -460,6 +473,7 @@ ka:
     no_primary_course: "ნახეთ კურსი კოდის სტუდიაში"
     choose_next_course: "სცადეთ კოდის სტუდიის კურსი, აირჩიეთ რომელიმე ვარიანტი"
     print_certificate: "სერტიფიკატის ამობეჭდვა"
+  certificate_sponsor_message: "%{sponsor_name} გააკეთა გულუხვი საჩუქარი სპონსორი თქვენი სწავლის."
   move_students:
     new_section_dne: "სამწუხაროდ, სექცია %{new_section_code} არ არსებობს. გთხოვთ, შეიყვანოთ სხვა სექციის კოდი."
     section_code_cant_be_current_section: "მიმდინარე სექცია ვერ იქნება იგივე, რაც ახალი სექცია."
@@ -488,6 +502,7 @@ ka:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. ყველა უფლება დაცულია. Star Warss&#8482; &copy; %{current_year} Disney and Lucasfilm. ყველა უფლება დაცულია. Frozen&#8482; &copy; %{current_year} Disney. ყველა უფლება დაცულია. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. ყველა უფლება დაცულია. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. ყველა უფლება დაცულია. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. ყველა უფლება დაცულია. The Amazing World of Gumball არის სავაჭრო ნიშანი &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org იყენებს p5.play, რომელიც ლიცენზირებულია აქ: <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">the GNU LGPL 2.1</a>.'
     powered_by_aws: 'შექმნილია Amazon Web Services დახმარებით'
+    built_on_github: 'აგებულია GitHub- ზე Microsoft- ისგან'
     trademark: '&copy;Code.org %{current_year}. Code.org®, Code.org&reg;, CODE ლოგო და Hour of Code&reg; Code.org-ის სავაჭრო ნიშნებია.'
     copyright: 'საავტორო უფლება'
     more: 'მეტი'
@@ -497,12 +512,14 @@ ka:
     tos_short: 'პირობები'
     tos: 'მომსახურების პირობები'
     privacy: 'კონფიდენციალურობის პოლიტიკა'
+    privacy_updated: 'კონფიდენციალურობის პოლიტიკა (მხრიდან)'
     secure: 'დაცული ვერსია'
     report_abuse: 'შეგვატყობინეთ დარღვევა'
     built_on_code_studio: 'დაწერეთ კოდი კოდის სტუდიაში'
     make_my_own_app: 'ჩემი საკუთარი აპლიკაციის შექმნა'
     how_it_works: 'როგორ მუშაობს (კოდის ნახვა)'
     try_hour_of_code: 'სცადეთ კოდის ერთი საათი!'
+    store: 'მაღაზია'
   reference_area:
     title: 'გჭირდებათ დახმარება?'
     subtitle: 'ნახეთ ეს ვიდეოები და მინიშნებები'
@@ -614,10 +631,12 @@ ka:
       title: "Minecraft"
     hero:
       title: "Minecraft"
+      body: "Minecraft დაბრუნდა საათის კოდი ახალი საქმიანობის! მოგზაურობა Minecraft კოდით."
     sports:
       title: "სპორტი"
       body: "შექმენით კალათბურთის თამაში ან შეურიეთ ერთმანეთს სპორტის სახეობები."
     text-compression:
+      title: "ტექსტის შეკუმშვა"
       body: "ამ გაკვეთილში მოსწავლეები გამოიყენებთ ტექსტის შეკუმშვის ვიჯეტს, რათა შეკუმშონ ტექსტი განმეორებადი ადგილების სიმბოლოებით ჩანაცვლებით."
     unplugged:
       title: "გაკვეთილები კომპიუტერის გარეშე"
@@ -872,6 +891,7 @@ ka:
   return_unit_overview: 'კურსის მიმოხილვაზე გადასვლა'
   return_course_overview: 'კურსის მიმოხილვაზე გადასვლა'
   view_all_units: 'ყველა სექციის ნახვა'
+  view_teacher_guide: 'იხილეთ მასწავლებლის სახელმძღვანელო'
   pd:
     form_labels:
       first_name: 'სახელი'
@@ -880,6 +900,7 @@ ka:
       email: 'ელექტრონული ფოსტა'
       email_alternate: 'ალტერნატიული ელფოსტა'
       gender: 'გენდერული იდენტობა'
+      school: 'სკოლა'
       school_name: 'სკოლის სახელი'
       school_city: 'სკოლის ქალაქი'
       school_country: 'სკოლის ქვეყანა'
@@ -952,4 +973,7 @@ ka:
   cookie_banner:
     accept: 'ვეთანხმები'
   page_not_found_title: "გვერდი არ მოიძებნა"
+  page_not_found_header: '404: გვერდი ვერ მოიძებნა'
+  page_not_found_description: "გვერდი, რომელსაც ეძებთ, არ არსებობს ამ მისამართზე. შეამოწმეთ ვებ მისამართი და დააბრუნეთ. ან, დაბრუნდით ჩვენს მთავარ გვერდზე."
+  page_not_found_button: "სახლში დაბრუნება"
   copy: 'კოპირება'

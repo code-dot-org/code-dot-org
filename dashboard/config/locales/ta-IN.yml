@@ -37,6 +37,7 @@ ta:
   submit: சமர்ப்பிக்க
   next_page: அடுத்த பக்கம்
   cancel: ரத்து செய்
+  okay: சரி.
   or: அல்லது
   join_section:
     code:
@@ -81,6 +82,10 @@ ta:
     email_preference_privacy: "(எங்கள் தனியுரிமைக் கொள்கையைப் பார்க்கவும்)"
     email_preference_yes: ஆம்
     email_preference_no: இல்லை
+    share_teacher_email_reg_partner_question: உள்ளூர் தொழில் மேம்பாடு, வளங்கள் மற்றும்
+      நிகழ்வுகள் குறித்து அவர்கள் உங்களுக்குத் தெரிவிக்க உங்கள் மாநிலத்தில் உள்ள [Code.org
+      regional partner](%{cdo_regional_partner_desc}) உங்கள் தொடர்புத் தகவலை நாங்கள்
+      பகிர விரும்புகிறீர்களா?
     share_teacher_email_reg_partner_preference_yes: ஆம்
     share_teacher_email_reg_partner_preference_no: இல்லை
     parent_account_checkbox: நான் எனது குழந்தையின் சார்பாக பதிவு செய்யும் பெற்றோர்
@@ -168,6 +173,8 @@ ta:
       minecraft_aquatic: Minecraft நீர்வாழ்
       minecraft_hero: Minecraft ஹீரோ
       playlab_k1: ப்ளே லேப் (முன்-ரீடர்)
+      poetry: கவிதை
+      poetry_hoc: கவிதை கலை
       sports: விளையாட்டு
       starwars: 'ஸ்டார் வார்ஸ் '
       starwarsblocks: ஸ்டார் வார்ஸ் (பிளாக்ஸ்)
@@ -191,6 +198,7 @@ ta:
     only_one_parent_email_supported_warning: 'குறிப்பு: இந்த நேரத்தில் ஒரு மாணவர்
       கணக்கிற்கு ஒரு பெற்றோர் / பாதுகாவலர் மின்னஞ்சல் முகவரியை மட்டுமே நாங்கள் ஆதரிக்க
       முடியும்.'
+    encrypted: மறை குறியீடு
   user_level:
     completed: நிறைவடைந்தது
     tried: முயற்சிக்கப்பட்டது
@@ -273,6 +281,15 @@ ta:
       audience: வயது 14+
   landing:
     help_support: உதவி மற்றும் ஆதரவு
+  multi-submittable:
+    wrong_title: நன்றி.
+    correct_title: நன்றி.
+  level_group:
+    wrong_title: நன்றி.
+    correct_title: நன்றி.
+  level_group-submittable:
+    wrong_title: நன்றி.
+    correct_title: நன்றி.
   dialog:
     ok: சரி
     startover_title: உறுதியாக மீண்டும் தொடங்க வேண்டுகிறீரா?
@@ -313,11 +330,14 @@ ta:
     form_labels:
       email: மின்னஞ்சல்
       school_city: பள்ளி நகரம்
+      school_city_district: பள்ளி நகரம்/மாவட்டம்
       colombian_school_city: பள்ளி நகரம்
     form_entries:
       subjects:
         cs: கணினி அறிவியல்
         math: கணிதம்
+        science: அறிவியல்
+        la: மொழி கலைகள்
       workshop_course:
         csf_express: CS அடிப்படைகள்(Pre-Express or Express)
         not_applicable: பொருந்தாது
@@ -351,3 +371,4 @@ ta:
       மற்றும் திட்டங்களைப் பற்றி புதுப்பிக்க உங்கள் கணக்கில் இந்த மின்னஞ்சலை இணைக்கவும்!"
     link_your_email: உங்கள் மின்னஞ்சலை இணைக்கவும்
     not_now: இப்போது இல்லை
+  teacher_feedback: ஆசிரியர் கருத்து

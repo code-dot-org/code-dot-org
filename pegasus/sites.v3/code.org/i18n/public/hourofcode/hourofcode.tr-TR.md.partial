@@ -1,32 +1,32 @@
 ---
-title: Teacher Resources - Write your first computer program
+title: Öğretmen Kaynakları - İlk bilgisayar programınızı yazın
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Write your first computer program: An Hour of Code Tutorial
+# İlk bilgisayar programınızı yazın: Bir Kod Saati Öğretici
 
 {{ hoc_maze_video }}
 
 [col-50]
 
-## Teacher Resources
+## Öğretmen Kaynakları
 
-### Lesson Plans:
+### Ders Planları:
 
-- [Write your first computer program]({{ hoc_hourofcode_cb_url }})
+- [İlk bilgisayar programınızı yazın]({{ hoc_hourofcode_cb_url }})
 
-### Extension Activities:
+### Uzatma Faaliyetleri:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Bir Kod Saati Ötesinde](http://code.org/learn/beyond)
+- [Bilgisayar Bilimi Temelleri: Kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Diğer Öğretmen Kaynakları:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Kod Saati: Eğitimciler için Nasıl Yapılır Kılavuzu](https://hourofcode.com/how-to)
+- [Başarılı Eğitimcilerden En İyi Uygulamalar](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Canlı Etkinlik: [Bir Eğitimcinin Kod Saati Kılavuzu](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,12 +34,12 @@ video_player: true
 
 ## Genel Bakış
 
-Learn the basic concepts of Computer Science with drag and drop programming. This is a game-like, self-directed tutorial starring video lectures by Bill Gates, Mark Zuckerberg, Angry Birds and Plants vs. Zombies. Learn repeat-loops, conditionals, and basic algorithms. Available in 37 languages.
+Sürükle ve bırak programlama ile Bilgisayar Biliminin temel kavramlarını öğrenin. Bu, Bill Gates, Mark Zuckerberg, Angry Birds ve Plants vs. Zombies tarafından verilen video derslerin yer aldığı, oyuna benzer, kendi kendini yöneten bir öğreticidir. Tekrarlama döngülerini, koşullu ifadeleri ve temel algoritmaları öğrenin. 37 dilde mevcuttur.
 
-**Recommended Age Range:** 4-104
+**Önerilen Yaş Aralığı:** 4-104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Teknoloji Gereksinimleri:** Modern tarayıcılar, akıllı telefonlar + tabletler
 
-<a href="http://studio.code.org/hoc/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/hoc/reset"><button>Öğreticiyi deneyin</button></a>
 
 [/col-50]

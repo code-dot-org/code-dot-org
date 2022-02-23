@@ -7,6 +7,7 @@ ms:
           {MOVE2}"
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -60,6 +61,7 @@ ms:
         text: "{GROUP} lakukan {MOVE} {DIR} selamanya"
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -119,6 +121,7 @@ ms:
         text: tukar {GROUP} {PROPERTY} dengan {VAL}
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -142,6 +145,7 @@ ms:
         text: "{GROUP} lakukan {MOVE} {DIR} sekali"
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -296,6 +300,7 @@ ms:
         text: lompat {GROUP} ke {LOCATION}
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -323,6 +328,7 @@ ms:
         text: susun atur {GROUP} seperti {FORMAT}
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -338,6 +344,7 @@ ms:
           FORMAT:
             '"border"': sempadan
             '"inner"': dalam segi empat
+            '"diamond"': berlian
             '"circle"': bulatan
             '"grid"': grid
             '"top"': barisan Atas
@@ -348,6 +355,8 @@ ms:
             '"right"': lajur Kanan
             '"x"': bersilang-silang
             '"plus"': tambah
+            '"spiral"': lingkaran
+            '"infinity"': garis tak terhingga
             '"random"': rawak
       Dancelab_makeAnonymousDanceSprite:
         text: buatkan {COSTUME} baharu di {LOCATION}
@@ -355,12 +364,16 @@ ms:
           COSTUME:
             '"ALIEN"': makhluk asing
             '"BEAR"': beruang
+            '"CAT"': kucing
             '"DOG"': anjing
+            '"DUCK"': itik
             '"FROG"': katak
             '"MOOSE"': rusa
             '"PINEAPPLE"': nenas
+            '"ROBOT"': robot
             '"SHARK"': ikan Jerung
             '"SLOTH"': sloth
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": bahagian atas
             "{x: 200, y: 300}": bahagian bawah
@@ -378,12 +391,16 @@ ms:
           COSTUME:
             '"ALIEN"': makhluk asing
             '"BEAR"': beruang
+            '"CAT"': kucing
             '"DOG"': anjing
+            '"DUCK"': itik
             '"FROG"': katak
             '"MOOSE"': rusa
             '"PINEAPPLE"': nenas
+            '"ROBOT"': robot
             '"SHARK"': ikan Jerung
             '"SLOTH"': sloth
+            '"UNICORN"': unicorn
           LOCATION:
             "{x: 200, y: 100}": bahagian atas
             "{x: 200, y: 300}": bahagian bawah
@@ -418,6 +435,26 @@ ms:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
@@ -434,6 +471,7 @@ ms:
           LAYOUT:
             '"border"': sempadan
             '"inner"': dalam segi empat
+            '"diamond"': berlian
             '"circle"': bulatan
             '"grid"': grid
             '"top"': barisan Atas
@@ -444,6 +482,8 @@ ms:
             '"right"': lajur Kanan
             '"x"': bersilang-silang
             '"plus"': tambah
+            '"spiral"': lingkaran
+            '"infinity"': garis tak terhingga
             '"random"': rawak
       Dancelab_mixColors:
         text: campurkan {COLOR1} dan {COLOR2}
@@ -509,6 +549,7 @@ ms:
             '"fireworks"': Bunga Api
             '"flowers"': Bunga
             '"growing_stars"': Bintang yang Semakin Meningkat
+            '"higher_power"': Kuasa yang lebih tinggi
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Lantai Menari Laser
@@ -548,6 +589,7 @@ ms:
         text: tetapkan {GROUP} kelajuan tarian kepada {SPEED}
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -621,6 +663,7 @@ ms:
         text: tetapkan {GROUP} {PROPERTY} kepada {VAL}
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -656,6 +699,7 @@ ms:
         text: merawak{GROUP} {PROPERTY}
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -682,6 +726,7 @@ ms:
         text: tetapkan {THIS} warna kepada {VAL}
         options:
           THIS:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -698,6 +743,7 @@ ms:
         text: tetapkan {THIS} warna kepada {VAL}
         options:
           THIS:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -722,6 +768,7 @@ ms:
         text: tetapkan {THIS} tahap penglihatan kepada {VISIBILITY}
         options:
           THIS:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -756,6 +803,7 @@ ms:
         text: "{GROUP} bermula {PROPERTY} berikutan {RANGE}"
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -800,6 +848,7 @@ ms:
         text: "{GROUP} berhenti {PROPERTY} berikutan {RANGE}"
         options:
           GROUP:
+            sprites: semua
             '"ALIEN"': semua makhluk asing
             '"BEAR"': beruang
             '"CAT"': kucing
@@ -845,6 +894,7 @@ ms:
             '"row_bottom"': barisan Bawah
             '"column_left"': lajur Kiri
             '"column_right"': lajur Kanan
+            '"diamond"': berlian
             '"mural"': Mural
             '"safari"': Safari
             '"network"': Rangkaian
@@ -858,6 +908,7 @@ ms:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -903,6 +954,7 @@ ms:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
             '"0"': '0'
             '"1"': '1'
@@ -928,25 +980,37 @@ ms:
       gamelab_addBehaviorSimple:
         text: bidadari {SPRITE} bermula {BEHAVIOR}
       gamelab_addTarget:
+        text: "{SPRITE} mendapat sasaran {TARGET} kepada {OPT}"
         options:
           OPT:
+            '"follow"': ikuti
             '"avoid"': elak
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
       gamelab_atTime:
+        text: pada {N} {UNIT}
         options:
           UNIT:
             '"seconds"': saat
+            '"frames"': bingkai
+      gamelab_avoidingTargets:
+        text: mengelak sasaran
+      gamelab_beginCollectingData:
+        text: mula mengumpul data {BREAK} nilai {VALUE} dengan label {LABEL}
+      gamelab_bounceOff:
+        text: "{SPRITE} melantun {TARGET}"
       gamelab_changePropBy:
         text: tukar {SPRITE} {PROPERTY} dengan {VAL}
         options:
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
+            '"x"': kedudukan x
+            '"y"': kedudukan y
             '"direction"': arah pergerakan
             '"speed"': kelajuan
       gamelab_checkTouching:
-        text: "{CONDITION} {SPRITE1} menyentuh {SPRITE2} 12321"
+        text: "{CONDITION} {SPRITE1} menyentuh {SPRITE2}"
         options:
           CONDITION:
             '"when"': apabila
@@ -954,9 +1018,19 @@ ms:
       gamelab_clickedOn:
         text: ketika {SPRITE} diklik
       gamelab_clickedSpritePointer:
-        text: mengklik {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_north_and_looping, []): bergerak ke utara dan gelung
+            new Behavior(moving_south_and_looping, []): bergerak ke selatan dan gelung
       gamelab_comment:
         text: 'komen: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
+      gamelab_countByAnimation:
+        text: jumlah {SPRITE}
       gamelab_createNewSprite:
         text: "buat sprite baru \n Dipanggil {NAME} \n dengan pakaian {COSTUME} \n
           Pada {LOCATION}"
@@ -964,26 +1038,62 @@ ms:
         text: keluarkan {THIS}
       gamelab_draggable:
         text: diseret
+      gamelab_drawLine:
+        text: lukis garisan {COLOR} {LOC1} {LOC2}
       gamelab_edgesDisplace:
         text: tepi blok {SPRITE} dari bergerak
+      gamelab_followingTargets:
+        text: mengikut sasaran
+      gamelab_getAllSprites:
+        text: semua pari-pari
       gamelab_getProp:
         text: "{SPRITE} {PROPERTY}"
         options:
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
+            '"x"': kedudukan x
+            '"y"': kedudukan y
             '"direction"': arah pergerakan
             '"tint"': warna
             '"speed"': kelajuan
       gamelab_getThisSprite:
         text: "{CHOICE} sprite"
+        options:
+          CHOICE:
+            '"this"': ini
       gamelab_getTime:
+        text: masa dalam {UNIT}
         options:
           UNIT:
             '"seconds"': saat
+            '"frames"': bingkai
+      gamelab_glideTo:
+        text: "{SPRITE} meluncur ke {LOCATION}"
       gamelab_hideTitleScreen:
         text: sembunyikan skrin tajuk
+      gamelab_ifVarEquals:
+        text: |-
+          jika {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      gamelab_isCostumeEqual:
+        text: "[SPRITE] [0] kostum adalah {COSTUME}"
       gamelab_isKeyPressed:
+        text: "[KEKUNCI] [0] ditekan"
         options:
           KEY:
             '"up"': atas
@@ -1015,9 +1125,12 @@ ms:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_isTouchingEdges:
         text: "{SPRITE} menyentuh tepi"
+      gamelab_isTouchingSprite:
+        text: "[SPRITE] [0] menyentuh {TARGET}"
       gamelab_jumpTo:
         text: "{SPRITE} lompat ke {LOCATION}"
       gamelab_keyPressed:
@@ -1056,18 +1169,39 @@ ms:
             '"v"': v
             '"w"': w
             '"x"': x
+            '"y"': y
             '"z"': z
       gamelab_locationAt:
         text: 'lokasi x: {X} y: {Y}'
+      gamelab_locationModifier:
+        text: "{DISTANCE} piksel {DIRECTION} daripada {LOCATION}"
+        options:
+          DIRECTION:
+            '"North"': Utara
+            '"East"': Timur
+            '"South"': Selatan
+            '"West"': Barat
       gamelab_locationMouse:
         text: lokasi tetikus
       gamelab_locationOf:
         text: lokasi {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        text: cipta  {EFFECT} kesan dengan {NUM} {ANIMATION_NAME} pari-pari
+        options:
+          EFFECT:
+            '"burst"': pecah
+            '"pop"': pop
+            '"rain"': hujan
+            '"spiral"': lingkaran
       gamelab_makeNewSpriteAnon:
-        text: membuat baru {ANIMATION_NAME} bidadari {LOCATION} 123_321
+        text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
+      gamelab_makeNumSprites:
+        text: jadikan {NUM} pari-pari {ANIMATION_NAME} baharu
       gamelab_makeProjectile:
+        text: "cipta projektil \n[ANIMATION_NAME] [0] dari {LOCATION} dengan kelajuan
+          {SPEED}direction{DIRECTION}"
         options:
           DIRECTION:
             '0': kanan
@@ -1082,25 +1216,89 @@ ms:
             '"left"': kiri
       gamelab_mouseLocation:
         text: lokasi tetikus
+      gamelab_moveBackward:
+        text: alih {SPRITE} {DISTANCE} piksel ke belakang
       gamelab_moveForward:
         text: bergerak {SPRITE} {DISTANCE} piksel ke hadapan
       gamelab_moveInDirection:
         text: bergerak {SPRITE} {DISTANCE} piksel {DIRECTION} 12321
+        options:
+          DIRECTION:
+            '"North"': Utara
+            '"East"': Timur
+            '"South"': Selatan
+            '"West"': Barat
       gamelab_moveToward:
         text: bergerak {SPRITE} piksel {DISTANCE} ke arah {TARGET}
       gamelab_newSpritePointer:
-        text: mengklik {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: mengklik {SPRITE}
+        text: "{SPRITE}"
+      gamelab_patrollingUpDown:
+        text: meronda ke atas dan ke bawah
       gamelab_playSound:
         text: PlaySound {SOUND}
       gamelab_playSoundOptions:
         text: PlaySound {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": loghat
+            "'sound://category_digital/boing_2.mp3'": boing
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": pop
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": bersinar
+            "'sound://category_app/app_button_1.mp3'": butang
+            "'sound://category_collect/clicky_crunch.mp3'": rangup
+            "'sound://category_swish/quick_swing.mp3'": ayunan
+            "'sound://category_nature/summer_night_loop.mp3'": malam musim panas
+            "'sound://category_background/ocean_waves.mp3'": gelombang laut
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": riak pantai
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": buih
+            "'sound://category_animals/bear.mp3'": beruang
+            "'sound://category_animals/cat.mp3'": kucing
+            "'sound://category_animals/cow.mp3'": lembu
+            "'sound://category_animals/pig.mp3'": babi
+            "'sound://category_animals/sheep.mp3'": biri-biri
+            "'sound://category_animals/goat.mp3'": kambing
+            "'sound://category_animals/chicken.mp3'": ayam
+            "'sound://category_animals/rooster.mp3'": ayam jantan
+            "'sound://category_animals/elephant.mp3'": gajah
+            "'sound://category_animals/dolphin.mp3'": lumba-lumba
+            "'sound://category_nature/thunderstorm_1.mp3'": ribut petir
+            "'sound://category_animals/chick.mp3'": anak ayam
+            "'sound://category_animals/dog.mp3'": anjing
+            "'sound://category_animals/tiger.mp3'": harimau
+            "'sound://category_collect/trill_stings.mp3'": getaran
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": kecapi
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": ketik
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": pukulan
+              tonal
+            "'sound://category_transition/trippy_robotic_transition.mp3'": peralihan
+              robotik
+            "'sound://category_transition/star_dust_particle_10.mp3'": debu bintang
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": kapal
+              makhluk asing
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": sumpahan
+              magik
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": pilih
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": bass yang
+              unik
             "'sound://category_digital/jump_7.mp3'": lompat
+      gamelab_playSpeech:
+        text: bermain ucapan {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): bergerak dengan kunci arah
+            draggable(): diseret
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
+        options:
+          DIRECTION:
+            '"North"': Utara
+            '"East"': Timur
+            '"South"': Selatan
+            '"West"': Barat
       gamelab_printText:
         text: cetak {TEXT}
       gamelab_randColor:
@@ -1115,6 +1313,10 @@ ms:
         text: bidadari {SPRITE} berhenti {BEHAVIOR}
       gamelab_removeTint:
         text: keluarkan warna dari {THIS}
+      gamelab_repeatForever:
+        text: ulang selamanya
+      gamelab_resetTimer:
+        text: set semula pemasa
       gamelab_setAnimation:
         text: menukar {THIS} pakaian untuk {ANIMATION}
       gamelab_setBackground:
@@ -1125,13 +1327,49 @@ ms:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': gua
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': bandar
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': rumput
+              kekal
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': mahkamah
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': padang
               pasir
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': jalan
+              padang pasir
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': tanah
+              ladang
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': rumput
+              terapung
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': bahagian
+              depan rumah
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': galaksi
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': grid
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': dapur
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': Ruang
+              tamu
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': padang
+              rumput
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': pemandangan
+              taman
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pokok
+              pine
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': pelangi
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': sains
+              fiksyen
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': padang
+              bola
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': peringkat
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': bintang
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': kereta
+              api bawah tanah
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': matahari
+              dan pelangi
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': dihujani
+              matahari
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': gelanggang
+              tenis
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': pulau
+              pokok
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': bawah
+              tanah
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': di
               bawah permukaan air
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': musim
@@ -1139,12 +1377,26 @@ ms:
             undefined: tiada
       gamelab_setBackgroundImageAs:
         text: tetapkan latar belakang ke {IMG}
+      gamelab_setDefaultSpriteSize:
+        text: tetapkan saiz lalai pari-pari baharu kepada {SIZE}
+        options:
+          SIZE:
+            '25': lebih kecil
+            '50': kecil
+            '75': sederhana
+            '100': besar
+      gamelab_setPrompt:
+        text: pengguna prom {QUESTION} untuk pembolehubah {VAR}
+      gamelab_setPromptWithChoices:
+        text: pengguna prom {QUESTION} untuk pembolehubah {VAR} dengan pilihan {A}{B}{C}
       gamelab_setProp:
         text: Set {SPRITE} {PROPERTY} Untuk {VAL}
         options:
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
+            '"x"': kedudukan x
+            '"y"': kedudukan y
             '"direction"': arah pergerakan
             '"speed"': kelajuan
       gamelab_setProp_dropdown:
@@ -1152,6 +1404,11 @@ ms:
         options:
           PROPERTY:
             '"scale"': saiz
+          SIZE:
+            '25': lebih kecil
+            '50': kecil
+            '75': sederhana
+            '100': besar
       gamelab_setSizes:
         text: Set {SPRITE} {PROPERTY} Untuk {N}%
         options:
@@ -1159,8 +1416,20 @@ ms:
             '"scale"': saiz
             '"width"': lebar
             '"height"': ketinggian
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': perlahan
+            '5': normal
+            '7': cepat
+            '9': extra fast
       gamelab_setTint:
         text: menukar warna {THIS} untuk {COLOR}
+      gamelab_setupScoreboard:
+        text: |-
+          lukis papan markah
+          {SPRITE1COSTUME}markah{VAR1}{SPRITE2COSTUME}markah{VAR2}sasaran{SPRITE3COSTUME}
       gamelab_setupSim:
         text: |-
           Persediaan simulasi dengan
@@ -1176,14 +1445,42 @@ ms:
           CONDITION:
             '"when"': apabila
             '"while"': semasa
+      gamelab_spriteSay:
+        text: "{SPRITE} katakan {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE} katakan {TEXT1} untuk {NUM} saat"
+      gamelab_startAvoiding:
+        text: "{SPRITE} mula mengelak {TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE} mula mengikuti {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} mula meluncur"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} berhenti mengelak pari-pari lain"
+      gamelab_stopCollectingData:
+        text: berhenti mengumpul data
+      gamelab_stopFollowing:
+        text: "{SPRITE} berhenti mengikuti pari-pari lain"
+      gamelab_stopGliding:
+        text: "{SPRITE} berhenti meluncur"
       gamelab_subjectSpritePointer:
-        text: mengklik {SPRITE}
+        text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR} {TEXT2}"
+      gamelab_tumbling:
+        text: berguling
       gamelab_turn:
         text: Menghidupkan {SPRITE} {DIRECTION} {N} Darjah
         options:
           DIRECTION:
             '"right"': kanan
             '"left"': kiri
+      gamelab_updateTitleWithColor:
+        text: tunjukkan skrin tajuk {BREAK} tajuk {TITLE} warna {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: apabila semua prom dijawab
       gamelab_whenDownArrow:
         text: apabila anak panah bawah ditekan
       gamelab_whenKey:
@@ -1201,8 +1498,12 @@ ms:
             '"d"': d
       gamelab_whenLeftArrow:
         text: bila anak panah kiri ditekan
+      gamelab_whenPromptAnswered:
+        text: apabila {VAR} dijawab
       gamelab_whenRightArrow:
         text: ketika panah kanan ditekan
+      gamelab_whenSpriteCreated:
+        text: apabila {SPRITE} dicipta
       gamelab_whenTouching:
         text: ketika {SPRITE1} menyentuh {SPRITE2}
       gamelab_whenUpArrow:
@@ -1230,6 +1531,21 @@ ms:
         text: manakala {SPRITE1} menyentuh {SPRITE2}
       gamelab_whileUpArrow:
         text: semasa anak panah ditekan
+      gamelab_withPercentChance:
+        text: |-
+          jika {NUM}% peluang
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} peluang
+           {STATEMENT}
+        options:
+          NUM:
+            '10': sangat rendah
+            '25': rendah
+            '50': 50/50
+            '75': tinggi
+            '90': sangat tinggi
       gamelab_xLocationOf:
         text: koordinat x dari {SPRITE}
       gamelab_yLocationOf:
@@ -1249,11 +1565,15 @@ ms:
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": bukan saya-label
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: pengguna prom {QUESTION} untuk pembolehubah {VAR} dengan pilihan {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
+            '"x"': kedudukan x
+            '"y"': kedudukan y
             '"direction"': arah pergerakan
       Mikelab_createNewSprite:
         options:
@@ -1274,15 +1594,26 @@ ms:
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
+            '"x"': kedudukan x
+            '"y"': kedudukan y
             '"direction"': arah pergerakan
       Mikelab_groupChangeAnim:
         text: tukar {SELECT} {COSTUME} kepada {COSTUME2}
+        options:
+          SELECT:
+            '"all"': semua
+            '"this"': ini
       Mikelab_groupChangePropBy:
         text: Menukar {PROPERTY} daripada {SELECT} {COSTUME} Oleh {VAL}
         options:
+          SELECT:
+            '"all"': semua
+            '"this"': ini
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
+            '"x"': kedudukan x
+            '"y"': kedudukan y
             '"direction"': arah pergerakan
       Mikelab_groupCreateNewSprite:
         text: buatkan {COSTUME} baharu di {LOCATION}
@@ -1299,6 +1630,10 @@ ms:
             "{x: 300, y: 300}": bahagian bawah sebelah kanan
       Mikelab_groupDestroy:
         text: keluarkan {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': semua
+            '"this"': ini
       Mikelab_groupDisplace:
         text: semua {COSTUME} blok {COSTUME2} dari bergerak
       Mikelab_groupEdgesDisplace:
@@ -1306,25 +1641,50 @@ ms:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME} {PROPERTY} 12321 123_321"
         options:
+          SELECT:
+            '"this"': ini
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
+            '"x"': kedudukan x
+            '"y"': kedudukan y
             '"direction"': arah pergerakan
       Mikelab_groupRemoveAllBehaviors:
         text: berhenti {SELECT} {COSTUME} tingkah laku
+        options:
+          SELECT:
+            '"all"': semua
+            '"this"': ini
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} berhenti {BEHAVIOR} 12321"
+        options:
+          SELECT:
+            '"all"': semua
+            '"this"': ini
       Mikelab_groupRemoveTint:
         text: keluarkan warna dari {SELECT} {COSTUME}
+        options:
+          SELECT:
+            '"all"': semua
+            '"this"': ini
       Mikelab_groupSetProp:
         text: Set {PROPERTY} daripada {SELECT} {COSTUME} Untuk {VAL}
         options:
+          SELECT:
+            '"all"': semua
+            '"this"': ini
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
+            '"x"': kedudukan x
+            '"y"': kedudukan y
             '"direction"': arah pergerakan
       Mikelab_groupSetTint:
         text: Tukar warna {SELECT} {COSTUME} Untuk {COLOR}
+        options:
+          SELECT:
+            '"all"': semua
+            '"this"': ini
       Mikelab_groupWhenClickedOn:
         text: ketika {COSTUME} diklik
       Mikelab_groupWhenXTouchesY:
@@ -1394,6 +1754,8 @@ ms:
         text: warna rawak
       Mikelab_removeBehaviorSimple:
         text: bidadari {SPRITE} berhenti {BEHAVIOR}
+      Mikelab_repeatUntilComplete:
+        text: ulang selamanya
       Mikelab_sendBad:
         text: alih objek kiri
       Mikelab_sendGood:
@@ -1402,11 +1764,47 @@ ms:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': bandar
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': rumput
+              kekal
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': jalan
+              padang pasir
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': tanah
+              ladang
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': rumput
+              terapung
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': bahagian
+              depan rumah
+            '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': dapur
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': Ruang
+              tamu
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': padang
+              rumput
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': pemandangan
+              taman
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': pokok
+              pine
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': padang
+              bola
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': peringkat
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': kereta
+              api bawah tanah
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': matahari
+              dan pelangi
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': dihujani
+              matahari
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': gelanggang
+              tenis
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': pulau
+              pokok
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': bawah
+              tanah
       Mikelab_setProp:
         options:
           PROPERTY:
             '"scale"': saiz
             '"rotation"': putaran
+            '"x"': kedudukan x
+            '"y"': kedudukan y
             '"direction"': arah pergerakan
       Mikelab_setupSim:
         text: |-
@@ -1439,13 +1837,25 @@ ms:
         text: ketika {KEY} ditekan
         options:
           KEY:
+            '"up"': anak panah atas
+            '"down"': anak panah ke bawah
+            '"left"': anak panah kiri
+            '"right"': anak panah kanan
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenKeyReleased:
         options:
           KEY:
+            '"up"': anak panah atas
+            '"down"': anak panah ke bawah
+            '"left"': anak panah kiri
+            '"right"': anak panah kanan
             '"w"': W
+            '"a"': A
             '"s"': S
+            '"d"': D
       Mikelab_whenMouseClicked:
         text: apabila tetikus diklik
       Mikelab_whenYesNoClicked:
@@ -1454,6 +1864,13 @@ ms:
           KEY:
             '"yes"': ya
             '"no"': tidak
+      Mikelab_whileKeyPressed:
+        options:
+          KEY:
+            '"up"': anak panah atas
+            '"down"': anak panah ke bawah
+            '"left"': anak panah kiri
+            '"right"': anak panah kanan
       Mikelab_xLocationOf:
         text: koordinat x dari {SPRITE}
       Mikelab_yLocationOf:
@@ -1470,29 +1887,193 @@ ms:
         text: raksasa mula memakai pelitup muka
       Outbreak_stopMoving:
         text: raksasa berhenti bergerak
-      PoemBot_playSound:
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"brick"': bata
+            '"fire"': api
+            '"flowers"': bunga
+            '"hearts"': hati
+            '"iceCream"': Aiskrim
+            '"leaves"': dedaun
+            '"rainbow"': pelangi
+            '"stars"': bintang
+            '"waves"': ombak
+      Poetry_addLine:
+        text: tambah baris {LINE}
+      Poetry_animateText:
+        text: teks beranimasi
+      Poetry_destroy:
+        text: alih keluar {ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE} meluncur ke {LOCATION}"
+      Poetry_hideText:
+        text: sembunyikan teks
+      Poetry_makeBurst:
+        text: cipta  {EFFECT} kesan dengan {NUM} {ANIMATION_NAME} pari-pari
+        options:
+          EFFECT:
+            '"burst"': pecah
+            '"pop"': pop
+            '"rain"': hujan
+            '"spiral"': lingkaran
+      Poetry_makeNewSpriteAnon:
+        text: membuat baru {ANIMATION_NAME} bidadari {LOCATION}
+      Poetry_makeNumSprites:
+        text: jadikan {NUM} pari-pari {ANIMATION_NAME} baharu
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Tenang
+            '"sound://category_nature/steady_campfire_loop.mp3"': Unggun Api
+            '"sound://category_nature/rain_loop.mp3"': Gerimis
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': hutan
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Berhantu
+            '"sound://category_background/inside_plane.mp3"': Dengung
+            '"sound://category_loops/red_flag_loop1.mp3"': Misi
+            '"sound://category_nature/summer_night_loop.mp3"': malam
+            '"sound://category_background/ocean_waves.mp3"': lautan
+            '"sound://category_background/rainforest_ambient_sound.mp3"': hutan hujan
+            '"sound://category_background/repitition.mp3"': Menunggang
+            '"sound://category_background/wavering_wind.mp3"': mengantuk
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Perlahan
+      Poetry_playSound:
         text: PlaySound {SOUND}
-      PoemBot_setBackgroundEffect:
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': Loceng
+            '"sound://category_digital/boing_2.mp3"': Boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Gelembung
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Peserta
+              Sembang
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Kempis
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Gagal
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Berkibar
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Lompat
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': lampu
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Poof
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Imbas
+            '"sound://category_background/typewriter.mp3"': Mesin taip
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Bersemangat
+            '"sound://category_achievements/peaceful_win_1.mp3"': Menang
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Pusar
+            '"sound://category_achievements/peaceful_win_6.mp3"': Loceng Angin
+      Poetry_setAuthor:
+        text: set pengarang {AUTHOR}
+      Poetry_setBackground:
+        text: tetapkan warna {COLOR} latar belakang
+      Poetry_setBackgroundEffect:
+        text: tetapkan latar belakang kepada {EFFECT} {PALETTE}
         options:
           EFFECT:
-            '"colors"': Warna
-            '"squiggles"': Cacing Kerawit
-            '"space"': Ruang
-            '"stars"': Bintang
-            '"ripples"': Riak
-          PALETTE:
-            '"rainbow"': Pelangi
-      PoemBot_setBackgroundImageAs:
-        text: tetapkan latar belakang ke {IMG}
-      PoemBot_setForegroundEffect:
-        text: tetapkan kesan {EFFECT} latar depan
-        options:
-          EFFECT:
-            '"rain"': Hujan
+            '"blooming"': Mekar
             '"bubbles"': Gelembung
-            '"hearts"': Hati Berwarna-warni
+            '"clouds"': Mendung
             '"confetti"': Konfeti
+            '"darkCircles"': Pudar
+            '"fadeColors"': Dibekukan
+            '"hearts"': hati
+            '"space"': Ruang
+            '"rain"': hujan
+            '"ripples"': Riak
+            '"colors"': Warna
+            '"stars"': Bintang
+            '"squiggles"': Cacing Kerawit
+          PALETTE:
+            '"autumn"': Musim Luruh
+            '"sunrise"': Subuh
+            '"sunset"': Senja
+            '"grayscale"': Kelabu
+            '"ocean"': lautan
+            '"rainbow"': pelangi
+            '"roses"': Mawar
+            '"sky"': Langit
+            '"spring"': Musim Bunga
+            '"summer"': Musim Panas
+            '"winter"': Musim Sejuk
+      Poetry_setBackgroundImageAs:
+        text: tetapkan latar belakang ke {IMG}
+      Poetry_setFont:
+        text: tetapkan font {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Tulisan tangan
+            '"Impact"': Impact
+            '"Georgia"': Georgia
+            '"Times"': Times
+      Poetry_setFontColor:
+        text: tetapkan warna teks {FILL}
+      Poetry_setForegroundEffect:
+        text: lakukan {EFFECT} kesan
+        options:
+          EFFECT:
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': hati
+            '"emojis"': Emoji gembira
+            '"rain"': hujan
             '"starburst"': Pecahan Cahaya
+            '"glass"': Kaca Pecah
+            '"twinkling"': Berkelip
+      Poetry_setPrompt:
+        text: pengguna prom {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} untuk pembolehubah {VAR}
+      Poetry_setPromptWithChoices:
+        text: pengguna prom {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} untuk pembolehubah {VAR}
+          dengan pilihan {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
+          {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: tetapkan saiz {SPRITE} kepada {VAL}
+      Poetry_setTextEffect:
+        text: tetapkan kesan teks {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': pudar
+            '"flyLeft"': terbang dari kiri
+            '"flyRight"': terbang dari kanan
+            '"flyTop"': terbang dari atas
+            '"flyBottom"': terbang dari bawah
+            '"typewriter"': mesin taip
+      Poetry_setTitle:
+        text: tetapkan tajuk {TITLE}
+      Poetry_showText:
+        text: tunjuk teks
+      Poetry_startBehavior:
+        text: 'sprite {ANIMATION_NAME} bermula {BEHAVIOR} '
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': Berenang
+      Poetry_stopBehavior:
+        text: 'sprite {ANIMATION_NAME} berhenti {BEHAVIOR} '
+        options:
+          BEHAVIOR:
+            '"swimming_left_and_right"': Berenang
+            '"all"': "--semua tingkah laku--"
+      Poetry_stringValue:
+        text: "{LEFT_QUOTE}{TEXT}{RIGHT_QUOTE}"
+      Poetry_textConcat:
+        text: "{LEFT_QUOTE}{TEXT1}{TEXT2}{RIGHT_QUOTE}"
+      Poetry_textVariableJoin:
+        text: "{VAR} {TEXT2}"
+      Poetry_whenLineShows:
+        text: apabila baris {N} ditunjukkan
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: apabila {VAR} dijawab
       RyanLab_moveForward:
         text: bergerak ke hadapan
       RyanLab_turnLeft:
@@ -1533,6 +2114,22 @@ ms:
             '"border"': sempadan
             '"row"': kelas
             '"random"': rawak
+      aalab_someGraduallyStartIntervention:
+        options:
+          PORTION:
+            '1': semua
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_someStartIntervention:
+        options:
+          PORTION:
+            '1': semua
+            '0.75': most
+            '0.5': half of
+            '0.25': few
+      aalab_spriteSayChoices:
+        text: "{SPRITE} katakan {SPEECH}"
       binary_drawBin:
         text: menarik binari {BIN}
       binary_drawBinScreen:

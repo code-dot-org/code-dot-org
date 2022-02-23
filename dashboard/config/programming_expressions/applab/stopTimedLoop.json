@@ -1,8 +1,7 @@
 {
-  "func": "stopTimedLoop",
+  "key": "stopTimedLoop",
+  "name": "stopTimedLoop",
   "category": "Control",
-  "paramButtons": {
-    "minArgs": 0,
-    "maxArgs": 1
-  }
+  "category_key": "control",
+  "syntax": "stopTimedLoop"
 }

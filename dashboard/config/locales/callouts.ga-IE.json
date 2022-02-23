@@ -1710,6 +1710,198 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Tarraing blocanna ón mbosca uirlisí go dtí an spás oibre."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Bloc nua!",
+          "hello_world_new_block": "Bloc nua!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Bloc nua!",
+          "hello_world_new_block": "Bloc nua!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Bloc nua!",
+          "hello_world_new_block": "Bloc nua!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Bloc nua!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Bloc nua!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Bloc nua!",
+          "poetry_foreground": "Bloc nua!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Bloc nua!",
+          "poetry_multiple_sprites": "Bloc nua!",
+          "poetry_new_block": "Bloc nua!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Bloc nua!",
+          "poetry_music": "Bloc nua!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Bloc nua!",
+          "poetry_sprite_stops": "Bloc nua!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Bloc nua!",
+          "poetry_remove_sprite": "Bloc nua!"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Cliceáil anseo chun an greille a thaispeáint."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Athraigh an uimhir anseo"
+        },
+        "CSD U3 abstraction accelerateX_2021": {
+          "CSD_U3_L11_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 abstraction accelerateY_2021": {
+          "CSD_U3_L11_S7_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 abstraction velocityX_2021": {
+          "CSD_U3_L11_S4_C1": "Cuir do bhloc anseo."
+        },
+        "CSD U3 abstraction velocityY_2021": {
+          "CSD_U3_L11_S5_C1": "Cuir do bhloc anseo."
+        },
+        "CSD U3 collisions isTouching intro_2021": {
+          "CSD_U3_L12_S2_C1": "Cuir do bhloc anseo."
+        },
+        "CSD U3 collisions types2_2021": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 collisions types3_2021": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 collisions types4_2021": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 collisions types_2021": {
+          "CSD_U3_L13_S6_C1": "Cuir do chuid cóid anseo."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Seo é an cód",
+          "CSD_U3_rect_c2": "Tarraing an bloc seo go dtí an cód."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Cuir do chuid cóid anseo"
+        },
+        "CSD U6 getProperty input_2021": {
+          "CSD_U6L06P03": "Cuir do bhloc anseo."
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Cad a dhéanann an líne seo?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Sainmhínigh startGame anseo"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Sainmhínigh movePlayer() anseo"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Féach ar bhuaigh an t-imreoir"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Athraigh an uimhir anseo"
         }
       }
     }

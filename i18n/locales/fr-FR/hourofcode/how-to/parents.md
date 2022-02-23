@@ -4,15 +4,15 @@ title: Guide pratique de l’Heure de Code pour les parents
 
 # Comment faire une Heure de Code avec votre enfant ? 
 
-Essayer une Heure de Code est une façon simple et amusante d'initier votre enfant à l'informatique, peut-être pour la toute première fois. Non seulement l'informatique est fondamentale pour tous les domaines d'études, mais [selon des études récentes](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536) : les enfants qui étudient l'informatique améliorent leurs résultats dans d'autres matières, excellent dans la résolution de problèmes et sont <font color = "00adbc">** 17 % plus susceptibles de s'inscrire à l'université**</font>. 
+Leur faire essayer une Heure de Code est une façon simple et amusante d'initier votre enfant à l'informatique, peut-être pour la toute première fois. Non seulement l'informatique est fondamentale pour tous les domaines d'études, mais [selon des études récentes](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536) : les enfants qui étudient l'informatique améliorent leurs résultats dans d'autres matières, excellent dans la résolution de problèmes et sont <font color = "00adbc">** 17 % plus susceptibles de s'inscrire à l'université**</font>. 
 
-Vous pouvez rejoindre des dizaines de millions d'étudiants dans le monde entier, dans cet événement mondial. Ensemble, nous pouvons inspirer les enfants à apprendre, à briser les stéréotypes, et les aider à découvrir un nouvel intérêt. Surtout, vous avez déjà tout le nécessaire pour amener L'Heure de Code dans votre maison !
+Vous pouvez rejoindre des dizaines de millions d'élèves au travers du monde entier lors de cet événement mondial. Ensemble, nous pouvons inspirer et aider les enfants à apprendre, à briser les idées reçues et à découvrir de nouveaux centres d'intérêt. Et le mieux, c'est que vous avez déjà tout ce qu'il faut pour qu'une Heure de Code ait lieu chez vous !
 
 [![](/images/fit-600/Marketing/mother-helping-her-daughter-use-a-laptop-4260325.jpg)]({{ urls/learn }})
 
 <h3>De quoi ai-je besoin pour commencer ?</h3>
 
-L'Heure de Code est simple à mettre en place - même pour les débutants. Aucune expérience en informatique ou en enseignement n'est nécessaire pour animer une activité amusante, qui permettra à vos enfants d'apprendre tout en riant.
+L'Heure de Code est simple à mettre en place, même pour les débutants. Aucune expérience en informatique ou en enseignement n'est requise pour animer une activité amusante, qui permettra à vos enfants d'apprendre tout en riant.
 
 Vous pouvez essayer l'Heure de Code avec un ordinateur, une tablette, un smartphone ou totalement débranché ! Voici comment démarrer. 
 
@@ -20,13 +20,13 @@ Vous pouvez essayer l'Heure de Code avec un ordinateur, une tablette, un smartph
 
 * * *
 
-## 1) Explorez les activités et les tutoriels.
+## 1) Découvrez les activités et les tutoriels.
 
 [![](/images/fit-600/tutorials.png)]({{ urls/learn }})
 
-D'innombrables [activités Heure de Code](https://hourofcode.com/us/learn) sont à votre disposition, si vous travaillez sur un ordinateur avec un accès à Internet. Nous vous encourageons à jeter un œil à certaines de vos options, à l'avance, afin que vous puissiez guider votre enfant vers des exercices qu'il appréciera.
+D'innombrables [activités Heure de Code](https://hourofcode.com/us/learn) sont à votre disposition, si vous travaillez sur un ordinateur avec un accès à Internet. Nous vous encourageons à jeter un œil aux choix que vous avez à l'avance, afin que vous puissiez guider votre enfant vers des exercices qu'il appréciera.
 
-Toutes nos activités intègrent la résolution de problèmes et la pensée critique, de manières amusante et créative, mais voici ce que les étudiants préfèrent :
+Toutes nos activités développent l'esprit critique et la capacité à résoudre les problèmes de manière ludique et originale. Toutefois, voici certaines activités que les élèves préfèrent :
 
 - Pour l'enfant qui aime jouer : [Minecraft](https://code.org/minecraft) ou Soirée Dansante</ a> </li> 
     
@@ -48,33 +48,33 @@ Toutes nos activités intègrent la résolution de problèmes et la pensée crit
     
     [![](/images/fit-600/Marketing/father-and-children-looking-at-a-laptop-4260749.jpg)]({{ urls/learn }})
 
-<h3>Plus d'un enfant à la maison ?</h3>
+<h3>Vous avez plus d'un enfant à la maison ?</h3>
 
     
     Envisagez de vous munir d'écouteurs, pour chacun de vos enfants, s'ils doivent travailler sur des appareils différents. De cette façon, ils seront en mesure de suivre des activités, avec le son, sans distraire les autres. 
     
-    Si vous n'utilisez qu'un seul appareil, ou voulez simplement rendre votre Heure de Code plus interactive, essayez la <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" mark= "crwd-mark">programmation par paires</a>. La programmation par paires encourage les enfants à travailler ensemble. Quand ils s'associent, ils s'aident mutuellement à résoudre les problèmes. Ils découvriront ainsi que l'informatique est une discipline qui favorise les interactions sociales et la collaboration.
+    Si vous n'utilisez qu'un seul appareil, ou voulez simplement rendre votre Heure de Code plus interactive, essayez la <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q" mark= "crwd-mark">programmation par paires</a>. La programmation par paires pousse les enfants à travailler ensemble. Quand ils s'associent, ils s'aident mutuellement à résoudre les problèmes. Ils découvriront ainsi que l'informatique est une discipline qui favorise les interactions sociales et la collaboration.
 
-<h3>Stimulez l'intérêt des enfants ! </h3>
+<h3>Stimulez l'intérêt de vos enfants ! </h3>
 
     
     C’est une excellente occasion d’ajouter un nouveau type d’activité à la journée de votre enfant. L'amusement peut se prolonger au-delà d'un tutoriel, grâce à ces suggestions : 
     
     - Montrez-lui une [vidéo qui inspire](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcadqJAZnbDYShie4gLZQQJ) et présente un des modèles qu’il admire 
     - Inspirez-le avec une vidéo sur l'une des [nombreuses carrières](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP) auxquelles les compétences en informatique peuvent conduire  
-    - [Commandez des récompenses stylisées](https://store.code.org/) ! Vous pouvez choisir parmi des t-shirts, des autocollants ou même des tatouages temporaires. Offrez-le tout de suite, pour stimuler son intérêt, ou à la fin de votre Heure de Code, en tant que récompense spéciale. 
+    - [Commandez des récompenses stylisées](https://store.code.org/) ! Vous pouvez choisir parmi des t-shirts, des autocollants ou même des tatouages éphémères. Offrez-leur cela soit tout de suite, pour stimuler leur intérêt, ou à la fin de votre Heure de Code en guise de récompense. 
     
     
 
 <a href="https://store.code.org/" target="_blank"><img src="/images/fit-500/Marketing/hourofcodestore.jpg"></a>
 
     
-    ## 3) Conseils pour initier votre enfant à l'informatique
+    ## 3) Astuces pour initier votre enfant à l'informatique
     
     Ce n'est pas un problème si vous et votre enfant êtes novices en informatique. Voici quelques idées pour présenter votre activité de l'Heure de Code et pour que, tous deux, vous réfléchissiez à l'informatique : 
     
-    - Expliquez les façons dont la technologie influence nos vies, avec des exemples spécifiques qui sont susceptibles d'intéresser votre enfant. Vous pourriez, par exemple, parler de médecine ou de la connection virtuelle des gens. Consultez également les questions de discussion que nous suggérons [Code.org/CSforGood](https://code.org/csforgood). 
-    - Ensemble, faites une liste des choses quotidiennes qui requièrent du code pour fonctionner correctement.
+    - Parlez-leur des diverses façons dont la technologie influe sur nos vies, en utilisant des exemples concrets qui sont susceptibles d'intéresser votre enfant. Vous pourriez, par exemple, parler de médecine ou du contact virtuel entre les gens. Consultez également les questions de discussion que nous suggérons [Code.org/CSforGood](https://code.org/csforgood). 
+    - Ensemble, faites une liste d'éléments du quotidien qui ne fonctionneraient pas correctement sans code. 
     
     [![](/images/fit-600/Marketing/girl-sitting-on-sofa-while-using-tablet-computer-4144035.jpg)]({{ urls/learn }})
 
@@ -82,16 +82,16 @@ Toutes nos activités intègrent la résolution de problèmes et la pensée crit
 </h3>
 
     
-    <a href="https://code.org/girls">Voici nos recommandations</a> pour vous aider à stimuler leur intérêt, vis à vis de l'informatique. **Conseil de pro** : vous pouvez commencer, simplement, en lui disant qu'elle ferait des merveilles dans ce domaine ! 
+    <a href="https://code.org/girls">Voici nos suggestions</a> pour vous aider à stimuler leur intérêt, vis-à-vis de l'informatique. **Conseil de pro** : vous pouvez commencer, simplement, en lui disant qu'elle ferait des merveilles dans ce domaine ! 
 
-<h3>Résoudre les problèmes ensemble</h3>
+<h3>Trouvez des solutions ensemble</h3>
 
     
     "Enfin, lorsque votre enfant rencontre des difficultés, n'hésitez pas à répondre : - « Je ne sais pas. »" "« Réfléchissons-y ensemble. » - « La technologie ne fonctionne pas toujours de la manière qu’on le souhaiterait. » - « Apprendre à programmer, c’est comme apprendre une nouvelle langue ; vous devez parler couramment tout de suite. »" 
     
     L'informatique consiste à apprendre à « déboguer » des situations qui ne se sont pas déroulées comme nous le pensions. Ensemble, vous et votre enfant pouvez réfléchir à des moyens créatifs pour résoudre le problème ! 
     
-    ## 4) N'oubliez pas de célébrer !
+    ## 4) N'oubliez pas de fêter ça !
     
     L'Heure de Code est un événement mondial, et votre famille mérite de célébrer. Voici quelques façons de rendre votre Heure de Code très spéciale : 
     
@@ -104,6 +104,6 @@ Toutes nos activités intègrent la résolution de problèmes et la pensée crit
 <h2>Et après l'Heure de Code ?</h2>
 
     
-    L'informatique ne devrait pas s'arrêter à l'Heure de Code ! Alors que 90% des parents veulent que leur enfant apprenne l'informatique, la plupart des écoles ne l'enseignent toujours pas. Pour vous aider, notre programme est disponible sur le web, et son utilisation est gratuite, pour toujours. [Découvrez comment](https://code.org/yourschool)apporter l’informatique à l'école de votre enfant, dès aujourd'hui. 
+    L'informatique ne devrait pas s'arrêter à l'Heure de Code ! Bien que 90% des parents souhaitent que leur enfant apprenne l'informatique, la plupart des écoles ne l'enseignent toujours pas. Pour vous aider, notre programme est disponible en ligne, et son utilisation est et restera gratuite à jamais. [Découvrez comment](https://code.org/yourschool)apporter l’informatique à l'école de votre enfant, dès aujourd'hui. 
     
     [<button>Consulter le guide en format PDF </button>]({{ localized_files/hourofcode_parent_how_to }})

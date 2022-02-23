@@ -35,7 +35,8 @@
     "pause_animations_by_default": "false",
     "edit_code": "false",
     "helper_libraries": [
-      "NativeSpriteLab"
+      "NativeSpriteLab",
+      "OutbreakRecovery"
     ],
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -67,15 +68,18 @@
     "project_template_level_name": "outbreak_template",
     "short_instructions": "Make any changes or improvements to your project that you would like. ",
     "hide_pause_button": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 64,
+  "published": true,
   "created_at": "2021-08-26T19:30:27.000Z",
   "level_num": "custom",
   "user_id": 9,
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-08-26T19:30:26.995+00:00\",\"changed\":[\"cloned from \\\"outbreak_freeplay_basic\\\"\"],\"cloned_from\":\"outbreak_freeplay_basic\"},{\"changed_at\":\"2021-08-26 19:33:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-08-26T19:30:26.995+00:00\",\"changed\":[\"cloned from \\\"outbreak_freeplay_basic\\\"\"],\"cloned_from\":\"outbreak_freeplay_basic\"},{\"changed_at\":\"2021-08-26 19:33:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-12-06 15:39:59 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -125,7 +129,7 @@
                               <value name="BEHAVIOR">
                                 <block type="gamelab_behavior_get">
                                   <mutation/>
-                                  <title name="VAR">wandering</title>
+                                  <title name="VAR" id="wandering">wandering</title>
                                 </block>
                               </value>
                               <next>
@@ -482,7 +486,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite, changing its direction randomly</description>
           </mutation>
-          <title name="NAME">wandering</title>
+          <title name="NAME" id="wandering">wandering</title>
           <statement name="STACK">
             <block type="gamelab_withPercentChance">
               <value name="NUM">
@@ -648,7 +652,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>change the size of a sprite</description>
           </mutation>
-          <title name="NAME">shrinking</title>
+          <title name="NAME" id="shrinking">shrinking</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <title name="PROPERTY">"scale"</title>
@@ -670,7 +674,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>change the size of a sprite</description>
           </mutation>
-          <title name="NAME">growing</title>
+          <title name="NAME" id="growing">growing</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <title name="PROPERTY">"scale"</title>
@@ -859,7 +863,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>randomly change the size of a sprite</description>
           </mutation>
-          <title name="NAME">jittering</title>
+          <title name="NAME" id="jittering">jittering</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy">
               <title name="PROPERTY">"scale"</title>
@@ -912,7 +916,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite across the screen, reversing direction if it touches the edges</description>
           </mutation>
-          <title name="NAME">patrolling</title>
+          <title name="NAME" id="patrolling">patrolling</title>
           <statement name="STACK">
             <block type="gamelab_moveForward">
               <value name="SPRITE">

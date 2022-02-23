@@ -3907,6 +3907,18 @@
               "length": "dĺžka",
               "sides": "Strany"
             }
+          },
+          "small flower": {
+            "name": "malý kvet"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGIKA: KVETY2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGIKA: KVET"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGIKA: KVETY"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -4399,6 +4411,11 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "posuň sa a získaj nektár s počítadlom"
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "začať od začiatku"
           }
         }
       }

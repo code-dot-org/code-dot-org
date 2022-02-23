@@ -37,11 +37,11 @@
 require 'state_abbr'
 
 # Base class for the Pd application forms.
-# Make sure to use a derived class for a specific application type and year.
 # This on its own will fail validation.
 module Pd::Application
   class ApplicationBase < ApplicationRecord
     include ApplicationConstants
+    include Pd::SharedApplicationConstants
     include Pd::Form
     include SerializedProperties
 
@@ -49,68 +49,25 @@ module Pd::Application
 
     acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
-    OTHER = 'Other'.freeze
-    OTHER_WITH_TEXT = 'Other:'.freeze
-    YES = 'Yes'.freeze
-    NO = 'No'.freeze
-    NONE = 'None'.freeze
-    INCOMPLETE = 'Incomplete'.freeze
-
-    COMMON_OPTIONS = {
-      title: %w(Mr. Mrs. Ms. Dr.),
-
-      state: get_all_states_with_dc.to_h.values,
-
-      gender_identity: [
-        'Female',
-        'Male',
-        'Non-binary',
-        'Preferred term not listed',
-        'Prefer not to answer'
-      ],
-
-      race: [
-        'White',
-        'Black or African American',
-        'Hispanic or Latino',
-        'Asian',
-        'Native Hawaiian or other Pacific Islander',
-        'American Indian/Alaska Native',
-        OTHER,
-        'Prefer not to answer'
-      ],
-
-      course_hours_per_year: [
-        'At least 100 course hours',
-        '50 to 99 course hours',
-        'Less than 50 course hours'
-      ],
-
-      terms_per_year: [
-        '1 quarter',
-        '1 trimester',
-        '1 semester',
-        '2 trimesters',
-        'A full year',
-        OTHER_WITH_TEXT
-      ],
-
-      school_type: [
-        'Public school',
-        'Private school',
-        'Charter school',
-        'Other'
-      ]
-    }
-
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
     has_and_belongs_to_many :tags, class_name: 'Pd::Application::Tag', foreign_key: 'pd_application_id', association_foreign_key: 'pd_application_tag_id'
+    belongs_to :user
+    belongs_to :regional_partner
 
-    after_initialize -> {self.status = :unreviewed}, if: :new_record?
-    before_create -> {self.status = :unreviewed}
     after_initialize :set_type_and_year
-    before_validation :set_type_and_year
+
+    before_validation -> {self.status = 'unreviewed' unless status}
+    validate :status_is_valid_for_application_type
+    validates_presence_of :type
+    validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
+    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
+    validates_inclusion_of :application_type, in: APPLICATION_TYPES
+    validates_inclusion_of :application_year, in: APPLICATION_YEARS
+
+    # An application either has an "incomplete" or "unreviewed" state when created.
+    # After creation, an RP or admin can change the status to "accepted," which triggers update_accepted_data.
     before_save :update_accepted_date, if: :status_changed?
+
     before_create :generate_application_guid, if: -> {application_guid.blank?}
     after_destroy :delete_unsent_email
 
@@ -121,6 +78,13 @@ module Pd::Application
       notes_5
     )
 
+    enum course: %w(
+      csf
+      csd
+      csp
+      csa
+    ).index_by(&:to_sym).freeze
+
     def set_type_and_year
       # Override in derived classes and set to valid values.
       # Setting them to nil here fails those validations and prevents this base class from being saved.
@@ -128,20 +92,11 @@ module Pd::Application
       self.application_type = nil
     end
 
-    def accepted?
-      status == 'accepted'
-    end
-
-    def unreviewed?
-      status == 'unreviewed'
-    end
-
-    def pending?
-      status == 'pending'
-    end
-
-    def waitlisted?
-      status == 'waitlisted'
+    # Creates the following methods: accepted? incomplete? pending? unreviewed? waitlisted?
+    %w(accepted incomplete pending unreviewed waitlisted).each do |attribute|
+      define_method(:"#{attribute}?") do
+        status == attribute
+      end
     end
 
     def update_accepted_date
@@ -222,33 +177,11 @@ module Pd::Application
     # This is equivalent to
     #   validates_inclusion_of :status, in: statuses
     # but it will work with derived classes that override statuses
-    validate :status_is_valid_for_application_type
     def status_is_valid_for_application_type
       unless status.nil? || self.class.statuses.include?(status)
         errors.add(:status, 'is not included in the list.')
       end
     end
-
-    enum course: %w(
-      csf
-      csd
-      csp
-    ).index_by(&:to_sym).freeze
-
-    COURSE_NAME_MAP = {
-      csp: Pd::Workshop::COURSE_CSP,
-      csd: Pd::Workshop::COURSE_CSD,
-      csf: Pd::Workshop::COURSE_CSF
-    }
-
-    belongs_to :user
-    belongs_to :regional_partner
-
-    validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
-    validates_inclusion_of :application_type, in: APPLICATION_TYPES
-    validates_inclusion_of :application_year, in: APPLICATION_YEARS
-    validates_presence_of :type
-    validates_presence_of :status, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
 
     # Override in derived class, if relevant, to specify which multiple choice answers
     # have additional text fields, e.g. "Other (please specify): ______"

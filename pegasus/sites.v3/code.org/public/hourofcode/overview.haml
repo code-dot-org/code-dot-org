@@ -17,6 +17,8 @@ social:
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
 %div{dir: language_dir_class}
+  = view :csc_promo
+
   %h1= I18n.t(:hoc_overview_title)
   != I18n.t(:hoc_overview_subtitle_markdown, markdown: :inline)
   %br/
@@ -52,14 +54,19 @@ social:
     = view :top_hoc_tutorials
   .clear
 
-  .full-resource-block
-    %img.full-resource-image{src: "/images/hoc2020-banner.png"}
+  - hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
+  - hoc_cse_enable_svg = DCDO.get("hoc_cse_enable_svg", false)
+  - hoc_image = ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode) ? "/images/hoc-cse-banner.png" : "/images/hoc2020-banner.png"
+
+  .full-resource-block{style: "position: relative"}
+    %a{href: CDO.hourofcode_url('/learn')}
+      %img.full-resource-image{src: hoc_image, style: "border: 1px solid #949ca2"}
     .activities-info
       %span
         %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)
         = I18n.t(:hoc_overview_partner_activities_body)
       %span
-        %a{href: "https://hourofcode.com/learn"}
+        %a{href: CDO.hourofcode_url('/learn')}
           %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc_overview_partner_activities_link)
 
   .hoc-tiles-container

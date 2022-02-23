@@ -1,23 +1,15 @@
 {
-  "func": "playSound",
+  "key": "playSound",
+  "name": "playSound",
   "category": "UI controls",
-  "paramButtons": {
-    "minArgs": 1,
-    "maxArgs": 2
-  },
-  "paletteParams": [
-    "url",
-    "loop"
+  "category_key": "ui_controls",
+  "palette_params": [
+    {
+      "name": "url"
+    },
+    {
+      "name": "loop"
+    }
   ],
-  "params": [
-    "\"sound://default.mp3\"",
-    "false"
-  ],
-  "dropdown": {
-    "1": [
-      "true",
-      "false"
-    ]
-  },
-  "nativeCallsBackInterpreter": true
+  "syntax": "playSound(url, loop)"
 }

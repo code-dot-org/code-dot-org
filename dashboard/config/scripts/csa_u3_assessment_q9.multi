@@ -1,11 +1,11 @@
 name 'CSA U3 Assessment q9'
 height 'auto'
 
-wrong ‘`newArray[k] = names[-k];`’
-wrong ‘`newArray[k] = names[k - names.length];`’
-wrong ‘`newArray[k] = names[k - names.length - 1];`’
-right ‘`newArray[k] = names[names.length - k - 1];`’
-wrong ‘`newArray[k] = names[names.length - k];`’
+wrong ‘`newArray[k] = arr[-k];`’
+wrong ‘`newArray[k] = newArray[k - newArray.length]`’
+wrong ‘`newArray[k] = arr[k - arr.length - 1];`’
+right ‘`newArray[k] = arr[arr.length - k - 1];`’
+wrong ‘`newArray[k] = arr[arr.length - k];`’
 
 
 
@@ -15,20 +15,20 @@ Covered in Unit 3 Lesson 10.
 MARKDOWN
 
 markdown <<MARKDOWN
-Consider the following method, which is intended to return an array of integers that contains the elements of the parameter `names` arranged in reverse order. For example, if `names` contains {“Ken”, “Isaiah”, “Jose”, “Esosa”}, then a new array containing {“Esosa”, “Jose”, “Isaiah”, “Ken”} should be returned and the parameter `names` should be left unchanged.
+Consider the following method, which is intended to return an array of `String`s that contains the elements of the parameter `arr` arranged in reverse order. For example, if `names` is an array of `String`s and contains `{“Ken”, “Isaiah”, “Jose”, “Esosa”}`, then when `reverse(names)` is called, a new array containing `{“Esosa”, “Jose”, “Isaiah”, “Ken”}` should be returned and the elements in `names` should be left unchanged.
 
 ```
-public static int[] reverse(int[] arr)
-{
-int[] newArr = new int[names.length];
-for (int k = 0; k < names.length; k++)
-{
-/* missing statement */
-}
-return newArr;
+public static String[] reverse(String[] arr) {
+   String[] newArr = new String[arr.length];
+
+   for (int k = 0; k < arr.length; k++) {
+      /* missing statement */
+   }
+
+   return newArr;
 }
 
 ```
-Which code segment should replace /* missing statement */ ?
+Which code segment should replace `/* missing statement */`?
 
 MARKDOWN

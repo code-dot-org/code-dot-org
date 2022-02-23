@@ -1556,6 +1556,21 @@
               "width": "Širina"
             }
           }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": "нацртај круг"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "моја функција"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "моја функција"
+          }
         }
       }
     }

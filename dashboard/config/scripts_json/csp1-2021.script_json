@@ -4,21 +4,23 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
-      "has_verified_resources": true,
-      "show_calendar": true,
-      "is_migrated": true,
       "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-09 01:42:19 UTC",
+    "serialized_at": "2022-02-23 18:03:45 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp1-2021"
     }
@@ -1461,7 +1463,7 @@
       "key": "3d68b771-e2d0-4d0d-aa0f-59e59adb3489",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play [r innovation-video-1-1/csp/2021]\n\n- The video is available for students in Code Studio as well.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play [Computer Science is Changing Everything](https://www.youtube.com/watch?v=QvyTEx1wyOY)\n\n- The video is available for students in Code Studio as well.",
         "progression_name": "Computer Science is Changing Everything"
       },
       "seeding_key": {
@@ -5743,9 +5745,9 @@
       "url": "https://docs.google.com/document/d/1l19mBWEkYLt-cIZbahv8JrrbRQFnwQQajmeq-r5InsU/edit",
       "key": "ab-cutouts",
       "properties": {
-        "type": "Resource",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "ab-cutouts"
@@ -5756,9 +5758,9 @@
       "url": "https://docs.google.com/document/d/17GrZRYeVRMKwo9vbW-xVT1-Ccu0U2n88Thr-kMqu4s4/edit",
       "key": "ag-ab-pattern",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "ag-ab-pattern"
@@ -5803,8 +5805,8 @@
       "url": "https://www.todayonline.com/world/athletes-dont-own-their-tattoos-thats-problem-video-game-developers",
       "key": "athletes-dont-own-their-tattoos",
       "properties": {
-        "type": "Article",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Article"
       },
       "seeding_key": {
         "resource.key": "athletes-dont-own-their-tattoos"
@@ -5815,9 +5817,9 @@
       "url": "https://youtu.be/rJOa5Q5a1WM",
       "key": "bw-pixelation-tutorial-1",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/pixelation_bw.mp4"
+        "download_url": "https://videos.code.org/2015/csp/pixelation_bw.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "bw-pixelation-tutorial-1"
@@ -5828,8 +5830,8 @@
       "url": "https://youtu.be/ITASCSxnBqw",
       "key": "copyright_in_practice",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "copyright_in_practice"
@@ -5840,8 +5842,8 @@
       "url": "https://youtu.be/GPNWvU_IphU",
       "key": "copyright_overview",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "copyright_overview"
@@ -5852,8 +5854,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -5864,8 +5866,8 @@
       "url": "https://youtu.be/wC-m23T7cPM",
       "key": "creative_commons_copyright",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "creative_commons_copyright"
@@ -5876,8 +5878,8 @@
       "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
       "key": "csp_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -5888,8 +5890,8 @@
       "url": "https://docs.google.com/presentation/d/1GvzemSaA6WDc1MRkZdLHv6RkmEl3wLEjncW1Gd56F5I/edit?usp=sharing",
       "key": "csp_unit_1_-_digital_information",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_1_-_digital_information"
@@ -5900,9 +5902,9 @@
       "url": "https://docs.google.com/document/d/14rAnNQCTjhGgWCqnVo4XczoNEDFM-oYLNqhJvLW-88Q/edit?usp=sharing",
       "key": "csp_unit_1_project_rubric",
       "properties": {
-        "type": "Rubric",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "csp_unit_1_project_rubric"
@@ -5913,8 +5915,8 @@
       "url": "https://www.bleepingcomputer.com/news/security/dna-testing-kits-and-the-security-risks-in-digitized-dna/",
       "key": "dna-testing-kits-the-security-risks-in-digitized-dna",
       "properties": {
-        "type": "Article",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Article"
       },
       "seeding_key": {
         "resource.key": "dna-testing-kits-the-security-risks-in-digitized-dna"
@@ -5925,8 +5927,8 @@
       "url": "https://drive.google.com/file/d/1zs-d_4L53qgPCtdg1e9Gw00QMx8NQpt0/view?usp=sharing",
       "key": "fortnite-article",
       "properties": {
-        "type": "Article",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Article"
       },
       "seeding_key": {
         "resource.key": "fortnite-article"
@@ -5937,9 +5939,9 @@
       "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
       "key": "how-computers-work-data-and-binary",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/cs-discoveries/concept/03_BinaryData_sm.mp4"
+        "download_url": "https://videos.code.org/cs-discoveries/concept/03_BinaryData_sm.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "how-computers-work-data-and-binary"
@@ -5961,8 +5963,8 @@
       "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-",
       "key": "how_to_videos_1",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "how_to_videos_1"
@@ -5973,9 +5975,9 @@
       "url": "https://youtu.be/1x54GqfL3UY",
       "key": "innovation-video-1-1",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4"
+        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "innovation-video-1-1"
@@ -5986,8 +5988,8 @@
       "url": "https://docs.google.com/document/d/1ZFg2LvFTLOJ5VFL0IxIEydKaLLz59g7gwhNLiFPz2gE/edit?usp=sharing",
       "key": "key_u1l4_flippy_do_pt_1_activity_guide",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
@@ -5998,8 +6000,8 @@
       "url": "https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing",
       "key": "key_u1l8_black_white_images_activity_guide",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "key_u1l8_black_white_images_activity_guide"
@@ -6010,9 +6012,9 @@
       "url": "https://docs.google.com/document/d/14UBbBCYtaWskax2UOcE-vMdSBUelte9qdKRhgQ6SeJU/",
       "key": "personal-innovations-1",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "personal-innovations-1"
@@ -6023,9 +6025,9 @@
       "url": "https://docs.google.com/document/d/1_ULIYnSwsMxOEZr0SHP_ueopo4qlIHFCyrfFcMhuDgE/",
       "key": "rubric-personal-innovations-1",
       "properties": {
-        "type": "Rubric",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Rubric"
       },
       "seeding_key": {
         "resource.key": "rubric-personal-innovations-1"
@@ -6036,8 +6038,8 @@
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
@@ -6048,9 +6050,9 @@
       "url": "http://youtu.be/LCGkcn1f-ms",
       "key": "text-compression-widget-tutorial-1",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://www.dropbox.com/s/tobaibth28ibd4f/Text-compression-widget_Aloe_small_090815.mp4?dl=0"
+        "download_url": "https://videos.code.org/2015/csp/textcompression_blacc.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "text-compression-widget-tutorial-1"
@@ -6061,8 +6063,8 @@
       "url": "https://mediaethicsinitiative.org/2019/02/13/the-ethics-of-computer-generated-actors/",
       "key": "the-ethics-of-computer-generated-actors",
       "properties": {
-        "type": "Article",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Article"
       },
       "seeding_key": {
         "resource.key": "the-ethics-of-computer-generated-actors"
@@ -6073,8 +6075,8 @@
       "url": "https://docs.google.com/document/d/1wm-dWM_MyuWv_ANcY7wOwB30DfePpJUGVS_Iju73F40/edit?usp=sharing",
       "key": "u1_high_score_sample_article_markup",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u1_high_score_sample_article_markup"
@@ -6085,8 +6087,8 @@
       "url": "https://docs.google.com/presentation/d/1Z7w4PeNIK5MhhoBYZ6nf_I005BwGx0GjENTIGIi-WfA/edit?usp=sharing",
       "key": "u1_high_score_sample_poster",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u1_high_score_sample_poster"
@@ -6097,8 +6099,8 @@
       "url": "https://docs.google.com/document/d/19D-A1wmOP-RjrqiMrbJ4sZFN5SnsfQVRdyB4CePnqJw/edit?usp=sharing",
       "key": "u1_high_score_sample_rubric",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u1_high_score_sample_rubric"
@@ -6120,9 +6122,9 @@
       "url": "https://docs.google.com/document/d/1DmzViCZqIJTEPZQ2-aVa4Z-8_3PmzgRIS_XzzPbxXsU/edit?usp=sharing",
       "key": "u1_l4_flippy_do_pt_1_-_activity_guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "u1_l4_flippy_do_pt_1_-_activity_guide"
@@ -6133,9 +6135,9 @@
       "url": "https://docs.google.com/document/d/1ecO5-Vg8eQVVvpjIUX8P0dAVX2Mi1-QW7zfIMFWeqgY/edit?usp=sharing",
       "key": "u1_l4_how_to_make_a_flippydo",
       "properties": {
-        "type": "Teacher Guide",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Teacher Guide"
       },
       "seeding_key": {
         "resource.key": "u1_l4_how_to_make_a_flippydo"
@@ -6146,8 +6148,8 @@
       "url": "https://docs.google.com/document/d/1JR2p0KS4HeBiwy5j5nAGMsIv6lRYwp8w6j6-he1JqQ0/edit?usp=sharing",
       "key": "u1_mid_score_sample_article_markup",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u1_mid_score_sample_article_markup"
@@ -6158,8 +6160,8 @@
       "url": "https://docs.google.com/presentation/d/1nWytpB3lOHq8U1ptGQ0r3IWg1jfH2fDxK88vNhq8d_E/edit?usp=sharing",
       "key": "u1_mid_score_sample_poster",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u1_mid_score_sample_poster"
@@ -6170,8 +6172,8 @@
       "url": "https://docs.google.com/document/d/1jXio0Ws5iXv_pcZXqIJ13hrYrYxJN0PtIDUynEX9DZ0/edit?usp=sharing",
       "key": "u1_mid_score_sample_rubric",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u1_mid_score_sample_rubric"
@@ -6182,9 +6184,9 @@
       "url": "https://docs.google.com/document/d/1-W0LMRihs84dIlC6VwKowq3FcTE3hCZGes8Duda1TqM/edit?usp=sharing",
       "key": "u1l7_black_and_white_images",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "u1l7_black_and_white_images"
@@ -6195,8 +6197,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -6527,23 +6529,13 @@
   ],
   "objectives": [
     {
-      "key": "dd940e9b-3cb8-4150-ab1a-e3916d03ef0b",
+      "key": "0492314d-fb48-49f9-8272-e8fe2633f6e6",
       "properties": {
-        "description": "Communicate with classmates about computing innovations in their lives."
+        "description": "Analyze an article about information digitization to determine the information being digitized and the initial goal or purpose."
       },
       "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "objective.key": "dd940e9b-3cb8-4150-ab1a-e3916d03ef0b"
-      }
-    },
-    {
-      "key": "ed50b922-567e-4c0e-b5ed-747f3e42e1c3",
-      "properties": {
-        "description": "Describe positive and negative effects of computing innovations."
-      },
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "objective.key": "ed50b922-567e-4c0e-b5ed-747f3e42e1c3"
+        "lesson.key": "Project - Digital Information Dilemmas Part 1",
+        "objective.key": "0492314d-fb48-49f9-8272-e8fe2633f6e6"
       }
     },
     {
@@ -6557,183 +6549,13 @@
       }
     },
     {
-      "key": "6e5d9c0b-4436-426a-892e-b507668a49a5",
+      "key": "0682a50c-8324-42b4-91e8-6e75176fd3b0",
       "properties": {
-        "description": "Use a device to represent different pieces of information"
+        "description": "Examine articles to identify the social benefits and harms caused by information digitization"
       },
       "seeding_key": {
-        "lesson.key": "Representing Information",
-        "objective.key": "6e5d9c0b-4436-426a-892e-b507668a49a5"
-      }
-    },
-    {
-      "key": "419775f9-1ae2-460d-876b-c555935a3557",
-      "properties": {
-        "description": "Use patterns to represent information"
-      },
-      "seeding_key": {
-        "lesson.key": "Representing Information",
-        "objective.key": "419775f9-1ae2-460d-876b-c555935a3557"
-      }
-    },
-    {
-      "key": "bc8f80a6-2a92-4dd4-a0a1-87df0cb5cd04",
-      "properties": {
-        "description": "Follow a set of rules for ordering sets of patterns"
-      },
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "objective.key": "bc8f80a6-2a92-4dd4-a0a1-87df0cb5cd04"
-      }
-    },
-    {
-      "key": "92d11716-d3b6-428b-9964-8737d52ef3b1",
-      "properties": {
-        "description": "Explain the challenges of creating a clear set of rules for ordering patterns"
-      },
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "objective.key": "92d11716-d3b6-428b-9964-8737d52ef3b1"
-      }
-    },
-    {
-      "key": "f319b427-4ff0-4ab1-b696-ecd11ae0571e",
-      "properties": {
-        "description": "Represent decimal numbers using combinations of binary (base 2) digits 0 and 1"
-      },
-      "seeding_key": {
-        "lesson.key": "Binary Numbers",
-        "objective.key": "f319b427-4ff0-4ab1-b696-ecd11ae0571e"
-      }
-    },
-    {
-      "key": "342f8f8d-565d-4d78-a0cf-147668e16a7b",
-      "properties": {
-        "description": "Represent binary numbers using combinations of decimal (base 10) digits 0-9"
-      },
-      "seeding_key": {
-        "lesson.key": "Binary Numbers",
-        "objective.key": "342f8f8d-565d-4d78-a0cf-147668e16a7b"
-      }
-    },
-    {
-      "key": "55e857e0-ae6a-4f9f-99e6-09f5ec3b90ae",
-      "properties": {
-        "description": "Explain how the position of each binary digit determines its place value and numeric value"
-      },
-      "seeding_key": {
-        "lesson.key": "Binary Numbers",
-        "objective.key": "55e857e0-ae6a-4f9f-99e6-09f5ec3b90ae"
-      }
-    },
-    {
-      "key": "35851bb7-3998-4443-975d-2293e318c001",
-      "properties": {
-        "description": "Understand that overflow and roundoff errors result from real-world limitations in representing place value. "
-      },
-      "seeding_key": {
-        "lesson.key": "Overflow and Rounding",
-        "objective.key": "35851bb7-3998-4443-975d-2293e318c001"
-      }
-    },
-    {
-      "key": "37810dbe-7633-466a-9448-e27153a7f770",
-      "properties": {
-        "description": "Develop a system for using numbers to represent text"
-      },
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "objective.key": "37810dbe-7633-466a-9448-e27153a7f770"
-      }
-    },
-    {
-      "key": "865a217f-86fa-40af-b269-f2fea7aa299d",
-      "properties": {
-        "description": "Explain how bits are grouped to represent abstractions like numbers and text."
-      },
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "objective.key": "865a217f-86fa-40af-b269-f2fea7aa299d"
-      }
-    },
-    {
-      "key": "f9649fb7-a5e7-4381-8dcc-729fdfb45b89",
-      "properties": {
-        "description": "Describe the challenges in representing text when using a fixed number of bits for each character"
-      },
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "objective.key": "f9649fb7-a5e7-4381-8dcc-729fdfb45b89"
-      }
-    },
-    {
-      "key": "b4512433-8d41-42f8-ac19-0dbed01ccd2e",
-      "properties": {
-        "description": "Explain how bits can be used to represent the individual pixels of a black and white image"
-      },
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "objective.key": "b4512433-8d41-42f8-ac19-0dbed01ccd2e"
-      }
-    },
-    {
-      "key": "bafe4a53-4fd6-4010-8b1c-a4239c250ea4",
-      "properties": {
-        "description": "Explain how sampling is used to create a digital form of an analog image"
-      },
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "objective.key": "bafe4a53-4fd6-4010-8b1c-a4239c250ea4"
-      }
-    },
-    {
-      "key": "96831d05-b1c0-408e-aaa1-ce2c9d940822",
-      "properties": {
-        "description": "Explain how bits can be used to represent the individual pixels of a color image"
-      },
-      "seeding_key": {
-        "lesson.key": "Color Images",
-        "objective.key": "96831d05-b1c0-408e-aaa1-ce2c9d940822"
-      }
-    },
-    {
-      "key": "fff66814-ed38-49ec-a07b-8ca078fa2661",
-      "properties": {
-        "description": "Explain how digital data is used to approximate real-world analog data "
-      },
-      "seeding_key": {
-        "lesson.key": "Color Images",
-        "objective.key": "fff66814-ed38-49ec-a07b-8ca078fa2661"
-      }
-    },
-    {
-      "key": "f2446f1f-6bca-43c0-91d2-270c6418853d",
-      "properties": {
-        "description": "Create lossless compressions of text files"
-      },
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "objective.key": "f2446f1f-6bca-43c0-91d2-270c6418853d"
-      }
-    },
-    {
-      "key": "a535c32e-2f2e-4241-b8f5-795d8a434399",
-      "properties": {
-        "description": "Analyze patterns in data to determine compression strategies"
-      },
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "objective.key": "a535c32e-2f2e-4241-b8f5-795d8a434399"
-      }
-    },
-    {
-      "key": "9e465acb-41a8-43be-aa1a-fd8cecba7f2f",
-      "properties": {
-        "description": "Examine the effects of lossy compression on text & images"
-      },
-      "seeding_key": {
-        "lesson.key": "Lossy Compression",
-        "objective.key": "9e465acb-41a8-43be-aa1a-fd8cecba7f2f"
+        "lesson.key": "Project - Digital Information Dilemmas Part 2",
+        "objective.key": "0682a50c-8324-42b4-91e8-6e75176fd3b0"
       }
     },
     {
@@ -6757,23 +6579,33 @@
       }
     },
     {
-      "key": "3803a5c1-94ea-4510-a383-22cea2d14498",
+      "key": "342f8f8d-565d-4d78-a0cf-147668e16a7b",
       "properties": {
-        "description": "Argue if current copyright laws are helping or harming society using evidence from an article"
+        "description": "Represent binary numbers using combinations of decimal (base 10) digits 0-9"
       },
       "seeding_key": {
-        "lesson.key": "Intellectual Property",
-        "objective.key": "3803a5c1-94ea-4510-a383-22cea2d14498"
+        "lesson.key": "Binary Numbers",
+        "objective.key": "342f8f8d-565d-4d78-a0cf-147668e16a7b"
       }
     },
     {
-      "key": "0492314d-fb48-49f9-8272-e8fe2633f6e6",
+      "key": "35851bb7-3998-4443-975d-2293e318c001",
       "properties": {
-        "description": "Analyze an article about information digitization to determine the information being digitized and the initial goal or purpose."
+        "description": "Understand that overflow and roundoff errors result from real-world limitations in representing place value. "
       },
       "seeding_key": {
-        "lesson.key": "Project - Digital Information Dilemmas Part 1",
-        "objective.key": "0492314d-fb48-49f9-8272-e8fe2633f6e6"
+        "lesson.key": "Overflow and Rounding",
+        "objective.key": "35851bb7-3998-4443-975d-2293e318c001"
+      }
+    },
+    {
+      "key": "37810dbe-7633-466a-9448-e27153a7f770",
+      "properties": {
+        "description": "Develop a system for using numbers to represent text"
+      },
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "objective.key": "37810dbe-7633-466a-9448-e27153a7f770"
       }
     },
     {
@@ -6787,6 +6619,46 @@
       }
     },
     {
+      "key": "3803a5c1-94ea-4510-a383-22cea2d14498",
+      "properties": {
+        "description": "Argue if current copyright laws are helping or harming society using evidence from an article"
+      },
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "objective.key": "3803a5c1-94ea-4510-a383-22cea2d14498"
+      }
+    },
+    {
+      "key": "419775f9-1ae2-460d-876b-c555935a3557",
+      "properties": {
+        "description": "Use patterns to represent information"
+      },
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "objective.key": "419775f9-1ae2-460d-876b-c555935a3557"
+      }
+    },
+    {
+      "key": "55e857e0-ae6a-4f9f-99e6-09f5ec3b90ae",
+      "properties": {
+        "description": "Explain how the position of each binary digit determines its place value and numeric value"
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "objective.key": "55e857e0-ae6a-4f9f-99e6-09f5ec3b90ae"
+      }
+    },
+    {
+      "key": "6e5d9c0b-4436-426a-892e-b507668a49a5",
+      "properties": {
+        "description": "Use a device to represent different pieces of information"
+      },
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "objective.key": "6e5d9c0b-4436-426a-892e-b507668a49a5"
+      }
+    },
+    {
       "key": "6f37d951-902c-4df9-afb7-933d3a42eb01",
       "properties": {
         "description": "Argue whether the digitization of information has broadly speaking improved or damaged society"
@@ -6797,59 +6669,147 @@
       }
     },
     {
-      "key": "0682a50c-8324-42b4-91e8-6e75176fd3b0",
+      "key": "865a217f-86fa-40af-b269-f2fea7aa299d",
       "properties": {
-        "description": "Examine articles to identify the social benefits and harms caused by information digitization"
+        "description": "Explain how bits are grouped to represent abstractions like numbers and text."
       },
       "seeding_key": {
-        "lesson.key": "Project - Digital Information Dilemmas Part 2",
-        "objective.key": "0682a50c-8324-42b4-91e8-6e75176fd3b0"
+        "lesson.key": "Representing Text",
+        "objective.key": "865a217f-86fa-40af-b269-f2fea7aa299d"
+      }
+    },
+    {
+      "key": "92d11716-d3b6-428b-9964-8737d52ef3b1",
+      "properties": {
+        "description": "Explain the challenges of creating a clear set of rules for ordering patterns"
+      },
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "objective.key": "92d11716-d3b6-428b-9964-8737d52ef3b1"
+      }
+    },
+    {
+      "key": "96831d05-b1c0-408e-aaa1-ce2c9d940822",
+      "properties": {
+        "description": "Explain how bits can be used to represent the individual pixels of a color image"
+      },
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "objective.key": "96831d05-b1c0-408e-aaa1-ce2c9d940822"
+      }
+    },
+    {
+      "key": "9e465acb-41a8-43be-aa1a-fd8cecba7f2f",
+      "properties": {
+        "description": "Examine the effects of lossy compression on text & images"
+      },
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "objective.key": "9e465acb-41a8-43be-aa1a-fd8cecba7f2f"
+      }
+    },
+    {
+      "key": "a535c32e-2f2e-4241-b8f5-795d8a434399",
+      "properties": {
+        "description": "Analyze patterns in data to determine compression strategies"
+      },
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "objective.key": "a535c32e-2f2e-4241-b8f5-795d8a434399"
+      }
+    },
+    {
+      "key": "b4512433-8d41-42f8-ac19-0dbed01ccd2e",
+      "properties": {
+        "description": "Explain how bits can be used to represent the individual pixels of a black and white image"
+      },
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "objective.key": "b4512433-8d41-42f8-ac19-0dbed01ccd2e"
+      }
+    },
+    {
+      "key": "bafe4a53-4fd6-4010-8b1c-a4239c250ea4",
+      "properties": {
+        "description": "Explain how sampling is used to create a digital form of an analog image"
+      },
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "objective.key": "bafe4a53-4fd6-4010-8b1c-a4239c250ea4"
+      }
+    },
+    {
+      "key": "bc8f80a6-2a92-4dd4-a0a1-87df0cb5cd04",
+      "properties": {
+        "description": "Follow a set of rules for ordering sets of patterns"
+      },
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "objective.key": "bc8f80a6-2a92-4dd4-a0a1-87df0cb5cd04"
+      }
+    },
+    {
+      "key": "dd940e9b-3cb8-4150-ab1a-e3916d03ef0b",
+      "properties": {
+        "description": "Communicate with classmates about computing innovations in their lives."
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "objective.key": "dd940e9b-3cb8-4150-ab1a-e3916d03ef0b"
+      }
+    },
+    {
+      "key": "ed50b922-567e-4c0e-b5ed-747f3e42e1c3",
+      "properties": {
+        "description": "Describe positive and negative effects of computing innovations."
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "objective.key": "ed50b922-567e-4c0e-b5ed-747f3e42e1c3"
+      }
+    },
+    {
+      "key": "f2446f1f-6bca-43c0-91d2-270c6418853d",
+      "properties": {
+        "description": "Create lossless compressions of text files"
+      },
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "objective.key": "f2446f1f-6bca-43c0-91d2-270c6418853d"
+      }
+    },
+    {
+      "key": "f319b427-4ff0-4ab1-b696-ecd11ae0571e",
+      "properties": {
+        "description": "Represent decimal numbers using combinations of binary (base 2) digits 0 and 1"
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "objective.key": "f319b427-4ff0-4ab1-b696-ecd11ae0571e"
+      }
+    },
+    {
+      "key": "f9649fb7-a5e7-4381-8dcc-729fdfb45b89",
+      "properties": {
+        "description": "Describe the challenges in representing text when using a fixed number of bits for each character"
+      },
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "objective.key": "f9649fb7-a5e7-4381-8dcc-729fdfb45b89"
+      }
+    },
+    {
+      "key": "fff66814-ed38-49ec-a07b-8ca078fa2661",
+      "properties": {
+        "description": "Explain how digital data is used to approximate real-world analog data "
+      },
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "objective.key": "fff66814-ed38-49ec-a07b-8ca078fa2661"
       }
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to CSP",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-27"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Information",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Information",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-DA-07"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Information",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Circle Square Patterns",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Binary Numbers",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-09"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Binary Numbers",
@@ -6908,84 +6868,7 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Overflow and Rounding",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overflow and Rounding",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overflow and Rounding",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Overflow and Rounding",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-09"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.A.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.A.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Representing Text",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.A.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-CS-02"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-DA-07"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Black and White Images",
+        "lesson.key": "Binary Numbers",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-09"
       }
@@ -7013,21 +6896,28 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Color Images",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-CS-02"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Color Images",
+        "lesson.key": "Black and White Images",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-DA-07"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Color Images",
+        "lesson.key": "Black and White Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-09"
       }
@@ -7041,79 +6931,23 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lossless Compression",
+        "lesson.key": "Color Images",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-10"
+        "standard.shortcode": "2-DA-07"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossless Compression",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.D.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossy Compression",
+        "lesson.key": "Color Images",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-10"
+        "standard.shortcode": "3A-CS-02"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Lossy Compression",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.D.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossy Compression",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.D.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossy Compression",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.D.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lossy Compression",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "DAT-1.D.8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intellectual Property",
+        "lesson.key": "Color Images",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-28"
+        "standard.shortcode": "3A-DA-09"
       }
     },
     {
@@ -7167,6 +7001,111 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.D.8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project - Digital Information Dilemmas Part 1",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-IC-20"
@@ -7205,6 +7144,69 @@
         "lesson.key": "Project - Digital Information Dilemmas Part 2",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-DA-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "DAT-1.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-27"
       }
     }
   ],

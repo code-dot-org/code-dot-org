@@ -2,15 +2,20 @@ ko:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" 와 벌'
+      AI Machine Learning - Video: AI 머신러닝 - 동영상
+      'AI: Impact on Society - Video': 'AI: 사회에 미치는 영향 - 동영상'
+      'AI: Training Data & Bias - Video': 'AI: 교육 데이터 및 편견 - 동영상'
       Accelerometer Events: 가속도계 이벤트
       Adding Images: 이미지 추가
       Adding Screens: 스크린 추가
       Alien Defender: 외계인 방어대
       Animate Your Scene: 장면을 애니메이트 하라
+      App Lab Intro - Video: 앱 랩 소개 - 동영상
       Artist Intro with JR Hildebrand: 아티스트 인트로 JR 힐데브랜드
       Artist Intro with JR Hildebrande: 아티스트 인트로 JR 힐데브랜드
       Artist Project: 아티스트 프로젝트
       'Artist: Variables': '화가: 변수'
+      Assessment: 평가
       Attribution: 권한 정보
       Back and Forth: 앞뒤로
       Basic Conditionals: 기본 조건
@@ -60,6 +65,7 @@ ko:
       Events: 이벤트
       Events and Linking Screens: 이벤트 및 연결 화면
       Events and Properties: 이벤트 및 속성
+      Example: 예시
       Example Projects: 예제 프로젝트
       Example projects: 예제 프로젝트
       Expanding Personal Website: 개인 웹 사이트 확장
@@ -68,6 +74,7 @@ ko:
       Exploration: 탐구
       Explore HTML: HTML 배우자
       Exploring more CSS: CSS 추가 탐색
+      Extra: 기타
       Finish a Screen: 화면 완료하라
       Finish the Prototype: 프로토타입 완성하라
       Finishing Functions: 기능을 완성하라
@@ -87,6 +94,7 @@ ko:
       Getting Properties: 속성 얻기
       HTML Tags: HTML 태그
       Headings: 제목
+      Hello World: 헬로우 월드
       How to Create a Simple Function: 단순 함수를 만드는 방법
       How to Make a Sprite: 스프라이트 만드는 방법
       Ice Age Loops: 아이스 에이지 루프
@@ -106,6 +114,7 @@ ko:
       Layout with CSS: CSS 레이아웃
       Learning from Simulations: 시뮬레이션으로 학습
       Lesson Extras: Lesson Extras
+      Levels: 레벨
       Light Show: 라이트 쇼
       Linking Pages: 링크 페이지
       Linking Screens: 화면 링크
@@ -117,6 +126,7 @@ ko:
       Making Sounds: 소리 만들기
       'Maze Intro: Programming with Blocks': '메이즈 인트로: 블록으로 프로그래밍'
       Measures: 마디
+      'Minecraft: Hero''s Journey': '마인크래프트: 히어로의 여정'
       'Mini-Project: About Me': '스프라이트 랩으로 자기 소개'
       'Mini-Project: Alien Dance Moves': '미니 프로젝트: 에일리언 댄스 무브스'
       'Mini-Project: Alien Dance Party': '미니 프로젝트: 에일리언 댄스 파티'
@@ -194,12 +204,14 @@ ko:
       Speed it Up, Slow it Down: 속도를 높여요, 속도는 낮춰요
       Sprite Lab Example Project: 스프라이트 랩 예 프로젝트
       Sprite Lab Project: 스프라이트 랩 프로젝트
+      Sprite Movement: 스프라이트 이동
       Sprite Properties: 스프라이트 속성
       Sprites and the Draw Loop: 스프라이트와 드로 루프
       Star Chaser: 스타 체이서
       Styling Text: 스타일링 텍스트
       Styling with Classes: 클래스를 사용한 스타일링
       Styling your Website: 웹 사이트 스타일 지정하기
+      Teach AI a New Word: 새로운 세상 AI를 가르치세요
       Text Compression: 텍스트 압축
       The Animation Tab: 애니메이션 탭
       The Artist in Code Studio: 코드 스튜디오 아티스트
@@ -207,6 +219,7 @@ ko:
       The Collector: 컬렉터
       The Harvester: 수확인
       UI Element Properties: UI 요소 속성
+      Updating Your Prototype: 프로토타입 업데이트
       User Interface: 사용자 인터페이스
       Using Getters and Setters: 게터 및 세터 사용
       Using HTML Tags: HTML 태그 사용

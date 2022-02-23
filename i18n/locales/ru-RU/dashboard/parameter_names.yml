@@ -1,14 +1,17 @@
 ru:
   data:
     parameter_names:
+      "???": "???\n"
       actor: персонаж
       color: цвет
       counter: счетчик
+      direction: направление
       height: высота
       honey: мед
       left: влево
       length: длина
       min: минимум
+      nectars: нектары
       points: очки
       radius: радиус
       sides: стороны

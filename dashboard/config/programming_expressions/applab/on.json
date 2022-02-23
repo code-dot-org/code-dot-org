@@ -1,5 +1,7 @@
 {
-  "func": "on",
+  "key": "on",
+  "name": "on",
   "category": "Circuit",
-  "modeOptionName": "*.on"
+  "category_key": "circuit",
+  "syntax": "on"
 }

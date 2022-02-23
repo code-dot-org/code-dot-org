@@ -373,6 +373,8 @@ in:
             '"right"': crwdns2657566:0crwdne2657566:0
             '"x"': crwdns2657568:0crwdne2657568:0
             '"plus"': crwdns2657570:0crwdne2657570:0
+            '"spiral"': crwdns2862429:0crwdne2862429:0
+            '"infinity"': crwdns2862431:0crwdne2862431:0
             '"random"': crwdns2657572:0crwdne2657572:0
       Dancelab_makeAnonymousDanceSprite:
         text: crwdns2063134:0[COSTUME]crwdnd2063134:0[0]crwdnd2063134:0[LOCATION]crwdnd2063134:0[1]crwdne2063134:0
@@ -451,6 +453,26 @@ in:
             '18': crwdns331016:0crwdne331016:0
             '19': crwdns331018:0crwdne331018:0
             '20': crwdns331020:0crwdne331020:0
+            '21': crwdns2867406:0crwdne2867406:0
+            '22': crwdns2867408:0crwdne2867408:0
+            '23': crwdns2867410:0crwdne2867410:0
+            '24': crwdns2867412:0crwdne2867412:0
+            '25': crwdns2867414:0crwdne2867414:0
+            '26': crwdns2867416:0crwdne2867416:0
+            '27': crwdns2867418:0crwdne2867418:0
+            '28': crwdns2867420:0crwdne2867420:0
+            '29': crwdns2867422:0crwdne2867422:0
+            '30': crwdns2867424:0crwdne2867424:0
+            '31': crwdns2867426:0crwdne2867426:0
+            '32': crwdns2867428:0crwdne2867428:0
+            '33': crwdns2867430:0crwdne2867430:0
+            '34': crwdns2867432:0crwdne2867432:0
+            '35': crwdns2867434:0crwdne2867434:0
+            '36': crwdns2867436:0crwdne2867436:0
+            '37': crwdns2867438:0crwdne2867438:0
+            '38': crwdns2867440:0crwdne2867440:0
+            '39': crwdns2867442:0crwdne2867442:0
+            '40': crwdns2867444:0crwdne2867444:0
           COSTUME:
             '"ALIEN"': crwdns2657622:0crwdne2657622:0
             '"BEAR"': crwdns2657624:0crwdne2657624:0
@@ -478,6 +500,8 @@ in:
             '"right"': crwdns2657666:0crwdne2657666:0
             '"x"': crwdns2657668:0crwdne2657668:0
             '"plus"': crwdns2657670:0crwdne2657670:0
+            '"spiral"': crwdns2862433:0crwdne2862433:0
+            '"infinity"': crwdns2862435:0crwdne2862435:0
             '"random"': crwdns2657672:0crwdne2657672:0
       Dancelab_mixColors:
         text: crwdns168900:0[COLOR1]crwdnd168900:0[0]crwdnd168900:0[COLOR2]crwdnd168900:0[1]crwdne168900:0
@@ -539,6 +563,7 @@ in:
             '"fireworks"': crwdns2657744:0crwdne2657744:0
             '"flowers"': crwdns2657746:0crwdne2657746:0
             '"growing_stars"': crwdns2657748:0crwdne2657748:0
+            '"higher_power"': crwdns2862437:0crwdne2862437:0
             '"swirl"': crwdns2657750:0crwdne2657750:0
             '"kaleidoscope"': crwdns2657752:0crwdne2657752:0
             '"lasers"': crwdns2657754:0crwdne2657754:0
@@ -1005,6 +1030,8 @@ in:
             '"y"': crwdns2658386:0crwdne2658386:0
             '"direction"': crwdns2658388:0crwdne2658388:0
             '"speed"': crwdns2658390:0crwdne2658390:0
+      gamelab_changeVarBy:
+        text: crwdns2859061:0[VARIABLE]crwdnd2859061:0[0]crwdnd2859061:0[VAL]crwdnd2859061:0[1]crwdne2859061:0
       gamelab_checkTouching:
         text: crwdns400994:0[CONDITION]crwdnd400994:0[0]crwdnd400994:0[SPRITE1]crwdnd400994:0[1]crwdnd400994:0[SPRITE2]crwdnd400994:0[2]crwdne400994:0
         options:
@@ -1015,6 +1042,21 @@ in:
         text: crwdns169029:0[SPRITE]crwdnd169029:0[0]crwdne169029:0
       gamelab_clickedSpritePointer:
         text: crwdns774668:0[SPRITE]crwdnd774668:0[0]crwdne774668:0
+      gamelab_collectibleBehaviors:
+        text: crwdns2862439:0[BEHAVIOR]crwdnd2862439:0[0]crwdne2862439:0
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): crwdns2862441:0crwdne2862441:0
+            new Behavior(spinning_left, []): crwdns2862443:0crwdne2862443:0
+            new Behavior(fluttering, []): crwdns2862445:0crwdne2862445:0
+            new Behavior(jittering, []): crwdns2862447:0crwdne2862447:0
+            new Behavior(wobbling, []): crwdns2862449:0crwdne2862449:0
+            new Behavior(wandering, []): crwdns2862451:0crwdne2862451:0
+            new Behavior(patrolling, []): crwdns2862453:0crwdne2862453:0
+            new Behavior(moving_west_and_looping, []): crwdns2862455:0crwdne2862455:0
+            new Behavior(moving_east_and_looping, []): crwdns2862457:0crwdne2862457:0
+            new Behavior(moving_north_and_looping, []): crwdns2862459:0crwdne2862459:0
+            new Behavior(moving_south_and_looping, []): crwdns2862461:0crwdne2862461:0
       gamelab_comment:
         text: crwdns169030:0[COMMENT]crwdnd169030:0[0]crwdne169030:0
       gamelab_costumeImage:
@@ -1064,6 +1106,20 @@ in:
         text: crwdns169053:0crwdne169053:0
       gamelab_ifVarEquals:
         text: crwdns2471710:0[NUM]crwdnd2471710:0[0]crwdnd2471710:0[VAL]crwdnd2471710:0[1]crwdnd2471710:0[STATEMENT]crwdnd2471710:0[2]crwdne2471710:0
+      gamelab_int10:
+        text: crwdns2862463:0[VALUE]crwdnd2862463:0[0]crwdne2862463:0
+        options:
+          VALUE:
+            '1': crwdns2862465:0crwdne2862465:0
+            '2': crwdns2862467:0crwdne2862467:0
+            '3': crwdns2862469:0crwdne2862469:0
+            '4': crwdns2862471:0crwdne2862471:0
+            '5': crwdns2862473:0crwdne2862473:0
+            '6': crwdns2862475:0crwdne2862475:0
+            '7': crwdns2862477:0crwdne2862477:0
+            '8': crwdns2862479:0crwdne2862479:0
+            '9': crwdns2862481:0crwdne2862481:0
+            '10': crwdns2862483:0crwdne2862483:0
       gamelab_isCostumeEqual:
         text: crwdns2471712:0[SPRITE]crwdnd2471712:0[0]crwdnd2471712:0[COSTUME]crwdnd2471712:0[1]crwdne2471712:0
       gamelab_isKeyPressed:
@@ -1168,7 +1224,7 @@ in:
             '"burst"': crwdns2692825:0crwdne2692825:0
             '"pop"': crwdns2692827:0crwdne2692827:0
             '"rain"': crwdns2692829:0crwdne2692829:0
-            '"zigzag"': crwdns2693583:0crwdne2693583:0
+            '"spiral"': crwdns2696057:0crwdne2696057:0
       gamelab_makeNewSpriteAnon:
         text: crwdns401076:0[ANIMATION_NAME]crwdnd401076:0[0]crwdnd401076:0[LOCATION]crwdnd401076:0[1]crwdne401076:0
       gamelab_makeNumSprites:
@@ -1224,20 +1280,42 @@ in:
             "'sound://category_swish/quick_swing.mp3'": crwdns2692841:0crwdne2692841:0
             "'sound://category_nature/summer_night_loop.mp3'": crwdns2693799:0crwdne2693799:0
             "'sound://category_background/ocean_waves.mp3'": crwdns2693801:0crwdne2693801:0
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": crwdns2695429:0crwdne2695429:0
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": crwdns2695431:0crwdne2695431:0
+            "'sound://category_animals/bear.mp3'": crwdns2695433:0crwdne2695433:0
+            "'sound://category_animals/cat.mp3'": crwdns2695435:0crwdne2695435:0
+            "'sound://category_animals/cow.mp3'": crwdns2695437:0crwdne2695437:0
+            "'sound://category_animals/pig.mp3'": crwdns2695439:0crwdne2695439:0
+            "'sound://category_animals/sheep.mp3'": crwdns2695441:0crwdne2695441:0
+            "'sound://category_animals/goat.mp3'": crwdns2695443:0crwdne2695443:0
+            "'sound://category_animals/chicken.mp3'": crwdns2695445:0crwdne2695445:0
+            "'sound://category_animals/rooster.mp3'": crwdns2695447:0crwdne2695447:0
+            "'sound://category_animals/elephant.mp3'": crwdns2695449:0crwdne2695449:0
             "'sound://category_animals/dolphin.mp3'": crwdns2693803:0crwdne2693803:0
             "'sound://category_nature/thunderstorm_1.mp3'": crwdns2693805:0crwdne2693805:0
             "'sound://category_animals/chick.mp3'": crwdns2693807:0crwdne2693807:0
             "'sound://category_animals/dog.mp3'": crwdns2693809:0crwdne2693809:0
             "'sound://category_animals/tiger.mp3'": crwdns2693811:0crwdne2693811:0
+            "'sound://category_collect/trill_stings.mp3'": crwdns2694069:0crwdne2694069:0
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": crwdns2694071:0crwdne2694071:0
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": crwdns2694073:0crwdne2694073:0
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": crwdns2694075:0crwdne2694075:0
             "'sound://category_transition/trippy_robotic_transition.mp3'": crwdns2693813:0crwdne2693813:0
             "'sound://category_transition/star_dust_particle_10.mp3'": crwdns2693815:0crwdne2693815:0
             "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": crwdns2693817:0crwdne2693817:0
             "'sound://category_projectile/retro_game_magic_spell_6.mp3'": crwdns2693819:0crwdne2693819:0
             "'sound://category_retro/retro_game_ui_select_6.mp3'": crwdns2693821:0crwdne2693821:0
-            "'sound://category_retro/retro_game_classic_player_death_9.mp3'": crwdns2693823:0crwdne2693823:0
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": crwdns2694077:0crwdne2694077:0
             "'sound://category_digital/jump_7.mp3'": crwdns2693825:0crwdne2693825:0
       gamelab_playSpeech:
         text: crwdns2692843:0[SOUND]crwdnd2692843:0[0]crwdne2692843:0
+      gamelab_playerBehaviors:
+        text: crwdns2862485:0[BEHAVIOR]crwdnd2862485:0[0]crwdne2862485:0
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): crwdns2862487:0crwdne2862487:0
+            new Behavior(driving_with_arrow_keys, []): crwdns2862489:0crwdne2862489:0
+            draggable(): crwdns2862491:0crwdne2862491:0
       gamelab_pointInDirection:
         text: crwdns169102:0[SPRITE]crwdnd169102:0[0]crwdnd169102:0[DIRECTION]crwdnd169102:0[1]crwdne169102:0
         options:
@@ -1262,6 +1340,8 @@ in:
         text: crwdns169113:0[THIS]crwdnd169113:0[0]crwdne169113:0
       gamelab_repeatForever:
         text: crwdns2471714:0crwdne2471714:0
+      gamelab_resetTimer:
+        text: crwdns2864055:0crwdne2864055:0
       gamelab_setAnimation:
         text: crwdns169115:0[THIS]crwdnd169115:0[0]crwdnd169115:0[ANIMATION]crwdnd169115:0[1]crwdne169115:0
       gamelab_setBackground:
@@ -1341,6 +1421,15 @@ in:
             '"scale"': crwdns2658646:0crwdne2658646:0
             '"width"': crwdns2658648:0crwdne2658648:0
             '"height"': crwdns2658650:0crwdne2658650:0
+      gamelab_setSpeed_dropdown:
+        text: crwdns2865698:0[SPRITE]crwdnd2865698:0[0]crwdnd2865698:0[SIZE]crwdnd2865698:0[1]crwdne2865698:0
+        options:
+          SIZE:
+            '1': crwdns2865700:0crwdne2865700:0
+            '3': crwdns2865702:0crwdne2865702:0
+            '5': crwdns2865704:0crwdne2865704:0
+            '7': crwdns2865706:0crwdne2865706:0
+            '9': crwdns2865708:0crwdne2865708:0
       gamelab_setTint:
         text: crwdns169141:0[THIS]crwdnd169141:0[0]crwdnd169141:0[COLOR]crwdnd169141:0[1]crwdne169141:0
       gamelab_setupScoreboard:
@@ -1357,18 +1446,6 @@ in:
             '"while"': crwdns2658654:0crwdne2658654:0
       gamelab_spriteSay:
         text: crwdns2572170:0[SPRITE]crwdnd2572170:0[0]crwdnd2572170:0[SPEECH]crwdnd2572170:0[1]crwdne2572170:0
-      gamelab_spriteSayChoices:
-        text: crwdns2688552:0[SPRITE]crwdnd2688552:0[0]crwdnd2688552:0[SPEECH]crwdnd2688552:0[1]crwdne2688552:0
-        options:
-          SPEECH:
-            '"I am Batman!"': crwdns2688554:0crwdne2688554:0
-            '"Being kind is never wasted."': crwdns2688556:0crwdne2688556:0
-            '"When you know better, you do better."': crwdns2688558:0crwdne2688558:0
-            '"You always pass failure on the way to success."': crwdns2688560:0crwdne2688560:0
-            '"Make each day your masterpiece."': crwdns2688562:0crwdne2688562:0
-            '"I am Catwoman!"': crwdns2688564:0crwdne2688564:0
-            '"Never quit!"': crwdns2688566:0crwdne2688566:0
-            '"Live Fast."': crwdns2688568:0crwdne2688568:0
       gamelab_spriteSayTime:
         text: crwdns2590328:0[SPRITE]crwdnd2590328:0[0]crwdnd2590328:0[TEXT1]crwdnd2590328:0[1]crwdnd2590328:0[NUM]crwdnd2590328:0[2]crwdne2590328:0
       gamelab_startAvoiding:
@@ -1853,170 +1930,234 @@ in:
         text: crwdns2546978:0[COUNT]crwdnd2546978:0[0]crwdne2546978:0
       Outbreak_stopMoving:
         text: crwdns2546980:0crwdne2546980:0
-      PoemBot_addLine:
-        text: crwdns2688416:0[LINE]crwdnd2688416:0[0]crwdne2688416:0
-      PoemBot_destroy:
-        text: crwdns2693757:0[ANIMATION_NAME]crwdnd2693757:0[0]crwdne2693757:0
-      PoemBot_hidePoem:
-        text: crwdns2692845:0crwdne2692845:0
-      PoemBot_makeNumSprites:
-        text: crwdns2693759:0[NUM]crwdnd2693759:0[0]crwdnd2693759:0[ANIMATION_NAME]crwdnd2693759:0[1]crwdne2693759:0
-      PoemBot_playSound:
-        text: crwdns2692847:0[SOUND]crwdnd2692847:0[0]crwdne2692847:0
+      Poetry_addFrame:
+        text: crwdns2710229:0[BRUSH]crwdnd2710229:0[0]crwdne2710229:0
+        options:
+          BRUSH:
+            '"bamboo"': crwdns2713501:0crwdne2713501:0
+            '"beaded"': crwdns2713503:0crwdne2713503:0
+            '"brick"': crwdns2710277:0crwdne2710277:0
+            '"decorative"': crwdns2713505:0crwdne2713505:0
+            '"donuts"': crwdns2713507:0crwdne2713507:0
+            '"fire"': crwdns2713509:0crwdne2713509:0
+            '"flowers"': crwdns2710267:0crwdne2710267:0
+            '"gilded"': crwdns2713511:0crwdne2713511:0
+            '"hearts"': crwdns2710265:0crwdne2710265:0
+            '"iceCream"': crwdns2713513:0crwdne2713513:0
+            '"leaves"': crwdns2713515:0crwdne2713515:0
+            '"metal"': crwdns2713517:0crwdne2713517:0
+            '"pawPrints"': crwdns2710273:0crwdne2710273:0
+            '"rainbow"': crwdns2710263:0crwdne2710263:0
+            '"stars"': crwdns2713519:0crwdne2713519:0
+            '"swirls"': crwdns2710271:0crwdne2710271:0
+            '"waves"': crwdns2710275:0crwdne2710275:0
+            '"wood"': crwdns2713521:0crwdne2713521:0
+            '"zigzag"': crwdns2710269:0crwdne2710269:0
+      Poetry_addLine:
+        text: crwdns2694079:0[LINE]crwdnd2694079:0[0]crwdne2694079:0
+      Poetry_addTextHighlight:
+        text: crwdns2710279:0[COLOR]crwdnd2710279:0[0]crwdne2710279:0
+      Poetry_animateText:
+        text: crwdns2696059:0crwdne2696059:0
+      Poetry_destroy:
+        text: crwdns2694081:0[ANIMATION_NAME]crwdnd2694081:0[0]crwdne2694081:0
+      Poetry_glideTo:
+        text: crwdns2713523:0[SPRITE]crwdnd2713523:0[0]crwdnd2713523:0[LOCATION]crwdnd2713523:0[1]crwdne2713523:0
+      Poetry_hideText:
+        text: crwdns2696061:0crwdne2696061:0
+      Poetry_makeBurst:
+        text: crwdns2694085:0[EFFECT]crwdnd2694085:0[0]crwdnd2694085:0[NUM]crwdnd2694085:0[1]crwdnd2694085:0[ANIMATION_NAME]crwdnd2694085:0[2]crwdne2694085:0
+        options:
+          EFFECT:
+            '"burst"': crwdns2694087:0crwdne2694087:0
+            '"pop"': crwdns2694089:0crwdne2694089:0
+            '"rain"': crwdns2694091:0crwdne2694091:0
+            '"spiral"': crwdns2713335:0crwdne2713335:0
+      Poetry_makeNewSpriteAnon:
+        text: crwdns2695453:0[ANIMATION_NAME]crwdnd2695453:0[0]crwdnd2695453:0[LOCATION]crwdnd2695453:0[1]crwdne2695453:0
+      Poetry_makeNumSprites:
+        text: crwdns2694095:0[NUM]crwdnd2694095:0[0]crwdnd2694095:0[ANIMATION_NAME]crwdnd2694095:0[1]crwdne2694095:0
+      Poetry_playMusic:
+        text: crwdns2710281:0[SOUND]crwdnd2710281:0[0]crwdne2710281:0
         options:
           SOUND:
-            '"sound://category_bell/bells_win_low.mp3"': crwdns2692849:0crwdne2692849:0
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': crwdns2692851:0crwdne2692851:0
-            '"sound://category_background/fire_burning.mp3"': crwdns2692853:0crwdne2692853:0
-            '"sound://category_nature/forest_woodland_ambience_2.mp3"': crwdns2692855:0crwdne2692855:0
-            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': crwdns2692857:0crwdne2692857:0
-            '"sound://category_nature/summer_night_loop.mp3"': crwdns2692859:0crwdne2692859:0
-            '"sound://category_background/ocean_waves.mp3"': crwdns2692861:0crwdne2692861:0
-            '"sound://category_background/rain_thunderstorm_calm.mp3"': crwdns2692863:0crwdne2692863:0
-            '"sound://category_background/rainforest_ambient_sound.mp3"': crwdns2692865:0crwdne2692865:0
-            '"sound://category_background/wavering_wind.mp3"': crwdns2692867:0crwdne2692867:0
-            '"sound://category_background/typewriter.mp3"': crwdns2692869:0crwdne2692869:0
-            '"sound://category_background/waterfall.mp3"': crwdns2692871:0crwdne2692871:0
-      PoemBot_randomWord:
-        text: crwdns2688418:0crwdne2688418:0
-      PoemBot_setAuthor:
-        text: crwdns2688420:0[AUTHOR]crwdnd2688420:0[0]crwdne2688420:0
-      PoemBot_setBackgroundEffect:
-        text: crwdns2688570:0[EFFECT]crwdnd2688570:0[0]crwdnd2688570:0[PALETTE]crwdnd2688570:0[1]crwdne2688570:0
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': crwdns2713525:0crwdne2713525:0
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': crwdns2710577:0crwdne2710577:0
+            '"sound://category_nature/steady_campfire_loop.mp3"': crwdns2710579:0crwdne2710579:0
+            '"sound://category_nature/rain_loop.mp3"': crwdns2710581:0crwdne2710581:0
+            '"sound://category_background/fire_burning.mp3"': crwdns2710289:0crwdne2710289:0
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': crwdns2710291:0crwdne2710291:0
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': crwdns2710293:0crwdne2710293:0
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': crwdns2710583:0crwdne2710583:0
+            '"sound://category_background/inside_plane.mp3"': crwdns2710585:0crwdne2710585:0
+            '"sound://category_loops/red_flag_loop1.mp3"': crwdns2710587:0crwdne2710587:0
+            '"sound://category_nature/summer_night_loop.mp3"': crwdns2710301:0crwdne2710301:0
+            '"sound://category_background/ocean_waves.mp3"': crwdns2710303:0crwdne2710303:0
+            '"sound://category_background/rain_thunderstorm_calm.mp3"': crwdns2710305:0crwdne2710305:0
+            '"sound://category_background/rainforest_ambient_sound.mp3"': crwdns2710307:0crwdne2710307:0
+            '"sound://category_background/repitition.mp3"': crwdns2710589:0crwdne2710589:0
+            '"sound://category_background/wavering_wind.mp3"': crwdns2710311:0crwdne2710311:0
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': crwdns2710591:0crwdne2710591:0
+            '"sound://category_background/waterfall.mp3"': crwdns2710315:0crwdne2710315:0
+      Poetry_playSound:
+        text: crwdns2694097:0[SOUND]crwdnd2694097:0[0]crwdne2694097:0
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': crwdns2710593:0crwdne2710593:0
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': crwdns2710595:0crwdne2710595:0
+            '"sound://category_digital/boing_2.mp3"': crwdns2710597:0crwdne2710597:0
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': crwdns2710599:0crwdne2710599:0
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': crwdns2710601:0crwdne2710601:0
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': crwdns2710603:0crwdne2710603:0
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': crwdns2710605:0crwdne2710605:0
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': crwdns2710607:0crwdne2710607:0
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': crwdns2710609:0crwdne2710609:0
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': crwdns2710611:0crwdne2710611:0
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': crwdns2710613:0crwdne2710613:0
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': crwdns2710615:0crwdne2710615:0
+            '"sound://category_background/typewriter.mp3"': crwdns2694119:0crwdne2694119:0
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': crwdns2710617:0crwdne2710617:0
+            '"sound://category_achievements/peaceful_win_1.mp3"': crwdns2710619:0crwdne2710619:0
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': crwdns2710621:0crwdne2710621:0
+            '"sound://category_achievements/peaceful_win_6.mp3"': crwdns2710623:0crwdne2710623:0
+      Poetry_setAuthor:
+        text: crwdns2694125:0[AUTHOR]crwdnd2694125:0[0]crwdne2694125:0
+      Poetry_setBackground:
+        text: crwdns2695455:0[COLOR]crwdnd2695455:0[0]crwdne2695455:0
+      Poetry_setBackgroundEffect:
+        text: crwdns2694127:0[EFFECT]crwdnd2694127:0[0]crwdnd2694127:0[PALETTE]crwdnd2694127:0[1]crwdne2694127:0
         options:
           EFFECT:
-            '"colors"': crwdns2692873:0crwdne2692873:0
-            '"squiggles"': crwdns2692875:0crwdne2692875:0
-            '"space"': crwdns2692877:0crwdne2692877:0
-            '"stars"': crwdns2692879:0crwdne2692879:0
-            '"darkCircles"': crwdns2692881:0crwdne2692881:0
-            '"fadeColors"': crwdns2692883:0crwdne2692883:0
-            '"blooming"': crwdns2692885:0crwdne2692885:0
-            '"ripples"': crwdns2692887:0crwdne2692887:0
-            '"clouds"': crwdns2692889:0crwdne2692889:0
+            '"blooming"': crwdns2694141:0crwdne2694141:0
+            '"bubbles"': crwdns2710351:0crwdne2710351:0
+            '"clouds"': crwdns2694145:0crwdne2694145:0
+            '"confetti"': crwdns2710353:0crwdne2710353:0
+            '"darkCircles"': crwdns2694137:0crwdne2694137:0
+            '"fadeColors"': crwdns2694139:0crwdne2694139:0
+            '"hearts"': crwdns2710355:0crwdne2710355:0
+            '"space"': crwdns2694133:0crwdne2694133:0
+            '"rain"': crwdns2710349:0crwdne2710349:0
+            '"ripples"': crwdns2694143:0crwdne2694143:0
+            '"colors"': crwdns2694129:0crwdne2694129:0
+            '"stars"': crwdns2694135:0crwdne2694135:0
+            '"squiggles"': crwdns2694131:0crwdne2694131:0
           PALETTE:
-            '"sky"': crwdns2692891:0crwdne2692891:0
-            '"ocean"': crwdns2692893:0crwdne2692893:0
-            '"sunrise"': crwdns2692895:0crwdne2692895:0
-            '"sunset"': crwdns2692897:0crwdne2692897:0
-            '"spring"': crwdns2692899:0crwdne2692899:0
-            '"summer"': crwdns2692901:0crwdne2692901:0
-            '"autumn"': crwdns2692903:0crwdne2692903:0
-            '"winter"': crwdns2692905:0crwdne2692905:0
-            '"grayscale"': crwdns2692907:0crwdne2692907:0
-            '"rainbow"': crwdns2692909:0crwdne2692909:0
-            '"roses"': crwdns2692911:0crwdne2692911:0
-      PoemBot_setBackgroundImageAs:
-        text: crwdns2693761:0[IMG]crwdnd2693761:0[0]crwdne2693761:0
-      PoemBot_setFont:
-        text: crwdns2692577:0[FONT]crwdnd2692577:0[0]crwdne2692577:0
+            '"autumn"': crwdns2694159:0crwdne2694159:0
+            '"sunrise"': crwdns2694151:0crwdne2694151:0
+            '"sunset"': crwdns2694153:0crwdne2694153:0
+            '"grayscale"': crwdns2694163:0crwdne2694163:0
+            '"ocean"': crwdns2694149:0crwdne2694149:0
+            '"rainbow"': crwdns2694165:0crwdne2694165:0
+            '"roses"': crwdns2694167:0crwdne2694167:0
+            '"sky"': crwdns2694147:0crwdne2694147:0
+            '"spring"': crwdns2694155:0crwdne2694155:0
+            '"summer"': crwdns2694157:0crwdne2694157:0
+            '"winter"': crwdns2694161:0crwdne2694161:0
+      Poetry_setBackgroundImageAs:
+        text: crwdns2694169:0[IMG]crwdnd2694169:0[0]crwdne2694169:0
+      Poetry_setFont:
+        text: crwdns2694171:0[FONT]crwdnd2694171:0[0]crwdne2694171:0
         options:
           FONT:
-            '"Arial"': crwdns2692579:0crwdne2692579:0
-            '"Georgia"': crwdns2692581:0crwdne2692581:0
-            '"Palatino"': crwdns2692583:0crwdne2692583:0
-            '"Times"': crwdns2692585:0crwdne2692585:0
-            '"Courier"': crwdns2692587:0crwdne2692587:0
-            '"Arial Black"': crwdns2692589:0crwdne2692589:0
-            '"Impact"': crwdns2692591:0crwdne2692591:0
-            '"Tahoma"': crwdns2692593:0crwdne2692593:0
-            '"Verdana"': crwdns2692595:0crwdne2692595:0
-      PoemBot_setFontColor:
-        text: crwdns2692597:0[FILL]crwdnd2692597:0[0]crwdne2692597:0
-      PoemBot_setForegroundEffect:
-        text: crwdns2688576:0[EFFECT]crwdnd2688576:0[0]crwdne2688576:0
+            '"Arial"': crwdns2694173:0crwdne2694173:0
+            '"Arial Black"': crwdns2694183:0crwdne2694183:0
+            '"Courier"': crwdns2694181:0crwdne2694181:0
+            '"Cursive"': crwdns2713337:0crwdne2713337:0
+            '"Impact"': crwdns2694185:0crwdne2694185:0
+            '"Georgia"': crwdns2694175:0crwdne2694175:0
+            '"Times"': crwdns2694179:0crwdne2694179:0
+      Poetry_setFontColor:
+        text: crwdns2694191:0[FILL]crwdnd2694191:0[0]crwdne2694191:0
+      Poetry_setForegroundEffect:
+        text: crwdns2694193:0[EFFECT]crwdnd2694193:0[0]crwdne2694193:0
         options:
           EFFECT:
-            '"rain"': crwdns2692913:0crwdne2692913:0
-            '"bubbles"': crwdns2692915:0crwdne2692915:0
-            '"hearts"': crwdns2692917:0crwdne2692917:0
-            '"emojis"': crwdns2692919:0crwdne2692919:0
-            '"confetti"': crwdns2692921:0crwdne2692921:0
-            '"starburst"': crwdns2692923:0crwdne2692923:0
-            '"glass"': crwdns2692925:0crwdne2692925:0
-            '"twinkling"': crwdns2692927:0crwdne2692927:0
-      PoemBot_setPoem:
-        text: crwdns2688582:0[POEM]crwdnd2688582:0[0]crwdne2688582:0
-        options:
-          POEM:
-            '"---"': crwdns2692929:0crwdne2692929:0
-            '"hafez"': crwdns2692931:0crwdne2692931:0
-            '"carroll_1"': crwdns2692933:0crwdne2692933:0
-            '"rumi_1"': crwdns2692935:0crwdne2692935:0
-            '"field"': crwdns2692937:0crwdne2692937:0
-            '"carroll_2"': crwdns2692939:0crwdne2692939:0
-            '"twain"': crwdns2692941:0crwdne2692941:0
-            '"wordsworth"': crwdns2692943:0crwdne2692943:0
-            '"carroll_3"': crwdns2692945:0crwdne2692945:0
-            '"rios"': crwdns2692947:0crwdne2692947:0
-            '"rumi_2"': crwdns2692949:0crwdne2692949:0
-            '"hughes_1"': crwdns2692951:0crwdne2692951:0
-            '"hughes"': crwdns2692953:0crwdne2692953:0
-      PoemBot_setPrompt:
-        text: crwdns2693763:0[NAME]crwdnd2693763:0[0]crwdnd2693763:0[RIGHT_QUOTE]crwdnd2693763:0[1]crwdnd2693763:0[VAR]crwdnd2693763:0[2]crwdne2693763:0
-      PoemBot_setPromptWithChoices:
-        text: crwdns2693765:0[TEXT]crwdnd2693765:0[0]crwdnd2693765:0[RIGHT_QUOTE]crwdnd2693765:0[1]crwdnd2693765:0[VAR]crwdnd2693765:0[2]crwdnd2693765:0[A]crwdnd2693765:0[3]crwdnd2693765:0[RIGHT_QUOTE_A]crwdnd2693765:0[4]crwdnd2693765:0[LEFT_QUOTE_B]crwdnd2693765:0[5]crwdnd2693765:0[B]crwdnd2693765:0[6]crwdnd2693765:0[RIGHT_QUOTE_B]crwdnd2693765:0[7]crwdnd2693765:0[LEFT_QUOTE_C]crwdnd2693765:0[8]crwdnd2693765:0[C]crwdnd2693765:0[9]crwdnd2693765:0[RIGHT_QUOTE_C]crwdnd2693765:0[10]crwdne2693765:0
-      PoemBot_setSize:
-        text: crwdns2692955:0[SPRITE]crwdnd2692955:0[0]crwdnd2692955:0[VAL]crwdnd2692955:0[1]crwdne2692955:0
-      PoemBot_setTextEffect:
-        text: crwdns2692957:0[EFFECT]crwdnd2692957:0[0]crwdne2692957:0
+            '"bubbles"': crwdns2694197:0crwdne2694197:0
+            '"confetti"': crwdns2694203:0crwdne2694203:0
+            '"hearts"': crwdns2694199:0crwdne2694199:0
+            '"emojis"': crwdns2694201:0crwdne2694201:0
+            '"rain"': crwdns2694195:0crwdne2694195:0
+            '"starburst"': crwdns2694205:0crwdne2694205:0
+            '"glass"': crwdns2694207:0crwdne2694207:0
+            '"twinkling"': crwdns2694209:0crwdne2694209:0
+      Poetry_setPrompt:
+        text: crwdns2694245:0[LEFT_QUOTE]crwdnd2694245:0[0]crwdnd2694245:0[NAME]crwdnd2694245:0[1]crwdnd2694245:0[RIGHT_QUOTE]crwdnd2694245:0[2]crwdnd2694245:0[VAR]crwdnd2694245:0[3]crwdne2694245:0
+      Poetry_setPromptWithChoices:
+        text: crwdns2694247:0[LEFT_QUOTE]crwdnd2694247:0[0]crwdnd2694247:0[TEXT]crwdnd2694247:0[1]crwdnd2694247:0[RIGHT_QUOTE]crwdnd2694247:0[2]crwdnd2694247:0[VAR]crwdnd2694247:0[3]crwdnd2694247:0[LEFT_QUOTE_A]crwdnd2694247:0[4]crwdnd2694247:0[A]crwdnd2694247:0[5]crwdnd2694247:0[RIGHT_QUOTE_A]crwdnd2694247:0[6]crwdnd2694247:0[LEFT_QUOTE_B]crwdnd2694247:0[7]crwdnd2694247:0[B]crwdnd2694247:0[8]crwdnd2694247:0[RIGHT_QUOTE_B]crwdnd2694247:0[9]crwdnd2694247:0[LEFT_QUOTE_C]crwdnd2694247:0[10]crwdnd2694247:0[C]crwdnd2694247:0[11]crwdnd2694247:0[RIGHT_QUOTE_C]crwdnd2694247:0[12]crwdne2694247:0
+      Poetry_setSize:
+        text: crwdns2694249:0[SPRITE]crwdnd2694249:0[0]crwdnd2694249:0[VAL]crwdnd2694249:0[1]crwdne2694249:0
+      Poetry_setTextEffect:
+        text: crwdns2694251:0[EFFECT]crwdnd2694251:0[0]crwdne2694251:0
         options:
           EFFECT:
-            '"fade"': crwdns2692959:0crwdne2692959:0
-            '"typewriter"': crwdns2692961:0crwdne2692961:0
-            '"flyLeft"': crwdns2692963:0crwdne2692963:0
-            '"flyRight"': crwdns2692965:0crwdne2692965:0
-            '"flyTop"': crwdns2692967:0crwdne2692967:0
-            '"flyBottom"': crwdns2692969:0crwdne2692969:0
-      PoemBot_setTitle:
-        text: crwdns2688422:0[TITLE]crwdnd2688422:0[0]crwdne2688422:0
-      PoemBot_showPoem:
-        text: crwdns2688424:0crwdne2688424:0
-      PoemBot_startBehavior:
-        text: crwdns2692971:0[ANIMATION_NAME]crwdnd2692971:0[0]crwdnd2692971:0[BEHAVIOR]crwdnd2692971:0[1]crwdne2692971:0
+            '"fade"': crwdns2694253:0crwdne2694253:0
+            '"flyLeft"': crwdns2694257:0crwdne2694257:0
+            '"flyRight"': crwdns2694259:0crwdne2694259:0
+            '"flyTop"': crwdns2694261:0crwdne2694261:0
+            '"flyBottom"': crwdns2694263:0crwdne2694263:0
+            '"typewriter"': crwdns2694255:0crwdne2694255:0
+      Poetry_setTitle:
+        text: crwdns2694265:0[TITLE]crwdnd2694265:0[0]crwdne2694265:0
+      Poetry_showText:
+        text: crwdns2696063:0crwdne2696063:0
+      Poetry_startBehavior:
+        text: crwdns2694269:0[ANIMATION_NAME]crwdnd2694269:0[0]crwdnd2694269:0[BEHAVIOR]crwdnd2694269:0[1]crwdne2694269:0
         options:
           BEHAVIOR:
-            fluttering: crwdns2692973:0crwdne2692973:0
-            growing: crwdns2692975:0crwdne2692975:0
-            jittering: crwdns2692977:0crwdne2692977:0
-            moving_north_and_looping: crwdns2692979:0crwdne2692979:0
-            moving_south_and_looping: crwdns2692981:0crwdne2692981:0
-            moving_east_and_looping: crwdns2692983:0crwdne2692983:0
-            moving_west_and_looping: crwdns2692985:0crwdne2692985:0
-            shrinking: crwdns2692987:0crwdne2692987:0
-            spinning_left: crwdns2692989:0crwdne2692989:0
-            spinning_right: crwdns2692991:0crwdne2692991:0
-            swimming_left_and_right: crwdns2692993:0crwdne2692993:0
-            wandering: crwdns2692995:0crwdne2692995:0
-            wobbling: crwdns2692997:0crwdne2692997:0
-      PoemBot_stopBehavior:
-        text: crwdns2692999:0[ANIMATION_NAME]crwdnd2692999:0[0]crwdnd2692999:0[BEHAVIOR]crwdnd2692999:0[1]crwdne2692999:0
+            '"fluttering"': crwdns2857755:0crwdne2857755:0
+            '"growing"': crwdns2857757:0crwdne2857757:0
+            '"jittering"': crwdns2857759:0crwdne2857759:0
+            '"moving_north_and_looping"': crwdns2857761:0crwdne2857761:0
+            '"moving_south_and_looping"': crwdns2857763:0crwdne2857763:0
+            '"moving_east_and_looping"': crwdns2857765:0crwdne2857765:0
+            '"moving_west_and_looping"': crwdns2857767:0crwdne2857767:0
+            '"shrinking"': crwdns2857769:0crwdne2857769:0
+            '"spinning_left"': crwdns2857771:0crwdne2857771:0
+            '"spinning_right"': crwdns2857773:0crwdne2857773:0
+            '"swimming_left_and_right"': crwdns2857775:0crwdne2857775:0
+            '"wandering"': crwdns2857777:0crwdne2857777:0
+            '"wobbling"': crwdns2857779:0crwdne2857779:0
+      Poetry_stopBehavior:
+        text: crwdns2694297:0[ANIMATION_NAME]crwdnd2694297:0[0]crwdnd2694297:0[BEHAVIOR]crwdnd2694297:0[1]crwdne2694297:0
         options:
           BEHAVIOR:
-            fluttering: crwdns2693001:0crwdne2693001:0
-            growing: crwdns2693003:0crwdne2693003:0
-            jittering: crwdns2693005:0crwdne2693005:0
-            moving_north_and_looping: crwdns2693007:0crwdne2693007:0
-            moving_south_and_looping: crwdns2693009:0crwdne2693009:0
-            moving_east_and_looping: crwdns2693011:0crwdne2693011:0
-            moving_west_and_looping: crwdns2693013:0crwdne2693013:0
-            shrinking: crwdns2693015:0crwdne2693015:0
-            spinning_left: crwdns2693017:0crwdne2693017:0
-            spinning_right: crwdns2693019:0crwdne2693019:0
-            swimming_left_and_right: crwdns2693021:0crwdne2693021:0
-            wandering: crwdns2693023:0crwdne2693023:0
-            wobbling: crwdns2693025:0crwdne2693025:0
-            '"all"': crwdns2693027:0crwdne2693027:0
-      PoemBot_stringValue:
-        text: crwdns2688588:0[LEFT_QUOTE]crwdnd2688588:0[0]crwdnd2688588:0[TEXT]crwdnd2688588:0[1]crwdnd2688588:0[RIGHT_QUOTE]crwdnd2688588:0[2]crwdne2688588:0
-      PoemBot_textConcat:
-        text: crwdns2688590:0[LEFT_QUOTE]crwdnd2688590:0[0]crwdnd2688590:0[TEXT1]crwdnd2688590:0[1]crwdnd2688590:0[TEXT2]crwdnd2688590:0[2]crwdnd2688590:0[RIGHT_QUOTE]crwdnd2688590:0[3]crwdne2688590:0
-      PoemBot_textVariableJoin:
-        text: crwdns2693767:0[VAR]crwdnd2693767:0[0]crwdnd2693767:0[TEXT2]crwdnd2693767:0[1]crwdne2693767:0
-      PoemBot_whenLineShows:
-        text: crwdns2692599:0[N]crwdnd2692599:0[0]crwdne2692599:0
-      PoemBot_whenPromptAnswered:
-        text: crwdns2693769:0[VAR]crwdnd2693769:0[0]crwdne2693769:0
+            '"fluttering"': crwdns2857781:0crwdne2857781:0
+            '"growing"': crwdns2857783:0crwdne2857783:0
+            '"jittering"': crwdns2857785:0crwdne2857785:0
+            '"moving_north_and_looping"': crwdns2857787:0crwdne2857787:0
+            '"moving_south_and_looping"': crwdns2857789:0crwdne2857789:0
+            '"moving_east_and_looping"': crwdns2857791:0crwdne2857791:0
+            '"moving_west_and_looping"': crwdns2857793:0crwdne2857793:0
+            '"shrinking"': crwdns2857795:0crwdne2857795:0
+            '"spinning_left"': crwdns2857797:0crwdne2857797:0
+            '"spinning_right"': crwdns2857799:0crwdne2857799:0
+            '"swimming_left_and_right"': crwdns2857801:0crwdne2857801:0
+            '"wandering"': crwdns2857803:0crwdne2857803:0
+            '"wobbling"': crwdns2857805:0crwdne2857805:0
+            '"all"': crwdns2694325:0crwdne2694325:0
+      Poetry_stringValue:
+        text: crwdns2694327:0[LEFT_QUOTE]crwdnd2694327:0[0]crwdnd2694327:0[TEXT]crwdnd2694327:0[1]crwdnd2694327:0[RIGHT_QUOTE]crwdnd2694327:0[2]crwdne2694327:0
+      Poetry_textConcat:
+        text: crwdns2694329:0[LEFT_QUOTE]crwdnd2694329:0[0]crwdnd2694329:0[TEXT1]crwdnd2694329:0[1]crwdnd2694329:0[TEXT2]crwdnd2694329:0[2]crwdnd2694329:0[RIGHT_QUOTE]crwdnd2694329:0[3]crwdne2694329:0
+      Poetry_textVariableJoin:
+        text: crwdns2694331:0[VAR]crwdnd2694331:0[0]crwdnd2694331:0[TEXT2]crwdnd2694331:0[1]crwdne2694331:0
+      Poetry_whenLineShows:
+        text: crwdns2694333:0[N]crwdnd2694333:0[0]crwdne2694333:0
+        options:
+          N:
+            '0': crwdns2694335:0crwdne2694335:0
+            '1': crwdns2694337:0crwdne2694337:0
+            '2': crwdns2694339:0crwdne2694339:0
+            '3': crwdns2694341:0crwdne2694341:0
+            '4': crwdns2694343:0crwdne2694343:0
+            '5': crwdns2694345:0crwdne2694345:0
+            '6': crwdns2694347:0crwdne2694347:0
+            '7': crwdns2694349:0crwdne2694349:0
+            '8': crwdns2694351:0crwdne2694351:0
+            '9': crwdns2694353:0crwdne2694353:0
+            '10': crwdns2694355:0crwdne2694355:0
+      Poetry_whenPromptAnswered:
+        text: crwdns2694357:0[VAR]crwdnd2694357:0[0]crwdne2694357:0
       RyanLab_moveForward:
         text: crwdns241356:0crwdne241356:0
       RyanLab_readSound:

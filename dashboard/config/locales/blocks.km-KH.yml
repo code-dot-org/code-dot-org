@@ -307,6 +307,11 @@ km:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": ខាំ
+            "'sound://category_animals/cat.mp3'": ឆ្មា
+            "'sound://category_animals/cow.mp3'": មេគោ
+            "'sound://category_animals/sheep.mp3'": ចៀម
+            "'sound://category_animals/chicken.mp3'": មេមាន់
+            "'sound://category_animals/dog.mp3'": ឆ្កែ
             "'sound://category_digital/jump_7.mp3'": លោត
       gamelab_randColor:
         text: ពណ៌​ព្រាវ
@@ -352,6 +357,14 @@ km:
           PROPERTY:
             '"scale"': ទំហំ
             '"height"': កម្ពស់
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': slow
+            '5': ធម្មតា
+            '7': លឿន
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:
@@ -530,6 +543,37 @@ km:
             '"down"': ព្រួញចុះក្រោម
             '"left"': ព្រួញខាងឆ្វេង
             '"right"': ព្រួញខាងស្តាំ
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': បេះដូង
+            '"rainbow"': ឥន្ទធនូ
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ភ្លៀង
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': យប់
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': លោត
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': ពពក
+            '"hearts"': បេះដូង
+            '"rain"': ភ្លៀង
+          PALETTE:
+            '"rainbow"': ឥន្ទធនូ
+            '"winter"': រដូវរងារ
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': បេះដូង
+            '"rain"': ភ្លៀង
       RyanLab_moveForward:
         text: រំកិល​ទៅមុខ
       RyanLab_turnLeft:

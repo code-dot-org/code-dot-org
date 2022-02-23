@@ -2,6 +2,99 @@
   "zh-TW": {
     "data": {
       "objectives": {
+        "6902d2bc-a266-487c-b0de-49de79f6fb98": {
+          "description": "展示詩歌中的意境轉換。"
+        },
+        "6da037be-d0be-4f41-a1e5-10b24a247190": {
+          "description": "代表文字的隱喻和字面含義。"
+        },
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "使用精靈圖和事件創建互動式動畫。"
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "創建新的精靈圖並為他們分配服裝和位置。"
+        },
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "製作使用序列步驟的程式，以完成一張圖像。"
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "把複雜的圖形分解為較簡單的部分。"
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "開發程式，回應定時事件"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "開發程式，回應使用者的輸入"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "使用程式碼製作舞蹈動畫"
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "創建新的精靈圖並為他們分配服裝和位置。"
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "使用精靈圖和事件創建互動式動畫。"
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "使用精靈圖和事件創建互動式動畫。"
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "創建新的精靈圖並為他們分配服裝和位置。"
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "使用精靈圖和事件創建互動式動畫。"
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "創建新的精靈圖並為他們分配服裝和位置。"
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "識別出與輸入事件相關的動作。"
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "使用序列與事件處理器製作互動遊戲。"
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "與其他學生分享創意作品。"
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "識別出與輸入事件相關的動作。"
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "使用序列與事件處理器製作互動遊戲。"
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "與其他學生分享創意作品。"
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "開發程式，回應定時事件"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "開發程式，回應使用者的輸入"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "使用程式碼製作舞蹈動畫"
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "討論人工智慧在他們的生活動扮演著甚麼角色。"
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "培訓並測試機器學習模型。"
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "推理思考人類的偏見在機器學習中產生甚麼影響。"
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "創建新的精靈圖並為他們分配服裝和位置。"
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "使用精靈圖和事件創建互動式動畫。"
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "展示詩歌中的意境轉換。"
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "代表文字的隱喻和字面含義。"
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "宣告一個變數"
         },
@@ -703,6 +796,12 @@
         },
         "2594052b-3b87-4d83-9038-56175058c1c2": {
           "description": "清楚說明設計流程，以及流程怎樣協助塑造完成的最終專案。"
+        },
+        "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
+          "description": "培訓並測試機器學習模型。"
+        },
+        "0c96ded9-a267-4b91-b81a-a45fbdfe32d0": {
+          "description": "推理思考人類的偏見在機器學習中產生甚麼影響。"
         }
       }
     }

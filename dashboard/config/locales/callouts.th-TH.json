@@ -135,13 +135,16 @@
           "craft_callout_preplaced_house": "โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน"
+          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน",
+          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน"
+          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน",
+          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน"
+          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน",
+          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง"
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "ทำซ้ำโดยวางบล็อกไที่นี่"
@@ -379,7 +382,8 @@
           "craft_callout_preplaced_house": "โค้ดนี้จะเริ่มสร้างบ้านของคุณ สามารถทำให้เสร็จได้ไหม"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน"
+          "craft_run_button_callout": "กด \"เริ่ม\" เพื่อดูโปรแกรมของคุณทำงาน",
+          "craft_drag_block_callout": "ลากบล็อก \"ไปข้างหน้า\" และติดบล็อกนั้นไว้ด้านล่างอีกบล็อกหนึ่ง"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "ทำซ้ำโดยวางบล็อกไที่นี่"
@@ -422,6 +426,235 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "หลังจากต่อบล็อกทั้งหมดเข้าด้วยกัน ให้กด \" เริ่ม \" เพื่อให้โปรแกรมของคุณเริ่มทำงาน"
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "บล็อกใหม่!",
+          "hello_world_new_block": "บล็อกใหม่!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "บล็อกใหม่!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "บล็อกใหม่!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "บล็อกใหม่!",
+          "poetry_foreground": "บล็อกใหม่!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "บล็อกใหม่!",
+          "poetry_multiple_sprites": "บล็อกใหม่!",
+          "poetry_new_block": "บล็อกใหม่!",
+          "poetry_selector": "เลือกบทกวีหรือใส่บทกวีของตัวเองได้เลย!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "บล็อกใหม่!",
+          "poetry_music": "บล็อกใหม่!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "บล็อกใหม่!",
+          "poetry_sprite_stops": "บล็อกใหม่!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "บล็อกใหม่!",
+          "poetry_remove_sprite": "บล็อกใหม่!"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "helloworld_animals_location": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_animals_multi": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "helloworld_emoji_location": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
+        },
+        "helloworld_food_click": {
+          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "helloworld_food_location": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_food_multi": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "ใช้บล็อกนี้เพื่อตั้งภาพพื้นหลังใหม่"
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "ใช้บล็อกนี้พร้อมกับพฤติกรรมอันใดอันหนึ่งด้านล้าง"
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "คลิกที่นี่เพื่อใช้งานโค้ด"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "เพิ่มบล็อกอีเวนต์นี้ในฉากของคุณ"
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "คลิกที่นี่เพื่อเพิ่มเครื่องแต่งกายในโปรเจกต์"
+        },
+        "helloworld_retro_location": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_retro_multi": {
+          "pin": "ปักหมุด"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "ใช้บล็อกนี้เพื่อทำให้สไปร์ทพูดได้",
+          "hello_world_make_sprite": "ใช้บล็อกนี้เพื่อสร้างสไปร์ท"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "ค้นหาบล็อกโค้ดที่นี่ ",
+          "run_button": "ทดสอบแอนิเมชั่นของคุณด้วยปุ่มนี้"
+        },
+        "AppLab Intro 7 - Change Screen Color": {
+          "applab_hoc_finish": "หน้าจอเปลี่ยนเป็นสีเขียวหรือไม่? ถ้าใช่ ให้กด 'เสร็จสิ้น' หากไม่เป็นเช่นนั้น ให้กด 'รีเซ็ต' เปลี่ยนโค้ดของคุณ แล้วกด 'เล่น' อีกครั้ง"
+        },
+        "AppLab Intro 7 - thisOrThatAddButton": {
+          "AppLabHoCFinal11": "ตอนนี้คุณอยู่ในโหมดการออกแบบ"
+        },
+        "Function intro Ryan": {
+          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
+        },
+        "Function intro Ryan_2019": {
+          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
+        },
+        "Function intro Ryan_2020": {
+          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
+        },
+        "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "คำแนะนำเล็กๆ น้อยๆ นี้บอกให้คอมพิวเตอร์เรียกใช้โค้ดก้อนใหญ่ที่มีชื่อเดียวกันในพื้นที่ทำงาน"
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "กด \"เล่น\" เพื่อเคลื่อนที่"
+        },
+        "MC_HOC_2017_03_Cole": {
+          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
+        },
+        "MC_HOC_2017_03_Cole_2019": {
+          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
+        },
+        "MC_HOC_2017_03_Cole_2020": {
+          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
+        },
+        "MC_HOC_2017_03_Cole_2021": {
+          "MC_HOC_2017_03_Cole_1": "นี่คือลูป 'ทำซ้ำ'! คลิกที่นี่ในพื้นที่ทำงานและเพิ่มโค้ดที่คุณต้องการทำซ้ำหลายๆครั้ง"
+        },
+        "MC_HOC_2017_04_Cole": {
+          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
+        },
+        "MC_HOC_2017_04_Cole_2019": {
+          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
+        },
+        "MC_HOC_2017_04_Cole_2020": {
+          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
+        },
+        "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "เอเจนท์สามารถโฉบเหนือน้ำได้ แต่ผู้เล่นทำไม่ได้!"
+        },
+        "MC_HOC_2017_06_Cole": {
+          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
+        },
+        "MC_HOC_2017_06_Cole_2019": {
+          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
+        },
+        "MC_HOC_2017_06_Cole_2020": {
+          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
+        },
+        "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_1": "คุณไม่สามารถทิ้งบล็อคเหล่านี้ได้ แต่คุณสามารถแก้ไขได้!"
+        },
+        "frozen line": {
+          "run": "กด \"เล่น\" เพื่อลองเล่นโปรแกรมของคุณ!"
         }
       }
     }

@@ -188,6 +188,9 @@ kk:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": шағылу
+            "'sound://category_animals/cow.mp3'": сиыр
+            "'sound://category_animals/sheep.mp3'": қой
+            "'sound://category_animals/chicken.mp3'": тауық
             "'sound://category_digital/jump_7.mp3'": секіру
       gamelab_randColor:
         text: кездейсоқ түс
@@ -338,6 +341,31 @@ kk:
             '"down"': төмен қарай
             '"left"': солға қарай
             '"right"': оңға қарай
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': жүрегтер
+            '"rainbow"': кемпірқосақ
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': түн
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': секіру
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': бұлтты
+            '"hearts"': жүрегтер
+          PALETTE:
+            '"rainbow"': кемпірқосақ
+            '"winter"': қыс
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': жүрегтер
       RyanLab_moveForward:
         text: алдыға қозғалу
       RyanLab_turnLeft:

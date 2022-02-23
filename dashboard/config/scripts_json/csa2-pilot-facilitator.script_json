@@ -5,18 +5,21 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSA",
-      "is_migrated": true,
-      "hideable_lessons": true,
-      "weekly_instructional_minutes": 225,
-      "show_calendar": true,
-      "include_student_lesson_plans": true,
       "has_verified_resources": true,
-      "pilot_experiment": "csa-pilot-facilitators"
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "pilot_experiment": "csa-pilot-facilitators",
+      "show_calendar": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-09-23 17:58:34 UTC",
+    "serialized_at": "2022-01-29 00:54:04 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa2-pilot-facilitator"
     }
@@ -315,7 +318,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "Students complete a Free Response Question (FRQ) in this lesson. They annotate a College Board FRQ as a class, then write code to answer an FRQ.\n\nThe goals of this lesson are:\n* Practice reading a College Board FRQ\n* Practice handwriting an FRQ\n* Serve as a summative assessment of the content from Unit 2\n\nWhile the format of this FRQ is not the same as an FRQ on the AP exam, it helps students develop strategies for approaching these questions. ",
-        "preparation": "* Print out and post the Combo Class FRQ Print Out \n* Print copies of FRQ Writing (one per student)\n* Print copies of College Board FRQ (one per student)\n* Print copies of FRQ Graphic Organizer (one per student)\n* Print copies of the FRQ Scoring Guide (one per pair of students)\n* Gather 1 index card per student\n* (Optional) Gather a yellow, blue, orange, and pink colored pencil or marker for each student",
+        "preparation": "* Print out and post the Burger Class FRQ Print Out \n* Print copies of FRQ Writing (one per student)\n* Print copies of College Board FRQ (one per student)\n* Print copies of FRQ Graphic Organizer (one per student)\n* Print copies of the FRQ Scoring Guide (one per pair of students)\n* Gather 1 index card per student\n* (Optional) Gather a yellow, blue, orange, and pink colored pencil or marker for each student",
         "student_overview": "Today you complete a Free Response Question (FRQ). You do this by first looking and annotating an FRQ with peers, then handwriting code to solve a problem, following up with scoring your solution with a partner. "
       },
       "seeding_key": {
@@ -448,6 +451,19 @@
       }
     },
     {
+      "key": "7b2bfba0-2be1-4c53-8653-de63fe10facf",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b2bfba0-2be1-4c53-8653-de63fe10facf",
+        "lesson.key": "Defining Attributes",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
       "key": "7e6a5f45-c3bf-4cbb-bc8a-ed7cbfb2ceb3",
       "position": 1,
       "properties": {
@@ -484,6 +500,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "833dc71d-c5db-4f3a-93db-ead35f2e0a75",
+        "lesson.key": "Using Variables",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
+      "key": "991d3e53-963a-4c51-a259-6809b78c7638",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "991d3e53-963a-4c51-a259-6809b78c7638",
         "lesson.key": "Using Variables",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot-facilitator"
@@ -532,6 +561,19 @@
       }
     },
     {
+      "key": "81ac9269-d97e-445f-93ba-9105ffc8527a",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "81ac9269-d97e-445f-93ba-9105ffc8527a",
+        "lesson.key": "Writing Constructors",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
       "key": "6ef5ad55-388d-4982-9116-a952524da40f",
       "position": 1,
       "properties": {
@@ -568,6 +610,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "d92893ec-8ab6-4f92-8bd4-5cc5c790c5c4",
+        "lesson.key": "Adding Multiple Constructors",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
+      "key": "6d0c5045-3242-4216-a037-466ba3896da0",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6d0c5045-3242-4216-a037-466ba3896da0",
         "lesson.key": "Adding Multiple Constructors",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot-facilitator"
@@ -616,6 +671,19 @@
       }
     },
     {
+      "key": "12d1a41e-7396-445b-ace6-c3f8ecb479ca",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12d1a41e-7396-445b-ace6-c3f8ecb479ca",
+        "lesson.key": "Manipulating Variables and Object Data",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
       "key": "6ade01bf-8194-4759-a50f-0bc11c948151",
       "position": 1,
       "properties": {
@@ -652,6 +720,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "a7a76c6b-09d9-488b-a36c-5dc244449dd4",
+        "lesson.key": "Minimizing Errors in Initialization",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
+      "key": "4db487bd-a5d6-4904-a8db-f4f8f8f73906",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4db487bd-a5d6-4904-a8db-f4f8f8f73906",
         "lesson.key": "Minimizing Errors in Initialization",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot-facilitator"
@@ -700,6 +781,19 @@
       }
     },
     {
+      "key": "9880ac29-bcdf-49ca-8d3e-93d40f20d549",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9880ac29-bcdf-49ca-8d3e-93d40f20d549",
+        "lesson.key": "Writing Constructors for Hierarchies",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
       "key": "b5a1dd47-a2c4-452a-ab93-a5d4a046e187",
       "position": 1,
       "properties": {
@@ -736,6 +830,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f8aa3ea0-fe5b-4951-bca5-2efcedd8dfa6",
+        "lesson.key": "Accessing Object Data",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
+      "key": "5fa7e5b0-2b3b-494e-8c25-ae3b8853f192",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5fa7e5b0-2b3b-494e-8c25-ae3b8853f192",
         "lesson.key": "Accessing Object Data",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot-facilitator"
@@ -784,6 +891,19 @@
       }
     },
     {
+      "key": "3368be3a-cac4-4bbf-bba0-a7abb34585df",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3368be3a-cac4-4bbf-bba0-a7abb34585df",
+        "lesson.key": "Modifying Object Data",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
       "key": "efd91027-f077-406b-9135-db834518f649",
       "position": 1,
       "properties": {
@@ -820,6 +940,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "563154c3-6cd0-4918-af21-7ea5c4a0e4f7",
+        "lesson.key": "Displaying Object Information",
+        "lesson_group.key": "lesson group",
+        "script.name": "csa2-pilot-facilitator"
+      }
+    },
+    {
+      "key": "e92f41c9-7a55-44dc-910c-b04bb97f69b3",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e92f41c9-7a55-44dc-910c-b04bb97f69b3",
         "lesson.key": "Displaying Object Information",
         "lesson_group.key": "lesson group",
         "script.name": "csa2-pilot-facilitator"
@@ -1224,6 +1357,17 @@
       }
     },
     {
+      "key": "4dff76a7-3913-4396-8ead-74b70a2284a9",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "4dff76a7-3913-4396-8ead-74b70a2284a9",
+        "lesson_activity.key": "7b2bfba0-2be1-4c53-8653-de63fe10facf"
+      }
+    },
+    {
       "key": "5205e4a3-1367-4e1b-87c3-ab846e42a515",
       "position": 1,
       "properties": {
@@ -1562,6 +1706,17 @@
       }
     },
     {
+      "key": "9edcf608-f081-4857-bd30-0e7cc94e01f0",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n* Topic Questions 1.4\n* Topic Questions 2.6\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "9edcf608-f081-4857-bd30-0e7cc94e01f0",
+        "lesson_activity.key": "991d3e53-963a-4c51-a259-6809b78c7638"
+      }
+    },
+    {
       "key": "e54148e5-03d3-40c7-9ac6-adae983e9365",
       "position": 1,
       "properties": {
@@ -1724,8 +1879,20 @@
       }
     },
     {
-      "key": "a8d8f606-2dc0-4f40-b8b1-697de2de577d",
+      "key": "7c3cc275-9387-4511-9bba-b907c40fe466",
       "position": 11,
+      "properties": {
+        "description": "When we call the constructor to create a `Painter` object, the constructor call interrupts the sequential execution of statements, causing the program to first execute the statements in the method or constructor before continuing. Once the last statement in the method or constructor has executed or a return statement is executed, flow of control is returned to the point immediately following where the method or constructor was called. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7c3cc275-9387-4511-9bba-b907c40fe466",
+        "lesson_activity.key": "046137f0-f0ea-4d22-8776-d383da52c3b8"
+      }
+    },
+    {
+      "key": "a8d8f606-2dc0-4f40-b8b1-697de2de577d",
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3 and 4 on Code Studio. Students create a `Dessert` object and use Scanner to get user input for values for the instance variables.",
         "progression_name": "Creating a Dessert Object",
@@ -1781,6 +1948,17 @@
       "seeding_key": {
         "activity_section.key": "e764a287-254d-4a8d-96a7-9aeb5e9c8b88",
         "lesson_activity.key": "79890174-9899-42f8-a260-4fcf5c0d7e6c"
+      }
+    },
+    {
+      "key": "45a9c243-4494-45d3-9d88-e55d3361e3ea",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "45a9c243-4494-45d3-9d88-e55d3361e3ea",
+        "lesson_activity.key": "81ac9269-d97e-445f-93ba-9105ffc8527a"
       }
     },
     {
@@ -1997,6 +2175,17 @@
       }
     },
     {
+      "key": "2413200a-2954-4685-b6f0-8f98626fc9b4",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "2413200a-2954-4685-b6f0-8f98626fc9b4",
+        "lesson_activity.key": "6d0c5045-3242-4216-a037-466ba3896da0"
+      }
+    },
+    {
       "key": "6af56e40-a160-4d27-a671-c55779660113",
       "position": 1,
       "properties": {
@@ -2150,6 +2339,17 @@
       "seeding_key": {
         "activity_section.key": "282c983b-7fc4-49ae-94be-ffaf6b09bb08",
         "lesson_activity.key": "13f5754c-5c03-4633-8d2c-76632e51148d"
+      }
+    },
+    {
+      "key": "e5376c9e-6a96-4210-9040-34f6f4e6bdbe",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5376c9e-6a96-4210-9040-34f6f4e6bdbe",
+        "lesson_activity.key": "12d1a41e-7396-445b-ace6-c3f8ecb479ca"
       }
     },
     {
@@ -2543,10 +2743,21 @@
       }
     },
     {
+      "key": "6b20c42b-7b56-4eee-a718-9b75e0b3c86e",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.2\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b20c42b-7b56-4eee-a718-9b75e0b3c86e",
+        "lesson_activity.key": "4db487bd-a5d6-4904-a8db-f4f8f8f73906"
+      }
+    },
+    {
       "key": "8db7f441-7d5e-4e91-aa2f-72343c0a9f72",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce class hierarchies.\n* Each class in a class hierarchy inherits from the class above it.\n* All classes implicitly inherit from a universal subclass called `Object`.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Class Hierarchy cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With their partner, students arrange the cards to create a class hierarchy of the `Painter`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce class hierarchies.\n* Each class in a class hierarchy inherits from the class above it.\n* All classes implicitly inherit from a universal superclass called `Object`.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of Class Hierarchy cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With their partner, students arrange the cards to create a class hierarchy of the `Painter`.",
         "name": "Constructing a Class Hierarchy",
         "tips": [
           {
@@ -2755,6 +2966,17 @@
       "seeding_key": {
         "activity_section.key": "4b61fe4c-5ab2-4b06-8baf-dc1096541532",
         "lesson_activity.key": "8cda79d1-8e93-4177-ba84-9a642fb75121"
+      }
+    },
+    {
+      "key": "0a0ba72c-ed42-49fb-afbc-5c6c387a33d8",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.5\n* Topic Questions 5.4\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a0ba72c-ed42-49fb-afbc-5c6c387a33d8",
+        "lesson_activity.key": "9880ac29-bcdf-49ca-8d3e-93d40f20d549"
       }
     },
     {
@@ -3088,6 +3310,17 @@
       }
     },
     {
+      "key": "9ca0af87-fbf7-49f6-8393-c43ad1692695",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n* Topic Questions 5.5\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "9ca0af87-fbf7-49f6-8393-c43ad1692695",
+        "lesson_activity.key": "5fa7e5b0-2b3b-494e-8c25-ae3b8853f192"
+      }
+    },
+    {
       "key": "d4258a3b-4edc-49db-bbc5-cf475964070d",
       "position": 1,
       "properties": {
@@ -3397,6 +3630,17 @@
       }
     },
     {
+      "key": "95bcd010-3882-4263-8985-1f31c67cef46",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "95bcd010-3882-4263-8985-1f31c67cef46",
+        "lesson_activity.key": "3368be3a-cac4-4bbf-bba0-a7abb34585df"
+      }
+    },
+    {
       "key": "0cd2b81a-07d4-4bf2-83dd-652ffb447974",
       "position": 1,
       "properties": {
@@ -3533,8 +3777,20 @@
       }
     },
     {
-      "key": "df3d2c80-f14d-482c-aa4a-7b86cc1cedf9",
+      "key": "22836880-7961-4ae4-bdd4-9c7ba3dbb0e2",
       "position": 7,
+      "properties": {
+        "description": "When we wrote our `toString()` method to print the values stored in the instance variables, we concatenated those primitive values with a `String` object. This causes implicit conversion of these values to `String` objects.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "22836880-7961-4ae4-bdd4-9c7ba3dbb0e2",
+        "lesson_activity.key": "db41289d-0d0a-4930-8c00-16633dcc791f"
+      }
+    },
+    {
+      "key": "df3d2c80-f14d-482c-aa4a-7b86cc1cedf9",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** After students have written their `toString()` method and refactored `printInfo()`, remind students how to print information to the console using the `System.out.print()` Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 2 on Code Studio to test their implementations."
       },
@@ -3545,7 +3801,7 @@
     },
     {
       "key": "fae897c2-c4a6-4256-872c-e3e03315d126",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce formatted output using escape sequences.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define escape sequences.\n* Have students predict the output before clicking through the animated slides to reveal the answer.\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> String formatted with a quote\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> String formatted with new lines\n    * <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> String formatted with backslashes"
       },
@@ -3556,7 +3812,7 @@
     },
     {
       "key": "a9f8dfd6-6047-442d-8bb2-4e1ebea87e1f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students refactor `toString()` and `printInfo()` to include formatting. Have students proceed to Level 4 to complete the Check for Understanding.",
         "progression_name": "Formatting toString()"
@@ -3568,7 +3824,7 @@
     },
     {
       "key": "ef13e97c-121c-4fef-8578-db78f7e588a9",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "While `printInfo()` always prints the string, `toString()` creates the string. This subtle difference is something we can leverage to write DRY code: When writing `toString()` methods for objects with a “has-a” relationship, we can call the `toString()` of objects stored as instance variables when writing the class’s own `toString()`.",
         "remarks": true
@@ -3580,7 +3836,7 @@
     },
     {
       "key": "2150a0ab-24e6-4b40-b58d-0699f2a4ea8d",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write a `toString()` method for `FoodTruck`, which calls the `toString()` of the `Dessert`.",
         "progression_name": "FoodTruck toString()"
@@ -3592,7 +3848,7 @@
     },
     {
       "key": "d5f2f788-53c5-4390-8955-b3f18ca6313a",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the alternate approach to Level 5. Instead of calling `toString()` of the `Dessert`, when an object is concatenated with a `String`, the object’s `toString()` is implicitly called."
       },
@@ -3654,6 +3910,17 @@
       "seeding_key": {
         "activity_section.key": "b64fd1a6-9282-4b2c-a12b-519176e34f6c",
         "lesson_activity.key": "563154c3-6cd0-4918-af21-7ea5c4a0e4f7"
+      }
+    },
+    {
+      "key": "3eb790d6-aa6f-4591-a627-7c84cb3fbef7",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.8\n* Topic Questions 5.9\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "3eb790d6-aa6f-4591-a627-7c84cb3fbef7",
+        "lesson_activity.key": "e92f41c9-7a55-44dc-910c-b04bb97f69b3"
       }
     },
     {
@@ -4233,7 +4500,7 @@
       "key": "c9d2faaf-d614-4db1-89bc-0505bb127da6",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pair students and distribute a copy of the FRQ Scoring Guide to each student.\n\n**Do This:** Ask students to evaluate their work with their partner using the Scoring Guide and complete the reflection on the last page of the FRQ Writing handout. Display the solution while moving through the slides: \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Combo` superclass and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `getName()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `getPrice()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `toString()` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What were you confident about? Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Help students process the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pair students and distribute a copy of the FRQ Scoring Guide to each student.\n\n**Do This:** Ask students to evaluate their work with their partner using the Scoring Guide and complete the reflection on the last page of the FRQ Writing handout. Display the solution while moving through the slides: \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Burger` subclass and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `getCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation and construction for the `setCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `toString()` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What were you confident about? Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Help students process the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations.",
         "duration": "8",
         "name": "FRQ Scoring",
         "tips": [
@@ -5911,6 +6178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -5933,6 +6203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -5955,6 +6228,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -6760,8 +7036,8 @@
       "url": "https://docs.google.com/document/d/1sfwKOEf7Wp1Bwd2Mo81I-4tAbi8M9rpFW0QQ-FIp8kw/edit",
       "key": "_key_college_board_frq",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_college_board_frq"
@@ -6772,8 +7048,8 @@
       "url": "https://docs.google.com/document/d/1kMfDP6rlD1NB_T8MaF33Iq_bkfba0Uo55eGzpzMqtpM/edit?usp=sharing",
       "key": "_key_construct_an_object_cards",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_construct_an_object_cards"
@@ -6784,8 +7060,8 @@
       "url": "https://docs.google.com/document/d/11kEvOxuygD9By8YSP9kezKkaDbUXuJ7PnIrBE0vLo4I/edit?usp=sharing",
       "key": "_key_defining_attributes",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_defining_attributes"
@@ -6796,8 +7072,8 @@
       "url": "https://docs.google.com/document/d/1DUZaRcBzsr1EgUwfMW0H9HCufKR40o8RMTz0zIe-qCg/edit",
       "key": "_key_diagramming_scope",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_diagramming_scope"
@@ -6808,8 +7084,8 @@
       "url": "https://docs.google.com/document/d/1aBxSZLeaH3r60ceyj7yFkj4skVi6hDAAeP8wYMhrnSI/edit?usp=sharing",
       "key": "_key_exploring_expressions_version_a",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_exploring_expressions_version_a"
@@ -6820,8 +7096,8 @@
       "url": "https://docs.google.com/document/d/19ymYGh-7Q6SdpKf1T1HAPdA7FqtapSPNoI5q0tKMhTc/edit",
       "key": "_key_exploring_expressions_version_b",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_exploring_expressions_version_b"
@@ -6832,8 +7108,8 @@
       "url": "https://docs.google.com/document/d/1wnSXd6bkEkyDHL5xB9IRPlxO3pf8Ufj6SJDNeF4sMhs/edit?usp=sharing",
       "key": "_key_frq_graphic_organizer",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_frq_graphic_organizer"
@@ -6844,8 +7120,8 @@
       "url": "https://docs.google.com/document/d/1S957n2yvo3Z8313gD0q9od2y4skpT47VDqnolLZVXEA/edit?usp=sharing",
       "key": "_key_frq_writing",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_frq_writing"
@@ -6856,8 +7132,8 @@
       "url": "https://docs.google.com/document/d/1-3fg4PJ6RZNbRSYGwcQ0IdFza4Z31N7p2DLRJ9cfRlk/edit?usp=sharing",
       "key": "_key_u2l10_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u2l10_extra_practice"
@@ -6868,8 +7144,8 @@
       "url": "https://docs.google.com/document/d/1uS6LHb6YUgAPII0wW8PWjT7fRkd1LrgHVG5YunSPqMs/edit?usp=sharing",
       "key": "_key_u2l1_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u2l1_extra_practice"
@@ -6880,8 +7156,8 @@
       "url": "https://docs.google.com/document/u/2/d/1hfTBO8HGWv25LCdXUp8KGVP6sV_yASXg3j69STJHkZ4/edit",
       "key": "_key_u2l2_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u2l2_extra_practice"
@@ -6892,8 +7168,8 @@
       "url": "https://docs.google.com/document/d/1_T4D2W3Erk80Az9auTymxzlUPEU863ARrH9fqthXbfs/edit?usp=sharing",
       "key": "_key_u2l3_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u2l3_extra_practice"
@@ -6904,8 +7180,8 @@
       "url": "https://docs.google.com/document/d/1YHxcaWVxO7j1dJHWvY5xEzCZfZnBQMT-5ULWhrPRFCY/edit?usp=sharing",
       "key": "_key_u2l4_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u2l4_extra_practice"
@@ -6916,8 +7192,8 @@
       "url": "https://docs.google.com/document/d/1y7s4q-hAw37m155j7AZAhU0_M7_RE4EZx-yxcKLYW0Q/edit#",
       "key": "_key_u2l5_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u2l5_extra_practice"
@@ -6928,8 +7204,8 @@
       "url": "https://docs.google.com/document/d/1Z3AaEnAEN_0Aop_U51i-kr1qNVjKEcwk99G8W6yhbAE/edit",
       "key": "_key_u2l6_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u2l6_extra_practice"
@@ -6940,8 +7216,8 @@
       "url": "https://docs.google.com/document/d/1tiqjMPq1RWhgNVz43RjY2vPz17OtlyELQL4wjEPuOOQ/edit",
       "key": "_key_u2l7_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u2l7_extra_practice"
@@ -6952,8 +7228,8 @@
       "url": "https://docs.google.com/document/d/1Z71tm624GiTDSPXVPydY51semtue1Flh4kHAZ-mU3Bo/edit?usp=sharing",
       "key": "_key_u2l8_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u2l8_extra_practice"
@@ -6964,8 +7240,8 @@
       "url": "https://docs.google.com/document/d/17TkAhTIZuk80n7OTiIYSJzgj4XWMlOWWjC13VXQr5fU/edit",
       "key": "_key_u2l9_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u2l9_extra_practice"
@@ -6976,8 +7252,8 @@
       "url": "https://docs.google.com/presentation/d/1Op_DvPrHFjFi-0h1mrTnontH9WgBOBxO48_TJ0uwVG0/edit#slide=id.p",
       "key": "_key_vocabulary_crossword",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_vocabulary_crossword"
@@ -6988,8 +7264,8 @@
       "url": "https://docs.google.com/document/d/15a8LPjxmhUUFkSrHb89ZEzRV2UI5WP9ZF9Z4MSaxuTs/edit?usp=sharing",
       "key": "_key_writing_constructors_guided_notes",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_writing_constructors_guided_notes"
@@ -7000,8 +7276,8 @@
       "url": "https://youtu.be/7Cs7uEasfmg",
       "key": "accepting_user_input",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "accepting_user_input"
@@ -7045,8 +7321,8 @@
       "url": "https://youtu.be/ILSs9qkB9Es",
       "key": "arithmetic_operators",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "arithmetic_operators"
@@ -7057,8 +7333,8 @@
       "url": "https://docs.google.com/presentation/d/1PPqhis5fMdGtoPXWl8S5yRWeHaMBZMDnTYBpAoGy6Oc/edit#slide=id.gd042471297_0_68",
       "key": "card_sort",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "card_sort"
@@ -7069,8 +7345,8 @@
       "url": "https://docs.google.com/presentation/d/1Ihkko5zmxClfxaRxdplFwywh7siGl_jfCsP1f9Ui-fk/edit?usp=sharing",
       "key": "class_hierarchy_cards",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "class_hierarchy_cards"
@@ -7081,20 +7357,20 @@
       "url": "https://drive.google.com/file/d/1rrggcOwUzIzbBLqCPEomrevozpYo09AB/view?usp=sharing",
       "key": "college_board_frq",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "college_board_frq"
       }
     },
     {
-      "name": "Combo Class FRQ Print Out",
+      "name": "Burger Subclass FRQ Print Out",
       "url": "https://docs.google.com/document/d/1Vhwh3WWjpzYYC9B0aIuGapty1X6Zzf7bf1My9Hc0F-Y/edit?usp=sharing",
       "key": "combo_class_frq_print_out",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "combo_class_frq_print_out"
@@ -7105,8 +7381,8 @@
       "url": "https://docs.google.com/presentation/d/17TySKn5znJbjAerFkctXL54iVz6ZnhJCEKwLkWT6Wo4/edit?usp=sharing",
       "key": "construct_an_object_cards",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "construct_an_object_cards"
@@ -7117,8 +7393,8 @@
       "url": "https://youtu.be/kgcWKdI4s_c",
       "key": "constructors",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "constructors"
@@ -7129,8 +7405,8 @@
       "url": "https://docs.google.com/document/d/1O6ScN52Cdi70Hz4vifCAcIcySoB2Wpw0z3DivFOi9ug/edit?usp=sharing",
       "key": "create_your_own_class",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "create_your_own_class"
@@ -7141,8 +7417,8 @@
       "url": "https://youtu.be/X5PwhMRPx3A",
       "key": "creating_variables",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "creating_variables"
@@ -7153,8 +7429,8 @@
       "url": "https://drive.google.com/file/d/1DjctdSw-oAtpSKFKj9uz4oyqEduORhIk/view?usp=sharing",
       "key": "defining_attributes_-_classes_foldables",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "defining_attributes_-_classes_foldables"
@@ -7165,8 +7441,8 @@
       "url": "https://drive.google.com/file/d/1aD0rS9pTNyxJ_ymN4fNboZsAuus5PQ_c/view?usp=sharing",
       "key": "defining_attributes_-_main_method",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "defining_attributes_-_main_method"
@@ -7177,8 +7453,8 @@
       "url": "https://docs.google.com/document/d/1l1O-YQ00HoqcJaZpyyCrXAhZ3wFrfoFHT4Jj43QVTAs/edit",
       "key": "diagramming_scope",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "diagramming_scope"
@@ -7189,8 +7465,8 @@
       "url": "https://youtu.be/jQOXijSTMK4",
       "key": "evaluating_expressions",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "evaluating_expressions"
@@ -7201,8 +7477,8 @@
       "url": "https://docs.google.com/document/d/10AmwHOT2NA5JujTKj41EvzbmRfrKJbkSFyC8Veic274/view",
       "key": "exploring_expressions_version_a",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "exploring_expressions_version_a"
@@ -7213,8 +7489,8 @@
       "url": "https://docs.google.com/document/d/1VvJKwMk2L-QQcdDskj9eSpw9mIKvZNJk946FBfoD5Rc/edit?usp=sharing",
       "key": "exploring_expressions_version_b",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "exploring_expressions_version_b"
@@ -7225,8 +7501,8 @@
       "url": "https://docs.google.com/document/d/134kZS6h1LG_Epr3w0ZA5zZeUJf3h3G1P3loA3syxfG8/edit?usp=sharing",
       "key": "frq_graphic_organizer",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "frq_graphic_organizer"
@@ -7237,8 +7513,8 @@
       "url": "https://docs.google.com/document/d/1Ly_jDtjcrItGJBTQ_O6lVkgU-NbvG-8vWJTxYLph5dE/edit?usp=sharing",
       "key": "frq_scoring_guide",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "frq_scoring_guide"
@@ -7249,8 +7525,8 @@
       "url": "https://docs.google.com/document/d/1ScZdiH6Y872_qLMET0lzucPvkzA0S8j-my0eq7ITv4c/edit?usp=sharing",
       "key": "frq_writing",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "frq_writing"
@@ -7261,8 +7537,8 @@
       "url": "https://youtu.be/uz4ItwOp5EE",
       "key": "instance_variables_and_attributes",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "instance_variables_and_attributes"
@@ -7273,8 +7549,8 @@
       "url": "https://youtu.be/JIO3Uy0emFM",
       "key": "methods_that_return",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "methods_that_return"
@@ -7285,8 +7561,8 @@
       "url": "https://youtu.be/TCKJPP2tTEE",
       "key": "mutator_methods",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "mutator_methods"
@@ -7297,8 +7573,8 @@
       "url": "https://docs.google.com/document/d/1OWtZ9NBepU91hBB8OngMoEBiM1RS1b5RDA3ivEh9hDI/edit?usp=sharing",
       "key": "neighborhood_store_management_project_peer_interview_cards",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "neighborhood_store_management_project_peer_interview_cards"
@@ -7309,8 +7585,8 @@
       "url": "https://docs.google.com/document/d/1hnwKcVP2keAA2N11gGjLOiHJ8vOvitTktc5FmuTot44/edit?usp=sharing",
       "key": "neighborhood_store_management_project_planning_guide",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "neighborhood_store_management_project_planning_guide"
@@ -7321,8 +7597,8 @@
       "url": "https://docs.google.com/document/d/1ayg5Z5kdt5Pra6uXtRpRQXE2dQh5ZWL3IuJ0CgRERcY/edit?usp=sharing",
       "key": "neighborhood_store_management_project_planning_guide_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "neighborhood_store_management_project_planning_guide_1"
@@ -7333,8 +7609,8 @@
       "url": "https://youtu.be/QRagJB4R-Qw",
       "key": "overloaded_constructors",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "overloaded_constructors"
@@ -7345,8 +7621,8 @@
       "url": "https://docs.google.com/document/d/1OZltNkaoYF7gkHsaEUnYovjg6MceYGFan__UMCjOJeM/edit?usp=sharing",
       "key": "quiz_quiz_trade",
       "properties": {
-        "type": "Handout",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "quiz_quiz_trade"
@@ -7357,8 +7633,8 @@
       "url": "https://drive.google.com/file/d/1szlGRNm7MEr9cD_QFi3nqzryqmDMsLK1/view?usp=sharing",
       "key": "scope",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "scope"
@@ -7369,8 +7645,8 @@
       "url": "https://youtu.be/SCqd19WjSYs",
       "key": "the_importance_of_code_refactoring",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the_importance_of_code_refactoring"
@@ -7381,8 +7657,8 @@
       "url": "https://youtu.be/gJKC_SkyODc",
       "key": "the_tostring_method",
       "properties": {
-        "type": "Video",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the_tostring_method"
@@ -7393,8 +7669,8 @@
       "url": "https://docs.google.com/document/d/1ESdmV6hSHu7NkSA2folLcorX84RrBpmF_kEWhEWm7jM/edit?usp=sharing",
       "key": "u2l10_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l10_extra_practice"
@@ -7405,8 +7681,8 @@
       "url": "https://docs.google.com/document/d/1tDn_h4BVavcFY-_YFUsxV6W4OUHk0OgRZKTNrHRI8NA/edit?usp=sharing",
       "key": "u2l1_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l1_extra_practice"
@@ -7417,8 +7693,8 @@
       "url": "https://docs.google.com/document/u/2/d/1kQFOmOfKMGpbBp68XCRgsFmG_h_tWxJaLGONpKADdwQ/edit",
       "key": "u2l2_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l2_extra_practice"
@@ -7429,8 +7705,8 @@
       "url": "https://docs.google.com/document/d/1b8J0XpAotSxPPK2AvnBPOZIA1GhKgwaio5Hswj6GRuY/edit?usp=sharing",
       "key": "u2l3_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l3_extra_practice"
@@ -7441,8 +7717,8 @@
       "url": "https://docs.google.com/document/d/12YjXgxnQNdmWvs9Q5KzeVemm8lBnx-EfEe_1R0QsGTU/edit?usp=sharing",
       "key": "u2l4_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l4_extra_practice"
@@ -7453,8 +7729,8 @@
       "url": "https://docs.google.com/document/d/1Sng7ML-9DYoPyqF64de2aI1wCii5Tai0mtaEn4bidZA/edit#",
       "key": "u2l5_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l5_extra_practice"
@@ -7465,8 +7741,8 @@
       "url": "https://docs.google.com/document/d/1fzeOD9y0KpGqCYgmTfO3ZQgk7nlnGvKSYg4NMzTiAGM/edit",
       "key": "u2l6_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l6_extra_practice"
@@ -7477,8 +7753,8 @@
       "url": "https://docs.google.com/document/d/1ABYjTxmUhmPDUOqmQ-LXtVvDcGZgeONHtPh-RFxQk7c/edit",
       "key": "u2l7_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l7_extra_practice"
@@ -7489,8 +7765,8 @@
       "url": "https://docs.google.com/document/d/1mOczdDWDouHfpRdlngTOobfMb3AS3oIoLADV5vhTju0/edit?usp=sharing",
       "key": "u2l8_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l8_extra_practice"
@@ -7501,8 +7777,8 @@
       "url": "https://docs.google.com/document/d/1_XHrhBK2o1vYFtfgv5HGAq86STYCr4IC9qh7CU3h5IY/edit",
       "key": "u2l9_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u2l9_extra_practice"
@@ -7513,8 +7789,8 @@
       "url": "https://docs.google.com/document/d/1z7Ez37_PTZizTX65qKHHcQX6U9FSTs6RFGZ7vXf6Hsg/edit?usp=sharing",
       "key": "unit_2_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_2_guide"
@@ -7525,8 +7801,8 @@
       "url": "https://docs.google.com/presentation/d/1kfzkThzPNV9xM1IJca8ySP7T2spBvzw03kze9k46H4I/edit?usp=sharing",
       "key": "unit_2_presentation_slides",
       "properties": {
-        "type": "Slides",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "unit_2_presentation_slides"
@@ -7537,8 +7813,8 @@
       "url": "https://docs.google.com/presentation/d/1GgW8Cj9mjcym6DmUw5Rd83yIR4-9EtaSZIr7hOPa0QM/edit?usp=sharing",
       "key": "variables_manipulatives",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "variables_manipulatives"
@@ -7549,8 +7825,8 @@
       "url": "https://docs.google.com/presentation/d/1ZJceJ7K_tj-Yszt81_uM1gY3oD0XprkTtdG5r5hDql8/edit#slide=id.p",
       "key": "vocabulary_crossword",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "vocabulary_crossword"
@@ -7561,8 +7837,8 @@
       "url": "https://docs.google.com/document/d/1Ffi0kn764VV99v_6jFKOdh_anzc8wmLIJnL59EN_KZQ/edit?usp=sharing",
       "key": "writing_constructors_guided_notes",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "writing_constructors_guided_notes"
@@ -8094,233 +8370,13 @@
   ],
   "vocabularies": [
     {
-      "key": "attribute",
-      "word": "Attribute",
-      "definition": "A characteristic of an object",
+      "key": "accessor_method",
+      "word": "Accessor Method",
+      "definition": "Gives the value stored in an instance variable",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
-      "key": "public",
-      "word": "public",
-      "definition": "Indicates that an instance variable or method is accessible from outside of the class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "public"
-      }
-    },
-    {
-      "key": "private",
-      "word": "private",
-      "definition": "Indicates that an instance variable or method is accessible only from within the class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "private"
-      }
-    },
-    {
-      "key": "instance_variable",
-      "word": "Instance Variable",
-      "definition": "A variable defined in a class which represents an attribute of an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "instance_variable"
-      }
-    },
-    {
-      "key": "has_a_relationship",
-      "word": "Has-A Relationship",
-      "definition": "The relationship between an object and its instance variables",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "has_a_relationship"
-      }
-    },
-    {
-      "key": "data_encapsulation",
-      "word": "Data Encapsulation",
-      "definition": "An object-oriented programming concept where the details of a class are hidden from the user; also referred to as information hiding",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "data_encapsulation"
-      }
-    },
-    {
-      "key": "boolean",
-      "word": "Boolean",
-      "definition": "A data type that can either be `true` or `false`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "boolean"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "Variable",
-      "definition": "A container that stores a value in memory",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "key": "declaration",
-      "word": "Declaration",
-      "definition": "Giving a name and data type to a variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "declaration"
-      }
-    },
-    {
-      "key": "initialization",
-      "word": "Initialization",
-      "definition": "Giving a starting value to a variable using the assignment operator (`=`)",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "initialization"
-      }
-    },
-    {
-      "key": "data_type",
-      "word": "Data Type",
-      "definition": "The format of the data that can be stored in a variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "data_type"
-      }
-    },
-    {
-      "key": "primitive_type",
-      "word": "Primitive Type",
-      "definition": "A basic data type that is predefined by Java",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "primitive_type"
-      }
-    },
-    {
-      "key": "reference_type",
-      "word": "Reference Type",
-      "definition": "A data type that contains a pointer to the memory location of an object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "reference_type"
-      }
-    },
-    {
-      "key": "assignment",
-      "word": "Assignment",
-      "definition": "Using the assignment operator (`=`) to initialize or change the value stored in a variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "assignment"
-      }
-    },
-    {
-      "key": "literal",
-      "word": "Literal",
-      "definition": "A source code representation of a value, such as a number or text",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "literal"
-      }
-    },
-    {
-      "key": "int",
-      "word": "int",
-      "definition": "A data type that can store integers, or whole numbers",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "int"
-      }
-    },
-    {
-      "key": "double",
-      "word": "double",
-      "definition": "A data type that can store a decimal number",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "double"
-      }
-    },
-    {
-      "key": "string",
-      "word": "String",
-      "definition": "A data type that contains a sequence of characters enclosed in double quotations (`\" \"`)",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "string"
-      }
-    },
-    {
-      "key": "null",
-      "word": "null",
-      "definition": "Indicates that the variable does not refer to any object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "null"
-      }
-    },
-    {
-      "key": "constructor",
-      "word": "Constructor",
-      "definition": "A block of code in the class that tells the computer how to create a new object",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "constructor"
-      }
-    },
-    {
-      "key": "initialize",
-      "word": "Initialize",
-      "definition": "Create a new object with a specific name and starting values for its attributes",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "initialize"
-      }
-    },
-    {
-      "key": "constructor_signature",
-      "word": "Constructor Signature",
-      "definition": "The first line of the constructor, which includes the constructor name and lists the object's attributes that can be specified when it is initialized",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "constructor_signature"
-      }
-    },
-    {
-      "key": "formal_parameter",
-      "word": "Formal Parameter",
-      "definition": "The name of the attribute in the constructor signature",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "formal_parameter"
+        "vocabulary.key": "accessor_method"
       }
     },
     {
@@ -8334,6 +8390,46 @@
       }
     },
     {
+      "key": "arithmeticexception",
+      "word": "ArithmeticException",
+      "definition": "An error caused by dividing by zero",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "arithmeticexception"
+      }
+    },
+    {
+      "key": "assignment",
+      "word": "Assignment",
+      "definition": "Using the assignment operator (`=`) to initialize or change the value stored in a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "assignment"
+      }
+    },
+    {
+      "key": "attribute",
+      "word": "Attribute",
+      "definition": "A characteristic of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "key": "boolean",
+      "word": "Boolean",
+      "definition": "A data type that can either be `true` or `false`",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
       "key": "call_by_value",
       "word": "Call By Value",
       "definition": "Copying the value of the actual parameter to the constructor's formal parameter",
@@ -8344,43 +8440,33 @@
       }
     },
     {
-      "key": "instantiate",
-      "word": "Instantiate",
-      "definition": "Calling the constructor to create an object",
+      "key": "compound_assignment_operator",
+      "word": "Compound Assignment Operator",
+      "definition": "Shortcut syntax (+=, -=, \\*=, /=, %=) to perform an operation (+, -, \\*, /, or %) on both operands and store the result into the operand on the left",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "instantiate"
+        "vocabulary.key": "compound_assignment_operator"
       }
     },
     {
-      "key": "local_variable",
-      "word": "Local Variable",
-      "definition": "A variable declared and accessible within a specific block of code",
+      "key": "concatenation",
+      "word": "Concatenation",
+      "definition": "Merging two strings into one",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "local_variable"
+        "vocabulary.key": "concatenation"
       }
     },
     {
-      "key": "default_value",
-      "word": "Default Value",
-      "definition": "A predefined value that is used by a program when the user does not provide a value",
+      "key": "constructor",
+      "word": "Constructor",
+      "definition": "A block of code in the class that tells the computer how to create a new object",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "default_value"
-      }
-    },
-    {
-      "key": "overloading",
-      "word": "Overloading",
-      "definition": "Defining two or more methods with the same name but different signatures",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "overloading"
+        "vocabulary.key": "constructor"
       }
     },
     {
@@ -8394,13 +8480,93 @@
       }
     },
     {
-      "key": "no_argument_constructor",
-      "word": "No-Argument Constructor",
-      "definition": "A constructor with no parameters",
+      "key": "constructor_signature",
+      "word": "Constructor Signature",
+      "definition": "The first line of the constructor, which includes the constructor name and lists the object's attributes that can be specified when it is initialized",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "no_argument_constructor"
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "key": "data_encapsulation",
+      "word": "Data Encapsulation",
+      "definition": "An object-oriented programming concept where the details of a class are hidden from the user; also referred to as information hiding",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_encapsulation"
+      }
+    },
+    {
+      "key": "data_type",
+      "word": "Data Type",
+      "definition": "The format of the data that can be stored in a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "key": "declaration",
+      "word": "Declaration",
+      "definition": "Giving a name and data type to a variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "declaration"
+      }
+    },
+    {
+      "key": "default_value",
+      "word": "Default Value",
+      "definition": "A predefined value that is used by a program when the user does not provide a value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "default_value"
+      }
+    },
+    {
+      "key": "dot_operator",
+      "word": "Dot Operator",
+      "definition": "Used to call a method in a class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dot_operator"
+      }
+    },
+    {
+      "key": "double",
+      "word": "double",
+      "definition": "A data type that can store a decimal number",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "double"
+      }
+    },
+    {
+      "key": "dry_principle",
+      "word": "DRY Principle",
+      "definition": "Stands for \"Don't Repeat Yourself\"; A software development principle to reduce repetition in code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dry_principle"
+      }
+    },
+    {
+      "key": "escape_sequence",
+      "word": "Escape Sequence",
+      "definition": "Starts with a `\\` to indicate how to display a `String`",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "escape_sequence"
       }
     },
     {
@@ -8424,63 +8590,23 @@
       }
     },
     {
-      "key": "concatenation",
-      "word": "Concatenation",
-      "definition": "Merging two strings into one",
+      "key": "formal_parameter",
+      "word": "Formal Parameter",
+      "definition": "The name of the attribute in the constructor signature",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "concatenation"
+        "vocabulary.key": "formal_parameter"
       }
     },
     {
-      "key": "compound_assignment_operator",
-      "word": "Compound Assignment Operator",
-      "definition": "Shortcut syntax (+=, -=, \\*=, /=, %=) to perform an operation (+, -, \\*, /, or %) on both operands and store the result into the operand on the left",
+      "key": "has_a_relationship",
+      "word": "Has-A Relationship",
+      "definition": "The relationship between an object and its instance variables",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "compound_assignment_operator"
-      }
-    },
-    {
-      "key": "arithmeticexception",
-      "word": "ArithmeticException",
-      "definition": "An error caused by dividing by zero",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "arithmeticexception"
-      }
-    },
-    {
-      "key": "operand",
-      "word": "Operand",
-      "definition": "The data that is operated on",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "operand"
-      }
-    },
-    {
-      "key": "scope",
-      "word": "Scope",
-      "definition": "Where a variable can be used",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "scope"
-      }
-    },
-    {
-      "key": "this_keyword",
-      "word": "this keyword",
-      "definition": "Used to refer to the current object in a method or constructor",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "this_keyword"
+        "vocabulary.key": "has_a_relationship"
       }
     },
     {
@@ -8494,23 +8620,173 @@
       }
     },
     {
-      "key": "super",
-      "word": "super",
-      "definition": "A keyword used to refer to the superclass",
+      "key": "initialization",
+      "word": "Initialization",
+      "definition": "Giving a starting value to a variable using the assignment operator (`=`)",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "super"
+        "vocabulary.key": "initialization"
       }
     },
     {
-      "key": "dry_principle",
-      "word": "DRY Principle",
-      "definition": "Stands for \"Don't Repeat Yourself\"; A software development principle to reduce repetition in code",
+      "key": "initialize",
+      "word": "Initialize",
+      "definition": "Create a new object with a specific name and starting values for its attributes",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "dry_principle"
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "key": "instance_variable",
+      "word": "Instance Variable",
+      "definition": "A variable defined in a class which represents an attribute of an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "instance_variable"
+      }
+    },
+    {
+      "key": "instantiate",
+      "word": "Instantiate",
+      "definition": "Calling the constructor to create an object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "instantiate"
+      }
+    },
+    {
+      "key": "int",
+      "word": "int",
+      "definition": "A data type that can store integers, or whole numbers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "int"
+      }
+    },
+    {
+      "key": "literal",
+      "word": "Literal",
+      "definition": "A source code representation of a value, such as a number or text",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "literal"
+      }
+    },
+    {
+      "key": "local_variable",
+      "word": "Local Variable",
+      "definition": "A variable declared and accessible within a specific block of code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "local_variable"
+      }
+    },
+    {
+      "key": "method_signature",
+      "word": "Method Signature",
+      "definition": "Consists of a name and parameter list",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "method_signature"
+      }
+    },
+    {
+      "key": "mutator_method",
+      "word": "Mutator Method",
+      "definition": "Changes the value stored in an instance variable",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "mutator_method"
+      }
+    },
+    {
+      "key": "no_argument_constructor",
+      "word": "No-Argument Constructor",
+      "definition": "A constructor with no parameters",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "no_argument_constructor"
+      }
+    },
+    {
+      "key": "null",
+      "word": "null",
+      "definition": "Indicates that the variable does not refer to any object",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "null"
+      }
+    },
+    {
+      "key": "operand",
+      "word": "Operand",
+      "definition": "The data that is operated on",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "operand"
+      }
+    },
+    {
+      "key": "overloading",
+      "word": "Overloading",
+      "definition": "Defining two or more methods with the same name but different signatures",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overloading"
+      }
+    },
+    {
+      "key": "override",
+      "word": "Override",
+      "definition": "Defining a method in a subclass with the same method signature as a method inherited from a superclass",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "override"
+      }
+    },
+    {
+      "key": "primitive_type",
+      "word": "Primitive Type",
+      "definition": "A basic data type that is predefined by Java",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "primitive_type"
+      }
+    },
+    {
+      "key": "private",
+      "word": "private",
+      "definition": "Indicates that an instance variable or method is accessible only from within the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "private"
+      }
+    },
+    {
+      "key": "public",
+      "word": "public",
+      "definition": "Indicates that an instance variable or method is accessible from outside of the class",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "public"
       }
     },
     {
@@ -8524,23 +8800,23 @@
       }
     },
     {
-      "key": "accessor_method",
-      "word": "Accessor Method",
-      "definition": "Gives the value stored in an instance variable",
+      "key": "reference_type",
+      "word": "Reference Type",
+      "definition": "A data type that contains a pointer to the memory location of an object",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "accessor_method"
+        "vocabulary.key": "reference_type"
       }
     },
     {
-      "key": "method_signature",
-      "word": "Method Signature",
-      "definition": "Consists of a name and parameter list",
+      "key": "return_by_value",
+      "word": "Return By Value",
+      "definition": "A copy of the value is given to where the method is called",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "method_signature"
+        "vocabulary.key": "return_by_value"
       }
     },
     {
@@ -8564,13 +8840,13 @@
       }
     },
     {
-      "key": "dot_operator",
-      "word": "Dot Operator",
-      "definition": "Used to call a method in a class",
+      "key": "scope",
+      "word": "Scope",
+      "definition": "Where a variable can be used",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "dot_operator"
+        "vocabulary.key": "scope"
       }
     },
     {
@@ -8584,23 +8860,43 @@
       }
     },
     {
-      "key": "return_by_value",
-      "word": "Return By Value",
-      "definition": "A copy of the value is given to where the method is called",
+      "key": "string",
+      "word": "String",
+      "definition": "A data type that contains a sequence of characters enclosed in double quotations (`\" \"`)",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "return_by_value"
+        "vocabulary.key": "string"
       }
     },
     {
-      "key": "mutator_method",
-      "word": "Mutator Method",
-      "definition": "Changes the value stored in an instance variable",
+      "key": "super",
+      "word": "super",
+      "definition": "A keyword used to refer to the superclass",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "mutator_method"
+        "vocabulary.key": "super"
+      }
+    },
+    {
+      "key": "this_keyword",
+      "word": "this keyword",
+      "definition": "Used to refer to the current object in a method or constructor",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "this_keyword"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A container that stores a value in memory",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
       }
     },
     {
@@ -8612,201 +8908,49 @@
       "seeding_key": {
         "vocabulary.key": "void_method"
       }
-    },
-    {
-      "key": "override",
-      "word": "Override",
-      "definition": "Defining a method in a subclass with the same method signature as a method inherited from a superclass",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "override"
-      }
-    },
-    {
-      "key": "escape_sequence",
-      "word": "Escape Sequence",
-      "definition": "Starts with a `\\` to indicate how to display a `String`",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "escape_sequence"
-      }
     }
   ],
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Defining Attributes",
-        "vocabulary.key": "attribute"
+        "lesson.key": "Accessing Object Data",
+        "vocabulary.key": "accessor_method"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Defining Attributes",
-        "vocabulary.key": "public"
+        "lesson.key": "Accessing Object Data",
+        "vocabulary.key": "dot_operator"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Defining Attributes",
-        "vocabulary.key": "private"
+        "lesson.key": "Accessing Object Data",
+        "vocabulary.key": "method_signature"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Defining Attributes",
-        "vocabulary.key": "instance_variable"
+        "lesson.key": "Accessing Object Data",
+        "vocabulary.key": "return_by_value"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Defining Attributes",
-        "vocabulary.key": "has_a_relationship"
+        "lesson.key": "Accessing Object Data",
+        "vocabulary.key": "return_keyword"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Defining Attributes",
-        "vocabulary.key": "data_encapsulation"
+        "lesson.key": "Accessing Object Data",
+        "vocabulary.key": "return_type"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "boolean"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "declaration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "initialization"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "data_type"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "primitive_type"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "reference_type"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "assignment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "literal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "int"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "double"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "string"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "vocabulary.key": "null"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "vocabulary.key": "constructor"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "vocabulary.key": "initialize"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "vocabulary.key": "constructor_signature"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "vocabulary.key": "formal_parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "vocabulary.key": "actual_parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "vocabulary.key": "call_by_value"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "vocabulary.key": "instantiate"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "vocabulary.key": "local_variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Adding Multiple Constructors",
-        "vocabulary.key": "default_value"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Adding Multiple Constructors",
-        "vocabulary.key": "overloading"
+        "lesson.key": "Accessing Object Data",
+        "vocabulary.key": "state"
       }
     },
     {
@@ -8818,7 +8962,85 @@
     {
       "seeding_key": {
         "lesson.key": "Adding Multiple Constructors",
+        "vocabulary.key": "default_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Adding Multiple Constructors",
         "vocabulary.key": "no_argument_constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Adding Multiple Constructors",
+        "vocabulary.key": "overloading"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Defining Attributes",
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Defining Attributes",
+        "vocabulary.key": "data_encapsulation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Defining Attributes",
+        "vocabulary.key": "has_a_relationship"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Defining Attributes",
+        "vocabulary.key": "instance_variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Defining Attributes",
+        "vocabulary.key": "private"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Defining Attributes",
+        "vocabulary.key": "public"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Displaying Object Information",
+        "vocabulary.key": "escape_sequence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Displaying Object Information",
+        "vocabulary.key": "override"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Manipulating Variables and Object Data",
+        "vocabulary.key": "arithmeticexception"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Manipulating Variables and Object Data",
+        "vocabulary.key": "compound_assignment_operator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Manipulating Variables and Object Data",
+        "vocabulary.key": "concatenation"
       }
     },
     {
@@ -8831,24 +9053,6 @@
       "seeding_key": {
         "lesson.key": "Manipulating Variables and Object Data",
         "vocabulary.key": "expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Manipulating Variables and Object Data",
-        "vocabulary.key": "concatenation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Manipulating Variables and Object Data",
-        "vocabulary.key": "compound_assignment_operator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Manipulating Variables and Object Data",
-        "vocabulary.key": "arithmeticexception"
       }
     },
     {
@@ -8871,72 +9075,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Writing Constructors for Hierarchies",
-        "vocabulary.key": "inheritance"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors for Hierarchies",
-        "vocabulary.key": "super"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors for Hierarchies",
-        "vocabulary.key": "dry_principle"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors for Hierarchies",
-        "vocabulary.key": "refactoring"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "vocabulary.key": "accessor_method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "vocabulary.key": "method_signature"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "vocabulary.key": "return_keyword"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "vocabulary.key": "return_type"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "vocabulary.key": "dot_operator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "vocabulary.key": "state"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "vocabulary.key": "return_by_value"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Modifying Object Data",
         "vocabulary.key": "mutator_method"
       }
@@ -8949,14 +9087,152 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "vocabulary.key": "override"
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "assignment"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "vocabulary.key": "escape_sequence"
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "boolean"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "declaration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "double"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "initialization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "int"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "literal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "null"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "primitive_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "reference_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "string"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors for Hierarchies",
+        "vocabulary.key": "dry_principle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors for Hierarchies",
+        "vocabulary.key": "inheritance"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors for Hierarchies",
+        "vocabulary.key": "refactoring"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors for Hierarchies",
+        "vocabulary.key": "super"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "vocabulary.key": "actual_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "vocabulary.key": "call_by_value"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "vocabulary.key": "constructor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "vocabulary.key": "constructor_signature"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "vocabulary.key": "formal_parameter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "vocabulary.key": "initialize"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "vocabulary.key": "instantiate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "vocabulary.key": "local_variable"
       }
     }
   ],
@@ -8965,103 +9241,23 @@
   ],
   "objectives": [
     {
-      "key": "491092d3-96ae-4607-be7f-a778d4315775",
+      "key": "034ca9e7-3a51-4752-a4b5-e9eace9bf386",
       "properties": {
-        "description": "Create instance variables to represent attributes"
+        "description": "Write expressions involving accessor methods and their return values"
       },
       "seeding_key": {
-        "lesson.key": "Defining Attributes",
-        "objective.key": "491092d3-96ae-4607-be7f-a778d4315775"
+        "lesson.key": "Accessing Object Data",
+        "objective.key": "034ca9e7-3a51-4752-a4b5-e9eace9bf386"
       }
     },
     {
-      "key": "4d7e1f78-823f-44fa-a001-2cb968da2d72",
+      "key": "0cab983e-8b1e-4ff0-a77f-c2de7c7fadda",
       "properties": {
-        "description": "Describe the process and purpose of encapsulation"
+        "description": "Design a class that can be extended and includes both accessor and mutator methods"
       },
       "seeding_key": {
-        "lesson.key": "Defining Attributes",
-        "objective.key": "4d7e1f78-823f-44fa-a001-2cb968da2d72"
-      }
-    },
-    {
-      "key": "359db9c0-fbcd-4c4e-a6c6-0541960e233d",
-      "properties": {
-        "description": "Understand the difference between `public` and `private` access"
-      },
-      "seeding_key": {
-        "lesson.key": "Defining Attributes",
-        "objective.key": "359db9c0-fbcd-4c4e-a6c6-0541960e233d"
-      }
-    },
-    {
-      "key": "fa32fb5e-e53d-47b2-b14e-6365d570cf05",
-      "properties": {
-        "description": "Declare and assign a value of type `int`, `double`, `boolean`, `String`, or `Painter` to a variable"
-      },
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "objective.key": "fa32fb5e-e53d-47b2-b14e-6365d570cf05"
-      }
-    },
-    {
-      "key": "ee18745f-0d62-4021-8962-1e05edbe6491",
-      "properties": {
-        "description": "Construct a trace table to track the changing values of variables"
-      },
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "objective.key": "ee18745f-0d62-4021-8962-1e05edbe6491"
-      }
-    },
-    {
-      "key": "934819b7-2007-45fc-9866-5e07c73dfd81",
-      "properties": {
-        "description": "Accept user input for different data types using a `Scanner` object"
-      },
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "objective.key": "934819b7-2007-45fc-9866-5e07c73dfd81"
-      }
-    },
-    {
-      "key": "81e6961d-2d66-414a-8e67-6e8db6d26b15",
-      "properties": {
-        "description": "Write a class with instance variables and a constructor"
-      },
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "objective.key": "81e6961d-2d66-414a-8e67-6e8db6d26b15"
-      }
-    },
-    {
-      "key": "2c9885f0-6a40-4ae5-8523-400b6f8d1ee0",
-      "properties": {
-        "description": "Identify the components of a constructor and its signature"
-      },
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "objective.key": "2c9885f0-6a40-4ae5-8523-400b6f8d1ee0"
-      }
-    },
-    {
-      "key": "689a8521-ba68-4a78-84e0-70bfde123660",
-      "properties": {
-        "description": "Use input to obtain values to initialize an object"
-      },
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "objective.key": "689a8521-ba68-4a78-84e0-70bfde123660"
-      }
-    },
-    {
-      "key": "c394a001-34a3-47e9-9e6d-a494de887974",
-      "properties": {
-        "description": "Identify the components of a constructor call"
-      },
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "objective.key": "c394a001-34a3-47e9-9e6d-a494de887974"
+        "lesson.key": "The Neighborhood Store Management Project - Day 1",
+        "objective.key": "0cab983e-8b1e-4ff0-a77f-c2de7c7fadda"
       }
     },
     {
@@ -9075,6 +9271,56 @@
       }
     },
     {
+      "key": "193cd2b5-d14a-4d2f-ab91-61eac4b128c6",
+      "properties": {
+        "description": "Write accessor methods for the Dessert class and its subclasses"
+      },
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "objective.key": "193cd2b5-d14a-4d2f-ab91-61eac4b128c6"
+      }
+    },
+    {
+      "key": "23cc34c9-fab2-4798-a506-22740822337c",
+      "properties": {
+        "description": "Refactor code to improve its readability and reusability"
+      },
+      "seeding_key": {
+        "lesson.key": "Writing Constructors for Hierarchies",
+        "objective.key": "23cc34c9-fab2-4798-a506-22740822337c"
+      }
+    },
+    {
+      "key": "242c2e6b-008d-4e0c-9035-a0b9c0613bf2",
+      "properties": {
+        "description": "Output information about the state of an object to the console"
+      },
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "objective.key": "242c2e6b-008d-4e0c-9035-a0b9c0613bf2"
+      }
+    },
+    {
+      "key": "26dbadcd-a56e-4e01-beb7-266dce5ebfb1",
+      "properties": {
+        "description": "Construct class hierarchies"
+      },
+      "seeding_key": {
+        "lesson.key": "Writing Constructors for Hierarchies",
+        "objective.key": "26dbadcd-a56e-4e01-beb7-266dce5ebfb1"
+      }
+    },
+    {
+      "key": "2c9885f0-6a40-4ae5-8523-400b6f8d1ee0",
+      "properties": {
+        "description": "Identify the components of a constructor and its signature"
+      },
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "objective.key": "2c9885f0-6a40-4ae5-8523-400b6f8d1ee0"
+      }
+    },
+    {
       "key": "31dc7695-d4cc-4d1a-b191-13040a7232e3",
       "properties": {
         "description": "Create overloaded constructors"
@@ -9085,13 +9331,163 @@
       }
     },
     {
-      "key": "f58b3006-0c78-4556-9ad5-10851118a475",
+      "key": "359db9c0-fbcd-4c4e-a6c6-0541960e233d",
       "properties": {
-        "description": "Construct a no-argument constructor to assign default values to the instance variables"
+        "description": "Understand the difference between `public` and `private` access"
       },
       "seeding_key": {
-        "lesson.key": "Adding Multiple Constructors",
-        "objective.key": "f58b3006-0c78-4556-9ad5-10851118a475"
+        "lesson.key": "Defining Attributes",
+        "objective.key": "359db9c0-fbcd-4c4e-a6c6-0541960e233d"
+      }
+    },
+    {
+      "key": "3f495c41-00f6-44f9-85d7-40731a517765",
+      "properties": {
+        "description": "Write and validate code of peers"
+      },
+      "seeding_key": {
+        "lesson.key": "FRQ Day",
+        "objective.key": "3f495c41-00f6-44f9-85d7-40731a517765"
+      }
+    },
+    {
+      "key": "42dfb94f-ed88-4c88-b9fa-598aa5ecb92e",
+      "properties": {
+        "description": "Write constructors for subclasses to initialize local and inherited instance variables"
+      },
+      "seeding_key": {
+        "lesson.key": "Writing Constructors for Hierarchies",
+        "objective.key": "42dfb94f-ed88-4c88-b9fa-598aa5ecb92e"
+      }
+    },
+    {
+      "key": "45a3b9b6-689e-4380-91d4-365841cf6e58",
+      "properties": {
+        "description": "Identify the components of a method signature"
+      },
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "objective.key": "45a3b9b6-689e-4380-91d4-365841cf6e58"
+      }
+    },
+    {
+      "key": "491092d3-96ae-4607-be7f-a778d4315775",
+      "properties": {
+        "description": "Create instance variables to represent attributes"
+      },
+      "seeding_key": {
+        "lesson.key": "Defining Attributes",
+        "objective.key": "491092d3-96ae-4607-be7f-a778d4315775"
+      }
+    },
+    {
+      "key": "4bd3baba-ce4d-4ddb-b9dd-68ca8c926271",
+      "properties": {
+        "description": "Explain the meaning of void"
+      },
+      "seeding_key": {
+        "lesson.key": "Modifying Object Data",
+        "objective.key": "4bd3baba-ce4d-4ddb-b9dd-68ca8c926271"
+      }
+    },
+    {
+      "key": "4c97b3ea-b6a0-4b07-aebd-cfb6b5da1c03",
+      "properties": {
+        "description": "Implement a class using inheritance"
+      },
+      "seeding_key": {
+        "lesson.key": "FRQ Day",
+        "objective.key": "4c97b3ea-b6a0-4b07-aebd-cfb6b5da1c03"
+      }
+    },
+    {
+      "key": "4d7e1f78-823f-44fa-a001-2cb968da2d72",
+      "properties": {
+        "description": "Describe the process and purpose of encapsulation"
+      },
+      "seeding_key": {
+        "lesson.key": "Defining Attributes",
+        "objective.key": "4d7e1f78-823f-44fa-a001-2cb968da2d72"
+      }
+    },
+    {
+      "key": "5018ede2-1318-45e0-9732-c5307d7da4fe",
+      "properties": {
+        "description": "Describe the relationship between print methods, `Object`, and `toString()` "
+      },
+      "seeding_key": {
+        "lesson.key": "Displaying Object Information",
+        "objective.key": "5018ede2-1318-45e0-9732-c5307d7da4fe"
+      }
+    },
+    {
+      "key": "55d3d40b-e65a-4b21-ab62-c04cdf1a2395",
+      "properties": {
+        "description": "Write mutator methods for the `Dessert` class and its subclasses"
+      },
+      "seeding_key": {
+        "lesson.key": "Modifying Object Data",
+        "objective.key": "55d3d40b-e65a-4b21-ab62-c04cdf1a2395"
+      }
+    },
+    {
+      "key": "567d5c8e-d7a2-4406-a38a-e9c4a4658883",
+      "properties": {
+        "description": "Describe and apply Java’s operator precedence"
+      },
+      "seeding_key": {
+        "lesson.key": "Manipulating Variables and Object Data",
+        "objective.key": "567d5c8e-d7a2-4406-a38a-e9c4a4658883"
+      }
+    },
+    {
+      "key": "56ccebea-12e4-472f-b5ce-dc50f0940a45",
+      "properties": {
+        "description": "Implement a class that represents an item for a business in The Neighborhood"
+      },
+      "seeding_key": {
+        "lesson.key": "The Neighborhood Store Management Project - Day 1",
+        "objective.key": "56ccebea-12e4-472f-b5ce-dc50f0940a45"
+      }
+    },
+    {
+      "key": "689a8521-ba68-4a78-84e0-70bfde123660",
+      "properties": {
+        "description": "Use input to obtain values to initialize an object"
+      },
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "objective.key": "689a8521-ba68-4a78-84e0-70bfde123660"
+      }
+    },
+    {
+      "key": "703d2689-e812-493e-a375-192ab472ceaf",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "FRQ Day",
+        "objective.key": "703d2689-e812-493e-a375-192ab472ceaf"
+      }
+    },
+    {
+      "key": "7bacd90a-e102-426e-b961-87ef5a1d3f62",
+      "properties": {
+        "description": "Write `toString()` methods"
+      },
+      "seeding_key": {
+        "lesson.key": "Displaying Object Information",
+        "objective.key": "7bacd90a-e102-426e-b961-87ef5a1d3f62"
+      }
+    },
+    {
+      "key": "81e6961d-2d66-414a-8e67-6e8db6d26b15",
+      "properties": {
+        "description": "Write a class with instance variables and a constructor"
+      },
+      "seeding_key": {
+        "lesson.key": "Writing Constructors",
+        "objective.key": "81e6961d-2d66-414a-8e67-6e8db6d26b15"
       }
     },
     {
@@ -9105,13 +9501,43 @@
       }
     },
     {
-      "key": "567d5c8e-d7a2-4406-a38a-e9c4a4658883",
+      "key": "91e9bc18-3888-49e7-9056-4bfd973944d6",
       "properties": {
-        "description": "Describe and apply Java’s operator precedence"
+        "description": "Implement a class that extends a superclass"
       },
       "seeding_key": {
-        "lesson.key": "Manipulating Variables and Object Data",
-        "objective.key": "567d5c8e-d7a2-4406-a38a-e9c4a4658883"
+        "lesson.key": "The Neighborhood Store Management Project - Day 2",
+        "objective.key": "91e9bc18-3888-49e7-9056-4bfd973944d6"
+      }
+    },
+    {
+      "key": "92e1af83-4932-4c60-a887-e748d9138817",
+      "properties": {
+        "description": "Use escape sequences to format output"
+      },
+      "seeding_key": {
+        "lesson.key": "Displaying Object Information",
+        "objective.key": "92e1af83-4932-4c60-a887-e748d9138817"
+      }
+    },
+    {
+      "key": "934819b7-2007-45fc-9866-5e07c73dfd81",
+      "properties": {
+        "description": "Accept user input for different data types using a `Scanner` object"
+      },
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "objective.key": "934819b7-2007-45fc-9866-5e07c73dfd81"
+      }
+    },
+    {
+      "key": "9c6a41f3-4296-4404-953f-fd97c12491ee",
+      "properties": {
+        "description": "Develop a program to manage a business in The Neighborhood"
+      },
+      "seeding_key": {
+        "lesson.key": "The Neighborhood Store Management Project - Day 2",
+        "objective.key": "9c6a41f3-4296-4404-953f-fd97c12491ee"
       }
     },
     {
@@ -9145,183 +9571,13 @@
       }
     },
     {
-      "key": "f18dc4c5-0b40-43ec-b0a8-30013af04c83",
+      "key": "c394a001-34a3-47e9-9e6d-a494de887974",
       "properties": {
-        "description": "Determine when to use the this keyword to refer to instance variables"
+        "description": "Identify the components of a constructor call"
       },
       "seeding_key": {
-        "lesson.key": "Minimizing Errors in Initialization",
-        "objective.key": "f18dc4c5-0b40-43ec-b0a8-30013af04c83"
-      }
-    },
-    {
-      "key": "26dbadcd-a56e-4e01-beb7-266dce5ebfb1",
-      "properties": {
-        "description": "Construct class hierarchies"
-      },
-      "seeding_key": {
-        "lesson.key": "Writing Constructors for Hierarchies",
-        "objective.key": "26dbadcd-a56e-4e01-beb7-266dce5ebfb1"
-      }
-    },
-    {
-      "key": "42dfb94f-ed88-4c88-b9fa-598aa5ecb92e",
-      "properties": {
-        "description": "Write constructors for subclasses to initialize local and inherited instance variables"
-      },
-      "seeding_key": {
-        "lesson.key": "Writing Constructors for Hierarchies",
-        "objective.key": "42dfb94f-ed88-4c88-b9fa-598aa5ecb92e"
-      }
-    },
-    {
-      "key": "23cc34c9-fab2-4798-a506-22740822337c",
-      "properties": {
-        "description": "Refactor code to improve its readability and reusability"
-      },
-      "seeding_key": {
-        "lesson.key": "Writing Constructors for Hierarchies",
-        "objective.key": "23cc34c9-fab2-4798-a506-22740822337c"
-      }
-    },
-    {
-      "key": "45a3b9b6-689e-4380-91d4-365841cf6e58",
-      "properties": {
-        "description": "Identify the components of a method signature"
-      },
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "objective.key": "45a3b9b6-689e-4380-91d4-365841cf6e58"
-      }
-    },
-    {
-      "key": "193cd2b5-d14a-4d2f-ab91-61eac4b128c6",
-      "properties": {
-        "description": "Write accessor methods for the Dessert class and its subclasses"
-      },
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "objective.key": "193cd2b5-d14a-4d2f-ab91-61eac4b128c6"
-      }
-    },
-    {
-      "key": "242c2e6b-008d-4e0c-9035-a0b9c0613bf2",
-      "properties": {
-        "description": "Output information about the state of an object to the console"
-      },
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "objective.key": "242c2e6b-008d-4e0c-9035-a0b9c0613bf2"
-      }
-    },
-    {
-      "key": "034ca9e7-3a51-4752-a4b5-e9eace9bf386",
-      "properties": {
-        "description": "Write expressions involving accessor methods and their return values"
-      },
-      "seeding_key": {
-        "lesson.key": "Accessing Object Data",
-        "objective.key": "034ca9e7-3a51-4752-a4b5-e9eace9bf386"
-      }
-    },
-    {
-      "key": "55d3d40b-e65a-4b21-ab62-c04cdf1a2395",
-      "properties": {
-        "description": "Write mutator methods for the `Dessert` class and its subclasses"
-      },
-      "seeding_key": {
-        "lesson.key": "Modifying Object Data",
-        "objective.key": "55d3d40b-e65a-4b21-ab62-c04cdf1a2395"
-      }
-    },
-    {
-      "key": "4bd3baba-ce4d-4ddb-b9dd-68ca8c926271",
-      "properties": {
-        "description": "Explain the meaning of void"
-      },
-      "seeding_key": {
-        "lesson.key": "Modifying Object Data",
-        "objective.key": "4bd3baba-ce4d-4ddb-b9dd-68ca8c926271"
-      }
-    },
-    {
-      "key": "5018ede2-1318-45e0-9732-c5307d7da4fe",
-      "properties": {
-        "description": "Describe the relationship between print methods, `Object`, and `toString()` "
-      },
-      "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "objective.key": "5018ede2-1318-45e0-9732-c5307d7da4fe"
-      }
-    },
-    {
-      "key": "7bacd90a-e102-426e-b961-87ef5a1d3f62",
-      "properties": {
-        "description": "Write `toString()` methods"
-      },
-      "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "objective.key": "7bacd90a-e102-426e-b961-87ef5a1d3f62"
-      }
-    },
-    {
-      "key": "92e1af83-4932-4c60-a887-e748d9138817",
-      "properties": {
-        "description": "Use escape sequences to format output"
-      },
-      "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "objective.key": "92e1af83-4932-4c60-a887-e748d9138817"
-      }
-    },
-    {
-      "key": "0cab983e-8b1e-4ff0-a77f-c2de7c7fadda",
-      "properties": {
-        "description": "Design a class that can be extended and includes both accessor and mutator methods"
-      },
-      "seeding_key": {
-        "lesson.key": "The Neighborhood Store Management Project - Day 1",
-        "objective.key": "0cab983e-8b1e-4ff0-a77f-c2de7c7fadda"
-      }
-    },
-    {
-      "key": "56ccebea-12e4-472f-b5ce-dc50f0940a45",
-      "properties": {
-        "description": "Implement a class that represents an item for a business in The Neighborhood"
-      },
-      "seeding_key": {
-        "lesson.key": "The Neighborhood Store Management Project - Day 1",
-        "objective.key": "56ccebea-12e4-472f-b5ce-dc50f0940a45"
-      }
-    },
-    {
-      "key": "9c6a41f3-4296-4404-953f-fd97c12491ee",
-      "properties": {
-        "description": "Develop a program to manage a business in The Neighborhood"
-      },
-      "seeding_key": {
-        "lesson.key": "The Neighborhood Store Management Project - Day 2",
-        "objective.key": "9c6a41f3-4296-4404-953f-fd97c12491ee"
-      }
-    },
-    {
-      "key": "91e9bc18-3888-49e7-9056-4bfd973944d6",
-      "properties": {
-        "description": "Implement a class that extends a superclass"
-      },
-      "seeding_key": {
-        "lesson.key": "The Neighborhood Store Management Project - Day 2",
-        "objective.key": "91e9bc18-3888-49e7-9056-4bfd973944d6"
-      }
-    },
-    {
-      "key": "ec214394-f07b-4c26-b002-82c9204ded48",
-      "properties": {
-        "description": "Conduct code reviews to give and receive feedback on program code"
-      },
-      "seeding_key": {
-        "lesson.key": "The Neighborhood Store Management Project - Day 2",
-        "objective.key": "ec214394-f07b-4c26-b002-82c9204ded48"
+        "lesson.key": "Writing Constructors",
+        "objective.key": "c394a001-34a3-47e9-9e6d-a494de887974"
       }
     },
     {
@@ -9335,6 +9591,16 @@
       }
     },
     {
+      "key": "ec214394-f07b-4c26-b002-82c9204ded48",
+      "properties": {
+        "description": "Conduct code reviews to give and receive feedback on program code"
+      },
+      "seeding_key": {
+        "lesson.key": "The Neighborhood Store Management Project - Day 2",
+        "objective.key": "ec214394-f07b-4c26-b002-82c9204ded48"
+      }
+    },
+    {
       "key": "ec3c063b-617f-46c0-8dfa-279d69f93fe4",
       "properties": {
         "description": "Implement the main method to allow user interaction with a class"
@@ -9342,6 +9608,26 @@
       "seeding_key": {
         "lesson.key": "The Neighborhood Store Management Project - Day 3",
         "objective.key": "ec3c063b-617f-46c0-8dfa-279d69f93fe4"
+      }
+    },
+    {
+      "key": "ee18745f-0d62-4021-8962-1e05edbe6491",
+      "properties": {
+        "description": "Construct a trace table to track the changing values of variables"
+      },
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "objective.key": "ee18745f-0d62-4021-8962-1e05edbe6491"
+      }
+    },
+    {
+      "key": "f18dc4c5-0b40-43ec-b0a8-30013af04c83",
+      "properties": {
+        "description": "Determine when to use the this keyword to refer to instance variables"
+      },
+      "seeding_key": {
+        "lesson.key": "Minimizing Errors in Initialization",
+        "objective.key": "f18dc4c5-0b40-43ec-b0a8-30013af04c83"
       }
     },
     {
@@ -9355,37 +9641,125 @@
       }
     },
     {
-      "key": "4c97b3ea-b6a0-4b07-aebd-cfb6b5da1c03",
+      "key": "f58b3006-0c78-4556-9ad5-10851118a475",
       "properties": {
-        "description": "Implement a class using inheritance"
+        "description": "Construct a no-argument constructor to assign default values to the instance variables"
       },
       "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "objective.key": "4c97b3ea-b6a0-4b07-aebd-cfb6b5da1c03"
+        "lesson.key": "Adding Multiple Constructors",
+        "objective.key": "f58b3006-0c78-4556-9ad5-10851118a475"
       }
     },
     {
-      "key": "703d2689-e812-493e-a375-192ab472ceaf",
+      "key": "fa32fb5e-e53d-47b2-b14e-6365d570cf05",
       "properties": {
-        "description": "Implement methods based on a given set of specifications"
+        "description": "Declare and assign a value of type `int`, `double`, `boolean`, `String`, or `Painter` to a variable"
       },
       "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "objective.key": "703d2689-e812-493e-a375-192ab472ceaf"
-      }
-    },
-    {
-      "key": "3f495c41-00f6-44f9-85d7-40731a517765",
-      "properties": {
-        "description": "Write and validate code of peers"
-      },
-      "seeding_key": {
-        "lesson.key": "FRQ Day",
-        "objective.key": "3f495c41-00f6-44f9-85d7-40731a517765"
+        "lesson.key": "Using Variables",
+        "objective.key": "fa32fb5e-e53d-47b2-b14e-6365d570cf05"
       }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.G.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.D.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.A.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Accessing Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Adding Multiple Constructors",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Adding Multiple Constructors",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Adding Multiple Constructors",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.B.5"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Defining Attributes",
@@ -9451,184 +9825,44 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Variables",
+        "lesson.key": "Displaying Object Information",
         "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.1"
+        "standard.shortcode": "MOD-2.D.6"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Variables",
+        "lesson.key": "Displaying Object Information",
         "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.1"
+        "standard.shortcode": "MOD-2.D.7"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Variables",
+        "lesson.key": "Displaying Object Information",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.A.1"
+        "standard.shortcode": "VAR-1.A.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Variables",
+        "lesson.key": "Displaying Object Information",
         "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.B.1"
+        "standard.shortcode": "VAR-1.E.11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Variables",
+        "lesson.key": "Displaying Object Information",
         "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.B.2"
+        "standard.shortcode": "VAR-1.E.4"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Using Variables",
+        "lesson.key": "Displaying Object Information",
         "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Using Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Writing Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Adding Multiple Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Adding Multiple Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Adding Multiple Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.B.5"
+        "standard.shortcode": "VAR-1.E.5"
       }
     },
     {
@@ -9738,6 +9972,132 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Modifying Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modifying Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.F.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modifying Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modifying Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modifying Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Modifying Object Data",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-3.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.B.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Variables",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Writing Constructors for Hierarchies",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-3.B.1"
@@ -9808,163 +10168,79 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.A.2"
+        "standard.shortcode": "MOD-1.C.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.3"
+        "standard.shortcode": "MOD-1.C.2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.5"
+        "standard.shortcode": "MOD-1.C.3"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.6"
+        "standard.shortcode": "MOD-1.C.6"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.G.1"
+        "standard.shortcode": "MOD-1.D.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.1"
+        "standard.shortcode": "MOD-1.D.2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.2"
+        "standard.shortcode": "MOD-1.D.4"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.3"
+        "standard.shortcode": "MOD-1.E.4"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.5"
+        "standard.shortcode": "MOD-2.A.5"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.4"
+        "standard.shortcode": "MOD-2.B.2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Accessing Object Data",
+        "lesson.key": "Writing Constructors",
         "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Object Data",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Object Data",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Object Data",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Object Data",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Object Data",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.E.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Modifying Object Data",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Displaying Object Information",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.5"
+        "standard.shortcode": "MOD-2.B.3"
       }
     }
   ],

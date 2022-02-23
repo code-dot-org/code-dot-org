@@ -1,0 +1,7 @@
+{
+  "key": "camera.mouseX",
+  "name": "camera.mouseX",
+  "category": "World",
+  "category_key": "world",
+  "syntax": "camera.mouseX"
+}

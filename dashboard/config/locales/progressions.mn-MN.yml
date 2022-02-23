@@ -6,6 +6,7 @@ mn:
       Arrays: Матрицууд
       Artist Project: Зураачийн төсөл
       'Artist: Variables': 'Зураач: Хувьсагчууд'
+      Assessment: Үнэлгээ
       Back and Forth: Арагш, урагш
       Bass, Mid, and Treble: Басс, Дунд, Требль
       Binary Numbers: Хоёртын тоо
@@ -24,6 +25,8 @@ mn:
       End of Course Projects: Хичээлийн төслийн төгсгөл
       Event Types: Үйл явдлын төрөл
       Events: Үйл явдлууд
+      Example: Жишээ
+      Extra: Нэмэлт
       For Loops: Гогцоонд зориулав
       Free Play: Чөлөөтэй тоглох
       Functions: Функцүүд
@@ -39,11 +42,13 @@ mn:
       Keeping Data Secret: Мэдээллийг нууцлах
       Keyboard Input: Гараар оруулах
       Lesson Extras: Хичээлийн нэмэлтүүд
+      Levels: Түвшингүүд
       Linking Pages: Хуудас холбох
       Linking Screens: Дэлгэцүүдийг холбож байна
       Lists: Жагсаалтууд
       Making Music: Хөгжим зохиох
       Measures: Арга хэмжээ
+      'Minecraft: Hero''s Journey': 'Minecraft: Баатарын аялал'
       'Mini-Project: About Me': Шидтэний лабтай хамтарсан миний тухай
       More Buttons: Илүү олон товчлуурууд
       Multi-Screen Apps: Олон дэлгэцийн аппууд
@@ -62,6 +67,7 @@ mn:
       Review: Хяналт
       Speed it Up, Slow it Down: Үүнийг хурдасгах, удаашруулах
       Sprite Lab Project: Шидтэний лабораторийн төсөл
+      Sprite Movement: Шидтэний хөдөлгөөн
       Text Compression: Текстийн шахалт
       The Animation Tab: Анимэйшний таб
       The Draw Loop: Зурах гогцоо

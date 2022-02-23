@@ -15,22 +15,22 @@
             {
               "text": "Nothing will happen.",
               "correct": false,
-              "feedback": "Incorrect. The tumbleweed will begin tumbling"
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
             },
             {
-              "text": "The tumbleweed will float to the top of the screen",
+              "text": "The tumbleweed will float to the top of the screen.",
               "correct": false,
-              "feedback": "Incorrect. The tumbleweed will begin tumbling"
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
             },
             {
-              "text": "The tumbleweed will begin tumbling",
+              "text": "The tumbleweed will begin tumbling.",
               "correct": true,
               "feedback": "Correct!"
             },
             {
               "text": "The tumbleweed will blink on and off.",
               "correct": false,
-              "feedback": "Incorrect. The tumbleweed will begin tumbling"
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
             }
           ],
           "questions": [
@@ -258,7 +258,7 @@
     }
   },
   "https://studio.code.org/s/coursee-2021/lessons/3/levels/7": {
-    "short_instructions": "Add an event that makes each alien stop moving after 3 seconds.",
+    "short_instructions": "Add an event that makes each alien stop moving after 5 seconds.",
     "long_instructions": "These aliens are running wild! Let's calm them down.\n\nAdd an event that makes each alien stop moving after 5 seconds, using [blockly block][0]!",
     "teacher_markdown": "This lesson contains a **mini-project**. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   All alien sprites must stop their behaviors.",
     "behavior_names": {
@@ -311,6 +311,13 @@
   },
   "https://studio.code.org/s/coursee-2021/lessons/6/levels/1": {
     "long_instructions": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"Hello, world! My name is Rikki, and here are some things I'd to share about me!\"_\n\n**Explore:** Rikki is using Sprite Lab to create an _interactive poster_ about herself that she can share on the web.  \n\nRikki has given you permission to check out her poster. You can even edit her code! \n\nPlay with Rikki's poster and code for a bit, then click **Finish**.",
+    "placeholder_texts": {
+      "b63151482630edd1589a9ac24d107c49": "That's me! Rikki! I like to code, hangout with Thuy, and eat ice cream!",
+      "810896b14fc6615f0c76628b9b6a727e": "That's my best friend Thuy! She's really good at sports!",
+      "8e985f60f328934accd78e7649584840": "Ice cream is my favorite treat!",
+      "31ba97bb501bb1f5b448221be09bad32": "That's my corgi, Lollipop! I should teach her how to code!",
+      "6f97975a0bda0c9219915161149cbb26": "That's my computer! I code on it ALL the time!"
+    },
     "behavior_names": {
       "wobbling": "wobbling",
       "moving with arrow keys": "moving with arrow keys",
@@ -326,13 +333,6 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
-    },
-    "placeholder_texts": {
-      "b63151482630edd1589a9ac24d107c49": "That's me! Rikki! I like to code, hangout with Thuy, and eat ice cream!",
-      "810896b14fc6615f0c76628b9b6a727e": "That's my best friend Thuy! She's really good at sports!",
-      "8e985f60f328934accd78e7649584840": "Ice cream is my favorite treat!",
-      "31ba97bb501bb1f5b448221be09bad32": "That's my corgi, Lollipop! I should teach her how to code!",
-      "6f97975a0bda0c9219915161149cbb26": "That's my computer! I code on it ALL the time!"
     }
   },
   "https://studio.code.org/s/coursee-2021/lessons/6/levels/2": {
@@ -359,6 +359,9 @@
   "https://studio.code.org/s/coursee-2021/lessons/6/levels/3": {
     "long_instructions": " _\"Say something about yourself, and make sure it's SAFE!\"_\n\nUse [blockly block][0] and [blockly block][1] (in the `World` blocks category) to share information about yourself when your sprite is clicked! \n\n**Just be sure the information you share is SAFE.**\n\n* * *\n\n#### Examples of SAFE vs UNSAFE Information\n\n| SAFE                | UNSAFE                |\n| ------------------- | --------------------- |\n| first name          | full name             |\n| favorite things     | home address          |\n| respectful opinions | phone number or email |",
     "teacher_markdown": "This lesson contains a **mini-project** called _Interactive Poster_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "placeholder_texts": {
+      "ed076287532e86365e841e92bfc50d8c": "Hello World!"
+    },
     "behavior_names": {
       "wandering": "wandering",
       "moving east": "moving east",
@@ -372,14 +375,14 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
-    },
-    "placeholder_texts": {
-      "ed076287532e86365e841e92bfc50d8c": "Hello World!"
     }
   },
   "https://studio.code.org/s/coursee-2021/lessons/6/levels/4": {
     "long_instructions": " _\"Add more sprites to your poster! Don't forget to give them costumes!\"_\n\nAdd **at least two** other sprites to your poster. Give each sprite a unique costume!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Interactive Poster_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create at least three sprites.",
+    "placeholder_texts": {
+      "ed076287532e86365e841e92bfc50d8c": "Hello World!"
+    },
     "behavior_names": {
       "wandering": "wandering",
       "moving east": "moving east",
@@ -393,14 +396,15 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
-    },
-    "placeholder_texts": {
-      "ed076287532e86365e841e92bfc50d8c": "Hello World!"
     }
   },
   "https://studio.code.org/s/coursee-2021/lessons/6/levels/5": {
     "long_instructions": " _\"Tell the world more about yourself through your new sprites!\"_\n\nMake your other sprites print information when they are clicked. Be sure whatever you share is SAFE!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Interactive Poster_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
+    "placeholder_texts": {
+      "ed076287532e86365e841e92bfc50d8c": "Hello World!",
+      "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
+    },
     "behavior_names": {
       "wandering": "wandering",
       "moving east": "moving east",
@@ -414,10 +418,6 @@
       "jittering": "jittering",
       "moving west": "moving west",
       "patrolling": "patrolling"
-    },
-    "placeholder_texts": {
-      "ed076287532e86365e841e92bfc50d8c": "Hello World!",
-      "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!"
     }
   },
   "https://studio.code.org/s/coursee-2021/lessons/6/levels/6": {
@@ -427,7 +427,7 @@
   },
   "https://studio.code.org/s/coursee-2021/lessons/7/levels/1": {
     "dsls": {
-      "markdown": "# Digital Sharing\n\nIn this lesson you'll consider the challenges and benefits of respecting ownership and copyright, particularly in digital environments.\n"
+      "markdown": "# Digital Sharing\n\nIn this lesson you'll consider the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments.\n"
     }
   },
   "https://studio.code.org/s/coursee-2021/lessons/8/levels/2": {

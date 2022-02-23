@@ -1,4 +1,7 @@
 {
-  "func": "noStroke",
-  "category": "Drawing"
+  "key": "noStroke",
+  "name": "noStroke",
+  "category": "Drawing",
+  "category_key": "drawing",
+  "syntax": "noStroke"
 }

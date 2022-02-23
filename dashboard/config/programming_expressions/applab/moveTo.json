@@ -1,12 +1,15 @@
 {
-  "func": "moveTo",
+  "key": "moveTo",
+  "name": "moveTo",
   "category": "Turtle",
-  "paletteParams": [
-    "x",
-    "y"
+  "category_key": "turtle",
+  "palette_params": [
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
-  "params": [
-    "0",
-    "0"
-  ]
+  "syntax": "moveTo(x, y)"
 }

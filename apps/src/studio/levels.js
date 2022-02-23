@@ -3729,7 +3729,6 @@ levels.js_hoc2015_event_free = {
     reinfFeedbackMsg: msg.hoc2015_reinfFeedbackMsg,
     sharingText: msg.hoc2015_shareGame
   },
-  disablePrinting: true,
   playStartSound: false
 };
 

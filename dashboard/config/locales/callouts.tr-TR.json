@@ -1847,6 +1847,438 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Araç kutusundan çalışma alanına blokları sürükleyin."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Yeni blok!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Yeni blok!",
+          "poetry_foreground": "Yeni blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Yeni blok!",
+          "poetry_multiple_sprites": "Yeni blok!",
+          "poetry_new_block": "Yeni blok!",
+          "poetry_selector": "Herhangi bir şiir seçin veya kendi şiirinizi girin!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Yeni blok!",
+          "poetry_music": "Yeni blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Yeni blok!",
+          "poetry_sprite_stops": "Yeni blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Yeni blok!",
+          "poetry_remove_sprite": "Yeni blok!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Projene yeni kostümler eklemek için buraya tıkla!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Projene yeni kostümler eklemek için buraya tıkla!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Önce Çalıştır düğmesine basın!",
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Oyun alanını yeniden boyutlandırmak için 3 noktayı sürükleyin."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "When'i while olarak değiştirmeyi deneyin."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Yeni bloklar buraya!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Burada bulunan yeni olay bloğunu kullan."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Bu bloğun sırası yanlış."
+        },
+        "courseF_events_time": {
+          "events_category": "Olaylar kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Davranışlar kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Hareketli Nesneler kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Konumlar kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Burada yeni blok ara."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Burada yeni blok ara!"
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Bitirdin mi? Öyleyse, \"Bitir\"e bas. Değilse, \"Sıfırla\"ya bas, kodunu değiştir ve tekrar \"Çalıştır\"a bas."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Burada yeni bloklar ara!"
+        },
+        "courseF_text_events": {
+          "events_category": "Olaylar kategorisini açmak için buraya tıklayın."
+        },
+        "courseF_text_print": {
+          "print_block": "Yazdır bloğunu burada bul!",
+          "text_print_finish": "Mesajın yukarıda yazdırıldı mı? Öyleyse, \"Bitir\"e bas. Değilse, \"Sıfırla\"ya bas, kodunu değiştir ve tekrar \"Çalıştır\"a bas."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "İstem bloğunu burada bul!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Programını burada yavaşlatabilirsin."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Kodunuzda her seferinde bir blok ile adım adım ilerlemeyi deneyin."
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Soruyu yanıtladığınızda arka planın rengi değişti mi? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Burada iki yeni blok ara!",
+          "text_answer_finish": "Bir başlık ekranı 3 saniye göründü mü? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Bu olay bloğunu çalışma alanınıza ekleyin."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+        },
+        "helloworld_animals_location": {
+          "pin": "pin"
+        },
+        "helloworld_animals_multi": {
+          "pin": "pin"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın.",
+          "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Bu olay bloğunu çalışma alanınıza ekleyin."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+        },
+        "helloworld_emoji_location": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın.",
+          "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Bu olay bloğunu çalışma alanınıza ekleyin."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+        },
+        "helloworld_food_location": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi": {
+          "pin": "pin"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın.",
+          "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Yeni bir arka plan ayarlamak için bu bloğu kullanın."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Bu bloğu aşağıdaki davranışlardan biriyle kullanın."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Kodu çalıştırmak için buraya tıklayın."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Bu olay bloğunu çalışma alanınıza ekleyin."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Projene kostüm eklemek için buraya tıkla."
+        },
+        "helloworld_retro_location": {
+          "pin": "pin"
+        },
+        "helloworld_retro_multi": {
+          "pin": "pin"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Hareketli nesnelerin konuşmasını sağlamak için bu bloğu kullanın.",
+          "hello_world_make_sprite": "Bir hareketli nesne oluşturmak için bu bloğu kullanın."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Kod bloklarını burada bulun.",
+          "run_button": "Animasyonunuzu bu düğmeyle test edin."
+        },
+        "New Artist Project": {
+          "New Artist Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "New Play Lab Project": {
+          "New Play Lab Project_callout2": "Programınızı kaydedip çalıştırmak için \"Çalıştır\"a basın",
+          "sign_in_to_save_project": "Projenize daha sonra erişmek ister misiniz? Bu projeyi hesabınıza kaydetmek için kaydolun!"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Izgarayı göstermek için buraya tıklayın."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Buradaki sayıyı değiştir"
+        },
+        "CSD U3 abstraction accelerateX_2021": {
+          "CSD_U3_L11_S6_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 abstraction accelerateY_2021": {
+          "CSD_U3_L11_S7_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 abstraction rotation control_2021": {
+          "CSD_U3_L11_S5_C1": "Bu koda bakın."
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "CSD_U3_L11_S5_C1": "Bu koda bakın."
+        },
+        "CSD U3 abstraction velocityX if-statements_2021": {
+          "CSD_U3_L11_S5_C1": "Bu koda bakın."
+        },
+        "CSD U3 abstraction velocityX_2021": {
+          "CSD_U3_L11_S4_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 abstraction velocityY control_2021": {
+          "CSD_U3_L11_S5_C1": "Bu koda bakın."
+        },
+        "CSD U3 abstraction velocityY_2021": {
+          "CSD_U3_L11_S5_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 collisions isTouching intro_2021": {
+          "CSD_U3_L12_S2_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 collisions types2_2021": {
+          "CSD_U3_L13_S6_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 collisions types3_2021": {
+          "CSD_U3_L13_S6_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 collisions types4_2021": {
+          "CSD_U3_L13_S6_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 collisions types_2021": {
+          "CSD_U3_L13_S6_C1": "Kodunu buraya ekle."
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "İşte kod"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "İşte kod",
+          "CSD_U3_rect_c2": "Bu bloğu kod alanına sürükleyin."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Kodunuzu buraya ekleyin"
+        },
+        "CSD U6 getProperty input_2021": {
+          "CSD_U6L06P03": "Kodunu buraya ekle."
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Bu satır ne yapıyor?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Burada oyunaBaşla'yı tanımlayın"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Burada oyuncuyuHareketEttir()'i tanımla"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Oyuncu kazandı mı kontrol edin"
+        },
+        "CSD games velocity bee_2021": {
+          "CSD_U3_L11_S5_C1": "Bu koda bakın."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Buradaki sayıyı değiştir"
         }
       }
     }

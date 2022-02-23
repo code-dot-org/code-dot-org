@@ -390,6 +390,7 @@ uk:
       starwars: 'Зоряні війни'
       starwarsblocks: 'Зоряні війни (блоки)'
       starwarsblocks_hour: 'Зоряні війни (блоки)'
+      loading: 'Завантаження...'
       view_all: 'Переглянути всі проекти...'
     popup:
       progress_for_user: "Прогрес %{name}"
@@ -404,6 +405,7 @@ uk:
       prizes_link: 'Детальніше'
   teacher:
     answer: Відповідь
+    dashboard: 'Панель вчителя'
     for_teachers_only: Лише для вчителів
     title:
       one: 'Ваш вчитель:'
@@ -962,6 +964,7 @@ uk:
       email: 'Електронна пошта'
       email_alternate: 'Додаткова адреса електронної пошти'
       gender: 'Гендерна приналежність'
+      school: 'Школа'
       school_name: 'Назва школи'
       school_country: 'Країна твоєї школи'
       colombian_school_municipality: 'Навчальний муніципалітет'
@@ -1070,3 +1073,4 @@ uk:
     text: "**Ви один з батьків або опікун? **Прив’яжіть до цього облікового запису свою електронну пошту, щоб бути в курсі успіхів і проектів вашої дитини!"
     link_your_email: "Прив'яжіть вашу ел. пошту"
     not_now: "Не зараз"
+  teacher_feedback: "Відгук викладача"

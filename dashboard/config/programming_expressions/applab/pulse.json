@@ -1,11 +1,12 @@
 {
-  "func": "pulse",
+  "key": "pulse",
+  "name": "pulse",
   "category": "Circuit",
-  "paletteParams": [
-    "interval"
+  "category_key": "circuit",
+  "palette_params": [
+    {
+      "name": "interval"
+    }
   ],
-  "params": [
-    "300"
-  ],
-  "modeOptionName": "*.pulse"
+  "syntax": "pulse(interval)"
 }

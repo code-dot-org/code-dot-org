@@ -34,14 +34,36 @@ def sync_out(upload_manifests=false)
   I18nScriptUtils.with_synchronous_stdout do
     I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
   end
+  clean_up_sync_out(CROWDIN_PROJECTS)
   puts "Sync out completed successfully"
 rescue => e
   puts "Sync out failed from the error: #{e}"
   raise e
 end
 
+# Cleans up any files the sync-out is responsible for managing. When this function is done running,
+# the locale filesystem should be ready for a new i18n-sync cycle.
+# @param projects [Hash] The Crowdin project configurations used by the i18n-sync.
+def clean_up_sync_out(projects)
+  # Cycle through each project and move temp files to /tmp/i18n-sync
+  projects.each do |_project_identifier, project_options|
+    # Move *_files_to_sync_out.json to /tmp/i18n-sync/ because these files have been successfully
+    # synced and we don't want the next i18n-sync-out to redistribute the files.
+    files_to_sync_out_path = project_options[:files_to_sync_out_json]
+    if File.exist?(files_to_sync_out_path)
+      i18n_sync_tmp_dir = '/tmp/i18n-sync'
+      FileUtils.mkdir_p(i18n_sync_tmp_dir)
+      puts "Backing up temp file #{files_to_sync_out_path} to #{i18n_sync_tmp_dir}"
+      FileUtils.mv(files_to_sync_out_path, i18n_sync_tmp_dir)
+    else
+      # This will happen if a sync-down hasn't happened since the last successful sync-out.
+      puts "No temp file #{files_to_sync_out_path} found to backup."
+    end
+  end
+end
+
 # Return true iff the specified file in the specified locale had changes
-# as of the most recent sync down.
+# since the last successful sync-out.
 #
 # @param locale [String] the locale code to check. This can be either the
 #  four-letter code used internally (ie, "es-ES", "es-MX", "it-IT", etc), OR
@@ -53,19 +75,17 @@ end
 #  "/dashboard/base.yml", "/blockly-mooc/maze.json",
 #  "/course_content/2018/coursea-2018.json", etc.
 def file_changed?(locale, file)
-  @change_datas ||= CROWDIN_PROJECTS.keys.map do |crowdin_project|
-    project = Crowdin::Project.new(crowdin_project, nil)
-    utils = Crowdin::Utils.new(project)
-    unless File.exist?(utils.changes_json)
+  @change_datas ||= CROWDIN_PROJECTS.map do |_project_identifier, project_options|
+    unless File.exist?(project_options[:files_to_sync_out_json])
       raise <<~ERR
-        No "changes" json found at #{utils.changes_json}.
+        File not found #{project_options[:files_to_sync_out_json]}.
 
         We expect to find a file containing a list of files changed by the most
         recent sync down; if this file does not exist, it likely means that no
         sync down has been run on this machine, so there is nothing to sync out
       ERR
     end
-    JSON.load(File.read(utils.changes_json))
+    JSON.load File.read(project_options[:files_to_sync_out_json])
   end
 
   crowdin_code = Languages.get_code_by_locale(locale)
@@ -232,6 +252,17 @@ def sanitize_data_and_write(data, dest_path)
   end
 end
 
+# Wraps hash in correct format to be loaded by our i18n backend.
+# This will most likely be JSON file data due to Crowdin only
+# setting the locale for yml files.
+def wrap_with_locale(data, locale, type)
+  final_hash = Hash.new
+  final_hash[locale] = Hash.new
+  final_hash[locale]["data"] = Hash.new
+  final_hash[locale]["data"][type] = data
+  final_hash
+end
+
 def serialize_i18n_strings(level, strings)
   result = Hash.new
 
@@ -304,10 +335,8 @@ def distribute_course_content(locale)
       parse_file(type_file).dig(locale, "data", type) || {} :
       {}
 
-    type_data = Hash.new
-    type_data[locale] = Hash.new
-    type_data[locale]["data"] = Hash.new
-    type_data[locale]["data"][type] = existing_data.deep_merge(translations.sort.to_h)
+    merged_data = existing_data.deep_merge(translations.sort.to_h)
+    type_data = wrap_with_locale(merged_data, locale, type)
 
     sanitize_data_and_write(type_data, type_file)
   end
@@ -338,7 +367,14 @@ def distribute_translations(upload_manifests)
         "dashboard/config/locales/#{locale}#{ext}" :
         "dashboard/config/locales/#{basename}.#{locale}#{ext}"
 
-      sanitize_file_and_write(loc_file, destination)
+      if ext == ".json"
+        # JSON files in this directory need the root key to be set to the locale
+        loc_data = JSON.load(File.read(loc_file))
+        loc_data = wrap_with_locale(loc_data, locale, basename)
+        sanitize_data_and_write(loc_data, destination)
+      else
+        sanitize_file_and_write(loc_file, destination)
+      end
     end
 
     ### Course Content

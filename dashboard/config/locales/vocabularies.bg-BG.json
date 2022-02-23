@@ -2,6 +2,78 @@
   "bg-BG": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "function/hero/unversioned": {
+          "word": "Функция"
+        },
+        "code/poem-art/2021": {
+          "word": "Код"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "code/artist/unversioned": {
+          "word": "Код"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Условия"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Повторения"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Отстраняване на грешки"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Код"
+        },
+        "behavior/coursef/2021": {
+          "word": "Поведение"
+        },
         "variable/coursef/2021": {
           "word": "Променлива"
         },
@@ -56,6 +128,9 @@
         "programming/express/2021": {
           "word": "Програмиране"
         },
+        "behavior/express/2021": {
+          "word": "Поведение"
+        },
         "conditionals/express/2021": {
           "word": "Условия"
         },
@@ -77,6 +152,9 @@
         "programming/pre-express/2021": {
           "word": "Програмиране"
         },
+        "behavior/coursee/2021": {
+          "word": "Поведение"
+        },
         "copyright/coursee/2021": {
           "word": "Авторско право"
         },
@@ -88,6 +166,27 @@
         },
         "define/coursee/2021": {
           "word": "Дефиниране"
+        },
+        "debugging/csd/2021": {
+          "word": "Отстраняване на грешки"
+        },
+        "variable/csd/2021": {
+          "word": "Променлива"
+        },
+        "conditionals/csd/2021": {
+          "word": "Условия"
+        },
+        "abstraction/csd/2021": {
+          "word": "Абстракция"
+        },
+        "function/csd/2021": {
+          "word": "Функция"
+        },
+        "input/csd/2021": {
+          "word": "Поле за въвеждане"
+        },
+        "copyright/csd/2021": {
+          "word": "Авторско право"
         }
       }
     }

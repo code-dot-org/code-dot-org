@@ -1,14 +1,18 @@
 {
-  "func": "putImageData",
+  "key": "putImageData",
+  "name": "putImageData",
   "category": "Canvas",
-  "paletteParams": [
-    "imgData",
-    "x",
-    "y"
+  "category_key": "canvas",
+  "palette_params": [
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
-  "params": [
-    "imgData",
-    "0",
-    "0"
-  ]
+  "syntax": "putImageData(imgData, x, y)"
 }

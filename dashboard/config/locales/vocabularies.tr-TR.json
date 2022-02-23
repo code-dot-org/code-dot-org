@@ -2,104 +2,479 @@
   "tr-TR": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "function/hero/unversioned": {
+          "word": "Fonksiyon"
+        },
+        "code/poem-art/2021": {
+          "word": "Kod",
+          "definition": "(v) bir bilgisayar için talimat yazma amacıyla."
+        },
+        "line/poem-art/2021": {
+          "word": "Satır",
+          "definition": "(şiir) - sağ kenarda biten bir satırda düzenlenmiş bir şiirin alt bölümü. "
+        },
+        "mood/poem-art/2021": {
+          "word": "Ruh hali",
+          "definition": "sanatta veya yazıda bir duygu, atmosfer veya hissin ifadesi."
+        },
+        "program/poem-art/2021": {
+          "definition": "Bir makine tarafından çalıştırılabilen bir şeye kodlanmış bir dizi adım."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "code/artist/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Koşullar"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Döngüler"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Şifreleme"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Kayıpsız Sıkıştırma"
+        },
+        "code/sports/unversioned": {
+          "word": "Kod"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Makine Öğrenimi"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Kod",
+          "definition": "(v) bir bilgisayar için talimat yazma amacıyla."
+        },
+        "program/poem-art/unversioned": {
+          "definition": "Bir makine tarafından çalıştırılabilen bir şeye kodlanmış bir dizi adım."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Ruh hali",
+          "definition": "sanatta veya yazıda bir duygu, atmosfer veya hissin ifadesi."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Satır",
+          "definition": "(şiir) - sağ kenarda biten bir satırda düzenlenmiş bir şiirin alt bölümü. "
+        },
+        "sprite/coursef/2021": {
+          "word": "Hareketli nesne",
+          "definition": "Ekranda konum, boyut ve görünüme sahip bir grafik."
+        },
+        "user/coursef/2021": {
+          "word": "Kullanıcı",
+          "definition": "Yazılım ve donanım da dahil olmak üzere bir nesne kullanan biri."
+        },
         "behavior/coursef/2021": {
-          "word": "Davranış"
+          "word": "Davranış",
+          "definition": "Bir hareketin durması söylenene kadar sürekli olarak gerçekleştirdiği bir eylem."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algoritma",
+          "definition": "Bir görevi tamamlamak için adımların listesi."
         },
         "variable/coursef/2021": {
-          "word": "Değişken"
+          "word": "Değişken",
+          "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
+        },
+        "prompt/coursef/2021": {
+          "word": "İstemi",
+          "definition": "Bilgisayar ekranında kullanıcıdan giriş bekleyen bir ileti."
         },
         "input/coursef/2021": {
-          "word": "Girdi"
+          "word": "Girdi",
+          "definition": "Bilgisayarların kullanıcılardan aldıkları bilgiler."
+        },
+        "repeat/coursef/2021": {
+          "word": "Tekrarla",
+          "definition": "Tekrar bir şey yapmak."
+        },
+        "for_loop/coursef/2021": {
+          "word": "İçin Döngüsü",
+          "definition": "Önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip döngüler."
         },
         "machine_learning/coursef/2021": {
           "word": "Makine Öğrenimi"
         },
+        "dns/coursef/2021": {
+          "word": "DNS",
+          "definition": "Alan Adı Sisteminin kısaltması, bu sistem, alan adlarını (mesela example.com) IP adreslerine (mesela 93.184.216.34) dönüştürür"
+        },
         "internet/coursef/2021": {
-          "word": "İnternet"
+          "word": "İnternet",
+          "definition": "Birbirine bağlı bir grup bilgisayar ve sunucu."
         },
         "packets/coursef/2021": {
-          "word": "Paketler"
+          "word": "Paketler",
+          "definition": "Daha büyük bilgi parçalarından dikkatlice oluşturulmuş küçük bilgi parçaları."
+        },
+        "servers/coursef/2021": {
+          "word": "Sunucular",
+          "definition": "Yalnızca bir şeyleri başkalarına sağlamak için bulunan bilgisayarlar."
+        },
+        "url/coursef/2021": {
+          "word": "URL",
+          "definition": "Bir web sayfasını (mesela www.code.org) çağırmak için hatırlaması kolay bir adres."
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/Kablo",
+          "definition": "Telefon veya televizyon kablolarını kullanarak bilgi gönderme yöntemi."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Fiber Optik Kablo",
+          "definition": "Bilgiyi aktarmak için ışığı kullanan bir bağlantı"
+        },
+        "ip_address/coursef/2021": {
+          "word": "IP Adresi",
+          "definition": "İnternete bağlı herhangi bir öğeye atanan bir sayı."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi",
+          "definition": "Radyo dalgalarını kullanarak bilgi göndermeye yönelik bir kablosuz yöntem."
         },
         "define/coursef/2021": {
-          "word": "Tanımla"
+          "word": "Tanımla",
+          "definition": "Çözmeye çalıştığınız sorunların ayrıntılarını bulma"
+        },
+        "prepare/coursef/2021": {
+          "word": "Hazırlan",
+          "definition": "Yapmak üzere olduğunuz aktivite için materyalleri araştırma, planlama ve elde etme."
+        },
+        "reflect/coursef/2021": {
+          "word": "Yansıtma",
+          "definition": "Gelecekte sonucu iyileştirmek amacıyla bir şeyi dikkatlice yeniden düşünün"
+        },
+        "try/coursef/2021": {
+          "word": "Deneyin",
+          "definition": "Bir şey yapma girişimi"
+        },
+        "algorithm/courseb/2021": {
+          "word": "Algoritma",
+          "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
+        },
+        "bug/courseb/2021": {
+          "word": "Hata",
+          "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/courseb/2021": {
           "word": "Hata Ayıklama (Debugging)"
         },
+        "click/courseb/2021": {
+          "word": "tıklayın",
+          "definition": "Fare butonuna basın"
+        },
+        "drag/courseb/2021": {
+          "word": "Sürükleme",
+          "definition": "Fare butonunuza tıklayın ve fare işaretçisini yeni bir konuma hareket ettirirken basılı tutun"
+        },
         "drop/courseb/2021": {
-          "word": "Bırak"
+          "word": "Bırak",
+          "definition": "Sürüklediğiniz bir öğeyi bırakmak için fare butonunuzu serbest bırakın"
+        },
+        "double_click/courseb/2021": {
+          "word": "Çift Tıklama",
+          "definition": "Fare butonuna hızlıca basın"
         },
         "programming/courseb/2021": {
-          "word": "Programlama"
+          "word": "Programlama",
+          "definition": "Bir program oluşturma sanatı."
+        },
+        "persistence/courseb/2021": {
+          "word": "Israr",
+          "definition": "Bir şey çok zor olsa bile tekrar tekrar deneme."
+        },
+        "repeat/courseb/2021": {
+          "word": "Tekrarla",
+          "definition": "Tekrar bir şey yapmak."
+        },
+        "algorithm/coursea/2021": {
+          "word": "Algoritma",
+          "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
         },
         "debugging/coursea/2021": {
           "word": "Hata Ayıklama (Debugging)"
         },
+        "click/coursea/2021": {
+          "word": "tıklayın",
+          "definition": "Fare butonuna basın"
+        },
+        "drag/coursea/2021": {
+          "word": "Sürükleme",
+          "definition": "Fare butonunuza tıklayın ve fare işaretçisini yeni bir konuma hareket ettirirken basılı tutun"
+        },
         "drop/coursea/2021": {
-          "word": "Bırak"
+          "word": "Bırak",
+          "definition": "Sürüklediğiniz bir öğeyi bırakmak için fare butonunuzu serbest bırakın"
+        },
+        "double_click/coursea/2021": {
+          "word": "Çift Tıklama",
+          "definition": "Fare butonuna hızlıca basın"
+        },
+        "bug/coursea/2021": {
+          "word": "Hata",
+          "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "programming/coursea/2021": {
-          "word": "Programlama"
+          "word": "Programlama",
+          "definition": "Bir program oluşturma sanatı."
+        },
+        "repeat/coursea/2021": {
+          "word": "Tekrarla",
+          "definition": "Tekrar bir şey yapmak."
+        },
+        "algorithm/coursec/2021": {
+          "word": "Algoritma",
+          "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
+        },
+        "bug/coursec/2021": {
+          "word": "Hata",
+          "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/coursec/2021": {
           "word": "Hata Ayıklama (Debugging)"
         },
         "sequencing/coursec/2021": {
-          "word": "Sıralama"
+          "word": "Sıralama",
+          "definition": "Bilgisayarların komutları okuyabilmesi için komutları doğru sırada dizme."
         },
         "programming/coursec/2021": {
-          "word": "Programlama"
+          "word": "Programlama",
+          "definition": "Bir program oluşturma sanatı."
+        },
+        "repeat/coursec/2021": {
+          "word": "Tekrarla",
+          "definition": "Tekrar bir şey yapmak."
         },
         "binary/coursec/2021": {
-          "word": "İkili"
+          "word": "İkili",
+          "definition": "Yalnız iki seçenek kullanarak bilgileri temsil etmenin bir yolu."
+        },
+        "algorithm/coursed/2021": {
+          "word": "Algoritma",
+          "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
+        },
+        "bug/coursed/2021": {
+          "word": "Hata",
+          "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/coursed/2021": {
           "word": "Hata Ayıklama (Debugging)"
         },
         "programming/coursed/2021": {
-          "word": "Programlama"
+          "word": "Programlama",
+          "definition": "Bir program oluşturma sanatı."
+        },
+        "frustrated/coursed/2021": {
+          "word": "Hayal Kırıklığına Uğramış",
+          "definition": "Bir şey istediğiniz gibi olmadığından dolayı kızmak veya sinirlenmek."
+        },
+        "persistence/coursed/2021": {
+          "word": "Israr",
+          "definition": "Bir şey çok zor olsa bile tekrar tekrar deneme."
+        },
+        "repeat/coursed/2021": {
+          "word": "Tekrarla",
+          "definition": "Tekrar bir şey yapmak."
+        },
+        "command/coursed/2021": {
+          "word": "Komut",
+          "definition": "Bilgisayar için bir talimat. Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur. "
         },
         "conditionals/coursed/2021": {
           "word": "Koşullar"
+        },
+        "pseudocode/coursed/2021": {
+          "word": "pseudocode",
+          "definition": "Algoritmadaki adımların düz bir dil açıklaması"
+        },
+        "while_loop/coursed/2021": {
+          "word": "Süresince Döngüsü",
+          "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+        },
+        "until/coursed/2021": {
+          "word": "Kadar",
+          "definition": "Sadece bir şeyin gerçek olduğu noktaya kadar bir şey yapmanızı söyleyen bir komut."
+        },
+        "algorithm/express/2021": {
+          "word": "Algoritma",
+          "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
+        },
+        "bug/express/2021": {
+          "word": "Hata",
+          "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/express/2021": {
           "word": "Hata Ayıklama (Debugging)"
         },
         "sequencing/express/2021": {
-          "word": "Sıralama"
+          "word": "Sıralama",
+          "definition": "Bilgisayarların komutları okuyabilmesi için komutları doğru sırada dizme."
         },
         "programming/express/2021": {
-          "word": "Programlama"
+          "word": "Programlama",
+          "definition": "Bir program oluşturma sanatı."
         },
         "behavior/express/2021": {
-          "word": "Davranış"
+          "word": "Davranış",
+          "definition": "Bir hareketin durması söylenene kadar sürekli olarak gerçekleştirdiği bir eylem."
+        },
+        "sprite/express/2021": {
+          "word": "Hareketli nesne",
+          "definition": "Ekranda konum, boyut ve görünüme sahip bir grafik."
+        },
+        "code/express/2021": {
+          "definition": "kod yazmak veya bir bilgisayar için yönergeler yazmak için."
+        },
+        "repeat/express/2021": {
+          "word": "Tekrarla",
+          "definition": "Tekrar bir şey yapmak."
+        },
+        "command/express/2021": {
+          "word": "Komut",
+          "definition": "Bilgisayar için bir talimat. Bir araya getirilen birçok komut, algoritmaları ve bilgisayar programlarını oluşturur. "
         },
         "conditionals/express/2021": {
           "word": "Koşullar"
+        },
+        "while_loop/express/2021": {
+          "word": "Süresince Döngüsü",
+          "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+        },
+        "until/express/2021": {
+          "word": "Kadar",
+          "definition": "Sadece bir şeyin gerçek olduğu noktaya kadar bir şey yapmanızı söyleyen bir komut."
         },
         "function/express/2021": {
           "word": "Fonksiyon"
         },
         "variable/express/2021": {
-          "word": "Değişken"
+          "word": "Değişken",
+          "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
+        },
+        "prompt/express/2021": {
+          "word": "çabuk",
+          "definition": "Bilgisayar ekranında kullanıcıdan giriş bekleyen bir ileti."
+        },
+        "for_loop/express/2021": {
+          "word": "İçin Döngüsü",
+          "definition": "Önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip döngüler."
         },
         "define/express/2021": {
-          "word": "Tanımla"
+          "word": "Tanımla",
+          "definition": "Çözmeye çalıştığınız sorunların ayrıntılarını bulma"
+        },
+        "prepare/express/2021": {
+          "word": "Hazırlan",
+          "definition": "Yapmak üzere olduğunuz aktivite için materyalleri araştırma, planlama ve elde etme."
+        },
+        "reflect/express/2021": {
+          "word": "Yansıtma",
+          "definition": "Gelecekte sonucu iyileştirmek amacıyla bir şeyi dikkatlice yeniden düşünün"
+        },
+        "try/express/2021": {
+          "word": "Deneyin",
+          "definition": "Bir şey yapma girişimi"
+        },
+        "click/pre-express/2021": {
+          "word": "tıklayın",
+          "definition": "Fare butonuna basın"
+        },
+        "drag/pre-express/2021": {
+          "word": "Sürükleme",
+          "definition": "Fare butonunuza tıklayın ve fare işaretçisini yeni bir konuma hareket ettirirken basılı tutun"
         },
         "drop/pre-express/2021": {
-          "word": "Bırak"
+          "word": "Bırak",
+          "definition": "Sürüklediğiniz bir öğeyi bırakmak için fare butonunuzu serbest bırakın"
+        },
+        "double_click/pre-express/2021": {
+          "word": "Çift Tıklama",
+          "definition": "Fare butonuna hızlıca basın"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Algoritma",
+          "definition": "Bir görevi tamamlamak için gereken adımların listesi. "
+        },
+        "bug/pre-express/2021": {
+          "word": "Hata",
+          "definition": "Bir programın düzgün çalışmayan kısmı."
         },
         "debugging/pre-express/2021": {
           "word": "Hata Ayıklama (Debugging)"
         },
         "programming/pre-express/2021": {
-          "word": "Programlama"
+          "word": "Programlama",
+          "definition": "Bir program oluşturma sanatı."
+        },
+        "persistence/pre-express/2021": {
+          "word": "Israr",
+          "definition": "Bir şey çok zor olsa bile tekrar tekrar deneme."
+        },
+        "repeat/pre-express/2021": {
+          "word": "Tekrarla",
+          "definition": "Tekrar bir şey yapmak."
         },
         "behavior/coursee/2021": {
-          "word": "Davranış"
+          "word": "Davranış",
+          "definition": "Bir hareketin durması söylenene kadar sürekli olarak gerçekleştirdiği bir eylem."
+        },
+        "sprite/coursee/2021": {
+          "word": "Hareketli nesne",
+          "definition": "Ekranda konum, boyut ve görünüme sahip bir grafik."
         },
         "copyright/coursee/2021": {
           "word": "Telif Hakkı"
+        },
+        "repeat/coursee/2021": {
+          "word": "Tekrarla",
+          "definition": "Tekrar bir şey yapmak."
         },
         "function/coursee/2021": {
           "word": "Fonksiyon"
@@ -107,8 +482,70 @@
         "conditionals/coursee/2021": {
           "word": "Koşullar"
         },
+        "while_loop/coursee/2021": {
+          "word": "Süresince Döngüsü",
+          "definition": "Bir koşul doğru olduğu sürece tekrarlamaya devam eden bir döngü."
+        },
         "define/coursee/2021": {
-          "word": "Tanımla"
+          "word": "Tanımla",
+          "definition": "Çözmeye çalıştığınız sorunların ayrıntılarını bulma"
+        },
+        "prepare/coursee/2021": {
+          "word": "Hazırlan",
+          "definition": "Yapmak üzere olduğunuz aktivite için materyalleri araştırma, planlama ve elde etme."
+        },
+        "reflect/coursee/2021": {
+          "word": "Yansıtma",
+          "definition": "Gelecekte sonucu iyileştirmek amacıyla bir şeyi dikkatlice yeniden düşünün"
+        },
+        "try/coursee/2021": {
+          "word": "Deneyin",
+          "definition": "Bir şey yapma girişimi"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Makine Öğrenimi"
+        },
+        "user_interface/csd/2021": {
+          "word": "Kullanıcı Arayüzü"
+        },
+        "bug/csd/2021": {
+          "word": "Hata",
+          "definition": "Bir programın düzgün çalışmayan kısmı."
+        },
+        "for_loop/csd/2021": {
+          "word": "İçin Döngüsü",
+          "definition": "Önceden belirlenmiş bir başlangıç, son ve artışa (adım aralığı) sahip döngüler."
+        },
+        "debugging/csd/2021": {
+          "word": "Hata Ayıklama (Debugging)"
+        },
+        "variable/csd/2021": {
+          "word": "Değişken",
+          "definition": "Bir programda kullanılan bir bilgi parçası için bir etiket."
+        },
+        "sprite/csd/2021": {
+          "word": "Hareketli nesne"
+        },
+        "conditionals/csd/2021": {
+          "word": "Koşullar"
+        },
+        "abstraction/csd/2021": {
+          "word": "Soyutlama"
+        },
+        "function/csd/2021": {
+          "word": "Fonksiyon"
+        },
+        "input/csd/2021": {
+          "word": "Girdi"
+        },
+        "processing/csd/2021": {
+          "word": "İşleme"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Dijital Ayak İzi"
+        },
+        "copyright/csd/2021": {
+          "word": "Telif Hakkı"
         }
       }
     }

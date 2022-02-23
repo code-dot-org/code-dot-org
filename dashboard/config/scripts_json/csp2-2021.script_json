@@ -4,22 +4,24 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
-      "is_migrated": true,
-      "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
-      "include_student_lesson_plans": true
+      "student_detail_progress_view": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-26 16:43:24 UTC",
+    "serialized_at": "2022-02-23 18:04:23 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp2-2021"
     }
@@ -225,8 +227,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "3c68d9f8-1ad2-4e9b-8c3b-472cb30f819f",
+      "key": "32e3598d-d1a1-40b5-a717-96af9fc53682",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "32e3598d-d1a1-40b5-a717-96af9fc53682",
+        "lesson.key": "Welcome to the Internet",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "key": "3c68d9f8-1ad2-4e9b-8c3b-472cb30f819f",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -240,7 +255,7 @@
     },
     {
       "key": "d0400f34-8c9c-472a-8bed-b69c4c6dbe4c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -254,7 +269,7 @@
     },
     {
       "key": "bbc5e633-ded2-4692-a5dd-da57a2e023b4",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -267,8 +282,21 @@
       }
     },
     {
-      "key": "7d434dfc-d492-41b8-80ca-291cdeef8f35",
+      "key": "b0e0e0c6-fc29-43a8-84a0-894e7fe0a304",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b0e0e0c6-fc29-43a8-84a0-894e7fe0a304",
+        "lesson.key": "Building a Network",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "key": "7d434dfc-d492-41b8-80ca-291cdeef8f35",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -282,7 +310,7 @@
     },
     {
       "key": "62ae7f8a-fe75-4097-a72c-5cfc0ba7ddb1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -296,7 +324,7 @@
     },
     {
       "key": "58160049-4918-4cfe-8540-3af390c31af7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -309,8 +337,21 @@
       }
     },
     {
-      "key": "ca609800-322b-4779-b39c-778d2eab2d23",
+      "key": "619e60c5-b521-4f77-a6e1-9ecc6ffa0fa1",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "619e60c5-b521-4f77-a6e1-9ecc6ffa0fa1",
+        "lesson.key": "The Need for Addressing",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "key": "ca609800-322b-4779-b39c-778d2eab2d23",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -324,7 +365,7 @@
     },
     {
       "key": "70fa70c1-0f3a-4263-b493-6df6057ffbaf",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -338,7 +379,7 @@
     },
     {
       "key": "bfac3a43-daf8-46b4-9038-189732aee8c6",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -351,8 +392,21 @@
       }
     },
     {
-      "key": "33d0b05f-97ee-44c4-9818-6c1aa8c6b170",
+      "key": "8e6e1eec-7f3a-4c26-b405-e3fc6faaf6f1",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8e6e1eec-7f3a-4c26-b405-e3fc6faaf6f1",
+        "lesson.key": "Routers and Redundancy",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "key": "33d0b05f-97ee-44c4-9818-6c1aa8c6b170",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -366,7 +420,7 @@
     },
     {
       "key": "e106f32e-0bcd-4d4d-b253-0616bfcbfe66",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -380,7 +434,7 @@
     },
     {
       "key": "e9a30822-c14b-4d05-9b38-c3a0500ec43e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -393,8 +447,21 @@
       }
     },
     {
-      "key": "0e878849-ad33-4ce0-8ee3-696839be1d7d",
+      "key": "7844a8d8-ef98-4da7-a7f5-27c150e8b4c0",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7844a8d8-ef98-4da7-a7f5-27c150e8b4c0",
+        "lesson.key": "Packets",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "key": "0e878849-ad33-4ce0-8ee3-696839be1d7d",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -408,7 +475,7 @@
     },
     {
       "key": "f691d9ca-d24e-429f-9e9e-bc903b0ff629",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -422,7 +489,7 @@
     },
     {
       "key": "ce9c080f-8959-4c32-bda9-dbfe319d6ae4",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -436,7 +503,7 @@
     },
     {
       "key": "fd8399b5-e6d7-4ee3-891e-68f76c41124e",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -447,8 +514,21 @@
       }
     },
     {
-      "key": "c08b9ac9-ba2e-47d3-9864-a30ee887d025",
+      "key": "d8f33be6-b7a8-488b-8a74-a7ab5d1105a1",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d8f33be6-b7a8-488b-8a74-a7ab5d1105a1",
+        "lesson.key": "DNS and HTTP",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "key": "c08b9ac9-ba2e-47d3-9864-a30ee887d025",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -462,7 +542,7 @@
     },
     {
       "key": "388d0d33-13dd-4c78-b7ad-4b2ba41599a8",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -476,7 +556,7 @@
     },
     {
       "key": "e4d6a5df-741d-4221-a3c3-6789d6fa032a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -489,8 +569,21 @@
       }
     },
     {
-      "key": "1d22d634-2f9a-4ce8-8cea-75580e76fe68",
+      "key": "f4141315-ff61-45ac-966b-6818e534a2c8",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f4141315-ff61-45ac-966b-6818e534a2c8",
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "key": "1d22d634-2f9a-4ce8-8cea-75580e76fe68",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -504,7 +597,7 @@
     },
     {
       "key": "5ecbd4d0-db59-4ad7-9940-213a76b42fdd",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -518,7 +611,7 @@
     },
     {
       "key": "1512fde1-f5f8-4726-9fd3-693c01f555a6",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -531,8 +624,21 @@
       }
     },
     {
-      "key": "06f410ac-58bb-4d84-aae9-4a6fd921bfd7",
+      "key": "cc6ded39-8b11-4533-910a-c43761da12ec",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc6ded39-8b11-4533-910a-c43761da12ec",
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "key": "06f410ac-58bb-4d84-aae9-4a6fd921bfd7",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -546,7 +652,7 @@
     },
     {
       "key": "df5a4291-73f7-48bf-bd23-cb57af091bf0",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 39,
         "name": "Activity"
@@ -560,7 +666,7 @@
     },
     {
       "key": "c208bc4a-2e23-4c57-927a-f0674450c8e4",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 1,
         "name": "Wrap Up"
@@ -573,8 +679,21 @@
       }
     },
     {
-      "key": "b227a89d-3e4d-400d-b381-5700a904725e",
+      "key": "3c38c83b-bce2-4a35-92e7-5eddf8a7a255",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3c38c83b-bce2-4a35-92e7-5eddf8a7a255",
+        "lesson.key": "Lesson 9: Assessment Day",
+        "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2021"
+      }
+    },
+    {
+      "key": "b227a89d-3e4d-400d-b381-5700a904725e",
+      "position": 2,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -588,7 +707,7 @@
     },
     {
       "key": "e4d5a985-34f4-4c1d-9926-f39a770b08e2",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -602,6 +721,17 @@
     }
   ],
   "activity_sections": [
+    {
+      "key": "7c2c80b2-05ea-46eb-8f0d-e04aa1e343bd",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ooxp4FBAsjl56kM5z0rUdRDIAUm9x3AOR_GirYSDooE/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "7c2c80b2-05ea-46eb-8f0d-e04aa1e343bd",
+        "lesson_activity.key": "32e3598d-d1a1-40b5-a717-96af9fc53682"
+      }
+    },
     {
       "key": "db76aff3-322c-4677-90d9-b7ca42131f09",
       "position": 1,
@@ -782,7 +912,7 @@
       "key": "d80460ab-af44-4e1d-b913-bc5861050d8f",
       "position": 2,
       "properties": {
-        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\r\n\r\nAt the end of this unit you will do a project focusing on a societal issues. As you go through these lessons keep you ears and eyes open for how things work.\r\n\r\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols late in this unit. \r\n\r\nFor example there are two major issues to think about:\r\n\r\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\r\n\r\n* Internet Censorship is the attempt to control or suppress of what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\r\n\r\nTo have an informed opinion though it helps to understand the technical underpinnings of how the internet works.\r\n\r\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
+        "description": "Why learn about how the Internet works? As Vint Cerf Says: \"You can't escape from contact with the Internet. So why not get to know it?\" But you don't have to take Vint Cerf's word for it. Some of the largest issues facing society hinge on an understanding of how the Internet functions.\n\nAt the end of this unit you will do a project focusing on a societal issue. As you go through these lessons keep you ears and eyes open for how things work.\n\nMany of the issues are related to people taking advantage of the open protocols that make the Internet function and present us with tricky dilemmas. We will learn about protocols later in this unit. \n\nFor example, there are two major issues to think about:\n\n* Net Neutrality is a raging legal debate about the principle that Internet service providers should enable access to all content and applications regardless of the source, and without favoring or blocking particular products or websites.\n\n* Internet Censorship is the attempt to control or suppress of what can be accessed, published, or viewed on the Internet by certain people. This can be used to protect people (i.e. to not allow access to child pornography) but can also be used to limit free speech.\n\nIn order to have an informed opinion, it helps to understand the technical underpinnings of how the internet works.\n\nFinally, a major issue that our society faces is that far too few people actually understand how the Internet works! We are going to change that over the next few lessons.",
         "remarks": true
       },
       "seeding_key": {
@@ -812,6 +942,17 @@
       "seeding_key": {
         "activity_section.key": "2a4f9916-2320-44f5-a6fc-11910e0d8fa8",
         "lesson_activity.key": "bbc5e633-ded2-4692-a5dd-da57a2e023b4"
+      }
+    },
+    {
+      "key": "8cfcbb23-dbcb-4e09-8f78-2564d06b4c5a",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1Z23SBjpjfAdBxPCupnKuwb_Y4vsyVFAHpPGriLObWuI/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "8cfcbb23-dbcb-4e09-8f78-2564d06b4c5a",
+        "lesson_activity.key": "b0e0e0c6-fc29-43a8-84a0-894e7fe0a304"
       }
     },
     {
@@ -973,6 +1114,17 @@
       "seeding_key": {
         "activity_section.key": "4652a86f-e996-47c5-a03e-86572416869d",
         "lesson_activity.key": "58160049-4918-4cfe-8540-3af390c31af7"
+      }
+    },
+    {
+      "key": "d206bb4c-55d3-430a-97ae-05129a85700c",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1h6M7ZaOlcXqvZmkLA6w4n9Uds9awoYnQHkIy5Jn1Vv8/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "d206bb4c-55d3-430a-97ae-05129a85700c",
+        "lesson_activity.key": "619e60c5-b521-4f77-a6e1-9ecc6ffa0fa1"
       }
     },
     {
@@ -1199,6 +1351,17 @@
       }
     },
     {
+      "key": "59f2874c-4237-4dea-ab27-62d4aa6c8071",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1j5XBQprztqal_96Jje78aiDaQFMzu_ljCSsFyJEDQbQ/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "59f2874c-4237-4dea-ab27-62d4aa6c8071",
+        "lesson_activity.key": "8e6e1eec-7f3a-4c26-b405-e3fc6faaf6f1"
+      }
+    },
+    {
       "key": "50af7093-2fd3-40d0-b658-db7d137bf0c9",
       "position": 1,
       "properties": {
@@ -1418,6 +1581,17 @@
       "seeding_key": {
         "activity_section.key": "abbc2369-6a89-40e5-9bec-847fe5ef943b",
         "lesson_activity.key": "e9a30822-c14b-4d05-9b38-c3a0500ec43e"
+      }
+    },
+    {
+      "key": "9d8120cd-8b0a-4689-8c83-a3d96568538f",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/107_EYOre7kGgkt8fRXb4Bq4SmL4LhKCj6w8o4dXU9Kc/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "9d8120cd-8b0a-4689-8c83-a3d96568538f",
+        "lesson_activity.key": "7844a8d8-ef98-4da7-a7f5-27c150e8b4c0"
       }
     },
     {
@@ -1654,6 +1828,17 @@
       "seeding_key": {
         "activity_section.key": "da03a305-0e4c-4eba-8f09-e978f956b854",
         "lesson_activity.key": "fd8399b5-e6d7-4ee3-891e-68f76c41124e"
+      }
+    },
+    {
+      "key": "f3b351e1-a083-4866-b4a0-bc16b3e1fc18",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1xAuTuuZnrSz_F3D2vHTUKpMaFslqYm6SRbU42CNYZHk/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "f3b351e1-a083-4866-b4a0-bc16b3e1fc18",
+        "lesson_activity.key": "d8f33be6-b7a8-488b-8a74-a7ab5d1105a1"
       }
     },
     {
@@ -1907,6 +2092,17 @@
       }
     },
     {
+      "key": "08b3191c-9625-42bc-8e20-2cc378bb9992",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/134Qj6cmMUgyh8Oc53Dof61qmTjvwhkswQ-Rr0ocCLu0/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "08b3191c-9625-42bc-8e20-2cc378bb9992",
+        "lesson_activity.key": "f4141315-ff61-45ac-966b-6818e534a2c8"
+      }
+    },
+    {
       "key": "f6a047df-d36e-4eab-84d6-e4dc4eb3edcc",
       "position": 1,
       "properties": {
@@ -2017,6 +2213,17 @@
       }
     },
     {
+      "key": "d13933d1-c3d8-43be-bbf7-5bd64ece4242",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/18eYxv3mEQXbeTFTrKY1dNy6b0UT8XD_ulBMzxfHdKFg/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "d13933d1-c3d8-43be-bbf7-5bd64ece4242",
+        "lesson_activity.key": "cc6ded39-8b11-4533-910a-c43761da12ec"
+      }
+    },
+    {
       "key": "6be04337-19ed-48ca-b82a-6daa223ed5a3",
       "position": 1,
       "properties": {
@@ -2115,6 +2322,17 @@
       "seeding_key": {
         "activity_section.key": "953c8663-ec87-4be7-b310-7f051102a281",
         "lesson_activity.key": "c208bc4a-2e23-4c57-927a-f0674450c8e4"
+      }
+    },
+    {
+      "key": "5a5a43d3-c205-426b-b1bb-c10e5ada8911",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1HpWjLU0-wHBd0xqk8UqIEoIBitkLJKQwq3sOaa8RGVY/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "5a5a43d3-c205-426b-b1bb-c10e5ada8911",
+        "lesson_activity.key": "3c38c83b-bce2-4a35-92e7-5eddf8a7a255"
       }
     },
     {
@@ -2770,8 +2988,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -2782,8 +3000,8 @@
       "url": "https://docs.google.com/presentation/d/1zk7XyygG02tc_DCKQK2K_10XayKoIG-gRwOoRjwFgRg/edit?usp=sharing",
       "key": "csp-unit-2-the-internet",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp-unit-2-the-internet"
@@ -2794,8 +3012,8 @@
       "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
       "key": "csp_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -2806,9 +3024,9 @@
       "url": "https://docs.google.com/document/d/1LHCRJlpBK56ynaYp5-RfiKlaAzCoh99QXUU8xbMPJS4/edit?usp=sharing",
       "key": "exemplar-internet-dilemmas",
       "properties": {
-        "type": "Exemplar",
         "audience": "Verified Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "exemplar-internet-dilemmas"
@@ -2819,9 +3037,9 @@
       "url": "https://docs.google.com/document/d/1UZ1FJDBnwLARSmP7hqFKnMLkV8c2lC6C3qO5RPulDao/edit?usp=sharing",
       "key": "internet-dilemmas-2021",
       "properties": {
-        "type": "Project Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Project Guide"
       },
       "seeding_key": {
         "resource.key": "internet-dilemmas-2021"
@@ -2832,8 +3050,8 @@
       "url": "https://docs.google.com/document/d/1IcnID2dhXrhagkJCUULO8g240NflvofUs3q23yEnUu4/edit?usp=sharing",
       "key": "ip_address_labels",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "ip_address_labels"
@@ -2844,9 +3062,9 @@
       "url": "https://docs.google.com/document/d/1EB_y099r7Qwb3SxFhHK9wSaikoHixL85O4_YdsUBJSY/edit",
       "key": "layers-of-the-internet-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "layers-of-the-internet-activity-guide"
@@ -2857,9 +3075,9 @@
       "url": "https://docs.google.com/document/d/1-ClLNZfyIyXIw9gJU3wyGaxi6WZdx5ihAEdRzs0QyAQ/view",
       "key": "teacher-guide-router",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "teacher-guide-router"
@@ -2870,8 +3088,8 @@
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
@@ -2882,9 +3100,9 @@
       "url": "https://youtu.be/kBXQZMmiA4s",
       "key": "the-internet-http-and-html-1",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/concept_http_html.mp4"
+        "download_url": "https://videos.code.org/2015/csp/concept_http_html.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the-internet-http-and-html-1"
@@ -2895,20 +3113,21 @@
       "url": "https://youtu.be/5o8CwafCxnU",
       "key": "the-internet-ip-addresses-and-dns-1",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/concept_internet_ip_dns.mp4"
+        "download_url": "https://videos.code.org/2015/csp/concept_internet_ip_dns.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the-internet-ip-addresses-and-dns-1"
       }
     },
     {
-      "name": "The Internet: IP Addresses and DNS - Video",
+      "name": "The Internet: IP Addresses and DNS",
       "url": "https://youtu.be/5o8CwafCxnU?t=249",
       "key": "the-internet-ip-addresses-and-dns-video",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/concept_internet_ip_dns.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -2920,9 +3139,9 @@
       "url": "https://youtu.be/AYdF7b3nMto",
       "key": "the-internet-packets-routing-and-reliability-1",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4"
+        "download_url": "https://videos.code.org/2015/csp/concept_internet_packets_reliability.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "the-internet-packets-routing-and-reliability-1"
@@ -2933,8 +3152,8 @@
       "url": "https://docs.google.com/document/d/1AuFdmglDQD6-gzzipbP492kkIUejKrwtHpLbvFv8kcA/edit?usp=sharing",
       "key": "u2_high_score_sample_guide_rubric",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u2_high_score_sample_guide_rubric"
@@ -2945,8 +3164,8 @@
       "url": "https://docs.google.com/document/d/1nWb27SlMffIYwKf3jgurJBPWyYhyIc-gSzObvJlHR8s/edit?usp=sharing",
       "key": "u2_mid_score_sample_guide_rubric",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u2_mid_score_sample_guide_rubric"
@@ -2957,9 +3176,9 @@
       "url": "https://docs.google.com/document/d/1JbZgvlloovjaV5UfewWj-E1-S5zmwgiv-r8_5cASoPY/edit?usp=sharing",
       "key": "u2l02-the-need-for-addressing",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "u2l02-the-need-for-addressing"
@@ -2970,9 +3189,9 @@
       "url": "https://docs.google.com/document/d/1A07hKLahrUc4pA4GI_fIYIIA1yH8iAHgdPg9Cokl7iI/edit?usp=sharing",
       "key": "u2l04-packets",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "u2l04-packets"
@@ -2983,8 +3202,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -2995,9 +3214,9 @@
       "url": "https://www.youtube.com/watch?v=Dxcc6ycZ73M",
       "key": "what-is-the-internet",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/what_is_the_internet.mp4"
+        "download_url": "https://videos.code.org/2015/csp/what_is_the_internet.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "what-is-the-internet"
@@ -3220,63 +3439,13 @@
   ],
   "objectives": [
     {
-      "key": "a7ff1a46-d3bc-4af7-a232-7268abda25c8",
+      "key": "1abb01e5-f48b-405d-8b58-3998bdc70d04",
       "properties": {
-        "description": "Identify questions they have about how the Internet works"
+        "description": "Describe how information flows through the Internet as a datastream of packets"
       },
       "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "objective.key": "a7ff1a46-d3bc-4af7-a232-7268abda25c8"
-      }
-    },
-    {
-      "key": "d2a523e2-1ba8-4a88-913e-1b999c75c9a2",
-      "properties": {
-        "description": "Use the Internet Simulator to communicate information with a partner"
-      },
-      "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "objective.key": "d2a523e2-1ba8-4a88-913e-1b999c75c9a2"
-      }
-    },
-    {
-      "key": "71af316c-5061-4a8e-8a49-65de740e9ed2",
-      "properties": {
-        "description": "Identify the path(s) connecting two devices in a simulated network"
-      },
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "objective.key": "71af316c-5061-4a8e-8a49-65de740e9ed2"
-      }
-    },
-    {
-      "key": "4dabfb2d-e3ff-47db-a890-afeb9426a08c",
-      "properties": {
-        "description": "Explain how computing devices can be connected to form a network"
-      },
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "objective.key": "4dabfb2d-e3ff-47db-a890-afeb9426a08c"
-      }
-    },
-    {
-      "key": "f7770a66-d770-4ea8-a402-f983be61d29f",
-      "properties": {
-        "description": "Explain the need for open and shared protocols for communicating on the Internet"
-      },
-      "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "objective.key": "f7770a66-d770-4ea8-a402-f983be61d29f"
-      }
-    },
-    {
-      "key": "71661941-9d27-431d-a866-be8c7a6220e4",
-      "properties": {
-        "description": "Describe the way the Internet Protocol helps uniquely identify one another on the Internet"
-      },
-      "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "objective.key": "71661941-9d27-431d-a866-be8c7a6220e4"
+        "lesson.key": "Packets",
+        "objective.key": "1abb01e5-f48b-405d-8b58-3998bdc70d04"
       }
     },
     {
@@ -3290,46 +3459,6 @@
       }
     },
     {
-      "key": "df7c8bc4-527b-4596-8d2b-d1bcd8e0ab91",
-      "properties": {
-        "description": "Describe how the redundant nature of networks can lead to dynamic, fault tolerant routes"
-      },
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "objective.key": "df7c8bc4-527b-4596-8d2b-d1bcd8e0ab91"
-      }
-    },
-    {
-      "key": "1abb01e5-f48b-405d-8b58-3998bdc70d04",
-      "properties": {
-        "description": "Describe how information flows through the Internet as a datastream of packets"
-      },
-      "seeding_key": {
-        "lesson.key": "Packets",
-        "objective.key": "1abb01e5-f48b-405d-8b58-3998bdc70d04"
-      }
-    },
-    {
-      "key": "605c8934-c6ce-4126-a06d-67a40b4cc5a4",
-      "properties": {
-        "description": "Explain how packet numbering and re-ordering can allow for large messages to reliably be sent even if packets are dropped or arrive out of order"
-      },
-      "seeding_key": {
-        "lesson.key": "Packets",
-        "objective.key": "605c8934-c6ce-4126-a06d-67a40b4cc5a4"
-      }
-    },
-    {
-      "key": "5f2a0d6b-6e51-41b1-8221-c38ce45b32e8",
-      "properties": {
-        "description": "Explain the differences between the Transmission Control Protocol (TCP) and User Datagram Protocol (UDP)"
-      },
-      "seeding_key": {
-        "lesson.key": "Packets",
-        "objective.key": "5f2a0d6b-6e51-41b1-8221-c38ce45b32e8"
-      }
-    },
-    {
       "key": "250f3506-fc51-4ae2-a554-5334f0d87074",
       "properties": {
         "description": "Describe how HTTP is used for sharing the files and pages that make up the World Wide Web"
@@ -3337,6 +3466,16 @@
       "seeding_key": {
         "lesson.key": "DNS and HTTP",
         "objective.key": "250f3506-fc51-4ae2-a554-5334f0d87074"
+      }
+    },
+    {
+      "key": "49c33371-74bb-4759-be6d-b557a8436d08",
+      "properties": {
+        "description": "Identify how an internet dilemma has the potential to benefit and harm different stakeholders"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "objective.key": "49c33371-74bb-4759-be6d-b557a8436d08"
       }
     },
     {
@@ -3350,6 +3489,56 @@
       }
     },
     {
+      "key": "4dabfb2d-e3ff-47db-a890-afeb9426a08c",
+      "properties": {
+        "description": "Explain how computing devices can be connected to form a network"
+      },
+      "seeding_key": {
+        "lesson.key": "Building a Network",
+        "objective.key": "4dabfb2d-e3ff-47db-a890-afeb9426a08c"
+      }
+    },
+    {
+      "key": "5f2a0d6b-6e51-41b1-8221-c38ce45b32e8",
+      "properties": {
+        "description": "Explain the differences between the Transmission Control Protocol (TCP) and User Datagram Protocol (UDP)"
+      },
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "objective.key": "5f2a0d6b-6e51-41b1-8221-c38ce45b32e8"
+      }
+    },
+    {
+      "key": "605c8934-c6ce-4126-a06d-67a40b4cc5a4",
+      "properties": {
+        "description": "Explain how packet numbering and re-ordering can allow for large messages to reliably be sent even if packets are dropped or arrive out of order"
+      },
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "objective.key": "605c8934-c6ce-4126-a06d-67a40b4cc5a4"
+      }
+    },
+    {
+      "key": "71661941-9d27-431d-a866-be8c7a6220e4",
+      "properties": {
+        "description": "Describe the way the Internet Protocol helps uniquely identify one another on the Internet"
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "objective.key": "71661941-9d27-431d-a866-be8c7a6220e4"
+      }
+    },
+    {
+      "key": "71af316c-5061-4a8e-8a49-65de740e9ed2",
+      "properties": {
+        "description": "Identify the path(s) connecting two devices in a simulated network"
+      },
+      "seeding_key": {
+        "lesson.key": "Building a Network",
+        "objective.key": "71af316c-5061-4a8e-8a49-65de740e9ed2"
+      }
+    },
+    {
       "key": "916b7051-3d90-49d5-8d97-dee12eeb1236",
       "properties": {
         "description": "Explain how different layers of protocols on the Internet build upon and rely on one another"
@@ -3360,13 +3549,13 @@
       }
     },
     {
-      "key": "f539812f-8d90-4196-95ed-cf12f69348a4",
+      "key": "a7ff1a46-d3bc-4af7-a232-7268abda25c8",
       "properties": {
-        "description": "Identify how an internet dilemma has the potential to benefit and harm different stakeholders"
+        "description": "Identify questions they have about how the Internet works"
       },
       "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "objective.key": "f539812f-8d90-4196-95ed-cf12f69348a4"
+        "lesson.key": "Welcome to the Internet",
+        "objective.key": "a7ff1a46-d3bc-4af7-a232-7268abda25c8"
       }
     },
     {
@@ -3380,13 +3569,43 @@
       }
     },
     {
-      "key": "49c33371-74bb-4759-be6d-b557a8436d08",
+      "key": "d2a523e2-1ba8-4a88-913e-1b999c75c9a2",
+      "properties": {
+        "description": "Use the Internet Simulator to communicate information with a partner"
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "objective.key": "d2a523e2-1ba8-4a88-913e-1b999c75c9a2"
+      }
+    },
+    {
+      "key": "df7c8bc4-527b-4596-8d2b-d1bcd8e0ab91",
+      "properties": {
+        "description": "Describe how the redundant nature of networks can lead to dynamic, fault tolerant routes"
+      },
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "objective.key": "df7c8bc4-527b-4596-8d2b-d1bcd8e0ab91"
+      }
+    },
+    {
+      "key": "f539812f-8d90-4196-95ed-cf12f69348a4",
       "properties": {
         "description": "Identify how an internet dilemma has the potential to benefit and harm different stakeholders"
       },
       "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 2",
-        "objective.key": "49c33371-74bb-4759-be6d-b557a8436d08"
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "objective.key": "f539812f-8d90-4196-95ed-cf12f69348a4"
+      }
+    },
+    {
+      "key": "f7770a66-d770-4ea8-a402-f983be61d29f",
+      "properties": {
+        "description": "Explain the need for open and shared protocols for communicating on the Internet"
+      },
+      "seeding_key": {
+        "lesson.key": "The Need for Addressing",
+        "objective.key": "f7770a66-d770-4ea8-a402-f983be61d29f"
       }
     },
     {
@@ -3401,48 +3620,6 @@
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-NI-04"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-NI-04"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-NI-03"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-NI-04"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-NI-04"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-NI-03"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Building a Network",
@@ -3501,65 +3678,275 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "The Need for Addressing",
+        "lesson.key": "Building a Network",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-NI-04"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Need for Addressing",
+        "lesson.key": "Building a Network",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-04"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-NI-04"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-NI-04"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
+        "lesson.key": "Building a Network",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-NI-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-1.B.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-1.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-1.D.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-1.D.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-2.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "DNS and HTTP",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-1.B.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-1.B.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CSN-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-NI-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.C.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.C.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.C.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "IOC-1.F.10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-28"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-30"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-26"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Internet Dilemmas Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-IC-28"
       }
     },
     {
@@ -3620,254 +4007,86 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Packets",
+        "lesson.key": "Routers and Redundancy",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-NI-04"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Packets",
+        "lesson.key": "Routers and Redundancy",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-04"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Packets",
+        "lesson.key": "Routers and Redundancy",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-NI-03"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Packets",
+        "lesson.key": "The Need for Addressing",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.5"
+        "standard.shortcode": "CSN-1.B.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Packets",
+        "lesson.key": "The Need for Addressing",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.6"
+        "standard.shortcode": "CSN-1.B.2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Packets",
+        "lesson.key": "The Need for Addressing",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.C.1"
+        "standard.shortcode": "CSN-1.B.3"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Packets",
+        "lesson.key": "The Need for Addressing",
         "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.C.2"
+        "standard.shortcode": "CSN-1.B.4"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Packets",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Packets",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
+        "lesson.key": "The Need for Addressing",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-NI-04"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "DNS and HTTP",
+        "lesson.key": "The Need for Addressing",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-NI-04"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "DNS and HTTP",
+        "lesson.key": "Welcome to the Internet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to the Internet",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-NI-03"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "DNS and HTTP",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-28"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-30"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-26"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-28"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 1",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.F.10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-24"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-28"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-IC-30"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-26"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-IC-28"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas Part 2",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.F.10"
       }
     }
   ],

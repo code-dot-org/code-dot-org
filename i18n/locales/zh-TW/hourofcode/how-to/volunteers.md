@@ -1,40 +1,40 @@
 ---
-title: Hour of Code How-To Guide for Volunteers
+title: 一小時玩程式志工指南
 ---
 
-# How to volunteer with a school or classroom
+# 如何在學校或課堂做志工
 
-### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
+### 成千上萬的老師正在尋找志工來激勵他們的學生。今天就做出改變！
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>註冊志工</button>]({{ urls/volunteer }})
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
+計算思維有助於培養問題解決能力、邏輯能力和創造力。 科技正改變著地球上的每一個行業。 今天的學生應該學習如何創造技術，而不僅僅是使用它。
 
-The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
+一小時玩程式是一個小時的電腦科學介紹，旨在揭開“代碼”的神秘面紗，表明任何人都可以學習基礎知識，並擴大在電腦科學領域的參與。 你可以幫助提高人們對電腦科學運動的認識，提供志工服務激勵更多學生嘗試電腦科學，特別是來自歷史上被邊緣化的種族和民族群體的年輕女性和學生。
 
-- [Who can volunteer?](#who-can-volunteer)
+- [誰可以做志工？](#who-can-volunteer)
 - [為何需要志工？](#why-volunteer)
-- [How do volunteers get selected?](#selection)
-- [What if I want to volunteer with a specific school?](#choose-a-school)
+- [如何挑選志工？](#selection)
+- [如果我想在一個特定的學校做志工該怎麼辦？](#choose-a-school)
 - [如何準備](#how-to-prepare)
-- [When you're hosting an event](#hosting-an-event)
-- [Spread the word about the Hour of Code](#promote-hour-of-code)
-- [More ways to support the Hour of Code](#support-hour-of-code)
-- [Volunteer FAQ](#faq)
+- [當你在舉辦活動的時候](#hosting-an-event)
+- [傳播一小時玩程式](#promote-hour-of-code)
+- [更多支持一小時玩程式的方式](#support-hour-of-code)
+- [志工常見問答](#faq)
 
-Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
+無論你是虛擬地、面對面地還是與你的公司一起做志工，你的努力都會對學生看待電腦科學和他們自身潛力的方式產生巨大的影響。 如果你還有問題，可以查看我們的[志工工具包]({{localized_files/hoc_volunteer_toolkit}})。
 
 * * *
 
 <a id="who-can-volunteer"></a>
 
-## Who can volunteer?
+## 誰可以做志工？
 
-Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We’d love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don’t need to be a programming expert to volunteer!
+任何對電腦科學教育和提升技術多樣性充滿熱情的人都可以成為志工！ 我們希望看到各種背景的志工參與進來。 一小時玩程式為所有年齡和技能水準的人提供各種各樣的活動，志工不必是程式設計專家！
 
-You can be a guest speaker in a classroom, or help a teacher run the activity. [Sign up today](https://code.org/volunteer) to inspire students to keep learning computer science.
+你可以在課堂做演講嘉賓，或者幫助老師開展活動。[立即註冊](https://code.org/volunteer)，激勵學生不斷學習電腦科學。
 
 * * *
 
@@ -42,41 +42,41 @@ You can be a guest speaker in a classroom, or help a teacher run the activity. [
 
 ## 為何需要志工？
 
-Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
+電腦科學是21世紀的決定性領域，但大多數學校仍然不教授它。 一小時玩程式可能是這些學生在給定的一年中接觸電腦科學的最大途徑。 通過志工服務，你可以讓老師更容易地將電腦科學帶入他們的課堂。
 
 [![](/images/fit-600/Marketing/HoC-2015-ACE-HS--42.jpg)]({{ urls/learn }})
 
-Check out some testimonials from past volunteers:
+看看來自之前的志工的感言：
 
 - 「在我經驗中最美好的部分是，整個課堂上都是女性與各個族裔的人們。這預告了我們這個產業將擁有機會去觸及與激發這些孩子們的未來。」 
 - 「尤其是享受著激勵年輕女孩們投入科技領域。感覺像是我在幫助我所在地方的下個世代。」 
-- 「我愛看到孩子們興奮的模樣。」 One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.” 
+- 「我愛看到孩子們興奮的模樣。」 “我體驗中最好的部分是整個班級都是有色人種的女性。它預示著在未來我們的行業可以有機會觸及並激發這些孩子。” 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>註冊志工</button>]({{ urls/volunteer }})
 
 * * *
 
 <a id="selection"></a>
 
-## How do volunteers get selected?
+## 如何挑選志工？
 
-Teachers can search for volunteers on our [volunteer map](http://code.org/volunteer/local). If you’re located near their classroom, teachers will review your profile on the map, so try to complete as much as possible to increase the chance that a teacher will contact you.
+老師可以在我們的[志工地圖](http://code.org/volunteer/local)上尋找志工。 如果你在他們的課堂附近，老師會在地圖上查看你的資料，所以盡可能多地完善，以增加老師與你聯繫的機會。
 
 [![](/images/fit-600/Marketing/2018_HoC-489-resized.jpg)]({{ urls/learn }})
 
-When selected, a teacher will contact you through the volunteer platform (we will never share your email address with the teacher). Work with them to determine how you can best contribute to their event, and if you’ll be visiting in-person or volunteering virtually.
+被選中後，老師會通過志工平臺與你聯繫（我們決不會將你的電子郵箱位址告訴老師）。 與他們合作，確定你可以如何為他們的活動做出最佳貢獻，以及你是面對面訪問他們還是遠端做志工。
 
-If you are receiving too many requests from teachers, you can always update your preferences or unsubscribe by clicking the link provided at the bottom of any email request from a teacher.
+如果你收到太多來自老師的請求，你可以隨時更新你的偏好，或點擊任何來自老師的郵件請求底部提供的連結取消訂閱。
 
 * * *
 
 <a id="choose-a-school"></a>
 
-## What if I want to volunteer with a specific school?
+## 如果我想在一個特定的學校做志工該怎麼辦？
 
-You don’t have to use our volunteer map in order to volunteer! In fact, we recommend reaching out to teachers and administrators directly if there’s a classroom you’d like to volunteer with.
+做志工不必使用我們的志工地圖！事實上，如果你想在某個課堂做志工，我們建議直接聯繫老師和管理人員。
 
-To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - If you have another school in mind, visit their website to find appropriate contacts to reach out to such as a principal or vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, Junior Achievement, a YMCA branch, and more to co-host an event. - If you’re unable to find a school that is hosting an Hour of Code, you can volunteer to help run your own event with your company. Check out our [How-To Guide for Companies](https://hourofcode.com/us/how-to/companies) to learn more and get inspired.
+開始： - 如果你是家長或監護人，發送[這封電子郵件](https://hourofcode.com/us/promote/resources#help-schools)給孩子的老師，主動幫助他們運行一小時玩程式。 - 如果你想到了另一所學校，訪問他們的網站，尋找合適的連絡人，如校長或副校長、技術或電腦科學講師，甚至學校的PTSA。 你也可以與一些組織合作來共同主辦活動，如美國男孩女孩俱樂部、青年成就、基督教青年會分支等等。 - 如果你無法找到舉辦一小時玩程式活動的學校，你可以志工幫助你的公司舉辦自己的活動。 查看我們的[公司指南](https://hourofcode.com/us/how-to/companies)以瞭解更多資訊並獲得靈感。
 
 * * *
 
@@ -84,161 +84,161 @@ To get started: - If you’re a parent or guardian, send [this email](https://ho
 
 ## 如何準備
 
-Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
+無論你是遠端參加還是面對面參加一小時玩程式活動，如果你事先做好了這些準備，你會有更順利的體驗。
 
 [![](/images/fit-600/Marketing/4Q9A5575.jpg)]({{ urls/learn }})
 
-### Meet with the Organizer
+### 與組織者會面
 
-If you’re volunteering with a classroom, discuss these logistics with the teacher ahead of time:
+如果你在課堂做志工，提前與老師討論這些後勤安排：
 
-- Your role at the event. If you work in tech, you might be asked to share your personal experiences or story: How did you get involved in a career in tech? Why is computer science important to you? What are some things you do as part of your job and how does that relate to technology? 
-- If you’ll be volunteering in-person, make sure you both understand local and school health and safety guidelines. Depending on their procedures you may need to arrive a little early. 
-- If you’ll be volunteering virtually or in-person as this can determine what times you need to be present and in what capacity. 
-- If you’re volunteering virtually, work with the teacher to determine the best video conferencing platform to use and try conducting a test run of the event together. 
-- If the teacher has predetermined Hour of Code activities for the event, be aware so that you can [explore them](https://hourofcode.com/us/learn) ahead of time. 
+- 你在活動中的角色。 如果你在科技行業工作，可能會讓你分享你的個人經歷或故事：你是如何進入科技行業工作的？ 為什麼電腦科學對你重要？ 作為你工作的一部分，你會做些什麼？這些與技術有什麼關係？ 
+- 如果你將面對面參加志工活動，請確保雙方都瞭解當地和學校的健康和安全指南。根據他們的程式，你可能需要提早一點到達。 
+- 如果你是虛擬或面對面志工，這將決定你需要在什麼時間和以什麼身份出現。 
+- 如果你是虛擬志工，與老師一起確定最佳的視訊會議平臺，並嘗試一起進行測試。 
+- 如果老師已經預先確定了一小時玩程式活動，那麼你可以提前[探索它們](https://hourofcode.com/us/learn)。 
 
-### Think about your participants
+### 考慮你的參與者
 
-- Consider the students you will be speaking to and what might resonate with them. As a volunteer, you can help them to realize that computing is everywhere and they too can become computer scientists. Consider their ages, backgrounds, and gender identities and come prepared with topics that may appeal to their interests. Here is additional guidance on how to inspire [young women](http://code.org/girls) to participate. 
-- Get the students excited! Work with the teacher to pick out an [inspirational video](https://hourofcode.com/us/promote/resources#videos) that can help focus the class and get them excited to do an Hour of Code. 
-- If you are a virtual volunteer, consider making a few slides as part of your presentation to help keep students engaged.
+- 考慮你將要與之交談的學生以及什麼可能與他們產生共鳴。 作為一名志工，你可以幫助他們認識到電腦無處不在，他們也可以成為電腦科學家。 考慮他們的年齡、背景和性別身份，準備一些可能吸引他們興趣的話題。 這裡有關於如何激勵[年輕女性](http://code.org/girls)參與的額外指導。 
+- 讓學生興奮起來！ 與老師一起挑選一個可以幫助專注課堂的[勵志視頻](https://hourofcode.com/us/promote/resources#videos)，讓學生受到鼓舞，開展程式設計一個小時。 
+- 如果你是一名虛擬志工，考慮為你的演講做一些幻燈片，説明學生參與進來。
 
-Need more resources? [Check out these other tips](https://code.org/files/CSTT_Volunteers.pdf).
+需要更多資源？[查看這些額外提示](https://code.org/files/CSTT_Volunteers.pdf)。
 
 * * *
 
 <a id="hosting-an-event"></a>
 
-## When you're hosting an event
+## 當你在舉辦活動的時候
 
-If you are the host of an event with a classroom, use the sample agenda to guide you. Confirm the agreed schedule for the day and discuss any talking points with the teacher beforehand. If you are physically visiting the class, make sure you sign in with the school and greet the teacher the day-of your event.
+如果你是課堂的活動主辦者，使用示例日程來指導你。 確認當天的排程，事先與老師討論談話要點。 如果你面對面去上課，記得在學校註冊，並在活動當天問候老師。
 
-If you’re considering hosting the Hour of Code at home or in the community, we recommend taking a look at some of our in-depth How-To Guides for [parents](https://hourofcode.com/us/how-to/parents) and [organizations or companies](https://hourofcode.com/us/how-to/companies).
+如果你正在考慮在家裡或在社區舉辦一小時玩程式，建議查看我們的一些< a href = " https://hourofcode.com/us/how-to/parents " >父母</a>和[組織或公司](https://hourofcode.com/us/how-to/companies)深度指南。
 
 ### 1. 觀看入門影片 <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-### 2. Determine a date, format, and location for your event
+### 2. 為你的活動確定日期、模式和地點
 
-Work with the school or teacher to discuss what makes the most sense. We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
+與學校或老師一起討論怎麼做最有意義。 我們已經看到了[虛擬](https://hourofcode.com/us/how-to/virtual)或面對面活動，在公司辦公室或在社區舉辦，面向所有年齡段的學生！ 你也可以看看其他[公司合作夥伴](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf)和[捐贈者](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f)在過去做過什麼，以獲得一些鼓舞人心的想法。
 
 <br />
 
-#### Sample Agenda:
+#### 示例日程：
 
-|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
-|5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? 什麼或誰激勵了你 你是如何對計算機科學感興趣的？ 你有導師嗎？ 問學生問題，並留下時間問問題 |  
-|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
+|時間 | 日程項目 | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5分鐘 | 展示[勵志視訊](https://hourofcode.com/us/promote/resources#videos)|  
+|5-10分鐘 | 介紹你自己，進一步瞭解學生：你在哪裡工作，你是做什麼的，你最喜歡工作中的什麼方面？ 什麼或誰激勵了你 你是如何對計算機科學感興趣的？ 你有導師嗎？ 問學生問題，並留下時間問問題 |  
+|30-60分鐘 | 代碼！ 如果你的活動是面對面的，這是回答問題和指導學生解決難題的時間。 試著不要直接給他們答案，相反，嘗試問他們問題，讓他們自己回答哪裡出了問題，鼓勵學生在有疑問時相互探討。 如果你是虛擬志工，與老師一起研究最好的方法是什麼。 在課程結束後回過來看看學生取得了哪些進步可能更有意義。 | | |1-3分鐘 | 感謝大家並分享鼓舞人心的臨別贈言。 分發你們公司的任何飾品（[貼紙](#celebrate)很棒）！ | | <br />
 
-#### Other ideas to add to your event
+#### 其他可以添加到你的活動中的想法
 
-- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
-- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
+- 解釋技術在哪些方面影響我們的生活，舉出各個背景的學生都關注的例子 - 談論技術如何拯救生命，幫助別人，溝通人類等。 
+- 如果你們是一家科技公司，展示你們公司正在開發的有趣的創新產品。如果你們不是科技公司，談談你們公司是如何利用科技來解決問題、實現目標的。
 - 從你的公司邀請軟體工程師來聊聊他們為什麼決定學計算機科學，還有他們進行中的計畫。
-- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
+- 如果你有一群員工為你的活動提供服務或在當地學校做志工，考慮為你的團體[定制T恤](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more)。
 
-### 3. Plan your technology needs
+### 3. 計劃你的技術需求
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### Devices:
+#### 裝置：
 
-一小時玩程式課程在有網路連線的電腦上會有最佳的體驗。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+一小時玩程式課程在有網路連線的電腦上會有最佳的體驗。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! 對於不插電的活動，只需過濾課堂技術部分以顯示“沒有電腦或裝置”選項。
 
-- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
-- **Don't have enough devices?** Use pair programming. 當學生們合作時，他們會互相幫忙，並減少對老師的依賴。 他們也將瞭解到計算機科學是需要社交與合作的。
-- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
-- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
+- 在電腦或設備上**測試活動**。確保活動能夠在流覽器上正常運行，包括聲音和視訊兩個方面。
+- **沒有足夠的裝置？**使用結對程式設計。 當學生們合作時，他們會互相幫忙，並減少對老師的依賴。 他們也將瞭解到計算機科學是需要社交與合作的。
+- 如果你的參與者將嘗試最適合以聲音進行的教程，為他們**提供耳機**或要求他們自帶耳機。
+- **低頻寬**？計劃在活動前展示視訊，這樣就不會每個參與者都下載視訊。或者嘗試不插電/線下活動。
 
-#### Virtual Events:
+#### 虛擬活動：
 
-If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+如果你的會議是虛擬的，那麼你需要在會議開始前確定會議平臺（並對其進行測試）。 這可能會影響能夠參與的學生數量，所以最好在課堂邀請或活動推廣之前確定這一點。 有關如何運行遠端一小時玩程式的想法，請閱讀我們的[虛擬一小時玩程式活動提示](https://hourofcode.com/us/how-to/virtual)。
 
-### 4. Choose an activity
+### 4. 選擇一個活動
 
-We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
+我們為所有年齡組和經驗水準的人提供各種充滿樂趣的學生指導教程 </a> 學生嘗試自我指導教程是很受歡迎的，儘管你可能想要以一個[勵志視訊](https://hourofcode.com/us/promote/resources#videos)作為活動的開始，讓大家一起觀看。
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **所有的一小時玩程式活動**都不需要做過多的準備，因為它可以讓參與者依自己的進度和程度自我學習。
+<a href="https://hourofcode.com/us/learn">探索活動</a>並提前決定，如果你想為所有客人選擇一個單一教程，或讓每個孩子自己選擇。 **所有的一小時玩程式活動**都不需要做過多的準備，因為它可以讓參與者依自己的進度和程度自我學習。
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
+一旦你的活動有了堅實的路線圖，你就可以開始邀請學生、學校或更大的社區。 我們建議從與你有關係的當地學校開始，或者[流覽我們的一小時玩程式活動地圖](https://hourofcode.com/us/map)。
 
 <a id="celebrate"></a>
 
-### 5. Celebrate
+### 5. 慶祝
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
+在學生或客人完成他們的一小時玩程式之後，是時候慶祝他們的成功了。以下是一些讓你的活動更有趣的思路：
 
-- [Share certificates]({{ urls/certificates }}) for participants and students.
-- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop). 
+- 為參與者和學生[分享證書]({{ urls/certificates }})。
+- [列印“我製作了一個一小時玩程式！貼紙”]({{ promote/resources_stickers }})或在Code.org亞馬遜商店尋找其他獎品和飾品。 
 - 在社群平台分享一小時玩程式的活動照片及影片，使用 #HourOfCode 和 @codeorg，這樣一來也可以突顯你的成功。
 
 * * *
 
 <a id="promote-hour-of-code"></a>
 
-## Spread the word about the Hour of Code
+## 傳播一小時玩程式
 
-One of the best ways to help is to spread the word and promote the Hour of Code.
+最好的幫助方式之一就是宣傳和推廣一小時玩程式。
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. Register Your Event
+### 1. 註冊活動
 
-When you sign up your Hour of Code event, you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
+當你註冊你的一小時玩程式活動時，你會收到包含新聞和提示的有用電子郵件溝通，以舉辦成功的一小時玩程式。 這也是你讓當地學校或家長知道你在他們附近舉辦活動的方式。
 
-### 2. Post on Social Media
+### 2. 在社交媒體上發佈
 
-Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
+通過在社交媒體上發佈並與你的員工分享這些示例內容，幫助提高人們對電腦科學運動的認識。
 
-#### Hour of Code general announcement
+#### 一小時玩程式一般公告
 
-- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/ 
-- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/ 
+- 電腦科學正在改變我們的世界。從#HourOfCode開始，幫助學生成為這一改變的一部分。https://hourofcode.com/ 
+- 不要只使用技術 — 學習如何構建它。通過#HourOfCode幫助別人開始。https://hourofcode.com/ 
 
-#### Stats
+#### 統計數據
 
-- Did you know only 45% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/ 
-- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
-- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/ 
+- 你是否知道只有45%的美國學校教授電腦科學？讓每個學生都有機會學習#HourOfCode。https://hourofcode.com/ 
+- 在美國，只有26%的軟體專業人員為女性。通過#HourOfCode向更多年輕女性介紹電腦科學：https://hourofcode.com/ 
+- 在美國，67%的計算機工作都不在科技領域。通過#HourOfCode將電腦科學納入標準課程。https://hourofcode.com/ 
 
-#### Create your own
+#### 創建你自己的
 
-- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/ 
-- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com 
+- #HourOfCode可以導致[填寫你的故事]。https://hourofcode.com/ 
+- 我支持#HourOfCode，因為[填寫你的想法]。加入我們。https://hourofcode.com 
 
-#### Engineer-specific
+#### 工程師特定
 
-- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer 
-- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
+- 如果你的第一行代碼改變了你的生活，那就幫助你附近的學生編寫他們的第一個#HourOfCode。https://code.org/volunteer 
+- 如果你學習了編碼 — 你的故事是什麼？通過第一個#HourOfCode激勵你身邊的學生。https://code.org/volunteer
 
-<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
+<a href="https://hourofcode.com/promote/resources#posters">進一步瞭解</a>海報、視訊、貼紙和其他方式，向你的社區推廣你的活動。
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## More ways to support the Hour of Code
+## 更多支持一小時玩程式的方式
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
-- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile). 
+- 通過佩戴[Code.org飾品](https://store.code.org/)傳播意識（所有收益將用於支持更多學生獲得電腦科學教育）。
+- 當你在[AmazonSmile](https://code.org/donate/amazonsmile)購物時，選擇使Code.org受益。 
 - 請你的 CEO 發送給全公司郵件，強調計算機科學的重要性，並鼓勵員工傳播這個訊息。
-- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
-- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science. 
-- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all. 
+- 在[慈善活動](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2)中和同事一起玩。
+- [簽署該請願書](https://code.org/promote)，以確保每個學生都有機會學習電腦科學。 
+- 向Code.org[捐款](https://code.org/donate)，這樣我們就可以讓我們的教育資源保持免費並讓所有人獲得。 
 
-For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
+有關如何支持Code.org和一小時玩程式的更多建議，請訪問[Code.org/Help](https://code.org/help)
 
 * * *
 
 <a id="faq"></a>
 
-## Volunteering FAQ
+## 志工服務常見問答
 
 ### 我還沒有得到老師的聯繫。我怎麼還能做志願者？
 
@@ -247,20 +247,20 @@ For more suggestions on how to support Code.org and the Hour of Code, visit [Cod
 
 ### 課堂訪問持續多長時間？
 
-An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
+面對面課堂訪問通常為60-90分鐘，虛擬課堂訪問通常為20-30分鐘。  
 
 
 ### 一小時玩程式活動是提供給哪個年齡層使用的？
 
-Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12) from all backgrounds. Everyone - even adults - can have fun playing!   
+Code.org 和我們的合作夥伴設計了所有的一小時玩程式活動，鼓勵各種背景、各個年級（K-12）的學生參與其中。每個人，甚至成年人都可以在其中獲得樂趣！  
 
 
-### How do I get selected as a technical volunteer or guest speaker?
+### 如何才能被選為技術志工或演講嘉賓？
 
-老師們會在我們[志願者地圖](https://code.org/volunteer/local)上尋找志願者。 儘量使您的個人資料盡可能完整, 以增加教師選擇您的機會。 If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
-
-
-When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). 如果您得教師收到太多的請求，你總是可以通過按一下編輯您的資訊或取消訂閱，從老師提供的任何電子郵件底部的連結更新您的首選項。   
+老師們會在我們[志願者地圖](https://code.org/volunteer/local)上尋找志願者。 儘量使您的個人資料盡可能完整, 以增加教師選擇您的機會。 如果你有偏好的志工服務方式，如作為嘉賓演講或技術支援，請在個人資料描述中注明。   
 
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+被選中後，老師會通過志工平臺與你聯繫（你的電子郵箱位址決不會與老師分享）。 如果您得教師收到太多的請求，你總是可以通過按一下編輯您的資訊或取消訂閱，從老師提供的任何電子郵件底部的連結更新您的首選項。   
+
+
+[<button>註冊志工</button>]({{ urls/volunteer }})

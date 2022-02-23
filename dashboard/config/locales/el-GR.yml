@@ -414,6 +414,7 @@ el:
       starwars: Star Wars
       starwarsblocks: Πόλεμος τον Άστρων (μπλοκ)
       starwarsblocks_hour: Πόλεμος τον Άστρων (μπλοκ)
+      loading: Φόρτωση...
       view_all: Όλα τα έργα...
     popup:
       progress_for_user: πρόοδος του %{name}
@@ -428,6 +429,7 @@ el:
       prizes_link: Περισσότερες πληροφορίες
   teacher:
     answer: Απάντηση
+    dashboard: πίνακας Δασκάλου
     for_teachers_only: Μόνο για εκπαιδευτικούς
     title:
       one: 'Ο δάσκαλος σας:'
@@ -952,6 +954,7 @@ el:
       first_name: Όνομα
       last_name: Επώνυμο
       email: Ηλεκτρονικό ταχυδρομείο
+      school: Σχολείο
       school_name: Όνομα σχολείου
       school_country: Χώρα σχολείου
       colombian_chilean_school_name: Όνομα σχολείου

@@ -4,22 +4,24 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
-      "version_year": "2021",
       "curriculum_umbrella": "CSP",
-      "has_verified_resources": true,
-      "project_sharing": true,
-      "is_migrated": true,
       "has_lesson_plan": true,
-      "weekly_instructional_minutes": 225,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "show_calendar": true
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-07-30 20:28:25 UTC",
+    "serialized_at": "2022-02-23 18:06:05 UTC",
     "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp5-2021"
     }
@@ -71,6 +73,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Post-Course Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2021"
       }
     }
@@ -440,12 +454,40 @@
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021"
       }
+    },
+    {
+      "key": "lesson-1",
+      "name": "CS Principles Post-Course Survey",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2021"
+      }
     }
   ],
   "lesson_activities": [
     {
-      "key": "2fd0da4f-e076-4051-9d70-614e8b497d52",
+      "key": "07c7eced-fe64-4881-9a59-ed0ab21be2d9",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07c7eced-fe64-4881-9a59-ed0ab21be2d9",
+        "lesson.key": "Lists Explore",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "2fd0da4f-e076-4051-9d70-614e8b497d52",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -459,7 +501,7 @@
     },
     {
       "key": "98e2cec8-7aaf-44b9-a7a3-7b68b9db1981",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -473,7 +515,7 @@
     },
     {
       "key": "86b6aeb8-b8db-4c5e-8562-7428898febbf",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -487,7 +529,7 @@
     },
     {
       "key": "2fb1e3bd-d4c1-4c61-bb8a-8cfb7b10bf97",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -498,8 +540,21 @@
       }
     },
     {
-      "key": "a524fea0-d8fc-42e9-aa28-d11f3420b74b",
+      "key": "fb0ec501-095d-448b-b7c2-604941526c2a",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb0ec501-095d-448b-b7c2-604941526c2a",
+        "lesson.key": "Lists Investigate",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "a524fea0-d8fc-42e9-aa28-d11f3420b74b",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -513,7 +568,7 @@
     },
     {
       "key": "44691909-06b5-4471-b2a9-aabb1c696569",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -527,7 +582,7 @@
     },
     {
       "key": "000523bf-2e1f-477c-b7ae-e62cfd34498e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -540,8 +595,21 @@
       }
     },
     {
-      "key": "5beb0da0-34dd-484b-a002-0810398c6439",
+      "key": "7e4c7577-04ec-4295-ba4e-860d9cb2da5d",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e4c7577-04ec-4295-ba4e-860d9cb2da5d",
+        "lesson.key": "Lists Practice",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "5beb0da0-34dd-484b-a002-0810398c6439",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -555,7 +623,7 @@
     },
     {
       "key": "972cf1dc-cb11-49d8-93c8-4cfec4eea90c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -569,7 +637,7 @@
     },
     {
       "key": "b8ca9667-3fb0-44c1-9959-4a2626da517b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -583,7 +651,7 @@
     },
     {
       "key": "1cc00f11-2df2-4262-ab47-e319e4f663ef",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -594,8 +662,21 @@
       }
     },
     {
-      "key": "0b996b04-98b6-48dc-b683-78b3ca018ca5",
+      "key": "b440a5ed-d09e-4d71-91cf-4087d6d76221",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b440a5ed-d09e-4d71-91cf-4087d6d76221",
+        "lesson.key": "Lists Make",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "0b996b04-98b6-48dc-b683-78b3ca018ca5",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -609,7 +690,7 @@
     },
     {
       "key": "21da5ec7-42ae-47e5-bf21-4918a884bc33",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -623,7 +704,7 @@
     },
     {
       "key": "c657ce28-a376-4075-863f-f8e148fcd123",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -636,8 +717,21 @@
       }
     },
     {
-      "key": "0c3a2eb5-b1ca-4f7f-a9d7-860e397a713d",
+      "key": "15a50031-3138-497c-84b6-1d1896d94ea4",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15a50031-3138-497c-84b6-1d1896d94ea4",
+        "lesson.key": "Loops Explore",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "0c3a2eb5-b1ca-4f7f-a9d7-860e397a713d",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -651,7 +745,7 @@
     },
     {
       "key": "c4b3f93b-e745-48ca-9484-e1db79ae86f3",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -665,7 +759,7 @@
     },
     {
       "key": "d766ca0f-63ed-4dd8-802d-3aa3f38ba957",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -679,7 +773,7 @@
     },
     {
       "key": "24256e70-e392-49e8-a571-6bfb91738b6c",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -690,8 +784,21 @@
       }
     },
     {
-      "key": "2436ddda-6b27-4322-aad8-b4d1a9823bb0",
+      "key": "264b1b18-d8fb-4216-9849-4b057b5d5251",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "264b1b18-d8fb-4216-9849-4b057b5d5251",
+        "lesson.key": "Loops Investigate",
+        "lesson_group.key": "csp_loops",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "2436ddda-6b27-4322-aad8-b4d1a9823bb0",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -705,7 +812,7 @@
     },
     {
       "key": "786b1b6e-0ae9-4a64-a7cc-c974ba017716",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -719,7 +826,7 @@
     },
     {
       "key": "8329da4e-675d-4656-836c-21f1fabac747",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -732,20 +839,21 @@
       }
     },
     {
-      "key": "14a84aad-343a-4889-9683-1903951f99b9",
-      "position": 4,
+      "key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
+      "position": 1,
       "properties": {
+        "name": "Lesson Modifications"
       },
       "seeding_key": {
-        "lesson_activity.key": "14a84aad-343a-4889-9683-1903951f99b9",
-        "lesson.key": "Loops Investigate",
+        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
+        "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021"
       }
     },
     {
       "key": "af64318d-1d9d-45a5-b8ee-0c286d87fb50",
-      "position": 1,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -759,7 +867,7 @@
     },
     {
       "key": "c71c3389-b880-4bae-ac9a-1ec525b74e41",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -773,7 +881,7 @@
     },
     {
       "key": "323e2f8b-da06-4786-a3e2-c587263386ed",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -786,20 +894,21 @@
       }
     },
     {
-      "key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
-      "position": 4,
+      "key": "2afdaa65-5984-4a69-ae98-9ef3a78dd72c",
+      "position": 1,
       "properties": {
+        "name": "Lesson Modifications"
       },
       "seeding_key": {
-        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49",
-        "lesson.key": "Loops Practice",
+        "lesson_activity.key": "2afdaa65-5984-4a69-ae98-9ef3a78dd72c",
+        "lesson.key": "Loops Make",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021"
       }
     },
     {
       "key": "57aabee9-7c2d-4b7c-a030-7442bbdf5755",
-      "position": 1,
+      "position": 2,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -813,7 +922,7 @@
     },
     {
       "key": "b9a1fd36-2594-4ca7-bb28-05e23de5c26e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -827,7 +936,7 @@
     },
     {
       "key": "b9b4559f-0922-4a34-a4dc-86186ddcd7c3",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -840,8 +949,21 @@
       }
     },
     {
-      "key": "77207611-4afa-4da3-a8ab-a6e3fb541e8a",
+      "key": "0cbe09a8-102e-42da-83ee-82a0f126ac83",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0cbe09a8-102e-42da-83ee-82a0f126ac83",
+        "lesson.key": "Traversals Explore",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "77207611-4afa-4da3-a8ab-a6e3fb541e8a",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -855,7 +977,7 @@
     },
     {
       "key": "2e19598b-8fb8-4086-b06f-fb2f28266d0c",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -869,7 +991,7 @@
     },
     {
       "key": "6cac2785-a577-4c38-84d7-6ccb691ca222",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -882,8 +1004,21 @@
       }
     },
     {
-      "key": "9d2a2e62-db9d-41cb-88b7-bfc8bedc8d1c",
+      "key": "ebc630d8-09cd-4c3c-b8d6-3155df285730",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ebc630d8-09cd-4c3c-b8d6-3155df285730",
+        "lesson.key": "Traversals Investigate",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "9d2a2e62-db9d-41cb-88b7-bfc8bedc8d1c",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -897,7 +1032,7 @@
     },
     {
       "key": "ed41f7ef-2dee-487c-ad9b-9c53517bba57",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -911,7 +1046,7 @@
     },
     {
       "key": "73c79453-c2a2-437f-9c83-1a68c1f7bf80",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -924,8 +1059,21 @@
       }
     },
     {
-      "key": "4909dde8-c244-4985-8482-1d23fbca66ea",
+      "key": "7b2d44af-b321-461d-9bcc-46f3c2cbc245",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b2d44af-b321-461d-9bcc-46f3c2cbc245",
+        "lesson.key": "Traversals Practice",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "4909dde8-c244-4985-8482-1d23fbca66ea",
+      "position": 2,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -939,7 +1087,7 @@
     },
     {
       "key": "6410b5d4-7c92-4d43-8000-0bfa5647b888",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -953,7 +1101,7 @@
     },
     {
       "key": "a901616d-689e-468f-ae88-e1a12f43111c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -966,8 +1114,21 @@
       }
     },
     {
-      "key": "88f74165-3f50-4fcd-afc5-d4cc8a06214e",
+      "key": "429c8110-84f8-408c-b307-81bb62f23e1d",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "429c8110-84f8-408c-b307-81bb62f23e1d",
+        "lesson.key": "Traversals Make",
+        "lesson_group.key": "csp_traversals",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "88f74165-3f50-4fcd-afc5-d4cc8a06214e",
+      "position": 2,
       "properties": {
         "duration": 2,
         "name": "Warm Up"
@@ -981,7 +1142,7 @@
     },
     {
       "key": "5c1c384d-9c10-4bfa-8e64-b8ecda9edf53",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 38,
         "name": "Activity"
@@ -995,7 +1156,7 @@
     },
     {
       "key": "5b113b1c-bea3-43d0-bf00-88b8f6e6be8b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1008,8 +1169,21 @@
       }
     },
     {
-      "key": "17eb6beb-026f-472d-92f1-98d4c2890397",
+      "key": "e21ee4c2-a9f1-4551-bbec-c4fc1d6dcb21",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e21ee4c2-a9f1-4551-bbec-c4fc1d6dcb21",
+        "lesson.key": "Semester Hackathon Part 1",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "17eb6beb-026f-472d-92f1-98d4c2890397",
+      "position": 2,
       "properties": {
         "duration": 3,
         "name": "Warm Up"
@@ -1023,7 +1197,7 @@
     },
     {
       "key": "c9da20bc-2099-4d5e-bba4-379c8a293d48",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -1037,7 +1211,7 @@
     },
     {
       "key": "a3987dda-424f-4408-a38d-72fbe48e4c55",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 2,
         "name": "Wrap Up"
@@ -1050,8 +1224,21 @@
       }
     },
     {
-      "key": "cd12a374-9ef8-485d-ae5f-3371ac6109c8",
+      "key": "446ad567-c1d6-493c-87eb-e5d094411933",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "446ad567-c1d6-493c-87eb-e5d094411933",
+        "lesson.key": "Semester Hackathon Part 2",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "cd12a374-9ef8-485d-ae5f-3371ac6109c8",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -1064,7 +1251,7 @@
     },
     {
       "key": "58a35cbc-454a-4c94-b8ad-ea03ef39691d",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -1078,7 +1265,7 @@
     },
     {
       "key": "1e910917-81d2-42d0-a371-8bae165924da",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1091,8 +1278,21 @@
       }
     },
     {
-      "key": "c293f5df-d64f-48aa-8930-010ba39fa27f",
+      "key": "6dc2ae1e-5daa-4838-95c3-b3a20de96957",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6dc2ae1e-5daa-4838-95c3-b3a20de96957",
+        "lesson.key": "Semester Hackathon Part 3",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "c293f5df-d64f-48aa-8930-010ba39fa27f",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -1105,7 +1305,7 @@
     },
     {
       "key": "77f1ecde-a64f-41d0-858a-9ff842015fe1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -1119,7 +1319,7 @@
     },
     {
       "key": "a1c4396e-ae0b-47c7-8823-9f2b8642e04e",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1132,8 +1332,21 @@
       }
     },
     {
-      "key": "fd43ae7b-1922-4049-a928-e3b058a7e0e9",
+      "key": "5f5ee1e1-f005-413a-b4cd-1c1dfb40fd77",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f5ee1e1-f005-413a-b4cd-1c1dfb40fd77",
+        "lesson.key": "Semester Hackathon Part 4",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "fd43ae7b-1922-4049-a928-e3b058a7e0e9",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -1146,7 +1359,7 @@
     },
     {
       "key": "40dd8e76-67a2-4b02-9bac-367dba9dccd6",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -1160,7 +1373,7 @@
     },
     {
       "key": "facd910b-5ce0-44fa-89d3-ed18edc9f9de",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1173,8 +1386,21 @@
       }
     },
     {
-      "key": "0f939a45-635d-47b2-825b-f3fb6a3f398b",
+      "key": "09cb9416-ea52-4397-95f5-239bd44506ca",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "09cb9416-ea52-4397-95f5-239bd44506ca",
+        "lesson.key": "Semester Hackathon Part 5",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "0f939a45-635d-47b2-825b-f3fb6a3f398b",
+      "position": 2,
       "properties": {
         "name": "Warm Up"
       },
@@ -1187,7 +1413,7 @@
     },
     {
       "key": "15d07a80-2cbc-49af-9521-509807d4cc19",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 40,
         "name": "Activity"
@@ -1201,7 +1427,7 @@
     },
     {
       "key": "ad60d948-c66c-4d73-a2bb-3b412f00cfe7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1214,8 +1440,21 @@
       }
     },
     {
-      "key": "656d61c3-6f76-49af-b1a6-11c3151f8d16",
+      "key": "da8e85c2-4738-452e-b153-55fc6c9e1eac",
       "position": 1,
+      "properties": {
+        "name": "Lesson Modifications"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da8e85c2-4738-452e-b153-55fc6c9e1eac",
+        "lesson.key": "Lesson 18: Assessment Day",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp5-2021"
+      }
+    },
+    {
+      "key": "656d61c3-6f76-49af-b1a6-11c3151f8d16",
+      "position": 2,
       "properties": {
         "duration": 25,
         "name": "Assessment"
@@ -1229,7 +1468,7 @@
     },
     {
       "key": "0247d771-7446-4e81-a4f1-56973d033744",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 20,
         "name": "Assessment Review"
@@ -1240,9 +1479,32 @@
         "lesson_group.key": "csp_project",
         "script.name": "csp5-2021"
       }
+    },
+    {
+      "key": "70611202-f846-483a-aea1-a61d8ced0290",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "70611202-f846-483a-aea1-a61d8ced0290",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2021"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "dab65186-c721-484f-bf9d-4514cc176c58",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1_JiH1xXiHo4N6Uvc_21wnoutnucn006iMWl-Nh1dsnM/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "dab65186-c721-484f-bf9d-4514cc176c58",
+        "lesson_activity.key": "07c7eced-fe64-4881-9a59-ed0ab21be2d9"
+      }
+    },
     {
       "key": "cd2244da-6c7b-4f9d-8f4f-4a8c64f8874e",
       "position": 1,
@@ -1270,7 +1532,7 @@
       "key": "3bd74877-a126-49b1-8319-7144d9ecb08e",
       "position": 1,
       "properties": {
-        "description": "**Group:** Group students in pairs.\r\n    \r\n**Distribute:** Give each pair of students:\r\n\r\n* A small stack of red and orange sticky notes\r\n* A pen/pencil\r\n* 7+ snack-sized plastic baggies\r\n* One gallon-sized plastic baggy\r\n* A dry erase marker to share with another group\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Conditionals. \r\n\r\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\r\n|---|---|\r\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_-Lists,-Loops,-and-Traversals1b.svg)|**Say:** Today, we are going to explore lists. <br><br> **Note:** Supplies Substitutions <br><br><ul><li>There's no need to use stickie notes if you have other scraps of colored paper. Also consider cutting stickies in 4 to make them go further. If you don't have dry erase markers handy consider using pieces of masking tape on the baggies.</li><li>The gallon-sized baggie can be replaced with any baggie that is large enough to hold the snack-sized baggies. </li></ul>|\r\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-1.svg) | **Say:** We’ve already learned that variables can help us store one piece of information. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-2_xivQY4r.svg) | **Say:** But what if we have lots of information? <br><br> **Do This:** With a partner, discuss the challenges that you’d encounter if you need to store 10, or 100, or 1,000 pieces of information using variables.<br><br>**Discuss:** Lead a short discussion on the challenges they’d encounter. The main challenges are that you’d need to make a variable for each piece of information and it could get difficult to name them all. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-3.svg) | **Say:** Let's look at how to use lists |\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-4.svg) | **Say:** Today we’re going to practice using a new way to store information called a list. Follow the instructions here to make a list of your own. <br><br>**Do This:** Have students create their own list. Circulate the room to check on how they’re doing. Make sure they share with another group.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-5.svg)| **Say:** Your list is made up of elements. Each element has its own index. Indexes are just numbers that count up from zero. The length of the list is how many elements it contains. This list has 3 elements and indexes from 0 to 2.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-6.jpg)| **Say:** Notice that all the bags can folded up and be placed inside the big variable baggie. Sometimes we want to think about the whole list, sometimes we want to think about individual elements |\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-7.svg)| **Say:** We create a list with this command. It creates a new list and assigns it to a variable. The square brackets indicate we’re making a list. Each value is separated by commas. <br><br> **Do This:** Have students write the command to make their own list and the list of partner group. By sharing their answers with another group they can check that they’re following along.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-8.svg) | **Say:** If we want to access the values in our list we use the square brackets next to the name of our list. <br><br> **Do This:** Have students discuss with other groups. They should see the answers are “nachos” and “soup” |\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-9.svg) | **Say:** We can use list accesses inside of expressions, just like variables. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This first expression evaluates to 23 because myNumbers[1] contains 20. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This second expression evaluates to 35 because myNumbers[0] and myNumbers[2] contain 25 and 10. <br><br> **Do This:** Have students write three expressions using their own lists. Then have them trade with another group to practice evaluating. Circulate the room to make sure students are following the directions correctly. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-10.svg) | **Say:** We can assign the index of a list just like a variable. <Br><br> **Do This:** Have students discuss what the list will contain after line 02 runs. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This code will assign a new value at index 2 of the list. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-11.svg) |**Do This:** Circulate the room while students run this program <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss quickly with the class why the program ends with the list shown.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-12.svg)| **Do This:** Circulate the room while students run this program <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss quickly with the class why the program ends with the list shown. <br><br> **Note:** Line 02 is tricky. You need to first evaluate myStuff[0] which is “dog”  to determine the value being assigned. Then evaluate myStuff[2], which is 3. At this point, the command reads myStuff[3] = “dog”. Now it is just a simple assignment. |\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-13.svg)| **Say:** Now let’s learn about three different commands that can change your list. |\r\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-14.svg) | **Say:** The removeItem command will remove an item from a list. The item at the index given is removed, items to the right are shifted over, and the last index is removed.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-15.svg)| **Say:** The appendITem command will add an item to a list. A new index is added to the end of the list and the new item is place in it.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-16.svg)| **Say:** The insertItem command will add an item to the middle of a list. The item is placed in the index given. Then every item is moved over one space to make room. A new index is aded to the end of the list to make room.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-17.svg)|**Do This:** Have students run this program. Circulate the room to support them with any questions.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\r\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-18.svg)|**Do This:** Have students run this program. Circulate the room to support them with any questions.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|",
+        "description": "**Group:** Group students in pairs.\n    \n**Distribute:** Give each pair of students:\n\n* A small stack of red and orange sticky notes\n* A pen/pencil\n* 7+ snack-sized plastic baggies\n* One gallon-sized plastic baggy\n* A dry erase marker to share with another group\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Display:** Use the activity slides for this lesson to guide the unplugged activity on Conditionals. \n\n|Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-5_-Lists,-Loops,-and-Traversals1b.svg)|**Say:** Today, we are going to explore lists. <br><br> **Note:** Supplies Substitutions <br><br><ul><li>There's no need to use stickie notes if you have other scraps of colored paper. Also consider cutting stickies in 4 to make them go further. If you don't have dry erase markers handy consider using pieces of masking tape on the baggies.</li><li>The gallon-sized baggie can be replaced with any baggie that is large enough to hold the snack-sized baggies. </li></ul>|\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-1.svg) | **Say:** We’ve already learned that variables can help us store one piece of information. |\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-2_xivQY4r.svg) | **Say:** But what if we have lots of information? <br><br> **Do This:** With a partner, discuss the challenges that you’d encounter if you need to store 10, or 100, or 1,000 pieces of information using variables.<br><br>**Discuss:** Lead a short discussion on the challenges they’d encounter. The main challenges are that you’d need to make a variable for each piece of information and it could get difficult to name them all. |\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-3.svg) | **Say:** Let's look at how to use lists |\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-4.svg) | **Say:** Today we’re going to practice using a new way to store information called a list. Follow the instructions here to make a list of your own. <br><br>**Do This:** Have students create their own list. Circulate the room to check on how they’re doing. Make sure they share with another group.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-5.svg)| **Say:** Your list is made up of elements. Each element has its own index. Indexes are just numbers that count up from zero. The length of the list is how many elements it contains. This list has 3 elements and indexes from 0 to 2.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-6.jpg)| **Say:** Notice that all the bags can folded up and be placed inside the big variable baggie. Sometimes we want to think about the whole list, sometimes we want to think about individual elements |\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-7.svg)| **Say:** We create a list with this command. It creates a new list and assigns it to a variable. The square brackets indicate we’re making a list. Each value is separated by commas. <br><br> **Do This:** Have students write the command to make their own list and the list of partner group. By sharing their answers with another group they can check that they’re following along.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-8.svg) | **Say:** If we want to access the values in our list we use the square brackets next to the name of our list. <br><br> **Do This:** Have students discuss with other groups. They should see the answers are “nachos” and “soup” |\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-9.svg) | **Say:** We can use list accesses inside of expressions, just like variables. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This first expression evaluates to 23 because myNumbers[1] contains 20. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This second expression evaluates to 35 because myNumbers[0] and myNumbers[2] contain 25 and 10. <br><br> **Do This:** Have students write three expressions using their own lists. Then have them trade with another group to practice evaluating. Circulate the room to make sure students are following the directions correctly. |\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-10.svg) | **Say:** We can assign the index of a list just like a variable. <Br><br> **Do This:** Have students discuss what the list will contain after line 02 runs. <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br> **Say:** This code will assign a new value at index 2 of the list. |\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-11.svg) |**Do This:** Circulate the room while students run this program <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss quickly with the class why the program ends with the list shown.|\n|![](https://images.code.org/837c1d6a1d389a300e74cb5b1c4951e3-image-1641233752930.12.31 AM.png)| **Do This:** Circulate the room while students run this program <br><br> ![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss quickly with the class why the program ends with the list shown. <br><br> **Note:** Line 02 is tricky. You need to first evaluate myStuff[0] which is “dog”  to determine the value being assigned. Then evaluate myStuff[2], which is 3. At this point, the command reads myStuff[3] = “dog”. Now it is just a simple assignment. |\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-13.svg)| **Say:** Now let’s learn about three different commands that can change your list. |\n| ![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-14.svg) | **Say:** The removeItem command will remove an item from a list. The item at the index given is removed, items to the right are shifted over, and the last index is removed.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-15.svg)| **Say:** The appendITem command will add an item to a list. A new index is added to the end of the list and the new item is place in it.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-16.svg)| **Say:** The insertItem command will add an item to the middle of a list. The item is placed in the index given. Then every item is moved over one space to make room. A new index is aded to the end of the list to make room.<br><br>**Do This:** Have students discuss what the list will show after this command.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-17.svg)|**Do This:** Have students run this program. Circulate the room to support them with any questions.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|\n|![](https://curriculum.code.org/media/uploads/CSP-20-21-U5-Lists-Explore-Slide-18.svg)|**Do This:** Have students run this program. Circulate the room to support them with any questions.<br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click for animation** <br><br>**Discuss:** Discuss with the class any questions.|",
         "name": "Lists \r"
       },
       "seeding_key": {
@@ -1324,6 +1586,17 @@
       "seeding_key": {
         "activity_section.key": "8fee2296-7332-439a-931d-cbb357a0bb76",
         "lesson_activity.key": "2fb1e3bd-d4c1-4c61-bb8a-8cfb7b10bf97"
+      }
+    },
+    {
+      "key": "53ddd1f2-5937-4d51-8b35-ec3ec02c2946",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/17N0rIzuUkvVioR5SdZnzr_PZ232jLhbBunZJDgufM_Q/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "53ddd1f2-5937-4d51-8b35-ec3ec02c2946",
+        "lesson_activity.key": "fb0ec501-095d-448b-b7c2-604941526c2a"
       }
     },
     {
@@ -1444,6 +1717,17 @@
       "seeding_key": {
         "activity_section.key": "f0d761a9-aa8b-43c3-a6e9-bcb60f782971",
         "lesson_activity.key": "000523bf-2e1f-477c-b7ae-e62cfd34498e"
+      }
+    },
+    {
+      "key": "9aa6f70a-69c9-434c-adb8-2f06c47ba0d9",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1Z53lslCQAsL8MfYjGBiEEa7wzBYtmNDLcUITmf1m8nQ/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "9aa6f70a-69c9-434c-adb8-2f06c47ba0d9",
+        "lesson_activity.key": "7e4c7577-04ec-4295-ba4e-860d9cb2da5d"
       }
     },
     {
@@ -1650,6 +1934,17 @@
       }
     },
     {
+      "key": "a0e3ec26-9190-4327-a4c2-783def7d1690",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1Lb6Zb8zDD8TjjAl7CGtFHhgplnsTfsx9VZ-ejYYadpE/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "a0e3ec26-9190-4327-a4c2-783def7d1690",
+        "lesson_activity.key": "b440a5ed-d09e-4d71-91cf-4087d6d76221"
+      }
+    },
+    {
       "key": "ca568d12-ef1a-4480-a233-d86fc6de875e",
       "position": 1,
       "properties": {
@@ -1777,6 +2072,17 @@
       }
     },
     {
+      "key": "0ba551f2-4d02-4e0f-a5fb-e010930d5104",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/19_bPJDxHCBMvpsqQ_c-VGW2fQLyCkHaz7tGl-ZVFhXw/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "0ba551f2-4d02-4e0f-a5fb-e010930d5104",
+        "lesson_activity.key": "15a50031-3138-497c-84b6-1d1896d94ea4"
+      }
+    },
+    {
       "key": "dc931c66-1eab-4f26-9fe5-2dfe4bd7f46d",
       "position": 1,
       "properties": {
@@ -1889,6 +2195,17 @@
       "seeding_key": {
         "activity_section.key": "b1dab762-59b7-44b1-a615-4197a822c677",
         "lesson_activity.key": "24256e70-e392-49e8-a571-6bfb91738b6c"
+      }
+    },
+    {
+      "key": "76544dbe-91a8-4501-bd02-3074c95b19dd",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1bFsNXxoznFCTa0dNc8cIZ8nle-CRck_KIl-DD47geWE/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "76544dbe-91a8-4501-bd02-3074c95b19dd",
+        "lesson_activity.key": "264b1b18-d8fb-4216-9849-4b057b5d5251"
       }
     },
     {
@@ -2083,7 +2400,8 @@
       "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Think back on the Font Tester App. Can you think of an example of another app or feature of an app which would use a loop to control different elements on a screen?",
-        "name": "Assessment: Check For Understanding\r"
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check For Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9865749b-36a9-44b1-bb53-8364b24782f7",
@@ -2091,14 +2409,15 @@
       }
     },
     {
-      "key": "5fac1c33-5897-446c-a420-b5f0b394ce59",
+      "key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18",
       "position": 1,
       "properties": {
-        "progression_name": "Check For Understanding"
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1zHvcREojOLrrbDUeq1YV5k68Y2HptzBUT35zUrE1DzA/edit?usp=sharing) to access the modifications.",
+        "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
-        "activity_section.key": "5fac1c33-5897-446c-a420-b5f0b394ce59",
-        "lesson_activity.key": "14a84aad-343a-4889-9683-1903951f99b9"
+        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18",
+        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49"
       }
     },
     {
@@ -2297,7 +2616,8 @@
       "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** What will be displayed after this code segment is run?\n\n![](https://images.code.org/24f101b4da2c1b4c7274bb91a0a21389-image-1611869581204.53.16-PM.png)\n\n**Question:** What will be displayed after this code segment is run?\n\n![](https://images.code.org/33c792c256cfb493d046dea8758fad5c-image-1611869581201.39.26-PM.png)",
-        "name": "Assessment: Check For Understanding: AP Practice\r"
+        "name": "Assessment: Check For Understanding: AP Practice\r",
+        "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
         "activity_section.key": "3a8bf0a1-3258-4866-984d-9572acd5e702",
@@ -2305,14 +2625,14 @@
       }
     },
     {
-      "key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18",
+      "key": "1f410a56-1cd6-477d-81f0-e6f42bfc1a1e",
       "position": 1,
       "properties": {
-        "progression_name": "Check For Understanding: AP Practice"
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ys33Q7bvhxP0y3i5fPRNoH7J9noVoNhuSoZtx2Ih7iE/edit?usp=sharing) to access the modifications."
       },
       "seeding_key": {
-        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18",
-        "lesson_activity.key": "7ff8d44f-ca7d-4f3d-99a5-b47afbd8fd49"
+        "activity_section.key": "1f410a56-1cd6-477d-81f0-e6f42bfc1a1e",
+        "lesson_activity.key": "2afdaa65-5984-4a69-ae98-9ef3a78dd72c"
       }
     },
     {
@@ -2462,6 +2782,17 @@
       }
     },
     {
+      "key": "3d441e9b-ead6-48de-a315-1884385a98d2",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1dMvP-yw6KGaN1Ufztp09MrxDxOiqT-0RfFUu8upHdqQ/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "3d441e9b-ead6-48de-a315-1884385a98d2",
+        "lesson_activity.key": "0cbe09a8-102e-42da-83ee-82a0f126ac83"
+      }
+    },
+    {
       "key": "6345d8d4-230b-42a1-a6e4-bcca0bd99008",
       "position": 1,
       "properties": {
@@ -2558,6 +2889,17 @@
       "seeding_key": {
         "activity_section.key": "e19ba162-e7c1-4ab3-9062-36d4c35db240",
         "lesson_activity.key": "6cac2785-a577-4c38-84d7-6ccb691ca222"
+      }
+    },
+    {
+      "key": "0ad5d485-48e5-4b0a-a643-a845b3506c20",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1jde5Kjx0A6TDiamplHnYYNkzhBnEvhyfU3uAKzuQjS4/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "0ad5d485-48e5-4b0a-a643-a845b3506c20",
+        "lesson_activity.key": "ebc630d8-09cd-4c3c-b8d6-3155df285730"
       }
     },
     {
@@ -2663,6 +3005,17 @@
       "seeding_key": {
         "activity_section.key": "9c9e3eef-8e3b-4b87-89e3-37c90af8abb1",
         "lesson_activity.key": "73c79453-c2a2-437f-9c83-1a68c1f7bf80"
+      }
+    },
+    {
+      "key": "19a6ee94-d13e-426e-99b3-cd4bf78f704b",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1t7-t3vUMMCCBn2RZMJ_d7Dd90nNO5MIOYgf10PxpOlE/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "19a6ee94-d13e-426e-99b3-cd4bf78f704b",
+        "lesson_activity.key": "7b2d44af-b321-461d-9bcc-46f3c2cbc245"
       }
     },
     {
@@ -2822,6 +3175,17 @@
       }
     },
     {
+      "key": "8b7de8d8-6571-46f4-b746-44aac5b5b23f",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1V1LBmASIokyCCsrdvncdB6FW8z5GH4mZnSr7FKJ3HzU/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "8b7de8d8-6571-46f4-b746-44aac5b5b23f",
+        "lesson_activity.key": "429c8110-84f8-408c-b307-81bb62f23e1d"
+      }
+    },
+    {
       "key": "e5d12501-e1e6-46f2-ba7e-21e284b0edb9",
       "position": 1,
       "properties": {
@@ -2926,6 +3290,17 @@
       }
     },
     {
+      "key": "87e53ff9-21af-4c00-9339-be19d0c26d94",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1UU8gRdqy4bt-SMKkjonHy0zJ5YUIMbggop9sSNii76I/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "87e53ff9-21af-4c00-9339-be19d0c26d94",
+        "lesson_activity.key": "e21ee4c2-a9f1-4551-bbec-c4fc1d6dcb21"
+      }
+    },
+    {
       "key": "457a2767-0c88-43d7-a3e0-4f255c0c2224",
       "position": 1,
       "properties": {
@@ -3013,6 +3388,17 @@
       }
     },
     {
+      "key": "166bd9b9-5b5a-47ae-8a20-53ae548c28b3",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/15Z75SyQ9tp1k7vl3GKNVUHQsl9lv6D1QQilcaVDrrro/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "166bd9b9-5b5a-47ae-8a20-53ae548c28b3",
+        "lesson_activity.key": "446ad567-c1d6-493c-87eb-e5d094411933"
+      }
+    },
+    {
       "key": "cc31ee79-c6f0-4484-937d-e45393f042d2",
       "position": 1,
       "properties": {
@@ -3086,6 +3472,17 @@
       "seeding_key": {
         "activity_section.key": "3f1741da-73b8-4ded-9af2-fd90fe9127e8",
         "lesson_activity.key": "1e910917-81d2-42d0-a371-8bae165924da"
+      }
+    },
+    {
+      "key": "c72fcc3c-9384-4390-9809-5935811fe93b",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1ejQ2TQJi571hJsTDBqcl1BlSNIjm1v3MSgclwYOCWqI/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "c72fcc3c-9384-4390-9809-5935811fe93b",
+        "lesson_activity.key": "6dc2ae1e-5daa-4838-95c3-b3a20de96957"
       }
     },
     {
@@ -3180,6 +3577,17 @@
       }
     },
     {
+      "key": "2ded6029-7cd9-4f06-b123-e001167e8d2e",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1hHfyT15riYXQBrSvHfe0WMC-qZevvhfnhutnvSQ357E/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "2ded6029-7cd9-4f06-b123-e001167e8d2e",
+        "lesson_activity.key": "5f5ee1e1-f005-413a-b4cd-1c1dfb40fd77"
+      }
+    },
+    {
       "key": "a4367bd1-fd8c-415c-a669-de5a82746c1e",
       "position": 1,
       "properties": {
@@ -3252,6 +3660,17 @@
       "seeding_key": {
         "activity_section.key": "dfec55b6-2840-4d90-9a56-f8831fc681ee",
         "lesson_activity.key": "facd910b-5ce0-44fa-89d3-ed18edc9f9de"
+      }
+    },
+    {
+      "key": "66831425-cf5a-429e-a024-002716d0b051",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1uNBmyn6sQsLkZqspZ2q4lkaVlqy3uK5XYziIPPIg0b4/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "66831425-cf5a-429e-a024-002716d0b051",
+        "lesson_activity.key": "09cb9416-ea52-4397-95f5-239bd44506ca"
       }
     },
     {
@@ -3382,6 +3801,17 @@
       }
     },
     {
+      "key": "fc0a887c-a71e-41b0-bca4-a541c99d7932",
+      "position": 1,
+      "properties": {
+        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1nauoXCZpBBr3iLgV6fYTjFIPv9YcHHyMXw-fLapdssI/edit?usp=sharing) to access the modifications."
+      },
+      "seeding_key": {
+        "activity_section.key": "fc0a887c-a71e-41b0-bca4-a541c99d7932",
+        "lesson_activity.key": "da8e85c2-4738-452e-b153-55fc6c9e1eac"
+      }
+    },
+    {
       "key": "4e85ff7d-88fd-4c72-b725-7975099cde08",
       "position": 1,
       "properties": {
@@ -3408,6 +3838,23 @@
       "seeding_key": {
         "activity_section.key": "880d624a-306a-4c0e-b660-a1e8e32ff067",
         "lesson_activity.key": "0247d771-7446-4e81-a4f1-56973d033744"
+      }
+    },
+    {
+      "key": "8671b614-2cb1-441e-838a-b789ec389bea",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Course Survey Instructions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/view)] [[pdf](https://docs.google.com/document/d/170NdiEBwcLEsLHQqgPy_zdNKFZfO-rS9aCAFCcEYhzY/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8671b614-2cb1-441e-838a-b789ec389bea",
+        "lesson_activity.key": "70611202-f846-483a-aea1-a61d8ced0290"
       }
     }
   ],
@@ -4181,7 +4628,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "5fac1c33-5897-446c-a420-b5f0b394ce59"
+        "activity_section.key": "9865749b-36a9-44b1-bb53-8364b24782f7"
       },
       "level_keys": [
         "U3L6 CSP CFU Element Looping_2021"
@@ -4406,7 +4853,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18"
+        "activity_section.key": "3a8bf0a1-3258-4866-984d-9572acd5e702"
       },
       "level_keys": [
         "U5L7 CFU Loops Psuedocode_2021"
@@ -4431,7 +4878,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18"
+        "activity_section.key": "3a8bf0a1-3258-4866-984d-9572acd5e702"
       },
       "level_keys": [
         "U5L7 CFU Loops Psuedocode 2_2021"
@@ -5111,6 +5558,31 @@
       "level_keys": [
         "CSP Unit 5 AP-Style Assessment _2021"
       ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "progression": "Post-Course Survey Instructions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2021",
+        "activity_section.key": "8671b614-2cb1-441e-838a-b789ec389bea"
+      },
+      "level_keys": [
+        "csp-post-survey-2021-markdown-with-link-to-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5483,7 +5955,7 @@
         "lesson.key": "Loops Investigate",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "5fac1c33-5897-446c-a420-b5f0b394ce59"
+        "activity_section.key": "9865749b-36a9-44b1-bb53-8364b24782f7"
       }
     },
     {
@@ -5591,7 +6063,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18"
+        "activity_section.key": "3a8bf0a1-3258-4866-984d-9572acd5e702"
       }
     },
     {
@@ -5603,7 +6075,7 @@
         "lesson.key": "Loops Practice",
         "lesson_group.key": "csp_loops",
         "script.name": "csp5-2021",
-        "activity_section.key": "7f06bfc0-3be0-46f7-b3be-e3d64bb77f18"
+        "activity_section.key": "3a8bf0a1-3258-4866-984d-9572acd5e702"
       }
     },
     {
@@ -5929,6 +6401,18 @@
         "script.name": "csp5-2021",
         "activity_section.key": "4e85ff7d-88fd-4c72-b725-7975099cde08"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey",
+        "script_level.level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp5-2021",
+        "activity_section.key": "8671b614-2cb1-441e-838a-b789ec389bea"
+      }
     }
   ],
   "resources": [
@@ -5959,8 +6443,8 @@
       "url": "https://docs.google.com/document/d/1CObflT7u5d5DJhJu7owaf3oMnSd-9LXSIhirU6BUvDI/edit?usp=sharing",
       "key": "course_master_vocabulary",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "course_master_vocabulary"
@@ -5971,9 +6455,9 @@
       "url": "https://docs.google.com/document/d/1_wObV2_1G7RiHpzBrdl63QHJyZqNyzW7CVqlFEJi2LA/edit?usp=sharing",
       "key": "csp-u5-hackathon-submission-on-ap-classroom",
       "properties": {
-        "type": "Resource",
         "audience": "Teacher",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp-u5-hackathon-submission-on-ap-classroom"
@@ -5984,8 +6468,8 @@
       "url": "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing",
       "key": "csp_curriculum_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csp_curriculum_guide"
@@ -5996,9 +6480,9 @@
       "url": "https://docs.google.com/document/d/1GlcxUvD-czBrwGGq70ZiiItOSB3R77s0JOSL2XvxecM/edit?usp=sharing",
       "key": "csp_lists_make_-_reminder_app",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "csp_lists_make_-_reminder_app"
@@ -6009,9 +6493,9 @@
       "url": "https://docs.google.com/document/d/1a6MK9hALSWPJ_mHs0uM5dwrGammMAr5IfXGbf7gtczg/edit?usp=sharing",
       "key": "csp_traversals_make_-_random_forecaster_app",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "csp_traversals_make_-_random_forecaster_app"
@@ -6022,9 +6506,9 @@
       "url": "https://docs.google.com/document/d/1Hc8LF0AsiPK_JyRaieKC6Kint6savoassU4ncz6GuTc/edit?usp=sharing",
       "key": "csp_u5_hackathon_project_planning_guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "csp_u5_hackathon_project_planning_guide"
@@ -6035,9 +6519,9 @@
       "url": "https://docs.google.com/document/d/1DN78RvCqq_mlTh9VLsBberQQV4xctby5PU6N4LLhDcU/edit?usp=sharing",
       "key": "csp_u5_hackathon_project_written_response",
       "properties": {
-        "type": "Written Response",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Written Response"
       },
       "seeding_key": {
         "resource.key": "csp_u5_hackathon_project_written_response"
@@ -6048,11 +6532,24 @@
       "url": "https://docs.google.com/presentation/d/1DABkbjVXjTM7FkPeNN1PavV3BWKsOWFyNksWW4UDdQk/edit?usp=sharing",
       "key": "csp_unit_5_-_lists_loops_and_traversals",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "name": "Data Tab in App Lab",
+      "url": "https://youtu.be/PNe3MSreQAA",
+      "key": "data_tab_in_app_lab",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csp_datatabinapplab_sm-1-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "data_tab_in_app_lab"
       }
     },
     {
@@ -6060,8 +6557,8 @@
       "url": "https://www.youtube.com/watch?v=OTvi0XRTIjA",
       "key": "guide_to_eipm_lessons",
       "properties": {
-        "type": "Video",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "guide_to_eipm_lessons"
@@ -6072,12 +6569,51 @@
       "url": "https://youtu.be/n1exiRH00x0",
       "key": "introduction_to_lists_-_part_1",
       "properties": {
+        "audience": "Student",
         "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_1.mp4",
-        "type": "Video",
-        "audience": "Student"
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "introduction_to_lists_-_part_1"
+      }
+    },
+    {
+      "name": "Introduction to Lists - Part 2",
+      "url": "https://youtu.be/TL0Y_GI4NZg",
+      "key": "introduction_to_lists_-_part_2",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_2.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_lists_-_part_2"
+      }
+    },
+    {
+      "name": "Introduction to Lists - Part 3",
+      "url": "https://youtu.be/rWSsVSMGXXY",
+      "key": "introduction_to_lists_-_part_3",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_3.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_lists_-_part_3"
+      }
+    },
+    {
+      "name": "Introduction to Lists - Part 4",
+      "url": "https://youtu.be/H__zi1BiXJM",
+      "key": "introduction_to_lists_-_part_4",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_lists_-_part_4"
       }
     },
     {
@@ -6085,9 +6621,9 @@
       "url": "https://docs.google.com/document/d/1MPQ1wXqf5SwDuqCJtiG7aGzrtmkOwCD5PUiPU32-LE4/edit?usp=sharing",
       "key": "loops-make-activity-guide",
       "properties": {
-        "type": "Activity Guide",
         "audience": "Student",
-        "include_in_pdf": true
+        "include_in_pdf": true,
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "loops-make-activity-guide"
@@ -6106,12 +6642,25 @@
       }
     },
     {
+      "name": "Processing Lists with Loops",
+      "url": "https://youtu.be/RQ6GJt9f2vg",
+      "key": "processing_lists_with_loops",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/applab/processing_lists.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "processing_lists_with_loops"
+      }
+    },
+    {
       "name": "Teacher Forum",
       "url": "https://forum.code.org/c/csp/curriculum/392",
       "key": "teacher_forum",
       "properties": {
-        "type": "Resource",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "teacher_forum"
@@ -6134,8 +6683,8 @@
       "url": "https://studio.code.org/projects/applab/zmiLk9B9ZWKLeJtoXNEiuxn92IpZukOz8xZWBLzzz9M",
       "key": "u5_hackathon_high_score_sample_app",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u5_hackathon_high_score_sample_app"
@@ -6146,8 +6695,8 @@
       "url": "https://docs.google.com/document/d/1oz5uUMSTi4VKGwBfT9cW3riBUFE5MEbg2baHPDg_U2k/edit?usp=sharing",
       "key": "u5_hackathon_high_score_sample_planning_guide_rubric",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u5_hackathon_high_score_sample_planning_guide_rubric"
@@ -6158,8 +6707,8 @@
       "url": "https://docs.google.com/document/d/1HbpOLfJHCzWEJjOsoXhl2QKocIcs32G3iB-zzw0ddXc/edit?usp=sharing",
       "key": "u5_hackathon_high_score_sample_written_responses",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u5_hackathon_high_score_sample_written_responses"
@@ -6170,8 +6719,8 @@
       "url": "https://studio.code.org/projects/applab/hGGs32BtXJMHnxpglngOa3XWPYHzy1obVNG9GYrgU5I",
       "key": "u5_hackathon_mid_score_sample_app",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u5_hackathon_mid_score_sample_app"
@@ -6182,8 +6731,8 @@
       "url": "https://docs.google.com/document/d/1k4Gy9UlB7jNfDwq-zFxyODi5fgNTaom1uuTE7HgpFv8/edit?usp=sharing",
       "key": "u5_hackathon_mid_score_sample_planning_guide_rubric",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u5_hackathon_mid_score_sample_planning_guide_rubric"
@@ -6194,11 +6743,24 @@
       "url": "https://docs.google.com/document/d/1CnpIoCRDR511Poisw9AWBs2_MZjYS4fKJGiqV_mIdss/edit?usp=sharing",
       "key": "u5_hackathon_mid_score_sample_written_responses",
       "properties": {
-        "type": "Exemplar",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
       },
       "seeding_key": {
         "resource.key": "u5_hackathon_mid_score_sample_written_responses"
+      }
+    },
+    {
+      "name": "Using Loops",
+      "url": "https://youtu.be/G8hfAk4PfOM",
+      "key": "using_loops",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/applab/loops.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "using_loops"
       }
     },
     {
@@ -6206,8 +6768,8 @@
       "url": "https://docs.google.com/document/d/11yXm8yVtM-eNggrvelnC-snXeMYImx-RM0Lz4EGfwf0/edit?usp=sharing",
       "key": "virtual_modification_resources",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "virtual_modification_resources"
@@ -6235,8 +6797,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "resource.key": "introduction_to_lists_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lists Investigate",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "resource.key": "introduction_to_lists_-_part_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "resource.key": "introduction_to_lists_-_part_4"
       }
     },
     {
@@ -6267,6 +6847,12 @@
       "seeding_key": {
         "lesson.key": "Loops Explore",
         "resource.key": "loops_game_board"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "resource.key": "using_loops"
       }
     },
     {
@@ -6416,6 +7002,12 @@
     {
       "seeding_key": {
         "lesson.key": "Traversals Explore",
+        "resource.key": "processing_lists_with_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Explore",
         "resource.key": "traversal_machine"
       }
     },
@@ -6423,6 +7015,12 @@
       "seeding_key": {
         "lesson.key": "Traversals Investigate",
         "resource.key": "csp_unit_5_-_lists_loops_and_traversals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "resource.key": "data_tab_in_app_lab"
       }
     },
     {
@@ -6502,43 +7100,113 @@
   ],
   "objectives": [
     {
-      "key": "bc5a11b3-b92f-4a68-b453-4fd84fc75acc",
+      "key": "11716a3c-51a4-4c4d-964d-b3bb0736e09c",
       "properties": {
-        "description": "Use appropriate vocabulary to describe lists. "
+        "description": "Modify apps that make use of common programming patterns with traversals to adjust their functionality"
       },
       "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "objective.key": "bc5a11b3-b92f-4a68-b453-4fd84fc75acc"
+        "lesson.key": "Traversals Investigate",
+        "objective.key": "11716a3c-51a4-4c4d-964d-b3bb0736e09c"
       }
     },
     {
-      "key": "9c0fc586-4ae3-4023-a643-05009ffe5b27",
+      "key": "189dbc57-1924-4a79-9efa-929d63706463",
       "properties": {
-        "description": "Use an index to reference specific elements in a list"
+        "description": "Write programs that use for loops with the support of sample code."
       },
       "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "objective.key": "9c0fc586-4ae3-4023-a643-05009ffe5b27"
+        "lesson.key": "Loops Practice",
+        "objective.key": "189dbc57-1924-4a79-9efa-929d63706463"
       }
     },
     {
-      "key": "91087dbd-98ff-465c-9986-373f6bb02950",
+      "key": "1ee7571d-5ac3-433f-b098-a899f17b2077",
       "properties": {
-        "description": "Identify common programming patterns using lists"
+        "description": "Use debugging skills as part of developing an app"
       },
       "seeding_key": {
-        "lesson.key": "Lists Investigate",
-        "objective.key": "91087dbd-98ff-465c-9986-373f6bb02950"
+        "lesson.key": "Loops Make",
+        "objective.key": "1ee7571d-5ac3-433f-b098-a899f17b2077"
       }
     },
     {
-      "key": "fc4059c0-c458-4da3-af2f-0e9dddb1e727",
+      "key": "22ee9897-7291-4181-85ef-1eb83ba12561",
       "properties": {
-        "description": "Explain the purpose of programming patterns with lists both in terms of how they work and what they accomplish"
+        "description": "Translate a paper prototype to screens"
       },
       "seeding_key": {
-        "lesson.key": "Lists Investigate",
-        "objective.key": "fc4059c0-c458-4da3-af2f-0e9dddb1e727"
+        "lesson.key": "Semester Hackathon Part 3",
+        "objective.key": "22ee9897-7291-4181-85ef-1eb83ba12561"
+      }
+    },
+    {
+      "key": "2495c640-77b7-4943-9b30-d288d6ca5045",
+      "properties": {
+        "description": "Use appropriate vocabulary to describe loops. "
+      },
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "objective.key": "2495c640-77b7-4943-9b30-d288d6ca5045"
+      }
+    },
+    {
+      "key": "250d8f9e-78f5-4340-842f-987295acb198",
+      "properties": {
+        "description": "Use debugging skills as part of developing an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Make",
+        "objective.key": "250d8f9e-78f5-4340-842f-987295acb198"
+      }
+    },
+    {
+      "key": "2d490dd9-e49a-473b-96e3-cfe3bb36eeec",
+      "properties": {
+        "description": "Write comments to clearly explain both the purpose and function of different segments of code within an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Make",
+        "objective.key": "2d490dd9-e49a-473b-96e3-cfe3bb36eeec"
+      }
+    },
+    {
+      "key": "3532c8c7-e3eb-476d-b017-5975aab27a14",
+      "properties": {
+        "description": "Complete a Written Response modeled after the Create PT"
+      },
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "objective.key": "3532c8c7-e3eb-476d-b017-5975aab27a14"
+      }
+    },
+    {
+      "key": "3549646d-13d1-4695-8407-12a06534ceb4",
+      "properties": {
+        "description": "Debug programs that use list traversals"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversals Practice",
+        "objective.key": "3549646d-13d1-4695-8407-12a06534ceb4"
+      }
+    },
+    {
+      "key": "3b3708f5-a5a4-4684-ba4e-4d546a4d787c",
+      "properties": {
+        "description": "Begin programming an app which uses a database"
+      },
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 2",
+        "objective.key": "3b3708f5-a5a4-4684-ba4e-4d546a4d787c"
+      }
+    },
+    {
+      "key": "5098bc7d-0772-402a-b76d-58ca3fe43901",
+      "properties": {
+        "description": "Write programs that use list traversals, including the filter and reduce patterns, with the support of sample code"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversals Practice",
+        "objective.key": "5098bc7d-0772-402a-b76d-58ca3fe43901"
       }
     },
     {
@@ -6562,113 +7230,23 @@
       }
     },
     {
-      "key": "769e58a5-6552-4adb-84c4-508db2882312",
+      "key": "65b7affc-33b9-47b4-8ac2-2b9b939a9dc8",
       "properties": {
-        "description": "Debug programs with lists"
+        "description": "Recognize the need for programming patterns with loops as part of developing a functioning app"
       },
       "seeding_key": {
-        "lesson.key": "Lists Practice",
-        "objective.key": "769e58a5-6552-4adb-84c4-508db2882312"
+        "lesson.key": "Loops Make",
+        "objective.key": "65b7affc-33b9-47b4-8ac2-2b9b939a9dc8"
       }
     },
     {
-      "key": "7cb0fd3c-1946-4e0b-a77d-2f27afb56f8c",
+      "key": "6732a9fb-c0a2-450d-b03e-aa92e4107109",
       "properties": {
-        "description": "Accurately use list operations including accessing, inserting, and removing elements"
+        "description": "Identify common programming patterns using traversals"
       },
       "seeding_key": {
-        "lesson.key": "Lists Practice",
-        "objective.key": "7cb0fd3c-1946-4e0b-a77d-2f27afb56f8c"
-      }
-    },
-    {
-      "key": "c6e6b518-80f8-4873-95ca-749270293d1a",
-      "properties": {
-        "description": "Recognize the need for programming patterns with lists as part of developing a functioning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "objective.key": "c6e6b518-80f8-4873-95ca-749270293d1a"
-      }
-    },
-    {
-      "key": "79b86581-3011-462a-80fd-9fe2de417de4",
-      "properties": {
-        "description": "Implement programming patterns with lists to develop a functioning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "objective.key": "79b86581-3011-462a-80fd-9fe2de417de4"
-      }
-    },
-    {
-      "key": "2d490dd9-e49a-473b-96e3-cfe3bb36eeec",
-      "properties": {
-        "description": "Write comments to clearly explain both the purpose and function of different segments of code within an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "objective.key": "2d490dd9-e49a-473b-96e3-cfe3bb36eeec"
-      }
-    },
-    {
-      "key": "250d8f9e-78f5-4340-842f-987295acb198",
-      "properties": {
-        "description": "Use debugging skills as part of developing an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "objective.key": "250d8f9e-78f5-4340-842f-987295acb198"
-      }
-    },
-    {
-      "key": "2495c640-77b7-4943-9b30-d288d6ca5045",
-      "properties": {
-        "description": "Use appropriate vocabulary to describe loops. "
-      },
-      "seeding_key": {
-        "lesson.key": "Loops Explore",
-        "objective.key": "2495c640-77b7-4943-9b30-d288d6ca5045"
-      }
-    },
-    {
-      "key": "db1184f3-5c0e-4a57-886f-11e0804858d3",
-      "properties": {
-        "description": "Identify the exit point of a loop. "
-      },
-      "seeding_key": {
-        "lesson.key": "Loops Explore",
-        "objective.key": "db1184f3-5c0e-4a57-886f-11e0804858d3"
-      }
-    },
-    {
-      "key": "d931f1df-9ce1-43f8-9dda-9f2f34c1c75a",
-      "properties": {
-        "description": "Trace a simple program with a loop"
-      },
-      "seeding_key": {
-        "lesson.key": "Loops Explore",
-        "objective.key": "d931f1df-9ce1-43f8-9dda-9f2f34c1c75a"
-      }
-    },
-    {
-      "key": "764b9a3b-ed81-4b22-8759-4a9cbd680f5f",
-      "properties": {
-        "description": "Read programs that use for loops"
-      },
-      "seeding_key": {
-        "lesson.key": "Loops Investigate",
-        "objective.key": "764b9a3b-ed81-4b22-8759-4a9cbd680f5f"
-      }
-    },
-    {
-      "key": "6c1283a1-ffca-42f1-8765-74c8d14dccc3",
-      "properties": {
-        "description": "Understand the parts of a for loop"
-      },
-      "seeding_key": {
-        "lesson.key": "Loops Investigate",
-        "objective.key": "6c1283a1-ffca-42f1-8765-74c8d14dccc3"
+        "lesson.key": "Traversals Investigate",
+        "objective.key": "6732a9fb-c0a2-450d-b03e-aa92e4107109"
       }
     },
     {
@@ -6682,13 +7260,153 @@
       }
     },
     {
-      "key": "189dbc57-1924-4a79-9efa-929d63706463",
+      "key": "6af46814-d6eb-4253-befb-d901de9ac632",
       "properties": {
-        "description": "Write programs that use for loops with the support of sample code."
+        "description": "Complete the Hackathon Project app"
       },
       "seeding_key": {
-        "lesson.key": "Loops Practice",
-        "objective.key": "189dbc57-1924-4a79-9efa-929d63706463"
+        "lesson.key": "Semester Hackathon Part 5",
+        "objective.key": "6af46814-d6eb-4253-befb-d901de9ac632"
+      }
+    },
+    {
+      "key": "6c1283a1-ffca-42f1-8765-74c8d14dccc3",
+      "properties": {
+        "description": "Understand the parts of a for loop"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "objective.key": "6c1283a1-ffca-42f1-8765-74c8d14dccc3"
+      }
+    },
+    {
+      "key": "6c979579-dafe-4e5b-b7ea-4084bee6bd2c",
+      "properties": {
+        "description": "Implement programming patterns with traversals to develop a functioning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "objective.key": "6c979579-dafe-4e5b-b7ea-4084bee6bd2c"
+      }
+    },
+    {
+      "key": "764b9a3b-ed81-4b22-8759-4a9cbd680f5f",
+      "properties": {
+        "description": "Read programs that use for loops"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "objective.key": "764b9a3b-ed81-4b22-8759-4a9cbd680f5f"
+      }
+    },
+    {
+      "key": "769e58a5-6552-4adb-84c4-508db2882312",
+      "properties": {
+        "description": "Debug programs with lists"
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "objective.key": "769e58a5-6552-4adb-84c4-508db2882312"
+      }
+    },
+    {
+      "key": "7789fc18-d660-410c-921b-536430dd128d",
+      "properties": {
+        "description": "Translate a paper prototype to screens"
+      },
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 2",
+        "objective.key": "7789fc18-d660-410c-921b-536430dd128d"
+      }
+    },
+    {
+      "key": "79b86581-3011-462a-80fd-9fe2de417de4",
+      "properties": {
+        "description": "Implement programming patterns with lists to develop a functioning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Make",
+        "objective.key": "79b86581-3011-462a-80fd-9fe2de417de4"
+      }
+    },
+    {
+      "key": "7cb0fd3c-1946-4e0b-a77d-2f27afb56f8c",
+      "properties": {
+        "description": "Accurately use list operations including accessing, inserting, and removing elements"
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Practice",
+        "objective.key": "7cb0fd3c-1946-4e0b-a77d-2f27afb56f8c"
+      }
+    },
+    {
+      "key": "7f105eee-e4cb-4d13-990a-c3886c50e358",
+      "properties": {
+        "description": "Write comments to clearly explain both the purpose and function of different segments of code within an app"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "objective.key": "7f105eee-e4cb-4d13-990a-c3886c50e358"
+      }
+    },
+    {
+      "key": "891ee350-b5b4-40ff-9636-1578d3248b9f",
+      "properties": {
+        "description": "Explain the purpose of programming patterns with traversals both in terms of how they work and what they accomplish"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "objective.key": "891ee350-b5b4-40ff-9636-1578d3248b9f"
+      }
+    },
+    {
+      "key": "91087dbd-98ff-465c-9986-373f6bb02950",
+      "properties": {
+        "description": "Identify common programming patterns using lists"
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "objective.key": "91087dbd-98ff-465c-9986-373f6bb02950"
+      }
+    },
+    {
+      "key": "9584bea1-7b7c-4130-b5d3-82c5675e84f4",
+      "properties": {
+        "description": "Recognize the need for programming patterns with traversals as part of developing a functioning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "objective.key": "9584bea1-7b7c-4130-b5d3-82c5675e84f4"
+      }
+    },
+    {
+      "key": "9746b928-cbf1-4c7c-89ca-7ba4cbf680bb",
+      "properties": {
+        "description": "Determine a dataset for project usage"
+      },
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 1",
+        "objective.key": "9746b928-cbf1-4c7c-89ca-7ba4cbf680bb"
+      }
+    },
+    {
+      "key": "9c0fc586-4ae3-4023-a643-05009ffe5b27",
+      "properties": {
+        "description": "Use an index to reference specific elements in a list"
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "objective.key": "9c0fc586-4ae3-4023-a643-05009ffe5b27"
+      }
+    },
+    {
+      "key": "9f50662c-6d3e-44f4-9159-339f9a9461db",
+      "properties": {
+        "description": "Continue programming an app which uses a database"
+      },
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 3",
+        "objective.key": "9f50662c-6d3e-44f4-9159-339f9a9461db"
       }
     },
     {
@@ -6702,23 +7420,23 @@
       }
     },
     {
-      "key": "c66afe5c-9eb1-4144-8021-7f727aad800b",
+      "key": "af8eae12-e612-41d9-8e9d-554191435aa4",
       "properties": {
-        "description": "Use a for-loop to update multiple screen elements at once"
+        "description": "Use appropriate vocabulary to describe traversals. "
       },
       "seeding_key": {
-        "lesson.key": "Loops Practice",
-        "objective.key": "c66afe5c-9eb1-4144-8021-7f727aad800b"
+        "lesson.key": "Traversals Explore",
+        "objective.key": "af8eae12-e612-41d9-8e9d-554191435aa4"
       }
     },
     {
-      "key": "65b7affc-33b9-47b4-8ac2-2b9b939a9dc8",
+      "key": "b57c32ce-9f24-44b8-a55a-b65ef2ea7405",
       "properties": {
-        "description": "Recognize the need for programming patterns with loops as part of developing a functioning app"
+        "description": "Continue programming an app which uses a database"
       },
       "seeding_key": {
-        "lesson.key": "Loops Make",
-        "objective.key": "65b7affc-33b9-47b4-8ac2-2b9b939a9dc8"
+        "lesson.key": "Semester Hackathon Part 4",
+        "objective.key": "b57c32ce-9f24-44b8-a55a-b65ef2ea7405"
       }
     },
     {
@@ -6732,6 +7450,76 @@
       }
     },
     {
+      "key": "bc5a11b3-b92f-4a68-b453-4fd84fc75acc",
+      "properties": {
+        "description": "Use appropriate vocabulary to describe lists. "
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Explore",
+        "objective.key": "bc5a11b3-b92f-4a68-b453-4fd84fc75acc"
+      }
+    },
+    {
+      "key": "c66afe5c-9eb1-4144-8021-7f727aad800b",
+      "properties": {
+        "description": "Use a for-loop to update multiple screen elements at once"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops Practice",
+        "objective.key": "c66afe5c-9eb1-4144-8021-7f727aad800b"
+      }
+    },
+    {
+      "key": "c6e6b518-80f8-4873-95ca-749270293d1a",
+      "properties": {
+        "description": "Recognize the need for programming patterns with lists as part of developing a functioning app"
+      },
+      "seeding_key": {
+        "lesson.key": "Lists Make",
+        "objective.key": "c6e6b518-80f8-4873-95ca-749270293d1a"
+      }
+    },
+    {
+      "key": "d5d0d13d-ef19-4359-84d7-d912533f60bd",
+      "properties": {
+        "description": "Translate a paper prototype to screens"
+      },
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 4",
+        "objective.key": "d5d0d13d-ef19-4359-84d7-d912533f60bd"
+      }
+    },
+    {
+      "key": "d859c6e6-b595-4f53-9bc1-8c8a8f5a120e",
+      "properties": {
+        "description": "Effectively plan a project using a paper prototype"
+      },
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 1",
+        "objective.key": "d859c6e6-b595-4f53-9bc1-8c8a8f5a120e"
+      }
+    },
+    {
+      "key": "d931f1df-9ce1-43f8-9dda-9f2f34c1c75a",
+      "properties": {
+        "description": "Trace a simple program with a loop"
+      },
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "objective.key": "d931f1df-9ce1-43f8-9dda-9f2f34c1c75a"
+      }
+    },
+    {
+      "key": "db1184f3-5c0e-4a57-886f-11e0804858d3",
+      "properties": {
+        "description": "Identify the exit point of a loop. "
+      },
+      "seeding_key": {
+        "lesson.key": "Loops Explore",
+        "objective.key": "db1184f3-5c0e-4a57-886f-11e0804858d3"
+      }
+    },
+    {
       "key": "e00d2e9b-a36f-41f2-a9ce-3ed7f46ab8f0",
       "properties": {
         "description": "Write comments to clearly explain both the purpose and function of different segments of code within an app"
@@ -6739,26 +7527,6 @@
       "seeding_key": {
         "lesson.key": "Loops Make",
         "objective.key": "e00d2e9b-a36f-41f2-a9ce-3ed7f46ab8f0"
-      }
-    },
-    {
-      "key": "1ee7571d-5ac3-433f-b098-a899f17b2077",
-      "properties": {
-        "description": "Use debugging skills as part of developing an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Loops Make",
-        "objective.key": "1ee7571d-5ac3-433f-b098-a899f17b2077"
-      }
-    },
-    {
-      "key": "af8eae12-e612-41d9-8e9d-554191435aa4",
-      "properties": {
-        "description": "Use appropriate vocabulary to describe traversals. "
-      },
-      "seeding_key": {
-        "lesson.key": "Traversals Explore",
-        "objective.key": "af8eae12-e612-41d9-8e9d-554191435aa4"
       }
     },
     {
@@ -6782,86 +7550,6 @@
       }
     },
     {
-      "key": "6732a9fb-c0a2-450d-b03e-aa92e4107109",
-      "properties": {
-        "description": "Identify common programming patterns using traversals"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversals Investigate",
-        "objective.key": "6732a9fb-c0a2-450d-b03e-aa92e4107109"
-      }
-    },
-    {
-      "key": "891ee350-b5b4-40ff-9636-1578d3248b9f",
-      "properties": {
-        "description": "Explain the purpose of programming patterns with traversals both in terms of how they work and what they accomplish"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversals Investigate",
-        "objective.key": "891ee350-b5b4-40ff-9636-1578d3248b9f"
-      }
-    },
-    {
-      "key": "11716a3c-51a4-4c4d-964d-b3bb0736e09c",
-      "properties": {
-        "description": "Modify apps that make use of common programming patterns with traversals to adjust their functionality"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversals Investigate",
-        "objective.key": "11716a3c-51a4-4c4d-964d-b3bb0736e09c"
-      }
-    },
-    {
-      "key": "5098bc7d-0772-402a-b76d-58ca3fe43901",
-      "properties": {
-        "description": "Write programs that use list traversals, including the filter and reduce patterns, with the support of sample code"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversals Practice",
-        "objective.key": "5098bc7d-0772-402a-b76d-58ca3fe43901"
-      }
-    },
-    {
-      "key": "3549646d-13d1-4695-8407-12a06534ceb4",
-      "properties": {
-        "description": "Debug programs that use list traversals"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversals Practice",
-        "objective.key": "3549646d-13d1-4695-8407-12a06534ceb4"
-      }
-    },
-    {
-      "key": "9584bea1-7b7c-4130-b5d3-82c5675e84f4",
-      "properties": {
-        "description": "Recognize the need for programming patterns with traversals as part of developing a functioning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "objective.key": "9584bea1-7b7c-4130-b5d3-82c5675e84f4"
-      }
-    },
-    {
-      "key": "6c979579-dafe-4e5b-b7ea-4084bee6bd2c",
-      "properties": {
-        "description": "Implement programming patterns with traversals to develop a functioning app"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "objective.key": "6c979579-dafe-4e5b-b7ea-4084bee6bd2c"
-      }
-    },
-    {
-      "key": "7f105eee-e4cb-4d13-990a-c3886c50e358",
-      "properties": {
-        "description": "Write comments to clearly explain both the purpose and function of different segments of code within an app"
-      },
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "objective.key": "7f105eee-e4cb-4d13-990a-c3886c50e358"
-      }
-    },
-    {
       "key": "f8e3cd05-d31a-48f4-88db-3b61953aca62",
       "properties": {
         "description": "Use debugging skills as part of developing an app"
@@ -6872,114 +7560,17 @@
       }
     },
     {
-      "key": "d859c6e6-b595-4f53-9bc1-8c8a8f5a120e",
+      "key": "fc4059c0-c458-4da3-af2f-0e9dddb1e727",
       "properties": {
-        "description": "Effectively plan a project using a paper prototype"
+        "description": "Explain the purpose of programming patterns with lists both in terms of how they work and what they accomplish"
       },
       "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 1",
-        "objective.key": "d859c6e6-b595-4f53-9bc1-8c8a8f5a120e"
-      }
-    },
-    {
-      "key": "9746b928-cbf1-4c7c-89ca-7ba4cbf680bb",
-      "properties": {
-        "description": "Determine a dataset for project usage"
-      },
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 1",
-        "objective.key": "9746b928-cbf1-4c7c-89ca-7ba4cbf680bb"
-      }
-    },
-    {
-      "key": "7789fc18-d660-410c-921b-536430dd128d",
-      "properties": {
-        "description": "Translate a paper prototype to screens"
-      },
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 2",
-        "objective.key": "7789fc18-d660-410c-921b-536430dd128d"
-      }
-    },
-    {
-      "key": "3b3708f5-a5a4-4684-ba4e-4d546a4d787c",
-      "properties": {
-        "description": "Begin programming an app which uses a database"
-      },
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 2",
-        "objective.key": "3b3708f5-a5a4-4684-ba4e-4d546a4d787c"
-      }
-    },
-    {
-      "key": "22ee9897-7291-4181-85ef-1eb83ba12561",
-      "properties": {
-        "description": "Translate a paper prototype to screens"
-      },
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 3",
-        "objective.key": "22ee9897-7291-4181-85ef-1eb83ba12561"
-      }
-    },
-    {
-      "key": "9f50662c-6d3e-44f4-9159-339f9a9461db",
-      "properties": {
-        "description": "Continue programming an app which uses a database"
-      },
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 3",
-        "objective.key": "9f50662c-6d3e-44f4-9159-339f9a9461db"
-      }
-    },
-    {
-      "key": "d5d0d13d-ef19-4359-84d7-d912533f60bd",
-      "properties": {
-        "description": "Translate a paper prototype to screens"
-      },
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 4",
-        "objective.key": "d5d0d13d-ef19-4359-84d7-d912533f60bd"
-      }
-    },
-    {
-      "key": "b57c32ce-9f24-44b8-a55a-b65ef2ea7405",
-      "properties": {
-        "description": "Continue programming an app which uses a database"
-      },
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 4",
-        "objective.key": "b57c32ce-9f24-44b8-a55a-b65ef2ea7405"
-      }
-    },
-    {
-      "key": "3532c8c7-e3eb-476d-b017-5975aab27a14",
-      "properties": {
-        "description": "Complete a Written Response modeled after the Create PT"
-      },
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "objective.key": "3532c8c7-e3eb-476d-b017-5975aab27a14"
-      }
-    },
-    {
-      "key": "6af46814-d6eb-4253-befb-d901de9ac632",
-      "properties": {
-        "description": "Complete the Hackathon Project app"
-      },
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "objective.key": "6af46814-d6eb-4253-befb-d901de9ac632"
+        "lesson.key": "Lists Investigate",
+        "objective.key": "fc4059c0-c458-4da3-af2f-0e9dddb1e727"
       }
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-14"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Lists Explore",
@@ -7024,16 +7615,9 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lists Investigate",
+        "lesson.key": "Lists Explore",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-23"
       }
     },
     {
@@ -7094,7 +7678,21 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lists Practice",
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lists Make",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-14"
       }
@@ -7143,16 +7741,9 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lists Make",
+        "lesson.key": "Lists Practice",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Explore",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-15"
       }
     },
     {
@@ -7171,23 +7762,9 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops Investigate",
+        "lesson.key": "Loops Explore",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-DA-12"
       }
     },
     {
@@ -7248,16 +7825,30 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops Practice",
+        "lesson.key": "Loops Investigate",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-15"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops Practice",
+        "lesson.key": "Loops Investigate",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
       }
     },
     {
@@ -7325,23 +7916,156 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Loops Make",
+        "lesson.key": "Loops Practice",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-15"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversals Explore",
+        "lesson.key": "Loops Practice",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 1",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversals Explore",
+        "lesson.key": "Semester Hackathon Part 1",
         "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-10"
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 2",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "framework.shortcode": "csp2021",
+        "standard.shortcode": "CRD-2.B.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Semester Hackathon Part 5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-23"
       }
     },
     {
@@ -7374,23 +8098,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversals Investigate",
+        "lesson.key": "Traversals Explore",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversals Investigate",
+        "lesson.key": "Traversals Explore",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Investigate",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-23"
       }
     },
     {
@@ -7444,14 +8161,35 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversals Practice",
+        "lesson.key": "Traversals Investigate",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversals Practice",
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Investigate",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversals Make",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-10"
       }
@@ -7465,156 +8203,16 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversals Make",
+        "lesson.key": "Traversals Practice",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Traversals Make",
+        "lesson.key": "Traversals Practice",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 2",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 3",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 4",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 4",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 4",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 4",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Semester Hackathon Part 5",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CRD-2.B.2"
       }
     }
   ],

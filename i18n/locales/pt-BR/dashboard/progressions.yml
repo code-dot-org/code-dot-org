@@ -2,12 +2,16 @@ pt:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" com a Abelha'
+      AI Machine Learning - Video: Aprendizado de Máquina com IA - Vídeo
+      'AI: Impact on Society - Video': 'IA: Impacto na sociedade - Vídeo'
+      'AI: Training Data & Bias - Video': 'IA: Dados de treinamento e viés - Vídeo'
       Accelerometer Events: Eventos do Acelerômetro
       Adding Images: Adicionando Imagens
       Adding Screens: Adicionando Telas
       Alien Defender: Defensor alienígena
       Analog Sensors: Sensores analógicos
       Animate Your Scene: Anime Sua Cena
+      App Lab Intro - Video: Introdução ao App Lab - Vídeo
       'App Project: Bugs and Features': 'Projeto do Aplicativo: Problemas e Recursos'
       'App Project: Linking Screens': 'Projeto do Aplicativo: Vinculando Telas'
       'App Project: Screen Design': 'Projeto do Aplicativo: Design da Tela'
@@ -17,17 +21,24 @@ pt:
       Artist Intro with JR Hildebrande: Introdução do Artista com JR Hildebrande
       Artist Project: Projeto Artista
       'Artist: Variables': 'Artista: variáveis'
+      Assessment: Avaliação
       Attribution: Atribuição
       Back and Forth: Vai e volta
       Basic Conditionals: Condicionais Básicas
       Bass, Mid, and Treble: Grave, Médio e Agudo
+      Be a Super Digital Citizen: Seja um Cidadão Super Digital
+      Begin planning your project: Comece planejando seu projeto
+      Begin planning your project_2018: Comece planejando seu projeto_2018
+      Binary Bracelets - Unplugged Activity: Pulseiras Binárias - Atividade offline
       Binary Numbers: Números binários
       Binary and Data: Binário e Dados
       Board Events: Eventos de borda
       Board Input and Output: Entrada e Saída da Placa
       Boolean Comparison: Comparação Booleana
       Booleans and Comparison Operators: Operadores de comparação e valores booleanos
+      Build a Platform Jumper: Construa um Platform Jumper
       Build a Screen: Construir uma Tela
+      Building a UI with Design Mode: Construindo uma Interface de Usuário com o Modo Design
       Building an App: Construir um App
       'Bunny ': 'Coelho '
       Bunny Jumper: Coelho Saltador
@@ -39,6 +50,7 @@ pt:
       CSS Text Properties: Propriedades CSS de Texto
       CSS and Style Sheets: CSS e Folhas de Estilo
       Cake Defender: Defensor do Bolo
+      Cake Survey: Pesquisa de Bolos
       Challenge: Desafio
       Challenge Levels: Níveis de Desafio
       'Challenge: Add More Inputs': 'Desafio: Adicionar Mais Entradas'
@@ -52,6 +64,8 @@ pt:
       Changing Screens: Mudando Telas
       Changing Sensor Scale: Alterando a escala do Sensor
       Checking for a Winner: Verificando um Vencedor
+      Choose Your Own Adventure: Escolha sua Aventura
+      Choosing Good IDs: Escolhendo bons IDs
       'Circuit Playground: Buzzer': 'Circuit Playground: Buzina'
       'Circuit Playground: Color LEDs': 'Circuit Playground: LEDs coloridos'
       'Circuit Playground: Introduction': 'Circuit Playground: LEDs'
@@ -66,17 +80,26 @@ pt:
       Color LEDs: LEDs Coloridos
       Combining Projects: Combinando Projetos
       Combining Representations: Combinando Representações
+      Conditionals with Cards - Unplugged Activity: Cláusulas Condicionais com Cartões - Atividade offline
       'Conditionals: If Statements': 'Condicionais: declarações "If"'
       'Conditionals: If and If/Else Statements': 'Condicionais: declarações "If" e "If/Else"'
       Course E Artist Project: Curso e Projeto Artístico
       Course E Sprite Lab Project: Curso e Projeto de Laboratório de Sprite 
+      'Course E: Play Lab Project': 'Curso E: Projeto Play Lab'
       Course F Artist Project: Curso F Projeto Artista
       Course F Sprite Lab Project: Projeto de Laboratório de Sprite do Curso F
+      'Course F: Artist Project': 'Curso F: Projeto Artista'
+      'Course F: Artist Project - Revise': 'Curso F: Projeto Artista - Revisão'
+      'Course F: Play Lab Project': 'Curso F: Projeto Play Lab'
+      'Course F: Play Lab Project - Revise': 'Curso F: Projeto Play Lab - Revisão'
+      Crack Random Substitution: Entendendo a Substituição Aleatória
+      Crack a Caesar Cipher: Quebrando a Cifra de César
       Create Your Own Animation: Crie Sua Própria Animação
       Create a Story: Crie uma História
       Create your project: Crie seu projeto
       Creating Sprites: Fazendo Sprites
       Creative Commons Search: Busca Creative Commons
+      Customize: Personalizar
       Dance Crews: Equipes de dança
       Data Visualization: Visualização de Dados
       De-bugging with the Step Button: Depuração com o Botão Step
@@ -87,39 +110,61 @@ pt:
       Demo Apps: Apps de Demonstração
       Design Mode: Modo de Design
       Design Mode Elements: Modo de Design de Elementos
+      Design Your Game: Concepção do seu Jogo
+      Design Your Prototype: Planeje seu protótipo
+      Design a Screen for your App: Conceba uma Tela para seu App
       Designing Screens with Code: Criando telas com código
       Designing for Accessibility: Projetando para Acessibilidade
+      Digital Sharing - Unplugged Activity: Compartilhamento Digital - Atividade offline
       Dogger Example: Exemplo do Cachorrinho
       Drawing: Desenho
       Drawing Shapes: Desenhando Formas
       Editing Images: Editando Imagens
       Emotion Machine Example: Exemplo de Máquina de Emoção
       End of Course Projects: Projetos de conclusão de curso
+      Escape Room Example: Exemplo de Sala de Escape
       Event Types: Tipos de Eventos
       Events: Eventos
       Events and Linking Screens: Eventos e Telas de Links
       Events and Properties: Eventos e Propriedades
+      Example: Exemplo
+      Example App Types: Exemplos de Tipos de App
+      Example Projects: Projetos de exemplo
       Example projects: Projetos de Exemplo
+      Exemplar Personal Websites: Exemplo de Websites pessoais
       Expanding Personal Website: Expandindo o Site Pessoal
       Expanding Your Website: Expandindo o Seu Site
       Experiment with Web Lab: Experimente o Laboratório Web
       Exploration: Exploração
       'Exploration: Adding Style': 'Explorando: Adicionando estilo'
+      'Exploration: For Loops': 'Exploração: loops for'
+      'Exploration: Sample Apps': 'Exploração: Apps de exemplo'
+      'Exploration: Sample Programs': 'Exploração: Programas de exemplo'
+      'Exploration: Sample Project': 'Exploração: Projeto de exemplo'
       Explore HTML: Explore o HTML
+      Exploring CS in Entertainment: Explorando Ciências da Computação no Entretenimento
       Exploring more CSS: Explorando mais CSS
+      Extra: Extra
       Final Personal Website: Website pessoal final
+      Final Room Escape App: App Final Sala de Escape
+      Find the Wizard: Encontre o Mago
       Finish a Screen: Concluir uma Tela
       Finish the Prototype: Concluir o Protótipo
       Finishing Functions: Funções de Acabamento
       Finishing Touches: Toques Finais
       Flyer Game: Jogo Flyer
+      Follow the Algorithm - Unplugged Activity: Siga o Algoritmo - Atividade offline
       Follow the Mouse: Siga o Mouse
       Fonts and Style: Fontes e Estilo
+      FoodFight: GuerraDeComida
+      For Loop Fun - Unplugged Activity: Diversão com loops for - Atividade offline
       For Loops: Laços para
       For Loops and Color LEDs: ' Laços "For" e LEDs Coloridos'
       For Loops and Repeat Blocks: ' Laços "For" e Blocos de Repetição'
       Formatting HTML: Formatando HTML
       Free Play: Atividade livre
+      'Free Play: Make a Scene': 'Diversão Livre: monte uma cena'
+      'Free Play: Make an Interactive Scene': 'Diversão Livre: monte uma cena interativa'
       Functions: funções
       Functions Review: Revisão sobre Funções
       Functions with Parameters: Funções com Parâmetros
@@ -127,10 +172,13 @@ pt:
       Get In Formation: Entrar em formação
       Getters and Setters: Getters e Setters
       Getting Properties: Obtendo propriedades
+      Graph Paper Programming - Unplugged Activity: Programação com Papel Gráfico - Atividade offline
+      Guess The Number: Adivinhe o Número
       HTML Tags: Tags HTML
       Hardware and Software: Hardware e Software
       Headings: Cabeçalhos
       Headings in HTML: Títulos em HTML
+      Hello World: Olá Mundo
       How to Create a Simple Function: Como Criar uma Função Simples
       How to Make a Sprite: Como fazer um Sprite
       Hyperlinks: HiperLinks
@@ -141,9 +189,11 @@ pt:
       Images in HTML: Imagens em HTML
       Importing Screens: Importando Telas
       Improve Your Game: Melhore seu Jogo
+      Innovation Research: Pesquisa de Inovação
       Input Examples: Exemplos de Entradas
       Input with If-Else: Entradas com "If-Else"
       Inspiration!: Inspiração!
+      InspirationalArtwork: ArteInspiradora
       Interactive Card: Cartão Interativo
       Intro to Design Mode: Introdução ao Modo Design
       Intro to For Loops: Introdução para Laços "For"
@@ -154,6 +204,7 @@ pt:
       Introduction to Game Lab: Introdução ao Laboratório de Jogos
       Introduction to Variables: Introdução a Variáveis
       Iteration and Parameters: Iteração e Parâmetros
+      Keep On Dancing!: Continue Dançando!
       Keeping Data Secret: Mantendo o segredo dos dados
       Keyboard Input: Entrada do teclado
       LED Apps: Apps LED
@@ -162,6 +213,7 @@ pt:
       Learning from Simulations: Aprendizado através de simulações
       Lesson Extras: Lição Extras
       Lesson Overview: Visão geral da aula
+      Levels: Níveis
       Light Show: Show de Luzes
       Linking Pages: Vinculando páginas
       Linking Screens: Telas de vinculação
@@ -177,6 +229,7 @@ pt:
       Making Sounds: Fazendo Sons
       'Maze Intro: Programming with Blocks': 'Introdução ao Labirinto: Programando com Blocos'
       Measures: Compassos
+      'Minecraft: Hero''s Journey': 'Minecraft: Jornada do Herói'
       'Mini-Project: About Me': 'Sobre mim com o Sprite Lab'
       'Mini-Project: Alien Dance Moves': 'Mini-Projeto: Movimentos de dança alienígena'
       'Mini-Project: Alien Dance Party': 'Mini-Projeto: Festa de dança alienígena'
@@ -276,6 +329,7 @@ pt:
       Sprite Interactions Review: Revisão de interações de Sprite
       Sprite Lab Example Project: Projeto de Exemplo do Laboratório de Sprite
       Sprite Lab Project: Projeto do Laboratório de Sprite
+      Sprite Movement: Movimento sprite
       Sprite Properties: Propriedades do Sprite
       Sprite Scenes: Cenas com Sprite
       Sprite Velocity: Velocidade de Sprite
@@ -284,6 +338,7 @@ pt:
       Styling Text: Estilo de Texto
       Styling with Classes: Estilizando com Classes
       Styling your Website: Estilizando seu SIte
+      Teach AI a New Word: Ensine à IA uma Nova Palavra
       Text Compression: Compressão de texto
       The Accelerometer: O Acelerômetro
       The Animation Tab: A Guia de Animação
@@ -328,6 +383,7 @@ pt:
       'Video: Introduction to Arrays': 'Vídeo: Introdução a Matrizes'
       'Video: Introduction to Sprites': 'Vídeo: Introdução a Sprites'
       'Video: Introduction to the Draw Loop': 'Vídeo: Introdução ao laço Draw'
+      'Video: Outbreak Simulator: Introduction': 'Video: Simulação de Vírus: Intro'
       'Video: Problem Solving Process': 'Vídeo: Processo de resolução de problemas'
       'Video: Sprite Movement': 'Vídeo: Movimento de Sprite'
       'Video: The Animation Tab': 'Vídeo: A guia de Animação'

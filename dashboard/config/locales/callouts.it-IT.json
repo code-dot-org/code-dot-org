@@ -343,13 +343,17 @@
           "actions_category": "La \"cassetta degli attrezzi\" ha un nuovo aspetto! I blocchi \"Azioni\" ora sono qui."
         },
         "New Artist Project": {
-          "New Artist Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma."
+          "New Artist Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.",
+          "New Artist Project_callout2": "Clicca su \"Esegui\" per salvare ed eseguire il tuo programma",
+          "sign_in_to_save_project": "Vuoi accedere al tuo progetto più tardi? Accedi per salvarlo nel tuo profilo!"
         },
         "New Frozen Project": {
           "snowflake_dropdown": "Usa questo elenco a discesa per creare fiocchi di neve di varie forme!"
         },
         "New Play Lab Project": {
-          "New Play Lab Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma."
+          "New Play Lab Project_callout1": "Clicca le categorie nella cassetta degli attrezzi per vedere tutti i blocchi a disposizione. Trascina i blocchi nell'area di lavoro per aggiungerli al tuo programma.",
+          "New Play Lab Project_callout2": "Clicca su \"Esegui\" per salvare ed eseguire il tuo programma",
+          "sign_in_to_save_project": "Vuoi accedere al tuo progetto più tardi? Accedi per salvarlo nel tuo profilo!"
         },
         "OPD-K5-forloops-5": {
           "courseF_bee_for4_1": "I cicli li trovi qui dentro!"
@@ -1709,6 +1713,371 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "Trascina i blocchi dagli strumenti nella tua area di lavoro."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_animals_sizes": {
+          "hello_world_new": "Nuovo blocco!",
+          "hello_world_new_block": "Nuovo blocco!!!!"
+        },
+        "helloworld_animals_sounds": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_emoji_sizes": {
+          "hello_world_new": "Nuovo blocco!",
+          "hello_world_new_block": "Nuovo blocco!"
+        },
+        "helloworld_emoji_sounds": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_food_costumes": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_food_sizes": {
+          "hello_world_new": "Nuovo blocco!",
+          "hello_world_new_block": "Nuovo blocco!"
+        },
+        "helloworld_food_sounds": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "helloworld_retro_sizes": {
+          "hello_world_new": "Nuovo blocco!",
+          "hello_world_new_block": "Nuovo blocco!"
+        },
+        "helloworld_retro_sounds": {
+          "hello_world_new": "Nuovo blocco!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nuovo blocco!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nuovo blocco!",
+          "poetry_foreground": "Nuovo blocco!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nuovo blocco!",
+          "poetry_multiple_sprites": "Nuovo blocco!",
+          "poetry_new_block": "Nuovo blocco!",
+          "poetry_selector": "Scegli una poesia qualsiasi o inseriscine una tua!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nuovo blocco!",
+          "poetry_music": "Nuovo blocco!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nuovo blocco!",
+          "poetry_sprite_stops": "Nuovo blocco!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nuovo blocco!",
+          "poetry_remove_sprite": "Nuovo blocco!"
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseF_apps_aquarium": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
+          "run_button": "Clicca prima sul pulsante della corsa"
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_chatbot": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
+          "run_button": "Clicca prima sul pulsante della corsa"
+        },
+        "courseF_apps_collector": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
+          "run_button": "Clicca prima sul pulsante della corsa"
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_apps_pet": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco.",
+          "run_button": "Clicca prima sul pulsante della corsa"
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Trascina i 3 puntini per ridimensionare l'area di gioco."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Cerca un nuovo blocco qui."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Qui puoi rallentare il tuo programma."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Nuovi blocchi qui!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Usa il nuovo blocco di eventi trovato qui."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Questo blocco è posizionato nell'ordine sbagliato."
+        },
+        "courseF_events_time": {
+          "events_category": "Clicca qui per aprire la categoria Eventi."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Clicca qui per aprire la categoria Comportamenti."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Clicca qui per aprire la categoria Personaggi."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Clicca qui per aprire la categoria Posizioni."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Cerca un nuovo blocco qui!"
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Cerca due nuovi blocchi qui!",
+          "text_answer_finish": "La schermata del titolo compare per 3 secondi? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Cerca nuovi blocchi qui!"
+        },
+        "courseF_text_events": {
+          "events_category": "Clicca qui per aprire la categoria Eventi."
+        },
+        "courseF_text_print": {
+          "print_block": "Il blocco stampa lo trovi qui!",
+          "text_print_finish": "IL tuo messaggio è apparso in alto? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Il blocco comando lo trovi qui!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Clicca qui per aggiungere nuovi indumenti al tuo progetto!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Clicca qui per aggiungere nuovi indumenti al tuo progetto!"
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Prova ad attraversare il tuo codice un blocco per volta."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Prova a cambiare dal blocco \"quando\" al blocco \"mentre\"."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Osserva attentamente il codice sotto questo punto."
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Il colore dello sfondo è cambiato quando hai risposto alla domanda? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Hai terminato? Se sì, clicca 'Fine'. Sennò, clicca 'Resetta', modifica il tuo codice, e clicca di nuovo 'Esegui'."
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Osserva attentamente il codice sotto questo punto."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Usa questo blocco per impostare un nuovo sfondo."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Usa questo blocco con uno dei comportamenti sottostanti."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Clicca qui per eseguire il codice."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+        },
+        "helloworld_animals_location": {
+          "pin": "fissa"
+        },
+        "helloworld_animals_multi": {
+          "pin": "fissa"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Usa questo blocco per fare in modo che i personaggi parlino.",
+          "hello_world_make_sprite": "Usa questo blocco per creare un personaggio."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Usa questo blocco per impostare un nuovo sfondo."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Usa questo blocco con uno dei comportamenti sottostanti."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Clicca qui per eseguire il codice."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+        },
+        "helloworld_emoji_location": {
+          "pin": "fissa"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "fissa"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Usa questo blocco per fare in modo che i personaggi parlino.",
+          "hello_world_make_sprite": "Usa questo blocco per creare un personaggio."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Usa questo blocco per impostare un nuovo sfondo."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Usa questo blocco con uno dei comportamenti sottostanti."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Clicca qui per eseguire il codice."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+        },
+        "helloworld_food_location": {
+          "pin": "fissa"
+        },
+        "helloworld_food_multi": {
+          "pin": "fissa"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Usa questo blocco per fare in modo che i personaggi parlino.",
+          "hello_world_make_sprite": "Usa questo blocco per creare un personaggio."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Usa questo blocco per impostare un nuovo sfondo."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Usa questo blocco con uno dei comportamenti sottostanti."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Clicca qui per eseguire il codice."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Aggiungi questo blocco dell'evento al tuo spazio di lavoro."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "Clicca qui per aggiungere indumenti al tuo progetto."
+        },
+        "helloworld_retro_location": {
+          "pin": "fissa"
+        },
+        "helloworld_retro_multi": {
+          "pin": "fissa"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Usa questo blocco per fare in modo che i personaggi parlino.",
+          "hello_world_make_sprite": "Usa questo blocco per creare un personaggio."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "I blocchi di codice li trovi qui. ",
+          "pause_button": "Metti alla prova la tua animazione con questo pulsante. ",
+          "run_button": "Prova la tua animazione con questo pulsante. "
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Clicca qui per mostrare la griglia."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Inserire qui il numero"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Ecco il codice",
+          "CSD_U3_rect_c2": "Trascina questo blocco all'interno dell'area del codice."
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Inserire qui il numero"
         }
       }
     }

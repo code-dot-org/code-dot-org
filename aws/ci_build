@@ -162,11 +162,9 @@ def main
         ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
         DevelopersTopic.set_dtp 'yes'
         InfraProductionTopic.set_dtp_commit GitHub.sha('production')
-        ChatClient.set_reminder(
-          'developers',
-          "@#{DevelopersTopic.dotd}",
-          "to check Zendesk in 2 hours"
-         )
+
+        # Schedule a reminder for the dotd to check Zendesk in 2 hours
+        Slack.remind(Slack.user_id(DevelopersTopic.dotd), Time.now.to_i + 7200, 'Reminder: check <https://codeorg.zendesk.com/agent/filters/44863373|Zendesk>')
 
         # Check hoc_mode and hoc_launch only on successful DTPs, so that we get about 1 reminder per
         # day to bring staging, test and production to the same hoc_mode and hoc_launch after a

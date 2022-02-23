@@ -1,71 +1,110 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Panduan untuk Acara Hour of Code Virtual
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Kiat untuk acara Hour of Code Virtual
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Anda tidak perlu datang langsung untuk menjalankan Hour of Code yang sukses!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+Sementara Hour of Code secara tradisional diadakan di ruang kelas di seluruh dunia, Anda tidak perlu bertemu langsung untuk menikmati keseruannya! Anda masih dapat menyelenggarakan Hour of Code yang interaktif dan inspiratif untuk siswa dari jarak jauh menggunakan beberapa rekomendasi ini.  Lihat [panduan acara virtual]({{ localized_files/participation_guide_virtual }}) kami jika Anda masih memiliki pertanyaan.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## Jarak boleh saja terpisah, tetapi Anda masih bisa memulai bersama
+Bahkan jika Anda punya rencana agar siswa menyelesaikan aktivitas mereka secara mandiri, kami sarankan untuk memulai acara Anda dengan kick-off virtual online untuk membuat peserta bersemangat. Ada beberapa cara menarik untuk memulai acara Anda: 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>Undang pembicara tamu</b>: Ribuan sukarelawan dari segala latar belakang menunggu kabar dari Anda! Cukup gunakan <a href="https://code.org/volunteer/local">peta relawan</a> kami untuk menelusurinya. Dengan Hour of Code virtual, Anda tidak dibatasi oleh jarak jadi jika diperlukan, pertimbangkan untuk mencari sukarelawan di luar wilayah Anda yang menawarkan bantuan dari jarak jauh. Setelah terhubung dengan seorang sukarelawan, Anda dapat merujuk <a href="http://hourofcode.com/us/how-to/volunteers">Panduan Relawan Hour of Code</a> untuk menentukan topik potensial, pertanyaan diskusi, dan banyak lagi.</li> 
+<li><b>Tampilkan video inspiratif</b>: Opsi andal lainnya untuk memulai acara Anda, adalah menunjukkan kepada peserta satu dari sekian <a href="http://hourofcode.com/us/promote/resources#videos">video inspiratif</a> kami. Banyak video berdurasi kurang dari 5 menit dan menampilkan inspirasi dan dorongan dari pesohor yang pasti dikenali siswa Anda.</li> 
+<li><b>Diskusikan manfaat ilmu komputer</b>: Ubah acara Hour of Code Anda menjadi pemahaman yang lebih mendalam tentang ilmu komputer dengan mempertimbangkan dampak teknologi pada kehidupan kita sehari-hari. Ajukan pertanyaan panduan kepada siswa dan ubah awal acara Anda menjadi diskusi interaktif. Untuk ide tentang cara memulai percakapan, lihat <a href="https://code.org/csforgood#prompts">pertanyaan diskusi</a> ini.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## Yang perlu disiapkan
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. Tentukan platform konferensi video Anda
+Kemungkinan Anda sudah familiar dengan platform seperti Cisco Webex, Google Meet, Microsoft Teams, Skype, atau Zoom sekarang. Alat apa pun yang Anda inginkan, kami hanya akan mendorong Anda untuk membiasakan diri, menguji kemampuannya, dan menjalankan agenda Hour of Code Anda sebelum tanggal acara Anda.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. Rencanakan bagaimana siswa akan berpartisipasi
+**Aktivitas Hour of Code Mandiri**<br> Setelah memulai, Anda sebaiknya mengizinkan siswa meninggalkan konferensi video untuk mengerjakan <a href="https://hourofcode.com/us/learn">aktivitas Hour of Code</ a> sendiri daripada bersama-sama secara langsung. Ini akan memungkinkan siswa untuk terjun dalam proyek mereka sendiri dan mendapatkan pemahaman yang lebih kuat tentang konsep Ilmu Komputer. Ini juga akan meminimalkan gangguan dan hambatan karena harus membuka jendela konferensi video. </p> 
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+<p spaces-before="0">
+  Mungkin Anda juga bisa untuk menentukan 1-3 opsi tutorial untuk mereka pilih sebelumnya. Hal ini memungkinkan Anda untuk memilih kegiatan yang paling cocok untuk tingkat kelas mereka. Selain itu, jika siswa memiliki pertanyaan yang memerlukan bantuan Anda, Anda akan lebih siap untuk membantu jika sudah terbiasa dengan tutorial yang sedang mereka kerjakan.
+</p>
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+<p spaces-before="0">
+  Jika kelas Anda diharapkan dapat melakukan aktivitas segera setelah acara dimulai, Anda dapat mempertimbangkan untuk tetap membuka ruang konferensi virtual, platform obrolan, atau sarana komunikasi lain sehingga mereka dapat terhubung kembali dengan Anda dengan pertanyaan sesuai kebutuhan.
+</p>
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+<p spaces-before="0">
+  <strong x-id="1">Aktivitas Hour of Code bersama secara online</strong><br> Jika Anda lebih memilih untuk membuat peserta Anda tetap pada panggilan video yang sama selama acara Anda, harap perhatikan bahwa mereka harus memiliki dua jendela terbuka setiap saat - satu untuk platform konferensi video, dan yang lainnya untuk  mengerjakan aktivitas mereka.
+</p>
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+<p spaces-before="0">
+  <strong x-id="1">Dengan orang tua</strong><br> Untuk siswa Kelas 4 ke bawah, pertimbangkan untuk mendorong orang tua mereka untuk menyelenggarakan Hour of Code di rumah. Anda dapat mendukung mereka dengan sejumlah tutorial yang direkomendasikan serta <a href="https://hourofcode.com/us/how-to/parents">Panduan untuk Orang Tua</a yang bermanfaat ini >. </p> 
+  
+  <p spaces-before="0">
+    <a href="https://hourofcode.com/us/how-to/parents"><img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" /></a>
+  </p>
 
-[<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
+<h3 spaces-before="0">
+  3. Daftarkan seorang sukarelawan
+</h3>
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+<p spaces-before="0">
+  Anda dapat menemukan relawan yang sesuai dengan kebutuhan Anda dengan mengunjungi <a href="https://code.org/volunteer/local">peta relawan</a> kami. Banyak sukarelawan tersedia untuk partisipasi jarak jauh dan lebih dari bersedia untuk berbicara tentang pengalaman mereka dalam ilmu komputer, bagaimana teknologi mempengaruhi peran mereka, atau hanya untuk membantu Anda memecahkan masalah pertanyaan siswa. Setelah Anda menemukan sukarelawan, pastikan Anda mengatur pertemuan dengan mereka sebelumnya untuk membahas peran mereka dalam acara tersebut, menyusun persyaratan teknis, dan menetapkan logistik untuk berpartisipasi secara online.
+</p>
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+<h3 spaces-before="0">
+  4. Suplai perayaan
+</h3>
 
----
+<p spaces-before="0">
+  Lihat di bawah untuk ide-ide merayakan Hour of Code virtual Anda. Beberapa mungkin mengharuskan Anda untuk melakukan persiapan lebih awal seperti membuat <a href="https://code.org/certificates">sertifikat</a> ketuntasan untuk semua peserta Anda.
+</p>
 
-## Celebrate together
+<hr />
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+<h2 spaces-before="0">
+  Rayakan bersama
+</h2>
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+<p spaces-before="0">
+  Mirip dengan bagaimana Anda memulai acara, berkumpullah setelahnya untuk merayakannya! Berikut sejumlah ide untuk membuat perayaan virtual Anda menjadi interaktif dan spesial:
+</p>
 
-[<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
+<ul>
+  <li>
+    Izinkan siswa untuk membagikan proyek yang telah mereka selesaikan dengan anggota kelas lainnya. Jika platform konferensi Anda memungkinkan, Anda bahkan dapat mendorong siswa untuk mengambil tangkapan layar proyek mereka dan menjadikannya sebagai latar belakang virtual mereka!
+  </li>
+  <li>
+    Diskusikan pembelajaran: Apa yang telah mereka pelajari tentang ilmu komputer atau teknologi? Apa yang mereka lakukan ketika mereka mengalami masalah, bagaimana mereka menyelesaikannya?
+  </li>
+  <li>
+    <a href="https://code.org/certificates">Buat dan bagikan sertifikat</a> untuk peserta Anda
+  </li>
+  <li>
+    Bagikan foto dan video Hour of Code virtual Anda di media sosial. Use #HourOfCode and @codeorg so we can highlight your success, too!
+  </li>
+</ul>
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+<p spaces-before="0">
+  <a href="{{ urls/learn }}"><img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" /></a>
+</p>
 
-{{ signup_button }}
+<p spaces-before="0">
+  Terakhir, jika Anda tidak menggunakan <a href="https://code.org/volunteer/local">pembicara tamu</a>, <a href="https ://hourofcode.com/us/promote/resources#">video inspiratif</a>, atau <a href="https://code.org/csforgood#prompts" mark=" crwd-mark">pertanyaan diskusi</a>, ini akan menjadi peluang bagus lainnya untuk menggabungkan salah satu dari pengalaman itu juga.
+</p>
+
+<p spaces-before="0">
+  {{ signup_button }}
+</p>

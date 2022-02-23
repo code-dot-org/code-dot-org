@@ -795,6 +795,12 @@
   coursed-2020_gradelevel: 8. klasse+
   coursee-2020_gradelevel: Alder 8-12
   coursef-2020_gradelevel: Alder 9 -13
+  coursea-2021_gradelevel: Alder 4-7
+  courseb-2021_gradelevel: Alder 5-8
+  coursec-2021_gradelevel: Alder 6-10
+  coursed-2021_gradelevel: 8. klasse+
+  coursee-2021_gradelevel: Alder 8-12
+  coursef-2021_gradelevel: Alder 9 -13
   accelerated_gradelevel: "Fra 10 år (efter kursus 3)"
   codeorg_platformtext: "Moderne browsere, smartphones, tabletter"
   codeintl_platformtext: "Moderne browsere, smartphones, tabletter"
@@ -1240,3 +1246,4 @@
   ai_microsoft_thanks: "Vi takker Microsoft for at støtte vores vision og mission for at sikre, at hvert barn har mulighed for at lære datalogi og få færdighederne til at få succes i det 21. århundrede."
   ai_activity: "Aktivitet"
   ai_description: "Beskrivelse"
+  outbreak_tile_title: "Udbrud"

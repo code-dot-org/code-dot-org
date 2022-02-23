@@ -2,6 +2,317 @@
   "ja-JP": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "event/dance-extras/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "program/dance-extras/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/minecraft/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/minecraft/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "event/minecraft/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "loop/minecraft/unversioned": {
+          "word": "ループ",
+          "definition": "何度も何度も何かをするという行為。"
+        },
+        "code/hero/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/hero/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/hero/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "function/hero/unversioned": {
+          "word": "関数（かんすう）",
+          "definition": "簡単に何度も何度も呼び出すことができるコードの一部。"
+        },
+        "code/poem-art/2021": {
+          "word": "コード",
+          "definition": "（v）コンピューター用の指示を書くこと。"
+        },
+        "event/poem-art/2021": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "line/poem-art/2021": {
+          "word": "行",
+          "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
+        },
+        "mood/poem-art/2021": {
+          "word": "ムード",
+          "definition": "アートや著作物で気持ち、雰囲気、感情を表したもの。"
+        },
+        "program/poem-art/2021": {
+          "word": "プログラム",
+          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
+        },
+        "code/flappy/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/flappy/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/hourofcode/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/frozen/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/frozen/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/iceage/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/iceage/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/artist/unversioned": {
+          "word": "コード",
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/artist/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/artist/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/gumball/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/gumball/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "event/dance/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "program/dance/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/dance/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "code/aquatic/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/aquatic/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "condition/aquatic/unversioned": {
+          "word": "条件",
+          "definition": "アクションを許可する前に、プログラムが真かどうかをチェックするもの。"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "条件",
+          "definition": "特定の条件でしか実行されないステートメント。"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "くりかえし",
+          "definition": "何度も何度も何かをするという行為。"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "暗号化"
+        },
+        "code/starwars/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/starwars/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/mc/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/mc/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/mc/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/playlab/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/playlab/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "可逆圧縮"
+        },
+        "event/outbreak/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "モデルとシミュレーション",
+          "definition": "実生活で実験を行うコスト、時間、またはリスクを気にせず、現実世界のイベントの主要な機能を複製または模倣して、その行動を調査するプログラム。"
+        },
+        "event/sports/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "code/sports/unversioned": {
+          "word": "コード"
+        },
+        "debugging/sports/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/sports/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/infinity/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/infinity/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "event/basketball/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "code/basketball/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/basketball/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "event/dance-2019/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "program/dance-2019/unversioned": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "機械学習",
+          "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
+        },
+        "code/poem-art/unversioned": {
+          "word": "コード",
+          "definition": "（v）コンピューター用の指示を書くこと。"
+        },
+        "event/poem-art/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "program/poem-art/unversioned": {
+          "word": "プログラム",
+          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
+        },
+        "mood/poem-art/unversioned": {
+          "word": "ムード",
+          "definition": "アートや著作物で気持ち、雰囲気、感情を表したもの。"
+        },
+        "line/poem-art/unversioned": {
+          "word": "行",
+          "definition": "（詩） - 右端が余白で終わるように配された詩の小さな単位。"
+        },
         "sprite/coursef/2021": {
           "word": "スプライト",
           "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
@@ -44,14 +355,14 @@
         },
         "repeat/coursef/2021": {
           "word": "繰り返し",
-          "definition": "もう一度何かをする。"
+          "definition": "何かを再びすること。"
         },
         "for_loop/coursef/2021": {
           "word": "Forループ",
           "definition": "あらかじめ開始、終了、増分（増分間隔）のあるループ。"
         },
         "models_and_simulations/coursef/2021": {
-          "word": "モデルとシュミレーション",
+          "word": "モデルとシミュレーション",
           "definition": "実生活で実験を行うコスト、時間、またはリスクを気にせず、現実世界のイベントの主要な機能を複製または模倣して、その行動を調査するプログラム。"
         },
         "machine_learning/coursef/2021": {
@@ -107,7 +418,7 @@
           "definition": "将来的により良い結果を出そうと、何かを慎重に考え直すこと"
         },
         "try/coursef/2021": {
-          "word": "トライ",
+          "word": "試してみる",
           "definition": "何かをしようとすること"
         },
         "algorithm/courseb/2021": {
@@ -227,7 +538,8 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "sequencing/coursec/2021": {
-          "word": "シークエンス"
+          "word": "シークエンス",
+          "definition": "コンピュータがコマンドを読めるように、コマンドを正しい順番に並べること。"
         },
         "programming/coursec/2021": {
           "word": "プログラミング",
@@ -246,7 +558,8 @@
           "definition": "何かを引き起こすアクション。"
         },
         "binary/coursec/2021": {
-          "word": "２しんすう"
+          "word": "２しんすう",
+          "definition": "2つの選択肢だけを使って情報を表現する方法。"
         },
         "algorithm/coursed/2021": {
           "word": "アルゴリズム",
@@ -272,6 +585,10 @@
           "word": "プログラミング",
           "definition": "プログラム作成の技能。"
         },
+        "frustrated/coursed/2021": {
+          "word": " 欲求不満",
+          "definition": "何かが自分の思い通りにならないので、イライラしたり怒ったりすること。"
+        },
         "persistence/coursed/2021": {
           "word": "粘り強さ",
           "definition": "何かがとても難しい時でも、何度も何度もトライすること。"
@@ -280,12 +597,36 @@
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
         },
+        "code/coursed/2021": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
         "repeat/coursed/2021": {
           "word": "繰り返し",
           "definition": "何かを再びすること。"
         },
+        "command/coursed/2021": {
+          "word": "コマンド",
+          "definition": "コンピュータへの命令。多くの命令を組み合わせてアルゴリズムやコンピュータプログラムを構成しています。"
+        },
         "conditionals/coursed/2021": {
-          "word": "条件"
+          "word": "条件",
+          "definition": "特定の条件でしか実行されないステートメント。"
+        },
+        "pseudocode/coursed/2021": {
+          "word": "疑似コード",
+          "definition": "アルゴリズムのステップに関するわかりやすい言語による説明"
+        },
+        "condition/coursed/2021": {
+          "word": "条件",
+          "definition": "アクションを許可する前に、プログラムが真かどうかをチェックするもの。"
+        },
+        "while_loop/coursed/2021": {
+          "word": "「while」ループ",
+          "definition": "条件が真である間、繰り返し続けるループ。"
+        },
+        "until/coursed/2021": {
+          "word": "Until（まで）",
+          "definition": "何かが真実になるまでの間だけ、何かをするように指示する命令。"
         },
         "algorithm/express/2021": {
           "word": "アルゴリズム",
@@ -300,7 +641,8 @@
           "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
         },
         "sequencing/express/2021": {
-          "word": "シークエンス"
+          "word": "シークエンス",
+          "definition": "コンピュータがコマンドを読めるように、コマンドを正しい順番に並べること。"
         },
         "program/express/2021": {
           "word": "プログラム",
@@ -322,6 +664,9 @@
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
         },
+        "code/express/2021": {
+          "definition": "コードを記述したり、コンピューターの命令を記述したりします。"
+        },
         "loop/express/2021": {
           "word": "ループ",
           "definition": "何度も何度も何かをするという行為。"
@@ -330,17 +675,36 @@
           "word": "繰り返し",
           "definition": "何かを再びすること。"
         },
+        "command/express/2021": {
+          "word": "コマンド",
+          "definition": "コンピュータへの命令。多くの命令を組み合わせてアルゴリズムやコンピュータプログラムを構成しています。"
+        },
+        "condition/express/2021": {
+          "word": "条件",
+          "definition": "アクションを許可する前に、プログラムが真かどうかをチェックするもの。"
+        },
         "conditionals/express/2021": {
-          "word": "条件"
+          "word": "条件",
+          "definition": "特定の条件でしか実行されないステートメント。"
+        },
+        "while_loop/express/2021": {
+          "word": "「while」ループ",
+          "definition": "条件が真である間、繰り返し続けるループ。"
+        },
+        "until/express/2021": {
+          "word": "Until（まで）",
+          "definition": "何かが真実になるまでの間だけ、何かをするように指示する命令。"
         },
         "function/express/2021": {
-          "word": "関数（かんすう）"
+          "word": "関数（かんすう）",
+          "definition": "簡単に何度も何度も呼び出すことができるコードの一部。"
         },
         "variable/express/2021": {
           "word": "変数",
           "definition": "プログラムで使用される情報の一部のラベル。"
         },
         "prompt/express/2021": {
+          "word": "プロンプト",
           "definition": "ユーザーからの入力を待つコンピュータ画面上のメッセージ。"
         },
         "for_loop/express/2021": {
@@ -419,6 +783,10 @@
           "word": "行動",
           "definition": "スプライトが停止を指示されるまで継続して行う動作。"
         },
+        "algorithm/coursee/2021": {
+          "word": "アルゴリズム",
+          "definition": "タスクを終わらせるためのステップリスト。"
+        },
         "sprite/coursee/2021": {
           "word": "スプライト",
           "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
@@ -428,7 +796,8 @@
           "definition": "何かを引き起こすアクション。"
         },
         "copyright/coursee/2021": {
-          "word": "著作権"
+          "word": "著作権",
+          "definition": "文学的、芸術的、または音楽的な素材を印刷、出版、上演、映画化、または録音する独占的な法的権利、および他の人に同じことをすることを許可する権利。"
         },
         "loop/coursee/2021": {
           "word": "ループ",
@@ -439,10 +808,20 @@
           "definition": "何かを再びすること。"
         },
         "function/coursee/2021": {
-          "word": "関数（かんすう）"
+          "word": "関数（かんすう）",
+          "definition": "簡単に何度も何度も呼び出すことができるコードの一部。"
+        },
+        "condition/coursee/2021": {
+          "word": "条件",
+          "definition": "アクションを許可する前に、プログラムが真かどうかをチェックするもの。"
         },
         "conditionals/coursee/2021": {
-          "word": "条件"
+          "word": "条件",
+          "definition": "特定の条件でしか実行されないステートメント。"
+        },
+        "while_loop/coursee/2021": {
+          "word": "「while」ループ",
+          "definition": "条件が真である間、繰り返し続けるループ。"
         },
         "define/coursee/2021": {
           "word": "定義",
@@ -459,6 +838,61 @@
         "try/coursee/2021": {
           "word": "試してみる",
           "definition": "何かをしようとすること"
+        },
+        "machine_learning/csd/2021": {
+          "word": "機械学習",
+          "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
+        },
+        "user_interface/csd/2021": {
+          "word": "ユーザーインタフェース"
+        },
+        "bug/csd/2021": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "for_loop/csd/2021": {
+          "word": "Forループ",
+          "definition": "あらかじめ開始、終了、増分（増分間隔）のあるループ。"
+        },
+        "debugging/csd/2021": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/csd/2021": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "variable/csd/2021": {
+          "word": "変数",
+          "definition": "プログラムで使用される情報の一部のラベル。"
+        },
+        "sprite/csd/2021": {
+          "word": "スプライト"
+        },
+        "condition/csd/2021": {
+          "word": "条件"
+        },
+        "conditionals/csd/2021": {
+          "word": "条件"
+        },
+        "abstraction/csd/2021": {
+          "word": "抽象化"
+        },
+        "function/csd/2021": {
+          "word": "関数（かんすう）"
+        },
+        "input/csd/2021": {
+          "word": "入力"
+        },
+        "processing/csd/2021": {
+          "word": "処理"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "デジタルフットプリント"
+        },
+        "copyright/csd/2021": {
+          "word": "著作権",
+          "definition": "文学的、芸術的、または音楽的な素材を印刷、出版、上演、映画化、または録音する独占的な法的権利、および他の人に同じことをすることを許可する権利。"
         }
       }
     }

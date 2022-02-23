@@ -2082,3 +2082,102 @@ ne-NP:
         - {}
         questions:
         - {}
+      Dance_Party_extras_intro:
+        markdown: |+
+          #नाचिरहनुहोस्!
+
+           भाग २ का लागि, तपाईंले आफ्नै परियोजना सिर्जना गर्न लाग्नुभएको छ । यहाँ कुनै पहेलीहरु छैनन् - यसको सट्टा त्यहाँ परियोजनाहरु को एक गुच्छा छन् जस्ले अधिक जटिल डान्स पार्टीहरु बनाउन को लागी विभिन्न तरीकाहरु देखाउँछन्।
+
+          तपाईंले यी स्तरहरु  _in any order_ गर्न सक्नुहुन्छ । अघिल्लो तहमा केही कसरी गरियो हेर्न वरिपरि जम्प गर्नुहोस्, वा परियोजनाको बीचमा अवधारणाहरु संयोजन गर्नुहोस् । ती सबै प्रयास गर्नुहोस्, आफूलाई मनपर्ने कुरा छान्नुहोस् र त्यो परियोजनालाई आफ्नो बनाउन थप समय बिताउनुहोस् ।
+
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: title
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}

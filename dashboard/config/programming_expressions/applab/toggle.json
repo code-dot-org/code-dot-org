@@ -1,5 +1,7 @@
 {
-  "func": "toggle",
+  "key": "toggle",
+  "name": "toggle",
   "category": "Circuit",
-  "modeOptionName": "*.toggle"
+  "category_key": "circuit",
+  "syntax": "toggle"
 }

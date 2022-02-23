@@ -1,6 +1,7 @@
 {
-  "func": "getScaledHeight",
+  "key": "getScaledHeight",
+  "name": "getScaledHeight",
   "category": "Sprites",
-  "modeOptionName": "*.getScaledHeight",
-  "type": "value"
+  "category_key": "sprites",
+  "syntax": "getScaledHeight"
 }

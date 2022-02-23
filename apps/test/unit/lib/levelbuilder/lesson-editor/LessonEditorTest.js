@@ -9,7 +9,8 @@ import {
   registerReducers
 } from '@cdo/apps/redux';
 import reducers, {
-  init
+  initActivities,
+  initLevelSearching
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
   initResources
@@ -50,7 +51,13 @@ describe('LessonEditor', () => {
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions, [], false));
+    store.dispatch(initActivities(sampleActivities));
+    store.dispatch(
+      initLevelSearching({
+        searchOptions: searchOptions,
+        programmingEnvironments: []
+      })
+    );
     store.dispatch(initResources(resourceTestData));
     store.dispatch(initVocabularies([]));
     store.dispatch(initProgrammingExpressions([]));
@@ -58,6 +65,12 @@ describe('LessonEditor', () => {
     defaultProps = {
       relatedLessons: [],
       initialObjectives: [],
+      unitInfo: {
+        isLaunched: false,
+        courseVersionId: 1,
+        unitPath: '/s/my-script/',
+        isProfessionalLearningCourse: false
+      },
       initialLessonData: {
         id: 1,
         name: 'Lesson Name',
@@ -72,10 +85,7 @@ describe('LessonEditor', () => {
         preparation: '- One',
         announcements: [],
         assessmentOpportunities: 'Assessment Opportunities',
-        courseVersionId: 1,
-        scriptPath: '/s/my-script/',
         lessonPath: '/lessons/1',
-        unitIsLaunched: false,
         frameworks: []
       }
     };
@@ -134,9 +144,9 @@ describe('LessonEditor', () => {
   });
 
   it('disables editing of lockable and has lesson plan for visible script', () => {
-    let initialLessonDataCopy = _.cloneDeep(defaultProps.initialLessonData);
-    initialLessonDataCopy.unitIsLaunched = true;
-    const wrapper = createWrapper({initialLessonData: initialLessonDataCopy});
+    let unitInfoCopy = _.cloneDeep(defaultProps.unitInfo);
+    unitInfoCopy.isLaunched = true;
+    const wrapper = createWrapper({unitInfo: unitInfoCopy});
     expect(
       wrapper
         .find('input')

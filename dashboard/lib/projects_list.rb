@@ -16,6 +16,7 @@ module ProjectsList
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance'],
+    poetry: ['poetry', 'poetry_hoc'],
     library: ['applab', 'gamelab']
   }.freeze
 
@@ -37,6 +38,28 @@ module ProjectsList
         project_data = get_project_row_data(project, channel_id, nil, true)
         personal_projects_list << project_data if project_data
       end
+      personal_projects_list
+    end
+
+    # Look up every project associated with the provided user_id, and project state, excluding those that are hidden.
+    # Return a set of metadata which can be used to display a table of personal projects in the admin UI.
+    # @param user_id
+    # @param state [String]
+    # @return [Array<Hash>] An array with each entry representing a project.
+    def fetch_personal_projects_for_admin(user_id, state)
+      personal_projects_list = []
+      storage_id = storage_id_for_user_id(user_id)
+
+      storage_apps_query = PEGASUS_DB[:storage_apps].
+        where(storage_id: storage_id, state: state).
+        order(Sequel.desc(:updated_at))
+
+      storage_apps_query.each do |project|
+        channel_id = storage_encrypt_channel_id(storage_id, project[:id])
+        project_data = get_project_row_data(project, channel_id, nil, true)
+        personal_projects_list << project_data if project_data
+      end
+
       personal_projects_list
     end
 

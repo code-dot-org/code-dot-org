@@ -1,12 +1,12 @@
 {
-  "func": "includes",
+  "key": "includes",
+  "name": "includes",
   "category": "Variables",
-  "paletteParams": [
-    "searchValue"
+  "category_key": "variables",
+  "palette_params": [
+    {
+      "name": "searchValue"
+    }
   ],
-  "params": [
-    "\"World\""
-  ],
-  "modeOptionName": "*.includes",
-  "type": "value"
+  "syntax": "includes(searchValue)"
 }

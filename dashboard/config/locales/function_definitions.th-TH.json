@@ -257,12 +257,12 @@
         },
         "Course 4 Play Lab Vars 1": {
           "set score": {
-            "name": "ตั้งค่า คะแนน"
+            "name": "ตั้งค่าคะแนน"
           }
         },
         "Course 4 Play Lab Vars 2": {
           "set score": {
-            "name": "ตั้งค่า คะแนน"
+            "name": "ตั้งค่าคะแนน"
           }
         },
         "Course 4 SCF 1": {
@@ -340,6 +340,12 @@
           },
           "draw a house": {
             "name": "วาดรูปบ้าน"
+          },
+          "sun": {
+            "name": "ดวงอาทิตย์"
+          },
+          "square": {
+            "name": "จัตุรัส"
           }
         },
         "Geometric Sun_2018": {
@@ -348,6 +354,12 @@
           },
           "draw a house": {
             "name": "วาดรูปบ้าน"
+          },
+          "sun": {
+            "name": "ดวงอาทิตย์"
+          },
+          "square": {
+            "name": "จัตุรัส"
           }
         },
         "InspirationalArtwork": {
@@ -1539,7 +1551,7 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "ความยาว",
-              "min": "min"
+              "min": "ค่าต่ำสุด"
             }
           }
         },
@@ -1547,7 +1559,7 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "ความยาว",
-              "min": "min"
+              "min": "ค่าต่ำสุด"
             }
           }
         },
@@ -1594,7 +1606,7 @@
           "draw a spiral edge": {
             "parameters": {
               "length": "ความยาว",
-              "min": "min"
+              "min": "ค่าต่ำสุด"
             }
           }
         },
@@ -2114,6 +2126,16 @@
         "courseF_bee_for_challenge1_2021": {
           "move and get nectar with counter": {
             "name": "บินไปและเก็บน้ำหวานด้วยตัวนับจำนวน"
+          }
+        },
+        "Course E: Artist Project_examples_2021": {
+          "my function": {
+            "name": "ฟังก์ชันของฉัน"
+          }
+        },
+        "Standalone_Artist_9": {
+          "my function": {
+            "name": "ฟังก์ชันของฉัน"
           }
         }
       }

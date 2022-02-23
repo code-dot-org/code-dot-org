@@ -1,34 +1,34 @@
 ---
-title: Teacher Resources - Code with Anna and Elsa
+title: Források tanároknak - Kódolás Annával és Elzával
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Code with Anna and Elsa: An Hour of Code Tutorial
+# Kódolás Annával és Elzával: Kódolás órája bemutató
 
 {{ hoc_frozen_video }}
 
 [col-50]
 
-## Teacher Resources
+## Források tanároknak
 
-### Lesson Plans:
+### Óravázlatok:
 
-- [Code with Anna and Elsa]({{ hoc_frozen_cb_url }})
-- [Answer Sheet](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
-- OPTIONAL: [The Drawing Machine](http://code.org/curriculum/misc/hocunplugged/Teacher)
+- [Kódolás Annával és Elzával]({{ hoc_frozen_cb_url }})
+- [Válaszlap](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
+- OPCIONÁLIS: [A rajzológép](http://code.org/curriculum/misc/hocunplugged/Teacher)
 
-### Extension Activities:
+### Tevékenységek kiterjesztése:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [A Kódolás óráján túl](http://code.org/learn/beyond)
+- [Informatikai alapismeretek: 2. kurzus](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Egyéb források tanároknak:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Kódolás órája: Módszertani útmutató oktatóknak](https://hourofcode.com/how-to)
+- [Legjobb gyakorlatok sikeres oktatóktól](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Élő esemény: [Egy oktató útmutatója a Kódolás órájához](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -36,12 +36,12 @@ video_player: true
 
 ## Áttekintés
 
-Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
+Használjuk a kódot, hogy csatlakozhassunk Annához és Elzához, akik felfedezik a jég varázsát és szépségét. Hópelyheket és mintákat fogsz készíteni korcsolyázás közben, és egy téli csodaországot hozol létre, amit aztán megoszthatsz a barátaiddal!
 
-**Recommended Age Range:** 8+
+**Javasolt korosztály:** 8+
 
-**Technology Requirements:** Modern browsers + tablets
+**Technológiai igények:** Modern böngészők + tabletek
 
-<a href="http://studio.code.org/s/frozen/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/frozen/reset"><button>Próbáld ki a bemutatót</button></a>
 
 [/col-50]

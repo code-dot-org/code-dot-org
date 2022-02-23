@@ -21,14 +21,14 @@ social:
 # Nauč sa viac o umelej inteligencii (AI)
 <div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
 <div class="col-40" style="margin-bottom:15px">
-<h2 style="color:#ffffff; margin-top:25px">NOVÉ: Modul o umelej inteligencii a strojovom učení</h2><p>Náš nový modul v učebnom pláne sa zameriava na etický rozmer umelej inteligencie, rozoberá problémy skreslenia a skúma a vysvetľuje základné koncepty prostredníctvom on‑line aktivít, aktivít bez počítača a skupinových diskusií.</p><a  href="#about-aimodule"><button>Ďalšie informácie</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Prezri si modul</button></a></div>
+<h2 style="color:#ffffff; margin-top:25px">NOVÉ: Modul o umelej inteligencii a strojovom učení</h2><p>Náš nový modul v učebnom pláne sa zameriava na etický rozmer umelej inteligencie, rozoberá problémy skreslenia a skúma a vysvetľuje základné koncepty prostredníctvom on‑line aktivít, aktivít bez počítača a skupinových diskusií.</p><a  href="#about-aimodule"><button>Ďalšie informácie</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Zobraziť celý modul</button></a></div>
 <div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI Lab"/></div>
 <div class="clear"></div>
 </div>
 
 Umelá inteligencia a strojové učenie ovplyvňujú celý náš svet. Menia spôsob, ako žijeme a pracujeme. Preto je pre všetkých z nás nesmierne dôležité rozumieť tejto čoraz dôležitejšej technológii – nielen tomu, ako je navrhnutá a ako sa používa, ale aj jej spoločenským a etickým dôsledkom.
 
-Pridaj sa k nám! Môžeš preskúmať umelú inteligenciu v novej sérii videí, trénovať umelú inteligenciu na pomoc oceánom vo viac než 25 jazykoch, diskutovať o etike a vyskúšať množstvo ďalších aktivít. 
+Pridajte sa k nám! Môžete preskúmať svet umelej inteligencie v novej sérii videí, trénovať umelú inteligenciu na pomoc oceánom (už vo viac než 25 jazykoch), diskutovať o etike a vyskúšať si množstvo ďalších aktivít. 
 
 {{ ai_20px_margin }}
 
@@ -49,10 +49,10 @@ Pridaj sa k nám! Môžeš preskúmať umelú inteligenciu v novej sérii vide
 ## NOVÉ: Modul o umelej inteligencii a strojovom učení
 <div>
 <div class="col-50">
-<p>Modul Umelá inteligencia a strojové učenie má približne 5-týždňový učebný plán, ktorý sa dá vyučovať <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >samostatne</a> alebo sa dá využiť ako voliteľná <a href="https://studio.code.org/s/csd7-2021">lekcia v kurze CS Discoveries (Informatické objavy)</a>. Zameriava na etický rozmer umelej inteligencie, rozoberá problémy skreslenia a skúma a vysvetľuje základné koncepty</p><p>Keďže strojové učenie využíva veľké súbory dát, nová lekcia zahŕňa skutočné súbory dát zo zdravotníctva, demografie a ďalších oblastí, aby žiakov zaujala. Popri tom hľadá odpovede na otázky ako: „S riešením akých problémov dokáže strojové učenie pomôcť?“ „Ako dokáže umelá inteligencia pomôcť spoločnosti?“ „Kto má z umelej inteligencie úžitok?“ „Komu, naopak, škodí?“ „Kto sa do tejto oblasti zapája?“ „Kto je z nej vynechaný?“  </p>
-<p>V popredí týchto diskusií budú stáť etické otázky, pričom vplyv týchto technológií bude častým bodom diskusií a zdrojom nových poznatkov. Študenti tak získajú aj holistické a hlboké porozumenie týmto technológiám a spoznajú aj technické základy, na ktorých fungujú.</p>
+<p>Modul „Umelá inteligencia a strojové učenie“ má približne 5-týždňový učebný plán, ktorý sa dá vyučovať <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >samostatne</a> alebo sa dá využiť ako voliteľná <a href="https://studio.code.org/s/csd7-2021">lekcia v kurze CS Discoveries (Informatické objavy)</a>. Zameriava na etický rozmer umelej inteligencie, rozoberá problémy skreslenia a skúma a vysvetľuje základné koncepty</p><p>Keďže strojové učenie si vyžaduje veľké množstvo údajov, nová lekcia zahŕňa skutočné súbory dát zo zdravotníctva, demografie a ďalších oblastí, aby žiakov zaujala. Popri tom hľadá odpovede na rozličné otázky: „S riešením akých problémov dokáže strojové učenie pomôcť?“ „Ako dokáže umelá inteligencia pomôcť spoločnosti?“ „Kto má z umelej inteligencie úžitok?“ „Komu, naopak, škodí?“ „Kto sa do tejto oblasti zapája?“ „Kto je z nej vynechaný?“  </p>
+<p>V popredí týchto diskusií budú stáť etické otázky, pričom vplyv týchto technológií bude častým bodom diskusií a zdrojom nových poznatkov. Študenti tak získajú hlboké holistické porozumenie týmto technológiám a spoznajú aj základy toho, ako fungujú.</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>Prezri si modul</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 
@@ -85,7 +85,7 @@ Táto séria krátkych videí s príhovorom od výkonného riaditeľa Microsoft
 
 ### Videá o umelej inteligencii od iných organizácií:
 - [Seeing AI: Chceme, aby bol vizuálny svet prístupnejší](https://youtu.be/DybczED-GKE) (3:27)
-- [Ako bojovať proti algoritmickým predsudkom](https://youtu.be/UG_X_7g63rY) (8:44)
+- [Ako bojovať proti skresleniam algoritmov](https://youtu.be/UG_X_7g63rY) (8:44)
 - [Strojové učenie a ľudské kognitívne skreslenia](https://youtu.be/59bMh59JQDo) (2:33)
 - [Etika umelej inteligencie](https://youtu.be/GboOXAjGevA) (8:03)
 - [Strojové učenie: riešenie veľkých, malých aj chúlostivých problémov](https://youtu.be/_rdINNHLYaQ) (5:19)
@@ -110,7 +110,7 @@ Táto séria krátkych videí s príhovorom od výkonného riaditeľa Microsoft
 
 ### AI pomáha oceánom: ako program funguje
 
-Úrovne 2 až 4 využívajú vopred natrénovaný model z projektu [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md) od platformy [TensorFlow](https://www.tensorflow.org/). Model MobileNet je [konvolučná neurónová sieť](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks) vytrénovaná na súbore dát [ImageNet](http://www.image-net.org/), ktorý obsahuje viac než 14 miliónov obrázkov ručne anotovaných slovami ako „balón“ či „jahoda“. Na to, aby sme tento model prispôsobili pomocou anotovaných trénovacích dát, ktoré študent pri aktivite vytvorí, využívame techniku nazývanú [transferové učenie (transfer learning)](https://en.wikipedia.org/wiki/Transfer_learning). Každý obrázok v trénovacom súbore dát sa posiela do modelu MobileNet vo forme pixelov. Výsledkom je zoznam anotácií, ktoré sa naň vzťahujú s najväčšou pravdepodobnosťou. Keď potom pracujeme s novým obrázkom, pošleme ho do modelu MobileNet a porovnáme jeho výsledný zoznam anotácií s tými, ktoré sme získali z trénovacieho súboru dát. Nový obrázok zatriedime pomocou rovnakých označení (napríklad „ryba“ a „nie ryba“) ako obrázky z trénovacieho súboru, ktoré majú najpodobnejšie výsledky.
+Úrovne 2 až 4 využívajú vopred natrénovaný model z projektu [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md) od platformy [TensorFlow](https://www.tensorflow.org/). Model MobileNet je [konvolučná neurónová sieť](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks) vytrénovaná na súbore dát [ImageNet](http://www.image-net.org/), ktorý obsahuje viac než 14 miliónov obrázkov ručne anotovaných slovami ako „balón“ či „jahoda“. Na to, aby sme tento model prispôsobili pomocou anotovaných trénovacích dát, ktoré žiak pri aktivite vytvorí, využívame techniku nazývanú [transferové učenie (transfer learning)](https://en.wikipedia.org/wiki/Transfer_learning). Každý obrázok v trénovacom súbore dát sa posiela do modelu MobileNet vo forme pixelov. Výsledkom je zoznam anotácií, ktoré sa naň vzťahujú s najväčšou pravdepodobnosťou. Keď potom pracujeme s novým obrázkom, pošleme ho do modelu MobileNet a porovnáme jeho výsledný zoznam anotácií s tými, ktoré sme získali z trénovacieho súboru dát. Nový obrázok zatriedime pomocou rovnakých označení (napríklad „ryba“ a „nie ryba“) ako obrázky z trénovacieho súboru, ktoré majú najpodobnejšie výsledky.
 
 Úrovne 6 až 8 využívajú \[metódu podporných vektorov\] (https://en.wikipedia.org/wiki/Support-vector_machine) (anglicky support-vector machine, skrátene SVM). Pozrieme sa na každú súčasť ryby (napríklad oči, ústa, telo) a zo všetkých metadát týchto súčastí (napríklad počet zubov, tvar tela) vytvoríme pri každej rybe vektor čísel. Tieto vektory využívame na trénovanie SVM. SVM na základe trénovacích dát rozdelí „priestor“ všetkých možných rýb na dve časti zodpovedajúce triedam, ktoré sa snažíme naučiť rozlišovať (napríklad „modrá“ alebo „nie modrá“).
 

@@ -2,15 +2,16 @@ name 'CSA Multiple Choice level to clone'
 height 'auto'
 
 wrong ‘7’
-wrong ‘3.04’
-right ‘7.0’
-wrong ‘7.04’
+wrong ‘7’
+right ‘123’
+wrong ‘7’
+wrong '7'
 
 
 
 
 teacher_markdown <<MARKDOWN
-Covered in Unit 1 Lesson 10. 
+Covered in Unit 7 Lesson . 
 
 MARKDOWN
 

@@ -2,6 +2,81 @@
   "si-LK": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "word": "කේතය"
+        },
+        "code/minecraft/unversioned": {
+          "word": "කේතය"
+        },
+        "code/hero/unversioned": {
+          "word": "කේතය"
+        },
+        "function/hero/unversioned": {
+          "word": "ශ්‍රිතය"
+        },
+        "code/poem-art/2021": {
+          "word": "කේතය"
+        },
+        "code/flappy/unversioned": {
+          "word": "කේතය"
+        },
+        "code/hourofcode/unversioned": {
+          "word": "කේතය"
+        },
+        "code/frozen/unversioned": {
+          "word": "කේතය"
+        },
+        "code/iceage/unversioned": {
+          "word": "කේතය"
+        },
+        "code/artist/unversioned": {
+          "word": "කේතය"
+        },
+        "code/gumball/unversioned": {
+          "word": "කේතය"
+        },
+        "code/dance/unversioned": {
+          "word": "කේතය"
+        },
+        "code/aquatic/unversioned": {
+          "word": "කේතය"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "ලූපයන්"
+        },
+        "code/starwars/unversioned": {
+          "word": "කේතය"
+        },
+        "code/mc/unversioned": {
+          "word": "කේතය"
+        },
+        "code/playlab/unversioned": {
+          "word": "කේතය"
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "කේතය"
+        },
+        "code/sports/unversioned": {
+          "word": "කේතය"
+        },
+        "code/infinity/unversioned": {
+          "word": "කේතය"
+        },
+        "code/basketball/unversioned": {
+          "word": "කේතය"
+        },
+        "code/dance-extras-2019/unversioned": {
+          "word": "කේතය"
+        },
+        "code/dance-2019/unversioned": {
+          "word": "කේතය"
+        },
+        "code/poem-art/unversioned": {
+          "word": "කේතය"
+        },
         "variable/coursef/2021": {
           "word": "විචල්‍යය"
         },
@@ -64,6 +139,21 @@
         },
         "define/coursee/2021": {
           "word": "අර්ථ දක්වන්න"
+        },
+        "variable/csd/2021": {
+          "word": "විචල්‍යය"
+        },
+        "conditionals/csd/2021": {
+          "word": "කන්ඩිෂනලස්"
+        },
+        "abstraction/csd/2021": {
+          "word": "ඇබ්ස්ට්‍රැක්ෂන්"
+        },
+        "function/csd/2021": {
+          "word": "ශ්‍රිතය"
+        },
+        "copyright/csd/2021": {
+          "word": "ප්‍රකාශන හිමිකම"
         }
       }
     }

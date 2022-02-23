@@ -1,5 +1,7 @@
 {
-  "func": "mathRandom",
-  "block": "Math.random()",
-  "category": "Math"
+  "key": "mathRandom",
+  "name": "Math.random",
+  "category": "Math",
+  "category_key": "math",
+  "syntax": "Math.random"
 }

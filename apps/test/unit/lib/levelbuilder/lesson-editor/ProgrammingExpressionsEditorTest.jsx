@@ -11,7 +11,8 @@ import {
   registerReducers
 } from '@cdo/apps/redux';
 import reducers, {
-  init
+  initActivities,
+  initLevelSearching
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 describe('ProgrammingExpressionsEditor', () => {
@@ -26,7 +27,10 @@ describe('ProgrammingExpressionsEditor', () => {
     });
 
     store = getStore();
-    store.dispatch(init([], {}, [], false));
+    store.dispatch(initActivities([]));
+    store.dispatch(
+      initLevelSearching({searchOptions: {}, programmingEnvironments: []})
+    );
 
     addProgrammingExpression = sinon.spy();
     removeProgrammingExpression = sinon.spy();

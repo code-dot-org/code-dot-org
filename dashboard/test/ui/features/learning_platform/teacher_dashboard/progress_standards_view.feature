@@ -2,22 +2,13 @@
 
 Feature: Viewing and Printing Standards Progress
 
-  Background:
-    Given I create a teacher named "Standards Importer"
-    Then I sign in as "Standards Importer"
-    Then I am on "http://studio.code.org/admin/standards"
-    And I wait until element "#import-standards" is visible
-    And I press "#import-standards" using jQuery
-    And I wait until element "#alert-details" is visible
-    And element "#alert-details" contains text "Hooray!"
-
   Scenario: Viewing standards progress in Progress Tab of Teacher Dashboard
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "coursea-2019"
     Given I am assigned to unit "allthethings"
 
     When I sign in as "Teacher_Sally" and go home
-    And I get hidden script access
+    And I get levelbuilder access
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     And I wait until element "#uitest-teacher-dashboard-nav" is visible

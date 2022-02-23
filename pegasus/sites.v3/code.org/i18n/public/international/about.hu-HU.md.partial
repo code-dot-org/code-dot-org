@@ -1,20 +1,20 @@
 ---
-title: About
+title: Tudnivalók
 theme: responsive
 video_player: true
 ---
 
-# About Us
+# Rólunk
 
 <div class="col-60">
-  Code.org® is a nonprofit dedicated to expanding access to computer science in schools and increasing participation by young women and students from other underrepresented groups. Our vision is that every student in every school has the opportunity to learn computer science, just like biology, chemistry, or algebra. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org is supported by generous donors including Amazon, Facebook, Google, the Infosys Foundation, Microsoft, and <a href="/about/donors">many more</a>.
+  A Code.org® egy nonprofit szervezet, amely az iskolai informatikához való hozzáférés kiterjesztését, valamint a fiatal nők és más alulreprezentált csoportokhoz tartozó diákok részvételének növelését tűzte ki célul. Az a célunk, hogy minden iskolában minden diáknak lehetősége legyen informatikát tanulni, csakúgy, mint biológiát, kémiát vagy algebrát. Mi biztosítjuk a legszélesebb körben használt tantervet az informatika általános és középiskolai oktatásához, és mi szervezzük az éves <a href="https://hourofcode.com">Kódolás órája</a> kampányt is, amely a világ összes diákjának 10%-át bevonja. A Code.org-ot olyan nagylelkű adományozók támogatják, mint az Amazon, a Facebook, a Google, az Infosys Foundation, a Microsoft és <a href="/about/donors">sokan mások</a>.
 </div>
 
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
   
-  <font size="4" color="#FFFFFF"><b>Code.org courses are used by tens of millions of students and by one million teachers all around the world.</b></font>
+  <font size="4" color="#FFFFFF"><b>A Code.org kurzusait több tízmillió diák és egymillió tanár használja világszerte.</b></font>
  
 </div>
 
@@ -22,33 +22,33 @@ video_player: true
 
 <div style="clear:both"></div>
 
-## History
+## Előzmények
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few.
+2013-ban az ikertestvérek, Hadi és Ali Partovi indították el a Code.org-ot egy [viedóval, amely az informatikát népszerűsíti](https://www.youtube.com/watch?v=nKIu9yen5nc). Ez a videó egy napra az első helyre került a YouTube-on, és 15 000 iskola fordult hozzánk segítségért. Azóta az önkéntesekből álló, kis létszámú személyzetből felépítettünk egy teljes szervezetet, amely egy világméretű mozgalmat támogat. Hisszük, hogy a minőségi informatikai oktatásnak minden gyermek számára elérhetőnek kell lennie, nem csak néhány szerencsésnek.
 <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
-## What We Do
+## Amit teszünk
 
-We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. Our work builds on decades of effort, by countless organizations and individuals who have helped establish, fund, and spread computer science education. We're grateful for the tireless work of the broader computer science education community, and we thank all the partners and individuals who have expanded our impact over the years.
+Az oktatás teljes spektrumán dolgozunk: [saját tanfolyamokat tervezünk](https://studio.code.org/courses) vagy másokkal együttműködve, tanárokat képzünk, nagy iskolai körzetekkel működünk együtt, segítünk kormányzati politikák megváltoztatásában, partnerségek révén nemzetközi szinten terjeszkedünk, és marketinget folytatunk a sztereotípiák megtörése érdekében. Munkánk a számtalan szervezet és magánszemély több évtizedes erőfeszítésére épül, akik segítettek a számítástechnikai oktatás létrehozásában, finanszírozásában és terjesztésében. Hálásak vagyunk a szélesebb számítástechnikai oktatási közösség fáradhatatlan munkájáért, és köszönetet mondunk mindazoknak a partnereknek és magánszemélyeknek, akik az évek során növelték befolyásunkat.
 
-## Code.org's International Reach
+## A Code.org nemzetközi kiterjedése
 
-Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
+Weboldalunk forgalmának több mint 40%-a az Egyesült Államokon kívülről érkezik, és ez a szám folyamatosan emelkedik. A számítástechnikához való globális hozzáférés kiterjesztése érdekében csapatunk szorosan együttműködik [több mint 100 nemzetközi partnerrel](/about/partners), segítve őket a Kódolás órájának népszerűsítésében, a politikai változásokért való kiállásban és a tanárok képzésében. A számítástechnikát a nemzetközi oktatási diskurzus részévé tesszük azáltal, hogy a világ oktatási minisztériumaival együttműködünk, és olyan nemzetközi szervezetekkel dolgozunk együtt, mint a Gazdasági Együttműködési és Fejlesztési Szervezet és az ENSZ Nevelésügyi, Tudományos és Kulturális Szervezete.
 
-<img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%" />
+<img alt="A Code.org nemzetközi partnerei" src="/images/international/international_partners.jpg" width="100%" />
 
-## Translation
+## Fordítás
 
-Want to have a direct impact on students in your country? Help us make Code.org content available in their native language! If you volunteer to help translate our tutorials and lessons, you'll be joining a community of more than 7,000 translators who help bring computer science education to students around the world. Take a look at our [translation guide](/translate) for more information.
+Szeretne közvetlenül segíteni az országában élő diákoknak? Segítsen nekünk, hogy a Code.org tartalma elérhető legyen az anyanyelvükön! Ha önkéntesként segít lefordítani oktatóanyagainkat és leckéinket, akkor csatlakozik a több mint 7000 fordítóból álló közösséghez, akik segítenek eljuttatni az informatikai oktatást a diákok számára a világ minden táján. További információkért tekintse meg [fordítási útmutatónkat](/translate).
 
-## Our commitment to free curriculum and open source technology
+## Elkötelezettségünk a szabadon használható tananyag és a nyílt forráskódú technológia iránt
 
-All curriculum resources and tutorials we create will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+Minden általunk készített tantervi forrás és oktatóanyag örökre szabadon felhasználható és nyílt licencű lesz a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) licenc alapján, amely lehetővé teszi mások számára, hogy nem kereskedelmi célokra származékos oktatási forrásanyagokat készítsenek. Ha anyagaink kereskedelmi célú licencelése érdekli, [lépjen kapcsolatba velünk](/contact). Tanfolyamainkat világméretű felhasználásra vagy a különböző nyelveket beszélők számára fordítjuk le. Technológiánkat [nyílt forráskódú projektként](https://github.com/code-dot-org/code-dot-org) fejlesztjük.
 
-<img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%" />
+<img alt="Hallgatók laptoppal" src="/images/international/group_computer.jpg" width="100%" />
 
-## Follow us
+## Kövessen minket
 
-[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+[Iratkozzon fel, hogy friss tájékoztatásokat kapjon](/about/hear-from-us) a K-12 informatikai mozgalom fejlődéséről és a Code.org munkájáról. Vagy kövesse a Code.org-ot a közösségi médiában:
 
 {{ social_media_codeorg }}

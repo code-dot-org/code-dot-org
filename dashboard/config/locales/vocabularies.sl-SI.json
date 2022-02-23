@@ -2,6 +2,75 @@
   "sl-SI": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "function/hero/unversioned": {
+          "word": "Funkcija"
+        },
+        "code/poem-art/2021": {
+          "word": "Koda"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "code/artist/unversioned": {
+          "word": "Koda"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Pogoji"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Zanke"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "code/sports/unversioned": {
+          "word": "Koda"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Odpravljanje napak"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Koda"
+        },
         "variable/coursef/2021": {
           "word": "Spremenljivka"
         },
@@ -58,6 +127,24 @@
         },
         "define/coursee/2021": {
           "word": "Definiraj"
+        },
+        "debugging/csd/2021": {
+          "word": "Odpravljanje napak"
+        },
+        "variable/csd/2021": {
+          "word": "Spremenljivka"
+        },
+        "conditionals/csd/2021": {
+          "word": "Pogoji"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstrakcija"
+        },
+        "function/csd/2021": {
+          "word": "Funkcija"
+        },
+        "copyright/csd/2021": {
+          "word": "Avtorska pravice"
         }
       }
     }

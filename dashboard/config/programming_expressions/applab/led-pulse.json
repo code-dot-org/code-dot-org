@@ -1,0 +1,12 @@
+{
+  "key": "led.pulse",
+  "name": "led.pulse",
+  "category": "Circuit",
+  "category_key": "circuit",
+  "palette_params": [
+    {
+      "name": "interval"
+    }
+  ],
+  "syntax": "led.pulse(interval)"
+}

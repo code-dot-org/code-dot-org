@@ -1,5 +1,7 @@
 {
-  "func": "head",
+  "key": "head",
+  "name": "head",
   "category": "HTML Tags",
+  "category_key": "html_tags",
   "syntax": "<head></head>"
 }

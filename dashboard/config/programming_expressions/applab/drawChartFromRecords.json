@@ -1,23 +1,21 @@
 {
-  "func": "drawChartFromRecords",
+  "key": "drawChartFromRecords",
+  "name": "drawChartFromRecords",
   "category": "Data",
-  "paramButtons": {
-    "minArgs": 4,
-    "maxArgs": 6
-  },
-  "paletteParams": [
-    "chartId",
-    "chartType",
-    "tableName",
-    "columns"
+  "category_key": "data",
+  "palette_params": [
+    {
+      "name": "chartId"
+    },
+    {
+      "name": "chartType"
+    },
+    {
+      "name": "tableName"
+    },
+    {
+      "name": "columns"
+    }
   ],
-  "params": [
-    "\"chartId\"",
-    "\"bar\"",
-    "\"mytable\"",
-    "[\"columnOne\", \"columnTwo\"]"
-  ],
-  "allowFunctionDrop": {
-    "5": true
-  }
+  "syntax": "drawChartFromRecords(chartId, chartType, tableName, columns)"
 }

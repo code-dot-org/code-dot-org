@@ -374,6 +374,7 @@
   homepage_donors_donate: "Spenden"
   homepage_below_hero_announcement_text: "Der Schutz deiner Daten ist uns wichtig, weshalb wir unsere Datenschutzerklärung mit Wirkung zum 25. Mai aktualisieren."
   homepage_below_hero_announcement_link_text: "Mehr erfahren"
+  homepage_higher_power_body: "Programmiere einen Tanz zu „Higher Power“ Coldplay, dann kannst du die Band vielleicht live erleben!"
   contact_form_topic_student: "Ich bin ein Schüler"
   contact_form_topic_parent: "Ich bin ein Elternteil"
   contact_form_topic_teacher: "Ich bin Lehrer/Pädagoge"
@@ -990,6 +991,8 @@
   iceage_name: "Ice Age"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "Star Wars (Bausteine)"
+  hoc-impact-study_name: Klassisches Labyrinth mit Umfrage
+  flappy-impact-study_name: Flappy Code mit Umfrage
   hoc-encryption_name: Einfache Verschlüsselung
   text-compression_name: Text-Kompression
   applab_name: "App-Labor"
@@ -1081,6 +1084,12 @@
   coursed-2020_gradelevel: Ab 8. Klasse
   coursee-2020_gradelevel: Alter 8-12
   coursef-2020_gradelevel: Alter 9-13
+  coursea-2021_gradelevel: Alter 4-7
+  courseb-2021_gradelevel: Alter 5-8
+  coursec-2021_gradelevel: Alter 6-10
+  coursed-2021_gradelevel: Ab 8. Klasse
+  coursee-2021_gradelevel: Alter 8-12
+  coursef-2021_gradelevel: Alter 9-13
   accelerated_gradelevel: "Alter: 10-18"
   codeorg_platformtext: "Moderne Browser, Smartphones, Tablets"
   codeintl_platformtext: "Moderne Browser, Smartphones, Tablets"
@@ -1480,6 +1489,8 @@
   header_legal_privacy: "Datenschutzerklärung"
   header_legal_tos: "AGBs"
   header_tutorials: "Einführungen"
+  header_screen_reader_hamburger: "Speisekarte"
+  header_screen_reader_help: "Hilfe Menu"
   app_lab_documentation: "App Lab Dokumentation"
   app_lab_tutorials: "App Lab Tutorials"
   game_lab_documentation: "Game Lab Dokumentation"
@@ -1649,6 +1660,7 @@
   hoc2018_dance_amazon_sponsor_section_with_logo_title: "In Zusammenarbeit mit"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link: "Amazon Future Engineer* ist ein umfassendes Kinder-Karriere Programm, mit dem einkommensschwache und andere benachteiligte Kinder und Jugendliche für Berufe in der Informatik inspiriert und ausgebildet werden sollen. <a href='%{amazon_future_engineer_link}' target='_blank'>Weitere Informationen</a>"
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: "Amazon Future Engineer* ist ein umfassendes Kinder-Karriere Programm, mit dem einkommensschwache und andere benachteiligte Kinder und Jugendliche für Berufe in der Informatik inspiriert und ausgebildet werden sollen. [Weitere Informationen] (%{amazon_future_engineer_link})"
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: "Wenn Sie ein Schüler oder Lehrer in Frankreich sind, besuchen Sie [Amazon Future Engineer - Frankreich] (%{amazon_future_engineer_france_link})"
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: "Erfahren Sie mehr über Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_title: "Über Amazon Future Engineer"
   hoc2018_dance_amazon_about_future_engineer_description: "Erfahre mehr über das Karriereprogramm des Amazon Kindergartens, um den Zugang zur Informatikausbildung zu verbessern. Hier findest du Informationen darüber, wie du dich an unseren Sommercamps, High School CS-Kursen, Stipendien und Praktika beteiligen kannst."
@@ -1675,6 +1687,8 @@
   hoc2018_dance_video2: "Tanzparty - Ereignisse"
   hoc2018_dance_video3: "Tanzparty - Eigenschaften"
   hoc2018_dance_video4: "Tanzparty - Glückwünsche"
+  dance_box_higher_power_line_1: "Programmiere einen Tanz zu „Higher Power“ Coldplay, dann kannst du die Band vielleicht live erleben!"
+  dance_box_higher_power_line_2: "Besuche <a href=\"%{path}\">code.org/coldplay</a> und erfahre mehr darüber"
   page_not_found_title: "Seite nicht gefunden"
   page_not_found_header: '404: Seite nicht gefunden'
   page_not_found_description: "Die Seite die Sie suchen gibt es nicht unter dieser Adresse. Prüfen Sie die Adresse und versuchen Sie es noch einmal. Oder, gehen Sie zurück zu unserer Webseite."
@@ -1691,19 +1705,81 @@
   homepage_slot_text_link_code_break: "Mache eine Programmierpause"
   homepage_slot_text_link_do_hoc: "Probiere die Hour of Code aus (deutsch \"Stunde des Codes\")"
   homepage_slot_text_link_express_course: "Versuche einen Express-Kurs"
+  page_not_available_title: "Seite nicht verfügbar"
+  page_not_available_description: "Es tut uns leid, die von Ihnen angeforderte Seite ist unter dieser Adresse nicht mehr verfügbar. Wenn Sie weiterhin Zugang benötigen, senden Sie bitte eine E-Mail an [support@code.org] (%{support_email_link})."
   page_not_available_button: "Zurück zur Homepage"
-  ! '': ' '
+  hoc2020_mc_available_code_org: "Erhältlich auf Code.org"
+  hoc2020_mc_available_mee: 'Erhältlich in Minecraft: Education Edition'
+  hoc2020_mc_mee_title: "Minecraft-Geschichte von zwei Dörfern"
+  hoc2020_mc_mee_description: 'Das neue Minecraft Hour of Code Tutorial ist jetzt in Minecraft: Education Edition für Windows, Mac, Chromebook und iPad verfügbar. Lernen Sie die Grundlagen des Programmierens kennen und erkunden Sie mit Ihren Studierenden Vielfalt und Inklusion! Greifen Sie auf kostenlose Ressourcen zu, darunter einen Unterrichtsplan, Videos, Informatik-Lehrplan, Equity-Unterricht und Lehrerschulungen.'
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Reisen Sie zurück in der Zeit und lernen Sie zu programmieren! Das neue Minecraft Hour of Code-Tutorial ist jetzt in einer Minecraft-Ausgabe verfügbar: Eine Unterrichts-Edition für Windows, Mac, Chromebook und iPad. Beginnen Sie jetzt mit kostenlosen Ressourcen für Pädagogen mit tollen Schulungen und Videos.'
+  hoc2021_mc_mee_villages_title: "Die Geschichte von zwei Dörfern"
+  hoc2021_mc_mee_villages_description: 'Machen Sie sich mit den Grundlagen des Programmierens vertraut und erforschen Sie mit Ihren SchülerInnen in Minecraft Vielfalt und Integration: Alles in dieser Unterrichts-Edition.'
+  hoc2021_mc_mee_ai_title: "KI für die Zukunft"
+  hoc2021_mc_mee_ai_description: 'Erforschen Sie KI mit Ihren Schülern und lernen Sie programmieren mit Minecraft: Alles in dieser Unterrichts-Edition.'
   footer_powered_by_aws: "Betrieben von Amazon Web Services"
+  footer_built_on_github: "Gebaut auf GitHub von Microsoft"
+  codebytes_skinny_banner_title: "Besuchen Sie uns vom 7. bis 11. Dezember für unsere CodeBytes Live-Mini-Lektionen!"
+  codebytes_skinny_banner_description: 'Besuchen Sie uns jeden Tag der CS Education Week for CodeBytes, 20-minütiger interaktiver Informatikunterricht. CodeBytes, das zweimal täglich live streamt, ist eine großartige Möglichkeit für Schüler, an einem virtuellen #HourOfCode teilzunehmen!'
   codebytes_skinny_banner_english_only: "Nur Englisch"
+  codebytes_skinny_banner_learn: "Erfahren Sie mehr unter [code.org/codebytes] (%{code_bytes_url})."
   footer_privacy_policy: "Datenschutzerklärung"
+  footer_privacy_policy_updated: "Datenschutzrichtlinie (aktualisiert)"
   footer_about: "Über"
   footer_partners: "Partner"
+  footer_blog: "Bloggen"
   footer_donate: "Spenden"
+  footer_store: "Geschäft"
   footer_support: "Unterstützung"
   footer_terms: "Bedingungen"
   ai_for_oceans: "KI für Meere"
   ai_for_oceans_lesson_plan: "Arbeitsplan"
+  ai_for_oceans_tile_description: "Hilf der KI, die Ozeane zu reinigen, indem du sie trainierst, Müll zu entdecken! Erfahren Sie mehr über Trainingsdaten und Voreingenommenheit und wie KI Probleme der Welt angehen kann. Ansicht"
+  how_ai_works: "So funktioniert KI"
+  how_ai_works_tile_description: "Erfahren Sie in dieser Serie von kurzen Videos, wie KI funktioniert und warum sie wichtig ist. Mit Satya Nadella, CEO von Microsoft, und einer Vielzahl von Experten."
+  watch_the_videos: "Sehen Sie sich die Videos an"
+  ai_and_ethics: "KI und Ethik"
+  ai_and_ethics_tile_description: "Die Studierenden reflektieren die ethischen Implikationen von KI und arbeiten dann zusammen, um eine Ressource zum „KI-Ethikkodex“ für KI-Schöpfer und Gesetzgeber überall zu schaffen."
+  view_lesson_plan: "Unterrichtsplan anzeigen"
   ai_in_partnership_with: "In Zusammenarbeit mit"
   ai_microsoft_thanks: "Wir danken Microsoft für die Unterstützung unserer Vision und Mission, sicherzustellen, dass jedes Kind die Möglichkeit hat, Informatik und die Fähigkeiten zu erlernen, um im 21. Jahrhundert erfolgreich zu sein."
+  ai_ethics_panel_header: "Erkundung der Ethik der KI-Podiumsdiskussion"
+  ai_ethics_panel_description_1: "Gehen Sie tiefer mit einigen unserer bevorzugten KI-Experten! Diese Podiumsdiskussion berührt wichtige Themen wie algorithmische Voreingenommenheit und die Zukunft der Arbeit. Kombiniere es mit unserem"
+  ai_ethics_lesson_plan: "Unterrichtsplan für KI und Ethik"
+  ai_ethics_panel_description_2: "für eine großartige Einführung in die Ethik der künstlichen Intelligenz!"
+  cs_for_good: "CS für immer"
+  cs_for_good_tile_description: "Ressourcen, die die Schüler dazu inspirieren, tief über die Rolle nachzudenken, die Informatik bei der Schaffung einer gerechteren und nachhaltigeren Welt spielen kann."
+  view_resources: "Ressourcen anzeigen"
+  imagine_cup_junior: "Stellen Sie sich Cup Junior"
+  imagine_cup_junior_tile_description: "Diese globale Herausforderung für KI für Good führt die Schüler in die AI for Good-Initiativen von Microsoft ein und ermöglicht es ihnen, ein Problem auf der Welt mit der Kraft der KI zu lösen."
   ai_activity: "Aufgabe"
   ai_description: "Beschreibung"
+  ai_seeing_ai: "KI sehen"
+  ai_seeing_ai_description: "Eine kostenlose App, die die Welt um Sie herum in einer Vielzahl von Sprachen erzählt."
+  ai_quick_draw: "Schnell, zeichnen!"
+  ai_quick_draw_description: "Kann ein neuronales Netzwerk lernen, Kritzeln zu erkennen?"
+  ai_teachable_machine: "Lehrbare Maschine"
+  ai_teachable_machine_description: "Trainieren Sie einen Computer, um Ihre eigenen Bilder, Töne und Posen zu erkennen."
+  ai_google: "KI-Experimente mit Google"
+  ai_google_description: "Erkunden Sie das maschinelle Lernen anhand von Bildern, Zeichnungen, Sprache, Musik und vielem mehr."
+  ai_zooniverse: "Zooniverse - Schnappschuss-Bergzebra"
+  ai_zooniverse_description: "Schützen Sie das gefährdete Kapbergzebra, indem Sie die verschiedenen Tiere auf den Bildern identifizieren."
+  ai_audience: "Publikum"
+  ai_minecraft_description: 'Greifen Sie auf kostenlose Ressourcen zu, darunter einen Unterrichtsplan, Videos, einen Informatik-Lehrplan und Lehrerschulungen. (Benötigt Minecraft: Education Edition)'
+  ai_k_12_audience: "K-12 (Lesung erforderlich)"
+  ai_microsoft_workshop: "Kostenlose virtuelle Workshops von Microsoft"
+  ai_microsoft_workshop_description: "Erwecken Sie Neugier mit kostenlosen STEM- und Codierungsworkshops."
+  ai_machine_learning_for_kids: "Maschinelles Lernen für Kinder"
+  ai_machine_learning_for_kids_description: "Trainieren Sie ein Modell für maschinelles Lernen mit Text, Zahlen oder Bildern und erstellen Sie damit Spiele in Scratch."
+  ai_ibm_machine_learning_for_kids: 'IBM: Maschinelles Lernen für Kinder'
+  ai_ecs: 'ECS: Künstliche Intelligenz (KI)'
+  ai_ecs_description: "Eine neue alternative Lehrplaneinheit für das Curriculum Exploring Computer Science (ECS)."
+  ai_elements: "Elemente der KI"
+  ai_elements_description: "Eine Reihe kostenloser Online-Kurse, die von Reaktor und der Universität Helsinki erstellt wurden."
+  ai_cognimates: "Cognimate"
+  ai_cognimates_description: "Eine KI-Bildungsplattform für den Aufbau von Spielen, das Programmieren von Robotern und das Training."
+  ai_try_activity: "Aktivität ausprobieren"
+  outbreak_tile_title: "Ausbruch"
+  outbreak_tile_subtitle: "Ein Virus hat Monster-Town infiziert! Programmieren Sie einen Ausbruchssimulator und prognostizieren Sie, was mit den Nachbarn von Monster-Town geschehen wird."
+  outbreak_tile_alt: "Eine Simulation, wie ein Virus sich in einer Gruppe violetter Monster verbreitet."

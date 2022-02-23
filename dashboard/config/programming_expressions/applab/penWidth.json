@@ -1,17 +1,12 @@
 {
-  "func": "penWidth",
+  "key": "penWidth",
+  "name": "penWidth",
   "category": "Turtle",
-  "paletteParams": [
-    "width"
+  "category_key": "turtle",
+  "palette_params": [
+    {
+      "name": "width"
+    }
   ],
-  "params": [
-    "3"
-  ],
-  "dropdown": {
-    "0": [
-      "1",
-      "3",
-      "5"
-    ]
-  }
+  "syntax": "penWidth(width)"
 }

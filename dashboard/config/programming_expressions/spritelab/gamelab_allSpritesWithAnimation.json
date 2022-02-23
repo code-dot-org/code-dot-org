@@ -1,0 +1,8 @@
+{
+  "key": "gamelab_allSpritesWithAnimation",
+  "name": "allSpritesWithAnimation",
+  "category": "Sprites",
+  "category_key": "sprites",
+  "block_name": "gamelab_allSpritesWithAnimation",
+  "syntax": "allSpritesWithAnimation"
+}

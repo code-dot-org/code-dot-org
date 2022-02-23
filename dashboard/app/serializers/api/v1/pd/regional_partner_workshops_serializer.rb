@@ -1,5 +1,5 @@
 class Api::V1::Pd::RegionalPartnerWorkshopsSerializer < ActiveModel::Serializer
-  attributes :id, :name, :group, :workshops, :has_csf
+  attributes :id, :name, :group, :workshops, :has_csf, :pl_programs_offered
 
   def workshops
     return nil if object.id.nil?

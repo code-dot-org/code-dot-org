@@ -1,25 +1,27 @@
 {
-  "func": "setRGB",
+  "key": "setRGB",
+  "name": "setRGB",
   "category": "Canvas",
-  "paramButtons": {
-    "minArgs": 6,
-    "maxArgs": 7
-  },
-  "paletteParams": [
-    "imgData",
-    "x",
-    "y",
-    "r",
-    "g",
-    "b"
+  "category_key": "canvas",
+  "palette_params": [
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "r"
+    },
+    {
+      "name": "g"
+    },
+    {
+      "name": "b"
+    }
   ],
-  "params": [
-    "imgData",
-    "0",
-    "0",
-    "255",
-    "255",
-    "255"
-  ],
-  "dontMarshal": true
+  "syntax": "setRGB(imgData, x, y, r, g, b)"
 }

@@ -1,11 +1,12 @@
 {
-  "func": "mouseIsOver",
-  "paletteParams": [
-    "sprite"
-  ],
-  "params": [
-    "sprite"
-  ],
+  "key": "mouseIsOver",
+  "name": "mouseIsOver",
   "category": "World",
-  "type": "value"
+  "category_key": "world",
+  "palette_params": [
+    {
+      "name": "sprite"
+    }
+  ],
+  "syntax": "mouseIsOver(sprite)"
 }

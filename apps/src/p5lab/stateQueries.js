@@ -34,20 +34,10 @@ function allowCodeMode() {
  * @param {Object} state - Game Lab redux state.
  * @returns {number}
  */
-function countAllowedModes(state) {
+export function countAllowedModes(state) {
   return [allowCodeMode(state), allowAnimationMode(state)].reduce(
     (m, n) => m + (n ? 1 : 0)
   );
-}
-
-/**
- * Decide whether we should show the visualization header (which, in Game Lab,
- * only contains the mode toggle).
- * @param {Object} state - Game Lab redux state.
- * @returns {boolean}
- */
-export function showVisualizationHeader(state) {
-  return countAllowedModes(state) > 1;
 }
 
 /**

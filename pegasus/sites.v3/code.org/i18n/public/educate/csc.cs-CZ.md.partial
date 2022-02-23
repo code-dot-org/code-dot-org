@@ -1,0 +1,56 @@
+---
+title: Napojení na počítačovou vědu
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Napojení na počítačovou vědu
+
+Naše nejnovější osnovy vytvářejí spojení mezi výukou počítačových věd a jinými předměty jako je matematika, jazykové umění, věda a společenské vědy. Prostřednictvím Napojení na počítačovou vědu budou třídy K-12 bádat nad svými běžnými předměty vzrušujícími novými způsoby!
+
+## Zkuste naše „Napojení na počítačovou vědu“ s těmito aktivitami na Hodinu programování
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Umělecká báseň", left_description: "Vyjádřete se! Využijte kód k vytvoření animovaných básní.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Začít", right_heading: "Ahoj, světe", right_description: "Vyberte si jedno ze čtyř témat a naprogramujte interaktivní postavičky ve Vámi vytvořeném světě.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
+{{ clearfix }}
+
+## Moduly
+
+Moduly napojení na počítačovou vědu jsou strukturovanou řadou lekcí, která integruje výuku počítačových věd do oblastí jádrových předmětů, jako je matematika, anglosaské literární a jiné umění a věda. Tyto moduly jsou sladěny se standardy pro všechny subjekty a vyvrcholí mezipředmětovým projektem.
+
+V modulu Kódování s poezií výukového plánu Propojení informatiky se studenti setkají se dvěma předměty – informatikou a poezií – novým způsobem.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3 a výše", subject: "anglosaské literární a jiné umění", duration: "5 hodin", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Programování s poezií", right_description: "Propojte ve své třídě počítačové vědy s poezií v této sérii lekcí.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Zobrazit modul" }}
+
+## Projekty s nepředurčeným koncem
+
+Nadále vytvářejte spojení mezi počítačovými vědami a tradičními předměty díky našim mezipředmětovým projektům. Zabere to jen 1 až 2 hodiny výuky a je to ideální pro jakéhokoli učitele, který se uvažuje, jak by co nejlépe rozvinul tématicky specifické projekty tak, aby zapadly do jeho stávajících osnov.
+
+<em>Tip: Tyto projekty vyžadují určité pochopení základů informatiky, proto před jejich zahájením doporučujeme, abyste dokončili naši aktivitu Ahoj světe z Hodiny kódu!</em>
+
+{{ csc_module, title: "Ekosystémy", image: "/images/csc/landing/project_ecosystems.png", grades: "3 a vyšší", subject: "Věda", duration: "1 až 2 hodiny", description: "Pomocí základních programátorských dovedností vytvoří studenti interaktivní model ekosystému, který prozkoumá, jak se navzájem ovlivňují různá zvířata, rostliny a organismy. Tento model by mělo být možné adaptovat také pro interakce mezi geosférou, biosférou, hydrosférou a atmosférou.", button_text: "Zjistěte si více", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Životní cykly", grades: "3 a vyšší", image: "/images/csc/landing/project_cycles.png", subject: "Věda", duration: "1 až 2 hodiny", description: "Přejděte od vajíčka přes pulce až k žábě v rámci tohoto projektu, v kterém budou studenti využívat kód k vytvoření vědeckého cyklu - jako je životní cyklus žáby nebo přenos energie!", button_text: "Zjistěte si více", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Studie postav", image: "/images/csc/landing/project_characterstudy.png", grades: "3 a vyšší", subject: "anglosaské literární a jiné umění", duration: "1 až 2 hodiny", description: "Každá akce má svou reakci! Ne, toto není fyzika - tento projekt studentům umožňuje naprogramovat scenérii z příběhu ukazujícího to, jak činy jedné postavy ovlivňují řetězec událostí.", button_text: "Zjistěte si více", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Mravní sdělení příběhu", image: "/images/csc/landing/project_storymorals.jpg", grades: "3 a vyšší", subject: "anglosaské literární a jiné umění", duration: "1 až 2 hodiny", description: "Co je mezi \"Bylo, nebylo\" a \"Konec?\" Studenti naprogramují interaktivní aplikaci, která bude vyprávěním příběhu a jeho mravních sdělení. Studenti by tuto dovednost mohli aplikovat na jakýkoli příběh, lidové vyprávění, knihu nebo báji.", button_text: "Zjistěte si více", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Překlenovací lekce
+
+Naše překlenovací lekce poskytují rychlý a zajímavý způsob, jak udělat spojení mezi počítačovou vědou a jinými předměty. Tyto lekce nevyžadují žádné předchozí znalosti počítačových věd, takže jsou dokonalé pro jakéhokoli učitele, který chce zavést do tradičních osnov učenost nezbytnou pro 21. století nebo motivovat studenty novými vzrušujícími způsoby výuky předmětů starších.
+
+
+{{ csc_module, title: "Pravopis s včelou", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 hodina", description: "ZÁBAVA! V této lekci budou studenti používat základní programátorské dovednosti k tomu, aby sdělili včele, kde má bzučet, aby správně hláskovala slova na písmeny zaplněné mřížce.", button_text: "Zjistěte si více", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Počítání s Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Matematika", duration: "1 hodina", description: "Je lov pokladů! Studenti budou praktikovat počítání a sčítání, když budou programovat s cykly, aby pomohli Laurel sbírat drahokamy v mřížce .", button_text: "Zjistěte si více", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "Etický kodex umělé inteligence", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9 a vyšší", subject: "anglosaské literární a jiné umění a humanitní obory", duration: "1 hodina", description: "po prozkoumání potenciálních etických problémů v oboru umělé inteligence (AI) budou studenti společně pracovat na vývoji prostředku \"Etický kodex umělé inteligence\".", button_text: "Zjistěte si více", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Vizualizace dat", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6 a více", subject: "Matematika", duration: "1 hodina", description: "Tato lekce studentům předvede aplikaci na vizualizaci dat v Laboratoři aplikací a dva důležité typy grafů: sloupcový graf a histogram. V průběhu této lekce si studenti rozvinou dovednosti v oblasti používání tohoto nástroje a čtení dat.", button_text: "Zjistěte si více", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Dokončili jste aktivitu Napojení na počítačovou vědu nebo hledáte další možnosti pro svou třídu? <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">Svou zpětnou vazbu</a> a nápady na další lekce sdílejte prosím tady!</em>

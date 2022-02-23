@@ -4,15 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
+      "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "minecraft",
-    "serialized_at": "2021-09-18 22:15:25 UTC",
+    "serialized_at": "2021-11-22 19:57:05 UTC",
     "published_state": "preview",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "minecraft"
     }
@@ -33,7 +37,7 @@
   "lessons": [
     {
       "key": "Minecraft Hour of Code Designer",
-      "name": "Minecraft Hour of Code Designer",
+      "name": "Minecraft: Designer",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -41,7 +45,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.",
-        "preparation": "### One Week Before Your Hour of Code\r\n\r\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \r\n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to receive swag or classroom support.\r\n- Review and complete the online tutorial yourself: [MINECRAFT Hour of Code](https://hourofcode.com/mc) \r\n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\r\n\r\n### One Day Before Your Hour of Code\r\n\r\n- Print one or more of the [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at the end of this lesson plan, or create your own. \r\n- Each student who completes the activity should receive a certificate. [Print one](https://code.org/certificates?script=mc) for everyone in advance to make this easier at the end of your Hour of Code.\r\n",
+        "preparation": "### One Week Before Your Hour of Code\n\n- Review the [Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/) and [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) in order to begin to plan your Hour of Code event. \n- [Register your Hour of Code event](http://hourofcode.com) if you’d like to receive swag or classroom support.\n- Review and complete the online tutorial yourself: [Minecraft: Designer](https://studio.code.org/s/minecraft/lessons/1/levels/1) \n- Be sure to test it first before asking your students to complete it. Check your technology and decide if you need to troubleshoot anything in advance of your Hour of Code.\n\n### One Day Before Your Hour of Code\n\n- Print one or more of the [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at the end of this lesson plan, or create your own. \n- Each student who completes the activity should receive a certificate. [Print one](https://code.org/certificates?script=mc) for everyone in advance to make this easier at the end of your Hour of Code.\n",
         "purpose": "This lesson introduces the core CS concepts of coding and programming (using blocks), as well as simple debugging techniques.",
         "student_overview": "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end."
       },
@@ -54,14 +58,14 @@
   ],
   "lesson_activities": [
     {
-      "key": "eed86444-00e1-4cb0-aaf8-24b682cc88a6",
+      "key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b",
       "position": 1,
       "properties": {
-        "duration": 0,
-        "name": "Wrap Up (5 minutes)"
+        "duration": 5,
+        "name": "Getting Started"
       },
       "seeding_key": {
-        "lesson_activity.key": "eed86444-00e1-4cb0-aaf8-24b682cc88a6",
+        "lesson_activity.key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b",
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft"
@@ -71,7 +75,6 @@
       "key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff",
       "position": 2,
       "properties": {
-        "duration": 0,
         "name": "Activity (30-45 minutes)"
       },
       "seeding_key": {
@@ -82,14 +85,14 @@
       }
     },
     {
-      "key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b",
+      "key": "eed86444-00e1-4cb0-aaf8-24b682cc88a6",
       "position": 3,
       "properties": {
-        "duration": 0,
-        "name": "Getting Started (5 minutes)"
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b",
+        "lesson_activity.key": "eed86444-00e1-4cb0-aaf8-24b682cc88a6",
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft"
@@ -99,7 +102,6 @@
       "key": "2ccc0a90-872b-424b-ae39-d7f92ceb8c06",
       "position": 4,
       "properties": {
-        "duration": 0,
         "name": "Assessment (2 minutes)"
       },
       "seeding_key": {
@@ -113,7 +115,6 @@
       "key": "e4041676-353d-409e-a7aa-bcfcc62bab09",
       "position": 5,
       "properties": {
-        "duration": 0,
         "name": "Extended Learning"
       },
       "seeding_key": {
@@ -122,22 +123,103 @@
         "lesson_group.key": "",
         "script.name": "minecraft"
       }
-    },
-    {
-      "key": "cd9cf80c-44c0-4f2e-8714-e361fe789595",
-      "position": 6,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cd9cf80c-44c0-4f2e-8714-e361fe789595",
-        "lesson.key": "Minecraft Hour of Code Designer",
-        "lesson_group.key": "",
-        "script.name": "minecraft"
-      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "563d9088-3ce6-48c1-aa79-6f673e089247",
+      "position": 1,
+      "properties": {
+        "description": "\n####Setting the Stage\n\nWelcome students to class and very briefly introduce the day’s activity. \n\nStudents are in for a real treat with this lesson. It's likely most of your students have heard of Minecraft, but give a brief introduction for those that may not know.\nMinecraft is a game of cubes. You can play as Alex or Steve as you work through mazes. You'll need to pick up items, and explore in a world made up of cubes of things.\n\n\n*Say: “Today we’re going to spend one hour learning to code. Has anyone here heard the term “code” before? What does it mean?”*\n\nStudents might mention that a “code” is like a secret message, or that it’s related to computers in some way.",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "563d9088-3ce6-48c1-aa79-6f673e089247",
+        "lesson_activity.key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b"
+      }
+    },
+    {
+      "key": "9f1107d0-cde6-4f78-911c-5018ea9264e0",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "One way to introduce the Hour of Code if you are not very familiar with coding yourself is to show one of [our inspirational videos](https://hourofcode.com/us/resources#videos). Choose one you think your students will find inspiring, and share it now. For young learners, we suggest “[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw).”\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f1107d0-cde6-4f78-911c-5018ea9264e0",
+        "lesson_activity.key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b"
+      }
+    },
+    {
+      "key": "ed8509fa-59b4-43a4-bd4a-05a5018387c2",
+      "position": 3,
+      "properties": {
+        "description": "Explain that in computer science, “code” means a set of instructions that a computer can understand. Let students know that today, they are going to practice “coding,” “programming,” \"events,\" \"loops\" and “debugging”.\n\nDefine:\n\n- **Coding** means to write code, or to write instructions for a computer.\n- **Debugging** means to check code for mistakes and try to fix errors.\n- **Event** is an action that causes something to happen.\n- **Loop** is the action of doing something over and over again.\n- **Programming**, similarly, means to write code or instructions. Today, you will program with blocks on the computer (if you’re using an online tutorial) or with pen and paper (if you’re using an unplugged activity).\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed8509fa-59b4-43a4-bd4a-05a5018387c2",
+        "lesson_activity.key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b"
+      }
+    },
+    {
+      "key": "f52f53ac-e12f-4277-acba-f1e3fa2ad611",
+      "position": 4,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You’ll want to spend very little time front-loading or introducing your Hour of Code. Especially with young learners, it’s best to jump in as quickly as possible. Too much explanation or lecture at the beginning tends to spoil the fun, and fun is the whole point! "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f52f53ac-e12f-4277-acba-f1e3fa2ad611",
+        "lesson_activity.key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b"
+      }
+    },
+    {
+      "key": "75d779c4-24f7-40be-bf92-b0c094c16d11",
+      "position": 1,
+      "properties": {
+        "description": "Challenge your students to complete this [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) activity.\n\nDepending on the age and ability of your students, you might consider: \n\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in Minecraft, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://code.org/starwars) tutorials.\n- For older or adult learners, the [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) tutorial works extremely well either as an independent challenge or a pair programming activity.",
+        "name": "Minecraft: Designer"
+      },
+      "seeding_key": {
+        "activity_section.key": "75d779c4-24f7-40be-bf92-b0c094c16d11",
+        "lesson_activity.key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff"
+      }
+    },
+    {
+      "key": "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Be sure to play through your chosen tutorials yourself, before asking your students to attempt them. That way you’ll know what to expect and can make decisions about whether to let students choose their own tutorial, or if you want to assign tutorials based on student needs.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d",
+        "lesson_activity.key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff"
+      }
+    },
+    {
+      "key": "307ffdf6-e274-484b-a10f-329ddfe568dc",
+      "position": 3,
+      "properties": {
+        "description": "If a group or individual finishes early, they can attempt another tutorial by visiting [code.org/learn](http://code.org/learn)."
+      },
+      "seeding_key": {
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc",
+        "lesson_activity.key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff"
+      }
+    },
     {
       "key": "70935a98-82e9-4553-94f7-90a4e615dd34",
       "position": 1,
@@ -166,108 +248,12 @@
       "key": "20b7009c-3a45-4211-a9ad-c65f56099200",
       "position": 3,
       "properties": {
-        "description": "Let students know that if they enjoyed today’s activity, they have many options for continuing to code. Encourage students to visit code.org/learn for a list of options, or, if you’re planning any of the extension activities that follow, tell students what’s coming next in your classroom.",
+        "description": "Let students know that if they enjoyed today’s activity, they have many options for continuing to code. Encourage students to visit [code.org/learn]() for a list of options, or, if you’re planning any of the extension activities that follow, tell students what’s coming next in your classroom.",
         "name": "Next Steps\r"
       },
       "seeding_key": {
         "activity_section.key": "20b7009c-3a45-4211-a9ad-c65f56099200",
         "lesson_activity.key": "eed86444-00e1-4cb0-aaf8-24b682cc88a6"
-      }
-    },
-    {
-      "key": "75d779c4-24f7-40be-bf92-b0c094c16d11",
-      "position": 1,
-      "properties": {
-        "description": "Challenge your students to complete the [MINECRAFT](https://hourofcode.com/mc) tutorial.\r\n\r\nDepending on the age and ability of your students, you might consider: \r\n\r\n- For younger students, we suggest you break your class into pairs and ask each group to work together to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\r\n- For learners in the middle grades, we find that working independently on tutorials works well. Sometimes it helps to allow students to choose their own tutorial. If students aren't interested in MINECRAFT, they can get a similar experience with the [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://hourofcode.com/sw) tutorials.\r\n- For older or adult learners, the [MINECRAFT](https://hourofcode.com/mc) tutorial works extremely well either as an independent challenge or a pair programming activity."
-      },
-      "seeding_key": {
-        "activity_section.key": "75d779c4-24f7-40be-bf92-b0c094c16d11",
-        "lesson_activity.key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff"
-      }
-    },
-    {
-      "key": "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "Be sure to play through your chosen tutorials yourself, before asking your students to attempt them. That way you’ll know what to expect and can make decisions about whether to let students choose their own tutorial, or if you want to assign tutorials based on student needs.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d",
-        "lesson_activity.key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff"
-      }
-    },
-    {
-      "key": "bfcd3075-59cc-4a5e-9229-7fe122cd2527",
-      "position": 3,
-      "properties": {
-        "description": "If a group or individual finishes early, they can attempt another tutorial by visiting [code.org/learn](http://code.org/learn)."
-      },
-      "seeding_key": {
-        "activity_section.key": "bfcd3075-59cc-4a5e-9229-7fe122cd2527",
-        "lesson_activity.key": "d8895b13-7ba3-49e1-9291-5ffd4cfb92ff"
-      }
-    },
-    {
-      "key": "563d9088-3ce6-48c1-aa79-6f673e089247",
-      "position": 1,
-      "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity. \r\n\r\n*Say: “Today we’re going to spend one hour learning to code. Has anyone here heard the term “code” before? What does it mean?”*\r\n\r\nStudents might mention that a “code” is like a secret message, or that it’s related to computers in some way.",
-        "name": "Setting the Stage\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "563d9088-3ce6-48c1-aa79-6f673e089247",
-        "lesson_activity.key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b"
-      }
-    },
-    {
-      "key": "9f1107d0-cde6-4f78-911c-5018ea9264e0",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "One way to introduce the Hour of Code if you are not very familiar with coding yourself is to show one of [our inspirational videos](https://hourofcode.com/us/resources#videos). Choose one you think your students will find inspiring, and share it now. For young learners, we suggest “[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw).”\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9f1107d0-cde6-4f78-911c-5018ea9264e0",
-        "lesson_activity.key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b"
-      }
-    },
-    {
-      "key": "ed8509fa-59b4-43a4-bd4a-05a5018387c2",
-      "position": 3,
-      "properties": {
-        "description": "Explain that in computer science, “code” means a set of instructions that a computer can understand. Let students know that today, they are going to practice “coding,” “programming” and “debugging”.\r\n\r\nDefine:\r\n\r\n- **Coding** means to write code, or to write instructions for a computer.\r\n- **Programming**, similarly, means to write code or instructions. Today, you will program with blocks on the computer (if you’re using an online tutorial) or with pen and paper (if you’re using an unplugged activity).\r\n- **Debugging** means to check code for mistakes and try to fix errors."
-      },
-      "seeding_key": {
-        "activity_section.key": "ed8509fa-59b4-43a4-bd4a-05a5018387c2",
-        "lesson_activity.key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b"
-      }
-    },
-    {
-      "key": "f52f53ac-e12f-4277-acba-f1e3fa2ad611",
-      "position": 4,
-      "properties": {
-        "tips": [
-          {
-            "key": "tip",
-            "type": "teachingTip",
-            "markdown": "You’ll want to spend very little time front-loading or introducing your Hour of Code. Especially with young learners, it’s best to jump in as quickly as possible. Too much explanation or lecture at the beginning tends to spoil the fun, and fun is the whole point! "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f52f53ac-e12f-4277-acba-f1e3fa2ad611",
-        "lesson_activity.key": "1b88e32e-69e1-4d42-a596-b8bf86c3749b"
       }
     },
     {
@@ -285,22 +271,12 @@
       "key": "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1",
       "position": 1,
       "properties": {
-        "description": "After your Hour of Code ends, there are many ways to continue teaching computer science in your K-5 classroom. Here are some ideas:\r\n\r\n- **Teach the [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) courses**. These four courses are designed for young learners. Students work their way through a series of puzzles that teach them to code, and educators have access to engaging lesson plans that help make the learning coming alive. Code.org offers free professional development for these courses, online or in-person.\r\n- **Invite a computer science expert to talk to your class about his or her work**. Don’t know any local computer scientists? Reach out to a volunteer on our [volunteer map](https://code.org/volunteer/local)",
+        "description": "After your Hour of Code ends, there are many ways to continue teaching computer science in your K-5 classroom. Here are some ideas:\n\n- **Teach the [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) courses**. These six courses are designed for young learners. Students work their way through a series of puzzles that teach them to code, and educators have access to engaging lesson plans that help make the learning coming alive. Code.org offers free professional development for these courses, online or in-person.\n- **Visit [You can Teach Computer Science](https://studio.code.org/courses?view=teacher)** for more course suggestions.\n- **Invite a computer science expert to talk to your class about his or her work**. Don’t know any local computer scientists? Reach out to a volunteer on our [volunteer map](https://code.org/volunteer/local)",
         "name": "Beyond an Hour of Code\r"
       },
       "seeding_key": {
         "activity_section.key": "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1",
         "lesson_activity.key": "e4041676-353d-409e-a7aa-bcfcc62bab09"
-      }
-    },
-    {
-      "key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2",
-        "lesson_activity.key": "cd9cf80c-44c0-4f2e-8714-e361fe789595"
       }
     }
   ],
@@ -311,6 +287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 2-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -320,7 +299,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 Level 2-2"
@@ -332,6 +311,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -341,7 +323,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 Level 3"
@@ -353,6 +335,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -362,7 +347,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 Level 4"
@@ -374,6 +359,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 New Walk"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -383,7 +371,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 New Walk"
@@ -395,6 +383,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 New Drop"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -404,7 +395,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 New Drop"
@@ -416,6 +407,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -425,7 +419,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 Level 5"
@@ -437,6 +431,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -446,7 +443,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 Level 8"
@@ -458,6 +455,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Village Test"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -467,7 +467,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 Village Test"
@@ -479,6 +479,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 New Spawn"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -488,7 +491,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 New Spawn"
@@ -500,6 +503,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -509,7 +515,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 Level 6"
@@ -521,6 +527,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 SCORE LEVEL"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -530,7 +539,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 SCORE LEVEL"
@@ -542,6 +551,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC HOC 2016 Level 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -551,7 +563,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       },
       "level_keys": [
         "MC HOC 2016 Level 10"
@@ -568,7 +580,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -580,7 +592,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -592,7 +604,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -604,7 +616,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -616,7 +628,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -628,7 +640,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -640,7 +652,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -652,7 +664,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -664,7 +676,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -676,7 +688,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -688,7 +700,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     },
     {
@@ -700,7 +712,7 @@
         "lesson.key": "Minecraft Hour of Code Designer",
         "lesson_group.key": "",
         "script.name": "minecraft",
-        "activity_section.key": "1d84dcaa-34e1-4d27-b2f7-34ea9671ddc2"
+        "activity_section.key": "307ffdf6-e274-484b-a10f-329ddfe568dc"
       }
     }
   ],
@@ -738,6 +750,26 @@
       }
     },
     {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "Loop",
+      "definition": "The action of doing something over and over again.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
       "key": "program",
       "word": "Program",
       "definition": "An algorithm that has been coded into something that can be run by a machine.",
@@ -764,6 +796,18 @@
     {
       "seeding_key": {
         "lesson.key": "Minecraft Hour of Code Designer",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Minecraft Hour of Code Designer",
         "vocabulary.key": "program"
       }
     }
@@ -783,16 +827,6 @@
       }
     },
     {
-      "key": "a4ad4a3c-f2b2-4675-90e5-626ce70c2764",
-      "properties": {
-        "description": "Identify key computer science vocabulary"
-      },
-      "seeding_key": {
-        "lesson.key": "Minecraft Hour of Code Designer",
-        "objective.key": "a4ad4a3c-f2b2-4675-90e5-626ce70c2764"
-      }
-    },
-    {
       "key": "343631be-830a-44f6-a249-a6aa96ea38f0",
       "properties": {
         "description": "Identify places to go to continue learning computer science and coding"
@@ -800,6 +834,16 @@
       "seeding_key": {
         "lesson.key": "Minecraft Hour of Code Designer",
         "objective.key": "343631be-830a-44f6-a249-a6aa96ea38f0"
+      }
+    },
+    {
+      "key": "a4ad4a3c-f2b2-4675-90e5-626ce70c2764",
+      "properties": {
+        "description": "Identify key computer science vocabulary"
+      },
+      "seeding_key": {
+        "lesson.key": "Minecraft Hour of Code Designer",
+        "objective.key": "a4ad4a3c-f2b2-4675-90e5-626ce70c2764"
       }
     }
   ],

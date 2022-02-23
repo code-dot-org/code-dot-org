@@ -2,20 +2,26 @@ sk:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" (ak/potom) so včelou'
+      AI Machine Learning - Video: Strojové učenie – video
+      'AI: Impact on Society - Video': 'Umelá inteligencia: Vplyv na spoločnosť – video'
+      'AI: Training Data & Bias - Video': 'Umelá inteligencia: Trénovacie dáta a skreslenie – Video'
       Accelerometer Events: Udalosti s akcelerometrom
       Adding Images: Pridanie obrázkov
       Adding Screens: Pridanie obrazoviek
       Animate Your Scene: Animuj svoju scénu
+      App Lab Intro - Video: Úvod do App Labu – video
       Arrays: Rady
       Artist Intro with JR Hildebrand: Úvod k Umelcovi s JR Hildebrandom
       Artist Intro with JR Hildebrande: Úvod k Umelcovi s JR Hildebrandom
       Artist Project: Umelec - Projekt
       'Artist: Variables': 'Umelec: Premenné'
+      Assessment: Hodnotenie
       Attribution: Uvedenie zdroja
       Back and Forth: Dozadu a dopredu
       Basic Conditionals: Základné podmienky
       Bass, Mid, and Treble: Basy, Stredy, a Výšky
       Be a Super Digital Citizen: Buď super digitálny občan
+      Binary Bracelets - Unplugged Activity: Binárne náramky – aktivita bez počítača
       Binary Numbers: Binárne čísla
       Board Input and Output: Vstup a výstup dosky plošných spojov
       Boolean Comparison: Porovnanie pravdivosti
@@ -32,7 +38,7 @@ sk:
       Change: Zmeň
       Checking for a Winner: Určuje sa víťaz
       'Circuit Playground: Introduction': 'Cvičný obvod: Úvod'
-      Code Your Own Flappy Game: Vytvor si svoju vlastnú "Flappy" hru
+      Code Your Own Flappy Game: 'Video: Vytvor si vlastnú hru Flappy'
       Collector Game: Hra Zberateľ
       Collision Detection: Detekcia kolízie
       Collision Detection Review: Detekcie kolízie - prehľad
@@ -40,11 +46,17 @@ sk:
       Collisions in Games: Kolízie v hrách
       Color LEDs: Farebné LEDky
       Combining Projects: Zlúčenie projektov
+      Conditionals with Cards - Unplugged Activity: Podmienky s kartami – aktivita bez počítača
       'Conditionals: If Statements': 'Podmineky: "if" (ak)'
       'Conditionals: If and If/Else Statements': 'Podmienky: "if" (ak) a "if/else" (ak/potom)'
       Course E Sprite Lab Project: Kurz E Lab projekt s postavičkou
+      'Course E: Play Lab Project': 'Kurz E: Projekt v Play Labe'
       Course F Artist Project: Projekt Umelec Kurz F
       Course F Sprite Lab Project: Sprite Lab projekt Kurz F
+      'Course F: Artist Project': 'Kurz F: Projekt v Umelcovi'
+      'Course F: Artist Project - Revise': 'Kurz F: Projekt v Umelcovi – opakovanie'
+      'Course F: Play Lab Project': 'Kurz F: Projekt v Play Labe'
+      'Course F: Play Lab Project - Revise': 'Kurz F: Projekt v Play Labe – opakovanie'
       Create Your Own Animation: Vytvor svoju vlastnú animáciu
       Create a Story: Vytvor príbeh
       Create your project: Vytvor svoj projekt
@@ -53,10 +65,12 @@ sk:
       Data Visualization: Vykreslenie údajov
       De-bugging with the Step Button: Ladenie programu pomocou tlačidla krokovania
       Debugging: Hľadanie a odstraňovanie chýb
-      Debugging with the Step Button: Ladenie programu pomocou tlačidla krokovania
+      Debugging with the Step Button: Ladenie pomocou tlačidla Krok
       Demo Apps: Demo aplikácie
       Design Mode: Dizajnový mód
       Design Mode Elements: Prvky dizajnového módu
+      Designing for Accessibility: Navrhovanie s ohľadom na zjednodušenie ovládania
+      Digital Sharing - Unplugged Activity: Digitálne zdieľanie – aktivita bez počítača
       Dogger Example: Príklad s loďou
       Drawing: Kreslenie
       Editing Images: Úprava obrázkov
@@ -64,6 +78,7 @@ sk:
       Events: Udalosti
       Events and Linking Screens: Udalosti a prepájanie obrazoviek
       Events and Properties: Udalosti a vlastnosti
+      Example: Príklad
       Example Projects: Vzorové projekty
       Example projects: Vzorové projekty
       Expanding Personal Website: Rozšírenie vlastnej webstránky
@@ -82,19 +97,25 @@ sk:
       Finishing Functions: Dokončovacie funkcie
       Finishing Touches: Dokončovanie detailov
       Flyer Game: Lietajúca hra
+      Follow the Algorithm - Unplugged Activity: Sleduj algoritmus – aktivita bez počítača
       Follow the Mouse: Sleduj myš
       Fonts and Style: Druhy a štýly písma
+      For Loop Fun - Unplugged Activity: Zábava s cyklami „for“ – aktivita bez počítača
       For Loops: Cykly "For"
       For Loops and Color LEDs: Cykly "for" a farebné LEDky
       For Loops and Repeat Blocks: Cykly "for" a opakujúce sa bloky
       Free Play: Voľná hra
+      'Free Play: Make a Scene': 'Voľná hra: Vytvor scénu'
+      'Free Play: Make an Interactive Scene': 'Voľná hra: Vytvor interaktívnu scénu'
       Functions: Funkcie
       Functions with Parameters: Funkcie s parametrami
       Geometric Sun: Geometrické Slnko
       Get In Formation: Všetci do formácie
+      Graph Paper Programming - Unplugged Activity: Programovanie na štvorčekovom papieri – aktivita bez počítača
       HTML Tags: HTML tag-y
       Headings: Nadpisy
       Headings in HTML: Nadpisy v HTML
+      Hello World: Ahoj Svet
       How to Create a Simple Function: Ako vytvoriť jednoduchú funkciu
       How to Make a Sprite: Ako vytvoriť postavu
       Ice Age Loops: Cykly Doby Ľadovej
@@ -120,6 +141,7 @@ sk:
       Learning from Simulations: Učenie sa zo simulácií
       Lesson Extras: Doplnkové materiály
       Lesson Overview: Prehľad lekcie
+      Levels: Úrovne
       Light Show: Svetelná show
       Lists: Zoznamy
       Lists in HTML: Zoznamy v HTML
@@ -132,29 +154,36 @@ sk:
       Making an Interactive Card: Vytvorenie interaktívnej pohľadnice
       'Maze Intro: Programming with Blocks': 'Úvod k bludiskám: Programovanie pomocou blokov'
       Measures: Takty
+      'Minecraft: Hero''s Journey': 'Minecraft: Cesta Hrdinu'
       'Mini-Project: About Me': '"O mne" so Sprite Labom'
       'Mini-Project: Alien Dance Moves': 'Mini-Projekt: Tanečné pohyby votrelca'
       'Mini-Project: Alien Dance Party': 'Mini-Projekt: Votrelcova tanečná párty'
+      'Mini-Project: Create a Virtual Pet': 'Miniprojekt: Vytvor si virtuálne zvieratko'
       'Mini-Project: Royal Battle': 'Mini-Projekt: Kráľovský súboj'
       "Mini-Project: Snowflake #1": "Mini-Projekt: Snehová vločka č.1"
       "Mini-Project: Snowflake #2": "Mini-Projekt: Snehová vločka č.2"
       'Mini-Project: Swimming Fish': 'Mini-Projekt: Plávajúca ryba'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Projekt: Plávajúca ryba (pokračovanie)'
+      'Mini-Project: User Input Programs': 'Miniprojekt: Programy reagujúce na vstupy používateľa'
       'Mini-Project: Virtual Pet': 'Mini-Projekt: Virtuálny maznáčik'
       'Mini-project: Chase Game': 'Mini-Projekt: Naháňačka'
       'Mini-project: Flappy Game': 'Mini projekt: Hra s Flappym'
       'Mini-project: Interactive Poster': 'Mini-Projekt: Interaktívny plagát'
       'Mini-project: Jorge the Dog': 'Mini projekt: Pes Jorge'
+      'Mini-project: Sticker Art': 'Miniprojekt: Pečiatkovanie'
       'Mini-project: Sticker Design': 'Mini-Projekt: Dizajn nálepky'
       Modify simulation variables: Zmeň premenné simulácie
       More Buttons: Viac tlačidiel
       More Input: Ďalšie vstupy
       More Parameters: Ďalšie parametre
       Motorcycle: Motorka
+      Move It Move it Video  - Unplugged Activity: 'Video: Pohni sa, pohni sa – aktivita bez počítača'
       Movement with the Counter Pattern: Pohyb pomocou počítacieho vzorca
       Multiframe Animations: Viacsnímkové animácie
       Musical Arrays: Hudobné polia
-      My Online Neighborhood: Moja internetová štvrť
+      My Loopy Robotic Friends - Unplugged Activity: Moji zacyklení robotickí kamaráti – aktivita bez počítača
+      My Online Neighborhood: Moja online štvrť
+      My Robotic Friends - Unplugged Activity: Moji robotickí kamaráti – aktivita bez počítača
       Nested Loops with the Bee: Vnorené cykly so včelou
       New Shapes: Nové tvary
       Orientation: Orientácia
@@ -172,7 +201,7 @@ sk:
       Post-Course Survey Instructions: Inštrukcie pre vypĺňanie dotazníka po kurze
       Practice: Cvičenie
       Predict: Predvídať
-      Prediction: Predpoklad
+      Prediction: Predpoveď
       Problem Solving: Riešenie problémov
       Programming with Rey and BB-8: Programovanie s Rey a BB-8
       Programs that Repeat: Opakujúce sa programy
@@ -186,12 +215,13 @@ sk:
       RGB Exploration: Objavovanie RGB
       Reading Sensors: Čítanie snímačov
       Reflection: Reflexia
+      Relay Programming - Unplugged Activity: Štafetové programovanie – aktivita bez počítača
       Repeat Blocks: Opakujúce sa bloky
       Repeat Blocks with BB-8: Opakujúce sa bloky s BB-8
-      Repeat Blocks with the Artist: Opakujúce sa bloky s umelcom
-      Repeat Unit Statements: Repeat until (Opakuj pokiaľ neplatí) príkazy
-      Repeat Until Statements: Repeat until (Opakuj pokiaľ neplatí) príkazy
-      Review: Zrevidovať
+      Repeat Blocks with the Artist: Bloky „opakuj“ s Umelcom
+      Repeat Unit Statements: Príkazy „opakuj až kým neplatí“
+      Repeat Until Statements: Príkazy „opakuj až kým neplatí“
+      Review: Opakovanie
       Revise Artist Project: Zreviduj projekt Umelec
       Revise Sprite Lab Project: Reviduj Sprite Lab projekt
       Robot Doodle: Robotova čmáranica
@@ -210,9 +240,11 @@ sk:
       Skill-Building: Budovanie zručností
       Sliders: Posuvníky
       Smart Bike - Blinkers: Inteligentný bicykel - Smerovky
+      Songwriting - Functions Unplugged Activity: 'Písanie pesničiek: funkcie – aktivita bez počítača'
       Speed it Up, Slow it Down: Zrýchli, spomaľ
       Sprite Lab Example Project: Sprite Lab ukážkový projekt
       Sprite Lab Project: Lab postáv projekt
+      Sprite Movement: Pohyb "sprite" objektu
       Sprite Properties: Vlastnosti postáv
       Sprite Velocity: Rýchlosť "sprite" objektu
       Sprites and the Draw Loop: '"Sprite" objekty a vykresľovací cyklus'
@@ -220,43 +252,124 @@ sk:
       Styling Text: Tvarovanie textu
       Styling with Classes: Tvarovanie pomocou tried
       Styling your Website: Úprava tvojej webstránky
+      Teach AI a New Word: Nauč umelú inteligenciu nové slovo
       Text Compression: Kompresia textu
       The Animation Tab: Záložka s animáciami
       The Artist in Code Studio: Umelec v Code Studiu
+      The Big Event - Unplugged Activity: Veľká udalosť – aktivita bez počítača
       The Buzzer: Bzučiak
-      The Collector: Zberateľ
+      The Collector: Zberateľka
       The Draw Loop: Cyklus kreslenia
       The Harvester: Záhradníčka
+      The Internet - Unplugged Activity: Internet – aktivita bez počítača
+      The Power of Words - Unplugged Activity: Objav silu slov – aktivita bez počítača
+      The Right App - Unplugged Activity: Vhodná aplikácia – aktivita bez počítača
       Tour of Design Mode: Predstavenie dizajnového módu
       UI Element Properties: Vlastnosti častí užívateľského rozhrania
       User Interface: Užívateľské prostredie
       Using Getters and Setters: Používanie GET/SET príkazov (vráť/nastav hodnotu)
       Using HTML Tags: Použivanie HTML tagov
       Using Random Numbers: Používanie náhodných čísel
+      Using Training Data: Používanie trénovacích dát
       Using the LED: Používanie LEDiek
-      Using the Repeat Block: Používanie bloku opakuj
+      Using the Repeat Block: 'Video: Používanie bloku „opakuj“'
       Using the Switch: Používanie prepínača
       Variables: Premenné
       Velocity: Rýchlosť
       Video: Video
+      Video - Encryption and Public Keys: 'Video: Šifrovanie a verejné kľúče'
+      'Video - Maze Intro: Programming with Blocks': 'Video – Úvod k bludiskám: Programovanie pomocou blokov'
+      'Video:  Debugging with the Step Button': 'Video: Ladenie pomocou tlačidla Krok'
+      'Video:  Minecraft - The Agent': 'Video: Minecraft – Agent'
+      'Video:  Text  and Prompts': 'Video: Text a výzvy'
+      'Video: "If/Else"': 'Video: "Ak/Inak"'
       'Video: "If/Else" Statements': 'Video: Podmienkové výroky'
+      'Video: AI: What is Machine Learning?': 'Video: Umelá inteligencia – Čo je strojové učenie?'
+      'Video: Artist Intro with JR Hildebrand': 'Video: Úvod k Umelcovi s JR Hildebrandom'
+      'Video: Artist Intro with JR Hildebrande': 'Video: Úvod k Umelcovi s JR Hildebrandom'
       'Video: Booleans': 'Video: Logické výrazy'
-      'Video: CS Matters': 'Video: záležitosti počítačových vied'
-      'Video: Conditional Statements': 'Video: Výrazy s podmienkou'
+      'Video: CS Matters': 'Video: Na informatike záleží'
+      'Video: Code Your Own Flappy Game': 'Video: Vytvor si vlastnú hru Flappy'
+      'Video: Conditional Statements': 'Video: Podmienené príkazy'
       'Video: Conditionals': 'Video: Podmienky'
+      'Video: Conditionals: If Statements': 'Video: Podmienky – Príkazy „ak“'
+      'Video: Conditionals: If and If/Else Statements': 'Video: Podmienky – Príkazy „ak“ a „ak/inak“'
+      'Video: Dance Party Events': 'Video: Tanečná párty – Udalosti'
+      'Video: Dance Party Measures': 'Video: Tanečná párty – Takty'
+      'Video: Dance Party Party On!': 'Video: Tanečná párty – Párty pokračuje!'
+      'Video: Dance Party Properties': 'Video: Tanečná párty – Vlastnosti'
+      'Video: Dance Party Warm Up': 'Video: Tanečná párty – Zahrej sa'
+      'Video: De-bugging with the Step Button': 'Video: Ladenie pomocou tlačidla Krok'
+      'Video: Debugging with Scrat ': 'Video: Ladenie so Scratom'
+      'Video: Debugging with the Step Button': 'Video: Ladenie pomocou tlačidla Krok'
       'Video: Drawing in Game Lab - Part 1': 'Video: Kreslenie v Game Labe - 1. časť'
       'Video: Drawing in Game Lab - Part 2': 'Video: Kreslenie v Game Labe - 2. časť'
-      'Video: For Loops': 'Video: "For-loop" Slučky '
+      'Video: Events': 'Video: Udalosti'
+      'Video: Follow The Digital Trail': 'Video: Sleduj digitálnu stopu'
+      'Video: For Loops': 'Video: Cykly „for“'
       'Video: Functions': 'Video: Funkcie'
+      'Video: Getting Loopy': 'Video: Cykly sa zacyklujú'
+      'Video: Happy Maps - Unplugged Activity': 'Video: Veselé mapy – aktivita bez počítača'
+      'Video: Harvesting with Conditionals': 'Video: Zber úrody s podmienkami'
+      'Video: How to Create a Simple Function': 'Video: Ako vytvoriť jednoduchú funkciu'
+      'Video: How to Make a Sprite': 'Video: Ako vytvoriť sprajt'
+      'Video: Ice Age Loops': 'Video: Cykly Doby ľadovej'
       'Video: If/Else Statements': 'Video: Podmienkové výroky'
-      'Video: Intro to Web Lab - Part 1': 'Video: Úvod do Web Lab- Časť 1'
-      'Video: Intro to Web Lab - Part 2': 'Video: Úvod do Web Lab - Časť 2'
+      'Video: Impacts on Society': 'Video: Vplyv na spoločnosť'
+      'Video: Intro to CSS': 'Video: Úvod do CSS'
+      'Video: Intro to CSS Part 2': 'Video: Úvod do CSS – 2. časť'
+      'Video: Intro to Web Lab - Part 1': 'Video: Úvod do Web Labu – 1. časť'
+      'Video: Intro to Web Lab - Part 2': 'Video: Úvod do Web Labu – 2. časť'
+      'Video: Introducing Sprite Lab': 'Video: Predstavenie Sprite Labu'
       'Video: Introduction to Arrays': 'Úvod do radov'
+      'Video: Introduction to Play Lab': 'Video: Úvod do Play Labu'
       'Video: Introduction to Sprites': 'Video: Predstavenie objeku Sprite'
+      'Video: Loops in Artist': 'Video: Cykly v Umelcovi'
+      'Video: Loops with the Artist': 'Video: Cykly s Umelcom'
+      'Video: Maze Intro - Programming with Blocks': 'Video: Úvod k bludiskám – Programovanie pomocou blokov'
+      'Video: Maze Intro - Programming with Blocks ': 'Video: Úvod k bludiskám – Programovanie pomocou blokov '
+      'Video: Maze Intro: Programming with Blocks': 'Video: Úvod k bludiskám – Programovanie pomocou blokov'
+      'Video: Measures': 'Video: Takty'
+      'Video: Minecraft - Congratulations': 'Video: Minecraft – Gratulujeme'
+      'Video: Minecraft - Functions': 'Video: Minecraft – Funkcie'
+      'Video: Minecraft - Repeat Loops': 'Video: Minecraft – opakovacie cykly'
+      'Video: Minecraft - The Agent': 'Video: Minecraft - Agent'
+      'Video: Minecraft: Voyage Aquatic Conditionals': 'Video: Minecraft: Vodné dobrodružstvo – podmienky'
+      'Video: Minecraft: Voyage Aquatic Congratulations': 'Video: Minecraft: Vodné Dobrodružstvo – Gratulujeme'
+      'Video: Minecraft: Voyage Aquatic Introduction': 'Video: Minecraft: Úvod do vodného dobrodružstva'
+      'Video: Minecraft: Voyage Aquatic Repeat Until': 'Video: Minecraft: Vodné dobrodružstvo – „opakuj až kým neplatí“'
+      'Video: Nested Loops': 'Video: Vnorené cykly'
+      'Video: Nested Loops with the Bee': 'Video: Vnorené cykly so včelou'
+      'Video: Outbreak Simulator: Introduction': 'Video: Veľa sprajtov'
+      'Video: Pair Programming': 'Video: Párové programovanie'
+      'Video: Pair Programming ': 'Video: Párové programovanie'
       'Video: Problem Solving Process': 'Video: Proces riešenia problémov'
-      'Video: Sprite Movement': 'Video: Pohyb "sprite" objektu'
+      'Video: Programming with Blocks': 'Video: Programovanie pomocou blokov'
+      'Video: Programming with Rey and BB-8': 'Video: Programovanie s Rey a BB-8'
+      'Video: Properties': 'Video: Vlastnosti'
+      'Video: Repeat Blocks': 'Video: Bloky „opakuj“'
+      'Video: Repeat Blocks with BB-8': 'Video: Bloky „opakuj“ s BB-8'
+      'Video: Repeat Blocks with the Artist': 'Video: Bloky „opakuj“ s Umelcom'
+      'Video: Repeat Until Blocks': 'Video: Bloky „opakuj až kým neplatí“'
+      'Video: Repeat Until Statements': 'Video: Príkazy „opakuj až kým neplatí“'
+      'Video: Sprite Movement': 'Video: Pohyb sprajtov'
+      'Video: Sprites in Action': 'Video: Sprajty v akcii'
+      'Video: Star Wars Project': 'Video: Projekt z Hviezdnych vojen'
+      'Video: Text and Prompts': 'Video: Text a výzvy'
+      'Video: The Animation Tab': 'Video: Záložka s animáciami'
+      'Video: The Artist in Code Studio': 'Video: Umelec v Code Studiu'
+      'Video: The Big Event - Unplugged Activity': 'Video: Veľká udalosť – aktivita bez počítača'
+      'Video: The Collector': 'Video: Zberateľka'
+      'Video: The Harvester': 'Video: Záhradníčka'
+      'Video: Training Data & Bias': 'Video: Trénovacie dáta a skreslenie'
+      'Video: Unplugged Variables in Envelopes': 'Video: Aktivita bez počítača – Premenné v obálkach'
+      'Video: Using the Repeat Block': 'Video: Používanie bloku „opakuj“'
+      'Video: Variables in Artist': 'Video: Premenné s Umelcom'
       'Video: Velocity': 'Video: Rýchlosť'
+      'Video: Warm Up': 'Video: Zahrej sa!'
       'Video: What Makes a Computer, a Computer?': 'Video: Čo robí počítač počítačom?'
+      'Video: While Loops with the Farmer': 'Video: Cykly „pokiaľ“ s Farmárkou'
+      'Video: Wrap-up': 'Video: Zhrnutie'
       Warm Up: Úvodná aktivita
       Website Project: Projekt webstránky
       Welcome to Monster Town: Vitajte v mestečku Monster Town

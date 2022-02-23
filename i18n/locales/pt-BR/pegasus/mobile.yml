@@ -1108,6 +1108,12 @@
   coursed-2020_gradelevel: Alunos a partir do 8º ano
   coursee-2020_gradelevel: De 8 a 12 anos
   coursef-2020_gradelevel: 'Idade: de 9 a 13 anos'
+  coursea-2021_gradelevel: 'Idade: de 4 a 7 anos'
+  courseb-2021_gradelevel: 'Idade: de 5 a 8 anos'
+  coursec-2021_gradelevel: 'Idade: de 6 a 10 anos'
+  coursed-2021_gradelevel: Alunos a partir do 8º ano
+  coursee-2021_gradelevel: De 8 a 12 anos
+  coursef-2021_gradelevel: 'Idade: de 9 a 13 anos'
   accelerated_gradelevel: "10-18 anos de idade"
   codeorg_platformtext: "Navegadores modernos, smartphones, tablets"
   codeintl_platformtext: "Navegadores modernos, smartphones, tablets"
@@ -1586,7 +1592,7 @@
   hoc_overview_partner_activities_body: "O site da Hora do Código tem mais de 500 atividades de ciência da computação para todas as idades e níveis de experiência, desenvolvidos pela Code.org e parceiros."
   hoc_overview_partner_activities_link: "Exibir atividades"
   hoc_overview_start_tutorial: "Começar"
-  hoc_overview_more_resources: "Para obter mais recursos sobre como interagir com sua sala de aula remota, consulte nosso guia para hospedar uma [Hora do Codigo virtual](](https://hourofcode.com/us/how-to/virtual). Para alunos com tecnologia ou conectividade limitada ou nenhuma, compartilhe este pacote de [atividades desconectadas](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
+  hoc_overview_more_resources: "Para obter mais materiais sobre como melhorar a interação com sua sala de aula virtual, consulte nosso guia sobre como hospedar uma [Hora do Codigo virtual](https://hourofcode.com/us/how-to/virtual). Para alunos com conectividade limitada ou nenhuma, compartilhe este pacote de [atividades desconectadas](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf)."
   hoc_overview_view_teacher_guide: "Exibir Guia do Professor"
   hoc2018_creativity: "criatividade"
   hoc2018_creativity_create: "Criar"
@@ -1710,6 +1716,8 @@
   hoc2018_dance_video2: "Festa Dançante - Eventos"
   hoc2018_dance_video3: "Festa Dançante - Propriedades"
   hoc2018_dance_video4: "Festa Dançante - Parabéns"
+  dance_box_higher_power_line_1: "Codifique uma dança para \"Higher Power\" da Coldplay e você pode ter a chance de ver a banda ao vivo!"
+  dance_box_higher_power_line_2: "Confira <a href=\"%{path}\">code.org/coldplay</a> para obter mais informações"
   page_not_found_title: "Página não encontrada"
   page_not_found_header: '404: Página não encontrada'
   page_not_found_description: "A página que você está procurando não existe neste endereço. Verifique o endereço de web e carregue novamente. Ou, então, volte para nossa página inicial."
@@ -1720,8 +1728,14 @@
   hoc2019_mc_mee_description1: 'O novo tutorial Hora de Código Minecraft está agora disponível em Minecraft: Edição Educacional para Windows, Mac e iPad. Aprenda os fundamentos de codificação e explore IA com seus alunos!'
   hoc2019_mc_mee_description2: "Acesse recursos grátis incluindo um plano de aula, vídeos, currículo de ciência da computação e treinamentos para professores."
   hoc2019_mc_more_coding_resources: "Mais Recursos de Codificação"
-  hoc2019_dance_previous_versions: "Procurando uma versão anterior de Festa Dançante?\nClique aqui para começar [Parte 1](%{dance_2018_link}) and [Parte 2](%{dance_extras_2018_link}) do último ano."
+  hoc2019_dance_previous_versions: "Procurando uma versão anterior de Festa Dançante?\nClique aqui para começar [Parte 1](%{dance_2018_link}) e [Parte 2](%{dance_extras_2018_link}) de 2018."
   page_not_available_button: "Volte para a página inicial"
+  hoc2021_mc_mee_title: "Minecraft TimeCraft"
+  hoc2021_mc_mee_description: 'Volte no tempo e aprenda a codificar! O novo tutorial de Hora do Código Minecraft já está disponível em Minecraft: Edição Educacional para Windows, Mac, Chromebook e iPad. Dê os primeiros passos para os recursos gratuitos para educadores, treinamentos e vídeos.'
+  hoc2021_mc_mee_villages_title: "Fábula das Duas Aldeias"
+  hoc2021_mc_mee_villages_description: 'Aprenda a codificação básica e explore a diversidade e a inclusão com os seus alunos em Minecraft: Edição Educacional.'
+  hoc2021_mc_mee_ai_title: "IA para sempre"
+  hoc2021_mc_mee_ai_description: 'Explore a IA com os seus alunos e aprenda a codificar em Minecraft: Edição Educacional.'
   footer_powered_by_aws: "Powered by Amazon Web Services"
   codebytes_skinny_banner_english_only: "Somente inglês"
   footer_privacy_policy: "Política de Privacidade"
@@ -1736,3 +1750,7 @@
   ai_microsoft_thanks: "Nós agradecemos à Microsoft por apoiar nossa visão e missão para que toda criança tenha a oportunidade de aprender ciência da computação e as habilidades necessárias para ter sucesso no século XXI."
   ai_activity: "Atividade"
   ai_description: "Descrição"
+  ai_ibm_machine_learning_for_kids: 'IBM: Aprendizado de Máquinas para crianças'
+  outbreak_tile_title: "Epidemia"
+  outbreak_tile_subtitle: "Um vírus infectou a Cidade dos Monstros! Codifique um simulador de surtos e faça previsões sobre o que acontecerá com os vizinhos da Cidade dos Monstros."
+  footer_cookie_notice: "Aviso sobre Cookies"

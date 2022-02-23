@@ -1,11 +1,11 @@
 ---
-title: Teacher Resources - Conditionals with Cards
+title: Ressources pour les enseignants - Conditions avec cartes
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Conditionals With Cards: An Hour of Code Tutorial
+# Conditions avec cartes : Tutoriel d'une Heure de code
 
 {{ hoc_unplugged_video }}
 
@@ -13,21 +13,21 @@ video_player: true
 
 ## Ressources pour les enseignants
 
-### Lesson Plans:
+### Plans de cours :
 
 - [Les Conditionnels avec des Cartes](/files/ConditionalsHoC.pdf)
-- Video: [How to Facilitate Conditionals with Cards in Your Classroom](https://youtu.be/IcEL5ibSvTs)
+- Vidéo : [Comment faciliter les conditions avec des cartes dans votre classe](https://youtu.be/IcEL5ibSvTs)
 
-### Extension Activities:
+### Activités supplémentaires :
 
 - [Après avoir fait Une Heure de Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Fondamentaux de l'informatique : cours 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Autres ressources pour les enseignants :
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Heure de code : Guide pratique pour les éducateurs](https://hourofcode.com/how-to)
+- [Meilleures pratiques des éducateurs qui réussissent](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Événement en direct : [Guide de l'éducateur sur l'Heure de code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -35,12 +35,12 @@ video_player: true
 
 ## Aperçu
 
-Learn about algorithms and conditional statements in this "unplugged" activity using a deck of cards. Students do this activity in teams, and need one deck of cards per team.
+Découvrez les algorithmes et les instructions de conditions dans cette activité « hors ligne » à l'aide d'un jeu de cartes. Les élèves font cette activité en équipe et ont besoin d'un jeu de cartes par équipe.
 
-**Recommended Age Range:** 8-12
+**Tranche d'âge recommandée :** 8-12 ans
 
-**Technology Requirements:** None! This is an "unplugged" activity that can be taught with nothing more than a deck of cards.
+**Exigences technologiques :** Aucune ! Il s'agit d'une activité « hors ligne » qui peut être enseignée juste avec un jeu de cartes.
 
-<a href="/files/ConditionalsHoC.pdf"><button>Download the activity</button></a>
+<a href="/files/ConditionalsHoC.pdf"><button>Télécharger l'activité </button></a>
 
 [/col-50]

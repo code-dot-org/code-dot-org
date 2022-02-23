@@ -205,17 +205,6 @@ img.video_thumbnail {
       float: left;
       clear: left;
     }
-    // TODO: Remove when Game Lab is no longer in beta
-    .beta-notice {
-      float: left;
-      margin-left: 10px;
-      display: inline-block;
-      padding: 7px 0;
-      font-family: $gotham-extra-bold;
-      font-size: 20px;
-      line-height: 20px;
-      color: $droplet_yellow;
-    }
   }
 
   .header_text {
@@ -1022,17 +1011,6 @@ $default-modal-width: 640px;
     float: left;
     clear: left;
   }
-  // TODO: Remove when Game Lab is no longer in beta
-  .beta-notice {
-    float: left;
-    margin-left: 10px;
-    display: inline-block;
-    padding: 7px 0;
-    font-family: $gotham-extra-bold;
-    font-size: 20px;
-    line-height: 20px;
-    color: $droplet_yellow;
-  }
 }
 
 .project_name {
@@ -1393,7 +1371,7 @@ body.iframe_embed_app_and_code {
 
   position: absolute;
   cursor: pointer;
-  z-index: 1;
+  z-index: 10;
   background: image-url("x_button.png") no-repeat center center;
   background-size: 100% auto;
 
@@ -1493,7 +1471,7 @@ html[dir=rtl] .qtip-content {
 }
 
 .cdo-qtips {
-  z-index: 1;
+  z-index: 1030 !important;
 }
 
 .tooltip-x-close.qtip-icon {
@@ -2902,7 +2880,8 @@ $modal-no-icon-gap: 22px;
 }
 
 .modal-image {
-  width: $modal-image-width;
+  max-width: $modal-image-width;
+  max-height: 100px;
   height: auto;
   margin-top: -75px;
   position: absolute;
@@ -2972,6 +2951,11 @@ $modal-no-icon-gap: 22px;
     float: left;
     padding-right: 10px;
   }
+
+  .instructor-image-end {
+    float: right;
+    padding-left: 10px;
+  }
 }
 
 .dynamic-instructions-markdown {
@@ -2986,6 +2970,12 @@ html[dir="rtl"] .instructions-markdown {
     float: right;
     padding-left: 10px;
     padding-right: 0;
+  }
+
+  .instructor-image-end {
+    float: left;
+    padding-right: 10px;
+    padding-left: 0;
   }
 }
 
@@ -3217,6 +3207,18 @@ $width: 400px;
   right: 0;
   color: $white;
   background-color: $light_purple;
+  padding: 3px;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: 0 0 7px 2px $shadow;
+}
+
+#instructor_in_training_tag {
+  position: fixed;
+  top: 60px;
+  right: 0;
+  color: $white;
+  background-color: $teal;
   padding: 3px;
   z-index: 100;
   cursor: pointer;

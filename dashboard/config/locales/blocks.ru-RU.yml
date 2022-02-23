@@ -3,27 +3,28 @@ ru:
   data:
     blocks:
       Dancelab_alternateMoves:
-        text: "\"{GROUP} чередовать каждые {N} тактов \n{MOVE1} и {MOVE2}"
+        text: "{GROUP} чередовать каждые {N} тактов \n{MOVE1} и {MOVE2}"
         options:
           GROUP:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           MOVE1:
             MOVES.Roll: Массажер
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -35,7 +36,7 @@ ru:
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -62,14 +63,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           MOVE:
             '"next"': "(Следующий)"
@@ -79,7 +81,7 @@ ru:
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -97,7 +99,7 @@ ru:
             MOVES.ClapHigh: Высокий хлопок
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -121,14 +123,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           PROPERTY:
             '"scale"': размер
@@ -144,14 +147,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           MOVE:
             '"rand"': "(Случайный)"
@@ -162,7 +166,7 @@ ru:
             MOVES.Dab: Дэб
             MOVES.XFever: Диско
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -190,7 +194,7 @@ ru:
             MOVES.Dab: Дэб
             MOVES.XFever: Диско
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Clown: Гангнам
@@ -260,7 +264,7 @@ ru:
             MOVES.Clown: Гангнам
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Roll: Массажер
@@ -300,14 +304,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           LOCATION:
             "{x: 200, y: 100}": верх
@@ -327,14 +332,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           FORMAT:
             '"border"': граница
@@ -342,10 +348,16 @@ ru:
             '"diamond"': алмаз
             '"circle"': круг
             '"grid"': сетка
+            '"top"': верхний ряд
             '"row"': шеренга
-            '"column"': колонна
+            '"bottom"': нижний ряд
+            '"left"': левый столбец
+            '"column"': столбец
+            '"right"': правый столбец
             '"x"': крест-накрест
             '"plus"': плюс
+            '"spiral"': спираль
+            '"infinity"': бесконечная линия
             '"random"': случайный
       Dancelab_makeAnonymousDanceSprite:
         text: сделать новый {COSTUME} в {LOCATION}
@@ -357,10 +369,11 @@ ru:
             '"DOG"': собака
             '"DUCK"': утка
             '"FROG"': Лягушка
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': Ананас
             '"ROBOT"': робот
             '"SHARK"': Акула
+            '"SLOTH"': ленивец
             '"UNICORN"': единорог
           LOCATION:
             "{x: 200, y: 100}": верх
@@ -385,10 +398,11 @@ ru:
             '"DOG"': собака
             '"DUCK"': утка
             '"FROG"': Лягушка
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': Ананас
             '"ROBOT"': робот
             '"SHARK"': Акула
+            '"SLOTH"': ленивец
             '"UNICORN"': единорог
           LOCATION:
             "{x: 200, y: 100}": верх
@@ -426,17 +440,38 @@ ru:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           LAYOUT:
             '"border"': граница
@@ -444,10 +479,16 @@ ru:
             '"diamond"': алмаз
             '"circle"': круг
             '"grid"': сетка
+            '"top"': верхний ряд
             '"row"': шеренга
-            '"column"': колонна
+            '"bottom"': нижний ряд
+            '"left"': левый столбец
+            '"column"': столбец
+            '"right"': правый столбец
             '"x"': крест-накрест
             '"plus"': плюс
+            '"spiral"': спираль
+            '"infinity"': бесконечная линия
             '"random"': случайный
       Dancelab_mixColors:
         text: смешайте {COLOR1} и {COLOR2}
@@ -470,7 +511,7 @@ ru:
             '"none"': Нет
             '"circles"': Туннель
             '"color_cycle"': Цвета
-            '"diamonds"': Ромбы
+            '"diamonds"': Алмазы
             '"disco_ball"': Зеркальный шар
             '"fireworks"': Фейерверк
             '"swirl"': Гипно
@@ -487,7 +528,9 @@ ru:
             '"stars"': Звезды
           PALETTE:
             '"rave"': Черно-белый
-            '"cool"': Голубой
+            '"cool"': Классный
+            '"electronic"': Электронный
+            '"iceCream"': Мороженое
             '"default"': Свет
             '"neon"': Неон
             '"tropical"': Тропический
@@ -504,10 +547,12 @@ ru:
             '"circles"': Туннель
             '"quads"': Углы
             '"color_cycle"': Цвета
-            '"diamonds"': Ромбы
+            '"diamonds"': Алмазы
             '"disco_ball"': Зеркальный шар
             '"fireworks"': Фейерверк
             '"flowers"': Цветы
+            '"growing_stars"': Растущие звезды
+            '"higher_power"': Higher Power
             '"swirl"': Гипно
             '"kaleidoscope"': Калейдоскоп
             '"lasers"': Лазерный танцпол
@@ -517,14 +562,18 @@ ru:
             '"ripples"': Круги на воде
             '"snowflakes"': Снег
             '"text"': Название песни
+            '"squiggles"': Завитки
             '"galaxy"': Космос
             '"sparkles"': Блестки
             '"spiral"': Спираль
             '"disco"': Квадраты
             '"stars"': Звезды
+            '"music_wave"': Волны
           PALETTE:
             '"rave"': Черно-белый
-            '"cool"': Голубой
+            '"cool"': Классный
+            '"electronic"': Электронный
+            '"iceCream"': Мороженое
             '"default"': Свет
             '"neon"': Неон
             '"tropical"': Тропический
@@ -546,14 +595,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           SPEED:
             '1': норма
@@ -571,10 +621,13 @@ ru:
             '"hearts_red"': Сердечки
             '"music_notes"': Ноты
             '"pineapples"': Ананасы
+            '"pizzas"': Пиццы
             '"smiling_poop"': Экскременты
             '"rain"': Дождь
             '"floating_rainbows"': Радуга
             '"smile_face"': Улыбки
+            '"spotlight"': Прожектор
+            '"color_lights"': Огни рампы
             '"raining_tacos"': Тако
       Dancelab_setForegroundEffectExtended:
         text: задать эффект переднего плана {EFFECT}
@@ -585,13 +638,19 @@ ru:
             '"bubbles"': Пузыри
             '"hearts_colorful"': Цветные сердечки
             '"confetti"': Конфетти
+            '"emojis"': Эмодзи
             '"hearts_red"': Сердечки
             '"music_notes"': Ноты
+            '"paint_drip"': Подтек
             '"pineapples"': Ананасы
+            '"pizzas"': Пиццы
             '"smiling_poop"': Экскременты
             '"rain"': Дождь
             '"floating_rainbows"': Радуга
             '"smile_face"': Улыбки
+            '"spotlight"': Прожектор
+            '"color_lights"': Огни рампы
+            '"exploding_stars"': Вспышка звёздообразования
             '"raining_tacos"': Тако
       Dancelab_setProp:
         text: 'установить {SPRITE} {PROPERTY} на {VAL} '
@@ -610,14 +669,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           PROPERTY:
             '"scale"': размер
@@ -645,14 +705,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           PROPERTY:
             '"scale"': размер
@@ -671,14 +732,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
       Dancelab_setTintEachInline:
         text: Установить {THIS} тона, чтобы {VAL}
@@ -687,14 +749,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
       Dancelab_setTintInline:
         text: установить оттенок {SPRITE} на {VAL}
@@ -711,14 +774,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           VISIBILITY:
             'true': видимый
@@ -745,14 +809,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           PROPERTY:
             '"scale"': размер
@@ -789,14 +854,15 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
-            '"MOOSE"': все лоси
+            '"MOOSE"': лось
             '"PINEAPPLE"': ананасы
-            '"ROBOT"': все роботы
+            '"ROBOT"': роботы
             '"SHARK"': акулы
+            '"SLOTH"': ленивцы
             '"UNICORN"': единороги
           PROPERTY:
             '"scale"': размер
@@ -815,13 +881,30 @@ ru:
         text: перевести {STRING}
         options:
           STRING:
+            '"music_wave"': Волны
             '"ripples"': Круги на воде
             '"ripples_random"': Случайные круги на воде
             '"quads"': Углы
             '"flowers"': Цветы
             '"popsicles"': Фруктовое мороженое
+            '"squiggles"': Завитки
+            '"growing_stars"': Растущие звезды
+            '"emojis"': Эмодзи
             '"hearts_colorful"': Сердечки
+            '"paint_drio"': Подтек
+            '"exploding_stars"': Вспышка звёздообразования
+            '"row_top"': верхний ряд
+            '"row_bottom"': нижний ряд
+            '"column_left"': левый столбец
+            '"column_right"': правый столбец
             '"diamond"': алмаз
+            '"mural"': Фреска
+            '"safari"': Сафари
+            '"network"': Сеть
+            '"highway"': Шоссе
+            '"stream"': Поток
+            '"tile"': Плитка
+            '"shadow"': Тень
             '"x"': x
             '"y"': у
             '"1"': '1'
@@ -871,10 +954,12 @@ ru:
       Dancelab_whenSetup2:
         text: установка
       gamelab_addBehaviorSimple:
-        text: Спрайт {SPRITE} Начинается {BEHAVIOR}
+        text: Спрайт {SPRITE} начинает {BEHAVIOR}
       gamelab_addTarget:
+        text: "{SPRITE} достигает цели {TARGET} – {OPT}"
         options:
           OPT:
+            '"follow"': следовать
             '"avoid"': избегать
       gamelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
@@ -884,6 +969,10 @@ ru:
           UNIT:
             '"seconds"': секунд
             '"frames"': кадры
+      gamelab_avoidingTargets:
+        text: избегание целей
+      gamelab_beginCollectingData:
+        text: начать сбор данных {BREAK} значение {VALUE} с меткой {LABEL}
       gamelab_bounceOff:
         text: "{SPRITE} отскакивает от {TARGET}"
       gamelab_changePropBy:
@@ -905,9 +994,28 @@ ru:
       gamelab_clickedOn:
         text: Когда {SPRITE} Нажал
       gamelab_clickedSpritePointer:
-        text: Нажал {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): вращение вправо
+            new Behavior(spinning_left, []): вращение влево
+            new Behavior(fluttering, []): дрожание
+            new Behavior(jittering, []): дрожание
+            new Behavior(wobbling, []): колебание
+            new Behavior(wandering, []): хождение
+            new Behavior(patrolling, []): патрулирование
+            new Behavior(moving_west_and_looping, []): движение на запад и зацикливание
+            new Behavior(moving_east_and_looping, []): движение на восток и зацикливание
+            new Behavior(moving_north_and_looping, []): движение на север и действие
+              в цикле
+            new Behavior(moving_south_and_looping, []): движение на юг и действие
+              в цикле
       gamelab_comment:
         text: 'комментарий: {COMMENT}'
+      gamelab_costumeImage:
+        text: "{COSTUME}"
       gamelab_countByAnimation:
         text: количество {SPRITE}
       gamelab_createNewSprite:
@@ -916,9 +1024,13 @@ ru:
       gamelab_destroy:
         text: удалить {THIS}
       gamelab_draggable:
-        text: время draggable
+        text: допускающий перетаскивание
+      gamelab_drawLine:
+        text: нарисовать линию {COLOR}  {LOC1}  {LOC2}
       gamelab_edgesDisplace:
         text: блок края {SPRITE} от перемещения
+      gamelab_followingTargets:
+        text: следование целям
       gamelab_getAllSprites:
         text: все спрайты
       gamelab_getProp:
@@ -936,6 +1048,7 @@ ru:
         text: "{CHOICE} Спрайт"
         options:
           CHOICE:
+            '"this"': это
             '"other"': другое
       gamelab_getTime:
         text: время в {UNIT}
@@ -943,8 +1056,30 @@ ru:
           UNIT:
             '"seconds"': секунд
             '"frames"': кадры
+      gamelab_glideTo:
+        text: "{SPRITE} плавно перейти к {LOCATION}"
       gamelab_hideTitleScreen:
         text: скрыть экран заголовка
+      gamelab_ifVarEquals:
+        text: |-
+          если {NUM} ={VAL}
+          {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      gamelab_isCostumeEqual:
+        text: "{SPRITE} костюм {COSTUME}"
       gamelab_isKeyPressed:
         text: "{KEY} нажата"
         options:
@@ -1003,15 +1138,21 @@ ru:
       gamelab_location_picker:
         text: "{LOCATION}"
       gamelab_makeBurst:
+        text: создать эффект {EFFECT} со спрайтами {NUM} {ANIMATION_NAME}
         options:
           EFFECT:
             '"burst"': взрыв
+            '"pop"': прыжок
             '"rain"': дождь
+            '"spiral"': спираль
       gamelab_makeNewSpriteAnon:
         text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       gamelab_makeNumSprites:
-        text: создать {NUM} новый {ANIMATION_NAME} слайдов
+        text: создать {NUM} новых {ANIMATION_NAME} спрайтов
       gamelab_makeProjectile:
+        text: |-
+          создать снаряд
+          {ANIMATION_NAME} из {LOCATION} со скоростью {SPEED}direction{DIRECTION}
         options:
           DIRECTION:
             '0': вправо
@@ -1041,9 +1182,9 @@ ru:
       gamelab_moveToward:
         text: Переместить {SPRITE} Пикселей {DISTANCE} К {TARGET}
       gamelab_newSpritePointer:
-        text: Нажал {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: Нажал {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: патрулирование вверх и вниз
       gamelab_playSound:
@@ -1052,9 +1193,57 @@ ru:
         text: playSound {SOUND}
         options:
           SOUND:
+            "'sound://category_accent/puzzle_game_accent_a_01.mp3'": акцент
+            "'sound://category_digital/boing_2.mp3'": звук отскока
+            "'sound://category_pop/bubble_pop_cluster_airy_1.mp3'": прыжок
+            "'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3'": мерцание
             "'sound://category_app/app_button_1.mp3'": кнопка
             "'sound://category_collect/clicky_crunch.mp3'": хруст
+            "'sound://category_swish/quick_swing.mp3'": взмах
+            "'sound://category_nature/summer_night_loop.mp3'": летняя ночь
+            "'sound://category_background/ocean_waves.mp3'": океанские волны
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": волны на
+              пляже
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": пузырик
+            "'sound://category_animals/bear.mp3'": Медведь
+            "'sound://category_animals/cat.mp3'": кот
+            "'sound://category_animals/cow.mp3'": корова
+            "'sound://category_animals/pig.mp3'": свинка
+            "'sound://category_animals/sheep.mp3'": овца
+            "'sound://category_animals/goat.mp3'": коза
+            "'sound://category_animals/chicken.mp3'": курица
+            "'sound://category_animals/rooster.mp3'": петух
+            "'sound://category_animals/elephant.mp3'": слон
+            "'sound://category_animals/dolphin.mp3'": дельфин
+            "'sound://category_nature/thunderstorm_1.mp3'": гроза
+            "'sound://category_animals/chick.mp3'": цыпленок
+            "'sound://category_animals/dog.mp3'": собака
+            "'sound://category_animals/tiger.mp3'": тигр
+            "'sound://category_collect/trill_stings.mp3'": щекотание
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": арфа
+            "'sound://category_tap/vibrant_positive_tap_1.mp3'": касание
+            "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": тональный
+              удар
+            "'sound://category_transition/trippy_robotic_transition.mp3'": роботизированный
+              переход
+            "'sound://category_transition/star_dust_particle_10.mp3'": звездная пыль
+            "'sound://category_whoosh/alien_ship_flyby_whoosh_3_slow.mp3'": инопланетный
+              корабль
+            "'sound://category_projectile/retro_game_magic_spell_6.mp3'": волшебное
+              заклинание
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": выбирать
+            "'sound://category_jump/quirky_bass_sc-fi_open_or_start.mp3'": причудливый
+              бас
             "'sound://category_digital/jump_7.mp3'": прыгнуть
+      gamelab_playSpeech:
+        text: воспроизвести речь {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): перемещение клавишами со стрелками
+            new Behavior(driving_with_arrow_keys, []): передвижение клавишами со стрелками
+            draggable(): допускающий перетаскивание
       gamelab_pointInDirection:
         text: точка {SPRITE} {DIRECTION}
         options:
@@ -1079,6 +1268,8 @@ ru:
         text: удалить цвет из {THIS}
       gamelab_repeatForever:
         text: повторять бесконечно
+      gamelab_resetTimer:
+        text: сбросить таймер
       gamelab_setAnimation:
         text: Изменить {THIS} костюм для {ANIMATION}
       gamelab_setBackground:
@@ -1089,13 +1280,43 @@ ru:
           IMG:
             '"https://studio.code.org/blockly/media/skins/studio/background_cave.png"': пещера
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': город
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': сплошная
+              трава
             '"https://studio.code.org/blockly/media/skins/studio/background.png"': Суд
             '"https://studio.code.org/blockly/media/skins/studio/background_desert.png"': пустыня
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': пустынная
+              дорога
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': сельскохозяйственные
+              угодья
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': плавающая
+              трава
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': перед
+              домом
             '"https://studio.code.org/blockly/media/skins/studio/background_space.png"': Galaxy
             '"https://studio.code.org/blockly/media/skins/studio/background_grid.png"': сетка
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'кухня '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': гостиная
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': луг
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': вид
+              на парк
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': сосны
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': радуга
+            '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': научная
+              фантастика
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': футбольное
+              поле
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': этап
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': Звезды
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метро
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': солнце
+              и радуга
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': солнечные
+              лучи
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': теннисный
+              корт
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': остров
+              с деревьями
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': подземелье
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': под
               водой
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': зима
@@ -1103,12 +1324,18 @@ ru:
       gamelab_setBackgroundImageAs:
         text: установить фон для {IMG}
       gamelab_setDefaultSpriteSize:
+        text: установить новый размер спрайта по умолчанию {SIZE}
         options:
           SIZE:
-            '25': extra small
-            '50': small
+            '25': очень маленький
+            '50': маленький
             '75': средне
-            '100': large
+            '100': большой
+      gamelab_setPrompt:
+        text: запросить у пользователя {QUESTION} переменную {VAR}
+      gamelab_setPromptWithChoices:
+        text: запросить у пользователя {QUESTION} переменную {VAR} с параметрами выбора
+          {A}{B}{C}
       gamelab_setProp:
         text: установить {SPRITE} {PROPERTY} в {VAL}
         options:
@@ -1125,10 +1352,10 @@ ru:
           PROPERTY:
             '"scale"': размер
           SIZE:
-            '25': extra small
-            '50': small
+            '25': очень маленький
+            '50': маленький
             '75': средне
-            '100': large
+            '100': большой
       gamelab_setSizes:
         text: установить {SPRITE} {PROPERTY} на {N}%
         options:
@@ -1136,8 +1363,18 @@ ru:
             '"scale"': размер
             '"width"': ширина
             '"height"': высота
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': медленно
+            '5': норма
+            '7': быстро
+            '9': extra fast
       gamelab_setTint:
         text: изменить цвет {THIS} на {COLOR}
+      gamelab_setupScoreboard:
+        text: "нарисовать табло \n{SPRITE1COSTUME}счет{VAR1}{SPRITE2COSTUME}счет{VAR2}цель{SPRITE3COSTUME}"
       gamelab_setupSim:
         text: |-
           моделирование установки с
@@ -1153,18 +1390,42 @@ ru:
           CONDITION:
             '"when"': когда
             '"while"': пока
+      gamelab_spriteSay:
+        text: "{SPRITE} сказать {SPEECH}"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}сказать{TEXT1}for{NUM}секунд"
+      gamelab_startAvoiding:
+        text: "{SPRITE} начинает избегать {TARGET}"
+      gamelab_startFollowing:
+        text: "{SPRITE} начинает следовать {TARGET}"
+      gamelab_startGliding:
+        text: "{SPRITE} начинает плавно переходить"
+      gamelab_stopAvoiding:
+        text: "{SPRITE} перестает избегать других спрайтов"
+      gamelab_stopCollectingData:
+        text: прекратить собирать данные
+      gamelab_stopFollowing:
+        text: "{SPRITE} перестает следовать другим спрайтам"
+      gamelab_stopGliding:
+        text: "{SPRITE} прекращает плавно переходить"
       gamelab_subjectSpritePointer:
-        text: Нажал {SPRITE}
+        text: "{SPRITE}"
+      gamelab_textJoin:
+        text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
+      gamelab_textVariableJoin:
+        text: "{VAR}{TEXT2}"
       gamelab_tumbling:
         text: акробатика
       gamelab_turn:
-        text: Свою очередь {SPRITE} {DIRECTION} {N} Градусов
+        text: повернуть на {SPRITE} {DIRECTION} {N} градусов
         options:
           DIRECTION:
             '"right"': вправо
             '"left"': влево
       gamelab_updateTitleWithColor:
         text: показать заголовок страницы {BREAK} заголовок {TITLE} цвет {COLOR}
+      gamelab_whenAllPromptsAnswered:
+        text: когда на все запросы получены ответы
       gamelab_whenDownArrow:
         text: когда стрелка вниз нажата
       gamelab_whenKey:
@@ -1177,10 +1438,15 @@ ru:
             '"right"': вправо
             '"space"': космос
             '"a"': a
+            '"w"': w
       gamelab_whenLeftArrow:
         text: когда стрелка влево нажата
+      gamelab_whenPromptAnswered:
+        text: когда на {VAR} получен ответ
       gamelab_whenRightArrow:
         text: когда стрелка вправо нажата
+      gamelab_whenSpriteCreated:
+        text: когда {SPRITE} создан
       gamelab_whenTouching:
         text: Когда {SPRITE1} Касается {SPRITE2}
       gamelab_whenUpArrow:
@@ -1202,28 +1468,46 @@ ru:
       gamelab_whileRightArrow:
         text: пока стрелка вправо нажата
       gamelab_whileTouching:
-        text: А {SPRITE1} трогательно {SPRITE2}
+        text: Пока {SPRITE1} касается {SPRITE2}
       gamelab_whileUpArrow:
         text: пока стрелка вверх нажата
+      gamelab_withPercentChance:
+        text: |-
+          если {NUM}% вероятность
+          {STATEMENT}
+      gamelab_withPercentChanceDropdown:
+        text: |2-
+           {NUM} шанс
+           {STATEMENT}
+        options:
+          NUM:
+            '10': очень низкий
+            '25': низкий
+            '50': 50/50
+            '75': высокий
+            '90': очень высокий
       gamelab_xLocationOf:
         text: x координата {SPRITE}
       gamelab_yLocationOf:
         text: y координата {SPRITE}
       Mikelab_addBehaviorSimple:
-        text: Спрайт {SPRITE} Начинается {BEHAVIOR}
+        text: Спрайт {SPRITE} начинает {BEHAVIOR}
       Mikelab_addTrainingData:
         text: 'добавить данные об обучении: {NAME},{LOCATION}'
         options:
           NAME:
             "{x: 201, y: 100}": Объекта
-            "{x: 200, y: 100}": Рыбы
+            "{x: 200, y: 100}": рыба
           LOCATION:
-            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": Рыбы
+            "{x: randomNumber(51, 350), y: randomNumber(50, 350)}": рыба
             "{x: randomNumber(52, 350), y: randomNumber(50, 350)}": не рыба
             "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": моя этикетка
             "{x: randomNumber(53, 350), y: randomNumber(50, 350)}": не моя этикетка
       Mikelab_allSpritesWithAnimation:
         text: "{ANIMATION}"
+      Mikelab_beginDataCollection:
+        text: запросить у пользователя {QUESTION} переменную {VAR} с параметрами выбора
+          {A}{B}{C}
       Mikelab_changePropBy:
         options:
           PROPERTY:
@@ -1259,11 +1543,13 @@ ru:
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupChangePropBy:
         text: Изменить {PROPERTY} из {SELECT} {COSTUME} по {VAL}
         options:
           SELECT:
             '"all"': все
+            '"this"': это
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
@@ -1288,6 +1574,7 @@ ru:
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupDisplace:
         text: Все {COSTUME} Блок {COSTUME2} от перемещения
       Mikelab_groupEdgesDisplace:
@@ -1295,6 +1582,9 @@ ru:
       Mikelab_groupGetProp:
         text: "{SELECT} {COSTUME}'ы {PROPERTY}"
         options:
+          SELECT:
+            '"average"': средний
+            '"this"': это
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
@@ -1306,21 +1596,25 @@ ru:
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupRemoveBehaviorSimple:
         text: "{SELECT} {COSTUME} Останавливается {BEHAVIOR}"
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupRemoveTint:
         text: удалить цвет из {SELECT} {COSTUME}
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupSetProp:
         text: Установить {PROPERTY} из {SELECT} {COSTUME} Кому {VAL}
         options:
           SELECT:
             '"all"': все
+            '"this"': это
           PROPERTY:
             '"scale"': размер
             '"rotation"': вращение
@@ -1332,6 +1626,7 @@ ru:
         options:
           SELECT:
             '"all"': все
+            '"this"': это
       Mikelab_groupWhenClickedOn:
         text: Когда {COSTUME} Нажал
       Mikelab_groupWhenXTouchesY:
@@ -1349,7 +1644,7 @@ ru:
         options:
           TRASH:
             object: Объекта
-            fish: Рыбы
+            fish: рыба
       Mikelab_ifDanceIs:
         text: |-
           если {SPRITE} выполняет {DANCE}
@@ -1360,7 +1655,7 @@ ru:
             MOVES.Clown: Гангнам
             MOVES.Dab: Дэб
             MOVES.DoubleJam: Удвоить усилия
-            MOVES.Drop: Дроп
+            MOVES.Drop: Опустить
             MOVES.Floss: Флосс
             MOVES.Fresh: Свежий
             MOVES.Roll: Массажер
@@ -1373,7 +1668,7 @@ ru:
           делать {DO1} Еще {DO2}
         options:
           DANCE:
-            MOVES.ClapHigh: Рыбы
+            MOVES.ClapHigh: рыба
             MOVES.Clown: моя этикетка
       Mikelab_ifRecognizeLabel:
         text: |-
@@ -1381,7 +1676,7 @@ ru:
           делать {DO1} Еще {DO2}
         options:
           DANCE:
-            MOVES.ClapHigh: Рыбы
+            MOVES.ClapHigh: рыба
             MOVES.Clown: моя этикетка
       Mikelab_ifRecognizeLabelOnly:
         text: |-
@@ -1389,12 +1684,21 @@ ru:
           делать {DO1}
         options:
           DANCE:
-            MOVES.ClapHigh: Рыбы
+            MOVES.ClapHigh: рыба
             MOVES.Clown: не моя этикетка
       Mikelab_locationAt:
         text: 'местоположение x: {X} Y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        options:
+          TEXT1:
+            '"Balancing on the "': "«балансирование на»"
+            '"A chubby cat "': "«пухлый кот (кошка)»"
+            '"The "': "«Это »"
+          TEXT2:
+            '" fence"': "« забор»"
+            '" breeze blows"': "« дует бриз»"
       Mikelab_randomColor:
         text: случайный цвет
       Mikelab_removeBehaviorSimple:
@@ -1409,7 +1713,35 @@ ru:
         options:
           BG:
             '"https://studio.code.org/api/v1/animation-library/04L4sdTODkNZF1OHf4qO_I.Al3QP43wA/category_backgrounds/city.png"': город
+            '"https://studio.code.org/api/v1/animation-library/UieRK0NBKD3xVHtSJxcUTAuhzLM1D_Hq/category_backgrounds/continuous_grass.png"': сплошная
+              трава
+            '"https://studio.code.org/api/v1/animation-library/nfgysU3t3P8XnUBAf9LjIy2JTHtdXpTj/category_backgrounds/desert_road.png"': пустынная
+              дорога
+            '"https://studio.code.org/api/v1/animation-library/4FnSIFL33P0PH_C_DnKOse2QbZCdtaJJ/category_backgrounds/farm_land.png"': сельскохозяйственные
+              угодья
+            '"https://studio.code.org/api/v1/animation-library/vrlUwPslp0VK_KJcPQ9OPZNb.Ms5eBL5/category_backgrounds/floating_grass.png"': плавающая
+              трава
+            '"https://studio.code.org/api/v1/animation-library/ZjjFGjO0xNEZGEweTgANloehQrxwIXVM/category_backgrounds/front_of_house.png"': перед
+              домом
             '"https://studio.code.org/api/v1/animation-library/1K7z7Kc3EeXsLV693byb0xxoJSJ4Du7e/category_backgrounds/kitchen.png"': 'кухня '
+            '"https://studio.code.org/api/v1/animation-library/4bsf67OUrcX.t1wbIcE_xygGKxOkiQ6f/category_backgrounds/living_room.png"': гостиная
+            '"https://studio.code.org/api/v1/animation-library/cJKusc1WPgWvCvgdwRX1gk8Zk0FggcVj/category_backgrounds/meadow.png"': луг
+            '"https://studio.code.org/api/v1/animation-library/4gC7uWaaRI4aDyrncCFO_wY_67vYhr4C/category_backgrounds/park_view.png"': вид
+              на парк
+            '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': сосны
+            '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': футбольное
+              поле
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': этап
+            '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': метро
+            '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': солнце
+              и радуга
+            '"https://studio.code.org/api/v1/animation-library/_aXeLwM1Ge.ZDVJoON.cAlR3iwhKJJvl/category_backgrounds/sunshine_showers.png"': солнечные
+              лучи
+            '"https://studio.code.org/api/v1/animation-library/.51KpEhDOyXg4dbDaAnm0dEWLAj1GZwy/category_backgrounds/tennis_court.png"': теннисный
+              корт
+            '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': остров
+              с деревьями
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': подземелье
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1418,6 +1750,18 @@ ru:
             '"x"': позиция на оси абсцисс (x)
             '"y"': позиция на оси ординат (y)
             '"direction"': направление движения
+      Mikelab_setupLevel:
+        text: |-
+          уровень настройки с
+          {A1}{A2}{A3}{A4}
+          {A5}{A6}{A7}{A8}
+          {B1}{B2}{B3}{B4}
+          {B5}{B6}{B7}{B8}
+      Mikelab_setupOutbreak:
+        text: |-
+          настройка вспышки
+          заполнение:{SPRITE2N}
+          {TOGGLE}virus
       Mikelab_setupSim:
         text: |-
           моделирование установки с
@@ -1433,6 +1777,7 @@ ru:
       Mikelab_showText:
         options:
           PREPOSITION:
+            '"above"': выше
             '"below"': ниже
       Mikelab_sprite:
         text: Новые функции {COSTUME} спрайт на {LOCATION}
@@ -1457,6 +1802,7 @@ ru:
             '"down"': клавиша со стрелкой вниз
             '"left"': клавиша со стрелкой влево
             '"right"': клавиша со стрелкой вправо
+            '"space"': клавиша пробела
             '"w"': З
             '"a"': А
             '"s"': Ю
@@ -1468,6 +1814,7 @@ ru:
             '"down"': клавиша со стрелкой вниз
             '"left"': клавиша со стрелкой влево
             '"right"': клавиша со стрелкой вправо
+            '"space"': клавиша пробела
             '"w"': З
             '"a"': А
             '"s"': Ю
@@ -1487,52 +1834,218 @@ ru:
             '"down"': клавиша со стрелкой вниз
             '"left"': клавиша со стрелкой влево
             '"right"': клавиша со стрелкой вправо
+            '"space"': клавиша пробела
       Mikelab_xLocationOf:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
-      PoemBot_makeNumSprites:
-        text: создать {NUM} новый {ANIMATION_NAME} слайдов
-      PoemBot_playSound:
-        text: playSound {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: задать фоновый эффект {EFFECT} {PALETTE}
+      Outbreak_beginCongregating:
+        text: монстры начинают собираться вместе
+      Outbreak_beginQuarantining:
+        text: монстры уходят на карантин при заболевании
+      Outbreak_beginSocialDistancing:
+        text: монстры инициируют социальное дистанцирование
+      Outbreak_beginWandering:
+        text: монстры начинают бродить
+      Outbreak_beginWearingMasks:
+        text: монстры начинают носить маски
+      Outbreak_layoutBorder:
+        text: скомпоновать монстров на границе
+      Outbreak_layoutClusters:
+        text: скомпоновать монстров в группы по {NUM}
+      Outbreak_layoutGrid:
+        text: скомпоновать монстров в виде сетки
+      Outbreak_layoutRandom:
+        text: скомпоновать монстров в случайном порядке
+      Outbreak_setSpeed:
+        text: установить скорость монстра на {VAL}
+      Outbreak_setupOutbreak:
+        text: задать для Города монстров {COUNT}монстров
+      Outbreak_stopMoving:
+        text: монстры перестают двигаться
+      Poetry_addFrame:
         options:
-          EFFECT:
-            '"colors"': Цвета
-            '"space"': Космос
+          BRUSH:
+            '"brick"': кирпич
+            '"fire"': огонь
+            '"flowers"': цветы
+            '"hearts"': сердца
+            '"iceCream"': Мороженое
+            '"leaves"': листья
+            '"rainbow"': радуга
             '"stars"': Звезды
-            '"ripples"': Круги на воде
-          PALETTE:
-            '"rainbow"': Радуга
-      PoemBot_setBackgroundImageAs:
-        text: установить фон для {IMG}
-      PoemBot_setForegroundEffect:
-        text: задать эффект переднего плана {EFFECT}
+            '"waves"': волны
+      Poetry_addLine:
+        text: добавить строку {LINE}
+      Poetry_destroy:
+        text: удалить {ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE} плавно перейти к {LOCATION}"
+      Poetry_makeBurst:
+        text: создать эффект {EFFECT} со спрайтами {NUM} {ANIMATION_NAME}
         options:
           EFFECT:
-            '"rain"': Дождь
+            '"burst"': взрыв
+            '"pop"': прыжок
+            '"rain"': дождь
+            '"spiral"': спираль
+      Poetry_makeNewSpriteAnon:
+        text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
+      Poetry_makeNumSprites:
+        text: создать {NUM} новых {ANIMATION_NAME} спрайтов
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Спокойствие
+            '"sound://category_nature/steady_campfire_loop.mp3"': Костер
+            '"sound://category_nature/rain_loop.mp3"': Роса
+            '"sound://category_nature/forest_woodland_ambience_2.mp3"': лес
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Очарование
+            '"sound://category_background/inside_plane.mp3"': Гул
+            '"sound://category_loops/red_flag_loop1.mp3"': Миссия
+            '"sound://category_nature/summer_night_loop.mp3"': ночь
+            '"sound://category_background/ocean_waves.mp3"': океан
+            '"sound://category_background/rainforest_ambient_sound.mp3"': тропический
+              лес
+            '"sound://category_background/repitition.mp3"': Верхом
+            '"sound://category_background/wavering_wind.mp3"': сонный
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Медленно
+      Poetry_playSound:
+        text: playSound {SOUND}
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': Колокольчик
+            '"sound://category_digital/boing_2.mp3"': Боинг
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Кружок
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Вибрация
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Сдувание
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Неудача
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Дрожание
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Прыжок
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': свет
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Перина
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Изучение
+            '"sound://category_background/typewriter.mp3"': Пишущая машинка
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Яркий
+            '"sound://category_achievements/peaceful_win_1.mp3"': Выигрыш
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Вихрь
+            '"sound://category_achievements/peaceful_win_6.mp3"': '"Китайские колокольчики"'
+      Poetry_setAuthor:
+        text: указать автора {AUTHOR}
+      Poetry_setBackground:
+        text: задать цвет фона {COLOR}
+      Poetry_setBackgroundEffect:
+        text: Установить фон {EFFECT} {PALETTE}
+        options:
+          EFFECT:
+            '"blooming"': Цветение
             '"bubbles"': Пузыри
-            '"hearts"': Цветные сердечки
+            '"clouds"': Облачно
             '"confetti"': Конфетти
-      PoemBot_startBehavior:
+            '"darkCircles"': Затухание
+            '"fadeColors"': Заморожен
+            '"hearts"': сердца
+            '"space"': Космос
+            '"rain"': дождь
+            '"ripples"': Круги на воде
+            '"colors"': Цвета
+            '"stars"': Звезды
+          PALETTE:
+            '"autumn"': Осень
+            '"sunrise"': Рассвет
+            '"sunset"': Сумерки
+            '"grayscale"': Серые
+            '"ocean"': океан
+            '"rainbow"': радуга
+            '"roses"': Розы
+            '"sky"': Небо
+            '"spring"': Весна
+            '"summer"': Лето
+            '"winter"': Зима
+      Poetry_setBackgroundImageAs:
+        text: установить фон для {IMG}
+      Poetry_setFont:
+        text: выбрать шрифт {FONT}
+        options:
+          FONT:
+            '"Arial"': Arial
+            '"Arial Black"': Arial Black
+            '"Courier"': Courier
+            '"Cursive"': Handwriting
+            '"Impact"': Impact
+            '"Georgia"': Georgia
+            '"Times"': Times
+      Poetry_setFontColor:
+        text: выбрать цвет текста {FILL}
+      Poetry_setForegroundEffect:
+        text: выполнить эффект  {EFFECT}
+        options:
+          EFFECT:
+            '"bubbles"': Пузыри
+            '"confetti"': Конфетти
+            '"hearts"': сердца
+            '"emojis"': Счастливые эмодзи
+            '"rain"': дождь
+            '"starburst"': Вспышка звёздообразования
+            '"glass"': Разбивающееся стекло
+            '"twinkling"': Мерцание
+      Poetry_setPrompt:
+        text: запросить у пользователя {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} переменную
+          {VAR}
+      Poetry_setPromptWithChoices:
+        text: запросить у пользователя {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} переменную
+          {VAR} с вариантами выбора {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
+          {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
+      Poetry_setSize:
+        text: задать размер  {SPRITE} в значение {VAL}
+      Poetry_setTextEffect:
+        text: задать эффект текста {EFFECT}
+        options:
+          EFFECT:
+            '"fade"': затухание
+            '"typewriter"': пишущая машинка
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
-            growing: увеличение
-            jittering: дрожание
-            shrinking: уменьшение
-            spinning_left: левостороннее вращение
-            spinning_right: правостороннее вращение
-            wandering: блуждание
-      PoemBot_stopBehavior:
+            '"fluttering"': дрожание
+            '"growing"': рост
+            '"jittering"': дрожание
+            '"shrinking"': сжимание
+            '"spinning_left"': вращение влево
+            '"spinning_right"': вращение вправо
+            '"swimming_left_and_right"': плавание
+            '"wandering"': хождение
+            '"wobbling"': колебание
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
-            growing: увеличение
-            jittering: дрожание
-            shrinking: уменьшение
-            spinning_left: левостороннее вращение
-            spinning_right: правостороннее вращение
-            wandering: блуждание
+            '"fluttering"': дрожание
+            '"growing"': рост
+            '"jittering"': дрожание
+            '"shrinking"': сжимание
+            '"spinning_left"': вращение влево
+            '"spinning_right"': вращение вправо
+            '"swimming_left_and_right"': плавание
+            '"wandering"': хождение
+            '"wobbling"': колебание
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
+      Poetry_whenPromptAnswered:
+        text: когда на {VAR} получен ответ
       RyanLab_moveForward:
         text: двигаться вперед
       RyanLab_turnLeft:
@@ -1567,26 +2080,98 @@ ru:
           PROPERTY:
             "'shapeColor'": цвет
       aalab_layoutSprites:
+        text: скомпоновать монстров в виде {FORMAT}
         options:
           FORMAT:
             '"grid"': сетка
             '"border"': граница
             '"row"': шеренга
             '"random"': случайный
+      aalab_levelFailure:
+        text: учащийся {STATE} с ключом {KEY}
+        options:
+          STATE:
+            '0': проходит
+            '3': терпит неудачу
+      aalab_setSpeed:
+        text: установить скорость монстра на {VAL}
+      aalab_setupSim:
+        text: задать для Города монстров {COUNT}монстров
       aalab_someGraduallyStartIntervention:
+        text: "{PORTION} монстры {RATE} начинают {BEHAVIOR}"
         options:
           PORTION:
             '1': все
-            '0.75': most
-            '0.5': half of
-            '0.25': few
+            '0.75': большинство
+            '0.5': половина
+            '0.25': несколько
+          RATE:
+            '"immediately"': немедленно
+            '"quickly"': быстро
+            '"gradually"': постепенно
+            '"slowly"': медленно
+          BEHAVIOR:
+            '"wandering"': ходить в случайном порядке
+            '"congregating"': собираться вместе
+            '"quarantining"': уходить на карантин при заболевании
+            '"avoiding"': социальное дистанцирование
+            '"none"': оставаться неподвижным
       aalab_someStartIntervention:
+        text: "{PORTION} монстры начинают {BEHAVIOR}"
         options:
           PORTION:
             '1': все
-            '0.75': most
-            '0.5': half of
-            '0.25': few
+            '0.75': большинство
+            '0.5': половина
+            '0.25': несколько
+          BEHAVIOR:
+            '"wandering"': ходить в случайном порядке
+            '"congregating"': собираться вместе
+            '"quarantining"': уходить на карантин при заболевании
+            '"avoiding"': социальное дистанцирование
+            '"none"': оставаться неподвижным
+      aalab_spriteSayChoices:
+        text: "{SPRITE} сказать {SPEECH}"
+        options:
+          SPEECH:
+            '"I have spoken."': Я уже говорил.
+            '"Bounty hunting is a complicated profession."': Охотник за головами —
+              сложная профессия.
+            '"I will initiate self-destruct."': Я инициирую самоуничтожение.
+            '"This is the way."': Таким образом.
+            '"People get built different. We don’t need to figure it out, we just need to respect it."': Все
+              люди разные. Нам не нужно выяснять почему, нам нужно просто относиться
+              к этому с уважением.
+            '"You don’t need a mirror to look good. You’re beautiful on the inside."': Чтобы
+              хорошо выглядеть, вам не нужно зеркало. Вы прекрасны изнутри.
+            '"Sometimes life is scary and dark. That is why we must find the light."': Иногда
+              жизнь бывает страшной и темной. Поэтому мы должны найти свет.
+            '"Everything small is just a smaller version of something big."': Все
+              маленькое — это лишь уменьшенная версия чего-то большого.
+            '"Suckin’ at something is the first step to being sorta good at something."': Не
+              ошибается тот, кто ничего не делает.
+            '"Life happens wherever you are, whether you make it or not."': Жизнь
+              течет там, где вы находитесь, независимо от вас.
+            '"You can’t knock me down!"': Не сверну с пути!
+            '"Roar!"': Рев!
+            '"My first girlfriend turned into the moon."': Моя первая девушка превратилась
+              в луну.
+            '"True humility is the only antidote to shame."': Истинное смирение —
+              единственное средство, позволяющее избежать позора.
+            '"You are stronger and wiser and freer than you have ever been."': Вы
+              сильнее, мудрее и свободнее, чем когда-либо.
+            '"You have to try every time. You can''t quit because you''re afraid you might fail."': Нельзя
+              прекращать предпринимать попытки чего-то добиться. Нельзя бросать работу
+              из-за боязни, что у вас ничего не получится.
+      aalab_startIntervention:
+        text: монстры начинают {BEHAVIOR}
+        options:
+          BEHAVIOR:
+            wandering: ходить в случайном порядке
+            '"congregating"': собираться вместе
+            '"quarantining"': уходить на карантин при заболевании
+            '"avoiding"': социальное дистанцирование
+            '"none"': оставаться неподвижным
       binary_drawBin:
         text: рисовать двоичный {BIN}
       binary_drawBinScreen:

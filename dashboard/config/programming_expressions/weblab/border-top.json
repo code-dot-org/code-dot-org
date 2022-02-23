@@ -1,0 +1,7 @@
+{
+  "key": "border-top",
+  "name": "border-top",
+  "category": "CSS Properties",
+  "category_key": "css_properties",
+  "syntax": "border-top: border-width border-style border-color;"
+}

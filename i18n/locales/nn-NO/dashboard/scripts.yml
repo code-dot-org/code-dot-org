@@ -190,7 +190,7 @@ nn:
           description_short: La oss bruke kode for å bli med Anna og Elsa som utforskar den magiske og vakre isen.
           lessons:
             Artist:
-              name: Kunstnar
+              name: Koding med Anna og Elsa
           student_description: La oss bruke kode og bli med Anna og Elsa når dei utforskar magien og skjønnheita med is. Du vil lage snøfnugg og mønster med kunstløp skøyter og skaper eit magisk vinterlandskap som du kan dele med venane dine!
         course4:
           title: Kurs 4
@@ -331,7 +331,7 @@ nn:
           description_short: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
           lessons:
             Infinity:
-              name: Uendeleg
+              name: Disney Infinity Spel-Lab
           student_description: Bruk Spill-Lab for å lage ei historie eller spel med Disney Infinity figurar.
         algebrademo:
           lessons:
@@ -1017,9 +1017,6 @@ nn:
         starwarsblocks:
           description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
           description_short: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
-          lessons:
-            Hour of Code 2015:
-              name: Kodetimen 2015
           student_description: Lær å programmere droner og skap ditt eige Star Wars-spel i ein galakse langt, langt borte.
         mc:
           title: Kodetimen med Minecraft
@@ -1538,9 +1535,6 @@ nn:
           title: Lag eit basketballspel
           description_short: Lag eit basketballspel
           description: Lag eit basketballspel
-          lessons:
-            Bounce:
-              name: Sprett
           student_description: Lag eit basketballspel
         hoc-encryption:
           lessons:
@@ -1692,9 +1686,6 @@ nn:
           title: Kode din eigen sport
           description_short: Kode din eigen sport
           description: Kode din eigen sport
-          lessons:
-            Sports:
-              name: Sport
           student_description: Kode din eigen sport
         2016_sciencePD-phase2b:
           lessons:
@@ -2265,7 +2256,7 @@ nn:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Helten si reise i Kodetimen'
             Minecraft Hour of Code:
-              name: Kodetimen med Minecraft
+              name: 'Minecraft: Helten si reise'
           student_description: Minecraft er tilbake i Kodetimen med ein heilt ny aktivitet! Reis gjennom Minecraft med kode.
         csp-explore-2017:
           lesson_groups:
@@ -2851,9 +2842,6 @@ nn:
               name: Kunstnar
         aquatic:
           description_short: Minecraft er tilbake med ein heilt ny aktivitet til Kodetimen!
-          lessons:
-            Aquatic:
-              name: Vatn
         dance--draft:
           lessons:
             Dance Party:
@@ -4338,16 +4326,36 @@ nn:
               display_name: Traversaler
             csp_project:
               display_name: Prosjekt
+            lessonGroup-5:
+              display_name: Undersøking etter kurs
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmer
+            lessonGroup-2:
+              display_name: Undersøking etter kurs
         csp7-2021:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Parameter og returverdiar
             csp_libraries:
               display_name: Bibliotek
+            lessonGroup-3:
+              display_name: Undersøking
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Undersøking
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(gammel) Eining 9: Data"
+            lessonGroup-2:
+              display_name: Undersøking
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Undersøking
         coursea-2021:
           description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
           lessons:
@@ -4581,6 +4589,18 @@ nn:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa8-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -4643,10 +4663,6 @@ nn:
           lessons:
             lesson-9:
               name: Lærarforum
-        self-paced-pl-csd6-2021:
-          lessons:
-            lesson-3:
-              name: 'Eining 2: Nettutvikling'
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -4737,5 +4753,339 @@ nn:
               display_name: Innhald
             lesson_group:
               display_name: Innhald
+            lessonGroup-2:
+              display_name: Innhald
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Moduler
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stavekonkurranse
+          title: Stavekonkurranse
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Undersøking etter kurs
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Stavekonkurranse
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Leksjon
+        csa6-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Morro med for-løkker
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Kodetimen
+        csa7-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Variablar
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funksjonar
+        csa8-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Glade Kart
+            'Programming: Happy Maps':
+              name: Glade Kart
+            Events in Play Lab:
+              key: Hendingar i Spel-lab
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendingar
+          description_short: Ein introduksjon til informatikk for dei som ikkje kan lese.
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Dansefest
+            lesson-1:
+              name: Dansefest
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_sprites:
+              display_name: Sprites
+            lessonGroup-9:
+              display_name: Hendingar
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+            csf_functions:
+              display_name: Funksjonar
+            csf_variables:
+              display_name: Variablar
+            csf_for_loops:
+              display_name: For-løkker
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Binære tal
+              key: Binære tal
+          lesson_groups:
+            cspSurvey:
+              display_name: Undersøking
+            csp_unit1_2020:
+              display_name: "(gammel) Eining 1: Digital informasjon"
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(gammel) Eining 2: Internett"
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Feilsøking
+              key: Feilsøking
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Variablar
+            csp_conditionals:
+              display_name: Betingelser
+            csp_functions:
+              display_name: Funksjonar
+            csp_project:
+              display_name: Prosjekt
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Lister
+            csp_loops:
+              display_name: Løkker
+            csp_traversals:
+              display_name: Traversaler
+            csp_project:
+              display_name: Prosjekt
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Flytt den, flytt den
+              key: Flytt den, flytt den
+            Getting Loopy:
+              name: Me blir sløyfete
+            The Right App:
+              name: Den rette appen
+              key: Den rette appen
+            'Loops: Getting Loopy':
+              name: Me blir sløyfete
+            Events in Play Lab:
+              key: Hendingar i Spel-lab
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendingar
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Den store hendinga
+            Binary Bracelets:
+              name: Binær armbånd
+              key: Binær armbånd
+            'Events: The Big Event':
+              name: Den store hendinga
+            Events in Play Lab:
+              key: Hendingar i Spel-lab
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendingar
+        csp7-2022:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Parameter og returverdiar
+            csp_libraries:
+              display_name: Bibliotek
+        csp9-2022:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(gammel) Eining 9: Data"
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Programmering på millimeterpapir
+            Relay Programming:
+              name: Programmeringsstafett
+              key: Programmeringsstafett
+            Dance Party:
+              name: Dansefest
+              key: Dansefest
+            Conditionals with Cards:
+              name: Vilkår med kort
+              key: Vilkår med kort
+            'Algorithms: Graph Paper Programming':
+              name: Programmering på millimeterpapir
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitalt statsborgerskap
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_events:
+              display_name: Hendingar
+            csf_loops:
+              display_name: Løkker
+            csf_conditionals:
+              display_name: Betingelser
+          title: Kurs D (2021)
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: Privat og personleg informasjon
+              key: Privat og personleg informasjon
+            Digital Sharing:
+              name: Digital deling
+              key: Digital deling
+            Songwriting:
+              name: Låtskriving
+            Simon Says:
+              key: Simon seier
+            'Functions: Songwriting':
+              name: Låtskriving
+            Conditionals:
+              key: Betingelser
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
+            csf_digcit:
+              display_name: Digitalt statsborgerskap
+            ramp_up:
+              display_name: Løkker i løkke
+            csf_functions:
+              display_name: Funksjonar
+            csf_nested_loops:
+              display_name: Betingelser
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Morro med for-løkker
+              key: Morro med for-løkker
+            The Internet:
+              name: Internett
+            Internet:
+              key: Internett
+              name: Internett
+          lesson_groups:
+            ramp_up:
+              display_name: Sprites
+            lessonGroup-7:
+              display_name: Digitalt statsborgerskap
+            lessonGroup-8:
+              display_name: Variablar
+          description_short: Lær alle konspta i grunnleggande informatikk og skap din eigen kunst, historie eller spel.
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Løkker
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        pre-express-2022:
+          lessons:
+            On the Move with Events:
+              key: Hendingar i Spellab
+              name: Hendingar i Spellab
+            A Royal Battle with Events:
+              key: Hendingar i Spellab
+              name: Hendingar i Spellab
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sekvensiering
+            csf_loops:
+              display_name: Løkker
+            csf_events:
+              display_name: Hendingar
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Betingelser
+            lesson-14:
+              name: Betingelser i Minecraft
+            lesson-16:
+              name: Feilsøking
+            lesson-19:
+              name: Feilsøking
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Løkker
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa8-pilot-extra:
+          lesson_groups:
             lessonGroup-2:
               display_name: Innhald

@@ -313,6 +313,7 @@ bg:
       algebra_game: 'Алгебра'
       applab: 'Лаборатория за приложения'
       artist: 'Художник'
+      basketball: 'Баскетбол'
       bounce: 'Bounce'
       calc: 'Calc'
       eval: 'Оценяване'
@@ -327,10 +328,12 @@ bg:
       minecraft_designer: 'Minecraft'
       minecraft_hero: 'Minecraft герой'
       playlab: 'Театрална лаборатория'
+      poetry: 'Поезия'
       sports: 'Спорт'
       starwars: 'Междузвездни войни'
       starwarsblocks: 'Междузвездни войни (блокове)'
       starwarsblocks_hour: 'Междузвездни войни (блокове)'
+      loading: 'Зареждане...'
       weblab: 'Web Lab'
     popup:
       progress_for_user: "на %{name} в прогрес"
@@ -345,6 +348,7 @@ bg:
       prizes_link: 'повече информация'
   teacher:
     answer: Oтговор
+    dashboard: 'Учителско табло'
     for_teachers_only: За учители само
     title:
       one: 'Вашият учител:'
@@ -396,6 +400,7 @@ bg:
     update_email: "Актуализиране"
     remove_parent_email_label: "Премахване"
     none: "Без"
+    encrypted: "Шифровано"
   user_level:
     completed: 'Завършено'
     tried: 'Опитах'
@@ -827,8 +832,11 @@ bg:
   pd:
     form_labels:
       email: 'Имейл'
+      school: 'Училище'
       school_name: 'Име на училището'
+      school_city: 'Града на Училището '
       school_country: 'Училищен район'
+      colombian_school_city: 'Града на Училището '
       colombian_chilean_school_name: 'Име на училището'
     form_entries:
       gender:

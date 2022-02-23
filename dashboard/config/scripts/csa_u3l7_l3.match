@@ -1,6 +1,7 @@
 name 'CSA U3L7-L3'
 title 'Check for Understanding'
 description 'Match the term to the correct definition.'
+height 'auto'
 question 'public'
 answer 'accessible outside of the class'
 

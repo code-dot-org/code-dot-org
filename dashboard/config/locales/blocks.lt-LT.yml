@@ -252,6 +252,11 @@ lt:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": trakšt
+            "'sound://category_animals/cat.mp3'": katė
+            "'sound://category_animals/cow.mp3'": karvė
+            "'sound://category_animals/sheep.mp3'": avis
+            "'sound://category_animals/chicken.mp3'": viščiukas
+            "'sound://category_animals/dog.mp3'": šuo
             "'sound://category_digital/jump_7.mp3'": šok
       gamelab_randColor:
         text: Atsitiktinė spalva
@@ -426,6 +431,31 @@ lt:
             '"down"': rodyklė į apačią
             '"left"': rodyklė į kairę
             '"right"': rodyklė į dešinę
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"hearts"': širdelės
+            '"rainbow"': vaivorykštė
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': naktis
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': šok
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"clouds"': debesuota
+            '"hearts"': širdelės
+          PALETTE:
+            '"rainbow"': vaivorykštė
+            '"winter"': žiema
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"hearts"': širdelės
       RyanLab_moveForward:
         text: judėk į priekį
       RyanLab_turnLeft:

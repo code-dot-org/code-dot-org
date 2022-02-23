@@ -343,6 +343,15 @@ Resources:
               - ssmmessages:OpenDataChannel
               - ssm:UpdateInstanceInformation
             Resource: '*'
+  # Manually creating Service Linked Roles rather than granting CloudFormationService role permission
+  LambdaReplicatorRole:
+    Type: AWS::IAM::ServiceLinkedRole
+    Properties: 
+      AWSServiceName: replicator.lambda.amazonaws.com
+  CloudfrontLoggerRole:
+    Type: AWS::IAM::ServiceLinkedRole
+    Properties: 
+      AWSServiceName: logger.cloudfront.amazonaws.com
 Outputs:
   DevPermissions:
     Description: Developer Permissions

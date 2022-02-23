@@ -1,5 +1,7 @@
 {
-  "func": "li",
+  "key": "li",
+  "name": "li",
   "category": "HTML Tags",
+  "category_key": "html_tags",
   "syntax": "<li></li>"
 }

@@ -273,6 +273,10 @@ lv:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": kraukš
+            "'sound://category_animals/bear.mp3'": Lācis
+            "'sound://category_animals/cat.mp3'": kaķis
+            "'sound://category_animals/cow.mp3'": govs
+            "'sound://category_animals/dog.mp3'": suns
             "'sound://category_digital/jump_7.mp3'": lēkt
       gamelab_pointInDirection:
         options:
@@ -419,10 +423,26 @@ lv:
             '"down"': bultiņa uz leju
             '"left"': bultiņa pa kreisi
             '"right"': bultiņa pa labi
-      PoemBot_setBackgroundEffect:
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"rainbow"': varavīksne
+      Poetry_playMusic:
+        options:
+          SOUND:
+            '"sound://category_nature/summer_night_loop.mp3"': nakts
+      Poetry_playSound:
+        options:
+          SOUND:
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': lēkt
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
+            '"clouds"': mākoņains
             '"colors"': Krāsas
+          PALETTE:
+            '"rainbow"': varavīksne
+            '"winter"': ziema
       RyanLab_moveForward:
         text: pārvietot uz priekšu
       RyanLab_turnLeft:

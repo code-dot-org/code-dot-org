@@ -1,6 +1,34 @@
 import reducer, * as animationPicker from '@cdo/apps/p5lab/redux/animationPicker';
 import {expect} from '../../../util/reconfiguredChai';
 var Goal = animationPicker.Goal;
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux
+} from '@cdo/apps/redux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import animationListReducer from '@cdo/apps/p5lab/redux/animationList';
+
+const testAnimation = {
+  name: 'test_animation',
+  sourceUrl: 'path/to/animation',
+  frameSize: {
+    x: 0,
+    y: 0
+  },
+  frameCount: 1,
+  looping: false,
+  frameDelay: 0,
+  version: '',
+  loadedFromSource: false,
+  sourceSize: {x: 0, y: 0},
+  saved: true,
+  blob: null,
+  dataURI: '',
+  hasNewVersionThisSession: false,
+  categories: []
+};
 
 describe('animationPicker', function() {
   describe('reducer', function() {
@@ -11,7 +39,8 @@ describe('animationPicker', function() {
       uploadFilename: null,
       uploadError: null,
       isSpriteLab: false,
-      isBackground: false
+      isBackground: false,
+      selectedAnimations: {}
     };
 
     it('has expected default state', function() {
@@ -126,6 +155,95 @@ describe('animationPicker', function() {
         expect(newState).not.to.equal(initialState);
         expect(newState.uploadError).to.equal(status);
       });
+    });
+
+    describe('action: selectAnimation', function() {
+      const addSelectedAnimation = animationPicker.addSelectedAnimation;
+
+      it('adds object to selectedAnimations state', function() {
+        const state = {selectedAnimations: {}};
+        const newState = reducer(state, addSelectedAnimation(testAnimation));
+        expect(newState).not.to.equal(state);
+        expect(
+          newState.selectedAnimations[testAnimation.sourceUrl]
+        ).to.deep.equal(testAnimation);
+      });
+    });
+
+    describe('action: removeAnimation', function() {
+      const removeSelectedAnimation = animationPicker.removeSelectedAnimation;
+
+      it('removes object from selectedAnimations state', function() {
+        let testAnimationState = {};
+        testAnimationState[testAnimation.sourceUrl] = testAnimation;
+        const state = {selectedAnimations: testAnimationState};
+        const newState = reducer(state, removeSelectedAnimation(testAnimation));
+        expect(newState).not.to.equal(state);
+        expect(Object.keys(newState.selectedAnimations).length).to.equal(0);
+      });
+    });
+  });
+
+  describe('pickLibraryAnimation', function() {
+    let pickLibraryAnimation = animationPicker.pickLibraryAnimation;
+    let show = animationPicker.show;
+
+    beforeEach(() => {
+      stubRedux();
+      registerReducers({
+        ...commonReducers,
+        animationPicker: reducer,
+        animationList: animationListReducer
+      });
+      getStore().dispatch(show(Goal.NEW_ANIMATION, true));
+    });
+
+    afterEach(() => {
+      restoreRedux();
+    });
+
+    it('adds to the selectedAnimations object', function() {
+      getStore().dispatch(pickLibraryAnimation(testAnimation));
+
+      let newState = getStore().getState().animationPicker;
+      expect(Object.keys(newState.selectedAnimations).length).to.equal(1);
+    });
+
+    it('removes from the selectedAnimations object', function() {
+      getStore().dispatch(pickLibraryAnimation(testAnimation));
+      let newState = getStore().getState().animationPicker;
+      expect(Object.keys(newState.selectedAnimations).length).to.equal(1);
+
+      getStore().dispatch(pickLibraryAnimation(testAnimation));
+      newState = getStore().getState().animationPicker;
+      expect(Object.keys(newState.selectedAnimations).length).to.equal(0);
+    });
+  });
+
+  describe('saveSelectedAnimations', function() {
+    let pickLibraryAnimation = animationPicker.pickLibraryAnimation;
+    let show = animationPicker.show;
+    let saveSelectedAnimations = animationPicker.saveSelectedAnimations;
+
+    before(() => {
+      stubRedux();
+      registerReducers(commonReducers);
+      registerReducers({animationPicker: reducer});
+      registerReducers({animationList: animationListReducer});
+      getStore().dispatch(show(Goal.NEW_ANIMATION, true));
+    });
+
+    after(() => {
+      restoreRedux();
+    });
+
+    it('hides the animation picker dialog and removes selected animations', function() {
+      getStore().dispatch(pickLibraryAnimation(testAnimation, true));
+      getStore().dispatch(saveSelectedAnimations());
+
+      let newState = getStore().getState().animationPicker;
+      expect(newState.visible).to.be.false;
+      expect(Object.keys(newState.selectedAnimations).length).to.equal(0);
     });
   });
 });
