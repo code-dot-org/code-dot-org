@@ -11,8 +11,10 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   And I press "runButton"
   Then I wait to see ".modal"
   And element ".modal .congrats" contains text "You completed Puzzle 1."
-  And I press "continue-button"
-  And I wait until I am on "http://studio.code.org/hoc/2"
+  And I close the dialog
+  ## Verify that closing doesn't redirect to the next level
+  And I wait until I am on "http://studio.code.org/hoc/1"
+  Then I am on "http://studio.code.org/hoc/2"
   And I wait for the page to fully load
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress

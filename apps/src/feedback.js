@@ -231,13 +231,9 @@ FeedbackUtils.prototype.displayFeedback = function(
   }
 
   // onHidden is called when the dialog is closed: only do something extra
-  // if there are hints for missing blocks. hideButDontContinue may change
-  // according to later events
+  // if there are hints for missing blocks.
   let onHidden = function() {
-    if (
-      !continueButton ||
-      (feedbackDialog && feedbackDialog.hideButDontContinue)
-    ) {
+    if (!continueButton) {
       this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
     }
   }.bind(this);
@@ -326,9 +322,7 @@ FeedbackUtils.prototype.displayFeedback = function(
         options,
         idealBlocks === Infinity ? null : isPerfect
       );
-      feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
-      feedbackDialog.hideButDontContinue = false;
     });
   }
 
@@ -458,9 +452,7 @@ FeedbackUtils.prototype.displayFeedback = function(
   if (publishButton) {
     dom.addClickTouchEvent(publishButton, () => {
       // Hide the current dialog since we're about to show the publish dialog
-      feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
-      feedbackDialog.hideButDontContinue = false;
 
       const store = getStore();
 
