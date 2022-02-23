@@ -23,12 +23,12 @@ class CourseOfferingTest < ActiveSupport::TestCase
     @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher2', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, family_name: 'family-3', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_facilitator_to_teacher)
 
-    @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
-    @pilot_unit = create :script, pilot_experiment: 'my-experiment', family_name: 'family-4', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
+    @pilot_teacher = create :teacher, pilot_experiment: 'a-pilot-course'
+    @pilot_unit = create :script, pilot_experiment: 'a-pilot-course', family_name: 'family-4', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(@pilot_unit)
 
-    @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
-    @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', family_name: 'family-5', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    @pilot_instructor = create :facilitator, pilot_experiment: 'a-pl-pilot-course'
+    @pilot_pl_unit = create :script, pilot_experiment: 'a-pl-pilot-course', family_name: 'family-5', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
     CourseOffering.add_course_offering(@pilot_pl_unit)
   end
 
