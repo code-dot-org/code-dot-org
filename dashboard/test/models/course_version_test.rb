@@ -33,7 +33,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert unit_group.course_version.recommended?
   end
 
-  test "recommended? is true if its the latest stable version in the family - unit" do
+  test "recommended? is true if its the latest stable version of unit in the family" do
     script = create :script, family_name: 'ss', version_year: '2050', is_course: true, supported_locales: ['fake-locale'], published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(script)
     script2 = create :script, family_name: 'ss', version_year: '2051', is_course: true, supported_locales: [], published_state: SharedCourseConstants::PUBLISHED_STATE.stable
@@ -42,20 +42,12 @@ class CourseVersionTest < ActiveSupport::TestCase
     refute script.course_version.recommended?('en-us')
     assert script2.course_version.recommended?('en-us')
     assert_equal script2.course_version.content_root, Script.latest_stable_version('ss')
-  end
-
-  test "recommended? is true if its the latest stable version in the family - unit with supported locales" do
-    script = create :script, family_name: 'ss', version_year: '2050', is_course: true, supported_locales: ['fake-locale'], published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    CourseOffering.add_course_offering(script)
-    script2 = create :script, family_name: 'ss', version_year: '2051', is_course: true, supported_locales: [], published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    CourseOffering.add_course_offering(script2)
-
     assert script.course_version.recommended?('fake-locale')
     refute script2.course_version.recommended?('fake-locale')
     assert_equal script.course_version.content_root, Script.latest_stable_version('ss', locale: 'fake-locale')
   end
 
-  test "recommended? is true if its the latest stable version in the family - unit group" do
+  test "recommended? is true if its the latest stable version of unit group in the family" do
     unit_group = create :unit_group, family_name: 'ug', version_year: '2050', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     CourseOffering.add_course_offering(unit_group)
     unit_group2 = create :unit_group, family_name: 'ug', version_year: '2051', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
