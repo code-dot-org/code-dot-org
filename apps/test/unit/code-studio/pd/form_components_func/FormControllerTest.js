@@ -175,18 +175,6 @@ describe('FormController', () => {
       expect(form.exists('Alert')).to.be.false;
     });
 
-    it('Does not show data was loaded message if partial saving is disabled', () => {
-      form = isolateComponent(
-        <FormController
-          {...defaultProps}
-          applicationId={applicationId}
-          allowPartialSaving={false}
-          validateOnSubmitOnly={true}
-        />
-      );
-      expect(form.exists('Alert')).to.be.false;
-    });
-
     it('Does not show data was loaded message if there is no application id', () => {
       form = isolateComponent(
         <FormController

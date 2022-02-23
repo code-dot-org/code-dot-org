@@ -100,7 +100,7 @@ const FormController = props => {
     applicationId
   );
   const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
-    applicationId && allowPartialSaving
+    applicationId
   );
   const applicationStatusOnSave = 'incomplete';
   const applicationStatusOnSubmit = 'unreviewed';
