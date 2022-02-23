@@ -70,6 +70,7 @@ const FormController = props => {
     onSetPage = () => {},
     onSuccessfulSubmit = () => {},
     onSuccessfulSave = () => {},
+    savedStatus = undefined,
     serializeAdditionalData = () => ({}),
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
@@ -514,8 +515,9 @@ const FormController = props => {
         bsStyle="info"
       >
         <p>
-          We found an application you started! Your saved responses have been
-          loaded.
+          {savedStatus === 'reopened'
+            ? 'Your Regional Partner has requested more information.  Please update and resubmit.'
+            : 'We found an application you started! Your saved responses have been loaded.'}
         </p>
       </Alert>
     );
@@ -638,6 +640,7 @@ FormController.propTypes = {
   onSetPage: PropTypes.func,
   onSuccessfulSubmit: PropTypes.func,
   onSuccessfulSave: PropTypes.func,
+  savedStatus: PropTypes.string,
   serializeAdditionalData: PropTypes.func,
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,
