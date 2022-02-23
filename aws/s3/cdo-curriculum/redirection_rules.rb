@@ -56,7 +56,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_ORG_HOST_NAME,
-      replace_key_prefix_with: "educate/curriculum/elementary-school"
+      replace_key_prefix_with: "educate/curriculum/csf"
     }
   },
   {
@@ -65,7 +65,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_ORG_HOST_NAME,
-      replace_key_prefix_with: "educate/curriculum/elementary-school",
+      replace_key_prefix_with: "educate/curriculum/csf",
       http_redirect_code: "302"
     }
   },
