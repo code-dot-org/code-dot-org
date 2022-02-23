@@ -601,7 +601,7 @@ const FormController = props => {
         {currentPage > 0 && backButton}
         {pageButtons}
         {shouldShowSubmit() ? submitButton : nextButton}
-        {allowPartialSaving && saveButton}
+        {allowPartialSaving && savedStatus !== 'reopened' && saveButton}
       </FormGroup>
     );
   };
