@@ -96,6 +96,10 @@ function showHomepage() {
               allowTeacherAppReopening &&
               homepageData.showFinishTeacherApplication
             }
+            showReturnToReopenedTeacherApplication={
+              allowTeacherAppReopening &&
+              homepageData.showReturnToReopenedTeacherApplication
+            }
             donorBannerName={homepageData.donorBannerName}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}

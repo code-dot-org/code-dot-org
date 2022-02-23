@@ -27,7 +27,7 @@ style_min: true
   - if request.language == "en"
     = view :curriculum_banner
     = view :homepage_below_hero_announcement
-    = view :homepage_below_hero_plane_banner
+    = view :professional_learning_marketing_banner, audience_text: 'you', link_address: '/educate/professional-learning/middle-high', button_label: 'Learn more', should_animate: true
     = view :stats_homepage
   - else
     = view :homepage_below_hero_announcement

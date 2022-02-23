@@ -1,6 +1,9 @@
 {
   "name": "applab",
+  "description": "App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.",
   "editor_type": "droplet",
+  "title": "App Lab",
+  "image_url": "https://studio.code.org/shared/images/courses/logo_applab_square.png",
   "categories": [
     {
       "key": "ui_controls",
