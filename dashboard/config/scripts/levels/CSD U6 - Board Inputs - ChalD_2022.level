@@ -54,7 +54,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# Board Inputs Challenge",
+    "long_instructions": "# Controller App\r\n\r\nCreate an app that uses the buttons or toggle switches as if the Circuit Playground were a controller for a game where you needed to make a decision. For example, using the left and right button to select which character you will play as or using the toggle switch to change your viewpoint in the game.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "parent_level_id": 20595,
     "name_suffix": "_2021",
     "mini_rubric": "false",
@@ -70,12 +70,13 @@
       "/docs/concepts/maker-toolkit/board-events/"
     ],
     "palette_category_at_start": "Circuit",
+    "display_name": "Controller App",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L4/challenge/D.png",
     "preload_asset_list": null,
     "encrypted_examples": [
 
     ],
-    "display_name": "Challenge D",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L4/challenge/D.png"
+    "bubble_choice_description": "Create an app prototype where your circuit playground could be used as a game controller"
   },
   "game_id": 41,
   "published": true,
@@ -83,7 +84,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T03:15:29.817+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalC_2022\"},{\"changed_at\":\"2021-12-16 03:15:33 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:03:23 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T03:15:29.817+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalC_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalC_2022\"},{\"changed_at\":\"2021-12-16 03:15:33 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:03:23 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-22 23:05:56 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
