@@ -347,6 +347,7 @@ const FormController = props => {
     const handleSuccessfulSave = data => {
       scrollToTop();
       setShowSavedMessage(true);
+      setShowDataWasLoadedMessage(false);
       setUpdatedApplicationId(data.id);
       setSaving(false);
       onSuccessfulSave(data);
