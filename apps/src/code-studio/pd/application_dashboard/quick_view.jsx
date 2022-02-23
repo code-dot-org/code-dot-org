@@ -22,6 +22,7 @@ import Spinner from '../components/spinner';
 import $ from 'jquery';
 import {getApplicationStatuses} from './constants';
 import {Button, FormGroup, ControlLabel, Row, Col} from 'react-bootstrap';
+import {removeIncompleteAppsFromQuickView} from '@cdo/apps/code-studio/pd/application_dashboard/applicationDashboardHelper';
 
 export class QuickView extends React.Component {
   static propTypes = {
@@ -89,7 +90,9 @@ export class QuickView extends React.Component {
     }).done(data => {
       this.setState({
         loading: false,
-        applications: data
+        applications: this.props.isWorkshopAdmin
+          ? data
+          : removeIncompleteAppsFromQuickView(data)
       });
       this.loadRequest = null;
     });
