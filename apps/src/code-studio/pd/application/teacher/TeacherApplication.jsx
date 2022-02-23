@@ -18,6 +18,17 @@ const pageComponents = [
   AdditionalDemographicInformation
 ];
 
+const sendFirehoseEvent = (userId, event) => {
+  firehoseClient.putRecord(
+    {
+      user_id: userId,
+      study: 'application-funnel',
+      event: event
+    },
+    {includeUserId: false}
+  );
+};
+
 const TeacherApplication = props => {
   const {
     // [MEG] TODO: remove allowPartialSaving prop when experiment is complete (TeacherApps will always have this option)
@@ -47,15 +58,7 @@ const TeacherApplication = props => {
   };
 
   const onInitialize = () => {
-    // Log the user ID to firehose.
-    firehoseClient.putRecord(
-      {
-        user_id: userId,
-        study: 'application-funnel',
-        event: 'started-teacher-application'
-      },
-      {includeUserId: false}
-    );
+    sendFirehoseEvent(userId, 'started-teacher-application');
   };
 
   const getPageProps = () => ({
@@ -66,27 +69,11 @@ const TeacherApplication = props => {
     // Let the server display a confirmation page as appropriate
     window.location.reload(true);
 
-    // Log the user ID to firehose.
-    firehoseClient.putRecord(
-      {
-        user_id: userId,
-        study: 'application-funnel',
-        event: 'submitted-teacher-application'
-      },
-      {includeUserId: false}
-    );
+    sendFirehoseEvent(userId, 'submitted-teacher-application');
   };
 
   const onSuccessfulSave = () => {
-    // Log the user ID to firehose.
-    firehoseClient.putRecord(
-      {
-        user_id: userId,
-        study: 'application-funnel',
-        event: 'saved-teacher-application'
-      },
-      {includeUserId: false}
-    );
+    sendFirehoseEvent(userId, 'saved-teacher-application');
   };
 
   // [MEG] TODO: Should a different GA link be sent if they're working on a saved application?
