@@ -10,7 +10,6 @@
 silenced = [
   # Added in Rails 5.2
   /Single arity template handlers are deprecated/,
-  /Dangerous query method \(method whose arguments are used as raw SQL\) called with non-attribute argument\(s\)/,
   /SourceAnnotationExtractor is deprecated! Use Rails::SourceAnnotationExtractor instead/,
 
   # Added in Rails 6.0
