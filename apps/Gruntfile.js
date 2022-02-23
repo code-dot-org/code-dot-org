@@ -650,6 +650,10 @@ describe('entry tests', () => {
       './src/sites/studio/pages/programming_expressions/new.js',
     'programming_expressions/edit':
       './src/sites/studio/pages/programming_expressions/edit.js',
+    'programming_expressions/show':
+      './src/sites/studio/pages/programming_expressions/show.js',
+    'reference_guides/show':
+      './src/sites/studio/pages/reference_guides/show.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
