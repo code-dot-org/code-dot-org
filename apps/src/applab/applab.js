@@ -737,7 +737,10 @@ Applab.init = function(config) {
     }
 
     console.log('in init, in config.level.makerLabEnabled');
-    window.addEventListener('beforeunload', makerToolkit.disconnect());
+    window.addEventListener('beforeunload', function() {
+      console.log(' in event listener');
+      makerToolkit.disconnect();
+    });
   } else {
     // Combine all maker blocks for both CP and MB since all maker blocks, regardless
     // of board type, should be disabled in this branch
@@ -919,7 +922,6 @@ function setupReduxSubscribers(store) {
       Applab.onIsRunningChange();
     }
   });
-
   // Initialize redux's list of tables from firebase, and keep it up to date as
   // new tables are added and removed.
   let subscribeToTable = function(tableRef, tableType) {
