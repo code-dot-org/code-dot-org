@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2022-02-16 16:42:25 UTC",
+    "serialized_at": "2022-02-23 19:43:40 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -898,12 +898,42 @@
       }
     },
     {
-      "key": "6e345c96-b614-472a-b02f-e347c3183fdb",
+      "key": "c9e5fa80-ef6c-41c9-8798-e8bdebf471fa",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9e5fa80-ef6c-41c9-8798-e8bdebf471fa",
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "6e345c96-b614-472a-b02f-e347c3183fdb",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb",
+        "lesson.key": "[New] Mini-Project: Collector Game",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022"
+      }
+    },
+    {
+      "key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a",
         "lesson.key": "[New] Mini-Project: Collector Game",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "coursef-2022"
@@ -1199,6 +1229,7 @@
       "key": "1b44f407-6993-417b-8930-6e3aeba28143",
       "position": 5,
       "properties": {
+        "duration": 45,
         "name": "Day 5 & 6 - Present Your Project"
       },
       "seeding_key": {
@@ -2667,7 +2698,7 @@
       "key": "c5e4d792-61de-487c-8180-4d0973363903",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What makes an activity a game?_\n\n**Discussion goal**: Students should understand that games usually involve players, score(s), a win or lose condition, and different outcomes. Each time a user plays through a game they might have a different outcome or score.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Discuss**: _Which of the following types of information change over time?_ \n* _Your first name_\n* _Your birthday_\n* _Your height_\n* _Your age_\n* _The temperature outside_\n* _The answer to 2+2_\n* _The capital of our country_\n* _Today’s date_\n* _The score in a game_\n\n**Do This**: Have students discuss which information would change over time and which would not. Some items might generate a larger discussion. For example, it is possible to change your first name or use a nickname. Also, over time, your height will stop changing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _When is it useful to change what is stored in a variable?_\n\n**Discussion goal**: Students should understand that they can create a variable that stores information that either stays the same or changes over time. In a game with points, a variable is responsible for keeping track of a user’s score throughout the game. Typically, this variable starts out being set to 0 and increases by 1 for every point that the user scores. The final score is reported at the end by printing out the variable. \n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2676,8 +2707,47 @@
       }
     },
     {
-      "key": "c91796e2-8558-4486-8d83-76f6a881365e",
+      "key": "f506d2b8-de59-4958-add1-3df80f630f6b",
       "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The goal of this discussion activity is to get students thinking about storing and modifying information using a variable. Students may recall that in previous lessons they would store information, like a word, by entering it into a prompt. In the next activities, students will learn a new way to store information as well as how to modify that information as a program runs. They should discuss when it would be necessary to change or update a variable over time. \n\nFor the discussion, decide beforehand what strategy will work best for your classroom. Some ideas include: using a T-chart, discussing in pairs or as a class.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f506d2b8-de59-4958-add1-3df80f630f6b",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "9d1483fd-ea40-45e8-a1a4-d9dd3a0184fd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d1483fd-ea40-45e8-a1a4-d9dd3a0184fd",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "f023d139-427c-42d0-b23d-0ac9934cedcf",
+      "position": 4,
+      "properties": {
+        "description": "The value stored in a variable can change over time.\n\nWhen we start, our count variable is set to 0. After a few seconds, it increases by 1.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f023d139-427c-42d0-b23d-0ac9934cedcf",
+        "lesson_activity.key": "515517b1-f722-4cec-82e5-63f2f1deb09f"
+      }
+    },
+    {
+      "key": "c91796e2-8558-4486-8d83-76f6a881365e",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Do this**: Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts.\n\n\n",
         "name": "Review"
@@ -2689,9 +2759,9 @@
     },
     {
       "key": "aab517d0-b612-48d3-a65b-57cb99fc48c7",
-      "position": 3,
+      "position": 6,
       "properties": {
-        "description": "When a user enters information into a prompt, the computer stores it with a variable. The prompt can also trigger an event. If the code uses a variable, the computer will look for a matching label to find the stored information.\n\nHow do you think variables could be useful to someone who wants to make a game? What information would we want to keep track of using variables?\n",
+        "description": "When a user enters information into a prompt, the computer stores it with a variable. The prompt can also trigger an event. If the code uses a variable, the computer will look for a matching label to find the stored information.",
         "remarks": true
       },
       "seeding_key": {
@@ -2701,7 +2771,7 @@
     },
     {
       "key": "4a134255-6472-4d5d-a9fb-651c811b41a3",
-      "position": 4,
+      "position": 7,
       "properties": {
         "tips": [
           {
@@ -2730,7 +2800,7 @@
       "key": "c549218b-369e-483a-9b9d-54008fb2d8e0",
       "position": 2,
       "properties": {
-        "description": "####Prediction (3 minutes)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prediction” slide\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
+        "description": "####Prediction (3 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2787,9 +2857,46 @@
       }
     },
     {
-      "key": "d085ff3f-4837-49cc-b1d2-9daccbe5ef8c",
+      "key": "ae85a4b4-3a05-4058-9db5-a278b3770e9c",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What makes an activity a game?_\n \n**Discussion Goal**: Students should understand that games usually involve players, score(s), a win or lose condition, and different outcomes. Each time a user plays through a game they might have a different outcome or score.\n",
+        "name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae85a4b4-3a05-4058-9db5-a278b3770e9c",
+        "lesson_activity.key": "c9e5fa80-ef6c-41c9-8798-e8bdebf471fa"
+      }
+    },
+    {
+      "key": "07ece36d-6d0a-4434-b2ca-0ac04fece727",
+      "position": 1,
+      "properties": {
+        "description": "####Exploration (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Exploration” slide\n\n**Goal**: Today, students will be creating their own interactive collector game in Sprite Lab! They'll begin by exploring a few examples. Then, after a quick introduction on customizing sprite behavior and keeping track of the score, students will work on designing their own game.\n",
+        "name": "Mini-Project: Collector Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "07ece36d-6d0a-4434-b2ca-0ac04fece727",
+        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb"
+      }
+    },
+    {
+      "key": "75a7273c-9d6d-432d-b327-998f2cbee9d3",
+      "position": 2,
+      "properties": {
+        "description": "Now it is time to explore some projects on your own. For each project, think about:\n\n* What do all of these projects have in common?\n* How are they different from each other?\n* What do you notice about the code in each project?\n\nWhen you finish exploring, click “Finish” and move on to the next level.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "75a7273c-9d6d-432d-b327-998f2cbee9d3",
+        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb"
+      }
+    },
+    {
+      "key": "d085ff3f-4837-49cc-b1d2-9daccbe5ef8c",
+      "position": 3,
+      "properties": {
+        "description": "**Transition**: Move students to their computers.\n\n**Do This**: Before students start the mini-project, have them explore the example projects in level 1. When they are ready to start planning their own program they can press  \"Finish\" and continue on.\n",
         "progression_name": "Exploration: Sample Programs"
       },
       "seeding_key": {
@@ -2799,8 +2906,9 @@
     },
     {
       "key": "ab31f766-71c9-4683-8bea-942b7ed7b348",
-      "position": 2,
+      "position": 4,
       "properties": {
+        "description": "####Mini-Project (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-8 - Mini-Project: Collector Game” slide\n\n**Do This**: Encourage students to follow the instructions for each level. In the last level they can add whatever they like to their code. For example, they can change the background at the end of the game or add sounds.\n",
         "progression_name": "Mini-Project: Collector Game"
       },
       "seeding_key": {
@@ -2809,14 +2917,27 @@
       }
     },
     {
-      "key": "018c8526-a41e-4ef6-b2f2-3cb1bb69e436",
-      "position": 3,
+      "key": "cb0cc4cb-9c49-42e5-b71d-0366bb59a367",
+      "position": 1,
       "properties": {
-        "progression_name": "Free Play"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Showcase” slide\n\n**Do This**: To celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement.\n\n* **Pair Playtesting**: Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting.\n\n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and play/test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
+        "name": "Showcase"
       },
       "seeding_key": {
-        "activity_section.key": "018c8526-a41e-4ef6-b2f2-3cb1bb69e436",
-        "lesson_activity.key": "6e345c96-b614-472a-b02f-e347c3183fdb"
+        "activity_section.key": "cb0cc4cb-9c49-42e5-b71d-0366bb59a367",
+        "lesson_activity.key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a"
+      }
+    },
+    {
+      "key": "02e2d47e-c813-4001-85de-436d5aaf788c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you like about the games that your classmates made? What surprised you?_\n\n",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "02e2d47e-c813-4001-85de-436d5aaf788c",
+        "lesson_activity.key": "f6a9bbf4-caff-470a-80f4-d3f2db1f8e2a"
       }
     },
     {
@@ -3725,7 +3846,8 @@
       "key": "dbe1c511-97c4-46c5-9e58-c2e538d694a5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n\nToday, you'll start the final lesson of the unit, in which you will design and code your own project. \n\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n\nToday, you'll start the final lesson of the unit, in which you will design and code your own project. \n\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide",
+        "name": "Explore"
       },
       "seeding_key": {
         "activity_section.key": "dbe1c511-97c4-46c5-9e58-c2e538d694a5",
@@ -3786,8 +3908,7 @@
       "key": "34b0e505-9537-4f80-bfca-2ae09cd2a79c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Define and Prepare” slide\n\nNow that the class has their ***Final Project Guide** in hand, they should start filling out the questions under the **Define and Prepare** section.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 1, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions.",
-        "name": "Handout - Define and Prepare:"
+        "description": "####Handout - Define and Prepare:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Define and Prepare” slide\n\nNow that the class has their ***Final Project Guide** in hand, they should start filling out the questions under the **Define and Prepare** section.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 1, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
       },
       "seeding_key": {
         "activity_section.key": "34b0e505-9537-4f80-bfca-2ae09cd2a79c",
@@ -3810,7 +3931,7 @@
       "key": "3d814afc-3dee-4010-ae83-ad34ac668ae9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 4: Feedback and Edits” slide\n\n**Goal:** Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Feedback:\n\nFor feedback, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the ***Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the ***Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 4: Feedback and Edits” slide\n\n#### Introduction (5 minutes)\n\n**Do This**: Explain to students that they will try out their classmates' projects and give them feedback. Then students will review the feedback they have received and use it to revise their own projects.\n\n**Goal:** Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Feedback (25 minutes)\n\nFor feedback, have each group pair up with another group to try each other’s projects for about 10 minutes. Then have the groups discuss the questions in the ***Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the ***Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
         "name": "Feedback and Edits "
       },
       "seeding_key": {
@@ -3838,7 +3959,7 @@
       "key": "06675763-0837-4208-b019-226f3dbcb8ce",
       "position": 3,
       "properties": {
-        "description": "#### Edits:\n\nWith their new reflections in hand, students can head back to their machines to make a handful of edits.  With just 10 minutes left, they will likely have to select only the most important feedback to incorporate."
+        "description": "#### Edits (15 minutes)\n\nWith their new reflections in hand, students can head back to their machines to make a handful of edits.  With just 15 minutes left, they will likely have to select only the most important feedback to incorporate."
       },
       "seeding_key": {
         "activity_section.key": "06675763-0837-4208-b019-226f3dbcb8ce",
@@ -3850,7 +3971,6 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 5 & 6: Present and Reflect” slide\n\n**Goal:** Students will create and present their projects in an approved manner (written, oral, or using multimedia).",
-        "duration": "45",
         "name": "Presentations - Day 5"
       },
       "seeding_key": {
@@ -3878,7 +3998,7 @@
       "key": "521152d8-a1b0-4677-8c5b-1b3008d99aa8",
       "position": 3,
       "properties": {
-        "description": "#### Create:\n\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like *Google Slides*.\n\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\n\n#### Present\n\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \n\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
+        "description": "#### Create\n\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like *Google Slides*.\n\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\n\n#### Present\n\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \n\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
       },
       "seeding_key": {
         "activity_section.key": "521152d8-a1b0-4677-8c5b-1b3008d99aa8",
@@ -6354,14 +6474,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "courseF_EOC2022"
+          "CourseF_Project_SpriteLab2022"
         ],
         "progression": "Create your project"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseF_EOC2022"
+          "CourseF_Project_SpriteLab2022"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",
@@ -6369,7 +6489,7 @@
         "activity_section.key": "2c1a7a91-4783-46d4-88e9-09a2b4cf3a52"
       },
       "level_keys": [
-        "courseF_EOC2022"
+        "CourseF_Project_SpriteLab2022"
       ]
     }
   ],
@@ -7540,9 +7660,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseF_EOC2022",
+        "level.key": "CourseF_Project_SpriteLab2022",
         "script_level.level_keys": [
-          "courseF_EOC2022"
+          "CourseF_Project_SpriteLab2022"
         ],
         "lesson.key": "End of Course Project",
         "lesson_group.key": "end_of_course_project",

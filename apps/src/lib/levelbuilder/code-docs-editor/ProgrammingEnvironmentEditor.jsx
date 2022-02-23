@@ -136,7 +136,16 @@ export default function ProgrammingEnvironmentEditor({
           ))}
         </select>
       </label>
-
+      <label>
+        Project URL
+        <input
+          value={programmingEnvironment.projectUrl || ''}
+          onChange={e =>
+            updateProgrammingEnvironment('projectUrl', e.target.value)
+          }
+          style={styles.textInput}
+        />
+      </label>
       <label>
         Image
         <Button
