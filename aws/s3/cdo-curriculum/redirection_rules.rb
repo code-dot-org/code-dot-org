@@ -18,7 +18,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_STUDIO_HOST_NAME,
-      replace_key_prefix_with: "courses/csp-2021/"
+      replace_key_prefix_with: "courses/csp/"
     }
   },
   {
@@ -27,7 +27,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_STUDIO_HOST_NAME,
-      replace_key_prefix_with: "courses/csp-2021/",
+      replace_key_prefix_with: "courses/csp/",
       http_redirect_code: "302"
     }
   },
@@ -37,7 +37,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_STUDIO_HOST_NAME,
-      replace_key_prefix_with: "courses/csd-2021/"
+      replace_key_prefix_with: "courses/csd/"
     }
   },
   {
@@ -46,7 +46,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_STUDIO_HOST_NAME,
-      replace_key_prefix_with: "courses/csd-2021/",
+      replace_key_prefix_with: "courses/csd/",
       http_redirect_code: "302"
     }
   },
@@ -56,7 +56,7 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_ORG_HOST_NAME,
-      replace_key_prefix_with: "educate/curriculum/elementary-school"
+      replace_key_prefix_with: "educate/curriculum/csf"
     }
   },
   {
@@ -65,10 +65,21 @@ routing_rules = [
     },
     redirect: {
       host_name: CODE_ORG_HOST_NAME,
-      replace_key_prefix_with: "educate/curriculum/elementary-school",
+      replace_key_prefix_with: "educate/curriculum/csf",
       http_redirect_code: "302"
     }
   },
+  {
+    condition: {
+      key_prefix_equals: "hoc-current/"
+    },
+    redirect: {
+      host_name: CODE_ORG_HOST_NAME,
+      replace_key_prefix_with: "learn/",
+      http_redirect_code: "302"
+    }
+  },
+
   {
     condition: {
       key_prefix_equals: "plcsf/"
