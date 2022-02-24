@@ -7,10 +7,9 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     File.stubs(:write)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
-    unit_group = create :unit_group, name: 'fake-course-2021'
-    course_offering = create :course_offering, key: 'fake-course'
-    course_version = create :course_version, key: '2021', content_root: unit_group, course_offering: course_offering
-    @reference_guide = create :reference_guide, course_version: course_version
+    unit_group = create :unit_group, family_name: 'bogus-course', version_year: '2022', name: 'bogus-course-2022'
+    CourseOffering.add_course_offering(unit_group)
+    @reference_guide = create :reference_guide, course_version: unit_group.course_version
   end
 
   test 'data is passed to show page' do
