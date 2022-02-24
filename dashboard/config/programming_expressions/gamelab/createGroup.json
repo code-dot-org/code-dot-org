@@ -1,7 +1,0 @@
-{
-  "key": "createGroup",
-  "name": "var group = createGroup",
-  "category": "Groups",
-  "category_key": "groups",
-  "syntax": "var group = createGroup"
-}

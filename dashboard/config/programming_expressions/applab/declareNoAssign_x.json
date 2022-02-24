@@ -1,7 +1,0 @@
-{
-  "key": "declareNoAssign_x",
-  "name": "declareNoAssign_x",
-  "category": "Variables",
-  "category_key": "variables",
-  "syntax": "var x;"
-}

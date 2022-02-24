@@ -25,16 +25,6 @@ module.exports = function(app) {
         blocks: require('@cdo/apps/calc/blocks')
       };
     };
-  } else if (app === 'flappy') {
-    appCache[app] = function() {
-      return {
-        skins: require('@cdo/apps/flappy/skins'),
-        levels: {
-          levels: require('@cdo/apps/flappy/levels')
-        },
-        blocks: require('@cdo/apps/flappy/blocks')
-      };
-    };
   } else if (app === 'turtle') {
     appCache[app] = function() {
       return {
@@ -52,16 +42,6 @@ module.exports = function(app) {
           levels: require('@cdo/apps/eval/levels')
         },
         blocks: require('@cdo/apps/eval/blocks')
-      };
-    };
-  } else if (app === 'bounce') {
-    appCache[app] = function() {
-      return {
-        skins: require('@cdo/apps/bounce/skins'),
-        levels: {
-          levels: require('@cdo/apps/bounce/levels')
-        },
-        blocks: require('@cdo/apps/bounce/blocks')
       };
     };
   } else if (app === 'studio') {
