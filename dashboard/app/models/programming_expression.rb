@@ -59,7 +59,7 @@ class ProgrammingExpression < ApplicationRecord
       else
         environment_name == 'spritelab' ? expression_config['color'] : ProgrammingExpression.get_category_color(expression_config['category'])
       end
-    expression_config.symbolize_keys.except(:category_key).merge(
+    expression_config.symbolize_keys.except(:category_key, :parameters).merge(
       {
         programming_environment_id: programming_environment.id,
         programming_environment_category_id: env_category&.id,
