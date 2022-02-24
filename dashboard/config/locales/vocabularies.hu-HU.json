@@ -190,6 +190,27 @@
         },
         "define/coursee/2021": {
           "word": "Meghatározás"
+        },
+        "debugging/csd/2021": {
+          "word": "Hibakeresés"
+        },
+        "variable/csd/2021": {
+          "word": "Változó"
+        },
+        "conditionals/csd/2021": {
+          "word": "Feltételek"
+        },
+        "abstraction/csd/2021": {
+          "word": "Absztrakció"
+        },
+        "function/csd/2021": {
+          "word": "Függvény"
+        },
+        "input/csd/2021": {
+          "word": "Bemenet"
+        },
+        "copyright/csd/2021": {
+          "word": "Szerzői jog"
         }
       }
     }

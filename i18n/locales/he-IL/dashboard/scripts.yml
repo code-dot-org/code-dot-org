@@ -3904,6 +3904,7 @@ he:
         apps-for-good: {}
         2021drafting:
           lessons:
+            Sprite Lab: {}
             lesson-4: {}
             Virus Simulation for Code Bytes:
               name: קידוד של סימולציה
@@ -5026,7 +5027,11 @@ he:
               display_name: דמויות
             lessonGroup-3:
               display_name: משתנים
-        csd6-pilot-2022: {}
+        csd6-pilot-2022:
+          lessons:
+            lesson-2: {}
+            Functions with Parameters:
+              name: פונקציות
         csa8-exemplars:
           lessons:
             lesson-1: {}
@@ -5295,7 +5300,22 @@ he:
         csp-post-survey-2021:
           lessons:
             lesson-1: {}
-        csa1-2022: {}
+        csa1-2022:
+          lessons:
+            lesson-2: {}
+            lesson-3: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9:
+              name: חזרות
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
         pre-express-2022:
           lessons:
             Learn to Drag and Drop: {}
@@ -5348,3 +5368,30 @@ he:
             lesson-20: {}
         csa4-2022: {}
         csa5-2022: {}
+        tess-test-csa: {}
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: חזרות
+        pltess: {}
+        self-paced-pl-csa1-2022: {}
+        self-paced-pl-csa3-2022: {}
+        csa7-pilot-extra:
+          lessons:
+            Unit 7 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa8-pilot-extra:
+          lessons:
+            Unit 8 Pilot Survey: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa-backpack-2022:
+          lessons:
+            lesson-1: {}

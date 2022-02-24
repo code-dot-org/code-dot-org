@@ -3024,25 +3024,25 @@
           "courseB_maze_seq5_c": "¿No estás seguro de cómo llegar a la bellota? Prueba este camino."
         },
         "courseB_maze_seq6": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro/a de cómo llegar al cerdo? ¡Prueba este camino!"
         },
         "courseB_maze_seq6_2018": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq6_2019": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq6_2020": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
           "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
           "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
           "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
@@ -3053,17 +3053,17 @@
           "courseB_maze_seq7_c": "¿No puedes llegar al cerdo? ¡Prueba este camino!"
         },
         "courseB_maze_seq7_2018": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
           "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
           "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq7_2019": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
           "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
           "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
         },
         "courseB_maze_seq7_2020": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
           "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
           "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
         },
@@ -9356,39 +9356,39 @@
           "courseB_iceage_loops9_c": "Scrat deberia seguir esta ruta para llegar a la bellota."
         },
         "courseB_maze_seq1_2021": {
-          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> Scrat hará movimiento!",
-          "courseB_maze_seq1_b": "Arrastre tres de estas <xml><block type=\"maze_moveSouth\"/></xml> flechas y conectalas al bloque <xml><block type=\"when_run\"/></xml> para que Scrat llegue a la bellota."
+          "courseB_maze_seq1_a": "Conecta los bloques al bloque <xml><block type=\"when_run\"/></xml> ¡para hacer que Scrat se mueva!",
+          "courseB_maze_seq1_b": "Arrastra tres flechas como esta <xml><block type=\"maze_moveSouth\"/></xml> hacia fuera y conéctalas al bloque <xml><block type=\"when_run\"/></xml> para llevar a Scrat hasta la bellota."
         },
         "courseB_maze_seq4_2021": {
-          "courseB_maze_seq4_a": "Intente agregar una instrucción a la vez hasta que llegue a la bellota.",
-          "courseB_maze_seq4_b": "Necesitas usar el bloque <xml><block type=\"maze_moveEast\"/></xml> para solucionar este puzzle."
+          "courseB_maze_seq4_a": "Intenta añadir una instrucción cada vez hasta llegar a la bellota.",
+          "courseB_maze_seq4_b": "Deberás utilizar el bloque <xml><block type=\"maze_moveEast\"/></xml> para resolver este rompecabezas."
         },
         "courseB_maze_seq5_2021": {
-          "courseB_maze_seq5_a": "Si te quedas atascado/a, intenta dibujar la ruta en papel.",
-          "courseB_maze_seq5_b": "¡Hay 2 formas de resolver este desafío!",
-          "courseB_maze_seq5_c": "¿No estás seguro de cómo llegar a la bellota? Prueba este camino."
+          "courseB_maze_seq5_a": "Si te bloqueas, intenta dibujar el recorrido en un papel.",
+          "courseB_maze_seq5_b": "¡Hay 2 formas de resolver este rompecabezas!",
+          "courseB_maze_seq5_c": "¿No sabes cómo llegar hasta la bellota?  Prueba este recorrido."
         },
         "courseB_maze_seq6_2021": {
-          "courseB_maze_seq6_a": "Tu código final debe tener tres bloques de movimiento.",
-          "courseB_maze_seq6_b": "Si te quedas atascado/a, intenta resolver el rompecabezas en dos partes, una hacia los lados y otra hacia arriba y hacia abajo.",
-          "courseB_maze_seq5_c": "Hay dos formas de resolver este desafío.",
-          "courseB_maze_seq5_d": "¿No estás seguro de cómo llegar a la bellota? ¡Prueba este camino!"
+          "courseB_maze_seq6_a": "Tu código final debería tener tres bloques de movimiento.",
+          "courseB_maze_seq6_b": "Si te bloqueas, intenta resolver el rompecabezas en dos partes, una de lado y otra de arriba a abajo.",
+          "courseB_maze_seq5_c": "Hay dos formas de resolver este rompecabezas.",
+          "courseB_maze_seq5_d": "¿No sabes cómo llegar a la bellota? ¡Prueba este recorrido!"
         },
         "courseB_maze_seq7_2021": {
-          "courseB_maze_seq7_a": "Agregue 1 bloque para mover Scrat a la bellota.",
-          "courseB_maze_seq7_b": "Intenta ejecutar el código que se te da y ve dónde terminas.",
-          "courseB_maze_seq7_c": "No se puede llegar a la bellota? ¡Prueba este camino!"
+          "courseB_maze_seq7_a": "Añade 1 bloque para mover a Scrat hasta la bellota.",
+          "courseB_maze_seq7_b": "Prueba a ejecutar el código que se te ha facilitado y mira a ver dónde acabas.",
+          "courseB_maze_seq7_c": "¿No puedes llegar hasta la bellota?  ¡Prueba este camino!"
         },
         "courseB_maze_seq8_2021": {
-          "courseB_maze_seq8_a": "Intenta agregar un bloque a la vez hasta que resuelvas el desafío.",
-          "courseB_maze_seq8_b": "¡Hay más de una manera para resolver este puzzle!",
-          "courseB_maze_seq8_c": "¿No sabes qué camino tomar? ¡Prueba este camino!"
+          "courseB_maze_seq8_a": "Intenta añadir un bloque cada vez hasta que resuelvas el rompecabezas.",
+          "courseB_maze_seq8_b": "¡Hay más de una manera de resolver este rompecabezas!",
+          "courseB_maze_seq8_c": "¿No sabes qué dirección tomar? ¡Prueba este camino!"
         },
         "courseB_maze_seq9_2021": {
           "courseB_maze_seq9_a": "Primero intenta escribir todos los pasos en un papel.",
-          "courseB_maze_seq9_b": "Construye tu programa de un bloque a la vez y prueba a medida que lo construyes.",
-          "courseB_maze_seq9_c": "Hay dos formas de resolver este desafío.",
-          "courseB_maze_seq9_d": "¿Atascado/a? ¡Prueba este camino!"
+          "courseB_maze_seq9_b": "Construye tu programa bloque a bloque y prueba mientras lo haces.",
+          "courseB_maze_seq9_c": "Hay dos formas de resolver este rompecabezas.",
+          "courseB_maze_seq9_d": "¿Tienes problemas?  ¡Prueba este camino!"
         },
         "courseB_maze_seq_challenge1_2021": {
           "courseB_maze_seq_challenge1_a": "El camino más corto podría no funcionar esta vez.",
@@ -9650,11 +9650,11 @@
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
         "courseC_collector_prog_challenge1_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque `collect` muchas veces para recoger el tesoro extra."
+          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque \"obtener\" muchas veces para conseguir el tesoro extra."
         },
         "courseC_collector_prog_challenge2_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar más de un bloque `recolectar` en cada espacio.",
-          "courseC_collector_prog_challenge1_b": "¿Perdiste tu camino? ¡Prueba este camino para resolver el desafío!"
+          "courseC_collector_prog_challenge1_a": "Puedes utilizar más de un bloque `obtener` en cada espacio.",
+          "courseC_collector_prog_challenge1_b": "¿Te has perdido?  ¡Prueba este camino para resolver el rompecabezas!"
         },
         "courseC_flappy_events1_2021": {
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -9737,11 +9737,11 @@
         "courseC_maze_debugging2_2021": {
           "courseC_maze_debugging2_a": "Hay un montón de código valioso en el espacio de trabajo. ¡No lo elimines todo y comiences de nuevo!",
           "courseC_maze_debugging2_b": "-   ¿Funciona todo después del primer paso?\n-   ¿Funciona después del segundo?\n-   ¿Cuándo deja de funcionar?",
-          "courseC_maze_debugging2_c": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
+          "courseC_maze_debugging2_c": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
         },
         "courseC_maze_debugging3_2021": {
           "courseC_maze_debugging3_a": "Para eliminar un bloque del medio de tu programa, pon todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde tienen que estar.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
+          "courseC_maze_debugging3_b": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
         },
         "courseC_maze_debugging4_2021": {
           "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones de una en una. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
@@ -9749,7 +9749,7 @@
         },
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres todos!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde el programa deja de funcionar.",
-          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de turno haciendo clic en el menú desplegable.",
+          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de giro haciendo clic en el desplegable.",
           "courseC_maze_debugging5_b": "Intenta decir lo que Scrat debería hacer en voz alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?"
         },
         "courseC_maze_debugging6_2021": {
@@ -9795,7 +9795,7 @@
           "courseC_maze_programming5_c": "La solución tendrá dos bloques \"avanzar\", un giro, y dos bloques más \"avanzar\"."
         },
         "courseC_maze_programming6_2021": {
-          "courseC_maze_programming6_a": "¡Hay dos formas de resolver este desafío!",
+          "courseC_maze_programming6_a": "¡Hay dos maneras de resolver este rompecabezas!",
           "courseC_maze_programming6_b": "Sigue con el dedo el camino del pájaro al cerdo, ¿qué pasos has dado?",
           "courseC_maze_programming6_c": "Recuerda que debes girar primero, ya que el pájaro empieza mirando a una pared.",
           "courseC_maze_programming6_d": "¿Atascado? ¡Mira este camino!"
@@ -9809,11 +9809,11 @@
           "courseC_maze_programming8_b": "¡No tengas miedo de cometer un error! Intenta agregar bloques y ejecutar el código para ver qué sucederá, incluso si crees que aún no has resuelto el puzle."
         },
         "courseC_maze_programming_challenge1_2021": {
-          "courseC_maze_programming_challenge1_a": "Hay muchas maneras de llegar al cerdo. ¡Usa tu dedo para encontrar un camino y luego programarlo!"
+          "courseC_maze_programming_challenge1_a": "Hay muchas maneras de llegar al cerdo. ¡Usa tu dedo para encontrar un camino y luego prográmalo!"
         },
         "courseC_maze_programming_challenge2_2021": {
           "courseC_maze_programming_challenge2_a": "_\"Si me envías hacia atrás, ¡ten mucho cuidado de que gire en la dirección correcta!\"_",
-          "courseC_maze_programming_challenge2_b": "La solución más corta usa solo 5 bloques, pero usa este bloque:\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+          "courseC_maze_programming_challenge2_b": "La solución más corta utiliza sólo 5 bloques, pero utiliza este bloque:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
         },
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_a": "¿Este patrón no te parece una escalera gigante? Intenta usar lo que aprendiste de los puzles anteriores para lograr todos los giros.",

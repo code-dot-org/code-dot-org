@@ -3420,6 +3420,12 @@ bs:
           lesson_groups:
             lessonGroup-3:
               display_name: Varijable
+        csd6-pilot-2022:
+          lessons:
+            Making Music:
+              name: Pravljenje muzike
+            Functions with Parameters:
+              name: Funkcije
         coursea-2022:
           lessons:
             Learn to Drag and Drop:
@@ -3599,6 +3605,10 @@ bs:
               display_name: Digitalno Državljanstvo
             lessonGroup-8:
               display_name: Varijable
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Petlje
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -3613,3 +3623,7 @@ bs:
               name: Otklanjanje pogrešaka
             lesson-19:
               name: Otklanjanje pogrešaka
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Petlje

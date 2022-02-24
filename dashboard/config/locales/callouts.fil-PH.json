@@ -364,13 +364,16 @@
           "craft_callout_preplaced_house": "Ang code na ito ay magsisimula sa paggawa ng iyong bahay. Matatapos mo ba ito?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Pindutin ang \"Takbo\" upang masubukan ang iyong program"
+          "craft_run_button_callout": "Pindutin ang \"Takbo\" upang masubukan ang iyong program",
+          "craft_drag_block_callout": "Mag-drag ng \"move forward\" na block at i-snap ito sa ibaba ng kabilang bloke"
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Pindutin ang \"Takbo\" upang masubukan ang iyong program"
+          "craft_run_button_callout": "Pindutin ang \"Takbo\" upang masubukan ang iyong program",
+          "craft_drag_block_callout": "Mag-drag ng \"move forward\" na block at i-snap ito sa ibaba ng kabilang bloke"
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Pindutin ang \"Takbo\" upang masubukan ang iyong program"
+          "craft_run_button_callout": "Pindutin ang \"Takbo\" upang masubukan ang iyong program",
+          "craft_drag_block_callout": "Mag-drag ng \"move forward\" na block at i-snap ito sa ibaba ng kabilang bloke"
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Ulitin ang mga aksyon sa pamamagitan ng paglagay ng mga bloke dito"
@@ -988,7 +991,8 @@
           "craft_callout_preplaced_house": "Ang code na ito ay magsisimula sa paggawa ng iyong bahay. Matatapos mo ba ito?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Pindutin ang \"Takbo\" upang masubukan ang iyong program"
+          "craft_run_button_callout": "Pindutin ang \"Takbo\" upang masubukan ang iyong program",
+          "craft_drag_block_callout": "Mag-drag ng \"move forward\" na block at i-snap ito sa ibaba ng kabilang bloke"
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Ulitin ang mga aksyon sa pamamagitan ng paglagay ng mga bloke dito"
@@ -1319,6 +1323,111 @@
         },
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "Maaaring mag-hover ang Agent sa lava, ngunit hindi magagawa nina Steve at Alex!"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "Mag-click dito para maipakita ang grid."
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "Baguhin ang numero dito"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "Narito ang code"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "Narito ang code",
+          "CSD_U3_rect_c2": "Kaladkarin ang blokeng ito sa pang-code na lugar."
+        },
+        "CSD U6 colorLeds intensity_2021": {
+          "CSDU6L10_rainbow": "Idagdag ang iyong code dito"
+        },
+        "CSD U6 light show_2021": {
+          "CSDUDL03P09": "Ano ang ginagawa ng linyang ito?"
+        },
+        "CSD U6 tugowar variables 1_2021": {
+          "CSD_U6_startGame": "Bigyang kahulagan ang startGame dito"
+        },
+        "CSD U6 tugowar variables 2_2021": {
+          "CSD_U6_movePlayer": "Bigyang kahulugan ang movePlayer() dito"
+        },
+        "CSD U6 tugowar variables 3_2021": {
+          "CSD_U6_checkWin": "Suriin kung nanalo ang manlalaro"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "Baguhin ang numero dito"
+        },
+        "MC HOC 2016 Level 2-2": {
+          "craft2_run_button_callout": "Kapag handa ka na, pindutin ang \"Run\" upang subukan ang programa mo."
+        },
+        "MC HOC 2016 New Walk": {
+          "MC_HOC_2016_New_Walk_callout2": "Pindutin ang \"Run\" upang magsimulang gumalaw."
         }
       }
     }

@@ -80,7 +80,7 @@ export const UnconnectedSectionLoginInfo = SectionLoginInfo;
 export default connect(state => ({
   section:
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
-  students: state.sectionData.section.students
+  students: state.teacherSections.selectedStudents
 }))(SectionLoginInfo);
 
 class OAuthLogins extends React.Component {
@@ -322,7 +322,7 @@ class LoginCard extends React.Component {
           <SafeMarkdown
             style={styles.text}
             markdown={i18n.loginCardForPrint3Word({
-              secretWords: student.secret_words
+              secretWords: student.secretWords
             })}
           />
         )}
@@ -331,7 +331,7 @@ class LoginCard extends React.Component {
             {i18n.loginCardForPrint3Picture()}
             <br />
             <img
-              src={pegasus(`/images/${student.secret_picture_path}`)}
+              src={pegasus(`/images/${student.secretPicturePath}`)}
               style={styles.img}
             />
             <br />

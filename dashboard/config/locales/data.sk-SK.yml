@@ -567,9 +567,9 @@ sk:
         C4_bee_conditional: Podmienky s včelou
         C4_variables_artist: Umelec - Premenné
         C4_variables_playlab: Premenné - Play Lab
-        C4_for_loops: Cykly "For"
-        C4_for_loops_bee: Cykly "For"
-        C4_for_loops_no_bee: Cykly "For"
+        C4_for_loops: Cykly "Pre"
+        C4_for_loops_bee: Cykly "Pre"
+        C4_for_loops_no_bee: Cykly "Pre"
         C4_math_artist: Programovanie Umelca s matematikou
         C4_function_edit: Úprava funkcií
         C4_function_create: Tvorba funkcií
@@ -578,7 +578,7 @@ sk:
         C4_unplugged_algorithms: Algoritmy s tangrammi
         C4_unplugged_madlibs: Slovné halušky
         C4_unplugged_variables: Premenné v obálkach
-        C4_unplugged_forloops: Cykly "For"
+        C4_unplugged_forloops: Cykly "Pre"
         C4_unplugged_parameters: Písanie pesničiek s parametrami
         C4_unplugged_binary: Binárny
         CSF_a_b_artist_loops: Cykly s Umelcom

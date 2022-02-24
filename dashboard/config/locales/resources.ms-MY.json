@@ -1260,6 +1260,44 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Pengubahsuaian Pelajaran Maya",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "Melihat AI"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: Data Latihan & Kepincangan",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "Forum Guru"
+        },
+        "functions_2/csd/2021": {
+          "name": "Fungsi"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Pembelajaran Mesin",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "variables_1/csd/2021": {
+          "name": "Pembolehubah"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Jin"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Fungsi"
+        },
+        "functions_1/csd/2021": {
+          "name": "Fungsi"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "Forum Guru"
+        },
+        "lists/csd/2021": {
+          "name": "Senarai"
         }
       }
     }

@@ -479,6 +479,7 @@
           ]
         },
         "6aeca5a9-2901-4f02-9c34-4104cf1296f5": {
+          "name": "Penilaian",
           "tips": [
             null
           ]
@@ -512,6 +513,7 @@
           ]
         },
         "3d7a5e6b-1a14-4091-98a1-c2bc45e970b0": {
+          "name": "Penilaian",
           "tips": [
             null
           ]
@@ -653,6 +655,9 @@
         "b6a63f32-8007-4b17-ae9b-718652243e78": {
           "progression_name": "Artis: Pemboleh Ubah"
         },
+        "7ba3e3fc-9997-480c-86f7-54e100343b8a": {
+          "progression_name": "Projek Lab Sprite"
+        },
         "919ce65a-2a03-4e80-9108-6243b5dd733f": {
           "name": "Projek Artis",
           "progression_name": "Projek Artis"
@@ -663,13 +668,23 @@
         "26d010c0-aeef-49ad-85f9-f06ce1daaa31": {
           "progression_name": "Video"
         },
+        "b8f9aaae-501f-4c71-9df3-3250ffe49d6e": {
+          "progression_name": "Projek Lab Sprite"
+        },
         "22ed3900-dd2a-4eec-99c1-69f131286de6": {
           "name": "Projek Artis",
           "progression_name": "Projek Artis"
         },
+        "f0d08173-4d56-4bdc-8bd0-173ba4445206": {
+          "progression_name": "Projek Lab Sprite"
+        },
         "9a803448-dc94-4fae-9c6e-9099f7a26bc2": {
           "name": "Projek Artis",
           "progression_name": "Projek Artis"
+        },
+        "7292a6ea-9eb1-4775-a680-ad1755ee4e59": {
+          "name": "Tambahan Pelajaran",
+          "progression_name": "Tambahan Pelajaran"
         },
         "e0d3988c-bdb0-45b1-9512-354e87118d64": {
           "progression_name": "Pengaturcaraan dengan Rey dan BB-8"
@@ -1023,6 +1038,7 @@
           "description": "### Pemboleh Ubah Rantaian Makanan (45-60 minit)\n\n![](https://curriculum.code.org/media/uploads/elaSmall.png) ![](https://curriculum.code.org/media/uploads/mathSmall.png) ![](https://curriculum.code.org/media/uploads/scienceSmall.png) **Sains Komputer + Seni Bahasa Inggeris + Matematik + Sains**\n\n[\\*\\*Food Chain Variables\\*\\*](https://docs.google.com/document/d/1td4o1Oj1Syw_WwVAJ2CMDdWhvwp9DwMdbwv0gV0azOs/edit?usp=sharing) ialah aktiviti pilihan yang dijajarkan mengikut Standard Kesenian Bahasa Inggeris Teras Umum dan Standard Sains Generasi Akan Datang, ditulis oleh komuniti guru kita. Pelajar akan mengenal pasti pelbagai nilai untuk pemboleh ubah yang ditemui dalam rantaian makanan (Contoh: tumbuhan, haiwan, pengurai dan sebagainya) kerana mereka mendokumenkan nilai ini dalam kad nota dan menunjukkan pergerakan jirim melalui alam sekitar. Pelajar juga akan mempelajari tentang Peraturan 10% dan menghuraikan dengan lebih lanjut mengenai aliran tenaga dengan prom penulisan.\n\n_Standard yang Dikemukakan:_\n\n-   **CCSS.ELA-LITERACY.W.5.2.B:** Membangunkan topik dengan fakta, takrifan, perincian konkrit, petikan, atau maklumat dan contoh lain yang berkaitan dengan topik.\n\n-   **CCSS.MATH.CONTENT.5.NF.B.7.C:** Menyelesaikan masalah dunia yang sebenar, melibatkan pembahagian pecahan unit dengan nombor bulat bukan sifar dan pembahagian nombor bulat dengan pecahan unit, misalnya, dengan menggunakan model pecahan visual dan persamaan untuk mewakili masalah.\n\n-   **NGSS.5-LS2-1:** Membangunkan model untuk menghuraikan pergerakan jirim dalam kalangan tumbuhan, haiwan, pengurai dan alam sekitar. "
         },
         "d2b97c32-0187-432e-9fa2-979e9f34280a": {
+          "name": "Semakan",
           "description": "**Lakukan Ini:** Ingatkan pelajar perkara yang mereka lakukan semasa kelas terakhir atau minta mereka kongsikan. \n\n**Bincangkan:** Bagaimanakah atur cara komputer meminta maklumat daripada kita?\n\n**Matlamat Perbincangan:** Pelajar perlu berfikir tentang pengalaman mereka sendiri sebagai pengguna dan masa apabila komputer meminta maklumat daripada mereka. Terdapat banyak cara untuk memasukkan maklumat ke dalam komputer, tetapi tumpukan kepada idea yang sesuatu ditaip ke dalam prom untuk masa sekarang.  "
         },
         "938a01cc-fcbd-4adf-a7ef-ab00d8f8950d": {
@@ -1045,6 +1061,7 @@
           ]
         },
         "ebaf4e77-bbe1-4fff-8f14-f6f8345e9cc9": {
+          "name": "Semakan",
           "description": "**Lakukan Ini:** Gunakan slaid pelajaran untuk menyemak perbendaharaan kata pelajaran ini. Pastikan pelajar boleh mengingat kembali daripada pelajaran yang mereka melihat setiap konsep ini. "
         },
         "75769a9e-4f2f-41af-b9b0-cb51cfadab11": {
@@ -1054,6 +1071,7 @@
           "description": "Pilih satu (atau dua) prom renungan di bawah untuk diberikan kepada pelajar. Mereka boleh mencatatkan jurnal secara berasingan, atau membincangkan jawapannya secara berkumpulan atau seluruh kelas.\n\n**Prom:**\n\n-   Bagaimanakah pemboleh ubah seperti kotak? Sejauh mana ia berbeza?\n\n-   Mengapakah pengatur cara memerlukan pemboleh ubah?"
         },
         "20919642-5201-4796-9e45-ee76e368614d": {
+          "name": "Semakan",
           "description": "**Lakukan Ini:** Dengan menggunakan slaid pelajaran, semak konsep yang telah diterokai oleh pelajar setakat ini: peperi, tingkah laku, peristiwa dan teks. Akhir sekali, semak cara prom dan pemboleh ubah berfungsi.\n\n#### Ramalan\n\n**Lakukan Ini:** Minta pelajar baca kod yang disediakan dan buat ramalan tentang perkara yang akan berlaku. Selepas menekan “Jalankan”, berikan masa untuk pelajar merenungkan apa-apa perkara yang mereka dapati menarik atau mengejutkan mereka.",
           "tips": [
             "Satu daripada bahagian paling rumit dalam pembelajaran pemboleh ubah ialah memastikan bahawa label pemboleh ubah sentiasa sepadan. Pada tahap ini, pastikan pelajar memerhatikan perbezaan antara pemboleh ubah **hidangan** dan pemboleh ubah **makanan**. Pelajar perlu memahami bahawa cara terbaik menyelesaikan masalah ini ialah dengan hanya menggunakan satu pemboleh ubah, memastikan label sentiasa sepadan.\n\nAnda juga boleh memberikan panduan kepada kelas anda untuk membaiki pepijat dalam atur cara ini dengan menggunakan tahap [Teacher Sandbox](https://studio.code.org/levels/27300) ini dengan projektor anda."
@@ -1093,6 +1111,7 @@
           "description": "**Prom:**\n\n-   Apakah bentuk atau rupa paling hebat yang anda atur cara hari ini? Lukiskannya!\n-   Apakah bentuk atau rupa lain yang anda ingin mengatur cara? Bolehkah anda membuat kod untuk menciptanya?"
         },
         "6f3a588c-d9d2-4705-8fb0-da0daa2e47cf": {
+          "name": "Semakan",
           "description": "Mungkin ia berguna untuk mengingatkan pelajar tentang perkara yang mereka tahu tentang pemboleh ubah setakat ini.\n\n-   Bagaimanakah pemboleh ubah seperti kotak atau bekas?\n-   Sebaik sahaja maklumat disimpan dalam pemboleh ubah, bagaimanakah kita menggunakannya dalam atur cara nanti?"
         },
         "13122569-6e3b-4fd1-8cbe-226e6fc82d19": {
@@ -1184,6 +1203,12 @@
           "name": "Untuk Gelung Dengan Lebah",
           "description": "#### Teka-Teki Dalam Talian\n\nSesetengah pelajar mungkin mengalami kesukaran membezakan antara gelung berulang dan gelung untuk. Kami sarankan supaya dikeluarkan kertas catatan untuk pelajar membuat tekaan tentang nilai seperti mula, berhenti dan langkah. Melaksanakan pengaturcaraan berpasangan dalam kalangan kelas juga mungkin berguna kepada pelajar anda."
         },
+        "1668a313-16da-49db-9713-13d7ad33889e": {
+          "progression_name": "Semakan"
+        },
+        "7a256684-5f37-4780-b2d7-a75a079dfc95": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "05cdc09c-2fde-45f0-ba51-06b6dc94b8a3": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Bagaimanakah gelung untuk berbeza daripada gelung berulang?\n-   Mengapakah anda fikir gelung untuk mungkin sangat berguna?"
         },
@@ -1192,6 +1217,9 @@
         },
         "b838a926-533f-414b-86f6-17f8ea078fad": {
           "name": "Untuk Gelung dengan Artis"
+        },
+        "6ea6e198-fa99-46cb-a234-0f2b60eaff4d": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "936c3852-feab-48df-824d-8b67ae8e9f90": {
           "tips": [
@@ -1544,6 +1572,9 @@
           "name": "Pengaturcaraan dengan Angry Birds",
           "description": "#### Demonstrasi Tambahan\n\nKita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas.\n\nTahap Ramalan:\n\n-   [Programming in Maze #1](https://studio.code.org/levels/8730)\n-   [Programming in Maze #2](https://studio.code.org/levels/8729)"
         },
+        "59a20536-707e-4328-88ab-71b1c533cd37": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "6a3d0163-b925-4e7a-933a-93f7d6432233": {
           "tips": [
             "Tunjukkan kepada pelajar _cara_ yang\\_ betul membantu rakan sekelas dengan:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
@@ -1650,6 +1681,9 @@
           "name": "Demonstrasi Guru",
           "description": "Kita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas. \n\nTahap Ramalan:\n\n-   [Course B, Loops in Collector](https://studio.code.org/levels/8746)"
         },
+        "eedc7420-83ed-420a-8bfe-db3e70719c14": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "65456981-db3c-42cb-b698-e162463df4d1": {
           "description": "Semasa pelajar berusaha menyelesaikan teka-teki, lihat sekiranya mereka dapat mengenal pasti bilangan blok yang mereka gunakan dengan **gelung** berbanding tanpa **gelung**."
         },
@@ -1670,6 +1704,9 @@
         },
         "6e4b782c-58b7-4079-bec6-7fe157198276": {
           "description": "Kita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas. \n\n**Tahap Ramalan:** - [Course B, Loops in Artist](https://studio.code.org/levels/8745)"
+        },
+        "6c661991-bf9d-4271-a318-5878b3ef438c": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "4ff7f892-7990-4917-9a54-92ad7d8c2335": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan wajah yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan corak yang anda buat dengan gelung.\n-   Lukiskan corak yang ingin anda buat dengan gelung."
@@ -1744,6 +1781,9 @@
           "name": "Pertempuran Diraja bersama Acara",
           "description": "Ini ialah aktiviti menggunakan alatan digital yang paling bebas dalam kursus ini. Pada tahap akhir pelajar mempunyai kebebasan mencipta cerita mereka sendiri. Anda mungkin mahu memberikan garis panduan berstruktur mengenai jenis cerita yang hendak ditulis, terutamanya bagi pelajar yang mempunyai terlalu banyak pilihan."
         },
+        "9e0be8b0-1cf0-479e-8b0a-e8bec10e796a": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "f7fafab8-5c1c-473a-901b-893eb23c491b": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan peristiwa yang anda gunakan dalam atur cara anda hari ini.\n-   Bayangkan anda mempunyai robot kawalan jauh. Bagaimanakah rupa bentuk alat kawalan jauh itu? Lukiskan gambar perkara yang anda fikir anda mungkin boleh minta robot tersebut lakukan."
         },
@@ -1751,6 +1791,7 @@
           "description": "Gunakan aktiviti ini untuk meningkatkan pembelajaran pelajar. Ini juga boleh digunakan sebagai aktiviti luar kelas atau rancangan pengayaan lain.\n\n**Lihat Di Bawah Hud**\n\nApabila anda berkongsi pautan kepada cerita anda, anda juga berkongsi semua kod yang terdapat di belakangnya. Ini ialah cara yang amat baik untuk pelajar mempelajari daripada satu sama lain.\n\n-   Siarkan pautan kepada cerita yang lengkap dalam talian\n    -   Buat cerita anda sendiri untuk dikongsikan juga!\n-   Apabila pelajar memuatkan pautan, minta mereka mengklik butang \"Cara ia Berfungsi\" untuk melihat kod di sebalik cerita tersebut.\n-   Bincangkan secara berkumpulan cara berbeza rakan sekelas anda mengekod cerita mereka.\n    -   Apakah yang mengejutkan anda?\n    -   Apakah yang ingin anda cuba?\n-   Pilih cerita individu lain dan klik `Gubah Semula` untuk membina cerita di atasnya. (Jangan bimbang, cerita asal akan selamat.)"
         },
         "eeaa078b-cc45-4a32-9299-6fbb4967c502": {
+          "name": "Semakan",
           "description": "**Lakukan ini:**\n\n\\*Buat pelajar teruja dan bersedia untuk aktiviti hari ini. Mulakan dengan meminta pelajar mengingati perkara yang telah mereka lakukan dalam pelajaran terdahulu dengan menggunakan alatan Makmal Mainan.\n\\*Semak perbendaharaan kata **peristiwa**.\n\\*Jika anda mencipta contoh projek anda sendiri, kongsikan sekarang."
         },
         "e69a4dc0-3f5e-4ddc-af82-12875c7cd32c": {
@@ -1913,6 +1954,9 @@
           "name": "Pengaturcaraan Dengan Scrat",
           "description": "Jika anda sedang mencari beberapa teka-teki tambahan untuk dibincangkan dengan kelas anda, berikut ialah beberapa teka-teki \"ramalan\" yang akan membolehkan anda mengikuti kod sedia ada dengan pelajar anda untuk meramalkan perkara yang _Scrat_ akan lakukan. Ini ialah idea yang baik untuk melakukannya bersama-sama sebelum melepaskan pelajar daripada menggunakan komputer mereka sendiri.\n\n#### Tahap Ramalan:\n\n-   [Course B, Programming in Maze #1](https://studio.code.org/levels/12607)\n-   [Course B, Programming in Maze #2](https://studio.code.org/levels/12608)"
         },
+        "a0a00f67-afa4-4d4d-a8d4-cd4801ccd329": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "3719811c-4fc2-4da5-94c7-989c91ef7d1e": {
           "tips": [
             "Tunjukkan kepada pelajar _cara_ yang\\_ betul membantu rakan sekelas dengan mengingatkan mereka:\n\n-   Jangan duduk di atas kerusi rakan sekelas.\n-   Jangan gunakan papan kekunci rakan sekelas.\n-   Jangan sentuh tetikus rakan sekelas.\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi."
@@ -2026,6 +2070,9 @@
         "1bbb191d-3177-490d-99ad-5a0e10e21985": {
           "description": "Tahap Ramalan:\n\n-   [Course A, Loops in Collector #1](https://studio.code.org/levels/8728)\n-   [Course A, Loops in Collector #2](https://studio.code.org/levels/8727)"
         },
+        "5580045e-132a-4c17-8c3f-522b7f01f442": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "46ce0bcb-9f62-42c7-91dd-a6a98b68b10b": {
           "description": "Semasa pelajar berusaha menyelesaikan teka-teki, lihat sekiranya mereka dapat mengenal pasti bilangan blok yang mereka gunakan dengan gelung berbanding tanpa gelung."
         },
@@ -2046,6 +2093,9 @@
           "tips": [
             "Ingatkan pelajar supaya berkongsi kerja mereka dengan rakan atau keluarga terdekat sahaja. Untuk maklumat lebih lanjut, sila tonton atau tunjukkan kepada kelas **\\*Video - Jeda dan Fikir Dalam Talian**."
           ]
+        },
+        "cfcb405b-99fc-4686-bd02-4e37b3f5c337": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "75843546-1fa3-4171-b034-3c14d8d9d5a4": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan wajah yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan beberapa anak tangga. Bayangkan gelung diperlukan untuk melukis ini.\n-   Lukiskan sesuatu yang lain dalam hidup anda yang menggunakan gelung."
@@ -2075,6 +2125,7 @@
           ]
         },
         "ec9ac54d-3d86-46b5-ab1a-6147640a7fb5": {
+          "name": "Penilaian",
           "description": "**Edarkan**: Edarkan satu **\\*Penilaian** kepada setiap pelajar dan biarkan mereka melengkapkannya sendiri selepas arahan telah dijelaskan dengan baik. Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
         },
         "d540fe6c-fd83-4e7d-98cc-6e78a2d36073": {
@@ -2103,6 +2154,9 @@
           "name": "Bergerak bersama Acara",
           "description": "Ini ialah aktiviti menggunakan alatan digital yang paling bebas dalam kursus ini. Pada tahap akhir pelajar mempunyai kebebasan mencipta cerita mereka sendiri. Anda mungkin mahu memberikan garis panduan berstruktur mengenai jenis cerita yang hendak ditulis, terutamanya bagi pelajar yang mempunyai terlalu banyak pilihan."
         },
+        "40ddc694-3a85-4874-b3ad-71810e6a0474": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "bae8edf5-1fe0-4f2b-ae79-08f18b2c3001": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada wajah yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan peristiwa yang anda gunakan dalam atur cara anda hari ini.\n-   Bayangkan anda mempunyai robot kawalan jauh. Bagaimanakah rupa bentuk alat kawalan jauh itu? Lukiskan gambar perkara yang anda fikir anda mungkin boleh minta robot tersebut lakukan."
         },
@@ -2110,6 +2164,7 @@
           "description": "Gunakan aktiviti ini untuk meningkatkan pembelajaran pelajar. Ini juga boleh digunakan sebagai aktiviti luar kelas atau rancangan pengayaan lain.\n\n**Lihat Di Bawah Hud**\n\nApabila anda berkongsi pautan kepada cerita anda, anda juga berkongsi semua kod yang terdapat di belakangnya. Ini ialah cara yang amat baik untuk pelajar mempelajari daripada satu sama lain.\n\n-   Siarkan pautan kepada cerita yang lengkap dalam talian\n    -   Buat cerita anda sendiri untuk dikongsikan juga!\n-   Apabila pelajar memuatkan pautan, minta mereka mengklik butang \"Cara ia Berfungsi\" untuk melihat kod di sebalik cerita tersebut.\n-   Bincangkan secara berkumpulan cara berbeza rakan sekelas anda mengekod cerita mereka.\n    -   Apakah yang mengejutkan anda?\n    -   Apakah yang ingin anda cuba?\n-   Pilih cerita individu lain dan klik `Gubah Semula` untuk membina cerita di atasnya. (Jangan bimbang, cerita asal akan selamat.)"
         },
         "4ae60932-ccb3-411c-bfb4-bc9e52149b27": {
+          "name": "Semakan",
           "description": "**Lakukan ini:**\n\n-   Buat pelajar teruja dan bersedia untuk aktiviti hari ini. Mulakan dengan meminta pelajar mengingati perkara yang telah mereka lakukan dalam pelajaran terdahulu dengan menggunakan alatan Artis.\n-   Semak perbendaharaan kata **gelung**.\n-   Jika anda mencipta contoh projek anda sendiri, kongsikan sekarang."
         },
         "d07826c3-fe5d-4ffa-a4ff-6bd799a62342": {
@@ -2215,6 +2270,9 @@
             "Tunjukkan kepada pelajar cara yang betul untuk membantu rakan sekelas:\n\n-   Jangan duduk di atas kerusi rakan sekelas\n-   Jangan gunakan papan kekunci rakan sekelas\n-   Jangan sentuh tetikus rakan sekelas\n-   Pastikan rakan sekelas dapat menghuraikan penyelesaian kepada anda dengan kuat sebelum anda pergi"
           ]
         },
+        "55ab3586-4bb1-4b3a-bec0-c103e1cf33cb": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "b36f792a-6557-4c68-9065-3a87966f2cf6": {
           "description": "**Sebarkan:** Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Pelajaran dalam talian bertujuan untuk berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah: \n\n-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk mula bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar supaya menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih menghadapi masalah selepas semua ini, cuba tanya soalan utama bertujuan meminta pelajar mengesan kesilapan mereka sendiri.\n\n**Bincangkan:** Selepas memberikan amaran kepada pelajar pada akhir waktu kelas, tarik perhatian semua pelajar dan minta mereka renungkan pengalaman yang baharu mereka lalui.\n\n-   _Adakah sesiapa yang merasa kecewa semasa melakukan mana-mana teka-teki?_\n-   _Adakah sesiapa menyedari keperluan menjadi seorang yang tabah?_\n\n**Peralihan:** Minta pelajar mengambil jurnal renungan mereka dan luangkan sedikit masa bagi merenung pelajaran itu untuk diri mereka sendiri."
         },
@@ -2237,6 +2295,9 @@
           "name": "Penyahpepijatan di dalam Pagar Sesat",
           "description": "Sebelum membenarkan pelajar menghidupkan komputer, ingatkan mereka tentang kelebihan video pengaturcaraan berpasangan dan meminta bantuan rakan sebaya mereka. Tetapkan tempat duduk pelajar secara berpasangan dan sarankan mereka meminta sekurang-kurangnya dua rakan sebaya untuk mendapatkan bantuan sebelum berjumpa guru."
         },
+        "12488a0c-dc91-4ea4-bdc7-28e27145f721": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "14243604-a841-47b9-a7b3-edeccb23ae65": {
           "description": "Seperti yang dinyatakan dalam tujuan pelajaran ini, pastikan pelajar sedar bahawa mereka akan menghadapi teka-teki yang mengecewakan. Beritahu mereka tidak menjadi masalah untuk berasa kecewa, tetapi ia penting untuk berusaha menyelesaikan masalah dan meminta bantuan. Semasa pelajar berusaha menyelesaikan teka-teki, sila berjalan di sekeliling untuk memastikan tiada pelajar sedang menghadapi masalah sehingga mereka tidak sanggup meneruskan lagi."
         },
@@ -2257,6 +2318,9 @@
           "name": "Mengumpul Harta Karun bersama Laurel",
           "description": "_Pengembara Laurel_ sedang berusaha mengumpulkan harta karun sebanyak yang mungkin. Arahkan pelajar merentasi teka-teki untuk mengumpulkan apa-apa sahaja yang mereka boleh. Terdapat beberapa peringkat permainan akan meminta anda mengambil hanya satu harta karun, tetapi bagi yang lain pula, anda diminta mengambil setiap harta karun yang ada. Tumpukan kepada arahan untuk mengetahui perkara yang perlu dilakukan!"
         },
+        "1eb79218-4e1c-4f9f-9a60-20b6c3c2f8b1": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "02bdc7bd-ae6d-426d-8e13-7f804e2292d4": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Lukiskan pagar sesat yang mungkin anda selesaikan dengan blok yang anda gunakan hari ini."
         },
@@ -2271,6 +2335,9 @@
           "tips": [
             "Teka-teki kelapan meminta pelajar melukis poligon 6 sisi. Ini mungkin mencabar bagi sesetengah pelajar. Kami sarankan agar pelajar mencuba beberapa kali, tanya rakan sebaya, kemudian minta bantuan guru. Di bawah ialah imej yang mungkin berguna untuk pelajar.\n\n![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
           ]
+        },
+        "8d556f84-689c-4046-bd40-a955e56ef116": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "e7143536-5b4e-4594-b2ff-707b87e128c3": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah sudut pedalaman yang membentuk segi empat sama. Bagaimana pula dengan segi tiga?\n-   Lakarkan bentuk mudah pada kertas anda dan gambarkan kod yang digunakan untuk melukisnya. Bolehkah anda menulis kod itu di sebelah bentuk tersebut?"
@@ -2323,6 +2390,9 @@
         "16139473-0792-46d6-b8f8-77c79ceead5c": {
           "name": "Gelung dengan Rey dan BB-8"
         },
+        "f7fc9c06-a367-443c-bbe6-4a9c02ca60c6": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "351f97fd-0d87-49c1-90ee-f4243884adf9": {
           "description": "Semasa pelajar menyelesaikan teka-teki, lihat jika mereka boleh mengenal pasti bilangan blok yang mereka gunakan dengan gelung berbanding tidak menggunakan gelung. **\\*Pengaturcaraan Berpasangan - Video Pelajar** berfungsi dengan baik dengan set teka-teki ini kerana terdapat beberapa cara untuk mengisi gelung. Galakkan untuk mengadakan perbincangan mesra antara pasangan dalam keadaan perselisihan pendapat tentang cara menyelesaikan teka-teki. Minta pelajar bertanya antara satu sama lain seperti:\n\n-   _Bagaimanakah anda mendapatkan penyelesaian itu?_\n-   _Apakah beberapa manfaat menyelesaikan teka-teki dengan cara itu?_\n\nKami juga sarankan supaya diadakan kertas di tangan untuk pelajar menulis kod mereka dan mencari apa-apa pengulangan untuk digunakan dalam gelung."
         },
@@ -2340,6 +2410,9 @@
         },
         "2f87a826-1460-4d5c-9db3-47911c77a56a": {
           "description": "Apabila pelajar menggunakan gelung untuk mengulangi tindakan (seperti menuai labu), galakkan mereka untuk berfikir tentang pergerakan sebelum dan selepas tindakan itu. Bolehkah tindakan tersebut dibawa ke dalam gelung juga?"
+        },
+        "f5cc9272-be27-471b-9cdd-f56920c56a34": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "809e449a-e392-48c2-9b9f-f53ce1d06366": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Berikan dua contoh masa anda menggunakan gelung dalam kod anda.\n-   Apakah yang boleh dituai oleh peladang lagi? Lukiskan blok kod yang anda perlukan untuk menuai item itu."
@@ -2396,6 +2469,7 @@
           ]
         },
         "e597d594-8df0-40d4-a4a5-9de0932f0bfc": {
+          "name": "Penilaian",
           "description": "-   Edarkan **\\*Penilaian** dan biarkan pelajar melengkapkan aktiviti mereka sendiri selepas arahan telah dijelaskan dengan baik.\n-   Perkara ini sepatutnya dirasai seperti biasa, terima kasih dengan aktiviti sebelumnya."
         },
         "3308de52-3ab5-4909-bcf5-c43c71617303": {
@@ -2449,6 +2523,9 @@
         },
         "e8c36f82-146f-40bd-a83c-0f0d9fac33d0": {
           "description": "Ini ialah aktiviti dalam talian yang paling bebas dalam kursus ini. Pada tahap akhir pelajar mempunyai kebebasan mencipta permainan mereka sendiri. Anda mungkin mahu memberikan garis panduan berstruktur mengenai jenis permainan yang hendak buat, terutamanya bagi pelajar yang mempunyai terlalu banyak pilihan."
+        },
+        "9f2441ae-b524-455b-b43b-8c01d9458d0d": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "27d0103f-b003-4668-bab3-46e2517d375f": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah peristiwa yang digunakan oleh atur cara anda hari ini?\n-   Adakah terdapat peristiwa yang anda ingin gunakan dalam permainan anda yang anda tidak dapat gunakan dalam Makmal Mainan?"
@@ -2793,6 +2870,12 @@
         "248f398f-18b7-4f09-a251-8d119f3c167d": {
           "description": "##### Peringkat 15\n\n-   Peringkat terakhir ini sangat terbuka. Tutorial ini sendiri direka bentuk untuk memberikan pelajar masa secukupnya bagi terus berusaha menambah baik tarian mereka sendiri.\n-   **Menggalakkan Perkongsian:** Jika pelajar mempunyai telefon mudah alih dengan pelan data, mereka boleh menghantar pautan untuk projek mereka dengan pantas kepada telefon sendiri atau telefon rakan mereka. Jika dasar sekolah anda membenarkannya, sila galakkan mereka melakukannya di sini.\n-   **Menggalakkan Kreativiti:** Kreativiti amat penting sepanjang pelajaran ini, tetapi ini benar di sini lebih daripada mana-mana tempat lain!"
         },
+        "f5a8a534-e7fe-4056-88e3-2f8c8f6c85ab": {
+          "progression_name": "Tambahan Pelajaran"
+        },
+        "9c113356-76b9-4324-b22f-e35ce5a49216": {
+          "name": "Penilaian"
+        },
         "18fe5772-b05d-4e30-ada7-28d06b1bdf5d": {
           "name": "Peluang Kurikulum Bersilang",
           "description": "### Kemandirian Penari (45-60 minit)\n\n![](https://curriculum.code.org/media/uploads/scienceSmall.png) \n**Sains Komputer + Sains**\n\n[Survival of the Dancers](https://docs.google.com/document/d/1F1E-qPyfnh7HV1euIjsRX01PZMhbOAA0q447FqRdefo/edit?usp=sharing) ialah aktiviti pilihan yang dijajarkan mengikut Standard Sains Generasi Akan Datang, ditulis oleh komuniti guru kita. Dengan menggunakan Majlis Tari-Menari, pelajar akan memilih sekurang-kurangnya satu organisma (penari) yang amat sesuai untuk persekitaran (dunia) yang mereka cipta. Pelajar digalakkan untuk menggunakan blok kod \"sifat\" untuk menyesuaikan ciri setiap organisma (penari). \n\n_Standard yang Diberikan Perhatian:_\n\n-   **NGSS.3-LS4-2:** Gunakan bukti untuk membina penjelasan tentang sejauh mana variasi dalam ciri antara individu daripada spesies yang sama boleh memberikan kelebihan dalam meneruskan kehidupan, mencari pasangan dan membiak. \n\n-   **NGSS.3-LS4-3:** Membina hujah dengan bukti bahawa dalam habitat tertentu sesetengah organisma boleh hidup dengan baik, ada yang hidup dengan kurang baik dan ada yang tidak dapat hidup sama sekali. \n\n-   **OPTIONAL EXTENSION: NGSS.3-LS4-4:** Membuat tuntutan tentang merit penyelesaian kepada masalah yang berpunca daripada perubahan persekitaran dan jenis tumbuhan dan haiwan yang tinggal di sana mungkin berubah."
@@ -2839,6 +2922,9 @@
         "fead1358-5e8f-4b1d-990a-4ee44b3e101b": {
           "name": "Gelung Bersarang di dalam Pagar Sesat",
           "description": "Kita amat menyarankan pengaturcaraan berpasangan untuk pelajaran ini. Ini mungkin bukan topik yang mudah untuk majoriti pelajar anda. Bekerjasama dengan pasangan dan membincangkan penyelesaian berpotensi kepada teka-teki mungkin dapat menenangkan fikiran pelajar.\n\nDi samping itu, minta disediakan kertas dan pensel berdekatan untuk pelajar menulis rancangan mereka sebelum mengekod. Sesetengah teka-teki mempunyai had ke atas bilangan blok tertentu yang boleh anda gunakan, oleh itu jika pelajar suka menulis jawapan yang panjang untuk mencari ulangan, kertas boleh menjadi sangat berguna."
+        },
+        "725a7d9a-35a3-483e-a83b-f88bf0033095": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "b014e946-ff8d-4740-9c42-51c8aa635252": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah gelung bersarang?\n-   Bolehkah anda melukis teka-teki yang akan menggunakan gelung bersarang? Cuba mengekodkan penyelesaian untuk teka-teki anda sendiri."
@@ -2893,6 +2979,9 @@
         },
         "7f949bd4-c8d6-42b7-a6b2-a835a8a63e41": {
           "description": "Teka-teki ini mungkin menimbulkan beberapa soalan, oleh itu minta pelajar bekerja secara berpasangan atau laksanakan peraturan \"Tanya tiga sebelum anda bertanya saya\" (minta pelajar meminta bantuan tiga rakan lain sebelum mereka pergi kepada guru.) Ini akan mencetuskan perbincangan yang akan mengembangkan kefahaman setiap pelajar."
+        },
+        "9326c58a-39b6-4f40-a2ba-5c19267c2a3f": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "fd68c153-b4d6-4729-a742-09f9ee9c25b1": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah syarat yang anda gunakan dalam kod anda hari ini?\n-   Apakah beberapa syarat lain yang mungkin digunakan oleh lebah? Contohnya termasuk: \n    -   jika terdapat pokok di hadapan saya, saya akan alihkannya dari jalan   \n    -   jika sayap saya terluka, saya berhenti rehat di atas tanah   \n    -   jika saya melihat lebah lain, saya ucapkan \"Helo!\""
@@ -2984,6 +3073,9 @@
           "name": "Penyahpepijatan dengan Scrat",
           "description": "Sebelum membenarkan pelajar menghidupkan komputer, ingatkan mereka tentang kelebihan video **\\*Pengaturcaraan Berpasangan** dan meminta bantuan rakan sebaya mereka. Tetapkan tempat duduk pelajar secara berpasangan dan sarankan mereka meminta sekurang-kurangnya dua rakan sebaya untuk mendapatkan bantuan sebelum berjumpa guru.\n\nSeperti yang dinyatakan dalam tujuan pelajaran ini, pastikan pelajar sedar bahawa mereka akan menghadapi teka-teki yang mengecewakan. Beritahu mereka tidak menjadi masalah untuk berasa kecewa, tetapi ia penting untuk berusaha menyelesaikan masalah dan meminta bantuan. Semasa pelajar berusaha menyelesaikan teka-teki, sila berjalan di sekeliling untuk memastikan tiada pelajar sedang menghadapi masalah sehingga mereka tidak sanggup meneruskan lagi."
         },
+        "509f1df0-4e9b-454e-ae25-a6380f29ab57": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "0406b536-ef27-4e66-aebd-6163d05bcc36": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah jenis pepijat yang anda temui hari ini?\n-   Lukiskan pepijat yang anda temui dalam satu daripada teka-teki hari ini. Apakah yang anda lakukan untuk \"nyahpepijat\" atur cara tersebut?"
         },
@@ -3001,6 +3093,9 @@
           "name": "Mengumpul Harta Karun bersama Laurel",
           "description": "_Pengembara Laurel_ sedang berusaha mengumpulkan harta karun sebanyak yang mungkin. Arahkan pelajar merentasi teka-teki untuk mengumpulkan apa-apa sahaja yang mereka boleh. Terdapat beberapa peringkat permainan akan meminta anda mengambil hanya satu harta karun, tetapi bagi yang lain pula, anda diminta mengambil setiap harta karun yang ada. Tumpukan kepada arahan untuk mengetahui perkara yang perlu dilakukan!"
         },
+        "d14ea8ad-6eb8-4142-ad1c-a0f1d7024948": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "c1db98cf-ca82-4092-a167-fc450bf6fd0f": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Lukiskan pagar sesat yang mungkin anda selesaikan dengan blok yang anda gunakan hari ini."
         },
@@ -3015,6 +3110,9 @@
           "tips": [
             "Teka-teki kelapan meminta pelajar melukis poligon 6 sisi. Ini mungkin mencabar bagi sesetengah pelajar. Kami sarankan agar pelajar mencuba beberapa kali, tanya rakan sebaya, kemudian minta bantuan guru. Di bawah ialah imej yang mungkin berguna untuk pelajar.\n\n![](https://images.code.org/6675ec0ae84db90ee699a8be4c7b23a6-hexagon2018.png)"
           ]
+        },
+        "35e7e7ca-ecb5-42bb-b3ca-5251508d3e89": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "6e2ecb9e-09e6-4af0-b1b4-7b704334ba6c": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah sudut pedalaman yang membentuk segi empat sama. Bagaimana pula dengan segi tiga?\n-   Lakarkan bentuk mudah pada kertas anda dan bayangkan kod yang digunakan untuk melukisnya. Bolehkah anda menulis kod itu di sebelah bentuk tersebut?"
@@ -3171,6 +3269,9 @@
         "86741327-b7d6-4dfb-b703-f23be6b2a7dc": {
           "description": "#### Majlis Bermula! Peringkat 15\n\n-   Peringkat terakhir ini sangat terbuka. Tutorial ini sendiri direka bentuk untuk memberikan pelajar masa secukupnya bagi terus berusaha menambah baik tarian mereka sendiri.\n-   **Menggalakkan Perkongsian:** Jika pelajar mempunyai telefon mudah alih dengan pelan data, mereka boleh menghantar pautan untuk projek mereka dengan pantas kepada telefon sendiri atau telefon rakan mereka. Jika dasar sekolah anda membenarkannya, sila galakkan mereka melakukannya di sini.\n-   **Menggalakkan Kreativiti:** Kreativiti amat penting sepanjang pelajaran ini, tetapi ini benar di sini lebih daripada mana-mana tempat lain!"
         },
+        "436d2aa5-5369-462c-acdd-5ae81d6b0423": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "93b0085f-79bb-48eb-a786-f20c04016a31": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah yang anda paling suka mengenai aktiviti hari ini?\n\n-   Apakah hubungan antara kreativiti dan sains komputer?\n\n-   Apakah CS dan mengapakah ia penting?"
         },
@@ -3183,6 +3284,9 @@
         },
         "2bb620b7-6107-4b46-b717-117c20503ef0": {
           "name": "Gelung dengan Rey dan BB-8"
+        },
+        "be8322ab-77e7-4f99-ad08-40a19edc5c00": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "a26945ef-9b81-4b37-96f8-c18304af3332": {
           "description": "Semasa pelajar menyelesaikan teka-teki, lihat jika mereka boleh mengenal pasti bilangan blok yang mereka gunakan dengan gelung berbanding tidak menggunakan gelung. **\\*Video Pelajar** berfungsi dengan baik dengan set teka-teki ini kerana terdapat beberapa cara untuk mengisi gelung. Galakkan untuk mengadakan perbincangan mesra antara pasangan dalam keadaan perselisihan pendapat tentang cara menyelesaikan teka-teki. Minta pelajar bertanya antara satu sama lain seperti:\n\n-   _Bagaimanakah anda mendapatkan penyelesaian itu?_\n-   _Apakah beberapa manfaat menyelesaikan teka-teki dengan cara itu?_\n\nKami juga sarankan supaya diadakan kertas di tangan untuk pelajar menulis kod mereka dan mencari apa-apa pengulangan untuk digunakan dalam gelung."
@@ -3222,6 +3326,9 @@
           "name": "Gelung Bersarang di dalam Pagar Sesat",
           "description": "Kita amat menyarankan pengaturcaraan berpasangan untuk pelajaran ini. Ini mungkin bukan topik yang mudah untuk majoriti pelajar anda. Bekerjasama dengan pasangan dan membincangkan penyelesaian berpotensi kepada teka-teki mungkin dapat menenangkan fikiran pelajar.\n\nDi samping itu, minta disediakan kertas dan pensel berdekatan untuk pelajar menulis rancangan mereka sebelum mengekod. Sesetengah teka-teki mempunyai had ke atas bilangan blok tertentu yang boleh anda gunakan, oleh itu jika pelajar suka menulis jawapan yang panjang untuk mencari ulangan, kertas boleh menjadi sangat berguna."
         },
+        "20282149-72fa-4e24-aa15-5182f21bcf95": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "fc83d25f-9089-4795-9933-52f7372e3ae7": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah gelung bersarang?\n-   Bolehkah anda melukis teka-teki yang akan menggunakan gelung bersarang? Cuba mengekodkan penyelesaian untuk teka-teki anda sendiri."
         },
@@ -3253,6 +3360,9 @@
         "22580642-ad9a-48f6-9ad6-8693e42ed9d3": {
           "description": "Teka-teki ini mungkin menimbulkan beberapa soalan, oleh itu minta pelajar bekerja secara berpasangan atau laksanakan peraturan \"Tanya tiga sebelum anda bertanya saya\" (minta pelajar meminta bantuan tiga rakan lain sebelum mereka pergi kepada guru.) Ini akan mencetuskan perbincangan yang akan mengembangkan kefahaman setiap pelajar."
         },
+        "fe26d5c2-ccdc-48cc-9678-793d2e491bf5": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "50020a45-10c5-4b0c-ba08-b54004bdcaa8": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah syarat yang anda gunakan dalam kod anda hari ini?\n-   Apakah beberapa syarat lain yang mungkin digunakan oleh lebah? Contohnya termasuk: \n    -   jika terdapat pokok di hadapan saya, saya akan alihkannya dari jalan   \n    -   jika sayap saya terluka, saya berhenti rehat di atas tanah   \n    -   jika saya melihat lebah lain, saya ucapkan \"Helo!\""
         },
@@ -3265,6 +3375,9 @@
         "b6676ce5-2f4a-4761-a053-792853904bd5": {
           "name": "Gelung Semasa di dalam Peladang",
           "description": "Gelung semasa tidak selalunya merupakan konsep yang sukar untuk difahami oleh pelajar, tetapi jika anda berpendapat kelas anda mungkin bersusah payah menyelesaikan teka-teki ini, kami sarankan pengaturcaraan berpasangan. Ini akan membolehkan pelajar melantunkan idea antara satu sama lain sebelum melaksanakan kod. Pengaturcaraan berpasangan berfungsi meningkatkan keyakinan dan pemahaman dengan topik seperti gelung semasa."
+        },
+        "c103e631-9559-4d34-9ff9-4227c8fb8baa": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "4860c6c5-d580-4865-a582-3c33cdb8e4da": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah perbezaan antara gelung semasa dan gelung ulangan biasa?\n-   Berikan contoh teka-teki yang anda akan menggunakan gelung semasa, tetapi tidak bukan gelung ulangan. Bolehkah anda berikan contoh teka-teki yang anda akan menggunakan gelung ulangan, tetapi bukan gelung semasa?"
@@ -3300,6 +3413,9 @@
         "26679730-3364-4598-abd8-b07e9d9f9ad9": {
           "description": "Pelajar akan terus berusaha dengan pernyataan jika / lain, gelung semasa dan gelung sehingga. Teka-teki ini agak mencabar, namun, ia menggalakkan pelajar untuk mengikutinya sehingga mereka dapat menghuraikan perkara yang perlu berlaku untuk setiap atur cara."
         },
+        "23df685c-9dd8-48af-9f9a-732ffa1de9c4": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "294fb9eb-4bd1-497a-8326-562ddd2671bf": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Bagaimanakah anda boleh melihat bersyarat sangat berguna dalam atur cara?\n-   Bagaimana jika individu hanya bercakap dalam pernyataan jika/lain? Apakah beberapa kelebihan dan keburukan menggunakan ini?"
         },
@@ -3324,6 +3440,9 @@
         "dd960de9-43c8-4013-9b55-41e931d458c1": {
           "name": "Fungsi dengan Artis"
         },
+        "8a16a242-40d2-407c-b2c2-92012cc69e3d": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "48eb2965-3a46-402c-9bcd-c38037adf810": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah beberapa perbezaan antara fungsi dan gelung?\n-   Lakarkan lukisan yang anda buat hari ini. Bolehkah anda menulis kod yang diperlukan untuk mencipta lukisan ini?\n-   Lukiskan gambar yang anda ingin cipta dengan kod. Cuba tulis atau draf kod yang akan membuat lukisan itu."
         },
@@ -3341,6 +3460,7 @@
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah yang membuatkan anda menyedari yang fungsi boleh membantu atur cara anda?\n-   Bagaimanakah pernyataan gelung `semasa` dan `jika / lain` membantu atur cara anda?"
         },
         "8df13f72-0404-4fa0-8fe7-1b7847e7072f": {
+          "name": "Semakan",
           "description": "**Bincangkan:** Bagaimanakah atur cara komputer meminta maklumat daripada kita?\n\n**Matlamat Perbincangan:** Pelajar perlu berfikir tentang pengalaman mereka sendiri sebagai pengguna dan masa apabila komputer meminta maklumat daripada mereka. Terdapat banyak cara untuk memasukkan maklumat ke dalam komputer, tetapi tumpukan kepada idea yang sesuatu ditaip ke dalam prom untuk masa sekarang.  "
         },
         "25823095-1532-4221-8a37-b07d1788c3ee": {
@@ -3363,6 +3483,7 @@
           ]
         },
         "82d80787-927d-4386-b471-8a0bc2d5ce1d": {
+          "name": "Semakan",
           "description": "**Lakukan Ini:** Gunakan slaid pelajaran untuk menyemak perbendaharaan kata pelajaran ini. Pastikan pelajar boleh mengingat kembali daripada pelajaran yang mereka melihat setiap konsep ini. "
         },
         "e852c6f5-b85a-4e1c-abe5-c5ec5b111f83": {
@@ -3372,6 +3493,7 @@
           "description": "Pilih satu (atau dua) prom renungan di bawah untuk diberikan kepada pelajar. Mereka boleh mencatatkan jurnal secara berasingan, atau membincangkan jawapannya secara berkumpulan atau seluruh kelas.\n\n**Prom:**\n\n-   Bagaimanakah pemboleh ubah seperti kotak? Sejauh mana ia berbeza?\n\n-   Mengapakah pengatur cara memerlukan pemboleh ubah?"
         },
         "8cd52fe8-78d6-4525-90bf-79ce9f7c89a0": {
+          "name": "Semakan",
           "description": "Mungkin ia berguna untuk mengingatkan pelajar tentang perkara yang mereka tahu tentang pemboleh ubah setakat ini.\n\n-   Bagaimanakah pemboleh ubah seperti kotak atau bekas?\n-   Sebaik sahaja maklumat disimpan dalam pemboleh ubah, bagaimanakah kita menggunakannya dalam atur cara nanti?"
         },
         "b270733d-2d48-4470-a0e4-7a805255d765": {
@@ -3398,6 +3520,12 @@
           "name": "Untuk Gelung Dengan Lebah",
           "description": "#### Teka-Teki Dalam Talian\n\nSesetengah pelajar mungkin mengalami kesukaran membezakan antara gelung berulang dan gelung untuk. Kami sarankan supaya dikeluarkan kertas catatan untuk pelajar membuat tekaan tentang nilai seperti mula, berhenti dan langkah. Melaksanakan pengaturcaraan berpasangan dalam kalangan kelas juga mungkin berguna kepada pelajar anda."
         },
+        "50cc68cf-605b-42e3-a882-bc77e7933f8b": {
+          "progression_name": "Semakan"
+        },
+        "776538d2-aa5d-4210-9c54-cfd0f01db4b0": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "3dde779a-f373-47b8-b892-013f3898d438": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Bagaimanakah gelung untuk berbeza daripada gelung berulang?\n-   Mengapakah anda fikir gelung untuk mungkin sangat berguna?"
         },
@@ -3409,6 +3537,9 @@
           "tips": [
             "Teka-teki ini amat menyeronokkan, tetapi ia mungkin membantu untuk pelajar mempunyai jangka sudut, pensel dan kertas catatan bertujuan melihat cara reka bentuk ini dibuat dalam bentuk fizikal. Jika itu bukan pilihan dalam kelas anda, cuba minta pelajar menekap pada skrin komputer dengan jari mereka."
           ]
+        },
+        "ad447053-20d4-49cb-a771-7fd893973f54": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "4622563b-bc99-49ea-b1fb-b7a9916cf957": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Lukiskan satu daripada reka bentuk yang anda buat hari ini. Apakah kod yang diperlukan untuk menciptanya?\n-   Apakah sebilangan reka bentuk yang anda ingin cipta? Pada pendapat anda, bagaimanakah gelung untuk atau pemboleh ubah boleh membantu mencipta kesemunya?"
@@ -3515,6 +3646,9 @@
         "c07f590c-4333-4b74-a479-fa00fb43acd4": {
           "name": "Pengaturcaraan dengan Angry Birds"
         },
+        "adf3c7a1-6041-4dfb-bd2a-9645a4751aa3": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "dec19d15-6248-4a60-87e3-b8bf155470bc": {
           "description": "**Sebarkan:** Guru memainkan peranan penting dalam pendidikan sains komputer dan menyokong persekitaran kelas yang bekerjasama dan bersemangat. Semasa melakukan aktiviti dalam talian, peranan guru yang utama ialah memberikan dorongan dan sokongan. Pelajaran dalam talian adalah bermaksud menjadi berpusatkan pelajar, oleh itu guru perlu mengelakkan diri daripada campur tangan apabila pelajar menghadapi masalah. Beberapa idea mengenai cara menjayakan ini ialah: \n\n-   Gunakan pengaturcaraan berpasangan pada bila-bila masa yang mungkin semasa melakukan aktiviti.\n-   Galakkan pelajar dengan soalan/cabaran untuk mula bertanya pasangan mereka.\n-   Soalan yang tidak terjawab boleh diajukan kepada kumpulan terdekat, yang mungkin sudah mengetahui penyelesaiannya.\n-   Ingatkan pelajar supaya menggunakan proses penyahpepijatan sebelum anda mendekati mereka.\n-   Minta pelajar menghuraikan masalah yang mereka lihat. Apakah yang perlu dilakukan? Apakah yang dilakukannya? Apakah yang diberitahu oleh perkara tersebut kepada anda?\n-   Ingatkan pelajar yang kecewa bahawa kekecewaan ialah langkah di laluan menuju pembelajaran dan kegigihan akan membuahkan hasil.\n-   Jika pelajar masih tersangkut selepas semua ini, cuba tanya soalan utama bertujuan meminta pelajar mengesan kesilapan mereka sendiri."
         },
@@ -3602,6 +3736,9 @@
           "name": "Teka-teki Dalam Talian",
           "description": "Semasa pelajar berusaha menyelesaikan teka-teki, lihat sekiranya mereka dapat mengenal pasti bilangan blok yang mereka gunakan dengan gelung berbanding tanpa gelung."
         },
+        "62dfefbf-589b-46c7-a6ae-2b80bb18b021": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "6397718f-1733-47e6-8ace-820b3f9d1701": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan garisan harta karun yang dapat dikumpulkan oleh Laurel.\n-   Lukis sesuatu yang menggunakan gelung."
         },
@@ -3620,6 +3757,9 @@
         "bbc61306-32dd-4de2-9a6b-35b47408093f": {
           "description": "Kita telah memasukkan tahap ramalan pelbagai pilihan yang sukar bagi bukan pembaca. Tahap ini ialah pilihan kepada anda untuk menyemak bersama kelas anda dengan tujuan membantu bersiap sedia menerima teka-teki yang akan datang. Sebagai alternatif, ini boleh digunakan selepas menyelesaikan peringkat tersebut sebagai penilaian untuk kelas.\n\nTahap Ramalan:\n\n-   [Loops in Artist](https://studio.code.org/levels/8726)"
         },
+        "71d66635-8ac0-46fa-94d5-1f574f1c7996": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "7043a915-b252-47d3-bb01-5975d613129c": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan beberapa anak tangga. Bayangkan gelung diperlukan untuk melukis ini.\n-   Lukiskan sesuatu yang lain dalam hidup anda yang menggunakan gelung."
         },
@@ -3634,6 +3774,9 @@
           "tips": [
             "Ingatkan pelajar supaya berkongsi kerja mereka dengan rakan atau keluarga terdekat sahaja. Untuk maklumat lebih lanjut, sila tonton atau tunjukkan kepada kelas video **\\*Jeda dan Fikir Dalam Talian**."
           ]
+        },
+        "b1227c60-2106-47a0-a2a0-d7fb4a460d44": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "e382cc47-35ef-4c10-80a1-4b9090d86856": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan corak yang anda buat dengan gelung.\n-   Lukiskan corak yang ingin anda buat dengan gelung."
@@ -3655,6 +3798,9 @@
           "name": "Bergerak bersama Acara",
           "description": "Pada tahap akhir pelajar mempunyai kebebasan mencipta cerita mereka sendiri. Anda mungkin mahu memberikan garis panduan berstruktur mengenai jenis cerita yang hendak ditulis, terutamanya bagi pelajar yang mempunyai terlalu banyak pilihan."
         },
+        "0a6abf88-92c8-455d-8d64-e8f61ae227ad": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "9336ef6c-3ac8-4703-8f8d-98e88518e5e9": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada [r feeling-faces-image/pre-express/2021] yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan peristiwa anda gunakan dalam atur cara anda hari ini.\n-   Bayangkan anda mempunyai robot kawalan jauh. Bagaimanakah rupa bentuk alat kawalan jauh itu? Lukiskan gambar perkara yang anda fikir anda mungkin boleh minta robot tersebut lakukan."
         },
@@ -3667,6 +3813,9 @@
         "fbc5ec8c-04e4-4690-8361-be9c49c1daca": {
           "name": "Pertempuran Diraja bersama Acara",
           "description": "Pada tahap akhir pelajar mempunyai kebebasan mencipta cerita mereka sendiri. Anda mungkin mahu memberikan garis panduan berstruktur mengenai jenis cerita yang hendak ditulis, terutamanya bagi pelajar yang mempunyai terlalu banyak pilihan."
+        },
+        "85076d8d-1ddf-45cc-b510-0eeddffaff85": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "00695f27-0eaf-43ef-bbd4-bd7879fbaa1c": {
           "description": "Meminta pelajar menulis tentang perkara yang mereka pelajari, sebab ia berguna dan sejauh mana perasaan mereka terhadapnya boleh membantu memantapkan apa-apa pengetahuan yang mereka peroleh hari ini dan membina lembaran semakan untuk mereka nantikan pada masa depan.\n\n**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Lukiskan satu daripada **\\*Wajah Beremosi** yang menunjukkan perasaan anda tentang pelajaran hari ini di sudut halaman jurnal anda.\n-   Lukiskan peristiwa yang anda gunakan dalam atur cara anda hari ini.\n-   Bayangkan anda mempunyai robot kawalan jauh. Bagaimanakah rupa bentuk alat kawalan jauh itu? Lukiskan gambar perkara yang anda fikir anda mungkin boleh minta robot tersebut lakukan."
@@ -3849,6 +3998,9 @@
           "name": "Melukis dengan Gelung",
           "description": "Sesetengah pelajar mungkin menemui tempat untuk menambahkan gelung \"berulang\" dengan menulis atur cara tanpa gelung kemudian mengelilingi bahagian ulangan. Jika pelajar dalam kelas anda kelihatan seperti mereka boleh memanfaatkan daripada ini, minta mereka letakkan kertas dan pensel di sebelah mereka pada mesin mereka. Pelajar juga mungkin suka melukis beberapa bentuk dan rupa pada kertas sebelum mereka mengatur caranya dalam talian."
         },
+        "1cbfaa5e-bd5f-4861-9152-5fd3e6a37d47": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "7f7b2c5d-fcd3-409a-9191-5e8ee587d2ea": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah bentuk atau rupa paling hebat yang anda atur cara hari ini? Lukiskannya!\n-   Apakah bentuk atau rupa lain yang anda ingin atur cara? Bolehkah anda menghasilkan kod untuk menciptanya?"
         },
@@ -3864,6 +4016,9 @@
           "tips": [
             "Pelajar akan mempunyai peluang berkongsi hasil usaha mereka sendiri pada akhir peringkat ini. Karya seni ini boleh dikongsi secara maya atau dicetak. Kami sarankan mencetak hasil kerja kelas dan memaparkannya untuk tatapan individu tersayang pelajar."
           ]
+        },
+        "0c0b60c9-9aee-43f0-9018-6f1d770ae014": {
+          "progression_name": "Tambahan Pelajaran"
         },
         "9ad07175-6454-4905-9366-61b189a9ab7e": {
           "description": "_Apakah yang anda buat hari ini?_\n\nBawa kelas bersama dan berikan masa untuk pelajar mempamerkan lukisan Artis mereka! Pastikan semua individu berasa terangkum dengan menyemak bahawa setiap pelajar telah selesai dengan lukisan Artis mereka sebelum memulakan pembentangan. Bincangkan cara setiap lukisan dibuat dan perkara yang ada dalam gelung bersarang pelajar."
@@ -3976,6 +4131,9 @@
           "name": "Fungsi dengan Artis",
           "description": "#### Teka-Teki Dalam Talian\n\nPelajar boleh memanfaatkan daripada menulis kod tanpa fungsi dan kemudian mencipta fungsi daripada kod berulang. Jika pelajar tidak suka melakukan ini dalam ruang kerja Code.org, kami sarankan supaya menyediakan kertas dan pensel untuk pelajar menulis (atau melukis) idea mereka."
         },
+        "761169d4-a60f-4c9d-b011-2e79adcf8b31": {
+          "progression_name": "Tambahan Pelajaran"
+        },
         "c8e5eb74-9ded-4c7c-bfbf-3fb3a144fe3a": {
           "description": "**Prom:**\n\n-   Apakah pelajaran yang diajar pada hari ini?\n-   Bagaimanakah perasaan anda tentang pelajaran hari ini?\n-   Apakah beberapa perbezaan antara fungsi dan gelung?\n-   Lakarkan lukisan yang anda buat hari ini. Bolehkah anda menulis kod yang diperlukan untuk mencipta lukisan ini?\n-   Lukiskan gambar yang anda ingin cipta dengan kod. Cuba tulis atau draf kod yang akan membuat lukisan itu."
         },
@@ -4086,6 +4244,3061 @@
           "name": "Lain-lain",
           "description": "Jika pelajar anda sudah selesa dengan konsep pengekodan, cuba minta mereka mencipta projek mereka dalam platform lain, seperti [Scratch](https://scratch.mit.edu/) atau [Alice](http://www.alice.org/index.php)."
         },
+        "1d222524-316a-4988-b206-b1f948cfbee7": {
+          "tips": [
+            null
+          ]
+        },
+        "aa866b7f-747f-49e4-9578-f937dbef61e4": {
+          "tips": [
+            null
+          ]
+        },
+        "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
+          "tips": [
+            null
+          ]
+        },
+        "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
+          "tips": [
+            null
+          ]
+        },
+        "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
+          "tips": [
+            null
+          ]
+        },
+        "57d8014b-4da5-4981-b5aa-bd5feb656548": {
+          "tips": [
+            null
+          ]
+        },
+        "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
+          "tips": [
+            null
+          ]
+        },
+        "c407d4d5-d82f-47d8-a814-76756c052cc5": {
+          "tips": [
+            null
+          ]
+        },
+        "8791201e-af87-456b-8f93-1c4cb8c10099": {
+          "tips": [
+            null
+          ]
+        },
+        "6ca0b1c3-d106-4e70-bdf5-ee0ed4f7dad6": {
+          "tips": [
+            null
+          ]
+        },
+        "48b299c7-bdd4-453e-aa47-d9d2c7622ee8": {
+          "tips": [
+            null
+          ]
+        },
+        "aa9a6902-38d1-4613-8535-7b515b0f7e04": {
+          "tips": [
+            null
+          ]
+        },
+        "1060fa91-ba3a-4d55-9a85-493f9b08e027": {
+          "tips": [
+            null
+          ]
+        },
+        "ec6a94fb-4529-40b5-bee7-42c5d06822e1": {
+          "tips": [
+            null
+          ]
+        },
+        "12acd4ea-a900-4ea1-a353-601a72b83c80": {
+          "tips": [
+            null
+          ]
+        },
+        "4cb7a9fe-2e72-4730-a3e8-5aaca89653e9": {
+          "tips": [
+            null
+          ]
+        },
+        "f25eef96-e4b8-46eb-8187-2f05676a8b22": {
+          "tips": [
+            null
+          ]
+        },
+        "77fbbd0c-9cd9-4764-a872-ac8da9a7871e": {
+          "tips": [
+            null
+          ]
+        },
+        "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
+          "tips": [
+            null
+          ]
+        },
+        "d0b76b9b-7d00-488a-9c55-38ef54a4be8d": {
+          "tips": [
+            null
+          ]
+        },
+        "187961bf-44e5-4407-81d7-a47884e32eb6": {
+          "tips": [
+            null
+          ]
+        },
+        "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
+          "tips": [
+            null
+          ]
+        },
+        "cbf336bc-c75f-4710-9ba5-d30782360222": {
+          "tips": [
+            null
+          ]
+        },
+        "42f29ce9-a2d0-4e8a-a60c-870858ba5847": {
+          "tips": [
+            null
+          ]
+        },
+        "948494c6-f9ab-422f-a5e5-1ba0dd2bb690": {
+          "tips": [
+            null
+          ]
+        },
+        "bde096a8-755f-4d46-8e37-2b7c22c6112d": {
+          "tips": [
+            null
+          ]
+        },
+        "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
+          "tips": [
+            null
+          ]
+        },
+        "73ce1ded-8856-4156-bfc4-c114b2bae063": {
+          "tips": [
+            null
+          ]
+        },
+        "9a6a30be-65eb-4ba0-ac15-d35a4120f163": {
+          "tips": [
+            null
+          ]
+        },
+        "0d89923e-93b3-4a03-b79e-b262c4a71f72": {
+          "tips": [
+            null
+          ]
+        },
+        "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
+          "tips": [
+            null
+          ]
+        },
+        "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
+          "tips": [
+            null
+          ]
+        },
+        "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
+          "tips": [
+            null
+          ]
+        },
+        "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
+          "tips": [
+            null
+          ]
+        },
+        "79f35dc1-bf5e-47ca-b1eb-b726b15859a8": {
+          "tips": [
+            null
+          ]
+        },
+        "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
+          "tips": [
+            null
+          ]
+        },
+        "43756539-5123-4890-8fb8-651dbb6ee4b2": {
+          "tips": [
+            null
+          ]
+        },
+        "e4ff1e67-0f17-46a7-8d03-26f8a65238c2": {
+          "tips": [
+            null
+          ]
+        },
+        "0f2e1a2e-8982-4393-9048-8910a592aa88": {
+          "tips": [
+            null
+          ]
+        },
+        "db8f4d62-af34-4871-993d-281cacf5ff29": {
+          "tips": [
+            null
+          ]
+        },
+        "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "tips": [
+            null
+          ]
+        },
+        "6dc2399a-dad6-46a3-8124-e6b3d100d4fe": {
+          "tips": [
+            null
+          ]
+        },
+        "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "tips": [
+            null
+          ]
+        },
+        "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
+          "tips": [
+            null
+          ]
+        },
+        "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
+          "tips": [
+            null
+          ]
+        },
+        "aedb156c-9f9c-4214-94aa-a664ce875b23": {
+          "tips": [
+            null
+          ]
+        },
+        "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
+          "tips": [
+            null
+          ]
+        },
+        "2ac899a0-cd0e-4440-89e1-ef4de87b930f": {
+          "tips": [
+            null
+          ]
+        },
+        "209eff96-d559-411e-b8cf-bd6a84923473": {
+          "tips": [
+            null
+          ]
+        },
+        "183a63a0-a03c-4739-8f29-fed89378086e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "8ded89d7-85cd-4bba-883e-7c4981ce3078": {
+          "tips": [
+            null
+          ]
+        },
+        "b39acb79-1fad-4acd-b3e4-789f32636f46": {
+          "tips": [
+            null
+          ]
+        },
+        "1f38b581-970b-4050-9a0b-b899978773d7": {
+          "tips": [
+            null
+          ]
+        },
+        "e2e484bb-64dd-4917-b336-741e743a8814": {
+          "tips": [
+            null
+          ]
+        },
+        "5d7ce86b-abab-41a9-a0a1-b7954bed02af": {
+          "tips": [
+            null
+          ]
+        },
+        "221c0911-a3eb-4409-be91-e665b43e3fc9": {
+          "tips": [
+            null
+          ]
+        },
+        "5b59847e-71f7-481a-a5ca-aa9ec4511289": {
+          "tips": [
+            null
+          ]
+        },
+        "0c7a96aa-61a7-4cbc-a8e4-36aec7260700": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "4e10be5f-60ad-4bae-913d-7a157e519447": {
+          "tips": [
+            null
+          ]
+        },
+        "c5595f82-fa56-4a48-a7f6-65b97947a7e9": {
+          "tips": [
+            null
+          ]
+        },
+        "4efb646c-4ce2-45f5-bb76-f444af86a9b4": {
+          "tips": [
+            null
+          ]
+        },
+        "a4bd3c09-bdc9-45a3-bcdd-6f54e3d19471": {
+          "tips": [
+            null
+          ]
+        },
+        "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
+          "tips": [
+            null
+          ]
+        },
+        "38761f3b-2e5b-4626-8f10-3a562e8d0c3b": {
+          "tips": [
+            null
+          ]
+        },
+        "bb1e1371-d01e-43c2-913a-5fe680de2bf4": {
+          "tips": [
+            null
+          ]
+        },
+        "c0c1d052-3e33-4066-a541-356b552d5ec7": {
+          "tips": [
+            null
+          ]
+        },
+        "0fac2a39-1a1e-4c53-a3eb-ef5ababb25f4": {
+          "tips": [
+            null
+          ]
+        },
+        "1ebb0840-0b5b-4ec9-9f95-1ccae266fe92": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
+          "tips": [
+            null
+          ]
+        },
+        "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
+          "tips": [
+            null
+          ]
+        },
+        "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
+          "tips": [
+            null
+          ]
+        },
+        "72daa1e4-2bc1-49f2-b46e-9e007cf78597": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "0644a5d2-d3ae-4dea-8777-47a522955b21": {
+          "tips": [
+            null
+          ]
+        },
+        "97535dd4-2332-47bc-af09-9571d848068d": {
+          "tips": [
+            null
+          ]
+        },
+        "8da670fc-d91b-438b-af07-2227156fdbcd": {
+          "tips": [
+            null
+          ]
+        },
+        "1b28522d-bf63-4f09-94a2-a80833819a38": {
+          "tips": [
+            null
+          ]
+        },
+        "9492e63b-28f6-41b5-89b9-5f1d611186a1": {
+          "name": "Aktiviti"
+        },
+        "5b3b512d-42b8-4c2f-bbb3-7ebad7908e62": {
+          "tips": [
+            null
+          ]
+        },
+        "fc716fb8-1b76-44d6-9565-f114f18721f1": {
+          "tips": [
+            null
+          ]
+        },
+        "c9458a29-f135-4840-aae0-37c35f2bfa52": {
+          "name": "Penggulungan"
+        },
+        "3bc8e042-f19f-4233-bebc-baccef07881b": {
+          "tips": [
+            null
+          ]
+        },
+        "892bacbf-54ca-4447-8e4e-c711765fcd7d": {
+          "name": "Penggulungan"
+        },
+        "dc5dddbb-40bf-41e0-be7e-51b41edf1337": {
+          "tips": [
+            null
+          ]
+        },
+        "065f7419-b028-4610-b0c4-671f2ec86590": {
+          "name": "Penggulungan"
+        },
+        "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a": {
+          "tips": [
+            null
+          ]
+        },
+        "2df922c9-a79a-4e9f-a4e5-003cee501451": {
+          "name": "Penggulungan"
+        },
+        "15cc22f5-50bf-4102-843a-7f9246727869": {
+          "tips": [
+            null
+          ]
+        },
+        "1f35f92d-5556-4137-a1e6-38c31a3a719f": {
+          "name": "Penggulungan"
+        },
+        "9819f2db-593b-4631-96e8-ad45aba59e08": {
+          "tips": [
+            null
+          ]
+        },
+        "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
+          "tips": [
+            null
+          ]
+        },
+        "e90bcc9b-7ad0-4e59-9c21-3e80d85c08f4": {
+          "tips": [
+            null
+          ]
+        },
+        "9a00392e-73f9-4bf0-9ca9-fc29a07a6bf1": {
+          "tips": [
+            null
+          ]
+        },
+        "8accf144-8730-45d6-a806-475e5164395c": {
+          "tips": [
+            null
+          ]
+        },
+        "d567345f-60b1-4c26-b5b7-d78d4e4ca1e9": {
+          "tips": [
+            null
+          ]
+        },
+        "aed2c64f-4f98-4bf6-adf7-f7cd80ab941a": {
+          "tips": [
+            null
+          ]
+        },
+        "b1931821-27e8-4550-98c6-ffc17f93cb62": {
+          "tips": [
+            null
+          ]
+        },
+        "d9db5d0e-f332-4e7f-8526-6bf166cae8a7": {
+          "tips": [
+            null
+          ]
+        },
+        "f5c05e62-80c7-422f-b578-b9ba663db140": {
+          "tips": [
+            null
+          ]
+        },
+        "ceaa3d86-c33a-4a0a-b56c-75b2b938786f": {
+          "name": "Takrifkan",
+          "tips": [
+            null
+          ]
+        },
+        "a400fd77-feee-4d7d-8be6-7ceb8e378cd0": {
+          "tips": [
+            null
+          ]
+        },
+        "11e8295e-4b2e-4844-91cd-3d02533f89ce": {
+          "tips": [
+            null
+          ]
+        },
+        "8e25228f-7396-4a9d-9dab-ff41c9ceeb53": {
+          "name": "Sedia"
+        },
+        "6c2b2e0f-0ca5-4f49-b7a4-e90ddc47860d": {
+          "tips": [
+            null
+          ]
+        },
+        "0e79724e-4dc4-491d-ac17-f4839c30ce19": {
+          "tips": [
+            null
+          ]
+        },
+        "ef056da0-16f9-479a-95ea-42f70ae6a9aa": {
+          "tips": [
+            null
+          ]
+        },
+        "667167ce-9c2f-4059-9a2a-71bdd0adccbc": {
+          "tips": [
+            null
+          ]
+        },
+        "3c36a33c-4c3d-4f93-8c89-a1a7dbdfd58c": {
+          "name": "Cuba"
+        },
+        "b640029f-89eb-45d2-a087-e6d57d703c12": {
+          "name": "Renungkan"
+        },
+        "8f2a96ab-2fe4-4799-bf45-5d850c830f97": {
+          "tips": [
+            null
+          ]
+        },
+        "8a310d03-4c27-4b18-b8f7-994c23971fdd": {
+          "tips": [
+            null
+          ]
+        },
+        "889b61a1-6e88-49a4-9250-5e48853f289c": {
+          "tips": [
+            null
+          ]
+        },
+        "6519fc7c-05b3-464d-a3ea-3cd9b239a023": {
+          "tips": [
+            null
+          ]
+        },
+        "b7a9b018-0728-4b91-935e-b3ec7c723623": {
+          "tips": [
+            null
+          ]
+        },
+        "45553c85-cb2b-4763-8875-484919a56ced": {
+          "tips": [
+            null
+          ]
+        },
+        "18ddafa9-e84c-403f-a417-d4516a1ae6a7": {
+          "tips": [
+            null
+          ]
+        },
+        "c5dbb48d-d120-4560-b671-bd507f1685b0": {
+          "tips": [
+            null
+          ]
+        },
+        "2ee54cfb-c1d2-4524-86c2-6ef303a598ea": {
+          "tips": [
+            null
+          ]
+        },
+        "2c2e61bd-0e80-4e8a-8377-5680d0d95f90": {
+          "tips": [
+            null
+          ]
+        },
+        "4a408d6d-8d2f-481e-aafe-e5d81da03a43": {
+          "tips": [
+            null
+          ]
+        },
+        "3fef28ad-87b4-4154-b80f-12b358f2e031": {
+          "tips": [
+            null
+          ]
+        },
+        "1715dc9b-df4c-4292-8b4a-f5cc8aea73a4": {
+          "tips": [
+            null
+          ]
+        },
+        "69cdfd66-ff99-4e25-b8e7-e6d920f36fb1": {
+          "tips": [
+            null
+          ]
+        },
+        "47fe69d8-300c-488d-94ac-616b6fb2fbb8": {
+          "tips": [
+            null
+          ]
+        },
+        "37a98989-bd44-40e0-8606-da8c32dde749": {
+          "tips": [
+            null
+          ]
+        },
+        "a23e57c3-d624-46df-bc76-87d7e4c16ad9": {
+          "tips": [
+            null
+          ]
+        },
+        "54a5e672-f71d-4cd7-9bb7-db4ad99104f5": {
+          "tips": [
+            null
+          ]
+        },
+        "743d6e6b-6320-4157-962e-5789b717aa34": {
+          "name": "Penggulungan"
+        },
+        "8672a531-0212-4a3a-9831-5c522d710bd4": {
+          "tips": [
+            null
+          ]
+        },
+        "33e66783-8c6a-4b44-a3ce-7715ffb2307d": {
+          "name": "Renungkan"
+        },
+        "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400": {
+          "tips": [
+            null
+          ]
+        },
+        "beeb8da7-5283-44e8-a1b5-0eb3987e226b": {
+          "tips": [
+            null
+          ]
+        },
+        "a97b7f87-b7d9-4a8d-a68e-35cd489345e2": {
+          "tips": [
+            null
+          ]
+        },
+        "86647112-ffd2-4c41-84b4-1ea040590a32": {
+          "tips": [
+            null
+          ]
+        },
+        "233defe7-9977-4539-8a42-7e146979db0e": {
+          "tips": [
+            null
+          ]
+        },
+        "f5bad206-6147-4a6c-af88-bf15c41f6469": {
+          "tips": [
+            null
+          ]
+        },
+        "d12014de-c29c-4d8d-891b-2dca9c37974f": {
+          "tips": [
+            null
+          ]
+        },
+        "eb20582a-3ffa-45d7-8ce4-5505dc1e9f17": {
+          "tips": [
+            null
+          ]
+        },
+        "f8a14811-8528-45d2-970e-71e4c4cdd40e": {
+          "tips": [
+            null
+          ]
+        },
+        "9519ba5f-1e9a-41a3-91a5-10dcaa31b00d": {
+          "tips": [
+            null
+          ]
+        },
+        "99a48707-5d94-418b-a63e-120ef2178c88": {
+          "tips": [
+            null
+          ]
+        },
+        "61333e8c-4c43-4cb8-8a5f-56153ff20170": {
+          "tips": [
+            null
+          ]
+        },
+        "ac59be9d-db06-4340-a5f3-2f74f4d22f72": {
+          "tips": [
+            null
+          ]
+        },
+        "7e704d36-1603-46a8-be78-8f13dcdae93f": {
+          "tips": [
+            null
+          ]
+        },
+        "9e5d6c76-47cf-4853-8bfb-ebfa6005ca71": {
+          "tips": [
+            null
+          ]
+        },
+        "43484e40-619c-44a7-97e1-2612ae402193": {
+          "tips": [
+            null
+          ]
+        },
+        "d7947c4f-5f7c-4011-a004-6fb9cc228706": {
+          "tips": [
+            null
+          ]
+        },
+        "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
+          "tips": [
+            null
+          ]
+        },
+        "69c31664-67a3-406f-aef7-9be5281299ee": {
+          "tips": [
+            null
+          ]
+        },
+        "4aec71fb-6cbe-4811-ab72-128f739c84a7": {
+          "tips": [
+            null
+          ]
+        },
+        "580b0187-b553-4031-b073-fa6790bd6f48": {
+          "tips": [
+            null
+          ]
+        },
+        "9e88ce3c-497f-47c8-88b9-717c5747ca41": {
+          "tips": [
+            null
+          ]
+        },
+        "34f8346c-af88-4f9e-b676-566a5aab39d2": {
+          "tips": [
+            null
+          ]
+        },
+        "9073a9fc-550e-48f5-9f00-55bd0c2abf6a": {
+          "tips": [
+            null
+          ]
+        },
+        "4defcbc5-28b7-46a2-81b0-5e1c923dc036": {
+          "tips": [
+            null
+          ]
+        },
+        "bcbc8736-9513-438c-b118-87470fc5f545": {
+          "tips": [
+            null
+          ]
+        },
+        "5299e79c-fbf7-422a-962a-8adee224fd98": {
+          "tips": [
+            null
+          ]
+        },
+        "2974a2b8-24cd-4a3c-bd66-04e92209110b": {
+          "tips": [
+            null
+          ]
+        },
+        "52705132-ae81-4c78-8704-9ffd36b9e5cb": {
+          "tips": [
+            null
+          ]
+        },
+        "9ac26727-d92c-474f-8a18-271e7f494132": {
+          "tips": [
+            null
+          ]
+        },
+        "2e5264db-0d1d-4fc1-adf1-c5bf13967af5": {
+          "tips": [
+            null
+          ]
+        },
+        "648adba7-4a69-4bce-9109-9d50e9d71087": {
+          "tips": [
+            null
+          ]
+        },
+        "3ae6c2fa-0e47-40a3-894b-b1995fe98c91": {
+          "tips": [
+            null
+          ]
+        },
+        "5a82120d-9538-4fd6-b631-86b6d0e8bfc6": {
+          "tips": [
+            null
+          ]
+        },
+        "cc78f5f7-002f-44ed-9f5f-2518a19953e7": {
+          "tips": [
+            null
+          ]
+        },
+        "311288e0-9ddf-4681-a8f2-31ae7d196423": {
+          "tips": [
+            null
+          ]
+        },
+        "045c4fbc-83bd-4cce-a007-ed7ed6ac48bf": {
+          "tips": [
+            null
+          ]
+        },
+        "2f4c69e6-995a-4646-ac24-53f224ef9dd7": {
+          "tips": [
+            null
+          ]
+        },
+        "aec4a036-761c-4015-bdd0-e138372c1847": {
+          "tips": [
+            null
+          ]
+        },
+        "ff9510f7-5db2-48e7-906e-2289e52db678": {
+          "tips": [
+            null
+          ]
+        },
+        "75d3dcbc-e41c-4063-b598-facb3bdc9bcb": {
+          "tips": [
+            null
+          ]
+        },
+        "cda83683-b629-4ed3-a3ee-944691693739": {
+          "tips": [
+            null
+          ]
+        },
+        "1fb9839f-ccd0-4f02-b7b9-44e8ff7ab095": {
+          "tips": [
+            null
+          ]
+        },
+        "66a0329e-9fa3-4294-ba1a-ac918f0e8408": {
+          "tips": [
+            null
+          ]
+        },
+        "24d188db-fc22-41a3-bba4-8ef59a0ddc53": {
+          "tips": [
+            null
+          ]
+        },
+        "14254f0c-651f-4902-88ae-509fe2b77f7e": {
+          "tips": [
+            null
+          ]
+        },
+        "7f6c261c-5cd3-4215-ba2d-bb0db7014f0c": {
+          "tips": [
+            null
+          ]
+        },
+        "ba1c96c9-ff95-432b-8d22-5138a319f4b4": {
+          "tips": [
+            null
+          ]
+        },
+        "f7bad8f1-8f27-48a7-bd98-70d03a7ddf81": {
+          "tips": [
+            null
+          ]
+        },
+        "0e136518-de25-4ad4-a786-e9736f9b4354": {
+          "tips": [
+            null
+          ]
+        },
+        "e4c15ff3-00e4-45d9-b9ad-78e5b332b058": {
+          "tips": [
+            null
+          ]
+        },
+        "9ab8fce2-b661-425e-a015-a671e382a411": {
+          "tips": [
+            null
+          ]
+        },
+        "8c475adc-0786-43a2-9f57-fde314fd24ad": {
+          "tips": [
+            null
+          ]
+        },
+        "b25121aa-b946-4bea-9fdd-6a874ffb4bd7": {
+          "tips": [
+            null
+          ]
+        },
+        "8b41cd86-ab6d-4cc1-b24f-70a9534ba318": {
+          "tips": [
+            null
+          ]
+        },
+        "2e7e6d2b-ce4c-48ee-ab67-a7002104dad7": {
+          "tips": [
+            null
+          ]
+        },
+        "a96b40dd-a27b-4fc0-8c1e-db5584a87c4e": {
+          "tips": [
+            null
+          ]
+        },
+        "fe5c3b17-fe61-4487-97d0-c8cb1c2641c8": {
+          "tips": [
+            null
+          ]
+        },
+        "0b73f454-275c-431b-8325-06c9a32000d1": {
+          "tips": [
+            null
+          ]
+        },
+        "5eb3c3e2-7ebd-4824-b769-14d1244e412b": {
+          "tips": [
+            null
+          ]
+        },
+        "dfe65c27-9f06-4c6f-857e-06f4ae98dcd1": {
+          "tips": [
+            null
+          ]
+        },
+        "b5282123-46f9-411e-ba2c-d6f5ab3b4ea7": {
+          "tips": [
+            null
+          ]
+        },
+        "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
+          "tips": [
+            null
+          ]
+        },
+        "f14cc941-af61-4deb-8c16-be730ded1849": {
+          "tips": [
+            null
+          ]
+        },
+        "fe4404fa-4e67-4c56-b117-6aa3dd7fd8ef": {
+          "tips": [
+            null
+          ]
+        },
+        "053cf5c9-1dd1-4da7-8fca-82dd5780c4b0": {
+          "tips": [
+            null
+          ]
+        },
+        "8cb231b2-ab63-4868-a949-bc91e701ea7d": {
+          "tips": [
+            null
+          ]
+        },
+        "dafc849e-b1f0-4767-aa97-69090169177e": {
+          "tips": [
+            null
+          ]
+        },
+        "9fc2aec4-9f01-4726-82a7-306e613d936e": {
+          "tips": [
+            null
+          ]
+        },
+        "1890c047-5983-4093-99a8-08fcb099c0e0": {
+          "tips": [
+            null
+          ]
+        },
+        "bc4c9c62-accc-4be6-a733-2a6acf678ec7": {
+          "tips": [
+            null
+          ]
+        },
+        "b297e101-f4cd-4ddd-ae0f-42e87ed683d0": {
+          "tips": [
+            null
+          ]
+        },
+        "c932e879-ed85-4226-b025-a1dbb22da379": {
+          "tips": [
+            null
+          ]
+        },
+        "4c3af8fe-b972-410f-a839-00f38e6a51ce": {
+          "tips": [
+            null
+          ]
+        },
+        "7091d49a-c4ac-4c04-aaa4-290efb0ee705": {
+          "tips": [
+            null
+          ]
+        },
+        "2224615d-c083-4694-b797-4b3c8e8d84da": {
+          "tips": [
+            null
+          ]
+        },
+        "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
+          "tips": [
+            null
+          ]
+        },
+        "f5a1e7d6-5715-4050-bfed-a5e0663486c4": {
+          "tips": [
+            null
+          ]
+        },
+        "ef9ec42f-f86e-4636-a45b-5da0d208b714": {
+          "tips": [
+            null
+          ]
+        },
+        "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "0d9ecf02-4bac-4dc3-86c4-ba83c96e8a14": {
+          "tips": [
+            null
+          ]
+        },
+        "01addbef-11df-4c62-a099-ae69c66c7c1c": {
+          "tips": [
+            null
+          ]
+        },
+        "33168786-d600-4b6c-a947-045b8a466d7c": {
+          "tips": [
+            null
+          ]
+        },
+        "8259e743-5c84-4516-8f31-300f06de6ab0": {
+          "tips": [
+            null
+          ]
+        },
+        "9afdcdd9-6cf6-481c-86b4-312da18c7cc3": {
+          "progression_name": "Acara-acara"
+        },
+        "b919f5c1-5152-4baa-bddb-112275d049ac": {
+          "progression_name": "Fungsi"
+        },
+        "316f977f-5ad8-4565-b6d1-1c62507ba565": {
+          "tips": [
+            null
+          ]
+        },
+        "701df007-2fc2-4907-bdae-63ea39ea0649": {
+          "tips": [
+            null
+          ]
+        },
+        "528b9a48-dd5d-4f52-b455-be650f9ed180": {
+          "tips": [
+            null
+          ]
+        },
+        "3f472ce9-f1fe-4be7-8849-5ba3155f2d11": {
+          "tips": [
+            null
+          ]
+        },
+        "78b871d6-dd5f-4ad8-b32b-97df938ae849": {
+          "tips": [
+            null
+          ]
+        },
+        "0d6b1fbb-59d1-4a90-a5f7-e6fdbabcdfb6": {
+          "tips": [
+            null
+          ]
+        },
+        "4563c715-0a30-419a-9eca-d5b41089e165": {
+          "tips": [
+            null
+          ]
+        },
+        "28fb99c8-886a-4ed6-859a-1fb1a813c484": {
+          "tips": [
+            null
+          ]
+        },
+        "eb895db7-aeb1-4efe-9eb8-c314cd7a2621": {
+          "tips": [
+            null
+          ]
+        },
+        "0874692e-8e17-4b1d-9232-f11c61106af0": {
+          "tips": [
+            null
+          ]
+        },
+        "d5b2ea3b-4370-4cf8-a9ed-670e789d812f": {
+          "tips": [
+            null
+          ]
+        },
+        "4eae7990-8111-4f59-a7ef-212acf9f054f": {
+          "tips": [
+            null
+          ]
+        },
+        "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
+          "tips": [
+            null
+          ]
+        },
+        "88fbe9b6-7233-4617-a579-4eea7041c1b0": {
+          "tips": [
+            null
+          ]
+        },
+        "83dadfe8-ec04-4986-9e4b-8fcb301bce51": {
+          "tips": [
+            null
+          ]
+        },
+        "61efbeb1-5fcd-4dec-9265-4628f24745de": {
+          "tips": [
+            null
+          ]
+        },
+        "de64b098-e02d-4a21-9965-1e7217f40ebd": {
+          "progression_name": "Fungsi-fungsi dengan parameter"
+        },
+        "02b60bab-d184-4bce-859c-5438c9e37cc4": {
+          "tips": [
+            null
+          ]
+        },
+        "3b0572f2-01eb-48b0-96a1-43739f98575a": {
+          "tips": [
+            null
+          ]
+        },
+        "38e26d5e-b651-4c50-b791-10455112e4ba": {
+          "tips": [
+            null
+          ]
+        },
+        "c814528c-f376-440e-849f-19d8790e7d92": {
+          "tips": [
+            null
+          ]
+        },
+        "8521f45a-fff7-43d7-bd5a-d32077c26151": {
+          "tips": [
+            null
+          ]
+        },
+        "420da788-7b37-45e7-b940-ae08c8f90b25": {
+          "tips": [
+            null
+          ]
+        },
+        "672d26f8-cbd5-46ea-8482-d84b0be3e335": {
+          "tips": [
+            null
+          ]
+        },
+        "a3f5dca7-56ea-4d7e-9f37-b1ae9f46aef5": {
+          "tips": [
+            null
+          ]
+        },
+        "0516be14-10b2-4124-af7c-3d76c5177d95": {
+          "tips": [
+            null
+          ]
+        },
+        "44000645-7870-4e71-b27e-75cd70b6dbb9": {
+          "tips": [
+            null
+          ]
+        },
+        "a76a28bd-8ddb-4b39-8ce7-6663e81bfd1b": {
+          "name": "Kongsi",
+          "tips": [
+            null
+          ]
+        },
+        "a237ce6e-b99e-4117-afee-b384cfd9fc4f": {
+          "tips": [
+            null
+          ]
+        },
+        "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
+          "tips": [
+            null
+          ]
+        },
+        "7e296c41-f0fb-4d31-8b13-31f6e7abe2f5": {
+          "tips": [
+            null
+          ]
+        },
+        "98a216a1-8aa6-4216-ad6e-b7ab5abca491": {
+          "tips": [
+            null
+          ]
+        },
+        "addfcb6c-dafa-4e9d-b5fc-8d2c400714aa": {
+          "tips": [
+            null
+          ]
+        },
+        "05ef09a7-e47c-4238-b280-31aeb3b4dc00": {
+          "tips": [
+            null
+          ]
+        },
+        "cc06e6ea-b748-4c9d-b201-ccb10cd77cf6": {
+          "tips": [
+            null
+          ]
+        },
+        "cbce24b3-baeb-42f3-978b-e4262e9e38b7": {
+          "tips": [
+            null
+          ]
+        },
+        "d324e413-50c5-4135-97ad-610430cd5a97": {
+          "tips": [
+            null
+          ]
+        },
+        "bb61bac7-12c5-4854-9cce-2450dae006fb": {
+          "tips": [
+            null
+          ]
+        },
+        "604675cc-016d-4706-ad48-32d1547d7a74": {
+          "tips": [
+            null
+          ]
+        },
+        "8aadfdde-40ea-48c0-b369-3e9a0213c31b": {
+          "tips": [
+            null
+          ]
+        },
+        "0cb3b9f4-af2b-43e0-bdaa-4ce6ff013a37": {
+          "tips": [
+            null
+          ]
+        },
+        "2f614323-09fc-4fc3-949a-d8326ea2dedf": {
+          "tips": [
+            null
+          ]
+        },
+        "17536ac7-f578-4492-9a2b-034697748108": {
+          "tips": [
+            null
+          ]
+        },
+        "143b040a-8c9e-4653-92d4-f58ea9ffef72": {
+          "tips": [
+            null
+          ]
+        },
+        "85c49ae4-5b52-40ad-96eb-424f02d8539e": {
+          "tips": [
+            null
+          ]
+        },
+        "7383a881-4001-478a-8e89-5169fc76e2fb": {
+          "tips": [
+            null
+          ]
+        },
+        "5e396df7-105a-46f4-8083-63f1c708ca2a": {
+          "tips": [
+            null
+          ]
+        },
+        "c71003ba-e08d-4d77-b308-5cc6ee941091": {
+          "tips": [
+            null
+          ]
+        },
+        "30ef889b-387b-4dbd-b6bc-96ca25489944": {
+          "tips": [
+            null
+          ]
+        },
+        "59dffdf2-728b-4b66-a29b-7635c858be00": {
+          "tips": [
+            null
+          ]
+        },
+        "5ab922e3-8512-4c62-83c7-e17aa282377d": {
+          "tips": [
+            null
+          ]
+        },
+        "1282f8e7-0fd9-47bc-b7b4-75b4025eedb5": {
+          "tips": [
+            null
+          ]
+        },
+        "13abae06-0500-42e9-a486-940684c9ba87": {
+          "tips": [
+            null
+          ]
+        },
+        "a4df917c-be45-4977-bc95-fbe945f3c3cf": {
+          "tips": [
+            null
+          ]
+        },
+        "38324708-63cb-4738-92c9-af06aed187f7": {
+          "tips": [
+            null
+          ]
+        },
+        "95c12363-142c-4e82-bed6-76541ed021c4": {
+          "tips": [
+            null
+          ]
+        },
+        "2c09cb98-721d-4c28-add5-bc717980da1e": {
+          "tips": [
+            null
+          ]
+        },
+        "e5d5e7ac-2362-41f9-a3ba-b78deaee4edc": {
+          "tips": [
+            null
+          ]
+        },
+        "bc476ecb-65ea-4f30-a970-81feb995c71c": {
+          "tips": [
+            null
+          ]
+        },
+        "112b54ac-5751-4635-8275-23e6acc5947c": {
+          "tips": [
+            null
+          ]
+        },
+        "1fcec88e-f931-4ece-95d2-966a9ce0d0eb": {
+          "tips": [
+            null
+          ]
+        },
+        "317d7606-342d-4068-939d-b4abefb7867f": {
+          "tips": [
+            null
+          ]
+        },
+        "4e8ecb03-3abf-412e-96bb-102eb61294aa": {
+          "tips": [
+            null
+          ]
+        },
+        "c74f28dc-8f61-443c-b03a-4943b65c8824": {
+          "tips": [
+            null
+          ]
+        },
+        "928ac428-64ef-4359-ad63-12d175fa700e": {
+          "name": "Takrifkan"
+        },
+        "d19d7358-a136-4eae-a082-fb508284fb50": {
+          "tips": [
+            null
+          ]
+        },
+        "35745fa0-2097-414b-beb8-eca436c1d5b9": {
+          "name": "Sedia"
+        },
+        "2cd98702-4332-403a-8ce9-01db36e361ab": {
+          "tips": [
+            null
+          ]
+        },
+        "799529e8-aa6b-44e9-a270-1db8052d7df3": {
+          "name": "Cuba"
+        },
+        "fae06660-56ad-41e5-8af3-bbfbe36ebb97": {
+          "tips": [
+            null
+          ]
+        },
+        "7080a972-d63e-4299-8260-f1df2f234857": {
+          "name": "Renungkan"
+        },
+        "cb6b53c4-832b-4488-b7d8-e235460c633c": {
+          "tips": [
+            null
+          ]
+        },
+        "4701e66f-6c37-4ae3-a6d9-b94b4c45704c": {
+          "tips": [
+            null
+          ]
+        },
+        "28dfd4cd-0d62-4c35-bed0-d6038adf4813": {
+          "tips": [
+            null
+          ]
+        },
+        "2bd9ece8-996d-4561-9ff9-b702ac019d12": {
+          "tips": [
+            null
+          ]
+        },
+        "b22284df-c9d1-4046-93d8-4cd7339b1ec0": {
+          "tips": [
+            null
+          ]
+        },
+        "b65a936d-eb48-4c6f-a0bf-751bb0829269": {
+          "tips": [
+            null
+          ]
+        },
+        "a6b0da50-c2de-4f78-98e0-5f01500c1845": {
+          "tips": [
+            null
+          ]
+        },
+        "a8280172-5d5d-4d29-b6ec-bc98ae0e3e08": {
+          "tips": [
+            null
+          ]
+        },
+        "c72ef18c-8a87-40ab-9a07-260f89fad275": {
+          "tips": [
+            null
+          ]
+        },
+        "45d58868-a7ed-43a5-ae94-c64de3cc4dd5": {
+          "tips": [
+            null
+          ]
+        },
+        "46bfc542-d2d8-4124-a4cd-d7e53fff618e": {
+          "tips": [
+            null
+          ]
+        },
+        "501ce03f-e483-4e6d-bbc8-dc26c9a3a265": {
+          "tips": [
+            null
+          ]
+        },
+        "3cf5b5f5-208d-4801-b616-a877e120f6ca": {
+          "tips": [
+            null
+          ]
+        },
+        "c3c51f8c-dafe-485c-9fb6-9e10a686097d": {
+          "tips": [
+            null
+          ]
+        },
+        "456fda46-f469-47e7-991c-6fd3efb1c0f6": {
+          "tips": [
+            null
+          ]
+        },
+        "1d7c5ce3-6ee6-408f-9723-8fdfb8b2fda3": {
+          "tips": [
+            null
+          ]
+        },
+        "400536e8-3e68-4e2e-a1cb-15abe6e78255": {
+          "tips": [
+            null
+          ]
+        },
+        "1fd332bf-4d3a-4fb3-8585-11aa036c87ff": {
+          "tips": [
+            null
+          ]
+        },
+        "1d708064-9b0b-4a56-bccf-715c91c2cf6d": {
+          "tips": [
+            null
+          ]
+        },
+        "a367b3e1-6f45-49c0-8429-9e2b607560a2": {
+          "tips": [
+            null
+          ]
+        },
+        "e4a6519f-4954-49e6-8914-83043cd945d7": {
+          "tips": [
+            null
+          ]
+        },
+        "e84d2260-141b-4899-971d-0e0e33eb12d2": {
+          "tips": [
+            null
+          ]
+        },
+        "caccc30a-07e9-465a-a077-65788e7b4f1b": {
+          "tips": [
+            null
+          ]
+        },
+        "83b2e7f4-a01c-491f-a3e1-29ac12d01a13": {
+          "tips": [
+            null
+          ]
+        },
+        "f6b744db-baed-4e9d-bdf4-1f1399bf716a": {
+          "tips": [
+            null
+          ]
+        },
+        "85bda82c-51d9-4b18-a377-4ecd142855c0": {
+          "tips": [
+            null
+          ]
+        },
+        "8ff48983-ab23-42db-8ad0-d0d690bafad5": {
+          "tips": [
+            null
+          ]
+        },
+        "7d58d643-efce-44e7-a3e4-7b3492c72250": {
+          "tips": [
+            null
+          ]
+        },
+        "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
+          "tips": [
+            null
+          ]
+        },
+        "914c565c-fb6d-490c-a14a-b289ac56d720": {
+          "tips": [
+            null
+          ]
+        },
+        "4ed5db10-7aec-4ab8-802b-10ccc9710ed5": {
+          "tips": [
+            null
+          ]
+        },
+        "92b13324-8ae5-4796-9071-694683704daa": {
+          "tips": [
+            null
+          ]
+        },
+        "7c5c8f29-ab7a-4891-b135-182f4222a591": {
+          "tips": [
+            null
+          ]
+        },
+        "375e017e-8620-4d95-a1f5-89fda22729ac": {
+          "tips": [
+            null
+          ]
+        },
+        "24a8f1ab-d8eb-4738-b114-0534be713085": {
+          "tips": [
+            null
+          ]
+        },
+        "ff9b8b39-860d-427b-9a2d-80c537bc539f": {
+          "tips": [
+            null
+          ]
+        },
+        "4bc50ef6-5978-4a80-943a-49fc0cffb23e": {
+          "tips": [
+            null
+          ]
+        },
+        "2d923b7c-56a0-462a-b7c4-5350cfe28ac0": {
+          "tips": [
+            null
+          ]
+        },
+        "92566744-182e-416d-b7c7-2f5b2a92026b": {
+          "tips": [
+            null
+          ]
+        },
+        "ec94d489-2b99-408d-bcce-782db2cdba44": {
+          "tips": [
+            null
+          ]
+        },
+        "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
+          "tips": [
+            null
+          ]
+        },
+        "e82622fb-a1cf-45c8-a0f2-7929503c4bfe": {
+          "tips": [
+            null
+          ]
+        },
+        "2725045e-4a46-449e-9a1e-ecf266e6755d": {
+          "tips": [
+            null
+          ]
+        },
+        "3c78bafa-e216-4280-a965-d982d319d15a": {
+          "tips": [
+            null
+          ]
+        },
+        "a929ea0c-ccdf-4e2c-9751-3012d428dcd6": {
+          "tips": [
+            null
+          ]
+        },
+        "0a01de04-3b8f-4025-864a-8a2f48f9fd09": {
+          "tips": [
+            null
+          ]
+        },
+        "b0b45a9e-53a8-4d5e-a248-7a7d042dd2b8": {
+          "tips": [
+            null
+          ]
+        },
+        "935fb22e-ea0b-4c9b-92fc-61c39895fca9": {
+          "tips": [
+            null
+          ]
+        },
+        "9663d7f7-168d-4f85-8f8a-cc2d6f86efa3": {
+          "tips": [
+            null
+          ]
+        },
+        "c838ee44-b6fd-467e-8733-9b52d9727b08": {
+          "tips": [
+            null
+          ]
+        },
+        "9612456b-5030-4f4c-a11b-893694130773": {
+          "tips": [
+            null
+          ]
+        },
+        "ea1a9294-f250-4c26-8032-c497088f8206": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "897f445d-23b2-4083-8982-ec4ea7cecbec": {
+          "tips": [
+            null
+          ]
+        },
+        "1f66ca37-97c5-48be-9f14-d7f4938b2632": {
+          "tips": [
+            null
+          ]
+        },
+        "11f4055c-bcd6-4b74-8f9a-5d69502955f2": {
+          "tips": [
+            null
+          ]
+        },
+        "ef33e6f2-c5d9-4d5d-85fc-4434062b105f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "a09c360f-651e-4539-94b3-620914e17cf2": {
+          "tips": [
+            null
+          ]
+        },
+        "5485407f-b2b9-433e-86a4-6da5afa523f5": {
+          "tips": [
+            null
+          ]
+        },
+        "9e754b3d-83a4-4fb3-bdf5-331c02667465": {
+          "tips": [
+            null
+          ]
+        },
+        "df26b7e2-cb48-40b2-b360-d0e9770b8802": {
+          "tips": [
+            null
+          ]
+        },
+        "a14285ec-28bc-4b44-a63c-204c0034c19f": {
+          "tips": [
+            null
+          ]
+        },
+        "58908247-dbee-4578-8155-09f7d934c017": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "e13128cb-3a56-488b-86db-0a2edd7aff6d": {
+          "tips": [
+            null
+          ]
+        },
+        "61d2c0ea-b465-4fe7-8906-7b4d6a8820cd": {
+          "tips": [
+            null
+          ]
+        },
+        "dfafff33-7c5b-4a4a-9d38-647e60b34160": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "e3a151f2-e5d3-4a66-9eed-6bc74f6adecb": {
+          "tips": [
+            null
+          ]
+        },
+        "04061607-035b-48a3-ad8e-33fed692aa2b": {
+          "tips": [
+            null
+          ]
+        },
+        "f52c22d8-72a7-44d1-91d2-66aacf92c1a8": {
+          "tips": [
+            null
+          ]
+        },
+        "8f56a7b9-e17b-4173-bae9-c996824270b4": {
+          "tips": [
+            null
+          ]
+        },
+        "234316a5-009b-44bd-a51d-fdcb54cc8903": {
+          "name": "Penilaian",
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "2057627a-c665-4a63-8aed-c1123ce9796a": {
+          "tips": [
+            null
+          ]
+        },
+        "5989291d-e9d4-4f14-bdf6-399b69b96cec": {
+          "tips": [
+            null
+          ]
+        },
+        "34fcaf28-d278-49ff-877f-a5f79f77af59": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "f455bf72-f2c8-4bf2-970f-af533ef80342": {
+          "tips": [
+            null
+          ]
+        },
+        "2d0fc04c-aa1b-4148-9efd-06764f14c100": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "7e2e7a3e-fd91-4ab5-8b46-f8ae96c91169": {
+          "tips": [
+            null
+          ]
+        },
+        "67d8c4d5-fda2-47c0-a7a3-164eb669718f": {
+          "name": "Semakan"
+        },
+        "0b250aa0-f3fa-4530-bef8-e328e4d93620": {
+          "tips": [
+            null
+          ]
+        },
+        "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
+          "tips": [
+            null
+          ]
+        },
+        "760b0216-8c5d-4954-ac35-fd42c527ac66": {
+          "tips": [
+            null
+          ]
+        },
+        "c490c403-c5dc-4755-a03b-1532565b1119": {
+          "tips": [
+            null
+          ]
+        },
+        "6cf8f316-c11f-4cc5-85a3-1596303e4317": {
+          "tips": [
+            null
+          ]
+        },
+        "18bcf449-d684-4e93-abbd-5af4e82d1e7b": {
+          "tips": [
+            null
+          ]
+        },
+        "fcb22a6b-b548-4ea4-b2bf-23f3db9dde29": {
+          "tips": [
+            null
+          ]
+        },
+        "d1f93971-c590-43fb-be4d-a3ced983e77a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "c2703579-0081-4ecf-8aa2-500ed370fb99": {
+          "tips": [
+            null
+          ]
+        },
+        "4e97aa36-b285-40f3-83cb-383e83158dc5": {
+          "tips": [
+            null
+          ]
+        },
+        "b8ce874f-8e09-4a78-aa14-7b32de942c69": {
+          "tips": [
+            null
+          ]
+        },
+        "a6ebae49-e1ca-4918-9d7f-4c0e33cdf00e": {
+          "tips": [
+            null
+          ]
+        },
+        "bccfd2b8-dd73-4be5-ab15-2dfa4024312b": {
+          "progression_name": "Penilaian"
+        },
+        "06cad4ef-4d60-42e4-829c-02fd3364c31e": {
+          "tips": [
+            null
+          ]
+        },
+        "eb0d27fe-7158-49fe-9e96-bbc70d2fa158": {
+          "name": "Semakan"
+        },
+        "a5361b9b-6e15-4bba-9b35-ae31a1e1b525": {
+          "tips": [
+            null
+          ]
+        },
+        "fa1f1ad4-aadd-49d1-9138-887450893813": {
+          "tips": [
+            null
+          ]
+        },
+        "f54152bb-4d02-459d-beea-ceeb422be02a": {
+          "tips": [
+            null
+          ]
+        },
+        "fbcd5bf0-4c6e-4142-934d-e4f4ebe17ad2": {
+          "tips": [
+            null
+          ]
+        },
+        "8ed5e3eb-5ffa-473f-b166-3ea936d0c9e7": {
+          "tips": [
+            null
+          ]
+        },
+        "02bcc907-1476-4a48-90ea-a56c5c91e6d4": {
+          "name": "Bersyarat"
+        },
+        "230cf2d8-bf75-4b73-aa29-4e468f203e78": {
+          "tips": [
+            null
+          ]
+        },
+        "030bb18c-bfaf-4c13-8ca7-9b251c26c162": {
+          "tips": [
+            null
+          ]
+        },
+        "b3b4d1e4-17c7-4933-8ba6-03ac7a46839a": {
+          "tips": [
+            null
+          ]
+        },
+        "461492e7-43b9-4c58-9ee4-b63b716dbded": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "2b5e9944-1e90-4362-98e9-ef74a8d1d48b": {
+          "tips": [
+            null
+          ]
+        },
+        "0ee8704d-9ad3-4a31-816f-555813322a78": {
+          "tips": [
+            null
+          ]
+        },
+        "9345c305-ff75-4d36-a595-b0b7a69c094f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "e016d4b6-9ebd-4c6c-9697-b368a0c90bd8": {
+          "tips": [
+            null
+          ]
+        },
+        "48c9aa57-b904-4660-b629-e49bf606fad7": {
+          "tips": [
+            null
+          ]
+        },
+        "991be916-6a79-484c-95a2-0e6f753d9ac8": {
+          "tips": [
+            null
+          ]
+        },
+        "fb40596d-a877-43f3-87b7-325a2fd79c37": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "957a684d-5930-4823-99fa-0af6c5701b6f": {
+          "name": "Penggulungan"
+        },
+        "b9716428-aedc-4578-8328-379b70cb0d50": {
+          "tips": [
+            null
+          ]
+        },
+        "09884749-ea7e-4df2-94f7-f73308052d81": {
+          "tips": [
+            null
+          ]
+        },
+        "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
+          "tips": [
+            null
+          ]
+        },
+        "4bfb9e2c-557b-464a-9a07-7190bc4dce87": {
+          "tips": [
+            null
+          ]
+        },
+        "b2ad1d43-99f9-40fa-9f88-d8b42f8c723e": {
+          "name": "Renungkan"
+        },
+        "a2fda764-6cf6-419d-a9cb-7d62a2749660": {
+          "tips": [
+            null
+          ]
+        },
+        "42d0eae6-06b2-4aa6-a8f6-6081ce2fa560": {
+          "tips": [
+            null
+          ]
+        },
+        "e8b8a1b0-89e9-4b09-978f-11db835db760": {
+          "tips": [
+            null
+          ]
+        },
+        "a0ba31d0-91f2-4271-aacb-bf5c614aabc3": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "864f7c7f-a19d-4470-8d53-52e790f5e783": {
+          "tips": [
+            null
+          ]
+        },
+        "28c72532-e347-4f43-81ea-7b83a4e336d1": {
+          "tips": [
+            null
+          ]
+        },
+        "57411d29-c010-41c3-82bc-be6b7025c796": {
+          "tips": [
+            null
+          ]
+        },
+        "49cfe240-7090-4fbd-9e61-ef725f8bddb1": {
+          "tips": [
+            null
+          ]
+        },
+        "ef8e8137-1524-4b5d-9e2a-6c6d535cda60": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "1e949591-d103-4f64-9c54-eeac71cc51d3": {
+          "tips": [
+            null
+          ]
+        },
+        "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
+          "tips": [
+            null
+          ]
+        },
+        "c87f7c08-8f60-4810-9e6f-10ae69319288": {
+          "tips": [
+            null
+          ]
+        },
+        "96cef9d3-a478-4852-9dff-061a5fa5dc79": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "443eb6ca-6406-4399-b140-a4d6ec3f0bca": {
+          "tips": [
+            null
+          ]
+        },
+        "136ec817-6a58-41db-aae8-3238b015ce63": {
+          "tips": [
+            null
+          ]
+        },
+        "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
+          "tips": [
+            null
+          ]
+        },
+        "4c0ed738-4808-45b2-aaae-965d536ffc6a": {
+          "tips": [
+            null
+          ]
+        },
+        "0d8cc1e7-4e01-4315-a98c-87fcc7031ca7": {
+          "tips": [
+            null
+          ]
+        },
+        "6b47f10d-a466-436e-ad48-25f2404ae07a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "d2cc216a-b098-4754-bb18-087f42007b46": {
+          "tips": [
+            null
+          ]
+        },
+        "40b22769-f206-4725-b2f4-fd3f71c15101": {
+          "tips": [
+            null
+          ]
+        },
+        "52d53651-705c-47ec-a68f-d014f3499a99": {
+          "tips": [
+            null
+          ]
+        },
+        "085e06bd-a991-42ec-b8e2-2e27712cf7dd": {
+          "tips": [
+            null
+          ]
+        },
+        "e4283f2d-5933-4812-80df-341067426cc8": {
+          "tips": [
+            null
+          ]
+        },
+        "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
+          "tips": [
+            null
+          ]
+        },
+        "3dfe6414-c583-4af9-a55d-7da0d06783ef": {
+          "tips": [
+            null
+          ]
+        },
+        "9fba4c16-6103-4cb5-88a4-1a250ec8abdb": {
+          "tips": [
+            null
+          ]
+        },
+        "e068a067-ade8-4f5c-bfad-661fdff103ed": {
+          "tips": [
+            null
+          ]
+        },
+        "d0d85465-a081-4c09-ae83-8b454e76c2ff": {
+          "tips": [
+            null
+          ]
+        },
+        "4304b5c8-73c0-44c3-bd18-3ec32f1e947d": {
+          "tips": [
+            null
+          ]
+        },
+        "70b55a3a-e9cd-435d-a426-ab6e80a725cb": {
+          "tips": [
+            null
+          ]
+        },
+        "79ced720-4977-4d65-9163-acd0147f2552": {
+          "tips": [
+            null
+          ]
+        },
+        "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
+          "tips": [
+            null
+          ]
+        },
+        "7e64a6bf-73b9-4cd3-be58-402b3da57768": {
+          "tips": [
+            null
+          ]
+        },
+        "686b638e-1a29-49cc-8711-191165d251b9": {
+          "tips": [
+            null
+          ]
+        },
+        "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
+          "tips": [
+            null
+          ]
+        },
+        "d1ae9072-39e7-4cd7-81eb-6434e0b2e39d": {
+          "name": "Kongsi"
+        },
+        "2d58346e-e123-4477-8995-fefc448b3fe3": {
+          "name": "Renungkan"
+        },
+        "b44faa8f-43ae-4899-b299-888d85f57d48": {
+          "tips": [
+            null
+          ]
+        },
+        "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
+          "tips": [
+            null
+          ]
+        },
+        "1dca60be-eb7f-40ef-8b91-8ca231c1b14a": {
+          "tips": [
+            null
+          ]
+        },
+        "1c951438-4727-4ea5-84d9-560f7dac9204": {
+          "tips": [
+            null
+          ]
+        },
+        "37d397d0-785f-4dc7-b172-2b51e5757ba3": {
+          "tips": [
+            null
+          ]
+        },
+        "5166952d-961b-4ba8-b379-c4101d84b4de": {
+          "tips": [
+            null
+          ]
+        },
+        "79ffacab-f428-4e4f-8f85-e9409b2e43a3": {
+          "tips": [
+            null
+          ]
+        },
+        "6470c3f3-0547-4d23-bede-dbac0704a029": {
+          "tips": [
+            null
+          ]
+        },
+        "e1fdc61e-61b5-4b5d-b46a-62a26f7cca05": {
+          "tips": [
+            null
+          ]
+        },
+        "fc1bd727-4c35-4405-a14f-a713bcd7e532": {
+          "name": "Renungkan"
+        },
+        "82378234-dc3a-4578-a458-e237d6b9b729": {
+          "tips": [
+            null
+          ]
+        },
+        "10aec291-0c45-453c-8609-5386783ff20e": {
+          "tips": [
+            null
+          ]
+        },
+        "11b483ae-c3f6-467d-85c3-9427203e2488": {
+          "tips": [
+            null
+          ]
+        },
+        "d7edf595-a13a-4992-b963-58a034f34112": {
+          "tips": [
+            null
+          ]
+        },
+        "7accdcb0-3787-4a97-9ac5-4044890f8c12": {
+          "tips": [
+            null
+          ]
+        },
+        "555a0b86-988d-4c75-ad9a-e3fc127d44c3": {
+          "tips": [
+            null
+          ]
+        },
+        "7e307eaa-f893-47b4-94ce-38801b41592a": {
+          "tips": [
+            null
+          ]
+        },
+        "c21034e8-cca8-4197-9819-081e4114ef36": {
+          "tips": [
+            null
+          ]
+        },
+        "06af5ad1-d9b6-4834-b94a-12f5c46232c7": {
+          "tips": [
+            null
+          ]
+        },
+        "ec21fe96-de6c-4818-bf1a-c02c1f4b66ff": {
+          "tips": [
+            null
+          ]
+        },
+        "ecb7626b-e9dc-4011-b1a2-54f138d54872": {
+          "tips": [
+            null
+          ]
+        },
+        "5733d57d-7dc2-45ba-885b-e223a44ad2af": {
+          "tips": [
+            null
+          ]
+        },
+        "900764b3-0256-4cc9-b88f-1b8c4992e653": {
+          "tips": [
+            null
+          ]
+        },
+        "e623c176-d684-43c0-ad4b-9f33a3acc00f": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "396fe142-472b-4c62-976b-578e5ff5bff0": {
+          "tips": [
+            null
+          ]
+        },
+        "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
+          "tips": [
+            null
+          ]
+        },
+        "e606d7d3-d552-4db3-91b7-c26f98da237c": {
+          "tips": [
+            null
+          ]
+        },
+        "f1388388-8631-479b-bca9-ffe97206edf8": {
+          "tips": [
+            null
+          ]
+        },
+        "ce77f101-8880-4264-bf0e-b2d95e40c080": {
+          "tips": [
+            null
+          ]
+        },
+        "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
+          "tips": [
+            null
+          ]
+        },
+        "4d905d80-5cc4-4017-88ab-904e5092fe0c": {
+          "tips": [
+            null
+          ]
+        },
+        "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
+          "tips": [
+            null
+          ]
+        },
+        "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
+          "tips": [
+            null
+          ]
+        },
+        "95323c16-49dc-4c54-9bf5-c351b458beb7": {
+          "tips": [
+            null
+          ]
+        },
+        "ed3fc57d-be54-4625-bae7-5cac4680d615": {
+          "tips": [
+            null
+          ]
+        },
+        "071466cb-7d6b-4e91-93bb-261e508f89dc": {
+          "tips": [
+            null
+          ]
+        },
+        "9c0439ca-8ac8-463f-889c-47df291b32d9": {
+          "tips": [
+            null
+          ]
+        },
+        "59845bd6-dedc-4283-9cbd-f3c574fd99ab": {
+          "tips": [
+            null
+          ]
+        },
+        "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
+          "tips": [
+            null
+          ]
+        },
+        "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
+          "tips": [
+            null
+          ]
+        },
+        "40b16a1c-add1-445a-81de-c281c495fe6f": {
+          "tips": [
+            null
+          ]
+        },
+        "254a27b6-75fb-4f5f-bdf1-2ac909f01f75": {
+          "tips": [
+            null
+          ]
+        },
+        "e7394c68-613b-4772-90c8-dcf1228ba5dc": {
+          "tips": [
+            null
+          ]
+        },
+        "6a60775b-f641-46a0-820d-f6895dd26fed": {
+          "tips": [
+            null
+          ]
+        },
+        "709fc018-84ca-4c5c-af4e-bae11c2867b1": {
+          "tips": [
+            null
+          ]
+        },
+        "06fa61d8-63d0-49d0-b9d1-77ec59c88d72": {
+          "tips": [
+            null
+          ]
+        },
+        "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
+          "tips": [
+            null
+          ]
+        },
+        "68d48a87-2999-499a-962e-a0a177e1c4e6": {
+          "tips": [
+            null
+          ]
+        },
+        "f51c4e46-0b95-4035-bbef-921e12d33e3c": {
+          "tips": [
+            null
+          ]
+        },
+        "922ac8cd-6633-48ac-bcb7-85fb1d2e711a": {
+          "tips": [
+            null
+          ]
+        },
+        "f3726d11-0690-46a9-b742-f48b4a80ab33": {
+          "tips": [
+            null
+          ]
+        },
+        "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
+          "tips": [
+            null
+          ]
+        },
+        "caf7880a-40b3-4252-865e-a81d22f30d07": {
+          "tips": [
+            null
+          ]
+        },
+        "17a60d00-0762-4796-8bb7-c953b2f53867": {
+          "name": "Renungkan"
+        },
+        "04f7b740-ae5f-4f12-9867-27f7b08eff1e": {
+          "tips": [
+            null
+          ]
+        },
+        "c55fae38-7795-4027-b469-a3238f34efe5": {
+          "tips": [
+            null
+          ]
+        },
+        "418d731c-d516-4e49-8547-9313763526ca": {
+          "tips": [
+            null
+          ]
+        },
+        "c941f0ac-38f6-4828-9ca4-e8b600868807": {
+          "tips": [
+            null
+          ]
+        },
+        "c209191d-c268-4f8e-b40c-93a5de206b76": {
+          "tips": [
+            null
+          ]
+        },
+        "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
+          "tips": [
+            null
+          ]
+        },
+        "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
+          "tips": [
+            null
+          ]
+        },
+        "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
+          "tips": [
+            null
+          ]
+        },
+        "cebe2e73-7783-4bbf-9469-c2084423900d": {
+          "name": "Renungkan"
+        },
+        "01c916af-970c-4e2f-a98e-38cbc436eefc": {
+          "tips": [
+            null
+          ]
+        },
+        "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
+          "tips": [
+            null
+          ]
+        },
+        "9823b27f-66ca-4ea1-860d-3472e5317340": {
+          "tips": [
+            null
+          ]
+        },
+        "77c22840-b9e9-4426-9894-30f101f2c00e": {
+          "tips": [
+            null
+          ]
+        },
+        "b452ecde-f660-4d52-9ab7-8b33989681f0": {
+          "tips": [
+            null
+          ]
+        },
+        "f5570fab-fdee-464e-b569-ec19142fc35d": {
+          "tips": [
+            null
+          ]
+        },
+        "661c94ca-9d68-45ee-afca-2ff357684bf3": {
+          "tips": [
+            null
+          ]
+        },
+        "bc8e4c54-e3ca-42f2-b613-2b383783dad8": {
+          "tips": [
+            null
+          ]
+        },
+        "ba9df800-646b-4324-9b35-b3f6564ba061": {
+          "name": "Renungkan"
+        },
+        "f25bdc7d-2ab6-493a-a4e7-e46dbeaa01c4": {
+          "tips": [
+            null
+          ]
+        },
+        "48dcb032-0dad-4177-89a7-066d60d785f5": {
+          "tips": [
+            null
+          ]
+        },
+        "7ce61da1-8486-4987-a971-d02802cf3223": {
+          "tips": [
+            null
+          ]
+        },
+        "be784b81-94c2-46a8-9f54-6eb72fa47020": {
+          "tips": [
+            null
+          ]
+        },
+        "90e3e011-8930-435c-8840-88bcb72a94b1": {
+          "tips": [
+            null
+          ]
+        },
+        "e550c27b-967f-46f1-a1bf-96eb4e4ccc2e": {
+          "tips": [
+            null
+          ]
+        },
+        "05109520-cc5d-4422-8447-09b5e315232c": {
+          "tips": [
+            null
+          ]
+        },
+        "8e2e9def-edb6-462f-b068-2be956dcc3c0": {
+          "tips": [
+            null
+          ]
+        },
+        "9844b63f-04a1-4011-87f7-eec3c63a5496": {
+          "tips": [
+            null
+          ]
+        },
+        "59cd3f12-f9b1-4cbd-bf6b-3507adc264bc": {
+          "tips": [
+            null
+          ]
+        },
+        "ed9353fe-9f41-42ef-9c2e-2e07231422ab": {
+          "tips": [
+            null
+          ]
+        },
+        "9ceef85f-40f8-4692-bcb4-1a689968a685": {
+          "tips": [
+            null
+          ]
+        },
+        "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "248256b0-de8c-4fcf-8f60-58492ef07802": {
+          "tips": [
+            null
+          ]
+        },
+        "f6a64a6e-ab8a-4258-b3cc-57707696fd6c": {
+          "tips": [
+            null
+          ]
+        },
+        "3af02eab-916a-4774-8a13-5a420dd53fc5": {
+          "tips": [
+            null
+          ]
+        },
+        "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7": {
+          "tips": [
+            null
+          ]
+        },
+        "08e81098-b771-4c82-bb64-9108ece6c97c": {
+          "tips": [
+            null
+          ]
+        },
+        "693d5350-e425-4ae5-926e-85984858fb31": {
+          "tips": [
+            null
+          ]
+        },
+        "470c3268-f70d-43ac-831f-b37c3103531b": {
+          "tips": [
+            null
+          ]
+        },
+        "1d5ddfcc-e375-4d04-9822-019d51c5272d": {
+          "tips": [
+            null
+          ]
+        },
+        "73435ea5-4c6f-4317-b21a-4fc9c732a4bf": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "579df0b6-aebc-48d8-9ac3-427a2c04e61f": {
+          "tips": [
+            null
+          ]
+        },
+        "7d15a1cb-357e-419d-b469-608585606064": {
+          "tips": [
+            null
+          ]
+        },
+        "83d7613a-c741-4d4a-9dcd-993ab08aa61d": {
+          "tips": [
+            null
+          ]
+        },
+        "970d404e-3aef-4384-88d6-da840d2bd8ca": {
+          "tips": [
+            null
+          ]
+        },
+        "ec491dbb-ef99-4e6e-9abf-f1f90c22e838": {
+          "tips": [
+            null
+          ]
+        },
+        "8ae3516e-e6e2-4401-afc1-4ddfb1f1312b": {
+          "tips": [
+            null
+          ]
+        },
+        "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1": {
+          "tips": [
+            null
+          ]
+        },
+        "27e7e382-bef2-4576-94b2-15f081c1c260": {
+          "tips": [
+            null
+          ]
+        },
+        "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
+          "tips": [
+            null
+          ]
+        },
+        "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
+          "tips": [
+            null
+          ]
+        },
+        "d3b01200-6f32-4a93-be82-df50df4e8221": {
+          "progression_name": "Penilaian"
+        },
+        "1db390c3-2d64-4581-a038-c4dd0f7226ee": {
+          "tips": [
+            null
+          ]
+        },
+        "016877a1-d391-46b7-998e-fbe9a7c12703": {
+          "tips": [
+            null
+          ]
+        },
+        "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
+          "tips": [
+            null
+          ]
+        },
+        "ec53cc7b-755c-461d-a075-16cf2ca7f1dd": {
+          "tips": [
+            null
+          ]
+        },
+        "e9ffa025-70b3-4fdf-a55e-b9324e0470f2": {
+          "tips": [
+            null
+          ]
+        },
+        "69dde422-3372-406e-9efe-b1df46472d00": {
+          "tips": [
+            null
+          ]
+        },
+        "3412213d-9a22-470e-859c-66b9a752d6bb": {
+          "tips": [
+            null
+          ]
+        },
+        "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
+          "tips": [
+            null
+          ]
+        },
+        "029f4c9c-3f40-458c-8480-b677aee2c5f5": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
+          "tips": [
+            null
+          ]
+        },
+        "3d52ed72-b57b-4d05-902a-c9daceffadc6": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "3a9a8696-72e3-4e6f-9812-59e180a16192": {
+          "tips": [
+            null
+          ]
+        },
+        "727aa204-0664-456f-b5fc-1f6409b65e88": {
+          "tips": [
+            null
+          ]
+        },
+        "39d79388-46f2-4f41-839d-c2bc3002d969": {
+          "tips": [
+            null
+          ]
+        },
+        "4662cf38-bec5-4f63-9f2d-237617407f0f": {
+          "tips": [
+            null
+          ]
+        },
+        "36889d4b-1b66-4a46-bd52-8e5464d17f96": {
+          "tips": [
+            null
+          ]
+        },
+        "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
+          "name": "Maklum Balas Rakan Sebaya"
+        },
+        "8c10515f-4ba5-4629-b5e0-e44975336298": {
+          "tips": [
+            null
+          ]
+        },
+        "3356cda1-c8fe-4475-aaf6-1361379c848f": {
+          "tips": [
+            null
+          ]
+        },
+        "fe6c8d53-4cc0-4bbb-8ffe-8cc1432e522b": {
+          "tips": [
+            null
+          ]
+        },
+        "f8a65f45-b4db-4f6f-9a20-b4ef89910159": {
+          "tips": [
+            null
+          ]
+        },
+        "957ba0ee-6412-418d-bb42-811c2ea546cc": {
+          "tips": [
+            null
+          ]
+        },
+        "353b9fc5-832d-4961-ab5e-4c59f80c104d": {
+          "tips": [
+            null
+          ]
+        },
+        "6ff6d697-74a4-41a2-91a3-4ef817ceff84": {
+          "tips": [
+            null
+          ]
+        },
+        "2c7139b2-bd78-402d-9d57-1191bfcf3d3c": {
+          "tips": [
+            null
+          ]
+        },
+        "42f4e940-4ca1-41ce-9efc-c9147fb84229": {
+          "tips": [
+            null
+          ]
+        },
+        "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52": {
+          "tips": [
+            null
+          ]
+        },
+        "168bbc11-2203-44d6-88fc-e6be6c05180b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "59343467-2b51-47a0-a2af-2f1357b5e3ba": {
+          "tips": [
+            null
+          ]
+        },
+        "bf7e752c-b96b-4416-b4cd-f3af71a59035": {
+          "tips": [
+            null
+          ]
+        },
+        "f694e569-1f2b-40ac-8e46-0439d6b12551": {
+          "tips": [
+            null
+          ]
+        },
+        "15cd087e-202a-4116-9feb-708690d683a2": {
+          "tips": [
+            null
+          ]
+        },
+        "0c2abb8a-e980-4137-bca7-7af46bb7b629": {
+          "tips": [
+            null
+          ]
+        },
+        "c816e4df-5e8b-4408-844a-1346d1f42700": {
+          "tips": [
+            null
+          ]
+        },
+        "60bf9811-2a1c-4ff5-8986-082f04512e85": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "0bb5cdfb-1e6b-44df-9d3f-7a1f0bfcab33": {
+          "tips": [
+            null
+          ]
+        },
+        "cc6a79fc-1951-4e82-8952-39b9a662aca5": {
+          "tips": [
+            null
+          ]
+        },
+        "b363e7a6-4522-46c8-99b8-c7a1db5936b7": {
+          "tips": [
+            null
+          ]
+        },
+        "710ee97e-1fb7-429d-a724-cb0a92f72425": {
+          "tips": [
+            null
+          ]
+        },
+        "793b6091-27f6-48c5-9b0c-b02534f8bc79": {
+          "tips": [
+            null
+          ]
+        },
+        "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
+          "tips": [
+            null
+          ]
+        },
+        "f82407b3-02da-446b-9c56-6e11c8f2df36": {
+          "tips": [
+            null
+          ]
+        },
+        "10b08619-0a72-442e-a75e-13b6cead2e90": {
+          "tips": [
+            null
+          ]
+        },
+        "20f18101-28c1-43ff-835a-9b098f7a5b9c": {
+          "tips": [
+            null
+          ]
+        },
+        "887eb66a-9701-4ec2-961e-2df7358980f6": {
+          "tips": [
+            null
+          ]
+        },
+        "d2fbc09d-cec0-4514-ba77-b635cc9379d5": {
+          "tips": [
+            null
+          ]
+        },
+        "286dd512-4c7c-42ec-8028-428a89833572": {
+          "tips": [
+            null
+          ]
+        },
+        "f410b7cd-fcb4-42ac-9ba6-517b2a8db144": {
+          "tips": [
+            null
+          ]
+        },
+        "f8ec8428-8030-4f3d-a42a-ace8a6526a70": {
+          "tips": [
+            null
+          ]
+        },
+        "d328ac00-0ae4-43b4-ac6b-09b544bdf673": {
+          "tips": [
+            null
+          ]
+        },
+        "fe322a4b-9393-40e7-92fe-8314928d0203": {
+          "tips": [
+            null
+          ]
+        },
+        "4e9b0621-b725-4913-8938-757f111a9ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "43da857d-e2ac-4797-b205-4bc8e5b274c8": {
+          "tips": [
+            null
+          ]
+        },
+        "52a7434e-fca4-48af-9aa8-61086949bb98": {
+          "tips": [
+            null
+          ]
+        },
+        "4145fe6b-15f3-4528-91b5-726f4cffd9b5": {
+          "tips": [
+            null
+          ]
+        },
+        "49bb4251-eaa1-423c-9bfd-ec0f6113f83e": {
+          "tips": [
+            null
+          ]
+        },
+        "229abe84-ae59-45f1-915e-681805560ab1": {
+          "tips": [
+            null
+          ]
+        },
+        "73c708b0-4bce-4d0c-8aef-d4383cbb24f5": {
+          "tips": [
+            null
+          ]
+        },
+        "136308c1-5aa0-4820-afe0-a16252ba6c74": {
+          "tips": [
+            null
+          ]
+        },
+        "c986ac31-a9e4-4fbb-8203-f8dd207cfed9": {
+          "tips": [
+            null
+          ]
+        },
+        "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Penilaian"
+        },
+        "ada4d5c1-50ee-446a-85c6-d61dd4d3221f": {
+          "tips": [
+            null
+          ]
+        },
+        "05ee8316-106b-4b34-9138-d1ceca375a8f": {
+          "name": "Gambaran Keseluruhan"
+        },
+        "410e0287-5cfd-4bc9-945a-4c1d330d795e": {
+          "tips": [
+            null
+          ]
+        },
+        "754d0467-6e5e-45c8-8692-2fab52c45548": {
+          "tips": [
+            null
+          ]
+        },
+        "85c3804b-17da-40f8-a088-0627011b36e7": {
+          "tips": [
+            null
+          ]
+        },
+        "c78f2804-62f0-4fe5-842f-0ed415de05fc": {
+          "name": "Makmal Web"
+        },
+        "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
+          "tips": [
+            null
+          ]
+        },
+        "c881299c-2798-4137-ac19-ba5e05d59340": {
+          "tips": [
+            null
+          ]
+        },
+        "4c27a0e8-612a-478a-a854-aa5a966c8245": {
+          "tips": [
+            null
+          ]
+        },
+        "e1f6d250-92c8-4b01-b970-698a4eb24f7b": {
+          "name": "Makmal Web"
+        },
+        "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497": {
+          "tips": [
+            null
+          ]
+        },
+        "35722166-2159-4038-8c7e-7a6cc0580812": {
+          "tips": [
+            null
+          ]
+        },
+        "aca795d4-18ad-434c-91f8-cc29e3d5a96c": {
+          "tips": [
+            null
+          ]
+        },
+        "938b93c7-1d09-4893-a312-181b8a14a4db": {
+          "tips": [
+            null
+          ]
+        },
         "83b5ca79-12e5-4d68-a965-4bed0681e331": {
           "progression_name": "Acara-acara"
         },
@@ -4097,6 +7310,10 @@
         },
         "7a2b3e7f-2f8f-4592-a166-1d279f647fb2": {
           "progression_name": "Wrap-up"
+        },
+        "69f7dde3-e970-464a-8255-fa5a68ff1d77": {
+          "name": "Tambahan Pelajaran",
+          "progression_name": "Tambahan Pelajaran"
         },
         "61e56a64-227e-422a-9c65-62c927caed06": {
           "progression_name": "Pengaturcaraan dengan Rey dan BB-8"

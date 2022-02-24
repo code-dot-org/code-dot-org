@@ -193,6 +193,51 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Vodič za Implementaciju"
+        },
+        "design_mode/csd/2021": {
+          "name": "Način Dizajniranje"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Način Dizajniranje"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funkcije"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "Od-Do-Za Petlje"
+        },
+        "for_loops/csd/2021": {
+          "name": "Od-Do-Za Petlje"
+        },
+        "variables_1/csd/2021": {
+          "name": "Varijable"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Brzina"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Brzina"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funkcije"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funkcije"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Aplikacije i riješavanje problema"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Aplikacije i riješavanje problema"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Aplikacije i riješavanje problema"
+        },
+        "lists/csd/2021": {
+          "name": "Liste"
+        },
+        "classes/csd/2021": {
+          "name": "Razredi"
         }
       }
     }

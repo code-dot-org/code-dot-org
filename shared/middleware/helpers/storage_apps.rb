@@ -155,7 +155,7 @@ class StorageApps
   # Determine if the current user can view the project
   def get_sharing_disabled(channel_id, current_user_id)
     owner_storage_id, storage_app_id = storage_decrypt_channel_id(channel_id)
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     # Sharing of a project is not disabled for the project owner
     # or the teachers of the project owner

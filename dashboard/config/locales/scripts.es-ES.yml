@@ -391,7 +391,7 @@ es:
           student_description: Una selección de los niveles del Curso 4 para pruebas
             de usabilidad.
         algebra:
-          title: Ciencias de la computación en álgebra
+          title: Informática en Álgebra
           description: Aprende Programación Funcional a través del Álgebra.
           description_short: Aprende Programación Funcional a través del Álgebra.
           lessons:
@@ -742,53 +742,53 @@ es:
             Sending Binary Messages:
               name: Enviando Mensajes Binarios
             Sending Binary Messages with the Internet Simulator:
-              name: Envío de mensajes binarios con el simulador de Internet
+              name: Enviando Mensajes Binarios con el Simulador de Internet
             Sending Bits in the Real World:
-              name: Envío de Bits en el mundo Real
+              name: Enviando Bits en el Mundo Real
             Sending Complex Messages:
-              name: Envío de mensajes complejos
+              name: Enviando Mensajes Complejos
             Sending Formatted Text:
-              name: Envío de texto con formato
+              name: Enviando Texto con Formato
             Sending Numbers:
-              name: Envío de números
+              name: Enviando Números
             Text Compression:
-              name: Compresión de texto
+              name: Compresión de Texto
           student_description: Esta unidad analiza los problemas y cuestiones técnicas
             que surgen de la necesidad de representar la información digital en los
             ordenadores y de transferirla entre las personas y los dispositivos informáticos.
             Esta unidad es una versión piloto a la que ya no se presta apoyo ni se
             actualiza. Puedes encontrar las nuevas unidades en code.org/educate/csp.
         algebraPD:
-          title: Ciencias de la computación en álgebra PD
-          description: 'Fase 1: introducción online'
-          description_short: 'Fase 1: introducción online'
+          title: Informática en Álgebra PD
+          description: 'Fase 1: Presentación en línea'
+          description_short: 'Fase 1: Presentación en línea'
           lessons:
             Course Overview:
-              name: Resumen del curso
+              name: Resumen del Curso
             Evaluation Blocks:
               name: Bloques de Evaluación
             Introduction to PD:
               name: Introducción al Desarrollo Profesional
             Preparing for in-person PD:
-              name: Preparación para el desarrollo profesional presencial
+              name: Preparación para el Desarrollo Profesional presencial
             Teacher Dashboard:
               name: Panel del Profesor
             Why Computer Science belongs in Algebra:
-              name: Por qué las Ciencias de la Computación pertenecen al Álgebra
-          student_description: 'Fase 1: introducción online'
+              name: Por qué la Informática debe estar en el Álgebra
+          student_description: 'Fase 1: Presentación en línea'
         algPDmiami:
-          title: Ciencias de la computación en álgebra PD
-          description: Enseñar álgebra a través de programación funcional
-          description_short: Enseñar álgebra a través de programación funcional
+          title: Informática en Álgebra PD
+          description: Enseñar Álgebra a través de la Programación Funcional
+          description_short: Enseñar Álgebra a través de la Programación Funcional
           lessons:
             Booleans:
-              name: Valores booleanos
+              name: Booleanos
             Design Recipe Practice:
-              name: Práctica del diseño receta
+              name: Receta de Diseño - Práctica
             Evaluation Blocks:
               name: Bloques de Evaluación
             Luigi's Pizza:
-              name: Pizza de Luigi
+              name: La Pizza de Luigi
             Rocket-Height:
               name: Altura del cohete
             Sam the Bat:
@@ -803,15 +803,15 @@ es:
               name: Tu juego - detección de colisiones
             Your Game - Player Movement:
               name: Tu juego - movimiento de jugador
-          student_description: Enseñar álgebra a través de programación funcional
+          student_description: Enseñar Álgebra a través de la Programación Funcional
         text-compression:
-          title: Compresión de texto
+          title: Compresión de Texto
           description: Comprimir texto mediante la identificación de patrones repetidos.
           description_short: Comprimir texto mediante la identificación de patrones
             repetidos.
           lessons:
             Text Compression:
-              name: Compresión de texto
+              name: Compresión de Texto
               description_student: 'En algún momento llegamos a un límite físico de
                 la velocidad a la que podemos enviar los bits y si queremos enviar
                 una gran cantidad de información más rápido, tenemos que encontrar
@@ -841,7 +841,7 @@ es:
             Introduction to PD:
               name: Introducción al Desarrollo Profesional
             Preparing for in-person PD:
-              name: Preparación para el desarrollo profesional presencial
+              name: Preparación para el Desarrollo Profesional presencial
             Teaching Strategies:
               name: Estrategias de enseñanza
             What is CSP?:
@@ -859,8 +859,8 @@ es:
           student_description: Ejemplos de lecciones para CSP
         ECSPD:
           title: Explorando la Informática - Desarrollo Profesional
-          description: 'Fase 1: introducción online'
-          description_short: 'Fase 1: introducción online'
+          description: 'Fase 1: Presentación en línea'
+          description_short: 'Fase 1: Presentación en línea'
           lessons:
             Growth Mindset:
               name: Mentalidad de crecimiento
@@ -869,17 +869,17 @@ es:
             Introduction to PD:
               name: Introducción al Desarrollo Profesional
             Preparing for in-person PD:
-              name: Preparación para el desarrollo profesional presencial
+              name: Preparación para el Desarrollo Profesional presencial
             Teaching Strategies:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
-          student_description: 'Fase 1: introducción online'
+          student_description: 'Fase 1: Presentación en línea'
           name: ECSPD
         sciencePD:
           title: La informática en la Ciencia - Desarrollo Profesional
-          description: 'Fase 1: introducción online'
-          description_short: 'Fase 1: introducción online'
+          description: 'Fase 1: Presentación en línea'
+          description_short: 'Fase 1: Presentación en línea'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -906,7 +906,7 @@ es:
               name: Utilizando Modelos en el Salón de Clases
             What to Expect:
               name: Qué esperar
-          student_description: 'Fase 1: introducción online'
+          student_description: 'Fase 1: Presentación en línea'
         rbo-reference:
           title: rbo-referencia
           description: rbo-referencia
@@ -1010,7 +1010,7 @@ es:
             Computer Science Pedagogy:
               name: Pedagogía de la Informática
             Course Overview:
-              name: Resumen del curso
+              name: Resumen del Curso
             Evaluation Blocks:
               name: Bloques de Evaluación
             Next Steps:
@@ -1027,8 +1027,8 @@ es:
             basada en bloques
         ECSPD-NexTech:
           title: Explorando la Informática - Desarrollo Profesional
-          description: 'Fase 1: introducción online'
-          description_short: 'Fase 1: introducción online'
+          description: 'Fase 1: Presentación en línea'
+          description_short: 'Fase 1: Presentación en línea'
           logo_image: nextech\_logo.png
           lessons:
             Growth Mindset:
@@ -1038,16 +1038,16 @@ es:
             Introduction to PD:
               name: Introducción al Desarrollo Profesional
             Preparing for in-person PD:
-              name: Preparación para el desarrollo profesional presencial
+              name: Preparación para el Desarrollo Profesional presencial
             Teaching Strategies:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
-          student_description: 'Fase 1: introducción online'
+          student_description: 'Fase 1: Presentación en línea'
         ECSPD-iZone:
           title: Explorando la Informática - Desarrollo Profesional
-          description: 'Fase 1: introducción online'
-          description_short: 'Fase 1: introducción online'
+          description: 'Fase 1: Presentación en línea'
+          description_short: 'Fase 1: Presentación en línea'
           logo_image: izone\_logo.png
           lessons:
             Growth Mindset:
@@ -1057,54 +1057,54 @@ es:
             Introduction to PD:
               name: Introducción al Desarrollo Profesional
             Preparing for in-person PD:
-              name: Preparación para el desarrollo profesional presencial
+              name: Preparación para el Desarrollo Profesional presencial
             Teaching Strategies:
               name: Estrategias de enseñanza
             What is ECS?:
               name: "¿Qué es ECS?"
-          student_description: 'Fase 1: introducción online'
+          student_description: 'Fase 1: Presentación en línea'
         algebraPD-NexTech:
-          title: Ciencias de la computación en álgebra PD
-          description: 'Fase 1: introducción online'
-          description_short: 'Fase 1: introducción online'
+          title: Informática en Álgebra PD
+          description: 'Fase 1: Presentación en línea'
+          description_short: 'Fase 1: Presentación en línea'
           logo_image: nextech\_logo.png
           lessons:
             Course Overview:
-              name: Resumen del curso
+              name: Resumen del Curso
             Evaluation Blocks:
               name: Bloques de Evaluación
             Introduction to PD:
               name: Introducción al Desarrollo Profesional
             Preparing for in-person PD:
-              name: Preparación para el desarrollo profesional presencial
+              name: Preparación para el Desarrollo Profesional presencial
             Teacher Dashboard:
               name: Panel del Profesor
             Why Computer Science belongs in Algebra:
-              name: Por qué las Ciencias de la Computación pertenecen al Álgebra
-          student_description: 'Fase 1: introducción online'
+              name: Por qué la Informática debe estar en el Álgebra
+          student_description: 'Fase 1: Presentación en línea'
         algebraPD-iZone:
-          title: Ciencias de la computación en álgebra PD
-          description: 'Fase 1: introducción online'
-          description_short: 'Fase 1: introducción online'
+          title: Informática en Álgebra PD
+          description: 'Fase 1: Presentación en línea'
+          description_short: 'Fase 1: Presentación en línea'
           logo_image: izone\_logo.png
           lessons:
             Course Overview:
-              name: Resumen del curso
+              name: Resumen del Curso
             Evaluation Blocks:
               name: Bloques de Evaluación
             Introduction to PD:
               name: Introducción al Desarrollo Profesional
             Preparing for in-person PD:
-              name: Preparación para el desarrollo profesional presencial
+              name: Preparación para el Desarrollo Profesional presencial
             Teacher Dashboard:
               name: Panel del Profesor
             Why Computer Science belongs in Algebra:
-              name: Por qué las Ciencias de la Computación pertenecen al Álgebra
-          student_description: 'Fase 1: introducción online'
+              name: Por qué la Informática debe estar en el Álgebra
+          student_description: 'Fase 1: Presentación en línea'
         sciencePD-NexTech:
           title: La informática en la Ciencia - Desarrollo Profesional
-          description: 'Fase 1: introducción online'
-          description_short: 'Fase 1: introducción online'
+          description: 'Fase 1: Presentación en línea'
+          description_short: 'Fase 1: Presentación en línea'
           logo_image: nextech\_logo.png
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -1132,11 +1132,11 @@ es:
               name: Utilizando Modelos en el Salón de Clases
             What to Expect:
               name: Qué esperar
-          student_description: 'Fase 1: introducción online'
+          student_description: 'Fase 1: Presentación en línea'
         sciencePD-iZone:
           title: La informática en la Ciencia - Desarrollo Profesional
-          description: 'Fase 1: introducción online'
-          description_short: 'Fase 1: introducción online'
+          description: 'Fase 1: Presentación en línea'
+          description_short: 'Fase 1: Presentación en línea'
           logo_image: izone\_logo.png
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
@@ -1164,7 +1164,7 @@ es:
               name: Utilizando Modelos en el Salón de Clases
             What to Expect:
               name: Qué esperar
-          student_description: 'Fase 1: introducción online'
+          student_description: 'Fase 1: Presentación en línea'
         sciencePD2:
           title: 'CS en ciencias: parte 2'
           description: Fase 2 Estudio de Verano Semipresencial en línea
@@ -1261,7 +1261,7 @@ es:
             no está soportada ni actualizada. Puedes encontrar las nuevas unidades
             en code.org/educate/csp.
         algebraPD2a:
-          title: Ciencias de la computación en álgebra PD
+          title: Informática en Álgebra PD
           description: Enseñar programación funcional a través de álgebra
           description_short: Enseñar programación funcional a través de álgebra
           lessons:
@@ -1276,7 +1276,7 @@ es:
             Big Game - Variables:
               name: El gran juego - Variables
             Booleans:
-              name: Valores booleanos
+              name: Booleanos
             Defining Variables:
               name: Definición de Variables
             Evaluation Blocks:
@@ -1284,7 +1284,7 @@ es:
             Free Play:
               name: Juego libre
             Luigi's Pizza:
-              name: Pizza de Luigi
+              name: La Pizza de Luigi
             Rocket-Height:
               name: Altura del cohete
             Sam the Bat:
@@ -1364,7 +1364,7 @@ es:
             Swapped Levels:
               name: Intercambio de niveles
             Text Compression:
-              name: Compresión de texto
+              name: Compresión de Texto
             TextMatch:
               name: TextMatch
             Web Lab:
@@ -1378,7 +1378,7 @@ es:
             Curriculum Reference:
               name: Referencia del plan de estudios
             Sprite Lab:
-              name: Laboratorio de sprites
+              name: Laboratorio de Sprites
             Dance Lab:
               name: Laboratorio de baile
             Mini Rubric:
@@ -1403,16 +1403,16 @@ es:
             de Usuario
           name: todo lo que hay
         algebraPD2b:
-          title: Ciencias de la computación en álgebra PD
+          title: Informática en Álgebra PD
           description: Enseñar programación funcional a través de álgebra
           description_short: Enseñar programación funcional a través de álgebra
           lessons:
             Best Practices for Teaching Computer Science:
               name: Mejores prácticas para la enseñanza de ciencias de la computación
             Booleans:
-              name: Valores booleanos
+              name: Booleanos
             Course Overview:
-              name: Resumen del curso
+              name: Resumen del Curso
             Defining Functions:
               name: Definición de funciones
             Defining Variables:
@@ -1790,7 +1790,7 @@ es:
           student_description: Utiliza el widget de Vigenere Cipher para explorar
             el cifrado y descifrado de mensajes mediante el método Vigenere Cipher.
         algebraPD3a:
-          title: Ciencias de la computación en álgebra PD
+          title: Informática en Álgebra PD
           description: 'Fase 3 (Parte 2): Estudio del año escolar semipresencial en
             línea de Informática en Álgebra'
           description_short: 'Fase 3 (Parte 1): Estudio del año escolar semipresencial
@@ -2010,7 +2010,7 @@ es:
             Wrap-Up:
               name: Cierre
         algebraPD3b:
-          title: Ciencias de la computación en álgebra PD
+          title: Informática en Álgebra PD
           description: 'Fase 3 (Parte 2): Apoyo de mitad del curso Informática en
             Álgebra'
           description_short: 'Fase 3 (Parte 2): Apoyo de mitad del curso Informática
@@ -2272,7 +2272,7 @@ es:
           student_description: Utiliza bloques de código para llevar a Steve o Alex
             en una aventura a través del mundo de Minecraft.
         oceans:
-          title: Inteligencia Artificial para océanos
+          title: Inteligencia Artificial para Océanos
           description: Aprende cómo IA y el aprendizaje automático se pueden usar
             para abordar problemas del mundo.
           description_short: Aprende cómo IA y el aprendizaje automático se pueden
@@ -2570,24 +2570,24 @@ es:
           student_description: Un lugar para probar cosas en Laboratorio de Juegos
         algebraPD1:
           title: CS en Algebra Parte 1
-          description: Enseñar álgebra a través de programación funcional
-          description_short: 'Fase 1: introducción online'
+          description: Enseñar Álgebra a través de la Programación Funcional
+          description_short: 'Fase 1: Presentación en línea'
           lessons:
             Course Overview:
-              name: Resumen del curso
+              name: Resumen del Curso
             Evaluation Blocks:
               name: Bloques de Evaluación
             Introduction to PD:
               name: Introducción al Desarrollo Profesional
             Preparing for in-person PD:
-              name: Preparación para el desarrollo profesional presencial
+              name: Preparación para el Desarrollo Profesional presencial
             Teacher Dashboard:
               name: Panel del Profesor
             Why Computer Science belongs in Algebra:
-              name: Por qué las Ciencias de la Computación pertenecen al Álgebra
-          student_description: Enseñar álgebra a través de programación funcional
+              name: Por qué la Informática debe estar en el Álgebra
+          student_description: Enseñar Álgebra a través de la Programación Funcional
         algebraPD3c:
-          title: Ciencias de la computación en álgebra PD
+          title: Informática en Álgebra PD
           description: 'Informática en Álgebra: Reflexión de fin de curso'
           description_short: 'Informática en Álgebra: Reflexión de fin de curso'
           lessons:
@@ -2636,9 +2636,9 @@ es:
             Sending Binary Messages:
               name: Enviando Mensajes Binarios
             Sending Binary Messages with the Internet Simulator:
-              name: Envío de mensajes binarios con el simulador de Internet
+              name: Enviando Mensajes Binarios con el Simulador de Internet
             Sending Numbers:
-              name: Envío de números
+              name: Enviando Números
             The Internet:
               name: Internet
             The Need for Addressing:
@@ -2713,7 +2713,7 @@ es:
             Practice PT - Tell a Data Story:
               name: PT de práctica - Contar una historia con datos
             Text Compression:
-              name: Compresión de texto
+              name: Compresión de Texto
             Unit 2 Chapter 1 Assessment:
               name: Evaluación del Capítulo 1 de la Unidad 2
             Unit 2 Chapter 2 Assessment:
@@ -2832,7 +2832,7 @@ es:
             Rapid Research - Data Innovations:
               name: Investigación rápida - Innovaciones de datos
             Simple Encryption:
-              name: Cifrado simple
+              name: Encriptación Simple
             The Cost of Free:
               name: El costo de lo gratuito
             What is Big Data?:
@@ -3123,7 +3123,7 @@ es:
           title: ECS Parte 1
           description: Dos horas de introducción a tu programa de aprendizaje profesional
             para el plan de estudios de la versión 5 de ECS
-          description_short: 'Fase 1: introducción online'
+          description_short: 'Fase 1: Presentación en línea'
           lessons:
             Background and Context:
               name: Experiencia y contexto
@@ -3143,8 +3143,8 @@ es:
             profesional para el plan de estudios de la versión 5 de ECS
         algebraFacilitator:
           title: Pre-trabajo de Facilitador de Informática en Álgebra
-          description: Enseñar álgebra a través de programación funcional
-          description_short: Enseñar álgebra a través de programación funcional
+          description: Enseñar Álgebra a través de la Programación Funcional
+          description_short: Enseñar Álgebra a través de la Programación Funcional
           lessons:
             Evaluation Blocks:
               name: Bloques de Evaluación
@@ -3153,12 +3153,12 @@ es:
             Teacher Dashboard:
               name: Panel del Profesor
             Why Computer Science belongs in Algebra:
-              name: Por qué las Ciencias de la Computación pertenecen al Álgebra
-          student_description: Enseñar álgebra a través de programación funcional
+              name: Por qué la Informática debe estar en el Álgebra
+          student_description: Enseñar Álgebra a través de la Programación Funcional
         sciencePD1:
           title: 'CS en ciencias: parte 1'
           description: En Colaboración con el Proyecto GUTS
-          description_short: 'Fase 1: introducción online'
+          description_short: 'Fase 1: Presentación en línea'
           lessons:
             Agent Based Modeling of Complex Adaptive Systems:
               name: Modelado de sistemas adaptativos complejos basado en agentes
@@ -4446,7 +4446,7 @@ es:
               name: Bucles Mientras
         algebrapdnext:
           title: Informática en Álgebra PD Fase 2
-          description: Enseñar álgebra a través de programación funcional
+          description: Enseñar Álgebra a través de la Programación Funcional
           description_short: "\\\\tFase 3: Apoyo al Curso Escolar"
           lessons:
             Lesson Prep:
@@ -4461,7 +4461,7 @@ es:
               name: La receta de diseño
             Welcome!:
               name: "¡Bienvenido!"
-          student_description: Enseñar álgebra a través de programación funcional
+          student_description: Enseñar Álgebra a través de la Programación Funcional
         csp-pre-survey:
           title: 'Principios de Informática: Encuesta previa'
           lessons:
@@ -4865,7 +4865,7 @@ es:
             secretos.
           lessons:
             Simple Encryption:
-              name: Cifrado simple
+              name: Encriptación Simple
               description_student: En esta lección, los alumnos se familiarizan con
                 la necesidad de encriptación y con técnicas sencillas para descifrar
                 (o romper) mensajes secretos.  Los alumnos prueban a descifrar un
@@ -9361,8 +9361,8 @@ es:
             TTS:
               name: TTS
         express-2017:
-          title: Curso Express (2018)
-          assignment_family_title: Curso Express (2018)
+          title: Curso Exprés
+          assignment_family_title: Curso Exprés
           description_audience: 'Edades: 9 a 18'
           description_short: 'Una introducción a la ciencia de la computación: combina
             lo mejor de nuestro plan de estudios de primaria para estudiantes mayores.'
@@ -10272,7 +10272,7 @@ es:
             Programming - Hour of Code:
               name: Programación - Hora del Código
             Simple Encryption:
-              name: Cifrado simple
+              name: Encriptación Simple
             Web Development - Creating Webpages:
               name: Desarrollo web - Creación de páginas web
             App Development Unplugged - User Interfaces:
@@ -11517,8 +11517,8 @@ es:
             y la seguridad en Internet. Al final del curso, crea tu propio juego o
             historia para compartir.
         express-2018:
-          title: Curso Express (2018)
-          assignment_family_title: Curso Express (2018)
+          title: Curso Exprés
+          assignment_family_title: Curso Exprés
           description: Aprende los fundamentos de las ciencias de la computación y
             la seguridad en Internet. Al final del curso, crea tu propio juego o historia
             para compartir.
@@ -12540,13 +12540,13 @@ es:
             Sending Binary Messages:
               name: Enviando Mensajes Binarios
             Sending Binary Messages with the Internet Simulator:
-              name: Envío de mensajes binarios con el simulador de Internet
+              name: Enviando Mensajes Binarios con el Simulador de Internet
             Number Systems:
               name: Sistemas de Numeración
             Binary Numbers:
               name: Números binarios
             Sending Numbers:
-              name: Envío de números
+              name: Enviando Números
             Encoding and Sending Formatted Text:
               name: Cifrado y envío de texto con formato
             Unit 1 Chapter 1 Assessment:
@@ -13476,7 +13476,7 @@ es:
             Bytes and File Sizes:
               name: Bytes y tamaños de los archivos
             Text Compression:
-              name: Compresión de texto
+              name: Compresión de Texto
             Encoding B&W Images:
               name: Codificando Imágenes en Blanco y Negro
             Encoding Color Images:
@@ -13676,7 +13676,7 @@ es:
             The Cost of Free:
               name: El costo de lo gratuito
             Simple Encryption:
-              name: Cifrado simple
+              name: Encriptación Simple
             Encryption with Keys and Passwords:
               name: Cifrado con claves y contraseñas
             Public Key Crypto:
@@ -14680,7 +14680,7 @@ es:
             new stage:
               name: nueva etapa
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
               description_student: En esta lección, los estudiantes de todas las edades
                 obtienen una experiencia introductoria con la programación y las ciencias
                 de la computación en un entorno seguro y que les brinda apoyo. Esta
@@ -14738,12 +14738,12 @@ es:
         dance--draft:
           lessons:
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
         dance-draft:
           title: NO USAR
           lessons:
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
         cspplayground:
           title: CSP Playground
           lesson_groups:
@@ -15152,7 +15152,7 @@ es:
             tus amigos! (Esta versión es para conexiones lentas)"
           lessons:
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
         coursed-2019:
           title: Curso D (2019)
           description: Los estudiantes desarrollan su comprensión de bucles anidados,
@@ -15358,7 +15358,7 @@ es:
                 serán guiados a través de eventos, luego le dadas espacio para crear
                 su propio juego.
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
               description_student: "¡Es el momento de celebrar! En esta lección, programarás
                 tu propia fiesta de baile interactiva."
               description_teacher: En esta lección, los estudiantes programarán su
@@ -15827,7 +15827,7 @@ es:
             Build A Project:
               name: Proyecto de fin de curso
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
             'Conditionals in Minecraft: Voyage Aquatic':
               name: 'Condicionales en Minecraft: Voyage Aquatic'
             Concept Practice with Minecraft:
@@ -18166,13 +18166,13 @@ es:
             Sending Binary Messages:
               name: Enviando Mensajes Binarios
             Sending Binary Messages with the Internet Simulator:
-              name: Envío de mensajes binarios con el simulador de Internet
+              name: Enviando Mensajes Binarios con el Simulador de Internet
             Number Systems:
               name: Sistemas de Numeración
             Binary Numbers:
               name: Números binarios
             Sending Numbers:
-              name: Envío de números
+              name: Enviando Números
             Sending Text:
               name: Envío de texto
             Unit 1 Chapter 1 Assessment:
@@ -18222,7 +18222,7 @@ es:
             Bytes and File Sizes:
               name: Bytes y tamaños de los archivos
             Text Compression:
-              name: Compresión de texto
+              name: Compresión de Texto
             Encoding B&W Images:
               name: Codificando Imágenes en Blanco y Negro
             Encoding Color Images:
@@ -18329,7 +18329,7 @@ es:
             The Cost of Free:
               name: El costo de lo gratuito
             Simple Encryption:
-              name: Cifrado simple
+              name: Encriptación Simple
             Encryption with Keys and Passwords:
               name: Cifrado con claves y contraseñas
             Public Key Crypto:
@@ -18597,7 +18597,7 @@ es:
             Sending Binary Messages:
               name: Enviando Mensajes Binarios
             Sending Binary Messages with the Internet Simulator:
-              name: Envío de mensajes binarios con el simulador de Internet
+              name: Enviando Mensajes Binarios con el Simulador de Internet
             AB Patterns:
               name: Patrones AB
             Flippy Do, pt. 1:
@@ -21059,7 +21059,7 @@ es:
           description: "¡Programa tu propio baile para compartirlo con tus amigos!"
           lessons:
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
               description_student: En esta lección, los estudiantes de todas las edades
                 obtienen una experiencia introductoria con la programación y las ciencias
                 de la computación en un entorno seguro y que les brinda apoyo. Esta
@@ -21148,7 +21148,7 @@ es:
             'Diving Deeper: Courses E and F':
               name: 'Profundizar: cursos E y F'
             Sprite Lab:
-              name: Laboratorio de sprites
+              name: Laboratorio de Sprites
             Variables:
               name: Variables
             For Loops:
@@ -24601,7 +24601,7 @@ es:
                 de las comunidades, ya sea que estén conectadas o no, como un paso
                 para aprender a ser buenos ciudadanos digitales."
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
               description_student: "¡Es el momento de celebrar! En esta lección, programarás
                 tu propia fiesta de baile interactiva."
               description_teacher: En esta lección, los estudiantes programarán su
@@ -25086,7 +25086,7 @@ es:
 
                 En la etapa "Explorar", el estudiante jugará con programas de Artista y Sprite Lab ya construidos para inspirarse. A continuación, el estudiante aprenderá sobre el proceso de diseño y cómo implementarlo en sus propios proyectos. Luego se le dará el espacio para crear su propio proyecto en Artista, Sprite Lab, o cualquier otra interfaz que tú te sientas cómodo proporcionando. (Esta es probablemente la etapa más larga del proyecto). El estudiante revisará su código después de las pruebas y la revisión de los compañeros. Finalmente, el estudiante podrá presentar su trabajo terminado a sus compañeros/as de clase.
             AI for Oceans:
-              name: Inteligencia Artificial para océanos
+              name: Inteligencia Artificial para Océanos
               description_student: 'Resumen de la tutoría: En primer lugar, los alumnos
                 clasifican los objetos como "peces" o "no peces" para intentar eliminar
                 la basura del océano. A continuación, los alumnos deberán ampliar
@@ -25146,7 +25146,7 @@ es:
               display_name: Proyecto de fin de curso
           lessons:
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
             Programming in Maze:
               name: Programación en Laberinto
             Debugging in Maze:
@@ -26357,7 +26357,7 @@ es:
             For Loops:
               name: Bucles Para
             Sprite Lab:
-              name: Laboratorio de sprites
+              name: Laboratorio de Sprites
             Reviewing your reflections:
               name: Revisión de tus reflexiones
             Next steps:
@@ -27075,7 +27075,7 @@ es:
             dog:
               name: "¿Le gusta a Code.org tu perro?"
             AI for Oceans:
-              name: Inteligencia Artificial para océanos
+              name: Inteligencia Artificial para Océanos
             oceans:
               name: Aprendizaje automático con Inteligencia Artificial para los océanos
             intro:
@@ -32187,8 +32187,8 @@ es:
                 y otros personajes de la Guerra de las Galaxias, los estudiantes serán
                 guiados a través de eventos, y luego podrán crear su propio juego.
             Dance Party:
-              key: Fiesta de baile
-              name: Fiesta de baile
+              key: Fiesta de Baile
+              name: Fiesta de Baile
               description_student: "¡Es el momento de celebrar! En esta lección, programarás
                 tu propia fiesta de baile interactiva."
               description_teacher: En esta lección, los estudiantes programarán su
@@ -32768,7 +32768,7 @@ es:
                 una variable en la variable podría tener un impacto en el resultado,
                 y luego probar esa hipótesis.
             AI for Oceans:
-              key: Inteligencia Artificial para océanos
+              key: Inteligencia Artificial para Océanos
               name: Inteligencia Artificial para océanos
               description_student: Clasifica los objetos como "peces" o "no peces"
                 para intentar eliminar la basura del océano. A continuación, amplía
@@ -32979,8 +32979,8 @@ es:
           description_audience: 'Edades: 9 a 18'
           lessons:
             Dance Party:
-              key: Fiesta de baile
-              name: Fiesta de baile
+              key: Fiesta de Baile
+              name: Fiesta de Baile
               description_student: En esta lección, los estudiantes programarán su
                 propia fiesta de baile interactiva. Esta actividad requiere el uso
                 de sonido, ya que la herramienta responde a la música.
@@ -33261,7 +33261,7 @@ es:
                 a través del proceso de diseño, desarrollo y exhibición de sus propios
                 proyectos.
             lesson-1:
-              name: Fiesta de baile
+              name: Fiesta de Baile
               description_student: "¡Es el momento de celebrar! En esta lección, programarás
                 tu propia fiesta de baile interactiva."
               description_teacher: En esta lección, los estudiantes programarán su
@@ -36327,7 +36327,7 @@ es:
               key: Bucles Para
               name: Bucles Para
             Sprite Lab:
-              key: Laboratorio de sprites
+              key: Laboratorio de Sprites
               name: Secuenciación con Sprites
             Reviewing your reflections:
               key: Revisión de tus reflexiones
@@ -40831,6 +40831,17 @@ es:
                 -   Requiere introducir funciones y luego funciones con parámetros.
                 -   Habrá que ver si se edita el vídeo original de las funciones
                 -   En el plan de estudios actual, las funciones con niveles de parámetros están estrechamente relacionadas con la música y el acelerómetro, por lo que tiene sentido incluirlas aquí en la progresión de la unidad
+            Circuits and Physical Prototypes:
+              description_student: 'En esta lección, cablearás circuitos sencillos
+                para crear un prototipo físico utilizando materiales de bajo coste
+                y fáciles de encontrar.  '
+              description_teacher: A la hora de preparar el proyecto final de este
+                capítulo, los estudiantes aprenderán cómo desarrollar un prototipo
+                de un objeto físico que incluya un Circuit Playground. Mediante una
+                guía de planificación de proyectos modelados y materiales baratos
+                fáciles de conseguir, como cartulina y cinta adhesiva, los estudiantes
+                aprenderán a conectar un par de circuitos simples y crear prototipos
+                que puedan comunicar el diseño previsto de un producto.
           lesson_groups:
             lessonGroup-3:
               display_name: Plantillas
@@ -42317,6 +42328,74 @@ es:
             probar estas nuevas lecciones. Apreciamos cualquier comentario. Este curso
             piloto estará disponible sólo hasta junio de 2022."
         csd6-pilot-2022:
+          lessons:
+            Project - Prototype an Innovation:
+              name: Proyecto - Prototipo de una Innovación
+              description_student: 'En este proyecto final, te enfrentarás al reto
+                de desarrollar y probar un prototipo para un dispositivo que interactúe
+                con el mundo físico a través de varios tipos de entrada y salida y
+                que permita interacciones de usuario interesantes y únicas. '
+              description_teacher: 'En este proyecto final del curso, los estudiantes
+                se reúnen en grupos para desarrollar y probar un prototipo de un dispositivo
+                informático innovador basado en el Circuit Playground. Mediante las
+                entradas y salidas disponibles en el tablero, los grupos crearán programas
+                que generan interacciones interesantes y únicas con los usuarios. '
+            Innovations in Computing:
+              name: Innovaciones en computación
+              description_student: 'En esta lección, explorarás una amplia variedad
+                de plataformas informáticas nuevas e innovadoras mientras amplías
+                tu comprensión de lo que puede ser un ordenador.  '
+              description_teacher: Para iniciar la unidad final de este curso, los
+                estudiantes harán algunas investigaciones sobre innovaciones interesantes
+                en computación. Esta lección mostrará a los estudiantes una variedad
+                más amplia de formatos informáticos (como una computadora) y campos
+                que se ven afectados por la computación. Más adelante, examinarán
+                los dispositivos que encontraron en esta lección a medida que desarrollan
+                sus propios dispositivos informáticos físicos.
+            The Circuit Playground:
+              name: The Circuit Playground
+              description_student: 'En esta lección, conocerás el Circuit Playground,
+                la placa de circuitos que se utilizará durante el resto de esta unidad. '
+            Board Events:
+              name: Eventos del tablero
+              description_student: En esta lección, aprenderás a utilizar los botones
+                de hardware del Circuit Playground y el interruptor que dará entrada
+                al Circuit Playground.
+            Arrays and Color LEDs:
+              name: LEDs de colores
+            lesson-10:
+              name: Combinando Entradas
+            Accelerometer:
+              name: Acelerómetro
+              description_student: 'En esta lección, explorarás el acelerómetro y
+                sus posibilidades. '
+              description_teacher: En esta lección, los estudiantes explorarán el
+                acelerómetro y sus capacidades. Se familiarizarán con sus eventos
+                y propiedades, y crearán varios programas que utilicen el acelerómetro,
+                similares a los que se encuentran en aplicaciones del mundo real.
+            Making Music:
+              name: Crear música
+              description_student: 'En esta lección, utilizarás al máximo la función
+                de zumbador del Circuit Playground produciendo sonidos, notas y canciones. '
+            Functions with Parameters:
+              name: Funciones
+            Project - Make a Game:
+              name: Proyecto - Crear un Juego
+              description_student: En esta lección, utilizarás lo que has aprendido
+                en el capítulo uno y desarrollarás una aplicación de tu propio diseño
+                que utilice la pizarra para emitir información.
+              description_teacher: Para este proyecto, los estudiantes diseñan y crean
+                un juego que aprovecha las nuevas entradas y salidas que tienen a
+                su disposición. Este proyecto se ha dejado intencionadamente muy abierto
+                para que los estudiantes puedan pensar en términos generales sobre
+                la utilidad de los resultados físicos en una aplicación, a la vez
+                que se les da la oportunidad de revisar el proceso de desarrollo del
+                programa y probar las nuevas funciones disponibles en el Circuit Playground.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capítulo 1
+            lessonGroup-3:
+              display_name: Capítulo 2
           name: csd6-piloto-2022
           title: Computación Física - Piloto (2022)
         csa8-exemplars:
@@ -43576,7 +43655,7 @@ es:
                 a sus mascotas.
               key: Mascota Virtual
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
               description_student: "¡Es el momento de celebrar! En esta lección, programarás
                 tu propia fiesta de baile interactiva."
               description_teacher: En esta lección, los estudiantes programarán su
@@ -43798,7 +43877,7 @@ es:
                 cronometrados y a las entradas del usuario. '
             lesson-1:
               key: lección-1
-              name: Fiesta de baile
+              name: Fiesta de Baile
               description_student: "¡Es el momento de celebrar! En esta lección, programarás
                 tu propia fiesta de baile interactiva."
               description_teacher: En esta lección, los estudiantes programarán su
@@ -46650,13 +46729,13 @@ es:
                 guiados a través de eventos, y luego podrán crear su propio juego.
               key: Construye un juego de la Guerra de las Galaxias
             Dance Party:
-              name: Fiesta de baile
+              name: Fiesta de Baile
               description_student: "¡Es el momento de celebrar! En esta lección, programarás
                 tu propia fiesta de baile interactiva."
               description_teacher: En esta lección, los estudiantes programarán su
                 propia fiesta de baile interactiva. Esta actividad requiere el uso
                 de sonido, ya que la herramienta responde a la música.
-              key: Fiesta de baile
+              key: Fiesta de Baile
             Loops in Ice Age:
               name: Bucles de la Era de Hielo
               description_student: En esta lección, usarás el bloque repetir para
@@ -47550,7 +47629,7 @@ es:
               key: lección-5
               name: Contar con Variables
             AI for Oceans:
-              key: Inteligencia Artificial para océanos
+              key: Inteligencia Artificial para Océanos
               name: Inteligencia Artificial para océanos
               description_student: Clasifica los objetos como "peces" o "no peces"
                 para intentar eliminar la basura del océano. A continuación, amplía
@@ -47581,6 +47660,12 @@ es:
                 URL, direcciones IP y el DNS.
             lesson-4:
               name: Muchos Sprites
+            "[New] Lots of Sprites":
+              name: "[New] Muchos Sprites"
+            "[New] Counting with Variables":
+              name: "[New] Contando con Variables"
+            "[New] Mini-Project: Collector Game":
+              name: "[New] Mini-Proyecto: Juego de Coleccionista"
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -47888,3 +47973,956 @@ es:
               display_name: Semana "Demuestra lo que sabes".
           name: csa5-2022
           title: Arrays Bidimensionales ('22-'23)
+        csa1-2022-exemplars:
+          lessons:
+            lesson-1:
+              name: Bienvenido a CSA
+            lesson-2:
+              name: Laboratorio Java
+            lesson-3:
+              name: Clases y Objetos
+            lesson-4:
+              name: Navegando y Pintando
+            lesson-5:
+              name: Tomando Decisiones
+            lesson-6:
+              name: Creando Tipos de Painters
+            lesson-7:
+              name: Mejorando los Programas con las Revisiones de Código
+            lesson-8:
+              name: Instrucciones de Repetición
+            lesson-9:
+              name: Bucles
+            lesson-10:
+              name: Depuración con el Painter
+            lesson-11:
+              name: Añadiendo Nuevas Capacidades
+            lesson-12:
+              name: Creando un  StampPainter
+            lesson-13:
+              name: Ampliando el StampPainter
+            lesson-14:
+              name: Creando un BackgroundPainter
+            lesson-15:
+              name: Convertirse en Ingenieros de Software
+            lesson-19:
+              name: Práctica de FRQ
+            lesson-20:
+              name: Evaluación de la Unidad 1
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+        self-paced-pl-csa1-2022:
+          lessons:
+            lesson-1:
+              name: Bienvenido a Code.org
+        csa7-pilot-extra:
+          lessons:
+            Writing Methods to Satisfy Conditions:
+              name: Métodos de Escritura para Satisfacer Condiciones
+              description_student: Tu creador de contenidos favorito te ha reclutado
+                para que crees una secuencia de títulos para utilizarla en ¡todos
+                sus contenidos! El Proyecto de Secuencia de Títulos es un gran proyecto
+                en el que trabajas a lo largo de la unidad, y las estrategias de gestión
+                de proyectos te ayudan a organizar y estructurar tu trabajo.
+              description_teacher: Los alumnos revisan los métodos de escritura para
+                satisfacer las condiciones y aprenden sobre la abstracción de procedimientos
+                y la descomposición de métodos. A continuación, los estudiantes se
+                introducen en el Proyecto de Secuencia de Títulos y evalúan los requisitos
+                y los ejemplos para identificar las preguntas y las características
+                clave.
+            Exploring Method Components and Functionality:
+              name: Explorando los Componentes y la Funcionalidad del Método
+              description_student: Se revisan los componentes de la firma de un método
+                y la relación entre los parámetros reales y los formales. Diferenciarás
+                entre métodos "vacíos" y no "vacíos" y depurarás el código con cabeceras
+                de método y declaraciones de retorno incorrectas. A continuación,
+                planifica las tareas que debe realizar para su proyecto de secuencia
+                de títulos.
+              description_teacher: Los alumnos revisan los componentes de la firma
+                de un método y repasan la relación entre los parámetros reales y los
+                formales. Los alumnos diferencian entre métodos `void` y no `void`
+                y depuran el código con cabeceras de método y declaraciones de retorno
+                incorrectas. A continuación, los alumnos planifican las tareas que
+                deben realizar para su Proyecto de Secuencia de Títulos.
+            Using Object References as Parameters:
+              name: Usando Referencias a Objetos como Parámetros
+              description_student: Se revisa el paso de primitivas y referencias a
+                objetos como parámetros para identificar las similitudes y diferencias
+                entre ambos. Determinarás el resultado de los segmentos de código
+                y el impacto en los objetos del uso de referencias a objetos como
+                parámetros. A continuación, aprenderás la importancia de las mejores
+                prácticas para el uso de referencias a objetos como parámetros para
+                asegurarte de que los objetos sólo se modifican cuando es necesario.
+              description_teacher: Los alumnos revisan el paso de primitivas y referencias
+                a objetos como parámetros para identificar las similitudes y diferencias
+                entre cada uno. Los alumnos determinan el resultado de los segmentos
+                de código y el impacto en los objetos de la utilización de referencias
+                a objetos como parámetros. A continuación, los estudiantes aprenden
+                la importancia de las mejores prácticas para el uso de referencias
+                a objetos como parámetros para asegurarse de que los objetos sólo
+                se modifican cuando es necesario.
+            Overloading Methods:
+              name: Sobrecarga de Métodos
+              description_student: Se revisa el propósito de la sobrecarga y se examinan
+                los métodos sobrecargados para determinar su impacto en la funcionalidad
+                de un programa. A continuación, escribirás métodos sobrecargados para
+                resolver problemas en la consola, El barrio o El teatro antes de empezar
+                a planificar tu proyecto de secuencia de títulos.
+              description_teacher: Los alumnos revisan el propósito de la sobrecarga
+                y examinan los métodos sobrecargados para determinar su impacto en
+                la funcionalidad de un programa. A continuación, los estudiantes escriben
+                métodos sobrecargados para resolver problemas en la consola, El Barrio
+                o El Teatro antes de comenzar sus planes iniciales para su Proyecto
+                de Secuencia de Títulos.
+            Accessing Object Behavior:
+              name: Accediendo al Comportamiento de los Objetos
+              description_student: Revisarás las palabras clave `public` y `private`
+                para determinar la accesibilidad externa de los atributos y comportamientos
+                de un objeto. Explorarás los impactos de establecer métodos como `private`
+                en la funcionalidad de un programa e identificarás los beneficios
+                de usar métodos `private`.
+              description_teacher: Los estudiantes revisan las palabras clave `public`
+                y `private` para determinar la accesibilidad externa de los atributos
+                y comportamientos de un objeto. Los estudiantes exploran los impactos
+                de la configuración de los métodos para `private` en la funcionalidad
+                de un programa e identifican los beneficios de usar métodos `private`.
+            Overriding Methods:
+              name: Anulación de Métodos
+              description_student: En lecciones anteriores has anulado métodos en
+                la clase `Object` y has trabajado con jerarquías de clases que implementan
+                métodos anulados. Explorarás la escritura y la llamada a métodos anulados
+                en clases personalizadas, y luego aprenderás a utilizar valores centinela
+                para mejorar tu capacidad de trabajar con la entrada del usuario en
+                tus programas.
+              description_teacher: Los estudiantes han anulado métodos en la clase
+                `Object` en lecciones anteriores y han trabajado con jerarquías de
+                clases que implementan métodos anulados. Los estudiantes exploran
+                la escritura y la llamada a métodos anulados en clases personalizadas,
+                y luego aprenden a utilizar valores centinela para mejorar su capacidad
+                de trabajar con la entrada del usuario en sus programas.
+            Exploring Recursive Methods:
+              name: Explorando los Métodos Recursivos
+              description_student: Explora los métodos recursivos a través de una
+                actividad no conectada de tu elección y practica el seguimiento del
+                código con métodos recursivos. A continuación, trabajarás en las tareas
+                de tu Panel de Planificación de Proyectos para continuar con el desarrollo
+                de tu Proyecto de Secuencia de Títulos.
+              description_teacher: Los alumnos exploran los métodos recursivos a través
+                de una actividad no conectada de su elección y practican el seguimiento
+                del código con métodos recursivos. A continuación, los estudiantes
+                trabajan en las tareas de su Panel de Planificación de Proyectos para
+                continuar con el desarrollo de su Proyecto de Secuencia de Títulos.
+            Comparing Recursive and Iterative Solutions:
+              name: Comparando Soluciones Recursivas e Iterativas
+              description_student: A veces es más fácil escribir un método de forma
+                iterativa, y otras veces es mejor un método recursivo. Examinarás
+                problemas y algoritmos para identificar sus casos base y sus casos
+                recursivos. Diferenciarás entre soluciones recursivas e iterativas
+                y practicarás la conversión de soluciones iterativas en métodos recursivos.
+              description_teacher: Los alumnos examinan problemas y algoritmos para
+                identificar sus casos base y sus casos recursivos. Los alumnos diferencian
+                entre soluciones recursivas e iterativas y practican la conversión
+                de soluciones iterativas en métodos recursivos.
+            Writing Recursive Methods:
+              name: Escribiendo Métodos Recursivos
+              description_student: Compararás soluciones iterativas y recursivas para
+                trabajar con `String`s y practicarás el seguimiento de soluciones
+                recursivas con `String`s, arrays y `ArrayList`s. A continuación, participarás
+                en una revisión por pares para dar y recibir comentarios sobre el
+                progreso de tu Proyecto de Secuencia de Títulos.
+              description_teacher: Los estudiantes comparan soluciones iterativas
+                y recursivas para trabajar con `String`s y practican el rastreo de
+                soluciones recursivas con `String`s, arrays y `ArrayList`s. A continuación,
+                los estudiantes participan en una revisión por pares para dar y recibir
+                comentarios sobre el progreso de su Proyecto de Secuencia de Títulos.
+            Maximizing System Reliability:
+              name: Maximizando la Fiabilidad del Sistema
+              description_student: Explorarás la fiabilidad del sistema teniendo en
+                cuenta a los usuarios finales de los programas y realizando pruebas
+                para comprobar que los programas satisfacen sus necesidades y expectativas.
+                Identificarás estrategias para probar la fiabilidad del sistema y
+                reconocerás tu papel como ingeniero de software en el desarrollo y
+                mantenimiento de un software que funcione.
+              description_teacher: Los alumnos exploran la fiabilidad del sistema
+                teniendo en cuenta a los usuarios finales de los programas y realizando
+                pruebas para comprobar que los programas satisfacen sus necesidades
+                y expectativas. Los estudiantes identifican estrategias para probar
+                la fiabilidad del sistema y reconocen su papel como ingenieros de
+                software en el desarrollo y mantenimiento de software que funciona.
+            Title Sequence Project - Day 1:
+              name: Proyecto de Secuencia de Títulos  - Día 1
+              description_student: Continúas desarrollando tu Proyecto de Secuencia
+                de Títulos para crear una secuencia de títulos para un programa de
+                promoción de tu creador de contenidos favorito utilizando imágenes
+                y dibujos para crear animaciones y efectos. En primer lugar, autoevaluarás
+                tu trabajo para valorar tu progreso a la hora de completar los requisitos
+                del proyecto y, a continuación, realizarás pruebas de aceptación para
+                determinar cuáles de tus historias de usuario están completas. Utiliza
+                la autoevaluación y los comentarios de los compañeros para priorizar
+                las tareas restantes y seguir desarrollando el proyecto.
+              description_teacher: Los alumnos continúan desarrollando su Proyecto
+                de Secuencia de Títulos para crear una secuencia de títulos para un
+                programa de promoción de su creador de contenidos favorito utilizando
+                imágenes y dibujos para crear animaciones y efectos. Los estudiantes
+                primero autoevalúan su trabajo para evaluar su progreso en la finalización
+                de los requisitos del proyecto, luego realizan pruebas de aceptación
+                para determinar cuáles de sus historias de usuario están completas.
+                Los estudiantes utilizan la autoevaluación y los comentarios de los
+                compañeros para priorizar sus tareas restantes y continuar desarrollando
+                sus proyectos.
+            Title Sequence Project - Day 2:
+              name: Proyecto de Secuencia de Títulos  - Día 2
+              description_student: En la lección anterior, realizaste una autoevaluación
+                y escribiste los criterios de aceptación de tu proyecto. En esta lección,
+                obtendrás los comentarios de tus compañeros para identificar las tareas
+                pendientes y continuar desarrollando tu Proyecto de Secuencia de Títulos.
+              description_teacher: En la lección anterior, los alumnos realizaron
+                autoevaluaciones y redactaron los criterios de aceptación de sus proyectos.
+                En esta lección, los estudiantes obtienen comentarios de sus compañeros
+                para identificar las tareas restantes que deben completar y continuar
+                desarrollando sus Proyectos de Secuencia de Títulos.
+            Title Sequence Project - Day 3:
+              name: Proyecto de Secuencia de Títulos  - Día 3
+              description_student: Realiza las revisiones y actualizaciones finales
+                basadas en las revisiones del código y en el Panel de Planificación
+                del Proyecto. Comparte tu Proyecto de Secuencia de Títulos con tus
+                compañeros. A continuación, celebra tu éxito y completa una reflexión
+                final sobre el proceso de desarrollo.
+              description_teacher: Los alumnos realizan revisiones y actualizaciones
+                finales basadas en sus revisiones de código y en el Panel de Planificación
+                de Proyectos. Los estudiantes comparten sus Proyectos de Secuencia
+                de Títulos con sus compañeros. A continuación, los estudiantes celebran
+                su éxito y completan una reflexión final sobre el proceso de desarrollo.
+            FRQ Day:
+              name: Día FRQ
+              description_student: 'Completarás de forma independiente una pregunta
+                de respuesta libre (FRQ) de estilo AP. Serás el responsable de seguir
+                el ritmo y aplicar el proceso de tres pasos: anotar la pregunta, escribir
+                el pseudocódigo y luego escribir el código Java. A continuación, completarás
+                un post-FRQ para identificar las áreas en las que podrías practicar
+                más.'
+              description_teacher: Los alumnos completan de forma independiente una
+                Pregunta de Respuesta Libre (FRQ) de estilo AP. A continuación, los
+                estudiantes completan una encuesta posterior a la FRQ para informar
+                sobre su experiencia en el examen e identificar cualquier laguna en
+                sus conocimientos.
+            Assessment Day:
+              name: Día de evaluación
+              description_student: En esta unidad, has practicado el diseño y desarrollo
+                de software utilizando las habilidades y construcciones de programación
+                que has aprendido a lo largo del curso para desarrollar una secuencia
+                de títulos para tu creador de contenidos favorito. Utilizaste estrategias
+                de descomposición y principios de programación orientada a objetos
+                para planificar e implementar tus ideas mientras te asegurabas de
+                que tu proyecto cumplía con los requisitos específicos. Has explorado
+                los métodos recursivos y has comparado las soluciones recursivas e
+                iterativas para mejorar su eficacia. Al final de la unidad, consideraste
+                la necesidad de maximizar la fiabilidad del sistema mientras analizabas
+                el código de fuente abierta. Ahora, se evalúa el logro de los objetivos
+                de aprendizaje de la unidad y las habilidades en una evaluación de
+                opción múltiple.
+              description_teacher: En esta unidad, los alumnos practicaron el diseño
+                y desarrollo de software utilizando las habilidades y construcciones
+                de programación que han aprendido a lo largo del curso para desarrollar
+                una secuencia de títulos para su creador de contenidos favorito. Los
+                estudiantes utilizaron estrategias de descomposición y principios
+                de programación orientada a objetos para planificar e implementar
+                sus ideas, asegurándose de que sus proyectos cumplieran con los requisitos
+                específicos. Los estudiantes exploraron los métodos recursivos y compararon
+                las soluciones recursivas e iterativas para lograr la eficiencia.
+                Al final de la unidad, los alumnos consideraron la necesidad de maximizar
+                la fiabilidad del sistema mientras analizaban el código de fuente
+                abierta. Ahora, los estudiantes evalúan el logro de los objetivos
+                de aprendizaje de la unidad y las habilidades en una evaluación de
+                opción múltiple.
+            Unit 7 Pilot Survey:
+              name: Unidad 7 - Encuesta Piloto
+            Java Lab:
+              name: Laboratorio Java
+              key: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+              key: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+              key: Utilización de comandos
+            The Playground:
+              name: La Zona de Juego
+              key: La Zona de Juego
+            lesson-10:
+              key: lección-10
+              name: Métodos de Escritura para Satisfacer Condiciones
+              description_student: Tu creador de contenidos favorito te ha reclutado
+                para que crees una secuencia de títulos para utilizarla en ¡todos
+                sus contenidos! El Proyecto de Secuencia de Títulos es un gran proyecto
+                en el que trabajas a lo largo de la unidad, y las estrategias de gestión
+                de proyectos te ayudan a organizar y estructurar tu trabajo.
+              description_teacher: Los alumnos revisan los métodos de escritura para
+                satisfacer las condiciones y aprenden sobre la abstracción de procedimientos
+                y la descomposición de métodos. A continuación, los estudiantes se
+                introducen en el Proyecto de Secuencia de Títulos y evalúan los requisitos
+                y los ejemplos para identificar las preguntas y las características
+                clave.
+            lesson-6:
+              key: lección-6
+              name: Explorando los Componentes y la Funcionalidad del Método
+              description_student: Se revisan los componentes de la firma de un método
+                y la relación entre los parámetros reales y los formales. Diferenciarás
+                entre métodos "vacíos" y no "vacíos" y depurarás el código con cabeceras
+                de método y declaraciones de retorno incorrectas. A continuación,
+                planifica las tareas que debe realizar para su proyecto de secuencia
+                de títulos.
+              description_teacher: Los alumnos revisan los componentes de la firma
+                de un método y repasan la relación entre los parámetros reales y los
+                formales. Los alumnos diferencian entre métodos `void` y no `void`
+                y depuran el código con cabeceras de método y declaraciones de retorno
+                incorrectas. A continuación, los alumnos planifican las tareas que
+                deben realizar para su Proyecto de Secuencia de Títulos.
+            lesson-7:
+              key: lección-7
+              name: Usando Referencias a Objetos como Parámetros
+              description_student: Se revisa el paso de primitivas y referencias a
+                objetos como parámetros para identificar las similitudes y diferencias
+                entre ambos. Determinarás el resultado de los segmentos de código
+                y el impacto en los objetos del uso de referencias a objetos como
+                parámetros. A continuación, aprenderás la importancia de las mejores
+                prácticas para el uso de referencias a objetos como parámetros para
+                asegurarte de que los objetos sólo se modifican cuando es necesario.
+              description_teacher: Los alumnos revisan el paso de primitivas y referencias
+                a objetos como parámetros para identificar las similitudes y diferencias
+                entre cada uno. Los alumnos determinan el resultado de los segmentos
+                de código y el impacto en los objetos de la utilización de referencias
+                a objetos como parámetros. A continuación, los estudiantes aprenden
+                la importancia de las mejores prácticas para el uso de referencias
+                a objetos como parámetros para asegurarse de que los objetos sólo
+                se modifican cuando es necesario.
+            lesson-8:
+              key: lección-8
+              name: Sobrecarga de Métodos
+              description_student: Se revisa el propósito de la sobrecarga y se examinan
+                los métodos sobrecargados para determinar su impacto en la funcionalidad
+                de un programa. A continuación, escribirás métodos sobrecargados para
+                resolver problemas en la consola, El barrio o El teatro antes de empezar
+                a planificar tu proyecto de secuencia de títulos.
+              description_teacher: Los alumnos revisan el propósito de la sobrecarga
+                y examinan los métodos sobrecargados para determinar su impacto en
+                la funcionalidad de un programa. A continuación, los estudiantes escriben
+                métodos sobrecargados para resolver problemas en la consola, El Barrio
+                o El Teatro antes de comenzar sus planes iniciales para su Proyecto
+                de Secuencia de Títulos.
+            lesson-9:
+              key: lección-9
+              name: Accediendo al Comportamiento de los Objetos
+              description_student: Revisarás las palabras clave `public` y `private`
+                para determinar la accesibilidad externa de los atributos y comportamientos
+                de un objeto. Explorarás los impactos de establecer métodos como `private`
+                en la funcionalidad de un programa e identificarás los beneficios
+                de usar métodos `private`.
+              description_teacher: Los estudiantes revisan las palabras clave `public`
+                y `private` para determinar la accesibilidad externa de los atributos
+                y comportamientos de un objeto. Los estudiantes exploran los impactos
+                de la configuración de los métodos para `private` en la funcionalidad
+                de un programa e identifican los beneficios de usar métodos `private`.
+            lesson-11:
+              key: lección-11
+              name: Anulación de Métodos
+              description_student: En lecciones anteriores has anulado métodos en
+                la clase `Object` y has trabajado con jerarquías de clases que implementan
+                métodos anulados. Explorarás la escritura y la llamada a métodos anulados
+                en clases personalizadas, y luego aprenderás a utilizar valores centinela
+                para mejorar tu capacidad de trabajar con la entrada del usuario en
+                tus programas.
+              description_teacher: Los estudiantes han anulado métodos en la clase
+                `Object` en lecciones anteriores y han trabajado con jerarquías de
+                clases que implementan métodos anulados. Los estudiantes exploran
+                la escritura y la llamada a métodos anulados en clases personalizadas,
+                y luego aprenden a utilizar valores centinela para mejorar su capacidad
+                de trabajar con la entrada del usuario en sus programas.
+            lesson-12:
+              key: lección-12
+              name: Explorando los Métodos Recursivos
+              description_student: Explora los métodos recursivos a través de una
+                actividad no conectada de tu elección y practica el seguimiento del
+                código con métodos recursivos. A continuación, trabajarás en las tareas
+                de tu Panel de Planificación de Proyectos para continuar con el desarrollo
+                de tu Proyecto de Secuencia de Títulos.
+              description_teacher: Los alumnos exploran los métodos recursivos a través
+                de una actividad no conectada de su elección y practican el seguimiento
+                del código con métodos recursivos. A continuación, los estudiantes
+                trabajan en las tareas de su Panel de Planificación de Proyectos para
+                continuar con el desarrollo de su Proyecto de Secuencia de Títulos.
+            lesson-13:
+              key: lección-13
+              name: Comparando Soluciones Recursivas e Iterativas
+              description_student: A veces es más fácil escribir un método de forma
+                iterativa, y otras veces es mejor un método recursivo. Examinarás
+                problemas y algoritmos para identificar sus casos base y sus casos
+                recursivos. Diferenciarás entre soluciones recursivas e iterativas
+                y practicarás la conversión de soluciones iterativas en métodos recursivos.
+              description_teacher: Los alumnos examinan problemas y algoritmos para
+                identificar sus casos base y sus casos recursivos. Los alumnos diferencian
+                entre soluciones recursivas e iterativas y practican la conversión
+                de soluciones iterativas en métodos recursivos.
+            lesson-14:
+              key: lección-14
+              name: Escribiendo Métodos Recursivos
+              description_student: Compararás soluciones iterativas y recursivas para
+                trabajar con `String`s y practicarás el seguimiento de soluciones
+                recursivas con `String`s, arrays y `ArrayList`s. A continuación, participarás
+                en una revisión por pares para dar y recibir comentarios sobre el
+                progreso de tu Proyecto de Secuencia de Títulos.
+              description_teacher: Los estudiantes comparan soluciones iterativas
+                y recursivas para trabajar con `String`s y practican el rastreo de
+                soluciones recursivas con `String`s, arrays y `ArrayList`s. A continuación,
+                los estudiantes participan en una revisión por pares para dar y recibir
+                comentarios sobre el progreso de su Proyecto de Secuencia de Títulos.
+            lesson-15:
+              key: lección-15
+              name: Maximizando la Fiabilidad del Sistema
+              description_student: Explorarás la fiabilidad del sistema teniendo en
+                cuenta a los usuarios finales de los programas y realizando pruebas
+                para comprobar que los programas satisfacen sus necesidades y expectativas.
+                Identificarás estrategias para probar la fiabilidad del sistema y
+                reconocerás tu papel como ingeniero de software en el desarrollo y
+                mantenimiento de un software que funcione.
+              description_teacher: Los alumnos exploran la fiabilidad del sistema
+                teniendo en cuenta a los usuarios finales de los programas y realizando
+                pruebas para comprobar que los programas satisfacen sus necesidades
+                y expectativas. Los estudiantes identifican estrategias para probar
+                la fiabilidad del sistema y reconocen su papel como ingenieros de
+                software en el desarrollo y mantenimiento de software que funciona.
+            lesson-1:
+              key: lección-1
+              name: Proyecto de Secuencia de Títulos  - Día 1
+              description_student: Continúas desarrollando tu Proyecto de Secuencia
+                de Títulos para crear una secuencia de títulos para un programa de
+                promoción de tu creador de contenidos favorito utilizando imágenes
+                y dibujos para crear animaciones y efectos. En primer lugar, autoevaluarás
+                tu trabajo para valorar tu progreso a la hora de completar los requisitos
+                del proyecto y, a continuación, realizarás pruebas de aceptación para
+                determinar cuáles de tus historias de usuario están completas. Utiliza
+                la autoevaluación y los comentarios de los compañeros para priorizar
+                las tareas restantes y seguir desarrollando el proyecto.
+              description_teacher: Los alumnos continúan desarrollando su Proyecto
+                de Secuencia de Títulos para crear una secuencia de títulos para un
+                programa de promoción de su creador de contenidos favorito utilizando
+                imágenes y dibujos para crear animaciones y efectos. Los estudiantes
+                primero autoevalúan su trabajo para evaluar su progreso en la finalización
+                de los requisitos del proyecto, luego realizan pruebas de aceptación
+                para determinar cuáles de sus historias de usuario están completas.
+                Los estudiantes utilizan la autoevaluación y los comentarios de los
+                compañeros para priorizar sus tareas restantes y continuar desarrollando
+                sus proyectos.
+            lesson-2:
+              key: lección-2
+              name: Proyecto de Secuencia de Títulos  - Día 2
+              description_student: En la lección anterior, realizaste una autoevaluación
+                y escribiste los criterios de aceptación de tu proyecto. En esta lección,
+                obtendrás los comentarios de tus compañeros para identificar las tareas
+                pendientes y continuar desarrollando tu Proyecto de Secuencia de Títulos.
+              description_teacher: En la lección anterior, los alumnos realizaron
+                autoevaluaciones y redactaron los criterios de aceptación de sus proyectos.
+                En esta lección, los estudiantes obtienen comentarios de sus compañeros
+                para identificar las tareas restantes que deben completar y continuar
+                desarrollando sus Proyectos de Secuencia de Títulos.
+            lesson-3:
+              key: lección-3
+              name: Proyecto de Secuencia de Títulos  - Día 3
+              description_student: Realiza las revisiones y actualizaciones finales
+                basadas en las revisiones del código y en el Panel de Planificación
+                del Proyecto. Comparte tu Proyecto de Secuencia de Títulos con tus
+                compañeros. A continuación, celebra tu éxito y completa una reflexión
+                final sobre el proceso de desarrollo.
+              description_teacher: Los alumnos realizan revisiones y actualizaciones
+                finales basadas en sus revisiones de código y en el Panel de Planificación
+                de Proyectos. Los estudiantes comparten sus Proyectos de Secuencia
+                de Títulos con sus compañeros. A continuación, los estudiantes celebran
+                su éxito y completan una reflexión final sobre el proceso de desarrollo.
+            lesson-4:
+              key: lección-4
+              name: Día FRQ
+              description_student: 'Completarás de forma independiente una pregunta
+                de respuesta libre (FRQ) de estilo AP. Serás el responsable de seguir
+                el ritmo y aplicar el proceso de tres pasos: anotar la pregunta, escribir
+                el pseudocódigo y luego escribir el código Java. A continuación, completarás
+                un post-FRQ para identificar las áreas en las que podrías practicar
+                más.'
+              description_teacher: Los alumnos completan de forma independiente una
+                Pregunta de Respuesta Libre (FRQ) de estilo AP. A continuación, los
+                estudiantes completan una encuesta posterior a la FRQ para informar
+                sobre su experiencia en el examen e identificar cualquier laguna en
+                sus conocimientos.
+            lesson-5:
+              key: lección-5
+              name: Día de evaluación
+              description_student: En esta unidad, has practicado el diseño y desarrollo
+                de software utilizando las habilidades y construcciones de programación
+                que has aprendido a lo largo del curso para desarrollar una secuencia
+                de títulos para tu creador de contenidos favorito. Utilizaste estrategias
+                de descomposición y principios de programación orientada a objetos
+                para planificar e implementar tus ideas mientras te asegurabas de
+                que tu proyecto cumplía con los requisitos específicos. Has explorado
+                los métodos recursivos y has comparado las soluciones recursivas e
+                iterativas para mejorar su eficacia. Al final de la unidad, consideraste
+                la necesidad de maximizar la fiabilidad del sistema mientras analizabas
+                el código de fuente abierta. Ahora, se evalúa el logro de los objetivos
+                de aprendizaje de la unidad y las habilidades en una evaluación de
+                opción múltiple.
+              description_teacher: En esta unidad, los alumnos practicaron el diseño
+                y desarrollo de software utilizando las habilidades y construcciones
+                de programación que han aprendido a lo largo del curso para desarrollar
+                una secuencia de títulos para su creador de contenidos favorito. Los
+                estudiantes utilizaron estrategias de descomposición y principios
+                de programación orientada a objetos para planificar e implementar
+                sus ideas, asegurándose de que sus proyectos cumplieran con los requisitos
+                específicos. Los estudiantes exploraron los métodos recursivos y compararon
+                las soluciones recursivas e iterativas para lograr la eficiencia.
+                Al final de la unidad, los alumnos consideraron la necesidad de maximizar
+                la fiabilidad del sistema mientras analizaban el código de fuente
+                abierta. Ahora, los estudiantes evalúan el logro de los objetivos
+                de aprendizaje de la unidad y las habilidades en una evaluación de
+                opción múltiple.
+            lesson-16:
+              key: lección-16
+              name: Unidad 7 - Encuesta Piloto
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+            lessonGroup-5:
+              display_name: Aislamiento
+        csa8-pilot-extra:
+          lessons:
+            Planning a Project:
+              name: Planificando un Proyecto
+              description_student: Te han propuesto que diseñes y desarrolles un juego
+                para que todos los miembros de tu comunidad puedan jugar. El proyecto
+                de Parque Infantil Inclusivo es un gran proyecto en el que trabajas
+                a lo largo de la unidad, y las estrategias de gestión de proyectos
+                te ayudan a organizar y estructurar tu trabajo.
+              description_teacher: Los alumnos estudian el diseño de juegos y aprenden
+                los principios que utilizan los diseñadores de juegos para crear juegos
+                inclusivos. Los estudiantes se introducen en el proyecto de juegos
+                inclusivos y evalúan los requisitos y los ejemplos para identificar
+                las preguntas y las características clave.
+            Searching for Data:
+              name: Buscando Datos
+              description_student: Has utilizado la búsqueda en algoritmos estándar
+                para encontrar un elemento objetivo en una lista. En esta lección,
+                explorarás los casos mejor, medio y peor del algoritmo de búsqueda
+                lineal utilizando los recuentos de ejecución.
+              description_teacher: Los alumnos han utilizado la búsqueda en algoritmos
+                estándar para encontrar un elemento objetivo en una lista. En esta
+                lección, los alumnos exploran los casos mejor, medio y peor del algoritmo
+                de búsqueda lineal utilizando recuentos de ejecución.
+            Implementing the Binary Search:
+              name: Aplicando la Búsqueda Binaria
+              description_student: Descubres un algoritmo de búsqueda mejor que puede
+                funcionar con más eficacia si la lista ya está ordenada. Traza el
+                código de una búsqueda binaria para evaluar su eficacia y compararla
+                con la búsqueda lineal. Aplicarás el algoritmo de búsqueda binaria
+                para resolver problemas en diversos escenarios.
+              description_teacher: Los alumnos descubren un algoritmo de búsqueda
+                mejor que puede funcionar de forma más eficiente si la lista ya está
+                ordenada. Los alumnos trazan el código de una búsqueda binaria para
+                evaluar su eficiencia y compararla con la búsqueda lineal. Los estudiantes
+                aplican el algoritmo de búsqueda binaria para resolver problemas en
+                una variedad de escenarios.
+            Implementing a Recursive Binary Search:
+              name: Aplicación de una Búsqueda Binaria Recursiva
+              description_student: Como muchos de los algoritmos que has escrito,
+                la búsqueda binaria se puede implementar de forma recursiva. En esta
+                lección, explorarás la implementación de la búsqueda binaria de forma
+                recursiva y la aplicarás para resolver diferentes problemas.
+              description_teacher: Los alumnos repasan el algoritmo de búsqueda binaria
+                y exploran la aplicación del algoritmo de forma recursiva. Los estudiantes
+                aplican el algoritmo de búsqueda binaria recursiva para resolver problemas
+                que contienen diferentes tipos de datos, estructuras de datos y restricciones
+                del problema.
+            Implementing the Selection Sort:
+              name: Aplicando la Ordenación por Selección
+              description_student: Explora el algoritmo de ordenación por selección
+                para organizar correctamente los elementos de una lista. Se rastrea
+                el algoritmo para entender su funcionalidad y determinar su eficiencia
+                utilizando los recuentos de ejecución.
+              description_teacher: Los alumnos exploran el algoritmo de ordenación
+                por selección para organizar correctamente los elementos de una lista.
+                Los alumnos rastrean el algoritmo para comprender su funcionalidad
+                y determinar su eficiencia mediante recuentos de ejecución.
+            Implementing the Insertion Sort:
+              name: Aplicando la Ordenación por Inserción
+              description_student: Explora el algoritmo de ordenación por selección
+                para organizar correctamente los elementos de una lista. Se rastrea
+                el algoritmo para entender su funcionalidad y determinar su eficiencia
+                utilizando los recuentos de ejecución. Diferenciarás entre los algoritmos
+                de ordenación por selección y ordenación por inserción comparando
+                su eficiencia.
+              description_teacher: Los alumnos exploran el algoritmo de ordenación
+                por inserción para organizar correctamente los elementos de una lista.
+                Los estudiantes rastrean el algoritmo para entender su funcionalidad
+                y determinar su eficiencia utilizando los recuentos de ejecución.
+                Los alumnos diferencian entre los algoritmos de ordenación por selección
+                y ordenación por inserción comparando su eficiencia.
+            Implementing the Merge Sort:
+              name: Aplicando la Ordenación por Fusión
+              description_student: Se explora el algoritmo de ordenación por fusión
+                para organizar los elementos de una lista mediante un enfoque de "divide
+                y vencerás". Identificarás los componentes del algoritmo y conocerás
+                las funciones de ayuda. Se rastrea el algoritmo para entender su funcionalidad
+                y determinar su eficiencia utilizando los recuentos de ejecución.
+              description_teacher: Los alumnos exploran el algoritmo de ordenación
+                por fusión para organizar los elementos de una lista utilizando un
+                enfoque de "divide y vencerás". Los estudiantes identifican los componentes
+                del algoritmo y aprenden sobre las funciones de ayuda. Los alumnos
+                rastrean el algoritmo para comprender su funcionalidad y determinar
+                su eficiencia utilizando recuentos de ejecución.
+            Expanding Standard Algorithms:
+              name: Ampliando los Algoritmos Estándar
+              description_student: Los algoritmos que has aprendido en el curso también
+                se pueden aplicar en los juegos para controlar los bots, la funcionalidad
+                del juego e interactuar con el usuario. Aplica algoritmos estándar,
+                de búsqueda y de ordenación en los juegos y considera cómo podrías
+                incorporar estos algoritmos en tu proyecto de Inclusive Playground.
+              description_teacher: Los estudiantes descubren que los algoritmos que
+                han aprendido en el curso también se pueden aplicar en los juegos
+                para controlar los bots, la funcionalidad del juego y para interactuar
+                con el usuario. Los estudiantes implementan algoritmos estándar, de
+                búsqueda y de ordenación en los juegos y consideran cómo podrían incorporar
+                estos algoritmos en su proyecto de Inclusive Playground.
+            Traversing Multiple Lists:
+              name: Recorriendo Listas Múltiples
+              description_student: Explorarás el recorrido de las listas múltiples
+                simultáneamente mediante la creación de algoritmos y el trazado de
+                código que incluya listas múltiples. Identificarás los escenarios
+                en los que pueden ser necesarias las listas múltiples y considerarás
+                cómo se pueden utilizar y recorrer las listas múltiples en los juegos.
+              description_teacher: Los alumnos exploran la posibilidad de recorrer
+                múltiples listas al mismo tiempo mediante la creación de algoritmos
+                y el trazado de código que incluya múltiples listas. Los alumnos identifican
+                situaciones en las que pueden ser necesarias varias listas y consideran
+                cómo pueden utilizarse y recorrerse varias listas en los juegos.
+            Defending Privacy and Security:
+              name: Defendiendo la Privacidad y la Seguridad
+              description_student: Explorarás cuestiones de privacidad y seguridad
+                y considerarás tu papel como ingeniero de software mientras identificas
+                estrategias para proteger la privacidad y la seguridad personal cuando
+                desarrolles programas. Aplicarás estas estrategias para hacer más
+                seguro un programa de código abierto.
+              description_teacher: Los alumnos exploran cuestiones de privacidad y
+                seguridad y consideran su papel como ingenieros de software mientras
+                identifican estrategias para proteger la privacidad y la seguridad
+                personal al desarrollar programas. Los estudiantes aplican estas estrategias
+                para hacer más seguro un programa de código abierto.
+            Inclusive Playground Project - Day 1:
+              name: Proyecto de Playground Inclusivo - Día 1
+              description_student: Seguirás desarrollando tu proyecto de Playground
+                Inclusivo para crear un juego para tu comunidad que incorpore los
+                principios del diseño orientado a objetos. En primer lugar, autoevaluarás
+                tu trabajo para valorar tu progreso en la consecución de los requisitos
+                del proyecto y, a continuación, realizarás pruebas de aceptación para
+                determinar cuáles de tus historias de usuario están completas. Utiliza
+                la autoevaluación y los comentarios de los compañeros para priorizar
+                las tareas restantes y seguir desarrollando el proyecto.
+              description_teacher: Los estudiantes continúan desarrollando su Proyecto
+                de Playground Inclusivo para crear un juego para su comunidad que
+                incorpore principios de diseño orientado a objetos. En primer lugar,
+                los estudiantes autoevaluarán su trabajo para valorar su progreso
+                en la finalización de los requisitos del proyecto y, a continuación,
+                realizarán pruebas de aceptación para determinar cuáles de sus historias
+                de usuario están completas. Los estudiantes utilizan la autoevaluación
+                y los comentarios de los compañeros para priorizar sus tareas restantes
+                y continuar desarrollando sus proyectos.
+            Inclusive Playground Project - Day 2:
+              name: Proyecto de Playground Inclusivo - Día 2
+              description_student: En la lección anterior, realizaste una autoevaluación
+                y escribiste los criterios de aceptación de tu proyecto. En esta lección,
+                obtienes los comentarios de tus compañeros para identificar las tareas
+                que quedan por completar y seguir desarrollando tu Proyecto de Playground
+                Inclusivo.
+              description_teacher: En la lección anterior, los alumnos realizaron
+                autoevaluaciones y redactaron los criterios de aceptación de sus proyectos.
+                En esta lección, los alumnos obtienen la opinión de sus compañeros
+                para identificar las tareas restantes que deben completar y seguir
+                desarrollando sus Proyectos de Playgrounds Inclusivos.
+            Inclusive Playground Project - Day 3:
+              name: Proyecto de Playground Inclusivo - Día 3
+              description_student: Realiza las revisiones y actualizaciones finales
+                basándote en las revisiones del código y en el Panel de Planificación
+                del Proyecto. Comparte tu proyecto de Playground Inclusivo con tus
+                compañeros. A continuación, celebra tu éxito y completa una reflexión
+                final sobre el proceso de desarrollo.
+              description_teacher: Los alumnos realizan revisiones y actualizaciones
+                finales basadas en sus revisiones de código y en el Panel de Planificación
+                de Proyecto. Los alumnos comparten sus proyectos de Playgrounds Inclusivos
+                con sus compañeros. Los estudiantes celebran su éxito y completan
+                una reflexión final sobre el proceso de desarrollo.
+            FRQ Day:
+              name: Día FRQ
+            Assessment Day:
+              name: Día de evaluación
+              description_student: En esta unidad, has aplicado algoritmos de búsqueda
+                y ordenación para trabajar con listas de datos primitivos y de objetos
+                almacenados en arrays 1D y 2D y ArrayLists. Has analizado la eficiencia
+                de los algoritmos de búsqueda y ordenación y has ampliado los algoritmos
+                estándar que has desarrollado a lo largo del curso para resolver problemas
+                más complejos. A lo largo de la unidad, aplicaste tus conocimientos
+                y habilidades de programación para desarrollar un juego que incorporaba
+                el diseño orientado a objetos y la eficiencia. Terminaste la unidad
+                y el curso considerando la privacidad y la seguridad de sus programas
+                y usuarios. Ahora, evalúas el logro de los objetivos de aprendizaje
+                de la unidad y las habilidades en una evaluación de opción múltiple.
+              description_teacher: En esta unidad, los alumnos aplicaron algoritmos
+                de búsqueda y ordenación para trabajar con listas de datos primitivos
+                y de objetos almacenados en arrays 1D y 2D y ArrayLists. Los estudiantes
+                analizaron la eficiencia de los algoritmos de búsqueda y ordenación
+                y ampliaron los algoritmos estándar que han desarrollado a lo largo
+                del curso para resolver problemas más complejos. A lo largo de la
+                unidad, los estudiantes aplicaron sus conocimientos y habilidades
+                de programación para desarrollar un juego que incorporaba el diseño
+                orientado a objetos y la eficiencia. Los estudiantes concluyeron la
+                unidad y el curso teniendo en cuenta la privacidad y la seguridad
+                de sus programas y usuarios. Ahora, los estudiantes evalúan el logro
+                de los objetivos de aprendizaje de la unidad y las habilidades en
+                una evaluación de opción múltiple.
+            Unit 8 Pilot Survey:
+              name: Unidad 8 - Encuesta Piloto
+            Java Lab:
+              name: Laboratorio Java
+              key: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+              key: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+              key: Utilización de comandos
+            The Playground:
+              name: La Zona de Juego
+              key: La Zona de Juego
+            lesson-1:
+              key: lección-1
+              name: Planificando un Proyecto
+              description_student: Te han propuesto que diseñes y desarrolles un juego
+                para que todos los miembros de tu comunidad puedan jugar. El proyecto
+                de Parque Infantil Inclusivo es un gran proyecto en el que trabajas
+                a lo largo de la unidad, y las estrategias de gestión de proyectos
+                te ayudan a organizar y estructurar tu trabajo.
+              description_teacher: Los alumnos estudian el diseño de juegos y aprenden
+                los principios que utilizan los diseñadores de juegos para crear juegos
+                inclusivos. Los estudiantes se introducen en el proyecto de juegos
+                inclusivos y evalúan los requisitos y los ejemplos para identificar
+                las preguntas y las características clave.
+            lesson-2:
+              key: lección-2
+              name: Buscando Datos
+              description_student: Has utilizado la búsqueda en algoritmos estándar
+                para encontrar un elemento objetivo en una lista. En esta lección,
+                explorarás los casos mejor, medio y peor del algoritmo de búsqueda
+                lineal utilizando los recuentos de ejecución.
+              description_teacher: Los alumnos han utilizado la búsqueda en algoritmos
+                estándar para encontrar un elemento objetivo en una lista. En esta
+                lección, los alumnos exploran los casos mejor, medio y peor del algoritmo
+                de búsqueda lineal utilizando recuentos de ejecución.
+            lesson-3:
+              key: lección-3
+              name: Aplicando la Búsqueda Binaria
+              description_student: Descubres un algoritmo de búsqueda mejor que puede
+                funcionar con más eficacia si la lista ya está ordenada. Traza el
+                código de una búsqueda binaria para evaluar su eficacia y compararla
+                con la búsqueda lineal. Aplicarás el algoritmo de búsqueda binaria
+                para resolver problemas en diversos escenarios.
+              description_teacher: Los alumnos descubren un algoritmo de búsqueda
+                mejor que puede funcionar de forma más eficiente si la lista ya está
+                ordenada. Los alumnos trazan el código de una búsqueda binaria para
+                evaluar su eficiencia y compararla con la búsqueda lineal. Los estudiantes
+                aplican el algoritmo de búsqueda binaria para resolver problemas en
+                una variedad de escenarios.
+            lesson-4:
+              key: lección-4
+              name: Aplicación de una Búsqueda Binaria Recursiva
+              description_student: Como muchos de los algoritmos que has escrito,
+                la búsqueda binaria se puede implementar de forma recursiva. En esta
+                lección, explorarás la implementación de la búsqueda binaria de forma
+                recursiva y la aplicarás para resolver diferentes problemas.
+              description_teacher: Los alumnos repasan el algoritmo de búsqueda binaria
+                y exploran la aplicación del algoritmo de forma recursiva. Los estudiantes
+                aplican el algoritmo de búsqueda binaria recursiva para resolver problemas
+                que contienen diferentes tipos de datos, estructuras de datos y restricciones
+                del problema.
+            lesson-5:
+              key: lección-5
+              name: Aplicando la Ordenación por Selección
+              description_student: Explora el algoritmo de ordenación por selección
+                para organizar correctamente los elementos de una lista. Se rastrea
+                el algoritmo para entender su funcionalidad y determinar su eficiencia
+                utilizando los recuentos de ejecución.
+              description_teacher: Los alumnos exploran el algoritmo de ordenación
+                por selección para organizar correctamente los elementos de una lista.
+                Los alumnos rastrean el algoritmo para comprender su funcionalidad
+                y determinar su eficiencia mediante recuentos de ejecución.
+            lesson-10:
+              key: lección-10
+              name: Aplicando la Ordenación por Inserción
+              description_student: Explora el algoritmo de ordenación por selección
+                para organizar correctamente los elementos de una lista. Se rastrea
+                el algoritmo para entender su funcionalidad y determinar su eficiencia
+                utilizando los recuentos de ejecución. Diferenciarás entre los algoritmos
+                de ordenación por selección y ordenación por inserción comparando
+                su eficiencia.
+              description_teacher: Los alumnos exploran el algoritmo de ordenación
+                por inserción para organizar correctamente los elementos de una lista.
+                Los estudiantes rastrean el algoritmo para entender su funcionalidad
+                y determinar su eficiencia utilizando los recuentos de ejecución.
+                Los alumnos diferencian entre los algoritmos de ordenación por selección
+                y ordenación por inserción comparando su eficiencia.
+            lesson-6:
+              key: lección-6
+              name: Aplicando la Ordenación por Fusión
+              description_student: Se explora el algoritmo de ordenación por fusión
+                para organizar los elementos de una lista mediante un enfoque de "divide
+                y vencerás". Identificarás los componentes del algoritmo y conocerás
+                las funciones de ayuda. Se rastrea el algoritmo para entender su funcionalidad
+                y determinar su eficiencia utilizando los recuentos de ejecución.
+              description_teacher: Los alumnos exploran el algoritmo de ordenación
+                por fusión para organizar los elementos de una lista utilizando un
+                enfoque de "divide y vencerás". Los estudiantes identifican los componentes
+                del algoritmo y aprenden sobre las funciones de ayuda. Los alumnos
+                rastrean el algoritmo para comprender su funcionalidad y determinar
+                su eficiencia utilizando recuentos de ejecución.
+            lesson-7:
+              key: lección-7
+              name: Ampliando los Algoritmos Estándar
+              description_student: Los algoritmos que has aprendido en el curso también
+                se pueden aplicar en los juegos para controlar los bots, la funcionalidad
+                del juego e interactuar con el usuario. Aplica algoritmos estándar,
+                de búsqueda y de ordenación en los juegos y considera cómo podrías
+                incorporar estos algoritmos en tu proyecto de Inclusive Playground.
+              description_teacher: Los estudiantes descubren que los algoritmos que
+                han aprendido en el curso también se pueden aplicar en los juegos
+                para controlar los bots, la funcionalidad del juego y para interactuar
+                con el usuario. Los estudiantes implementan algoritmos estándar, de
+                búsqueda y de ordenación en los juegos y consideran cómo podrían incorporar
+                estos algoritmos en su proyecto de Inclusive Playground.
+            lesson-8:
+              key: lección-8
+              name: Recorriendo Listas Múltiples
+              description_student: Explorarás el recorrido de las listas múltiples
+                simultáneamente mediante la creación de algoritmos y el trazado de
+                código que incluya listas múltiples. Identificarás los escenarios
+                en los que pueden ser necesarias las listas múltiples y considerarás
+                cómo se pueden utilizar y recorrer las listas múltiples en los juegos.
+              description_teacher: Los alumnos exploran la posibilidad de recorrer
+                múltiples listas al mismo tiempo mediante la creación de algoritmos
+                y el trazado de código que incluya múltiples listas. Los alumnos identifican
+                situaciones en las que pueden ser necesarias varias listas y consideran
+                cómo pueden utilizarse y recorrerse varias listas en los juegos.
+            lesson-9:
+              key: lección-9
+              name: Defendiendo la Privacidad y la Seguridad
+              description_student: Explorarás cuestiones de privacidad y seguridad
+                y considerarás tu papel como ingeniero de software mientras identificas
+                estrategias para proteger la privacidad y la seguridad personal cuando
+                desarrolles programas. Aplicarás estas estrategias para hacer más
+                seguro un programa de código abierto.
+              description_teacher: Los alumnos exploran cuestiones de privacidad y
+                seguridad y consideran su papel como ingenieros de software mientras
+                identifican estrategias para proteger la privacidad y la seguridad
+                personal al desarrollar programas. Los estudiantes aplican estas estrategias
+                para hacer más seguro un programa de código abierto.
+            lesson-11:
+              key: lección-11
+              name: Proyecto de Playground Inclusivo - Día 1
+              description_student: Seguirás desarrollando tu proyecto de Playground
+                Inclusivo para crear un juego para tu comunidad que incorpore los
+                principios del diseño orientado a objetos. En primer lugar, autoevaluarás
+                tu trabajo para valorar tu progreso en la consecución de los requisitos
+                del proyecto y, a continuación, realizarás pruebas de aceptación para
+                determinar cuáles de tus historias de usuario están completas. Utiliza
+                la autoevaluación y los comentarios de los compañeros para priorizar
+                las tareas restantes y seguir desarrollando el proyecto.
+              description_teacher: Los estudiantes continúan desarrollando su Proyecto
+                de Playground Inclusivo para crear un juego para su comunidad que
+                incorpore principios de diseño orientado a objetos. En primer lugar,
+                los estudiantes autoevaluarán su trabajo para valorar su progreso
+                en la finalización de los requisitos del proyecto y, a continuación,
+                realizarán pruebas de aceptación para determinar cuáles de sus historias
+                de usuario están completas. Los estudiantes utilizan la autoevaluación
+                y los comentarios de los compañeros para priorizar sus tareas restantes
+                y continuar desarrollando sus proyectos.
+            lesson-12:
+              key: lección-12
+              name: Proyecto de Playground Inclusivo - Día 2
+              description_student: En la lección anterior, realizaste una autoevaluación
+                y escribiste los criterios de aceptación de tu proyecto. En esta lección,
+                obtienes los comentarios de tus compañeros para identificar las tareas
+                que quedan por completar y seguir desarrollando tu Proyecto de Playground
+                Inclusivo.
+              description_teacher: En la lección anterior, los alumnos realizaron
+                autoevaluaciones y redactaron los criterios de aceptación de sus proyectos.
+                En esta lección, los alumnos obtienen la opinión de sus compañeros
+                para identificar las tareas restantes que deben completar y seguir
+                desarrollando sus Proyectos de Playgrounds Inclusivos.
+            lesson-13:
+              key: lección-13
+              name: Proyecto de Playground Inclusivo - Día 3
+              description_student: Realiza las revisiones y actualizaciones finales
+                basándote en las revisiones del código y en el Panel de Planificación
+                del Proyecto. Comparte tu proyecto de Playground Inclusivo con tus
+                compañeros. A continuación, celebra tu éxito y completa una reflexión
+                final sobre el proceso de desarrollo.
+              description_teacher: Los alumnos realizan revisiones y actualizaciones
+                finales basadas en sus revisiones de código y en el Panel de Planificación
+                de Proyecto. Los alumnos comparten sus proyectos de Playgrounds Inclusivos
+                con sus compañeros. Los estudiantes celebran su éxito y completan
+                una reflexión final sobre el proceso de desarrollo.
+            lesson-14:
+              key: lección-14
+              name: Día FRQ
+            lesson-15:
+              key: lección-15
+              name: Día de evaluación
+              description_student: En esta unidad, has aplicado algoritmos de búsqueda
+                y ordenación para trabajar con listas de datos primitivos y de objetos
+                almacenados en arrays 1D y 2D y ArrayLists. Has analizado la eficiencia
+                de los algoritmos de búsqueda y ordenación y has ampliado los algoritmos
+                estándar que has desarrollado a lo largo del curso para resolver problemas
+                más complejos. A lo largo de la unidad, aplicaste tus conocimientos
+                y habilidades de programación para desarrollar un juego que incorporaba
+                el diseño orientado a objetos y la eficiencia. Terminaste la unidad
+                y el curso considerando la privacidad y la seguridad de sus programas
+                y usuarios. Ahora, evalúas el logro de los objetivos de aprendizaje
+                de la unidad y las habilidades en una evaluación de opción múltiple.
+              description_teacher: En esta unidad, los alumnos aplicaron algoritmos
+                de búsqueda y ordenación para trabajar con listas de datos primitivos
+                y de objetos almacenados en arrays 1D y 2D y ArrayLists. Los estudiantes
+                analizaron la eficiencia de los algoritmos de búsqueda y ordenación
+                y ampliaron los algoritmos estándar que han desarrollado a lo largo
+                del curso para resolver problemas más complejos. A lo largo de la
+                unidad, los estudiantes aplicaron sus conocimientos y habilidades
+                de programación para desarrollar un juego que incorporaba el diseño
+                orientado a objetos y la eficiencia. Los estudiantes concluyeron la
+                unidad y el curso teniendo en cuenta la privacidad y la seguridad
+                de sus programas y usuarios. Ahora, los estudiantes evalúan el logro
+                de los objetivos de aprendizaje de la unidad y las habilidades en
+                una evaluación de opción múltiple.
+            lesson-16:
+              key: lección-16
+              name: Unidad 8 - Encuesta Piloto
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
+            lessonGroup-4:
+              display_name: Encuesta Piloto
+            lessonGroup-5:
+              display_name: Aislamiento
+        csa-backpack-2022:
+          lessons:
+            lesson-1:
+              name: Creando Tipos de Painters

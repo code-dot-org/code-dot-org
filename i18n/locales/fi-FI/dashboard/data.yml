@@ -214,7 +214,7 @@ fi:
         studio_playlab_10: Luo oma pelisi.  Kun olet valmis, napsauta Valmis, niin voit antaa ystäviesikin kokeilla tarinaasi puhelimissaan.
         studio_iceage_hello1: Sid haluaa kerätä kaikki uudelle seikkailulle. Voitko auttaa häntä sanomaan "hei" vetämällä 'sano' lohkon työalueelle kirjoittamalla sen sisälle "hei"?
         studio_iceage_hello2: Sid (näyttelijä 1) löysi Mannyn (näyttelijä 2) ja haluaa kutsua hänet seikkailulle. Auta heitä tervehtimään toisiaan käyttämällä 'näyttelijä sanoo' lohkoa kahdesti.
-        studio_iceage_move_to_flag: Scrat etsii tammenterhoaan! Auta häntä kulkemaan viimeiset 200 pikseliä käyttämällä 'liiku' lohkoa.
+        studio_iceage_move_to_flag: Scrat etsii tammenterhoaan! Auta häntä kulkemaan viimeiset 200 kuvapistettä käyttämällä 'liiku' lohkoa.
         studio_iceage_move_to_actor: Diego (näyttelijä 1) etsii Mannya (näyttelijä 2). Auta Diegoa kulkemaan 200 pikseliä Mannyn luokse käyttämällä 'liikuta näyttelijää' lohkoa. Sitten, yhdistä lohko tapahtumaan 'kun näyttelijä koskee' saadaksesi äänen kuulumaan kun he löytävät toisensa.
         studio_iceage_repeat: '''Toista ikuisesti'' komento antaa sinun toistaa koodia jatkuvasti. Voitko yhdistää lohkoja auttaaksesi isoäitiä kuntoilemaan liikkumalla oikeaan ja vasempaan toistuvasti?'
         studio_iceage_click_hello: Voitko auttaa Sidiä tekemään viimeisen kutsun ystävilleen kun häntä klikataan? Älä unohda klikata häntä kun olet painanut 'Suorita'.

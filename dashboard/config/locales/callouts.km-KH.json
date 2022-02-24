@@ -1045,6 +1045,172 @@
         },
         "courseE_farmer_functions2b_2021": {
           "courseE_farmer_functions1a_1": "បន្លែនេះមិនត្រូវបានគេដឹងទេ។ វាផ្លាស់ប្តូររាល់ពេលដែលអ្នកដំណើរការកម្មវិធី។"
+        },
+        "CSD U3 Sprites anitab 1_2021": {
+          "anicallout": "ចុចទីនេះដើម្បីបើកផ្ទាំងរូបភាពគំនូរជីវចល។"
+        },
+        "CSD U3 Sprites intro sprites_2021": {
+          "": "ប្រើប្រាស់ប្លុកខណ្ឌនេះដើម្បិបង្កើsprite"
+        },
+        "CSD U3 Sprites text_2021": {
+          "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
+        },
+        "CSD U3 Variables Predict Where XY_2021": {
+          "grid": "ចុចទីនេះដើម្បីបង្ហាញក្រឡាចត្រង្គ"
+        },
+        "CSD U3 Variables Predict Where X_2021": {
+          "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
+        },
+        "CSD U3 abstraction accelerateX_2021": {
+          "CSD_U3_L11_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction accelerateY_2021": {
+          "CSD_U3_L11_S7_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction jump_2021": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់",
+          "CSD_U3_L11_S17_C2": "បញ្ជូនកង្កែបត្រឡប់មកវិញនៅទីនេះ"
+        },
+        "CSD U3 abstraction jumping_2021": {
+          "CSD_U3_L13_S8_C1": "កំណត់ល្បឿននៅទីនេះ"
+        },
+        "CSD U3 abstraction looping_2021": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD U3 abstraction rotation control_2021": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction rotation_2021": {
+          "CSD_U3_L11_S4_C1": "ប្រើប្លុក rotationSpeed នៅទីនេះ"
+        },
+        "CSD U3 abstraction tumbleweed_2021": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityX if-statements_2021": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityX_2021": {
+          "CSD_U3_L11_S4_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 abstraction velocityY control_2021": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD U3 abstraction velocityY_2021": {
+          "CSD_U3_L11_S5_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions isTouching intro_2021": {
+          "CSD_U3_L12_S2_C1": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions types2_2021": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions types3_2021": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions types4_2021": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 collisions types_2021": {
+          "CSD_U3_L13_S6_C1": "បញ្ចូលកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD U3 debug_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 drawing challenge 2_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 drawing challenge 3_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 drawing practice 1_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 drawing practice 2_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 drawing practice 3_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 ellipse_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 fill_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 game variables_2021": {
+          "CSD_U3_L18_S3_C2": "ទីតាំងអថេរ"
+        },
+        "CSD U3 platform scoreboard_2021": {
+          "CSD_U3_L17_S7_C1": "ពិន្ទុត្រូវបានបង្ហាញនៅទីនេះ។"
+        },
+        "CSD U3 properties depth_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 properties tint_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 rect_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ"
+        },
+        "CSD U3 sequence_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes arc_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes behind_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes line_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes missing_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes polygon_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes scene_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U3 shapes_2021": {
+          "CSD_U3_rect_c1": "ហើយនេះគឺជាលេខកូដ",
+          "CSD_U3_rect_c2": "ទាញប្លុកនេះចូលទៅក្នុងតំបន់កូដ។"
+        },
+        "CSD U6 getProperty input_2021": {
+          "CSD_U6L06P03": "បញ្ចូលប្លុកកូដរបស់អ្នកនៅទីនេះ"
+        },
+        "CSD games sidescroll background_2021": {
+          "CSD_U3_L11_S17_C1": "មើលនៅក្នុង if ពាក្យបង្គាប់"
+        },
+        "CSD games velocity bee_2021": {
+          "CSD_U3_L11_S5_C1": "មើលកូដនេះ។"
+        },
+        "CSD web text explore_2021": {
+          "CSD_U3_variables": "ប្តូរលេខនៅទីនេះ"
+        },
+        "CSD web text size_2021": {
+          "": "ប្រើប្លុកមួយនេះដើម្បីដាក់អត្ថបទនៅលើអេក្រង់"
         }
       }
     }

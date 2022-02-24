@@ -796,6 +796,57 @@
         "try/coursee/2021": {
           "word": "尝试",
           "definition": "试图做某事"
+        },
+        "machine_learning/csd/2021": {
+          "word": "机器学习",
+          "definition": "计算机如何在没有明确编程的情况下识别模式并做出决策"
+        },
+        "bug/csd/2021": {
+          "word": "Bug/错误",
+          "definition": "程序中不能正常工作的部分。"
+        },
+        "for_loop/csd/2021": {
+          "word": "For循环",
+          "definition": "具有预定开始、结束和增量（步长间隔）的循环。"
+        },
+        "debugging/csd/2021": {
+          "word": "调试",
+          "definition": "在算法或程序中发现并解决问题。"
+        },
+        "program/csd/2021": {
+          "word": "程序",
+          "definition": "编码为可以由计算机运行的算法。"
+        },
+        "variable/csd/2021": {
+          "word": "变量",
+          "definition": "程序中使用的一段信息的标签。"
+        },
+        "sprite/csd/2021": {
+          "word": "精灵"
+        },
+        "condition/csd/2021": {
+          "word": "条件"
+        },
+        "conditionals/csd/2021": {
+          "word": "条件语句"
+        },
+        "abstraction/csd/2021": {
+          "word": "抽象化"
+        },
+        "function/csd/2021": {
+          "word": "函数"
+        },
+        "input/csd/2021": {
+          "word": "输入"
+        },
+        "processing/csd/2021": {
+          "word": "正在处理中"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "数字足迹"
+        },
+        "copyright/csd/2021": {
+          "word": "版权"
         }
       }
     }

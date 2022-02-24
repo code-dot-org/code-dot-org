@@ -1,7 +1,0 @@
-{
-  "key": "getTime",
-  "name": "getTime",
-  "category": "Control",
-  "category_key": "control",
-  "syntax": "getTime()"
-}
