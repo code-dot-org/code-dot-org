@@ -1281,6 +1281,7 @@ describe('entry tests', () => {
     envConstants.DEV ? 'noop' : 'newer:copy:unhash'
   ]);
 
+  // Builds the Service Worker used for the Code.org offline experience.
   grunt.registerTask('buildOffline', ['webpack:buildOffline']);
 
   grunt.registerTask('rebuild', ['clean', 'build']);
