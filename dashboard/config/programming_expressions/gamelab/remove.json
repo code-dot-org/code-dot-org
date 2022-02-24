@@ -23,9 +23,6 @@
       "description": "The sprite to remove from the group."
     }
   ],
-  "parameters": [
-    "sprite"
-  ],
   "return_value": "No return value.",
   "short_description": "Remove a sprite from the group.",
   "syntax": "remove(sprite)",

@@ -38,10 +38,6 @@
       "description": "The source URL (or filename for an uploaded file) of the image to be displayed on screen."
     }
   ],
-  "parameters": [
-    "id",
-    "url"
-  ],
   "return_value": "No return value. Modifies screen only.",
   "short_description": "Displays the image from the provided URL on the screen.",
   "syntax": "image(id, url)",
