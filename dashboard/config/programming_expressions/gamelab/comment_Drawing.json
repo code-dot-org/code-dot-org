@@ -1,7 +1,8 @@
 {
   "key": "comment_Drawing",
-  "name": "comment_Drawing",
+  "name": "comment",
   "category": "Drawing",
   "category_key": "drawing",
+  "short_description": "// Comment",
   "syntax": "// Comment"
 }

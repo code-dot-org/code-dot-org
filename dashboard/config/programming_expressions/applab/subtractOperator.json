@@ -1,7 +1,19 @@
 {
   "key": "subtractOperator",
-  "name": "subtractOperator",
+  "name": "Subtract operator",
   "category": "Math",
   "category_key": "math",
-  "syntax": "__ - __"
+  "content": "[name]\r\n\r\n## Subtract operator\r\n\r\n[/name]\r\n\r\n[category]\r\n\r\nCategory: Math\r\n\r\n[/category]\r\n\r\n[description]\r\n\r\n[short_description]\r\n\r\nSubtracts two numbers.\r\n\r\n[/short_description]\r\n\r\nAll programming languages support the basic arithmetic operations of addition, subtraction, multiplication and division of numbers.\r\n\r\n[/description]\r\n\r\n### Examples\r\n____________________________________________________\r\n\r\n[example]\r\n\r\n```\r\n// Subtract two numbers.\r\nconsole.log(3-5);\r\nvar x=3;\r\nvar y=5;\r\nconsole.log(x-y);\r\n```\r\n\r\n[/example]\r\n\r\n____________________________________________________\r\n\r\n[bug]\r\n\r\nFound a bug in the documentation? Let us know at documentation@code.org\r\n\r\n[/bug]",
+  "palette_params": [
+    {
+      "name": "Name",
+      "type": "any",
+      "required": true,
+      "description": "The operands can be a number, or a variable containing a number, or the number returned by a function, or the numeric result of the evaluation of an expression."
+    }
+  ],
+  "return_value": "The difference of two numbers.",
+  "short_description": "\nSubtract operator\nCategory: Math",
+  "syntax": "__ - __",
+  "tips": "- Operator precedence is the same as standard arithmetic - Expressions within a parentheses have the highest precedence, then multiplcation and division, then addition and subtraction."
 }

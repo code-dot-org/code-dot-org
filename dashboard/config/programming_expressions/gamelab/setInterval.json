@@ -1,15 +1,12 @@
 {
   "key": "setInterval",
-  "name": "setInterval",
+  "name": "setInterval()",
   "category": "Control",
   "category_key": "control",
-  "palette_params": [
-    {
-      "name": "callback"
-    },
-    {
-      "name": "ms"
-    }
+  "parameters": [
+    "callback",
+    "ms"
   ],
+  "short_description": "Game Lab - setInterval()",
   "syntax": "setInterval(callback, ms)"
 }
