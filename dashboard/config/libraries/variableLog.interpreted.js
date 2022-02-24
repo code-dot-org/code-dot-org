@@ -69,12 +69,15 @@ function storeVariableLogforPrevious() {
   previousVarLog = JSON.parse(JSON.stringify(varLog));
 }
 
-// Returns false if the student has a variable label that starts with "_"
-function noBadVariableLabels() {
-  var result = true;
+// Returns true if the student has a variable label that starts with "_"
+// This can be used to check that students have renamed their variables
+// from the default "???" by adding !varLabelStartsWithUnderscore()
+// as a validation criterion.
+function varLabelStartsWithUnderscore() {
+  var result = false;
   Object.keys(varLog).forEach(function (label,index) {
     if (label.charAt(0) === "_") {
-      result = false;
+      result = true;
     }
   });
   return result;
