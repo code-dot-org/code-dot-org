@@ -8440,34 +8440,6 @@ de-DE:
           mit Unterrichtsplänen, die Ihre SchülerInnen anleiten, mit Aktivitäten ohne
           Geräte und mit Foren, in denen Sie sich mit anderen LehrerInnen austauschen
           können, weiter vertiefen."
-      OPD-K5 CS Courses_dani:
-        markdown: "# Planung > Erste Schritte auf Code.org\n\n## 1. Schritt: Wählen
-          Sie einen Kurs\nAlle unsere Kurse - von der Vorstufe bis zur Oberstufe -
-          sind in unserem **[Kurskatalog](https://studio.code.org/courses)** aufgeführt.
-          Um die Lektionen zu den Grundlagen der Informatik zu finden, mit denen Sie
-          geübt haben, gehen Sie auf unsere **[Grundschulseite](https://code.org/educate/curriculum/elementary-school)**
-          und scrollen Sie nach unten zum Abschnitt \"Kurse\". Alle unsere Kurse sind
-          kostenlos. Sprechen Sie mit KollegInnen an Ihrer Schule, um herauszufinden,
-          wie sich der Lehrplan des Kurses mit einer Vielzahl von Fächern verbinden
-          lässt.\n![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)\n***\n##
-          2. Schritt: Richten Sie Ihren Unterricht ein\nRichten Sie einen Bereich
-          für Ihren Unterricht ein, um die Fortschritte Ihrer SchülerInnen zu sehen,
-          Anmeldekarten für Ihre SchülerInnen zu drucken, ihre Konten zu verwalten
-          und Zertifikate zu drucken, die sie nach Abschluss des Kurses mit nach Hause
-          nehmen können. Klicken Sie auf diesen Link, um **[ein kurzes Video anzusehen](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)**,
-          das Ihnen zeigt, wie Sie Ihren ersten Informatikkurs auf Code.org einrichten.
-          Sie können die Schritte auch in **[diesem Support-Artikel](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**
-          nachlesen.\n![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)\n***\n##
-          3. Schritt: Weisen Sie den Kurs Ihrem Lernbereich zu\nKlicken Sie auf den
-          Kurs, den Sie unterrichten - Sie sollten einen Bildschirm sehen, der wie
-          der nachfolgende aussieht. Sie können dann auf \"Kurs zuweisen\" klicken
-          und den Kurs einem Ihrer Abschnitte zuweisen. \n![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)\n***\n##
-          Schritt 4: Beginnen Sie zu unterrichten! \nSie brauchen nur eine Unterrichtsstunde,
-          um Informatikkonzepte in Ihrem Unterricht einzuführen. Sobald Sie merken,
-          dass Ihre SchülerInnen sich für die Informatik begeistern, können Sie mit
-          täglichen Unterrichtsplänen, die Ihre SchülerInnen anleiten, mit Aktivitäten
-          ohne Geräte und mit Foren, in denen Sie sich mit anderen LehrerInnen austauschen
-          können, noch weiter gehen.  "
       OPD-K5 CS Tips:
         markdown: |
           # Erste Schritte > Navigieren in diesem Online-Kurs
@@ -9676,28 +9648,6 @@ de-DE:
           Lektion suchen. \n\n***\n<a href=\"https://curriculum.code.org/csf-19/coursed/10/\"
           target=\"blank\" rel=\"noopener noreferrer\">![](https://images.code.org/d4959eca61f272b9416ff4e65a259bd2-image-1573080208870.43.14
           PM.png)</a>"
-      OPD-K5 Stage5Go_dani:
-        markdown: "  # Bedingungen > Lektionen ohne Geräte\n\n\n**1. Wiederholung
-          \"[Bedingungen mit Karten](https://curriculum.code.org/csf-18/coursed/13/)\"
-          Lektionsplan von Kurs D:** \n<br/>\nKurs D ist für SchülerInnen der Klasse
-          3 gedacht. Dieselbe Lektion erscheint auch in Kurs E und Kurs F. Die Bedingungen
-          werden in den Kursen A, B und C nicht behandelt.\n<br/><br/>\n\n**2. Sehen
-          Sie sich das Video für SchülerInnen an: Bedingungen mit Karten**\n<br/>\nDieses
-          Video können Sie Ihren SchülerInnen zeigen, um das Konzept der Bedingungen
-          einzuführen und die Lektion ohne Geräte einzuleiten.\n[![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41
-          PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)\n<br/>\n[Können Sie
-          das Video nicht sehen? Klicken Sie hier](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)\n\n<br/><br/>\n**3.
-          Sehen Sie, wie eine LehrerIn diese Lektion präsentiert: \"Bedingungen mit
-          Karten \"**\n<br/>\nDieses Video ist als Unterstützung für Sie als LehrerIn
-          gedacht, wenn Sie nach Tipps für diese Lektion suchen. \n\n\n[![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37
-          PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)\n\n[Können Sie das Video
-          nicht sehen? Klicken Sie hier](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)\n\n<br/><br/>\n---\n\n>
-          ## Reflektion\n> Wie würden Sie Ihren SchülerInnen das Konzept der Bedingungen
-          erklären? Teilen Sie Ihre Gedanken in [unserem Forum](http://forum.code.org/t/teaching-conditionals/406/1)
-          mit.\n\n> <a href=\"http://forum.code.org/t/teaching-conditionals/406/1\"
-          target=\"blank\" rel=\"noopener noreferrer\"><button class=\"plc\"> Diskutieren
-          Sie in den Foren >></button></a>\n\nWenn Sie im Forum kommentiert haben,
-          kehren Sie hierher zurück und klicken unten, um zur nächsten Stufe überzugehen."
       OPD-K5 Stage5Review:
         markdown: "# Bedingungen > Reflektieren\n\nIn dieser Phase haben wir untersucht,
           wie Bedingungen Programmierern helfen, ihrem Code Logik hinzuzufügen. In
@@ -10163,51 +10113,7 @@ de-DE:
           Ein Screenshot des Dashboards für LehrerInnen ist nachfolgend abgebildet. Sie müssen sich in Ihr Code.org Lehrer-Konto einloggen, um es aufrufen zu können. Sobald Sie sich angemeldet haben, sollte dies der Standardbildschirm sein, den Sie auf der Code.org-Website sehen. Wenn Sie noch kein Lehrer-Konto haben, können Sie **<a href="https://studio.code.org/users/sign_up" target="blank" rel="noopener noreferrer">hier ein Konto anlegen</a>**.
 
           <a href="http://studio.code.org/" target="blank" rel="noopener noreferrer">![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)</a>
-      OPD-K5 Stage9Start_dani:
-        markdown: " # Planung > Ressourcen für LehrerInnen erforschen\n\nWährend der
-          Stufen 4-8 haben Sie sich einige der \"ohne Geräte\" und online verfügbaren
-          Lernressourcen für die Grundlagen der Informatik kennengelernt, die den
-          von Ihnen erlernten Informatikkonzepten entsprechen. \n\nSie wissen nun,
-          wie man programmiert und wie man Informatik unterrichtet, und es ist an
-          der Zeit, Ihren Unterricht zu planen. In dieser Phase werden wir andere
-          Bereiche der Code.org-Plattform und das **[Teacher Dashboard](http://studio.code.org/)**
-          besuchen. \n\nWenn Sie an Stufe 10 teilnehmen, werden Sie:\n\n- die für
-          LehrerInnen verfügbaren Ressourcen erkunden\n- das Code.org **[Teacher Dashboard](http://studio.code.org/)**
-          erkunden\n- Planen, wie Sie Informatik in Ihren Unterricht integrieren können.\n\n***\n\nNachfolgend
-          sehen Sie einen Screenshot des Lehrer-Dashboarda. Sie müssen sich bei Ihrem
-          Code.org LehrerInnen-Konto anmelden, um es zu sehen - sobald Sie angemeldet
-          sind, sollte es der Standardbildschirm sein, den Sie auf der Code.org Website
-          sehen. Wenn Sie noch kein LehrerInnen-Konto haben, können Sie sich **[hier](https://studio.code.org/users/sign_up)**
-          anmelden.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)"
       OPD-K5 Using CS:
-        markdown: "# Planung > Vorbereitungen für eine Code Studio-Stunde\n\nSehen
-          wir uns einmal an, wie Code Studio für Sie und Ihre SchülerInnen im Unterricht
-          funktioniert.\n\n## 1. Schritt: Wählen Sie einen Kurs\nAuf unserer [Grundschulseite]
-          (https://code.org/educate/curriculum/elementary-school) finden Sie die Unterrichtspläne
-          und vollständigen Kurse für unsere Kurse Grundlagen der Informatik A-F.
-          Wenn Sie sich für unsere Kurse für die Mittel- oder Oberstufe interessieren,
-          finden Sie Kurse für alle Levels - vom Leseanfängern bis zum Abitur und
-          \ alles dazwischen. Alle unsere Kurse sind kostenlos. Sprechen Sie mit KollegInnen
-          an Ihrer Schule, um herauszufinden, wie sich der Lehrplan mit einer Vielzahl
-          von Fächern verbinden lässt. \n \n## Schritt 2: Richten Sie Ihren Unterrichtsbereich
-          ein\nRichten Sie einen Bereich für Ihren Unterricht ein, um die Fortschritte
-          Ihrer SchülerInnen zu sehen, Login-Karten für Ihre SchülerInnen zu drucken,
-          ihre Konten zu verwalten und Zertifikate zu drucken, die sie nach Abschluss
-          des Kurses mit nach Hause nehmen können. Klicken Sie auf diesen Link, um
-          [ein kurzes Video anzusehen](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b),
-          das Ihnen zeigt, wie Sie Ihren ersten Informatikkurs auf Code.org einrichten.
-          Sie können die Schritte auch in [diesem Support-Artikel](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)
-          nachlesen.\n\n## Schritt 3: Weisen Sie den Kurs Ihrer Sektion zu\nKlicken
-          Sie auf den Kurs, den Sie unterrichten - Sie sollten einen Bildschirm sehen,
-          der wie der nachfolgende aussieht. Sie können dann auf \"Kurs zuweisen\"
-          klicken und den Kurs einem Ihrer Abschnitte zuweisen. \n\n## Schritt 4:
-          Beginnen Sie zu unterrichten! \nSie brauchen nur eine Lektion, um Informatikkonzepte
-          in Ihren Unterricht einzubringen. Sobald Sie sehen, dass Ihre SchülerInnen
-          sich für Informatik begeistern, können Sie mit täglichen Unterrichtsplänen,
-          die Ihre SchülerInnen anleiten, mit Aktivitäten, die Sie ohne Geräte durchführen
-          können, und mit Foren, in denen Sie sich mit anderen LehrerInnen austauschen
-          können, noch weiter gehen."
-      OPD-K5 Using CS_dani:
         markdown: "# Planung > Vorbereitungen für eine Code Studio-Stunde\n\nSehen
           wir uns einmal an, wie Code Studio für Sie und Ihre SchülerInnen im Unterricht
           funktioniert.\n\n## 1. Schritt: Wählen Sie einen Kurs\nAuf unserer [Grundschulseite]
@@ -10849,3 +10755,265 @@ de-DE:
           [Wert einer Variablen deklarieren und zuweisen](//studio.code.org/docs/gamelab/declareAssign_x/)\n\n##
           Ressourcen\n\n* [Einführung zu Variablen](https://youtu.be/G41G_PEWFjE)
           - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))\n"
+      CSD Games Properties multi predict_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Sprite Eigenschaften
+      CSD Games variables practice_2021:
+        display_name: Variablen Übung
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+          correct: true
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+          correct: true
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+          correct: true
+        content1: Schaue dir den Code unten an und sage voraus, wie die Überschriften
+          angezeigt werden. Wähle eine der Optionen auf der rechten Seite.
+        markdown: |
+          <pre>
+          &lt;h3&gt; Eier &lt;/h3&gt;
+          &lt;h1&gt; Speck &lt;/h1&gt;
+          &lt;h6&gt; Waffeln &lt;/h6&gt;
+          </pre>
+        title: Überschriften-Schnellprüfung
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Text mit CSS formatieren
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Hinzufügen von Bildern
+      CSD U2 Image practice_pilot_2021:
+        display_name: Hinzufügen von Bildern
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png">
+        - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png">
+        - text: <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png">
+        - text: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png">
+        content1: Ordne den fehlerhaften HTML-Code der Beschreibung des Fehlers zu.
+        questions:
+        - text: Das `src`-Attribut ist falsch geschrieben.
+        - text: Die Attribute `src` und `alt` sind vertauscht
+        - text: Die Dateierweiterung (.jpg) fehlt in der Bildadresse
+        - text: Die Bildadresse wird nicht als `src`-Attribut angegeben
+        - text: Im Dateinamen ist ein Leerzeichen vorhanden
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: hier die Beschreibung
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - text: dog.x == cat.x
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - text: "0  \n200  \n100"
+          correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+        title: Titel
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: hier die Beschreibung
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - text: Das rote Quadrat wird gezeichnet, aber das grüne nicht. Du kannst
+            keine Funktionen aufrufen, nachdem sie erstellt wurden.
+          correct: true
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
+        - text: Das grüne Quadrat wird gezeichnet, aber das rote nicht. Du kannst
+            keine Funktionen aufrufen, bevor sie erstellt wurden.
+          correct: true
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
+        - correct: true
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
+        - text: Keines der Quadrate wird gezeichnet. Es liegt ein Fehler im Code vor.
+          correct: true
+          feedback: Funktionen können an beliebiger Stelle in deinem Code erstellt
+            werden. Es ist aber trotzdem eine gute Idee, sie alle zur Organisation
+            unten zu halten!
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
+        questions:
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
+      CSD U3 drawing practice choice_2021:
+        display_name: Übung
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: hier die Beschreibung
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: hier die Beschreibung
+      CSD U6 LED create intro_2021:
+        content1: hier die Beschreibung
+        markdown: |-
+          # LED-Anwendungen
+
+          Im letzten Level hast du eine App erstellt, um die LED mit verschiedenen Tasten auf dem Bildschirm zu steuern.   In den nächsten beiden Levels siehst du einige weitere Beispiele für Apps und du hast dann die Möglichkeit, eine eigene zu erstellen.
+
+          Während du dir die Beispiele ansiehst, überlege, welcher Code für die Anwendung, die du und dein Partner erstellen möchtest, nützlich sein könnte.
+      CSD U6 array multi_2021:
+        answers:
+        - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png" width="200px" />
+          correct: true
+        - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png" width="200px" />
+          correct: true
+        - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png" width="200px" />
+          correct: true
+        - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png" width="200px"
+          correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)\n"
+        questions:
+        - {}
+      CSD U6 circuit smart bike blinker build_2021:
+        markdown: |
+          # Baue einen Blinker
+
+          Kehre mit der soeben gebauten Strecke zu Deinem Smart Bike Prototyp zurück und füge die Blinker hinzu.
+      CSD U6 final intro_2021:
+        content1: hier die Beschreibung
+      CSD U6 game project stop_2021:
+        markdown: |
+          # Stopp
+
+          Bevor du weitermachst, solltest du dir den Projektleitfaden für dieses Projekt ansehen. Warte auch auf Anweisungen deines Lehrers.
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - text: "![](https://images.code.org/1e226012bfa76c84938097e1ff117150-image-1579828841757.png)"
+          correct: true
+        - text: "![](https://images.code.org/dc9e1f761ff6a95542f283e2c700f9f1-image-1579828841754.png)"
+          correct: true
+        - text: "![](https://images.code.org/f89441dfc9260030feac9de3af2b7d3a-image-1579828841748.png)"
+          correct: true
+        - text: "![](https://images.code.org/b82461e6219e023280c4e22df59071d4-image-1579828841751.png)"
+          correct: true
+        questions:
+        - {}
+        title: Mache eine Vorhersage
+      CSD U6 tugowar stop_2021:
+        markdown: |
+          # Stopp
+
+          Bevor du weitermachst, solltest du dir den Projektleitfaden für dieses Projekt ansehen. Warte auch auf Anweisungen deines Lehrers.
+      CSD games cake challenge choice_2021:
+        display_name: Herausforderungen
+      CSD games functions practice choice_2021:
+        display_name: Übung zu Funktionen
+      CSD games platform challenge choice_2021:
+        display_name: Herausforderungen
+      CSD web conditionals practice choice_2021:
+        display_name: Übung zu Bedingungen
+      CSD web draw loop practice choice_2021:
+        display_name: Übung
+      CSD web movement practice choice_2021:
+        display_name: Übung
+      CSD web text practice choice_2021:
+        display_name: Übung
+      Design a Screen for your App_2021:
+        markdown: |
+          # Ein Mock-Up Deiner App
+
+          Jetzt, da du einige Elemente im App Lab kennengelernt hast, kannst du damit beginnen, deine eigene App zu planen. Teile mit deiner Gruppe die Bildschirme so auf, dass jeder auf einem anderen Bildschirm arbeitet.
+
+          Da ihr die Arbeit aufteilen werden, werden ihr im Voraus planen müssen, um ein einheitliches Erscheinungsbild Eurer Seiten zu erreichen. Zum Beispiel werdet ihr Euch über Dinge austauschen müssen:
+
+          * Wohin gehen die Navigationstasten?
+          * Welche Farben sollen für Hintergründe, Text und Schaltflächen haben?
+          * Was ist der allgemeine Stil und das Layout?
+
+          # Namensraum
+
+          In der nächsten Lektion wirst du alle Bildschirme deiner Teammitglieder in einer App kombinieren. Um sicherzustellen, dass die IDs auf einer Seite nicht in Konflikt mit anderen stehen, musst du einen eindeutigen _Namensraum_ für die Seite angeben. Dies wird etwas sein, das du am Anfang jeder ID hinzufügst, damit deine Element-IDs nicht mit anderen in Konflikt geraten, wenn du die Bildschirme aller Beteiligten zusammenführst. Dein Namensraum sollte die ID deines Bildschirms mit einem Unterstrich am Ende sein. Wenn du zum Beispiel die Homepage erstellst, kannst du "home_" als Namensraum verwenden - was zu IDs wie:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
+        title: Blitzumfrage zu Informatik-Entdeckungen!

@@ -1,0 +1,31 @@
+{
+  "key": "gamelab_removeAllBehaviors",
+  "name": "stops everything",
+  "category": "Behaviors",
+  "category_key": "behaviors",
+  "block_name": "gamelab_removeAllBehaviors",
+  "content": "Sprite stops doing all its behaviors.\r\n\r\nIf a sprite has multiple behaviors, they can all be stopped at once using this block.  For more information see `Adding and Removing Behaviors`.",
+  "examples": [
+    {
+      "name": "",
+      "description": "The sprite has three behaviors: spinning, swimming, and growing. When it is clicked, all three behaviors will stop.\r\n",
+      "code": "```\n\n```",
+      "app": "https://studio.code.org/projects/spritelab/7VN3d3ZyD39cXZL2occ6H7giOQ8dlrbMtkWBszyNb5Y",
+      "image": null,
+      "app_display_type": "embedAppWithCode",
+      "embed_app_with_code_height": 310
+    }
+  ],
+  "image_url": "https://curriculum.code.org/media/blocks/stopsEverything.PNG",
+  "palette_params": [
+    {
+      "name": "sprite",
+      "type": "",
+      "required": true,
+      "description": "The sprite or sprite group stopping all behaviors"
+    }
+  ],
+  "short_description": "Sprite Lab - sprite begins (clone)",
+  "syntax": "removeAllBehaviors",
+  "tips": "- Connect this block to events like `sprite clicked`. Code is executed quickly in Sprite Lab. If you tell a sprite to begin a behavior and then tell it to stop in the same sequence of code, there is not enough time to see the behavior in action.\r\n- This block can be used along with `set sprite property`, `jump to` and `change color` to restore a sprite to its initial state, which can be useful in games and simulations that can be “reset”.\r\n"
+}

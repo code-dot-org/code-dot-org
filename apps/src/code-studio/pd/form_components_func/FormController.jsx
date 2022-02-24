@@ -70,6 +70,7 @@ const FormController = props => {
     onSetPage = () => {},
     onSuccessfulSubmit = () => {},
     onSuccessfulSave = () => {},
+    savedStatus = undefined,
     serializeAdditionalData = () => ({}),
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
@@ -99,7 +100,7 @@ const FormController = props => {
     applicationId
   );
   const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
-    applicationId && allowPartialSaving
+    applicationId
   );
   const applicationStatusOnSave = 'incomplete';
   const applicationStatusOnSubmit = 'unreviewed';
@@ -294,12 +295,13 @@ const FormController = props => {
    *
    * @returns {Object}
    */
-  const serializeFormData = formData => {
+  const serializeFormData = (formData, status) => {
     if (!formData) {
       throw new Error(`formData cannot be undefined`);
     }
     return {
       form_data: formData,
+      status: status,
       ...serializeAdditionalData()
     };
   };
@@ -318,16 +320,13 @@ const FormController = props => {
   };
 
   const makeRequest = applicationStatus => {
-    const dataWithStatus = {...data, status: applicationStatus};
-    setData(dataWithStatus);
-
     const ajaxRequest = (method, endpoint) =>
       $.ajax({
         method: method,
         url: endpoint,
         contentType: 'application/json',
         dataType: 'json',
-        data: JSON.stringify(serializeFormData(dataWithStatus))
+        data: JSON.stringify(serializeFormData(data, applicationStatus))
       });
 
     return updatedApplicationId
@@ -348,6 +347,7 @@ const FormController = props => {
     const handleSuccessfulSave = data => {
       scrollToTop();
       setShowSavedMessage(true);
+      setShowDataWasLoadedMessage(false);
       setUpdatedApplicationId(data.id);
       setSaving(false);
       onSuccessfulSave(data);
@@ -516,8 +516,9 @@ const FormController = props => {
         bsStyle="info"
       >
         <p>
-          We found an application you started! Your saved responses have been
-          loaded.
+          {savedStatus === 'reopened'
+            ? 'Your Regional Partner has requested more information.  Please update and resubmit.'
+            : 'We found an application you started! Your saved responses have been loaded.'}
         </p>
       </Alert>
     );
@@ -600,7 +601,7 @@ const FormController = props => {
         {currentPage > 0 && backButton}
         {pageButtons}
         {shouldShowSubmit() ? submitButton : nextButton}
-        {allowPartialSaving && saveButton}
+        {allowPartialSaving && savedStatus !== 'reopened' && saveButton}
       </FormGroup>
     );
   };
@@ -640,6 +641,7 @@ FormController.propTypes = {
   onSetPage: PropTypes.func,
   onSuccessfulSubmit: PropTypes.func,
   onSuccessfulSave: PropTypes.func,
+  savedStatus: PropTypes.string,
   serializeAdditionalData: PropTypes.func,
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,

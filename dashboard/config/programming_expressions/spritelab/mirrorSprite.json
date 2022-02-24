@@ -1,8 +1,0 @@
-{
-  "key": "mirrorSprite",
-  "name": "mirrorSprite",
-  "category": "Sprites",
-  "category_key": "sprites",
-  "block_name": "gamelab_mirrorSprite",
-  "syntax": "mirrorSprite"
-}

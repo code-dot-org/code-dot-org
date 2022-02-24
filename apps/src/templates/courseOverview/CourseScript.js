@@ -191,7 +191,7 @@ export const UnconnectedCourseScript = CourseScript;
 export default connect(
   (state, ownProps) => ({
     viewAs: state.viewAs,
-    selectedSectionId: parseInt(state.teacherSections.selectedSectionId),
+    selectedSectionId: state.teacherSections.selectedSectionId,
     sectionsForDropdown: sectionsForDropdown(
       state.teacherSections,
       ownProps.id,

@@ -734,6 +734,50 @@
         },
         "define/coursee/2021": {
           "word": "Təyin et"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Avtomatlaşdırılmış Öyrənmə",
+          "definition": "Kompüterlər açıq şəkildə proqramlaşdırılmadan nümunələri necə tanıyır və qərarlar qəbul edir"
+        },
+        "ethics/csd/2021": {
+          "word": "Etika"
+        },
+        "bug/csd/2021": {
+          "word": "Səhv",
+          "definition": "Proqramın bir hissəsi düzgün işləmir."
+        },
+        "debugging/csd/2021": {
+          "word": "Sazlama",
+          "definition": "Bir alqoritmdə və ya proqramda problemləri tapmaq və həll etmək."
+        },
+        "program/csd/2021": {
+          "word": "Proqram",
+          "definition": "Bir maşın tərəfindən idarə edilə bilən bir şeyə kodlaşdırılmış bir alqoritm."
+        },
+        "variable/csd/2021": {
+          "word": "Dəyişən",
+          "definition": "Proqramda istifadə olunan məlumat üçün etiket."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprayt"
+        },
+        "condition/csd/2021": {
+          "word": "şərt"
+        },
+        "conditionals/csd/2021": {
+          "word": "Şərti ifadələr"
+        },
+        "abstraction/csd/2021": {
+          "word": "Mücərrədlik"
+        },
+        "function/csd/2021": {
+          "word": "Funksiya"
+        },
+        "input/csd/2021": {
+          "word": "Giriş"
+        },
+        "copyright/csd/2021": {
+          "word": "Müəllif Haqqı"
         }
       }
     }

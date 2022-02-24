@@ -3712,7 +3712,23 @@
         "poetry_hoc_spriteSizes": "Daha önce oluşturduğunuz bir hareketli nesnenin boyutunu değiştirebilirsiniz.",
         "ramp_artist_loops6v1_2021": "Bu merdiveni çizmek için bir döngü kullanın.",
         "simcustom_2021": "Hareketli nesne kostümlerinde veya aşağıdaki kodda bazı değişiklikler yapmayı deneyin.",
-        "New Artist Project": "Muhteşem bir şey çiz! Kodunuz, istediğiniz zaman tekrar değişiklik yapabilmeniz için bir proje olarak kaydedildi."
+        "New Artist Project": "Muhteşem bir şey çiz! Kodunuz, istediğiniz zaman tekrar değişiklik yapabilmeniz için bir proje olarak kaydedildi.",
+        "CSD U3 L5 Freeplay_2021": "PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?",
+        "CSD U3 Mouse Input Bee 2_2021": "Bunu yap",
+        "CSD U3 Sprites intro sprites_2021": "Bunu yap",
+        "CSD U3 Variables change circle size_2021": "PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?",
+        "CSD U3 Variables naming rules v2_2021": "PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?",
+        "CSD U3 Variables random with assignment_2021": "PetalSize değeri birden çok kez değiştirin. Çizim değişiyor mu?",
+        "CSD U5 black white images pixelation 2_2021": "Bir gülen yüz (resmi görmek için buraya tıklayın) çiz",
+        "CSD U5 black white images pixelation 3_2021": "Görüntüyü (daha fazla görmek için buraya tıklayın) Görmek için Genişlik ve yükseklik kaydırıcıyılarını değiştir",
+        "CSD U5 black white images pixelation 4_2021": "Gülen yüze (görüntüyü görmek için buraya tıklayın) kaşları Ekle",
+        "CSD U5 black white images pixelation 5_2021": "İstediğini çiz",
+        "CSD U5 black white images pixelation_2021": "0 ve 1 yazarak X şeklini tamamla",
+        "CSD U6 params modify planes_2021": "# Çoklu-uçak Kumandası\\\r\n\n\\\r\nBu program tahta izme ölçer ve ekrandaki kutucuklarla üç uçağı hareket ettirir. Şu anda, sadece kırmızı uçak çalışıyor.\\\r\n\\\r\n\n# Bunu Yap\\\r\n\n-   Her uçağı hareket ettirebilen yeni bir 'uçağıHareketEttir(isim) fonksiyonu oluşturun.\\\r\n-   Olay karesi içinden 'uçağıHareketEttir(isim)' fonksiyonunu çağırın, öyle ki sadece kutucuğu işaretli olan uçak hareket eder.",
+        "CSDU6 arrays select rainbow_2021": "Dizinin içeriğini sayısal düzende ekrana yazın. (Tam talimatları görmek için tıklayın)",
+        "CSDU6 arrays select random_2021": "Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)",
+        "CSDU6 arrays select variable_2021": "Diziden rastgele seçilen bir rengi gösteren bir program yazın. (Tam talimatları görmek için tıklayın)",
+        "U4 Model Design 1_2021": "Tasarım Modu'nu kullanarak ekranınıza büyük kırmızı bir buton ekleyin. (Tam talimatları görmek için tıklayın)"
       }
     }
   }

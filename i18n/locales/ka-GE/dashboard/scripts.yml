@@ -9110,6 +9110,12 @@ ka:
               display_name: სპრაიტები
             lessonGroup-3:
               display_name: ცვლადები
+        csd6-pilot-2022:
+          lessons:
+            Making Music:
+              name: მუსიკის შექმნა
+            Functions with Parameters:
+              name: ფუნქციები
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -9564,6 +9570,9 @@ ka:
           description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
           description_audience: 'ასაკი: 9-13'
         csa1-2022:
+          lessons:
+            lesson-9:
+              name: ციკლები
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი
@@ -9621,6 +9630,21 @@ ka:
           lessons:
             lesson-2:
               name: სექცია 5 დავალება
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: ციკლები
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი

@@ -2576,6 +2576,10 @@ ca:
           lesson_groups:
             lessonGroup-3:
               display_name: Variables
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funcions
         coursea-2022:
           lessons:
             Happy Maps:
@@ -2726,6 +2730,10 @@ ca:
           description_short: Apreneu tots els conceptes dels Fonaments de la informàtica
             i creeu el vostre propi art, històries i jocs.
           description_audience: De 9 a 13 anys
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Bucles
         pre-express-2022:
           lesson_groups:
             csf_loops:
@@ -2740,3 +2748,7 @@ ca:
               name: Depuració
             lesson-19:
               name: Depuració
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Bucles

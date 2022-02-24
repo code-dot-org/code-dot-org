@@ -4893,6 +4893,10 @@ nn:
               display_name: Sprites
             lessonGroup-3:
               display_name: Variablar
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funksjonar
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -5113,6 +5117,9 @@ nn:
           description_short: Lær alle konspta i grunnleggande informatikk og skap
             din eigen kunst, historie eller spel.
         csa1-2022:
+          lessons:
+            lesson-9:
+              name: Løkker
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald
@@ -5154,6 +5161,21 @@ nn:
             lessonGroup-2:
               display_name: Innhald
         csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Løkker
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhald
+        csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhald

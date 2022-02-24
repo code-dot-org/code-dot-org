@@ -1,0 +1,8 @@
+{
+  "key": "multiplyOperator",
+  "name": "Multiply operator",
+  "category": "Math",
+  "category_key": "math",
+  "short_description": "Game Lab - Multiply operator",
+  "syntax": "__ * __"
+}

@@ -26,7 +26,12 @@ export const PALETTES = {
   roses: ['#4C0606', '#86003C', '#E41F7B', '#FF8BA0 ', '#FFB6B3']
 };
 
-// Author is the only attribute not translated
+// Notes:
+// - author is not translated.
+// - Poems are shown in all languages, unless there is a locale attribute, in which case
+//   the poem is shown in the dropdown only for users with that current locale.
+// - If the locale attribute is set, then title is used and is not translated.
+// - If the locale attribute is set, then linesSplit is used and is not translated.
 export const POEMS = {
   hafez: {author: 'Hafez'},
   field: {author: 'Eugene Field'},
@@ -55,5 +60,99 @@ export const POEMS = {
   hughes1: {author: 'Langston Hughes'},
   lomeli1: {author: 'Caia Lomeli'},
   lomeli2: {author: 'Caia Lomeli'},
-  frost: {author: 'Robert Frost'}
+  frost: {author: 'Robert Frost'},
+  rusinek1: {
+    locale: 'pl_pl',
+    author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
+    title: 'WIESZAKI',
+    linesSplit: [
+      'Wszystkie dzieciaki',
+      'wiedzą, co to wieszaki',
+      'i że służą one zwłaszcza',
+      'do wieszania płaszcza',
+      'lub kurtki, lub pelerynki',
+      'chłopczyka i dziewczynki.',
+      '',
+      'Lecz tak naprawdę wieszaki',
+      'to są dzikie zwierzaki:',
+      'zaczepne, rogate',
+      'i okropnie pyskate!',
+      'Kto słyszy ich awantury,',
+      'chowa się do mysiej dziury.'
+    ]
+  },
+  rusinek2: {
+    locale: 'pl_pl',
+    author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
+    title: 'PRYSZNIC',
+    linesSplit: [
+      'Prysznic to nie jest zabawka.',
+      'Prysznic to taka słuchawka',
+      'do rozmów międzywannowych',
+      'i międzyprysznicowych.',
+      ' ',
+      'Ważne, by podczas rozmowy',
+      'nie przyszło ci czasem do głowy',
+      'kręcić kurkiem, uparciuszku,',
+      'bo będziesz mieć wodę w uszku!'
+    ]
+  },
+  rusinek3: {
+    locale: 'pl_pl',
+    author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
+    title: 'TOSTER',
+    linesSplit: [
+      'Do czego służy toster?',
+      'To bardzo, bardzo proste:',
+      'do opiekania grzanek,',
+      'kiedy nadchodzi ranek.',
+      '  ',
+      'A kiedy się pozmienia',
+      'tostera ustawienia,',
+      'to służyć mu jest dane',
+      'i do zwęglania grzanek.',
+      '  ',
+      'Ech, męczą się górnicy',
+      'tak trochę po próżnicy,',
+      'bo gdyby mieli toster,',
+      'życie by było proste:',
+      '  ',
+      'Ustawiałby górnik na full',
+      'swój toster – i siadał jak król.',
+      'A węgiel by robił się sam.',
+      'No, mówię wam!'
+    ]
+  },
+  rusinek4: {
+    locale: 'pl_pl',
+    author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
+    title: 'WAZON',
+    linesSplit: [
+      'Bez względu na to, czy w wazonie',
+      'stoją żonkile, czy piwonie,',
+      'wazon jest przede wszystkim po to,',
+      'by dać się czasem rozbić kotom.'
+    ]
+  },
+  rusinek5: {
+    locale: 'pl_pl',
+    author: 'Michał Rusinek, Wierszyki domowe, Znak, 2021',
+    title: 'SŁOIKI',
+    linesSplit: [
+      'Stoją w piwnicy puste słoiki.',
+      'W jednym z nich były raz borowiki,',
+      'w innym pieczarki marynowane,',
+      'a w jeszcze innym ćwikła wraz z chrzanem.',
+      '  ',
+      'Gdy ze słoików wszystko zjedzono,',
+      'to je umyto i wysuszono.',
+      'Zniesiono tutaj ich zapas spory*,',
+      'bo mogą przydać się na przetwory.',
+      '  ',
+      'Ten, kto na podróż w czasie ma chętkę,',
+      'może odkręcić jedną zakrętkę:',
+      'wtedy ze środka uleci wokół',
+      'trochę powietrza – z zeszłego roku!'
+    ]
+  }
 };

@@ -1,7 +1,0 @@
-{
-  "key": "camera.position.x",
-  "name": "camera.position.x",
-  "category": "World",
-  "category_key": "world",
-  "syntax": "camera.position.x"
-}

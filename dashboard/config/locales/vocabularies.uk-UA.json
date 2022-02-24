@@ -187,6 +187,36 @@
         },
         "define/coursee/2021": {
           "word": "Визначити"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Машинне навчання"
+        },
+        "user_interface/csd/2021": {
+          "word": "Інтерфейс користувача"
+        },
+        "debugging/csd/2021": {
+          "word": "Налагодження"
+        },
+        "variable/csd/2021": {
+          "word": "Змінна"
+        },
+        "conditionals/csd/2021": {
+          "word": "Умови"
+        },
+        "abstraction/csd/2021": {
+          "word": "Абстракції"
+        },
+        "function/csd/2021": {
+          "word": "Функція"
+        },
+        "input/csd/2021": {
+          "word": "Ввід"
+        },
+        "processing/csd/2021": {
+          "word": "В обробці"
+        },
+        "copyright/csd/2021": {
+          "word": "Авторські права"
         }
       }
     }

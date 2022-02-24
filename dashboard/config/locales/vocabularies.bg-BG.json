@@ -166,6 +166,27 @@
         },
         "define/coursee/2021": {
           "word": "Дефиниране"
+        },
+        "debugging/csd/2021": {
+          "word": "Отстраняване на грешки"
+        },
+        "variable/csd/2021": {
+          "word": "Променлива"
+        },
+        "conditionals/csd/2021": {
+          "word": "Условия"
+        },
+        "abstraction/csd/2021": {
+          "word": "Абстракция"
+        },
+        "function/csd/2021": {
+          "word": "Функция"
+        },
+        "input/csd/2021": {
+          "word": "Поле за въвеждане"
+        },
+        "copyright/csd/2021": {
+          "word": "Авторско право"
         }
       }
     }
