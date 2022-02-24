@@ -11,6 +11,7 @@ describe('CodeDocLink', () => {
           link: '/docs/applab/code',
           name: 'App Lab Code'
         }}
+        showBlocks
       />
     );
     expect(wrapper.find('a').length).to.equal(1);
@@ -32,9 +33,32 @@ describe('CodeDocLink', () => {
           name: 'Sprite Lab Block',
           blockName: 'code_block'
         }}
+        showBlocks
       />
     );
     expect(wrapper.text().includes('Sprite Lab Block')).to.be.false;
     expect(wrapper.find('EmbeddedBlock').length).to.equal(1);
+  });
+
+  it('renders simple link if showBlocks is false', () => {
+    const wrapper = shallow(
+      <CodeDocLink
+        programmingExpression={{
+          link: '/docs/spritelab/code',
+          name: 'Sprite Lab Block',
+          blockName: 'code_block'
+        }}
+        showBlocks={false}
+      />
+    );
+    expect(wrapper.find('a').length).to.equal(1);
+    expect(
+      wrapper
+        .find('a')
+        .first()
+        .props().href
+    ).to.equal('/docs/spritelab/code');
+    expect(wrapper.text().includes('Sprite Lab Block')).to.be.true;
+    expect(wrapper.find('EmbeddedBlock').length).to.equal(0);
   });
 });
