@@ -1,7 +1,8 @@
 {
   "key": "andOperator",
-  "name": "andOperator",
+  "name": "And Operator",
   "category": "Math",
   "category_key": "math",
+  "short_description": "Game Lab - And Operator",
   "syntax": "__ && __"
 }

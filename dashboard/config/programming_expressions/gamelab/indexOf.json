@@ -1,12 +1,11 @@
 {
   "key": "indexOf",
-  "name": "indexOf",
+  "name": "str.indexOf()",
   "category": "Variables",
   "category_key": "variables",
-  "palette_params": [
-    {
-      "name": "searchValue"
-    }
+  "parameters": [
+    "searchValue"
   ],
+  "short_description": "Game Lab - str.indexOf()",
   "syntax": "indexOf(searchValue)"
 }

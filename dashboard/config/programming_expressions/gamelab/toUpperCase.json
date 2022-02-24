@@ -1,7 +1,8 @@
 {
   "key": "toUpperCase",
-  "name": "toUpperCase",
+  "name": "str.toUpperCase()",
   "category": "Variables",
   "category_key": "variables",
+  "short_description": "Game Lab - str.toUpperCase()",
   "syntax": "toUpperCase"
 }
