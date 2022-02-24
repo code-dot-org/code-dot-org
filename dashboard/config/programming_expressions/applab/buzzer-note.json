@@ -38,10 +38,6 @@
       "description": "How long the note should play for in milliseconds. "
     }
   ],
-  "parameters": [
-    "note",
-    "duration"
-  ],
   "short_description": "Plays specific notes on the buzzer.",
   "syntax": "buzzer.note(note, duration)",
   "tips": "* All octaves start at a C note and end on a B note. The notes are ordered C, D, E, F, G, A, B.\r\n* You can play sharp notes with the buzzer with the # sign, but you cannot play flat notes. \r\n* The full scale of notes that the buzzer can play is:  C, C#, D, D#, E, F, F# G, G# A, A# B."
