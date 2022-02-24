@@ -48,13 +48,16 @@ export const commands = {
     return result;
   },
 
-  // Return true if any sprite's speech include values from a given object.
-  anySpeechIncludesValues(object, object2) {
+  // Return true if any sprite's speech include values from the given object(s).
+  // The second parameter is optional, but exists in case the levelbuilder would
+  // like to give students the flexibility of using the value from either the
+  // current or previous frame.
+  anySpeechIncludesValues(currentVariables, previousVariables) {
     const spriteIds = this.getSpriteIdsInUse();
     let result = false;
-    const values = object2
-      ? Object.values(object).concat(Object.values(object2))
-      : Object.values(object);
+    const values = previousVariables
+      ? Object.values(currentVariables).concat(Object.values(previousVariables))
+      : Object.values(currentVariables);
     for (let i = 0; i < spriteIds.length; i++) {
       values.forEach(value => {
         let speechText = this.getLastSpeechBubbleForSpriteId(spriteIds[i])
