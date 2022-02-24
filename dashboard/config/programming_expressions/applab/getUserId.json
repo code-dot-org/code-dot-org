@@ -3,5 +3,7 @@
   "name": "getUserId",
   "category": "Data",
   "category_key": "data",
+  "content": "[name]\r\n\r\n## getUserId()\r\n\r\n[/name]\r\n\r\n[category]\r\n\r\nCategory: Data\r\n\r\n[/category]\r\n\r\n[description]\r\n\r\n[short_description]\r\n\r\nGets a unique identifier for the current user of this app.\r\n\r\n[/short_description]\r\n\r\nSometimes you want to track a user over multiple uses of your app. *getUserId* will get a unique identifier that you can save to track this user's use of your app. Usually you will save the user ID to remote data storage using *createRecord()* so you can keep track of who gave you what data.\r\n\r\n[/description]\r\n\r\n### Examples\r\n____________________________________________________\r\n\r\n[example]\r\n\r\n```\r\nconsole.log(getUserId());\r\n```\r\n\r\n[/example]\r\n____________________________________________________\r\n\r\n[syntax]\r\n\r\n### Syntax\r\n\r\n```\r\ngetUserId();\r\n```\r\n\r\n[/syntax]\r\n\r\n[parameters]\r\n\r\n### Parameters\r\n\r\ngetUserId() does not take any parameters.\r\n\r\n[/parameters]\r\n\r\n[returns]\r\n\r\n### Returns\r\nReturns a unique identifier for the current user of this app.\r\n\r\n[/returns]\r\n\r\n[bug]\r\n\r\nFound a bug in the documentation? Let us know at documentation@code.org\r\n\r\n[/bug]",
+  "short_description": "\ngetUserId()\nCategory: Data",
   "syntax": "getUserId"
 }

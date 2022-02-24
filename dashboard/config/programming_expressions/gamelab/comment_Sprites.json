@@ -1,7 +1,8 @@
 {
   "key": "comment_Sprites",
-  "name": "comment_Sprites",
+  "name": "comment",
   "category": "Sprites",
   "category_key": "sprites",
+  "short_description": "// Comment",
   "syntax": "// Comment"
 }

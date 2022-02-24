@@ -1,7 +1,8 @@
 {
   "key": "mathAbs",
-  "name": "Math.abs",
+  "name": "Math.abs()",
   "category": "Math",
   "category_key": "math",
+  "short_description": "Game Lab - Math.abs()",
   "syntax": "Math.abs"
 }
