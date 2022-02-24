@@ -1085,7 +1085,7 @@
   "libraryFunctionRequirements": "Select the functions you want to add to the library. To help understand what the function is for, you may only export functions that have a comment directly above them in your code.",
   "libraryIdImport": "Import library from ID",
   "libraryImportError": "An error occurred while importing your library. Please make sure you have a valid ID and an internet connection.",
-  "libraryLoadError": "There was an error loading your library. Check your internet connection and try again.",
+  "libraryLoadError": "There was an error loading your library. Check to make sure there are no errors when running your program. Then, check your internet connection and try again.",
   "libraryManage": "Manage libraries in this project",
   "libraryName": "Library Name",
   "libraryNameRequirements": "Your library's name must start with a capital letter and use only letters, numbers, and underscores.",
