@@ -18,10 +18,6 @@
       "description": "The tempo determines the speed at which the list of notes will be played, in beats per minute (or bpm). If a tempo is not included, notes will play at a default tempo of 120 bpm"
     }
   ],
-  "parameters": [
-    "notes",
-    "tempo"
-  ],
   "short_description": "Play a list of notes with the buzzer.",
   "syntax": "buzzer.play(notes, tempo)"
 }

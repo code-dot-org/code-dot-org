@@ -38,10 +38,6 @@
       "description": "Whether the checkbox is initially checked."
     }
   ],
-  "parameters": [
-    "id",
-    "checked"
-  ],
   "return_value": "No return value. Modifies screen only.",
   "short_description": "Creates a checkbox on the screen with the initial checked boolean value and referenced by the given id at default location (0,0).",
   "syntax": "checkbox(id, checked)",

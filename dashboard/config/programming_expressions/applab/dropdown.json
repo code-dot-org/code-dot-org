@@ -44,11 +44,6 @@
       "description": "The text displayed within the dropdown box. "
     }
   ],
-  "parameters": [
-    "id",
-    "option1",
-    "etc"
-  ],
   "return_value": "No return value. Modifies screen only.",
   "short_description": "Creates a dropdown selection box on the screen displaying the options provided and referenced by the given id at default location (0,0).",
   "syntax": "dropdown(id, option1, etc)",

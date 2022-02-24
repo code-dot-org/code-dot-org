@@ -41,9 +41,6 @@
       "description": "The message string and/or variable values to display to the app screen."
     }
   ],
-  "parameters": [
-    "text"
-  ],
   "return_value": "No return value. Displays to the app screen only.",
   "short_description": "Displays a string and/or variable values to the app screen. The text can also be formatted as HTML.",
   "syntax": "write(text)",

@@ -3,9 +3,6 @@
   "name": "strincludes()",
   "category": "Variables",
   "category_key": "variables",
-  "parameters": [
-    "searchValue"
-  ],
   "short_description": "Game Lab - strincludes()",
   "syntax": "includes(searchValue)"
 }

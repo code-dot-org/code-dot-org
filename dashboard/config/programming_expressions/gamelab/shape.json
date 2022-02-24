@@ -41,14 +41,6 @@
       "description": "The y-location in pixels of the second point of the shape, from top to bottom on the display. Should be a number from 0 to 400, but negative numbers will locate the point above the display and numbers greater than 400 will locate the point below the display (possibly unseen)."
     }
   ],
-  "parameters": [
-    "x1",
-    "y1",
-    "x2",
-    "y2",
-    "x3",
-    "y3"
-  ],
   "return_value": "No return value. Outputs to the display only.",
   "short_description": "Connect the points to draw a shape.",
   "syntax": "shape(x1, y1, x2, y2, x3, y3)",

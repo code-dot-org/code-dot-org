@@ -1,0 +1,8 @@
+{
+  "key": "indexOf",
+  "name": "str.indexOf()",
+  "category": "Variables",
+  "category_key": "variables",
+  "short_description": "Game Lab - str.indexOf()",
+  "syntax": "indexOf(searchValue)"
+}
