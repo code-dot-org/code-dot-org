@@ -1,7 +1,0 @@
-{
-  "key": "inequalityOperator",
-  "name": "inequalityOperator",
-  "category": "Math",
-  "category_key": "math",
-  "syntax": "__ != __"
-}

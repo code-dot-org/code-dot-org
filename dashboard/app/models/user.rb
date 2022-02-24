@@ -656,7 +656,7 @@ class User < ApplicationRecord
 
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
+    user_id = user_id_for_storage_id(owner_storage_id)
     User.find(user_id)
   rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
     nil
@@ -2343,11 +2343,8 @@ class User < ApplicationRecord
       update(state: 'active', updated_at: Time.now)
   end
 
-  # Gets the user's user_storage_id from the pegasus database, if it's available.
-  # Note: Known that this duplicates some logic in storage_id_for_user_id, but
-  # that method is globally stubbed in tests :cry: and therefore not very helpful.
   def user_storage_id
-    @user_storage_id ||= PEGASUS_DB[:user_storage_ids].where(user_id: id).first&.[](:id)
+    @user_storage_id ||= storage_id_for_user_id(id)
   end
 
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)
