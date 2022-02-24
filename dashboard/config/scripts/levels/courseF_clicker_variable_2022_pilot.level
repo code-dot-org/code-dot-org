@@ -1,9 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "game_id": 64,
-  "created_at": "2022-02-23T21:02:47.000Z",
-  "level_num": "custom",
-  "user_id": 63,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -48,7 +44,7 @@
     "parent_level_id": 21671,
     "block_pool": "gamelab",
     "include_shared_functions": "true",
-    "name_suffix": "_2022_pilot",
+    "name_suffix": "_2021",
     "encrypted": "false",
     "mini_rubric": "false",
     "block_pools": [
@@ -62,13 +58,20 @@
     "long_instructions": "# Track the score with a variable\r\n\r\nYou need to keep track of the player's score. Let's use a variable to do two things:\r\n1. Set the score to 0 at the beginning of the game.\r\n2. Give a point each time the user clicks a sprite.\r\n\r\n## Do This\r\n*Under `when run`:*\r\n* Set a variable like `score` to 0.\r\n\r\n*Under `when clicked`:*\r\n* Give the user points by changing the same variable.",
     "authored_hints": "[]",
     "hint_prompt_attempts_threshold": "1",
-    "project_template_level_name": "courseF_clicker_template_2022_pilot",
-    "validation_code": "// This level requires the variableLog Helper Library\r\n\r\nif (World.frameCount == 1) {\r\n  varLog = buildVariableLog();\r\n  addCriteria(function(){\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function(){\r\n    return Object.keys(varLog).length >0;\r\n  }, 'createVariable');\r\n  addCriteria(function(){\r\n    return clickEventFound();\r\n  }, 'spriteNotClicked');\r\n  addCriteria(function(){\r\n    return spriteRemoved()&&clickEventFound();\r\n  }, 'removeSpriteWhenClicked');\r\n  addCriteria(function() {\r\n    return onlyEventSpriteRemoved();\r\n  }, 'removeOnlyClickedSprite');\r\n  addCriteria(function(){\r\n    return detectVariableLogChange();\r\n  }, 'changeVariableBlock');\r\n}\r\n\r\ndelayEndInActiveApp();\r\ncheck();\r\n",
-    "preload_asset_list": null
+    "project_template_level_name": "courseF_clicker_template",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "validation_code": "// This level requires the variableLog Helper Library\r\n\r\nif (World.frameCount == 1) {\r\n  varLog = buildVariableLog();\r\n  addCriteria(function(){\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function(){\r\n    return Object.keys(varLog).length >0;\r\n  }, 'createVariable');\r\n  addCriteria(function(){\r\n    return noBadVariableLabels();\r\n  }, 'renameVariable');\r\n  addCriteria(function(){\r\n    return clickEventFound();\r\n  }, 'spriteNotClicked');\r\n  addCriteria(function(){\r\n    return spriteRemoved()&&clickEventFound();\r\n  }, 'removeSpriteWhenClicked');\r\n  addCriteria(function() {\r\n    return onlyEventSpriteRemoved();\r\n  }, 'removeOnlyClickedSprite');\r\n  addCriteria(function(){\r\n    return detectVariableLogChange();\r\n  }, 'changeVariableBlock');\r\n}\r\n\r\ndelayEndInActiveApp();\r\ncheck();\r\n"
   },
+  "game_id": 64,
   "published": true,
+  "created_at": "2022-02-16T19:37:58.000Z",
+  "level_num": "custom",
+  "user_id": 63,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-02-23T21:02:47.595+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_variable\\\"\"],\"cloned_from\":\"courseF_clicker_variable\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-13T20:34:35.932+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_score\\\"\"],\"cloned_from\":\"courseF_clicker_score\"},{\"changed_at\":\"2022-01-13 20:36:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 21:00:23 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"short_instructions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 21:18:33 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-13 21:31:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-20 15:36:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-20 15:39:48 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-16 16:39:40 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-02-18 13:46:35 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-02-18 14:52:01 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-02-18 18:14:51 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2022-02-24 10:48:58 -0500\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\",\"validation_code\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
