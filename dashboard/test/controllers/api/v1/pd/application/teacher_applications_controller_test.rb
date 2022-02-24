@@ -51,24 +51,6 @@ module Api::V1::Pd::Application
       params: -> {{id: @application.id}},
       response: :success
 
-    test_user_gets_response_for :update,
-      name: 'program managers can update completed applications they own',
-      user:  -> {@program_manager},
-      params: -> {{id: @application.id}},
-      response: :success
-
-    test_user_gets_response_for :update,
-      name: 'program managers cannot update incomplete applications they own',
-      user:  -> {@program_manager},
-      params: -> {{id: @incomplete_application.id}},
-      response: :forbidden
-
-    test_user_gets_response_for :update,
-      name: 'a workshop admin can update applications they own',
-      user:  :workshop_admin,
-      params: -> {{id: @incomplete_application.id}},
-      response: :success
-
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
       user: -> {@program_manager},
