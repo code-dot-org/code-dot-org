@@ -69,3 +69,13 @@ function storeVariableLogforPrevious() {
   previousVarLog = JSON.parse(JSON.stringify(varLog));
 }
 
+// Returns true if the student has a variable label that starts with "_"
+function noBadVariableLabels() {
+  var result = true;
+  Object.keys(varLog).forEach(function (label,index) {
+    if (label.charAt(0) == "_") {
+      result = false;
+    }
+  });
+  return result;
+}

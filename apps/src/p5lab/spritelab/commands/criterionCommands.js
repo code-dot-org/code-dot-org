@@ -49,11 +49,14 @@ export const commands = {
   },
 
   // Return true if any sprite's speech include values from a given object.
-  anySpeechIncludesValues(object) {
+  anySpeechIncludesValues(object, object2) {
     const spriteIds = this.getSpriteIdsInUse();
     let result = false;
+    const values = object2
+      ? Object.values(object).concat(Object.values(object2))
+      : Object.values(object);
     for (let i = 0; i < spriteIds.length; i++) {
-      Object.values(object).forEach(value => {
+      values.forEach(value => {
         let speechText = this.getLastSpeechBubbleForSpriteId(spriteIds[i])
           ?.text;
         let type = typeof speechText;
