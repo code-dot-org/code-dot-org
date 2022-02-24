@@ -28412,7 +28412,7 @@ en:
 
 '
               description_teacher: |-
-                To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+                In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
 
                 **Question of the Day:** What is a computing innovation?
             Designing Screens with Code:
@@ -31673,10 +31673,18 @@ en:
         self-paced-pl-csa2-2022:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-csa2-2022
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1:
               name: Introduction to JavaLab
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: Using variables in Java
           lesson_groups: {}
