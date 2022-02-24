@@ -9,6 +9,7 @@ export default function CodeDocLink({programmingExpression}) {
       <EmbeddedBlock
         blockName={programmingExpression.blockName}
         link={programmingExpression.link}
+        ariaLabel={programmingExpression.name}
       />
     );
   } else {

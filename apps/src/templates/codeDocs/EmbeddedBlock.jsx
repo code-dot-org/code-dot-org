@@ -4,7 +4,7 @@ import {parseElement} from '@cdo/apps/xml';
 import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
 import {Link} from '@dsco_/link';
 
-export default function EmbeddedBlock({blockName, link}) {
+export default function EmbeddedBlock({blockName, link, ariaLabel}) {
   const blockRef = createRef();
 
   useEffect(() => {
@@ -29,6 +29,7 @@ export default function EmbeddedBlock({blockName, link}) {
           id={`embedded-block-${blockName}`}
           ref={blockRef}
           style={{paddingBottom: 5}}
+          aria-label={ariaLabel || blockName}
         />
       </Link>
     </div>
@@ -37,5 +38,6 @@ export default function EmbeddedBlock({blockName, link}) {
 
 EmbeddedBlock.propTypes = {
   blockName: PropTypes.string.isRequired,
-  link: PropTypes.string
+  link: PropTypes.string,
+  ariaLabel: PropTypes.string
 };
