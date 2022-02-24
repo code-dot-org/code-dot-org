@@ -186,6 +186,7 @@ function shouldRunWithFakeBoard() {
  * Resets the board state and puts maker UI back in a default state.
  */
 export function reset() {
+  console.log('in toolkit.js reset(), currentBoard:', currentBoard);
   if (currentBoard) {
     currentBoard.reset();
   }
