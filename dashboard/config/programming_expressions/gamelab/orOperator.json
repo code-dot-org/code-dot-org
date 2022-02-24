@@ -1,7 +1,8 @@
 {
   "key": "orOperator",
-  "name": "orOperator",
+  "name": "Or operator",
   "category": "Math",
   "category_key": "math",
+  "short_description": "Game Lab - Or operator",
   "syntax": "__ || __"
 }

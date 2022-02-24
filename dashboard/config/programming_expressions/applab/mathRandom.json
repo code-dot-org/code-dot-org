@@ -3,5 +3,7 @@
   "name": "Math.random",
   "category": "Math",
   "category_key": "math",
+  "content": "[name]\r\n\r\n## Documentation coming soon!\r\n\r\n[/name]\r\n\r\n[bug]\r\n\r\nFound a bug in the documentation? Let us know at documentation@code.org\r\n\r\n[/bug]",
+  "short_description": "\nDocumentation coming soon!\nFound a bug in the documentation? Let us know at documentation@code.org",
   "syntax": "Math.random"
 }

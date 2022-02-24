@@ -3,16 +3,12 @@
   "name": "insertItem",
   "category": "Variables",
   "category_key": "variables",
-  "palette_params": [
-    {
-      "name": "list"
-    },
-    {
-      "name": "index"
-    },
-    {
-      "name": "item"
-    }
+  "content": "[name]\n\n## insertItem(list, index, item)\n\n[/name]\n\n[category]\n\nCategory: Variables\n\n[/category]\n\n[description]\n\n[short_description]\n\nInserts the item into the array at the specified index position.\n\n[/short_description]\n\nIn real life you sometimes need to add items at various positions in a list, and make the list larger. *insertItem(list, index, item)* makes the \"list\" one larger and inserts the \"item\" at the specified *index* position (moving other items to the right). The index must be a valid index position in the list or you may get unexpected results.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\n// List of favorite foods.\nvar myFavoriteFoods=[\"pizza\",\"steak\"];\nconsole.log(myFavoriteFoods + \" length=\" +myFavoriteFoods.length);\ninsertItem(myFavoriteFoods, 1, \"artichokes\");\nconsole.log(myFavoriteFoods + \" length=\" +myFavoriteFoods.length);\ninsertItem(myFavoriteFoods, 4, \"shrimp\");\nconsole.log((myFavoriteFoods + \" length=\") +myFavoriteFoods.length);\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Fibonacci** Generate the first 10 numbers in the fibonacci sequence.\n\n```\n// Generate the first 10 numbers in the fibonacci sequence.\nvar fibonacci=[1,1];\nvar nextTerm=0;\nfor (var i=3; i<=10; i++) {\n  nextTerm=fibonacci[i-2]+fibonacci[i-3];\n  insertItem(fibonacci, i, nextTerm);\n}\nconsole.log(fibonacci);\n```\n\n[/example]\n\n____________________________________________________\n\n[syntax]\n\n### Syntax\n\n```\ninsertItem(list, index, item)\n```\n\n[/syntax]\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| list | variable name | Yes | The variable name of the list (array) you want to insert the item into. |\n| index | number  | Yes | The index position you want to insert the item at. |\n| item | any type  | Yes | The number or string item to be inserted into the list. |\n\n[/parameters]\n\n[returns]\n\n### Returns\nNo return value.\n\n[/returns]\n\n[tips]\n\n### Tips\n- List(array) manipulation functions include: [appendItem(list, item)](/docs/applab/appendItem), [insertItem(list, index, item)](/docs/applab/insertItem) and [removeItem(list, index)](/docs/applab/removeItem).\n- Multiple calls to *insertItem()* can be slow because to expand the list, Javascript needs to create a new list one item larger and then copy all the items over before instering the new item at the end. If possible it is better to create the list intially large enough for all the possible items and *list[index]* to add new items at specific positions.\n\n[/tips]\n\n[bug]\n\nFound a bug in the documentation? Let us know at documentation@code.org\n\n[/bug]",
+  "parameters": [
+    "list",
+    "index",
+    "item"
   ],
+  "short_description": "\ninsertItem(list, index, item)\nCategory: Variables",
   "syntax": "insertItem(list, index, item)"
 }
