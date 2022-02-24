@@ -59,7 +59,7 @@ export const editorDarkModeThemeOverride = EditorView.theme(
     },
     // Sets the background color for the currently selected line
     '.cm-activeLine': {
-      backgroundColor: color.dark_charcoal
+      backgroundColor: color.dark_gray
     },
     // Sets the background color for the left-hand side gutters
     '.cm-gutters': {

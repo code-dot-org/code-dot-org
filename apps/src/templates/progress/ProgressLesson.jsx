@@ -31,7 +31,7 @@ class ProgressLesson extends React.Component {
     isVisible: PropTypes.bool.isRequired,
     hiddenForStudents: PropTypes.bool.isRequired,
     isLockedForUser: PropTypes.bool.isRequired,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.number,
     lockableAuthorized: PropTypes.bool,
     lockableAuthorizedLoaded: PropTypes.bool.isRequired,
     isLockedForAllStudents: PropTypes.bool.isRequired,
@@ -328,7 +328,7 @@ export default connect((state, ownProps) => ({
     ownProps.lesson.id,
     state
   ),
-  selectedSectionId: state.teacherSections.selectedSectionId.toString(),
+  selectedSectionId: state.teacherSections.selectedSectionId,
   scriptId: state.progress.scriptId,
   isRtl: state.isRtl,
   isMiniView: state.progress.isMiniView,
