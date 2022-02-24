@@ -3,16 +3,54 @@
   "name": "dropdown",
   "category": "UI controls",
   "category_key": "ui_controls",
-  "palette_params": [
+  "content": "\r\n\r\nCreates a dropdown selection box on the screen displaying the *options* provided and referenced by the given *id* at default location (0,0).\r\n\r\n\r\nYour apps will sometimes need to collect specific input from the user, instead of unrestricted input using `textInput()`. You can code an event handler that is triggered by various events in the dropdown box. Use `getText()` to get the option currently chosen in the dropdown.\r\n\r\n\r\n",
+  "examples": [
     {
-      "name": "id"
+      "name": "",
+      "description": "",
+      "code": "```\n//Get the user's mood.\r\ndropdown(\"id\", \"happy\", \"sad\");\r\nonEvent(\"id\", \"change\", function(event) {\r\n  write(getText(\"id\"));\r\n});\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
     },
     {
-      "name": "option1"
-    },
-    {
-      "name": "etc"
+      "name": "Example Simple Form",
+      "description": "Demonstrate UI element modification and query functions.",
+      "code": "```\n// Demonstrate UI element modification and query functions.\r\ntextLabel(\"subjectLabel\", \"What subject do you like the most?\");\r\ndropdown(\"subjectId\", \"Arts\", \"Science\", \"History\", \"Math\");\r\nbutton(\"submitID\", \"Submit\");\r\nonEvent(\"submitID\", \"click\", function(event) {\r\n  console.log(getText(\"subjectId\"));\r\n  setText(\"subjectId\", \"____\");\r\n});\r\n\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
     }
   ],
-  "syntax": "dropdown(id, option1, etc)"
+  "palette_params": [
+    {
+      "name": "id ",
+      "type": "string",
+      "required": true,
+      "description": "The unique identifier for the dropdown box. The id is used for referencing the text input box in event handlers or other UI element modification functions. Must begin with a letter, contain no spaces, and may contain letters, digits, - and _. "
+    },
+    {
+      "name": "option1",
+      "type": "string",
+      "required": true,
+      "description": "The text displayed within the dropdown box."
+    },
+    {
+      "name": "option2",
+      "type": "string",
+      "required": false,
+      "description": "The text displayed within the dropdown box. "
+    }
+  ],
+  "parameters": [
+    "id",
+    "option1",
+    "etc"
+  ],
+  "return_value": "No return value. Modifies screen only.",
+  "short_description": "Creates a dropdown selection box on the screen displaying the options provided and referenced by the given id at default location (0,0).",
+  "syntax": "dropdown(id, option1, etc)",
+  "tips": "- If there is another UI element at location (0,0) the dropdown box is placed at the next available position to the right or below.\r\n- There are various UI element modification functions available: `setText()`, `showElement()`, `hideElement()`, `deleteElement()`, `setPosition()`, `setSize()`. \r\n- There are various UI element query functions available: `getText()`, `getXPosition()`, `getYPosition()`.\r\n- You should always provide a label for your dropdown box.\r\n- Dropdown boxes can also be created and initialized in Design mode."
 }

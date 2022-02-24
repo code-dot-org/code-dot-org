@@ -1,12 +1,11 @@
 {
   "key": "clearTimeout",
-  "name": "clearTimeout",
+  "name": "clearTimeout()",
   "category": "Control",
   "category_key": "control",
-  "palette_params": [
-    {
-      "name": "__"
-    }
+  "parameters": [
+    "__"
   ],
+  "short_description": "Game Lab - clearTimeout()",
   "syntax": "clearTimeout(__)"
 }

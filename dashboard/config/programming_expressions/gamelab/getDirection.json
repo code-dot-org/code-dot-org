@@ -1,7 +1,21 @@
 {
   "key": "getDirection",
-  "name": "getDirection",
+  "name": "sprite.getDirection()",
   "category": "Sprites",
   "category_key": "sprites",
+  "content": "The sprite's movement direction in degrees.\r\n\r\nThe direction angle is a number from -180 to 180, 0 is to the right, clockwise increasing.\r\n\r\nThe velocity of the sprite, its speed and direction, can be set in many ways:\r\n\r\n- by using the \"counter pattern\" on `sprite.x` and `sprite.y` properties within the `draw()` function\r\n- by setting the `sprite.velocityX` and `sprite.velocityY` properties\r\n- by calling `sprite.setVelocity()` or `sprite.setSpeedAndDirection()`",
+  "examples": [
+    {
+      "name": "Circling",
+      "description": "Move a sprite in a circle.",
+      "code": "```\n// Move a sprite in a circle.\r\nvar sprite = createSprite(200, 100);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  sprite.setSpeedAndDirection(2,sprite.getDirection()+1);\r\n  console.log(sprite.getDirection());\r\n}\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
+    }
+  ],
+  "return_value": "The direction angle of the sprite in degrees.",
+  "short_description": "The sprite's movement direction in degrees.",
   "syntax": "getDirection"
 }

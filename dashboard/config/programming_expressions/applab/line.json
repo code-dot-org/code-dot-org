@@ -3,19 +3,13 @@
   "name": "line",
   "category": "Canvas",
   "category_key": "canvas",
-  "palette_params": [
-    {
-      "name": "x1"
-    },
-    {
-      "name": "y1"
-    },
-    {
-      "name": "x2"
-    },
-    {
-      "name": "y2"
-    }
+  "content": "[name]\n\n## line(x1, y1, x2, y2)\n\n[/name]\n\n[category]\n\nCategory: Canvas\n\n[/category]\n\n[description]\n\n[short_description]\n\nDraws a line on the active canvas from (x1, y1) to (x2, y2).\n\n[/short_description]\n\nYou can draw many things with the basic canvas drawing functions of circle, line and rect. For line(), the (x1, y1) to (x2, y2) coordinates specify the endpoints of the line, relative to the top-left corner of the canvas (x:0 y:0). Lines are drawn using the current stroke width and current stroke color.\n\nWhen drawing thick lines, the line coordinates define the center of the line. The ends of the line will be rounded, forming semi-circles beyond the ends of the line.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\n//Draw a diagonal line across the screen.\ncreateCanvas(\"canvas1\");\nline(0, 0, 320, 480);\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Small Window** Lines and shapes drawn outside the bounds of the canvas are not totally visible.\n\n```\n// Lines and shapes drawn outside the bounds of the canvas are not totally visible.\ncreateCanvas(\"canvas1\", 50, 50);\nline(0, 0, 320, 480);\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Two Lines** Draw two lines with different stroke width showing how the stroke width affects how the line is drawn.\n\n```\n// Draw two lines with different stroke width showing how the stroke width affects how the line is drawn.\ncreateCanvas(\"canvas1\");\nsetStrokeColor(\"lightblue\");\nsetStrokeWidth(20);\nline(20, 50, 300, 50);\nsetStrokeColor(\"black\");\nsetStrokeWidth(1);\nline(20, 50, 300, 50);\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Random Line Art** Draw 100 random lines, head to tail.\n\n```\n// Draw 100 random lines, head to tail.\ncreateCanvas(\"canvas1\");\nvar x1=randomNumber(0,320);\nvar y1=randomNumber(0,480);\nvar x2=randomNumber(0,320);\nvar y2=randomNumber(0,480);\nfor (var i = 0; i < 100; i++) {\n  line(x1, y1, x2, y2);\n  x1=x2;\n  y1=y2;\n  x2=randomNumber(0,320);\n  y2=randomNumber(0,480);  \n}\n```\n\n[/example]\n\n____________________________________________________\n\n[syntax]\n\n### Syntax\n\n```\nline(x1, y1, x2, y2)\n```\n\n[/syntax]\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| x1 | number | Yes | The x position on the canvas in pixels of the beginning of the line.  |\n| y1 | number | Yes | The y position on the canvas in pixels of the beginning of the line.  |\n| x2 | number | Yes | The x position on the canvas in pixels of the end of the line.  |\n| y2 | number | Yes | The y position on the canvas in pixels of the end of the line.  |\n\n[/parameters]\n\n[returns]\n\n### Returns\nNo return value. Outputs to the display only.\n\n[/returns]\n\n[tips]\n\n### Tips\n- A canvas element must be created before a line can be drawn. Create a canvas element in Design mode first, or call createCanvas() before calling line.\n- If you're having trouble getting a line to show up, make sure that you're trying to draw the line within the bounds of the active canvas.\n- Change the width of the line and color of the line used to draw all subsequent liness using [setStrokeWidth](/docs/applab/setStrokeWidth), [setStrokeColor](/docs/applab/setStrokeColor).\n\n[/tips]\n\n[bug]\n\nFound a bug in the documentation? Let us know at documentation@code.org\n\n[/bug]",
+  "parameters": [
+    "x1",
+    "y1",
+    "x2",
+    "y2"
   ],
+  "short_description": "\nline(x1, y1, x2, y2)\nCategory: Canvas",
   "syntax": "line(x1, y1, x2, y2)"
 }

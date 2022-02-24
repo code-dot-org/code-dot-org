@@ -1,8 +1,46 @@
 {
   "key": "gamelab_moveForward",
-  "name": "moveForward",
+  "name": "move forward",
   "category": "Sprites",
-  "category_key": "sprites",
+  "category_key": "actions",
   "block_name": "gamelab_moveForward",
-  "syntax": "moveForward"
+  "content": "Moves the sprite the specified number of pixels in the direction it is facing.\r\n\r\nBy default, the block moves sprites to the right (or east). However, changing the sprite’s movement direction will change which direction it moves when moving forward.",
+  "examples": [
+    {
+      "name": "Example 1",
+      "description": "This airplane moves \"forward\". All sprites move to the right by default.",
+      "code": "```\n\n```",
+      "app": "https://studio.code.org/projects/spritelab/f38oDFC4vPSwHNfMxitUavljGTcG3lVCxbATW2nlmZ4",
+      "image": null,
+      "app_display_type": "embedAppWithCode",
+      "embed_app_with_code_height": 310
+    },
+    {
+      "name": "Example 2",
+      "description": "Extra code changes the sprite's starting direction. You can also change direction with the arrow keys.",
+      "code": "```\n\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "embedAppWithCode",
+      "embed_app_with_code_height": 600
+    }
+  ],
+  "image_url": "https://curriculum.code.org/media/blocks/moveForward.PNG",
+  "palette_params": [
+    {
+      "name": "sprite",
+      "type": "",
+      "required": true,
+      "description": "The sprite or sprite group moving forward"
+    },
+    {
+      "name": "number",
+      "type": "",
+      "required": true,
+      "description": "The number of pixels the sprite is moving forward"
+    }
+  ],
+  "short_description": "Moves the sprite the specified number of pixels in the direction it is facing.",
+  "syntax": "moveForward",
+  "tips": "- Using this block with `turn` or `change sprite property` (rotation) can allow a sprite to move in the direction that its costume is facing."
 }
