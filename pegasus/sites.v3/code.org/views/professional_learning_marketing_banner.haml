@@ -5,7 +5,7 @@
   - homepage ||= false
   - if homepage
     - large_image = "/images/homepage/superhero-banner-gold.png"
-    - half_image = "/images/homepage/superhero-banner-half.png"
+    - half_image = "/images/homepage/superhero-banner-half-gold.png"
   - else
     - large_image = "/images/homepage/superhero-banner.png"
     - half_image = "/images/homepage/superhero-banner-half.png"
@@ -21,7 +21,7 @@
         .right-button
           %button
             #{button_label}
-      .professional-learning-banner-tablet.tablet-restrictive-feature
+      .professional-learning-banner-tablet.tablet-restrictive-feature{class: homepage ? 'gold-version' : ''}
         .banner
           %img{src: half_image}
           .text-button-wrapper
@@ -29,7 +29,7 @@
             .text= text
             %button
               #{button_label}
-      .professional-learning-banner-phone.phone-feature
+      .professional-learning-banner-phone.phone-feature{class: homepage ? 'gold-version' : ''}
         .text-button-wrapper
           .header= header_text
           .text= text

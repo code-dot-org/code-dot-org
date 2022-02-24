@@ -103,6 +103,20 @@ $dark_blue_background_colour: #0d4172;
     }
   }
 
+  .professional-learning-banner-tablet.gold-version {
+
+    .text-button-wrapper {
+      right: 64px;
+
+      .header {
+        color: black;
+      }
+      
+      .text {
+        color: black;
+      }
+    }
+  }
   .professional-learning-banner-tablet {
     margin: 0 auto;
     position: relative;
@@ -141,6 +155,21 @@ $dark_blue_background_colour: #0d4172;
         margin-top: 15px;
         font-size: 14px;
         margin-bottom: 15px;
+      }
+    }
+  }
+
+  .professional-learning-banner-phone.gold-version {
+    background-color: $gold_background_colour;
+
+    .text-button-wrapper {
+
+      .header {
+        color: black;
+      }
+      
+      .text {
+        color: black;
       }
     }
   }
