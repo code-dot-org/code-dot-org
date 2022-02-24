@@ -469,7 +469,7 @@ hu-HU:
         - {}
         - {}
         questions:
-        - text: Melyik blokkok oldják meg ezt a rejtvényt?
+        - text: Melyik blokkok oldják meg ezt a feladványt?
         title: Labirintus Feltételes Többszörös választás
       4-5 maze match 1:
         answers:
@@ -489,7 +489,7 @@ hu-HU:
         - {}
         - {}
         questions:
-        - text: Melyik blokkok oldják meg ezt a rejtvényt?
+        - text: Melyik blokkok oldják meg ezt a feladványt?
         title: Labirintus - válaszd ki
       Begin planning your project:
         content1: a leírás itt található

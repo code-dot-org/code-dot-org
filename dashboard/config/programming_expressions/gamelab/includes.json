@@ -1,12 +1,8 @@
 {
   "key": "includes",
-  "name": "includes",
+  "name": "strincludes()",
   "category": "Variables",
   "category_key": "variables",
-  "palette_params": [
-    {
-      "name": "searchValue"
-    }
-  ],
+  "short_description": "Game Lab - strincludes()",
   "syntax": "includes(searchValue)"
 }

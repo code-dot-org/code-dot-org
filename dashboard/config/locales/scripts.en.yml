@@ -29184,6 +29184,7 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
+          name: coursea-2022
         express-2022:
           lessons:
             Programming with Angry Birds:
@@ -31673,7 +31674,11 @@ en:
           lessons: {}
           lesson_groups: {}
         self-paced-pl-csa3-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Introduction to JavaLab
+            lesson-2:
+              name: Using variables in Java
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
           title: Support for text-based programming
@@ -32086,3 +32091,122 @@ en:
           description_short: ''
           description: These are the new projects for the CS Discoveries Physical Computing unit. This unit exists to help playtesting the new MicroBit features in the Code.org platform
           student_description: ''
+        coursef-2022-pilot:
+          lessons:
+            The Power of Words:
+              name: The Power of Words
+              description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
+              description_teacher: |2-
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
+
+                This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                As kids grow, they'll naturally start to communicate more online. But some of what they see could make them feel hurt, sad, angry, or even fearful. Help your students build empathy for others and learn strategies to use when confronted with cyberbullying.
+              key: The Power of Words
+            Introducing Sprite Lab:
+              name: Introducing Sprite Lab
+              description_student: You will discuss the role of computers and technology in your lives with a focus on how apps and tools give users choices about how to use them.
+              description_teacher: 'In this **context-setting** lesson, students will discuss the role of computers and technology in their lives, focusing on how apps and tools give users choices about how to use them. Students will also explore apps similar to those they’ll create themselves later on.
+
+'
+              key: Introducing Sprite Lab
+            Making Sprites:
+              name: Making Sprites
+              description_student: |2-
+
+                In this lesson you will write programs and learn about sprites and behaviors.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs and learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. '
+              key: Making Sprites
+            Sprites in Action:
+              name: Sprites in Action
+              description_student: You will work through programming levels and finish with an open-ended "free play" task where you can build whatever you like.
+              description_teacher: 'In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. '
+              key: Sprites in Action
+            'Mini-Project: Virtual Pet':
+              name: 'Mini-Project: Virtual Pet'
+              description_student: Create an interactive Virtual Pet that looks and behaves how you want! Give your pet a life of its own!
+              description_teacher: Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's "Costumes" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.
+              key: 'Mini-Project: Virtual Pet'
+            Blank Space Stories:
+              name: Blank Space Stories
+              description_student: 'In this activity, you will use fill-in-the-blank stories (similar to Mad Libs®) to get ready for understanding how computers take and store input from a user, then use it later as a program runs. '
+              description_teacher: 'In this **context-setting** lesson, students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs. '
+              key: Blank Space Stories
+            Text and Prompts:
+              name: Text and Prompts
+              description_student: In this lesson you will practice with variables in Sprite Lab.
+              description_teacher: 'In this **skill-building** lesson, students will get practice with variables in Sprite Lab. '
+              key: Text and Prompts
+            'Mini-Project: User Input Programs':
+              name: 'Mini-Project: User Input Programs'
+              description_student: Apply your new skills with variables to one of three open-ended projects.
+              description_teacher: Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, create a plan for their own project, and program it from scratch.
+              key: 'Mini-Project: User Input Programs'
+            "[New] Lots of Sprites":
+              name: "[New] Lots of Sprites"
+              description_student: You will learn how to do even more with Sprite Lab and make projects with a lot of sprites!
+              description_teacher: In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform) after teaching it.**
+              key: "[New] Lots of Sprites"
+            "[New] Counting with Variables":
+              name: "[New] Counting with Variables"
+              description_student: You will learn to use variables to make a counter or keep track of a score in a game.
+              description_teacher: In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform) after teaching it.**
+              key: "[New] Counting with Variables"
+            "[New] Mini-Project: Collector Game":
+              name: "[New] Mini-Project: Collector Game"
+              description_student: Collect all the sprites! In this project, you will create a game that others can play.
+              description_teacher: In this **mini-project** lesson, students will create a customized "collector game", in which the user moves a sprite around to collect objects. **This lesson is still in development. [Please provide feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform) after teaching it.**
+              key: "[New] Mini-Project: Collector Game"
+            Simulating Experiments:
+              name: Simulating Experiments
+              description_student: Run simulations on the computer and experiment by changing variables.
+              description_teacher: In this **context-setting** lesson, students will run and collect data from a simple simulation in Sprite Lab. After running the simulation multiple times, students will have an opportunity to predict how changing a variable in the simulation might impact the outcome and test that hypothesis.
+              key: Simulating Experiments
+            Outbreak:
+              name: Outbreak
+              description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
+              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
+              key: Outbreak
+            AI For Oceans:
+              name: AI For Oceans
+              description_student: Classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, expand your training data set to include other sea creatures that belong in the water. In the second part of the activity, choose your own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: In this **exploratory** lesson, students will train a machine learning model by classifying fish and other objects.
+              key: AI For Oceans
+            The Internet:
+              name: The Internet
+              description_student: Ever wondered how information travels across the Internet? It's not magic! This lesson will teach you the basics of how the internet works.
+              description_teacher: Students will pretend to flow through the internet while learning about connections, URLs, IP Addresses, and DNS in this **exploratory** lesson.
+              key: The Internet
+            End of Course Project:
+              name: End of Course Project
+              description_student: Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!
+              description_teacher: This **project** lesson takes students through the process of designing, developing, and showcasing new projects!
+              key: End of Course Project
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            ramp_up:
+              display_name: Sprites
+            lessonGroup-8:
+              display_name: Variables
+            csf_data:
+              display_name: Data and Simulations
+            end_of_course_project:
+              display_name: End of Course Project
+          name: coursef-2022-pilot
+          title: Course F (2022)
+          description_audience: 'Ages: 9-13'
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description: |
+            We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+
+            ## Spring 2022 Open Preview
+            This new version of Course F includes three new lessons, and we need your feedback! The new lessons are:
+            * Lesson 9 - Lots of Sprites - [give feedback](https://docs.google.com/forms/d/e/1FAIpQLSdgGilUP1l2i7Cie_kojOBjq_UMVDA8O1NFX4hLt4Ts4IMvnQ/viewform)
+            * Lesson 10 - Counting with Variables - [give feedback](https://docs.google.com/forms/d/e/1FAIpQLSeuqnSbdJEgUY9paU2HNLN0RymYogBIRYrAtttTg826QXjK0w/viewform)
+            * Lesson 11 - Mini-Project: Collector Game - [give feedback](https://docs.google.com/forms/d/e/1FAIpQLSe5IU4p57sowVOUuJyk_1Nv_R8XwELRwto75zPdre50aYy9DA/viewform)
+
+            Please note that these new lessons may change between now and July 2022. We appreciate any feedback. Courses A-E of CS Fundamentals (2022) will launch in July 2022.
+
+            We have also added a full slide deck covering all lessons in Course F. We welcome your [feedback](https://docs.google.com/forms/d/e/1FAIpQLScDJ_UUYW1fw36uCiupsB96F8O8zoiSuppGQ7YrQfVn0ma_5w/viewform) on the lesson slides as well!
+          student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
