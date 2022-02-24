@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-21 15:59:13 UTC",
+    "serialized_at": "2022-02-24 14:47:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5124,6 +5124,18 @@
       }
     },
     {
+      "name": "[KEY] U8L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1ARgZ4ltm1rws0nMf6gWCejInovDUtq2ovGBAyArvCC4/edit?usp=sharing",
+      "key": "_key_u8l8_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u8l8_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U8L9 Extra Practice",
       "url": "https://docs.google.com/document/d/1IVPKUKXotUjrQc-AraJ5YsSO4anxDJfa4kUuparFJTo/edit?usp=sharing",
       "key": "_key_u8l9_extra_practice",
@@ -5481,6 +5493,18 @@
       }
     },
     {
+      "name": "U8L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/11iPXyqk5Zh9UFhVbDQYj3_L9MhcvYzU85sV_ElYacjg/edit?usp=sharing",
+      "key": "u8l8_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u8l8_extra_practice"
+      }
+    },
+    {
       "name": "U8L9 Extra Practice",
       "url": "https://docs.google.com/document/d/1BRtOEE2BaPzcrm6OwaAza0MzdZCbsW5eDQH_2FmLQpU/edit?usp=sharing",
       "key": "u8l9_extra_practice",
@@ -5558,6 +5582,18 @@
       "seeding_key": {
         "lesson.key": "Defending Privacy and Security",
         "resource.key": "unit_8_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Expanding Standard Algorithms",
+        "resource.key": "_key_u8l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Expanding Standard Algorithms",
+        "resource.key": "u8l8_extra_practice"
       }
     },
     {

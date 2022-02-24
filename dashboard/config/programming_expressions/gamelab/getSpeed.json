@@ -1,7 +1,21 @@
 {
   "key": "getSpeed",
-  "name": "getSpeed",
+  "name": "sprite.getSpeed()",
   "category": "Sprites",
   "category_key": "sprites",
+  "content": "The sprite's scalar speed.\r\n\r\nThe velocity of the sprite, its speed and direction, can be set in many ways:\r\n\r\n- by using the \"counter pattern\" on `sprite.x` and `sprite.y` properties within the `draw()` function\r\n- by setting the `sprite.velocityX` and `sprite.velocityY` properties\r\n- by calling `sprite.setVelocity()` or `sprite.setSpeedAndDirection()`",
+  "examples": [
+    {
+      "name": "Spiral",
+      "description": "Move a sprite in a spiral.",
+      "code": "```\n// Move a sprite in a spiral.\r\nvar sprite = createSprite(200, 100, 20, 20);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  sprite.setSpeedAndDirection(sprite.getSpeed()+0.01,sprite.getDirection()+1);\r\n}\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
+    }
+  ],
+  "return_value": "The speed of the sprite in pixels per frame..",
+  "short_description": "The sprite's scalar speed.",
   "syntax": "getSpeed"
 }

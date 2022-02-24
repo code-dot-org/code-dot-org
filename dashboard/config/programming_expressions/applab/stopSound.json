@@ -5,8 +5,16 @@
   "category_key": "ui_controls",
   "palette_params": [
     {
-      "name": "url"
+      "name": "url",
+      "type": "string",
+      "required": false,
+      "description": "The source URL (or filename for an uploaded file) of the MP3 sound file to be stopped."
     }
   ],
-  "syntax": "stopSound(url)"
+  "parameters": [
+    "url"
+  ],
+  "short_description": "App Lab - stopSound",
+  "syntax": "stopSound(url)",
+  "tips": "- The sound URL requires the full http:// prefix."
 }

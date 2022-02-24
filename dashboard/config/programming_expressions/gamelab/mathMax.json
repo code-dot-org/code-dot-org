@@ -1,7 +1,8 @@
 {
   "key": "mathMax",
-  "name": "Math.max",
+  "name": "Math.max()",
   "category": "Math",
   "category_key": "math",
+  "short_description": "Game Lab - Math.max()",
   "syntax": "Math.max"
 }
