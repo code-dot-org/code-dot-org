@@ -211,10 +211,8 @@ class Ability
           # regional partners by default have read, quick_view, and update permissions
           can [:read, :quick_view, :cohort_view, :update, :search, :destroy], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
 
-          # regional partners cannot see incomplete teacher applications
-          cannot [:read, :quick_view, :cohort_view, :update, :search, :destroy], Pd::Application::TeacherApplication do |application|
-            (user.regional_partners.pluck(:id).include? application.regional_partner_id) && application.incomplete?
-          end
+          # regional partners cannot see or update incomplete teacher applications
+          cannot [:show, :update, :destroy], Pd::Application::TeacherApplication, &:incomplete?
 
           # G3 regional partners should have full management permission
           group_3_partner_ids = user.regional_partners.where(group: 3).pluck(:id)
