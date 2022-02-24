@@ -7,7 +7,7 @@ class OfflineController < ApplicationController
 
   # Responds with the offline-service-worker.js file.
   def offline_service_worker
-    file_path = webpack_offline_asset_path('js/offline-service-worker.js')
-    send_file(dashboard_dir('public', 'blockly', 'js', file_path), type: 'application/javascript')
+    filename = ActiveStorage::Filename.new(params[:file]).sanitized
+    send_file(dashboard_dir('public', 'blockly', 'js', filename), type: 'application/javascript')
   end
 end
