@@ -1,15 +1,40 @@
 {
   "key": "setVelocityEach",
-  "name": "setVelocityEach",
+  "name": "group.setVelocityEach()",
   "category": "Groups",
   "category_key": "groups",
-  "palette_params": [
+  "content": "Sets the velocity in both the x and y direction for all the sprites in a group.\r\n\r\nA positive x parameter will move the sprite to the right, a positive y parameter will move the sprite downward. Must be used with the draw() function containing a `drawSprites()`. You can also update the velocity of each sprite in a group using `setSpeedAndDirectionEach()` or by using `setVelocityXEach()` and `setVelocityYEach()`. \r\n\r\nThe default velocity is 0 in both x and y directions.",
+  "examples": [
     {
-      "name": "x"
-    },
-    {
-      "name": "y"
+      "name": "",
+      "description": "",
+      "code": "```\n// The gray dots have all the same velocity.\r\nvar group1 = createGroup();\r\nfor (var i = 0; i < 10; i++) {\r\n  var sprite = createSprite(randomNumber(0, 400), 0, 5, 5);\r\n  sprite.shapeColor='red';\r\n  sprite.setVelocity(0, randomNumber(1, 10));\r\n  group1.add(sprite);\r\n}\r\nvar group2 = createGroup();\r\nfor (var i = 0; i < 10; i++) {\r\n  var sprite = createSprite(randomNumber(0, 400), 0, 5, 5);\r\n  group2.add(sprite);\r\n}\r\ngroup2.setVelocityEach(0, randomNumber(1,10));\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
     }
   ],
-  "syntax": "setVelocityEach(x, y)"
+  "palette_params": [
+    {
+      "name": "x",
+      "type": "Number",
+      "required": true,
+      "description": "The velocity of each sprite in the positive x direction, to the right."
+    },
+    {
+      "name": "y",
+      "type": "Number",
+      "required": true,
+      "description": "The velocity of each sprite in the positive y direction, downward."
+    }
+  ],
+  "parameters": [
+    "x",
+    "y"
+  ],
+  "return_value": "No return value. Changes output in the display after drawSprites() is called.",
+  "short_description": "Sets the velocity in both the x and y direction for all the sprites in a group.",
+  "syntax": "setVelocityEach(x, y)",
+  "tips": "- Changing World.frameRate will affect the velocity.\r\n- Groups of sprites all have the same functions and you use the dot notation (combining the name of the group, followed by a dot, with the function name) to call the function for that group of sprites.\r\n- Any changes to the properties of a sprite will not be seen until after `drawSprites()` is called.\r\n- If `setColliderEach()` is called for group before it is scaled, the collider is not scaled. But if a group of sprites is first scaled and then the collider set, the scale is also applied to the collider."
 }

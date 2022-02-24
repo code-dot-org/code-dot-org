@@ -3,13 +3,11 @@
   "name": "appendItem",
   "category": "Variables",
   "category_key": "variables",
-  "palette_params": [
-    {
-      "name": "list"
-    },
-    {
-      "name": "item"
-    }
+  "content": "[name]\n\n## appendItem(list, item)\n\n[/name]\n\n[category]\n\nCategory: Variables\n\n[/category]\n\n[description]\n\n[short_description]\n\nAppends the item to the end of the array.\n\n[/short_description]\n\nIn real life you sometimes need add items to the end of the list, and make the list larger. *appendItem(list, item)* makes the \"list\" one larger and inserts the \"item\" at the end of the list. If the append is successful, *appendItem()* returns true, otherwise it returns false.\n\n[/description]\n\n### Examples\n____________________________________________________\n\n[example]\n\n```\n// List of favorite movies.\nvar myFavoriteMovies=[];\nappendItem(myFavoriteMovies, \"Star Wars\");\nappendItem(myFavoriteMovies, \"Lord of the Rings\");\nappendItem(myFavoriteMovies, \"Harry Potter\");\nconsole.log(myFavoriteMovies);\n```\n\n[/example]\n\n____________________________________________________\n\n[example]\n\n**Example: Fibonacci** Generate the first 10 numbers in the fibonacci sequence.\n\n```\n// Generate the first 10 numbers in the fibonacci sequence.\nvar fibonacci=[1,1];\nvar nextTerm=0;\nfor (var i=3; i<=10; i++) {\n  nextTerm=fibonacci[i-2]+fibonacci[i-3];\n  appendItem(fibonacci,nextTerm);\n}\nconsole.log(fibonacci);\n```\n\n[/example]\n\n____________________________________________________\n\n[syntax]\n\n### Syntax\n\n```\nappendItem(list, item)\n```\n\n[/syntax]\n\n[parameters]\n\n### Parameters\n\n| Name  | Type | Required? | Description |\n|-----------------|------|-----------|-------------|\n| list | variable name | Yes | The variable name of the list (array) you want to append to the end of. |\n| item | any type  | Yes | The number or string item to be inserted at the end of the list. |\n\n[/parameters]\n\n[returns]\n\n### Returns\nBoolean true or false\n\n[/returns]\n\n[tips]\n\n### Tips\n- List(array) manipulation functions include: [appendItem(list, item)](/docs/applab/appendItem), [insertItem(list, index, item)](/docs/applab/insertItem) and [removeItem(list, index)](/docs/applab/removeItem).\n- Multiple calls to *appendItem()* can be slow because to expand the list, Javascript needs to create a new list one item larger and then copy all the items over before instering the new item at the end. If possible it is better to create the list intially large enough for all the possible items and *list[index]* to add new items at specific positions.\n\n[/tips]\n\n[bug]\n\nFound a bug in the documentation? Let us know at documentation@code.org\n\n[/bug]",
+  "parameters": [
+    "list",
+    "item"
   ],
+  "short_description": "\nappendItem(list, item)\nCategory: Variables",
   "syntax": "appendItem(list, item)"
 }

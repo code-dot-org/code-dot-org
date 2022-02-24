@@ -1,7 +1,8 @@
 {
   "key": "divideOperator",
-  "name": "divideOperator",
+  "name": "Divide operator",
   "category": "Math",
   "category_key": "math",
+  "short_description": "Game Lab - Divide operator",
   "syntax": "__ / __"
 }

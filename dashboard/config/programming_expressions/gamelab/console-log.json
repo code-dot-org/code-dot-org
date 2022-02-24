@@ -1,12 +1,11 @@
 {
   "key": "console.log",
-  "name": "console.log",
+  "name": "console.log()",
   "category": "Variables",
   "category_key": "variables",
-  "palette_params": [
-    {
-      "name": "message"
-    }
+  "parameters": [
+    "message"
   ],
+  "short_description": "Game Lab - console.log()",
   "syntax": "console.log(message)"
 }
