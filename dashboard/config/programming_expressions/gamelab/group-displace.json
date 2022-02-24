@@ -23,9 +23,6 @@
       "description": "The name of the target sprite or target group you want to check for a collision."
     }
   ],
-  "parameters": [
-    "target"
-  ],
   "return_value": "Boolean true or false. Changes output in the display after the sprites touch and drawSprites() is called.",
   "short_description": "Makes each sprite in the group push the target as long as they are touching each other. The sprites keep moving normally.",
   "syntax": "group.displace(target)",

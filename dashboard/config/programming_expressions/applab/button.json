@@ -47,10 +47,6 @@
       "description": "The text displayed within the button. "
     }
   ],
-  "parameters": [
-    "id",
-    "text"
-  ],
   "return_value": "No return value. Modifies screen only.",
   "short_description": "Creates a button on the screen displaying the text provided and referenced by the given id at default location (0,0).",
   "syntax": "button(id, text)",

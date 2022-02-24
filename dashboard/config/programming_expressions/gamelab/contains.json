@@ -23,9 +23,6 @@
       "description": "The sprite you want to find in the group."
     }
   ],
-  "parameters": [
-    "sprite"
-  ],
   "return_value": "Boolean true or false.",
   "short_description": "Checks if the sprite is in the group.",
   "syntax": "contains(sprite)",

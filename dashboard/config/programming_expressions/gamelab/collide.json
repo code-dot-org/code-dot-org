@@ -32,9 +32,6 @@
       "description": "The name of the target sprite or target group you want to check for a collision."
     }
   ],
-  "parameters": [
-    "target"
-  ],
   "return_value": "Boolean true or false. Changes output in the display after the sprites touch and drawSprites() is called.",
   "short_description": "Makes the sprite stop when it runs into the target. If the target is moving, it will push the sprite with it. The target keeps moving as before.",
   "syntax": "collide(target)",

@@ -41,9 +41,6 @@
       "description": "The color used for the background or a call to the rgb() command."
     }
   ],
-  "parameters": [
-    "color"
-  ],
   "return_value": "No return value. Changes output to the display only.",
   "short_description": "Sets the color used for the background of your game.",
   "syntax": "background(color)",

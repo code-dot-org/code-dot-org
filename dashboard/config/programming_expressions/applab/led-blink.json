@@ -41,9 +41,6 @@
       "description": "The time (in milliseconds) in between blinks. If left empty, the interval will default to 200."
     }
   ],
-  "parameters": [
-    "interval"
-  ],
   "short_description": "Makes the red LED blink.",
   "syntax": "led.blink(interval)"
 }

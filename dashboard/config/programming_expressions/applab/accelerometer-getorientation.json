@@ -8,5 +8,6 @@
       "name": "orientationType"
     }
   ],
+  "short_description": "accelerometer.getOrientation()",
   "syntax": "accelerometer.getOrientation(orientationType)"
 }

@@ -32,9 +32,6 @@
       "description": "The sprite to add to the group."
     }
   ],
-  "parameters": [
-    "sprite"
-  ],
   "return_value": "No return value.",
   "short_description": "Add a sprite to the group.",
   "syntax": "add(sprite)",
