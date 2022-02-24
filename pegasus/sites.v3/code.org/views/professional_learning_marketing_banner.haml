@@ -12,25 +12,25 @@
 
   .homepage-professional-learning-banner{class: homepage ? 'animate-text' : ''}
     %a.linktag#pl-2019{href: link_address}
-      .professional-learning-banner-desktop.desktop-feature
+      .professional-learning-banner-desktop.desktop-feature{class: homepage ? 'homepage' : ''}
         .banner
           %img{src: large_image}
-        .left
+        .text-wrapper
           .header= header_text
           .text= text
         .right-button
           %button
             #{button_label}
-      .professional-learning-banner-tablet.tablet-restrictive-feature{class: homepage ? 'gold-version' : ''}
+      .professional-learning-banner-tablet.tablet-restrictive-feature{class: homepage ? 'homepage' : ''}
         .banner
           %img{src: half_image}
-          .text-button-wrapper
+          .text-wrapper
             .header= header_text
             .text= text
             %button
               #{button_label}
-      .professional-learning-banner-phone.phone-feature{class: homepage ? 'gold-version' : ''}
-        .text-button-wrapper
+      .professional-learning-banner-phone.phone-feature{class: homepage ? 'homepage' : ''}
+        .text-wrapper
           .header= header_text
           .text= text
           %button

@@ -14,15 +14,7 @@ $dark_blue_background_colour: #0d4172;
 
 .homepage-professional-learning-banner.animate-text {
 
-  .left {
-    animation: 2s ease-out 0s 1 slideInFromLeft;
-  }
-
-  .header {
-    animation: fadein 2s;
-  }
-
-  .text {
+  .text-wrapper {
     animation: fadein 2s;
   }
 }
@@ -43,13 +35,32 @@ $dark_blue_background_colour: #0d4172;
     font-weight: bold;
   }
 
-  .header {
-    font-size: 18px;
-    font-weight: bold;
+  .text-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .header {
+      font-weight: bold;
+    }
   }
 
-  .text {
-    font-size: 14px;
+  .professional-learning-banner-desktop.homepage {
+    
+    .text-wrapper {
+      left: 3.5vw;
+      width: calc(100% - 650px);
+      line-height: 1.3;
+
+      .header {
+        padding-bottom: 5px;
+        font-size: 1.8vw;
+      }
+
+      .text {
+        font-size: 1.2vw;
+      }
+    }
   }
 
   .professional-learning-banner-desktop {
@@ -71,21 +82,20 @@ $dark_blue_background_colour: #0d4172;
       }
     }
 
-    .left {
-      position: absolute;
+    .text-wrapper {
       width: 50%;
+      left: 30px;
 
       .header {
         color: black;
-        padding: 15px 10px 5px 30px;
         position: relative;
+        font-size: 16px;
       }
 
       .text {
         color: black;
-        line-height: 1.3;
         position: relative;
-        left: 30px;
+        font-size: 14px;
         width: calc(100% - 150px);
       }
     }
@@ -103,17 +113,26 @@ $dark_blue_background_colour: #0d4172;
     }
   }
 
-  .professional-learning-banner-tablet.gold-version {
+  .professional-learning-banner-tablet.homepage {
 
-    .text-button-wrapper {
-      right: 64px;
+    .text-wrapper {
+      right: 24px;
+      width: 50%;
+      float: right;
 
       .header {
         color: black;
+        padding-bottom: 5px;
+        font-size: 2.5vw;
       }
       
       .text {
         color: black;
+        font-size: 2vw;
+      }
+
+      button {
+        margin-top: 10px;
       }
     }
   }
@@ -132,11 +151,8 @@ $dark_blue_background_colour: #0d4172;
       }
     }
 
-    .text-button-wrapper {
-      position: absolute;
+    .text-wrapper {
       width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
 
       .header {
         color: white;
@@ -159,10 +175,10 @@ $dark_blue_background_colour: #0d4172;
     }
   }
 
-  .professional-learning-banner-phone.gold-version {
+  .professional-learning-banner-phone.homepage {
     background-color: $gold_background_colour;
 
-    .text-button-wrapper {
+    .text-wrapper {
 
       .header {
         color: black;
@@ -181,11 +197,10 @@ $dark_blue_background_colour: #0d4172;
     height: 150px;
     background-color: $dark_blue_background_colour;
 
-    .text-button-wrapper {
-      position: absolute;
+    .text-wrapper {
       width: 100%;
-      top: 50%;
-      transform: translateY(-50%);
+      padding-left: 24px;
+      padding-right: 24px;
 
       .header {
         color: white;
