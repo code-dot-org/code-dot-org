@@ -745,7 +745,7 @@ class AbilityTest < ActiveSupport::TestCase
     assert Ability.new(workshop_admin).can? :update_scholarship_info, pd_enrollment
   end
 
-  test 'workshop admins can see or update incomplete applications' do
+  test 'workshop admins can see and update incomplete applications' do
     workshop_admin = create :workshop_admin
     incomplete_application = create :pd_teacher_application, status: 'incomplete'
 
