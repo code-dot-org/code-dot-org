@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef-2022-pilot",
-    "serialized_at": "2022-02-24 16:55:42 UTC",
+    "serialized_at": "2022-02-24 18:16:39 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1878,7 +1878,7 @@
       "key": "ab5fa58f-f1d8-420a-be1c-ad3c410a0ba6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** Ask students questions about events and behaviors. \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used ? What do they do?_\n    - \"patrolling\"\n    - \"jittering\"\n    - \"spinning right/left\" \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\nRevisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Review:** \n\n* _Do you remember what an event is?_\n\n* _Do you remember what a behavior is?_\n\n* _Can you remember some of the behaviors you have used? What do they do?_\n    - _\"patrolling\"_\n    - _\"jittering\"_\n    - _\"spinning right/left\"_ \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\nRevisit _events_ and _behaviors_ in programming. Additionally, introduce the Sprite Lab \"Costumes\" tool that allows students to draw their own costumes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Exploration” slide\n\n**Display:** Begin by showing Level 1 of today's lesson to your students. \n\n**Think/Pair:** Ask students to predict what will happen when the code is run, and to discuss with their neighbors. Run the code, and discuss the outcome.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Skill Building” slide\n\n**Display:** Show Level 2. Briefly demonstrate how to do the following: \n\n- Navigate between the _Code_ and _Costumes_ tabs. \n- Draw a costume. \n- Choose a costume from the costume library.\n- Change the virtual pet's sprite's costume to a custom one.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2034,7 +2034,7 @@
       "key": "3d4a2cd4-a71b-4347-b9e2-18d49009e87c",
       "position": 5,
       "properties": {
-        "description": "\nIn a moment, I’ll have volunteers to help us fill in the blanks. We’re going to use envelopes to keep track of the information they provide. Each envelope has a label that goes with one of the blank spaces. If I hand you an envelope, please write a word that goes with that label and place it inside, then hand it back to me.\n\n\n\n",
+        "description": "In a moment, I’ll have volunteers to help us fill in the blanks. We’re going to use envelopes to keep track of the information they provide. Each envelope has a label that goes with one of the blank spaces. If I hand you an envelope, please write a word that goes with that label and place it inside, then hand it back to me.\n\n\n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -2057,7 +2057,7 @@
       "key": "85ef0302-caf2-40d2-91bc-ffbdf3e0533e",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Story: Party Games” slide\n\n**Do This:**\n- Prepare the envelopes marked “adjective”, “object”, “body part”, and “number”. \n- Repeat the game above with the second story. This time you can begin with the labels before showing the story to build more suspense. The animations in the lesson slides are already set up to help facilitate this.\n\n\n####(Optional) Role Play Extension\n\nA connection can be made between the volunteers and the idea of an app having a “user”. In this analogy, your role as the teacher has been like the computer. You will request and store the information from the \"users\" and then work out how to put the story together. To involve more students and have them act out this model, assign roles:\n\n_Computers:_ Pass out and collect envelopes. Open each envelope as the story is being read to check for the values being stored.\n\n_Users:_ Submit the words needed to complete the story.\n\n_Reader:_ Read the finished story out loud.\n\n\n####Debrief\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _How is writing a blank space story different from writing a normal story?_\n\n**Discuss:** How is writing a blank space story different from writing a normal story?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Story: Party Games” slide\n\n**Do This:**\n- Prepare the envelopes marked “adjective”, “object”, “body part”, and “number”. \n- Repeat the game above with the second story. This time you can begin with the labels before showing the story to build more suspense. The animations in the lesson slides are already set up to help facilitate this.\n\n\n####(Optional) Role Play Extension\n\nA connection can be made between the volunteers and the idea of an app having a “user”. In this analogy, your role as the teacher has been like the computer. You will request and store the information from the \"users\" and then work out how to put the story together. To involve more students and have them act out this model, assign roles:\n\n_Computers:_ Pass out and collect envelopes. Open each envelope as the story is being read to check for the values being stored.\n\n_Users:_ Submit the words needed to complete the story.\n\n_Reader:_ Read the finished story out loud.\n\n\n####Debrief\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How is writing a blank space story different from writing a normal story?_",
         "name": "Party Games"
       },
       "seeding_key": {
@@ -2162,7 +2162,7 @@
       "key": "518519b6-2f8b-4310-9d7d-582bde027691",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Stories Wrap-Up three app images” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide"
       },
       "seeding_key": {
         "activity_section.key": "518519b6-2f8b-4310-9d7d-582bde027691",
@@ -2185,7 +2185,7 @@
       "key": "a063dcd4-385b-440b-bc55-fab06ce96de6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Stories Wrap-Up Variables” slide\n\n\n\n\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n\n\n\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "a063dcd4-385b-440b-bc55-fab06ce96de6",
@@ -2208,7 +2208,7 @@
       "key": "dfb5ab2d-2034-4eb1-9fca-06d99212a61d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next “Blank Space Stories Wrap-Up Variables” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next “Variables” slide"
       },
       "seeding_key": {
         "activity_section.key": "dfb5ab2d-2034-4eb1-9fca-06d99212a61d",
@@ -2231,7 +2231,7 @@
       "key": "414db3dd-e587-44e3-bd5e-1f1575d21f51",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Blank Space Stories Wrap-Up summary” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide"
       },
       "seeding_key": {
         "activity_section.key": "414db3dd-e587-44e3-bd5e-1f1575d21f51",
@@ -2242,7 +2242,7 @@
       "key": "a7935028-0d52-41b4-adc8-deb00454aa2a",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _How do you think blank space stories relate to learning computer science?_\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _How do you think blank space stories relate to learning computer science?_\n\n\n\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2265,7 +2265,7 @@
       "key": "43054004-5e7d-49a1-a99a-6da1f53ec97e",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Remind students what they did last class or ask them to share. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _How did we use variables in our \nBlank Space Stories?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prompts” slide\n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n",
+        "description": "**Do This:** Remind students what they did last class or ask them to share. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _How did we use variables in our \nBlank Space Stories?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prompts” slide\n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n",
         "name": "Review"
       },
       "seeding_key": {
@@ -2386,7 +2386,7 @@
       "key": "110774cf-28f2-4562-afe8-570492140c12",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n* _How do sprites, behaviors, events, and text work?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Review” slide\n\n**Do This:** Using the lesson slides, review the concepts that students have explored so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them. You can also edit this code with your class in this standalone [\"sandbox\"](https://studio.code.org/levels/27300) level.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _How do sprites, behaviors, events, and text work?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Review” slide\n\n**Do This:** Using the lesson slides, review the concepts that students have explored so far in the course: sprites, behaviors, events, and text. Finally, review how prompts and variables work. \n\n####Prediction\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them. You can also edit this code with your class in this standalone [\"sandbox\"](https://studio.code.org/levels/27300) level.",
         "name": "Review",
         "progression_name": "Prediction",
         "tips": [
@@ -2405,7 +2405,7 @@
       "key": "7b843efb-47fa-4eea-867b-1b0806abb6bc",
       "position": 2,
       "properties": {
-        "description": "###Exploration\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Exporation: Sample Programs” slide\n\n**Do This:** Have students explore the sample programs in level 1. This can be done as a whole class with discussion, with pairs sharing a device, or even individually. For each of the programs, have students think about how it works, who would use it, and any ideas it gives them about what they could make themselves. A good strategy here is to have students read the program’s code out loud, one line at a time, then talk about what it is for.",
+        "description": "###Exploration\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Exploration: Sample Programs” slide\n\n**Do This:** Have students explore the sample programs in level 1. This can be done as a whole class with discussion, with pairs sharing a device, or even individually. For each of the programs, have students think about how it works, who would use it, and any ideas it gives them about what they could make themselves. A good strategy here is to have students read the program’s code out loud, one line at a time, then talk about what it is for.",
         "progression_name": "Exploration: Sample Programs",
         "tips": [
           {
@@ -2598,7 +2598,7 @@
       "key": "24657a14-c156-413e-8d01-914b5c9fb646",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: \n* _How would you describe this interactive scene?_\n* _If you wanted to create this scene in Sprite Lab, what blocks of code would you need?_\n\n**Discussion goal**: Students should recognize parts of the scene that they already understand how to create, such as making sprites and giving them behaviors. They should also notice that many sprites are created all at once, and that each sprite responds to the user clicking it at a different time. This might invite discussion about new blocks of code that could be used here.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How would you describe this interactive scene?” slide\n\n**Discuss**: \n* _How would you describe this interactive scene?_\n* _If you wanted to create this scene in Sprite Lab, what blocks of code would you need?_\n\n**Discussion goal**: Students should recognize parts of the scene that they already understand how to create, such as making sprites and giving them behaviors. They should also notice that many sprites are created all at once, and that each sprite responds to the user clicking it at a different time. This might invite discussion about new blocks of code that could be used here.\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2607,20 +2607,8 @@
       }
     },
     {
-      "key": "e8b76c44-09a6-4566-94d0-c594187ffdb1",
-      "position": 2,
-      "properties": {
-        "description": "In this scene, we see multiple sprites that each begin spinning when the user clicks on them. We already know how to make sprites and give them a behavior. \n\nToday we’ll learn how to create a group of sprites with matching costumes and interact with each sprite separately. This will enable us to make busier animations and fun games.\n",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "e8b76c44-09a6-4566-94d0-c594187ffdb1",
-        "lesson_activity.key": "f16ed0d3-6f3b-4665-a2fc-a228760ad964"
-      }
-    },
-    {
       "key": "967d9b05-511e-4cdd-9d6f-bd4a6a429332",
-      "position": 3,
+      "position": 2,
       "properties": {
         "tips": [
           {
@@ -2631,6 +2619,18 @@
       },
       "seeding_key": {
         "activity_section.key": "967d9b05-511e-4cdd-9d6f-bd4a6a429332",
+        "lesson_activity.key": "f16ed0d3-6f3b-4665-a2fc-a228760ad964"
+      }
+    },
+    {
+      "key": "e8b76c44-09a6-4566-94d0-c594187ffdb1",
+      "position": 3,
+      "properties": {
+        "description": "In this scene, we see multiple sprites that each begin spinning when the user clicks on them. We already know how to make sprites and give them a behavior. \n\nToday we’ll learn how to create a group of sprites with matching costumes and interact with each sprite separately. This will enable us to make busier animations and fun games.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e8b76c44-09a6-4566-94d0-c594187ffdb1",
         "lesson_activity.key": "f16ed0d3-6f3b-4665-a2fc-a228760ad964"
       }
     },
@@ -2649,7 +2649,7 @@
       "key": "5a9a4e19-b34d-41f6-b26c-90532a0a1667",
       "position": 2,
       "properties": {
-        "description": "####Prediction (3 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prediction” slide\n\n**Do This**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
+        "description": "####Prediction (3 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do This**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2709,7 +2709,7 @@
       "key": "8d7437be-c48e-4827-9357-6f7da9e9ea2a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: How can you use sprites and events to make your program more complex?\n\n**Discussion goal**: Students should understand that opening up the event blocks (using the + sign) and dragging out the sprite block inside enables the program to change individual sprites one at a time when they are clicked by the user.  ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How can you use sprites and events to make your program more complex?_\n\n**Discussion goal**: Students should understand that opening up the event blocks (using the + sign) and dragging out the sprite block inside enables the program to change individual sprites one at a time when they are clicked by the user.  ",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -2721,7 +2721,7 @@
       "key": "914e32ac-23a7-4ce3-9304-2bc65b14d7e7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Discuss**: _Which of the following types of information change over time?_ \n* _Your first name_\n* _Your birthday_\n* _Your height_\n* _Your age_\n* _The temperature outside_\n* _The answer to 2+2_\n* _The capital of our country_\n* _Today’s date_\n* _The score in a game_\n\n**Do This**: Have students discuss which information would change over time and which would not. Some items might generate a larger discussion. For example, it is possible to change your first name or use a nickname. Also, over time, your height will stop changing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _When is it useful to change what is stored in a variable?_\n\n**Discussion goal**: Students should understand that they can create a variable that stores information that either stays the same or changes over time. In a game with points, a variable is responsible for keeping track of a user’s score throughout the game. Typically, this variable starts out being set to 0 and increases by 1 for every point that the user scores. The final score is reported at the end by printing out the variable. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n\n**Discuss**: _Which of the following types of information change over time?_ \n* _Your first name_\n* _Your birthday_\n* _Your height_\n* _Your age_\n* _The temperature outside_\n* _The answer to 2+2_\n* _The capital of our country_\n* _Today’s date_\n* _The score in a game_\n\n**Do This**: Have students discuss which information would change over time and which would not. Some items might generate a larger discussion. For example, it is possible to change your first name or use a nickname. Also, over time, your height will stop changing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _When is it useful to change what is stored in a variable?_\n\n**Discussion goal**: Students should understand that they can create a variable that stores information that either stays the same or changes over time. In a game with points, a variable is responsible for keeping track of a user’s score throughout the game. Typically, this variable starts out being set to 0 and increases by 1 for every point that the user scores. The final score is reported at the end by printing out the variable. \n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2823,7 +2823,7 @@
       "key": "a80c0627-7e45-4424-977e-73c2d0186c6d",
       "position": 2,
       "properties": {
-        "description": "####Prediction (3 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n",
+        "description": "####Prediction (3 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Predict” slide\n\n**Do this**: Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2832,10 +2832,26 @@
       }
     },
     {
-      "key": "886af41c-6efc-4f15-9dab-a7d73fb3bf37",
+      "key": "387f54ed-993c-4b38-9f44-8bf83cb1a796",
       "position": 3,
       "properties": {
-        "description": "####Skill Building and Exploration (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-4 - Skill Building” slide\n\n**Transition**: Move students to their computers. Encourage students to follow the instructions for each level.\n \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson includes two prediction puzzles: one to bridge what students have already learned and a second one to introduce the new blocks in the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "387f54ed-993c-4b38-9f44-8bf83cb1a796",
+        "lesson_activity.key": "b443d789-1bda-4e39-9e20-53e27e62c6c7"
+      }
+    },
+    {
+      "key": "886af41c-6efc-4f15-9dab-a7d73fb3bf37",
+      "position": 4,
+      "properties": {
+        "description": "####Skill Building and Exploration (10 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-5 - Skill Building” slide\n\n**Transition**: Move students to their computers. Encourage students to follow the instructions for each level.\n \n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2845,9 +2861,9 @@
     },
     {
       "key": "9723f75a-10c8-4c36-9193-44e84f8a43a6",
-      "position": 4,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Exploration” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Exploration” slide",
         "progression_name": "Exploration: Clicker Game"
       },
       "seeding_key": {
@@ -2857,9 +2873,9 @@
     },
     {
       "key": "53c914c7-703b-47b9-82fe-3400b8f6d36b",
-      "position": 5,
+      "position": 6,
       "properties": {
-        "description": "####Mini-Project (17 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-10 - Clicker Game” slide\n",
+        "description": "####Mini-Project (17 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-11 - Clicker Game” slide\n",
         "progression_name": "Mini-Project: Clicker Game"
       },
       "seeding_key": {
@@ -2883,7 +2899,7 @@
       "key": "8de14f7d-fbb0-4c7a-98e1-fec56cc16889",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _What makes an activity a game?_\n \n**Discussion Goal**: Students should understand that games usually involve players, score(s), a win or lose condition, and different outcomes. Each time a user plays through a game they might have a different outcome or score.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What makes an activity a game?_\n \n**Discussion Goal**: Students should understand that games usually involve players, score(s), a win or lose condition, and different outcomes. Each time a user plays through a game they might have a different outcome or score.\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2955,7 +2971,7 @@
       "key": "e9835242-f244-43b1-9937-5ef97a8c9ff9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you like about the games that your classmates made? What surprised you?_\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What did you like about the games that your classmates made? What surprised you?_\n\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -2967,7 +2983,7 @@
       "key": "7bb1b81a-3c0c-4052-8ac4-50f61daa32de",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _If you were a scientist, when might you want to simulate an experiment on a computer instead of in real life?_ \n\nEncourage students to consider experiments that might be dangerous or difficult to reproduce in real life.\n\n**Say**: _Today we're going to run a simulation to gather data about an experiment, just like scientists do._",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:  _If you were a scientist, when might you want to simulate an experiment on a computer instead of in real life?_ \n\nEncourage students to consider experiments that might be dangerous or difficult to reproduce in real life.\n\n**Say**: _Today we're going to run a simulation to gather data about an experiment, just like scientists do._",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3476,7 +3492,7 @@
       "key": "683370cc-a030-4ec1-ab7d-1f9b67511eb4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss:**\n- How can simulations be helpful in the real world? \n- How can simulations improve the way we test out ideas? \n\nThe goal of the discussion is for students to understand that simulations are a way to model complex systems in an interactive way. They should also see how simulations let people test out ideas quickly, cheaply and safely. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss:**\n- _How can simulations be helpful in the real world?_ \n- _How can simulations improve the way we test out ideas?_ \n\nThe goal of the discussion is for students to understand that simulations are a way to model complex systems in an interactive way. They should also see how simulations let people test out ideas quickly, cheaply and safely. "
       },
       "seeding_key": {
         "activity_section.key": "683370cc-a030-4ec1-ab7d-1f9b67511eb4",
@@ -3499,7 +3515,7 @@
       "key": "9b30d703-be1d-4007-aded-1c96d4d9c0d8",
       "position": 1,
       "properties": {
-        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**Video:** The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch ***AI: Machine Learning** as a class and debrief afterwards to help students build connections to the content.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n* _Do you think technology can predict your actions or interests? Explain why or why not._\n",
+        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**Video:** The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch ***AI: Machine Learning** as a class and debrief afterwards to help students build connections to the content.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _Do you think technology can predict your actions or interests? Explain why or why not._\n",
         "name": "Build Excitement!\r"
       },
       "seeding_key": {
@@ -3651,7 +3667,7 @@
       "key": "b1091517-144f-4044-b95e-5668d66e4f64",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** How could artificial intelligence be used to solve a problem in the world?\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _How could artificial intelligence be used to solve a problem in the world?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3675,7 +3691,7 @@
       "key": "228f9c3d-849e-4762-aa7f-cb5573802088",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:\n* _How does the Internet help connect us to other people?_\n\n####Vocabulary:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide\n\nThis lesson has several new and important words:\n\n - **IP Address** - *Say it with me: I-P Add-ress.*\n\nA number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - *Say it with me: D-N-S.* \n\nThe service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - *Say it with me: U-R-L.* \n\nAn easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - *Say it with me: In-ter-net.* \n\nA group of computers and servers that are connected to each other\n\n - **Servers** - *Say it with me: Ser-vers.* \n\nComputers that exist only to provide things to others",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: _How does the Internet help connect us to other people?_\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3684,13 +3700,24 @@
       }
     },
     {
-      "key": "0b8a1fa2-cae9-419b-85c5-400533be620c",
+      "key": "c2dac7d5-dae4-4bb2-a61f-0012206950ee",
       "position": 2,
+      "properties": {
+        "description": "####Vocabulary:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2dac7d5-dae4-4bb2-a61f-0012206950ee",
+        "lesson_activity.key": "02f4a751-e3ec-4d42-8b24-a91d56006a60"
+      }
+    },
+    {
+      "key": "0b8a1fa2-cae9-419b-85c5-400533be620c",
+      "position": 3,
       "properties": {
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "A quick preview is all you need here. These words will all be explained as part of the lesson, so it would be far less confusing to do a brief intro to the words as a \"see if you can spot these during the day\" type of heads-up.\n\n - **Fiber Optic Cable** - *Say it with me: Fye-ber Op-tic Cay-bl*\n"
+            "markdown": "A quick preview is all you need here. These words will all be explained as part of the lesson, so it would be far less confusing to do a brief intro to the words as a \"see if you can spot these during the day\" type of heads-up.\n"
           }
         ]
       },
@@ -3701,9 +3728,9 @@
     },
     {
       "key": "12ad2422-9939-4f41-9101-ce53f5c10ec0",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "A connection that uses light to transmit information\n\n - **Wi-Fi** - *Say it with me: Wye-Fye.* \n\nA wireless method of sending information using radio waves\n\n - **DSL/Cable** - *Say it with me: D-S-L / Cay-bl.*\n\nA method of sending information using telephone or television cables\n\n - **Packets** - *Say it with me: Pack-ets.* \n\nSmall chunks of information that have been carefully formed from larger chunks of information"
+        "description": "This lesson has several new and important words:\n\n - **IP Address** - *Say it with me: I-P Add-ress.*\n\nA number assigned to any item that is connected to the Internet\n\n - **DNS (Domain Name Service)** - *Say it with me: D-N-S.* \n\nThe service that translates URLs to IP addresses\n\n - **URL (Universal Resource Locator)** - *Say it with me: U-R-L.* \n\nAn easy-to-remember address for calling a web page (like www.code.org)\n\n - **Internet** - *Say it with me: In-ter-net.* \n\nA group of computers and servers that are connected to each other\n\n - **Servers** - *Say it with me: Ser-vers.* \n\nComputers that exist only to provide things to others \n\n- **Fiber Optic Cable** - *Say it with me: Fye-ber Op-tic Cay-bl*\n\nA connection that uses light to transmit information\n\n - **Wi-Fi** - *Say it with me: Wye-Fye.* \n\nA wireless method of sending information using radio waves\n\n - **DSL/Cable** - *Say it with me: D-S-L / Cay-bl.*\n\nA method of sending information using telephone or television cables\n\n - **Packets** - *Say it with me: Pack-ets.* \n\nSmall chunks of information that have been carefully formed from larger chunks of information"
       },
       "seeding_key": {
         "activity_section.key": "12ad2422-9939-4f41-9101-ce53f5c10ec0",
@@ -3712,7 +3739,7 @@
     },
     {
       "key": "49851966-c466-450e-bbd1-fb186464872a",
-      "position": 4,
+      "position": 5,
       "properties": {
         "tips": [
           {
@@ -3728,7 +3755,7 @@
     },
     {
       "key": "cabc8840-373c-4b1b-b2e6-eea16b9d64bf",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "\n####Getting the Message\n\n- It's quite likely that your students are aware of what the internet is, but they may not really understand what the internet does.\n\t- **Ask:** _What is the internet?_\n\t- _Is the internet a public place or a private place?_\n\t- (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)\n\t- _How does information get from place to place?_\n- _Let's say that I want to look at the webpage for Code.org. What do you suppose the process would be like for me to send a message to request that page?_\n\t- _What do I do as a user?_\n\t- _What do you think happens inside the internet?_\n\nSending a message over the internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Packets” slide\n\nEvery message we send through the internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those packets. Packets are specially formed chunks of information that are able to easily flow through any of the internet's channels.\n\nSometimes, a few of those packets will get lost, because the internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Servers” slide\n\n_Where do you think those packets are headed?_\n\n- Even if you're sending messages to another person, they first have to go to at least one server.\n\t- A server is a special computer that is supposed to be always on and ready to send and receive information.\n\t- Every website has a server.\n\t- Even email goes through servers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “IP Addresses” slide \n\nServers don't have names like you and I do. They're actually addressed using numbers. These numbers are called IP addresses, and they look a little strange.\n\n- For example: One of Code.org's IP addresses used to be 54.243.71.82\n\t- (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “DSL, Cable, Fiber Optic, or WiFi” slide\n\nThere are many ways to reach the internet from your house, school, or place of business.\n\n- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic)\n- Or you can connect using radio waves over the air through Wi-Fi.\n\nDirect connections are most reliable, but they can be inconvenient.\n\n- *Can you figure out why?*\n\t- (You have to be attached to a cable!)\n\nWi-Fi connections are super convenient, but the aren't always reliable.\n\n- *Can you figure out why not?*\n\t- (Radio waves bounce all over the place and can get lost.)"
       },
@@ -3739,7 +3766,7 @@
     },
     {
       "key": "4d811146-e596-48cd-bfa6-d120b1d7db95",
-      "position": 6,
+      "position": 7,
       "properties": {
         "tips": [
           {
@@ -3755,7 +3782,7 @@
     },
     {
       "key": "bea1fc61-c235-444a-9020-90e4503d3430",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “IP Addresses & DNS” video\n\nSo, if you're used to sending information to URLs (like www.code.org) and the servers actually have IP addresses for names (like 54.243.71.82) how does the Internet change from one to the other? That's what the DNS is for. The DNS (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the internet as we know it!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Create a DNS Table” slide\n\nWith that said, let's try to understand what the DNS does by making a little DNS table ourselves.\n\nPull out a piece of paper and draw a grid similar to that in the internet activity:\n\nSample of DNS Table:\n\n| #  | URL  | IP Address |\n| ------------- | ------------- | ------------- |\n| 1  | &nbsp;&nbsp;&nbsp;code.org&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;54.243.71.82&nbsp;&nbsp;  |\n| 2  |   |   |\n| 3  |   |   |\n| 4  |   |   |\n| 5  |   |   |\n\n\n<br/>First, we need to fill in this table.\n\n- Survey the class for their favorite websites and write the URLs in the left column\n- Use a site like ***get-site-ip.com** to find the IP addresses for those sites and write them in the corresponding rows of the right column.\n\nNow let's take this DNS Table and pretend to send messages through the internet!"
       },
@@ -3847,7 +3874,7 @@
       "key": "4b753541-b077-48a7-a285-413444736b69",
       "position": 3,
       "properties": {
-        "description": "\n####Reflect\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:**\n* _What's something you learned about the internet today?_\n"
+        "description": "\n####Reflect\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _What's something you learned about the internet today?_\n"
       },
       "seeding_key": {
         "activity_section.key": "4b753541-b077-48a7-a285-413444736b69",
@@ -3869,7 +3896,7 @@
       "key": "4a54784f-3018-4f27-8f7a-053af4275c80",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n\nToday, you'll start the final lesson of the unit, in which you will design and code your own project. \n\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _Today, you'll start the final lesson of the unit, in which you will design and code your own project._\n\n_Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “End of Course Project” slide\n\n**Goal:** This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Day 1 - Explore” slide\n\nGive students a day to play with and remix the projects found on Code Studio. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be spending the next several weeks working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Projects” slide",
         "name": "Explore"
       },
       "seeding_key": {
@@ -5393,6 +5420,28 @@
     {
       "chapter": 54,
       "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_predict2"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022-pilot",
+        "activity_section.key": "a80c0627-7e45-4424-977e-73c2d0186c6d"
+      },
+      "level_keys": [
+        "courseF_variables2_predict2"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5416,8 +5465,8 @@
       ]
     },
     {
-      "chapter": 55,
-      "position": 3,
+      "chapter": 56,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5441,8 +5490,8 @@
       ]
     },
     {
-      "chapter": 56,
-      "position": 4,
+      "chapter": 57,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -5466,8 +5515,8 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 5,
+      "chapter": 58,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5491,8 +5540,8 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 6,
+      "chapter": 59,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5516,8 +5565,8 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 7,
+      "chapter": 60,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5541,8 +5590,8 @@
       ]
     },
     {
-      "chapter": 60,
-      "position": 8,
+      "chapter": 61,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -5566,8 +5615,8 @@
       ]
     },
     {
-      "chapter": 61,
-      "position": 9,
+      "chapter": 62,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -5591,8 +5640,8 @@
       ]
     },
     {
-      "chapter": 62,
-      "position": 10,
+      "chapter": 63,
+      "position": 11,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -5616,7 +5665,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5641,7 +5690,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5666,7 +5715,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5691,7 +5740,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5716,7 +5765,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5741,7 +5790,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -5766,7 +5815,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -5791,7 +5840,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -5816,7 +5865,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5841,7 +5890,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5866,7 +5915,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5891,7 +5940,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5916,7 +5965,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5941,7 +5990,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5966,7 +6015,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5991,7 +6040,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6016,7 +6065,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6041,7 +6090,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6066,7 +6115,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6091,7 +6140,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6116,7 +6165,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6141,7 +6190,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -6166,7 +6215,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -6191,7 +6240,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -6216,7 +6265,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6241,7 +6290,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6266,7 +6315,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6291,7 +6340,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6316,7 +6365,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6341,7 +6390,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6366,7 +6415,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6391,7 +6440,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6416,7 +6465,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6441,7 +6490,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6466,7 +6515,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6491,7 +6540,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7146,6 +7195,18 @@
         "level.key": "courseF_variables2_predict_2022_pilot",
         "script_level.level_keys": [
           "courseF_variables2_predict_2022_pilot"
+        ],
+        "lesson.key": "[New] Counting with Variables",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "coursef-2022-pilot",
+        "activity_section.key": "a80c0627-7e45-4424-977e-73c2d0186c6d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_predict2",
+        "script_level.level_keys": [
+          "courseF_variables2_predict2"
         ],
         "lesson.key": "[New] Counting with Variables",
         "lesson_group.key": "lessonGroup-8",
