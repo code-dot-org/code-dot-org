@@ -30,6 +30,7 @@ export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
  * @type {CircuitPlaygroundBoard} The current board controller, populated when
  * connected, null when not connected.  There can be only one at any time.
  */
+console.log('in toolkit.js, before let currentBoard = null;');
 let currentBoard = null;
 
 /**
