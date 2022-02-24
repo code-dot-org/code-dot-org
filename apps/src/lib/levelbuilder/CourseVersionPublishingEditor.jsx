@@ -270,7 +270,11 @@ export default class CourseVersionPublishingEditor extends Component {
                 <tr>
                   <td style={styles.tableBorder}>Deprecated</td>
                   <td style={styles.tableBorder}>
-                    A course that has been deprecated.
+                    A course that has been deprecated. <br />
+                    <br />
+                    For Deeper Learning Courses, deprecation prevents Peer
+                    Reviews conducted as part of this unit from being displayed
+                    in the admin-only Peer Review Dashboard.
                   </td>
                 </tr>
               </tbody>
