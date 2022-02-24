@@ -29184,6 +29184,7 @@ en:
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
+          name: coursea-2022
         express-2022:
           lessons:
             Programming with Angry Birds:
@@ -31673,7 +31674,11 @@ en:
           lessons: {}
           lesson_groups: {}
         self-paced-pl-csa3-2022:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Introduction to JavaLab
+            lesson-2:
+              name: Using variables in Java
           lesson_groups: {}
           name: self-paced-pl-csa3-2022
           title: Support for text-based programming
