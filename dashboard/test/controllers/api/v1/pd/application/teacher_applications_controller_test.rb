@@ -17,9 +17,6 @@ module Api::V1::Pd::Application
       @program_manager = create :program_manager
       @partner = @program_manager.regional_partners.first
       @application = create TEACHER_APPLICATION_FACTORY, regional_partner: @partner
-      @incomplete_application = create :pd_teacher_application, form_data_hash: (
-        build :pd_teacher_application_hash
-      ), status: 'incomplete'
     end
 
     setup do
