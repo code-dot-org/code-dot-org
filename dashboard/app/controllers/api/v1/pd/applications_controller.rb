@@ -206,7 +206,10 @@ module Api::V1::Pd
     private
 
     def get_applications_by_role(role, include_associations: true)
-      applications_of_type = @applications.where(type: TYPES_BY_ROLE[role].try(&:name))
+      # hide incomplete applications for people who are not workshop admins
+      applications_of_type = current_user.workshop_admin? ?
+        @applications.where(type: TYPES_BY_ROLE[role].try(&:name)) :
+        @applications.where.not(status: 'incomplete').where(type: TYPES_BY_ROLE[role].try(&:name))
       applications_of_type = applications_of_type.includes(:user, :regional_partner) if include_associations
 
       case role

@@ -40,6 +40,7 @@ module Api::V1::Pd
 
       @csd_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csd'
       @csd_teacher_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner
+      @csd_incomplete_application_with_partner = create TEACHER_APPLICATION_FACTORY, course: 'csd', regional_partner: @regional_partner, status: 'incomplete'
       @csp_teacher_application = create TEACHER_APPLICATION_FACTORY, course: 'csp'
       @csp_facilitator_application = create FACILITATOR_APPLICATION_FACTORY, course: 'csp', regional_partner: @regional_partner
 
@@ -110,6 +111,14 @@ module Api::V1::Pd
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
       assert_response :success
+      assert_equal [@csd_teacher_application_with_partner.id, @csd_incomplete_application_with_partner.id],
+        JSON.parse(@response.body).map {|r| r['id']}
+    end
+
+    test 'quick view if not admin returns applications without incomplete apps and with filter' do
+      sign_in @program_manager
+      get :quick_view, params: {role: 'csd_teachers', regional_partner_value: @regional_partner.id}
+      assert_response :success
       assert_equal [@csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
     end
 
@@ -117,7 +126,12 @@ module Api::V1::Pd
       sign_in @workshop_admin
       get :quick_view, params: {role: 'csd_teachers'}
       assert_response :success
-      assert_equal [@csd_teacher_application.id, @csd_teacher_application_with_partner.id], JSON.parse(@response.body).map {|r| r['id']}
+      assert_equal [
+        @csd_teacher_application.id,
+        @csd_teacher_application_with_partner.id,
+        @csd_incomplete_application_with_partner.id
+      ],
+        JSON.parse(@response.body).map {|r| r['id']}
     end
 
     test "quick view returns applications with regional partner filter set to no partner" do
