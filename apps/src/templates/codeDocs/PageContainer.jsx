@@ -10,7 +10,7 @@ export default function PageContainer({
   currentCategoryKey
 }) {
   return (
-    <div>
+    <>
       <h1>
         {i18n.programmingEnvironmentDocumentation({
           programmingEnvironmentTitle
@@ -23,7 +23,7 @@ export default function PageContainer({
         />
         {children}
       </div>
-    </div>
+    </>
   );
 }
 
