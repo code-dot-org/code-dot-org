@@ -16,7 +16,7 @@
   "actions": "Actions",
   "add": "Add",
   "additionalInformationHeader": "Additional Information",
-  "additionalInformationText": "For more information, see [{externalDocumentationUrl}]({externalDocumentationUrl})",
+  "additionalInformationText": "For more information, see {externalDocumentationUrl}.",
   "addNewSection": "Add New Section",
   "addParentEmailModal_confirmedParentEmail_label": "Confirm parent/guardian email address",
   "addParentEmailModal_confirmedParentEmail_mustMatch": "Email addresses must match.",
