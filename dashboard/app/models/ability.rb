@@ -345,6 +345,7 @@ class Ability
         Lesson,
         ProgrammingEnvironment,
         ProgrammingExpression,
+        ReferenceGuide,
         CourseOffering,
         UnitGroup,
         Resource,
