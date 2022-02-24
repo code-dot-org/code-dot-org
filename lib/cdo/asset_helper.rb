@@ -7,6 +7,7 @@ class AssetHelper
     "#{CDO.root_dir}/dashboard/public/blockly/js/manifest.json"
   end
 
+  # Manifest file for the offline feature's webpack build output.
   def offline_webpack_manifest_path
     "#{CDO.root_dir}/dashboard/public/blockly/js/offline-manifest.json"
   end
@@ -49,6 +50,7 @@ class AssetHelper
     path
   end
 
+  # Returns the asset path for assets handled by the offline feature's webpack build.
   def webpack_offline_asset_path(asset)
     path = webpack_offline_manifest[asset]
     raise "Invalid webpack asset name: '#{asset}'" unless path
@@ -60,6 +62,7 @@ def webpack_asset_path(asset)
   AssetHelper.instance.webpack_asset_path(asset)
 end
 
+# Returns the asset path for assets handled by the offline feature's webpack build.
 def webpack_offline_asset_path(asset)
   AssetHelper.instance.webpack_offline_asset_path(asset)
 end

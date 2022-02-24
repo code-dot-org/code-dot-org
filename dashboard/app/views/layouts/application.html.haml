@@ -9,6 +9,7 @@
         var _jipt = [];
         _jipt.push(['project', 'codeorg']);
       %script{type: "text/javascript", src: "//cdn.crowdin.com/jipt/jipt.js"}
+    -# Setup variables used by the Offline feature.
     :javascript
       window.OFFLINE_SERVICE_WORKER_PATH =
         "#{webpack_offline_asset_path('js/offline-service-worker.js')}"
