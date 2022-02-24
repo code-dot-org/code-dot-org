@@ -29,10 +29,6 @@
       "description": "Length of how long the buzzer will play the frequency for in milliseconds. "
     }
   ],
-  "parameters": [
-    "frequency",
-    "duration"
-  ],
   "short_description": "Makes the buzzer play at a specific frequency and duration.",
   "syntax": "buzzer.frequency(frequency, duration)",
   "tips": "* Extremely low and high frequencies can come out sounding distorted. The most usable frequencies are in the range of 261-987.\r\n* The higher the frequency, the higher the tone will sound. "
