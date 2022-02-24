@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {createRef, useEffect} from 'react';
 import {parseElement} from '@cdo/apps/xml';
 import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
+import {Link} from '@dsco_/link';
 
 export default function EmbeddedBlock({blockName, link}) {
   const blockRef = createRef();
@@ -23,13 +24,13 @@ export default function EmbeddedBlock({blockName, link}) {
 
   return (
     <div>
-      <a href={link}>
+      <Link href={link}>
         <div
           id={`embedded-block-${blockName}`}
           ref={blockRef}
           style={{paddingBottom: 5}}
         />
-      </a>
+      </Link>
     </div>
   );
 }

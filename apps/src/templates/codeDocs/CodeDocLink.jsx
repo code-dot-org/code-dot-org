@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
-import {Link} from '@dsco_/link';
+import {TextLink} from '@dsco_/link';
 
 export default function CodeDocLink({programmingExpression}) {
   if (programmingExpression.blockName) {
@@ -13,9 +13,10 @@ export default function CodeDocLink({programmingExpression}) {
     );
   } else {
     return (
-      <Link href={programmingExpression.link} weight="regular">
-        {programmingExpression.name}
-      </Link>
+      <TextLink
+        href={programmingExpression.link}
+        text={programmingExpression.name}
+      />
     );
   }
 }

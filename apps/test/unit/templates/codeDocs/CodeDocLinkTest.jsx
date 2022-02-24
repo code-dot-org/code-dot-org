@@ -13,10 +13,10 @@ describe('CodeDocLink', () => {
         }}
       />
     );
-    expect(wrapper.find('Link').length).to.equal(1);
+    expect(wrapper.find('TextLink').length).to.equal(1);
     expect(
       wrapper
-        .find('Link')
+        .find('TextLink')
         .first()
         .props().href
     ).to.equal('/docs/applab/code');
@@ -33,7 +33,7 @@ describe('CodeDocLink', () => {
         }}
       />
     );
-    expect(wrapper.find('Link').length).to.equal(0);
+    expect(wrapper.find('TextLink').length).to.equal(0);
     expect(wrapper.find('EmbeddedBlock').length).to.equal(1);
   });
 });
