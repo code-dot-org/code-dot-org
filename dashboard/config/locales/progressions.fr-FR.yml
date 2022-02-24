@@ -325,8 +325,12 @@ fr:
       Velocity and the Counter Pattern: Vélocité et le contre-modèle
       Velocity and the Counter Pattern Review: Révision de la vélocité et du contre-modèle
       Video: Vidéo
+      'Video:  Minecraft - The Agent': 'Vidéo : Minecraft - L''agent'
+      'Video:  Text  and Prompts': 'Vidéo : Texte et invites '
       'Video: "If/Else"': 'Video: « Si/Sinon »'
       'Video: "If/Else" Statements': 'Vidéo : Instructions conditionnelles « Si/Sinon »'
+      'Video: AI: What is Machine Learning?': 'Vidéo : IA : Qu''est-ce que l''apprentissage
+        automatique ? '
       'Video: Artist Intro with JR Hildebrand': 'Vidéo : Intro l''Artiste avec JR
         Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Vidéo : Intro l''Artiste avec JR
@@ -356,6 +360,7 @@ fr:
       'Video: Events': " Événements"
       'Video: Follow The Digital Trail': 'Vidéo :  Suivez la piste numérique'
       'Video: For Loops': 'Video: Les Boucles « Pour »'
+      'Video: Functions': 'Vidéo: Les Fonctions'
       'Video: Getting Loopy': 'Vidéo : Faire des boucles '
       'Video: Happy Maps - Unplugged Activity': 'Vidéo : Happy Maps - Activité hors
         ligne'
@@ -373,7 +378,7 @@ fr:
       'Video: Introducing Sprite Lab': " Introduction au Labo des Lutins"
       'Video: Introduction to Play Lab': " Introduction au Labo de jeux"
       'Video: Introduction to Sprites': 'Vidéo : Introduction aux sprites'
-      'Video: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle draw'
+      'Video: Introduction to the Draw Loop': 'Vidéo : Introduction à la boucle dessine'
       'Video: Loops in Artist': " Les Boucles dans Artiste"
       'Video: Loops with the Artist': 'Vidéo : Les Boucles avec l''Artiste'
       'Video: Maze Intro - Programming with Blocks': 'Vidéo - Intro Maze : Programmation
@@ -427,6 +432,8 @@ fr:
       'Video: Warm Up': 'Vidéo : échauffement'
       'Video: What Makes a Computer, a Computer?': 'Vidéo : De quoi est fait un ordinateur
         ?'
+      'Video: What is Machine Learning?': 'Vidéo : Qu''est-ce que l''apprentissage
+        automatique ?'
       'Video: While Loops with the Farmer': " Les Boucles Tant Que avec la Fermière"
       'Video: Wrap-up': 'Vidéo : Conclusion '
       Warm Up: Warm-up (Séance d’échauffement)

@@ -18,6 +18,7 @@ mr-IN:
   twentyhours_heading: संगणक शास्त्राशी ओळख करून पहा
   twentyhours_text: "'आवर ऑफ कोड' चा पहिला भाग संपला ? आमच्या पुढच्या आभ्यास्क्रमामध्ये
     संगणक शास्त्र आणि प्रोग्रामिंग च्या अजून संकल्पना शिका."
+  csedweek_map_search_reset: रिसेट करा
   write_your_first_program: तुमचा पहिला कॉम्प्युटर प्रोग्रॅम लिहा
   third_party_gradelevel_kto8: इयत्ता बालवाडी-8
   third_party_gradelevel_kto2: इयत्ता बालवाडी-2
@@ -49,6 +50,7 @@ mr-IN:
   homepage_slot_text_flappy: फ्लॅपी कोड
   homepage_action_text_girlvideo: एका मुलीला प्रोत्साहन द्या
   homepage_slot_text_title_hoc: अवर ऑफ कोड
+  homepage_slot_text_link_hoc: अवर ऑफ कोड करून पहा
   videos_more: आदर्श व्यक्ती आणि सेलिब्रिटीज असलेले अजून काही <a href='%{inspiring_videos_playlist}'>प्रेरणादायक
     व्हिडीओज</a>
   videos_more_markdown: आदर्श व्यक्ती आणि सेलिब्रिटीज असलेले अजून काही [प्रेरणादायक
@@ -324,6 +326,9 @@ mr-IN:
   user_header_create: 'बनवा '
   user_header_artist: आर्टीस्ट
   user_header_dance: डांस पार्टी
+  user_header_flappy: फ्लॅपी
+  user_header_view_my_projects: माझे प्रोजेक्ट्स पहा
+  view_all_sections: सर्व विभाग पहा
   applab_tile_subtitle: 'ब्लॉकवर आधारित प्रोग्रॅमिंगचा वापर करून जावास्क्रिप्टमध्ये  तुमचे
     स्वत:चे अॅप तयार करा किंवा टेक्स्टवर आधारित प्रोग्रॅमिंग करून तुमचे कौशल्य पुढच्या
     पातळीला न्या. (फक्त इंग्रजी)    '
@@ -405,6 +410,8 @@ mr-IN:
   hoc2018_mc_back_journey: 'अवर ऑफ कोडसाठी एका नव्या कोऱ्या कृतीसह आता माईनक्राफ्ट
     पुन्हा परत आले आहे! माईनक्राफ्टमधून कोडद्वारे प्रवास करा. '
   hoc2018_mc_teacher_guide: शिक्षक मार्गदर्शक पहा
+  hoc2018_mc_minecraft_education: माईनक्राफ्ट एज्युकेशन
+  hoc2018_mc_continue_learning: माईनक्राफ्टसह शिकणे सुरू ठेवा.
   hoc2018_mc_go_to_mc_education: 'माईनक्राफ्ट एज्युकेशनकडे जा '
   hoc2018_mc_short_description_shorter: तुमच्या सर्जनशीलतेचा आणि समस्या सोडवण्याच्या
     कौशल्यांचा उपयोग संहितेसह पाण्याखालील जग शोधण्यासाठी आणि निर्माण करण्यासाठी करा.

@@ -71,7 +71,7 @@ class JavabuilderSessionsController < ApplicationController
     )
 
     if use_dashboard_sources == 'false'
-      success = JavalabFilesHelper.upload_project_files(channel_id, level_id, encoded_payload)
+      success = JavalabFilesHelper.upload_project_files(channel_id, level_id, request.host, encoded_payload)
       return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
     end
 

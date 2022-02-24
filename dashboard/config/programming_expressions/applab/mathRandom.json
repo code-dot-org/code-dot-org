@@ -1,7 +1,0 @@
-{
-  "key": "mathRandom",
-  "name": "Math.random",
-  "category": "Math",
-  "category_key": "math",
-  "syntax": "Math.random"
-}
