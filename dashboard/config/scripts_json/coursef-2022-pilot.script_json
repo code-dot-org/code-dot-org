@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "notice": "Attention teachers!",
+          "details": "We need your feedback! Please look for the survey links on this course page and let us know what you think.",
+          "link": "",
+          "type": "information",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -20,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef-2022-pilot",
-    "serialized_at": "2022-02-23 21:19:36 UTC",
+    "serialized_at": "2022-02-23 23:52:06 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4039,6 +4048,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PowerOfWords-Unplugged2022_2022_pilot"
+        ],
         "progression": "The Power of Words - Unplugged Activity"
       },
       "bonus": false,
@@ -4061,6 +4073,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_2022_pilot"
+        ],
         "progression": "Video: Introducing Sprite Lab"
       },
       "bonus": false,
@@ -4083,6 +4098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_intro_apps2022_2022_pilot"
+        ],
         "progression": "Exploration: Sample Apps"
       },
       "bonus": false,
@@ -4105,6 +4123,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_predict_2022_pilot"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4127,6 +4148,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2021-2_2022_pilot"
+        ],
         "progression": "Video: How to Make a Sprite"
       },
       "bonus": false,
@@ -4149,6 +4173,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_make_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4171,6 +4198,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_positioning_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4193,6 +4223,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_moreSprites_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4215,6 +4248,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_properties_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4237,6 +4273,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_behaviors_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4259,6 +4298,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_practice2022_2022_pilot"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4281,6 +4323,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_freeplay2022_2022_pilot"
+        ],
         "progression": "Free Play: Make a Scene"
       },
       "bonus": false,
@@ -4303,6 +4348,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_predict_2022_pilot"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4325,6 +4373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_events_2022_pilot"
+        ],
         "progression": "Video: Sprites in Action"
       },
       "bonus": false,
@@ -4347,6 +4398,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_review_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4369,6 +4423,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_time_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4391,6 +4448,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_key_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4413,6 +4473,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_stops_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4435,6 +4498,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_conflict_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4457,6 +4523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_practice2022_2022_pilot"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4479,6 +4548,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_freeplay2022_2022_pilot"
+        ],
         "progression": "Free Play: Make an Interactive Scene"
       },
       "bonus": false,
@@ -4501,6 +4573,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 1_2022_pilot"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -4523,6 +4598,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 2_2022_pilot"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -4545,6 +4623,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 3_2022_pilot"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -4567,6 +4648,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 5_2022_pilot"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -4589,6 +4673,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 6_2022_pilot"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -4611,6 +4698,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 7_2022_pilot"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -4633,6 +4723,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 8_2022_pilot"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -4655,6 +4748,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021_22022_2022_pilot"
+        ],
         "progression": "Video: Unplugged Variables in Envelopes"
       },
       "bonus": false,
@@ -4677,6 +4773,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_predict_2022_pilot"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4699,6 +4798,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_prompts_2022_pilot"
+        ],
         "progression": "Video: Text and Prompts"
       },
       "bonus": false,
@@ -4721,6 +4823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_review_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4743,6 +4848,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_print_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4765,6 +4873,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_events_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4787,6 +4898,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_prompts_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4809,6 +4923,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_answer_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4831,6 +4948,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_concat_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4853,6 +4973,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_practice2022_2022_pilot"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4875,6 +4998,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_label_predict_2022_pilot"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4897,6 +5023,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_samples2022_2022_pilot"
+        ],
         "progression": "Exploration: Sample Programs"
       },
       "bonus": false,
@@ -4919,6 +5048,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_stop2022_2022_pilot"
+        ],
         "progression": "Planning"
       },
       "bonus": false,
@@ -4941,6 +5073,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_projects2022_2022_pilot"
+        ],
         "progression": "Mini-Project: User Input Programs"
       },
       "bonus": false,
@@ -4963,6 +5098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_predict_2022_pilot"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4985,6 +5123,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_video_2022_pilot"
+        ],
         "progression": "Video: Lots of Sprites"
       },
       "bonus": false,
@@ -5007,6 +5148,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_make_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5029,6 +5173,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_size_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5051,6 +5198,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_say_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5073,6 +5223,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_costume_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5095,6 +5248,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_behaviors_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5117,6 +5273,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_touch_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5139,6 +5298,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_practice_2022_pilot"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5161,6 +5323,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_freeplay_2022_pilot"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5183,6 +5348,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_2022_pilot"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -5205,6 +5373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5227,6 +5398,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5249,6 +5423,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_click_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5271,6 +5448,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_explore_2022_pilot"
+        ],
         "progression": "Exploration: Clicker Game"
       },
       "bonus": false,
@@ -5293,6 +5473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_2022_pilot"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5315,6 +5498,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_2022_pilot"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5337,6 +5523,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_2022_pilot"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5359,6 +5548,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score_2022_pilot"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5381,6 +5573,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_2022_pilot"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5403,6 +5598,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_samples_2022_pilot"
+        ],
         "progression": "Exploration: Sample Programs"
       },
       "bonus": false,
@@ -5425,6 +5623,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_player_move_2022_pilot"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5447,6 +5648,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_items_2022_pilot"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5469,6 +5673,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_score_variable_2022_pilot"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5491,6 +5698,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_remove_2022_pilot"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5513,6 +5723,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_more_sprites_2022_pilot"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5535,6 +5748,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_score_2022_pilot"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5557,6 +5773,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_freeplay_2022_pilot"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5579,6 +5798,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "simstarter_2022_pilot"
+        ],
         "progression": "Run a simulation"
       },
       "bonus": false,
@@ -5601,6 +5823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "simconfig_2022_pilot"
+        ],
         "progression": "Modify simulation variables"
       },
       "bonus": false,
@@ -5623,6 +5848,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "simcustom_2022_pilot"
+        ],
         "progression": "Customize"
       },
       "bonus": false,
@@ -5645,6 +5873,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story2022_2022_pilot"
+        ],
         "progression": "Welcome to Monster Town"
       },
       "bonus": false,
@@ -5667,6 +5898,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_intro_video_2022_pilot"
+        ],
         "progression": "Video: Outbreak Simulator: Introduction"
       },
       "bonus": false,
@@ -5689,6 +5923,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak1_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5711,6 +5948,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_events_video_2022_pilot"
+        ],
         "progression": "Video: Outbreak Simulator: Events"
       },
       "bonus": false,
@@ -5733,6 +5973,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak2_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5755,6 +5998,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak3_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5777,6 +6023,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak4_2022_pilot"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5799,6 +6048,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_scientist_video_2022_pilot"
+        ],
         "progression": "Video: Outbreak Simulator: Thinking Like a Scientist"
       },
       "bonus": false,
@@ -5821,6 +6073,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story22022_2022_pilot"
+        ],
         "progression": "Learning from Simulations"
       },
       "bonus": false,
@@ -5843,6 +6098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak5_2022_pilot"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -5865,6 +6123,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak6_2022_pilot"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -5887,6 +6148,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak7_2022_pilot"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -5909,6 +6173,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_outro_video_2022_pilot"
+        ],
         "progression": "Video: Outbreak Simulator: Free Play"
       },
       "bonus": false,
@@ -5931,6 +6198,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak8_2022_pilot"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -5953,6 +6223,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Machine_Learning_2022_pilot"
+        ],
         "progression": "Video: AI: What is Machine Learning?"
       },
       "bonus": false,
@@ -5975,6 +6248,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_FishVTrash_2022_pilot"
+        ],
         "progression": "Train AI to Clean the Ocean"
       },
       "bonus": false,
@@ -5997,6 +6273,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_CreaturesVTrashDemo_2022_pilot"
+        ],
         "progression": "Train AI to Clean the Ocean"
       },
       "bonus": false,
@@ -6019,6 +6298,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_CreaturesVTrash_2022_pilot"
+        ],
         "progression": "Train AI to Clean the Ocean"
       },
       "bonus": false,
@@ -6041,6 +6323,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Training_Data_2022_pilot"
+        ],
         "progression": "Video: Training Data & Bias"
       },
       "bonus": false,
@@ -6063,6 +6348,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Short_2022_pilot"
+        ],
         "progression": "Using Training Data"
       },
       "bonus": false,
@@ -6085,6 +6373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Societal_Implications_2022_pilot"
+        ],
         "progression": "Video: Impacts on Society"
       },
       "bonus": false,
@@ -6107,6 +6398,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Long_2022_pilot"
+        ],
         "progression": "Teach A.I. a new word"
       },
       "bonus": false,
@@ -6129,6 +6423,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet-Unplugged2022_2022_pilot"
+        ],
         "progression": "The Internet - Unplugged Activity"
       },
       "bonus": false,
@@ -6151,6 +6448,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_EOC_examples2022_2022_pilot"
+        ],
         "progression": "Example projects"
       },
       "bonus": false,
@@ -6173,6 +6473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Project_SpriteLab_2022_pilot"
+        ],
         "progression": "Create your project"
       },
       "bonus": false,
