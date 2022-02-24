@@ -1,7 +1,8 @@
 {
   "key": "equalityOperator",
-  "name": "equalityOperator",
+  "name": "Equality operator",
   "category": "Math",
   "category_key": "math",
+  "short_description": "Game Lab - Equality operator",
   "syntax": "__ == __"
 }
