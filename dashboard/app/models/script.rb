@@ -290,7 +290,6 @@ class Script < ApplicationRecord
     project_sharing
     curriculum_umbrella
     tts
-    deprecated
     is_course
     show_calendar
     weekly_instructional_minutes
@@ -1527,7 +1526,7 @@ class Script < ApplicationRecord
       assigned_section_id: assigned_section_id,
       hasStandards: has_standards_associations?,
       tts: tts?,
-      deprecated: deprecated?,
+      deprecated: get_published_state == SharedCourseConstants::PUBLISHED_STATE.deprecated,
       is_course: is_course?,
       is_migrated: is_migrated?,
       scriptPath: script_path(self),
@@ -1777,7 +1776,6 @@ class Script < ApplicationRecord
       :has_verified_resources,
       :project_sharing,
       :tts,
-      :deprecated,
       :is_course,
       :show_calendar,
       :is_migrated,
