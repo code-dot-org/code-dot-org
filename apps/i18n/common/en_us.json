@@ -1451,6 +1451,7 @@
   "privacyLinkToPolicy": "Just looking for a letter about Code.org's privacy policy for families? [Check here]({privacyPolicyLink}).",
   "professionalLearning": "Professional Learning",
   "professionalLearningDescription": "Our highly-rated professional learning prepares you for your next computer science class.",
+  "programmingEnvironmentDocumentation": "{programmingEnvironmentTitle} Documentation",
   "progress": "Progress",
   "progressLegendAssessment": "Assessment",
   "progressOnCSTAStandards": "Progress on CSTA Standards",

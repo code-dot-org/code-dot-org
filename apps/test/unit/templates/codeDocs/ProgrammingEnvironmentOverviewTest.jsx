@@ -42,19 +42,12 @@ describe('ProgrammingEnvironmentOverview', () => {
     ).to.eql(['World', 'Sprites']);
   });
 
-  it('renders title and description if provided', () => {
+  it('renders description if provided', () => {
     const wrapper = shallow(
       <ProgrammingEnvironmentOverview
         programmingEnvironment={defaultProgrammingEnvironment}
       />
     );
-    expect(wrapper.find('h1').length).to.equal(1);
-    expect(
-      wrapper
-        .find('h1')
-        .first()
-        .text()
-    ).to.equal('Sprite Lab');
     expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(1);
     expect(
       wrapper
@@ -65,8 +58,7 @@ describe('ProgrammingEnvironmentOverview', () => {
     expect(wrapper.find('a').props().href).to.equal('/p/spritelab');
   });
 
-  it('doesnt render title and description if not provided', () => {
-    delete defaultProgrammingEnvironment.title;
+  it('doesnt render description if not provided', () => {
     delete defaultProgrammingEnvironment.description;
     delete defaultProgrammingEnvironment.projectUrl;
     const wrapper = shallow(
@@ -74,7 +66,6 @@ describe('ProgrammingEnvironmentOverview', () => {
         programmingEnvironment={defaultProgrammingEnvironment}
       />
     );
-    expect(wrapper.find('h1').length).to.equal(0);
     expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(0);
     expect(wrapper.find('a').length).to.equal(0);
   });
