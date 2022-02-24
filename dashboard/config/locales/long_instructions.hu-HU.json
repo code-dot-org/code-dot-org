@@ -1185,7 +1185,8 @@
         "CSDU6 making new arrays_2021": "# Új tömbök készítése\n\nMost, hogy meg tudod változtatni a tömböket, itt az ideje, hogy készítsd el a sajátodat.\n\n# Csináld ezt\n\n-   Készíts egy új tömböt a kívánt célra. Különböző oktávok lehetnek, egy bizonyos kulcsban elrendezve, stb.\n-   Ha a \\*\\* jobb \\*\\* gombot megnyomja, a zümmögő véletlenszerűen írjon egy jegyet a tömbbe.",
         "Intro to Web Lab - Part 1_2021": "## megfontolandó kérdés:\n\n-   Melyek a Web Lab különböző részei, és mire használhatók?",
         "U4 Model Program 5_2021": "# A többi gomb felszerelése\n\nMost, hogy készült egy működő gomb, csak ismételd tovább mintát. \n\n# Csináld ezt\n\n-   Minden gomb megnyomásakor hozzon létre egy eseményt, amely a gomb megnyomásakor hivatkozik a megfelelő képernyőre. \n-   Futtassa az alkalmazást és tesztelje, hogy az összes gomb működik-e.",
-        "courseD_bee_nestedLoops9_2021": "Készítsd el az összes mézet!\n\n![](<>)"
+        "courseD_bee_nestedLoops9_2021": "Készítsd el az összes mézet!\n\n![](<>)",
+        "course3_maze_debugging_challenge1": "–\"Csak körbe-körbe járkálok?\""
       }
     }
   }

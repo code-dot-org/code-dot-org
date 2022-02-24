@@ -1182,7 +1182,7 @@
   "noStudentsInSection": "Tiada pelajar lain dalam bahagian ini.",
   "exceededPairProgrammingMax": "Anda tidak boleh berpasangan dengan lebih daripada 4 orang.",
   "noSectionDialogHeader": "Mengapa bahagian {classroom} tidak mempunyai Kod Bahagian?",
-  "noSectionDialogBody": "Senarai pelajar bahagian {classroom} menggambarkan senarai {classroom} yang diuruskan secara luaran anda. Untuk menambah atau mengalih keluar pelajar daripada bahagian ini, sila tambah atau alih keluar mereka terlebih dahulu daripada bilik darjah yang sepadan dalam {classroom}, kemudian klik butang \"Segerakkan Pelajar dari {bilik darjah}\" di penjuru kiri sebelah atas tab Urus Pelajar.",
+  "noSectionDialogBody": "Senarai pelajar bahagian {classroom} menggambarkan senarai {classroom} yang diuruskan secara luaran anda. Untuk menambah atau mengalih keluar pelajar daripada bahagian ini, sila tambah atau alih keluar mereka terlebih dahulu daripada bilik darjah yang sepadan dalam {classroom}, kemudian klik butang \"Segerakkan Pelajar dari {classroom}\" di penjuru kiri sebelah atas tab Urus Pelajar.",
   "noTablesInProject": "Anda tidak mempunyai jadual dalam projek anda. Cuba tambah satu daripada Pustaka Data.",
   "none": "Tiada",
   "note": "*Nota:",

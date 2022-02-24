@@ -4,7 +4,8 @@
       "lessons": {
         "dance-extras/Dance Party - Go Further": {
           "overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique.",
-          "purpose": "Cette leçon présente les concepts principaux de CS relatifs au codage et à la programmation d'événements (utilisation de blocs).",
+          "preparation": "-   Passez en revue et complétez vous-même le tutoriel en ligne : [Soirée Dansante](https://studio.code.org/s/dance-extras/lessons/1/levels/1) \n-   Veillez à l'essayer avant de demander à vos élèves de le compléter. Assurez-vous que votre matériel informatique est bien compatible et voyez s'il y a un problème à résoudre avant votre Heure de Code.",
+          "purpose": "Cette leçon présente les concepts clés de l'informatique relatifs au codage et à la programmation d'événements (utilisation de blocs).",
           "student_overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique."
         },
         "minecraft/Minecraft Hour of Code Designer": {
@@ -41,7 +42,7 @@
         "dance/Dance Party": {
           "overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique.",
           "preparation": "### Une semaine avant votre Heure de Code\n\n-   Consultez le [Guide Enseignant Une Heure de Code](http://hourofcode.com/resources/how-to/) et les [Meilleures Pratiques des enseignants pour réussir](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) afin de commencer à planifier votre événement Heure de Code. \n-   [Inscrivez-vous pour déclarer votre événement Heure de Code](http://hourofcode.com) si vous souhaitez obtenir du soutien en salle de classe, des posters à prix réduit ou participer au concours de robotique (États-Unis uniquement).\n-   Passez en revue et faites vous-même le tutoriel en ligne : [Dance Party](https://studio.code.org/s/dance/lessons/1/levels/1) \n-   Assurez-vous de l'essayer vous-même avant de demander à vos élèves de le faire. Vérifiez votre technologie et décidez si vous avez besoin de résoudre un problème avant votre Heure de Code.\n-   Passez en revue le plan de cours supplémentaire [\"Le Grand Dance Party\"](studio.code.org/s/dance-unplugged/lessons/1) pour voir si vous souhaitez enseigner ce cours en amont de votre Heure de Code.\n\n### Un jour avant l'Heure de Code\n\n-   Chaque élève qui termine l'activité à droit à un [certificat](http://code.org/certificates). Imprimez-en un pour tout le monde à l’avance afin de vous faciliter la tâche à la fin de votre Heure de Code.\n-   (facultatif) Poussez vos élèves à apporter des écouteurs à utiliser pendant l'activité.",
-          "purpose": "Cette leçon présente les concepts principaux de CS relatifs au codage et à la programmation d'événements (utilisation de blocs).",
+          "purpose": "Cette leçon présente les concepts clés de l'informatique relatifs au codage et à la programmation d'événements (utilisation de blocs).",
           "student_overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique."
         },
         "hello-world-food-2021/Hello World": {
@@ -103,11 +104,11 @@
           "student_overview": "Tu souhaites jouer à des jeux vidéo à l'école ? Dans cette leçon, tu apprendras à créer le tien !"
         },
         "dance-extras-2019/Dance Party - Go Further": {
-          "purpose": "Cette leçon présente les concepts principaux de CS relatifs au codage et à la programmation d'événements (utilisation de blocs)."
+          "purpose": "Cette leçon présente les concepts clés de l'informatique relatifs au codage et à la programmation d'événements (utilisation de blocs)."
         },
         "dance-2019/Dance Party": {
           "overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique.",
-          "purpose": "Cette leçon présente les concepts principaux de CS relatifs au codage et à la programmation d'événements (utilisation de blocs).",
+          "purpose": "Cette leçon présente les concepts clés de l'informatique relatifs au codage et à la programmation d'événements (utilisation de blocs).",
           "student_overview": "Ce cours permettra aux apprenants de tous âges de s'initier au codage et à l'informatique tout en travaillant dans un environnement sûr et favorable à l'apprentissage. Il a été conçu pour les apprenants de tous âges, mais il requiert de la lecture. L'activité nécessite du son, car l'outil a été conçu pour s'adapter à la musique."
         },
         "oceans/Oceans": {
@@ -650,7 +651,7 @@
         "express-2021/lesson-1": {
           "overview": "Dans cette leçon, les élèves programmeront leur propre soirée dansante interactive. Cette activité nécessite du son car l'outil a été conçu pour répondre à la musique.",
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Voyez s'il y a besoin d'écouteurs pour cette activité audio. ",
-          "purpose": "Cette leçon présente les concepts principaux de CS relatifs au codage et à la programmation d'événements (utilisation de blocs).",
+          "purpose": "Cette leçon présente les concepts clés de l'informatique relatifs au codage et à la programmation d'événements (utilisation de blocs).",
           "student_overview": "Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive."
         },
         "express-2021/Loops with Rey and BB-8": {

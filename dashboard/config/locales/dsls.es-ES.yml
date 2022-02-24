@@ -10982,14 +10982,14 @@ es-ES:
       csf_putting_a_stop_to_online_meanness_2021:
         content1: descripción aquí
         markdown: |-
-          # STOP a la maldad
+          # STOP a la Maldad
 
-          ## ¿Qué debes hacer si alguien no se porta bien contigo en Internet?
+          ## ¿Qué deberías hacer si alguien no se porta bien contigo en Internet?
 
-          * Aléjate.
-          * Habla con un adulto de confianza.
-          * Sitios seguros primero.
-          * Haz una pausa y piensa en Internet.
+          * **P**arar y salir.
+          * **A**hora, habla con un adulto de confianza.
+          * **R**ecuerda: Sitios seguros primero.
+          * **A**hora, haz una pausa y piensa.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_safety_in_my_online_neighborhood_2021:
@@ -11020,8 +11020,8 @@ es-ES:
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         questions:
-        - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
-            ejecutes el programa?
+        - text: Observa este código con atención. ¿Qué crees que ocurrirá cuando se
+            ejecute el programa?
       CourseF_outbreak_story:
         content1: descripción aquí
         markdown: "El Brote: Codifica tu Propia Simulación\n\n## ¡Bienvenido a Monster
@@ -12229,15 +12229,16 @@ es-ES:
 
       courseF_intro_apps:
         description: "¡Bienvenido a Fundamentos de Informática! Todos estos proyectos
-          fueron creados con el Laboratorio de Sprite. Pruébalos ahora para ver lo
-          que es posible. Al final de este curso, serás capaz de hacer tus propios
-          proyectos como estos... ¡y más!"
+          fueron creados con el Laboratorio de Sprite. Pruébalos ahora para que veas
+          lo que se puede hacer. Al final de este curso, serás capaz de crear tus
+          propios proyectos, como estos... ¡y más!"
         display_name: Aplicaciones de Laboratorio Sprite
-        teacher_markdown: |
-          # Visión General de los Niveles de Elección
-          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar a través de tantos como ellos (o usted) quieran.
+        teacher_markdown: |+
+          # Visión General de los Niveles Opcionales
+          Los niveles opcionales proporcionan un menú de niveles adicionales para que los estudiantes los completen. Los estudiantes deben completar aquí al menos uno de los subniveles, pero pueden trabajar a través de tantos como ellos (o tú) queráis.
 
-          Las opciones aquí llevan a los alumnos a aplicaciones de muestra que pueden explorar. Esta actividad está pensada para coordinarse con la hoja de trabajo Explorando Aplicaciones, que se encuentra en el [plan de la lección] (.././).
+          Las opciones que aparecen aquí llevan a los alumnos a aplicaciones de ejemplo que pueden explorar. Esta actividad está pensada para coordinarse con la hoja de trabajo Explorando Aplicaciones, que se encuentra en el [plan de estudios](.././).
+
       courseF_labels_predict_multi:
         answers:
         - text: '"¡Una pizza marchando!"'
