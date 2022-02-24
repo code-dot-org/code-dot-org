@@ -13864,9 +13864,13 @@
           "progression_name": "Instrucciones para la encuesta fin de curso"
         },
         "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
+          "description": "Durante el curso, para poder ver el trabajo de los estudiantes y para que ellos puedan acceder a las herramientas y recursos en línea, toda la clase debe formar parte de la misma sección en Code Studio.  Para ver las evaluaciones y las hojas de respuestas que brinda Code.org, necesita acceder como un “docente verificado”.",
           "tips": [
-            null
+            "**Videos explicativos:** Antes de leer las instrucciones, sugerimos revisar una serie de videos explicativos disponibles en la página de apoyo técnico para el docente. [r how-to-videos/csd/2021]"
           ]
+        },
+        "ad03dcc6-515c-4a86-bf14-d0bb13c89769": {
+          "description": "## Antes de la clase\n\n#### Asegúrese de estar registrado en Code Studio con una cuenta de docente “verificado”\n\nCualquier persona puede crear una cuenta de docente en Code Studio. Sin embargo, para que los docentes puedan ver las evaluaciones, hojas de respuestas y cualquier otro recurso adicional, deben contar con una cuenta de docente verificado. Si ha asistido a algún curso de Code.org, debería contar con este acceso.\n\nPara comprobar si tiene acceso:\n\n1.  Navegue en la [unidad 1 en la página de descripción general](https://studio.code.org/s/csd1-2021)\n2.  Verifique que puede ver la “encuesta del curso CS Discoveries” previa a la primera “etapa” de éste.\n3.  En caso de no verla, complete [este formulario](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform). Nota: Obtener una cuenta de docente verificado, puede tomar uno o más días. Recomendamos realizar este paso con anticipación.\n\nSi _no_ tiene una cuenta de docente verificado, de todas maneras, puede crear una sección para su clase. Sin embargo, no contará con la opción de aplicar la encuesta antes del primer día de clases.\n\n#### Crear una sección de clase en Code Studio.\n\nPara crear una sección:\n\n1.  Ir a [Página principal del docente](https://studio.code.org/home)\n2.  Haga Clic en la pestaña de 'Nueva sección' que se encuentra dentro de 'Secciones de la clase'\n3.  Escoger la opción 'acceso con email' \n4.  Complete los espacios con el nombre de su sección (ejemplo: CSD Periodo 1), el grado de sus estudiantes; Curso: 'Descubrimientos de las Ciencias de la Computación', Unidad Actual: 'Unidad 1” Resolución de Problemas', y haga clic 'Guardar'\n5.  Una vez que la creada la sección, haga clic en el nombre de ésta\n6.  Luego, verá un vínculo de acceso de inscripción (URL) en la nueva página para que sus estudiantes se unan a su clase. \n\nSi necesita más información de cómo usar su cuenta Code.org, ingrese a [r how-to-videos/csd/2021]"
         },
         "1dca60be-eb7f-40ef-8b91-8ca231c1b14a": {
           "tips": [
@@ -14101,6 +14105,9 @@
           "name": "Reflexión",
           "progression_name": "Reflexión"
         },
+        "7693d6aa-abdb-4631-ae6c-d358e5d063e8": {
+          "description": "Durante el curso, para poder ver el trabajo de los estudiantes y para que ellos puedan acceder a las herramientas y recursos en línea, toda la clase debe formar parte de la misma sección en Code Studio.  Para ver las evaluaciones y las hojas de respuestas que brinda Code.org, necesita acceder como un “docente verificado”."
+        },
         "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
           "tips": [
             null
@@ -14144,6 +14151,9 @@
             null
           ]
         },
+        "805b87e8-c377-489d-84e2-8be6316309b1": {
+          "description": "Durante el curso, para poder ver el trabajo de los estudiantes y para que ellos puedan acceder a las herramientas y recursos en línea, toda la clase debe formar parte de la misma sección en Code Studio.  Para ver las evaluaciones y las hojas de respuestas que brinda Code.org, necesita acceder como un “docente verificado”."
+        },
         "c55fae38-7795-4027-b469-a3238f34efe5": {
           "tips": [
             null
@@ -14186,6 +14196,9 @@
           "tips": [
             null
           ]
+        },
+        "7e2b0140-2517-4a48-89c6-2e51107ec2f2": {
+          "description": "Durante el curso, para poder ver el trabajo de los estudiantes y para que ellos puedan acceder a las herramientas y recursos en línea, toda la clase debe formar parte de la misma sección en Code Studio.  Para ver las evaluaciones y las hojas de respuestas que brinda Code.org, necesita acceder como un “docente verificado”."
         },
         "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
           "tips": [

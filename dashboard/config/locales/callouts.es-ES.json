@@ -1939,7 +1939,7 @@
           "courseC_harvester_loops1_callout1": "El número cuatro en la calabaza te informa que hay cuatro calabazas disponibles para escoger."
         },
         "courseC_maze_debugging5_2021": {
-          "courseC_maze_debugging5_1": "¡Estos bloques están bloqueados y no se pueden eliminar!"
+          "courseC_maze_debugging5_1": "¡Estos bloques grises están protegidos y no se pueden eliminar!"
         },
         "courseC_maze_debugging9_2021": {
           "courseC_maze_debugging9_2019_1": "Arrastra los bloques desde la caja de herramientas hacia tu espacio de trabajo."
@@ -2046,7 +2046,7 @@
           "grade2_CaringForNewPet_0_1": "Después de ajustar todos los bloques juntos, presiona \"Ejecutar\" para iniciar tu programa."
         },
         "express_maze_debugging9_2021": {
-          "express_maze_debugging9_2019_1": "Arrastra los bloques desde la caja de herramientas hacia tu espacio de trabajo."
+          "express_maze_debugging9_2019_1": "Arrastra los bloques de la caja de herramientas a tu espacio de trabajo."
         },
         "CourseF_outbreak2": {
           "minitoolbox": "Haga clic aquí para ampliar el bloque.",
@@ -2060,9 +2060,6 @@
         },
         "Virtual Pet 6_2021": {
           "vp_costumes": "Haz clic aquí para añadir nuevos disfraces a tu proyecto."
-        },
-        "courseC_artist_prog2_2021": {
-          "slider": "Aquí puedes ralentizar tu programa."
         },
         "courseC_starWars_loops2_dani": {
           "courseC_starWars_loops2": "Sólo dispones de uno de estos bloques en este puzle."
@@ -2082,34 +2079,34 @@
         },
         "courseF_apps_aquarium": {
           "run_button": "¡Pulsa primero el botón Ejecutar!",
-          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño de la zona de juego."
         },
         "courseF_apps_card": {
-          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño de la zona de juego."
         },
         "courseF_apps_chatbot": {
           "run_button": "¡Pulsa primero el botón Ejecutar!",
-          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño de la zona de juego."
         },
         "courseF_apps_collector": {
           "run_button": "¡Pulsa primero el botón Ejecutar!",
-          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño de la zona de juego."
         },
         "courseF_apps_madlib": {
-          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño de la zona de juego."
         },
         "courseF_apps_pet": {
           "run_button": "¡Pulsa primero el botón Ejecutar!",
-          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño de la zona de juego."
         },
         "courseF_editable_card": {
-          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño de la zona de juego."
         },
         "courseF_editable_chatbot": {
-          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño de la zona de juego."
         },
         "courseF_editable_madlib": {
-          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño del área de juego."
+          "visualizationResizeBar": "Arrastra los 3 puntos para cambiar el tamaño de la zona de juego."
         },
         "courseF_events_choice_penguin": {
           "whenToWhile": "Intenta cambiar cuando a mientras."

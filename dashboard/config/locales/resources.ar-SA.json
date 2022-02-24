@@ -279,30 +279,36 @@
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
         },
         "cross-curricular_extension_activities/courseb/2021": {
-          "name": "نشاط إضافي عبر المناهج"
+          "name": "نشاط إضافي عبر المناهج",
+          "url": ""
         },
         "course_vocabulary/courseb/2021": {
           "name": "مفردات الدورة التدريبية",
           "url": "https://studio.code.org/s/courseb-2021/vocab"
         },
         "implementation_guide/courseb/2021": {
-          "name": "دليل التنفيذ"
+          "name": "دليل التنفيذ",
+          "url": ""
         },
         "lesson_type_guide/courseb/2021": {
-          "name": "دليل نوع الدرس"
+          "name": "دليل نوع الدرس",
+          "url": ""
         },
         "debugging_guide/courseb/2021": {
-          "name": "دليل إيجاد وتصحيح الخلل البرمجي"
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": ""
         },
         "curriculum_guide_1/courseb/2021": {
           "name": "دليل المقرر الدراسي",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/courseb/2021": {
-          "name": "سجل التغيير ٢٠٢١"
+          "name": "سجل التغيير ٢٠٢١",
+          "url": ""
         },
         "teacher_forum_1/courseb/2021": {
-          "name": "منتدى المعلم"
+          "name": "منتدى المعلم",
+          "url": ""
         },
         "virtual_lesson_modifications/courseb/2021": {
           "name": "تعديلات الدرس الافتراضي",
@@ -481,23 +487,28 @@
           "url": "https://studio.code.org/s/coursea-2021/vocab"
         },
         "implementation_guide/coursea/2021": {
-          "name": "دليل التنفيذ"
+          "name": "دليل التنفيذ",
+          "url": ""
         },
         "lesson_type_guide/coursea/2021": {
-          "name": "دليل نوع الدرس"
+          "name": "دليل نوع الدرس",
+          "url": ""
         },
         "debugging_guide/coursea/2021": {
-          "name": "دليل إيجاد وتصحيح الخلل البرمجي"
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": ""
         },
         "curriculum_guide_1/coursea/2021": {
           "name": "دليل المقرر الدراسي",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursea/2021": {
-          "name": "سجل التغيير ٢٠٢١"
+          "name": "سجل التغيير ٢٠٢١",
+          "url": ""
         },
         "teacher_forum_1/coursea/2021": {
-          "name": "منتدى المعلم"
+          "name": "منتدى المعلم",
+          "url": ""
         },
         "virtual_lesson_modifications/coursea/2021": {
           "name": "تعديلات الدرس الافتراضي",
@@ -548,16 +559,20 @@
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
         },
         "debugging_guide/coursec/2021": {
+          "name": "",
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
         },
         "course-cf-blockly-blocks/coursec/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)"
+          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "url": ""
         },
         "csf-artist-intro-video/coursec/2021": {
-          "name": "تقديم الفنان"
+          "name": "تقديم الفنان",
+          "url": ""
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "لفات وزوايا"
+          "name": "لفات وزوايا",
+          "url": ""
         },
         "csf-turns-angles-doc/coursec/2021": {
           "name": "لفات وزوايا",
@@ -640,30 +655,36 @@
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
         },
         "cross-curricular_extension_activities/coursec/2021": {
-          "name": "نشاط إضافي عبر المناهج"
+          "name": "نشاط إضافي عبر المناهج",
+          "url": ""
         },
         "course_vocabulary/coursec/2021": {
           "name": "مفردات الدورة التدريبية",
           "url": "https://studio.code.org/s/coursec-2021/vocab"
         },
         "implementation_guide/coursec/2021": {
-          "name": "دليل التنفيذ"
+          "name": "دليل التنفيذ",
+          "url": ""
         },
         "lesson_type_guide/coursec/2021": {
-          "name": "دليل نوع الدرس"
+          "name": "دليل نوع الدرس",
+          "url": ""
         },
         "debugging_guide_1/coursec/2021": {
-          "name": "دليل إيجاد وتصحيح الخلل البرمجي"
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": ""
         },
         "curriculum_guide_1/coursec/2021": {
           "name": "دليل المقرر الدراسي",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursec/2021": {
-          "name": "سجل التغيير ٢٠٢١"
+          "name": "سجل التغيير ٢٠٢١",
+          "url": ""
         },
         "teacher_forum_1/coursec/2021": {
-          "name": "منتدى المعلم"
+          "name": "منتدى المعلم",
+          "url": ""
         },
         "virtual_lesson_modifications/coursec/2021": {
           "name": "تعديلات الدرس الافتراضي",
@@ -750,9 +771,11 @@
           "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit"
         },
         "course-cf-blockly-blocks/coursed/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)"
+          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "url": ""
         },
         "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "",
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
         "pause_and_think_online/coursed/2021": {
@@ -772,7 +795,8 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
-          "name": "Spotify Playlist (كل الأعمار)"
+          "name": "Spotify Playlist (كل الأعمار)",
+          "url": ""
         },
         "dance_party_unplugged/coursed/2021": {
           "name": "حفلة رقص (غير متصل)",
@@ -815,6 +839,7 @@
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "",
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
         },
         "csta_standards_mapping/coursed/2021": {
@@ -826,60 +851,84 @@
           "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
         },
         "cross-curricular_extension_activities/coursed/2021": {
-          "name": "نشاط إضافي عبر المناهج"
+          "name": "نشاط إضافي عبر المناهج",
+          "url": ""
         },
         "course_vocabulary/coursed/2021": {
           "name": "مفردات الدورة التدريبية",
           "url": "https://studio.code.org/s/coursed-2021/vocab"
         },
         "implementation_guide/coursed/2021": {
-          "name": "دليل التنفيذ"
+          "name": "دليل التنفيذ",
+          "url": ""
         },
         "lesson_type_guide/coursed/2021": {
-          "name": "دليل نوع الدرس"
+          "name": "دليل نوع الدرس",
+          "url": ""
         },
         "debugging_guide/coursed/2021": {
-          "name": "دليل إيجاد وتصحيح الخلل البرمجي"
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": ""
         },
         "curriculum_guide_1/coursed/2021": {
           "name": "دليل المقرر الدراسي",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
         "2021_change_log/coursed/2021": {
-          "name": "سجل التغيير ٢٠٢١"
+          "name": "سجل التغيير ٢٠٢١",
+          "url": ""
         },
         "teacher_forum_1/coursed/2021": {
-          "name": "منتدى المعلم"
+          "name": "منتدى المعلم",
+          "url": ""
         },
         "virtual_lesson_modifications/coursed/2021": {
           "name": "تعديلات الدرس الافتراضي",
           "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "unplugged_maze_blocks/express/2021": {
-          "name": "قوالب المتاهة غير المتصلة"
+          "name": "قوالب المتاهة غير المتصلة",
+          "url": ""
         },
         "pair_programming/express/2021": {
           "name": "البرمجة الزوجية",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
+        "unplugged_blocks_courses_c-f_/express/2021": {
+          "name": "",
+          "url": ""
+        },
         "artist_introduction/express/2021": {
-          "name": "تقديم الفنان"
+          "name": "تقديم الفنان",
+          "url": ""
         },
         "turns_angles/express/2021": {
-          "name": "لفات وزوايا"
+          "name": "لفات وزوايا",
+          "url": ""
         },
         "turns_angles_1/express/2021": {
           "name": "لفات وزوايا",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
+        "swimming_fish_teacher_sandbox/express/2021": {
+          "name": "",
+          "url": ""
+        },
         "sprite_lab_documentation/express/2021": {
-          "name": "وثائق مختبر الرسوم المتحركة"
+          "name": "وثائق مختبر الرسوم المتحركة",
+          "url": ""
+        },
+        "making_sprites/express/2021": {
+          "name": "",
+          "url": ""
         },
         "sprite_lab_documentation_1/express/2021": {
-          "name": "وثائق مختبر الرسوم المتحركة"
+          "name": "وثائق مختبر الرسوم المتحركة",
+          "url": ""
         },
         "sprites_in_action/express/2021": {
-          "name": "الرسوم المتحركة في العمل"
+          "name": "الرسوم المتحركة في العمل",
+          "url": ""
         },
         "pause_and_think_online/express/2021": {
           "name": "توقف قليلاً وفكر وأنت على الإنترنت",
@@ -890,29 +939,68 @@
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/express/2021": {
-          "name": "Spotify Playlist (كل الأعمار)"
+          "name": "Spotify Playlist (كل الأعمار)",
+          "url": ""
         },
         "open-ended_programming_levels/express/2021": {
           "name": "مستويات برمجة مفتوحة",
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "pair_programming_video/express/2021": {
+          "name": "",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
+        "unplugged_blocks_courses_c-f__1/express/2021": {
+          "name": "",
+          "url": ""
+        },
+        "unplugged_blocks_courses_c-f__2/express/2021": {
+          "name": "",
+          "url": ""
+        },
+        "unplugged_blocks_courses_c-f__3/express/2021": {
+          "name": "",
+          "url": ""
+        },
         "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)"
+          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "url": ""
         },
         "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)"
+          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "url": ""
+        },
+        "text_and_prompts/express/2021": {
+          "name": "",
+          "url": ""
         },
         "variables_video/express/2021": {
-          "name": "المتغيرات"
+          "name": "المتغيرات",
+          "url": ""
+        },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "name": "",
+          "url": ""
         },
         "rubric-csf-final-projects/express/2021": {
-          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر"
+          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
+          "url": ""
+        },
+        "csta_standards_mapping/express/2021": {
+          "name": "",
+          "url": ""
+        },
+        "course_vocabulary_1/express/2021": {
+          "name": "",
+          "url": ""
         },
         "teacher_forum_1/express/2021": {
-          "name": "منتدى المعلم"
+          "name": "منتدى المعلم",
+          "url": ""
+        },
+        "debugging_guide/express/2021": {
+          "name": "",
+          "url": ""
         },
         "pair-programming-vid/pre-express/2021": {
           "name": "البرمجة الزوجية",
@@ -947,24 +1035,51 @@
           "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
-          "name": "منتدى المعلم"
+          "name": "منتدى المعلم",
+          "url": ""
         },
         "debugging_guide/pre-express/2021": {
-          "name": "دليل إيجاد وتصحيح الخلل البرمجي"
+          "name": "دليل إيجاد وتصحيح الخلل البرمجي",
+          "url": ""
         },
         "follow_the_algorithm/coursee/2021": {
+          "name": "",
           "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
         },
+        "swimming-fish-teacher-sandbox/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
         "sprite_lab_documentation/coursee/2021": {
-          "name": "وثائق مختبر الرسوم المتحركة"
+          "name": "وثائق مختبر الرسوم المتحركة",
+          "url": ""
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": "",
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
         "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
         },
         "common-sense-media-pause-think/coursee/2021": {
@@ -972,6 +1087,7 @@
           "url": "https://youtu.be/X_duZ-1LApg"
         },
         "about_me_planning_guide/coursee/2021": {
+          "name": "",
           "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
         },
         "digital-sharing-lesson/coursee/2021": {
@@ -987,7 +1103,8 @@
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "لفات وزوايا"
+          "name": "لفات وزوايا",
+          "url": ""
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
           "name": "كتابة الأغاني مع الدوال",
@@ -1010,32 +1127,76 @@
           "url": "https://docs.google.com/document/d/1L9YwWrsDBbTOZEVFCBhDxIIrYjkzZY3o1ZARKqa6lxw/edit"
         },
         "course-cf-blockly-blocks/coursee/2021": {
-          "name": "قوالب غير متصلة (الدورات ج - و)"
+          "name": "قوالب غير متصلة (الدورات ج - و)",
+          "url": ""
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "التصميم من أجل الوصول"
+          "name": "التصميم من أجل الوصول",
+          "url": ""
+        },
+        "types_of_disabilities/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "end-of-course-project-guide/coursee/2021": {
+          "name": "",
+          "url": ""
         },
         "rubric-csf-final-projects/coursee/2021": {
-          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر"
+          "name": "المشروع النهائي في أساسيات علوم الكمبيوتر",
+          "url": ""
         },
         "design-process/coursee/2021": {
-          "name": "عملية التصميم"
+          "name": "عملية التصميم",
+          "url": ""
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 طريقة إبداعية يمكن لطلابك استخدامها لإظهار ما يعرفونه"
+          "name": "72 طريقة إبداعية يمكن لطلابك استخدامها لإظهار ما يعرفونه",
+          "url": ""
+        },
+        "csta_standards_mapping/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "cross-curricular_extension_activities/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "course_vocabulary/coursee/2021": {
+          "name": "",
+          "url": ""
         },
         "implementation_guide/coursee/2021": {
-          "name": "دليل التنفيذ"
+          "name": "دليل التنفيذ",
+          "url": ""
+        },
+        "lesson_type_guide/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "debugging_guide/coursee/2021": {
+          "name": "",
+          "url": ""
         },
         "curriculum_guide_1/coursee/2021": {
           "name": "دليل المقرر الدراسي",
           "url": "https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview"
         },
+        "2021_change_log/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
         "teacher_forum_1/coursee/2021": {
-          "name": "منتدى المعلم"
+          "name": "منتدى المعلم",
+          "url": ""
         },
         "sprite_lab_documentation_1/coursee/2021": {
-          "name": "وثائق مختبر الرسوم المتحركة"
+          "name": "وثائق مختبر الرسوم المتحركة",
+          "url": ""
         },
         "virtual_lesson_modifications/coursee/2021": {
           "name": "تعديلات الدرس الافتراضي",

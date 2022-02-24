@@ -41,9 +41,6 @@
       "description": "The number of milliseconds in between blinks for the LED."
     }
   ],
-  "parameters": [
-    "interval"
-  ],
   "short_description": "Makes the color LEDs blink.",
   "syntax": "blink(interval)"
 }

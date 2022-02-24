@@ -71,14 +71,6 @@
       "description": "The angle in degrees to end the arc in a clockwise direction from start. 0 degrees is to the right."
     }
   ],
-  "parameters": [
-    "x",
-    "y",
-    "w",
-    "h",
-    "start",
-    "stop"
-  ],
   "return_value": "No return value. Outputs to the display only.",
   "short_description": "Draws an arc onto the display from start to stop angle, centered at x and y and inscribed in a rectangle with sides length w(idth) and h(eight).",
   "syntax": "arc(x, y, w, h, start, stop)",

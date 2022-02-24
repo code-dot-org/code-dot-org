@@ -1,8 +1,9 @@
 
 module JavalabFilesHelper
-  def self.upload_project_files(channel_id, level_id, auth_token)
+  def self.upload_project_files(channel_id, level_id, hostname, auth_token)
     uri = URI.parse("#{CDO.javabuilder_upload_url}?Authorization=#{auth_token}")
     upload_request = Net::HTTP::Put.new(uri)
+    upload_request['Origin'] = hostname
     upload_request.body = get_project_files(channel_id, level_id).to_json
 
     response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') do |http|
@@ -33,7 +34,7 @@ module JavalabFilesHelper
     if level
       serialized_maze = level.try(:get_serialized_maze)
       if serialized_maze
-        sources["grid.txt"] = serialized_maze.to_s
+        sources["grid.txt"] = serialized_maze.to_json
       end
     end
     all_files["sources"] = sources

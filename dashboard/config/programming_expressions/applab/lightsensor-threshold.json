@@ -3,5 +3,6 @@
   "name": "lightSensor.threshold",
   "category": "Circuit",
   "category_key": "circuit",
+  "short_description": "lightSensor.threshold",
   "syntax": "lightSensor.threshold"
 }

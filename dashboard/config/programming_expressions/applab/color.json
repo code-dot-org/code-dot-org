@@ -59,9 +59,6 @@
       "description": "Changes the saturation of blue in the LED. Must be a number ranging from 0-255 for this to work."
     }
   ],
-  "parameters": [
-    "color"
-  ],
   "short_description": "Changes the color of the color LED specified.",
   "syntax": "color(color)",
   "tips": "* `colorLeds[i].color()` also accepts hexadecimal strings as a color parameter. \r\n\r\n* You can randomly color the LEDs in a few ways. You can follow example #2 from above and make an array of colors and choose a random index, or you can use the RGB parameters and assign a random number up to 255 to each parameter. \r\n\r\n* Keep in mind: the second method of randomizing colors does not allow much control for what colors you see. If you're looking for certain colors, you should use the array method from example #2."

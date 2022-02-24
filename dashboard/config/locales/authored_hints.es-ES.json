@@ -9650,11 +9650,11 @@
           "courseC_collector_prog7_c": "¿Tienes problemas para ver una ruta para recoger todo el tesoro? ¡Prueba este camino!"
         },
         "courseC_collector_prog_challenge1_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque `collect` muchas veces para recoger el tesoro extra."
+          "courseC_collector_prog_challenge1_a": "Puedes usar el bloque \"obtener\" muchas veces para conseguir el tesoro extra."
         },
         "courseC_collector_prog_challenge2_2021": {
-          "courseC_collector_prog_challenge1_a": "Puedes usar más de un bloque `recolectar` en cada espacio.",
-          "courseC_collector_prog_challenge1_b": "¿Perdiste tu camino? ¡Prueba este camino para resolver el desafío!"
+          "courseC_collector_prog_challenge1_a": "Puedes utilizar más de un bloque `obtener` en cada espacio.",
+          "courseC_collector_prog_challenge1_b": "¿Te has perdido?  ¡Prueba este camino para resolver el rompecabezas!"
         },
         "courseC_flappy_events1_2021": {
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
@@ -9741,7 +9741,7 @@
         },
         "courseC_maze_debugging3_2021": {
           "courseC_maze_debugging3_a": "Para eliminar un bloque del medio de tu programa, pon todos los bloques a otro lugar del espacio de trabajo.\n\nArrastra el bloque que deseas eliminar a la caja de herramientas.\n\nFinalmente, vuelve a poner el resto de los bloques a donde tienen que estar.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
-          "courseC_maze_debugging3_b": "¿No puede descubrir qué pasa? Intenta ejecutar el código un par de veces para ver qué pasa."
+          "courseC_maze_debugging3_b": "¿No puedes averiguar qué es lo que está mal? Intenta ejecutar el código un par de veces para ver qué ocurre."
         },
         "courseC_maze_debugging4_2021": {
           "courseC_maze_debugging4_a": "Usa el botón \"Paso\" para ejecutar las instrucciones de una en una. ¿Te ayuda ésto a encontrar la línea donde las cosas van mal?",
@@ -9749,7 +9749,7 @@
         },
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_a": "Hay muchos bloques útiles en el área de trabajo. ¡No los borres todos!\n\nUsa el botón \"Paso\" para recorrer el código y averiguar donde el programa deja de funcionar.",
-          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de turno haciendo clic en el menú desplegable.",
+          "courseC_maze_debugging5_c": "Puedes cambiar la dirección del bloque de giro haciendo clic en el desplegable.",
           "courseC_maze_debugging5_b": "Intenta decir lo que Scrat debería hacer en voz alta. ¿Es lo mismo que el código en el área de trabajo? ¿Dónde falla?"
         },
         "courseC_maze_debugging6_2021": {
