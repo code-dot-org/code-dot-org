@@ -1,7 +1,8 @@
 {
   "key": "mathMin",
-  "name": "mathMin",
+  "name": "Math.min()",
   "category": "Math",
   "category_key": "math",
+  "short_description": "Game Lab - Math.min()",
   "syntax": "Math.min(__)"
 }

@@ -1,7 +1,8 @@
 {
   "key": "declareAssign_list_abd",
-  "name": "declareAssign_list_abd",
+  "name": "Declare and assign an array to a variable",
   "category": "Variables",
   "category_key": "variables",
+  "short_description": "Game Lab - Declare and assign an array to a variable",
   "syntax": "var list = [\"a\", \"b\", \"d\"];"
 }
