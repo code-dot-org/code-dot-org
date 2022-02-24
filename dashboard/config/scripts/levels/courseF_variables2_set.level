@@ -61,7 +61,7 @@
     "encrypted_examples": [
 
     ],
-    "validation_code": "// This level requires the variableLog Helper Library\r\n\r\nif (World.frameCount == 1) {\r\n  setFailTime(90);\r\n  varLog = buildVariableLog();\r\n  addCriteria(function(){\r\n    return minimumSprites(1);\r\n  }, 'starterSprites');\r\n  addCriteria(function(){\r\n    return Object.keys(varLog).length >0;\r\n  }, 'createVariable');\r\n  addCriteria(function(){\r\n    return noBadVariableLabels();\r\n  }, 'renameVariable');\r\n  addCriteria(function(){\r\n    return anySpriteSpeaking();\r\n  }, 'saySprite');\r\n  addCriteria(function(){\r\n    return anySpeechIncludesValues(varLog);\r\n  }, 'sayVariable');\r\n}\r\n\r\ncheck();\r\n"
+    "validation_code": "// This level requires the variableLog Helper Library\r\n\r\nif (World.frameCount == 1) {\r\n  setFailTime(90);\r\n  varLog = buildVariableLog();\r\n  addCriteria(function(){\r\n    return minimumSprites(1);\r\n  }, 'starterSprites');\r\n  addCriteria(function(){\r\n    return Object.keys(varLog).length >0;\r\n  }, 'createVariable');\r\n  addCriteria(function(){\r\n    return !varLabelStartsWithUnderscore();\r\n  }, 'renameVariable');\r\n  addCriteria(function(){\r\n    return anySpriteSpeaking();\r\n  }, 'saySprite');\r\n  addCriteria(function(){\r\n    return anySpeechIncludesValues(varLog);\r\n  }, 'sayVariable');\r\n}\r\n\r\ncheck();\r\n"
   },
   "game_id": 64,
   "published": true,
