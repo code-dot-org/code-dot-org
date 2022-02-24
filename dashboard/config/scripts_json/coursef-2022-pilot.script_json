@@ -29,7 +29,7 @@
     },
     "new_name": null,
     "family_name": "coursef-2022-pilot",
-    "serialized_at": "2022-02-23 23:52:06 UTC",
+    "serialized_at": "2022-02-24 16:55:42 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1397,7 +1397,7 @@
       "key": "6d3a390d-53bf-4cb9-84d6-60f8c588027c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Introducing Sprite Lab” video.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Introducing Sprite Lab” video",
         "duration": "5",
         "name": "Introducing Sprite Lab",
         "progression_name": "Video: Introducing Sprite Lab"
@@ -1492,8 +1492,7 @@
       "key": "a9a494c5-9122-4c41-b54d-6d92a3bdfba3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  Show “Wrap-Up Sprite” slide",
-        "name": "Reflection"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  Show Wrap-Up \"Sprite” slide"
       },
       "seeding_key": {
         "activity_section.key": "a9a494c5-9122-4c41-b54d-6d92a3bdfba3",
@@ -1516,7 +1515,7 @@
       "key": "3530f2f0-bb62-46b7-9304-e63ef02508a2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  Show “Wrap-Up Sprite Costume” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:  Show Wrap-Up \"Sprite Costumes” slide"
       },
       "seeding_key": {
         "activity_section.key": "3530f2f0-bb62-46b7-9304-e63ef02508a2",
@@ -1539,7 +1538,8 @@
       "key": "6c66ac1b-8a3a-4019-8a77-8388901a3496",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect**:\n* _What’s an example of a choice you’d like to be able to make in the games or apps you use?_\n* _What kind of app or game would you like to create?_\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect**:\n* _What’s an example of a choice you’d like to be able to make in the games or apps you use?_\n* _What kind of app or game would you like to create?_\n",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "6c66ac1b-8a3a-4019-8a77-8388901a3496",
@@ -1574,7 +1574,7 @@
       "key": "128c92ad-85c4-4fcb-9306-92c2c90b7498",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Ant and Dragonfly Scene” slide\n\n**Do this:** Using the lesson warm up slides, or this [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), show students the animation of the ant and dragonfly.\n\n**Discuss:** \n* _How would you describe this sprite scene?_\n* _If you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Instructions” slide\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \n* _What is the same or different about our instructions and this code?_\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How would you describe this sprite scene?” slide\n\n**Do this:** Using the lesson warm up slides, or this [sample project](https://studio.code.org/projects/spritelab/i1-YKJAmtlLMi54FJRIVNnWR_yLy-xRpmUAKcIAlaa0/view), show students the animation of the ant and dragonfly.\n\n**Discuss:** \n* _How would you describe this sprite scene?_\n* _If you wanted someone to create this scene for you on a computer, what instructions would they need?_\n\n**Discussion goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice the background.\nGive students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Instructions” slide\n\nNext, show the actual code used for this project and invite students to attempt to read through it.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _What is the same or different about our instructions and this code?_\n"
       },
       "seeding_key": {
         "activity_section.key": "128c92ad-85c4-4fcb-9306-92c2c90b7498",
@@ -1688,7 +1688,7 @@
       "key": "4669dde2-50c4-47ec-ae98-b8e2e551c0b2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Reflect:**\n* _What advice would you have for a friend who is interested in creating their own programs in Sprite Lab?_\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.\n\n**Reflect:** _What advice would you have for a friend who is interested in creating their own programs in Sprite Lab?_\n\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -1741,7 +1741,7 @@
       "key": "cc9bbe15-7936-4ccd-967d-e4ce50244382",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 1 - Basic” slide\n\n#### Round 1 (Basic):\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n\n**Debrief:** \n* _What happened when you were told to clap but you were already marching in place?_ \n* _What happens if you are told to begin two different behaviors at once?_\n\nStudents should understand that multiple behaviors can happen simultaneously.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 2 - Intermediate” slide\n\n####Round 2 (Intermediate):\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n\n**Debrief:**\n* _What kinds of instructions caused people to make mistakes?_\n* _What strategies do you think are helpful for making sure you follow instructions correctly?_\n* _Why is it important to keep track of each behavior separately?_\n\nStudents should understand that each behavior needs to be stopped individually. They need to keep track of each one separately.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 3 - Challenging” slide\n\n####Round 3 (Challenging):\n\n* Begin crouching.\n* Begin tapping your head.\n* Stop crouching.\n* Stop tapping your head.\n* Begin jumping up and down.\n* Begin tapping your head.\n* Stop everything.\n* Begin clapping.\n* Begin flapping your arms like a bird.\n* Stop everything.\n* Begin crouching.\n* Begin jumping up and down.\n* Stop everything.\n* Begin tapping your knees.\n* Begin tapping your head.\n* Stop everything.\n* Begin spinning to the left.\n* Begin spinning to the right.\n* Stop spinning to the left.\n* Stop spinning to the right.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n* _What happens if two behaviors seem to conflict with each other?_\n\n**Discussion Goal:** Students should understand that some behaviors conflict with each other which can result in unexpected outcomes. It’s possible for two opposite behaviors to effectively cancel each other out.\n\n**Additional prompts:**\n\n_What should you do when told to clap your hands and flap your arms at the same time?_\n\n_How can you jump up and down while crouching?_\n\n_What happens if you need to tap your knees and your head at the same time?_\n\n_When you were told to spin in two opposite directions what did you see people do?_ \n\n_What would happen if you were told to spin left and right at the exact same time?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 1 - Basic” slide\n\n#### Round 1 (Basic):\n* Begin marching in place.\n* Stop marching in place.\n* Begin clapping.\n* Stop clapping.\n* Begin marching in place.\n* Begin clapping.\n* Stop everything.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n\n**Debrief:** \n* _What happened when you were told to clap but you were already marching in place?_ \n* _What happens if you are told to begin two different behaviors at once?_\n\nStudents should understand that multiple behaviors can happen simultaneously.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 2 - Intermediate” slide\n\n####Round 2 (Intermediate):\n* Begin waving your arms in the air.\n* Begin bobbing your head.\n* Stop waving your arms in the air.\n* Stop bobbing your head.\n* Begin shaking your knees.\n* Begin flapping your arms like a bird.\n* Stop shaking your knees.\n* Begin bobbing your head.\n* Begin marching in place.\n* Stop flapping your arms like a bird.\n* Stop everything.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n\n**Debrief:**\n* _What kinds of instructions caused people to make mistakes?_\n* _What strategies do you think are helpful for making sure you follow instructions correctly?_\n* _Why is it important to keep track of each behavior separately?_\n\nStudents should understand that each behavior needs to be stopped individually. They need to keep track of each one separately.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Round 3 - Challenging” slide\n\n####Round 3 (Challenging):\n\n* Begin crouching.\n* Begin tapping your head.\n* Stop crouching.\n* Stop tapping your head.\n* Begin jumping up and down.\n* Begin tapping your head.\n* Stop everything.\n* Begin clapping.\n* Begin flapping your arms like a bird.\n* Stop everything.\n* Begin crouching.\n* Begin jumping up and down.\n* Stop everything.\n* Begin tapping your knees.\n* Begin tapping your head.\n* Stop everything.\n* Begin spinning to the left.\n* Begin spinning to the right.\n* Stop spinning to the left.\n* Stop spinning to the right.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n _What happens if two behaviors seem to conflict with each other?_\n\n**Discussion Goal:** Students should understand that some behaviors conflict with each other which can result in unexpected outcomes. It’s possible for two opposite behaviors to effectively cancel each other out.\n\n**Additional prompts:**\n\n* _What should you do when told to clap your hands and flap your arms at the same time?_\n\n* _How can you jump up and down while crouching?_\n\n* _What happens if you need to tap your knees and your head at the same time?_\n\n* _When you were told to spin in two opposite directions what did you see people do?_ \n\n* _What would happen if you were told to spin left and right at the exact same time?_"
       },
       "seeding_key": {
         "activity_section.key": "cc9bbe15-7936-4ccd-967d-e4ce50244382",
@@ -1831,7 +1831,7 @@
       "key": "71dfd3ed-ddff-4190-8882-97252e942ba7",
       "position": 2,
       "properties": {
-        "description": "Today you learned to create programs that change over time using events. \n\n**Event** - *An action that causes something to happen.*",
+        "description": "Today you learned to create programs that change over time using events. \n\n**Event** - An action that causes something to happen.",
         "remarks": true
       },
       "seeding_key": {
@@ -1840,8 +1840,31 @@
       }
     },
     {
-      "key": "2b474525-e079-4540-9aa9-d781c46fb290",
+      "key": "15cf3a36-0d62-4290-b7c2-dea896e60d30",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show next slide\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "15cf3a36-0d62-4290-b7c2-dea896e60d30",
+        "lesson_activity.key": "cda0c0ab-8269-402e-ae93-33d4c776a78a"
+      }
+    },
+    {
+      "key": "3566e4b5-e96e-4a63-a77e-7eb5e0501361",
+      "position": 4,
+      "properties": {
+        "description": "How do events work?\n\n1. The user presses a key on the keyboard.\n2. The keyboard sends a signal to the computer.\n3. The computer makes a decision based on the code.\n4. The computer updates the display.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3566e4b5-e96e-4a63-a77e-7eb5e0501361",
+        "lesson_activity.key": "cda0c0ab-8269-402e-ae93-33d4c776a78a"
+      }
+    },
+    {
+      "key": "2b474525-e079-4540-9aa9-d781c46fb290",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** \nArrow keys are one way to make a program more interactive. \n* _What other ways could we give a user control over what happens in an app or game?_\n\nHaving students write about what they learned, why it’s useful, and how they feel about it can help solidify any knowledge they obtained today and build a review sheet for them to look to in the future.",
         "name": "Reflect"
@@ -2848,7 +2871,7 @@
       "key": "1c996232-41ee-46ad-9cf0-34a4dd204ece",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How did you use variables in your game?_\n\n**Discussion goal**: Students should understand that the variables in their game stored a value that changed over time. A variable’s value can set directly in the code, modified as a user interacts with an app, or input directly such as with a prompt.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How did you use variables in your game?_\n\n**Discussion goal**: Students should understand that the variables in their game stored a value that changed over time. A variable’s value can set directly in the code, modified as a user interacts with an app, or input directly such as with a prompt.",
         "name": "Reflect"
       },
       "seeding_key": {
