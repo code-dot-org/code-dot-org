@@ -162,7 +162,6 @@ class UnitEditor extends React.Component {
       hasImportedLessonDescriptions: false,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
-      deprecated: this.props.initialDeprecated,
       publishedState: this.props.initialPublishedState,
       instructionType: this.props.initialInstructionType,
       instructorAudience: this.props.initialInstructorAudience,
@@ -288,7 +287,6 @@ class UnitEditor extends React.Component {
       instruction_type: this.state.instructionType,
       instructor_audience: this.state.instructorAudience,
       participant_audience: this.state.participantAudience,
-      deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
@@ -1003,24 +1001,6 @@ class UnitEditor extends React.Component {
                 course model.
               </i>
             </b>
-            <label>
-              Deprecated
-              <input
-                type="checkbox"
-                checked={this.state.deprecated}
-                style={styles.checkbox}
-                onChange={() =>
-                  this.setState({deprecated: !this.state.deprecated})
-                }
-              />
-              <HelpTip>
-                <p>
-                  Used only for Professional Learning Courses. Deprecation
-                  prevents Peer Reviews conducted as part of this unit from
-                  being displayed in the admin-only Peer Review Dashboard.
-                </p>
-              </HelpTip>
-            </label>
             <label>
               Professional Learning Course
               <HelpTip>
