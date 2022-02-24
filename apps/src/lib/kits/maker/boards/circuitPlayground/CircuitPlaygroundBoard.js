@@ -234,13 +234,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // and the Chrome App connector, but it is required for native
         // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
-          this.serialPort_.close();
-          console.log('serial port closed');
+          console.log('serial port defined');
+          resolve(this.serialPort_.close());
           this.logWithFirehose('serial-port-closed');
+        } else {
+          resolve();
         }
         this.serialPort_ = null;
         this.logWithFirehose('serial-port-cleared');
-        resolve();
       }, 50);
     });
   }
