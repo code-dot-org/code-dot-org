@@ -3,9 +3,6 @@
   "name": "console.log()",
   "category": "Variables",
   "category_key": "variables",
-  "parameters": [
-    "message"
-  ],
   "short_description": "Game Lab - console.log()",
   "syntax": "console.log(message)"
 }

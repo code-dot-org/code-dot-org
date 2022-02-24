@@ -23,9 +23,6 @@
       "description": "The name of the target sprite or target group you want to check for a collision."
     }
   ],
-  "parameters": [
-    "target"
-  ],
   "return_value": "Boolean true or false. Changes output in the display after the sprites touch and drawSprites() is called.",
   "short_description": "Makes the target bounce off each sprite in the group when they touch each other. Both the target and the sprite change how they are moving.",
   "syntax": "group.bounce(target)",

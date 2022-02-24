@@ -32,9 +32,6 @@
       "description": "The index position of a sprite from the group."
     }
   ],
-  "parameters": [
-    "i"
-  ],
   "return_value": "The sprite at index position i.",
   "short_description": "Gets the sprite at index i of the group.",
   "syntax": "get(i)",
