@@ -12,9 +12,6 @@
       "description": "The length of time (in milliseconds) that the light should be dimming for."
     }
   ],
-  "parameters": [
-    "interval"
-  ],
   "short_description": "Makes the colorLed(s) pulse at a specific time interval. ",
   "syntax": "pulse(interval)"
 }

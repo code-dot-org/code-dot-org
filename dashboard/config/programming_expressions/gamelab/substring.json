@@ -3,10 +3,6 @@
   "name": "str.substring()",
   "category": "Variables",
   "category_key": "variables",
-  "parameters": [
-    "start",
-    "end"
-  ],
   "short_description": "Game Lab - str.substring()",
   "syntax": "substring(start, end)"
 }

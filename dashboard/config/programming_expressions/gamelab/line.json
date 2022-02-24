@@ -68,12 +68,6 @@
       "description": "The y-location in pixels of the second endpoint of the line. Should be a number from 0 to 400, but negative numbers will start the line above the display and numbers greater than 400 will start the line below the display (possibly unseen)."
     }
   ],
-  "parameters": [
-    "x1",
-    "y1",
-    "x2",
-    "y2"
-  ],
   "return_value": "No return value. Outputs to the display only.",
   "short_description": "Draws a straight line between two points.",
   "syntax": "line(x1, y1, x2, y2)",

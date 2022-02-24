@@ -41,9 +41,6 @@
       "description": "The length of time (in milliseconds) that the light should be dimming for. If left empty, the interval will default to 200."
     }
   ],
-  "parameters": [
-    "interval"
-  ],
   "short_description": "Makes the red LED pulse at a specific interval.",
   "syntax": "led.pulse(interval)",
   "tips": "* Use `led.on()` or `led.off()` to make the led stop pulsing."

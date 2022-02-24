@@ -86,12 +86,6 @@
       "description": "The vertical height in pixels of the rectangle. Should be a positive number, but negative numbers will draw the rectangle above the (x,y) upper left corner position."
     }
   ],
-  "parameters": [
-    "x",
-    "y",
-    "w",
-    "h"
-  ],
   "return_value": "No return value. Outputs to the display only.",
   "short_description": "Draws a rectangle onto the display positioned at x and y with sides length w(idth) and h(eight).",
   "syntax": "rect(x, y, w, h)",

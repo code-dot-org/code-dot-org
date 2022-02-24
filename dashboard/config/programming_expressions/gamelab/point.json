@@ -56,10 +56,6 @@
       "description": "The y-location in pixels of the point. Should be a number from 0 to 400, but negative numbers will draw the point above the display and numbers greater than 400 will draw the point below the display (possibly unseen)."
     }
   ],
-  "parameters": [
-    "x",
-    "y"
-  ],
   "return_value": "No return value. Outputs to the display only.",
   "short_description": "Draws a point.",
   "syntax": "point(x, y)",
