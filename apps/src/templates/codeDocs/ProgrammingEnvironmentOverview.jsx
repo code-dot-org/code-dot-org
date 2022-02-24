@@ -19,7 +19,7 @@ export function CategorySection({category}) {
       <ul>
         {category.programmingExpressions.map(expression => (
           <li key={expression.key}>
-            <CodeDocLink programmingExpression={expression} />
+            <CodeDocLink programmingExpression={expression} showBlocks />
           </li>
         ))}
       </ul>
@@ -31,8 +31,7 @@ export default function ProgrammingEnvironmentOverview({
   programmingEnvironment
 }) {
   return (
-    <div>
-      {programmingEnvironment.title && <h1>{programmingEnvironment.title}</h1>}
+    <div style={{width: '100%'}}>
       {programmingEnvironment.description && (
         <EnhancedSafeMarkdown markdown={programmingEnvironment.description} />
       )}
