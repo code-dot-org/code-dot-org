@@ -70,6 +70,7 @@ const FormController = props => {
     onSetPage = () => {},
     onSuccessfulSubmit = () => {},
     onSuccessfulSave = () => {},
+    savedStatus = undefined,
     serializeAdditionalData = () => ({}),
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
@@ -99,7 +100,7 @@ const FormController = props => {
     applicationId
   );
   const [showDataWasLoadedMessage, setShowDataWasLoadedMessage] = useState(
-    applicationId && allowPartialSaving
+    applicationId
   );
   const applicationStatusOnSave = 'incomplete';
   const applicationStatusOnSubmit = 'unreviewed';
@@ -346,6 +347,7 @@ const FormController = props => {
     const handleSuccessfulSave = data => {
       scrollToTop();
       setShowSavedMessage(true);
+      setShowDataWasLoadedMessage(false);
       setUpdatedApplicationId(data.id);
       setSaving(false);
       onSuccessfulSave(data);
@@ -514,8 +516,9 @@ const FormController = props => {
         bsStyle="info"
       >
         <p>
-          We found an application you started! Your saved responses have been
-          loaded.
+          {savedStatus === 'reopened'
+            ? 'Your Regional Partner has requested more information.  Please update and resubmit.'
+            : 'We found an application you started! Your saved responses have been loaded.'}
         </p>
       </Alert>
     );
@@ -598,7 +601,7 @@ const FormController = props => {
         {currentPage > 0 && backButton}
         {pageButtons}
         {shouldShowSubmit() ? submitButton : nextButton}
-        {allowPartialSaving && saveButton}
+        {allowPartialSaving && savedStatus !== 'reopened' && saveButton}
       </FormGroup>
     );
   };
@@ -638,6 +641,7 @@ FormController.propTypes = {
   onSetPage: PropTypes.func,
   onSuccessfulSubmit: PropTypes.func,
   onSuccessfulSave: PropTypes.func,
+  savedStatus: PropTypes.string,
   serializeAdditionalData: PropTypes.func,
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,
