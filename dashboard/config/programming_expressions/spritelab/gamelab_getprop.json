@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Make the cow move forward by its size each time it is clicked.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/YF9qqbU2thaidVnAsyO5xZZg-Qyd8sbffBtHIMKqNiY",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "There is a bee hiding in a random location on the screen, but where is it? Printing the x and y positions of the sprite helps you find it faster.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/BGMPqEYSlbx-7A3K4irU0TEtqMUYXEhotBNOJpwXh7k",
       "image": null,
       "app_display_type": "embedAppWithCode",

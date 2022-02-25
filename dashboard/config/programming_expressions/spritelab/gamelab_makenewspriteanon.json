@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Create a new sprite with a \"pink bunny\" costume at (100, 300).\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/urrtCeUSn8OCCexM3ueoBbQN0f6vzydtME2g8a_JJI4",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Create a carrot in a random location whenever the bunny is clicked.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/0PeIG8da8W2sfQXLz_cZ-hvIvj3Izq20IdHqUa305mg",
       "image": null,
       "app_display_type": "embedAppWithCode",

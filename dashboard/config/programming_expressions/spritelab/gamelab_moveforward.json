@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "This airplane moves \"forward\". All sprites move to the right by default.",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/f38oDFC4vPSwHNfMxitUavljGTcG3lVCxbATW2nlmZ4",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Extra code changes the sprite's starting direction. You can also change direction with the arrow keys.",
-      "code": "```\n\n```",
       "app": "",
       "image": null,
       "app_display_type": "embedAppWithCode",
