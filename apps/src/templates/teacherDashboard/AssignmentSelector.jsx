@@ -2,7 +2,12 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
-import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
+import {
+  sectionShape,
+  assignmentShape,
+  assignmentFamilyShape,
+  assignmentCourseOfferingShape
+} from './shapes';
 import {assignmentId, assignmentFamilyFields} from './teacherSectionsRedux';
 import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
@@ -52,6 +57,8 @@ export default class AssignmentSelector extends Component {
   static propTypes = {
     section: sectionShape,
     assignments: PropTypes.objectOf(assignmentShape).isRequired,
+    courseOfferings: PropTypes.arrayOf(assignmentCourseOfferingShape)
+      .isRequired,
     assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
     chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
@@ -246,6 +253,7 @@ export default class AssignmentSelector extends Component {
 
   render() {
     const {assignments, dropdownStyle, disabled} = this.props;
+
     let {assignmentFamilies} = this.props;
     const {
       selectedPrimaryId,

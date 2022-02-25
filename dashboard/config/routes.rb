@@ -96,6 +96,7 @@ Dashboard::Application.routes.draw do
       collection do
         get 'membership'
         get 'valid_scripts'
+        get 'valid_course_offerings'
         get 'require_captcha'
       end
     end

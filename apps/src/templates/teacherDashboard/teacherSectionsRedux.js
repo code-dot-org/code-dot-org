@@ -46,6 +46,7 @@ const importUrlByProvider = {
 //
 const SET_VALID_GRADES = 'teacherDashboard/SET_VALID_GRADES';
 const SET_VALID_ASSIGNMENTS = 'teacherDashboard/SET_VALID_ASSIGNMENTS';
+const SET_COURSE_OFFERINGS = 'teacherDashboard/SET_COURSE_OFFERINGS';
 const SET_LESSON_EXTRAS_UNIT_IDS =
   'teacherDashboard/SET_LESSON_EXTRAS_UNIT_IDS';
 const SET_TEXT_TO_SPEECH_UNIT_IDS =
@@ -128,6 +129,10 @@ export const setAuthProviders = providers => ({
 export const setRosterProvider = rosterProvider => ({
   type: SET_ROSTER_PROVIDER,
   rosterProvider
+});
+export const setCourseOfferings = courseOfferings => ({
+  type: SET_COURSE_OFFERINGS,
+  courseOfferings
 });
 export const setValidAssignments = (validCourses, validScripts) => ({
   type: SET_VALID_ASSIGNMENTS,
@@ -393,6 +398,7 @@ export const asyncLoadSectionData = id => dispatch => {
   dispatch({type: ASYNC_LOAD_BEGIN});
   let apis = [
     '/dashboardapi/sections',
+    '/dashboardapi/sections/valid_course_offerings',
     `/dashboardapi/courses`,
     '/dashboardapi/sections/valid_scripts'
   ];
@@ -401,13 +407,22 @@ export const asyncLoadSectionData = id => dispatch => {
   }
 
   return Promise.all(apis.map(fetchJSON))
-    .then(([sections, validCourses, validScripts, students]) => {
-      dispatch(setValidAssignments(validCourses, validScripts));
-      dispatch(setSections(sections));
-      if (id) {
-        dispatch(setStudentsForCurrentSection(id, students));
+    .then(
+      ([
+        sections,
+        validCourseOfferings,
+        validCourses,
+        validScripts,
+        students
+      ]) => {
+        dispatch(setCourseOfferings(validCourseOfferings));
+        dispatch(setValidAssignments(validCourses, validScripts));
+        dispatch(setSections(sections));
+        if (id) {
+          dispatch(setStudentsForCurrentSection(id, students));
+        }
       }
-    })
+    )
     .catch(err => {
       console.error(err.message);
     })
@@ -536,6 +551,10 @@ const initialState = {
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentFamilyShape PropType.
   assignmentFamilies: [],
+  // Array of course offerings, to populate the assignment dropdown
+  // with options like "CSD", "Course A", or "Frozen". See the
+  // assignmentCourseOfferingShape PropType.
+  courseOfferings: [],
   // Mapping from sectionId to section object
   sections: {},
   // List of students in section currently being edited (see studentShape PropType)
@@ -652,6 +671,13 @@ export default function teacherSections(state = initialState, action) {
     return {
       ...state,
       pageType: action.pageType
+    };
+  }
+
+  if (action.type === SET_COURSE_OFFERINGS) {
+    return {
+      ...state,
+      courseOfferings: action.courseOfferings
     };
   }
 
