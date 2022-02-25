@@ -99,7 +99,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.assignable_course_offerings_info(user, locale_code = 'en-us')
-    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
+    assignable_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def self.assignable_student_course_offerings(user)
@@ -107,7 +107,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.assignable_student_course_offerings_info(user, locale_code = 'en-us')
-    assignable_student_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
+    assignable_student_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def self.assignable_pl_course_offerings(user)
@@ -115,7 +115,7 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.assignable_pl_course_offerings_info(user, locale_code = 'en-us')
-    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}
+    assignable_pl_course_offerings(user).map {|co| co.summarize_for_assignment_dropdown(user, locale_code)}.to_h
   end
 
   def assignable?(user)
@@ -128,13 +128,16 @@ class CourseOffering < ApplicationRecord
   end
 
   def summarize_for_assignment_dropdown(user, locale_code)
-    {
-      id: id,
-      display_name: localized_display_name,
-      category: category,
-      is_featured: is_featured?,
-      course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
-    }
+    [
+      id,
+      {
+        id: id,
+        display_name: localized_display_name,
+        category: category,
+        is_featured: is_featured?,
+        course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}.to_h
+      }
+    ]
   end
 
   def localized_display_name

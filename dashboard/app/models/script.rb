@@ -1875,10 +1875,13 @@ class Script < ApplicationRecord
   def summarize_for_assignment_dropdown
     info = ScriptConstants.assignable_info(self)
 
-    {
-      id: id,
-      name: I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
-    }
+    [
+      id,
+      {
+        id: id,
+        name: I18n.t("data.script.name.#{info[:name]}.title", default: info[:name])
+      }
+    ]
   end
 
   # @return {AssignableInfo} with strings translated
