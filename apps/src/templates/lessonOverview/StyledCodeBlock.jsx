@@ -19,6 +19,7 @@ export default function StyledCodeBlock({programmingExpression}) {
       <EmbeddedBlock
         blockName={programmingExpression.blockName}
         link={programmingExpression.link}
+        ariaLabel={programmingExpression.name}
       />
     );
   } else {
