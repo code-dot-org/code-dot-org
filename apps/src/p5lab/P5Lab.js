@@ -58,6 +58,7 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
+import defaultSprites from './spritelab/defaultSprites.json';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -79,7 +80,6 @@ import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exp
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import defaultSprites from './spritelab/defaultSprites.json';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -103,7 +103,7 @@ const DRAW_LOOP_MEASURE = 'drawLoop';
  * @implements LogTarget
  */
 export default class P5Lab {
-  constructor(defaultSprites) {
+  constructor(defaultSprites = []) {
     this.defaultAnimations = defaultSprites;
     this.skin = null;
     this.level = null;
