@@ -1,7 +1,0 @@
-{
-  "key": "gamelab_printText",
-  "name": "printText",
-  "category": "World",
-  "block_name": "gamelab_printText",
-  "syntax": "printText"
-}

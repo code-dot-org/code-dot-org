@@ -3,15 +3,18 @@
   "script_names": [
     "csa1-2022",
     "csa2-2022",
-    "csa3-2022"
+    "csa3-2022",
+    "csa4-2022",
+    "csa5-2022"
   ],
-  "published_state": "in_development",
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
     "family_name": "csa",
     "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2022"
   },
   "resources": [

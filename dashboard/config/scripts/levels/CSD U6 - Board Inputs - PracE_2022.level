@@ -54,7 +54,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
-    "long_instructions": "# Board Inputs Practice",
+    "long_instructions": "# Yes-Or-No Communicator\r\n\r\nCreate an app that uses the buzzer and the left and right buttons to represent answers to yes or no questions. For example, a high-buzz could represent \"yes\" and a low-buzz could represent \"no\". Then, use the buzzer to answer yes-or-no questions with a partner and see if they can understand your responses!\r\n\r\n## Do This\r\n\r\n**In Design Mode:**\r\n- Decide on what buzz represents \"yes\" and what buz represents \"no\"\r\n- Use a `label` element to describe what type of buzz means \"yes\" and what type of buzz means \"no\"\r\n\r\n**In Code Mode:**\r\n- Use an `onBoardEvent` to detect when the left button is pressed and play the note for \"yes\"\r\n- Use an `onBoardEvent` to detect when the right button is pressed and play the note for \"no\"\r\n\r\n**Run The App!** When a partner looks at the app, they should be able to understand how it works without you needing to speak. When they ask yes-or-no questions, they should be able to understand your answers without you needing to speak either!\r\n\r\n_Note: This is an example of an app that focuses on **accessibility**, which makes it easier for people with disabilities to use technology and communicate. This type of app could be used by someone who can't speak but still needs to communicate_",
     "parent_level_id": 20595,
     "name_suffix": "_2021",
     "mini_rubric": "false",
@@ -70,10 +70,13 @@
       "/docs/concepts/maker-toolkit/board-events/"
     ],
     "palette_category_at_start": "Circuit",
+    "display_name": "Yes-Or-No Communicator",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L4/practice/E.png",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "bubble_choice_description": "Create an app that uses button presses and the buzzer to communicate \"yes\" and \"no\" answers"
   },
   "game_id": 41,
   "published": true,
@@ -81,7 +84,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T03:11:03.466+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracD_2022\"},{\"changed_at\":\"2021-12-16 03:11:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T03:11:03.466+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - PracD_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - PracD_2022\"},{\"changed_at\":\"2021-12-16 03:11:07 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 17:01:32 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-22 22:44:44 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -70,10 +70,6 @@ class HomeController < ApplicationController
     render 'home/index'
   end
 
-  def certificate_link_test
-    render 'certificate_link_test', formats: [:html]
-  end
-
   # This static page combines TOS and Privacy partials all in one page
   # for easy printing.
   def terms_and_privacy
@@ -130,11 +126,11 @@ class HomeController < ApplicationController
     # script, so we don't want to include that script (if it exists) in the
     # regular lists of recent scripts.
     exclude_primary_script = true
-    @homepage_data[:courses] = current_user.recent_courses_and_scripts(exclude_primary_script)
+    @homepage_data[:courses] = current_user.recent_student_courses_and_units(exclude_primary_script)
 
     @homepage_data[:hasFeedback] = current_user.student? && TeacherFeedback.has_feedback?(current_user.id)
 
-    script = Queries::ScriptActivity.primary_script(current_user)
+    script = Queries::ScriptActivity.primary_student_unit(current_user)
     if script
       script_level = current_user.next_unpassed_progression_level(script)
     end
@@ -149,6 +145,26 @@ class HomeController < ApplicationController
     end
 
     if current_user.teacher?
+      # Teachers will receive a topPlCourse for their primary
+      # unit, so we don't want to include that unit (if it exists) in the
+      # regular lists of recent units.
+      exclude_primary_script = true
+      @homepage_data[:plCourses] = current_user.recent_pl_courses_and_units(exclude_primary_script)
+
+      pl_unit = Queries::ScriptActivity.primary_pl_unit(current_user)
+      if pl_unit
+        pl_script_level = current_user.next_unpassed_progression_level(pl_unit)
+      end
+      @homepage_data[:topPlCourse] = nil
+      if pl_unit && pl_script_level
+        @homepage_data[:topPlCourse] = {
+          assignableName: data_t_suffix('script.name', pl_unit[:name], 'title'),
+          lessonName: pl_script_level.lesson.localized_title,
+          linkToOverview: script_path(pl_unit),
+          linkToLesson: script_next_path(pl_unit, 'next')
+        }
+      end
+
       unless current_user.donor_teacher_banner_dismissed
         donor_banner_name = current_user.school_donor_name
       end
@@ -170,6 +186,7 @@ class HomeController < ApplicationController
       @homepage_data[:showCensusBanner] = show_census_banner
       @homepage_data[:showNpsSurvey] = show_nps_survey?
       @homepage_data[:showFinishTeacherApplication] = has_incomplete_application?
+      @homepage_data[:showReturnToReopenedTeacherApplication] = has_reopened_application?
       @homepage_data[:donorBannerName] = donor_banner_name
       @homepage_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/home")
       @homepage_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids

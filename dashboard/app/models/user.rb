@@ -656,7 +656,7 @@ class User < ApplicationRecord
 
   def self.find_channel_owner(encrypted_channel_id)
     owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
-    user_id = PEGASUS_DB[:user_storage_ids].first(id: owner_storage_id)[:user_id]
+    user_id = user_id_for_storage_id(owner_storage_id)
     User.find(user_id)
   rescue ArgumentError, OpenSSL::Cipher::CipherError, ActiveRecord::RecordNotFound
     nil
@@ -1577,7 +1577,7 @@ class User < ApplicationRecord
   end
 
   # Returns the set of courses the user has been assigned to or has progress in.
-  def courses_as_student
+  def courses_as_participant
     visible_scripts.map(&:unit_group).compact.concat(section_courses).uniq
   end
 
@@ -1663,16 +1663,18 @@ class User < ApplicationRecord
   # Example: true when the primary_script is being used for a TopCourse on /home
   # @return [Array{CourseData, ScriptData}] an array of hashes of script and
   # course data
-  def recent_courses_and_scripts(exclude_primary_script)
-    primary_script_id = Queries::ScriptActivity.primary_script(self).try(:id)
+  def recent_pl_courses_and_units(exclude_primary_script)
+    primary_script_id = Queries::ScriptActivity.primary_pl_unit(self).try(:id)
 
     # Filter out user_scripts that are already covered by a course
-    unit_group_units_script_ids = courses_as_student.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
+    unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
       select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
 
-    user_script_data = user_scripts.map do |user_script|
+    pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
+
+    user_script_data = pl_user_scripts.map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
       # primary script.
       if exclude_primary_script && user_script[:script_id] == primary_script_id
@@ -1689,7 +1691,47 @@ class User < ApplicationRecord
       end
     end.compact
 
-    user_course_data = courses_as_student.map(&:summarize_short)
+    user_course_data = courses_as_participant.select(&:pl_course?).map(&:summarize_short)
+
+    user_course_data + user_script_data
+  end
+
+  # Return a collection of courses and scripts for the user.
+  # First in the list will be courses enrolled in by the user's sections.
+  # Following that will be all scripts in which the user has made progress that # are not in any of the enrolled courses.
+  # @param exclude_primary_script [boolean]
+  # Example: true when the primary_script is being used for a TopCourse on /home
+  # @return [Array{CourseData, ScriptData}] an array of hashes of script and
+  # course data
+  def recent_student_courses_and_units(exclude_primary_script)
+    primary_script_id = Queries::ScriptActivity.primary_student_unit(self).try(:id)
+
+    # Filter out user_scripts that are already covered by a course
+    unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
+
+    user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
+      select {|user_script| !unit_group_units_script_ids.include?(user_script.script_id)}
+
+    user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
+
+    user_script_data = user_student_scripts.map do |user_script|
+      # Skip this script if we are excluding the primary script and this is the
+      # primary script.
+      if exclude_primary_script && user_script[:script_id] == primary_script_id
+        nil
+      else
+        script_id = user_script[:script_id]
+        script = Script.get_from_cache(script_id)
+        {
+          name: script[:name],
+          title: data_t_suffix('script.name', script[:name], 'title'),
+          description: data_t_suffix('script.name', script[:name], 'description_short', default: ''),
+          link: script_path(script),
+        }
+      end
+    end.compact
+
+    user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
 
     user_course_data + user_script_data
   end
@@ -2301,11 +2343,8 @@ class User < ApplicationRecord
       update(state: 'active', updated_at: Time.now)
   end
 
-  # Gets the user's user_storage_id from the pegasus database, if it's available.
-  # Note: Known that this duplicates some logic in storage_id_for_user_id, but
-  # that method is globally stubbed in tests :cry: and therefore not very helpful.
   def user_storage_id
-    @user_storage_id ||= PEGASUS_DB[:user_storage_ids].where(user_id: id).first&.[](:id)
+    @user_storage_id ||= storage_id_for_user_id(id)
   end
 
   # Via the paranoia gem, undelete / undestroy the deleted / destroyed user and any (dependent)

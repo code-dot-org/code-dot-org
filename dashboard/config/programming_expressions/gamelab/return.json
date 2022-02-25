@@ -2,5 +2,7 @@
   "key": "return",
   "name": "return",
   "category": "Functions",
+  "category_key": "functions",
+  "short_description": "Game Lab - return",
   "syntax": "return __;"
 }

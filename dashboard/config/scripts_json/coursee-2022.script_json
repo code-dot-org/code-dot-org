@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2022-01-27 18:39:55 UTC",
+    "serialized_at": "2022-02-22 19:49:16 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1407,7 +1407,7 @@
       "position": 1,
       "properties": {
         "duration": 45,
-        "name": "End of Course Project"
+        "name": "Day 1 - Explore Project Ideas"
       },
       "seeding_key": {
         "lesson_activity.key": "03e20d6a-151e-4f7c-8455-81945f0789b6",
@@ -1461,6 +1461,7 @@
       "key": "f4c94b25-e0f0-4caa-bebd-1557f771a849",
       "position": 5,
       "properties": {
+        "duration": 45,
         "name": "Day 5 & 6 - Present Your Project"
       },
       "seeding_key": {
@@ -3396,7 +3397,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _Today, you'll start the final lesson of the unit, in which you will design and code your own project._\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “End of Course” slide\n\n**Say**: You’re going to be designing a project using Sprite Lab, Artist, or Frozen. If you choose Sprite Lab, you will show that you know: sprites, behaviors, and events. If you choose Artist or Frozen, you will show that you know: loops, nested loops, and functions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 1: Explore” slide\n\nGoal: This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\nGive students a day to play with and remix the example projects found in the lesson. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Example Projects” slide\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use.",
-        "name": "Day 1 - Explore Project Ideas"
+        "name": "Explore"
       },
       "seeding_key": {
         "activity_section.key": "5605c699-7bc3-4d0e-b7fd-f50cb86f79e8",
@@ -3480,9 +3481,8 @@
       "key": "ba161938-b183-494b-824e-0e5194b95cb9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 4: Feedback and Edits” slide\n\nStudents will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Feedback:\n\nFor feedback, have each group pair up with another group to try each other’s projects.  After about 10 minutes, have the groups discuss the questions in the Final Project Design Worksheet.  \n\nEncourage students to ask the questions on the Final Project Design Worksheet and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
-        "duration": "45",
-        "name": "Day 4: Feedback and Edits"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 4: Feedback and Edits” slide\n\n#### Introduction (5 minutes)\n\n**Do This**: Explain to students that they will try out their classmates' projects and give them feedback. Then students will review the feedback they have received and use it to revise their own projects.\n\n**Goal:** Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Feedback (25 minutes)\n\nFor feedback, have each group pair up with another group to try each other’s projects for about 10 minutes. Then have the groups discuss the questions in the ***Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the ***Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
+        "name": "Feedback and Edits"
       },
       "seeding_key": {
         "activity_section.key": "ba161938-b183-494b-824e-0e5194b95cb9",
@@ -3509,7 +3509,7 @@
       "key": "85892c70-0773-4ae2-a207-7f9f8935be81",
       "position": 3,
       "properties": {
-        "description": "#### Edits:\n\nWith their new reflections in hand, students can head back to their machines to make a handful of edits.  With just 10 minutes left, they will likely have to select only the most important feedback to incorporate."
+        "description": "#### Edits (15 minutes)\n\nWith their new reflections in hand, students can head back to their machines to make a handful of edits.  With just 15 minutes left, they will likely have to select only the most important feedback to incorporate."
       },
       "seeding_key": {
         "activity_section.key": "85892c70-0773-4ae2-a207-7f9f8935be81",
@@ -3520,8 +3520,7 @@
       "key": "b3a29f62-726b-481d-8dc7-d25eca19dc48",
       "position": 4,
       "properties": {
-        "description": "If your students are already comfortable with coding concepts, try having them create their projects in another platform, like [Scratch](https://scratch.mit.edu/) or [Alice](http://www.alice.org/index.php).",
-        "name": "Other\r"
+        "description": "#### Other\n\nIf your students are already comfortable with coding concepts, try having them create their projects in another platform, like [Scratch](https://scratch.mit.edu/) or [Alice](http://www.alice.org/index.php)."
       },
       "seeding_key": {
         "activity_section.key": "b3a29f62-726b-481d-8dc7-d25eca19dc48",
@@ -3533,7 +3532,6 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 5 & 6: Present and Reflect” slide\n\nStudents will create and present their projects in an approved manner (written, oral, or using multimedia).",
-        "duration": "45",
         "name": "Presentations - Day 5"
       },
       "seeding_key": {
@@ -3561,7 +3559,7 @@
       "key": "5b84b4f8-673c-4bdc-ad80-4705f485deea",
       "position": 3,
       "properties": {
-        "description": "#### Create:\n\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like *Google Slides*. \n\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\n\n#### Present:\n\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \n\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
+        "description": "#### Create\n\nIdeally, you will have class time available to give students to work on their presentations.  This will allow them to incorporate rich multimedia components, like *Google Slides*. \n\nEncourage students to include all of the information from Section J of the Final Project Design Worksheet into their presentation, as well as two or more questions from Section K.\n\n#### Present\n\nStudents should showcase their apps first, then they can discuss the questions that they covered in their presentations. \n\nIt can be very helpful to have students sign up for a specific order in which to give their presentations, so that they are able to enjoy the demonstrations of their classmates without worrying about whether they will be called on next."
       },
       "seeding_key": {
         "activity_section.key": "5b84b4f8-673c-4bdc-ad80-4705f485deea",
@@ -3573,11 +3571,22 @@
       "position": 4,
       "properties": {
         "description": "Students will continue to present their projects in an approved manner (written, oral, or using multimedia). ",
-        "duration": "45",
         "name": "Presentations - Day 6"
       },
       "seeding_key": {
         "activity_section.key": "53b377b0-6916-4b90-977b-bd9dab3dc424",
+        "lesson_activity.key": "f4c94b25-e0f0-4caa-bebd-1557f771a849"
+      }
+    },
+    {
+      "key": "9946dfc7-dce9-4ead-bbdc-aec0d224bbc9",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n* _What did you learn in creating this project?_\n* _What was the most challenging part about this experience? How did you overcome that challenge?_\n\nStudents will reflect on their work by completing the final **Reflect** section of their ***Final Project Guide** packets.",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "9946dfc7-dce9-4ead-bbdc-aec0d224bbc9",
         "lesson_activity.key": "f4c94b25-e0f0-4caa-bebd-1557f771a849"
       }
     }
@@ -3863,6 +3872,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_introtosprites"
+        ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
@@ -3885,6 +3897,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_say"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3982,6 +3997,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_eventsvideo"
+        ],
         "progression": "Video: Hello World: Programming with Events"
       },
       "bonus": false,
@@ -4004,6 +4022,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_events"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4026,6 +4047,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4048,6 +4072,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_costumes"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4070,6 +4097,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sizes"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4092,6 +4122,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4114,6 +4147,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sounds"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4136,6 +4172,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplayvideo"
+        ],
         "progression": "Video: Hello World: Do What You Want"
       },
       "bonus": false,
@@ -4158,6 +4197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "coursee_helloworld_freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -9132,6 +9174,32 @@
       }
     },
     {
+      "name": "CSF - Course E - Slides 2022-2023",
+      "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview",
+      "key": "csf_-_course_e_-_slides_2022-2023",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "name": "CSF - Course E - Slides 2022-2023",
+      "url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview",
+      "key": "csf_-_course_e_-_slides_2022-2023_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/explore/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_-_course_e_-_slides_2022-2023_1"
+      }
+    },
+    {
       "name": "CSTA Standards Mapping",
       "url": "https://studio.code.org/s/coursee-2021/standards",
       "key": "csta_standards_mapping",
@@ -9165,18 +9233,6 @@
       },
       "seeding_key": {
         "resource.key": "debugging_guide"
-      }
-    },
-    {
-      "name": "Designing for Accessibility",
-      "url": "https://docs.google.com/presentation/d/1hgMk91Ij1UxeobZ74uMiucJ0261yaHf5WLU9ItoQKZA/template/preview",
-      "key": "designing_for_accessibility",
-      "properties": {
-        "audience": "Student",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "designing_for_accessibility"
       }
     },
     {
@@ -9490,6 +9546,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with the Farmer",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Conditionals with the Farmer",
         "resource.key": "pause_and_think_online"
       }
@@ -9497,13 +9565,19 @@
     {
       "seeding_key": {
         "lesson.key": "Designing for Accessibility",
-        "resource.key": "designing_for_accessibility"
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Designing for Accessibility",
         "resource.key": "types_of_disabilities"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Sharing",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9520,6 +9594,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing with Loops",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project",
         "resource.key": "cs_fundamentals_final_project"
       }
@@ -9527,7 +9607,19 @@
     {
       "seeding_key": {
         "lesson.key": "End of Course Project",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
         "resource.key": "end_of_course_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Fancy Shapes using Nested Loops",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9551,7 +9643,19 @@
     {
       "seeding_key": {
         "lesson.key": "Functions in Minecraft",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
         "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions with Artist",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9562,8 +9666,26 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Functions with Harvester",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World: Food",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: About Me",
         "resource.key": "about_me_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: About Me",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9576,6 +9698,12 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: About Me",
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Design a Snowflake",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {
@@ -9611,6 +9739,12 @@
     {
       "seeding_key": {
         "lesson.key": "Songwriting",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriting",
         "resource.key": "functions_unplugged_songwriting"
       }
     },
@@ -9636,6 +9770,12 @@
       "seeding_key": {
         "lesson.key": "Songwriting",
         "resource.key": "songwriting_with_functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Swimming Fish with Sprite Lab",
+        "resource.key": "csf_-_course_e_-_slides_2022-2023"
       }
     },
     {

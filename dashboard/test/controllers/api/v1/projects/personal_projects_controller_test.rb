@@ -19,6 +19,9 @@ class Api::V1::Projects::PersonalProjectsControllerTest < ActionDispatch::Integr
 
   test 'personal projects are correct' do
     sign_in(@project_owner)
+    storage_id = fake_storage_id_for_user_id(@project_owner.id)
+    ProjectsList.stubs(:storage_id_for_user_id).with(@project_owner.id).returns(storage_id)
+
     get "/api/v1/projects/personal/"
     assert_response :success
     assert_match "no-store", response.headers["Cache-Control"]

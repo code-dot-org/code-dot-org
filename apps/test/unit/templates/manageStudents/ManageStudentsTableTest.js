@@ -32,9 +32,9 @@ import manageStudents, {
   TransferType
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import teacherSections, {
-  setSections
+  setSections,
+  selectSection
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import sectionData, {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
@@ -144,13 +144,12 @@ describe('ManageStudentsTable', () => {
         teacherSections,
         manageStudents,
         isRtl,
-        sectionData,
         unitSelection
       });
       const store = getStore();
       store.dispatch(setLoginType(fakeSection.login_type));
       store.dispatch(setSections([fakeSection]));
-      store.dispatch(setSection(fakeSection));
+      store.dispatch(selectSection(fakeSection.id));
       store.dispatch(setStudents(fakeStudents));
     });
 
@@ -243,7 +242,6 @@ describe('ManageStudentsTable', () => {
       };
       getStore().dispatch(setLoginType(SectionLoginType.word));
       getStore().dispatch(setSections([wordSection]));
-      getStore().dispatch(setSection(wordSection));
       getStore().dispatch(setStudents(wordStudents));
       const wrapper = mount(
         <Provider store={getStore()}>
@@ -273,7 +271,6 @@ describe('ManageStudentsTable', () => {
       };
       getStore().dispatch(setLoginType(SectionLoginType.email));
       getStore().dispatch(setSections([emailSection]));
-      getStore().dispatch(setSection(emailSection));
       getStore().dispatch(setStudents(emailStudents));
       const wrapper = mount(
         <Provider store={getStore()}>
@@ -300,7 +297,6 @@ describe('ManageStudentsTable', () => {
       };
       getStore().dispatch(setLoginType(SectionLoginType.clever));
       getStore().dispatch(setSections([cleverSection]));
-      getStore().dispatch(setSection(cleverSection));
       const wrapper = mount(
         <Provider store={getStore()}>
           <ManageStudentsTable section={cleverSection} />
@@ -322,7 +318,6 @@ describe('ManageStudentsTable', () => {
       };
       getStore().dispatch(setLoginType(SectionLoginType.google_classroom));
       getStore().dispatch(setSections([googleSection]));
-      getStore().dispatch(setSection(googleSection));
       const wrapper = mount(
         <Provider store={getStore()}>
           <ManageStudentsTable section={googleSection} />
@@ -346,7 +341,6 @@ describe('ManageStudentsTable', () => {
       };
       getStore().dispatch(setLoginType(SectionLoginType.google_classroom));
       getStore().dispatch(setSections([googleSection]));
-      getStore().dispatch(setSection(googleSection));
       const wrapper = mount(
         <Provider store={getStore()}>
           <ManageStudentsTable section={googleSection} />
@@ -370,7 +364,6 @@ describe('ManageStudentsTable', () => {
       };
       getStore().dispatch(setLoginType(SectionLoginType.clever));
       getStore().dispatch(setSections([cleverSection]));
-      getStore().dispatch(setSection(cleverSection));
       const wrapper = mount(
         <Provider store={getStore()}>
           <ManageStudentsTable section={cleverSection} />
@@ -395,7 +388,6 @@ describe('ManageStudentsTable', () => {
       };
       getStore().dispatch(setLoginType(SectionLoginType.word));
       getStore().dispatch(setSections([wordSection]));
-      getStore().dispatch(setSection(wordSection));
       getStore().dispatch(setStudents(wordStudents));
 
       const defaultAddTransferStatus = {

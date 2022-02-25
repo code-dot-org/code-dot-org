@@ -12,13 +12,13 @@ social:
   "twitter:description": "Explore potential opportunities to fund your CS education"
   "twitter:image": "/images/csjourneys/og-scholarships.jpg"
 ---
-<div class="col-100" style="padding:25px; border:1px solid #29458c; border-radius:15px">
-  <a class="linktag" id="afe" href="https://www.amazonfutureengineer.com/scholarship?utm_campaign=Code%20.org&utm_medium=Scholarship&utm_source=US" target="_blank">
-    <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/beyond/afe.png" alt="Amazon Future Engineer logo">
+<div class="col-100" style="padding:25px; border:1px solid #000000; border-radius:15px">
+  <a class="linktag" msft-bam-scholarships" href="https://www.microsoft.com/en-us/diversity/programs/blacks-scholarships.aspx" target="_blank">
+    <img style="width: 12%; float: left; margin-top: 1%; margin-right: 2%" src="/images/avatars/microsoft.jpg" alt="Microsoft logo">
   </a>
   <div style="width: 85%; float: left">
-    <a class="linktag" id="afe" href="https://www.amazonfutureengineer.com/scholarship?utm_campaign=Code%20.org&utm_medium=Scholarship&utm_source=US" target="_blank"><h3 style="margin-top:0; color:#29458c"><strong>Applications now open for Amazon Future Engineer scholarship!</strong></h3></a>
-    <p>$40,000 for college and a paid programming internship at Amazon for high school students from underserved and historically underrepresented backgrounds planning to major in CS. <a class="linktag" id="afe" href="https://www.amazonfutureengineer.com/scholarship?utm_campaign=Code%20.org&utm_medium=Scholarship&utm_source=US" target="_blank" style="color:#29458c">View details.</a></p>
+    <a class="linktag" msft-bam-scholarships" href="https://www.microsoft.com/en-us/diversity/programs/blacks-scholarships.aspx" target="_blank"><h3 style="margin-top:0; color:#000000"><strong>Applications open for Microsoft's Blacks at Microsoft (BAM) scholarships!</strong></h3></a>
+    <p>The Blacks at Microsoft (BAM) group offers a number of scholarships to high school students of African descent planning on majoring in engineering, computer science, or business. Applications are open until March 15th. <a class="linktag" msft-bam-scholarships" href="https://www.microsoft.com/en-us/diversity/programs/blacks-scholarships.aspx" target="_blank" style="color:#000000">View details</a>.</p>
   </div>
   <div style="clear:both"></div>
 </div>

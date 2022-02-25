@@ -10,7 +10,8 @@
       "led.blink": null,
       "led.toggle": null,
       "led.pulse": null,
-      "buzzer.stop": null
+      "buzzer.stop": null,
+      "randomNumber_min_max": null
     },
     "edit_code": true,
     "embed": "false",
@@ -51,7 +52,7 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "true",
     "palette_category_at_start": "Circuit",
-    "long_instructions": "# Board Output Challenge",
+    "long_instructions": "# Random Buzzer!\r\n\r\nCreate an app with a single button. When the user presses the button, the buzzer will play a random frequency for a random amount of time. This app requires you to use the [`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/) block.\r\n\r\n## Do This:\r\n- **In Design Mode:** drag out a button element and give it a decriptive ID\r\n- **In Code Mode:**\r\n\t- Add an [`onEvent()`(#fff176)](/docs/applab/onEvent/) block for when the user clicks the button\r\n    - Use the [`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/) block inside the [`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) block to play a random frequency for a random duration\r\n\r\n**Run Your Code!** When you press the button, the buzzer should make a different sound each time!",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
     "name_suffix": "_2021",
@@ -66,10 +67,15 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
+    "display_name": "Random Numbers",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L2/challenge/C.png",
+    "start_blocks": "//This is a single button app that lets the user press the button \r\n//to play a random frequency for a random amount of time\r\n\r\n\r\n//Add an onEvent() block for when the user clicks the button\r\n//Add the randomNumber() block inside the buzzer.frequency() block \r\n//to play a random frequency for a random duration\r\n\r\n\r\n\r\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "bubble_choice_description": "Learn how to use the random number block to make the buzzer play a random frequency"
   },
   "game_id": 41,
   "published": true,
@@ -77,7 +83,7 @@
   "level_num": "custom",
   "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T02:57:35.473+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - ChalB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - ChalB_2022\"},{\"changed_at\":\"2021-12-16 02:57:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T02:57:35.473+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - ChalB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - ChalB_2022\"},{\"changed_at\":\"2021-12-16 02:57:39 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:44:30 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-17 22:20:43 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-17 22:21:15 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-21 08:31:28 +0000\",\"changed\":[],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"},{\"changed_at\":\"2022-02-22 22:05:06 +0000\",\"changed\":[\"code_functions\",\"display_name\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

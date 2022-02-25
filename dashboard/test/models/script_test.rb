@@ -250,6 +250,34 @@ class ScriptTest < ActiveSupport::TestCase
     end
   end
 
+  test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if participant' do
+    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp', version_year: '2017', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp', version_year: '2018', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+
+    # Assign participant to pl_csp1_2017.
+    section = create :section, script: pl_csp1_2017
+    participant = create :teacher
+    section.students << participant
+
+    redirect_unit = Script.get_unit_family_redirect_for_user('pl-csp', user: participant)
+    assert_equal pl_csp1_2017.name, redirect_unit.redirect_to
+
+    # participant makes progress in csp1_2018.
+    create :user_level, user: participant, script: pl_csp1_2018
+    participant.reload
+
+    redirect_unit = Script.get_unit_family_redirect_for_user('pl-csp', user: participant)
+    assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
+  end
+
+  test 'get_unit_family_redirect_for_user returns nil if user can not be an instructor or participant' do
+    student = create :student
+    create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp', version_year: '2017', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp', version_year: '2018', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+
+    assert_nil Script.get_unit_family_redirect_for_user('pl-csp', user: student)
+  end
+
   test 'get_unit_family_redirect_for_user returns latest stable unit assigned or with progress if student' do
     csp1_2017 = create(:script, name: 'csp1-2017', family_name: 'csp', version_year: '2017')
     csp1_2018 = create(:script, name: 'csp1-2018', family_name: 'csp', version_year: '2018')
@@ -268,6 +296,17 @@ class ScriptTest < ActiveSupport::TestCase
 
     redirect_unit = Script.get_unit_family_redirect_for_user('csp', user: student)
     assert_equal csp1_2018.name, redirect_unit.redirect_to
+  end
+
+  test 'get_unit_family_redirect_for_user returns latest stable unit in family if instructor' do
+    facilitator = create :facilitator
+    pl_csp1_2017 = create(:script, name: 'pl-csp1-2017', family_name: 'pl-csp', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    pl_csp1_2018 = create(:script, name: 'pl-csp1-2018', family_name: 'pl-csp', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    create(:script, name: 'pl-csp1-2019', family_name: 'pl-csp', version_year: '2019', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    create :section, user: facilitator, script: pl_csp1_2017
+
+    redirect_unit = Script.get_unit_family_redirect_for_user('pl-csp', user: facilitator)
+    assert_equal pl_csp1_2018.name, redirect_unit.redirect_to
   end
 
   test 'get_unit_family_redirect_for_user returns latest stable unit in family if teacher' do
@@ -379,59 +418,73 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal courseg_2018.link, courseg_2017.redirect_to_unit_url(student)
   end
 
-  test 'can_view_version? is true for teachers' do
-    unit = create :script, name: 'my-script'
-    teacher = create :teacher
-    assert unit.can_view_version?(teacher)
-  end
+  class CanViewVersion < ActiveSupport::TestCase
+    setup do
+      @student = create :student
+      @teacher = create :teacher
+      @facilitator = create :facilitator
+      @plc_reviewer = create :plc_reviewer
 
-  test 'can_view_version? is true if unit is latest stable version in student locale or in English' do
-    latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: []
-    latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['it-it']
-    student = create :student
+      @courseq_2017 = create(:script, name: 'courseq-2017', family_name: 'courseq', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @courseq_2018 = create(:script, name: 'courseq-2018', family_name: 'courseq', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @courseq_2019 = create(:script, name: 'courseq-2019', family_name: 'courseq', version_year: '2019')
 
-    assert latest_in_english.can_view_version?(student, locale: 'it-it')
-    assert latest_in_english.can_view_version?(nil)
-    assert latest_in_locale.can_view_version?(student, locale: 'it-it')
-    assert latest_in_locale.can_view_version?(nil, locale: 'it-it')
-  end
+      @pl_courseq_2017 = create(:script, name: 'pl-courseq-2017', family_name: 'pl-courseq', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @pl_courseq_2018 = create(:script, name: 'pl-courseq-2018', family_name: 'pl-courseq', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+    end
 
-  test 'can_view_version? is false if unit is unstable and has no progress and is not assigned' do
-    unstable = create :script, name: 'new-unstable', family_name: 'courseg', version_year: '2018'
-    student = create :student
+    test 'can_view_version? is true for instructor audience for old versions' do
+      assert @pl_courseq_2017.can_view_version?(@plc_reviewer)
+    end
 
-    refute unstable.can_view_version?(student, locale: 'it-it')
-  end
+    test 'can_view_version? is true for teachers where they are part of the instructor or participant audiences' do
+      assert @courseq_2017.can_view_version?(@teacher)
+    end
 
-  test 'can_view_version? is true if student is assigned to unit' do
-    unit = create :script, name: 'my-script', family_name: 'script-fam'
-    student = create :student
-    student.expects(:assigned_script?).returns(true)
+    test 'can_view_version? is false for teachers where they are NOT part of the instructor or participant audiences' do
+      refute @pl_courseq_2017.can_view_version?(@teacher)
+    end
 
-    assert unit.can_view_version?(student)
-  end
+    test 'can_view_version? is true if unit is latest stable version in student locale or in English' do
+      latest_in_english = create :script, name: 'english-only-script', family_name: 'courseg', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: []
+      latest_in_locale = create :script, name: 'localized-script', family_name: 'courseg', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable, supported_locales: ['it-it']
+      student = create :student
 
-  test 'can_view_version? is true if student has progress in unit' do
-    unit = create :script, name: 'my-script', family_name: 'script-fam', published_state: SharedCourseConstants::PUBLISHED_STATE.stable
-    student = create :student
-    student.scripts << unit
+      assert latest_in_english.can_view_version?(student, locale: 'it-it')
+      assert latest_in_english.can_view_version?(nil)
+      assert latest_in_locale.can_view_version?(student, locale: 'it-it')
+      assert latest_in_locale.can_view_version?(nil, locale: 'it-it')
+    end
 
-    assert unit.can_view_version?(student)
-  end
+    test 'can_view_version? is false if unit is unstable and has no progress and is not assigned' do
+      refute @courseq_2019.can_view_version?(@student)
+    end
 
-  test 'can_view_version? is true if student has progress in unit group unit belongs to' do
-    unit_group = create :unit_group, family_name: 'unit-fam'
-    unit1 = create :script, name: 'unit1', family_name: 'unit-fam'
-    create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
-    unit2 = create :script, name: 'unit2', family_name: 'unit-fam'
-    create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
-    student = create :student
-    student.scripts << unit1
-    unit_group.reload
-    unit1.reload
-    unit2.reload
+    test 'can_view_version? is true if student is assigned to unit' do
+      @student.expects(:assigned_script?).returns(true)
 
-    assert unit2.can_view_version?(student)
+      assert @courseq_2017.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is true if student has progress in unit' do
+      @student.scripts << @courseq_2017
+
+      assert @courseq_2017.can_view_version?(@student)
+    end
+
+    test 'can_view_version? is true if student has progress in unit group unit belongs to' do
+      unit_group = create :unit_group, family_name: 'unit-fam'
+      unit1 = create :script, name: 'unit1', family_name: 'unit-fam'
+      create :unit_group_unit, unit_group: unit_group, script: unit1, position: 1
+      unit2 = create :script, name: 'unit2', family_name: 'unit-fam'
+      create :unit_group_unit, unit_group: unit_group, script: unit2, position: 2
+      @student.scripts << unit1
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert unit2.can_view_version?(@student)
+    end
   end
 
   test 'self.latest_stable_version is nil if no unit versions in family are stable in locale' do
@@ -981,14 +1034,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 2, versions.length
     assert_equal 'foo-2018', versions[0][:name]
     assert_equal 'foo-2017', versions[1][:name]
-
-    teacher = create(:teacher)
-    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-    versions = foo17.summarize(true, teacher)[:versions]
-    assert_equal 3, versions.length
-    assert_equal 'foo-2019', versions[0][:name]
-    assert_equal 'foo-2018', versions[1][:name]
-    assert_equal 'foo-2017', versions[2][:name]
   end
 
   test 'summarize includes show assign button' do
@@ -1526,44 +1571,11 @@ class ScriptTest < ActiveSupport::TestCase
     refute has_unlaunched_unit?(units)
   end
 
-  test "self.valid_scripts: returns unlaunched units when user is an admin" do
+  test "self.valid_scripts: does not return unlaunched units when user is an admin" do
     admin = create(:admin)
 
     units = Script.valid_scripts(admin)
-    assert has_unlaunched_unit?(units)
-  end
-
-  test "self.valid_scripts: returns unlaunched units when user has hidden script access" do
-    teacher = create(:teacher)
-    teacher.update(permission: UserPermission::HIDDEN_SCRIPT_ACCESS)
-
-    units = Script.valid_scripts(teacher)
-    assert has_unlaunched_unit?(units)
-  end
-
-  test "self.valid_scripts: returns alternate unit if user has a course experiment with an alternate unit" do
-    Script.destroy_all
-    user = create(:user)
-    create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, name: 'original-unit')
-    alternate_unit = build(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable, name: 'alternate-unit')
-
-    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Script.any_instance.stubs(:alternate_script).returns(alternate_unit)
-
-    units = Script.valid_scripts(user)
-    assert_equal [alternate_unit], units
-  end
-
-  test "self.valid_scripts: returns original unit if user has a course experiment with no alternate unit" do
-    Script.destroy_all
-    user = create(:user)
-    unit = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-
-    UnitGroup.stubs(:has_any_course_experiments?).returns(true)
-    Script.any_instance.stubs(:alternate_script).returns(nil)
-
-    units = Script.valid_scripts(user)
-    assert_equal [unit], units
+    refute has_unlaunched_unit?(units)
   end
 
   test "self.valid_scripts: omits in-development units" do
@@ -2171,6 +2183,14 @@ class ScriptTest < ActiveSupport::TestCase
       refute_nil cloned_unit.get_course_version
     end
 
+    test 'clone raises exception if script name has already been taken' do
+      create :script, name: 'my-name'
+      raise = assert_raises do
+        @standalone_unit.clone_migrated_unit('my-name', version_year: '2022')
+      end
+      assert_equal 'Script name has already been taken', raise.message
+    end
+
     test 'clone raises exception if destination_unit_group does not have a course version' do
       versionless_unit_group = create :unit_group
       assert_nil versionless_unit_group.course_version
@@ -2187,6 +2207,46 @@ class ScriptTest < ActiveSupport::TestCase
         @standalone_unit.clone_migrated_unit('standalone-2022', family_name: 'standalone')
       end
     end
+  end
+
+  test 'should raise error if participant audience is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.participant_audience = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Participant audience must be set on the unit if its a standalone unit.'
+  end
+
+  test 'should raise error if instructor audience is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.instructor_audience = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Instructor audience must be set on the unit if its a standalone unit.'
+  end
+
+  test 'should raise error if published state is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.published_state = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Published state must be set on the unit if its a standalone unit.'
+  end
+
+  test 'should raise error if instruction type is nil for standalone unit' do
+    unit = create(:standalone_unit)
+    error = assert_raises do
+      unit.instruction_type = nil
+      unit.save!
+    end
+
+    assert_includes error.message, 'Instruction type must be set on the unit if its a standalone unit.'
   end
 
   private

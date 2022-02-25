@@ -2,10 +2,16 @@
   "key": "open",
   "name": "open",
   "category": "UI controls",
+  "category_key": "ui_controls",
   "palette_params": [
     {
-      "name": "url"
+      "name": "url",
+      "type": "string",
+      "required": true,
+      "description": "The URL to open."
     }
   ],
-  "syntax": "open(url)"
+  "short_description": "App Lab - open",
+  "syntax": "open(url)",
+  "tips": "- The open URL requires the full http:// prefix."
 }

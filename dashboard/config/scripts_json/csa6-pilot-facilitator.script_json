@@ -2,9 +2,10 @@
   "script": {
     "name": "csa6-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -14,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-26 20:04:07 UTC",
+    "serialized_at": "2022-02-16 21:18:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -457,6 +458,19 @@
       }
     },
     {
+      "key": "9e741e94-bd95-4eec-acbc-5d8e9424750b",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9e741e94-bd95-4eec-acbc-5d8e9424750b",
+        "lesson.key": "Documenting Program Code",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
       "key": "e6cee895-7e7d-4e94-8eee-26378084c138",
       "position": 1,
       "properties": {
@@ -493,6 +507,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "139324c5-7993-4025-a70e-9f986c6f5c08",
+        "lesson.key": "Exploring Integer and Double Objects",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
+      "key": "2d783ee9-cdb0-4711-8987-2aa4724f5f6c",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2d783ee9-cdb0-4711-8987-2aa4724f5f6c",
         "lesson.key": "Exploring Integer and Double Objects",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa6-pilot-facilitator"
@@ -541,6 +568,19 @@
       }
     },
     {
+      "key": "f288c0de-894a-4212-803b-dbf6e6d06255",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f288c0de-894a-4212-803b-dbf6e6d06255",
+        "lesson.key": "Using ArrayLists to Store Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
       "key": "e5133759-9489-4e75-a12f-491cdd6f3492",
       "position": 1,
       "properties": {
@@ -577,6 +617,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "e4f963cb-0d0c-471e-9bf5-395ecc2f256c",
+        "lesson.key": "Working with ArrayList Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
+      "key": "7cd759d4-206b-4d59-890f-296ba5c98565",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7cd759d4-206b-4d59-890f-296ba5c98565",
         "lesson.key": "Working with ArrayList Data",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa6-pilot-facilitator"
@@ -625,6 +678,19 @@
       }
     },
     {
+      "key": "47073b20-1512-4ab3-95a1-fa64f1b3c6cc",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47073b20-1512-4ab3-95a1-fa64f1b3c6cc",
+        "lesson.key": "Storing Objects in an ArrayList",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
       "key": "393d3d70-075b-4613-b1bc-143b28354364",
       "position": 1,
       "properties": {
@@ -661,6 +727,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "ca8adbe3-3c18-434a-b955-a588103e7038",
+        "lesson.key": "Removing Data from an ArrayList",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
+      "key": "2f58e8c7-2b5d-4580-9a58-4c617642e2e4",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2f58e8c7-2b5d-4580-9a58-4c617642e2e4",
         "lesson.key": "Removing Data from an ArrayList",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa6-pilot-facilitator"
@@ -709,6 +788,19 @@
       }
     },
     {
+      "key": "683ef9e0-a360-48d6-ad07-6b8e4f0f2a9b",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "683ef9e0-a360-48d6-ad07-6b8e4f0f2a9b",
+        "lesson.key": "Using String Methods",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
       "key": "7f55107e-3a92-4613-b489-d80d469209fc",
       "position": 1,
       "properties": {
@@ -751,6 +843,19 @@
       }
     },
     {
+      "key": "680e374b-34cf-45f9-8069-14c6e38037b4",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "680e374b-34cf-45f9-8069-14c6e38037b4",
+        "lesson.key": "Comparing Strings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
       "key": "a46dad08-0832-474f-ab4a-c1a0a62ee06e",
       "position": 1,
       "properties": {
@@ -787,6 +892,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "8270206b-afb5-4935-9f6c-3af87218170e",
+        "lesson.key": "Solving Problems with Strings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
+      "key": "be74c20c-516c-45c8-bb46-03d13855dae5",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "be74c20c-516c-45c8-bb46-03d13855dae5",
         "lesson.key": "Solving Problems with Strings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa6-pilot-facilitator"
@@ -1076,22 +1194,11 @@
   ],
   "activity_sections": [
     {
-      "key": "04c00c2d-270a-423d-b1a7-0a8714845551",
+      "key": "db5811bf-6b66-441f-a3b2-bc15232bf958",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Dr. Seuss Book Written by A.I. video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students notice that the story closely follows the same format as popular Dr. Seuss stories and may also note that the story does not consistently rhyme. Students may wonder how they might write a program to generate a story based on a line of text entered.",
-        "name": "Stories Written by A.I."
-      },
-      "seeding_key": {
-        "activity_section.key": "04c00c2d-270a-423d-b1a7-0a8714845551",
-        "lesson_activity.key": "83645ffe-bbbc-4c34-80a4-08be31585c84"
-      }
-    },
-    {
-      "key": "db5811bf-6b66-441f-a3b2-bc15232bf958",
-      "position": 2,
-      "properties": {
         "description": "You have learned a lot about Java throughout the year, much of which we can use to create a simple version of a program that can produce something like this story.",
+        "name": "Stories Written by A.I.",
         "remarks": true
       },
       "seeding_key": {
@@ -1101,15 +1208,9 @@
     },
     {
       "key": "bfccb2f4-92f9-4be5-989d-aa232f4fd2e5",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you create a program that generated a story like this?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for creating a similar program, such as searching for words with specific characteristics and using conditionals and iteration. Students note that they need to know how to work with `String`s to find some of these characteristics and might even suggest needing a way to search for words in an existing dictionary file.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The program used to produce the story in the video is more complex than what students would typically create in this course. Help students identify simple aspects that they could implement, such as finding words by characteristics such as using conditionals and iteration to check for syllables, length, positive or negative connotations, or other characteristics."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you create a program that generates a story?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for creating a similar program, such as searching for words with specific characteristics and using conditionals and iteration. Students note that they need to know how to work with `String`s to find some of these characteristics and might even suggest needing a way to search for words in an existing dictionary file."
       },
       "seeding_key": {
         "activity_section.key": "bfccb2f4-92f9-4be5-989d-aa232f4fd2e5",
@@ -1354,6 +1455,17 @@
       }
     },
     {
+      "key": "5169e361-ccba-43d1-bb98-7dcbaa3798a7",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "5169e361-ccba-43d1-bb98-7dcbaa3798a7",
+        "lesson_activity.key": "9e741e94-bd95-4eec-acbc-5d8e9424750b"
+      }
+    },
+    {
       "key": "64d05696-7993-4399-a95a-6eb25e3f659a",
       "position": 1,
       "properties": {
@@ -1542,6 +1654,17 @@
       }
     },
     {
+      "key": "58f429b5-698e-492a-ab58-e1f0c5b1969a",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.8\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "58f429b5-698e-492a-ab58-e1f0c5b1969a",
+        "lesson_activity.key": "2d783ee9-cdb0-4711-8987-2aa4724f5f6c"
+      }
+    },
+    {
       "key": "6d459168-2640-47e8-bc88-10c5d44da9d4",
       "position": 1,
       "properties": {
@@ -1697,7 +1820,7 @@
       "key": "4af7c4f5-b17a-4a03-8784-45a90a17e5e1",
       "position": 11,
       "properties": {
-        "description": "`ArrayList`s allow software engineers to solve more complex problems with our programs because they adapt based on their needs.\n\nFor example, when we need to work with a lot of data, we usually don't want to enter the data into the program every time we run it. We also want our programs to work with different sets of data without needing to change our code every time. What if we could use text files that contain the data we want to use in our programs?",
+        "description": "Autoboxing also occurs when a primitive value is passed as a parameter to a method that expects an object of the corresponding wrapper class.\n\n`ArrayList`s allow software engineers to solve more complex problems with our programs because they adapt based on their needs. For example, when we need to work with a lot of data, we usually don't want to enter the data into the program every time we run it. We also want our programs to work with different sets of data without needing to change our code every time. What if we could use text files that contain the data we want to use in our programs?",
         "remarks": true
       },
       "seeding_key": {
@@ -1793,6 +1916,17 @@
       "seeding_key": {
         "activity_section.key": "ef74f12f-2ac9-4050-906d-c98115f85985",
         "lesson_activity.key": "8e2d4c02-4b64-4f2c-a642-5d6fc0590725"
+      }
+    },
+    {
+      "key": "0a1df5f7-873d-471c-adc7-1cb02da42f26",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "0a1df5f7-873d-471c-adc7-1cb02da42f26",
+        "lesson_activity.key": "f288c0de-894a-4212-803b-dbf6e6d06255"
       }
     },
     {
@@ -1958,7 +2092,7 @@
       "key": "e02df4a3-638b-4726-a93a-12e0cb1f3cf1",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define the `length()` method and discuss the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `teamList1.length()` return?*\n* *How many characters will `teamList3.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `teamList1` and 17 for `teamList3`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to complete Levels 4, 5, and 6 on Code Studio. On Level 4, students debug a program that produces an `ArrayIndexOutofBoundsExceptio`n. On Level 5, students use the `length()` and `set()` methods to modify an existing `ArrayList`. Students do a code review with a partner on Level 5 to receive feedback and improve their work before moving on to complete a Check for Understanding on Level 6.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define the `length()` method and discuss the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `atlanta.length()` return?*\n* *How many characters will `tennessee.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 15 for `atlanta` and 16 for `tennessee`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to complete Levels 4, 5, and 6 on Code Studio. On Level 4, students debug a program that produces an `ArrayIndexOutofBoundsExceptio`n. On Level 5, students use the `length()` and `set()` methods to modify an existing `ArrayList`. Students do a code review with a partner on Level 5 to receive feedback and improve their work before moving on to complete a Check for Understanding on Level 6.",
         "progression_name": "Changing Values in an ArrayList"
       },
       "seeding_key": {
@@ -1986,6 +2120,18 @@
       },
       "seeding_key": {
         "activity_section.key": "70aa5fb3-bf21-47be-830f-cf5128d03de9",
+        "lesson_activity.key": "dbef214d-3ce3-4fbe-a19a-7da496c04a7d"
+      }
+    },
+    {
+      "key": "7e75b355-1981-4fef-8501-5e911c7a0897",
+      "position": 13,
+      "properties": {
+        "description": "Unboxing also occurs when a wrapper class object is passed as a parameter to a method that expects a value of the corresponding primitive type.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7e75b355-1981-4fef-8501-5e911c7a0897",
         "lesson_activity.key": "dbef214d-3ce3-4fbe-a19a-7da496c04a7d"
       }
     },
@@ -2041,6 +2187,17 @@
       "seeding_key": {
         "activity_section.key": "84ce3da6-59aa-4578-874b-a0344e8854ed",
         "lesson_activity.key": "e4f963cb-0d0c-471e-9bf5-395ecc2f256c"
+      }
+    },
+    {
+      "key": "b3b403a4-b9a9-4aae-b599-101ade88f137",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "b3b403a4-b9a9-4aae-b599-101ade88f137",
+        "lesson_activity.key": "7cd759d4-206b-4d59-890f-296ba5c98565"
       }
     },
     {
@@ -2176,6 +2333,17 @@
       "seeding_key": {
         "activity_section.key": "7497df82-adc8-4ee0-9591-4d6cf8e2080e",
         "lesson_activity.key": "9fbaa505-22b0-4042-96f5-b88e42b95059"
+      }
+    },
+    {
+      "key": "18afe009-ee0c-4c4b-86fb-101f316f7914",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.1\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "18afe009-ee0c-4c4b-86fb-101f316f7914",
+        "lesson_activity.key": "47073b20-1512-4ab3-95a1-fa64f1b3c6cc"
       }
     },
     {
@@ -2382,6 +2550,17 @@
       "seeding_key": {
         "activity_section.key": "5885d9cd-b9aa-4a84-bc03-9e996707533f",
         "lesson_activity.key": "ca8adbe3-3c18-434a-b955-a588103e7038"
+      }
+    },
+    {
+      "key": "11bf017d-22dc-4163-ab65-eecb979202ec",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.2\n* Topic Questions 7.3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "11bf017d-22dc-4163-ab65-eecb979202ec",
+        "lesson_activity.key": "2f58e8c7-2b5d-4580-9a58-4c617642e2e4"
       }
     },
     {
@@ -2631,6 +2810,17 @@
       }
     },
     {
+      "key": "18641a33-d028-4655-a6ba-3fe5fa5d2544",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "18641a33-d028-4655-a6ba-3fe5fa5d2544",
+        "lesson_activity.key": "683ef9e0-a360-48d6-ad07-6b8e4f0f2a9b"
+      }
+    },
+    {
       "key": "f80b4181-5ab8-46e3-abff-2400c58cc88f",
       "position": 1,
       "properties": {
@@ -2813,6 +3003,17 @@
       }
     },
     {
+      "key": "ea40af87-05b1-4b2b-a988-2fcb53c5b024",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.7\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea40af87-05b1-4b2b-a988-2fcb53c5b024",
+        "lesson_activity.key": "680e374b-34cf-45f9-8069-14c6e38037b4"
+      }
+    },
+    {
       "key": "7968557f-8614-4ab7-973d-daca7ae9e6f8",
       "position": 1,
       "properties": {
@@ -2959,6 +3160,17 @@
       }
     },
     {
+      "key": "044af30b-e0b4-4163-8fec-f543a060a352",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.3\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "044af30b-e0b4-4163-8fec-f543a060a352",
+        "lesson_activity.key": "be74c20c-516c-45c8-bb46-03d13855dae5"
+      }
+    },
+    {
       "key": "cb3edcdd-a380-4865-b853-957675c9359e",
       "position": 1,
       "properties": {
@@ -3062,6 +3274,18 @@
       },
       "seeding_key": {
         "activity_section.key": "ec24d0fa-1540-4619-a9c0-3b6f04413b4d",
+        "lesson_activity.key": "437585ee-f4d9-4f01-abc6-832c658dfd72"
+      }
+    },
+    {
+      "key": "b97abef1-3617-4b2e-9681-9597e694e4ed",
+      "position": 4,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 7.4\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "b97abef1-3617-4b2e-9681-9597e694e4ed",
         "lesson_activity.key": "437585ee-f4d9-4f01-abc6-832c658dfd72"
       }
     },
@@ -6168,15 +6392,36 @@
       }
     },
     {
-      "name": "Dr. Seuss Book Written by A.I.",
-      "url": "https://youtu.be/DckBBDU6V4k",
-      "key": "dr_seuss_book_written_by_a_i_",
+      "name": "All Resources",
+      "url": "/s/csa6-pilot-facilitator/resources",
+      "key": "all_resources_6",
       "properties": {
-        "audience": "Student",
-        "type": "Video"
+        "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "dr_seuss_book_written_by_a_i_"
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa6-pilot-facilitator/standards",
+      "key": "all_standards_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa6-pilot-facilitator/vocab",
+      "key": "all_vocabulary_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6"
       }
     },
     {
@@ -6481,7 +6726,7 @@
     },
     {
       "name": "Wrapper Classes",
-      "url": "https://youtu.be/37DLyyCQ2Ds",
+      "url": "https://youtu.be/Lthrwc-PJQw",
       "key": "wrapper_classes",
       "properties": {
         "audience": "Student",
@@ -6521,12 +6766,6 @@
       "seeding_key": {
         "lesson.key": "Documenting Program Code",
         "resource.key": "_key_u6l1_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Documenting Program Code",
-        "resource.key": "dr_seuss_book_written_by_a_i_"
       }
     },
     {
@@ -6807,7 +7046,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_6",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6",
+        "script.name": "csa6-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 

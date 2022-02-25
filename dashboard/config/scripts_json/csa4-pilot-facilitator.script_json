@@ -2,7 +2,7 @@
   "script": {
     "name": "csa4-pilot-facilitator",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "announcements": [
         {
@@ -14,6 +14,7 @@
         }
       ],
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -23,7 +24,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-26 21:27:51 UTC",
+    "serialized_at": "2022-01-29 00:36:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -470,6 +471,19 @@
       }
     },
     {
+      "key": "2b40b7db-bf0f-49a4-9136-781c5648e042",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2b40b7db-bf0f-49a4-9136-781c5648e042",
+        "lesson.key": "Using Existing Libraries to Add Capabilities",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
       "key": "1a3f4fe3-3c63-4d0d-8a72-445b47c089c0",
       "position": 1,
       "properties": {
@@ -506,6 +520,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "44f21eb3-68b4-48cc-9ec8-2289ca814dc6",
+        "lesson.key": "Solving Problems with the Math Class",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "key": "04f556c7-dcc1-462f-9d01-2b4a14036d0c",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04f556c7-dcc1-462f-9d01-2b4a14036d0c",
         "lesson.key": "Solving Problems with the Math Class",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot-facilitator"
@@ -554,6 +581,19 @@
       }
     },
     {
+      "key": "a554d80a-2da3-4cf0-9c52-7684aad4e1f1",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a554d80a-2da3-4cf0-9c52-7684aad4e1f1",
+        "lesson.key": "Treating Data as a Different Types",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
       "key": "bd22f595-1504-47cd-a40e-4699d2fb5bd3",
       "position": 1,
       "properties": {
@@ -590,6 +630,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "553d0685-0329-4283-91cf-68b4abda251f",
+        "lesson.key": "Comparing Values to Make Decisions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "key": "1f924405-e496-4c7c-b56a-95787eb2c9e7",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f924405-e496-4c7c-b56a-95787eb2c9e7",
         "lesson.key": "Comparing Values to Make Decisions",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot-facilitator"
@@ -638,6 +691,19 @@
       }
     },
     {
+      "key": "10d0cc16-ee83-40c9-84c7-cc266762a142",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "10d0cc16-ee83-40c9-84c7-cc266762a142",
+        "lesson.key": "Adding Randomness to a Program",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
       "key": "5959bd89-920f-4e03-888b-8da836b06880",
       "position": 1,
       "properties": {
@@ -674,6 +740,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "8adc7129-e487-4167-af62-0c1b29d6872a",
+        "lesson.key": "Comparing Object References and Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "key": "1f19dc1d-61da-4355-b005-d27661784f3d",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f19dc1d-61da-4355-b005-d27661784f3d",
         "lesson.key": "Comparing Object References and Data",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot-facilitator"
@@ -722,6 +801,19 @@
       }
     },
     {
+      "key": "005c780b-0cc5-482a-9857-667bbb0b4d29",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "005c780b-0cc5-482a-9857-667bbb0b4d29",
+        "lesson.key": "Providing an Alternate Path of Execution",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
       "key": "d6374c33-bbd5-4b2f-95e7-e18134a54357",
       "position": 1,
       "properties": {
@@ -758,6 +850,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f9dcda02-9e63-4dca-b3e2-5e7e8e690c58",
+        "lesson.key": "Testing Multiple Conditions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "key": "52d892b7-4c66-464b-b439-306c4926620f",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52d892b7-4c66-464b-b439-306c4926620f",
         "lesson.key": "Testing Multiple Conditions",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot-facilitator"
@@ -806,6 +911,19 @@
       }
     },
     {
+      "key": "734917c4-1140-4cd3-815a-ef85af6339d2",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "734917c4-1140-4cd3-815a-ef85af6339d2",
+        "lesson.key": "Using Logical Operators",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
       "key": "65bcf982-659a-479e-a60a-379975a6de87",
       "position": 1,
       "properties": {
@@ -842,6 +960,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "5ca0248f-52d0-4639-a678-de881cad0a84",
+        "lesson.key": "Applying De Morgan's Laws to Boolean Expressions",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "key": "81cc6b33-639f-437f-aeb6-661422903b7c",
+      "position": 4,
+      "properties": {
+        "name": "AP Classroom Topic Questions"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "81cc6b33-639f-437f-aeb6-661422903b7c",
         "lesson.key": "Applying De Morgan's Laws to Boolean Expressions",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-pilot-facilitator"
@@ -1341,6 +1472,17 @@
       }
     },
     {
+      "key": "65dd28a3-32f1-4156-ac64-67cd4607daa5",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "65dd28a3-32f1-4156-ac64-67cd4607daa5",
+        "lesson_activity.key": "2b40b7db-bf0f-49a4-9136-781c5648e042"
+      }
+    },
+    {
       "key": "fa634f3c-2077-426f-a0d0-41638e3a6fb0",
       "position": 1,
       "properties": {
@@ -1525,6 +1667,17 @@
       }
     },
     {
+      "key": "79095870-ce96-4347-9912-4c50e5931c0f",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.7\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "79095870-ce96-4347-9912-4c50e5931c0f",
+        "lesson_activity.key": "04f556c7-dcc1-462f-9d01-2b4a14036d0c"
+      }
+    },
+    {
       "key": "f6e8cbf3-b4aa-4403-a715-dc6260e1b28c",
       "position": 1,
       "properties": {
@@ -1706,6 +1859,17 @@
       }
     },
     {
+      "key": "033374b0-3ec5-4862-8db6-cf6ca6ea421b",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "033374b0-3ec5-4862-8db6-cf6ca6ea421b",
+        "lesson_activity.key": "a554d80a-2da3-4cf0-9c52-7684aad4e1f1"
+      }
+    },
+    {
       "key": "5545b6d8-5546-458d-a0db-ba08023ae260",
       "position": 1,
       "properties": {
@@ -1872,6 +2036,17 @@
       "seeding_key": {
         "activity_section.key": "07a65f60-f54e-41c0-9ec5-da9803033795",
         "lesson_activity.key": "553d0685-0329-4283-91cf-68b4abda251f"
+      }
+    },
+    {
+      "key": "c5e1f918-612c-4330-a5a5-a092b57c4bc4",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom)."
+      },
+      "seeding_key": {
+        "activity_section.key": "c5e1f918-612c-4330-a5a5-a092b57c4bc4",
+        "lesson_activity.key": "1f924405-e496-4c7c-b56a-95787eb2c9e7"
       }
     },
     {
@@ -2092,6 +2267,17 @@
       "seeding_key": {
         "activity_section.key": "57947253-8547-4bea-822c-d0d08abc3a88",
         "lesson_activity.key": "f712022a-02cd-49f9-9caa-5770517dd9ad"
+      }
+    },
+    {
+      "key": "51daa908-45c3-4392-8bcf-e3b59dff2f48",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.5\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "51daa908-45c3-4392-8bcf-e3b59dff2f48",
+        "lesson_activity.key": "10d0cc16-ee83-40c9-84c7-cc266762a142"
       }
     },
     {
@@ -2339,6 +2525,17 @@
       }
     },
     {
+      "key": "82587c0c-a902-4214-8905-948c299e71ed",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.6\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "82587c0c-a902-4214-8905-948c299e71ed",
+        "lesson_activity.key": "1f19dc1d-61da-4355-b005-d27661784f3d"
+      }
+    },
+    {
       "key": "d9931270-bf9e-4dbf-a1f7-76a45ba4ac7c",
       "position": 1,
       "properties": {
@@ -2555,6 +2752,17 @@
       }
     },
     {
+      "key": "278b08b3-2b92-4b9c-b45a-fd8f5fb215ca",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.7\n* Topic Questions 9.7\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "278b08b3-2b92-4b9c-b45a-fd8f5fb215ca",
+        "lesson_activity.key": "005c780b-0cc5-482a-9857-667bbb0b4d29"
+      }
+    },
+    {
       "key": "bbf50828-9a31-45e4-8653-1db7bb08deed",
       "position": 1,
       "properties": {
@@ -2703,6 +2911,17 @@
       "seeding_key": {
         "activity_section.key": "2f8c3026-34bf-4817-8b9a-b5dbd574e767",
         "lesson_activity.key": "f9dcda02-9e63-4dca-b3e2-5e7e8e690c58"
+      }
+    },
+    {
+      "key": "18ff4826-81e9-432c-979b-27e5b574a841",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.5\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "18ff4826-81e9-432c-979b-27e5b574a841",
+        "lesson_activity.key": "52d892b7-4c66-464b-b439-306c4926620f"
       }
     },
     {
@@ -2965,6 +3184,17 @@
       }
     },
     {
+      "key": "4371c553-011e-4369-9099-5dadcc171a32",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.9\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "4371c553-011e-4369-9099-5dadcc171a32",
+        "lesson_activity.key": "734917c4-1140-4cd3-815a-ef85af6339d2"
+      }
+    },
+    {
       "key": "97f01c5b-a3e3-4224-9a00-c218867ebaac",
       "position": 1,
       "properties": {
@@ -3170,6 +3400,17 @@
       "seeding_key": {
         "activity_section.key": "b2fb5aff-7d78-4d18-9f33-2c94ad1dc375",
         "lesson_activity.key": "5ca0248f-52d0-4639-a678-de881cad0a84"
+      }
+    },
+    {
+      "key": "e43d2696-9d9f-4a11-9559-e3289a471353",
+      "position": 1,
+      "properties": {
+        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.4\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*"
+      },
+      "seeding_key": {
+        "activity_section.key": "e43d2696-9d9f-4a11-9559-e3289a471353",
+        "lesson_activity.key": "81cc6b33-639f-437f-aeb6-661422903b7c"
       }
     },
     {
@@ -6613,6 +6854,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa4-pilot-facilitator/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa4-pilot-facilitator/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa4-pilot-facilitator/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
+    {
       "name": "Around the World Printouts",
       "url": "https://docs.google.com/document/d/1FMlneQD0SY65y9atWPYPz2fN63wboyhUiTx8csrU_Vw/edit?usp=sharing",
       "key": "around_the_world_printouts",
@@ -7378,7 +7652,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
+        "script.name": "csa4-pilot-facilitator"
+      }
+    }
   ],
   "scripts_student_resources": [
 

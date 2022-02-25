@@ -198,14 +198,6 @@ module ApplicationHelper
     html.html_safe
   end
 
-  def script_certificate_image_url(user, script)
-    certificate_image_url(
-      name: user.name,
-      course: script.name,
-      course_title: data_t_suffix('script.name', script.name, 'title')
-    )
-  end
-
   # Returns a client state object for the current session and cookies.
   def client_state
     @client_state ||= ClientState.new(session, cookies)

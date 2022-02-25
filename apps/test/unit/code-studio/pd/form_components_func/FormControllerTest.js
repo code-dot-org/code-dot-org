@@ -2,7 +2,7 @@ import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormCo
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {isolateComponent} from 'isolate-components';
+import {isolateComponent} from 'isolate-react';
 
 let DummyPage1 = () => {
   return <div>Page 1</div>;
@@ -138,6 +138,24 @@ describe('FormController', () => {
       });
     });
 
+    it('Never shows save button if status is reopened', () => {
+      form = isolateComponent(
+        <FormController
+          {...defaultProps}
+          allowPartialSaving={true}
+          validateOnSubmitOnly={true}
+          savedStatus={'reopened'}
+        />
+      );
+      [0, 1, 2].forEach(page => {
+        setPage(page);
+        const buttons = form.findAll('Button');
+        buttons.forEach(button =>
+          expect(button.content()).not.to.eql(saveButtonText)
+        );
+      });
+    });
+
     it('Shows data was loaded message given application id, and user can close message', () => {
       form = isolateComponent(
         <FormController
@@ -156,15 +174,22 @@ describe('FormController', () => {
       expect(form.exists('Alert')).to.be.false;
     });
 
-    it('Does not show data was loaded message if partial saving is disabled', () => {
+    it('Shows data was loaded message if status is reopened', () => {
       form = isolateComponent(
         <FormController
           {...defaultProps}
           applicationId={applicationId}
-          allowPartialSaving={false}
+          savedStatus={'reopened'}
+          allowPartialSaving={true}
           validateOnSubmitOnly={true}
         />
       );
+      const alert = form.findOne('Alert');
+      expect(alert.content()).to.contain(
+        'Your Regional Partner has requested more information.  Please update and resubmit.'
+      );
+
+      alert.props.onDismiss();
       expect(form.exists('Alert')).to.be.false;
     });
 
@@ -177,6 +202,96 @@ describe('FormController', () => {
         />
       );
       expect(form.exists('Alert')).to.be.false;
+    });
+
+    describe('Saving', () => {
+      // [MEG] TODO: Refactor this to use savedStatus instead of form_data
+      it('Overrides application status as incomplete to data', () => {
+        const testData = {
+          field1: 'value 1',
+          field2: 'value 2',
+          status: 'something'
+        };
+
+        form = isolateComponent(
+          <FormController {...defaultProps} getInitialData={() => testData} />
+        );
+        form.findAll('Button')[1].props.onClick();
+
+        expect(getData(DummyPage1)).to.eql({...testData});
+      });
+
+      it('Disables the save button during save', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+        form.findAll('Button')[1].props.onClick();
+        expect(form.findAll('Button')[1].props.disabled).to.be.true;
+      });
+
+      it('Re-enables the save button after successful save', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+
+        const server = sinon.fakeServer.create();
+        server.respondWith([
+          201,
+          {'Content-Type': 'application/json'},
+          JSON.stringify({})
+        ]);
+
+        form.findAll('Button')[1].props.onClick();
+        server.respond();
+
+        expect(form.findAll('Button')[1].props.disabled).to.be.false;
+
+        server.restore();
+      });
+
+      it('Re-enables the save button after unsuccessful save', () => {
+        form = isolateComponent(<FormController {...defaultProps} />);
+
+        const server = sinon.fakeServer.create();
+        server.respondWith([
+          400,
+          {'Content-Type': 'application/json'},
+          JSON.stringify({
+            errors: {form_data: ['an error']}
+          })
+        ]);
+
+        form.findAll('Button')[1].props.onClick();
+        server.respond();
+
+        expect(form.findAll('Button')[1].props.disabled).to.be.false;
+
+        server.restore();
+      });
+
+      it('Shows saved message alert after saving is complete, and user can close it', () => {
+        form = isolateComponent(
+          <FormController {...defaultProps} applicationId={applicationId} />
+        );
+
+        const server = sinon.fakeServer.create();
+        server.respondWith([
+          201,
+          {'Content-Type': 'application/json'},
+          JSON.stringify({})
+        ]);
+
+        form.findAll('Button')[1].props.onClick();
+        server.respond();
+
+        const alert = form.findOne('Alert');
+        expect(alert.content()).to.contain(
+          'Your progress has been saved. Return to this page at any time to continue working on your application.'
+        );
+
+        alert.props.onDismiss();
+        expect(form.exists('Alert')).to.be.false;
+
+        expect(form.findAll('Button')[1].props.disabled).to.be.false;
+
+        server.restore();
+      });
     });
 
     describe('Page validation', () => {
@@ -213,6 +328,7 @@ describe('FormController', () => {
           );
           setPage(2);
         };
+
         const setUpValidWithApplicationId = applicationId =>
           setupValid(applicationId);
 
@@ -285,6 +401,25 @@ describe('FormController', () => {
 
           expect(getErrors(DummyPage3)).to.eql(['an error']);
           expect(form.findOne('#submit').props.disabled).to.be.false;
+        });
+
+        // [MEG] TODO: Refactor this to use savedStatus instead of form_data
+        it('Overrides application status as unreviewed on submit', () => {
+          const testData = {
+            field1: 'value 1',
+            field2: 'value 2',
+            status: 'incomplete'
+          };
+
+          form = isolateComponent(
+            <FormController {...defaultProps} getInitialData={() => testData} />
+          );
+          setPage(2);
+          triggerSubmit();
+
+          expect(getData(DummyPage3)).to.eql({
+            ...testData
+          });
         });
 
         it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {

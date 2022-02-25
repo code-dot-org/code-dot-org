@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-01-13 16:44:44 UTC",
+    "serialized_at": "2022-02-24 14:46:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -326,7 +326,7 @@
       "key": "lesson-15",
       "name": "Assessment Day",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
@@ -3345,7 +3345,8 @@
       "key": "b2fd099e-2a74-4a4c-98eb-e7d7d9266540",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 8 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 8 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "progression_name": "Unit 8 Assessment"
       },
       "seeding_key": {
         "activity_section.key": "b2fd099e-2a74-4a4c-98eb-e7d7d9266540",
@@ -4156,6 +4157,31 @@
       "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA Unit 8 Pilot Assessment 2021"
+        ],
+        "progression": "Unit 8 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 8 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "b2fd099e-2a74-4a4c-98eb-e7d7d9266540"
+      },
+      "level_keys": [
+        "CSA Unit 8 Pilot Assessment 2021"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4178,7 +4204,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4203,7 +4229,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4228,7 +4254,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4253,7 +4279,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4629,6 +4655,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA Unit 8 Pilot Assessment 2021",
+        "script_level.level_keys": [
+          "CSA Unit 8 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa8-pilot",
+        "activity_section.key": "b2fd099e-2a74-4a4c-98eb-e7d7d9266540"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Pilot Survey Unit 8",
         "script_level.level_keys": [
           "CSA Pilot Survey Unit 8"
@@ -4798,6 +4836,18 @@
       }
     },
     {
+      "name": "[KEY] U8L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1F4RRZvER4A_dNiTCoS0wxPXimDBx7bah2f63EYqjnb4/edit?usp=sharing",
+      "key": "_key_u8l3_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u8l3_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U8L4 Extra Practice",
       "url": "https://docs.google.com/document/d/1vgXJM0WFjBSFereFgnFBCbH0sJBtpgBt8LS5bCYi25Y/edit?usp=sharing",
       "key": "_key_u8l4_extra_practice",
@@ -4846,6 +4896,18 @@
       }
     },
     {
+      "name": "[KEY] U8L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/1ARgZ4ltm1rws0nMf6gWCejInovDUtq2ovGBAyArvCC4/edit?usp=sharing",
+      "key": "_key_u8l8_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u8l8_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U8L9 Extra Practice",
       "url": "https://docs.google.com/document/d/1IVPKUKXotUjrQc-AraJ5YsSO4anxDJfa4kUuparFJTo/edit?usp=sharing",
       "key": "_key_u8l9_extra_practice",
@@ -4855,6 +4917,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_u8l9_extra_practice"
+      }
+    },
+    {
+      "name": "Binary Search",
+      "url": "https://docs.google.com/document/d/1pycNLXO3CCuwA57r9GYBUde3L5fSWxK7vxGxhSTnGuA/edit?usp=sharing",
+      "key": "binary_search",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "binary_search"
       }
     },
     {
@@ -5098,6 +5172,18 @@
       }
     },
     {
+      "name": "U8L3 Extra Practice",
+      "url": "https://docs.google.com/document/d/1tYXxG787WVT1absx77VnlnBTVYKE3HCZCJt6G1BpAyM/edit?usp=sharing",
+      "key": "u8l3_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u8l3_extra_practice"
+      }
+    },
+    {
       "name": "U8L4 Extra Practice",
       "url": "https://docs.google.com/document/d/1y8JwPQDLHFZCs4Hp7auzdQtW4U1k771MH7JqWud_isI/edit?usp=sharing",
       "key": "u8l4_extra_practice",
@@ -5143,6 +5229,18 @@
       },
       "seeding_key": {
         "resource.key": "u8l7_extra_practice"
+      }
+    },
+    {
+      "name": "U8L8 Extra Practice",
+      "url": "https://docs.google.com/document/d/11iPXyqk5Zh9UFhVbDQYj3_L9MhcvYzU85sV_ElYacjg/edit?usp=sharing",
+      "key": "u8l8_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u8l8_extra_practice"
       }
     },
     {
@@ -5336,6 +5434,24 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "_key_u8l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "binary_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "u8l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "unit_8_presentation_slides"
       }
     },
@@ -5445,6 +5561,18 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "unit_8_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_key_u8l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "u8l8_extra_practice"
       }
     },
     {

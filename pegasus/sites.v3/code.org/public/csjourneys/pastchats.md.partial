@@ -31,6 +31,26 @@ social:
 <a id="recordings"></a>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney12 }}
+  <h3><strong>Exploring the World of Virtual Reality</strong></h3>
+  <p>How can virtual reality experiences reinvent how people work, play, and communicate?  Find out as we talk to a technical program manager at Meta Quest.</p>
+</div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney11 }}
+  <h3><strong>Behind the scenes at Code.org</strong></h3>
+  <p>Hear about the career path that led a non-computer science major to become a Product Manager at Code.org and how she creates fun tools used in classrooms around the world.</p>
+</div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
+  {{ myjourney10 }}
+  <h3><strong>Music and more at Spotify</strong></h3>
+  <p>Hear about the career path that led two software engineers to Spotify and how each plays a different role in helping to bring music to our lives.</p>
+</div>
+
+<div style="clear: both"></div>
+
+<div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney3 }}
   <h3><strong>Building models of the universe</strong></h3>
   <p>Hear from NASA scientists Kim Arcand and Rutu Das about their career journeys and how they use data science to build 3D models of the universe.</p>

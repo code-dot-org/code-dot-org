@@ -57,6 +57,15 @@ module Api::V1::Pd
       @markdown = Redcarpet::Markdown.new(Redcarpet::Render::StripDown)
     end
 
+    # Manually reload application between tests, to work around an unusual bug
+    # here with the interaction of three things:
+    #   1. Rails 6
+    #   2. composite_primary_keys
+    #   3. SetupAllAndTeardownAll
+    teardown do
+      @csp_facilitator_application.reload
+    end
+
     test_redirect_to_sign_in_for :index
     test_redirect_to_sign_in_for :show, params: -> {@test_show_params}
     test_redirect_to_sign_in_for :update, params: -> {@test_update_params}
@@ -670,6 +679,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -713,6 +723,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -756,6 +767,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted'
         application.save!
         application.lock!
@@ -807,6 +819,7 @@ module Api::V1::Pd
         application.update_scholarship_status(Pd::ScholarshipInfoConstants::NO)
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
         application.lock!
@@ -851,6 +864,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted_not_notified'
         application.save!
 
@@ -893,6 +907,7 @@ module Api::V1::Pd
         )
 
         application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
+        application.save!
         application.status = 'accepted'
         application.save!
         application.lock!

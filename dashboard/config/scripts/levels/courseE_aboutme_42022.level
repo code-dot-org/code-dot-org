@@ -41,7 +41,7 @@
     "project_template_level_name": "courseE_aboutme_template2022",
     "validation_code": "//This level requires zValidationHelperFunctions\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar eventLog = getEventLog();\r\nif (!validationProps.vars) {\r\n  validationProps.vars = {\r\n    eventLogLength : 0\r\n  };\r\n}\r\n\r\nif (!validationProps.successCriteria) {\r\n  setSuccessCriteria({\r\n    threeSprites: spriteIds.length>=3,\r\n    differentLocations: checkSpriteLocations(spriteIds),\r\n    differentCostumes: checkSpriteCostumes(spriteIds)\r\n  });\r\n}\r\n\r\n// Logic\r\nsetSuccessTime(validationProps.successCriteria);\r\n\r\nif (!validationProps.successCriteria.threeSprites ||\r\n    !validationProps.successCriteria.differentLocations ||\r\n    !validationProps.successCriteria.differentCostumes) {\r\n  drawProgressBar(\"earlyFail\");\r\n} else {\r\n  drawProgressBar(\"pass\");\r\n}\r\n\r\nif (World.frameCount > EARLY_FAIL_TIME) {\r\n  if (!validationProps.successCriteria.threeSprites) {\r\n    levelFailure(3, \"createAtLeastThreeSprites\");\r\n  } else if (!validationProps.successCriteria.differentLocations) {\r\n    levelFailure(3, \"moveSpriteLocation\");\r\n  } else if (!validationProps.successCriteria.differentCostumes) {\r\n    levelFailure(3, \"spritesNeedUniqueCostumes\");\r\n  }\r\n}\r\n\r\n// Check if student is interacting with the program\r\nif (validationProps.successTime && (checkForNewEvent(eventLog, validationProps.vars.eventLogLength))) {\r\n  WAIT_TIME = World.frameCount + 90;\r\n}\r\n\r\nif (World.frameCount - validationProps.successTime >= WAIT_TIME) {\r\n  levelFailure(0, \"genericSuccess\");\r\n}\r\n\r\nvalidationProps.vars.eventLogLength = eventLog.length;",
     "auto_run_setup": "DRAW_LOOP",
-    "encrypted_examples": "Rl1U++OKJfteAOHUlglE2LF7cQFBgeTBuBlObOylmPBNVRz0nE7sWs0FsCFO\nds5HfulIY1yUhq6eQ4oyV0/A0BazcJDWnV81kDX275mKYl3k/seEgZ1POk2y\nWTsmmRtFkKljsUHY2zzZAYY8rm2Q/g==\n",
+    "encrypted_examples": "klUBIhaBoU59L8bLsdyA2DKnKF7pi53XgroAlSzIKQMWI6RkKfNuX71/TKyZ\nTB3+dfOSyekNUH942+j56i3KdEPd+8baLBBd8k7Fm6DyYGYdIgZ3fEB/70gk\nPPQFSjAAY0x8Fgtn6skbeEPLqALc+Q==\n",
     "teacher_markdown": "This lesson contains a **mini-project** called *Interactive Poster*. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \r\n\r\n* The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\r\n* These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \r\n* Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\r\n\r\nThis level will validate a student’s code by checking that the following conditions have been met:\r\n* Student must create at least three sprites.",
     "name_suffix": "2022",
     "hint_prompt_attempts_threshold": "1",
@@ -57,7 +57,7 @@
   "level_num": "custom",
   "user_id": 833,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:37.974+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_4_2021\\\"\"],\"cloned_from\":\"courseE_aboutme_4_2021\"},{\"changed_at\":\"2022-01-24 19:48:51 +0000\",\"changed\":[\"solution_blocks\",\"helper_libraries\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 19:50:23 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 19:54:13 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 19:54:53 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 19:59:34 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 20:00:52 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 20:02:22 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 20:09:35 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-25 16:40:24 +0000\",\"changed\":[\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:22:37.974+00:00\",\"changed\":[\"cloned from \\\"courseE_aboutme_4_2021\\\"\"],\"cloned_from\":\"courseE_aboutme_4_2021\"},{\"changed_at\":\"2022-01-24 19:48:51 +0000\",\"changed\":[\"solution_blocks\",\"helper_libraries\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 19:50:23 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 19:54:13 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 19:54:53 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 19:59:34 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 20:00:52 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 20:02:22 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-24 20:09:35 +0000\",\"changed\":[\"solution_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-01-25 16:40:24 +0000\",\"changed\":[\"solution_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2022-02-16 19:05:46 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-02-16 19:15:51 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-02-16 19:16:31 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2022-02-16 19:16:55 +0000\",\"changed\":[\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 3,
     "debugging": 1,
@@ -240,7 +240,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite to the right across the screen</description>
           </mutation>
-          <title name="NAME">moving east</title>
+          <title name="NAME" id="moving east">moving east</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"East"</title>
@@ -262,7 +262,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>rotate a sprite to its left</description>
           </mutation>
-          <title name="NAME">spinning left</title>
+          <title name="NAME" id="spinning left">spinning left</title>
           <statement name="STACK">
             <block type="gamelab_turn">
               <title name="DIRECTION">"left"</title>
@@ -284,7 +284,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>rotate a sprite to its right</description>
           </mutation>
-          <title name="NAME">spinning right</title>
+          <title name="NAME" id="spinning right">spinning right</title>
           <statement name="STACK">
             <block type="gamelab_turn">
               <title name="DIRECTION">"right"</title>
@@ -350,7 +350,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite downwards across the screen</description>
           </mutation>
-          <title name="NAME">moving south</title>
+          <title name="NAME" id="moving south">moving south</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"South"</title>
@@ -372,7 +372,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite horizontally, reversing direction if it touches the edges of the screen</description>
           </mutation>
-          <title name="NAME">swimming left and right</title>
+          <title name="NAME" id="swimming left and right">swimming left and right</title>
           <statement name="STACK">
             <block type="controls_if">
               <mutation elseif="1"/>
@@ -495,7 +495,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite upwards across the screen</description>
           </mutation>
-          <title name="NAME">moving north</title>
+          <title name="NAME" id="moving north">moving north</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"North"</title>
@@ -548,7 +548,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite to the left across the screen</description>
           </mutation>
-          <title name="NAME">moving west</title>
+          <title name="NAME" id="moving west">moving west</title>
           <statement name="STACK">
             <block type="gamelab_moveInDirection">
               <title name="DIRECTION">"West"</title>
