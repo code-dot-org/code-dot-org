@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-24 19:17:55 UTC",
+    "serialized_at": "2022-02-24 20:57:37 UTC",
     "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": "self_paced",
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "self-paced-pl-csa3-2022"
     }
@@ -63,16 +63,152 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "0c402e2a-025e-4a40-8c9e-efd3bcae7163",
+      "position": 1,
+      "properties": {
+        "name": "Here is a header"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0c402e2a-025e-4a40-8c9e-efd3bcae7163",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410",
+      "position": 1,
+      "properties": {
+        "description": "a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of texta bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of texta bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of texta bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of texta bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of texta bunch of text a bunch of text a bunch of text a bunch of text a bunch of text a bunch of text",
+        "name": "smaller header",
+        "progression_name": "Test levels in a progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410",
+        "lesson_activity.key": "0c402e2a-025e-4a40-8c9e-efd3bcae7163"
+      }
+    },
+    {
+      "key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a",
+      "position": 2,
+      "properties": {
+        "name": "another small header",
+        "progression_name": "another progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a",
+        "lesson_activity.key": "0c402e2a-025e-4a40-8c9e-efd3bcae7163"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Test levels in a progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Example Markdown (External Level) with Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+      },
+      "level_keys": [
+        "Example Markdown (External Level) with Video"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Test levels in a progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Javalab Example - Using Instructor in Training"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+      },
+      "level_keys": [
+        "Javalab Example - Using Instructor in Training"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "another progression"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
+      },
+      "level_keys": [
+        "test3"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "Example Markdown (External Level) with Video",
+        "script_level.level_keys": [
+          "Example Markdown (External Level) with Video"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Javalab Example - Using Instructor in Training",
+        "script_level.level_keys": [
+          "Javalab Example - Using Instructor in Training"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "1457c5b4-bc26-48aa-a933-e3fbca0bd410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test3",
+        "script_level.level_keys": [
+          "test3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-csa3-2022",
+        "activity_section.key": "0fa981b7-b76f-4db2-bd93-2c79b91fda4a"
+      }
+    }
   ],
   "resources": [
 
