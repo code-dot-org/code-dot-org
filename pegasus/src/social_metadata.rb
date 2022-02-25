@@ -2,6 +2,7 @@
 #
 #   code.org/
 #   code.org/challenge
+#   code.org/coldplay
 #   code.org/dance
 #   code.org/minecraft
 #   code.org/oceans
@@ -29,6 +30,7 @@ def get_social_metadata_for_page(request)
     cs_is_everything_thumbnail: {path: "/images/cs-is-everything-thumbnail.png", width: 1200, height: 627},
     hoc_2018_creativity: {path: "/images/social-media/hoc-2018-creativity.png", width: 1200, height: 630},
     hoc_student_challenge: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
+    hoc_student_challenge_new: {path: "/images/fit-1920/social-media/hoc-student-challenge.png", width: 1920, height: 1080},
     mc_social_2017: {path: "/images/mc/mc_social_2017.png", width: 1200, height: 630},
     mc_social_2018: {path: "/images/social-media/mc-social-2018.png", width: 1200, height: 630},
     dance_2018: {path: "/images/social-media/dance-social-2018.png", width: 1200, height: 630},
@@ -40,6 +42,7 @@ def get_social_metadata_for_page(request)
     codeorg2020_social: {path: "/shared/images/social-media/codeorg2020_social.png", width: 1200, height: 630},
     hoc_2020_social: {path: "/shared/images/social-media/hoc2020_social.png", width: 1200, height: 630},
     hoc_cse_social: {path: "/shared/images/social-media/hoc_cse_social.png", width: 1200, height: 630},
+    coldplay: {path: "/shared/images/social-media/coldplay_social.png", width: 1920, height: 1080},
   }
 
   # Important:
@@ -75,6 +78,13 @@ def get_social_metadata_for_page(request)
         title: "Celebrity Challenge",
         description: "Win a celebrity video chat for your class!",
         image: images[:celeb_challenge]
+      }
+    },
+    "coldplay" => {
+      "default" => {
+        title: hoc_s(:social_coldplay_title),
+        description: hoc_s(:social_coldplay_desc),
+        image: images[:coldplay]
       }
     },
     "minecraft" => {
@@ -138,6 +148,8 @@ def get_social_metadata_for_page(request)
 
   if request.path == "/challenge" && request.site == "code.org"
     page = "challenge"
+  elsif request.path == "/coldplay" && request.site == "code.org"
+    page = "coldplay"
   elsif request.path == "/minecraft" && request.site == "code.org"
     page = "minecraft"
   elsif request.path == "/dance" && request.site == "code.org"

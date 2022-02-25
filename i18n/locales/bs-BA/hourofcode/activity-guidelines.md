@@ -14,7 +14,7 @@ Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on t
 
 Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/z8ARSLcJCFdNPVJS8). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, {{ campaign_date/year }} will not be listed for {{ campaign_date/year }}'s Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/z8ARSLcJCFdNPVJS8). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2022, will not be listed for 2022's Hour of Code.) The deadline to submit for an early qualitative review [(details below)](#earlyreview) is August 16.** If you have any questions about your activitiy submission, please reach out to us at support@code.org.
 
 A few tips:
 
@@ -293,4 +293,4 @@ Please promote your activity to your network! Direct them to your Hour of Code p
 
 [**Back to the top**](#top)
 
-{{ signup_button }}
+{{ signup_button }} <!-- Adding in specific year for 2022 per Eric for later fix on line 18 as site was not auto-udpating to correct year -->

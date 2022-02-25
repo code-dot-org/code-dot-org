@@ -64,6 +64,7 @@ ms:
   next_resource: Sumber seterusnya
   done_with_module: Selesai dengan Modul Pembelajaran ini
   cancel: "Batal"
+  okay: "Okey"
   or: "atau"
   heading_x_of_y: "%{heading} (muka surat %{x} of %{y})"
   join_section:
@@ -110,6 +111,7 @@ ms:
     facebook: 'Facebook'
     windowslive: 'Akaun Microsoft'
     microsoft_v2_auth: 'Akaun Microsoft'
+    clever: 'Clever'
     powerschool: 'Powerschool'
     forgot_password: 'Lupa kata laluan anda?'
     migration_success: 'Berjaya! Anda telah mengemas kini kepada pengalaman akaun baharu kami.'
@@ -179,6 +181,7 @@ ms:
     accept_terms: "Anda mesti bersetuju untuk mencipta akaun."
     error: "Ralat berlaku."
     email_preference_question: "Bolehkah kami menghantar e-mel kepada anda mengenai kemas kini kursus, peluang tempatan, atau berita sains komputer yang lain? (kira-kira sekali sebulan)"
+    email_preference_privacy: "(Lihat dasar privasi kami)"
     email_preference_yes: "Ya"
     email_preference_no: "Tidak"
     email_preference_required: "Anda mesti nyatakan keutamaan e-mel."
@@ -267,6 +270,8 @@ ms:
       picture: 'Kata Laluan Gambar'
       word: 'Perkataan rahsia'
       email: 'E-mel'
+      google_classroom: 'Bilik Darjah Google'
+      clever: 'Clever'
   follower:
     invite_sent: 'Jemputan dihantar'
     added_teacher: '%{name} ditambah sebagai guru anda'
@@ -282,6 +287,7 @@ ms:
       blank_code: "Sila masukkan kod bahagian"
       cant_join_own_section: "Maaf, anda tidak dapat menyertai bahagian anda sendiri."
       restricted_section: "Kami tidak dapat memasukkan anda ke dalam bahagian %{section_code} kerana ia dikunci. Sila hubungi guru anda untuk bantuan."
+      not_participant_type: "Kami tidak dapat menambahkan anda ke bahagian %{section_code} kerana anda tidak memenuhi jenis peserta untuk bahagian tersebut."
     mail:
       student_disassociated:
         subject: "Code.org pemberitahuan: %{student_name} ini tidak lagi dianggap sebagai pelajar anda."
@@ -310,10 +316,12 @@ ms:
     header:
       finished_hoc: "Saya telah menyelesaikan Hour of Code saya"
       sign_in_to_save: 'Daftar Masuk untuk menyimpan kemajuan'
+      my_dashboard: "Papan Pemuka Saya"
       course_catalog: "Katalog Kursus"
       project_gallery: "Projek"
       help_support: "Bantuan dan sokongan"
       report_bug: "Laporkan masalah"
+      professional_learning: "Pembelajaran Profesional"
       documentation: "Dokumentasi"
       tutorials: "Tutorial"
       educate_hoc: "Hour of Code"
@@ -330,18 +338,27 @@ ms:
       signin: 'Log masuk'
       signup: 'Buat akaun'
       create: 'Buat'
+      algebra_game: 'Algebra'
       artist: 'Artis'
       artist_k1: 'Artis (Prapembaca)'
+      basketball: 'Bola keranjang'
       bounce: 'Lantunan'
+      calc: 'Calc'
       dance: 'Majlis Tari-Menari'
+      eval: 'Eval'
       flappy: 'Flappy'
       frozen: 'Frozen'
+      gamelab_jr: 'Game Lab (beta)'
       infinity: 'Infiniti'
+      minecraft_aquatic: 'Akuatik Minecraft'
+      minecraft_hero: 'Wira Minecraft'
+      playlab_k1: 'Play Lab (Pra-pembaca)'
       poetry: 'Puisi'
       poetry_hoc: 'Seni Puisi'
       sports: 'Sukan'
       starwars: 'Star Wars'
       loading: 'Sila tunggu...'
+      weblab: 'Makmal Web'
     popup:
       progress: 'Kemajuan anda'
       lines: 'Total baris kod: %{lines}'
@@ -408,6 +425,7 @@ ms:
     remove_parent_email_label: "Alih keluar"
     none: "Tiada"
     only_one_parent_email_supported_warning: "Nota: kami hanya dapat sokong satu e-mel ibubapa/penjaga untuk setiap akaun pelajar pada masa ini."
+    encrypted: "Disulitkan"
   user_level:
     completed: 'Lengkap'
     tried: 'Telah dicuba'
@@ -453,6 +471,7 @@ ms:
     current_section_dne: "Maaf, seksyen %{current_section_code} tidak wujud. Sila masukkan kod seksyen yang lain."
     student_ids_not_entered: "Sila berikan student_ids."
     student_not_found: "Satu atau lebih pelajar tidak dijumpai."
+    not_correct_participant_type: "Anda tidak boleh mengalihkan pengguna ini kerana mereka tidak mempunyai kebenaran untuk menjadi peserta dalam bahagian baharu."
   gender:
     male: 'Lelaki'
     female: 'Perempuan'
@@ -471,6 +490,7 @@ ms:
     privacy: 'Dasar Privasi'
     secure: 'Versi Dilindungi'
     report_abuse: 'Lapor Salah Guna'
+    cookie_notice: 'Notis Kuki'
   reference_area:
     title: 'Perlu bantuan?'
     subtitle: 'Lihat video dan petunjuk ini'
@@ -482,6 +502,7 @@ ms:
     notes: 'Tiada video? Lihat nota.'
     autoplay_option: 'Video AutoMain'
     download: 'Muat turun Video'
+    label: 'Video'
   compatibility:
     upgrade:
       link: "Ketahui lebih lanjut"
@@ -572,15 +593,21 @@ ms:
     correct_title: "Betul"
     correct_body: "Itulah jawapan yang betul."
   multi-submittable:
+    wrong_title: "Terima kasih"
     wrong_body: "Terima kasih kerana menghantar jawapan."
+    correct_title: "Terima kasih"
     correct_body: "Terima kasih kerana menghantar jawapan."
   level_group:
+    wrong_title: "Terima kasih"
     wrong_body: "Terima kasih kerana menghantar jawapan."
+    correct_title: "Terima kasih"
     correct_body: "Terima kasih kerana menghantar jawapan."
     hide_survey_last_answer: "Kaji selidik ini adalah tanpa nama.  Sila lawati papan pemuka guru untuk mendapatkan keputusan agregat.  Harap maklum bahawa keputusan hanya boleh dilihat jika sekurang-kurangnya lima pelajar menyerahkan tinjauan."
     survey_submission_thankyou: "Terima kasih kerana menghantar tinjauan ini! Tinjauan telah dibersihkan supaya respons anda kekal tanpa nama. Perhatikan bahawa guru anda masih dapat melihat respons untuk seluruh kelas, tetapi tanpa nama yang dilampirkan."
   level_group-submittable:
+    wrong_title: "Terima kasih"
     wrong_body: "Terima kasih kerana menghantar jawapan."
+    correct_title: "Terima kasih"
     correct_body: "Terima kasih kerana menghantar jawapan."
     unsubmit-title: "Nyahlanggan penilaian anda"
     unsubmit-body: "Menyahlanggan penilaian anda akan menetapkan semula masa dan tarikh yang dihantar.  Adakah awak pasti?"
@@ -702,8 +729,10 @@ ms:
       email: 'E-mel'
       school: 'Sekolah'
       school_name: 'Nama sekolah'
+      school_city: 'Bandar Sekolah'
       school_city_district: 'Sekolah Bandar/Daerah'
       school_country: 'Negara Sekolah'
+      colombian_school_city: 'Bandar Sekolah'
       colombian_chilean_school_name: 'Nama sekolah'
     form_entries:
       gender:
@@ -713,6 +742,8 @@ ms:
       subjects:
         cs: 'Sains Komputer'
         math: 'Matematik'
+        science: 'Sains'
+        la: 'Seni bahasa'
       workshop_course:
         csf_express: 'Asas CS (Praekspres atau Ekspres)'
       email_opt_in:
@@ -726,3 +757,4 @@ ms:
     text: "**Adakah anda ibubapa atau penjaga?** Sambungkan e-mel anda ke akaun ini untuk kemaskini kemajuan dan projek anak anda!"
     link_your_email: "Sambung e-mel"
     not_now: "Nanti"
+  teacher_feedback: "Maklum balas Pengajar"

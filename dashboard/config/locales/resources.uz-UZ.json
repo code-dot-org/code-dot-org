@@ -920,6 +920,242 @@
         "virtual_lesson_modifications/coursee/2021": {
           "name": "Virtual dars modifikatsiyalari",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "ai_what_is_machine_learning_/csd/2021": {
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "introduction_to_ai_lab/csd/2021": {
+          "name": "6-dars"
+        },
+        "introduction_to_ai_lab_1/csd/2021": {
+          "name": "6-dars"
+        },
+        "ai_training_data_bias/csd/2021": {
+          "name": "AI: O'rganish ma'lumotlari & yanglishishlar",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
+        "survey_planning/csd/2021": {
+          "name": "Designing Data Collection"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "Paper Prototypes"
+        },
+        "market-research/csd/2021": {
+          "name": "Market Research"
+        },
+        "market_research/csd/2021": {
+          "name": "Market Research"
+        },
+        "design_mode/csd/2021": {
+          "name": "Design Mode"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "Design Mode"
+        },
+        "app-presentation/csd/2021": {
+          "name": "App Presentation"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "App Presentation"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "O‘qituvchilar forumi"
+        },
+        "random_numbers_1/csd/2021": {
+          "name": "Tasodifiy sonlar"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "Kompyuterlar qanday ishlaydi: Hardware & Software"
+        },
+        "board_events/csd/2021": {
+          "name": "Board Events"
+        },
+        "physical_input/csd/2021": {
+          "name": "Physical Input"
+        },
+        "analog_sensors/csd/2021": {
+          "name": "Analog Sensorlar"
+        },
+        "changing_sensor_scale/csd/2021": {
+          "name": "Sensor Shkalasini o'zgartirish"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funksiyalar"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "Massivlar bilan tanishish"
+        },
+        "arrays/csd/2021": {
+          "name": "Massivlar"
+        },
+        "playing_notes/csd/2021": {
+          "name": "Notalarni ijro etish"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "For sikllari"
+        },
+        "for_loops/csd/2021": {
+          "name": "For sikllari"
+        },
+        "accelerometer_events/csd/2021": {
+          "name": "Akselerometr hodisalari"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "Kompyuterlar qanday ishlaydi: Sxemalar va mantiq"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "Representing Information"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "Representing Numbers"
+        },
+        "keeping-data-secret-exemplar-2019/csd/2021": {
+          "name": "Keeping Data Secret"
+        },
+        "structuring_data/csd/2021": {
+          "name": "Structuring Data"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "Interpreting Data"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "Interpreting Data"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "Interpreting Data"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "Making Decisions with Data"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "Automating Data Decisions"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "Automating Data Decisions"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "Automating Data Decisions"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "Data in the Real World"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "Data in the Real World"
+        },
+        "video_machine_learning/csd/2021": {
+          "name": "Video: Machine Learning - Mashina o'rganishi",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "introduction-to-variables/csd/2021": {
+          "name": "Oʻzgaruvchilar mavzusiga kirish"
+        },
+        "variables_1/csd/2021": {
+          "name": "O‘zgaruvchilar"
+        },
+        "random_numbers/csd/2021": {
+          "name": "Tasodifiy sonlar"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "Animatsiya yorlig‘i"
+        },
+        "sprites_1/csd/2021": {
+          "name": "Spraytlar"
+        },
+        "sprite_properties/csd/2021": {
+          "name": "Sprait hususiyatlari"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "Sprite Movement"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "Mantiqiy ifodalar"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "Shartli bayonotlar"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "If/Else bayonotlari"
+        },
+        "velocity_1/csd/2021": {
+          "name": "Tezlik"
+        },
+        "velocity_2/csd/2021": {
+          "name": "Tezlik"
+        },
+        "side-scroller-1/csd/2021": {
+          "name": "Yon skroller"
+        },
+        "side-scroller/csd/2021": {
+          "name": "Yon skroller"
+        },
+        "flyer-game-1/csd/2021": {
+          "name": "Flayer o'yini"
+        },
+        "flyer-game/csd/2021": {
+          "name": "Flayer o'yini"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funksiyalar"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funksiyalar"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "O‘qituvchilar forumi"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "Kompyuter nima?"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "Input and Output"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "Input and Output"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "Apps and Problem Solving"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "Apps and Problem Solving"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "Apps and Problem Solving"
+        },
+        "html_tags/csd/2021": {
+          "name": "HTML Teglar"
+        },
+        "headings_and_paragraphs/csd/2021": {
+          "name": "Sarlavha va paragraflar"
+        },
+        "formatting_html/csd/2021": {
+          "name": "HTML-da formatlash"
+        },
+        "lists/csd/2021": {
+          "name": "Ro‘yxatlar"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "Digital Footprint"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "CSS-ga kirish - 1-qism"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "CSS-ga kirish - 2-qism"
+        },
+        "creative_commons_search/csd/2021": {
+          "name": "Creative Commons Qidiruv"
+        },
+        "images_in_html/csd/2021": {
+          "name": "HTMLda rasmlar"
+        },
+        "layout-properties/csd/2021": {
+          "name": "Maket (Layout) xususiyatlari"
+        },
+        "classes/csd/2021": {
+          "name": "Sinflar"
+        },
+        "hyperlinks/csd/2021": {
+          "name": "Giperhavolalar"
         }
       }
     }

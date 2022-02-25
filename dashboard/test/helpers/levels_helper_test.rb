@@ -8,6 +8,7 @@ class LevelsHelperTest < ActionView::TestCase
     user.reload
     # override the default sign_in helper because we don't actually have a request or anything here
     stubs(:current_user).returns user
+    stub_get_storage_id(user.id)
   end
 
   setup do
@@ -22,6 +23,7 @@ class LevelsHelperTest < ActionView::TestCase
     end
 
     stubs(:current_user).returns nil
+    stub_get_storage_id(nil)
     stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
@@ -118,8 +120,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "blockly_options 'level.isLastLevelInLesson' is false if script level is not the last level in the lesson" do
     @level = create :applab
     @lesson = create :lesson
-    @script_level = create :script_level, levels: [@level], lesson: @lesson, position: 1
-    create :script_level, lesson: @lesson, position: 2
+    @script_level = create :script_level, levels: [@level], lesson: @lesson, chapter: 1, position: 1
+    create :script_level, lesson: @lesson, chapter: 2, position: 2
 
     options = blockly_options
 
@@ -129,8 +131,8 @@ class LevelsHelperTest < ActionView::TestCase
   test "blockly_options 'level.isLastLevelInLesson' is true if script level is the last level in the lesson" do
     @level = create :applab
     @lesson = create :lesson
-    create :script_level, lesson: @lesson, position: 1
-    @script_level = create :script_level, levels: [@level], lesson: @lesson, position: 2
+    create :script_level, lesson: @lesson, position: 1, chapter: 1
+    @script_level = create :script_level, levels: [@level], lesson: @lesson, position: 2, chapter: 2
 
     options = blockly_options
 
@@ -410,13 +412,14 @@ class LevelsHelperTest < ActionView::TestCase
     # two different users
     @user = create :user
     sign_in create(:user)
+    stub_storage_id_for_user_id(@user.id)
 
     script = create(:script)
     @level = create :applab
     create(:script_level, script: script, levels: [@level])
 
     # channel exists
-    create :channel_token, level: @level, storage_id: storage_id_for_user_id(@user.id)
+    create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(@user.id)
     assert_not_nil get_channel_for(@level, script.id, @user)
 
     # calling app_options should set readonly_workspace, since we're viewing for
@@ -427,10 +430,13 @@ class LevelsHelperTest < ActionView::TestCase
 
   test 'level_started? should return true if a channel exists for a channel backed level' do
     user = create :user
+    stub_storage_id_for_user_id(user.id)
+
     applab_level = create :applab # is channel backed
     script = create(:script)
     create(:script_level, levels: [applab_level], script: script)
-    create :channel_token, level: applab_level, storage_id: storage_id_for_user_id(user.id)
+
+    create :channel_token, level: applab_level, storage_id: fake_storage_id_for_user_id(user.id)
 
     assert_equal true, level_started?(applab_level, script, user)
   end
@@ -469,10 +475,13 @@ class LevelsHelperTest < ActionView::TestCase
     @script = script = create(:script)
     create(:script_level, levels: [@level], script: script)
 
+    stub_storage_id_for_user_id(@user.id)
+
     teacher = create :teacher
     sign_in teacher
+
     # create progress on level for teacher to ensure we get back student isStarted value
-    create :channel_token, level: @level, storage_id: storage_id_for_user_id(teacher.id)
+    create :channel_token, level: @level, storage_id: fake_storage_id_for_user_id(teacher.id)
 
     assert_equal false, app_options[:level][:isStarted]
   end
@@ -491,6 +500,7 @@ class LevelsHelperTest < ActionView::TestCase
   test 'applab levels should include pairing_driver and pairing_channel_id when viewed by navigator' do
     @level = create :applab
     @driver = create :student
+    stub_storage_id_for_user_id(@driver.id)
     @navigator = create :student
     create_applab_progress_for_pair @level, @driver, @navigator
 
@@ -536,7 +546,7 @@ class LevelsHelperTest < ActionView::TestCase
     navigator_user_level = create :user_level, user: navigator, level: level
     create :paired_user_level,
       driver_user_level: driver_user_level, navigator_user_level: navigator_user_level
-    create :channel_token, level: level, storage_id: storage_id_for_user_id(driver.id)
+    create :channel_token, level: level, storage_id: fake_storage_id_for_user_id(driver.id)
   end
 
   def stub_country(code)

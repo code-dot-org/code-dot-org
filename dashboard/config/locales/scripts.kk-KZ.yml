@@ -2526,6 +2526,10 @@ kk:
               display_name: Тізімдер
             csp_loops:
               display_name: Ілмек
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Алгоритмдер
         coursea-2021:
           lessons:
             'Programming: Happy Maps':
@@ -2812,10 +2816,25 @@ kk:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Көңілді For циклі
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Код жазу Сағаты
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Айнымалылар
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Функциялар
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2825,6 +2844,189 @@ kk:
             lessonGroup-2:
               display_name: Контент
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Көңілді Карталар
+            'Programming: Happy Maps':
+              name: Көңілді Карталар
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+            csf_conditionals:
+              display_name: Шарттар
+            csf_functions:
+              display_name: Функциялар
+            csf_variables:
+              display_name: Айнымалылар
+            csf_for_loops:
+              display_name: For ілмектері
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Бағдарламаны дұрыстау
+              key: Бағдарламаны дұрыстау
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Айнымалылар
+            csp_conditionals:
+              display_name: Шарттар
+            csp_functions:
+              display_name: Функциялар
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Тізімдер
+            csp_loops:
+              display_name: Ілмек
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Қозғал, Қозғал
+              key: Қозғал, Қозғал
+            Getting Loopy:
+              name: Ілмектерді үйрену
+            'Loops: Getting Loopy':
+              name: Ілмектерді үйрену
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Үлкен Оқиға
+            Binary Bracelets:
+              name: Екілік Білезіктер
+              key: Екілік Білезіктер
+            'Events: The Big Event':
+              name: Үлкен Оқиға
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Миллиметрлік Бағдарламалау
+            Relay Programming:
+              name: Релелік Бағдарламалау
+              key: Релелік Бағдарламалау
+            Conditionals with Cards:
+              name: Картаға қатысты шартты белгілер
+              key: Картаға қатысты шартты белгілер
+            'Algorithms: Graph Paper Programming':
+              name: Миллиметрлік Бағдарламалау
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Сандық Азаматтық
+            csf_events:
+              display_name: Шаралар
+            csf_loops:
+              display_name: Ілмек
+            csf_conditionals:
+              display_name: Шарттар
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Ән Жазу
+            'Functions: Songwriting':
+              name: Ән Жазу
+            Conditionals:
+              key: Шарттар
+          lesson_groups:
+            csf_digcit:
+              display_name: Сандық Азаматтық
+            ramp_up:
+              display_name: Кіріккен Циклдер
+            csf_functions:
+              display_name: Функциялар
+            csf_nested_loops:
+              display_name: Шарттар
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Көңілді For циклі
+              key: Көңілді For циклі
+            The Internet:
+              name: Ғаламтор
+            Internet:
+              key: Ғаламтор
+              name: Ғаламтор
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Сандық Азаматтық
+            lessonGroup-8:
+              display_name: Айнымалылар
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Ілмек
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Ілмек
+            csf_events:
+              display_name: Шаралар
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Шарттар
+            lesson-16:
+              name: Бағдарламаны дұрыстау
+            lesson-19:
+              name: Бағдарламаны дұрыстау
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Ілмек
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Контент
+        csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Контент

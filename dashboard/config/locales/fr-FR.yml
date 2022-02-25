@@ -360,6 +360,8 @@ fr:
       provider_managed_section: Cette section est gérée par un autre fournisseur et
         ne peut pas être rejointe. Demande à ton professeur de t’ajouter via %{provider}
         et de resynchroniser sa section.
+      not_participant_type: Nous n'avons pas pu vous ajouter à la section %{section_code},
+        vous ne remplissez pas les conditions pour y participer.
     mail:
       student_disassociated:
         subject: 'Notification de Code.org: %{student_name} n''est plus considéré
@@ -679,6 +681,8 @@ fr:
       sont déjà dans une autre section.
     third_party_login: Vous ne pouvez pas déplacer d’élèves dans une section qui est
       synchronisée avec l’outil d’un tiers.
+    not_correct_participant_type: Impossible de déplacer ces utilisateurs car ils
+      n'ont pas les autorisations nécessaires pour participer à la nouvelle section.
   share:
     title: Apprends avec Code Studio
     description: N'importe qui peut apprendre l’informatique. Crée des jeux, des applications
@@ -745,6 +749,7 @@ fr:
     how_it_works: Comment ça marche
     try_hour_of_code: Essaie une Heure du Code !
     store: Magasin
+    cookie_notice: " Utilisation de cookies"
   reference_area:
     title: Besoin d'aide ?
     subtitle: Regarder les vidéos et les indices
@@ -1306,6 +1311,7 @@ fr:
       school_country: Pays de l’École
       colombian_school_city: Ville de l’École
       colombian_chilean_school_name: Nom de l'école
+      chilean_school_commune: Commune
       ages: Quelle est la tranche d'âge de vos étudiants, cette année ?
       subjects: Quelle(s) matière(s) enseignez-vous, cette année ?
       resources: Parmi les ressources d’éducation en informatique suivantes, lesquelles
@@ -1345,6 +1351,7 @@ fr:
         malaysia: Malaisie
         mexico: Mexique
         thailand: Thaïlande
+        uzbekistan: Ouzbékistan
       ages:
         ages_under_6: Moins de 6 ans
         ages_7_8: 7-8 ans
@@ -1468,3 +1475,4 @@ fr:
   behaviors:
     this_sprite: ce sprite
   unit_prefix: Unité %{n}
+  teacher_feedback: FeedBack enseignants

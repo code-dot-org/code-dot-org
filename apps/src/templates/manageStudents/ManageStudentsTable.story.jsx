@@ -6,7 +6,6 @@ import manageStudents, {
   blankStudentTransfer
 } from './manageStudentsRedux';
 import teacherSections from '../teacherDashboard/teacherSectionsRedux';
-import sectionData from '@cdo/apps/redux/sectionDataRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 
 const initialState = {
@@ -15,10 +14,16 @@ const initialState = {
     studentData: {},
     addStatus: {}
   },
-  sectionData: {
-    section: {
-      id: 53
-    }
+  teacherSections: {
+    selectedSectionId: 53,
+    sections: [
+      {
+        id: 53,
+        name: 'Test section',
+        loginType: SectionLoginType.email,
+        hidden: false
+      }
+    ]
   },
   unitSelection: {
     scriptId: 22,
@@ -244,7 +249,7 @@ export default storybook => {
   storybook
     .storiesOf('ManageStudentsTable', module)
     .withReduxStore(
-      {manageStudents, teacherSections, sectionData, unitSelection},
+      {manageStudents, teacherSections, unitSelection},
       initialState
     )
     .addStoryTable([

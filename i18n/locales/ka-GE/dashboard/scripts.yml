@@ -8345,10 +8345,32 @@ ka:
               display_name: სიები
             csp_loops:
               display_name: ციკლები
+            lessonGroup-5:
+              display_name: კურსის შემდგომი გამოკითხვა
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ალგორითმები
+            lessonGroup-2:
+              display_name: კურსის შემდგომი გამოკითხვა
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: გამოკითხვა
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: გამოკითხვა
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
               display_name: "(ძველი) სექცია 9: მონაცემები"
+            lessonGroup-2:
+              display_name: გამოკითხვა
+        csp10-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: გამოკითხვა
         coursea-2021:
           description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა არ იცის.
           description_audience: 'ასაკი: 4-7'
@@ -9061,6 +9083,18 @@ ka:
           lessons:
             lesson-1:
               name: დათვლა ცვლადებით
+            Programming with the Bee:
+              name: ჩადგმული ციკლები ლაბირინთში
+            For Loop Fun:
+              name: ხალისი "მიზნისთვის" ციკლით
+              description_student: თქვენ ძალიან იხალისებთ, როდესაც შეისწავლით `for` ციკლებს!
+            For Loops with Bee:
+              description_student: ბზზ ბზზ. ამ თავსატეხებში თქვენ უნდა მიიყვანოთ ფუტკარი ნექტართან და თაფლთან `for` ციკლების გამოყენებით!
+            For Loops with Artist:
+              name: For ციკლები მხატვარში
+          lesson_groups:
+            lessonGroup-8:
+              display_name: კოდის ერთი საათი
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -9069,6 +9103,19 @@ ka:
           lessons:
             lesson-2:
               name: დათვლა ცვლადებით
+            Sprites in Action:
+              name: სპრაიტები მოქმედებაში
+          lesson_groups:
+            lessonGroup-2:
+              display_name: სპრაიტები
+            lessonGroup-3:
+              display_name: ცვლადები
+        csd6-pilot-2022:
+          lessons:
+            Making Music:
+              name: მუსიკის შექმნა
+            Functions with Parameters:
+              name: ფუნქციები
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -9078,6 +9125,526 @@ ka:
             lessonGroup-2:
               display_name: შიგთავსი
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        coursea-2022:
+          lessons:
+            Learn to Drag and Drop:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
+            Happy Maps:
+              name: ბედნიერი რუკები
+              description_teacher: ალგორითმებიდან და პროგრამირებამდე მოკლე გზაა, თუ მოსწავლეებს ესმით განსხვავება მიმდევრობის დაგეგმარებასა და ამ მიმდევრობის პროგრამირების ენაზე კოდირების შორის. ეს აქტივობა დაეხმარება მოსწავლეებს, მიიღონ გამოცდილება ფსევდოკოდის წაკითხვასა და დაწერაში.
+            Sequencing with Scrat:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
+            Programming with Rey and BB-8:
+              name: პროგრამირება რეისთან და BB-8-სთან ერთად
+              key: პროგრამირება რეისთან და BB-8-სთან ერთად
+            Happy Loops:
+              name: 'ციკლები: ბედნიერი ციკლები'
+            Loops with Laurel:
+              name: ციკლები შემგროვებელში
+              description_teacher: განმეორებადი ინსტრუქციების შესახებ "ბედნიერი ციკლებიდან" მიღებული ცოდნის საფუძველზე, ამ ეტაპზე მოსწავლეები ციკლებს Code.org-ზე განძის უფრო ეფექტურად შესაგროვებლად გამოიყენებენ.
+            Ocean Scene with Loops:
+              name: ციკლები მხატვარში
+              key: ციკლები მხატვარში
+            'Mini-Project: On the Move with Play Lab':
+              description_teacher: ამ ონლაინ აქტივობაში მოსწავლეებს ექნებათ საშუალება, შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა, გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
+            'Programming: Happy Maps':
+              key: 'პროგრამირება: ბედნიერი რუკები'
+              name: ბედნიერი რუკები
+              description_teacher: ალგორითმებიდან და პროგრამირებამდე მოკლე გზაა, თუ მოსწავლეებს ესმით განსხვავება მიმდევრობის დაგეგმარებასა და ამ მიმდევრობის პროგრამირების ენაზე კოდირების შორის. ეს აქტივობა დაეხმარება მოსწავლეებს, მიიღონ გამოცდილება ფსევდოკოდის წაკითხვასა და დაწერაში.
+            'Loops: Happy Loops':
+              key: 'ციკლები: ბედნიერი ციკლები'
+              name: 'ციკლები: ბედნიერი ციკლები'
+            Loops in Ice Age:
+              key: ციკლები გამყინვარების პერიოდში
+            Loops in Collector:
+              key: ციკლები შემგროვებელში
+              name: ციკლები შემგროვებელში
+              description_teacher: განმეორებადი ინსტრუქციების შესახებ "ბედნიერი ციკლებიდან" მიღებული ცოდნის საფუძველზე, ამ ეტაპზე მოსწავლეები ციკლებს Code.org-ზე განძის უფრო ეფექტურად შესაგროვებლად გამოიყენებენ.
+            'Events: The Big Event':
+              key: 'მოვლენები: დიდი მოვლენა'
+            Events in Play Lab:
+              key: მოვლენები სათამაშო ლაბორატორიაში
+              description_teacher: ამ ონლაინ აქტივობაში მოსწავლეებს ექნებათ საშუალება, შეისწავლონ სათამაშო ლაბორატორიაში მოვლენების გამოყენება და გამოიყენონ კოდის წერის უნარები, რათა შექმნან ანიმირებული თამაში. დროა, გავხდეთ კრეატიულები და შევქმნათ ამბავი სათამაშო ლაბორატორიაში!
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          student_description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
+          description_short: შესავალი კომპიუტერულ მეცნიერებაში მათთვის, ვინც ჯერ კითხვა არ იცის.
+          description_audience: 'ასაკი: 4-7'
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: პროგრამირება ლაბირინთში
+              key: პროგრამირება ლაბირინთში
+            Debugging in Maze:
+              name: გამართვა ლაბირინთში
+            Collecting Treasure with Laurel:
+              name: განძის შეგროვება ლორელთან ერთად
+              key: განძის შეგროვება ლორელთან ერთად
+            Creating Art with Code:
+              name: კოდის მეშვეობით ხელოვნების შექმნა
+              key: კოდის მეშვეობით ხელოვნების შექმნა
+            Sprites in Action:
+              name: სპრაიტები მოქმედებაში
+            Dance Party:
+              name: ცეკვა
+            Loops with Rey and BB-8:
+              name: ციკლები რეისთან და BB-8-სთან ერთად
+              key: ციკლები რეისთან და BB-8-სთან ერთად
+            Nested Loops in Maze:
+              name: ჩადგმული ციკლები ლაბირინთში
+              key: ჩადგმული ციკლები ლაბირინთში
+            Snowflakes with Anna and Elsa:
+              description_teacher: ამ **მინი-პროექტის** გაკვეთილზე მოსწავლეები შეასრულებენ სავარჯიშოებს და შექმნიან თოვლის ფიფქს ფილმი _გაყინულის_ პერსონაჟებთან ერთად.
+            If/Else with Bee:
+              name: პირობითი ბრძანებები ფუტკარში
+              key: პირობითი ბრძანებები ფუტკარში
+            While Loops in Farmer:
+              name: While ციკლები ფერმერში
+            Harvesting with Conditionals:
+              name: მოსავლის აღება პირობითი წინადადებებით
+              key: მოსავლის აღება პირობითი წინადადებებით
+            Functions with Artist:
+              name: ფუნქციები მხატვარში
+              description_teacher: მოსწავლეები გაეცნობიან ფუნქციების გამოყენებას Code.org-ზე. ფუნქციების საშუალებით "მხატვრის" პროგრამაში შეიქმნება და შესწორდება არაჩვეულებრივი ნახატები. უფრო რთული ნიმუშებისთვის, მოსწავლეები შეისწავლიან ფუნქციების ჩადგმის პრინციპებს (ერთი ფუნქციიდან მეორის გამოძახებას).
+              key: ფუნქციები მხატვარში
+            For Loops with Bee:
+              description_student: ბზზ ბზზ. ამ თავსატეხებში თქვენ უნდა მიიყვანოთ ფუტკარი ნექტართან და თაფლთან `for` ციკლების გამოყენებით!
+            For Loops with Artist:
+              name: For ციკლები მხატვარში
+              key: For ციკლები მხატვარში
+            End of Course Project:
+              description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ თქვენი პროექტის აწყობა.
+            Debugging with Scrat:
+              key: გამართვა სკრეტთან ერთად
+              name: გამართვა ლაბირინთში
+            lesson-3:
+              name: სპრაიტები მოქმედებაში
+            lesson-1:
+              name: ცეკვა
+            Sticker Art with Loops:
+              key: ციკლები მხატვარში
+            While Loops with the Farmer:
+              key: While ციკლები ფერმერში
+              name: While ციკლები ფერმერში
+          lesson_groups:
+            csf_sprites:
+              display_name: სპრაიტები
+            lessonGroup-9:
+              display_name: მოვლენები
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+            csf_functions:
+              display_name: ფუნქციები
+            csf_variables:
+              display_name: ცვლადები
+            csf_for_loops:
+              display_name: '"მიზნისთვის" ციკლები'
+          description_short: 'შესავალი კომპიუტერულ მეცნიერებაში: აერთიანებს დაწყებითი სკოლის პროგრამის საუკეთესო ელემენტებს უფროსი მოსწავლეებისთვის.'
+          description_audience: 'ასაკი: 9-18'
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey:
+              name: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
+              key: კომპიუტერული მეცნიერების საფუძვლების წინარეგამოკითხვა
+            Representing Information:
+              name: ინფორმაციის წარმოდგენა
+              key: ინფორმაციის წარმოდგენა
+            Binary Numbers:
+              name: ორობითი რიცხვები
+              key: ორობითი რიცხვები
+            Intellectual Property:
+              name: ინტელექტუალური ქონება
+              key: ინტელექტუალური ქონება
+          lesson_groups:
+            cspSurvey:
+              display_name: გამოკითხვა
+            csp_unit1_2020:
+              display_name: "(ძველი) სექცია 1: ციფრული ინფორმაცია"
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(ძველი) სექცია 2: ინტერნეტი"
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: გამართვა
+              key: გამართვა
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: ცვლადები
+            csp_conditionals:
+              display_name: პირობითი ბრძანებები
+            csp_functions:
+              display_name: ფუნქციები
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: სიები
+            csp_loops:
+              display_name: ციკლები
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: ვისწავლოთ გადაადგილება
+              key: ვისწავლოთ გადაადგილება
+            Sequencing with Angry Birds:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
+            Programming with Angry Birds:
+              name: პროგრამირება ლაბირინთში
+            Getting Loopy:
+              name: ჩაციკლვა
+            Loops with Laurel:
+              name: ციკლები შემგროვებელში
+            Drawing Gardens with Loops:
+              name: ეზოების ხატვა ციკლებით
+            Sequencing in Maze:
+              description_teacher: ეს გაკვეთილი შეუქმნის მოსწავლეებს წარმოდგენას, თუ რას უნდა ელოდონ, როდესაც გაემგზავრებიან კომპიუტერულ ლაბორატორიაში. ის იწყება მოკლე განხილვით და კომპიუტერულ ლაბორატორიაში ქცევის წესებით, შემდეგ მოსწავლეები გადავლენ კომპიუტერის საშუალებით ონლაინ თავსატეხების ამოხსნაზე.
+            Programming in Maze:
+              key: პროგრამირება ლაბირინთში
+              name: პროგრამირება ლაბირინთში
+            'Loops: Getting Loopy':
+              name: ჩაციკლვა
+            Loops in Harvester:
+              key: ციკლები მკრეფავში
+            Loops in Collector:
+              key: ციკლები შემგროვებელში
+              name: ციკლები შემგროვებელში
+            Loops in Artist:
+              key: ციკლები მხატვარში
+              name: ეზოების ხატვა ციკლებით
+            'Events: The Big Event':
+              key: 'მოვლენები: დიდი მოვლენა'
+            Events in Play Lab:
+              key: მოვლენები სათამაშო ლაბორატორიაში
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          student_description: შეისწავლეთ კომპიუტერული მეცნიერების და ინტერნეტ უსაფრთხოების საფუძვლები. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ისტორია, რომლის გაზიარებასაც შეძლებთ.
+          description_audience: 'ასაკი: 5-8'
+        coursec-2022:
+          lessons:
+            My Robotic Friends Jr.:
+              name: 'პროგრამირება: ჩემი რობოტი მეგობრები.'
+            Programming with Angry Birds:
+              name: პროგრამირება ლაბირინთში
+            Debugging in Maze:
+              name: გამართვა ლაბირინთში
+              key: გამართვა ლაბირინთში
+            Collecting Treasure with Laurel:
+              name: განძის შეგროვება ლორელთან ერთად
+            Creating Art with Code:
+              name: კოდის მეშვეობით ხელოვნების შექმნა
+            My Loopy Robotic Friends Jr.:
+              name: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები.'
+            Loops with Rey and BB-8:
+              name: ციკლები რეისთან და BB-8-სთან ერთად
+              key: ციკლები რეისთან და BB-8-სთან ერთად
+            The Big Event:
+              name: დიდი მოვლენა
+            Build a Flappy Game:
+              name: ააწყვეთ მოფარფატე ჩიტის თამაში
+              key: ააწყვეთ მოფარფატე ჩიტის თამაში
+            Binary Bracelets:
+              name: ორობითი სამაჯურები
+              key: ორობითი სამაჯურები
+            End of Course Project:
+              description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ თქვენი პროექტის აწყობა.
+            'Programming: My Robotic Friends':
+              key: 'პროგრამირება: ჩემი რობოტისებრი მეგობრები'
+              name: 'პროგრამირება: ჩემი რობოტი მეგობრები.'
+            Programming in Maze:
+              key: პროგრამირება ლაბირინთში
+              name: პროგრამირება ლაბირინთში
+            Programming in Collector:
+              key: პროგრამირება შემგროვებელში
+              name: განძის შეგროვება ლორელთან ერთად
+            Programming in Artist:
+              key: პროგრამირება მსახიობში
+              name: კოდის მეშვეობით ხელოვნების შექმნა
+            'Loops: My Loopy Robotic Friends':
+              key: 'ციკლები: ჩემი ციკლური რობოტისებრი მეგობრები'
+              name: 'ციკლები: ჩემი ციკლური რობოტი მეგობრები.'
+            Loops in Harvester:
+              key: ციკლები მკრეფავში
+            Sticker Art with Loops:
+              key: ციკლები მხატვარში
+            'Events: The Big Event':
+              key: 'მოვლენები: დიდი მოვლენა'
+              name: დიდი მოვლენა
+            Events in Play Lab:
+              key: მოვლენები სათამაშო ლაბორატორიაში
+            'End of Course Project: Create a Play Lab Game':
+              description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ თქვენი პროექტის აწყობა.
+          lesson_groups:
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+          student_description: შექმენით პროგრამები ციკლებით, მოვლენებით და ბრძანებათა მიმდევრობებით. გადათარგმნეთ თქვენი ინიციალები ორობითში, გამოიკვლიეთ პრობლემის გადაჭრის სხვადასხვა ტექნიკა და ისწავლეთ, თუ როგორ უნდა უპასუხოთ კიბერძალადობას. კურსის ბოლოს შექმენით თქვენი საკუთარი თამაში ან ამბავი, რომლის გაზიარებასაც შეძლებთ!
+          description_short: ისწავლეთ კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ისტორიები და თამაშები.
+          description_audience: 'ასაკი: 6-10'
+        csp9-2022:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(ძველი) სექცია 9: მონაცემები"
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: გრაფიკული პროგრამირება ქაღალდზე
+            Introduction to Online Puzzles:
+              name: შესავალი ონლაინ თავსატეხებში
+              key: შესავალი ონლაინ თავსატეხებში
+            Relay Programming:
+              name: პროგრამირება ცვლაში
+              key: პროგრამირება ცვლაში
+            Debugging with Laurel:
+              name: გამართვა ლორელთან ერთად
+            Events in Bounce:
+              name: მოვლენები მხტუნავში
+              key: მოვლენები მხტუნავში
+            Build a Star Wars Game:
+              name: ააწყვეთ ვარსკვლავური ომების თამაში
+              description_student: შეიგრძენით ძალა, როდესაც შექმნით თქვენს საკუთარ ვარსკვლავური ომების თამაშს ამ გაკვეთილში.
+              description_teacher: ამ გაკვეთილში მოსწავლეები ივარჯიშებენ მოვლენების გამოყენებაზე. მოვლენების საშუალებით ისინი შეძლებენ ისეთი თამაშის აწყობას, რომელსაც შემდგომში გაუზიარებენ სხვებს ონლაინ. R2-D2 და სხვა ვარსკვლავური ომების პერსონაჟებთან ერთად, მოსწავლეები შეისწავლიან მოვლენების მთავარ პრინციპებს, ხოლო შემდეგ მათ მიეცემათ საშუალება, შექმნან საკუთარი თამაში.
+              key: ააწყვეთ ვარსკვლავური ომების თამაში
+            Dance Party:
+              name: ცეკვა
+              key: ცეკვა
+            Loops in Ice Age:
+              name: ციკლები გამყინვარების პერიოდში
+              key: ციკლები გამყინვარების პერიოდში
+            Drawing Shapes with Loops:
+              name: ციკლები მხატვარში
+            Nested Loops in Maze:
+              name: ჩადგმული ციკლები ლაბირინთში
+            Conditionals with Cards:
+              name: პირობები ბარათებით
+              key: პირობები ბარათებით
+            If/Else with Bee:
+              name: პირობითი ბრძანებები ფუტკარში
+            While Loops in Farmer:
+              name: While ციკლები ფერმერში
+              key: While ციკლები ფერმერში
+            End of Course Project:
+              description_student: მოემზადეთ ბევრი კოდის დასაწერად! დროა, დაიწყოთ თქვენი პროექტის აწყობა.
+            'Algorithms: Graph Paper Programming':
+              name: გრაფიკული პროგრამირება ქაღალდზე
+            Debugging in Collector:
+              key: დებაგირება შემგროვებელში
+              name: გამართვა ლორელთან ერთად
+            Loops in Artist:
+              key: ციკლები მხატვარში
+              name: ციკლები მხატვარში
+            Nested Loops in Bee:
+              key: ჩადგმული ციკლები ფუტკარში
+              name: ჩადგმული ციკლები ლაბირინთში
+            Conditionals in Bee:
+              key: პირობითი ბრძანებები ფუტკარში
+              name: პირობითი ბრძანებები ფუტკარში
+          lesson_groups:
+            lessonGroup-6:
+              display_name: ციფრული მოქალაქეობა
+            csf_events:
+              display_name: მოვლენები
+            csf_loops:
+              display_name: ციკლები
+            csf_conditionals:
+              display_name: პირობითი ბრძანებები
+          description_audience: 'ასაკი: 7-11'
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: კონფიდენციალური და პირადი ინფორმაცია
+              key: კონფიდენციალური და პირადი ინფორმაცია
+            Digital Sharing:
+              name: ციფრული გაზიარება
+              key: ციფრული გაზიარება
+            Fancy Shapes using Nested Loops:
+              name: რთული ფიგურები ჩადგმული ციკლების მეშევეობით
+            'Mini-Project: Design a Snowflake':
+              name: 'მინი-პროექტი: თოვლის ფიფქის დიზაინი'
+              description_teacher: ამ **მინი-პროექტის** გაკვეთილზე მოსწავლეები შეასრულებენ სავარჯიშოებს და შექმნიან თოვლის ფიფქს ფილმი _გაყინულის_ პერსონაჟებთან ერთად.
+            Songwriting:
+              name: სიმღერის დაწერა
+              description_student: როკ ვარსკვლავებსაც კი სჭირდებათ პროგრამირების უნარები. ეს დონე შეგასწავლით ყველაფერს ფუნქციების შესახებ სიმღერების ტექსტების გამოყენებით.
+            Functions with Artist:
+              name: ფუნქციები მხატვარში
+              description_teacher: მოსწავლეები გაეცნობიან ფუნქციების გამოყენებას Code.org-ზე. ფუნქციების საშუალებით "მხატვრის" პროგრამაში შეიქმნება და შესწორდება არაჩვეულებრივი ნახატები. უფრო რთული ნიმუშებისთვის, მოსწავლეები შეისწავლიან ფუნქციების ჩადგმის პრინციპებს (ერთი ფუნქციიდან მეორის გამოძახებას).
+            Nested Loops in Artist:
+              key: ჩადგმული ციკლები მხატვარში
+              name: რთული ფიგურები ჩადგმული ციკლების მეშევეობით
+            Nested Loops in Frozen:
+              key: ჩასმული ციკლები გაყინულში
+              name: 'მინი-პროექტი: თოვლის ფიფქის დიზაინი'
+              description_teacher: ამ **მინი-პროექტის** გაკვეთილზე მოსწავლეები შეასრულებენ სავარჯიშოებს და შექმნიან თოვლის ფიფქს ფილმი _გაყინულის_ პერსონაჟებთან ერთად.
+            'Functions: Songwriting':
+              key: 'ფუნქციები: სიმღერების დაწერა'
+              name: სიმღერის დაწერა
+              description_student: როკ ვარსკვლავებსაც კი სჭირდებათ პროგრამირების უნარები. ეს დონე შეგასწავლით ყველაფერს ფუნქციების შესახებ სიმღერების ტექსტების გამოყენებით.
+            Functions in Artist:
+              key: ფუნქციები მხატვარში
+              name: ფუნქციები მხატვარში
+              description_teacher: მოსწავლეები გაეცნობიან ფუნქციების გამოყენებას Code.org-ზე. ფუნქციების საშუალებით "მხატვრის" პროგრამაში შეიქმნება და შესწორდება არაჩვეულებრივი ნახატები. უფრო რთული ნიმუშებისთვის, მოსწავლეები შეისწავლიან ფუნქციების ჩადგმის პრინციპებს (ერთი ფუნქციიდან მეორის გამოძახებას).
+            Conditionals:
+              key: პირობითი ბრძანებები
+            Functions in Harvester:
+              key: ფუნქციები მკრეფავში
+          lesson_groups:
+            csf_sprites:
+              display_name: სპრაიტები
+            csf_digcit:
+              display_name: ციფრული მოქალაქეობა
+            ramp_up:
+              display_name: ჩასმული ციკლები
+            csf_functions:
+              display_name: ფუნქციები
+            csf_nested_loops:
+              display_name: პირობითი ბრძანებები
+          description_audience: 'ასაკი: 8-12'
+        coursef-2022:
+          lessons:
+            Sprites in Action:
+              name: სპრაიტები მოქმედებაში
+            The Power of Words:
+              name: სიტყვების ძალა
+              description_student: ძალადობა არასდროს არის კარგი. ეს გაკვეთილი გასწავლით, თუ რისი გაკეთება შეიძლება ონლაინ და რისი - არა.
+            Programming with the Bee:
+              name: ჩადგმული ციკლები ლაბირინთში
+            For Loop Fun:
+              name: ხალისი "მიზნისთვის" ციკლით
+              description_student: თქვენ ძალიან იხალისებთ, როდესაც შეისწავლით `for` ციკლებს!
+              key: ხალისი "მიზნისთვის" ციკლით
+            For Loops with Bee:
+              description_student: ბზზ ბზზ. ამ თავსატეხებში თქვენ უნდა მიიყვანოთ ფუტკარი ნექტართან და თაფლთან `for` ციკლების გამოყენებით!
+            For Loops with Artist:
+              name: For ციკლები მხატვარში
+            AI For Oceans:
+              name: AI ოკეანეებისთვის
+            The Internet:
+              name: ინტერნეტი
+            lesson-8:
+              name: სპრაიტები მოქმედებაში
+            lesson-2:
+              name: სიტყვების ძალა
+              description_student: ძალადობა არასდროს არის კარგი. ეს გაკვეთილი გასწავლით, თუ რისი გაკეთება შეიძლება ონლაინ და რისი - არა.
+            Nested Loops in the Maze:
+              name: ჩადგმული ციკლები ლაბირინთში
+            For Loops in Bee:
+              key: For ციკლები ფუტკარში
+              description_student: ბზზ ბზზ. ამ თავსატეხებში თქვენ უნდა მიიყვანოთ ფუტკარი ნექტართან და თაფლთან `for` ციკლების გამოყენებით!
+            For Loops in Artist:
+              key: For ციკლები მხატვარში
+              name: For ციკლები მხატვარში
+            lesson-5:
+              name: დათვლა ცვლადებით
+            AI for Oceans:
+              key: AI ოკეანეებისთვის
+              name: AI ოკეანეებისთვის
+            Internet:
+              key: ინტერნეტი
+              name: ინტერნეტი
+          lesson_groups:
+            ramp_up:
+              display_name: სპრაიტები
+            lessonGroup-7:
+              display_name: ციფრული მოქალაქეობა
+            lessonGroup-8:
+              display_name: ცვლადები
+          description_short: ვისწავლოთ ყველა ცნება კომპიუტერული მეცნიერების საფუძვლები და შექმნათ თქვენი საკუთარი ხელოვნება, ამბავი ან თამაში.
+          description_audience: 'ასაკი: 9-13'
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: ციკლები
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        pre-express-2022:
+          lessons:
+            Programming with Angry Birds:
+              key: პროგრამირება ლაბირინთში
+              name: პროგრამირება ლაბირინთში
+            Programming with Rey and BB-8:
+              key: პროგრამირება რეისთან და BB-8-სთან ერთად
+              name: პროგრამირება რეისთან და BB-8-სთან ერთად
+            Loops with Laurel:
+              key: ციკლები შემგროვებელში
+              name: ციკლები შემგროვებელში
+            Ocean Scene with Loops:
+              key: ციკლები მხატვარში
+              name: ციკლები მხატვარში
+            Drawing Gardens with Loops:
+              key: ეზოების ხატვა ციკლებით
+              name: ეზოების ხატვა ციკლებით
+            On the Move with Events:
+              key: მოვლენები სათამაშო ლაბორატორიაში
+              name: მოვლენები სათამაშო ლაბორატორიაში
+            A Royal Battle with Events:
+              key: მოვლენები სათამაშო ლაბორატორიაში
+              name: მოვლენები სათამაშო ლაბორატორიაში
+          lesson_groups:
+            csf_loops:
+              display_name: ციკლები
+            csf_events:
+              display_name: მოვლენები
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: პირობითი ბრძანებები
+            lesson-14:
+              name: პირობითი წინადადებები Minecraft-ში
+            lesson-16:
+              name: გამართვა
+            lesson-19:
+              name: გამართვა
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa5-2022:
+          lessons:
+            lesson-2:
+              name: სექცია 5 დავალება
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: ციკლები
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: შიგთავსი
+        csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: შიგთავსი

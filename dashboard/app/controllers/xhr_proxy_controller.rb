@@ -63,7 +63,6 @@ class XhrProxyController < ApplicationController
     api.zippopotam.us
     bible-api.com
     code.org
-    codeorg-api.com
     covidtracking.com
     cryptonator.com
     data.austintexas.gov
@@ -76,6 +75,7 @@ class XhrProxyController < ApplicationController
     distanza.org
     dweet.io
     enclout.com
+    freecurrencyapi.net
     googleapis.com
     grobchess.com
     herokuapp.com
@@ -94,6 +94,7 @@ class XhrProxyController < ApplicationController
     pastebin.com
     pixabay.com
     pokeapi.co
+    pro-api.coinmarketcap.com
     qrng.anu.edu.au
     quandl.com
     random.org

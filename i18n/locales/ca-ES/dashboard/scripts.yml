@@ -2227,6 +2227,10 @@ ca:
               display_name: Llistes
             csp_loops:
               display_name: Bucles
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algorismes
         coursea-2021:
           description_short: Una introducció a la informàtica per prelectors.
           description_audience: De 4 a 7 anys
@@ -2464,3 +2468,184 @@ ca:
           lessons:
             lesson-1:
               name: Abella ortogràfica
+        2022drafting:
+          lesson_groups:
+            lessonGroup-8:
+              display_name: L'hora del codi
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Variables
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: Funcions
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Mapes feliços
+            'Programming: Happy Maps':
+              name: Mapes feliços
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          description_short: Una introducció a la informàtica per prelectors.
+          description_audience: De 4 a 7 anys
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Festa de ball
+            lesson-1:
+              name: Festa de ball
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+            csf_functions:
+              display_name: Funcions
+            csf_variables:
+              display_name: Variables
+            csf_for_loops:
+              display_name: Per bucles
+          description_short: 'Una introducció a la informàtica: combina el millor del nostre currículum d''educació primària per alumnes més grans.'
+          description_audience: De 9 a 18 anys
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Depuració
+              key: Depuració
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Variables
+            csp_conditionals:
+              display_name: Condicionals
+            csp_functions:
+              display_name: Funcions
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Llistes
+            csp_loops:
+              display_name: Bucles
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Mou-lo, Mou-lo
+              key: Mou-lo, Mou-lo
+            Getting Loopy:
+              name: Fent bucles
+            'Loops: Getting Loopy':
+              name: Fent bucles
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          description_audience: De 5 a 8 anys
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: El gran esdeveniment
+            Binary Bracelets:
+              name: Polseres binàries
+              key: Polseres binàries
+            'Events: The Big Event':
+              name: El gran esdeveniment
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+          description_short: Apreneu els conceptes bàsics de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: De 6 a 10 anys
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Programació de paper quadriculat
+            Relay Programming:
+              name: Programació en relleus
+              key: Programació en relleus
+            Dance Party:
+              name: Festa de ball
+              key: Festa de ball
+            Conditionals with Cards:
+              name: Condicionals amb targetes
+              key: Condicionals amb targetes
+            'Algorithms: Graph Paper Programming':
+              name: Programació de paper quadriculat
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Ciutadania digital
+            csf_events:
+              display_name: Esdeveniments
+            csf_loops:
+              display_name: Bucles
+            csf_conditionals:
+              display_name: Condicionals
+          description_audience: De 7 a 11 anys
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: Composició de cançons
+            'Functions: Songwriting':
+              name: Composició de cançons
+            Conditionals:
+              key: Condicionals
+          lesson_groups:
+            csf_digcit:
+              display_name: Ciutadania digital
+            ramp_up:
+              display_name: Bucles imbricats
+            csf_functions:
+              display_name: Funcions
+            csf_nested_loops:
+              display_name: Condicionals
+          description_audience: De 8 a 12 anys
+        coursef-2022:
+          lessons:
+            The Internet:
+              name: Internet
+            Internet:
+              key: Internet
+              name: Internet
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Ciutadania digital
+            lessonGroup-8:
+              display_name: Variables
+          description_short: Apreneu tots els conceptes dels Fonaments de la informàtica i creeu el vostre propi art, històries i jocs.
+          description_audience: De 9 a 13 anys
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Bucles
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: Bucles
+            csf_events:
+              display_name: Esdeveniments
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Condicionals
+            lesson-16:
+              name: Depuració
+            lesson-19:
+              name: Depuració
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Bucles

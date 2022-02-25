@@ -556,6 +556,32 @@
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "文字壓縮"
         },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "介紹"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "疫情爆發",
+          "description": "_在今天的課上，你將去“怪獸城鎮”，那裡即將發生病毒疫情爆發。怪物博士需要你的幫助來減緩病毒的傳播。_\n\n_你將在精靈圖實驗室中創建一個疫情爆發模擬器，然後使用它來瞭解病毒如何傳播。你還將幫助所有的怪物恢復健康！_",
+          "progression_name": "疫情爆發"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
+          "progression_name": "歡迎來到怪物鎮"
+        },
+        "df13fa93-37df-4188-837d-462c48179625": {
+          "progression_name": "技能發展"
+        },
+        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
+          "progression_name": "小項目：疫情爆發模擬器"
+        },
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
+          "progression_name": "自由發揮"
+        },
+        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
+          "description": "_模擬是學習現實世界中難以觀察的事物的好方法。模擬可以幫助科學家解決問題，預測如何解決問題，並安全有效地測試新想法。你的模擬是展示怪物城鎮病毒疫情爆發的一種方法。_"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "反思"
+        },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "介紹",
           "tips": [
@@ -4573,32 +4599,6 @@
         "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
           "description": "你可以使用2張便簽紙。在其中一張上面，寫下你今天所學到的一項程式設計內容。\n在另一張上面，寫下你今天所學到的一項詩歌內容。\n\n鼓勵學生們舉手回答問題，與全班同學分享：你希望在接下來的程式設計和電腦科學課程中學習哪些其他知識？"
         },
-        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
-          "name": "介紹"
-        },
-        "d63c77c1-4167-4360-ab98-25610934beda": {
-          "name": "疫情爆發",
-          "description": "_在今天的課上，你將去“怪獸城鎮”，那裡即將發生病毒疫情爆發。怪物博士需要你的幫助來減緩病毒的傳播。_\n\n_你將在精靈圖實驗室中創建一個疫情爆發模擬器，然後使用它來瞭解病毒如何傳播。你還將幫助所有的怪物恢復健康！_",
-          "progression_name": "疫情爆發"
-        },
-        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
-          "progression_name": "歡迎來到怪物鎮"
-        },
-        "df13fa93-37df-4188-837d-462c48179625": {
-          "progression_name": "技能發展"
-        },
-        "ae9fb00b-5b7e-4ecb-94c9-c778a2eba24e": {
-          "progression_name": "小項目：疫情爆發模擬器"
-        },
-        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
-          "progression_name": "自由發揮"
-        },
-        "3a53855f-2fc4-48f1-a05e-1bd8e2c265e0": {
-          "description": "_模擬是學習現實世界中難以觀察的事物的好方法。模擬可以幫助科學家解決問題，預測如何解決問題，並安全有效地測試新想法。你的模擬是展示怪物城鎮病毒疫情爆發的一種方法。_"
-        },
-        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
-          "name": "反思"
-        },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
             null
@@ -7623,6 +7623,3641 @@
         "a277a288-e8d5-4788-aef0-cb7851045427": {
           "name": "其它",
           "description": "如果你的學生已經習慣了編寫代碼概念，可以嘗試讓他們在其他平臺上建立他們的專案，比如 [Scratch](https://scratch.mit.edu/) 或 [Alice](http://www.alice.org/index.php)。"
+        },
+        "1d222524-316a-4988-b206-b1f948cfbee7": {
+          "tips": [
+            null
+          ]
+        },
+        "aa866b7f-747f-49e4-9578-f937dbef61e4": {
+          "tips": [
+            null
+          ]
+        },
+        "8c5b9e26-3b22-4a68-a10d-2e8f3d24a9b0": {
+          "tips": [
+            null
+          ]
+        },
+        "01e90cb3-4a6f-46ed-9a4e-4e7524589e47": {
+          "tips": [
+            null
+          ]
+        },
+        "d26ab8fe-dc83-4704-8aba-bd0cdbdd80a4": {
+          "name": "反思"
+        },
+        "8bdf1f4e-1c20-42bd-a5d5-7217dfa0bd4f": {
+          "tips": [
+            null
+          ]
+        },
+        "57d8014b-4da5-4981-b5aa-bd5feb656548": {
+          "tips": [
+            null
+          ]
+        },
+        "14ad319c-b3ec-4f24-a9c7-5f80f29c9ba8": {
+          "tips": [
+            null
+          ]
+        },
+        "c407d4d5-d82f-47d8-a814-76756c052cc5": {
+          "tips": [
+            null
+          ]
+        },
+        "8791201e-af87-456b-8f93-1c4cb8c10099": {
+          "tips": [
+            null
+          ]
+        },
+        "6ca0b1c3-d106-4e70-bdf5-ee0ed4f7dad6": {
+          "tips": [
+            null
+          ]
+        },
+        "48b299c7-bdd4-453e-aa47-d9d2c7622ee8": {
+          "tips": [
+            null
+          ]
+        },
+        "aa9a6902-38d1-4613-8535-7b515b0f7e04": {
+          "tips": [
+            null
+          ]
+        },
+        "1060fa91-ba3a-4d55-9a85-493f9b08e027": {
+          "tips": [
+            null
+          ]
+        },
+        "ec6a94fb-4529-40b5-bee7-42c5d06822e1": {
+          "tips": [
+            null
+          ]
+        },
+        "12acd4ea-a900-4ea1-a353-601a72b83c80": {
+          "tips": [
+            null
+          ]
+        },
+        "4cb7a9fe-2e72-4730-a3e8-5aaca89653e9": {
+          "tips": [
+            null
+          ]
+        },
+        "f25eef96-e4b8-46eb-8187-2f05676a8b22": {
+          "tips": [
+            null
+          ]
+        },
+        "77fbbd0c-9cd9-4764-a872-ac8da9a7871e": {
+          "tips": [
+            null
+          ]
+        },
+        "40e5d7a1-ae14-4585-bdab-1fc0036d91b2": {
+          "tips": [
+            null
+          ]
+        },
+        "d0b76b9b-7d00-488a-9c55-38ef54a4be8d": {
+          "tips": [
+            null
+          ]
+        },
+        "187961bf-44e5-4407-81d7-a47884e32eb6": {
+          "tips": [
+            null
+          ]
+        },
+        "859c17eb-f742-4430-ab49-fe335f6dc3c0": {
+          "tips": [
+            null
+          ]
+        },
+        "cbf336bc-c75f-4710-9ba5-d30782360222": {
+          "tips": [
+            null
+          ]
+        },
+        "42f29ce9-a2d0-4e8a-a60c-870858ba5847": {
+          "tips": [
+            null
+          ]
+        },
+        "948494c6-f9ab-422f-a5e5-1ba0dd2bb690": {
+          "tips": [
+            null
+          ]
+        },
+        "bde096a8-755f-4d46-8e37-2b7c22c6112d": {
+          "tips": [
+            null
+          ]
+        },
+        "bebc0942-fc14-4063-9feb-e47a4a62d9c8": {
+          "tips": [
+            null
+          ]
+        },
+        "73ce1ded-8856-4156-bfc4-c114b2bae063": {
+          "tips": [
+            null
+          ]
+        },
+        "9a6a30be-65eb-4ba0-ac15-d35a4120f163": {
+          "tips": [
+            null
+          ]
+        },
+        "0d89923e-93b3-4a03-b79e-b262c4a71f72": {
+          "tips": [
+            null
+          ]
+        },
+        "d3990be6-8d37-475a-bb3e-5a4f4fc990ca": {
+          "tips": [
+            null
+          ]
+        },
+        "a93eb670-a170-422f-b5cc-1bb0cba75be3": {
+          "tips": [
+            null
+          ]
+        },
+        "35bd3261-9e58-490f-a4f7-6f6188cf278e": {
+          "tips": [
+            null
+          ]
+        },
+        "7cc32c19-2a9a-423f-a8b7-90a739cd379c": {
+          "tips": [
+            null
+          ]
+        },
+        "79f35dc1-bf5e-47ca-b1eb-b726b15859a8": {
+          "tips": [
+            null
+          ]
+        },
+        "189848b1-8798-4d6b-ba64-c7e43f6aa84a": {
+          "tips": [
+            null
+          ]
+        },
+        "43756539-5123-4890-8fb8-651dbb6ee4b2": {
+          "tips": [
+            null
+          ]
+        },
+        "e4ff1e67-0f17-46a7-8d03-26f8a65238c2": {
+          "tips": [
+            null
+          ]
+        },
+        "0f2e1a2e-8982-4393-9048-8910a592aa88": {
+          "tips": [
+            null
+          ]
+        },
+        "db8f4d62-af34-4871-993d-281cacf5ff29": {
+          "tips": [
+            null
+          ]
+        },
+        "30e5080a-05d0-4193-82e4-f7c81f1adb5c": {
+          "tips": [
+            null
+          ]
+        },
+        "6dc2399a-dad6-46a3-8124-e6b3d100d4fe": {
+          "tips": [
+            null
+          ]
+        },
+        "0c250e92-85e3-4f85-8a99-44a79fb72c03": {
+          "tips": [
+            null
+          ]
+        },
+        "527dacdb-36d1-4e9e-ad42-b28aab54a395": {
+          "tips": [
+            null
+          ]
+        },
+        "91d7768c-2c1c-4b4b-bb3d-b7646f8144d6": {
+          "tips": [
+            null
+          ]
+        },
+        "aedb156c-9f9c-4214-94aa-a664ce875b23": {
+          "tips": [
+            null
+          ]
+        },
+        "819a4c17-f05f-4298-9cfc-1cb2c0b00f5d": {
+          "tips": [
+            null
+          ]
+        },
+        "2ac899a0-cd0e-4440-89e1-ef4de87b930f": {
+          "tips": [
+            null
+          ]
+        },
+        "209eff96-d559-411e-b8cf-bd6a84923473": {
+          "tips": [
+            null
+          ],
+          "progression_name": "練習"
+        },
+        "183a63a0-a03c-4739-8f29-fed89378086e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "8ded89d7-85cd-4bba-883e-7c4981ce3078": {
+          "tips": [
+            null
+          ]
+        },
+        "61bfa751-8587-4118-84e1-b3870975fad4": {
+          "progression_name": "挑戰"
+        },
+        "b39acb79-1fad-4acd-b3e4-789f32636f46": {
+          "tips": [
+            null
+          ]
+        },
+        "1f38b581-970b-4050-9a0b-b899978773d7": {
+          "tips": [
+            null
+          ]
+        },
+        "e2e484bb-64dd-4917-b336-741e743a8814": {
+          "tips": [
+            null
+          ]
+        },
+        "5d7ce86b-abab-41a9-a0a1-b7954bed02af": {
+          "tips": [
+            null
+          ]
+        },
+        "221c0911-a3eb-4409-be91-e665b43e3fc9": {
+          "tips": [
+            null
+          ]
+        },
+        "5b59847e-71f7-481a-a5ca-aa9ec4511289": {
+          "tips": [
+            null
+          ]
+        },
+        "0c7a96aa-61a7-4cbc-a8e4-36aec7260700": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "4e10be5f-60ad-4bae-913d-7a157e519447": {
+          "tips": [
+            null
+          ]
+        },
+        "c5595f82-fa56-4a48-a7f6-65b97947a7e9": {
+          "tips": [
+            null
+          ]
+        },
+        "4efb646c-4ce2-45f5-bb76-f444af86a9b4": {
+          "tips": [
+            null
+          ]
+        },
+        "a4bd3c09-bdc9-45a3-bcdd-6f54e3d19471": {
+          "tips": [
+            null
+          ]
+        },
+        "489ed446-aa78-47e3-b9f2-30bc9164d6c3": {
+          "name": "反思",
+          "progression_name": "反思"
+        },
+        "f2c599ed-2dc6-4fa2-8ebd-5123c77dd9c3": {
+          "tips": [
+            null
+          ]
+        },
+        "38761f3b-2e5b-4626-8f10-3a562e8d0c3b": {
+          "tips": [
+            null
+          ]
+        },
+        "bb1e1371-d01e-43c2-913a-5fe680de2bf4": {
+          "tips": [
+            null
+          ]
+        },
+        "c0c1d052-3e33-4066-a541-356b552d5ec7": {
+          "tips": [
+            null
+          ]
+        },
+        "0fac2a39-1a1e-4c53-a3eb-ef5ababb25f4": {
+          "tips": [
+            null
+          ]
+        },
+        "1ebb0840-0b5b-4ec9-9f95-1ccae266fe92": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "bb917641-be8e-41f9-8ba5-bad758aeb8d5": {
+          "name": "問卷"
+        },
+        "9f17132f-2c2e-4f16-bead-88b852b9e33f": {
+          "tips": [
+            null
+          ]
+        },
+        "3c4c7d3e-338a-4934-bc9c-b9e01d0f14cd": {
+          "tips": [
+            null
+          ]
+        },
+        "7f4a57cb-7221-40f4-a60a-2026a13bcba2": {
+          "tips": [
+            null
+          ]
+        },
+        "72daa1e4-2bc1-49f2-b46e-9e007cf78597": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "0644a5d2-d3ae-4dea-8777-47a522955b21": {
+          "tips": [
+            null
+          ]
+        },
+        "97535dd4-2332-47bc-af09-9571d848068d": {
+          "tips": [
+            null
+          ]
+        },
+        "8da670fc-d91b-438b-af07-2227156fdbcd": {
+          "tips": [
+            null
+          ]
+        },
+        "1b28522d-bf63-4f09-94a2-a80833819a38": {
+          "tips": [
+            null
+          ]
+        },
+        "f1aefb0a-3a33-499b-9ea6-fc842ba895de": {
+          "name": "熱身"
+        },
+        "9492e63b-28f6-41b5-89b9-5f1d611186a1": {
+          "name": "活動"
+        },
+        "5b3b512d-42b8-4c2f-bbb3-7ebad7908e62": {
+          "tips": [
+            null
+          ]
+        },
+        "fc716fb8-1b76-44d6-9565-f114f18721f1": {
+          "tips": [
+            null
+          ]
+        },
+        "c9458a29-f135-4840-aae0-37c35f2bfa52": {
+          "name": "總結"
+        },
+        "847d4606-cf5c-4060-ab5c-2870853447a3": {
+          "name": "熱身"
+        },
+        "3bc8e042-f19f-4233-bebc-baccef07881b": {
+          "tips": [
+            null
+          ]
+        },
+        "892bacbf-54ca-4447-8e4e-c711765fcd7d": {
+          "name": "總結"
+        },
+        "934317da-7e33-4f20-ad76-9f06d203b1a6": {
+          "name": "熱身"
+        },
+        "dc5dddbb-40bf-41e0-be7e-51b41edf1337": {
+          "tips": [
+            null
+          ]
+        },
+        "065f7419-b028-4610-b0c4-671f2ec86590": {
+          "name": "總結"
+        },
+        "9e4ffdd6-9a34-453b-953c-23f4e0516b0f": {
+          "name": "熱身"
+        },
+        "4af3f898-21e4-4ed3-bbc6-ca4686c46f7a": {
+          "tips": [
+            null
+          ]
+        },
+        "2df922c9-a79a-4e9f-a4e5-003cee501451": {
+          "name": "總結"
+        },
+        "73c0c357-7096-42d6-b457-e88276905578": {
+          "name": "熱身"
+        },
+        "15cc22f5-50bf-4102-843a-7f9246727869": {
+          "tips": [
+            null
+          ]
+        },
+        "1f35f92d-5556-4137-a1e6-38c31a3a719f": {
+          "name": "總結"
+        },
+        "f5c2056c-f519-4991-a58b-f22058fbaa9d": {
+          "name": "反思",
+          "progression_name": "反思"
+        },
+        "9819f2db-593b-4631-96e8-ad45aba59e08": {
+          "tips": [
+            null
+          ],
+          "progression_name": "課後問券指示"
+        },
+        "7c0f6057-1b87-4d67-a58d-c511e59b2e62": {
+          "tips": [
+            null
+          ]
+        },
+        "e90bcc9b-7ad0-4e59-9c21-3e80d85c08f4": {
+          "tips": [
+            null
+          ]
+        },
+        "9a00392e-73f9-4bf0-9ca9-fc29a07a6bf1": {
+          "tips": [
+            null
+          ]
+        },
+        "8accf144-8730-45d6-a806-475e5164395c": {
+          "tips": [
+            null
+          ]
+        },
+        "d567345f-60b1-4c26-b5b7-d78d4e4ca1e9": {
+          "tips": [
+            null
+          ]
+        },
+        "aed2c64f-4f98-4bf6-adf7-f7cd80ab941a": {
+          "tips": [
+            null
+          ]
+        },
+        "b1931821-27e8-4550-98c6-ffc17f93cb62": {
+          "tips": [
+            null
+          ]
+        },
+        "d9db5d0e-f332-4e7f-8526-6bf166cae8a7": {
+          "tips": [
+            null
+          ]
+        },
+        "f5c05e62-80c7-422f-b578-b9ba663db140": {
+          "tips": [
+            null
+          ]
+        },
+        "ceaa3d86-c33a-4a0a-b56c-75b2b938786f": {
+          "name": "定義",
+          "tips": [
+            null
+          ]
+        },
+        "a400fd77-feee-4d7d-8be6-7ceb8e378cd0": {
+          "tips": [
+            null
+          ]
+        },
+        "11e8295e-4b2e-4844-91cd-3d02533f89ce": {
+          "tips": [
+            null
+          ]
+        },
+        "8e25228f-7396-4a9d-9dab-ff41c9ceeb53": {
+          "name": "準備（Prepare）"
+        },
+        "6c2b2e0f-0ca5-4f49-b7a4-e90ddc47860d": {
+          "tips": [
+            null
+          ]
+        },
+        "0e79724e-4dc4-491d-ac17-f4839c30ce19": {
+          "tips": [
+            null
+          ]
+        },
+        "ef056da0-16f9-479a-95ea-42f70ae6a9aa": {
+          "tips": [
+            null
+          ]
+        },
+        "667167ce-9c2f-4059-9a2a-71bdd0adccbc": {
+          "tips": [
+            null
+          ]
+        },
+        "3c36a33c-4c3d-4f93-8c89-a1a7dbdfd58c": {
+          "name": "嘗試（Try）"
+        },
+        "b640029f-89eb-45d2-a087-e6d57d703c12": {
+          "name": "反思（Reflect）"
+        },
+        "8f2a96ab-2fe4-4799-bf45-5d850c830f97": {
+          "tips": [
+            null
+          ]
+        },
+        "8a310d03-4c27-4b18-b8f7-994c23971fdd": {
+          "tips": [
+            null
+          ]
+        },
+        "aa617b29-6e2d-44e6-972d-45bb987419e8": {
+          "name": "紙上原型"
+        },
+        "889b61a1-6e88-49a4-9250-5e48853f289c": {
+          "tips": [
+            null
+          ]
+        },
+        "6519fc7c-05b3-464d-a3ea-3cd9b239a023": {
+          "tips": [
+            null
+          ]
+        },
+        "b7a9b018-0728-4b91-935e-b3ec7c723623": {
+          "tips": [
+            null
+          ]
+        },
+        "45553c85-cb2b-4763-8875-484919a56ced": {
+          "tips": [
+            null
+          ]
+        },
+        "18ddafa9-e84c-403f-a417-d4516a1ae6a7": {
+          "tips": [
+            null
+          ]
+        },
+        "c5dbb48d-d120-4560-b671-bd507f1685b0": {
+          "tips": [
+            null
+          ]
+        },
+        "2ee54cfb-c1d2-4524-86c2-6ef303a598ea": {
+          "tips": [
+            null
+          ]
+        },
+        "2c2e61bd-0e80-4e8a-8377-5680d0d95f90": {
+          "tips": [
+            null
+          ]
+        },
+        "4a408d6d-8d2f-481e-aafe-e5d81da03a43": {
+          "tips": [
+            null
+          ]
+        },
+        "3fef28ad-87b4-4154-b80f-12b358f2e031": {
+          "tips": [
+            null
+          ]
+        },
+        "1715dc9b-df4c-4292-8b4a-f5cc8aea73a4": {
+          "tips": [
+            null
+          ]
+        },
+        "69cdfd66-ff99-4e25-b8e7-e6d920f36fb1": {
+          "tips": [
+            null
+          ]
+        },
+        "47fe69d8-300c-488d-94ac-616b6fb2fbb8": {
+          "tips": [
+            null
+          ]
+        },
+        "37a98989-bd44-40e0-8606-da8c32dde749": {
+          "tips": [
+            null
+          ]
+        },
+        "0b2efd87-9305-4f69-b54f-ad720a636f39": {
+          "name": "新手上路"
+        },
+        "a23e57c3-d624-46df-bc76-87d7e4c16ad9": {
+          "tips": [
+            null
+          ]
+        },
+        "54a5e672-f71d-4cd7-9bb7-db4ad99104f5": {
+          "tips": [
+            null
+          ]
+        },
+        "743d6e6b-6320-4157-962e-5789b717aa34": {
+          "name": "總結"
+        },
+        "9afae521-da27-48d1-9d5f-e90c8690923f": {
+          "name": "熱身"
+        },
+        "8d94bfb4-8b4f-47e4-975d-28814e71b929": {
+          "name": "原型測試"
+        },
+        "8672a531-0212-4a3a-9831-5c522d710bd4": {
+          "tips": [
+            null
+          ]
+        },
+        "33e66783-8c6a-4b44-a3ce-7715ffb2307d": {
+          "name": "反思（Reflect）"
+        },
+        "ce9819ba-4ea2-4327-9ed9-6e56f4bf3400": {
+          "tips": [
+            null
+          ]
+        },
+        "beeb8da7-5283-44e8-a1b5-0eb3987e226b": {
+          "tips": [
+            null
+          ]
+        },
+        "a97b7f87-b7d9-4a8d-a68e-35cd489345e2": {
+          "tips": [
+            null
+          ]
+        },
+        "3c6018f8-0048-4c97-9970-72884de4c736": {
+          "progression_name": "反思"
+        },
+        "b13161da-36da-4c66-a533-ee18c77cc807": {
+          "name": "展望未來"
+        },
+        "86647112-ffd2-4c41-84b4-1ea040590a32": {
+          "tips": [
+            null
+          ]
+        },
+        "233defe7-9977-4539-8a42-7e146979db0e": {
+          "tips": [
+            null
+          ]
+        },
+        "f5bad206-6147-4a6c-af88-bf15c41f6469": {
+          "tips": [
+            null
+          ]
+        },
+        "d12014de-c29c-4d8d-891b-2dca9c37974f": {
+          "tips": [
+            null
+          ]
+        },
+        "eb20582a-3ffa-45d7-8ce4-5505dc1e9f17": {
+          "tips": [
+            null
+          ]
+        },
+        "f8a14811-8528-45d2-970e-71e4c4cdd40e": {
+          "tips": [
+            null
+          ]
+        },
+        "9519ba5f-1e9a-41a3-91a5-10dcaa31b00d": {
+          "tips": [
+            null
+          ]
+        },
+        "99a48707-5d94-418b-a63e-120ef2178c88": {
+          "tips": [
+            null
+          ]
+        },
+        "61333e8c-4c43-4cb8-8a5f-56153ff20170": {
+          "tips": [
+            null
+          ]
+        },
+        "ac59be9d-db06-4340-a5f3-2f74f4d22f72": {
+          "tips": [
+            null
+          ]
+        },
+        "7e704d36-1603-46a8-be78-8f13dcdae93f": {
+          "tips": [
+            null
+          ]
+        },
+        "9e5d6c76-47cf-4853-8bfb-ebfa6005ca71": {
+          "tips": [
+            null
+          ]
+        },
+        "43484e40-619c-44a7-97e1-2612ae402193": {
+          "tips": [
+            null
+          ]
+        },
+        "d7947c4f-5f7c-4011-a004-6fb9cc228706": {
+          "tips": [
+            null
+          ]
+        },
+        "7fd85c65-ad1b-4f7d-a93d-eed09e89386c": {
+          "tips": [
+            null
+          ]
+        },
+        "69c31664-67a3-406f-aef7-9be5281299ee": {
+          "tips": [
+            null
+          ]
+        },
+        "4aec71fb-6cbe-4811-ab72-128f739c84a7": {
+          "tips": [
+            null
+          ]
+        },
+        "580b0187-b553-4031-b073-fa6790bd6f48": {
+          "tips": [
+            null
+          ]
+        },
+        "9e88ce3c-497f-47c8-88b9-717c5747ca41": {
+          "tips": [
+            null
+          ]
+        },
+        "34f8346c-af88-4f9e-b676-566a5aab39d2": {
+          "tips": [
+            null
+          ]
+        },
+        "9073a9fc-550e-48f5-9f00-55bd0c2abf6a": {
+          "tips": [
+            null
+          ]
+        },
+        "4defcbc5-28b7-46a2-81b0-5e1c923dc036": {
+          "tips": [
+            null
+          ]
+        },
+        "bcbc8736-9513-438c-b118-87470fc5f545": {
+          "tips": [
+            null
+          ]
+        },
+        "5299e79c-fbf7-422a-962a-8adee224fd98": {
+          "tips": [
+            null
+          ]
+        },
+        "2974a2b8-24cd-4a3c-bd66-04e92209110b": {
+          "tips": [
+            null
+          ]
+        },
+        "52705132-ae81-4c78-8704-9ffd36b9e5cb": {
+          "tips": [
+            null
+          ]
+        },
+        "9ac26727-d92c-474f-8a18-271e7f494132": {
+          "tips": [
+            null
+          ]
+        },
+        "2e5264db-0d1d-4fc1-adf1-c5bf13967af5": {
+          "tips": [
+            null
+          ]
+        },
+        "ff254aeb-ed49-4b8f-83b5-1bbfbc1eb7c8": {
+          "progression_name": "建造一個畫面"
+        },
+        "e259d4f1-45b8-4d26-9ddd-5e4a146ac9e6": {
+          "progression_name": "完成一個畫面"
+        },
+        "648adba7-4a69-4bce-9109-9d50e9d71087": {
+          "tips": [
+            null
+          ]
+        },
+        "3ae6c2fa-0e47-40a3-894b-b1995fe98c91": {
+          "tips": [
+            null
+          ]
+        },
+        "5a82120d-9538-4fd6-b631-86b6d0e8bfc6": {
+          "tips": [
+            null
+          ]
+        },
+        "cc78f5f7-002f-44ed-9f5f-2518a19953e7": {
+          "tips": [
+            null
+          ]
+        },
+        "311288e0-9ddf-4681-a8f2-31ae7d196423": {
+          "tips": [
+            null
+          ]
+        },
+        "045c4fbc-83bd-4cce-a007-ed7ed6ac48bf": {
+          "tips": [
+            null
+          ]
+        },
+        "2f4c69e6-995a-4646-ac24-53f224ef9dd7": {
+          "tips": [
+            null
+          ]
+        },
+        "ed8ac962-30bc-457d-aee3-6965176fd6e4": {
+          "progression_name": "新增畫面"
+        },
+        "af502a23-0afa-4a37-b4e2-8ca110bd9ef6": {
+          "progression_name": "事件以及連結的畫面"
+        },
+        "aec4a036-761c-4015-bdd0-e138372c1847": {
+          "tips": [
+            null
+          ]
+        },
+        "ff9510f7-5db2-48e7-906e-2289e52db678": {
+          "tips": [
+            null
+          ]
+        },
+        "75d3dcbc-e41c-4063-b598-facb3bdc9bcb": {
+          "tips": [
+            null
+          ]
+        },
+        "ab7b313f-01ee-47bc-a177-0bd27a77f88e": {
+          "progression_name": "合併專案"
+        },
+        "cda83683-b629-4ed3-a3ee-944691693739": {
+          "tips": [
+            null
+          ]
+        },
+        "1fb9839f-ccd0-4f02-b7b9-44e8ff7ab095": {
+          "tips": [
+            null
+          ]
+        },
+        "66a0329e-9fa3-4294-ba1a-ac918f0e8408": {
+          "tips": [
+            null
+          ]
+        },
+        "24d188db-fc22-41a3-bba4-8ef59a0ddc53": {
+          "tips": [
+            null
+          ]
+        },
+        "14254f0c-651f-4902-88ae-509fe2b77f7e": {
+          "tips": [
+            null
+          ]
+        },
+        "7f6c261c-5cd3-4215-ba2d-bb0db7014f0c": {
+          "tips": [
+            null
+          ]
+        },
+        "ba1c96c9-ff95-432b-8d22-5138a319f4b4": {
+          "tips": [
+            null
+          ]
+        },
+        "f7bad8f1-8f27-48a7-bd98-70d03a7ddf81": {
+          "tips": [
+            null
+          ]
+        },
+        "0e136518-de25-4ad4-a786-e9736f9b4354": {
+          "tips": [
+            null
+          ]
+        },
+        "e4c15ff3-00e4-45d9-b9ad-78e5b332b058": {
+          "tips": [
+            null
+          ]
+        },
+        "9ab8fce2-b661-425e-a015-a671e382a411": {
+          "tips": [
+            null
+          ]
+        },
+        "8c475adc-0786-43a2-9f57-fde314fd24ad": {
+          "tips": [
+            null
+          ]
+        },
+        "b25121aa-b946-4bea-9fdd-6a874ffb4bd7": {
+          "tips": [
+            null
+          ]
+        },
+        "8b41cd86-ab6d-4cc1-b24f-70a9534ba318": {
+          "tips": [
+            null
+          ]
+        },
+        "2e7e6d2b-ce4c-48ee-ab67-a7002104dad7": {
+          "tips": [
+            null
+          ]
+        },
+        "a96b40dd-a27b-4fc0-8c1e-db5584a87c4e": {
+          "tips": [
+            null
+          ]
+        },
+        "fe5c3b17-fe61-4487-97d0-c8cb1c2641c8": {
+          "tips": [
+            null
+          ]
+        },
+        "0b73f454-275c-431b-8325-06c9a32000d1": {
+          "tips": [
+            null
+          ]
+        },
+        "5eb3c3e2-7ebd-4824-b769-14d1244e412b": {
+          "tips": [
+            null
+          ]
+        },
+        "216053ef-be2c-486a-8bd6-89db4c7ea9dc": {
+          "name": "熱身"
+        },
+        "dfe65c27-9f06-4c6f-857e-06f4ae98dcd1": {
+          "tips": [
+            null
+          ]
+        },
+        "cbd1e24c-3232-42ff-bd52-2725517f8697": {
+          "progression_name": "反思"
+        },
+        "b5282123-46f9-411e-ba2c-d6f5ab3b4ea7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "課後問券指示"
+        },
+        "2bddbd31-7cae-4867-96fd-f8ba2f18b6c8": {
+          "tips": [
+            null
+          ]
+        },
+        "f14cc941-af61-4deb-8c16-be730ded1849": {
+          "tips": [
+            null
+          ],
+          "progression_name": "設定屬性"
+        },
+        "fe4404fa-4e67-4c56-b117-6aa3dd7fd8ef": {
+          "tips": [
+            null
+          ],
+          "progression_name": "事件與屬性"
+        },
+        "12af028a-bc38-49f4-8fda-8cd49963e102": {
+          "progression_name": "構建一個手機應用程式"
+        },
+        "053cf5c9-1dd1-4da7-8fca-82dd5780c4b0": {
+          "tips": [
+            null
+          ]
+        },
+        "8cb231b2-ab63-4868-a949-bc91e701ea7d": {
+          "tips": [
+            null
+          ]
+        },
+        "dafc849e-b1f0-4767-aa97-69090169177e": {
+          "tips": [
+            null
+          ]
+        },
+        "9fc2aec4-9f01-4726-82a7-306e613d936e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "硬體和軟體"
+        },
+        "1890c047-5983-4093-99a8-08fcb099c0e0": {
+          "tips": [
+            null
+          ],
+          "progression_name": "使用彩色顯示器"
+        },
+        "bc4c9c62-accc-4be6-a733-2a6acf678ec7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "發光二極管 應用程式"
+        },
+        "b297e101-f4cd-4ddd-ae0f-42e87ed683d0": {
+          "tips": [
+            null
+          ]
+        },
+        "0904effb-8684-4f4b-8bbf-795b9787b83e": {
+          "progression_name": "輸入範例"
+        },
+        "5037ffb9-a7e8-4abc-81cc-e72d58b5e31c": {
+          "name": "不插電介紹輸入（Input）"
+        },
+        "c932e879-ed85-4226-b025-a1dbb22da379": {
+          "tips": [
+            null
+          ]
+        },
+        "4c3af8fe-b972-410f-a839-00f38e6a51ce": {
+          "name": "反思",
+          "tips": [
+            null
+          ]
+        },
+        "42897a7c-47b8-426e-9d2f-c9177a06433e": {
+          "progression_name": "電路板事件"
+        },
+        "70584163-7483-4f54-b414-11925175ca74": {
+          "progression_name": "使用開關"
+        },
+        "15e99a5a-e49e-47de-8eb1-f01b08a46a42": {
+          "progression_name": "蜂鳴器"
+        },
+        "7091d49a-c4ac-4c04-aaa4-290efb0ee705": {
+          "tips": [
+            null
+          ]
+        },
+        "2224615d-c083-4694-b797-4b3c8e8d84da": {
+          "tips": [
+            null
+          ],
+          "progression_name": "取得屬性"
+        },
+        "bf62acfd-9cbc-4232-ba68-d86ced8e58bc": {
+          "progression_name": "滑塊"
+        },
+        "aa167cb8-d7fb-4c0f-8a8a-55ee234635da": {
+          "progression_name": "改變"
+        },
+        "a7dd4853-b8c3-44d2-a03b-f5e5e23ff0ac": {
+          "progression_name": "摩托車"
+        },
+        "d0e85c72-53c1-4429-91ab-3d160fc10b20": {
+          "tips": [
+            null
+          ]
+        },
+        "f5a1e7d6-5715-4050-bfed-a5e0663486c4": {
+          "tips": [
+            null
+          ]
+        },
+        "ad9b3ec1-2ac4-49e3-ae20-08ed7b100017": {
+          "progression_name": "讀取感測器"
+        },
+        "dd5aab7d-3ee7-465c-9668-d584bf8b416c": {
+          "progression_name": "感測事件"
+        },
+        "ef9ec42f-f86e-4636-a45b-5da0d208b714": {
+          "tips": [
+            null
+          ],
+          "progression_name": "感測器到顏色"
+        },
+        "dd376cda-c9b9-4bf6-9cd4-be44b1ec632f": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "0d9ecf02-4bac-4dc3-86c4-ba83c96e8a14": {
+          "tips": [
+            null
+          ]
+        },
+        "75c3755e-3860-4965-b2df-a459e020a7a8": {
+          "progression_name": "範例程式"
+        },
+        "5959a534-f372-4111-a8d2-4e94de572996": {
+          "progression_name": "畫面設計"
+        },
+        "01addbef-11df-4c62-a099-ae69c66c7c1c": {
+          "tips": [
+            null
+          ],
+          "progression_name": "完成函式"
+        },
+        "33168786-d600-4b6c-a947-045b8a466d7c": {
+          "tips": [
+            null
+          ],
+          "progression_name": "確認誰是贏家"
+        },
+        "8259e743-5c84-4516-8f31-300f06de6ab0": {
+          "tips": [
+            null
+          ]
+        },
+        "6d7c017d-88c7-4ed3-ac37-b2a3c8a741df": {
+          "progression_name": "演示 - 錯誤抓取"
+        },
+        "2248f61c-7cfa-491e-87f6-fba7f80558b9": {
+          "progression_name": "畫面設計"
+        },
+        "9afdcdd9-6cf6-481c-86b4-312da18c7cc3": {
+          "progression_name": "事件"
+        },
+        "b919f5c1-5152-4baa-bddb-112275d049ac": {
+          "progression_name": "函式"
+        },
+        "ec8d5281-885f-4d9d-af4e-2d28ecfb94c6": {
+          "progression_name": "最後微調"
+        },
+        "187cdb02-266e-41c6-a35e-8d31c07cfdff": {
+          "progression_name": "反思"
+        },
+        "316f977f-5ad8-4565-b6d1-1c62507ba565": {
+          "tips": [
+            null
+          ]
+        },
+        "81d447de-9abb-4bc8-af49-9d823c30e8cb": {
+          "name": "陣列與彩色 LED"
+        },
+        "701df007-2fc2-4907-bdae-63ea39ea0649": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：陣列的介紹"
+        },
+        "528b9a48-dd5d-4f52-b455-be650f9ed180": {
+          "tips": [
+            null
+          ],
+          "progression_name": "陣列（Arrays）的介紹"
+        },
+        "624b7f1b-43ad-451a-80bb-86622fe827e6": {
+          "progression_name": "彩色顯示器"
+        },
+        "3f472ce9-f1fe-4be7-8849-5ba3155f2d11": {
+          "tips": [
+            null
+          ],
+          "progression_name": "燈光表演"
+        },
+        "45cd46c8-3f06-4b93-8688-a6da5a670734": {
+          "progression_name": "挑戰等級"
+        },
+        "78b871d6-dd5f-4ad8-b32b-97df938ae849": {
+          "tips": [
+            null
+          ]
+        },
+        "0d6b1fbb-59d1-4a90-a5f7-e6fdbabcdfb6": {
+          "tips": [
+            null
+          ]
+        },
+        "a5ccf2e8-f9e7-42df-a5e1-2c86349bf620": {
+          "name": "製作音樂"
+        },
+        "658d5770-5620-4be8-b722-0c8cfa66fe52": {
+          "progression_name": "遊玩筆記"
+        },
+        "4563c715-0a30-419a-9eca-d5b41089e165": {
+          "tips": [
+            null
+          ],
+          "progression_name": "音樂陣列"
+        },
+        "28fb99c8-886a-4ed6-859a-1fb1a813c484": {
+          "tips": [
+            null
+          ],
+          "progression_name": "製作歌曲"
+        },
+        "99bb7a42-a203-480b-af5d-4e828d85e452": {
+          "progression_name": "額外的"
+        },
+        "eb895db7-aeb1-4efe-9eb8-c314cd7a2621": {
+          "tips": [
+            null
+          ]
+        },
+        "0874692e-8e17-4b1d-9232-f11c61106af0": {
+          "tips": [
+            null
+          ]
+        },
+        "e91b0fe3-8fe2-463c-b2fe-349fcbc510b7": {
+          "name": "陣列和 for（計數）迴圈"
+        },
+        "d4f41f0f-3bd8-493c-b4c6-9ec09058247b": {
+          "progression_name": "重複執行的程式"
+        },
+        "d5b2ea3b-4370-4cf8-a9ed-670e789d812f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：計次迴圈"
+        },
+        "2aed74d8-d9e0-4c5d-b0bc-7bc5e90ce0df": {
+          "progression_name": "計次迴圈（For Loops）"
+        },
+        "4eae7990-8111-4f59-a7ef-212acf9f054f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "For 迴圈以及彩色顯示器"
+        },
+        "5cf3a5e9-20b3-4eb3-bc30-8f7676bfbfc8": {
+          "tips": [
+            null
+          ]
+        },
+        "2433b686-980c-423e-bada-f8a501c7bc82": {
+          "name": "加速器"
+        },
+        "387ec0d5-447c-41a9-ad6d-5383ce38f8f6": {
+          "progression_name": "螢幕方向"
+        },
+        "88fbe9b6-7233-4617-a579-4eea7041c1b0": {
+          "tips": [
+            null
+          ],
+          "progression_name": "加速計事件"
+        },
+        "83dadfe8-ec04-4986-9e4b-8fcb301bce51": {
+          "tips": [
+            null
+          ]
+        },
+        "61efbeb1-5fcd-4dec-9265-4628f24745de": {
+          "tips": [
+            null
+          ]
+        },
+        "de64b098-e02d-4a21-9965-1e7217f40ebd": {
+          "progression_name": "函式帶參數"
+        },
+        "fca31602-8539-4b94-968a-9a98631d3394": {
+          "progression_name": "迭代和參數"
+        },
+        "02b60bab-d184-4bce-859c-5438c9e37cc4": {
+          "tips": [
+            null
+          ],
+          "progression_name": "星星追尋者"
+        },
+        "3b0572f2-01eb-48b0-96a1-43739f98575a": {
+          "tips": [
+            null
+          ]
+        },
+        "38e26d5e-b651-4c50-b791-10455112e4ba": {
+          "tips": [
+            null
+          ]
+        },
+        "4d9d84e9-900f-4816-81fd-b70a1ca43b16": {
+          "progression_name": "簡易電路"
+        },
+        "c814528c-f376-440e-849f-19d8790e7d92": {
+          "tips": [
+            null
+          ],
+          "progression_name": "智慧單車 - 閃光警戒燈"
+        },
+        "8521f45a-fff7-43d7-bd5a-d32077c26151": {
+          "tips": [
+            null
+          ]
+        },
+        "420da788-7b37-45e7-b940-ae08c8f90b25": {
+          "tips": [
+            null
+          ]
+        },
+        "90ed38ab-3eec-449a-a2dd-dccd4a1aa26d": {
+          "progression_name": "按鈕電路"
+        },
+        "672d26f8-cbd5-46ea-8482-d84b0be3e335": {
+          "tips": [
+            null
+          ],
+          "progression_name": "完成原型"
+        },
+        "a3f5dca7-56ea-4d7e-9f37-b1ae9f46aef5": {
+          "tips": [
+            null
+          ]
+        },
+        "0516be14-10b2-4124-af7c-3d76c5177d95": {
+          "tips": [
+            null
+          ]
+        },
+        "1f452df6-46c4-4e9d-82b5-6efe4fd98928": {
+          "progression_name": "使用者介面"
+        },
+        "aff65857-e7c8-4c2c-91b8-ea88ac74042c": {
+          "progression_name": "根目錄 -> 資料 -> 進度 -> 輸入輸出控制板"
+        },
+        "e94b332f-1746-4ad8-ad48-f3a337b69c2c": {
+          "progression_name": "最後微調"
+        },
+        "7550d329-92cf-4cd3-b0b5-c918c24f2105": {
+          "progression_name": "反思"
+        },
+        "44000645-7870-4e71-b27e-75cd70b6dbb9": {
+          "tips": [
+            null
+          ]
+        },
+        "a76a28bd-8ddb-4b39-8ce7-6663e81bfd1b": {
+          "name": "分享",
+          "tips": [
+            null
+          ]
+        },
+        "a237ce6e-b99e-4117-afee-b384cfd9fc4f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "課後問券指示"
+        },
+        "c80549fe-fb7e-4eef-ba30-247264bf0e1f": {
+          "tips": [
+            null
+          ]
+        },
+        "7e296c41-f0fb-4d31-8b13-31f6e7abe2f5": {
+          "tips": [
+            null
+          ]
+        },
+        "98a216a1-8aa6-4216-ad6e-b7ab5abca491": {
+          "tips": [
+            null
+          ]
+        },
+        "addfcb6c-dafa-4e9d-b5fc-8d2c400714aa": {
+          "tips": [
+            null
+          ]
+        },
+        "05ef09a7-e47c-4238-b280-31aeb3b4dc00": {
+          "tips": [
+            null
+          ]
+        },
+        "cc06e6ea-b748-4c9d-b201-ccb10cd77cf6": {
+          "tips": [
+            null
+          ]
+        },
+        "cbce24b3-baeb-42f3-978b-e4262e9e38b7": {
+          "tips": [
+            null
+          ]
+        },
+        "d324e413-50c5-4135-97ad-610430cd5a97": {
+          "tips": [
+            null
+          ]
+        },
+        "bb61bac7-12c5-4854-9cce-2450dae006fb": {
+          "tips": [
+            null
+          ]
+        },
+        "604675cc-016d-4706-ad48-32d1547d7a74": {
+          "tips": [
+            null
+          ]
+        },
+        "8aadfdde-40ea-48c0-b369-3e9a0213c31b": {
+          "tips": [
+            null
+          ]
+        },
+        "2c878939-14f1-4cca-a6a5-d1bcc71ffb84": {
+          "name": "像素化小工具",
+          "progression_name": "表示圖像"
+        },
+        "0cb3b9f4-af2b-43e0-bdaa-4ce6ff013a37": {
+          "tips": [
+            null
+          ]
+        },
+        "2f614323-09fc-4fc3-949a-d8326ea2dedf": {
+          "tips": [
+            null
+          ]
+        },
+        "17536ac7-f578-4492-9a2b-034697748108": {
+          "tips": [
+            null
+          ]
+        },
+        "143b040a-8c9e-4653-92d4-f58ea9ffef72": {
+          "tips": [
+            null
+          ]
+        },
+        "85c49ae4-5b52-40ad-96eb-424f02d8539e": {
+          "tips": [
+            null
+          ]
+        },
+        "7383a881-4001-478a-8e89-5169fc76e2fb": {
+          "tips": [
+            null
+          ]
+        },
+        "5e396df7-105a-46f4-8083-63f1c708ca2a": {
+          "tips": [
+            null
+          ]
+        },
+        "c71003ba-e08d-4d77-b308-5cc6ee941091": {
+          "tips": [
+            null
+          ]
+        },
+        "30ef889b-387b-4dbd-b6bc-96ca25489944": {
+          "tips": [
+            null
+          ]
+        },
+        "59dffdf2-728b-4b66-a29b-7635c858be00": {
+          "tips": [
+            null
+          ],
+          "progression_name": "二進位和資料"
+        },
+        "5ab922e3-8512-4c62-83c7-e17aa282377d": {
+          "tips": [
+            null
+          ]
+        },
+        "1282f8e7-0fd9-47bc-b7b4-75b4025eedb5": {
+          "tips": [
+            null
+          ]
+        },
+        "13abae06-0500-42e9-a486-940684c9ba87": {
+          "tips": [
+            null
+          ]
+        },
+        "a4df917c-be45-4977-bc95-fbe945f3c3cf": {
+          "tips": [
+            null
+          ]
+        },
+        "38324708-63cb-4738-92c9-af06aed187f7": {
+          "tips": [
+            null
+          ]
+        },
+        "95c12363-142c-4e82-bed6-76541ed021c4": {
+          "tips": [
+            null
+          ]
+        },
+        "2c09cb98-721d-4c28-add5-bc717980da1e": {
+          "tips": [
+            null
+          ]
+        },
+        "e5d5e7ac-2362-41f9-a3ba-b78deaee4edc": {
+          "tips": [
+            null
+          ]
+        },
+        "bc476ecb-65ea-4f30-a970-81feb995c71c": {
+          "tips": [
+            null
+          ]
+        },
+        "112b54ac-5751-4635-8275-23e6acc5947c": {
+          "tips": [
+            null
+          ]
+        },
+        "1fcec88e-f931-4ece-95d2-966a9ce0d0eb": {
+          "tips": [
+            null
+          ]
+        },
+        "317d7606-342d-4068-939d-b4abefb7867f": {
+          "tips": [
+            null
+          ]
+        },
+        "4e8ecb03-3abf-412e-96bb-102eb61294aa": {
+          "tips": [
+            null
+          ]
+        },
+        "89ef6969-5f33-411f-905d-93ffc791d9f8": {
+          "progression_name": "反思"
+        },
+        "c74f28dc-8f61-443c-b03a-4943b65c8824": {
+          "tips": [
+            null
+          ]
+        },
+        "928ac428-64ef-4359-ad63-12d175fa700e": {
+          "name": "定義"
+        },
+        "d19d7358-a136-4eae-a082-fb508284fb50": {
+          "tips": [
+            null
+          ]
+        },
+        "35745fa0-2097-414b-beb8-eca436c1d5b9": {
+          "name": "準備（Prepare）"
+        },
+        "2cd98702-4332-403a-8ce9-01db36e361ab": {
+          "tips": [
+            null
+          ]
+        },
+        "799529e8-aa6b-44e9-a270-1db8052d7df3": {
+          "name": "嘗試（Try）"
+        },
+        "fae06660-56ad-41e5-8af3-bbfbe36ebb97": {
+          "tips": [
+            null
+          ]
+        },
+        "7080a972-d63e-4299-8260-f1df2f234857": {
+          "name": "反思（Reflect）"
+        },
+        "cb6b53c4-832b-4488-b7d8-e235460c633c": {
+          "tips": [
+            null
+          ]
+        },
+        "4701e66f-6c37-4ae3-a6d9-b94b4c45704c": {
+          "tips": [
+            null
+          ]
+        },
+        "28dfd4cd-0d62-4c35-bed0-d6038adf4813": {
+          "tips": [
+            null
+          ]
+        },
+        "2bd9ece8-996d-4561-9ff9-b702ac019d12": {
+          "tips": [
+            null
+          ]
+        },
+        "b22284df-c9d1-4046-93d8-4cd7339b1ec0": {
+          "tips": [
+            null
+          ]
+        },
+        "b65a936d-eb48-4c6f-a0bf-751bb0829269": {
+          "tips": [
+            null
+          ]
+        },
+        "a6b0da50-c2de-4f78-98e0-5f01500c1845": {
+          "tips": [
+            null
+          ]
+        },
+        "a8280172-5d5d-4d29-b6ec-bc98ae0e3e08": {
+          "tips": [
+            null
+          ]
+        },
+        "c72ef18c-8a87-40ab-9a07-260f89fad275": {
+          "tips": [
+            null
+          ]
+        },
+        "45d58868-a7ed-43a5-ae94-c64de3cc4dd5": {
+          "tips": [
+            null
+          ]
+        },
+        "46bfc542-d2d8-4124-a4cd-d7e53fff618e": {
+          "tips": [
+            null
+          ]
+        },
+        "501ce03f-e483-4e6d-bbc8-dc26c9a3a265": {
+          "tips": [
+            null
+          ]
+        },
+        "3cf5b5f5-208d-4801-b616-a877e120f6ca": {
+          "tips": [
+            null
+          ]
+        },
+        "c3c51f8c-dafe-485c-9fb6-9e10a686097d": {
+          "tips": [
+            null
+          ]
+        },
+        "456fda46-f469-47e7-991c-6fd3efb1c0f6": {
+          "tips": [
+            null
+          ]
+        },
+        "1d7c5ce3-6ee6-408f-9723-8fdfb8b2fda3": {
+          "tips": [
+            null
+          ]
+        },
+        "400536e8-3e68-4e2e-a1cb-15abe6e78255": {
+          "tips": [
+            null
+          ]
+        },
+        "1fd332bf-4d3a-4fb3-8585-11aa036c87ff": {
+          "tips": [
+            null
+          ]
+        },
+        "1d708064-9b0b-4a56-bccf-715c91c2cf6d": {
+          "tips": [
+            null
+          ]
+        },
+        "a367b3e1-6f45-49c0-8429-9e2b607560a2": {
+          "tips": [
+            null
+          ]
+        },
+        "e4a6519f-4954-49e6-8914-83043cd945d7": {
+          "tips": [
+            null
+          ]
+        },
+        "e84d2260-141b-4899-971d-0e0e33eb12d2": {
+          "tips": [
+            null
+          ]
+        },
+        "caccc30a-07e9-465a-a077-65788e7b4f1b": {
+          "tips": [
+            null
+          ]
+        },
+        "83b2e7f4-a01c-491f-a3e1-29ac12d01a13": {
+          "tips": [
+            null
+          ]
+        },
+        "f6b744db-baed-4e9d-bdf4-1f1399bf716a": {
+          "tips": [
+            null
+          ]
+        },
+        "1f315b3a-9470-42be-95de-4b2327b9a338": {
+          "name": "反思"
+        },
+        "85bda82c-51d9-4b18-a377-4ecd142855c0": {
+          "tips": [
+            null
+          ]
+        },
+        "8ff48983-ab23-42db-8ad0-d0d690bafad5": {
+          "tips": [
+            null
+          ]
+        },
+        "7d58d643-efce-44e7-a3e4-7b3492c72250": {
+          "tips": [
+            null
+          ]
+        },
+        "f8f9a770-42a2-4c1d-9b51-52f46ff9360d": {
+          "tips": [
+            null
+          ]
+        },
+        "914c565c-fb6d-490c-a14a-b289ac56d720": {
+          "tips": [
+            null
+          ]
+        },
+        "4ed5db10-7aec-4ab8-802b-10ccc9710ed5": {
+          "tips": [
+            null
+          ]
+        },
+        "92b13324-8ae5-4796-9071-694683704daa": {
+          "tips": [
+            null
+          ]
+        },
+        "7c5c8f29-ab7a-4891-b135-182f4222a591": {
+          "tips": [
+            null
+          ]
+        },
+        "375e017e-8620-4d95-a1f5-89fda22729ac": {
+          "tips": [
+            null
+          ]
+        },
+        "24a8f1ab-d8eb-4738-b114-0534be713085": {
+          "tips": [
+            null
+          ]
+        },
+        "84929552-ebfc-43ef-a97d-f1857609d4ae": {
+          "progression_name": "應用程式範例"
+        },
+        "ff9b8b39-860d-427b-9a2d-80c537bc539f": {
+          "tips": [
+            null
+          ]
+        },
+        "4bc50ef6-5978-4a80-943a-49fc0cffb23e": {
+          "tips": [
+            null
+          ]
+        },
+        "2d923b7c-56a0-462a-b7c4-5350cfe28ac0": {
+          "tips": [
+            null
+          ]
+        },
+        "92566744-182e-416d-b7c7-2f5b2a92026b": {
+          "tips": [
+            null
+          ]
+        },
+        "22ca7a0f-899a-4cd3-8fbd-14afbf396317": {
+          "progression_name": "反思"
+        },
+        "ec94d489-2b99-408d-bcce-782db2cdba44": {
+          "tips": [
+            null
+          ],
+          "progression_name": "課後問券指示"
+        },
+        "31ee2243-fd15-45ab-a0d7-80c2c97d88c7": {
+          "tips": [
+            null
+          ]
+        },
+        "d4d92cde-d8c2-4f5d-89bb-6aac7ec2de59": {
+          "progression_name": "圖形的繪製"
+        },
+        "e82622fb-a1cf-45c8-a0f2-7929503c4bfe": {
+          "tips": [
+            null
+          ]
+        },
+        "2725045e-4a46-449e-9a1e-ecf266e6755d": {
+          "tips": [
+            null
+          ]
+        },
+        "3c78bafa-e216-4280-a965-d982d319d15a": {
+          "tips": [
+            null
+          ]
+        },
+        "a929ea0c-ccdf-4e2c-9751-3012d428dcd6": {
+          "tips": [
+            null
+          ]
+        },
+        "0a01de04-3b8f-4025-864a-8a2f48f9fd09": {
+          "tips": [
+            null
+          ]
+        },
+        "b0b45a9e-53a8-4d5e-a248-7a7d042dd2b8": {
+          "tips": [
+            null
+          ]
+        },
+        "935fb22e-ea0b-4c9b-92fc-61c39895fca9": {
+          "tips": [
+            null
+          ],
+          "progression_name": "Game Lab 的介紹"
+        },
+        "9663d7f7-168d-4f85-8f8a-cc2d6f86efa3": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：用 Game Lab 繪圖 - 第 1 部分"
+        },
+        "9b7caf32-0737-4382-be8b-66460fc06c42": {
+          "progression_name": "網格的用法"
+        },
+        "c838ee44-b6fd-467e-8733-9b52d9727b08": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：用 Game Lab 繪圖 - 第 2 部分"
+        },
+        "74393dee-626c-4743-b131-1566ed43d56c": {
+          "progression_name": "技能發展"
+        },
+        "9612456b-5030-4f4c-a11b-893694130773": {
+          "tips": [
+            null
+          ],
+          "progression_name": "練習"
+        },
+        "ea1a9294-f250-4c26-8032-c497088f8206": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "897f445d-23b2-4083-8982-ec4ea7cecbec": {
+          "tips": [
+            null
+          ],
+          "progression_name": "挑戰"
+        },
+        "1f66ca37-97c5-48be-9f14-d7f4938b2632": {
+          "tips": [
+            null
+          ]
+        },
+        "11f4055c-bcd6-4b74-8f9a-5d69502955f2": {
+          "tips": [
+            null
+          ]
+        },
+        "4c1fe47c-e862-4d73-9a70-66843600aa20": {
+          "progression_name": "技能發展"
+        },
+        "b5f4b746-8e7a-4a6d-8f2c-39ec9d4dc3d7": {
+          "progression_name": "練習"
+        },
+        "ef33e6f2-c5d9-4d5d-85fc-4434062b105f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "a09c360f-651e-4539-94b3-620914e17cf2": {
+          "tips": [
+            null
+          ],
+          "progression_name": "挑戰"
+        },
+        "5485407f-b2b9-433e-86a4-6da5afa523f5": {
+          "tips": [
+            null
+          ]
+        },
+        "9e754b3d-83a4-4fb3-bdf5-331c02667465": {
+          "tips": [
+            null
+          ]
+        },
+        "6638d677-a241-4922-bc90-a10daceb1787": {
+          "progression_name": "預測"
+        },
+        "df26b7e2-cb48-40b2-b360-d0e9770b8802": {
+          "tips": [
+            null
+          ]
+        },
+        "a14285ec-28bc-4b44-a63c-204c0034c19f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "b55ffb73-9837-4f02-8ad8-6465f209cbd7": {
+          "progression_name": "練習"
+        },
+        "58908247-dbee-4578-8155-09f7d934c017": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "04d00beb-b2b6-4f05-8529-f018aef183c0": {
+          "progression_name": "挑戰"
+        },
+        "ad26b802-3d93-4e28-bf0c-2b04b8127c12": {
+          "name": "反思"
+        },
+        "e13128cb-3a56-488b-86db-0a2edd7aff6d": {
+          "tips": [
+            null
+          ]
+        },
+        "61d2c0ea-b465-4fe7-8906-7b4d6a8820cd": {
+          "tips": [
+            null
+          ]
+        },
+        "841704c1-3513-4bb1-bfd7-0a0783072b45": {
+          "progression_name": "探索"
+        },
+        "cd7e0902-f7eb-47aa-b09c-b506a3860ff0": {
+          "progression_name": "技能發展"
+        },
+        "da183609-402a-448c-9d31-e3cb729a0d56": {
+          "progression_name": "練習"
+        },
+        "dfafff33-7c5b-4a4a-9d38-647e60b34160": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "3acf7a09-7059-4259-b07f-d404e0c3f7da": {
+          "progression_name": "挑戰"
+        },
+        "e3a151f2-e5d3-4a66-9eed-6bc74f6adecb": {
+          "tips": [
+            null
+          ]
+        },
+        "04061607-035b-48a3-ad8e-33fed692aa2b": {
+          "tips": [
+            null
+          ]
+        },
+        "068fe268-da1d-49ed-8628-408960971d4a": {
+          "progression_name": "探索"
+        },
+        "f52c22d8-72a7-44d1-91d2-66aacf92c1a8": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：角色的介紹"
+        },
+        "31324d8c-8187-4b66-b0fe-ff74bbb6077e": {
+          "progression_name": "技能發展"
+        },
+        "8f56a7b9-e17b-4173-bae9-c996824270b4": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：動畫頁籤"
+        },
+        "d78f2220-48f9-4316-aaeb-7b6131700133": {
+          "name": "技能發展",
+          "progression_name": "技能發展"
+        },
+        "b2d492ac-9752-4402-8d16-c80b49172609": {
+          "name": "練習",
+          "progression_name": "練習"
+        },
+        "234316a5-009b-44bd-a51d-fdcb54cc8903": {
+          "name": "測驗",
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "2057627a-c665-4a63-8aed-c1123ce9796a": {
+          "name": "挑戰",
+          "tips": [
+            null
+          ],
+          "progression_name": "挑戰"
+        },
+        "5989291d-e9d4-4f14-bdf6-399b69b96cec": {
+          "tips": [
+            null
+          ]
+        },
+        "08b6ad2a-7ff0-429d-bc3b-e83030e2fcbc": {
+          "progression_name": "預測"
+        },
+        "d77cb04c-3156-47e2-88d1-bbb3c891d9b1": {
+          "progression_name": "技能發展"
+        },
+        "b0d26289-6dd8-4acd-ac6b-c93dbe519272": {
+          "progression_name": "練習"
+        },
+        "34fcaf28-d278-49ff-877f-a5f79f77af59": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "9925febf-964d-468b-8ad0-b76a389d4498": {
+          "progression_name": "挑戰"
+        },
+        "f455bf72-f2c8-4bf2-970f-af533ef80342": {
+          "tips": [
+            null
+          ]
+        },
+        "de715c3f-0860-4e19-acb1-ebcb230a19a8": {
+          "progression_name": "預測"
+        },
+        "57f321f4-4d9c-4cfe-9142-513345b6aaec": {
+          "progression_name": "技能發展"
+        },
+        "abf0a52f-bd1d-457e-a3ce-77ec28543885": {
+          "progression_name": "練習"
+        },
+        "2d0fc04c-aa1b-4148-9efd-06764f14c100": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "06559d3f-7ebd-4356-a06d-c16cdeaebde5": {
+          "progression_name": "挑戰"
+        },
+        "7e2e7a3e-fd91-4ab5-8b46-f8ae96c91169": {
+          "tips": [
+            null
+          ]
+        },
+        "67d8c4d5-fda2-47c0-a7a3-164eb669718f": {
+          "name": "檢視"
+        },
+        "0b250aa0-f3fa-4530-bef8-e328e4d93620": {
+          "tips": [
+            null
+          ]
+        },
+        "fe60d6bf-420e-474d-8b50-0ff252e6c6bf": {
+          "tips": [
+            null
+          ]
+        },
+        "760b0216-8c5d-4954-ac35-fd42c527ac66": {
+          "tips": [
+            null
+          ]
+        },
+        "c490c403-c5dc-4755-a03b-1532565b1119": {
+          "tips": [
+            null
+          ]
+        },
+        "6cf8f316-c11f-4cc5-85a3-1596303e4317": {
+          "tips": [
+            null
+          ]
+        },
+        "18bcf449-d684-4e93-abbd-5af4e82d1e7b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：圖形迴圈的介紹"
+        },
+        "09ba5105-6934-4a31-9684-3e62192e7542": {
+          "progression_name": "探索"
+        },
+        "71831a0f-cae7-4f2f-be4d-8d29515588aa": {
+          "progression_name": "技能發展"
+        },
+        "fcb22a6b-b548-4ea4-b2bf-23f3db9dde29": {
+          "tips": [
+            null
+          ],
+          "progression_name": "預測"
+        },
+        "323374c7-2b08-4f0b-a97d-cab7f3f81de7": {
+          "progression_name": "技能發展"
+        },
+        "d707e22e-3f7e-4e4e-aa2d-a31cb12357da": {
+          "progression_name": "練習"
+        },
+        "d1f93971-c590-43fb-be4d-a3ced983e77a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "c2703579-0081-4ecf-8aa2-500ed370fb99": {
+          "tips": [
+            null
+          ],
+          "progression_name": "挑戰"
+        },
+        "4e97aa36-b285-40f3-83cb-383e83158dc5": {
+          "tips": [
+            null
+          ]
+        },
+        "b8ce874f-8e09-4a78-aa14-7b32de942c69": {
+          "tips": [
+            null
+          ]
+        },
+        "93b30d12-a9fb-473d-88e3-55b1c6948991": {
+          "progression_name": "預測"
+        },
+        "a6ebae49-e1ca-4918-9d7f-4c0e33cdf00e": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：角色動作"
+        },
+        "1b41610c-933d-416a-b713-b4d975f298f9": {
+          "progression_name": "技能發展"
+        },
+        "dd261f84-96e5-4abe-94dc-5af81c906ff0": {
+          "progression_name": "練習"
+        },
+        "bccfd2b8-dd73-4be5-ab15-2dfa4024312b": {
+          "progression_name": "測驗"
+        },
+        "23d183b4-c898-41d3-b5c7-de7336534cd5": {
+          "progression_name": "挑戰"
+        },
+        "06cad4ef-4d60-42e4-829c-02fd3364c31e": {
+          "tips": [
+            null
+          ]
+        },
+        "eb0d27fe-7158-49fe-9e96-bbc70d2fa158": {
+          "name": "檢視"
+        },
+        "a5361b9b-6e15-4bba-9b35-ae31a1e1b525": {
+          "tips": [
+            null
+          ]
+        },
+        "fa1f1ad4-aadd-49d1-9138-887450893813": {
+          "tips": [
+            null
+          ]
+        },
+        "f54152bb-4d02-459d-beea-ceeb422be02a": {
+          "tips": [
+            null
+          ]
+        },
+        "fbcd5bf0-4c6e-4142-934d-e4f4ebe17ad2": {
+          "tips": [
+            null
+          ]
+        },
+        "8ed5e3eb-5ffa-473f-b166-3ea936d0c9e7": {
+          "tips": [
+            null
+          ]
+        },
+        "02bcc907-1476-4a48-90ea-a56c5c91e6d4": {
+          "name": "條件判斷（Conditionals）"
+        },
+        "970064bc-3023-4f10-9359-91868ff9c77d": {
+          "progression_name": "預測"
+        },
+        "230cf2d8-bf75-4b73-aa29-4e468f203e78": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：布林值"
+        },
+        "ba88e2d6-49b9-4e4b-a34f-3a7804ea1ce5": {
+          "progression_name": "技能發展"
+        },
+        "030bb18c-bfaf-4c13-8ca7-9b251c26c162": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：條件陳述式"
+        },
+        "b3b4d1e4-17c7-4933-8ba6-03ac7a46839a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "a9e1809e-78f0-42a5-b9b3-f680e95c5d15": {
+          "progression_name": "練習"
+        },
+        "461492e7-43b9-4c58-9ee4-b63b716dbded": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "30bb6b07-5257-4a19-89a0-02be767443b5": {
+          "progression_name": "挑戰"
+        },
+        "2b5e9944-1e90-4362-98e9-ef74a8d1d48b": {
+          "tips": [
+            null
+          ]
+        },
+        "0ee8704d-9ad3-4a31-816f-555813322a78": {
+          "name": "取得輸入資料",
+          "tips": [
+            null
+          ]
+        },
+        "55c35c06-acaf-41fa-b001-47448467e841": {
+          "name": "鍵盤輸入"
+        },
+        "1cc6a39c-ad40-4484-941a-cfedaee5e669": {
+          "progression_name": "預測"
+        },
+        "7f5ec4ec-e8ef-46fb-98db-48db8f4510d2": {
+          "progression_name": "技能發展"
+        },
+        "21c5c04b-1e3d-4de7-9694-083ed04efc2b": {
+          "progression_name": "練習"
+        },
+        "9345c305-ff75-4d36-a595-b0b7a69c094f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "d489f6eb-e7e8-45ba-ac13-a12a78c22a08": {
+          "progression_name": "挑戰"
+        },
+        "e016d4b6-9ebd-4c6c-9697-b368a0c90bd8": {
+          "tips": [
+            null
+          ]
+        },
+        "04c8e14b-6000-4ac2-9f56-6dd8b660b460": {
+          "progression_name": "預測"
+        },
+        "48c9aa57-b904-4660-b629-e49bf606fad7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：如果/否則 陳述式"
+        },
+        "991be916-6a79-484c-95a2-0e6f753d9ac8": {
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "a24db1f0-f6cf-4e74-91e7-5b4ba3746db2": {
+          "progression_name": "練習"
+        },
+        "fb40596d-a877-43f3-87b7-325a2fd79c37": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "8615ab59-fb2e-47e1-8f04-ab9d578fbc79": {
+          "progression_name": "挑戰"
+        },
+        "957a684d-5930-4823-99fa-0af6c5701b6f": {
+          "name": "總結"
+        },
+        "b9716428-aedc-4578-8328-379b70cb0d50": {
+          "tips": [
+            null
+          ]
+        },
+        "09884749-ea7e-4df2-94f7-f73308052d81": {
+          "tips": [
+            null
+          ]
+        },
+        "4b3c39d2-a62c-43c3-b5ae-048ef270624a": {
+          "tips": [
+            null
+          ]
+        },
+        "1f6b91fb-f2a1-4585-bb33-4ede2232a20d": {
+          "progression_name": "專案: 工作"
+        },
+        "187ab288-8997-4b05-90b2-993b1d29c6ba": {
+          "name": "同儕審查"
+        },
+        "4bfb9e2c-557b-464a-9a07-7190bc4dce87": {
+          "tips": [
+            null
+          ]
+        },
+        "b2ad1d43-99f9-40fa-9f88-d8b42f8c723e": {
+          "name": "反思（Reflect）"
+        },
+        "d8f8a198-8cc9-47f1-b6c9-f03f573fe546": {
+          "progression_name": "反思"
+        },
+        "360d3353-5639-4dfb-a66d-784a152e1794": {
+          "name": "反思"
+        },
+        "a2fda764-6cf6-419d-a9cb-7d62a2749660": {
+          "tips": [
+            null
+          ]
+        },
+        "498b10a2-a029-449b-a37d-0b85141e917b": {
+          "progression_name": "技能發展"
+        },
+        "42d0eae6-06b2-4aa6-a8f6-6081ce2fa560": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：速度"
+        },
+        "e8b8a1b0-89e9-4b09-978f-11db835db760": {
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "b61a7b78-619b-46fd-a7f4-e5e3f9e2a976": {
+          "progression_name": "練習"
+        },
+        "a0ba31d0-91f2-4271-aacb-bf5c614aabc3": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "c7ff9236-7fd7-41ce-968f-0261551fd3b5": {
+          "progression_name": "挑戰"
+        },
+        "864f7c7f-a19d-4470-8d53-52e790f5e783": {
+          "tips": [
+            null
+          ]
+        },
+        "28c72532-e347-4f43-81ea-7b83a4e336d1": {
+          "tips": [
+            null
+          ]
+        },
+        "57411d29-c010-41c3-82bc-be6b7025c796": {
+          "tips": [
+            null
+          ]
+        },
+        "49cfe240-7090-4fbd-9e61-ef725f8bddb1": {
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "9f5f2c6e-0979-4ada-bfbb-8be2fb0e7642": {
+          "progression_name": "練習"
+        },
+        "ef8e8137-1524-4b5d-9e2a-6c6d535cda60": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "db772045-97b4-4f93-8e9d-8b9d015190a2": {
+          "progression_name": "挑戰"
+        },
+        "1e949591-d103-4f64-9c54-eeac71cc51d3": {
+          "tips": [
+            null
+          ]
+        },
+        "3d9ddc58-7bda-43a0-8944-fd8c622b3d70": {
+          "progression_name": "角色的互動"
+        },
+        "560aac86-3e4c-411b-be1c-9cc37704fd3f": {
+          "tips": [
+            null
+          ]
+        },
+        "c87f7c08-8f60-4810-9e6f-10ae69319288": {
+          "tips": [
+            null
+          ],
+          "progression_name": "預測"
+        },
+        "e327d5f5-1886-4b6a-ba54-7eb091abc739": {
+          "progression_name": "技能發展"
+        },
+        "1697fdd9-29f2-46d5-8091-5b5028ffc925": {
+          "progression_name": "練習"
+        },
+        "96cef9d3-a478-4852-9dff-061a5fa5dc79": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "077d6880-3d7a-4c59-a63c-06ab77e3e0d8": {
+          "progression_name": "挑戰"
+        },
+        "443eb6ca-6406-4399-b140-a4d6ec3f0bca": {
+          "tips": [
+            null
+          ]
+        },
+        "136ec817-6a58-41db-aae8-3238b015ce63": {
+          "tips": [
+            null
+          ]
+        },
+        "29881c8e-82cb-4886-8e1f-7f101c91bae9": {
+          "tips": [
+            null
+          ]
+        },
+        "4c0ed738-4808-45b2-aaae-965d536ffc6a": {
+          "tips": [
+            null
+          ]
+        },
+        "0d8cc1e7-4e01-4315-a98c-87fcc7031ca7": {
+          "tips": [
+            null
+          ]
+        },
+        "c6e363e6-23a1-466a-9589-a4b871989618": {
+          "progression_name": "技能發展"
+        },
+        "97db6b61-4e7a-4ce8-8b03-698a3b983f8c": {
+          "progression_name": "練習"
+        },
+        "6b47f10d-a466-436e-ad48-25f2404ae07a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "e0a4583c-3ca6-4235-a457-774d3696a07d": {
+          "progression_name": "挑戰"
+        },
+        "d2cc216a-b098-4754-bb18-087f42007b46": {
+          "tips": [
+            null
+          ]
+        },
+        "a7af5fa7-b9bc-4779-bf77-e349bd07d0f2": {
+          "progression_name": "角色動作"
+        },
+        "93c86b2f-aeb2-48d2-b34d-8213761ae09c": {
+          "progression_name": "角色的互動"
+        },
+        "40b22769-f206-4725-b2f4-fd3f71c15101": {
+          "tips": [
+            null
+          ]
+        },
+        "52d53651-705c-47ec-a68f-d014f3499a99": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：函式"
+        },
+        "085e06bd-a991-42ec-b8e2-2e27712cf7dd": {
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "e4283f2d-5933-4812-80df-341067426cc8": {
+          "tips": [
+            null
+          ],
+          "progression_name": "練習"
+        },
+        "fa4f0ee7-664c-4e90-b170-12f4cfb45ef5": {
+          "tips": [
+            null
+          ],
+          "progression_name": "收集遊戲"
+        },
+        "c3302e9a-4da1-4c1b-96ca-232b7026ea9c": {
+          "progression_name": "挑戰"
+        },
+        "3dfe6414-c583-4af9-a55d-7da0d06783ef": {
+          "tips": [
+            null
+          ]
+        },
+        "9fba4c16-6103-4cb5-88a4-1a250ec8abdb": {
+          "tips": [
+            null
+          ]
+        },
+        "e068a067-ade8-4f5c-bfad-661fdff103ed": {
+          "tips": [
+            null
+          ]
+        },
+        "b38b9687-9ab2-490a-8306-5e0655d51863": {
+          "progression_name": "角色的互動"
+        },
+        "d0d85465-a081-4c09-ae83-8b454e76c2ff": {
+          "tips": [
+            null
+          ],
+          "progression_name": "挑戰"
+        },
+        "4304b5c8-73c0-44c3-bd18-3ec32f1e947d": {
+          "tips": [
+            null
+          ]
+        },
+        "70b55a3a-e9cd-435d-a426-ab6e80a725cb": {
+          "tips": [
+            null
+          ]
+        },
+        "79ced720-4977-4d65-9163-acd0147f2552": {
+          "tips": [
+            null
+          ]
+        },
+        "b51fe24a-e404-4c6e-9fe1-8916f81f0e85": {
+          "progression_name": "平台跳跳人 - 背景與變數"
+        },
+        "acfd2ab2-c569-4af6-b8c4-95bcf48e5f87": {
+          "progression_name": "平台跳跳人 - 平台"
+        },
+        "c8f33ef3-d45e-4cdc-9b94-b621dab81076": {
+          "progression_name": "平台跳跳人 - 道具"
+        },
+        "e41b90a3-20b1-45d9-9e3d-490c083587ea": {
+          "progression_name": "平台跳跳人 -  玩家"
+        },
+        "b29f40dd-4e28-4c22-8aa8-9e387819622c": {
+          "tips": [
+            null
+          ]
+        },
+        "3732107f-02cf-4117-941b-725824574e50": {
+          "progression_name": "挑戰"
+        },
+        "7e64a6bf-73b9-4cd3-be58-402b3da57768": {
+          "tips": [
+            null
+          ]
+        },
+        "686b638e-1a29-49cc-8711-191165d251b9": {
+          "tips": [
+            null
+          ]
+        },
+        "c06da82f-6be2-49e8-8d8b-6579ef11f06d": {
+          "progression_name": "專案-背景以及變數"
+        },
+        "f582ab6b-ecf5-438c-9782-e7dbbc1dc1a9": {
+          "progression_name": "專案 - 小怪跟互動 "
+        },
+        "59ca85ff-b7b0-450d-b354-1c9938c4a615": {
+          "tips": [
+            null
+          ]
+        },
+        "d1ae9072-39e7-4cd7-81eb-6434e0b2e39d": {
+          "name": "分享"
+        },
+        "2d58346e-e123-4477-8995-fefc448b3fe3": {
+          "name": "反思（Reflect）",
+          "progression_name": "反思"
+        },
+        "b44faa8f-43ae-4899-b299-888d85f57d48": {
+          "tips": [
+            null
+          ],
+          "progression_name": "課後問券指示"
+        },
+        "beb5adaf-44d3-48fe-bb2d-99a2f55caeff": {
+          "tips": [
+            null
+          ]
+        },
+        "1dca60be-eb7f-40ef-8b91-8ca231c1b14a": {
+          "tips": [
+            null
+          ]
+        },
+        "1c951438-4727-4ea5-84d9-560f7dac9204": {
+          "tips": [
+            null
+          ]
+        },
+        "37d397d0-785f-4dc7-b172-2b51e5757ba3": {
+          "tips": [
+            null
+          ]
+        },
+        "5166952d-961b-4ba8-b379-c4101d84b4de": {
+          "tips": [
+            null
+          ]
+        },
+        "79ffacab-f428-4e4f-8f85-e9409b2e43a3": {
+          "tips": [
+            null
+          ]
+        },
+        "6470c3f3-0547-4d23-bede-dbac0704a029": {
+          "tips": [
+            null
+          ]
+        },
+        "e1fdc61e-61b5-4b5d-b46a-62a26f7cca05": {
+          "tips": [
+            null
+          ]
+        },
+        "fc1bd727-4c35-4405-a14f-a713bcd7e532": {
+          "name": "反思（Reflect）"
+        },
+        "82378234-dc3a-4578-a458-e237d6b9b729": {
+          "tips": [
+            null
+          ]
+        },
+        "10aec291-0c45-453c-8609-5386783ff20e": {
+          "tips": [
+            null
+          ]
+        },
+        "11b483ae-c3f6-467d-85c3-9427203e2488": {
+          "tips": [
+            null
+          ]
+        },
+        "d7edf595-a13a-4992-b963-58a034f34112": {
+          "tips": [
+            null
+          ]
+        },
+        "7accdcb0-3787-4a97-9ac5-4044890f8c12": {
+          "tips": [
+            null
+          ]
+        },
+        "555a0b86-988d-4c75-ad9a-e3fc127d44c3": {
+          "tips": [
+            null
+          ]
+        },
+        "7e307eaa-f893-47b4-94ce-38801b41592a": {
+          "tips": [
+            null
+          ]
+        },
+        "4436ad56-59ce-4b60-8e8e-bd0c9f80626a": {
+          "description": "![](https://images.code.org/52f474adbbc3bdd87aaae407c9ebf588-image-1515690462464.png)"
+        },
+        "c21034e8-cca8-4197-9819-081e4114ef36": {
+          "tips": [
+            null
+          ]
+        },
+        "06af5ad1-d9b6-4834-b94a-12f5c46232c7": {
+          "tips": [
+            null
+          ]
+        },
+        "ec21fe96-de6c-4818-bf1a-c02c1f4b66ff": {
+          "tips": [
+            null
+          ]
+        },
+        "ecb7626b-e9dc-4011-b1a2-54f138d54872": {
+          "tips": [
+            null
+          ]
+        },
+        "5733d57d-7dc2-45ba-885b-e223a44ad2af": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：是什麼讓電腦成為電腦？"
+        },
+        "900764b3-0256-4cc9-b88f-1b8c4992e653": {
+          "tips": [
+            null
+          ]
+        },
+        "e623c176-d684-43c0-ad4b-9f33a3acc00f": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "396fe142-472b-4c62-976b-578e5ff5bff0": {
+          "tips": [
+            null
+          ]
+        },
+        "502a9053-c029-441d-aac1-5dcfc540fe9d": {
+          "name": "輸入與輸出"
+        },
+        "a52b80a3-f6a7-4e24-8347-1eb0be4ccddf": {
+          "tips": [
+            null
+          ]
+        },
+        "e606d7d3-d552-4db3-91b7-c26f98da237c": {
+          "tips": [
+            null
+          ]
+        },
+        "f1388388-8631-479b-bca9-ffe97206edf8": {
+          "tips": [
+            null
+          ]
+        },
+        "ce77f101-8880-4264-bf0e-b2d95e40c080": {
+          "tips": [
+            null
+          ]
+        },
+        "584f3a53-ab7b-421d-a8a4-bc8c106ead2a": {
+          "tips": [
+            null
+          ]
+        },
+        "4d905d80-5cc4-4017-88ab-904e5092fe0c": {
+          "tips": [
+            null
+          ]
+        },
+        "fb64c101-5e75-4908-9b31-15d964b4ffa9": {
+          "tips": [
+            null
+          ]
+        },
+        "21e51178-7062-468a-b8e1-a9227a0ac5eb": {
+          "tips": [
+            null
+          ]
+        },
+        "95323c16-49dc-4c54-9bf5-c351b458beb7": {
+          "tips": [
+            null
+          ]
+        },
+        "ed3fc57d-be54-4625-bae7-5cac4680d615": {
+          "tips": [
+            null
+          ]
+        },
+        "071466cb-7d6b-4e91-93bb-261e508f89dc": {
+          "tips": [
+            null
+          ]
+        },
+        "9c0439ca-8ac8-463f-889c-47df291b32d9": {
+          "tips": [
+            null
+          ]
+        },
+        "59845bd6-dedc-4283-9cbd-f3c574fd99ab": {
+          "tips": [
+            null
+          ]
+        },
+        "fa03e441-7483-4193-a5f7-20fa4bb081bf": {
+          "tips": [
+            null
+          ]
+        },
+        "4cefb9ba-ffbc-40ba-bc37-dae06e608b67": {
+          "tips": [
+            null
+          ]
+        },
+        "40b16a1c-add1-445a-81de-c281c495fe6f": {
+          "tips": [
+            null
+          ]
+        },
+        "254a27b6-75fb-4f5f-bdf1-2ac909f01f75": {
+          "tips": [
+            null
+          ]
+        },
+        "e7394c68-613b-4772-90c8-dcf1228ba5dc": {
+          "tips": [
+            null
+          ]
+        },
+        "6a60775b-f641-46a0-820d-f6895dd26fed": {
+          "tips": [
+            null
+          ]
+        },
+        "709fc018-84ca-4c5c-af4e-bae11c2867b1": {
+          "tips": [
+            null
+          ]
+        },
+        "06fa61d8-63d0-49d0-b9d1-77ec59c88d72": {
+          "tips": [
+            null
+          ]
+        },
+        "03ad2f47-6f62-4854-b398-3075d952d71e": {
+          "name": "反思",
+          "progression_name": "反思"
+        },
+        "7d3700c3-08ad-41e8-bee3-19384d50e4c4": {
+          "tips": [
+            null
+          ]
+        },
+        "68d48a87-2999-499a-962e-a0a177e1c4e6": {
+          "tips": [
+            null
+          ]
+        },
+        "f51c4e46-0b95-4035-bbef-921e12d33e3c": {
+          "tips": [
+            null
+          ]
+        },
+        "922ac8cd-6633-48ac-bcb7-85fb1d2e711a": {
+          "tips": [
+            null
+          ]
+        },
+        "f3726d11-0690-46a9-b742-f48b4a80ab33": {
+          "tips": [
+            null
+          ]
+        },
+        "6cd90ae5-5c64-45e8-a9c5-c1e01bdddd64": {
+          "tips": [
+            null
+          ]
+        },
+        "caf7880a-40b3-4252-865e-a81d22f30d07": {
+          "tips": [
+            null
+          ]
+        },
+        "17a60d00-0762-4796-8bb7-c953b2f53867": {
+          "name": "反思（Reflect）"
+        },
+        "04f7b740-ae5f-4f12-9867-27f7b08eff1e": {
+          "tips": [
+            null
+          ]
+        },
+        "c55fae38-7795-4027-b469-a3238f34efe5": {
+          "tips": [
+            null
+          ]
+        },
+        "418d731c-d516-4e49-8547-9313763526ca": {
+          "tips": [
+            null
+          ]
+        },
+        "c941f0ac-38f6-4828-9ca4-e8b600868807": {
+          "tips": [
+            null
+          ]
+        },
+        "c209191d-c268-4f8e-b40c-93a5de206b76": {
+          "tips": [
+            null
+          ]
+        },
+        "09e4642c-bedd-44e7-a7a7-ed2f85ece6c1": {
+          "tips": [
+            null
+          ]
+        },
+        "740f2761-b6d0-4d82-97ec-2c97d92e2859": {
+          "tips": [
+            null
+          ]
+        },
+        "193961e8-e637-4d45-bb0b-014a3e8d1bbb": {
+          "tips": [
+            null
+          ]
+        },
+        "cebe2e73-7783-4bbf-9469-c2084423900d": {
+          "name": "反思（Reflect）"
+        },
+        "01c916af-970c-4e2f-a98e-38cbc436eefc": {
+          "tips": [
+            null
+          ]
+        },
+        "163d7212-c083-4ba8-bb87-6150a37f8f0f": {
+          "tips": [
+            null
+          ]
+        },
+        "9823b27f-66ca-4ea1-860d-3472e5317340": {
+          "tips": [
+            null
+          ]
+        },
+        "77c22840-b9e9-4426-9894-30f101f2c00e": {
+          "tips": [
+            null
+          ]
+        },
+        "b452ecde-f660-4d52-9ab7-8b33989681f0": {
+          "tips": [
+            null
+          ]
+        },
+        "f5570fab-fdee-464e-b569-ec19142fc35d": {
+          "tips": [
+            null
+          ]
+        },
+        "661c94ca-9d68-45ee-afca-2ff357684bf3": {
+          "tips": [
+            null
+          ]
+        },
+        "bc8e4c54-e3ca-42f2-b613-2b383783dad8": {
+          "tips": [
+            null
+          ]
+        },
+        "ba9df800-646b-4324-9b35-b3f6564ba061": {
+          "name": "反思（Reflect）"
+        },
+        "f25bdc7d-2ab6-493a-a4e7-e46dbeaa01c4": {
+          "tips": [
+            null
+          ]
+        },
+        "48dcb032-0dad-4177-89a7-066d60d785f5": {
+          "tips": [
+            null
+          ]
+        },
+        "7ce61da1-8486-4987-a971-d02802cf3223": {
+          "tips": [
+            null
+          ]
+        },
+        "be784b81-94c2-46a8-9f54-6eb72fa47020": {
+          "tips": [
+            null
+          ]
+        },
+        "90e3e011-8930-435c-8840-88bcb72a94b1": {
+          "tips": [
+            null
+          ]
+        },
+        "e550c27b-967f-46f1-a1bf-96eb4e4ccc2e": {
+          "tips": [
+            null
+          ]
+        },
+        "05109520-cc5d-4422-8447-09b5e315232c": {
+          "tips": [
+            null
+          ]
+        },
+        "8e2e9def-edb6-462f-b068-2be956dcc3c0": {
+          "tips": [
+            null
+          ]
+        },
+        "9844b63f-04a1-4011-87f7-eec3c63a5496": {
+          "tips": [
+            null
+          ]
+        },
+        "59cd3f12-f9b1-4cbd-bf6b-3507adc264bc": {
+          "tips": [
+            null
+          ]
+        },
+        "ed9353fe-9f41-42ef-9c2e-2e07231422ab": {
+          "tips": [
+            null
+          ]
+        },
+        "9ceef85f-40f8-4692-bcb4-1a689968a685": {
+          "tips": [
+            null
+          ]
+        },
+        "ab4371e8-c868-4587-9f32-2a0f857b910d": {
+          "tips": [
+            null
+          ]
+        },
+        "248256b0-de8c-4fcf-8f60-58492ef07802": {
+          "tips": [
+            null
+          ]
+        },
+        "f6a64a6e-ab8a-4258-b3cc-57707696fd6c": {
+          "tips": [
+            null
+          ]
+        },
+        "3af02eab-916a-4774-8a13-5a420dd53fc5": {
+          "tips": [
+            null
+          ]
+        },
+        "2ca0bf9a-5cd6-4beb-8b48-d788ad425fa7": {
+          "tips": [
+            null
+          ],
+          "progression_name": "使用網路實驗室進行實驗"
+        },
+        "08e81098-b771-4c82-bb64-9108ece6c97c": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：Web Lab 介紹 - 第 1 部分"
+        },
+        "693d5350-e425-4ae5-926e-85984858fb31": {
+          "tips": [
+            null
+          ],
+          "progression_name": "探索 HTML"
+        },
+        "470c3268-f70d-43ac-831f-b37c3103531b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "影片：Web Lab 介紹 - 第 2 部分"
+        },
+        "1d5ddfcc-e375-4d04-9822-019d51c5272d": {
+          "tips": [
+            null
+          ],
+          "progression_name": "練習"
+        },
+        "73435ea5-4c6f-4317-b21a-4fc9c732a4bf": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "579df0b6-aebc-48d8-9ac3-427a2c04e61f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "挑戰"
+        },
+        "b883c2e6-ca65-4053-b848-046bdfbb2a38": {
+          "name": "反思"
+        },
+        "7d15a1cb-357e-419d-b469-608585606064": {
+          "tips": [
+            null
+          ]
+        },
+        "83d7613a-c741-4d4a-9dcd-993ab08aa61d": {
+          "tips": [
+            null
+          ]
+        },
+        "970d404e-3aef-4384-88d6-da840d2bd8ca": {
+          "tips": [
+            null
+          ]
+        },
+        "ec491dbb-ef99-4e6e-9abf-f1f90c22e838": {
+          "name": "結對編程",
+          "tips": [
+            null
+          ]
+        },
+        "8ae3516e-e6e2-4401-afc1-4ddfb1f1312b": {
+          "tips": [
+            null
+          ]
+        },
+        "77578c68-97e0-4ef5-a4a5-75c5c0d5bcc1": {
+          "tips": [
+            null
+          ]
+        },
+        "27e7e382-bef2-4576-94b2-15f081c1c260": {
+          "tips": [
+            null
+          ],
+          "progression_name": "技能發展"
+        },
+        "415a1a02-00ce-4eee-9af3-bcddf1369b79": {
+          "tips": [
+            null
+          ]
+        },
+        "f5c13deb-a9a7-4f04-9daa-ec92ec261b02": {
+          "tips": [
+            null
+          ]
+        },
+        "b9b617ce-f9b9-4d30-90ae-0ecb111821d7": {
+          "progression_name": "練習"
+        },
+        "d3b01200-6f32-4a93-be82-df50df4e8221": {
+          "progression_name": "測驗"
+        },
+        "499a4b6c-eccd-4c51-a6db-17c2c9a0801a": {
+          "progression_name": "挑戰"
+        },
+        "1db390c3-2d64-4581-a038-c4dd0f7226ee": {
+          "tips": [
+            null
+          ]
+        },
+        "016877a1-d391-46b7-998e-fbe9a7c12703": {
+          "tips": [
+            null
+          ]
+        },
+        "1712fd0b-563c-4ac9-b929-288bce3bbb72": {
+          "tips": [
+            null
+          ]
+        },
+        "b9efce7e-87cf-466d-8916-1ef98f26db40": {
+          "name": "你的數位足跡"
+        },
+        "ec53cc7b-755c-461d-a075-16cf2ca7f1dd": {
+          "tips": [
+            null
+          ]
+        },
+        "e9ffa025-70b3-4fdf-a55e-b9324e0470f2": {
+          "tips": [
+            null
+          ]
+        },
+        "69dde422-3372-406e-9efe-b1df46472d00": {
+          "tips": [
+            null
+          ]
+        },
+        "3412213d-9a22-470e-859c-66b9a752d6bb": {
+          "tips": [
+            null
+          ]
+        },
+        "0fb9d1d3-097c-4ce5-b276-aa71c839c82f": {
+          "tips": [
+            null
+          ],
+          "progression_name": "探索"
+        },
+        "029f4c9c-3f40-458c-8480-b677aee2c5f5": {
+          "tips": [
+            null,
+            null
+          ]
+        },
+        "8c1fda37-7107-43e8-92ad-60e7fc6d2d7d": {
+          "progression_name": "技能發展"
+        },
+        "bc3aac22-e4eb-4c6f-9b69-60cb02414ac9": {
+          "tips": [
+            null
+          ]
+        },
+        "d9a4b1da-84da-40b3-a256-bbd4223652cd": {
+          "progression_name": "技能發展"
+        },
+        "497dd6c0-f7ae-4c32-a6b2-086a26b849b6": {
+          "progression_name": "練習"
+        },
+        "3d52ed72-b57b-4d05-902a-c9daceffadc6": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "3a9a8696-72e3-4e6f-9812-59e180a16192": {
+          "tips": [
+            null
+          ],
+          "progression_name": "挑戰"
+        },
+        "727aa204-0664-456f-b5fc-1f6409b65e88": {
+          "tips": [
+            null
+          ]
+        },
+        "39d79388-46f2-4f41-839d-c2bc3002d969": {
+          "tips": [
+            null
+          ]
+        },
+        "4662cf38-bec5-4f63-9f2d-237617407f0f": {
+          "tips": [
+            null
+          ]
+        },
+        "36889d4b-1b66-4a46-bd52-8e5464d17f96": {
+          "tips": [
+            null
+          ]
+        },
+        "c48b651f-340a-4ea2-baae-aebee2dc69ff": {
+          "name": "同伴反饋"
+        },
+        "8c10515f-4ba5-4629-b5e0-e44975336298": {
+          "tips": [
+            null
+          ]
+        },
+        "3356cda1-c8fe-4475-aaf6-1361379c848f": {
+          "tips": [
+            null
+          ]
+        },
+        "fe6c8d53-4cc0-4bbb-8ffe-8cc1432e522b": {
+          "tips": [
+            null
+          ]
+        },
+        "f8a65f45-b4db-4f6f-9a20-b4ef89910159": {
+          "tips": [
+            null
+          ]
+        },
+        "957ba0ee-6412-418d-bb42-811c2ea546cc": {
+          "tips": [
+            null
+          ]
+        },
+        "353b9fc5-832d-4961-ab5e-4c59f80c104d": {
+          "tips": [
+            null
+          ]
+        },
+        "6ff6d697-74a4-41a2-91a3-4ef817ceff84": {
+          "tips": [
+            null
+          ]
+        },
+        "48accbcd-e23c-4d31-aa68-baed73694793": {
+          "name": "使用圖片"
+        },
+        "2c7139b2-bd78-402d-9d57-1191bfcf3d3c": {
+          "tips": [
+            null
+          ]
+        },
+        "42f4e940-4ca1-41ce-9efc-c9147fb84229": {
+          "name": "增加圖像",
+          "tips": [
+            null
+          ]
+        },
+        "f69595ea-98fa-4c39-9686-6916ab265ab4": {
+          "progression_name": "技能發展"
+        },
+        "cf0abcbd-3e9a-4964-9cb3-de8d7b5bec52": {
+          "tips": [
+            null
+          ],
+          "progression_name": "練習"
+        },
+        "168bbc11-2203-44d6-88fc-e6be6c05180b": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "125e32e7-13c6-48a9-8fcb-b8635d079ecf": {
+          "progression_name": "挑戰"
+        },
+        "869d287c-19c3-4e38-83bf-0498821d1157": {
+          "name": "使用圖片"
+        },
+        "59343467-2b51-47a0-a2af-2f1357b5e3ba": {
+          "tips": [
+            null
+          ]
+        },
+        "bf7e752c-b96b-4416-b4cd-f3af71a59035": {
+          "tips": [
+            null
+          ]
+        },
+        "f694e569-1f2b-40ac-8e46-0439d6b12551": {
+          "tips": [
+            null
+          ]
+        },
+        "15cd087e-202a-4116-9feb-708690d683a2": {
+          "tips": [
+            null
+          ]
+        },
+        "0c2abb8a-e980-4137-bca7-7af46bb7b629": {
+          "tips": [
+            null
+          ]
+        },
+        "c816e4df-5e8b-4408-844a-1346d1f42700": {
+          "tips": [
+            null
+          ]
+        },
+        "cbb6abd1-911a-4ea4-b133-78742425ccbc": {
+          "progression_name": "探索"
+        },
+        "e26e14a3-6dad-4328-82ae-39649c0e2970": {
+          "progression_name": "技能發展"
+        },
+        "6fd29f2b-af40-4cc1-89c1-1f25aab27647": {
+          "progression_name": "練習"
+        },
+        "60bf9811-2a1c-4ff5-8986-082f04512e85": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "fa81a49c-8be7-43ac-92fe-cbc509b0970c": {
+          "progression_name": "挑戰"
+        },
+        "0bb5cdfb-1e6b-44df-9d3f-7a1f0bfcab33": {
+          "tips": [
+            null
+          ]
+        },
+        "cc6a79fc-1951-4e82-8952-39b9a662aca5": {
+          "tips": [
+            null
+          ]
+        },
+        "b363e7a6-4522-46c8-99b8-c7a1db5936b7": {
+          "tips": [
+            null
+          ]
+        },
+        "710ee97e-1fb7-429d-a724-cb0a92f72425": {
+          "tips": [
+            null
+          ]
+        },
+        "793b6091-27f6-48c5-9b0c-b02534f8bc79": {
+          "tips": [
+            null
+          ]
+        },
+        "8b6eb0b5-4aba-4b1e-8c0b-5ef7c4035ae1": {
+          "tips": [
+            null
+          ]
+        },
+        "ca2ccd24-0a7e-4ce6-8cd1-72d599a19cd7": {
+          "progression_name": "網站專案"
+        },
+        "f82407b3-02da-446b-9c56-6e11c8f2df36": {
+          "tips": [
+            null
+          ]
+        },
+        "21f831a9-7123-4982-b5fb-d37eadd0df25": {
+          "progression_name": "Publishing Your Website"
+        },
+        "ff09ae02-5fc8-4ac3-9e08-18a25ffd0d76": {
+          "name": "同儕審查"
+        },
+        "10b08619-0a72-442e-a75e-13b6cead2e90": {
+          "tips": [
+            null
+          ]
+        },
+        "bb76c259-62ef-49ef-9b8c-d0ca91a380a7": {
+          "progression_name": "反思"
+        },
+        "20f18101-28c1-43ff-835a-9b098f7a5b9c": {
+          "tips": [
+            null
+          ]
+        },
+        "887eb66a-9701-4ec2-961e-2df7358980f6": {
+          "tips": [
+            null
+          ]
+        },
+        "d2fbc09d-cec0-4514-ba77-b635cc9379d5": {
+          "tips": [
+            null
+          ]
+        },
+        "286dd512-4c7c-42ec-8028-428a89833572": {
+          "tips": [
+            null
+          ]
+        },
+        "f410b7cd-fcb4-42ac-9ba6-517b2a8db144": {
+          "tips": [
+            null
+          ]
+        },
+        "f8ec8428-8030-4f3d-a42a-ace8a6526a70": {
+          "tips": [
+            null
+          ]
+        },
+        "d328ac00-0ae4-43b4-ac6b-09b544bdf673": {
+          "tips": [
+            null
+          ]
+        },
+        "fe322a4b-9393-40e7-92fe-8314928d0203": {
+          "tips": [
+            null
+          ]
+        },
+        "4e9b0621-b725-4913-8938-757f111a9ce6": {
+          "tips": [
+            null
+          ]
+        },
+        "43da857d-e2ac-4797-b205-4bc8e5b274c8": {
+          "tips": [
+            null
+          ]
+        },
+        "52a7434e-fca4-48af-9aa8-61086949bb98": {
+          "tips": [
+            null
+          ]
+        },
+        "4145fe6b-15f3-4528-91b5-726f4cffd9b5": {
+          "tips": [
+            null
+          ]
+        },
+        "49bb4251-eaa1-423c-9bfd-ec0f6113f83e": {
+          "tips": [
+            null
+          ]
+        },
+        "229abe84-ae59-45f1-915e-681805560ab1": {
+          "tips": [
+            null
+          ]
+        },
+        "73c708b0-4bce-4d0c-8aef-d4383cbb24f5": {
+          "tips": [
+            null
+          ]
+        },
+        "136308c1-5aa0-4820-afe0-a16252ba6c74": {
+          "tips": [
+            null
+          ]
+        },
+        "c986ac31-a9e4-4fbb-8203-f8dd207cfed9": {
+          "tips": [
+            null
+          ]
+        },
+        "287a07a0-cdbc-4680-8733-69515c67c54b": {
+          "name": "類別"
+        },
+        "39d43b4f-8e5c-4459-9592-b9a44cd41c4d": {
+          "progression_name": "探索"
+        },
+        "6a056ff0-2cca-4983-bfe6-a78771cae232": {
+          "progression_name": "技能發展"
+        },
+        "a7488505-0cbe-4c90-83cd-481891cac662": {
+          "progression_name": "練習"
+        },
+        "d22a9dfb-fec1-43bb-add2-c76ec1a76f2a": {
+          "tips": [
+            null
+          ],
+          "progression_name": "測驗"
+        },
+        "5aa91065-3f4e-409f-9f3e-14bd98649ef5": {
+          "progression_name": "挑戰"
+        },
+        "ada4d5c1-50ee-446a-85c6-d61dd4d3221f": {
+          "tips": [
+            null
+          ]
+        },
+        "05ee8316-106b-4b34-9138-d1ceca375a8f": {
+          "name": "概覽"
+        },
+        "410e0287-5cfd-4bc9-945a-4c1d330d795e": {
+          "tips": [
+            null
+          ]
+        },
+        "754d0467-6e5e-45c8-8692-2fab52c45548": {
+          "tips": [
+            null
+          ]
+        },
+        "85c3804b-17da-40f8-a088-0627011b36e7": {
+          "tips": [
+            null
+          ]
+        },
+        "c78f2804-62f0-4fe5-842f-0ed415de05fc": {
+          "name": "Web Lab"
+        },
+        "01cbfd4f-3493-48d9-beb3-04018d4272f3": {
+          "progression_name": "探索"
+        },
+        "850ba43d-59d1-4cf8-be6c-b2c33b4b4875": {
+          "progression_name": "技能發展"
+        },
+        "0a2cb9cf-e6bb-433b-aed9-61118385f936": {
+          "progression_name": "練習"
+        },
+        "34f33cbb-40a2-4d61-aa69-7bf1aa7f4c81": {
+          "tips": [
+            null
+          ]
+        },
+        "76186510-9804-44d1-8371-4aa2895fc16d": {
+          "progression_name": "挑戰"
+        },
+        "c881299c-2798-4137-ac19-ba5e05d59340": {
+          "tips": [
+            null
+          ]
+        },
+        "4c27a0e8-612a-478a-a854-aa5a966c8245": {
+          "tips": [
+            null
+          ]
+        },
+        "e1f6d250-92c8-4b01-b970-698a4eb24f7b": {
+          "name": "Web Lab"
+        },
+        "8f6c023a-3dd4-4c70-8cff-a4daa7c7e497": {
+          "tips": [
+            null
+          ]
+        },
+        "35722166-2159-4038-8c7e-7a6cc0580812": {
+          "tips": [
+            null
+          ]
+        },
+        "aca795d4-18ad-434c-91f8-cc29e3d5a96c": {
+          "tips": [
+            null
+          ]
+        },
+        "c11db9e7-9e8e-470f-854b-a56722d138f0": {
+          "progression_name": "反思"
+        },
+        "938b93c7-1d09-4893-a312-181b8a14a4db": {
+          "tips": [
+            null
+          ],
+          "progression_name": "課後問券指示"
         },
         "4430b310-61e8-44d7-9033-9b5f7099ddb1": {
           "name": "創建你的專案",

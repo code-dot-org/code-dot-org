@@ -144,6 +144,9 @@ pl:
     świecie. Informatyka to coś więcej niż tylko kodowanie! Ciesz się pierwszym krokiem
     Code.org w nowej podróży, aby zacząć uczyć o sztucznej inteligencji z naszym programem
     nauczania.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: '"Godzina kodowania" na żywo'
   hoc_live_sign_up_title: Zaloguj się do "Godziny kodowania" na żywo
   hoc_live_learn_title: Ucz się z Godziną Kodowania na Żywo
@@ -1018,6 +1021,7 @@ pl:
   footer_menu_support: Pomoc techniczna
   footer_menu_terms: Warunki
   footer_menu_privacy: Polityka Prywatności
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Aktywności Godziny Kodowania
   learn_banner_blurb: Wypróbuj jednogodzinny kurs, przeznaczony dla wszystkich grup
     wiekowych, dostępny w ponad 45 językach.  Dołącz do milionów uczniów i nauczycieli

@@ -164,6 +164,14 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "event/outbreak/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Mô hình và bản mô phỏng",
+          "definition": "chương trình sao chép hoặc bắt chước các đặc điểm chính của một sự kiện trong thế giới thực để nghiên cứu kết quả của sự kiện đó mà không tốn chi phí, thời gian hoặc gặp nguy hiểm khi chạy thử nghiệm trong đời thực."
+        },
         "event/sports/unversioned": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
@@ -239,14 +247,6 @@
           "word": "Dòng",
           "definition": "(thơ) - một phần của bài thơ được sắp xếp thành một hàng, kết thúc ở lề bên phải."
         },
-        "event/outbreak/unversioned": {
-          "word": "Sự kiện",
-          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Mô hình và bản mô phỏng",
-          "definition": "chương trình sao chép hoặc bắt chước các đặc điểm chính của một sự kiện trong thế giới thực để nghiên cứu kết quả của sự kiện đó mà không tốn chi phí, thời gian hoặc gặp nguy hiểm khi chạy thử nghiệm trong đời thực."
-        },
         "sprite/coursef/2021": {
           "word": "Nhân vật",
           "definition": "Yếu tố đồ họa trên màn hình có vị trí, kích thước và ngoại hình."
@@ -280,6 +280,7 @@
           "definition": "Thông báo trên màn hình máy tính chờ người dùng nhập dữ liệu đầu vào."
         },
         "input/coursef/2021": {
+          "word": "Đầu vào",
           "definition": "Thông tin máy tính nhận được từ người dùng."
         },
         "loop/coursef/2021": {
@@ -753,6 +754,52 @@
         "try/coursee/2021": {
           "word": "Thử",
           "definition": "Cố gắng làm điều gì đó"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Học máy",
+          "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
+        },
+        "bug/csd/2021": {
+          "word": "Lỗi",
+          "definition": "Một phần của chương trình không hoạt động chính xác."
+        },
+        "for_loop/csd/2021": {
+          "word": "Vòng lặp for",
+          "definition": "Các vòng lặp có điểm bắt đầu, kết thúc và gia số xác định trước (khoảng cách của bước nhảy)."
+        },
+        "debugging/csd/2021": {
+          "word": "Sửa lỗi",
+          "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
+        },
+        "program/csd/2021": {
+          "word": "Chương trình",
+          "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "variable/csd/2021": {
+          "word": "Biến",
+          "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
+        },
+        "sprite/csd/2021": {
+          "word": "Nhân vật"
+        },
+        "conditionals/csd/2021": {
+          "word": "Điều kiện"
+        },
+        "abstraction/csd/2021": {
+          "word": "Trừu tượng"
+        },
+        "function/csd/2021": {
+          "word": "Hàm"
+        },
+        "input/csd/2021": {
+          "word": "Đầu vào"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Dấu vết số"
+        },
+        "copyright/csd/2021": {
+          "word": "Bản quyền",
+          "definition": "quyền hợp pháp độc quyền để in, xuất bản, biểu diễn, quay phim hoặc ghi lại tài liệu văn học, nghệ thuật hoặc âm nhạc và cho phép người khác làm điều tương tự"
         }
       }
     }

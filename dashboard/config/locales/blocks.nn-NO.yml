@@ -430,6 +430,26 @@ nn:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': romvesen
             '"BEAR"': bjørnar
@@ -979,6 +999,19 @@ nn:
             '"seconds"': sekund
       gamelab_hideTitleScreen:
         text: skjul tittelskjerm
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isKeyPressed:
         options:
           KEY:
@@ -1120,6 +1153,10 @@ nn:
             "'sound://category_animals/dolphin.mp3'": delfin
             "'sound://category_animals/dog.mp3'": hund
             "'sound://category_digital/jump_7.mp3'": hopp
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            draggable(): er flyttbar
       gamelab_pointInDirection:
         text: pek {SPRITE} {DIRECTION}
         options:
@@ -1189,6 +1226,14 @@ nn:
             '"scale"': størrelse
             '"width"': breidde
             '"height"': høgd
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': sakte
+            '5': normal
+            '7': rask
+            '9': extra fast
       gamelab_spriteClicked:
         options:
           CONDITION:

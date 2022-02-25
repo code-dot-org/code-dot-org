@@ -254,6 +254,7 @@ ja:
       blank_code: セクションのコードを入力してください
       cant_join_own_section: 申し訳ありません。あなたはログインすることができません。
       provider_managed_section: このセクションは、別のプロバイダーによって管理されているためご参加いただけません。%{provider}経由で追加し、そのセクションを再同期するよう先生に依頼してください。
+      not_participant_type: セクションの参加者タイプを満たしていないため、セクション%{section_code}にあなたを追加できませんでした。
     mail:
       student_disassociated:
         subject: 'あなたはCode.org の通知: %{student_name} で、学生として関連付けられていません'
@@ -522,6 +523,7 @@ ja:
     all_students_must_be_in_current_section: すべての学生は、現在あなたのセクションに在籍している必要があります。
     already_enrolled_in_new_section: この先生は既に彼らを別セクションに持っているため、これらの学生は移動できません。
     third_party_login: 生徒をサードパーティツールと同期しているセクションへ移動できません。
+    not_correct_participant_type: これらのユーザーには新しいセクションの参加者権限がないため移動できません。
   share:
     title: コード スタジオで学ぶ
     description: 誰もがコンピュータサイエンスを学ぶことができます。ゲーム、アプリ、アートをコードで作ろう。
@@ -578,6 +580,7 @@ ja:
     how_it_works: 動作の説明
     try_hour_of_code: アワーオブコードを試してみよう！
     store: ストア
+    cookie_notice: クッキーについての通知
   reference_area:
     title: 助けが必要ですか？
     subtitle: ビデオやヒントを見る
@@ -1008,3 +1011,6 @@ ja:
     text: "**あなたは親または保護者ですか？**このアカウントにあなたのメールをリンクさせてお子様の進み具合とプロジェクトについて最新情報を入手しましょう！"
     link_your_email: メールアドレスをリンクさせる
     not_now: 後で
+  teacher_feedback: '先生のフィードバック
+
+'

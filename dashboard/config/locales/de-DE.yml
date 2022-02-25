@@ -1473,3 +1473,4 @@ de:
   behaviors:
     this_sprite: dieser Sprite
   unit_prefix: Lektion %{n}
+  teacher_feedback: Rückmeldung vom Lehrer

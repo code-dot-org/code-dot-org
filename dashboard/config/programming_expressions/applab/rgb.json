@@ -1,20 +1,8 @@
 {
   "key": "rgb",
-  "name": "rgb",
+  "name": "rgb()",
   "category": "UI controls",
-  "palette_params": [
-    {
-      "name": "r"
-    },
-    {
-      "name": "g"
-    },
-    {
-      "name": "b"
-    },
-    {
-      "name": "a"
-    }
-  ],
+  "category_key": "ui_controls",
+  "short_description": "App Lab - rgb()",
   "syntax": "rgb(r, g, b, a)"
 }

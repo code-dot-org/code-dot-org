@@ -4324,12 +4324,31 @@ hu:
               display_name: Listák
             csp_loops:
               display_name: hurkok
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: algoritmusok
+        csp7-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kérdőív
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Kérdőív
+        csp9-2021:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kérdőív
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
               description_student: Lecke áttekintése
             'Project: Innovation Simulation Part 7':
               description_student: Lecke áttekintése
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kérdőív
         coursea-2021:
           description_short: Bevezetés a számítástechnikába az előolvasók számára.
           lessons:
@@ -6242,10 +6261,36 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: Szórakozás a For ciklussal
+          lesson_groups:
+            lessonGroup-8:
+              display_name: A kódolás órája
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: manók
+            lessonGroup-3:
+              display_name: változók
+            lessonGroup-4:
+              display_name: Kurzus Projekt vége
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: Bemenetek kombinálása
+            Functions with Parameters:
+              name: funkciók
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 1.  fejezet
+            lessonGroup-3:
+              display_name: 2.  fejezet
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -6290,6 +6335,438 @@ hu:
             lessonGroup-5:
               display_name: Homokozó
         csa8-pilot-facilitator:
+          lessons:
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-4:
+              key: 4.  lecke
+            lesson-5:
+              key: 5.  lecke
+            lesson-10:
+              key: 10. lecke
+            lesson-6:
+              key: 6.  lecke
+            lesson-7:
+              key: 7.  lecke
+            lesson-8:
+              key: 8.  lecke
+            lesson-9:
+              key: 9.  lecke
+            lesson-11:
+              key: 11. lecke
+            lesson-12:
+              key: 12. lecke
+            lesson-13:
+              key: 13. lecke
+            lesson-14:
+              key: 14. lecke
+            lesson-15:
+              key: 15. lecke
+            lesson-16:
+              key: 16. lecke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Vidám térképek
+            Programming with Rey and BB-8:
+              name: Programozás Rey és BB-8 segítségével
+              description_student: Segíts BB-8-nek begyűjteni a fémdarabokat
+              description_teacher: Ebben a leckében a diákok újszerű programozási
+                képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban,
+                BB-8-tet irányítva.
+              key: Programozás Rey és BB-8 segítségével
+            End of Course Project:
+              name: Kurzus Projekt vége
+            'Programming: Happy Maps':
+              name: Vidám térképek
+            lesson-1:
+              key: 1.  lecke
+              name: Kurzus Projekt vége
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+            lessonGroup-5:
+              display_name: Kurzus Projekt vége
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság
+            alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit
+            megoszthatsz.
+          description_short: Bevezetés a számítástechnikába az előolvasók számára.
+        express-2022:
+          lessons:
+            Dance Party:
+              name: Táncos buli
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok
+                használatával! '
+              key: Ciklusok Reyjel és BB-8-tel
+            End of Course Project:
+              name: Kurzus Projekt vége
+              key: Kurzus Projekt vége
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-1:
+              key: 1.  lecke
+              name: Táncos buli
+            lesson-4:
+              key: 4.  lecke
+          lesson_groups:
+            csf_sprites:
+              display_name: manók
+            lessonGroup-9:
+              display_name: Események
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            csf_functions:
+              display_name: funkciók
+            csf_variables:
+              display_name: változók
+            csf_for_loops:
+              display_name: Számláló ciklusok
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        csp1-2022:
+          lessons:
+            Representing Information:
+              name: Az információ ábrázolása
+              key: Az információ ábrázolása
+          lesson_groups:
+            cspSurvey:
+              display_name: Kérdőív
+            csp_unit1_2020:
+              display_name: '1.  fejezet: Digitális információ'
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: '2.  lecke: Az internet'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Hibakeresés
+              key: Hibakeresés
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: változók
+            csp_conditionals:
+              display_name: Feltételek
+            csp_functions:
+              display_name: funkciók
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Listák
+            csp_loops:
+              display_name: hurkok
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Gyerünk, gyerünk!
+              key: Gyerünk, gyerünk!
+            Getting Loopy:
+              name: Ciklikusság
+            The Right App:
+              name: A megfelelő alkalmazás
+              key: A megfelelő alkalmazás
+            End of Course Project:
+              name: Kurzus Projekt vége
+            'Loops: Getting Loopy':
+              name: Ciklikusság
+            lesson-1:
+              key: 1.  lecke
+              name: Kurzus Projekt vége
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+            lessonGroup-6:
+              display_name: Kurzus Projekt vége
+          student_description: Ismerje meg a számítástechnika és az internetbiztonság
+            alapjait. A kurzus végén hozd létre saját játékodat vagy történeted, amit
+            megoszthatsz.
+        coursec-2022:
+          lessons:
+            Loops with Rey and BB-8:
+              name: Ciklusok Reyjel és BB-8-tel
+              description_student: 'Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok
+                használatával! '
+              description_teacher: A „Getting Loopy” című utasítások ismétlődésének
+                koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak,
+                amiben BB-8 lesz a segítségükre.
+              key: Ciklusok Reyjel és BB-8-tel
+            The Big Event:
+              name: A nagy esemény
+            Picturing Data:
+              name: Az adatok leképezése
+              key: Az adatok leképezése
+            Binary Bracelets:
+              name: Bináris karkötők
+              key: Bináris karkötők
+            End of Course Project:
+              name: Kurzus Projekt vége
+            'Events: The Big Event':
+              name: A nagy esemény
+            'End of Course Project: Create a Play Lab Game':
+              name: Kurzus Projekt vége
+          lesson_groups:
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+            csf_data:
+              display_name: Adat
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+          student_description: Hozzon létre programokat szekvenálással, hurkokkal
+            és eseményekkel. Fordítsa le a monogramját binárisra, vizsgálja meg a
+            különböző problémamegoldó technikákat, és megtanulja, hogyan reagáljon
+            a kiberzaklatásra. A kurzus végén hozd létre saját játékodat vagy történeted,
+            amit megoszthatsz!
+          description_short: Ismerje meg a számítástechnika alapjait, és hozzon létre
+            saját műalkotásokat, történeteket és játékokat.
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: 4.  lecke
+        csp9-2022:
+          lessons:
+            lesson-10:
+              key: 10. lecke
+        csp10-2022:
+          lessons:
+            Project   Innovation Simulation Part 6:
+              description_student: Lecke áttekintése
+            Project   Innovation Simulation Part 7:
+              description_student: Lecke áttekintése
+            'Project: Innovation Simulation Part 6':
+              description_student: Lecke áttekintése
+            'Project: Innovation Simulation Part 7':
+              description_student: Lecke áttekintése
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Grafikus programozás
+            Relay Programming:
+              name: Váltó programozás
+              key: Váltó programozás
+            Dance Party:
+              name: Táncos buli
+              key: Táncos buli
+            Conditionals with Cards:
+              name: Feltételek kártyákkal
+              key: Feltételek kártyákkal
+            End of Course Project:
+              name: Kurzus Projekt vége
+              key: Kurzus Projekt vége
+            lesson-5:
+              key: 5.  lecke
+            'Algorithms: Graph Paper Programming':
+              name: Grafikus programozás
+            lesson-6:
+              key: 6.  lecke
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digitális állampolgárság
+            csf_events:
+              display_name: Események
+            csf_loops:
+              display_name: hurkok
+            csf_conditionals:
+              display_name: Feltételek
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: Magán és személyes információk
+              key: Magán és személyes információk
+            Digital Sharing:
+              name: Digitális megosztás
+              key: Digitális megosztás
+            Songwriting:
+              name: Dalszerzés paraméterekkel
+            End of Course Project:
+              name: Kurzus Projekt vége
+              key: Kurzus Projekt vége
+            Simon Says:
+              key: Simon mondja
+            lesson-4:
+              key: 4.  lecke
+            'Functions: Songwriting':
+              name: Dalszerzés paraméterekkel
+            Conditionals:
+              key: Feltételek
+            lesson-1:
+              key: 1.  lecke
+            'Hello World: Food':
+              name: Helló világ
+          lesson_groups:
+            csf_sprites:
+              display_name: manók
+            csf_digcit:
+              display_name: Digitális állampolgárság
+            ramp_up:
+              display_name: Egymásba ágyazott ciklusok
+            csf_functions:
+              display_name: funkciók
+            csf_nested_loops:
+              display_name: Feltételek
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: Szórakozás a For ciklussal
+              key: Szórakozás a For ciklussal
+            The Internet:
+              name: Az internet
+            End of Course Project:
+              name: Kurzus Projekt vége
+              key: Kurzus Projekt vége
+            lesson-6:
+              key: 6.  lecke
+            lesson-7:
+              key: 7.  lecke
+            lesson-8:
+              key: 8.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-9:
+              key: 9.  lecke
+            lesson-10:
+              key: 10. lecke
+            lesson-11:
+              key: 11. lecke
+            lesson-5:
+              key: 5.  lecke
+            AI for Oceans:
+              key: AI óceánok
+            Internet:
+              key: Internet
+              name: Az internet
+          lesson_groups:
+            ramp_up:
+              display_name: manók
+            lessonGroup-7:
+              display_name: Digitális állampolgárság
+            lessonGroup-8:
+              display_name: változók
+            end_of_course_project:
+              display_name: Kurzus Projekt vége
+          description_short: Ismerje meg a Computer Science Fundamentals összes koncepcióját,
+            és hozzon létre saját művészetét, történetét vagy
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: hurkok
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        pre-express-2022:
+          lessons:
+            Programming with Rey and BB-8:
+              key: Programozás Rey és BB-8 segítségével
+              name: Programozás Rey és BB-8 segítségével
+          lesson_groups:
+            csf_loops:
+              display_name: hurkok
+            csf_events:
+              display_name: Események
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Feltételek
+            lesson-16:
+              name: Hibakeresés
+            lesson-17:
+              name: Projekt inspiráció
+            lesson-19:
+              name: Hibakeresés
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: hurkok
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa7-pilot-extra:
+          lessons:
+            lesson-10:
+              key: 10. lecke
+            lesson-6:
+              key: 6.  lecke
+            lesson-7:
+              key: 7.  lecke
+            lesson-8:
+              key: 8.  lecke
+            lesson-9:
+              key: 9.  lecke
+            lesson-11:
+              key: 11. lecke
+            lesson-12:
+              key: 12. lecke
+            lesson-13:
+              key: 13. lecke
+            lesson-14:
+              key: 14. lecke
+            lesson-15:
+              key: 15. lecke
+            lesson-1:
+              key: 1.  lecke
+            lesson-2:
+              key: 2.  lecke
+            lesson-3:
+              key: 3.  lecke
+            lesson-4:
+              key: 4.  lecke
+            lesson-5:
+              key: 5.  lecke
+            lesson-16:
+              key: 16. lecke
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+            lessonGroup-5:
+              display_name: Homokozó
+        csa8-pilot-extra:
           lessons:
             lesson-1:
               key: 1.  lecke

@@ -1,75 +1,84 @@
+/* This file is only executed within JSInterpreter */
+/* This library supports validation of Sprite Lab projects that use variables.*/
+
 var studentVarToken = false;
-var varLog={};
-if(!validationProps){
-  var validationProps ={};
-}
+var previousVarLog;
 
-function updateLog(){
-  var start = Object.keys(window).indexOf("playSoundOptions")+1;
-  var end = Object.keys(window).indexOf("math_random_int");
+// Create an array of objects representing within the variables that have been
+// declared or updated within the Blockly environment. All Blockly variables
+// are global, and we would like to find a more efficient way to find just
+// those used by the student.
+function buildVariableLog() {
+  var varLog = {};
+  var windowKeys = Object.keys(window);
+  var start = windowKeys.indexOf("studentVarToken") + 1;
+  var end = windowKeys.length;
   var index;
-  for(var i=start;i<end;i++){
-    if(window[Object.keys(window)[i]] != undefined){
-      varLog[Object.keys(window)[i]] = window[Object.keys(window)[i]];
+  for (var i = start; i < end; i++) {
+    var currentKey = windowKeys[i];
+    var currentValue = window[currentKey];
+    // Blockly functions and behaviors should be excluded.
+    var valueTypes = ["number", "string", "boolean"];
+    // ES5 doesn't support .includes or we'd use that here.
+    if (valueTypes.indexOf(typeof currentValue) > -1) {
+      varLog[windowKeys[i]] = currentValue;
     }
   }
-  varWatchers(varLog);
-  
-  if(validationProps){//is Sprite Lab
-    if(!validationProps.previous){
-      validationProps.previous = {};
-    }
-    detectVarChange();
-    validationProps.previous.varLog=JSON.parse(JSON.stringify(varLog));
-  }
-  
+  return varLog;
 }
 
-function varWatchers(varLog){
-  for(var key in varLog){
-    var index = Object.keys(varLog).indexOf(key);
-    var x = 5;
-    var y = 32;
-    watcher(key, varLog[key], index, x, y);
-  }
-}
-
-function watcher(label, value, index, x, y){
-  if(!value&&value!=0&&value!=''){
-    value = 'undefined';
-  }
-  //rect(fontSize/2,fontSize/2+index*fontSize*2);
-  var fontSize=15;
-  textSize(fontSize);
-  textAlign(LEFT,CENTER);
-  labelX = x + 5;
-  valueX = x + 15 + textWidth(label);
-  textY = y + (index+0.5) * fontSize*2;
-  stroke("#c6cacd");
-  fill("#e7e8ea");
-  rect(x,y + index * fontSize*2,textWidth(label)+textWidth(value)+25,fontSize*2, fontSize/2);
-  noStroke();
-  fill("#5b6770");
-  text(label,labelX,textY);
-  fill("#ffa400");
-  rect(valueX - 5,y + (index+0.125) * fontSize*2,textWidth(value)+10,fontSize*1.5, fontSize/1.5);
-  noStroke();
-  fill("white");
-  text(value,valueX,textY);
-}
-
-function detectVarChange(){
-  if(validationProps.previous.varLog){
-    if(JSON.stringify(validationProps.previous.varLog) != JSON.stringify(varLog)){
-      /*for (var key in validationProps.previous.varLog){
-        if(validationProps.previous.varLog[key]!=window[key]){
-          //console.log("["+ World.frameCount + "]: " + key + " changed from " + validationProps.previous.varLog[key] + " to " + window[key]);
-        }
-      }*/
-      return true;
+// Returns true if any student-created variable was updated.
+// This function can run multiple times per frame.
+function detectVariableLogChange() {
+  var result = false;
+  if (varLog && previousVarLog) {
+    for (var property in varLog) {
+      if (varLog[property] !== previousVarLog[property]) {
+        result = true;
+      }
     }
   }
-  return false;
+  return result;
 }
 
-other.push(updateLog);
+// Replaces check() found in ValidationSetup interpreted library.
+function check() {
+  updateVariableLog();
+  var results = updateValidation();
+  if (results) {
+    if (results.state === "failed") {
+      levelFailure(3, results.feedback);
+    } else if (results.state === "succeeded") {
+      levelFailure(0, results.feedback);
+    }
+  }
+  storeVariableLogforPrevious();
+}
+
+// Updates the variable log. This function should run once per frame.
+function updateVariableLog() {
+  if (varLog) {
+    for (var property in varLog) {
+      varLog[property] = window[property];
+    }
+  }
+}
+
+// Perform a deep copy for comparisons during the next frame.
+function storeVariableLogforPrevious() {
+  previousVarLog = JSON.parse(JSON.stringify(varLog));
+}
+
+// Returns true if the student has a variable label that starts with "_"
+// This can be used to check that students have renamed their variables
+// from the default "???" by adding !varLabelStartsWithUnderscore()
+// as a validation criterion.
+function varLabelStartsWithUnderscore() {
+  var result = false;
+  Object.keys(varLog).forEach(function (label,index) {
+    if (label.charAt(0) === "_") {
+      result = true;
+    }
+  });
+  return result;
+}

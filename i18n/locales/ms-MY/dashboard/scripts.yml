@@ -3,6 +3,7 @@ ms:
   data:
     script:
       category:
+        csf_category_name: Asas CS
         hoc_category_name: Hour of Code
         math_category_name: Matematik
         other_category_name: Lain-lain
@@ -211,6 +212,10 @@ ms:
           lessons:
             Bounce:
               name: Lantunan
+            Calc:
+              name: Calc
+            Eval:
+              name: Eval
           student_description: Acara-acara
         flappy:
           title: Kod Flappy
@@ -224,6 +229,11 @@ ms:
             Jigsaw:
               description_student: Klik dan tarik untuk menyelesaikan teka-teki.
               description_teacher: Pelajaran ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.
+        step:
+          title: Langkah
+          lessons:
+            Step:
+              name: Langkah
         Hour of Code:
           description: Cuba asas sains komputer dengan watak daripada Angry Birds dan Tumbuhan lwn. Zombi!
           description_short: Cuba asas sains komputer dengan banyak watak yang menyeronokkan!
@@ -263,12 +273,20 @@ ms:
               name: Pelbagai
             Text Compression:
               name: Pemampatan Teks
+            Web Lab:
+              name: Makmal Web
+            Java Lab:
+              name: Java Lab
         cspfacilitator:
           lessons:
             Text Compression Lesson:
               name: Pelajaran Pemampatan Teks
             Text Compression Widget:
               name: Widget Pemampatan Teks
+        K5-OnlinePD:
+          lessons:
+            Computer Science Fundamentals:
+              name: Asas Sains Komputer
         ECSPD2:
           lessons:
             Wrap-up:
@@ -302,6 +320,8 @@ ms:
               name: Peta-peta Gembira
         afterschool1:
           description_audience: Umur 7-13 tahun
+        cspunit4draft:
+          description_short: Data
         ScienceP3OLPT2:
           lessons:
             Wrap-Up:
@@ -392,6 +412,8 @@ ms:
           lessons:
             Exploring Apps:
               name: Meneroka Aplikasi
+        CSDU5-Draft:
+          description_short: Data
         CSF_Secret_Sample_Story:
           description_audience: Umur 8-18 tahun+
         MikeTest:
@@ -786,6 +808,8 @@ ms:
           lessons:
             Lists:
               name: Senarai
+            Map:
+              name: Peta
             Functions with Parameters:
               name: Fungsi-fungsi dengan parameter
         workshop-gamelab:
@@ -2590,6 +2614,8 @@ ms:
               display_name: Tingkatkan
             csf_variables:
               display_name: Pembolehubah
+            csf_data:
+              display_name: Data
             csf_internet:
               display_name: Internet
             csf_sprites:
@@ -3103,6 +3129,8 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+            csf_data:
+              display_name: Data
             end_of_course_project:
               display_name: Akhir Projek Kursus
           lessons:
@@ -3675,6 +3703,8 @@ ms:
           student_description: Kod majlis tari-menari anda sendiri untuk berkongsi dengan rakan anda!
         k5-onlinepd-2019:
           lessons:
+            Computer Science Fundamentals:
+              name: Asas Sains Komputer
             Sequencing:
               name: Penjujukan
             Loops:
@@ -3975,6 +4005,8 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+            csf_data:
+              display_name: Data
             end_of_course_project:
               display_name: Akhir Projek Kursus
           lessons:
@@ -4268,6 +4300,8 @@ ms:
               display_name: Tingkatkan
             csf_variables:
               display_name: Pembolehubah
+            csf_data:
+              display_name: Data
             csf_sprites:
               display_name: Jin
             end_of_course_project:
@@ -4513,6 +4547,8 @@ ms:
               name: Penyahpepijatan
         jess-test-script:
           lessons:
+            Tools:
+              name: Alatan
             Debugging:
               name: Penyahpepijatan
         csp5-virtual:
@@ -4557,6 +4593,22 @@ ms:
               name: Bersyarat
             Functions:
               name: Fungsi
+        ui-test-script-in-course-2017:
+          lessons:
+            Lesson:
+              name: Pelajaran
+        ui-test-script-in-course-2019:
+          lessons:
+            Lesson:
+              name: Pelajaran
+        ui-test-versioned-script-2017:
+          lessons:
+            Lesson:
+              name: Pelajaran
+        ui-test-versioned-script-2019:
+          lessons:
+            Lesson:
+              name: Pelajaran
         curriculum-sandbox-levels:
           lessons:
             Course A:
@@ -4567,6 +4619,8 @@ ms:
               name: Kursus E
             Course F:
               name: Kursus F
+            csf:
+              name: Asas CS
             minitoolbox_2021:
               name: 'Makmal Peperi: Banyak Peperi'
             csf_slides:
@@ -4670,6 +4724,10 @@ ms:
               display_name: Senarai
             csp_loops:
               display_name: Gelung
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritma
         csp9-2021:
           lessons:
             lesson-10:
@@ -4902,6 +4960,8 @@ ms:
               display_name: Gelung
             csf_events:
               display_name: Acara-acara
+            csf_data:
+              display_name: Data
             end_of_course_project:
               display_name: Akhir Projek Kursus
           name: kursusc-2021
@@ -5488,6 +5548,8 @@ ms:
             lesson-19:
               description_student: Hari ini anda berjaya melengkapkan Soalan Respons Bebas (FRQ) pertama anda! Ini bermaksud anda menulis kod dengan tangan untuk menyelesaikan tugas yang besar. Anda melakukan ini bersama rakan dengan bergerak di sekeliling bilik dan menyelesaikan sebahagian daripada tugas itu di setiap lokasi, serta memeriksa hasil kerja anda semasa anda meninggalkan tempat tersebut.
               description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
+            lesson-24:
+              name: Java Lab
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
@@ -5526,6 +5588,8 @@ ms:
               name: Projek Pengurusan Storan Kejiranan - Hari 3
             lesson-1:
               name: Kajian Perintis Unit 2
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Sandbox
@@ -5533,6 +5597,8 @@ ms:
           lessons:
             lesson-16:
               name: Kajian Perintis Unit 3
+            lesson-17:
+              name: Java Lab
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
@@ -5550,15 +5616,22 @@ ms:
             lesson-10:
               description_student: Anda meneroka masalah yang melibatkan pelbagai syarat dan belajar menggunakan pernyataan 'jika' bersarang dalam penyelesaian anda. Anda menulis ungkapan menggunakan operator logik baru dalam pernyataan bersyarat dan mengenal pasti kesan pengendali ini pada hasilnya. Anda kemudian meningkatkan permainan dan fungsi permainan Pop the Balloons anda menggunakan kenyataan 'jika' bersarang dan pengendali logik.
               description_teacher: Pelajar meneroka masalah yang melibatkan pelbagai syarat dan menulis kenyataan 'jika' bersarang untuk membangunkan penyelesaian. Pelajar menulis ungkapan menggunakan pengendali logik dalam pernyataan bersyarat dan mengenal pasti kesan pengendali logik pada hasilnya. Kenyataan 'jika' bersarang dan pengendali logik kemudiannya dilaksanakan dalam permainan Pop the Balloons untuk meningkatkan permainan dan fungsi keseluruhan.
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Sandbox
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Sandbox
         csa6-pilot:
           lessons:
+            Java Lab:
+              name: Java Lab
             lesson-1:
               description_student: Projek yang telah anda bangunkan sepanjang kursus ini telah memberikan inspirasi kepada banyak kreativiti dalam komuniti! Pesta Cahaya Kejiranan akan diadakan untuk mempamerkan cerita, skrip, lirik lagu, surat dan sajak kreatif. Projek Pesta Cahaya Kejiranan ialah projek besar yang anda usahakan di seluruh unit dan strategi pengurusan projek membantu mengatur dan menstruktur kerja anda. Anda meneroka strategi untuk menulis dan menstruktur kod supaya jurutera perisian lain boleh memahami dengan mudah dan menggunakan alat Java untuk mencipta dokumentasi atur cara.
               description_teacher: Pelajar diperkenalkan kepada Projek Pesta Cahaya Kejiranan dan menilai keperluan, serta contoh untuk mengenal pasti soalan dan ciri utama. Sebelum memulakan kerja ke atas projek, pelajar mengembangkan pemahaman mereka mengenai struktur atur cara dan memberi komen dengan mengenal pasti amalan terbaik dan meneroka penggunaan Javadocs untuk menjana dokumentasi atur cara.
@@ -5608,10 +5681,16 @@ ms:
             lessonGroup-5:
               display_name: Sandbox
         csa7-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
         csa8-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-5:
               display_name: Sandbox
@@ -5639,6 +5718,15 @@ ms:
           lessons:
             lesson-9:
               name: Langkah Permulaan 1
+        kodea-pd-2021:
+          lessons:
+            Computer Science Fundamentals:
+              key: Asas Sains Komputer
+              name: Asas Sains Komputer
+        self-paced-pl-csd2-2021:
+          lessons:
+            lesson-9:
+              name: Komuniti Guru
         self-paced-pl-csd5-2021:
           lessons:
             lesson-4:
@@ -5665,6 +5753,10 @@ ms:
               name: Mengubah Suai Data Objek
             lesson-10:
               name: Memaparkan Maklumat Objek
+        csa-videos:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sumber
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -5685,11 +5777,15 @@ ms:
               name: Gambaran Keseluruhan
         csa-u6-dev:
           lessons:
+            lesson-12:
+              name: Alatan
             lesson-17:
               name: Konsol
             lesson-18:
               name: Widget
           lesson_groups:
+            lessonGroup-2:
+              display_name: Pelajaran
             lessonGroup-4:
               display_name: Demo dan Sumber
         csa-self-paced-pl:
@@ -5740,6 +5836,7 @@ ms:
               description_teacher: "Pelajar berjaya menyelesaikan masalah mengikut cara Soalan Respons Bebas (FRQ) di dalam pelajaran ini. Mereka menganotasi soalan sebagai kelas, kemudian melaksanakan kelas `SpiralPainter` penuh secara berpasangan melalui aktiviti yang mengikut cara \"Seluruh Dunia\".\n\nMatlamat pelajaran ini ialah tiga kali ganda: \n\n-   Mewujudkan rasa keseronokan dan pencapaian semasa melengkapkan FRQ\n-   Berlatih soalan mengikut cara FRQ (ditulis dengan tangan)\n-   Berfungsi sebagai penilaian hasil tambah kandungan dari Unit 1\n\nMeskipun format FRQ ini tidak sama dengan FRQ di dalam peperiksaan AP, ini menjadi blok binaan untuk membantu pelajar bersiap sedia menjawab jenis soalan ini. Semasa pelajar menjalani kursus ini, soalan FRQ yang mereka temui secara perlahan-lahan menjadi lebih hampir dengan perkara yang sebenar."
             lesson-1:
               key: pelajaran-1
+              name: Java Lab
             lesson-2:
               key: pelajaran-2
             lesson-3:
@@ -5864,6 +5961,7 @@ ms:
               key: pelajaran-15
             lesson-1:
               key: pelajaran-1
+              name: Java Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Sandbox
@@ -5874,6 +5972,7 @@ ms:
               name: Kajian Perintis Unit 3
             lesson-1:
               key: pelajaran-1
+              name: Java Lab
             lesson-2:
               key: pelajaran-2
             lesson-3:
@@ -5929,6 +6028,7 @@ ms:
               description_teacher: Pelajar meneroka masalah yang melibatkan pelbagai syarat dan menulis kenyataan 'jika' bersarang untuk membangunkan penyelesaian. Pelajar menulis ungkapan menggunakan pengendali logik dalam pernyataan bersyarat dan mengenal pasti kesan pengendali logik pada hasilnya. Kenyataan 'jika' bersarang dan pengendali logik kemudiannya dilaksanakan dalam permainan Pop the Balloons untuk meningkatkan permainan dan fungsi keseluruhan.
             lesson-1:
               key: pelajaran-1
+              name: Java Lab
             lesson-3:
               key: pelajaran-3
             lesson-4:
@@ -5993,6 +6093,8 @@ ms:
               key: pelajaran-14
             lesson-15:
               key: pelajaran-15
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-4:
               display_name: Sandbox
@@ -6101,9 +6203,18 @@ ms:
           lessons:
             lesson-2:
               name: Widget
+            lesson-3:
+              name: Alatan
           lesson_groups:
+            lessonGroup-2:
+              display_name: Pelajaran
             lessonGroup-4:
               display_name: Demo dan Sumber
+        tesstest921:
+          lessons:
+            lesson-1:
+              name: Menguji Klon CSA
+          name: tesstest921
         hello-world-animals:
           lessons:
             lesson-1:
@@ -6160,6 +6271,8 @@ ms:
           lessons:
             lesson-1:
               name: Widget
+            lesson-2:
+              name: Alatan
           lesson_groups:
             lessonGroup-2:
               display_name: Demo dan Sumber
@@ -6283,6 +6396,9 @@ ms:
             Assessment Day:
               description_student: Dalam unit ini, anda menggunakan `Senarai Tatasusunan` untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Anda meneroka manfaat dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini untuk menyelesaikan masalah yang melibatkan data berangka dan objek. Anda menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis dan memproses teks yang diperoleh daripada input pengguna dan fail. Sepanjang unit, anda menulis dokumentasi atur cara dengan menggunakan komen satu baris, komen berbilang baris dan komen Javadoc untuk mencipta dokumentasi API. Dalam proses itu, anda mengenal pasti dan mendokumenkan prasyarat dan pascasyarat objek dan kaedah. Kini, anda menaksir pencapaian objektif dan kemahiran pembelajaran unit dengan menggunakan penilaian pelbagai pilihan.
               description_teacher: Dalam unit ini, pelajar menggunakan `Senarai Tatasusunan` untuk menyimpan data atur cara dan membezakan antara masa untuk menggunakan tatasusunan 1D dan 2D dan `Senarai Tatasusunan`. Pelajar meneroka manfaat dan kefungsian `Senarai Tatasusunan`, dengan menggunakan ini untuk menyelesaikan masalah yang melibatkan data berangka dan objek. Pelajar menggunakan kaedah dalam kelas `Rentetan` untuk menganalisis dan memproses teks yang diperoleh daripada input pengguna dan fail. Sepanjang unit, pelajar menulis dokumentasi atur cara dengan menggunakan komen satu baris, komen berbilang baris dan komen Javadoc untuk mencipta dokumentasi API. Dalam proses itu, pelajar mengenal pasti dan mendokumenkan prasyarat dan pascasyarat objek dan kaedah. Kini, pelajar menaksir pencapaian objektif dan kemahiran pembelajaran unit dengan menggunakan penilaian pelbagai pilihan.
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
             lesson-1:
               key: pelajaran-1
             lesson-2:
@@ -6441,6 +6557,10 @@ ms:
               description_student: Bantu Laurel, pemburu harta karun, mengira dan menambah langkah untuk mengumpul permata!
               description_teacher: "Pelajaran ini membina aktiviti terdahulu yang melibatkan mengira dan mewakili penambahan. Mengira dengan Laurel menyokong pelajar di tadika dan gred satu dengan latihan mengira dan menambah sambil mereka menggunakan gelung untuk membantu Laurel, pemburu harta karun, mengumpul permata merentasi grid mez. Mereka menggunakan satu siri perintah pengekodan untuk membimbing Laurel merentasi grid untuk mengumpulkan permata, menggunakan blok \"Ulang\" yang memerlukan mereka mengira berapa banyak langkah yang perlu diambil oleh Laurel- kemudian mewakili nombor itu menggunakan angka yang betul dalam blok kod.\n\n#### Kemahiran Prasyarat\n\nPelajaran ini tidak bertujuan untuk memperkenalkan pelajar kepada nombor, mengira atau menambah. Pelajar harus mengikuti pelajaran ini dengan beberapa pengetahuan dan kemahiran terdahulu untuk dapat:\n\n-   mengenal dan mengira nombor hingga 10 menggunakan imej, jari atau manipulatif.\n-   tambah objek, imej, jari atau manipulatif sehingga jumlah 10."
           title: Mengira dengan Laurel
+        hello-world-gabrielle-validation:
+          lessons:
+            lesson-1:
+              name: Pelajaran
         csa6-exemplars:
           lessons:
             lesson-11:
@@ -6453,8 +6573,95 @@ ms:
           lessons:
             lesson-4:
               name: Simulator Wabak
+            Drawing with Loops:
+              name: Melukis dengan Gelung
+              description_student: Dalam pelajaran ini, **gelung** memudahkan imej menarik dibuat dengan Artis!
+              description_teacher: Pelajaran **membina kemahiran** ini mengalihkan tumpuan daripada Makmal Peperi kepada Artis, alat baharu yang akan diterokai oleh pelajar sepanjang tempoh kursus yang tinggal ini.
+            Using Variables with the Artist:
+              description_student: Dalam pelajaran ini, anda akan membuat lukisan dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.
+            Programming with the Bee:
+              name: Pengaturcaraan dengan Lebah
+              description_student: Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung yang lain.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan digalakkan berfikir sejauh mana perubahan kecil di dalam gelung akan memberikan kesan kepada atur cara mereka.
+            Variables with the Bee:
+              name: Pemboleh ubah dengan Lebah
+              description_student: Lebah ini menyukai pemboleh ubah!
+              description_teacher: Pelajaran **membina kemahiran** ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih dinamik dengan membenarkan nilai ditukar semasa kod sedang berjalan.
+            For Loop Fun:
+              description_student: Anda akan menikmati banyak keseronokan apabila mempelajari tentang gelung `untuk`!
+            For Loops with Artist:
+              name: Untuk Gelung dengan Artis
+              description_student: Bersedia untuk membuat hasil kerja agung anda yang seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan membuat beberapa gambar yang cukup luar biasa.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar berlatih gelung “untuk” dengan Artis. Pelajar akan menyelesaikan teka-teki untuk mencipta reka bentuk kompleks dan seni unik.
+            Follow the Algorithm:
+              name: Ikuti Algoritma
+              description_student: Main permainan dan fikirkan tentang perintah yang diperlukan untuk mendapatkan hasil yang betul.
+            Alien Dance Party with Sprite Lab:
+              name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+              description_student: Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas.
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Pembolehubah Kursus F (Ditamatkan)
+            lessonGroup-6:
+              display_name: Kursus F Untuk Gelung (Ditamatkan)
+            lessonGroup-7:
+              display_name: Kursus E Sprite (Dihentikan)
+            lessonGroup-8:
+              display_name: Hour of Code
+        csf-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              description_student: Anda akan membincangkan peranan komputer dan teknologi dalam kehidupan anda dengan tumpuan diberikan kepada sejauh mana aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya.
+            Making Sprites:
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
+            Sprites in Action:
+              description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. '
+            'Mini-Project: Virtual Pet':
+              description_student: Cipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang anda inginkan! Berikan haiwan peliharaan anda kehidupannya sendiri!
+              description_teacher: Dalam pelajaran **projek mini**, pelajar akan mencipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang mereka inginkan. Pelajar akan menggunakan alat "Kostum" Makmal Peperi untuk menyesuaikan penampilan haiwan peliharaan mereka. Kemudian, mereka akan menggunakan peristiwa, tingkah laku dan konsep lain yang telah mereka pelajari untuk merealisasikan projek mereka.
+            Blank Space Stories:
+              name: Cerita Ruang Kosong
+              description_student: 'Dalam aktiviti ini, anda akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) untuk bersiap sedia memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan. '
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) sebagai konteks untuk memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan.
+            Text and Prompts:
+              name: Teks dan Prom
+              description_student: Dalam pelajaran ini anda akan berlatih dengan pemboleh ubah di dalam Makmal Peperi.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. '
+            'Mini-Project: User Input Programs':
+              description_student: Gunakan kemahiran baharu anda dengan pemboleh ubah kepada satu daripada tiga projek terbuka.
+              description_teacher: Pelajar akan menggunakan kemahiran baharu mereka dengan pemboleh ubah kepada satu daripada tiga **projek mini** terbuka. Pelajar akan meneroka atur cara sampel, mencipta rancangan untuk projek mereka sendiri dan mengatur caranya tanpa apa-apa asas.
+            Simulating Experiments:
+              name: Mensimulasikan Eksperimen
+              description_student: Jalankan simulasi pada komputer dan eksperimen dengan menukar pemboleh ubah.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar akan menjalankan dan mengumpulkan data daripada simulasi ringkas di Makmal Peperi. Selepas menjalankan simulasi beberapa kali, pelajar akan mempunyai peluang membuat ramalan tentang sejauh mana dengan menukar pemboleh ubah dalam simulasi mungkin memberikan kesan kepada hasilnya dan kemudian uji hipotesis tersebut.
+            End of Course Project:
+              description_student: Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!
+              description_teacher: Pelajaran **projek** ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek baharu!
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Jin
+            lessonGroup-3:
+              display_name: Pembolehubah
+            lessonGroup-4:
+              display_name: Akhir Projek Kursus
+        csd6-pilot-2022:
+          lessons:
+            lesson-10:
+              name: Menggabungkan Input
+            Functions with Parameters:
+              name: Fungsi
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Bab 1
+            lessonGroup-3:
+              display_name: Bab 2
         csa7-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
             lesson-10:
               key: pelajaran-10
             lesson-6:
@@ -6492,6 +6699,1046 @@ ms:
               display_name: Sandbox
         csa8-pilot-facilitator:
           lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: pelajaran-1
+            lesson-2:
+              key: pelajaran-2
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+            lesson-5:
+              key: pelajaran-5
+            lesson-10:
+              key: pelajaran-10
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+            lesson-8:
+              key: pelajaran-8
+            lesson-9:
+              key: pelajaran-9
+            lesson-11:
+              key: pelajaran-11
+            lesson-12:
+              key: pelajaran-12
+            lesson-13:
+              key: pelajaran-13
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+            lesson-16:
+              key: pelajaran-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+        coursea-2022:
+          lessons:
+            Safety in My Online Neighborhood:
+              name: Keselamatan di Kejiranan dalam Talian Saya
+              description_student: Pelajari cara untuk pergi ke merata tempat dengan selamat dalam talian.
+              description_teacher: |-
+                [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Kuasa internet membolehkan pelajar mengalami dan mengunjungi merata tempat yang mungkin tidak dapat mereka lihat dengan sendiri. Tetapi, seperti melakukan perjalanan di dalam dunia nyata, ia penting untuk menjaga keselamatan semasa melakukan perjalanan dalam talian. Dalam perjalanan lapangan maya ini, kanak-kanak boleh berlatih menjaga keselamatan semasa pengembaraan dalam talian.
+              key: Keselamatan di Kejiranan dalam Talian Saya
+            Learn to Drag and Drop:
+              name: Pelajari Tarik dan Lepas
+              description_student: Klik dan tarik untuk menyelesaikan teka-teki.
+              description_teacher: Pelajaran **membina kemahiran** ini akan memberikan idea kepada pelajar mengenai perkara yang dijangkakan apabila mereka menuju ke makmal komputer. Sesi ini dimulakan dengan perbincangan ringkas memperkenalkan mereka kepada peradaban ketika berada di dalam makmal komputer, kemudian mereka akan meneruskan sesi dengan menggunakan komputer untuk menyelesaikan teka-teki dalam talian.
+              key: Pelajari Tarik dan Lepas
+            Happy Maps:
+              name: Peta-peta Gembira
+              description_student: Tulis arahan untuk membawa Flurb kepada buah.
+              description_teacher: 'Pelajaran **tetapan konteks** ini menyatupadukan pasukan dengan tugas mudah: bawa "flurb" kepada buah. Pelajar akan berlatih menulis arahan yang tepat semasa mereka berusaha menterjemahkan arahan kepada simbol yang disediakan.'
+            Sequencing with Scrat:
+              name: Penjujukan dengan Scrat
+              description_student: Atur cara Scrat mendapatkan buah oak.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan membangunkan algoritma berjujukan untuk menggerakkan watak tupai dari satu bahagian pagar sesat ke bahagian lain tempat buah oak boleh didapati. Untuk melakukan ini, mereka akan menyusun blok kod bersama dalam jujukan linear.
+              key: Penjujukan dengan Scrat
+            Programming with Scrat:
+              name: Pengaturcaraan dengan Scrat
+              description_student: Tulis program untuk membantu Scrat mendapatkan buah oak.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan terus membangunkan kemahiran algoritma berjujukan.
+            Programming with Rey and BB-8:
+              name: Pengaturcaraan dengan Rey dan BB-8
+              description_student: Bantu BB-8 mengumpulkan logam sekerap.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan kemahiran pengaturcaraan yang baharu diperoleh mereka dengan cara yang lebih rumit untuk menavigasi kursus yang sukar dengan BB-8\_.
+              key: Pengaturcaraan dengan Rey dan BB-8
+            Happy Loops:
+              name: Gelung Bahagia
+              description_student: Bantu Flurb menyelesaikan masalah yang lebih besar dengan menggunakan gelung.
+            Loops with Scrat:
+              name: Gelung dengan Scrat
+              description_student: Bantu Scrat menutup lebih banyak tanah dengan menggunakan gelung.
+            Loops with Laurel:
+              name: Gelung dengan Laurel
+              description_student: Bantu pengembara Laurel mengumpulkan harta karun di bawah tanah.
+            Ocean Scene with Loops:
+              name: Pemandangan Lautan dengan Gelung
+              description_student: Gunakan gelung dan corak untuk menyiapkan imej.
+              key: Pemandangan Lautan dengan Gelung
+            The Big Event Jr.:
+              name: Jr. Peristiwa Besar
+              description_student: Bergerak dan berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
+            'Mini-Project: On the Move with Play Lab':
+              description_student: Cipta permainan dan cerita anda sendiri.
+            End of Course Project:
+              name: Akhir Projek Kursus
+            'Programming: Happy Maps':
+              key: 'Pengaturcaraan: Peta Bahagia'
+              name: Peta-peta Gembira
+              description_student: Tulis arahan untuk membawa Flurb kepada buah.
+              description_teacher: 'Pelajaran **tetapan konteks** ini menyatupadukan pasukan dengan tugas mudah: bawa "flurb" kepada buah. Pelajar akan berlatih menulis arahan yang tepat semasa mereka berusaha menterjemahkan arahan kepada simbol yang disediakan.'
+            Programming in Ice Age:
+              key: Pengaturcaraan dalam Ice Age
+              name: Pengaturcaraan dengan Scrat
+              description_student: Tulis program untuk membantu Scrat mendapatkan buah oak.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan terus membangunkan kemahiran algoritma berjujukan.
+            'Loops: Happy Loops':
+              key: 'Gelung: Gelung Bahagia'
+              name: Gelung Bahagia
+              description_student: Bantu Flurb menyelesaikan masalah yang lebih besar dengan menggunakan gelung.
+            Loops in Ice Age:
+              name: Gelung dengan Scrat
+              description_student: Bantu Scrat menutup lebih banyak tanah dengan menggunakan gelung.
+            Loops in Collector:
+              key: Gelung di dalam Pengumpul
+              name: Gelung dengan Laurel
+              description_student: Bantu pengembara Laurel mengumpulkan harta karun di bawah tanah.
+            'Events: The Big Event':
+              key: 'Peristiwa: Peristiwa Besar'
+              name: Jr. Peristiwa Besar
+              description_student: Bergerak dan berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
+            Events in Play Lab:
+              key: Peristiwa di dalam Makmal Mainan
+              description_student: Cipta permainan dan cerita anda sendiri.
+            lesson-1:
+              key: pelajaran-1
+              name: Akhir Projek Kursus
+          lesson_groups:
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+            lessonGroup-5:
+              display_name: Akhir Projek Kursus
+          title: Kursus A (2021)
+          student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
+          description_short: Pengenalan kepada sains komputer untuk prapembaca.
+          description_audience: 'Umur: 4-7 tahun'
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: Pengaturcaraan dengan Angry Birds
+              description_student: Pelajari tentang jujukan dan algoritma dengan _Angry Birds_.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan membangunkan algoritma berjujukan untuk menggerakkan burung dari satu bahagian pagar sesat ke bahagian lain tempat khinzir berada. Untuk melakukan ini, mereka akan menyusun blok kod bersama dalam jujukan linear, membuatkannya bergerak lurus, belok ke kiri, atau belok ke kanan.
+              key: Pengaturcaraan dengan Angry Birds
+            Debugging in Maze:
+              name: Penyahpepijatan di dalam Pagar Sesat
+              description_student: Cari masalah di dalam teka-teki dan berlatih kemahiran penyahpepijatan anda.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan menemui kod prabertulis yang mengandungi kesalahan. Mereka perlu meneliti kod sedia ada untuk mengenal pasti ralatnya.
+            Collecting Treasure with Laurel:
+              name: Mengumpul Harta Karun bersama Laurel
+              key: Mengumpul Harta Karun bersama Laurel
+            Creating Art with Code:
+              name: Mencipta Seni dengan Kod
+              description_student: Cipta imej yang cantik dengan mengatur cara Artis.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan mengawal Artis bagi melengkapkan lukisan pada skrin.
+              key: Mencipta Seni dengan Kod
+            Swimming Fish in Sprite Lab:
+              description_student: Pelajari cara mencipta dan mengedit peperi.
+            Making Sprites:
+              description_student: Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
+            Sprites in Action:
+              description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. '
+            Virtual Pet with Sprite Lab:
+              name: Haiwan Peliharaan Maya dengan Makmal Peperi
+              description_student: Cipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang anda inginkan! Berikan haiwan peliharaan anda kehidupannya sendiri!
+              description_teacher: Dalam pelajaran **projek mini**, pelajar akan mencipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang mereka inginkan. Pelajar akan menggunakan alat "Kostum" Makmal Peperi untuk menyesuaikan penampilan haiwan peliharaan mereka. Kemudian, mereka akan menggunakan peristiwa, tingkah laku dan konsep lain yang telah mereka pelajari untuk merealisasikan projek mereka.
+              key: Haiwan Peliharaan Maya dengan Makmal Peperi
+            Dance Party:
+              name: Majlis Tari-Menari
+              description_student: Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri.
+            Loops with Rey and BB-8:
+              name: Gelung dengan Rey dan BB-8
+              description_student: Bantu _BB-8_ melepasi pagar sesat dengan menggunakan gelung!
+              key: Gelung dengan Rey dan BB-8
+            'Mini-Project: Sticker Art':
+              description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
+            Nested Loops in Maze:
+              name: Gelung Bersarang di dalam Pagar Sesat
+              description_student: Gelung di dalam gelung di dalam gelung. Apakah yang dimaksudkan dengan ini? Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda mencipta gelung bersarang.
+              key: Gelung Bersarang di dalam Pagar Sesat
+            Snowflakes with Anna and Elsa:
+              name: Emping Salji dengan Anna dan Elsa
+              key: Emping Salji dengan Anna dan Elsa
+            Looking Ahead with Minecraft:
+              description_teacher: Pelajaran **membina kemahiran** ini akan memberikan pelajar peluang berlatih konsep yang telah mereka pelajari sehingga tahap ini dan mendapatkan pengalaman pertama mereka dengan bersyarat!
+            If/Else with Bee:
+              description_student: Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.
+            While Loops in Farmer:
+              name: Gelung Semasa di dalam Peladang
+              description_student: 'Gelung adalah sangat berguna dalam pengekodan. Pelajaran ini akan mengajar anda tentang jenis gelung baharu: iaitu gelung semasa!'
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang, tetapi mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran. Untuk menyelesaikan teka-teki ini, pelajar akan menggunakan jenis gelung yang baharu.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Bersyarat dalam Minecraft: Pelayaran Akuatik'
+              key: 'Bersyarat dalam Minecraft: Pelayaran Akuatik'
+            Until Loops in Maze:
+              description_student: Anda boleh melakukan beberapa perkara yang menakjubkan apabila anda menggunakan gelung `sehingga`!
+            Harvesting with Conditionals:
+              description_student: Bukan selalunya jelas masa untuk menggunakan setiap yang bersyarat. Pelajaran ini akan membantu anda berlatih membuat keputusan mengenai perkara yang perlu dilakukan.
+              description_teacher: Pelajar akan berlatih gelung `semasa`, gelung `sehingga` dan pernyataan `jika / lain`. Semua blok ini menggunakan bersyarat. Apabila berlatih dengan menggunakan ketiga-tiganya, pelajar akan mempelajari menulis kod yang kompleks dan fleksibel.
+            Functions in Minecraft:
+              name: Fungsi dalam Minecraft
+              description_student: Bolehkah anda memikirkan cara menggunakan fungsi untuk kod yang paling cekap?
+              key: Fungsi dalam Minecraft
+            Functions with Artist:
+              name: Fungsi dengan Artis
+              description_student: Membuatkan lukisan yang kompleks menjadi lebih mudah dengan fungsi!
+              key: Fungsi dengan Artis
+            Functions with Harvester:
+              name: Fungsi dengan Penuai
+              description_student: Fungsi akan mengurangkan banyak kerja kerana anda membantu peladang dengan proses penuaiannya!
+              key: Fungsi dengan Penuai
+            Text and Prompts:
+              name: Teks dan Prom
+              description_student: Dalam pelajaran ini anda akan berlatih dengan pemboleh ubah di dalam Makmal Peperi.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. '
+            Using Variables with the Artist:
+              description_student: Dalam pelajaran ini, anda akan membuat lukisan dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.
+            Variables with the Bee:
+              name: Pemboleh ubah dengan Lebah
+              description_student: Lebah ini menyukai pemboleh ubah!
+              description_teacher: Pelajaran **membina kemahiran** ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih dinamik dengan membenarkan nilai ditukar semasa kod sedang berjalan.
+            For Loops with Artist:
+              name: Untuk Gelung dengan Artis
+              description_student: Bersedia untuk membuat hasil kerja agung anda yang seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan membuat beberapa gambar yang cukup luar biasa.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar berlatih gelung “untuk” dengan Artis. Pelajar akan menyelesaikan teka-teki untuk mencipta reka bentuk kompleks dan seni unik.
+              key: Untuk Gelung dengan Artis
+            End of Course Project:
+              name: Akhir Projek Kursus
+              description_student: Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda.
+              description_teacher: Pelajaran **projek** ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek baharu!
+              key: Akhir Projek Kursus
+            Debugging with Scrat:
+              key: Penyahpepijatan dengan Scrat
+              name: Penyahpepijatan di dalam Pagar Sesat
+              description_student: Cari masalah di dalam teka-teki dan berlatih kemahiran penyahpepijatan anda.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan menemui kod prabertulis yang mengandungi kesalahan. Mereka perlu meneliti kod sedia ada untuk mengenal pasti ralatnya.
+            lesson-2:
+              key: pelajaran-2
+              description_student: Dalam pelajaran ini anda akan menulis atur cara dan mempelajari tentang peperi dan tingkah laku.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
+            lesson-3:
+              key: pelajaran-3
+              description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. '
+            lesson-1:
+              key: pelajaran-1
+              name: Majlis Tari-Menari
+              description_student: Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri.
+            Sticker Art with Loops:
+              key: Seni Pelekat dengan Gelung
+              description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
+            'Looking Ahead with Minecraft ':
+              description_teacher: Pelajaran **membina kemahiran** ini akan memberikan pelajar peluang berlatih konsep yang telah mereka pelajari sehingga tahap ini dan mendapatkan pengalaman pertama mereka dengan bersyarat!
+            While Loops with the Farmer:
+              name: Gelung Semasa di dalam Peladang
+              description_student: 'Gelung adalah sangat berguna dalam pengekodan. Pelajaran ini akan mengajar anda tentang jenis gelung baharu: iaitu gelung semasa!'
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang, tetapi mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran. Untuk menyelesaikan teka-teki ini, pelajar akan menggunakan jenis gelung yang baharu.
+            lesson-4:
+              key: pelajaran-4
+              name: Teks dan Prom
+              description_student: Dalam pelajaran ini anda akan berlatih dengan pemboleh ubah di dalam Makmal Peperi.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. '
+            Variables with Artist:
+              key: Pemboleh Ubah dengan Artis
+              description_student: Dalam pelajaran ini, anda akan membuat lukisan dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.
+            Changing Variables with Bee:
+              name: Pemboleh ubah dengan Lebah
+              description_student: Lebah ini menyukai pemboleh ubah!
+              description_teacher: Pelajaran **membina kemahiran** ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih dinamik dengan membenarkan nilai ditukar semasa kod sedang berjalan.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_sprites:
+              display_name: Jin
+            lessonGroup-9:
+              display_name: Acara-acara
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+            csf_functions:
+              display_name: Fungsi
+            csf_variables:
+              display_name: Pembolehubah
+            end_of_course_project:
+              display_name: Akhir Projek Kursus
+          description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
+          student_description: Pelajari sains komputer dengan mencuba pelajaran di bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi cabaran yang menyeronokkan! Buat permainan dan projek kreatif untuk dikongsikan dengan rakan, keluarga dan guru.
+          description_short: 'Pengenalan kepada sains komputer: menggabungkan kurikulum sekolah rendah yang terbaik untuk pelajar yang lebih tua.'
+          description_audience: 'Umur: 9-18 tahun'
+          name: ekspres-2022
+        csp2-2022:
+          lessons:
+            Packets:
+              name: Bingkisan
+              key: Bingkisan
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Penyahpepijatan
+              key: Penyahpepijatan
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Pembolehubah
+            csp_conditionals:
+              display_name: Bersyarat
+            csp_functions:
+              display_name: Fungsi
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Senarai
+            csp_loops:
+              display_name: Gelung
+        courseb-2022:
+          lessons:
+            Digital Trails:
+              name: Jejak Digital
+              description_student: Pelajari tentang jejak digital anda dan cara untuk kekal selamat semasa melayari laman web.
+              description_teacher: |2-
+                 [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Adakah perkara yang anda lakukan dalam talian sentiasa berada dalam talian? Pelajar mempelajari bahawa maklumat yang mereka kongsi dalam talian meninggalkan jejak digital atau "jejak." Bergantung pada cara mereka menguruskannya, jejak ini boleh menjadi besar atau kecil, serta berbahaya atau bermanfaat. Pelajar membandingkan jalan berbeza dan berfikir secara kritis tentang jenis maklumat yang mereka mahu tinggalkan.
+              key: Jejak Digital
+            Move It, Move It:
+              description_student: Atur cara akan sekelas anda untuk melangkah dengan berhati-hati dari satu tempat ke tempat yang lain.
+            Sequencing with Angry Birds:
+              name: Penjujukan dengan Angry Birds
+              description_student: Bantu Red, Angry Bird mengikuti laluan menuju ke tempat khinzir yang nakal.
+            Programming with Angry Birds:
+              name: Pengaturcaraan dengan Angry Birds
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan terus membangunkan kemahiran algoritma berjujukan.
+            Programming with Harvester:
+              name: Pengaturcaraan dengan Penuai
+              description_student: Bantu Penuai mengumpulkan sayuran di sepanjang laluan.
+              description_teacher: Pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai dalam pelajaran **membina kemahiran** ini. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan.
+            Getting Loopy:
+              description_student: Dalam pelajaran ini, kami akan mengadakan majlis tari-menari dengan menggunakan gelung berulang!
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar akan belajar menggunakan gelung untuk menyampaikan arahan dengan lebih mudah dengan melihat pada corak pergerakan berulang dalam tarian.
+            Loops with Harvester:
+              name: Gelung dengan Penuai
+              description_student: Bantu Penuai mengumpulkan lebih banyak lagi, dengan menggunakan gelung!
+            Loops with Laurel:
+              name: Gelung dengan Laurel
+              description_student: Atur cara pengembara Laurel mengumpulkan harta karun di dalam ruang gua yang terbuka.
+            Drawing Gardens with Loops:
+              name: Melukis Taman dengan Gelung
+              description_student: Gunakan corak dan gelung untuk menyiapkan imej.
+            The Right App:
+              description_student: Lakarkan aplikasi telefon pintar anda sendiri.
+            The Big Event Jr.:
+              name: Jr. Peristiwa Besar
+              description_student: Bergerak atau berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
+            'Mini-Project: A Royal Battle with Events':
+              description_student: Gunakan acara untuk mencipta cerita atau membuat permainan berinteraktif.
+              description_teacher: Dalam **projek mini** ini, pelajar akan berpeluang mempelajari cara menggunakan acara di dalam Makmal Mainan dan melaksanakan semua kemahiran pengekodan yang telah mereka pelajari untuk mencipta permainan animasi.
+            End of Course Project:
+              name: Akhir Projek Kursus
+            Sequencing in Maze:
+              name: Penjujukan dengan Angry Birds
+              description_student: Bantu Red, Angry Bird mengikuti laluan menuju ke tempat khinzir yang nakal.
+            Programming in Maze:
+              key: Pengaturcaraan di dalam Pagar Sesat
+              name: Pengaturcaraan dengan Angry Birds
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan terus membangunkan kemahiran algoritma berjujukan.
+            Programming in Harvester:
+              name: Pengaturcaraan dengan Penuai
+              description_student: Bantu Penuai mengumpulkan sayuran di sepanjang laluan.
+              description_teacher: Pelajar akan menggunakan konsep pengaturcaraan yang telah dipelajari kepada persekitaran Penuai dalam pelajaran **membina kemahiran** ini. Pelajar akan terus membangunkan kemahiran algoritma berjujukan dan mula menggunakan proses penyahpepijatan.
+            'Loops: Getting Loopy':
+              key: 'Gelung: Menjadi Bergelung'
+              description_student: Dalam pelajaran ini, kami akan mengadakan majlis tari-menari dengan menggunakan gelung berulang!
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar akan belajar menggunakan gelung untuk menyampaikan arahan dengan lebih mudah dengan melihat pada corak pergerakan berulang dalam tarian.
+            Loops in Harvester:
+              name: Gelung dengan Penuai
+              description_student: Bantu Penuai mengumpulkan lebih banyak lagi, dengan menggunakan gelung!
+            Loops in Collector:
+              key: Gelung di dalam Pengumpul
+              name: Gelung dengan Laurel
+              description_student: Atur cara pengembara Laurel mengumpulkan harta karun di dalam ruang gua yang terbuka.
+            Loops in Artist:
+              key: Gelung di dalam Artis
+              name: Melukis Taman dengan Gelung
+              description_student: Gunakan corak dan gelung untuk menyiapkan imej.
+            'Events: The Big Event':
+              key: 'Peristiwa: Peristiwa Besar'
+              name: Jr. Peristiwa Besar
+              description_student: Bergerak atau berteriak apabila guru anda menekan butang pada alat kawalan jauh gergasi.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, kelas akan mengalami konsep peristiwa melalui permainan apabila mereka bergerak atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
+            Events in Play Lab:
+              key: Peristiwa di dalam Makmal Mainan
+              description_student: Gunakan acara untuk mencipta cerita atau membuat permainan berinteraktif.
+              description_teacher: Dalam **projek mini** ini, pelajar akan berpeluang mempelajari cara menggunakan acara di dalam Makmal Mainan dan melaksanakan semua kemahiran pengekodan yang telah mereka pelajari untuk mencipta permainan animasi.
+            lesson-1:
+              key: pelajaran-1
+              name: Akhir Projek Kursus
+          lesson_groups:
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_loops:
+              display_name: Gelung
+            csf_impacts:
+              display_name: Kesan Pengkomputeran
+            csf_events:
+              display_name: Acara-acara
+            lessonGroup-6:
+              display_name: Akhir Projek Kursus
+          title: Kursus B (2021)
+          student_description: Pelajari asas sains komputer dan keselamatan internet. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan.
+          description_short: Pengenalan kepada sains komputer untuk prapembaca. Serupa dengan Kursus A, tetapi dengan kedalaman konsep tambahan.
+          description_audience: 'Umur: 5-8 tahun'
+        coursec-2022:
+          lessons:
+            Putting a STOP to Online Meanness:
+              name: MENGHENTIKAN Kekejian Dalam Talian
+              description_student: Dalam pelajaran ini, anda akan mempelajari tentang kekejian dan perkara yang perlu dilakukan jika anda mengalaminya dalam talian.
+              description_teacher: |2-
+                 [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Internet dipenuhi dengan semua jenis individu yang menarik, tetapi kadang-kadang, sebilangan daripada mereka boleh menjadi zalim antara satu sama lain. Dengan peranan ini, bantu pelajar anda memahami sebab lebih mudah bersikap zalim dalam talian daripada bersemuka dan cara menangani kekejian dalam talian apabila mereka melihatnya.
+              key: MENGHENTIKAN Kekejian Dalam Talian
+            My Robotic Friends Jr.:
+              name: Rakan Robotik Junior Saya
+              description_student: Dalam pelajaran ini, anda akan berpura-pura yang rakan sekelas anda ialah robot dan mengatur cara mereka untuk membina corak cawan yang tersusun.
+            Programming with Angry Birds:
+              name: Pengaturcaraan dengan Angry Birds
+              description_student: Pelajari tentang jujukan dan algoritma dengan _Angry Birds_.
+            Debugging in Maze:
+              name: Penyahpepijatan di dalam Pagar Sesat
+              description_student: Cari masalah di dalam teka-teki dan berlatih kemahiran penyahpepijatan anda.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan menemui kod prabertulis yang mengandungi kesalahan. Mereka perlu meneliti kod sedia ada untuk mengenal pasti ralatnya.
+              key: Penyahpepijatan di dalam Pagar Sesat
+            Collecting Treasure with Laurel:
+              name: Mengumpul Harta Karun bersama Laurel
+              description_student: Tulis algoritma untuk membantu Pengembara Laurel mengumpulkan banyak batu permata!
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan terus membangunkan pemahaman mereka tentang algoritma dan penyahpepijatan. Bersama watak baharu, _Pengembara Laurel_, pelajar akan mencipta algoritma berjujukan untuk membantu _Laurel_ mengambil harta karun semasa dia berjalan di sepanjang laluan.
+            Creating Art with Code:
+              name: Mencipta Seni dengan Kod
+              description_student: Cipta imej yang cantik dengan mengatur cara Artis.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan mengawal Artis bagi melengkapkan lukisan pada skrin.
+            My Loopy Robotic Friends Jr.:
+              name: Rakan Robotik Bergelung Junior Saya
+              description_student: Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda sekali lagi, tetapi dengan menggunakan gelung, anda akan dapat menyelesaikan masalah yang lebih besar dan lebih rumit.
+            Loops with Rey and BB-8:
+              name: Gelung dengan Rey dan BB-8
+              description_student: Bantu _BB-8_ melepasi pagar sesat dengan menggunakan gelung!
+              key: Gelung dengan Rey dan BB-8
+            Harvesting Crops with Loops:
+              name: Menuai Tanaman dengan Gelung
+              description_student: Mari kita gunakan gelung untuk membantu penuai mengumpulkan sebahagian daripada sayuran!
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar menggelungkan tindakan baharu untuk membantu penuai mengumpulkan pelbagai sayuran yang tumbuh dalam rumpun yang besar.
+            'Mini-Project: Sticker Art':
+              description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
+            The Big Event:
+              description_student: Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar akan belajar bahawa peristiwa ialah cara terbaik menambahkan fleksibiliti kepada algoritma prabertulis.
+            Build a Flappy Game:
+              name: Membina Permainan Kibasan
+              description_student: Bina permainan Kibasan Burung anda sendiri mengikut kesukaan anda, kemudian kongsikan dengan rakan anda!
+              key: Membina Permainan Kibasan
+            'Mini-Project: Chase Game':
+              description_student: Sudah tiba masanya menjadi kreatif dan mencipta permainan di Makmal Mainan!
+            Binary Bracelets:
+              description_student: Cipta gelang binari anda sendiri dan ketahui cara komputer mengingati maklumat!
+            End of Course Project:
+              name: Akhir Projek Kursus
+              description_student: Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda.
+            'Programming: My Robotic Friends':
+              key: 'Pengaturcaraan: Rakan Robotik Saya'
+              name: Rakan Robotik Junior Saya
+              description_student: Dalam pelajaran ini, anda akan berpura-pura yang rakan sekelas anda ialah robot dan mengatur cara mereka untuk membina corak cawan yang tersusun.
+            Programming in Maze:
+              key: Pengaturcaraan di dalam Pagar Sesat
+              name: Pengaturcaraan dengan Angry Birds
+              description_student: Pelajari tentang jujukan dan algoritma dengan _Angry Birds_.
+            Programming in Collector:
+              key: Pengaturcaraan di dalam Pengumpul
+              name: Mengumpul Harta Karun bersama Laurel
+              description_student: Tulis algoritma untuk membantu Pengembara Laurel mengumpulkan banyak batu permata!
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan terus membangunkan pemahaman mereka tentang algoritma dan penyahpepijatan. Bersama watak baharu, _Pengembara Laurel_, pelajar akan mencipta algoritma berjujukan untuk membantu _Laurel_ mengambil harta karun semasa dia berjalan di sepanjang laluan.
+            Programming in Artist:
+              key: Pengaturcaraan di dalam Artis
+              name: Mencipta Seni dengan Kod
+              description_student: Cipta imej yang cantik dengan mengatur cara Artis.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan mengawal Artis bagi melengkapkan lukisan pada skrin.
+            'Loops: My Loopy Robotic Friends':
+              key: 'Gelung: Rakan Robotik Bergelung Saya'
+              name: Rakan Robotik Bergelung Junior Saya
+              description_student: Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda sekali lagi, tetapi dengan menggunakan gelung, anda akan dapat menyelesaikan masalah yang lebih besar dan lebih rumit.
+            Loops in Harvester:
+              name: Menuai Tanaman dengan Gelung
+              description_student: Mari kita gunakan gelung untuk membantu penuai mengumpulkan sebahagian daripada sayuran!
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar menggelungkan tindakan baharu untuk membantu penuai mengumpulkan pelbagai sayuran yang tumbuh dalam rumpun yang besar.
+            Sticker Art with Loops:
+              key: Seni Pelekat dengan Gelung
+              description_student: Dalam pelajaran ini, gelung memudahkan imej lebih menarik dibuat dengan Artis!
+            'Events: The Big Event':
+              key: 'Peristiwa: Peristiwa Besar'
+              description_student: Main permainan yang menyeronokkan untuk mengetahui tentang peristiwa.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar akan belajar bahawa peristiwa ialah cara terbaik menambahkan fleksibiliti kepada algoritma prabertulis.
+            Events in Play Lab:
+              key: Peristiwa di dalam Makmal Mainan
+              description_student: Sudah tiba masanya menjadi kreatif dan mencipta permainan di Makmal Mainan!
+            'End of Course Project: Create a Play Lab Game':
+              key: 'Akhir Projek Kursus: Membuat Permainan Makmal Mainan'
+              name: Akhir Projek Kursus
+              description_student: Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: Akhir Projek Kursus
+          title: Kursus C (2021)
+          student_description: Cipta atur cara dengan penjujukan, gelung dan peristiwa. Terjemahkan tanda nama anda kepada binari, selidik teknik penyelesaian masalah yang berbeza dan pelajari cara bertindak balas terhadap buli siber. Pada akhir kursus, cipta permainan atau cerita anda sendiri yang boleh anda kongsikan!
+          description_short: Pelajari asas sains komputer dan cipta seni, cerita dan permainan anda sendiri.
+          description_audience: 'Umur: 6-10 tahun'
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: pelajaran-4
+        csp9-2022:
+          lessons:
+            Algorithmic Bias:
+              name: Kepincangan Algoritma
+            lesson-10:
+              key: pelajaran-10
+              name: Kepincangan Algoritma
+        coursed-2022:
+          lessons:
+            Password Power-Up:
+              name: Menguatkan Kata Laluan
+              description_student: Dalam pelajaran ini, anda akan mempelajari cara kata laluan melindungi maklumat anda dan membuat kata laluan yang baik.
+              description_teacher: |2-
+                 [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Kata laluan dalam talian yang lebih kuat dan selamat ialah idea yang baik untuk semua individu. Tetapi bagaimanakah kita boleh membantu kanak-kanak mencipta kata laluan yang lebih baik dan betul-betul boleh mengingatinya? Gunakan petua dalam pelajaran ini untuk membantu kanak-kanak mencipta kata laluan yang selamat dan tidak boleh dilupakan.
+            Graph Paper Programming:
+              name: Pengaturcaraan kertas graf
+              description_student: Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda untuk melukis gambar!
+              description_teacher: 'Dalam pelajaran **tetapan konteks** ini, pelajar menggunakan simbol memberikan arahan kepada satu sama lain untuk mewarnakan segi empat sama pada kertas graf. Dengan "mengatur cara" antara satu sama lain untuk melukis gambar, pelajar mendapat peluang merasai pengalaman sebahagian daripada konsep teras pengaturcaraan melalui cara yang menyeronokkan dan mudah diakses. '
+            Introduction to Online Puzzles:
+              name: Pengenalan kepada Teka-teki dalam Talian
+              description_student: Pelajaran ini akan memberikan anda latihan dalam kemahiran yang anda perlukan untuk kursus ini.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan berlatih kemahiran _penjujukan_ dan penyahpepijatan mereka dalam teka-teki pagar sesat.
+              key: Pengenalan kepada Teka-teki dalam Talian
+            Relay Programming:
+              name: Pengaturcaraan penyampai
+              description_student: Adakah anda masih ingat pada permulaan kursus ini apabila anda membuat lukisan dengan menggunakan kod? Dalam pelajaran ini, anda akan bekerjasama dengan pasukan untuk melakukan sesuatu yang serupa!
+              key: Pengaturcaraan penyampai
+            Debugging with Laurel:
+              name: Penyahpijatan dengan Laurel
+              description_student: Adakah anda pernah menghadapi masalah semasa pengekodan? Dalam pelajaran ini, anda akan mempelajari rahsia penyahpepijatan. Penyahpepijatan ialah proses mencari dan membetulkan masalah dalam kod anda.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan berlatih melakukan penyahpepijatan dalam persekitaran "pengumpul". Pelajar perlu berlatih membaca dan mengedit kod untuk membetulkan teka-teki dengan algoritma, gelung dan gelung bersarang yang mudah.
+            Events in Bounce:
+              name: Peristiwa dalam Lantunan
+              description_student: Adakah anda pernah berharap agar dapat bermain permainan video di sekolah? Dalam pelajaran ini, anda akan mencipta permainan itu sendiri!
+              key: Peristiwa dalam Lantunan
+            Build a Star Wars Game:
+              name: Membina Permainan Star Wars
+              description_student: Rasakan kekuatan semasa anda membina permainan Star Wars anda sendiri dalam pelajaran ini.
+              key: Membina Permainan Star Wars
+            Dance Party:
+              name: Majlis Tari-Menari
+              description_student: Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri.
+              key: Majlis Tari-Menari
+            Loops in Ice Age:
+              description_student: Dalam pelajaran ini, anda akan menggunakan blok ulangan untuk membantu Scrat mendapatkan buah oak secekap yang mungkin.
+            Drawing Shapes with Loops:
+              name: Melukis Bentuk dengan Gelung
+              description_student: Dalam pelajaran ini, gelung memudahkan imej menarik dibuat dengan Artis!
+              description_teacher: Pelajaran **membina kemahiran** ini dibina berasaskan pemahaman tentang gelung daripada pelajaran sebelumnya dan berfungsi sebagai pelaksanaan penyahpepijatan untuk latihan penyelesaian masalah tambahan.
+            Nested Loops in Maze:
+              name: Gelung Bersarang di dalam Pagar Sesat
+            Conditionals with Cards:
+              description_student: Sudah tiba masanya untuk bermain permainan yang anda memperoleh mata hanya di bawah syarat tertentu!
+            Looking Ahead with Minecraft:
+              description_teacher: Pelajaran **membina kemahiran** ini akan memberikan pelajar peluang berlatih konsep yang telah mereka pelajari sehingga tahap ini dan mendapatkan pengalaman pertama mereka dengan bersyarat!
+            If/Else with Bee:
+              description_student: Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.
+            While Loops in Farmer:
+              name: Gelung Semasa di dalam Peladang
+              description_student: 'Gelung adalah sangat berguna dalam pengekodan. Pelajaran ini akan mengajar anda tentang jenis gelung baharu: iaitu gelung semasa!'
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha mengisi lubang dan menggali kotoran di dalam Peladang, tetapi mereka tidak akan tahu saiz lubang atau ketinggian timbunan kotoran. Untuk menyelesaikan teka-teki ini, pelajar akan menggunakan jenis gelung yang baharu.
+              key: Gelung Semasa di dalam Peladang
+            Until Loops in Maze:
+              description_student: Anda boleh melakukan beberapa perkara yang menakjubkan apabila anda menggunakan gelung `sehingga`!
+            End of Course Project:
+              name: Akhir Projek Kursus
+              description_student: Pastikan tangan mereka bersedia untuk melaksanakan pengekodan yang banyak! Sudah tiba masanya untuk mula membina projek anda.
+              description_teacher: Pelajaran **projek** ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek baharu!
+              key: Akhir Projek Kursus
+            lesson-5:
+              key: pelajaran-5
+              name: Menguatkan Kata Laluan
+              description_student: Dalam pelajaran ini, anda akan mempelajari cara kata laluan melindungi maklumat anda dan membuat kata laluan yang baik.
+              description_teacher: |2-
+                 [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum).
+
+                Kata laluan dalam talian yang lebih kuat dan selamat ialah idea yang baik untuk semua individu. Tetapi bagaimanakah kita boleh membantu kanak-kanak mencipta kata laluan yang lebih baik dan betul-betul boleh mengingatinya? Gunakan petua dalam pelajaran ini untuk membantu kanak-kanak mencipta kata laluan yang selamat dan tidak boleh dilupakan.
+            'Algorithms: Graph Paper Programming':
+              key: 'Algoritma: Pengaturcaraan Kertas Graf'
+              name: Pengaturcaraan kertas graf
+              description_student: Dalam pelajaran ini, anda akan mengatur cara rakan sekelas anda untuk melukis gambar!
+              description_teacher: 'Dalam pelajaran **tetapan konteks** ini, pelajar menggunakan simbol memberikan arahan kepada satu sama lain untuk mewarnakan segi empat sama pada kertas graf. Dengan "mengatur cara" antara satu sama lain untuk melukis gambar, pelajar mendapat peluang merasai pengalaman sebahagian daripada konsep teras pengaturcaraan melalui cara yang menyeronokkan dan mudah diakses. '
+            Debugging in Collector:
+              key: Penyahpepijatan di dalam Pengumpul
+              name: Penyahpijatan dengan Laurel
+              description_student: Adakah anda pernah menghadapi masalah semasa pengekodan? Dalam pelajaran ini, anda akan mempelajari rahsia penyahpepijatan. Penyahpepijatan ialah proses mencari dan membetulkan masalah dalam kod anda.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan berlatih melakukan penyahpepijatan dalam persekitaran "pengumpul". Pelajar perlu berlatih membaca dan mengedit kod untuk membetulkan teka-teki dengan algoritma, gelung dan gelung bersarang yang mudah.
+            Loops in Artist:
+              key: Gelung di dalam Artis
+              name: Melukis Bentuk dengan Gelung
+              description_student: Dalam pelajaran ini, gelung memudahkan imej menarik dibuat dengan Artis!
+              description_teacher: Pelajaran **membina kemahiran** ini dibina berasaskan pemahaman tentang gelung daripada pelajaran sebelumnya dan berfungsi sebagai pelaksanaan penyahpepijatan untuk latihan penyelesaian masalah tambahan.
+            Nested Loops in Bee:
+              name: Gelung Bersarang di dalam Pagar Sesat
+            lesson-6:
+              key: pelajaran-6
+              description_teacher: Pelajaran **membina kemahiran** ini akan memberikan pelajar peluang berlatih konsep yang telah mereka pelajari sehingga tahap ini dan mendapatkan pengalaman pertama mereka dengan bersyarat!
+            Conditionals in Bee:
+              key: Bersyarat di dalam Lebah
+              description_student: Memandangkan anda sudah memahami bersyarat, sudah tiba masanya untuk mengatur cara Lebah bagi menggunakannya apabila mengumpulkan madu dan nektar.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_events:
+              display_name: Acara-acara
+            csf_loops:
+              display_name: Gelung
+            csf_conditionals:
+              display_name: Bersyarat
+            end_of_course_project:
+              display_name: Akhir Projek Kursus
+          title: Kursus D (2021)
+          description_short: Pelajari tentang pernyataan bersyarat. Cipta seni, permainan dan malah majlis tari-menari anda sendiri.
+          description_audience: 'Umur: 7-11 tahun'
+        coursee-2022:
+          lessons:
+            Follow the Algorithm:
+              name: Ikuti Algoritma
+              description_student: Main permainan dan fikirkan tentang perintah yang diperlukan untuk mendapatkan hasil yang betul.
+            Swimming Fish with Sprite Lab:
+              name: Ikan Berenang dengan Makmal Peperi
+              description_student: Pelajari cara mencipta dan mengedit peperi.
+            Alien Dance Party with Sprite Lab:
+              name: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+              description_student: Cipta projek berinteraktif yang boleh dikongsikan dengan rakan sekelas.
+              key: Majlis Tari-Menari untuk Makhluk Asing dengan Makmal Peperi
+            Be A Super Digital Citizen:
+              name: Jadilah Warganegara Super Digital
+              description_student: Pelajari cara anda boleh menjadi individu bertanggungjawab apabila anda melihat buli siber.
+              description_teacher: |2-
+                 [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Alatan dalam talian memperkasakan kanak-kanak dan mereka juga mempunyai tanggungjawab yang besar. Tetapi adakah kanak-kanak sentiasa mengetahui perkara yang perlu dilakukan apabila mereka mengalami buli siber? Tunjukkan kepada pelajar anda cara yang sesuai untuk mengambil tindakan dan menyelesaikan konflik, dengan menjadi individu bertanggungjawab membantu mereka yang memerlukan.
+            Private and Personal Information:
+              description_student: Internet ialah sesuatu yang menyeronokkan dan menarik, tetapi adalah penting untuk kekal selamat. Pelajaran ini mengajar anda perbezaan antara maklumat yang selamat untuk dikongsi dan maklumat yang bersifat sulit.
+              description_teacher: |2-
+                 [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Sudah menjadi kebiasaan pelajar kami untuk berkongsi dan menyambungkan dengan individu lain. Tetapi berkongsi dalam talian mempunyai beberapa risiko. Bagaimanakah kita boleh membantu kanak-kanak membina hubungan yang kuat, positif dan selamat dalam talian? Bantu pelajar anda mengetahui perbezaan antara perkara peribadi dan paling baik dibiarkan sebagai perkara sulit.
+            Digital Sharing:
+              description_student: Dalam pelajaran ini, anda akan mempelajari tentang cabaran dan manfaat pemilikan dan hak cipta.
+            Drawing with Loops:
+              name: Melukis dengan Gelung
+              description_student: Dalam pelajaran ini, **gelung** memudahkan imej menarik dibuat dengan Artis!
+            Fancy Shapes using Nested Loops:
+              name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
+              description_student: Lebih banyak gelung bersarang! Kali ini, anda boleh membuat lukisan yang MENAKJUBKAN dengan gelung bersarang.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, mencipta reka bentuk yang rumit dengan menggunakan Artis. Pelajaran ini berakhir dengan peluang untuk pelajar mencipta reka bentuk mereka sendiri.
+            Songwriting:
+              description_student: Malah bintang lagu rock juga memerlukan kemahiran pengaturcaraan. Pelajaran ini akan mengajar anda tentang fungsi menggunakan lirik daripada lagu.
+            Functions in Minecraft:
+              name: Fungsi dalam Minecraft
+              description_student: Bolehkah anda memikirkan cara menggunakan fungsi untuk kod yang paling cekap?
+              key: Fungsi dalam Minecraft
+            Functions with Artist:
+              name: Fungsi dengan Artis
+              description_student: Membuatkan lukisan yang kompleks menjadi lebih mudah dengan fungsi!
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Bersyarat dalam Minecraft: Pelayaran Akuatik'
+              key: 'Bersyarat dalam Minecraft: Pelayaran Akuatik'
+            Conditionals with the Farmer:
+              name: Bersyarat dengan Peladang
+            Functions with Harvester:
+              name: Fungsi dengan Penuai
+              description_student: Fungsi akan mengurangkan banyak kerja kerana anda membantu peladang dengan proses penuaiannya!
+            Designing for Accessibility:
+              name: Mereka Bentuk untuk Aksesibiliti
+            End of Course Project:
+              name: Akhir Projek Kursus
+              description_student: Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!
+              key: Akhir Projek Kursus
+            Simon Says:
+              name: Ikuti Algoritma
+              description_student: Main permainan dan fikirkan tentang perintah yang diperlukan untuk mendapatkan hasil yang betul.
+            Learning Sprites with Sprite Lab:
+              name: Ikan Berenang dengan Makmal Peperi
+              description_student: Pelajari cara mencipta dan mengedit peperi.
+            lesson-4:
+              key: pelajaran-4
+              name: Jadilah Warganegara Super Digital
+              description_student: Pelajari cara anda boleh menjadi individu bertanggungjawab apabila anda melihat buli siber.
+              description_teacher: |2-
+                 [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Alatan dalam talian memperkasakan kanak-kanak dan mereka juga mempunyai tanggungjawab yang besar. Tetapi adakah kanak-kanak sentiasa mengetahui perkara yang perlu dilakukan apabila mereka mengalami buli siber? Tunjukkan kepada pelajar anda cara yang sesuai untuk mengambil tindakan dan menyelesaikan konflik, dengan menjadi individu bertanggungjawab membantu mereka yang memerlukan.
+            Programming and Loops with the Artist:
+              name: Melukis dengan Gelung
+              description_student: Dalam pelajaran ini, **gelung** memudahkan imej menarik dibuat dengan Artis!
+            Nested Loops in Artist:
+              key: Gelung Bersarang di dalam Artis
+              name: Bentuk Beragam dengan Menggunakan Gelung Bersarang
+              description_student: Lebih banyak gelung bersarang! Kali ini, anda boleh membuat lukisan yang MENAKJUBKAN dengan gelung bersarang.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, mencipta reka bentuk yang rumit dengan menggunakan Artis. Pelajaran ini berakhir dengan peluang untuk pelajar mencipta reka bentuk mereka sendiri.
+            Nested Loops in Frozen:
+              key: Gelung Bersarang dalam Frozen
+            'Functions: Songwriting':
+              key: 'Fungsi : Penulisan Lagu'
+              description_student: Malah bintang lagu rock juga memerlukan kemahiran pengaturcaraan. Pelajaran ini akan mengajar anda tentang fungsi menggunakan lirik daripada lagu.
+            Functions in Artist:
+              key: Fungsi di dalam Artis
+              name: Fungsi dengan Artis
+              description_student: Membuatkan lukisan yang kompleks menjadi lebih mudah dengan fungsi!
+            Conditionals:
+              key: Bersyarat
+              name: Bersyarat dengan Peladang
+            Functions in Harvester:
+              key: Fungsi di dalam Penuai
+              name: Fungsi dengan Penuai
+              description_student: Fungsi akan mengurangkan banyak kerja kerana anda membantu peladang dengan proses penuaiannya!
+            lesson-1:
+              key: pelajaran-1
+              name: Mereka Bentuk untuk Aksesibiliti
+            'Hello World: Food':
+              name: Helo Dunia
+              description_student: Dalam pelajaran ini, anda akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan belajar mencipta dan menghidupkan sprite dan menjadikannya interaktif menggunakan acara.
+          lesson_groups:
+            csf_sprites:
+              display_name: Jin
+            ramp_up:
+              display_name: Gelung Bersarang
+            csf_functions:
+              display_name: Fungsi
+            csf_nested_loops:
+              display_name: Bersyarat
+            lessonGroup-7:
+              display_name: Kesan Pengkomputeran
+            end_of_course_project:
+              display_name: Akhir Projek Kursus
+          description_audience: 'Umur: 8-12 tahun'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              description_student: Anda akan membincangkan peranan komputer dan teknologi dalam kehidupan anda dengan tumpuan diberikan kepada sejauh mana aplikasi dan alatan memberikan pengguna pilihan tentang cara menggunakannya.
+            Making Sprites:
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
+            Sprites in Action:
+              description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. '
+            'Mini-Project: Virtual Pet':
+              description_student: Cipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang anda inginkan! Berikan haiwan peliharaan anda kehidupannya sendiri!
+              description_teacher: Dalam pelajaran **projek mini**, pelajar akan mencipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang mereka inginkan. Pelajar akan menggunakan alat "Kostum" Makmal Peperi untuk menyesuaikan penampilan haiwan peliharaan mereka. Kemudian, mereka akan menggunakan peristiwa, tingkah laku dan konsep lain yang telah mereka pelajari untuk merealisasikan projek mereka.
+            The Power of Words:
+              name: Kuasa Perkataan
+              description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian.
+              description_teacher: |2-
+                 [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Oleh kerana kanak-kanak membesar, mereka akan mula berkomunikasi dengan lebih banyak secara dalam talian. Tetapi sebahagian daripada perkara yang mereka lihat boleh mengakibatkan mereka merasa sakit hati, sedih, marah, atau malah takut. Bantu pelajar anda membina empati terhadap individu lain dan pelajari strategi yang perlu digunakan apabila berhadapan dengan buli siber.
+            Blank Space Stories:
+              name: Cerita Ruang Kosong
+              description_student: 'Dalam aktiviti ini, anda akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) untuk bersiap sedia memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan. '
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) sebagai konteks untuk memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan.
+            Text and Prompts:
+              name: Teks dan Prom
+              description_student: Dalam pelajaran ini anda akan berlatih dengan pemboleh ubah di dalam Makmal Peperi.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. '
+            'Mini-Project: User Input Programs':
+              description_student: Gunakan kemahiran baharu anda dengan pemboleh ubah kepada satu daripada tiga projek terbuka.
+              description_teacher: Pelajar akan menggunakan kemahiran baharu mereka dengan pemboleh ubah kepada satu daripada tiga **projek mini** terbuka. Pelajar akan meneroka atur cara sampel, mencipta rancangan untuk projek mereka sendiri dan mengatur caranya tanpa apa-apa asas.
+            Drawing with Loops:
+              name: Melukis dengan Gelung
+              description_student: Dalam pelajaran ini, **gelung** memudahkan imej menarik dibuat dengan Artis!
+              description_teacher: Pelajaran **membina kemahiran** ini mengalihkan tumpuan daripada Makmal Peperi kepada Artis, alat baharu yang akan diterokai oleh pelajar sepanjang tempoh kursus yang tinggal ini.
+            Using Variables with the Artist:
+              description_student: Dalam pelajaran ini, anda akan membuat lukisan dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.
+            Programming with the Bee:
+              name: Pengaturcaraan dengan Lebah
+              description_student: Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung yang lain.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan digalakkan berfikir sejauh mana perubahan kecil di dalam gelung akan memberikan kesan kepada atur cara mereka.
+            Variables with the Bee:
+              name: Pemboleh ubah dengan Lebah
+              description_student: Lebah ini menyukai pemboleh ubah!
+              description_teacher: Pelajaran **membina kemahiran** ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih dinamik dengan membenarkan nilai ditukar semasa kod sedang berjalan.
+            For Loop Fun:
+              description_student: Anda akan menikmati banyak keseronokan apabila mempelajari tentang gelung `untuk`!
+            For Loops with Artist:
+              name: Untuk Gelung dengan Artis
+              description_student: Bersedia untuk membuat hasil kerja agung anda yang seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan membuat beberapa gambar yang cukup luar biasa.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar berlatih gelung “untuk” dengan Artis. Pelajar akan menyelesaikan teka-teki untuk mencipta reka bentuk kompleks dan seni unik.
+            Simulating Experiments:
+              name: Mensimulasikan Eksperimen
+              description_student: Jalankan simulasi pada komputer dan eksperimen dengan menukar pemboleh ubah.
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar akan menjalankan dan mengumpulkan data daripada simulasi ringkas di Makmal Peperi. Selepas menjalankan simulasi beberapa kali, pelajar akan mempunyai peluang membuat ramalan tentang sejauh mana dengan menukar pemboleh ubah dalam simulasi mungkin memberikan kesan kepada hasilnya dan kemudian uji hipotesis tersebut.
+              key: Mensimulasikan Eksperimen
+            Outbreak:
+              name: Wabak
+            AI For Oceans:
+              name: Kecerdasan Buatan (AI) Untuk Lautan
+            The Internet:
+              name: Internet
+              description_student: Adakah anda pernah terfikir cara maklumat bergerak merentasi Internet? Ini bukan silap mata! Pelajaran ini akan mengajar anda asas-asas cara internet berfungsi.
+            End of Course Project:
+              name: Akhir Projek Kursus
+              description_student: Projek sebesar ini memerlukan masa dan perancangan yang banyak. Cari inspirasi anda, bangunkan rancangan dan luahkan kreativiti anda!
+              description_teacher: Pelajaran **projek** ini membawa pelajar melalui proses mereka bentuk, membangunkan dan mempamerkan projek baharu!
+              key: Akhir Projek Kursus
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara dan mempelajari tentang dua konsep utama Makmal Peperi: iaitu peperi dan tingkah laku. '
+            lesson-8:
+              key: pelajaran-8
+              description_student: Anda akan berusaha melalui tahap pengaturcaraan dan menghabiskannya dengan tugas “permainan bebas” terbuka apabila anda dapat membina apa sahaja yang anda suka.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan berusaha melalui siri tahap pengaturcaraan pada komputer, menghabiskannya dengan tugas “permainan bebas” terbuka apabila mereka dapat membina apa sahaja yang mereka suka. Pelajar akan menulis atur cara yang bertindak balas terhadap peristiwa yang ditetapkan masanya dan input pengguna. '
+            Virtual Pet:
+              key: Haiwan Peliharaan Maya
+              description_student: Cipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang anda inginkan! Berikan haiwan peliharaan anda kehidupannya sendiri!
+              description_teacher: Dalam pelajaran **projek mini**, pelajar akan mencipta Haiwan Peliharaan Maya berinteraktif yang mempunyai rupa dan berkelakuan seperti yang mereka inginkan. Pelajar akan menggunakan alat "Kostum" Makmal Peperi untuk menyesuaikan penampilan haiwan peliharaan mereka. Kemudian, mereka akan menggunakan peristiwa, tingkah laku dan konsep lain yang telah mereka pelajari untuk merealisasikan projek mereka.
+            lesson-2:
+              key: pelajaran-2
+              name: Kuasa Perkataan
+              description_student: Perbuatan membuli sememangnya sangat teruk. Pelajaran ini akan mengajar anda tentang perkara yang baik atau tidak baik untuk dikatakan dalam talian.
+              description_teacher: |2-
+                 [![pendidikan yang munasabah](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+
+                Pelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Ketahui lebih lanjut.](https://www.commonsense.org/education/digital-citizenship/curriculum)
+
+                Oleh kerana kanak-kanak membesar, mereka akan mula berkomunikasi dengan lebih banyak secara dalam talian. Tetapi sebahagian daripada perkara yang mereka lihat boleh mengakibatkan mereka merasa sakit hati, sedih, marah, atau malah takut. Bantu pelajar anda membina empati terhadap individu lain dan pelajari strategi yang perlu digunakan apabila berhadapan dengan buli siber.
+            lesson-9:
+              key: pelajaran-9
+              name: Cerita Ruang Kosong
+              description_student: 'Dalam aktiviti ini, anda akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) untuk bersiap sedia memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan. '
+              description_teacher: Dalam pelajaran **tetapan konteks** ini, pelajar akan menggunakan cerita isi tempat kosong (serupa dengan Mad Libs®) sebagai konteks untuk memahami cara komputer mengambil dan menyimpan input daripada pengguna, kemudian menggunakannya nanti semasa atur cara dijalankan.
+            lesson-10:
+              key: pelajaran-10
+              name: Teks dan Prom
+              description_student: Dalam pelajaran ini anda akan berlatih dengan pemboleh ubah di dalam Makmal Peperi.
+              description_teacher: 'Dalam pelajaran **membina kemahiran** ini, pelajar akan mendapat latihan dengan pemboleh ubah di dalam Makmal Peperi. '
+            lesson-11:
+              key: pelajaran-11
+              description_student: Gunakan kemahiran baharu anda dengan pemboleh ubah kepada satu daripada tiga projek terbuka.
+              description_teacher: Pelajar akan menggunakan kemahiran baharu mereka dengan pemboleh ubah kepada satu daripada tiga **projek mini** terbuka. Pelajar akan meneroka atur cara sampel, mencipta rancangan untuk projek mereka sendiri dan mengatur caranya tanpa apa-apa asas.
+            Loops with the Artist:
+              name: Melukis dengan Gelung
+              description_student: Dalam pelajaran ini, **gelung** memudahkan imej menarik dibuat dengan Artis!
+              description_teacher: Pelajaran **membina kemahiran** ini mengalihkan tumpuan daripada Makmal Peperi kepada Artis, alat baharu yang akan diterokai oleh pelajar sepanjang tempoh kursus yang tinggal ini.
+            Variables that Change in Artist:
+              description_student: Dalam pelajaran ini, anda akan membuat lukisan dengan menggunakan pemboleh ubah yang bertukar semasa program berjalan.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan meneroka penciptaan reka bentuk berulang dengan menggunakan pemboleh ubah dalam persekitaran Artis. Pelajar akan mempelajari cara pemboleh ubah menjadikan kod lebih mudah ditulis dan dibaca. Selepas teka-teki dibimbing, pelajar akan mengakhiri pelajaran pada tahap permainan bebas bertujuan menunjukkan perkara yang telah mereka pelajari dan mencipta reka bentuk baharu.
+            Nested Loops in the Maze:
+              name: Pengaturcaraan dengan Lebah
+              description_student: Pelajaran ini akan mengajar anda perkara yang berlaku apabila anda menempatkan gelung di dalam gelung yang lain.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar akan digalakkan berfikir sejauh mana perubahan kecil di dalam gelung akan memberikan kesan kepada atur cara mereka.
+            Variables that Change in Bee:
+              name: Pemboleh ubah dengan Lebah
+              description_student: Lebah ini menyukai pemboleh ubah!
+              description_teacher: Pelajaran **membina kemahiran** ini akan membantu menggambarkan cara pemboleh ubah boleh menjadikan atur cara lebih dinamik dengan membenarkan nilai ditukar semasa kod sedang berjalan.
+            For Loops in Bee:
+              key: Untuk Gelung di dalam Lebah
+            For Loops in Artist:
+              key: Untuk Gelung di dalam Artis
+              name: Untuk Gelung dengan Artis
+              description_student: Bersedia untuk membuat hasil kerja agung anda yang seterusnya. Di sini anda akan menggunakan gelung `untuk` bertujuan membuat beberapa gambar yang cukup luar biasa.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar berlatih gelung “untuk” dengan Artis. Pelajar akan menyelesaikan teka-teki untuk mencipta reka bentuk kompleks dan seni unik.
+            lesson-5:
+              key: pelajaran-5
+            AI for Oceans:
+              key: Kecerdasan Buatan (AI) untuk Lautan
+              name: Kecerdasan Buatan (AI) Untuk Lautan
+            Internet:
+              key: Internet
+              name: Internet
+              description_student: Adakah anda pernah terfikir cara maklumat bergerak merentasi Internet? Ini bukan silap mata! Pelajaran ini akan mengajar anda asas-asas cara internet berfungsi.
+          lesson_groups:
+            ramp_up:
+              display_name: Jin
+            lessonGroup-8:
+              display_name: Pembolehubah
+            end_of_course_project:
+              display_name: Akhir Projek Kursus
+          description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta seni, cerita atau permainan anda sendiri.
+          description_audience: 'Umur: 9-13 tahun'
+        csa1-2022:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: Gelung
+        pre-express-2022:
+          lessons:
+            Learn to Drag and Drop:
+              key: Pelajari Tarik dan Lepas
+              name: Pelajari Tarik dan Lepas
+            Sequencing with Scrat:
+              key: Penjujukan dengan Scrat
+              name: Penjujukan dengan Scrat
+            Programming with Angry Birds:
+              key: Pengaturcaraan dengan Angry Birds
+              name: Pengaturcaraan dengan Angry Birds
+            Programming with Rey and BB-8:
+              key: Pengaturcaraan dengan Rey dan BB-8
+              name: Pengaturcaraan dengan Rey dan BB-8
+            Programming with Harvester:
+              key: Pengaturcaraan dengan Penuai
+              name: Pengaturcaraan dengan Penuai
+            Loops with Scrat:
+              key: Gelung dengan Scrat
+              name: Gelung dengan Scrat
+            Loops with Laurel:
+              key: Gelung dengan Laurel
+              name: Gelung dengan Laurel
+            Ocean Scene with Loops:
+              key: Pemandangan Lautan dengan Gelung
+              name: Pemandangan Lautan dengan Gelung
+            Drawing Gardens with Loops:
+              key: Melukis Taman dengan Gelung
+              name: Melukis Taman dengan Gelung
+            On the Move with Events:
+              key: Bergerak bersama Acara
+              name: Bergerak bersama Acara
+            A Royal Battle with Events:
+              key: Pertempuran Diraja bersama Acara
+              name: Pertempuran Diraja bersama Acara
+          lesson_groups:
+            csf_sequencing:
+              display_name: Penjujukan
+            csf_loops:
+              display_name: Gelung
+            csf_events:
+              display_name: Acara-acara
+        tessplayground:
+          name: tessplayground
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Bersyarat
+            lesson-14:
+              name: Bersyarat dalam Minecraft
+            lesson-16:
+              name: Penyahpepijatan
+            lesson-17:
+              name: Inspirasi Projek
+            lesson-19:
+              name: Penyahpepijatan
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Java Lab
+            lesson-9:
+              name: Gelung
+        csa7-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-10:
+              key: pelajaran-10
+            lesson-6:
+              key: pelajaran-6
+            lesson-7:
+              key: pelajaran-7
+            lesson-8:
+              key: pelajaran-8
+            lesson-9:
+              key: pelajaran-9
+            lesson-11:
+              key: pelajaran-11
+            lesson-12:
+              key: pelajaran-12
+            lesson-13:
+              key: pelajaran-13
+            lesson-14:
+              key: pelajaran-14
+            lesson-15:
+              key: pelajaran-15
+            lesson-1:
+              key: pelajaran-1
+            lesson-2:
+              key: pelajaran-2
+            lesson-3:
+              key: pelajaran-3
+            lesson-4:
+              key: pelajaran-4
+            lesson-5:
+              key: pelajaran-5
+            lesson-16:
+              key: pelajaran-16
+          lesson_groups:
+            lessonGroup-5:
+              display_name: Sandbox
+        csa8-pilot-extra:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
             lesson-1:
               key: pelajaran-1
             lesson-2:

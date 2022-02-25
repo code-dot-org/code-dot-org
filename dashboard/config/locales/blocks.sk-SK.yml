@@ -358,6 +358,7 @@ sk:
             '"right"': pravý stĺpec
             '"x"': krížom-krážom
             '"plus"': plus
+            '"spiral"': špirála
             '"random"': náhodný
       Dancelab_makeAnonymousDanceSprite:
         text: vytvoriť nový {COSTUME} na {LOCATION}
@@ -436,6 +437,26 @@ sk:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': mimozemšťania
             '"BEAR"': medvedi
@@ -463,6 +484,7 @@ sk:
             '"right"': pravý stĺpec
             '"x"': krížom-krážom
             '"plus"': plus
+            '"spiral"': špirála
             '"random"': náhodný
       Dancelab_mixColors:
         text: zmiešaj {COLOR1} a {COLOR2}
@@ -1000,7 +1022,21 @@ sk:
       gamelab_clickedOn:
         text: po kliknutí na {SPRITE}
       gamelab_clickedSpritePointer:
-        text: klikla {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): točenie vpravo
+            new Behavior(spinning_left, []): točenie vľavo
+            new Behavior(fluttering, []): chvenie
+            new Behavior(jittering, []): chvieť sa
+            new Behavior(wobbling, []): kolísanie
+            new Behavior(wandering, []): túlať sa
+            new Behavior(patrolling, []): hliadkovať
+            new Behavior(moving_west_and_looping, []): posun na západ a cyklenie
+            new Behavior(moving_east_and_looping, []): posun na východ a cyklenie
+            new Behavior(moving_north_and_looping, []): posuv na sever a cyklenie
+            new Behavior(moving_south_and_looping, []): posun na juh a cyklenie
       gamelab_comment:
         text: 'poznámka: {COMMENT}'
       gamelab_costumeImage:
@@ -1056,6 +1092,19 @@ sk:
         text: |-
           ak {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} má kostým {COSTUME}"
       gamelab_isKeyPressed:
@@ -1198,9 +1247,9 @@ sk:
       gamelab_moveToward:
         text: pohni {SPRITE} o {DISTANCE} pixelov smerom k {TARGET}
       gamelab_newSpritePointer:
-        text: klikla {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: klikla {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: hliadkovať hore-dole
       gamelab_playSound:
@@ -1252,6 +1301,12 @@ sk:
             "'sound://category_digital/jump_7.mp3'": skoč
       gamelab_playSpeech:
         text: prehrať reč {SOUND}
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): posúvanie klávesami so šípkami
+            new Behavior(driving_with_arrow_keys, []): ovládanie pomocou šípok
+            draggable(): je posúvateľný
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
         options:
@@ -1367,6 +1422,14 @@ sk:
             '"scale"': veľkosť
             '"width"': šírka
             '"height"': výška
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': pomaly
+            '5': normálny
+            '7': rýchlo
+            '9': extra fast
       gamelab_setTint:
         text: zmeň farbu {THIS} na {COLOR}
       gamelab_setupScoreboard:
@@ -1402,7 +1465,7 @@ sk:
       gamelab_stopGliding:
         text: "{SPRITE} prestane sa kĺzať"
       gamelab_subjectSpritePointer:
-        text: klikla {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

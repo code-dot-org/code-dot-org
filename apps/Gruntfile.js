@@ -508,6 +508,7 @@ describe('entry tests', () => {
   );
 
   var codeStudioEntries = {
+    'certificates/show': './src/sites/studio/pages/certificates/show.js',
     'code-studio': './src/sites/studio/pages/code-studio.js',
     'congrats/index': './src/sites/studio/pages/congrats/index.js',
     'courses/index': './src/sites/studio/pages/courses/index.js',
@@ -516,6 +517,15 @@ describe('entry tests', () => {
     'courses/resources': './src/sites/studio/pages/courses/resources.js',
     'courses/code': './src/sites/studio/pages/courses/code.js',
     'courses/standards': './src/sites/studio/pages/courses/standards.js',
+    'lessons/show': './src/sites/studio/pages/lessons/show.js',
+    'lessons/student_lesson_plan':
+      './src/sites/studio/pages/lessons/student_lesson_plan.js',
+    'programming_environments/index':
+      './src/sites/studio/pages/programming_environments/index.js',
+    'programming_environments/show':
+      './src/sites/studio/pages/programming_environments/show.js',
+    'programming_expressions/show':
+      './src/sites/studio/pages/programming_expressions/show.js',
     'devise/registrations/_finish_sign_up':
       './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
     'devise/registrations/edit':
@@ -591,6 +601,8 @@ describe('entry tests', () => {
   var internalEntries = {
     'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
     'blocks/index': './src/sites/studio/pages/blocks/index.js',
+    'course_offerings/edit':
+      './src/sites/studio/pages/course_offerings/edit.js',
     'courses/edit': './src/sites/studio/pages/courses/edit.js',
     'courses/new': './src/sites/studio/pages/courses/new.js',
     'datasets/show': './src/sites/studio/pages/datasets/show.js',
@@ -598,9 +610,6 @@ describe('entry tests', () => {
     'datasets/edit_manifest':
       './src/sites/studio/pages/datasets/edit_manifest.js',
     'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
-    'lessons/show': './src/sites/studio/pages/lessons/show.js',
-    'lessons/student_lesson_plan':
-      './src/sites/studio/pages/lessons/student_lesson_plan.js',
     levelbuilder: './src/sites/studio/pages/levelbuilder.js',
     'levels/editors/_applab':
       './src/sites/studio/pages/levels/editors/_applab.js',
@@ -632,14 +641,14 @@ describe('entry tests', () => {
     'levels/editors/_studio':
       './src/sites/studio/pages/levels/editors/_studio.js',
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
+    'programming_environments/new':
+      './src/sites/studio/pages/programming_environments/new.js',
     'programming_environments/edit':
       './src/sites/studio/pages/programming_environments/edit.js',
     'programming_expressions/new':
       './src/sites/studio/pages/programming_expressions/new.js',
     'programming_expressions/edit':
       './src/sites/studio/pages/programming_expressions/edit.js',
-    'programming_expressions/show':
-      './src/sites/studio/pages/programming_expressions/show.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',

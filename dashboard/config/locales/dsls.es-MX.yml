@@ -633,13 +633,13 @@ es-MX:
           | [![Ardilla hambrienta (Laboratorio de juegos)](https://images.code.org/3fda61d18026d6661dccf4b09baea111-image-1565115158327.PNG "Ardilla hambrienta (Laboratorio de juegos")](https://studio.code.org/projects/playlab/HN1zAX4Om6zdsxVsBBug9Y8mlzKSWUAXhjzRl-64YRs/view) | [[Alien Story (Play Lab)](https://images.code.org/0bd5ed3674ac9fe3304e27e68974c35f-image-1565115240833.PNG "Alien Story (Play Lab")](https://studio.code.org/projects/playlab/I_8rcKtpLFRAn8flROC15Oc-KnDu-bkKBnSORoIDs0o/view) |
           | ¡Intenta añadir sonidos a este juego! | ¡Intenta añadir otra escena a esta historia! |
       BigEvent-Unplugged:
-        markdown: "# El Gran Evento \n\nEn ciencias de la computación, eventos son
-          acciones que un computador monitorea. En esta lección usted reaccionará
-          de manera diferente dependiendo cuál botón esta presionado.\n"
+        markdown: "# El Gran Evento \n\nEn ciencias de la computación, los eventos
+          son acciones que una computadora monitorea. En esta lección, tú reaccionarás
+          de manera diferente dependiendo qué botón estés presionado.\n"
       BigEvent-Unplugged_2020:
-        markdown: "# El Gran Evento \n\nEn ciencias de la computación, eventos son
-          acciones que un computador monitorea. En esta lección usted reaccionará
-          de manera diferente dependiendo cuál botón esta presionado.\n"
+        markdown: "# El Gran Evento \n\nEn ciencias de la computación, los eventos
+          son acciones que una computadora monitorea. En esta lección, tú reaccionarás
+          de manera diferente dependiendo qué botón estés presionado.\n"
       Building a UI with Design Mode:
         markdown: |
           # Bienvenidos al modo de diseño de Laboratorio de aplicaciones
@@ -6922,13 +6922,13 @@ es-MX:
         answers:
         - text: '4'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         - text: '12'
           correct: true
           feedback: "¡Correcto!"
         - text: '15'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         - text: No lo sé.
           feedback: El granjero recogerá 4 calabazas en cada uno de los 3 loops. ¡4
             veces 3 es 12!
@@ -6939,13 +6939,13 @@ es-MX:
         answers:
         - text: '4'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         - text: '12'
           correct: true
           feedback: "¡Correcto!"
         - text: '15'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         - text: No lo sé.
           feedback: El granjero recogerá 4 calabazas en cada uno de los 3 loops. ¡4
             veces 3 es 12!
@@ -6956,13 +6956,13 @@ es-MX:
         answers:
         - text: '4'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         - text: '12'
           correct: true
           feedback: "¡Correcto!"
         - text: '15'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         - text: No lo sé.
           feedback: El granjero recogerá 4 calabazas en cada uno de los 3 loops. ¡4
             veces 3 es 12!
@@ -6973,13 +6973,13 @@ es-MX:
         answers:
         - text: '4'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         - text: '12'
           correct: true
           feedback: "¡Correcto!"
         - text: '15'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         - text: No lo sé.
           feedback: El granjero recogerá 4 calabazas en cada uno de los 3 loops. ¡4
             veces 3 es 12!
@@ -7042,7 +7042,7 @@ es-MX:
         - text: Scrat llegará a la bellota. No hay errores en el código.
           feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota.
-        - text: Scrat no llegará a la bellota porque gira en sentido equivocado.
+        - text: Scrat no llegará a la bellota porque gira en la dirección equivocada.
           correct: true
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
@@ -7060,15 +7060,15 @@ es-MX:
             problema?
       courseC_multi_maze_programming8_predict1:
         answers:
-        - text: El pájaro quedará a un paso del cerdo.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+        - text: El pájaro se quedará a un paso atras del cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         - text: No lo sé.
           feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
         questions:
@@ -7076,15 +7076,15 @@ es-MX:
             en "Ejecutar"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
-        - text: El pájaro quedará a un paso del cerdo.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+        - text: El pájaro se quedará a un paso atras del cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         - text: No lo sé.
           feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
         questions:
@@ -7092,15 +7092,15 @@ es-MX:
             en "Ejecutar"?
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
-        - text: El pájaro quedará a un paso del cerdo.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+        - text: El pájaro se quedará a un paso atras del cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         - text: No lo sé.
           feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
         questions:
@@ -7108,15 +7108,15 @@ es-MX:
             en "Ejecutar"?
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
-        - text: El pájaro quedará a un paso del cerdo.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+        - text: El pájaro se quedará a un paso atras del cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
-          feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
-            el cerdo.
+          feedback: Incorrecto. Este código lleva al pájaro perfectamente hasta el
+            cerdo.
         - text: No lo sé.
           feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
         questions:
@@ -7125,9 +7125,9 @@ es-MX:
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 no se moverá.
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
@@ -7138,9 +7138,9 @@ es-MX:
       courseC_multi_starWars_predict1_2018:
         answers:
         - text: BB-8 no se moverá.
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
@@ -7151,9 +7151,9 @@ es-MX:
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 no se moverá.
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
@@ -7164,9 +7164,9 @@ es-MX:
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 no se moverá.
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
-          feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
+          feedback: Incorrecto. El bloque "repetir" hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
@@ -7176,16 +7176,16 @@ es-MX:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict2:
         answers:
-        - text: BB-8 irá demasiado lejos en el primer bucle.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
-        - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
-            recoger toda la chatarra.
+        - text: BB-8 llegará demasiado lejos en el primer bucle (loop).
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
+        - text: BB-8 no irá lo suficientemente lejos en el primer bucle (loop) para
+            poder recoger toda la chatarra.
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
         - text: No lo sé.
           feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
@@ -7194,16 +7194,16 @@ es-MX:
             clic en "Ejecutar"?
       courseC_multi_starWars_predict2_2018:
         answers:
-        - text: BB-8 irá demasiado lejos en el primer bucle.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
-        - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
-            recoger toda la chatarra.
+        - text: BB-8 llegará demasiado lejos en el primer bucle (loop).
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
+        - text: BB-8 no irá lo suficientemente lejos en el primer bucle (loop) para
+            poder recoger toda la chatarra.
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
         - text: No lo sé.
           feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
@@ -7212,16 +7212,16 @@ es-MX:
             clic en "Ejecutar"?
       courseC_multi_starWars_predict2_2018_2019:
         answers:
-        - text: BB-8 irá demasiado lejos en el primer bucle.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
-        - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
-            recoger toda la chatarra.
+        - text: BB-8 llegará demasiado lejos en el primer bucle (loop).
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
+        - text: BB-8 no irá lo suficientemente lejos en el primer bucle (loop) para
+            poder recoger toda la chatarra.
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
         - text: No lo sé.
           feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
@@ -7230,16 +7230,16 @@ es-MX:
             clic en "Ejecutar"?
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
-        - text: BB-8 irá demasiado lejos en el primer bucle.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
-        - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
-            recoger toda la chatarra.
+        - text: BB-8 llegará demasiado lejos en el primer bucle (loop).
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
+        - text: BB-8 no irá lo suficientemente lejos en el primer bucle (loop) para
+            poder recoger toda la chatarra.
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
-          feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
-            cuando necesita avanzar 3 espacios.
+          feedback: Incorrecto. El primer bucle (loop) sólo le permite a BB-8 avanzar
+            2 espacios, cuando necesita avanzar 3 espacios.
         - text: No lo sé.
           feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
@@ -9220,14 +9220,14 @@ es-MX:
       csf_putting_a_stop_to_online_meanness:
         content1: descripción aquí
         markdown: |-
-          # STOP a la maldad
+          # Para el Maltrato
 
-          ## ¿Qué debes hacer si alguien no se porta bien contigo en Internet?
+          ## ¿Qué deberías hacer si alguien comportarse mal contigo en línea?
 
-          * Aléjate.
-          * Habla con un adulto de confianza.
-          * Sitios seguros primero.
-          * Haz una pausa y piensa en Internet.
+          * **P**ara y vete.
+          * **A**hora dile a un adulto confiable.
+          * **R**ecuerda sitios seguros primero.
+          * **A**l hacer una pausa, piensa.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       grade2_multi_collector_A_predict1:
@@ -9235,7 +9235,7 @@ es-MX:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
-        - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
+        - text: Laurel intentará recoger el tesoro donde no lo hay y eso provoca un
             error.
           correct: true
           feedback: "¡Correcto!"
@@ -9254,7 +9254,7 @@ es-MX:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
-        - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
+        - text: Laurel intentará recoger el tesoro donde no lo hay y eso provoca un
             error.
           correct: true
           feedback: "¡Correcto!"
@@ -9272,7 +9272,7 @@ es-MX:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
-        - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
+        - text: Laurel intentará recoger el tesoro donde no lo hay y eso provoca un
             error.
           correct: true
           feedback: "¡Correcto!"
@@ -9290,7 +9290,7 @@ es-MX:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
-        - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
+        - text: Laurel intentará recoger el tesoro donde no lo hay y eso provoca un
             error.
           correct: true
           feedback: "¡Correcto!"
@@ -9312,7 +9312,7 @@ es-MX:
         markdown: |-
           # Sigue el Rastro Digital
 
-          ## ¿Qué información es buena para obtener en tu huellas digitales?
+          ## ¿Qué información está bien para tenerla en tu huella digital?
       csf_safety_in_my_online_neighborhood:
         markdown: |-
           # Mi Barrio en Línea
@@ -10143,12 +10143,12 @@ es-MX:
         markdown: |-
           # Mis amigos robóticos de Loopy
 
-          ¡Haz tus programas más cortos usando bucles!
+          ¡Haz tus programas más cortos usando bucles (loops)!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |-
           # Mis amigos robóticos de Loopy
 
-          ¡Haz tus programas más cortos usando bucles!
+          ¡Haz tus programas más cortos usando bucles (loops)!
       MyRoboticFriends-Unplugged:
         markdown: |-
           # Mis Amigos Robóticos
@@ -10405,12 +10405,12 @@ es-MX:
           Poniendo información sobre ti en línea, crea una huella digital.
       GettingLoopy-Unplugged:
         markdown: |-
-          # Haciendo un Loopy
+          # Cómo hacerse Loopy
 
           Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
       GettingLoopy-Unplugged_2020:
         markdown: |-
-          # Haciendo un Loopy
+          # Cómo hacerse Loopy
 
           Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
       MoveItMoveIt-Unplugged:
@@ -10425,14 +10425,14 @@ es-MX:
           Utiliza un mapa y da órdenes para llegar a la meta.
       TheRightAppMarkdownLevel_2019:
         markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
-          ordenadores, especialmente los smartphones. \n* Las aplicaciones para teléfonos
+          computadoras, especialmente los smartphones. \n* Las aplicaciones para teléfonos
           inteligentes ayudan a la gente a hacer cosas como hablar con los amigos,
           escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
           que los programadores entiendan las necesidades de los demás y diseñen las
           aplicaciones pensando en ellas!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
       TheRightAppMarkdownLevel_2019_2020:
         markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
-          ordenadores, especialmente los smartphones. \n* Las aplicaciones para teléfonos
+          computadoras, especialmente los smartphones. \n* Las aplicaciones para teléfonos
           inteligentes ayudan a la gente a hacer cosas como hablar con los amigos,
           escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
           que los programadores entiendan las necesidades de los demás y diseñen las
@@ -10592,7 +10592,7 @@ es-MX:
           Sabemos que loop nos permite hacer cosas una y otra vez, pero ahora vamos a aprender cómo usar loop con estructuras extras ya construidos.
       GettingLoopy-Unplugged_2021:
         markdown: |-
-          # Haciendo un Loopy
+          # Cómo hacerse Loopy
 
           Esta lección introduce el concepto de programación de los bucles a través de una actividad de baile.
       GraphPaperProgramming-Unplugged_2021:
@@ -10619,7 +10619,7 @@ es-MX:
         markdown: |-
           # Mis amigos robóticos de Loopy
 
-          ¡Haz tus programas más cortos usando bucles!
+          ¡Haz tus programas más cortos usando bucles (loops)!
       MyRoboticFriends-Unplugged_2021:
         markdown: |-
           # Mis Amigos Robóticos
@@ -10678,27 +10678,6 @@ es-MX:
           <a href=\"http://support.code.org\" target=\"blank\"><button class=\"plc\">Obtener
           ayuda>></button></a>\n\nDespués de comentar en el foro, regresa aquí y haz
           clic a continuación para pasar a la siguiente etapa.\n"
-      OPD-K5 CS Courses_dani:
-        markdown: |+
-          # Planificación > Comenzar en Code.org
-
-
-          ## Paso 1: Elige un curso
-          Todos nuestros cursos, desde prelectores hasta estudiantes de secundaria, figuran en nuestro **[catálogo de cursos] (https://studio.code.org/courses)**. Para encontrar las lecciones de Fundamentos de las Ciencias de la Computación con las que has estado practicando, ve a nuestra ** [página primaria] (https://code.org/educate/curriculum/elementary-school)** y ve a la sección "Cursos". Todos nuestros cursos están disponibles sin costo. Chatea con colegas de tu escuela para determinar cómo se puede integrar el plan de estudios del curso con una variedad de materias.
-          ![](https://images.code.org/37dd42348eba605513fd0b1f17d1409c-image-1549066063927.png)
-          ***
-          ## Paso 2: Configura la sección de tu clase
-          Configura una sección en el aula para ver el progreso de tu estudiante, imprime tarjetas de inicio de sesión para tus estudiantes, administra tus cuentas e imprime certificados que pueden llevar a casa cuando terminen el curso. Haz clic en este enlace para **[ver un breve video](https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)** que demuestra cómo configurar tu primera clase de informática en Code.org. También puedes encontrar los pasos en **[este artículo de soporte](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section)**.
-          ![](https://images.code.org/26b023ea019f33492aebea43eb6a1dfe-image-1549065670221.png)
-          ***
-          ## Paso 3: Asigna el curso a tu sección
-          Haz clic en el curso que estás enseñando; deberías ver una pantalla que se parece a la siguiente. Luego puedes hacer clic en "Asignar curso" y asignar ese curso a una de tus secciones.
-          ![](https://images.code.org/3b81aa7989d237447e525f42646412d4-image-1549065690577.png)
-          ***
-          ## Paso 4: ¡Comienza a enseñar!
-          Lo único que necesitas es una lección para llevar los conceptos informáticos a tu salón de clases. Una vez que veas el entusiasmo de tus estudiantes por las Ciencias de la Computación, ve más allá con planes de lecciones diarias para guiar a tus estudiantes, actividades desconectadas que puedes hacer sin una computadora y foros para conectarte con otros profesores.
-
-
       OPD-K5 CS Tips_dani:
         markdown: |
           # Primeros pasos > Navegar este curso en línea
@@ -11296,42 +11275,6 @@ es-MX:
           > **Qué esperar en esta etapa:** En los niveles que siguen, presentaremos una lección desconectada y una serie de desafíos del Curso C (destinados al Grado 2) que se centran en el concepto de bucles. Para completar un desafío, necesitarás escribir código usando programación visual basada en bloques. Cerraremos con la oportunidad de reflexionar. Debes pasar entre 20 y 45 minutos en esta etapa.
 
           ¿Listo? ¡Vamos!
-      OPD-K5 Stage5Go_dani:
-        markdown: |
-          # Condicionales > Lecciones desconectadas
-
-          ** 1. Revisa "[Condicionales con tarjetas](https://curriculum.code.org/csf-18/coursed/13/)" Plan de lección del Curso D:**
-          <br/>
-          El curso D está destinado a estudiantes de grado 3. Esta misma lección también aparece en el curso E y el curso F. Los condicionales no están cubiertos en los cursos A, B o C.
-          <br/><br/>
-
-          **2. Mira el video del estudiante: condicionales con tarjetas**
-          <br/>
-          Este es un video que les mostrarías a tus alumnos para ayudarles a introducir el concepto de condicionales y comenzar la lección desconectada.
-          [![](https://images.code.org/3e6b0d2fc5a0beb4e6211d0571d190d3-image-1571253527382.18.41 PM.png)](https://www.youtube.com/watch?v=UymN4lTL50s)
-          <br/>
-          [¿No puedes ver el video? Haz clic aquí](http://videos.code.org/2014/C2-conditionals-with-cards.mp4)
-
-          <br/><br/>
-          ** 3. Mira a un profesor modelar esta lección: "Condicionales con tarjetas"**
-          <br/>
-          Este video está destinado a ser un apoyo para ti como profesor, si estás buscando consejos sobre cómo ejecutar esta lección.
-
-
-          [![](https://images.code.org/3899707f84b1f69360c98f73c5a9c640-image-1571253595879.19.37 PM.png)](https://www.youtube/watch?v=2m2Rn9VxHfU)
-
-          [¿No puedes ver el video? Haga clic aquí](https://videos.code.org/levelbuilder/unplugged-lessoninaction-conditionalswithcards-mp4.mp4)
-
-          <br/><br/>
-
-          ---
-
-          > ## Reflexionar
-          > ¿Cómo explicarías el concepto de condicionales a tus alumnos? Comparte tus pensamientos en [nuestro foro](http://forum.code.org/t/teaching-conditionals/406/1).
-
-          > <a href="http://forum.code.org/t/teaching-conditionals/406/1" target="blank"><button class="plc">Debatir en el foro>></button></a>
-
-          Después de comentar en el foro, regresa aquí y haz clic a continuación para pasar a la siguiente etapa.
       OPD-K5 Stage5Review_dani:
         markdown: |
           # Condicionales> Reflexionar
@@ -11547,51 +11490,6 @@ es-MX:
           - Reflexionar sobre tu aprendizaje
           - Planificar los próximos pasos que puedes seguir para continuar tu aprendizaje
           - Conectarte con una comunidad global de educadores interesados ​​en la educación en informática
-      OPD-K5 Stage9Start_dani:
-        markdown: "# Planificación > Exploración de recursos para docentes\n\nA lo
-          largo de las etapas 4-8, echaste un vistazo a algunos de los recursos de
-          aprendizaje \"desconectados\" y en línea disponibles para Fundamentos de
-          las Ciencias de la Computación, ya que se alinearon con los conceptos de
-          informática que estabas aprendiendo.\n\nAhora que tienes una idea sobre
-          cómo codificar, igual que sobre cómo enseñar ciencias de la computación,
-          es hora de comenzar a planificar tu instrucción. En esta etapa, recorreremos
-          otras áreas de la plataforma Code.org y el ** [Panel del profesor](http://studio.code.org/)**.
-          \n\nAl completar la Etapa 10, podrás:\n\n- Explorar los recursos disponibles
-          para los profesores\n- Explorar Code.org ** [Panel del profesor] ​​(http://studio.code.org/)
-          **\n- Planificar cómo podrías integrar la informática en tu práctica\n\n***\n\nA
-          continuación se muestra una captura de pantalla del Panel del profesor.
-          Deberás iniciar sesión en tu cuenta de profesor de Code.org para verla:
-          una vez que hayas iniciado sesión, debería aparecer la pantalla predeterminada
-          que ves en el sitio web de Code.org. Si no tienes una cuenta de profesor,
-          puedes** [registrarte para obtener una aquí](https://studio.code.org/users/sign_up)**.\n\n![](https://images.code.org/d6345709495f764a71d9cb0994dbd7e4-image-1549064603589.png)\n"
-      OPD-K5 Using CS_dani:
-        markdown: "# Planificación > Preparación para una lección de Code Studio\n\nEchemos
-          un vistazo a cómo funciona Code Studio para ti y tus alumnos en un aula.\n\n##
-          Paso 1: Elige un curso\nConsulta nuestra [página de la escuela primaria]
-          (https://code.org/educate/curriculum/elementary-school) y encuentra los
-          planes de lecciones y los cursos completos para nuestras lecciones A-F de
-          los Fundamentos de las Ciencias de la Computación. O, si estás interesado
-          en nuestros cursos de secundaria o preparatoria, encontrarás cursos para
-          todos los niveles de grado, desde prelectores hasta personas de la tercera
-          edad en la escuela secundaria y todos los demás. Todos nuestros cursos están
-          disponibles sin costo. Chatea con colegas de tu escuela para determinar
-          cómo se puede integrar el plan de estudios del curso con una variedad de
-          materias.\n \n## Paso 2: Configura la sección de tu clase\nConfigura una
-          sección en el aula para ver el progreso de tu estudiante, imprime tarjetas
-          de inicio de sesión para tus estudiantes, administra tus cuentas e imprime
-          certificados que pueden llevar a casa cuando terminen el curso. Haz clic
-          en este enlace para [ver un breve video] (https://code.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=56d32934-3f67-48db-98db-e66e9152df7b)
-          que muestra cómo configurar tu primera clase de informática en Code.org.
-          También puedes encontrar los pasos en [este artículo de soporte](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\n##
-          Paso 3: Asigna el curso a tu sección\nHaz clic en el curso que estás enseñando;
-          deberías ver una pantalla que se parece a la siguiente. Luego puedes hacer
-          clic en \"Asignar curso\" y asignar ese curso a una de tus secciones.\n\n##
-          Paso 4: ¡Comienza a enseñar!\nLo único que necesitas es una lección para
-          llevar los conceptos informáticos a tu salón de clases. Una vez que veas
-          el entusiasmo de tus estudiantes por las Ciencias de la Computación, ve
-          más allá con planes de lecciones diarias para guiar a tus estudiantes, actividades
-          desconectadas que puedes hacer sin una computadora y foros para conectarte
-          con otros profesores.\n\n\n\n"
       OPD-K5 Vocabulary_dani:
         markdown: |
           # Fundamentos de la Ciencia de la Computación> Vocabulario clave
@@ -11745,7 +11643,7 @@ es-MX:
           Utiliza el concepto de estribillo en una canción para aprender a definir y llamar a las funciones.
       TheRightAppMarkdownLevel_2021:
         markdown: "# La aplicación correcta\n\n* Hoy en día todo el mundo utiliza
-          ordenadores, especialmente los smartphones. \n* Las aplicaciones para teléfonos
+          computadoras, especialmente los smartphones. \n* Las aplicaciones para teléfonos
           inteligentes ayudan a la gente a hacer cosas como hablar con los amigos,
           escuchar música, comprar o simplemente navegar por la web.\n* ¡Es importante
           que los programadores entiendan las necesidades de los demás y diseñen las
@@ -11774,16 +11672,16 @@ es-MX:
         answers:
         - text: '4'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         - text: '12'
           correct: true
           feedback: "¡Correcto!"
         - text: '15'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         - text: '20'
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
-            3 loops. 4 veces 3 es 12!
+            3 bucles (loops). 4 veces 3 es 12!
         questions:
         - text: Mira el siguiente código con atención. ¿Cuántas calabazas recogerá
             la granjera luego de que hagas clic en "Ejecutar"?
@@ -12234,10 +12132,10 @@ es-MX:
           propios proyectos como estos... ¡y más!"
         display_name: Aplicaciones del Laboratorio de Sprite
         teacher_markdown: |
-          # Visión General de los Niveles de Elección
-          Los niveles de elección proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles aquí, pero pueden trabajar a través de tantos como ellos (o usted) quieran.
+          # Visión General de los Niveles Disponibles
+          Los niveles disponibles proporcionan un menú de niveles adicionales para que los alumnos los completen. Los alumnos deben completar al menos uno de los subniveles, pero pueden realizar tantos como ellos (o usted) quieran.
 
-          Las opciones aquí llevan a los alumnos a aplicaciones de muestra que pueden explorar. Esta actividad está pensada para coordinarse con la hoja de trabajo Explorando Aplicaciones, que se encuentra en el [plan de la lección] (.././).
+          Estas opciones llevan a los alumnos a aplicaciones que pueden explorar. Esta actividad está pensada para coordinarse con la hoja de trabajo Explorando Aplicaciones, que se encuentra en el [plan de la lección] (.././).
       courseF_labels_predict_multi:
         answers:
         - text: '"¡Una pizza marchando!"'
@@ -12420,7 +12318,7 @@ es-MX:
         markdown: |-
           # Sigue el Rastro Digital
 
-          ## ¿Qué información es buena para obtener en tu huellas digitales?
+          ## ¿Qué información está bien para tenerla en tu huella digital?
       csf_password_power-up_2021:
         content1: descripción aquí
         markdown: |-
@@ -12438,21 +12336,21 @@ es-MX:
       csf_putting_a_stop_to_online_meanness_2021:
         content1: descripción aquí
         markdown: |-
-          # STOP a la maldad
+          # Para el Maltrato
 
-          ## ¿Qué debes hacer si alguien no se porta bien contigo en Internet?
+          ## ¿Qué deberías hacer si alguien comportarse mal contigo en línea?
 
-          * Aléjate.
-          * Habla con un adulto de confianza.
-          * Sitios seguros primero.
-          * Haz una pausa y piensa en Internet.
+          * **P**ara y vete.
+          * **A**hora dile a un adulto confiable.
+          * **R**ecuerda sitios seguros primero.
+          * **A**l hacer una pausa, piensa.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_safety_in_my_online_neighborhood_2021:
         markdown: |-
-          # Mi Barrio en Línea
+          # Mi vecindario en Línea
 
-          ## ¿Cómo navegas en la Red sin riesgo?
+          ## ¿Cómo visitas lugares en línea de manera segura?
       express_EOC_2021:
         description: "¡Has llegado al final del Curso E! Elige un proyecto para crear."
         display_name: Proyecto de fin de curso
@@ -12478,3 +12376,396 @@ es-MX:
         questions:
         - text: Observa este código cuidadosamente. ¿Qué crees que ocurrirá cuando
             ejecutes el programa?
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Propiedades de Sprite
+      CSD Games variables practice_2021:
+        display_name: Variables Practicar
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Mira el código a continuación y predice cómo se mostrarán los títulos.
+          Elige entre una de las opciones de la derecha.
+        markdown: |-
+          <pre>
+          &lt;h3&gt; Huevos &lt;/h3&gt;
+          &lt;h1&gt; Tocino &lt;/h1&gt;
+          &lt;h6&gt; Gofres &lt;/h6&gt;
+          </pre>
+        teacher_markdown: |
+          <img src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screen-Shot-2017-04-27-at-10.38.03-AM.png" style="width:200px; float:right">
+
+          **Tipos de niveles: Esta pregunta de opción múltiple pide a los alumnos que elijan cómo se mostrarán los encabezados HTML en una página web. Puede ver qué alumnos han respondido correctamente a la pregunta yendo a ese nivel y sacando el Panel del Profesor de la parte derecha.  Los alumnos que hayan respondido correctamente a la pregunta tendrán un punto verde.  Los alumnos tienen tantas oportunidades como quieran para responder correctamente, por lo que adivinar y comprobar también puede conducir a una respuesta correcta.
+
+          <div class="clear"></div>
+        title: Verificación rápida de títulos
+      CSD Interactive Animations and Games Post-Project Test_pilot_2021:
+        title: 'Animaciones y Juegos Interactivos: Prueba Fin de Proyecto'
+      CSD Physical Computing Post-Project Test_2021:
+        title: Prueba Fin de Curso de Computación Física
+      CSD U1 Test_2021:
+        title: 'Prueba Fin de Proyecto: Ordenadores y Resolución de Problemas '
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Estilos de texto con CSS
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Añadiendo los Imágenes
+      CSD U2 Image practice_pilot_2021:
+        display_name: Añadiendo los Imágenes
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - text: <img src="https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01
+            PM.png">
+        - text: <img src="https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47
+            PM.png">
+        - text: <img src="https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40
+            PM.png">
+        - text: <img src="https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24
+            PM.png">
+        content1: Haz coincidir el código HTML con errores con la descripción de su
+          error.
+        questions:
+        - text: El atributo `src` está mal escrito.
+        - text: Los atributos `src` y `alt` están cambiados
+        - text: La dirección de la imagen no incluye la extensión de archivo (.jpg)
+        - text: La dirección de la imagen no se da como un atributo `src`
+        - text: Hay un espacio en el nombre del archivo
+        teacher_markdown: 'Aunque este nivel puede utilizarse para evaluar la comprensión
+          por parte de los alumnos de la sintaxis de la etiqueta `<img>`, su objetivo
+          principal es que los alumnos conozcan los tipos de errores más comunes que
+          pueden encontrar al añadir imágenes a las páginas web.
+
+'
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: descripción aquí
+        teacher_markdown: |-
+          # Punto de control de la planificación
+
+          Revise los planes de los alumnos antes de permitirles continuar en el resto de los niveles.
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - text: perro.rotacion &lt; gato.rotacion
+        - text: perro.x &lt; gato.x
+        - text: perro.escala &gt; gato.escala
+        - text: perro.x &gt; gato.x
+        - text: perro.x == gato.x
+        content1: Haz coincidir la expresión booleana con la descripción en español.
+        questions:
+        - text: "¿La rotación del sprite del perro es menor a la rotación del sprite
+            del gato?"
+        - text: "¿La x del sprite del perro es menor a la x del sprite del gato?"
+        - text: "¿La escala del sprite del perro es menor a la escala del sprite del
+            gato?"
+        - text: "¿La x del sprite del perro es mayor a la x del sprite del gato?"
+        - text: "¿La x del sprite del perro es igual a la x del sprite del gato?"
+        title: 'Coincidencia: operadores de comparación'
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - text: verdadero<br>falso<br>verdadero
+          correct: true
+        - text: "  0<br>200<br>100"
+        - text: "  verdadero<br>error<br>verdadero"
+        - text: "  falso<br>verdadero<br>falso"
+        questions:
+        - text: "¿Qué resultado se imprimirá en la consola con este programa?"
+        title: Título
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: descripción aquí
+        markdown: |-
+          # Tu tarjeta interactiva
+
+          En los próximos niveles, completarás tu propia tarjeta interactiva.  Aquí tienes algunos ejemplos para darte algunas ideas.  No olvides mirar el código para ver cómo funcionan.
+
+          ## Ejemplos
+
+          [![](https://images.code.org/7bbdbbb01c354a7c09bb4b9b5182a951-image-1522780803299.png)](https://studio.code.org/projects/gamelab/OzdFqrZ4oHPYsTddaRWaZxtTvdj9NzZVwCq6NkyONXM/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ed307e22854e4958a006d8023636cfd5-image-1522780803295. png)](https://studio.code.org/projects/gamelab/fmFrWsocELzP19CfbGI5P_hsgxN5ewVaB5f0Bw5S1_E/edit)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![](https://images.code.org/ae0eca1dab46f13fcb21d4d0e264d637-image-1522780803298.png)](https://studio.code.org/projects/gamelab/z4XDrC0lsqoRY0xzYaXdJfChmyCl5O6YM-EOByecscc/edit)
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - text: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones
+            después de que se crean.
+          feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
+            es una buena idea agruparlas en la parte inferior para que estén organizadas!
+        - text: Se dibujará el cuadrado verde, pero no el rojo. No puedes llamar funciones
+            antes de que sean creadas.
+          feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
+            es una buena idea agruparlas en la parte inferior para que estén organizadas!
+        - text: Se dibujarán ambos cuadrados. Puedes crear funciones en cualquier
+            parte de tu código.
+          correct: true
+          feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
+            es una buena idea agruparlas en la parte inferior para que estén organizadas!
+        - text: No se dibujará ningún cuadrado. Hay un error en el código.
+          feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
+            es una buena idea agruparlas en la parte inferior para que estén organizadas!
+        markdown: |-
+          # ¿Importa dónde se crean las funciones?
+
+          Hasta ahora todas tus funciones han sido creadas en la parte inferior de tu código. ¿Qué crees que pasará si llamas a una función antes de que esté definida?
+
+          Observa que el cuadrado rojo se dibuja **antes** de que se cree su función mientras que el cuadrado verde se dibuja **después** de que se cree su función. ¿Cuál de ellos crees que se dibujará?
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
+            style='border: 1px solid #ccc'>"
+        - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
+            style='border: 1px solid #ccc'>"
+          correct: true
+        - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
+            style='border: 1px solid #ccc'>"
+        questions:
+        - text: Lee este programa y predice cuál de las siguientes animaciones se
+            producirá.
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - text: <img width="300px" src="https://images.code.org/131282b44fe34cd619a9a21bc68888da-image-1523902103487.58.48
+            AM.png">
+        - text: <img src="https://images.code.org/2fbe4029dc47f6f048e7c9f90ac99cac-image-1523902103485.25.09
+            AM.png">
+        - text: <img src="https://images.code.org/c4cb49e00f7087765865da87cff37549-image-1523902103477.58.00
+            AM.png">
+        - text: <img src="https://images.code.org/7465035fc6701dcb91731fe9d160b638-image-1523902103481.58.28
+            AM.png">
+        content1: Haz coincidir el código con la imagen que genera.
+        questions:
+        - text: <img src="https://images.code.org/cd11d762b2cb3e36c3d45157b965c968-image-1523901253224.59.08
+            AM.png">
+        - text: <img src="https://images.code.org/653dff2d49f07341b2f2552747212b34-image-1523901253222.59.21
+            AM.png">
+        - text: <img src="https://images.code.org/db71e0cde6861faabc0b5a55d67c739e-image-1523901253227.58.12
+            AM.png">
+        - text: <img src="https://images.code.org/15d6014329fa3da9b73016af9f1d0d74-image-1523901253226.58.34
+            AM.png">
+        title: dibujarSprites
+      CSD U3 drawing practice choice_2021:
+        display_name: Practica
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: descripción aquí
+        markdown: |-
+          # Crea tu propio juego
+
+          Ahora que tienes todas las habilidades que necesitas, ¡es el momento de crear tu propio juego!
+
+          Con un compañero, haz una lluvia de ideas para tu juego.  Puedes pensar en los juegos que ya has visto, o mirar algunos juegos más de ejemplo para darte ideas.
+
+          [<img src="https://images.code.org/fc2d4cdba80a476b1ff476081991031e-image-1498594631779.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/AwDcX5nehOApfzyywI6BOLT1xbf0MIV1dUj8KjQaNtA)
+
+          [<img src="https://images.code.org/b89895bdd43be4b729ca9165fc2923cf-image-1498595512898.28.24 PM.png" style="width: 200px; float: left; margin: 10px;">](https://studio.code.org/projects/gamelab/r9OYVTSj2od8vaCA-nKikTVpx-2Co8qHhuZiBIu30JA)
+
+          [<img src="https://images.code.org/d430061caab264330da0227b53e2db90-image-1498595505047.27.59 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/hAz7RSdqc0c_MSQVUpvz1XrLDr8QLsansWDVI0ZberQ)
+
+          [<img src="https://images.code.org/c9fb241c5684e10d9ba2b85d4d4a906b-image-1498764384615.25.58 PM.png" style="width: 200px; margin: 10px;">](https://studio.code.org/projects/gamelab/DmRPNYR3n7bMO--_KkP7r6mOoGynBVyi3BMVPWDiVeI)
+
+          Una vez que hayas acordado un tipo de juego con tu compañero, rellena la Guía del Proyecto con los fondos, variables, sprites y funciones que necesitarás para hacer el juego.  Pasarás los siguientes niveles creando tu juego.
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: descripción aquí
+      CSD U5 test_2021:
+        title: Datos y Sociedad Prueba Fin de Proyecto
+      CSD U6 LED create intro_2021:
+        content1: descripción aquí
+        markdown: |-
+          # Aplicaciones para LED
+
+          En el último nivel, hiciste una aplicación para controlar el LED con diferentes botones en la pantalla.   En los próximos dos niveles, verás otros ejemplos de aplicaciones y luego tendrás la oportunidad de crear una propia.
+
+          Mientras miras los ejemplos, piensa en qué código podría ser útil para la app que tú y tu compañero queréis crear.
+      CSD U6 array multi_2021:
+        answers:
+        - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
+            PM.png" width="200px" />
+        - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
+            PM.png" width="200px"
+          correct: true
+        markdown: "![](https://images.code.org/134a993836c148f64a7045d489ec58dc-image-1512686800350.45.08
+          PM.png)"
+        questions:
+        - text: "¿Qué mostrará el Laboratorio de aplicaciones cuando se ejecute el
+            código de la izquierda?"
+        title: Uso de arreglos
+      CSD U6 circuit smart bike blinker build_2021:
+        markdown: |-
+          # Construye tus intermitentes
+
+          Utilizando el circuito que acabas de construir, vuelve a tu prototipo de bicicleta inteligente y añade los intermitentes.
+      CSD U6 final intro_2021:
+        content1: descripción aquí
+        markdown: |-
+          # Prototipo de tu propia creación
+
+          Ahora que tienes todas las habilidades que necesitas, ¡es el momento de crear tu propio juego!
+
+          Con un compañero o un equipo, haz un derroche de ideas sobre diferentes dispositivos físicos de los que podrías hacer prototipo. Podéis basaros en los programas que ya habéis hecho en lecciones anteriores, en dispositivos innovadores que hayáis visto en el mundo real o en cualquier idea descabellada que se os ocurra.
+
+          Una vez que hayas decidido una idea con tu equipo, rellena la Guía del Proyecto con los bocetos de los componentes físicos de tu dispositivo, las entradas y salidas que necesitarás y los planes sobre la información que tendrás que procesar.
+
+          ## Ideas de innovación
+
+          Para ayudarte a iniciar tu lluvia de ideas, echa un vistazo a estos proyectos de ejemplo:
+
+          ### Luz nocturna automática
+
+          Utilizando hilo conductor, LEDs y el sensor de luz, crea una pieza decorativa de arte mural que se convierta en una luz nocturna cuando se apaguen las luces. Ésta está diseñada para que parezca que las luciérnagas parpadean.
+
+          ![](https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)
+
+          ### Instrumento musical
+
+          Diseña un instrumento musical que pueda ser tocado como quieras, utilizando sensores o botones de entrada. En este caso hemos creado cinco nuevos botones utilizando cinta de cobre conductora, aunque también podrías utilizar papel de aluminio o cualquier otro material conductor.
+
+          ![](https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)
+
+          ### Bop-it
+
+          ¡Haz un juego! Este utiliza una matriz para almacenar los diferentes comandos, que se eligen al azar cada vez que sigues correctamente las instrucciones en pantalla.
+
+          ![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)
+      CSD U6 game project stop_2021:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
+            style="max-width: 100px;">'
+        - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
+            style="max-width: 100px;">'
+          correct: true
+        questions:
+        - text: Lee el código y predice cómo se verá esta aplicación cuando se ejecute.
+        title: Haz una predicción
+      CSD U6 tugowar stop_2021:
+        markdown: |-
+          # Parada
+
+          Antes de seguir adelante tendrás que mirar la Guía del Proyecto para este proyecto. Espera también las instrucciones de tu profesor.
+      CSD User Centered Design Post-Project Test_2021:
+        title: 'Diseño Centrado en el Usuario: Prueba Fin de Proyecto'
+      CSD Web Development Post-Project Test_pilot_2021:
+        title: Prueba Final del Proyecto Desarrollo Web
+      CSD games cake challenge choice_2021:
+        display_name: Desafíos
+      CSD games functions practice choice_2021:
+        display_name: Funciones Practicar
+      CSD games platform challenge choice_2021:
+        display_name: Desafíos
+      CSD web conditionals practice choice_2021:
+        display_name: Condicionales Practicar
+      CSD web draw loop practice choice_2021:
+        display_name: Practica
+      CSD web movement practice choice_2021:
+        display_name: Practica
+      CSD web text practice choice_2021:
+        display_name: Practica
+      CSDU6 Innovation_2021:
+        markdown: |+
+          #Investigación sobre la innovación
+
+          Elija uno de los siguientes temas para investigar. Querrá encontrar información sobre algunos de los dispositivos informáticos innovadores más recientes relacionados con su categoría.
+
+          ## Tecnología vestible
+          La tecnología vestible incluye cualquier forma de informática diseñada para ser llevada por el usuario, ya sea integrada en la ropa o como accesorio. Muchos wearables, como los podómetros inteligentes, se solapan en cierto modo con la salud y la seguridad, ya que el dispositivo es a la vez wearable _y_ pretende ayudar a mejorar la salud personal.
+
+          ## Salud y seguridad
+          Este tema tan amplio incluye tanto la tecnología de consumo (cosas que usted podría utilizar para mejorar su salud o seguridad) como la tecnología profesional (equipos que podría utilizar un médico u otro profesional).
+
+          ## Agricultura
+          Puede que la agricultura no sea un tema obvio, pero las innovaciones tecnológicas han tenido un gran impacto en la forma en que abordamos la agricultura. Esto incluye la incorporación de ordenadores a los equipos agrícolas existentes, el uso de sensores y robótica para controlar los cultivos y el análisis de datos para mejorar la eficiencia y la sostenibilidad.
+
+          ## Fabricación
+          Los avances en la creación rápida de prototipos, la robótica industrial y la automatización han tenido un gran impacto en la forma de producir bienes. Ya sea la tecnología que permite la fabricación asequible a pequeña escala (como las impresoras 3D y las cortadoras láser) o la integración de los ordenadores en el trabajo de las fábricas, hay muchas áreas interesantes que investigar aquí.
+
+          ## Arte y diseño
+          La intersección entre la expresión artística y la informática puede dar resultados impresionantes e inesperados. Aunque es menos probable encontrar productos comerciales relacionados con el arte y el diseño, sí que se puede encontrar una gran variedad de creaciones caseras que utilizan todo tipo de dispositivos informáticos de forma creativa y expresiva.
+
+          ## Casa inteligente
+          El sueño de una casa que entienda e incluso se anticipe a tus necesidades está más cerca que nunca. Tanto si se controlan explícitamente mediante comandos de voz como si se utilizan sensores para controlar y responder a las condiciones cambiantes, los dispositivos domésticos inteligentes se encargan de cualquier número de tareas mundanas o repetitivas en la casa.
+
+
+          # Consideraciones sobre la investigación
+
+          Cuando busques dispositivos sobre tu tema, ten en cuenta las siguientes consideraciones:
+
+          * Concéntrese en las soluciones basadas en hardware sobre los programas de software
+          * Céntrese en las innovaciones recientes por encima de las antiguas
+          * Sigue lo que te interesa
+
+          Además de los sitios recomendados para cada tema, considera la posibilidad de mirar hacia los distintos sitios web de financiación colectiva (como Kickstarter e Indiegogo) para ver los productos que aún no han salido al mercado.
+
+
+      Design a Screen for your App_2021:
+        markdown: |-
+          #Montaje de la aplicación
+
+          Ahora que tienes algo de práctica en el diseño de elementos en App Lab, puedes empezar a trabajar en el diseño de tu propia aplicación. Con tu grupo, divide las pantallas para que cada uno trabaje en una pantalla diferente.
+
+          Dado que vas a dividir el trabajo, deberás planearlo con antelación para decidir un aspecto común para tus páginas. Por ejemplo, querrás acordar cosas como:
+
+          * ¿Dónde van los botones de navegación?
+          * Qué colores se utilizarán para el fondo, el texto y los botones.
+          * ¿Cuál es el estilo y el diseño general?
+
+          # Espacio de nombres
+
+          En la siguiente lección combinarás todas las pantallas de los miembros de tu equipo en una sola aplicación. Para asegurarte de que los identificadores de una página no entran en conflicto con otra, tendrás que incluir un _espacio de nombres_ único para tu página. Esto será algo que añadirás al principio de cada id para que los ids de tus elementos no entren en conflicto con los de los demás cuando combines las pantallas de todos juntos. Tu espacio de nombres debe ser el identificador de tu pantalla con un guión bajo al final. Por ejemplo, si estás haciendo la página de inicio, puedes utilizar "home_" como su espacio de nombres - lo que lleva a identificadores como:
+
+          * "home_title"
+          * "home_loginButton"
+          * "home_logo"
+        teacher_markdown: |-
+          #### Espacio de nombres
+
+          Asegurarse de que todos los alumnos están creando identificadores únicos para todos los elementos y espaciando correctamente los nombres será de gran ayuda para evitar problemas en la siguiente lección, por lo que vale la pena ser riguroso en este aspecto. Puede proporcionar a los alumnos la Guía de Actividades de Diseño de Pantallas opcional para que lleven la cuenta de los identificadores de sus elementos.
+
+          #### Trabajando juntos, separados
+
+          Incluso más que en la actividad de creación de prototipos en papel, es fácil que los alumnos de esta lección olviden que deben tener en cuenta cómo sus elecciones afectan a su equipo. Fomente el debate activo entre los equipos mientras diseñan las pantallas para asegurarse de que todos están trabajando hacia un objetivo común.
+      csd-pre-survey-levelgroup_21_22:
+        title: Encuesta Pre-Curso al Estudiante sobre CS Descubrimientos
+      csd-pulse-check-survey-1-levelgroup U1Ch2_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019_pilot_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U3Ch2_2018_2019_pilot_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U4Ch1_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U4Ch2_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U5Ch1_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U5Ch2_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U6Ch1_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"
+      csd-pulse-check-survey-1-levelgroup U6Ch2_2021:
+        title: "¡Encuesta rápida de CS Discoveries!"

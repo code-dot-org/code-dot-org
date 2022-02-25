@@ -140,6 +140,9 @@ vi:
     vấn đề toàn cầu. Khoa học máy tính bao gồm nhiều lĩnh vực khác ngoài Lập Trình!
     Hãy cùng Code.org bước những bước đầu tiên trên con đường tìm hiểu thêm về AI
     thông qua chương trình đào tạo của chúng tôi nhé.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Giờ lập trình trực tiếp
   hoc_live_sign_up_title: Đăng ký Giờ lập trình trực tiếp
   hoc_live_learn_title: Học với Giờ lập trình trực tiếp
@@ -247,7 +250,7 @@ vi:
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Hãy thử khám phá <span class="highlight-word">Bữa
     Tiệc&nbsp;Khiêu Vũ!</span> mới
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Hỗ trợ dành cho phụ huynh và các thầy cô giáo
     để đối mặt với thực trạng đóng cửa trường học
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -614,7 +617,7 @@ vi:
     Tất cả các sự kiện đã đăng ký với địa chỉ hợp lệ có thể được xem trên <a href='%{events_url}'>
     trang sự kiện.</a>
   map_warning_markdown: Bạn có thể xem danh sách đầy đủ các sự kiện trên [trang sự
-    kiện](%{Events_url}).
+    kiện](%{events_url}).
   meta_tag_og_title: Sự kiện Giờ Mã đang đến gần
   meta_tag_og_description: Giờ Mã là một trào lưu toàn cầu tiếp cận hàng chục triệu
     học sinh, sinh viên trên 180+ quốc gia và có sẵn trong hơn 30 ngôn ngữ. Độ tuổi
@@ -1031,6 +1034,7 @@ vi:
   footer_menu_support: Hỗ trợ
   footer_menu_terms: Các điều khoản của Code.org
   footer_menu_privacy: Chính sách bảo mật của Code.org
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: GIỜ LẬP TRÌNH
   learn_banner_blurb: Hãy thử làm hướng dẫn một giờ được thiết kế cho mọi lứa tuổi
     trên 45 ngôn ngữ.  Tham gia vào hàng triệu sinh viên và giáo viên tại hơn 180

@@ -5074,12 +5074,26 @@ uk:
               display_name: Переходи
             csp_project:
               display_name: Проект
+            lessonGroup-5:
+              display_name: Опитування після закінчення курсу
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Алгоритми
+            lessonGroup-2:
+              display_name: Опитування після закінчення курсу
         csp7-2021:
           lesson_groups:
             csp_parameters_return_values:
               display_name: Параметри і значення, які повертаються
             csp_libraries:
               display_name: Бібліотеки
+            lessonGroup-3:
+              display_name: Опитування
+        csp8-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Опитування
         csp9-2021:
           lessons:
             Machine Learning and Bias:
@@ -5087,12 +5101,17 @@ uk:
           lesson_groups:
             csp_unit9_2020:
               display_name: 'Розділ 9: Дані'
+            lessonGroup-2:
+              display_name: Опитування
         csp10-2021:
           lessons:
             'Project: Innovation Simulation Part 6':
               description_student: Огляд уроку
             'Project: Innovation Simulation Part 7':
               description_student: Огляд уроку
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Опитування
         coursea-2021:
           description_audience: 'Вік: 4-7'
           lessons:
@@ -5717,11 +5736,37 @@ uk:
           lessons:
             lesson-4:
               name: Симулятор спалаху
+            For Loop Fun:
+              name: Ігри з циклами
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Година коду
           description_short: Внутрішній
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст
+        csf-2022-pilot:
+          lessons:
+            Introducing Sprite Lab:
+              name: Представляємо Лабораторію спрайтів
+            Sprites in Action:
+              name: Спрайт в Дії
+            'Mini-Project: Virtual Pet':
+              name: 'Міні-проект: Віртуальний вихованець'
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Спрайти
+            lessonGroup-3:
+              display_name: Змінні
+        csd6-pilot-2022:
+          lessons:
+            Arrays and Color LEDs:
+              name: Кольорові LEDи
+            Accelerometer:
+              name: Акселерометр
+            Functions with Parameters:
+              name: Функції
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -5731,6 +5776,323 @@ uk:
             lessonGroup-2:
               display_name: Зміст
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Щасливі карти
+            'Programming: Happy Maps':
+              name: Щасливі карти
+            Loops in Ice Age:
+              key: Петлі в Ice Age
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          description_audience: 'Вік: 4-7'
+        express-2022:
+          lessons:
+            Sprites in Action:
+              name: Спрайт в Дії
+            Dance Party:
+              name: Танцювальна вечірка
+            lesson-3:
+              name: Спрайт в Дії
+            lesson-1:
+              name: Танцювальна вечірка
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_sprites:
+              display_name: Спрайти
+            lessonGroup-9:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+            csf_functions:
+              display_name: Функції
+            csf_variables:
+              display_name: Змінні
+            csf_for_loops:
+              display_name: Цикли For
+          description_audience: 'Вік: 9-18'
+        csp1-2022:
+          lessons:
+            Binary Numbers:
+              name: Двійкові Числа
+              key: Двійкові Числа
+            Color Images:
+              name: Робота з кольорами зображень
+              key: Робота з кольорами зображень
+            Lossless Compression:
+              name: Стискання без втрат
+              key: Стискання без втрат
+            Intellectual Property:
+              name: Інтелектуальна власність
+              key: Інтелектуальна власність
+          lesson_groups:
+            cspSurvey:
+              display_name: Опитування
+            csp_unit1_2020:
+              display_name: 'Розділ 1: Цифрова інформація'
+        csp2-2022:
+          lessons:
+            Packets:
+              name: Пакет
+              key: Пакет
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: 'Розділ 2: Інтернет'
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Налагодження
+              key: Налагодження
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Змінні
+            csp_conditionals:
+              display_name: Умови
+            csp_functions:
+              display_name: Функції
+            csp_project:
+              display_name: Проект
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Списки
+            csp_loops:
+              display_name: Цикли
+            csp_traversals:
+              display_name: Переходи
+            csp_project:
+              display_name: Проект
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Рухайся, рухайся
+              key: Рухайся, рухайся
+            Getting Loopy:
+              name: Економія на повторах
+            'Loops: Getting Loopy':
+              name: Економія на повторах
+            Loops in Artist:
+              key: Художник - Цикли
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+          description_audience: 'Вік: 5-8'
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: Велика подія
+            Binary Bracelets:
+              name: Двійкові браслети
+              key: Двійкові браслети
+            'Programming: My Robotic Friends':
+              key: 'Програмування: Мої друзі-роботи'
+            'Loops: My Loopy Robotic Friends':
+              key: 'Цикли: Мої циклічні друзі-роботи '
+            'Events: The Big Event':
+              name: Велика подія
+          lesson_groups:
+            csf_digcit:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+            csf_data:
+              display_name: Дані
+          description_audience: 'Вік: 6-10'
+        csp7-2022:
+          lesson_groups:
+            csp_parameters_return_values:
+              display_name: Параметри і значення, які повертаються
+            csp_libraries:
+              display_name: Бібліотеки
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: Машинне навчання
+            Machine Learning and Bias:
+              name: Машинне навчання
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: 'Розділ 9: Дані'
+        csp10-2022:
+          lessons:
+            Project   Innovation Simulation Part 6:
+              description_student: Огляд уроку
+            Project   Innovation Simulation Part 7:
+              description_student: Огляд уроку
+            'Project: Innovation Simulation Part 6':
+              description_student: Огляд уроку
+            'Project: Innovation Simulation Part 7':
+              description_student: Огляд уроку
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Програмування по клітинках
+            Relay Programming:
+              name: Естафетне програмування
+              key: Естафетне програмування
+            Dance Party:
+              name: Танцювальна вечірка
+              key: Танцювальна вечірка
+            Loops in Ice Age:
+              name: Петлі в Ice Age
+              key: Петлі в Ice Age
+            Conditionals with Cards:
+              name: Листівки та умови
+              key: Листівки та умови
+            'Algorithms: Graph Paper Programming':
+              name: Програмування по клітинках
+            Loops in Artist:
+              key: Художник - Цикли
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Цифрове громадянство
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_events:
+              display_name: Події
+            csf_loops:
+              display_name: Цикли
+            csf_conditionals:
+              display_name: Умови
+          title: Курс D (2021)
+          description_audience: 'Вік: 7-11'
+        coursee-2022:
+          lessons:
+            Private and Personal Information:
+              name: Приватна та Особиста інформація
+              key: Приватна та Особиста інформація
+            Songwriting:
+              name: Написання пісень
+            About Me:
+              key: Про мене
+            'Functions: Songwriting':
+              name: Написання пісень
+            Conditionals:
+              key: Умови
+          lesson_groups:
+            csf_sprites:
+              display_name: Спрайти
+            csf_digcit:
+              display_name: Цифрове громадянство
+            ramp_up:
+              display_name: Вкладені цикли
+            csf_functions:
+              display_name: Функції
+            csf_nested_loops:
+              display_name: Умови
+          description_audience: 'Вік: 8-12'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Представляємо Лабораторію спрайтів
+            Sprites in Action:
+              name: Спрайт в Дії
+            'Mini-Project: Virtual Pet':
+              name: 'Міні-проект: Віртуальний вихованець'
+            The Power of Words:
+              description_student: Залякування - це завжди погано. Цей урок навчить вас про те, що можна і не можна говорити в Інтернеті.
+            For Loop Fun:
+              name: Ігри з циклами
+              key: Ігри з циклами
+            Outbreak:
+              name: Спалах
+            The Internet:
+              name: Інтернет
+            lesson-8:
+              name: Спрайт в Дії
+            Virtual Pet:
+              name: 'Міні-проект: Віртуальний вихованець'
+            lesson-2:
+              description_student: Залякування - це завжди погано. Цей урок навчить вас про те, що можна і не можна говорити в Інтернеті.
+            Loops with the Artist:
+              key: Петлі з художником
+            Internet:
+              key: Інтернет
+              name: Інтернет
+          lesson_groups:
+            ramp_up:
+              display_name: Спрайти
+            lessonGroup-7:
+              display_name: Цифрове громадянство
+            lessonGroup-8:
+              display_name: Змінні
+          description_audience: 'Вік: 9-13'
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: Цикли
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        pre-express-2022:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Послідовність дій
+            csf_loops:
+              display_name: Цикли
+            csf_events:
+              display_name: Події
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: Умови
+            lesson-16:
+              name: Налагодження
+            lesson-19:
+              name: Налагодження
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: Цикли
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Зміст
+        csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: Зміст

@@ -1,31 +1,57 @@
 az:
   data:
     progressions:
+      '"If/Else" with the Bee': "Arı ilə \"Əgər/Yoxsa\"\n"
+      AI Machine Learning - Video: AI Machine Learning - Video
+      'AI: Impact on Society - Video': 'AI: Cəmiyyətə Təsir - Video'
+      'AI: Training Data & Bias - Video': 'AI: Təlim məlumatları və qərəzlilik - Video'
       Accelerometer Events: Akselerometr hadisələri
       Adding Images: Şəkillər əlavə etmək
       Adding Screens: ekranlar əlavə etmək
       Alien Defender: Yadplanteli mudafiyesi
       Analog Sensors: Analoq sensorlar
+      Animate Your Scene: "Səhnənizi Canlandırın\n"
+      App Lab Intro - Video: "Tətbiq Laboratoriyasına Giriş - Video\n"
       'App Project: Linking Screens': 'Tətbiq Layihəsi: Ekranları Bağlamaq'
+      'App Project: Screen Design': 'Proqram Layihəsi: Ekran Dizaynı'
       Arrays: Massivlər
+      Artist Intro with JR Hildebrand: JR Hildebrand ilə Rəssam Girişi
+      Artist Intro with JR Hildebrande: JR Hildebrand ilə Rəssam Girişi
       Artist Project: Sənətçi Layihəsi
       'Artist: Variables': 'Rəssam: Dəyişənlər'
+      Assessment: Yoxlama
       Attribution: Atributlar
       Back and Forth: Qabağa və Arxaya
       Basic Conditionals: Əsas şərtlər
+      Bass, Mid, and Treble: Bas, Orta və Tiz
+      Be a Super Digital Citizen: Super Rəqəmsal Vətəndaş olun
       Begin planning your project: Layihənizi planlaşdırmağa başlayın
+      Begin planning your project_2018: Layihənizi planlaşdırmağa başlayın_2018
+      Binary Bracelets - Unplugged Activity: İkili bilərziklər - Unplugged Fəaliyyət
       Binary Numbers: İkilik rəqəmlər
       Binary and Data: İkili və məlumat
+      Board Events: İdarə Heyətinin Tədbirləri
+      Board Input and Output: Lövhənin Girişi və Çıxışı
       Boolean Comparison: Boolean müqayisə
+      Build a Platform Jumper: Platforma Jumper qurun
       Build a Screen: Ekran qur
+      Building a UI with Design Mode: Dizayn rejimi ilə UI qurmaq
       Building an App: Bir App qurmaq
       'Bunny ': 'dovşan'
       Button Circuits: düymə dövrələri
       Buttons and Switch: Düymələr və Keçid
+      CS Discoveries Post-Course Survey: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+      CS Discoveries Post-course Survey: CS Kəşfləri Tələbə Kurs Öncəsi Anket
+      CSD U3 Interactive Card Exemplar: CSD U3 İnteraktiv Kart nümunəsi
+      CSD U3 platform intro: CSD U3 platformasına giriş
+      'CSD: For Loop': 'Arı: For Dövrləri'
       CSS Classes: CSS dərsləri
       CSS Text Properties: CSS Mətn Xüsusiyyətləri
       CSS and Style Sheets: CSS və Stil səhifələri
+      Cake Defender: Keks mudafiəsi
+      Cake Survey: Tort Sorğusu
       Challenge: meydan oxumaq
+      Challenge Levels: Çağırış Səviyyələri
       'Challenge: Draw an Image': 'Çağırış: Bir şəkil çəkin'
       'Challenge: Extend Your Scene': 'Çağırış: Səhnənizi genişləndirin'
       'Challenge: Updating Variables': 'Çağırış: Dəyişənləri Yeniləmə'
@@ -33,12 +59,26 @@ az:
       Change: Dəyişmək
       Changing Screens: Ekranların dəyişdirilməsi
       Checking for a Winner: Qazananı yoxlamaq
+      Choose Your Own Adventure: Öz macəranızı seçin
+      Choosing Good IDs: Yaxşı şəxsiyyət vəsiqələrinin seçilməsi
+      'Circuit Playground: Introduction': 'Circuit Playground: Giriş'
+      Code Your Own Flappy Game: Öz Flappy Oyununuzu Kodlayın
       Collector Game: Kolleksiyaçı oyunu
       Collisions: Toqquşmalar
       Collisions in Games: oyunlarda toqquşmalar
+      Color LEDs: Rəngli LEDlər
       Combining Projects: Layihələri birləşdirmək
+      Combining Representations: Nümayəndəlikləri birləşdirən
+      Conditionals with Cards - Unplugged Activity: Kartlı Şərtlər - Unplugged Fəaliyyət
       'Conditionals: If Statements': 'Şərtlər: İf Operatorları'
+      'Conditionals: If and If/Else Statements': 'Şərtlər: If və If/Else ifadələri'
+      'Course E: Play Lab Project': 'Kurs E: Play Lab Layihəsi'
+      'Course F: Artist Project': 'Kurs F: Rəssam Layihəsi'
+      'Course F: Artist Project - Revise': 'Kurs F: Rəssam Layihəsi - Yenidən nəzərdən keçirin'
       'Course F: Play Lab Project': 'Kurs F: Laboratoriya Layihəsin Oyna'
+      'Course F: Play Lab Project - Revise': 'Kurs F: Play Lab Layihəsi - Yenidən nəzərdən keçirin'
+      Crack Random Substitution: Crack Təsadüfi Əvəzetmə
+      Crack a Caesar Cipher: Sezar şifrəsini sındırın
       Create Your Own Animation: öz animasiyanızı yaradın
       Create a Story: Hekayə yarat
       Create your project: Layihə yarat
@@ -46,14 +86,19 @@ az:
       Creative Commons Search: Yaradıcı ümumi araşdırma
       Customize: Özəlləşdir
       Dance Crews: Rəqs komandası
+      Data Visualization: Məlumatların vizuallaşdırılması
+      De-bugging with the Step Button: Addım Düyməsi ilə Debugging
       Debugging: Sazlama
+      Debugging with the Step Button: Addım düyməsi ilə sazlama
       Demo Apps: Demo applikasiyalar
       Design Mode: Dizayn Rejimi
       Design Mode Elements: Dizayn rejimi elementləri
       Design Your Game: Oyununu dizayn et
+      Design Your Prototype: "Prototipinizi dizayn edin\n"
       Design a Screen for your App: Proqramınız üçün ekran dizayn edin
       Designing Screens with Code: Kod ilə ekran dizaynı 
       Designing for Accessibility: Əlçatanlıq üçün dizayn
+      Digital Sharing - Unplugged Activity: Rəqəmsal Paylaşım - Çıxarılan Fəaliyyət
       Drawing: Şəkil
       Drawing Shapes: Rəsm Şekilləri
       Editing Images: Şəkilləri redaktə etmək
@@ -74,20 +119,31 @@ az:
       Experiment with Web Lab: Web Lab ilə  təcrübə
       Exploration: Kəşf
       'Exploration: Adding Style': 'Kəşfiyyat: Stil əlavə etmək'
+      'Exploration: For Loops': "Kəşfiyyat: Döngələr üçün\n"
+      'Exploration: Rikki''s Poster': "Kəşfiyyat: Rikkinin Posteri\n"
       'Exploration: Sample Apps': 'Tədqiqat: Nümunə Tətbiqlər'
       'Exploration: Sample Programs': 'Tədqiqat: Nümunə Proqramlar'
       'Exploration: Sample Project': 'Tədqiqat: Nümunə Layihəsi'
       Explore HTML: HTML kəşf edin
+      Exploring CS in Entertainment: Əyləncədə CS-ni araşdırın
+      Exploring more CSS: Daha çox CSS-i araşdırın
+      Extra: Əlavə
       Final Personal Website: Son şəxsi sayt
+      Final Room Escape App: Son otaqdan qaçış proqramı
       Find the Wizard: Sehrbazı tapın
       Finish a Screen: Ekranı Bitirmək
       Finish the Prototype: Prototipi Bitirin
       Finishing Functions: Bitirmə Funksiyaları
       Finishing Touches: Toxunuşları bitirmək
+      Flyer Game: Flyer Oyunu
+      Follow the Algorithm - Unplugged Activity: Alqoritmə əməl edin - Plugged Fəaliyyət
       Follow the Mouse: Siçanı izlə
       Fonts and Style: Şriftlər və üslub
       FoodFight: YeməkMübarizəsi
+      For Loop Fun - Unplugged Activity: Döngə Əyləncəsi üçün - Bağlanmamış Fəaliyyət
       For Loops: '"For" dövrü'
+      For Loops and Color LEDs: Döngələr və Rəngli LEDlər üçün
+      For Loops and Repeat Blocks: Döngələr və Təkrar Blokları üçün
       Formatting HTML: HTML formatı
       Free Play: Azad Oyna
       'Free Play: Make a Scene': 'Pulsuz Oyun: Səhnə yaradın'
@@ -96,6 +152,7 @@ az:
       Functions with Parameters: Parametrli funksiyalar
       Get In Formation: Düzül
       Getting Properties: Xüsusiyyətləri əldə etmək
+      Graph Paper Programming - Unplugged Activity: Qrafik Kağız Proqramlaşdırma - Unplugged Fəaliyyət
       Guess The Number: Rəqəmi təxmin et
       HTML Tags: HTML teqlər
       Hardware and Software: Kompüter Təchizatı və Proqram Təminatı
@@ -105,14 +162,17 @@ az:
       How to Create a Simple Function: Sadə funksiya necə yaradılır
       How to Make a Sprite: Pəri Necə Hazırlanır
       Hyperlinks: Köprülər
+      Ice Age Loops: Buz Dövrü Döngələri
       Images and Sounds: Şəkillər və Səslər
       Images in HTML: HTML-dəki şəkillər
       Importing Screens: Ekranlar idxal olunur
       Improve Your Game: Oyununuzu təkmilləşdirin
       Innovation Research: Yenilik Araşdırması
       Input Examples: Giriş Nümunələri
+      Input with If-Else: If-Else ilə daxil edin
       InspirationalArtwork: İlham verən sənət əsəri
       Intro to Design Mode: Dizayn rejiminə giriş
+      Intro to For Loops: For Loops-a giriş
       Intro to Sprites: Spraytlara giriş
       Intro to Variables: Dəyişənlərə giriş
       Introducing Sprite Lab: Sprite Laboratoriyasını təqdim edirik
@@ -122,10 +182,14 @@ az:
       Iteration and Parameters: Təkrarlanma və Parametrlər
       Keep On Dancing!: Rəqs etməyə davam edin!
       Keeping Data Secret: Məlumatlar Gizli Saxlanır
+      Keyboard Input: Klaviatura Girişi
+      LED Apps: LED Proqramları
       Layout Properties: Düzən Xüsusiyyətləri
+      Layout with CSS: CSS ilə tərtibat
       Learning from Simulations: Simulyasiyalardan öyrənmək
       Lesson Extras: Dərsə əlavələr
       Lesson Overview: Dərsin icmalı
+      Level Overview: Səviyyə İcmal
       Levels: Səviyyələr
       Light Show: İşıq şousu
       Lists: Siyahılar
@@ -133,6 +197,7 @@ az:
       Make a Prediction: Proqnoz verin
       Making Music: Musiqi bəstələmək
       Measures: Ölçülər
+      'Minecraft: Hero''s Journey': 'Minecraft: Qəhrəmanın səyahəti'
       Modifying and Creating Arrays: Dizilərin dəyişdirilməsi və yaradılması
       More Buttons: Daha çox Düymələr
       Motorcycle: Motosiklet
@@ -152,30 +217,84 @@ az:
       Polling Events: Səsvermə hadisəsi
       Practice: Praktika
       Prediction: Təxmin
+      Problem Solving: Problemin həlli
+      Problem Solving Process for Programming: Proqramlaşdırma üçün Problemlərin Həlli Prosesi
+      Programming with Rey and BB-8: Rey və BB-8 ilə proqramlaşdırma
+      Programs that Repeat: Təkrarlanan proqramlar
       Project: Layihə
+      Project - Background and Variables: Layihə - Fon və Dəyişənlər
+      Project - Sprites and Interactions: Layihə - Sprite və Qarşılıqlı Əlaqələr
+      Project Guide: Layihə Bələdçisi
       Project Work: layihə işi
       Properties: Xüsusiyyətlər
+      Publishing Your Website: Veb saytınızın nəşri
+      Quarter Notes: Dörddəbir Qeydlər
+      RGB Exploration: RGB kəşfiyyatı
       RGB Widget: RGB Widget'i
       Random Numbers: Təsadufi rəqəmlər
+      Reading Sensors: Oxuma Sensorları
       Reflection: Əksetmə
+      Relay Programming - Unplugged Activity: Rele Programming - Unplugged Fəaliyyət
       Repeat Blocks: Bloklari təkrar et
+      Repeat Blocks with BB-8: BB-8 ilə blokları təkrarlayın
+      Repeat Blocks with the Artist: Rəssamla blokları təkrarlayın
+      Repeat Unit Statements: Vahid İfadələrini təkrarlayın
+      Repeat Until Statements: Bəyanatlara qədər təkrarlayın
+      Representing Images: Şəkilləri təmsil edir
       Responding to Board Events: Lovhə hadisələrinə cavab vermək
       Responding to User Input: İstifadəçi input-una cavab
       Review: Gözdən keçirmə
       Revise Artist Project: Rəssamın layihəsini yenidən gözdən keçir
-      Sample App: Nümunə tətbiq
+      Run a simulation: Simulyasiya edin
+      Sample App: Nümunə Tətbiqlər
       Sample Game: Örnək oyun
       Sample Program: Nümunə program
+      Sample Programs: Nümunə proqramlar
       Screen Design: Ekran Dizaynı
+      Sensor Events: Sensor hadisələri
+      Sensors to Colors: Rənglərə Sensorlar
+      Setting Properties: Xüsusiyyətlərin qurulması
       Shapes and Parameters: Forma və parametrlər
+      Shapes and the Draw Loop: Formalar və Çəkmə Döngəsi
+      Share Your App: Tətbiqinizi paylaşın
+      Side Scroller: Yan Scroller
+      Simple Circuits: Sadə sxemlər
+      Skill Building: Bacarıqların qurulması
+      Skill-Building: Bacarıqların qurulması
+      Sliders: Sürgülər
+      Smart Bike - Blinkers: Ağıllı Velosiped - Yandırıcılar
+      Social Sleuth: Sosial Sleuth
+      Songwriting - Functions Unplugged Activity: Mahnı Yazısı - Unplugged Fəaliyyət funksiyaları
       Speed it Up, Slow it Down: Sürətləndir,Yavaşlat
       Sprite Lab Project: Sprite Laboratoriyası Layihəsi
+      Sprite Properties: Sprite Xüsusiyyətləri
       Sprite Scenes: Sprite səhnələri
+      Sprites and the Draw Loop: Sprites və Draw Loop
+      Star Chaser: Ulduz Qovucu
+      Styling Text: Styling mətni
+      Styling with Classes: Siniflərlə üslub
+      Styling your Website: Veb saytınızın üslubu
+      Teach A.I. a new word: A.I. yeni söz
+      Teach AI a New Word: Süni intellektə yeni söz öyrədin
+      'Technique: Frequency Analysis': 'Texnika: Tezlik Analizi'
+      Terminology Recap: Terminologiya xülasəsi
+      Text Compression: Mətnin sıxılması
       The Accelerometer: Akselerometr
       The Animation Tab: "\nAnimasiya Nişanı"
+      The Artist in Code Studio: Code Studio-da Rəssam
+      The Big Event - Unplugged Activity: Böyük Hadisə - Unplugged Fəaliyyət
       The Body Element: Bədən elementi
+      The Buzzer: Buzzer
+      The Collector: Kollektor
+      The Draw Loop: Bərabərlik Döngüsü
       The Harvester: "Biçinçi\n"
+      The Internet - Unplugged Activity: İnternet - Bağlanmamış Fəaliyyət
+      The Power of Words - Unplugged Activity: Sözlərin Gücü - Unplugged Fəaliyyət
+      The Right App - Unplugged Activity: Düzgün Tətbiq - Çıxarılan Fəaliyyət
+      Top Websites: Ən yaxşı veb saytlar
       Tour of Design Mode: Dizayn rejimi turu
+      Train AI to Clean the Ocean: Okeanı təmizləmək üçün süni intellektə öyrədin
+      UI Element Properties: UI Element Xüsusiyyətləri
       Using the Grid: Şəbəkədən istifadə
       Using the Repeat Block: Dövr bloklarından istifadə etmək
       Variables: dəyişənlər

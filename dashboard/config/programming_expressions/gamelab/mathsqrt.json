@@ -1,0 +1,29 @@
+{
+  "key": "mathSqrt",
+  "name": "Math.sqrt()",
+  "category": "Math",
+  "category_key": "math",
+  "content": "[description]\r\n\r\n[short_description]\r\n\r\nTakes the square root of x.\r\n\r\n[/short_description]\r\n\r\nThere are some math calculations that require you to take the square root. *Math.sqrt(x)* does not change the value of x, rather it returns the the square root of x.\r\n\r\n[/description]",
+  "examples": [
+    {
+      "name": "",
+      "description": "var t = Math.sqrt(16);\r\nconsole.log(t);",
+      "code": "```\n\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
+    }
+  ],
+  "palette_params": [
+    {
+      "name": "x",
+      "type": "Number",
+      "required": true,
+      "description": "A number to take the square root of"
+    }
+  ],
+  "return_value": "A number that is the square root of x",
+  "short_description": "\nTakes the square root of x.",
+  "syntax": "Math.sqrt"
+}

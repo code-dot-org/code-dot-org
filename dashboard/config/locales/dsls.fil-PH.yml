@@ -1219,65 +1219,73 @@ fil-PH:
         - {}
       courseD_multi_artist_binary8_predict1:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: A
+        - text: B
+        - text: C
+        - text: D
+          correct: true
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -2050,6 +2058,7 @@ fil-PH:
           sa iba, o magbahagi ng isang mensahe tungkol sa kung ano sa tingin mo ang
           maaari naming gawin upang matulungan ang iba na maging malusog pagdating
           ng isang virus sa bayan."
+        content1: paglalarawan dito
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - {}
@@ -2101,9 +2110,10 @@ fil-PH:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
-        - correct: true
-        - {}
-        - {}
+        - text: A
+          correct: true
+        - text: B
+        - text: C
         - {}
         questions:
         - {}
@@ -2341,6 +2351,7 @@ fil-PH:
 
 
           Kapag tapos ka na, ibahagi ang iyong simulasyon sa iba. Ibahagi ang iyong mensahe tungkol sa kung ano sa palagay mo ang maaaring gawin upang matulungan ang iba na maging malusog pagdating ng isang virus sa bayan.
+        content1: paglalarawan dito
       CSD U3 Collisions SFLP:
         markdown: |-
           Pinoprograma ng klase ang kanilang mga tiyanak na makipag-ugnayan sa mga bagong paraan. Pagkatapos ng maikling pagsusuri kung paano nila ginamit ang isTouching na block, nag-isip ang klase ng iba pang paraan kung paano makikipag-ugnayan ang dalawang tiyanak. Ginagamit nila ang isTouching upang hayaang itulak ng isang tiyanak ang isa pa sa screen bago magsanay gamit ang apat na block ng banggaan (bumangga, umalis, tumalbog, at bounceOff).
@@ -2401,3 +2412,474 @@ fil-PH:
           ## Mga Mapagkukunan
 
           * [Introduction to Variables](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      Begin planning your project:
+        content1: paglalarawan dito
+      Begin planning your project_2018:
+        content1: paglalarawan dito
+      Begin planning your project_2018_2019:
+        content1: paglalarawan dito
+      Begin planning your project_2018_2019_2020:
+        content1: paglalarawan dito
+      CSD U2 Design Project:
+        content1: paglalarawan dito
+      CSD U2 Design Project_2018:
+        content1: paglalarawan dito
+      CSD U2 Design Project_2018_2019:
+        content1: paglalarawan dito
+      CSD U2 L1 Overview:
+        content1: paglalarawan dito
+      CSD U2 L2 Overview:
+        content1: paglalarawan dito
+      CSD U2 L3 Overview:
+        content1: paglalarawan dito
+      CSD U2 L4 Overview:
+        content1: paglalarawan dito
+      CSD U2 L5 Overview:
+        content1: paglalarawan dito
+      CSD U2 L6 Overview:
+        content1: paglalarawan dito
+      CSD U2 Lesson 6 Overview:
+        content1: paglalarawan dito
+      CSD U2 expand project:
+        content1: paglalarawan dito
+      CSD U2 expand project_2018:
+        content1: paglalarawan dito
+      CSD U2 expand project_2018_2019:
+        content1: paglalarawan dito
+      CSD U2 project guide:
+        content1: paglalarawan dito
+      CSD U2 project guide_2018:
+        content1: paglalarawan dito
+      CSD U2 project guide_2018_2019:
+        content1: paglalarawan dito
+      CSD U3 Card Examples_2018:
+        content1: paglalarawan dito
+      CSD U3 Card Examples_2018_2019:
+        content1: paglalarawan dito
+      CSD U3 combining rep:
+        content1: paglalarawan dito
+      CSD U3 combining rep_2018:
+        content1: paglalarawan dito
+      CSD U3 combining rep_2018_2019:
+        content1: paglalarawan dito
+      CSD U3 game intro:
+        content1: paglalarawan dito
+      CSD U3 game intro_2018:
+        content1: paglalarawan dito
+      CSD U3 game intro_2018_2019:
+        content1: paglalarawan dito
+      CSD U3 platform intro:
+        content1: paglalarawan dito
+      CSD U3 platform intro_2018:
+        content1: paglalarawan dito
+      CSD U3 platform intro_2018_2019:
+        content1: paglalarawan dito
+      CSD U5 Encryption 1:
+        content1: paglalarawan dito
+      CSD U5 Encryption 1_2018:
+        content1: paglalarawan dito
+      CSD U5 Encryption 1_2018_2019:
+        content1: paglalarawan dito
+      CSD U5 Encryption 2:
+        content1: paglalarawan dito
+      CSD U5 Encryption 2_2018:
+        content1: paglalarawan dito
+      CSD U5 Encryption 2_2018_2019:
+        content1: paglalarawan dito
+      CSD U5 L13 SFLP Interpreting Data:
+        content1: paglalarawan dito
+      CSD U5 crosstab warmup:
+        content1: paglalarawan dito
+      CSD U5 crosstab warmup_2018:
+        content1: paglalarawan dito
+      CSD U5 crosstab warmup_2018_2019:
+        content1: paglalarawan dito
+      CSD U5 data visualization:
+        content1: paglalarawan dito
+      CSD U5 data visualization_2018:
+        content1: paglalarawan dito
+      CSD U5 data visualization_2018_2019:
+        content1: paglalarawan dito
+      CSD U5 student record:
+        content1: paglalarawan dito
+      CSD U5 student record_2018:
+        content1: paglalarawan dito
+      CSD U5 student record_2018_2019:
+        content1: paglalarawan dito
+      CSD U6 LED create intro:
+        content1: paglalarawan dito
+      CSD U6 LED create intro_2018:
+        content1: paglalarawan dito
+      CSD U6 LED create intro_2018_2019:
+        content1: paglalarawan dito
+      CSD U6 final intro:
+        content1: paglalarawan dito
+      CSD U6 final intro_2018:
+        content1: paglalarawan dito
+      CSD U6 final intro_2018_2019:
+        content1: paglalarawan dito
+      Internet Simulator Setup:
+        content1: paglalarawan dito
+        markdown: "# Internet Simulator ng Code.org\n\n_Tandaan: Para sa mga gurong
+          gustong gamitin ang Internet Simulator ang mga tagubiling nakalista sa tutorial
+          na ito bilang isang standalone na tool, na hiwalay sa kurikulum ng Code.org
+          Computer Science Principles. Kung pinaplano mong gamitin ang mga aktibidad
+          na idinisenyo bilang bahagi ng Code.org CSP curriculum, pagkatapos ay pumunta
+          sa [CSP curriculum page.]\n(https://code.org/educate/csp)_\n\n### Mga Nilalaman\nMayroong
+          3 pahina ng background at impormasyong nakapaloob dito:\n\n* Ano ang Internet
+          Simulator? Pangkalahatang-ideya (tingnan sa ibaba)\n* [mga tagubilin sa
+          pag-setup](/s/netsim/lessons/1/levels/2)\n* [FAQ](/s/netsim/lessons/1/levels/3)\n\n###
+          Ano ang Internet Simulator? Isang Pangkalahatang-ideya:\n\nIsang tool ang
+          Internet Simulator na binuo ng Code.org para sa aming bagong high school
+          [Computer Science Principles] (https://code.org/educate/csp) na klase. Idinisenyo
+          ang tool upang hayaan ang mga mag-aaral na makakuha ng karanasan sa pag-eksperimento
+          sa (at paglutas) ng iba't ibang uri ng mga problema na nauugnay sa mga naka-network
+          na computer. Ginagamit ang Internet Simulator sa maraming aralin sa buong
+          Yunit 1 at 2 sa aming curriculum upang sunud-sunod na buuin ang iba't ibang
+          layer ng Internet.\n\nKung isinasaalang-alang mo ang paggamit ng tool sa
+          silid-aralan mo sa mga aktibidad na iyong idinisenyo, inirerekomenda naming
+          maging pamilyar ka sa tool sa pamamagitan ng aming [mga plano sa aralin](https://curriculum.code.org/csp/unit1).
+          **Para sa mga gurong gustong gumamit ng Internet Simulator na hiwalay sa
+          kurikulum ng Code.org CSP ang mga tagubilin sa pag-setup** sa susunod na
+          pahina.\n\nAng tool mismo ay hindi _nagtuturo_ ng mga konseptong ito, ngunit
+          sa halip ay nagbibigay ng kapaligiran para sa maraming mag-aaral na magsama-sama
+          at magpadala ng binary, decimal, o ascii based na mensahe sa isa't isa o
+          sa iba pang mga kaklase. **Maaaring i-configure ang kapaligiran** sa iba't
+          ibang paraan upang ilantad ang iba't ibang uri ng mga problema, mailarawan
+          ang data at mga koneksiyon sa pagitan ng mga host, at suportahan ang pag-aaral
+          ng iba't ibang konsepto na nauugnay sa Internet.\n\nIdinisenyo ang Internet
+          Simulator upang magamit sa isang *silid-aralan* na may mga mag-aaral na
+          nagtutulungan nang personal upang malutas ang mga problema. Kadalasan nagsasangkot
+          ang mga problemang ito ng pag-imbento ng protocol ng komunikasyon, o pag-imbento
+          ng mga paraan upang i-encode ang impormasyon sa isang nakabalangkas na paraan
+          na ginagawang posible ang pagdadala sa Internet.\n\n**Sa Computer Science
+          Principles curriculum ng Code.org** karaniwan naming binubuo ang mga aralin
+          at aktibidad sa sumusunod na paraan:\n\n* **Una magbigay ng hamon sa mga
+          mag-aaral**\n * hal. Likas na hindi mapagkakatiwalaan at maaaring mag-drop
+          ng mga mensahe ang pisikal na internet\n* **Bigyan ng pagkakataong mag-eksperimento
+          sa simulator upang malaman ang mga isyu**\n * hal. tingnan ang mga log ng
+          router upang matuklasan na 10-20% ng lahat ng mga mensahe ay nahuhulog at
+          ang mga packet ay maaaring iruta nang wala sa ayos\n* **Bigyan ng pagkakataong
+          mag-imbento ng sariling solusyon sa hamon**\n * hal. mag-imbento ng sariling
+          protocol sa kung paano mapagkakatiwalaang magpadala ng mga mensahe sa hindi
+          mapagkakatiwalaang network na ito\n* **Pagkatapos, sinasaliksik ng mga mag-aaral
+          kung paano gumagana ang protocol o imbensyon na iyon \"sa totoong mundo\"**\n
+          * hal. Magsaliksik kung paano talaga gumagana ang TCP at manood ng video\n\n###
+          Ano ang Maaaring I-configure na Gawin ng Internet Simulator?\n\nSa pinaka-basic
+          nito, maaaring maghatid ang Internet Simulator ng isang piraso ng impormasyon
+          sa pamamagitan ng iisang shared wire na walang koordinasyon o pag-synchronize.
+          \n\nSa pinaka-advance nito, maaari nitong gayahin ang mga hindi mapagkakatiwalaang
+          koneksiyon sa maraming router, gamit ang mga IP address, DNS, at mga fixed
+          sized na packet na nangangailangan ng paglikha ng mga protocol na katulad
+          ng TCP/IP o HTTP.\n\nNa-set up namin ang Internet Simulator sa iba't ibang
+          configuration na nakakatulong sa pagtuturo ng ilang partikular na paksa.
+          Ngunit kung gumagamit ng Internet Simulator sa klase dapat kang magkaroon
+          ng kamalayan sa ilang mga setting ng user interface na maaaring gusto mong
+          kontrolin o sabihin sa mga mag-aaral mo na mag-setup sa isang partikular
+          na paraan.\n\nHalimbawa: ang isa sa mga tampok ng Internet Simulator ay
+          maaari mong ipakita ang binary, decimal, hex at ASCII na representasyon
+          ng anumang data na ipinadala mo sa paligid. Maaari ding itakda ng user sa
+          ilang mga pagsasaayos ang \"laki ng tipak\" upang idikta kung paano binibigyang-kahulugan
+          ang mga bit. Sa isang aralin ng sarili mong disenyo, maaari kang pumili
+          ng isa sa mga configuration na ibinigay namin, ngunit maaaring kailanganin
+          na mag-utos na ang mga mag-aaral ay magpakita lamang ng isang partikular
+          na representasyon ng mga piraso, o marahil ay gusto mong itakda ang laki
+          ng chunk sa isang partikular na halaga.\n\nAng mga pagsasaayos ang mas malaking
+          punto na ibinigay dito na sinadya upang maging isang panimulang punto sa
+          pagtuturo ng isang partikular na paksa. Maaaring kailanganin mong gumamit
+          ng ilang katalinuhan at mga diskarte sa pagtuturo upang higit pang pinuhin
+          ang paggamit ng Simulator upang umangkop sa mga pangangailangan mo.\n\n
+          <br><br>\n<img src=\"https://images.code.org/0bf9799b2bec2756c1664b84e12cbe27-image-1438642671141.57.13.png\"
+          width=\"600px\" style=\"margin:0 100px\"/>\n<br><br>\n\n\n\n    \n\n\n_Susunod:
+          Mga tagubilin sa pag-setup_"
+      Internet Simulator Setup 2:
+        content1: paglalarawan dito
+        markdown: |-
+          # Internet Simulator: Mga Tagubilin sa Pag-setup
+
+          1. **Gumawa ng isang seksyon sa Code Studio.** Upang makapag-usap sa isa't isa ang mga mag-aaral sa klase mo, kailangang iugnay sa parehong seksyon sa Code Studio silang lahat. Naka-sign in bilang account ng guro, kakailanganin mong lumikha ng isang seksiyon na sasalihan ng lahat ng mga mag-aaral mo. Upang lumikha ng isang seksyon:
+           * Mag-navigate sa [mga seksiyon] lugar ng dashboard ng guro
+           * I-click ang pindutan na 'Bagong Seksyon'. Inirerekomenda namin ang pagpili sa Uri ng Pag-login na 'Email' at 'cspunit1' sa kurso.
+            <br>
+          <img src="https://images.code.org/9e9961a44b0a2f76ab92e6f9634d8f55-image-1438640255737.17.04.png" width="600px" />
+          <br><br>
+          2. **Pasalihin ang mga mag-aaral sa seksiyon mo.** Kapag nalikha na ang seksiyon, i-click ang link na 'Pamahalaan ang mga Mag-aaral' para sa seksiyon. Makakakita ka ng code ng seksiyon na maaari mong hilingin sa mga mag-aaral na sumali kapag nakagawa na sila ng sarili nilang mga Code Studio account.
+          <br>
+          <img src="https://images.code.org/9b8863dbb5a8e229e9bc1c4fc74ddd22-image-1438641516264.png" width="400px" />
+          <br><br>
+          3. **Bigyan ang mga mag-aaral ng URL sa bersiyon ng Internet Simulator na gusto mong gamitin.** Gumawa kami ng ilang iba't ibang configuration ng Internet Simulator na available sa [code.org/internetsimulator](http://code.org/internetsimulator). Kapag nakakita ka ng configuration na gumagana sa aktibidad mo, ibahagi ang URL sa mga mag-aaral. Kung nasa iisang seksiyon silang lahat, awtomatiko silang makakakonekta sa isa't isa kapag dumating sila sa parehong URL.
+
+          _Susunod: Mga Madalas Itanong_
+      Internet Simulator Setup 3:
+        content1: paglalarawan dito
+        markdown: |-
+          # Internet Simulator: FAQ
+
+          #### Saan ko mahahanap ang mga aktibidad na idinisenyo mong gamitin sa Internet Simulator?
+          Makikita sa mga plano ng aralin sa Unit ang mga aktibidad na aming idinisenyo sa aming kurikulum ng Mga Prinsipyo ng Computer Science, kabilang ang mga partikular na pagsasaayos ng Internet Simulator. [here](https://code.org/educate/csp). Marami sa mga lesson plan ay may mga video na sumusuporta sa "Mga Tip at Trick ng Guro" na nagpapakita ng mga demonstrasyon ng Internet Simulator na ginamit bilang bahagi ng mga aktibidad sa silid-aralan. Maaari mong gamitin ang mga aktibidad na ito, o huwag mag-atubiling baguhin upang iangkop sa klase mo!
+
+          #### Maaari ko bang i-customize ang Internet Simulator sa aking klase?
+          Sa ngayon, sa kasamaang-palad ay wala kaming paraan sa mga tao sa labas ng Code.org na lumikha ng mga partikular na configuration at tagubilin para sa Internet Simulator. Sinubukan naming ilantad ang iba't ibang mga configuration na sana ay gagana sa silid-aralan at aktibidad mo. Sa pangmatagalan, gusto naming magkaroon ng paraan upang hayaan ang iba na i-configure ang tool.
+
+          #### Hindi makikita ng mga estudyante ko ang isa't isa kapag pumunta sila sa URL na ibibigay ko sa kanila sa Internet Simulator. Ano ang gagawin ko?
+          Upang makita ng mga mag-aaral ang isa't isa sa lobby ng Internet Simulator, kakailanganing nasa parehong seksiyon sila. I-double check kung nakumpleto mo na ang mga tagubilin sa pag-setup ng seksiyon mula sa nakaraang pahina, at sumali sa partikular na code ng seksiyon na iyon ang mga estudyanteng pinag-uusapan. Gayundin, maaaring nasa maraming seksiyon ang ilang mag-aaral kung nakagawa na sila ng coursework sa Code.org dati, kaya siguraduhing alam nila ang pangalan ng seksiyon mo at pinili ito sa dropdown bago pumasok sa lobby.
+      Multi-Screen Apps:
+        content1: paglalarawan dito
+      New Challenge Introduction:
+        content1: paglalarawan dito
+        markdown: "### Bagong Hamon: Mag-crack ng Random Substitution Cipher...na
+          may bagong widget\n\nPaano kung sa halip na ilipat ang buong alpabeto, i-mapa
+          namin ang bawat titik ng alpabeto sa isang random na magkakaibang titik
+          ng alpabeto? Tinatawag ito na **random substitution cipher.**\n\n![](https://images.code.org/7837e7fef2f38659f4bf51a29b6dc4d3-image-1473863470440.gif)\n\nNgayon,
+          sa halip na ang lihim na mensahe ay naka-encode sa isang simpleng alphabetic
+          shift, haharapin mo ang mga mensaheng naka-encode na may **random substitution**.\n\n\n\nMas
+          mahirap itong i-crack at nangangailangan ng mas sopistikadong tool, kaya...\n\nKapag
+          nag-click ka sa magpatuloy, makakakita ka ng **bago, mas sopistikadong bersyon
+          ng tool sa pag-encrypt** na nagpapakita sa iyo ng maraming iba't ibang bagay.\n\nNgunit
+          isang kaunting misteryo ang ginagawa nito!\n\n### Iyong Gawain:\n\n * Alamin
+          kung ano ang nangyayari sa bagong bersyon na ito ng tool\n * Anong impormasyon
+          ang inilalahad sa iyo?\n * Alamin kung ano ang pinapayagan ng tool na gawin
+          mo\n * Gaya ng dati: hindi mo ito masisira. Kaya mag-click sa mga bagay,
+          sundutin sa paligid.\n * Kung malalaman mo ito, maaari mong i-crack ang
+          isang mensaheng naka-encode na may random na pagpapalit.\n \n### Mungkahi\n\n*
+          Alam mo ba na **E** ang pinakakaraniwang titik na ginagamit sa Ingles?\n\n###
+          Muling Magtipon at Mag-usap\nPagkatapos ng ilang oras na paglalaro dito,
+          dapat kang makipag-usap sa isang tao - kasosyo, maliit na grupo, buong klase
+          - upang talakayin kung ano ang nahanap mo at i-verify na alam mo kung ano
+          ang nangyayari at ang iba't ibang paraan na magagamit mo ang tool."
+      OPD-K5 Reviewing Reflections:
+        content1: paglalarawan dito
+      OPD-K5 Stage3aGo:
+        content1: paglalarawan dito
+      OPD-K5 Stage3aGo_copy:
+        content1: paglalarawan dito
+      OPD-K5 Stage3aGo_dani:
+        content1: paglalarawan dito
+      OPD-K5 conditionals introduced:
+        content1: paglalarawan dito
+      OPD-K5 debugging:
+        content1: paglalarawan dito
+      OPD-K5 diving deeper intro:
+        content1: paglalarawan dito
+      OPD-K5 events introduced:
+        content1: paglalarawan dito
+      OPD-K5 for loops:
+        content1: paglalarawan dito
+      OPD-K5 for loops intro:
+        content1: paglalarawan dito
+      OPD-K5 for loops introduction:
+        content1: paglalarawan dito
+      OPD-K5 functions introduced:
+        content1: paglalarawan dito
+      OPD-K5 journaling:
+        content1: paglalarawan dito
+      OPD-K5 lesson implementation planning:
+        content1: paglalarawan dito
+      OPD-K5 lesson plans:
+        content1: paglalarawan dito
+      OPD-K5 loops introduced:
+        content1: paglalarawan dito
+      OPD-K5 project:
+        content1: paglalarawan dito
+      OPD-K5 projects introduction:
+        content1: paglalarawan dito
+      OPD-K5 role_of_teacher:
+        content1: paglalarawan dito
+      OPD-K5 sequencing introduced:
+        content1: paglalarawan dito
+      OPD-K5 sprite lab:
+        content1: paglalarawan dito
+      OPD-K5 sprite lab introduction:
+        content1: paglalarawan dito
+      OPD-K5 sprite lab unplugged:
+        content1: paglalarawan dito
+      OPD-K5 sprite lab video:
+        content1: paglalarawan dito
+      OPD-K5 types of lessons:
+        content1: paglalarawan dito
+      OPD-K5 using lesson plans:
+        content1: paglalarawan dito
+      OPD-K5 variables:
+        content1: paglalarawan dito
+      OPD-K5 variables introduction:
+        content1: paglalarawan dito
+      OPD-K5 variables unplugged:
+        content1: paglalarawan dito
+      OPD-K5 where to next:
+        content1: paglalarawan dito
+      OPD-K5-projects-1:
+        content1: paglalarawan dito
+      Prepare for your presentation:
+        content1: paglalarawan dito
+      'Technique: Frequency Analysis':
+        content1: paglalarawan dito
+        markdown: "# Pagka-crack ng Mga Substitution Cipher\n\nKilala bilang **frequency
+          analysis** ang pinakamahusay na pamamaraan sa pag-crack ng random substitution
+          cipher\n\nMuling Pagsulat mula sa: [wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)\n\n*
+          Isang diskarteng nakabatay sa kung gaano *dalas* lumilitaw ang ilang mga
+          titik sa English kumpara sa iba ang **Frequency analysis**.\n* Halimbawa,
+          bihira sa isang seksiyon ng English na text, *E*, *T*, *A* at *O* ang pinakakaraniwan,
+          habang ang *Z*, *Q* at *X*. Gayundin, ang mga pinakakaraniwang pares ng
+          mga titik na magkatabi  ang *TH*, *ER*, *ON*, at *AN*.\n* Sa katunayan,
+          halos pareho  ang pamamahagi ng mga titik sa halos *lahat* ng mga sample
+          ng English na teksto.\n\n\nNilayon ng bersiyon ng widget sa nakaraang page
+          na tulungan kang **mag-crack ng substitution cipher sa pamamagitan ng frequency
+          analysis**.\n\nSa pamamagitan ng pagsusuri sa dalas ng mga titik sa naka-encrypt
+          na mensahe kumpara sa dalas ng mga titik sa isang tipikal na piraso ng English
+          na prosa, maaari kang magsimulang tumakda sa kung ano ang maaaring maging
+          mga letter mapping.\n\nIpinapakita sa iyo ng tool kung paano inihahambing
+          ang dalas ng mga titik sa naka-encrypt na teksto (orange) sa mga frequency
+          mula sa karaniwang ingles (asul).\n\n### Hint: Saan magsisimula?\n\n1. Hanapin
+          ang mga maikling salita at \"i-crack\" muna ang mga ito. Ilang isang letrang
+          salita ang alam mo? (\"a\"). Ang isang napaka-karaniwang 3-titik na salita
+          ay \"ang\".\n2. Kapag nagawa mo na iyon, mayroon kang mga substition sa
+          ilan sa mga pinakakaraniwang titik. Dapat kang gumamit ng intuwisyon upang
+          tumingin sa iba pang mga salita gamit ang mga bahagyang subsitition na ito
+          at gumawa ng mahusay na mga hula.\n3. Matapos mahanap ang isang maliit na
+          bilang ng mga hard-fight na mga titik, mabilis na babagsak ang iba.\n4.
+          Nagbibigay ng magandang pananaw sa paggawa ng mga matinong hula ang paghahambing
+          ng mga frequency ng mga titik.\n\n### Subukan mo ito:\nNagpapakita ng isang
+          tao na nagsisimula ang animation sa ibaba. Narito kung ano ang sinubukan
+          nila\n\n* Unahin ang mga character ayon sa dalas.\n* Tukuyin ang isang pangkat
+          ng mga karakter na maaaring mapa sa salitang `ang`. \nIsang magandang simula
+          ito!\n\n![](https://images.code.org/4c188dfb0b284810845285b83ce5bcd4-image-1473787694329.gif)\n\n##
+          Maganda ba ang random substitution?\n* Pagkatapos ng kaunting pagsasanay,
+          gaano katagal bago ka mag-crack ng random substitution cipher?\n* Maganda
+          ba ito o hindi?\n"
+      Terminology Recap:
+        content1: paglalarawan dito
+        markdown: |-
+          # I-pause at Recap
+
+          Napakadaling basagin ang mga mensaheng naka-encrypt gamit ang **Caesar cipher**, lalo na sa isang computational tool. Ngayon na mayroon ka nang kaunting pagsasanay sa pag-crack ng isang alphabetic shift cipher (medyo madali, ha?) subukan natin ang isang bagay na mas mahirap.
+
+          **Terminolohiya ng Recap:**
+
+          * **Encryption** - isang proseso ng pag-encode ng mga mensahe upang panatilihing lihim ang mga ito, kaya ang mga "awtorisadong" partido lang ang makakabasa nito.
+          * **Decryption** - isang proseso na binabaligtad ang encryption, pagkuha ng isang lihim na mensahe at paggawa ng orihinal na plain text
+          * **Cipher** - ang generic na termino sa isang technique (o algorithm) na nagsasagawa ng pag-encrypt
+          * **Caesar's Cipher** - isang pamamaraan sa pag-encrypt na nagbabago ng alpabeto sa pamamagitan ng ilang bilang ng mga karakter.
+          * **Cracking encryption** - Kapag sinubukan mong i-decode ang isang lihim na mensahe
+          *nang hindi* nalalaman ang lahat ng mga detalye ng cipher, sinusubukan mong **i-crack** ang encryption.
+
+
+          I-click ang Magpatuloy upang makita ang **Susunod na Hamon**...
+      courseF_variables_stop:
+        content1: paglalarawan dito
+      csf_be_a_super_digital_citizen:
+        content1: paglalarawan dito
+      csf_be_a_super_digital_citizen_2021:
+        content1: paglalarawan dito
+      csf_password_power-up:
+        content1: paglalarawan dito
+      csf_password_power-up_2021:
+        content1: paglalarawan dito
+      csf_putting_a_stop_to_online_meanness:
+        content1: paglalarawan dito
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: paglalarawan dito
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Pag-style ng Teksto gamit ang CSS
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: paglalarawan dito
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: title
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: paglalarawan dito
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: paglalarawan dito
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: paglalarawan dito
+      CSD U6 LED create intro_2021:
+        content1: paglalarawan dito
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: paglalarawan dito
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}

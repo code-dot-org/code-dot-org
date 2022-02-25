@@ -1,6 +1,0 @@
-{
-  "key": "randomNumber_min_max",
-  "name": "randomNumber_min_max",
-  "category": "Math",
-  "syntax": "randomNumber(1, 10)"
-}

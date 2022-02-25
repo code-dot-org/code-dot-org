@@ -352,6 +352,7 @@ hu:
             '"right"': jobb oszlop
             '"x"': keresztezés
             '"plus"': plusz
+            '"spiral"': spirál
             '"random"': véletlen
       Dancelab_makeAnonymousDanceSprite:
         text: 'készíts új {COSTUME} itt: {LOCATION}'
@@ -434,6 +435,26 @@ hu:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': földönkívüliek
             '"BEAR"': összes medve
@@ -461,6 +482,7 @@ hu:
             '"right"': jobb oszlop
             '"x"': keresztezés
             '"plus"': plusz
+            '"spiral"': spirál
             '"random"': véletlen
       Dancelab_mixColors:
         text: "{COLOR1} és {COLOR2} keverése"
@@ -993,6 +1015,13 @@ hu:
         text: amikor {SPRITE} szereplőre klikkel
       gamelab_clickedSpritePointer:
         text: kattintott {SPRITE} szereplőre
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(fluttering, []): csapkodva
+            new Behavior(wobbling, []): kalimpálva
+            new Behavior(moving_west_and_looping, []): nyugat felé menni és ismételgetni
+            new Behavior(moving_east_and_looping, []): kelet felé menni és ismételgetni
       gamelab_comment:
         text: 'megjegyzés: {COMMENT}'
       gamelab_costumeImage:
@@ -1044,6 +1073,19 @@ hu:
         text: |-
           ha {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE} ruhája {COSTUME}"
       gamelab_isKeyPressed:
@@ -1233,6 +1275,11 @@ hu:
             "'sound://category_digital/jump_7.mp3'": Ugorj
       gamelab_playSpeech:
         text: "{SOUND} beszéd eljátszása"
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(driving_with_arrow_keys, []): irányítás nyilakkal
+            draggable(): vonszolható
       gamelab_pointInDirection:
         text: "{SPRITE} fordulj {DIRECTION} felé"
         options:
@@ -1336,6 +1383,14 @@ hu:
             '"scale"': méret
             '"width"': szélesség
             '"height"': magasság
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': lassú
+            '5': normál
+            '7': gyors
+            '9': extra fast
       gamelab_setTint:
         text: "{THIS} színének megváltoztatása erre: {COLOR}"
       gamelab_setupScoreboard:

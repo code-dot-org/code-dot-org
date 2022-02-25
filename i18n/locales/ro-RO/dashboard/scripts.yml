@@ -3458,6 +3458,7 @@ ro:
               name: Pre-cercetare CSP 21-22
             CSD pre-survey 21-2:
               name: Pre-cercetare CSD 21-22
+            lesson-20: {}
         k1hoc2017: {}
         hero:
           title: 'Minecraft: Călătoria eroului'
@@ -7438,8 +7439,10 @@ ro:
         apps-for-good: {}
         2021drafting:
           lessons:
+            Sprite Lab: {}
             Course F Introduction:
               name: Prezentând Laboratorul de Desen
+            lesson-4: {}
             Virus Simulation for Code Bytes:
               name: Cum se Codifică o Simulare
             Sprites in Action:
@@ -7595,22 +7598,51 @@ ro:
             csp_functions:
               display_name: Funcţii
         csp5-2021:
+          lessons:
+            lesson-1: {}
           lesson_groups:
             csp_lists:
               display_name: Liste
             csp_loops:
               display_name: Bucle
-        csp6-2021: {}
-        csp7-2021: {}
-        csp8-2021: {}
+            lessonGroup-5:
+              display_name: Chestionar după curs
+        csp6-2021:
+          lessons:
+            lesson-1: {}
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: Algoritmi
+            lessonGroup-2:
+              display_name: Chestionar după curs
+        csp7-2021:
+          lessons:
+            lesson-1: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sondaj
+        csp8-2021:
+          lessons:
+            lesson-1: {}
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Sondaj
         csp9-2021:
           lessons:
             Machine Learning and Bias:
               name: Învățare Automată
+            lesson-1: {}
           lesson_groups:
             csp_unit9_2020:
               display_name: "(vechi) Unitatea 9: date"
-        csp10-2021: {}
+            lessonGroup-2:
+              display_name: Sondaj
+        csp10-2021:
+          lessons:
+            lesson-1: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sondaj
         coursea-2021:
           title: Curs A (2021)
           description_short: O introducere în informatică pentru preșcolari.
@@ -8424,6 +8456,7 @@ ro:
               display_name: Sondaj
         testtess:
           lessons:
+            new lesson: {}
             lesson-2:
               name: lecție nouă 1
         contagion-pilot:
@@ -8732,12 +8765,8 @@ ro:
         self-paced-pl-csd5-2021:
           lessons:
             lesson-1: {}
-            lesson-2: {}
-            lesson-3: {}
             lesson-4:
               name: Procesul de design
-            lesson-5: {}
-            lesson-6: {}
             lesson-7: {}
         self-paced-pl-csd6-2021:
           lessons:
@@ -9369,6 +9398,7 @@ ro:
               display_name: Lecții
             lessonGroup-4:
               display_name: Demonstrații și Resurse
+        tesstest921: {}
         hello-world-animals:
           lessons:
             lesson-1:
@@ -9809,10 +9839,42 @@ ro:
               display_name: Conţinut
         2022drafting:
           lessons:
+            lesson-2: {}
             lesson-4:
               name: Simulator Epidemie
             lesson-5:
               name: Despre mine cu Laboratorul cu sprites
+            lesson-6: {}
+            Drawing with Loops:
+              name: Cum să desenăm cu ajutorul buclelor
+            Using Variables with the Artist:
+              description_student: În această lecție vei desena cu variabile care se schimbă pe măsură ce programul rulează.
+              description_teacher: În această lecție, elevii vor explora crearea de modele repetitive folosind variabile în mediul Artist. Elevii vor învăța cum pot fi utilizate variabilele pentru a scrie și citi cod cu mai multă ușurință. După o serie de puzzle-uri ghidate, elevii vor încheia ora cu un nivel de joc liber, fără reguli, în care vor demonstra ce au învățat și în care își vor crea propriile modele.
+            Programming with the Bee:
+              description_student: " În această lecție, elevii vor învăța ce se întâmplă atunci când introduc o buclă într-o altă buclă."
+            Variables with the Bee:
+              description_student: Această albină adoră variabilele!
+              description_teacher: Această lecție va ajuta la ilustrarea modului în care variabilele pot face ca programele să fie mai eficiente, permițându-le elevilor să modifice valorile în timp ce rulează codul.
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+              description_student: Te vei distra la maxim învățând despre buclele `for`!
+              description_teacher: Știm deja că buclele ne permit să întreprindem acțiuni în mod repetat, dar acum vom învăța cum să folosim bucle care includ structuri suplimentare încorporate. Cu ajutorul acestor noi structuri, elevii vor scrie cod mai eficient și mai dinamic.
+            For Loops with Bee:
+              description_student: Bzz bzz! În aceste puzzle-uri vei îndruma o albină către nectar și miere cu ajutorul buclelor `for`!
+              description_teacher: Albinuța este personajul principal al acestei lecții care se axează pe bucle `for` și pe utilizarea unei variabile incrementale pentru a rezolva puzzle-uri mai complicate. Elevii vor începe prin a analiza bucle din lecțiile anterioare, apoi vor fi ghidați printr-o secțiune introductivă cu privire la buclele `for` pentru a rezolva probleme complicate mai eficient.
+            For Loops with Artist:
+              description_student: Pregătește-te să creezi următoarea ta capodoperă. Aici vei utiliza bucle `for` pentru a crea imagini care îți taie răsuflarea.
+              description_teacher: În această lecție, elevii continuă să lucreze cu bucle `for`, însă de data aceasta în mediul Artist. Elevii vor rezolva puzzle-uri în care sunt combinate variabile, bucle și bucle `for` pentru a crea modele complexe. La final, elevii vor putea să creeze desenele proprii în cadrul unui nivel de joc liber, fără reguli.
+            Follow the Algorithm:
+              name: Urmați algoritmul
+              description_student: Joacă un joc și gândește-te la comenzile necesare pentru a obține rezultatul corect.
+              description_teacher: În această lecție, elevii vor juca un joc care îi va face să reflecteze la modul în care trebuie să fie transmise comenzile pentru a obține rezultatul corect. Acest lucru îi va ajuta să facă mai ușor tranziția către Laboratorul cu sprites în cursul lecțiilor viitoare.
+            Alien Dance Party with Sprite Lab:
+              name: Petrecere dansantă cu extratereștri în Laboratorul cu sprites
+              description_student: Creează un proiect interactiv pe care să-l partajezi cu colegii de clasă.
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Oră de Programare
         csa7-exemplars:
           lessons:
             lesson-1: {}
@@ -9838,7 +9900,38 @@ ro:
             lesson-1: {}
             lesson-2: {}
             lesson-3: {}
-        csd6-pilot-2022: {}
+            Introducing Sprite Lab:
+              name: Prezentând Laboratorul de Desen
+            Sprites in Action:
+              name: Spiriduși în acțiune
+            'Mini-Project: Virtual Pet':
+              description_teacher: În această lecție, elevii vor crea un animal de companie virtual interactiv, care arată și se comportă exact așa cum își doresc ei. Elevii vor folosi instrumentul „Costume” din Laboratorul cu sprites pentru a personaliza aspectul animalului de companie. Apoi vor folosi evenimente, comportamente și alte concepte pe care le-au asimilat pentru a crea animalul de companie!
+            Simulating Experiments:
+              name: Simularea de experimente
+              description_student: Rulează simulări pe computer și experimentează, schimbând variabilele.
+              description_teacher: Prin rularea unei simple simulări în Laboratorul cu sprites, studenții vor vedea cum se poate utiliza computerul pentru a colecta date care identifică tendințe sau modele. După ce rulează simularea de mai multe ori, elevii vor avea ocazia să facă o predicție cu privire la modul în care schimbarea unei variabile din simulare poate afecta rezultatul, iar apoi să testeze ipoteza respectivă.
+            End of Course Project:
+              description_student: Pentru proiectele mari este nevoie de timp și de planificare. Găsește-ți sursa de inspirație, pregătește un plan și pune-ți creativitatea la treabă!
+              description_teacher: În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate!
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Spiriduși
+            lessonGroup-3:
+              display_name: Variabile
+            lessonGroup-4:
+              display_name: Proiect de final de curs
+        csd6-pilot-2022:
+          lessons:
+            lesson-2: {}
+            lesson-10:
+              name: Se Combină Intrările
+            Functions with Parameters:
+              name: Funcţii
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Capitolul 1
+            lessonGroup-3:
+              display_name: Capirolul 2
         csa8-exemplars:
           lessons:
             lesson-1: {}
@@ -9956,3 +10049,1090 @@ ro:
             lessonGroup-5:
               display_name: Cutie cu nisip
         csa9-pilot-facilitator: {}
+        coursea-2022:
+          lessons:
+            Safety in My Online Neighborhood:
+              name: Siguranța comunității mele online
+              description_student: Află cum poți naviga în siguranță pe internet.
+              description_teacher: "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)Această lecție a fost concepută inițial de Common Sense Education. [Mai multe informații.](https://www.commonsense.org/education/digital-citizenship/curriculum).Cu ajutorul Internetului, elevii pot să viziteze locuri pe care nu le pot vizita în persoană. Dar ca și în cazul călătoriilor din lumea reală, este important să fie în siguranță atunci când „călătoresc” online. În cadrul acestei excursii virtuale, copiii pot să vadă cum pot fi în siguranță în timpul aventurilor online."
+              key: Siguranța comunității mele online
+            Learn to Drag and Drop:
+              name: Să învățăm să glisăm și să fixăm
+              description_student: Fă clic și glisează obiecte pentru a rezolva puzzle-urile.
+              description_teacher: În această lecție, elevii își vor face o idee cu privire la ce se poate întâmpla în timpul activităților desfășurate în laboratorul de informatică. Această lecție începe cu o scurtă discuție în care se prezintă regulile de conduită în laboratorul de informatică, apoi elevii vor trece la utilizarea unui computer pentru a rezolva puzzle-uri online.
+              key: Să învățăm să glisăm și să fixăm
+            Happy Maps:
+              name: Hărţi Fericite
+              description_student: Scrie instrucțiuni pentru a ajuta Pufoșenia să ajungă la fructe.
+              description_teacher: 'În această lecție offline, echipele lucrează împreună pentru a atinge un obiectiv simplu: să ajute „pufoșenia” să ajungă la fructe. Elevii vor scrie instrucțiuni precise în timp ce lucrează pentru a transpune instrucțiunile în simbolurile care le-au fost puse la dispoziție. Dacă apar probleme legate de cod, elevii trebuie să colaboreze pentru a identifica erorile și a găsi soluții.'
+            Sequencing with Scrat:
+              name: Secvențiere cu Scrat
+              description_student: Programează-l pe Scrat să ajungă la ghindă.
+              description_teacher: Cu ajutorul lui Scrat din Epoca de Gheață, elevii vor dezvolta algoritmi secvențiali cu ajutorul cărora o vor ajuta pe veverița simpatică să traverseze labirintul pentru a ajunge la ghinda care se află în partea opusă. Pentru a face acest lucru, elevii vor stivui blocuri de cod în succesiune liniară.
+              key: Secvențiere cu Scrat
+            Programming with Scrat:
+              name: Programare cu Scrat
+              description_student: Scrie programe pentru a-l ajuta pe Scrat să ajungă la ghindă.
+            Programming with Rey and BB-8:
+              name: Programare cu Rey și BB-8
+              description_student: Ajută-l pe BB-8 să strângă fierul vechi.
+              key: Programare cu Rey și BB-8
+            Happy Loops:
+              name: Bucle vesele
+              description_student: Ajută Pufoșenia să rezolve probleme mai complicate cu ajutorul buclelor
+              description_teacher: În cadrul acestei activități, elevii vor lucra din nou cu Hărțile vesele. De această dată, elevii vor rezolva puzzle-uri mai complexe și cu durată mai lungă cu ajutorul codului, constatând astfel cât de utile sunt structurile care le permit să scrie coduri mai lungi într-un mod mai ușor.
+            Loops with Scrat:
+              name: Bucle cu Scrat
+              description_student: Ajută-l pe Scrat să se deplaseze pe distanțe mai mari cu ajutorul buclelor.
+              description_teacher: Plecând de la conceptul repetării instrucțiunilor prezentat în „Bucle vesele”, în această etapă elevii vor folosi bucle pentru a ajunge mai eficient la ghindă pe Code.org.
+            Loops with Laurel:
+              name: Bucle cu Laurel
+              description_student: Ajut-o pe Aventuriera Laurel să strângă comorile din subteran.
+              description_teacher: În această lecție, elevii aprofundează conceptul de bucle. În lecția anterioară, elevii au lucrat cu bucle cu ajutorul cărora s-au deplasat în interiorul unui labirint și au cules porumb. Aici buclele sunt folosite pentru a strânge comori într-o peșteră.
+            Ocean Scene with Loops:
+              name: Peisaj oceanic cu bucle
+              description_student: Folosește bucle și modele pentru a finaliza imaginile.
+              description_teacher: Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția precedentă, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, buclele sunt utilizate pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.
+              key: Peisaj oceanic cu bucle
+            The Big Event Jr.:
+              name: Marele Eveniment, ediția Juniori
+              description_student: Mișcă-te și fă zgomot atunci când profesorii apasă butoanele unei telecomenzi uriașe.
+              description_teacher: Evenimentele sunt o modalitate foarte ușoară de a imprima varietate unui algoritm scris anterior. Poate că uneori vă doriți ca programul dvs. să răspundă utilizatorului exact atunci când dorește utilizatorul. Acesta este scopul evenimentelor.
+            'Mini-Project: On the Move with Play Lab':
+              description_student: Creează-ți propriul joc sau propria poveste.
+              description_teacher: În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați o poveste în Laboratorul de Joacă!
+            End of Course Project:
+              name: Proiect de final de curs
+            'Programming: Happy Maps':
+              key: 'Programare: Hărți vesele'
+              name: Hărţi Fericite
+              description_student: Scrie instrucțiuni pentru a ajuta Pufoșenia să ajungă la fructe.
+              description_teacher: 'În această lecție offline, echipele lucrează împreună pentru a atinge un obiectiv simplu: să ajute „pufoșenia” să ajungă la fructe. Elevii vor scrie instrucțiuni precise în timp ce lucrează pentru a transpune instrucțiunile în simbolurile care le-au fost puse la dispoziție. Dacă apar probleme legate de cod, elevii trebuie să colaboreze pentru a identifica erorile și a găsi soluții.'
+            Programming in Ice Age:
+              key: Programare în Epoca de Gheață
+              name: Programare cu Scrat
+              description_student: Scrie programe pentru a-l ajuta pe Scrat să ajungă la ghindă.
+            'Loops: Happy Loops':
+              key: 'Bucle: Bucle vesele'
+              name: Bucle vesele
+              description_student: Ajută Pufoșenia să rezolve probleme mai complicate cu ajutorul buclelor
+              description_teacher: În cadrul acestei activități, elevii vor lucra din nou cu Hărțile vesele. De această dată, elevii vor rezolva puzzle-uri mai complexe și cu durată mai lungă cu ajutorul codului, constatând astfel cât de utile sunt structurile care le permit să scrie coduri mai lungi într-un mod mai ușor.
+            Loops in Ice Age:
+              key: Bucle în Ice Age
+              name: Bucle cu Scrat
+              description_student: Ajută-l pe Scrat să se deplaseze pe distanțe mai mari cu ajutorul buclelor.
+              description_teacher: Plecând de la conceptul repetării instrucțiunilor prezentat în „Bucle vesele”, în această etapă elevii vor folosi bucle pentru a ajunge mai eficient la ghindă pe Code.org.
+            Loops in Collector:
+              key: Bucle în Colecționar
+              name: Bucle cu Laurel
+              description_student: Ajut-o pe Aventuriera Laurel să strângă comorile din subteran.
+              description_teacher: În această lecție, elevii aprofundează conceptul de bucle. În lecția anterioară, elevii au lucrat cu bucle cu ajutorul cărora s-au deplasat în interiorul unui labirint și au cules porumb. Aici buclele sunt folosite pentru a strânge comori într-o peșteră.
+            'Events: The Big Event':
+              key: 'Evenimente: Marele Eveniment'
+              name: Marele Eveniment, ediția Juniori
+              description_student: Mișcă-te și fă zgomot atunci când profesorii apasă butoanele unei telecomenzi uriașe.
+              description_teacher: Evenimentele sunt o modalitate foarte ușoară de a imprima varietate unui algoritm scris anterior. Poate că uneori vă doriți ca programul dvs. să răspundă utilizatorului exact atunci când dorește utilizatorul. Acesta este scopul evenimentelor.
+            Events in Play Lab:
+              key: Evenimente în Laboratorul de Joacă
+              description_student: Creează-ți propriul joc sau propria poveste.
+              description_teacher: În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați o poveste în Laboratorul de Joacă!
+            lesson-1:
+              key: lecția-1
+              name: Proiect de final de curs
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+            lessonGroup-5:
+              display_name: Proiect de final de curs
+          title: Curs A (2021)
+          student_description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
+          description_short: O introducere în informatică pentru preșcolari.
+          description_audience: 'Vârsta: 4-7 ani'
+        express-2022:
+          lessons:
+            Programming with Angry Birds:
+              name: Programare cu Angry Birds
+              key: Programare cu Angry Birds
+            Debugging in Maze:
+              name: Depanare în Labirint
+              description_student: Identificați problemele din puzzle-uri și puneți-vă în practică aptitudinile de depanare.
+              description_teacher: Depanarea este un element esențial al procesului de învățare a programării. Elevii vor găsi puzzle-uri care au fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent pentru a identifica erorile, inclusiv buclele incorecte, blocurile care lipsesc, blocurile suplimentare și blocurile care nu funcționează.
+            Creating Art with Code:
+              description_student: Creați imagini extraordinare programând Artistul.
+              description_teacher: În această lecție, elevii vor avea control asupra Artistului și vor finaliza desene pe ecran. În această etapă din Artist, elevii vor crea imagini a căror complexitate va crește progresiv, folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează la dreapta cu 90 de grade`.
+            Swimming Fish in Sprite Lab:
+              description_student: Află cum poți crea și edita sprites.
+              description_teacher: 'În această lecție, elevii vor învăța despre cele două concepte esențiale ale Laboratorului cu sprites: sprites și comportamente. Sprites sunt personaje sau obiecte de pe ecran pe care elevii le pot muta, modifica și manipula. Comportamentele sunt acțiuni pe care sprites le vor întreprinde încontinuu, până când sunt opriți.'
+            Sprites in Action:
+              name: Spiriduși în acțiune
+            Virtual Pet with Sprite Lab:
+              name: Animalul de companie virtual cu Laboratorul cu sprites
+              description_teacher: În această lecție, elevii vor crea un animal de companie virtual interactiv, care arată și se comportă exact așa cum își doresc ei. Elevii vor folosi instrumentul „Costume” din Laboratorul cu sprites pentru a personaliza aspectul animalului de companie. Apoi vor folosi evenimente, comportamente și alte concepte pe care le-au asimilat pentru a crea animalul de companie!
+              key: Animalul de companie virtual cu Laboratorul cu sprites
+            Dance Party:
+              name: Petrecere dansantă
+              description_student: A venit momentul să sărbătorim! În această lecție vei programa propria petrecere dansantă interactivă.
+              description_teacher: În această lecție elevii vor programa propria petrecere dansantă interactivă. Pentru această activitate este nevoie de sunet, deoarece instrumentul a fost creat pentru a reacționa la muzică.
+            Loops with Rey and BB-8:
+              name: Bucle cu Rey și BB-8
+              key: Bucle cu Rey și BB-8
+            'Mini-Project: Sticker Art':
+              description_student: În această lecție vei desena imagini și mai grozave în Artist, cu ajutorul buclelor!
+              description_teacher: Elevii vor fi extrem de încântați de desenele incredibile pe care le vor crea, folosind un număr mic de blocuri și de stickere digitale! Această lecție are la bază cunoștințele despre bucle asimilate în lecțiile anterioare și oferă elevilor posibilitatea de a fi cu adevărat creativi. Această activitate este excelentă pentru crearea de artefacte pentru portofolii sau pentru conferințe cu părinții/profesorii.
+            Nested Loops in Maze:
+              name: Bucle imbricate în Labirint
+              description_student: Bucle în interiorul unor bucle care la rândul lor se află în interiorul altor bucle. Ce înseamnă asta? În această lecție vei învăța ce se întâmplă atunci când creezi o buclă imbricată.
+              key: Bucle imbricate în Labirint
+            Snowflakes with Anna and Elsa:
+              name: Fulgi de zăpadă cu Anna și Elsa
+              key: Fulgi de zăpadă cu Anna și Elsa
+            If/Else with Bee:
+              description_student: 'Acum că înțelegeți relațiile de condiționalitate, este timpul să programați Albinuța să le utilizeze atunci când strânge miere și nectar. '
+              description_teacher: Până acum elevii au scris cod care este executat exact la fel de fiecare dată când este rulat – acesta este fiabil, dar nu foarte flexibil. În această lecție, elevii vor începe să includă relații de condiționalitate, care le vor permite să scrie cod care funcționează diferit în funcție de condițiile specifice întâlnite de program.
+            While Loops in Farmer:
+              name: Bucle „while” în Fermier
+              description_student: 'Buclele sunt extrem de utile atunci când scriem cod. În această lecție vei învăța mai multe despre un nou tip de buclă: buclele „while”!'
+              description_teacher: Până la această lecție, elevii au folosit pentru destul de mult timp buclele `repeat`, așa că a sosit momentul să complicăm puțin lucrurile. _Buclele while_ sunt bucle care continuă să repete comenzi atâta timp cât este îndeplinită o condiție. Buclele „while” sunt folosite atunci când programatorul nu știe cu exactitate de câte ori trebuie să se repete comenzile, dar știe ce condiție trebuie să fie adevărată pentru ca bucla să se repete în continuare. De exemplu, elevii trebuie să umple gropile și să sape pentru a face grămezi de pământ în Fermier. Aceștia nu vor ști care este dimensiunea gropilor sau înălțimea grămezilor de pământ, dar știu că trebuie să continue să umple gropile și să sape pentru a face grămezi de pământ atâta timp cât solul nu este nivelat.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Relații de condiționalitate în Minecraft: Călătorie în lumea subacvatică'
+              key: 'Relații de condiționalitate în Minecraft: Călătorie în lumea subacvatică'
+            Until Loops in Maze:
+              description_student: Puteți face lucruri extraordinare atunci când folosiți buclele `until`!
+              description_teacher: În această lecție, elevii vor învăța despre buclele `until`. Elevii vor elabora programe în care personajul principal repetă acțiuni până când (`until`) acestea ajung în punctul în care trebuie să se oprească.
+            Harvesting with Conditionals:
+              description_student: Nu este întotdeauna clar când să trebuie să folosim fiecare relație de condiționalitate. Această lecție te va ajuta să decizi ce trebuie să faci.
+              description_teacher: Elevii vor exersa cu bucle `while`, bucle `until` și condiții `if / else`. Toate aceste blocuri folosesc relații de condiționalitate. Punând în practică toate cele trei elemente, elevii vor învăța să scrie coduri complexe și flexibile.
+            Functions in Minecraft:
+              name: Funcții în Minecraft
+              description_student: Știi cum să utilizezi funcțiile pentru a scrie cel mai eficient cod?
+              description_teacher: În această aventură distractivă și interactivă în Minecraft, elevii vor începe să înțeleagă modul în care funcțiile le sunt utile!
+              key: Funcții în Minecraft
+            Functions with Artist:
+              name: Funcții cu Artist
+              description_student: Realizează desene complexe mai ușor cu ajutorul funcțiilor!
+              description_teacher: Elevii vor începe să studieze utilizarea funcțiilor cu ajutorul mediului Artist. Aici vor crea și modifica imagini extraordinare. Pentru modele mai complicate, elevii vor învăța despre funcțiile imbricate, prin care o funcție este apelată din altă funcție.
+              key: Funcții cu Artist
+            Functions with Harvester:
+              name: Funcții cu Culegător
+              description_student: Funcțiile te vor ajuta să nu depui prea mult efort atunci când o ajuți pe fermieră să strângă recolta!
+              key: Funcții cu Culegător
+            Using Variables with the Artist:
+              description_student: În această lecție vei desena cu variabile care se schimbă pe măsură ce programul rulează.
+              description_teacher: În această lecție, elevii vor explora crearea de modele repetitive folosind variabile în mediul Artist. Elevii vor învăța cum pot fi utilizate variabilele pentru a scrie și citi cod cu mai multă ușurință. După o serie de puzzle-uri ghidate, elevii vor încheia ora cu un nivel de joc liber, fără reguli, în care vor demonstra ce au învățat și în care își vor crea propriile modele.
+            Variables with the Bee:
+              description_student: Această albină adoră variabilele!
+              description_teacher: Această lecție va ajuta la ilustrarea modului în care variabilele pot face ca programele să fie mai eficiente, permițându-le elevilor să modifice valorile în timp ce rulează codul.
+            For Loops with Bee:
+              description_student: Bzz bzz! În aceste puzzle-uri vei îndruma o albină către nectar și miere cu ajutorul buclelor `for`!
+              description_teacher: Albinuța este personajul principal al acestei lecții care se axează pe bucle `for` și pe utilizarea unei variabile incrementale pentru a rezolva puzzle-uri mai complicate. Elevii vor începe prin a analiza bucle din lecțiile anterioare, apoi vor fi ghidați printr-o secțiune introductivă cu privire la buclele `for` pentru a rezolva probleme complicate mai eficient.
+            For Loops with Artist:
+              description_student: Pregătește-te să creezi următoarea ta capodoperă. Aici vei utiliza bucle `for` pentru a crea imagini care îți taie răsuflarea.
+              description_teacher: În această lecție, elevii continuă să lucreze cu bucle `for`, însă de data aceasta în mediul Artist. Elevii vor rezolva puzzle-uri în care sunt combinate variabile, bucle și bucle `for` pentru a crea modele complexe. La final, elevii vor putea să creeze desenele proprii în cadrul unui nivel de joc liber, fără reguli.
+            End of Course Project:
+              name: Proiect de final de curs
+              description_student: Pregătește-te serios să scrii cod! A venit momentul să începi să îți elaborezi proiectul.
+              description_teacher: În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate!
+              key: Proiect de final de curs
+            Debugging with Scrat:
+              key: Depanare cu Scrat
+              name: Depanare în Labirint
+              description_student: Identificați problemele din puzzle-uri și puneți-vă în practică aptitudinile de depanare.
+              description_teacher: Depanarea este un element esențial al procesului de învățare a programării. Elevii vor găsi puzzle-uri care au fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent pentru a identifica erorile, inclusiv buclele incorecte, blocurile care lipsesc, blocurile suplimentare și blocurile care nu funcționează.
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+              name: Spiriduși în acțiune
+            lesson-1:
+              key: lecția-1
+              name: Petrecere dansantă
+              description_student: A venit momentul să sărbătorim! În această lecție vei programa propria petrecere dansantă interactivă.
+              description_teacher: În această lecție elevii vor programa propria petrecere dansantă interactivă. Pentru această activitate este nevoie de sunet, deoarece instrumentul a fost creat pentru a reacționa la muzică.
+            Sticker Art with Loops:
+              description_student: În această lecție vei desena imagini și mai grozave în Artist, cu ajutorul buclelor!
+              description_teacher: Elevii vor fi extrem de încântați de desenele incredibile pe care le vor crea, folosind un număr mic de blocuri și de stickere digitale! Această lecție are la bază cunoștințele despre bucle asimilate în lecțiile anterioare și oferă elevilor posibilitatea de a fi cu adevărat creativi. Această activitate este excelentă pentru crearea de artefacte pentru portofolii sau pentru conferințe cu părinții/profesorii.
+            While Loops with the Farmer:
+              name: Bucle „while” în Fermier
+              description_student: 'Buclele sunt extrem de utile atunci când scriem cod. În această lecție vei învăța mai multe despre un nou tip de buclă: buclele „while”!'
+              description_teacher: Până la această lecție, elevii au folosit pentru destul de mult timp buclele `repeat`, așa că a sosit momentul să complicăm puțin lucrurile. _Buclele while_ sunt bucle care continuă să repete comenzi atâta timp cât este îndeplinită o condiție. Buclele „while” sunt folosite atunci când programatorul nu știe cu exactitate de câte ori trebuie să se repete comenzile, dar știe ce condiție trebuie să fie adevărată pentru ca bucla să se repete în continuare. De exemplu, elevii trebuie să umple gropile și să sape pentru a face grămezi de pământ în Fermier. Aceștia nu vor ști care este dimensiunea gropilor sau înălțimea grămezilor de pământ, dar știu că trebuie să continue să umple gropile și să sape pentru a face grămezi de pământ atâta timp cât solul nu este nivelat.
+            lesson-4:
+              key: lecția-4
+            Variables with Artist:
+              description_student: În această lecție vei desena cu variabile care se schimbă pe măsură ce programul rulează.
+              description_teacher: În această lecție, elevii vor explora crearea de modele repetitive folosind variabile în mediul Artist. Elevii vor învăța cum pot fi utilizate variabilele pentru a scrie și citi cod cu mai multă ușurință. După o serie de puzzle-uri ghidate, elevii vor încheia ora cu un nivel de joc liber, fără reguli, în care vor demonstra ce au învățat și în care își vor crea propriile modele.
+            Changing Variables with Bee:
+              description_student: Această albină adoră variabilele!
+              description_teacher: Această lecție va ajuta la ilustrarea modului în care variabilele pot face ca programele să fie mai eficiente, permițându-le elevilor să modifice valorile în timp ce rulează codul.
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_sprites:
+              display_name: Spiriduși
+            lessonGroup-9:
+              display_name: Evenimente
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            csf_functions:
+              display_name: Funcţii
+            csf_variables:
+              display_name: Variabile
+            csf_for_loops:
+              display_name: Bucle Pentru
+            end_of_course_project:
+              display_name: Proiect de final de curs
+          description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
+          student_description: Învață știința calculatoarelor în ritmul tău cu ajutorul lecțiilor de mai jos! Învață să scrii programe pentru computer, să îți dezvolți abilitățile de rezolvare a problemelor și participă la provocări distractive! Creează jocuri și proiecte creative pe care să le partajezi cu prietenii, familia și profesorii tăi.
+          description_short: 'O introducere în știința calculatoarelor: o combinație a celor mai bune programe pentru școala elementară destinate elevilor mai mari.'
+          description_audience: 'Vârsta: 9-18 ani'
+        csp1-2022:
+          lessons:
+            CS Principles Pre-survey: {}
+            Binary Numbers:
+              name: Numerele binare
+              key: Numerele binare
+          lesson_groups:
+            cspSurvey:
+              display_name: Sondaj
+            csp_unit1_2020:
+              display_name: "(vechi) Unitatea 1: Informaţii digitale"
+        csp2-2022:
+          lessons:
+            The Need for Addressing:
+              name: Nevoia de adresare
+              key: Nevoia de adresare
+            Routers and Redundancy:
+              name: Routere și redundanță
+              key: Routere și redundanță
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: "(vechi) Unitatea 2: Internet"
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Corectare erori
+              key: Corectare erori
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: Variabile
+            csp_conditionals:
+              display_name: Condiţionale
+            csp_functions:
+              display_name: Funcţii
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: Liste
+            csp_loops:
+              display_name: Bucle
+        courseb-2022:
+          lessons:
+            Digital Trails:
+              name: Urme digitale
+              description_student: 'Află mai multe despre amprenta ta digitală și despre cum poți să fii în siguranță atunci când vizitezi website-uri. '
+              description_teacher: " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)Această lecție a fost concepută inițial de Common Sense Education. [Mai multe informații.](https://www.commonsense.org/education/digital-citizenship/curriculum).Crezi că ceea ce faci online rămâne întotdeauna online? Elevii învață că informațiile pe care le partajează online lasă o amprentă sau o „urmă” digitală. În funcție de modul în care o gestionează, această urmă poate fi mai mare sau mai mică și poate fi dăunătoare sau utilă. Elevii compară diferite astfel de urme și își folosesc abilitățile de gândire critică cu privire la tipurile de informații pe care doresc să le lase în urmă."
+              key: Urme digitale
+            Move It, Move It:
+              name: Mutaţi-l, mutați-l
+              description_student: Programează-ți colegii de clasă să pășească cu atenție dintr-un loc în altul.
+              description_teacher: În cadrul acestei lecții, elevii se vor pregăti mintal pentru exercițiile de scriere de cod pe care le vor întâlni în acest curs. Lucrând în echipe mici, elevii vor folosi activitățile fizice pentru a-și „programa” colegii de clasă să pășească cu atenție dintr-un loc în altul până la atingerea unui obiectiv.
+              key: Mutaţi-l, mutați-l
+            Sequencing with Angry Birds:
+              name: Secvențiere cu Angry Birds
+              description_student: Ajută-l pe Red din Angry Birds să ajungă până la porcul obraznic, înaintând pe cărare.
+            Programming with Angry Birds:
+              name: Programare cu Angry Birds
+            Programming with Harvester:
+              name: Programare cu Culegătorul
+              description_student: Ajută Culegătorul să strângă verdețurile care cresc pe cărare.
+              description_teacher: Elevii vor aplica conceptele de programare pe care le-au învățat în mediul Culegător. Acum, în loc să ajute personajul să ajungă la un obiectiv, elevii trebuie să strângă porumb cu ajutorul unui bloc nou. Elevii vor continua să își dezvolte abilitățile de creare de algoritmi secvențiali și vor începe să utilizeze procesul de depanare.
+            Getting Loopy:
+              name: Transformând în Buclă
+              description_student: În această lecție vom organiza o petrecere dansantă cu bucle „repeat”!
+              description_teacher: Pe măsură ce începem să scriem programe tot mai lungi și mai interesante, codul nostru conține adesea multe repetiții. În această lecție, elevii vor învăța despre modul în care pot fi folosite buclele pentru a comunica mai ușor instrucțiunile care conțin multe repetiții, analizând modelele repetate ale mișcărilor dintr-un dans.
+            Loops with Harvester:
+              name: Bucle cu Culegătorul
+              description_student: Ajută Culegătorul să strângă mai mult cu ajutorul buclelor!
+              description_teacher: Plecând de la conceptul repetării instrucțiunilor prezentat în „Cum e să ai mintea creață”, în această etapă elevii vor folosi bucle pentru a culege mai eficient porumbul, pe Code.org.
+            Loops with Laurel:
+              name: Bucle cu Laurel
+              description_student: Programeaz-o pe Aventuriera Laurel să strângă comorile din peșteră.
+              description_teacher: În această lecție, elevii aprofundează conceptul de bucle. Aici Aventuriera Laurel folosește bucle pentru a strâng comori într-o peșteră. Laurel are la dispoziție un bloc nou, denumit `ia comoara`, care o va ajuta în călătorie.
+            Drawing Gardens with Loops:
+              name: Cum să desenăm grădini cu ajutorul buclelor
+              description_student: Folosește modele și bucle pentru a finaliza imaginile.
+              description_teacher: Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția online anterioară, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, elevii folosesc buclele pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.
+            The Right App:
+              description_student: Creează-ți propria aplicație pentru smartphone.
+              description_teacher: În această lecție elevii învață faptul că informatica poate fi de ajutor în viața reală. Mai întâi, elevii se pun în locul mai multor utilizatori fictivi de smartphone-uri și îi ajută să găsească „aplicația potrivită” care să răspundă nevoilor lor. Apoi, elevii își folosesc empatia și creativitatea pentru a crea propria aplicație pentru smartphone care răspunde nevoilor unui utilizator suplimentar.
+            The Big Event Jr.:
+              name: Marele Eveniment, ediția Juniori
+              description_student: Mișcă-te și fă zgomot atunci când profesorul apasă butoanele unei telecomenzi uriașe.
+              description_teacher: Evenimentele sunt o modalitate foarte ușoară de a imprima varietate unui algoritm scris anterior. Poate că uneori vă doriți ca programul dvs. să răspundă utilizatorului exact atunci când dorește utilizatorul. Acesta este scopul evenimentelor.
+            'Mini-Project: A Royal Battle with Events':
+              description_student: Folosește evenimentele pentru a crea o poveste sau un joc interactiv.
+              description_teacher: În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați un joc în Laboratorul de Joacă!
+            End of Course Project:
+              name: Proiect de final de curs
+            Sequencing in Maze:
+              name: Secvențiere cu Angry Birds
+              description_student: Ajută-l pe Red din Angry Birds să ajungă până la porcul obraznic, înaintând pe cărare.
+            Programming in Maze:
+              key: Programare în Labirint
+              name: Programare cu Angry Birds
+            Programming in Harvester:
+              name: Programare cu Culegătorul
+              description_student: Ajută Culegătorul să strângă verdețurile care cresc pe cărare.
+              description_teacher: Elevii vor aplica conceptele de programare pe care le-au învățat în mediul Culegător. Acum, în loc să ajute personajul să ajungă la un obiectiv, elevii trebuie să strângă porumb cu ajutorul unui bloc nou. Elevii vor continua să își dezvolte abilitățile de creare de algoritmi secvențiali și vor începe să utilizeze procesul de depanare.
+            'Loops: Getting Loopy':
+              key: 'Bucle: Cum e să ai mintea creață'
+              name: Transformând în Buclă
+              description_student: În această lecție vom organiza o petrecere dansantă cu bucle „repeat”!
+              description_teacher: Pe măsură ce începem să scriem programe tot mai lungi și mai interesante, codul nostru conține adesea multe repetiții. În această lecție, elevii vor învăța despre modul în care pot fi folosite buclele pentru a comunica mai ușor instrucțiunile care conțin multe repetiții, analizând modelele repetate ale mișcărilor dintr-un dans.
+            Loops in Harvester:
+              key: Cicluri în Harvester
+              name: Bucle cu Culegătorul
+              description_student: Ajută Culegătorul să strângă mai mult cu ajutorul buclelor!
+              description_teacher: Plecând de la conceptul repetării instrucțiunilor prezentat în „Cum e să ai mintea creață”, în această etapă elevii vor folosi bucle pentru a culege mai eficient porumbul, pe Code.org.
+            Loops in Collector:
+              key: Bucle în Colecționar
+              name: Bucle cu Laurel
+              description_student: Programeaz-o pe Aventuriera Laurel să strângă comorile din peșteră.
+              description_teacher: În această lecție, elevii aprofundează conceptul de bucle. Aici Aventuriera Laurel folosește bucle pentru a strâng comori într-o peșteră. Laurel are la dispoziție un bloc nou, denumit `ia comoara`, care o va ajuta în călătorie.
+            Loops in Artist:
+              key: Cicluri cu Artistul
+              name: Cum să desenăm grădini cu ajutorul buclelor
+              description_student: Folosește modele și bucle pentru a finaliza imaginile.
+              description_teacher: Revenind la bucle, elevii învață să deseneze imagini repetând secvențe simple de instrucțiuni. În lecția online anterioară, buclele au fost folosite pentru a traversa un labirint și pentru a strânge comori. Aici, elevii folosesc buclele pentru a crea modele. La sfârșitul acestei etape, elevii vor avea posibilitatea de a crea propriile imagini folosind buclele.
+            'Events: The Big Event':
+              key: 'Evenimente: Marele Eveniment'
+              name: Marele Eveniment, ediția Juniori
+              description_student: Mișcă-te și fă zgomot atunci când profesorul apasă butoanele unei telecomenzi uriașe.
+              description_teacher: Evenimentele sunt o modalitate foarte ușoară de a imprima varietate unui algoritm scris anterior. Poate că uneori vă doriți ca programul dvs. să răspundă utilizatorului exact atunci când dorește utilizatorul. Acesta este scopul evenimentelor.
+            Events in Play Lab:
+              key: Evenimente în Laboratorul de Joacă
+              description_student: Folosește evenimentele pentru a crea o poveste sau un joc interactiv.
+              description_teacher: În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați un joc în Laboratorul de Joacă!
+            lesson-1:
+              key: lecția-1
+              name: Proiect de final de curs
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_loops:
+              display_name: Bucle
+            csf_impacts:
+              display_name: Impactul computerelor
+            csf_events:
+              display_name: Evenimente
+            lessonGroup-6:
+              display_name: Proiect de final de curs
+          title: Curs B (2021)
+          student_description: Învață noțiunile de bază ale științei calculatoarelor și siguranței pe Internet. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți.
+          description_short: O introducere în știința calculatoarelor pentru preșcolari. Asemănătoare cu Cursul A, dar cu o prezentare mai aprofundată a conceptelor.
+          description_audience: 'Vârsta: 5-8 ani'
+        coursec-2022:
+          lessons:
+            Putting a STOP to Online Meanness:
+              name: Să punem capăt comportamentelor răutăcioase din mediul online
+              description_student: În această lecție vei afla mai multe despre comportamentele răutăcioase și despre ce trebuie să faci dacă le întâlnești online.
+              description_teacher: " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)Această lecție a fost concepută inițial de Common Sense Education [Mai multe informații.](https://www.commonsense.org/education/digital-citizenship/curriculum)Pe Internet sunt tot felul de oameni interesanți, dar uneori aceștia pot fi răutăcioși unii cu alții. Ajutați-i pe elevi, folosind acest joc de rol, să înțeleagă de ce este adesea mai ușor să fii răutăcios online decât în persoană și cum pot să facă față atitudinii răutăcioase online când se lovesc de aceasta."
+              key: Să punem capăt comportamentelor răutăcioase din mediul online
+            My Robotic Friends Jr.:
+              name: Prietenii mei, roboții, ediția Juniori
+              description_student: În această lecție vei pretinde că toți colegii tăi sunt roboți și îi vei programa să construiască modele cu ajutorul paharelor suprapuse.
+              description_teacher: Folosind un set de simboluri în loc de cod, elevii vor concepe algoritmi prin care transmit instrucțiuni unui „robot” să suprapună pahare folosind pentru aceasta diferite modele. Elevii vor fi pe rând roboți și vor reacționa numai la algoritmul definit de colegii lor. În acest segment, elevii învață legătura care există între simboluri și acțiuni, diferența dintre un algoritm și un program, precum și cât de importantă este depanarea.
+            Programming with Angry Birds:
+              name: Programare cu Angry Birds
+            Debugging in Maze:
+              name: Depanare în Labirint
+              description_student: Identificați problemele din puzzle-uri și puneți-vă în practică aptitudinile de depanare.
+              description_teacher: Depanarea este un element esențial al procesului de învățare a programării. Elevii vor găsi puzzle-uri care au fost rezolvate incorect. Aceștia vor trebui să parcurgă codul existent pentru a identifica erorile, inclusiv buclele incorecte, blocurile care lipsesc, blocurile suplimentare și blocurile care nu funcționează.
+              key: Depanare în Labirint
+            Collecting Treasure with Laurel:
+              description_student: Scrie algoritmi pentru a o ajuta pe Aventuriera Laurel să adune o mulțime de pietre prețioase!
+            Creating Art with Code:
+              description_student: Creați imagini extraordinare programând Artistul.
+              description_teacher: În această lecție, elevii vor avea control asupra Artistului și vor finaliza desene pe ecran. În această etapă din Artist, elevii vor crea imagini a căror complexitate va crește progresiv, folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează la dreapta cu 90 de grade`.
+            My Loopy Robotic Friends Jr.:
+              name: Prietenii mei, roboții trăsniți, ediția Juniori
+              description_student: În această lecție îți vei putea „programa” din nou colegii, dar acum vei folosi bucle pentru a rezolva probleme mai mari și mai complicate.
+              description_teacher: Luând activitatea inițială „Prietenii mei, roboții” drept punct de plecare, elevii se confruntă acum cu sarcini mai mari și mai complicate. Pentru a programa „roboții” să finalizeze aceste sarcini mai complexe, elevii trebuie să identifice modele repetate din instrucțiuni care pot fi înlocuite cu o buclă.
+            Loops with Rey and BB-8:
+              name: Bucle cu Rey și BB-8
+              key: Bucle cu Rey și BB-8
+            Harvesting Crops with Loops:
+              name: Cum să strângi recolta cu ajutorul Buclelor
+              description_student: Să folosim bucle pentru a-l ajuta pe culegător să strângă verdețuri!
+              description_teacher: Elevii includ în buclă acțiuni noi pentru a-l ajuta pe culegător să strângă mai multe verdețuri care cresc în legături mari.
+            'Mini-Project: Sticker Art':
+              description_student: În această lecție vei desena imagini și mai grozave în Artist, cu ajutorul buclelor!
+            The Big Event:
+              name: Marele eveniment
+              description_student: 'Joacă un joc distractiv pentru a învăța mai multe despre evenimente. '
+              description_teacher: Elevii vor afla în curând că evenimentele sunt o modalitate foarte ușoară de a imprima flexibilitate unui algoritm scris anterior. Poate că uneori vă doriți ca programul să răspundă utilizatorului exact atunci când dorește utilizatorul. Cu ajutorul evenimentelor, programul poate fi mai interesant și mai interactiv.
+            Build a Flappy Game:
+              name: Construiește un Joc Flappy
+              description_student: Construiește-ți propriul joc Flappy Bird așa cum dorești, apoi partajează-l cu prietenii!
+              description_teacher: În această etapă, elevii își construiesc propriul joc Flappy Bird folosind manipulatoare ale evenimentelor pentru a detecta clicurile mouse-ului și coliziunile cu obiecte. La sfârșitul nivelului, elevii vor putea să-și personalizeze jocul schimbând elementele vizuale sau regulile.
+              key: Construiește un Joc Flappy
+            'Mini-Project: Chase Game':
+              description_student: A venit momentul să fim creativi și să creăm un joc în Laboratorul de joacă!
+              description_teacher: În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați un joc în Laboratorul de Joacă!
+            Picturing Data:
+              description_student: Datele pot fi folosite pentru a-i ajuta pe elevi să înțeleagă lumea care îi înconjoară și pentru a răspunde la întrebări interesante. În această lecție, elevii vor strânge date dintr-un proiect creat în Laboratorul de joacă și le vor vizualiza folosind diferite tipuri de grafice.
+              description_teacher: Datele pot fi folosite pentru a-i ajuta pe elevi să înțeleagă lumea care îi înconjoară și pentru a răspunde la întrebări interesante. În această lecție, elevii vor strânge date dintr-un proiect creat în Laboratorul de joacă și le vor vizualiza folosind diferite tipuri de grafice.
+            Binary Bracelets:
+              name: Brăţări Binare
+              description_student: Creează-ți propria brățară binară și află cum își amintesc computerele informațiile!
+              description_teacher: Limbajul binar este extrem de important în universul computerelor. Majoritatea computerelor din ziua de astăzi stochează informații în format binar. În această lecție se poate demonstra cum puteți să luați un element din viața reală și să-l transformați într-o serie de comenzi de activare și dezactivare.
+              key: Brăţări Binare
+            End of Course Project:
+              name: Proiect de final de curs
+              description_student: Pregătește-te serios să scrii cod! A venit momentul să începi să îți elaborezi proiectul.
+              description_teacher: În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate în Laboratorul de joacă! Pentru a ne asigura că acest proces se desfășoară fără probleme, vă punem la dispoziție o structură care poate fi urmărită pas cu pas de elevi, de la planificarea pe hârtie până la etapa de scriere a codului pe site-ul nostru web. În plus, oferim idei utile pentru profesori, care îi vor ajuta să organizeze o prezentare memorabilă!
+            'Programming: My Robotic Friends':
+              key: 'Programare: Prietenii mei, roboții'
+              name: Prietenii mei, roboții, ediția Juniori
+              description_student: În această lecție vei pretinde că toți colegii tăi sunt roboți și îi vei programa să construiască modele cu ajutorul paharelor suprapuse.
+              description_teacher: Folosind un set de simboluri în loc de cod, elevii vor concepe algoritmi prin care transmit instrucțiuni unui „robot” să suprapună pahare folosind pentru aceasta diferite modele. Elevii vor fi pe rând roboți și vor reacționa numai la algoritmul definit de colegii lor. În acest segment, elevii învață legătura care există între simboluri și acțiuni, diferența dintre un algoritm și un program, precum și cât de importantă este depanarea.
+            Programming in Maze:
+              key: Programare în Labirint
+              name: Programare cu Angry Birds
+            Programming in Collector:
+              key: Programare în Colecționar
+              description_student: Scrie algoritmi pentru a o ajuta pe Aventuriera Laurel să adune o mulțime de pietre prețioase!
+            Programming in Artist:
+              key: Programare în Artist
+              description_student: Creați imagini extraordinare programând Artistul.
+              description_teacher: În această lecție, elevii vor avea control asupra Artistului și vor finaliza desene pe ecran. În această etapă din Artist, elevii vor crea imagini a căror complexitate va crește progresiv, folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează la dreapta cu 90 de grade`.
+            'Loops: My Loopy Robotic Friends':
+              key: 'Programare: Prietenii mei, roboții trăsniți'
+              name: Prietenii mei, roboții trăsniți, ediția Juniori
+              description_student: În această lecție îți vei putea „programa” din nou colegii, dar acum vei folosi bucle pentru a rezolva probleme mai mari și mai complicate.
+              description_teacher: Luând activitatea inițială „Prietenii mei, roboții” drept punct de plecare, elevii se confruntă acum cu sarcini mai mari și mai complicate. Pentru a programa „roboții” să finalizeze aceste sarcini mai complexe, elevii trebuie să identifice modele repetate din instrucțiuni care pot fi înlocuite cu o buclă.
+            Loops in Harvester:
+              key: Cicluri în Harvester
+              name: Cum să strângi recolta cu ajutorul Buclelor
+              description_student: Să folosim bucle pentru a-l ajuta pe culegător să strângă verdețuri!
+              description_teacher: Elevii includ în buclă acțiuni noi pentru a-l ajuta pe culegător să strângă mai multe verdețuri care cresc în legături mari.
+            Sticker Art with Loops:
+              description_student: În această lecție vei desena imagini și mai grozave în Artist, cu ajutorul buclelor!
+            'Events: The Big Event':
+              key: 'Evenimente: Marele Eveniment'
+              name: Marele eveniment
+              description_student: 'Joacă un joc distractiv pentru a învăța mai multe despre evenimente. '
+              description_teacher: Elevii vor afla în curând că evenimentele sunt o modalitate foarte ușoară de a imprima flexibilitate unui algoritm scris anterior. Poate că uneori vă doriți ca programul să răspundă utilizatorului exact atunci când dorește utilizatorul. Cu ajutorul evenimentelor, programul poate fi mai interesant și mai interactiv.
+            Events in Play Lab:
+              key: Evenimente în Laboratorul de Joacă
+              description_student: A venit momentul să fim creativi și să creăm un joc în Laboratorul de joacă!
+              description_teacher: În această activitate online, elevii vor avea ocazia să învețe cum să folosească evenimentele în Laboratorul de Joacă și să aplice toate abilitățile de scriere de cod pe care le-au dobândit pentru a crea un joc animat. A venit timpul să fiți creativi și să creați un joc în Laboratorul de Joacă!
+            'End of Course Project: Create a Play Lab Game':
+              key: 'Proiect de final de curs: Creează un joc în Laboratorul de Joacă'
+              name: Proiect de final de curs
+              description_student: Pregătește-te serios să scrii cod! A venit momentul să începi să îți elaborezi proiectul.
+              description_teacher: În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate în Laboratorul de joacă! Pentru a ne asigura că acest proces se desfășoară fără probleme, vă punem la dispoziție o structură care poate fi urmărită pas cu pas de elevi, de la planificarea pe hârtie până la etapa de scriere a codului pe site-ul nostru web. În plus, oferim idei utile pentru profesori, care îi vor ajuta să organizeze o prezentare memorabilă!
+          lesson_groups:
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+            csf_data:
+              display_name: Date
+            end_of_course_project:
+              display_name: Proiect de final de curs
+          title: Curs C (2021)
+          student_description: Creează programe cu secvențiere, bucle și evenimente. Scrie-ți inițialele în format binar, studiază diferite tehnici de rezolvare a problemelor și învață cum să reacționezi la cyberbullying. La sfârșitul cursului, creează-ți propriul joc sau propria poveste pe care să le partajezi cu ceilalți!
+          description_short: Învață noțiunile de bază ale științei calculatoarelor și creează desene, povești și jocuri.
+          description_audience: 'Vârsta: 6-10 ani'
+        csp6-2022: {}
+        csp7-2022: {}
+        csp8-2022:
+          lessons:
+            lesson-4:
+              key: lecția-4
+        csp9-2022:
+          lessons:
+            Machine Learning:
+              name: Învățare Automată
+            Machine Learning and Bias:
+              name: Învățare Automată
+            lesson-10:
+              key: lecția-10
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: "(vechi) Unitatea 9: date"
+        csp10-2022: {}
+        coursed-2022:
+          lessons:
+            Password Power-Up:
+              name: Parole mai puternice
+              description_student: În această lecție vei afla cum sunt protejate informațiile cu ajutorul parolelor, precum și cum să creezi o parolă eficientă.
+              description_teacher: " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)>Această lecție a fost concepută inițial de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).Parolele online mai puternice și mai sigure sunt o idee bună pentru oricine. Dar cum îi putem ajuta pe copii să creeze parole mai bune și să le și memoreze? Folosiți sfaturile din această lecție pentru a-i ajuta pe copii să creeze parole care sunt atât sigure, cât și ușor de memorat."
+            Graph Paper Programming:
+              name: Programare pe Hârtie Milimetrică
+              description_student: În această lecție îți vei programa colegul să deseneze imagini!
+              description_teacher: "„Programându-se” unul pe celălalt să deseneze imagini, elevii vor lua contact cu unele dintre conceptele esențiale ale programării, dar într-un mod distractiv și accesibil. La începutul orei, elevii vor utiliza simboluri pentru a-și transmite reciproc instrucțiuni pentru colorarea de pătrate pe hârtie de copiat, încercând să reproducă o imagine. Dacă este timp, lecția se poate încheia cu imagini create chiar de elevi. "
+            Introduction to Online Puzzles:
+              name: Introducere în puzzle-urile online
+              description_student: În cadrul acestei lecții îți vei folosi abilitățile de care vei avea nevoie pentru acest curs.
+              key: Introducere în puzzle-urile online
+            Relay Programming:
+              name: Programare de releu
+              description_student: Îți amintești că la începutul cursului ai desenat cu ajutorul codului? În această lecție vei lucra în echipă cu alți colegi pentru a face ceva foarte asemănător!
+              key: Programare de releu
+            Debugging with Laurel:
+              name: Depanare cu Laurel
+              description_student: Ai avut vreodată probleme în timp ce scriai cod? În această lecție, vei afla câteva dintre secretele depanării. Depanarea este procesul de identificare și de rezolvare a problemelor care apar în codul tău.
+              description_teacher: În această activitate online, elevii își vor pune în practică aptitudinile de depanare în mediul „Colecționar”. Elevii vor putea citi și edita codul pentru a elimina erorile din puzzle-uri cu algoritmi simpli, bucle și bucle imbricate.
+            Events in Bounce:
+              name: Evenimente în Bounce
+              description_student: Ți-ai dorit vreodată să poți juca jocuri video la școală? În această lecție vei putea să-ți creezi propriul joc!
+              description_teacher: În această activitate online, elevii vor învăța ce sunt evenimentele și cum sunt acestea folosite de computere în programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze jocul, adăugând viteze și sunete diferite.
+              key: Evenimente în Bounce
+            Build a Star Wars Game:
+              name: Construiește un joc Războiul Stelelor
+              description_student: Lasă Forța să te ghideze și construiește-și propriul joc Războiul Stelelor în această lecție.
+              key: Construiește un joc Războiul Stelelor
+            Dance Party:
+              name: Petrecere dansantă
+              description_student: A venit momentul să sărbătorim! În această lecție vei programa propria petrecere dansantă interactivă.
+              description_teacher: În această lecție elevii vor programa propria petrecere dansantă interactivă. Pentru această activitate este nevoie de sunet, deoarece instrumentul a fost creat pentru a reacționa la muzică.
+              key: Petrecere dansantă
+            Loops in Ice Age:
+              name: Bucle în Ice Age
+              description_student: În această lecție vei folosi blocul repetare pentru a-l ajuta pe Scrat să ajungă la ghindă într-un mod cât mai eficient posibil.
+              key: Bucle în Ice Age
+            Drawing Shapes with Loops:
+              name: Cum să desenăm forme cu ajutorul buclelor
+              description_student: În această lecție vei desena imagini grozave în Artist cu ajutorul buclelor!
+              description_teacher: Această lecție are la bază cunoștințele despre bucle asimilate în lecțiile anterioare și oferă elevilor posibilitatea de a fi cu adevărat creativi. Această activitate este și un exercițiu de depanare pentru punerea în practică suplimentară a abilităților de rezolvare a problemelor.
+            Nested Loops in Maze:
+              name: Bucle imbricate în Labirint
+              description_student: Bucle în interiorul unor bucle care la rândul lor se află în interiorul altor bucle. Ce înseamnă asta? În această lecție vei învăța ce se întâmplă atunci când creezi o buclă imbricată.
+            Conditionals with Cards:
+              name: Condiționale cu Carduri
+              description_student: Este timpul să jucăm un joc în care câștigi puncte numai în anumite condiții!
+              key: Condiționale cu Carduri
+            If/Else with Bee:
+              description_student: 'Acum că înțelegeți relațiile de condiționalitate, este timpul să programați Albinuța să le utilizeze atunci când strânge miere și nectar. '
+              description_teacher: Până acum elevii au scris cod care este executat exact la fel de fiecare dată când este rulat – acesta este fiabil, dar nu foarte flexibil. În această lecție, elevii vor începe să includă relații de condiționalitate, care le vor permite să scrie cod care funcționează diferit în funcție de condițiile specifice întâlnite de program.
+            While Loops in Farmer:
+              name: Bucle „while” în Fermier
+              description_student: 'Buclele sunt extrem de utile atunci când scriem cod. În această lecție vei învăța mai multe despre un nou tip de buclă: buclele „while”!'
+              description_teacher: Până la această lecție, elevii au folosit pentru destul de mult timp buclele `repeat`, așa că a sosit momentul să complicăm puțin lucrurile. _Buclele while_ sunt bucle care continuă să repete comenzi atâta timp cât este îndeplinită o condiție. Buclele „while” sunt folosite atunci când programatorul nu știe cu exactitate de câte ori trebuie să se repete comenzile, dar știe ce condiție trebuie să fie adevărată pentru ca bucla să se repete în continuare. De exemplu, elevii trebuie să umple gropile și să sape pentru a face grămezi de pământ în Fermier. Aceștia nu vor ști care este dimensiunea gropilor sau înălțimea grămezilor de pământ, dar știu că trebuie să continue să umple gropile și să sape pentru a face grămezi de pământ atâta timp cât solul nu este nivelat.
+              key: Bucle „while” în Fermier
+            Until Loops in Maze:
+              description_student: Puteți face lucruri extraordinare atunci când folosiți buclele `until`!
+              description_teacher: În această lecție, elevii vor învăța despre buclele `until`. Elevii vor elabora programe în care personajul principal repetă acțiuni până când (`until`) acestea ajung în punctul în care trebuie să se oprească.
+            End of Course Project:
+              name: Proiect de final de curs
+              description_student: Pregătește-te serios să scrii cod! A venit momentul să începi să îți elaborezi proiectul.
+              description_teacher: În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate!
+              key: Proiect de final de curs
+            lesson-5:
+              key: lecția-5
+              name: Parole mai puternice
+              description_student: În această lecție vei afla cum sunt protejate informațiile cu ajutorul parolelor, precum și cum să creezi o parolă eficientă.
+              description_teacher: " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)>Această lecție a fost concepută inițial de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).Parolele online mai puternice și mai sigure sunt o idee bună pentru oricine. Dar cum îi putem ajuta pe copii să creeze parole mai bune și să le și memoreze? Folosiți sfaturile din această lecție pentru a-i ajuta pe copii să creeze parole care sunt atât sigure, cât și ușor de memorat."
+            'Algorithms: Graph Paper Programming':
+              key: 'Algoritmi: Programare cu hârtie de copiat'
+              name: Programare pe Hârtie Milimetrică
+              description_student: În această lecție îți vei programa colegul să deseneze imagini!
+              description_teacher: "„Programându-se” unul pe celălalt să deseneze imagini, elevii vor lua contact cu unele dintre conceptele esențiale ale programării, dar într-un mod distractiv și accesibil. La începutul orei, elevii vor utiliza simboluri pentru a-și transmite reciproc instrucțiuni pentru colorarea de pătrate pe hârtie de copiat, încercând să reproducă o imagine. Dacă este timp, lecția se poate încheia cu imagini create chiar de elevi. "
+            Debugging in Collector:
+              key: Depanare în Colecționar
+              name: Depanare cu Laurel
+              description_student: Ai avut vreodată probleme în timp ce scriai cod? În această lecție, vei afla câteva dintre secretele depanării. Depanarea este procesul de identificare și de rezolvare a problemelor care apar în codul tău.
+              description_teacher: În această activitate online, elevii își vor pune în practică aptitudinile de depanare în mediul „Colecționar”. Elevii vor putea citi și edita codul pentru a elimina erorile din puzzle-uri cu algoritmi simpli, bucle și bucle imbricate.
+            Loops in Artist:
+              key: Cicluri cu Artistul
+              name: Cum să desenăm forme cu ajutorul buclelor
+              description_student: În această lecție vei desena imagini grozave în Artist cu ajutorul buclelor!
+              description_teacher: Această lecție are la bază cunoștințele despre bucle asimilate în lecțiile anterioare și oferă elevilor posibilitatea de a fi cu adevărat creativi. Această activitate este și un exercițiu de depanare pentru punerea în practică suplimentară a abilităților de rezolvare a problemelor.
+            Nested Loops in Bee:
+              name: Bucle imbricate în Labirint
+              description_student: Bucle în interiorul unor bucle care la rândul lor se află în interiorul altor bucle. Ce înseamnă asta? În această lecție vei învăța ce se întâmplă atunci când creezi o buclă imbricată.
+            lesson-6:
+              key: lecția-6
+            Conditionals in Bee:
+              key: Relații de condiționalitate în Albinuță
+              description_student: 'Acum că înțelegeți relațiile de condiționalitate, este timpul să programați Albinuța să le utilizeze atunci când strânge miere și nectar. '
+              description_teacher: Până acum elevii au scris cod care este executat exact la fel de fiecare dată când este rulat – acesta este fiabil, dar nu foarte flexibil. În această lecție, elevii vor începe să includă relații de condiționalitate, care le vor permite să scrie cod care funcționează diferit în funcție de condițiile specifice întâlnite de program.
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Cetățenia Digitală
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_events:
+              display_name: Evenimente
+            csf_loops:
+              display_name: Bucle
+            csf_conditionals:
+              display_name: Condiţionale
+            end_of_course_project:
+              display_name: Proiect de final de curs
+          title: "\t\nCurs D (2021)"
+          description_short: Învață despre condiții. Creează propriile opere de artă, jocuri, chiar și o petrecere dansantă.
+          description_audience: 'Vârsta: 7-11 ani'
+        coursee-2022:
+          lessons:
+            Follow the Algorithm:
+              name: Urmați algoritmul
+              description_student: Joacă un joc și gândește-te la comenzile necesare pentru a obține rezultatul corect.
+              description_teacher: În această lecție, elevii vor juca un joc care îi va face să reflecteze la modul în care trebuie să fie transmise comenzile pentru a obține rezultatul corect. Acest lucru îi va ajuta să facă mai ușor tranziția către Laboratorul cu sprites în cursul lecțiilor viitoare.
+            Swimming Fish with Sprite Lab:
+              name: Pești care înoată în Laboratorul cu sprites
+              description_student: Află cum poți crea și edita sprites.
+            Alien Dance Party with Sprite Lab:
+              name: Petrecere dansantă cu extratereștri în Laboratorul cu sprites
+              description_student: Creează un proiect interactiv pe care să-l partajezi cu colegii de clasă.
+              key: Petrecere dansantă cu extratereștri în Laboratorul cu sprites
+            Be A Super Digital Citizen:
+              name: Fii un supercetățean digital
+              description_student: Află cum poți fi un exemplu pentru ceilalți atunci când asiști la cyberbullying.
+              description_teacher: "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)Această lecție a fost concepută inițial de Common Sense Education. [Mai multe informații.](https://www.commonsense.org/education/digital-citizenship/curriculum).Instrumentele online îi ajută pe copii să se afirme și să se dezvolte, dar sunt însoțite și de o responsabilitate semnificativă. Întrebarea este dacă aceștia știu cum trebuie să procedeze când se confruntă cu fenomenul de „cyberbullying”. Arătați-le elevilor care sunt modurile adecvate în care trebuie să acționeze și să rezolve conflictele, să fie un exemplu pentru ceilalți și să îi ajute pe ceilalți la nevoie."
+            Private and Personal Information:
+              description_student: Internetul este distractiv și interesant, dar este important să fii în siguranță. În această lecție vei învăța care este diferența dintre informațiile care pot fi distribuite în siguranță și informațiile private.
+              description_teacher: " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)Această lecție a fost concepută inițial de Common Sense Education. [Mai multe informații.](https://www.commonsense.org/education/digital-citizenship/curriculum).Dorința de a partaja informații și de a stabili legături cu cei din jur este un lucru natural pentru elevii noștri. Dar partajarea acestor informații online este însoțită de anumite riscuri. Cum îi putem ajuta pe copii să aibă relații online solide, sigure și care să aibă un impact pozitiv asupra lor? Ajutați-vă elevii să învețe diferența dintre datele cu caracter personal și informațiile care trebuie să rămână private."
+            'Mini-Project: About Me':
+              name: Despre mine cu Laboratorul cu sprites
+              description_student: Prin crearea unui poster interactiv în Laboratorul cu sprites, elevii vor aplica toate cunoștințele asimilate cu privire la schimbul de date cu caracter personal și de informații private pe internet.
+            Digital Sharing:
+              description_student: 'În această lecție vei afla mai multe despre provocările și avantajele drepturilor de proprietate și ale drepturilor de autor. '
+            Drawing with Loops:
+              name: Cum să desenăm cu ajutorul buclelor
+            Fancy Shapes using Nested Loops:
+              name: Cum să realizăm forme complicate cu ajutorul buclelor imbricate
+              description_student: Și mai multe bucle imbricate! De data aceasta vei putea crea niște desene EXTRAORDINARE cu ajutorul buclelor imbricate.
+              description_teacher: În setul de puzzle-uri de astăzi, elevii vor crea desene complexe folosind Artist. Continuând să exerseze cu buclele imbricate, dar cu obiective noi, elevii vor utiliza buclele mai mult. Acest set de puzzle-uri le oferă și posibilitatea de a-și utiliza creativitatea, deoarece elevii pot să creeze propriile desene la sfârșitul acestei lecții.
+            Songwriting:
+              name: Compunând Cântece
+              description_student: Chiar și starurile rock trebuie să aibă abilități de programare. Această lecție te va învăța lucruri noi despre funcții cu ajutorul versurilor melodiilor.
+              description_teacher: Funcția este una dintre structurile cu adevărat magnifice din universul științei calculatoarelor. Funcțiile (uneori denumite și proceduri apelate) sunt mini-programe pe care le poți folosi repetat într-un program mai mare. Această lecție îi va ajuta pe elevi să înțeleagă intuitiv de ce este utilă combinarea mai multor fragmente de cod în cadrul unei funcții.
+            Functions in Minecraft:
+              name: Funcții în Minecraft
+              description_student: Știi cum să utilizezi funcțiile pentru a scrie cel mai eficient cod?
+              description_teacher: În această aventură distractivă și interactivă în Minecraft, elevii vor începe să înțeleagă modul în care funcțiile le sunt utile!
+              key: Funcții în Minecraft
+            Functions with Artist:
+              name: Funcții cu Artist
+              description_student: Realizează desene complexe mai ușor cu ajutorul funcțiilor!
+              description_teacher: Elevii vor începe să studieze utilizarea funcțiilor cu ajutorul mediului Artist. Aici vor crea și modifica imagini extraordinare. Pentru modele mai complicate, elevii vor învăța despre funcțiile imbricate, prin care o funcție este apelată din altă funcție.
+            'Conditionals in Minecraft: Voyage Aquatic':
+              name: 'Relații de condiționalitate în Minecraft: Călătorie în lumea subacvatică'
+              key: 'Relații de condiționalitate în Minecraft: Călătorie în lumea subacvatică'
+            Conditionals with the Farmer:
+              name: Relații de condiționalitate cu Fermier
+            Functions with Harvester:
+              name: Funcții cu Culegător
+              description_student: Funcțiile te vor ajuta să nu depui prea mult efort atunci când o ajuți pe fermieră să strângă recolta!
+            Designing for Accessibility:
+              name: Design pentru accesibilitate
+              description_teacher: 'În această lecție, elevii vor învăța despre accesibilitate și despre importanța empatiei prin brainstorming și prin conceperea de soluții accesibile pentru aplicații ipotetice. '
+            End of Course Project:
+              name: Proiect de final de curs
+              description_student: Pentru proiectele mari este nevoie de timp și de planificare. Găsește-ți sursa de inspirație, pregătește un plan și pune-ți creativitatea la treabă!
+              key: Proiect de final de curs
+            Simon Says:
+              name: Urmați algoritmul
+              description_student: Joacă un joc și gândește-te la comenzile necesare pentru a obține rezultatul corect.
+              description_teacher: În această lecție, elevii vor juca un joc care îi va face să reflecteze la modul în care trebuie să fie transmise comenzile pentru a obține rezultatul corect. Acest lucru îi va ajuta să facă mai ușor tranziția către Laboratorul cu sprites în cursul lecțiilor viitoare.
+            Learning Sprites with Sprite Lab:
+              name: Pești care înoată în Laboratorul cu sprites
+              description_student: Află cum poți crea și edita sprites.
+            lesson-4:
+              key: lecția-4
+              name: Fii un supercetățean digital
+              description_student: Află cum poți fi un exemplu pentru ceilalți atunci când asiști la cyberbullying.
+              description_teacher: "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)Această lecție a fost concepută inițial de Common Sense Education. [Mai multe informații.](https://www.commonsense.org/education/digital-citizenship/curriculum).Instrumentele online îi ajută pe copii să se afirme și să se dezvolte, dar sunt însoțite și de o responsabilitate semnificativă. Întrebarea este dacă aceștia știu cum trebuie să procedeze când se confruntă cu fenomenul de „cyberbullying”. Arătați-le elevilor care sunt modurile adecvate în care trebuie să acționeze și să rezolve conflictele, să fie un exemplu pentru ceilalți și să îi ajute pe ceilalți la nevoie."
+            About Me:
+              name: Despre mine cu Laboratorul cu sprites
+              description_student: Prin crearea unui poster interactiv în Laboratorul cu sprites, elevii vor aplica toate cunoștințele asimilate cu privire la schimbul de date cu caracter personal și de informații private pe internet.
+            Programming and Loops with the Artist:
+              name: Cum să desenăm cu ajutorul buclelor
+            Nested Loops in Artist:
+              key: Bucle imbricate în Artist
+              name: Cum să realizăm forme complicate cu ajutorul buclelor imbricate
+              description_student: Și mai multe bucle imbricate! De data aceasta vei putea crea niște desene EXTRAORDINARE cu ajutorul buclelor imbricate.
+              description_teacher: În setul de puzzle-uri de astăzi, elevii vor crea desene complexe folosind Artist. Continuând să exerseze cu buclele imbricate, dar cu obiective noi, elevii vor utiliza buclele mai mult. Acest set de puzzle-uri le oferă și posibilitatea de a-și utiliza creativitatea, deoarece elevii pot să creeze propriile desene la sfârșitul acestei lecții.
+            Nested Loops in Frozen:
+              key: Bucle imbricate în Regatul de gheață
+            'Functions: Songwriting':
+              key: 'Funcții: Compoziții muzicale'
+              name: Compunând Cântece
+              description_student: Chiar și starurile rock trebuie să aibă abilități de programare. Această lecție te va învăța lucruri noi despre funcții cu ajutorul versurilor melodiilor.
+              description_teacher: Funcția este una dintre structurile cu adevărat magnifice din universul științei calculatoarelor. Funcțiile (uneori denumite și proceduri apelate) sunt mini-programe pe care le poți folosi repetat într-un program mai mare. Această lecție îi va ajuta pe elevi să înțeleagă intuitiv de ce este utilă combinarea mai multor fragmente de cod în cadrul unei funcții.
+            Functions in Artist:
+              key: Funcții în Artist
+              name: Funcții cu Artist
+              description_student: Realizează desene complexe mai ușor cu ajutorul funcțiilor!
+              description_teacher: Elevii vor începe să studieze utilizarea funcțiilor cu ajutorul mediului Artist. Aici vor crea și modifica imagini extraordinare. Pentru modele mai complicate, elevii vor învăța despre funcțiile imbricate, prin care o funcție este apelată din altă funcție.
+            Conditionals:
+              key: Condiţionale
+              name: Relații de condiționalitate cu Fermier
+            Functions in Harvester:
+              key: Funcții în Culegător
+              name: Funcții cu Culegător
+              description_student: Funcțiile te vor ajuta să nu depui prea mult efort atunci când o ajuți pe fermieră să strângă recolta!
+            lesson-1:
+              key: lecția-1
+              name: Design pentru accesibilitate
+              description_teacher: 'În această lecție, elevii vor învăța despre accesibilitate și despre importanța empatiei prin brainstorming și prin conceperea de soluții accesibile pentru aplicații ipotetice. '
+            'Hello World: Food':
+              name: Bună Lume
+          lesson_groups:
+            csf_sprites:
+              display_name: Spiriduși
+            csf_digcit:
+              display_name: Cetățenia Digitală
+            ramp_up:
+              display_name: Repetiții imbricate
+            csf_functions:
+              display_name: Funcţii
+            csf_nested_loops:
+              display_name: Condiţionale
+            lessonGroup-7:
+              display_name: Impactul computerelor
+            end_of_course_project:
+              display_name: Proiect de final de curs
+          description_audience: 'Vârsta: 8-12 ani'
+        coursef-2022:
+          lessons:
+            Introducing Sprite Lab:
+              name: Prezentând Laboratorul de Desen
+            Sprites in Action:
+              name: Spiriduși în acțiune
+            'Mini-Project: Virtual Pet':
+              description_teacher: În această lecție, elevii vor crea un animal de companie virtual interactiv, care arată și se comportă exact așa cum își doresc ei. Elevii vor folosi instrumentul „Costume” din Laboratorul cu sprites pentru a personaliza aspectul animalului de companie. Apoi vor folosi evenimente, comportamente și alte concepte pe care le-au asimilat pentru a crea animalul de companie!
+            The Power of Words:
+              name: Puterea cuvintelor
+              description_student: Hărțuirea („bullying”) nu este niciodată acceptabilă. În această lecție vei învăța ce poți spune și ce nu poți spune online.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)Această lecție a fost concepută inițial de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).Pe măsură ce copiii cresc, aceștia vor începe, în mod firesc, să comunice mai mult online. Dar o parte din ceea ce văd online îi poate face să se simtă răniți, triști, furioși sau chiar să îi sperie. Ajutați-vă elevii să dea dovadă de empatie în relațiile cu cei din jur și să învețe strategii pe care trebuie să le utilizeze atunci când se confruntă cu fenomenul „cyberbullying”."
+            Drawing with Loops:
+              name: Cum să desenăm cu ajutorul buclelor
+            Using Variables with the Artist:
+              description_student: În această lecție vei desena cu variabile care se schimbă pe măsură ce programul rulează.
+              description_teacher: În această lecție, elevii vor explora crearea de modele repetitive folosind variabile în mediul Artist. Elevii vor învăța cum pot fi utilizate variabilele pentru a scrie și citi cod cu mai multă ușurință. După o serie de puzzle-uri ghidate, elevii vor încheia ora cu un nivel de joc liber, fără reguli, în care vor demonstra ce au învățat și în care își vor crea propriile modele.
+            Programming with the Bee:
+              description_student: " În această lecție, elevii vor învăța ce se întâmplă atunci când introduc o buclă într-o altă buclă."
+            Variables with the Bee:
+              description_student: Această albină adoră variabilele!
+              description_teacher: Această lecție va ajuta la ilustrarea modului în care variabilele pot face ca programele să fie mai eficiente, permițându-le elevilor să modifice valorile în timp ce rulează codul.
+            For Loop Fun:
+              name: Pentru distracția cu bucle
+              description_student: Te vei distra la maxim învățând despre buclele `for`!
+              description_teacher: Știm deja că buclele ne permit să întreprindem acțiuni în mod repetat, dar acum vom învăța cum să folosim bucle care includ structuri suplimentare încorporate. Cu ajutorul acestor noi structuri, elevii vor scrie cod mai eficient și mai dinamic.
+              key: Pentru distracția cu bucle
+            For Loops with Bee:
+              description_student: Bzz bzz! În aceste puzzle-uri vei îndruma o albină către nectar și miere cu ajutorul buclelor `for`!
+              description_teacher: Albinuța este personajul principal al acestei lecții care se axează pe bucle `for` și pe utilizarea unei variabile incrementale pentru a rezolva puzzle-uri mai complicate. Elevii vor începe prin a analiza bucle din lecțiile anterioare, apoi vor fi ghidați printr-o secțiune introductivă cu privire la buclele `for` pentru a rezolva probleme complicate mai eficient.
+            For Loops with Artist:
+              description_student: Pregătește-te să creezi următoarea ta capodoperă. Aici vei utiliza bucle `for` pentru a crea imagini care îți taie răsuflarea.
+              description_teacher: În această lecție, elevii continuă să lucreze cu bucle `for`, însă de data aceasta în mediul Artist. Elevii vor rezolva puzzle-uri în care sunt combinate variabile, bucle și bucle `for` pentru a crea modele complexe. La final, elevii vor putea să creeze desenele proprii în cadrul unui nivel de joc liber, fără reguli.
+            Simulating Experiments:
+              name: Simularea de experimente
+              description_student: Rulează simulări pe computer și experimentează, schimbând variabilele.
+              description_teacher: Prin rularea unei simple simulări în Laboratorul cu sprites, studenții vor vedea cum se poate utiliza computerul pentru a colecta date care identifică tendințe sau modele. După ce rulează simularea de mai multe ori, elevii vor avea ocazia să facă o predicție cu privire la modul în care schimbarea unei variabile din simulare poate afecta rezultatul, iar apoi să testeze ipoteza respectivă.
+              key: Simularea de experimente
+            Outbreak:
+              name: Epidemie
+            AI For Oceans:
+              name: IA pentru Oceane
+            The Internet:
+              name: Internetul
+              description_teacher: Chiar dacă mulți oameni folosesc Internetul zilnic, sunt puțini cei care știu cum funcționează. În această lecție, elevii vor pretinde că pot circula în interiorul Internetului în timp ce învață despre conexiuni, adrese URL, adrese IP și DNS.
+            End of Course Project:
+              name: Proiect de final de curs
+              description_student: Pentru proiectele mari este nevoie de timp și de planificare. Găsește-ți sursa de inspirație, pregătește un plan și pune-ți creativitatea la treabă!
+              description_teacher: În această lecție finală elevii vor proiecta, dezvolta și prezenta propriile proiecte realizate!
+              key: Proiect de final de curs
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+              name: Spiriduși în acțiune
+            Virtual Pet:
+              key: Animalul de companie virtual
+              description_teacher: În această lecție, elevii vor crea un animal de companie virtual interactiv, care arată și se comportă exact așa cum își doresc ei. Elevii vor folosi instrumentul „Costume” din Laboratorul cu sprites pentru a personaliza aspectul animalului de companie. Apoi vor folosi evenimente, comportamente și alte concepte pe care le-au asimilat pentru a crea animalul de companie!
+            lesson-2:
+              key: lecția-2
+              name: Puterea cuvintelor
+              description_student: Hărțuirea („bullying”) nu este niciodată acceptabilă. În această lecție vei învăța ce poți spune și ce nu poți spune online.
+              description_teacher: "![](https://curriculum.code.org/media/uploads/CommonSenseEducationShort400px.png)Această lecție a fost concepută inițial de [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).Pe măsură ce copiii cresc, aceștia vor începe, în mod firesc, să comunice mai mult online. Dar o parte din ceea ce văd online îi poate face să se simtă răniți, triști, furioși sau chiar să îi sperie. Ajutați-vă elevii să dea dovadă de empatie în relațiile cu cei din jur și să învețe strategii pe care trebuie să le utilizeze atunci când se confruntă cu fenomenul „cyberbullying”."
+            lesson-9:
+              key: lecția-9
+            lesson-10:
+              key: lecția-10
+            lesson-11:
+              key: lecția-11
+            Loops with the Artist:
+              name: Cum să desenăm cu ajutorul buclelor
+            Variables that Change in Artist:
+              description_student: În această lecție vei desena cu variabile care se schimbă pe măsură ce programul rulează.
+              description_teacher: În această lecție, elevii vor explora crearea de modele repetitive folosind variabile în mediul Artist. Elevii vor învăța cum pot fi utilizate variabilele pentru a scrie și citi cod cu mai multă ușurință. După o serie de puzzle-uri ghidate, elevii vor încheia ora cu un nivel de joc liber, fără reguli, în care vor demonstra ce au învățat și în care își vor crea propriile modele.
+            Nested Loops in the Maze:
+              description_student: " În această lecție, elevii vor învăța ce se întâmplă atunci când introduc o buclă într-o altă buclă."
+            Variables that Change in Bee:
+              description_student: Această albină adoră variabilele!
+              description_teacher: Această lecție va ajuta la ilustrarea modului în care variabilele pot face ca programele să fie mai eficiente, permițându-le elevilor să modifice valorile în timp ce rulează codul.
+            For Loops in Bee:
+              key: Bucle „For” în Albinuță
+              description_student: Bzz bzz! În aceste puzzle-uri vei îndruma o albină către nectar și miere cu ajutorul buclelor `for`!
+              description_teacher: Albinuța este personajul principal al acestei lecții care se axează pe bucle `for` și pe utilizarea unei variabile incrementale pentru a rezolva puzzle-uri mai complicate. Elevii vor începe prin a analiza bucle din lecțiile anterioare, apoi vor fi ghidați printr-o secțiune introductivă cu privire la buclele `for` pentru a rezolva probleme complicate mai eficient.
+            For Loops in Artist:
+              key: Bucle „For” în Artist
+              description_student: Pregătește-te să creezi următoarea ta capodoperă. Aici vei utiliza bucle `for` pentru a crea imagini care îți taie răsuflarea.
+              description_teacher: În această lecție, elevii continuă să lucreze cu bucle `for`, însă de data aceasta în mediul Artist. Elevii vor rezolva puzzle-uri în care sunt combinate variabile, bucle și bucle `for` pentru a crea modele complexe. La final, elevii vor putea să creeze desenele proprii în cadrul unui nivel de joc liber, fără reguli.
+            lesson-5:
+              key: lecția-5
+            AI for Oceans:
+              name: IA pentru Oceane
+            Internet:
+              key: Internet
+              name: Internetul
+              description_teacher: Chiar dacă mulți oameni folosesc Internetul zilnic, sunt puțini cei care știu cum funcționează. În această lecție, elevii vor pretinde că pot circula în interiorul Internetului în timp ce învață despre conexiuni, adrese URL, adrese IP și DNS.
+          lesson_groups:
+            ramp_up:
+              display_name: Spiriduși
+            lessonGroup-7:
+              display_name: Cetățenia Digitală
+            lessonGroup-8:
+              display_name: Variabile
+            end_of_course_project:
+              display_name: Proiect de final de curs
+          description_short: Învățați toate conceptele din fundamentele informaticii şi creați propria dvs. artă, poveste sau joc.
+          description_audience: 'Vârsta: 9-13 ani'
+        csp-post-survey-2021:
+          lessons:
+            lesson-1: {}
+        csa1-2022:
+          lessons:
+            lesson-2:
+              name: Laboratorul Java
+            lesson-3: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9:
+              name: Bucle
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        pre-express-2022:
+          lessons:
+            Learn to Drag and Drop:
+              key: Să învățăm să glisăm și să fixăm
+              name: Să învățăm să glisăm și să fixăm
+            Sequencing with Scrat:
+              key: Secvențiere cu Scrat
+              name: Secvențiere cu Scrat
+            Programming with Angry Birds:
+              key: Programare cu Angry Birds
+              name: Programare cu Angry Birds
+            Programming with Rey and BB-8:
+              key: Programare cu Rey și BB-8
+              name: Programare cu Rey și BB-8
+            Programming with Harvester:
+              key: Programare cu Culegătorul
+              name: Programare cu Culegătorul
+            Loops with Scrat:
+              key: Bucle cu Scrat
+              name: Bucle cu Scrat
+            Loops with Laurel:
+              key: Bucle cu Laurel
+              name: Bucle cu Laurel
+            Ocean Scene with Loops:
+              key: Peisaj oceanic cu bucle
+              name: Peisaj oceanic cu bucle
+            Drawing Gardens with Loops:
+              key: Cum să desenăm grădini cu ajutorul buclelor
+              name: Cum să desenăm grădini cu ajutorul buclelor
+            On the Move with Events:
+              key: Să ne mișcăm cu Evenimente
+              name: Să ne mișcăm cu Evenimente
+            A Royal Battle with Events:
+              key: O bătălie regală cu Evenimente
+              name: O bătălie regală cu Evenimente
+          lesson_groups:
+            csf_sequencing:
+              display_name: Secvențiere
+            csf_loops:
+              display_name: Bucle
+            csf_events:
+              display_name: Evenimente
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        tessplayground: {}
+        cs4all-invasive-species:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12:
+              name: Condiţionale
+            lesson-13: {}
+            lesson-14:
+              name: Relații de condiționalitate în Minecraft
+            lesson-15: {}
+            lesson-16:
+              name: Corectare erori
+            lesson-17:
+              name: Inspirație pentru proiect
+            lesson-18: {}
+            lesson-19:
+              name: Corectare erori
+            lesson-20: {}
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        tess-test-csa: {}
+        csa1-2022-exemplars:
+          lessons:
+            lesson-2:
+              name: Laboratorul Java
+            lesson-9:
+              name: Bucle
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        pltess: {}
+        self-paced-pl-csa1-2022: {}
+        self-paced-pl-csa3-2022: {}
+        csa7-pilot-extra:
+          lessons:
+            Unit 7 Pilot Survey: {}
+            Java Lab:
+              name: Laboratorul Java
+              key: Laboratorul Java
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-10:
+              key: lecția-10
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-16:
+              key: lecția-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+        csa8-pilot-extra:
+          lessons:
+            Unit 8 Pilot Survey: {}
+            Java Lab:
+              name: Laboratorul Java
+              key: Laboratorul Java
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-1:
+              key: lecția-1
+            lesson-2:
+              key: lecția-2
+            lesson-3:
+              key: lecția-3
+            lesson-4:
+              key: lecția-4
+            lesson-5:
+              key: lecția-5
+            lesson-10:
+              key: lecția-10
+            lesson-6:
+              key: lecția-6
+            lesson-7:
+              key: lecția-7
+            lesson-8:
+              key: lecția-8
+            lesson-9:
+              key: lecția-9
+            lesson-11:
+              key: lecția-11
+            lesson-12:
+              key: lecția-12
+            lesson-13:
+              key: lecția-13
+            lesson-14:
+              key: lecția-14
+            lesson-15:
+              key: lecția-15
+            lesson-16:
+              key: lecția-16
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+            lessonGroup-5:
+              display_name: Cutie cu nisip
+        csa-backpack-2022:
+          lessons:
+            lesson-1: {}

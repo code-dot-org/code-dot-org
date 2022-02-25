@@ -1,9 +1,10 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
-import {isolateComponent} from 'isolate-components';
+import {isolateComponent} from 'isolate-react';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+import Button from '@cdo/apps/templates/Button';
 
 describe('BorderedCallToAction', () => {
   const headingText = 'Do Something';
@@ -73,6 +74,18 @@ describe('BorderedCallToAction', () => {
         borderStyle: 'solid',
         borderWidth: 1
       });
+    });
+
+    it('can have a custom button color', () => {
+      const borderedCtA = isolateComponent(
+        <BorderedCallToAction
+          {...defaultProps}
+          buttonColor={Button.ButtonColor.orange}
+        />
+      );
+      const button = borderedCtA.findOne('Button');
+      expect(button.props.text).to.equal(buttonText);
+      expect(button.props.color).to.equal('orange');
     });
 
     it('can use a custom onClick, which ignores buttonUrl', () => {

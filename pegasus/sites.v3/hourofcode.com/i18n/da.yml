@@ -136,6 +136,9 @@ da:
     du udforsker etiske problemer, og om hvordan AI kan bruges til at løse verdensproblemer.
     Datalogi handler om så meget mere end koder! Nyd Code.org's første skridt på en
     ny rejse for at lære mere om AI gennem hele vores læseplan.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -234,7 +237,7 @@ da:
   hoc2018_tutorial_mchoc_description: Brug kodeblokkene til at tage Alex eller Steve
     med på eventyr gennem Minecraft universet.
   codeorg_homepage_hoc2019_dance_heading: Prøv den nye <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Støtte til forældre og lærere, der står over
     for skolelukninger.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -971,6 +974,7 @@ da:
   footer_menu_support: Support
   footer_menu_terms: Vilkår
   footer_menu_privacy: Privatlivspolitik
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Prøv en times lektion for alle aldre på mere end 45 sprog.  Slut
     dig til millioner af elever og lærere i mere end 180 lande og start med Programmeringstimen.

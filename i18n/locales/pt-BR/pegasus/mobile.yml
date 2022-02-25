@@ -395,6 +395,7 @@
   homepage_donors_donate: "Faça uma doação"
   homepage_below_hero_announcement_text: "Sua privacidade é importante para nós e estamos fazendo algumas atualizações em nossa política de privacidade, que entrará em vigor em 25 de maio."
   homepage_below_hero_announcement_link_text: "Saiba mais"
+  homepage_higher_power_body: "Cria com Festa dançante, ganha a oportunidade de ver a banda ao vivo."
   contact_form_topic_student: "Sou um estudante"
   contact_form_topic_parent: "Sou um pai"
   contact_form_topic_teacher: "Sou um professor/educador"
@@ -1716,6 +1717,8 @@
   hoc2018_dance_video2: "Festa Dançante - Eventos"
   hoc2018_dance_video3: "Festa Dançante - Propriedades"
   hoc2018_dance_video4: "Festa Dançante - Parabéns"
+  dance_box_higher_power_line_1: "Codifique uma dança para \"Higher Power\" da Coldplay e você pode ter a chance de ver a banda ao vivo!"
+  dance_box_higher_power_line_2: "Confira <a href=\"%{path}\">code.org/coldplay</a> para obter mais informações"
   page_not_found_title: "Página não encontrada"
   page_not_found_header: '404: Página não encontrada'
   page_not_found_description: "A página que você está procurando não existe neste endereço. Verifique o endereço de web e carregue novamente. Ou, então, volte para nossa página inicial."
@@ -1751,3 +1754,4 @@
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizado de Máquinas para crianças'
   outbreak_tile_title: "Epidemia"
   outbreak_tile_subtitle: "Um vírus infectou a Cidade dos Monstros! Codifique um simulador de surtos e faça previsões sobre o que acontecerá com os vizinhos da Cidade dos Monstros."
+  footer_cookie_notice: "Aviso sobre Cookies"

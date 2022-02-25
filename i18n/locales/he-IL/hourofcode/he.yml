@@ -130,6 +130,9 @@ he:
     והטייה, תוך בחינת דילמות מוסריות והאופן שבו ניתן לגייס בינה מלאכותית להתמודדות
     עם בעיות עולמיות. מדעי המחשב עוסקים בכל כך הרבה דברים מלבד תכנות! תיהנו מהצעד
     הראשון של Code.org במסע חדש ללימוד בינה מלאכותית באמצעות תוכנית הלימודים שלנו.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -222,8 +225,8 @@ he:
   codeorg_homepage_csc_title: CS Connections
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: תמיכה בהורים ובמורים המתמודדים עם סגירות בתי
     הספר.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -930,6 +933,7 @@ he:
   footer_menu_support: תמיכה
   footer_menu_terms: תנאי שימוש
   footer_menu_privacy: מדיניות הפרטיות
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Try a one-hour tutorial designed for all ages in over 45 languages.  Join
     millions of students and teachers in over 180 countries starting with an Hour

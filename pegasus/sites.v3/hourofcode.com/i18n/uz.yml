@@ -141,6 +141,9 @@ uz:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Dasturlash soati jonli efir
   hoc_live_sign_up_title: Dasturlash soati jonli efiriga ro'yxatdan o'ting
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -751,15 +754,14 @@ uz:
     "Dasturlash soati" uchun birlashdilar. Batafsil ma'lumot [bu yerda](%{promot}).
     "
   hoc_faq_tutorial_q: Qanday qilib bir soatlik darslikni tayyorlashim mumkin? '
-  hoc_faq_tutorial_a: Agar o‘qituvchi sherik bo‘lishni xohlasangiz, <a href='/tutorial-guidlines'>
-    bizning ko‘rsatmalarimizga va ko‘rsatmalariga qarang </a>. Biz turli xil qiziqarli
-    variantlarni qabul qilmoqchimiz, lekin asosiy maqsad kompyuter fanlari bilan yangi
-    tanishgan talabalar va o‘qituvchilar uchun tajribani optimallashtirishdir. "
+  hoc_faq_tutorial_a: Agar o‘qituvchi sherik bo‘lishni xohlasangiz, <a href='/tutorial-guidelines'>bizning
+    ko‘rsatmalarimizga va ko‘rsatmalariga qarang</a>. Biz turli xil qiziqarli variantlarni
+    qabul qilmoqchimiz, lekin asosiy maqsad kompyuter fanlari bilan yangi tanishgan
+    talabalar va o‘qituvchilar uchun tajribani optimallashtirishdir.
   hoc_faq_tutorial_a_markdown: Agar o‘qituvchi sherik bo‘lishni xohlasangiz, [bizning
-    ko‘rsatmalarimizga va ko‘rsatmalarimizga qarang](%{tutorial_guidlines}). Biz turli
-    xil qiziqarli variantlarni qabul qilmoqchimiz, lekin asosiy maqsad kompyuter fanlari
-    bilan yangi tanishgan talabalar va o‘qituvchilar uchun tajribani optimallashtirishdir.
-    "
+    ko‘rsatmalarimizga va ko‘rsatmalarimizga qarang](%{tutorial_guidelines}). Biz
+    turli xil qiziqarli variantlarni qabul qilmoqchimiz, lekin asosiy maqsad kompyuter
+    fanlari bilan yangi tanishgan talabalar va o‘qituvchilar uchun tajribani optimallashtirishdir.
   hoc_faq_account_q: Talabalar akkaunt yordamida tizimga kirishlari kerakmi? "
   hoc_faq_account_a: Yo‘q. Kodeks soatini sinab ko‘rish uchun talabalarga ro‘yxatdan
     o‘tish yoki kirish shart emas. <a href='%{codeorg_url}/learn/beyond'> keyingi
@@ -1052,7 +1054,7 @@ uz:
     Uilyams, kichik Neymar, Karmelo Entoni va boshqalar talabalarni o‘zlarini itarishga
     undaydi.
   highlights_constant_athletes_short_heading: O‘zingizni itaring
-  footer_copyright_message: "%{Current_year} Code.org mualliflik huquqi. Barcha huquqlar
+  footer_copyright_message: "%{current_year} Code.org mualliflik huquqi. Barcha huquqlar
     himoyalangan.'"
   footer_trademark_message: Hour of Code ™ va Hora del Código® Code.org savdo belgilaridir.
     Amazon veb-xizmatlari va "Powered by AWS" logotipi Amazon.com, Inc yoki uning
@@ -1063,6 +1065,7 @@ uz:
   footer_menu_support: Qo‘llab-quvvatlash
   footer_menu_terms: Xizmat shartlari
   footer_menu_privacy: Maxfiylik siyosati
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Dasturlash soati mashg‘ulotlari
   learn_banner_blurb: 45 tadan ziyod tillarda barcha yoshdagilarga mo‘ljallangan bir
     soatlik darslarni sinab ko‘ring. Dasturlash soatidan boshlagan 180 dan ortiq mamlakatlardagi

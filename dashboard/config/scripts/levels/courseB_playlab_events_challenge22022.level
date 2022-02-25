@@ -60,11 +60,16 @@
     "default_num_example_blocks": "false",
     "show_type_hints": "false",
     "include_shared_functions": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "This level validates by checking for a score > 9. If a student builds the envisioned game, they will score 10 points quickly. It is of course possible to exploit this check and have your game counted as successful without building it correctly.\r\n\r\n\"courseB_playlab_events_challenge2_embed\" is a clone of this level but marked as free play without any success conditions. This will let the student play their game as long as they like, unlike the normal puzzle levels that cut them off mid-game to end the level as a win.",
-  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:10.526+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_events_challenge2_2021\\\"\"],\"cloned_from\":\"courseB_playlab_events_challenge2_2021\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-01-06T20:08:10.526+00:00\",\"changed\":[\"cloned from \\\"courseB_playlab_events_challenge2_2021\\\"\"],\"cloned_from\":\"courseB_playlab_events_challenge2_2021\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "events": 4
+  }
 }]]></config>
   <blocks>
     <initialization_blocks>

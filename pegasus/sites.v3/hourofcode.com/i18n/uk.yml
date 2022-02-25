@@ -139,6 +139,9 @@ uk:
     для вирішення світових проблем. Інформатика – це набагато більше, ніж просто програмування!
     Насолоджуйтесь першим кроком Code.org у новій подорожі, щоб дізнатися більше про
     AI в рамках нашої навчальної програми.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -238,7 +241,7 @@ uk:
     чи Стіва через пригоди в цьому світі Майнкрафт.
   codeorg_homepage_hoc2019_dance_heading: Спробуйте новий урок <span class="highlight-word">Танцювальна
     вечірка!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Підтримка батьків та вчителів, які стикаються
     із закриттям школи.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -963,6 +966,7 @@ uk:
   footer_menu_support: Підтримка
   footer_menu_terms: Умови
   footer_menu_privacy: Політика конфіденційності
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Година Коду
   learn_banner_blurb: Спробуйте одно-годинні підручники, розроблені для будь-якого
     віку на 45 мовах. Приєднуйтесь до мільйонів учнів та вчителів у більш, як 180

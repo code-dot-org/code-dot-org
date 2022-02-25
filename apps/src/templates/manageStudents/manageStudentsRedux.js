@@ -1,11 +1,10 @@
 import _ from 'lodash';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {getCurrentSection} from '@cdo/apps/util/userSectionClient';
 import {
   sectionCode,
-  sectionName
+  sectionName,
+  asyncLoadSectionData
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 import $ from 'jquery';
 
 export const ParentLetterButtonMetricsCategory = {
@@ -291,7 +290,7 @@ export const handleShareSetting = disable => {
 export const saveStudent = studentId => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
-    const sectionId = getState().sectionData.section.id;
+    const sectionId = getState().teacherSections.selectedSectionId;
     dispatch(startSavingStudent(studentId));
     updateStudentOnServer(
       state.editingData[studentId],
@@ -301,7 +300,7 @@ export const saveStudent = studentId => {
           console.error(error);
         }
         dispatch(saveStudentSuccess(studentId));
-        getCurrentSection(sectionId, section => dispatch(setSection(section)));
+        dispatch(asyncLoadSectionData(sectionId));
       }
     );
   };
@@ -343,7 +342,7 @@ export const saveAllStudents = () => {
 export const addStudents = studentIds => {
   return (dispatch, getState) => {
     const state = getState().manageStudents;
-    const sectionId = getState().sectionData.section.id;
+    const sectionId = getState().teacherSections.selectedSectionId;
     const numStudentsToAdd = studentIds.length;
 
     // Update each row to saving in progress.
@@ -370,7 +369,7 @@ export const addStudents = studentIds => {
             convertStudentServerData(data, state.loginType, sectionId)
           )
         );
-        getCurrentSection(sectionId, section => dispatch(setSection(section)));
+        dispatch(asyncLoadSectionData(sectionId));
       }
     });
   };
@@ -406,7 +405,10 @@ export const transferStudents = onComplete => {
     dispatch(transferStudentsPending());
     const state = getState();
     // Get section code for current section from teacherSectionsRedux
-    const currentSectionCode = sectionCode(state, state.sectionData.section.id);
+    const currentSectionCode = sectionCode(
+      state,
+      state.teacherSections.selectedSectionId
+    );
     const {
       studentIds,
       sectionId: newSectionId,
@@ -454,8 +456,8 @@ export const transferStudents = onComplete => {
             )
           );
           onComplete();
-          getCurrentSection(currentSectionCode, section =>
-            dispatch(setSection(section))
+          dispatch(
+            asyncLoadSectionData(state.teacherSections.selectedSectionId)
           );
         }
       }

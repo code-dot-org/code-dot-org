@@ -617,9 +617,9 @@ de:
         C4_bee_conditional: Biene Bedingungen
         C4_variables_artist: Variablen - Künstler
         C4_variables_playlab: Variablen - Spielelabor
-        C4_for_loops: '"Zähle mit"-Schleifen'
-        C4_for_loops_bee: '"Zähle mit"-Schleifen'
-        C4_for_loops_no_bee: '"Zähle mit"-Schleifen'
+        C4_for_loops: Schleifen mit dem Wiederhol-Block
+        C4_for_loops_bee: Schleifen mit dem Wiederhol-Block
+        C4_for_loops_no_bee: Schleifen mit dem Wiederhol-Block
         C4_math_artist: Programmiere den Künstler mit Mathematik
         C4_function_edit: Funktionen bearbeiten
         C4_function_create: Funktionen erstellen
@@ -628,7 +628,7 @@ de:
         C4_unplugged_algorithms: Algorithmen mit Tangram
         C4_unplugged_madlibs: Mad Libs
         C4_unplugged_variables: Variablen in Briefumschlägen
-        C4_unplugged_forloops: '"Zähle mit"-Schleifen'
+        C4_unplugged_forloops: Schleifen mit dem Wiederhol-Block
         C4_unplugged_parameters: Songschreiben mit Parametern
         C4_unplugged_binary: Binärdatei
         CSF_a_b_artist_loops: Schleifen beim Künstler
@@ -839,7 +839,10 @@ de:
         codebreak_e04: Code Break 4.0 Informationen mit Mike Krieger und Alice Keeler
         codebreak_e05: 'Code Break 5.0: Simulation & Daten mit Bill Gates'
         csd_how_teamwork_works: Wie Teamarbeit funktioniert
+        codebreak_e10: 'Folge 10.0: Künstliche Intelligenz mit Kat Graham und Kate
+          Park'
         outbreak_mike: CodeBytes Episode 3 mit Mike – Ausbruchssimulator
+        csd_ml_import_model: Importieren eines KI-Modells
         playlab_2021: Einführung ins Spielelabor
         playlab_2021_reader: Einführung ins Spielelabor
         PL_CSD_TeacherTips_Advise: Tipps für Lehrer – Ratschläge für neue Lehrer

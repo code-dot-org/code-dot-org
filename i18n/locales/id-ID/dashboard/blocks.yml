@@ -358,6 +358,7 @@ id:
             '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
+            '"infinity"': infinite line
             '"random"': acak
       Dancelab_makeAnonymousDanceSprite:
         text: buat baru {COSTUME} di {LOCATION}
@@ -440,6 +441,26 @@ id:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': semua aliens
             '"BEAR"': semua beruang
@@ -467,6 +488,7 @@ id:
             '"right"': kolom kanan
             '"x"': berselang-seling
             '"plus"': plus
+            '"infinity"': infinite line
             '"random"': acak
       Dancelab_mixColors:
         text: campur {COLOR1} dan {COLOR2}
@@ -532,6 +554,7 @@ id:
             '"fireworks"': Kembang Api
             '"flowers"': Bunga
             '"growing_stars"': Bintang Tumbuh
+            '"higher_power"': Higher Power
             '"swirl"': Hypno
             '"kaleidoscope"': Kaleidoskop
             '"lasers"': Lantai Dansa Laser
@@ -1001,6 +1024,17 @@ id:
         text: ketika {SPRITE} diklik
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): berputar ke kanan
+            new Behavior(spinning_left, []): berputar ke kiri
+            new Behavior(jittering, []): gugup
+            new Behavior(wandering, []): pengembaraan
+            new Behavior(patrolling, []): perondaan
+            new Behavior(moving_north_and_looping, []): bergerak ke utara dan berulang
+            new Behavior(moving_south_and_looping, []): bergerak ke selatan dan berulang
       gamelab_comment:
         text: 'komentar: {COMMENT}'
       gamelab_costumeImage:
@@ -1052,6 +1086,20 @@ id:
         text: |-
           jika {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: kostum {SPRITE} adalah {COSTUME}
       gamelab_isKeyPressed:
@@ -1242,6 +1290,12 @@ id:
             "'sound://category_digital/jump_7.mp3'": lompat
       gamelab_playSpeech:
         text: putar ucapan {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): bergerak dengan tanda panah
+            draggable(): yang diseret
       gamelab_pointInDirection:
         text: titik {SPRITE} {DIRECTION}
         options:
@@ -1266,6 +1320,8 @@ id:
         text: hapus warna dari {THIS}
       gamelab_repeatForever:
         text: Ulangi selamanya
+      gamelab_resetTimer:
+        text: reset timer
       gamelab_setAnimation:
         text: perubahan {THIS} kostum untuk {ANIMATION}
       gamelab_setBackground:
@@ -1345,6 +1401,14 @@ id:
             '"scale"': ukuran
             '"width"': lebar
             '"height"': tinggi
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': lambat
+            '5': normal
+            '7': cepat
+            '9': extra fast
       gamelab_setTint:
         text: ubah warna {THIS} menjadi {COLOR}
       gamelab_setupScoreboard:

@@ -83,6 +83,9 @@
         "text-compression/Text Compression": {
           "student_overview": "V určitom bode narazíme na hranicu fyzických možností ohľadom rýchlosti posielania bitov. Ak chceme posielať väčšie množstvo informácií rýchlejšie, musíme nájsť spôsob, ako reprezentovať rovnakú informáciu pomocou menšieho množstva bitov – musíme komprimovať dáta."
         },
+        "outbreak/Outbreak": {
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
+        },
         "infinity/Infinity": {
           "student_overview": "V tejto lekcii žiaci získajú úvodnú skúsenosť s informatikou a pomocou základných programových blokov vytvoria hru."
         },
@@ -105,9 +108,6 @@
         "poem-art/lesson-1": {
           "overview": "V tejto integrovanej lekcii počítačovej vedy a anglického jazyka a literatúry (ELA) budú žiaci vytvárať programovaním animáciu k básni, aby ilustrovali náladu básne. Počas tejto úvodnej aktivity programovania si žiaci prečítajú a určia náladu básne. Potom nájdu zodpovedajúce efekty a obrázky, ktoré im pomôžu ilustrovať náladu básne. Nakoniec žiaci použijú udalosti (kód), aby ilustrovali zmenu nálady alebo nakreslili implementovanie nových obrázkov do básne. Túto lekciu je možné absolvovať ako 1-hodinovú samostatnú lekciu. Existuje možnosť použiť túto lekciu ako prvú lekciu 5-hodinového modulu s názvom [Programovanie s poéziou](http://code.org/poetry). Na konci modulu Programovanie s poéziou žiaci napíšu svoje vlastné básne a vytvoria aplikáciu na generátor básní, ktorú budú zdieľať so svojimi kamarátmi. Programovanie s poéziou je súčasťou učebných osnov programu CS Connections na stránke Code.org, ktorého cieľom je integrovať počítačovú do iných predmetov, ako je matematika, anglický jazyk a literatúra a veda, v súlade s normami CCSS, NGSS a CSTA. ",
           "preparation": "-   Prezrite a dokončite online návod: [Umenie poézie](http://studio.code.org/s/poem-art).\n\n-   Aktivity si najskôr vyskúšajte, predtým, ako požiadate svojich žiakov, aby ich urobili.\n\n-   Skontrolujte svoju technológiu a vopred sa rozhodnite, či potrebujete vyriešiť akékoľvek nezrovnalosti.\n\n-   Niektoré úrovne vyžadujú prehrávanie zvuku. Vopred rozdajte žiakom slúchadlá. \n\n-   [Voliteľné] každý žiak dostane 2 poznámkové bloky na hodnotenie."
-        },
-        "outbreak/Outbreak": {
-          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
         },
         "jigsaw/Jigsaw": {
           "overview": "Táto lekcia poskytne študentom predstavu o tom, čo očakávať, keď prídu do počítačových laboratórií. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačových laboratóriách, a potom pokročia k používaniu počítača na dokončenie online úloh.",
@@ -852,6 +852,9 @@
           "preparation": "-   Venujte čas tomu, aby ste si vytvorili vlastný projekt v Umelcovi aj Sprite Labe. Oboznámte sa s možnosťami a obmedzeniami oboch nástrojov.\n-   Upravte **\\*hodnotiacu tabuľku** tak, aby bola v súlade s vašimi triednymi cieľmi a každému žiakovi vytlačte jeden exemplár.\n-   Upravte **\\*hárok návrhu projektu** tak, aby bol v súlade s vašimi triednymi cieľmi a každému žiakovi vytlačte jeden exemplár.",
           "purpose": "Hoci môžu byť žiaci pripravení vrhnúť sa do vytvárania vlastných projektov, táto lekcia im pomôže premeniť nápady na plány. Táto štruktúra pomôže uzemniť idealistov a zároveň ukáže cestu tým, ktorí ešte možno trocha blúdia. Dajte žiakom dosť času na to, aby si vytvorili a upravili svoje projekty. Nevyhnutnosť prístupu „pokus –omyl“ v tejto lekcii naučí žiakov riešiť problémy a vytrvať.",
           "student_overview": "Na takéto veľké projekty treba veľa času a plánovania. Nájdite inšpiráciu, vytvorte si plán a potom prejavte svoju tvorivosť naplno!"
+        },
+        "csd3-2021/Variables": {
+          "overview": "**Otázka dňa:  Ako vieme využiť premenné na skladovanie konkrétnej hodnoty a jej využitie v našom programe?**\n\nV tejto lekcii si predstavíme premenné ako spôsob na označenie čísla alebo uloženie náhodne vygenerovanej hodnoty. Začneme jednoduchým popisom premenných a ich využitia a vyskúšame ich použitie v praxi. "
         }
       }
     }

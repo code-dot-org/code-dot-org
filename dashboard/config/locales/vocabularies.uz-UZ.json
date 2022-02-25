@@ -208,6 +208,10 @@
         "lossless_compression/text-compression/unversioned": {
           "word": "Lossless Compression"
         },
+        "event/outbreak/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
         "event/sports/unversioned": {
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
@@ -284,10 +288,6 @@
         },
         "program/poem-art/unversioned": {
           "word": "Dastur"
-        },
-        "event/outbreak/unversioned": {
-          "word": "Hodisa",
-          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
         "sprite/coursef/2021": {
           "word": "Sprait",
@@ -788,6 +788,64 @@
         "try/coursee/2021": {
           "word": "Urinish (Try)",
           "definition": "Biror nima qilishga urinish"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Mashinalar o‘rganishi",
+          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
+        },
+        "ethics/csd/2021": {
+          "word": "Etika"
+        },
+        "user_interface/csd/2021": {
+          "word": "UI - Foydalanuvchi interfeysi"
+        },
+        "bug/csd/2021": {
+          "word": "Bag",
+          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
+        },
+        "for_loop/csd/2021": {
+          "word": "For sikli",
+          "definition": "Boshlanish, tugash va o‘sish qadami (oralig‘i) oldindan belgilangan sikllar."
+        },
+        "debugging/csd/2021": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/csd/2021": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "variable/csd/2021": {
+          "word": "O‘zgaruvchi",
+          "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprait"
+        },
+        "condition/csd/2021": {
+          "word": "Shart"
+        },
+        "conditionals/csd/2021": {
+          "word": "Shartli bayonotlar"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstraksiya"
+        },
+        "function/csd/2021": {
+          "word": "Funksiya"
+        },
+        "input/csd/2021": {
+          "word": "Kiritish"
+        },
+        "processing/csd/2021": {
+          "word": "Processing"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Digital Footprint"
+        },
+        "copyright/csd/2021": {
+          "word": "Mualliflik huquqi",
+          "definition": "adabiy, badiiy yoki musiqiy materiallarni chop etish, nashr etish, ijro etish, videoga tushirish yoki yozib olish va boshqalarga ham shu imkoniyatlarni beradigan eksklyuziv qonuniy huquq."
         }
       }
     }

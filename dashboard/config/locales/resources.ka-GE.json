@@ -676,6 +676,162 @@
         },
         "virtual_lesson_modifications/coursee/2021": {
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
+        },
+        "seeing_ai/csd/2021": {
+          "name": "AI-ს დანახვა"
+        },
+        "paper-prototypes/csd/2021": {
+          "name": "ქაღალდის პროტოტიპები"
+        },
+        "design_mode/csd/2021": {
+          "name": "დიზაინის რეჟიმი"
+        },
+        "design_mode_1/csd/2021": {
+          "name": "დიზაინის რეჟიმი"
+        },
+        "app-presentation/csd/2021": {
+          "name": "აპლიკაციის პრეზენტაცია"
+        },
+        "app-presentation-exemplar/csd/2021": {
+          "name": "აპლიკაციის პრეზენტაცია"
+        },
+        "teacher_forum/csd/2021": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "how_computers_word_hardware_software/csd/2021": {
+          "name": "როგორ მუშაობს კომპიუტერი: აპარატული და პროგრამული უზრუნველყოფა"
+        },
+        "physical_input/csd/2021": {
+          "name": "ფიზიკურად შეყვანილი ინფორმაცია"
+        },
+        "functions_2/csd/2021": {
+          "name": "ფუნქციები"
+        },
+        "introduction_to_arrays/csd/2021": {
+          "name": "შესავალი მასივებში"
+        },
+        "loops_in_app_lab/csd/2021": {
+          "name": "\"მიზნისთვის\" ციკლები"
+        },
+        "for_loops/csd/2021": {
+          "name": "\"მიზნისთვის\" ციკლები"
+        },
+        "circuits-logic-video/csd/2021": {
+          "name": "როგორ მუშაობს კომპიუტერი: სქემები და ლოგიკა"
+        },
+        "representing-information-1/csd/2021": {
+          "name": "ინფორმაციის წარმოდგენა"
+        },
+        "representing-numbers-exemplar-2019/csd/2021": {
+          "name": "რიცხვების წარმოდგენა"
+        },
+        "interpreting-data-exemplar-2019/csd/2021": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "interpreting-data/csd/2021": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "interpreting-data-1/csd/2021": {
+          "name": "მონაცემთა ინტერპრეტაცია"
+        },
+        "making-decisions-with-data/csd/2021": {
+          "name": "გადაწყვეტილების მიღება მონაცემებთან ერთად"
+        },
+        "automating-data-decisions-exemplar-2019/csd/2021": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "data-decisions-resource/csd/2021": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "automating-data-decisions-1/csd/2021": {
+          "name": "მონაცემთა გადაწყვეტილებების ავტომატიზირება"
+        },
+        "data-in-the-real-world-exemplar-2019/csd/2021": {
+          "name": "მონაცემები რეალურ ცხოვრებაში"
+        },
+        "data-in-the-real-world/csd/2021": {
+          "name": "მონაცემები რეალურ ცხოვრებაში"
+        },
+        "variables_1/csd/2021": {
+          "name": "ცვლადები"
+        },
+        "the_animation_tab/csd/2021": {
+          "name": "ანიმაციის ტაბი"
+        },
+        "sprites_1/csd/2021": {
+          "name": "სპრაიტები"
+        },
+        "the_draw_loop/csd/2021": {
+          "name": "ხატვის ციკლი"
+        },
+        "animating-sprites/csd/2021": {
+          "name": "სპრაიტების მოძრაობა"
+        },
+        "boolean_expressions/csd/2021": {
+          "name": "ბულის ტიპის გამოთქმები"
+        },
+        "conditional_statements/csd/2021": {
+          "name": "პირობითი დებულებები"
+        },
+        "if_else_statements/csd/2021": {
+          "name": "„თუ/სხვაგვარად“ დებულებები"
+        },
+        "velocity_1/csd/2021": {
+          "name": "სიჩქარე"
+        },
+        "velocity_2/csd/2021": {
+          "name": "სიჩქარე"
+        },
+        "collision-detection-exemplar-2020/csd/2021": {
+          "name": "შეჯახების აღმოჩენა"
+        },
+        "collision_detection/csd/2021": {
+          "name": "შეჯახების აღმოჩენა"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "ფუნქციები"
+        },
+        "functions_1/csd/2021": {
+          "name": "ფუნქციები"
+        },
+        "teacher_forum_1/csd/2021": {
+          "name": "მასწავლებლის ფორუმი"
+        },
+        "what-is-a-computer-2020/csd/2021": {
+          "name": "რა არის კომპიუტერი?"
+        },
+        "input-and-output-2020/csd/2021": {
+          "name": "შესაყვანი და გამოსაყვანი ინფორმაცია"
+        },
+        "input-and-output-1/csd/2021": {
+          "name": "შესაყვანი და გამოსაყვანი ინფორმაცია"
+        },
+        "app-proposal-project/csd/2021": {
+          "name": "აპლიკაციები და პრობლემების გადაჭრა"
+        },
+        "apps-and-problem-solving-peer-review-2019/csd/2021": {
+          "name": "აპლიკაციები და პრობლემების გადაჭრა"
+        },
+        "apps_and_problem_solving/csd/2021": {
+          "name": "აპლიკაციები და პრობლემების გადაჭრა"
+        },
+        "lists/csd/2021": {
+          "name": "სიები"
+        },
+        "digital-footprint/csd/2021": {
+          "name": "ციფრული ნაკვალევი"
+        },
+        "intro_to_css_-_part_1/csd/2021": {
+          "name": "შესავალი CSS-ში - ნაწილი 1"
+        },
+        "intro_to_css_-_part_2/csd/2021": {
+          "name": "შესავალი CSS-ში - ნაწილი 2"
+        },
+        "images_in_html/csd/2021": {
+          "name": "სურათები HTML-ში"
+        },
+        "classes/csd/2021": {
+          "name": "კლასები"
         }
       }
     }

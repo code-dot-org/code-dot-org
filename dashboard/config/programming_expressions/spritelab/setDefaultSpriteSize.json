@@ -1,7 +1,0 @@
-{
-  "key": "setDefaultSpriteSize",
-  "name": "setDefaultSpriteSize",
-  "category": "Sprites",
-  "block_name": "gamelab_setDefaultSpriteSize",
-  "syntax": "setDefaultSpriteSize"
-}

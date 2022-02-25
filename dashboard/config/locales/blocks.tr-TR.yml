@@ -344,6 +344,8 @@ tr:
             '"column"': sütun
             '"x"': çapraz geçiş
             '"plus"': artı
+            '"spiral"': sarmal
+            '"infinity"': sonsuz çizgi
             '"random"': gelişigüzel
       Dancelab_makeAnonymousDanceSprite:
         text: "{LOCATION} 'de yeni bir {COSTUME} yapın"
@@ -426,6 +428,26 @@ tr:
             '18': '18'
             '19': '19'
             '20': '20'
+            '21': '21'
+            '22': '22'
+            '23': '23'
+            '24': '24'
+            '25': '25'
+            '26': '26'
+            '27': '27'
+            '28': '28'
+            '29': '29'
+            '30': '30'
+            '31': '31'
+            '32': '32'
+            '33': '33'
+            '34': '34'
+            '35': '35'
+            '36': '36'
+            '37': '37'
+            '38': '38'
+            '39': '39'
+            '40': '40'
           COSTUME:
             '"ALIEN"': tüm uzaylılar
             '"BEAR"': ayılar
@@ -448,6 +470,8 @@ tr:
             '"column"': sütun
             '"x"': çapraz geçiş
             '"plus"': artı
+            '"spiral"': sarmal
+            '"infinity"': sonsuz çizgi
             '"random"': gelişigüzel
       Dancelab_mixColors:
         text: "{COLOR1} ve {COLOR2}’yi karıştır"
@@ -508,6 +532,7 @@ tr:
             '"fireworks"': Havai fişek
             '"flowers"': Çiçekler
             '"growing_stars"': Büyüyen Yıldızlar
+            '"higher_power"': Higher Power
             '"swirl"': Hipnozcu
             '"kaleidoscope"': Kaleydoskop
             '"lasers"': Lazer Dans Pisti
@@ -937,7 +962,22 @@ tr:
       gamelab_clickedOn:
         text: "{SPRITE} tıklandığında"
       gamelab_clickedSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
+      gamelab_collectibleBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): sağa dönme
+            new Behavior(spinning_left, []): sola dönme
+            new Behavior(fluttering, []): fluttering
+            new Behavior(jittering, []): kararsızlık
+            new Behavior(wobbling, []): sallanma
+            new Behavior(wandering, []): gezinme
+            new Behavior(patrolling, []): kontrol sağlama
+            new Behavior(moving_west_and_looping, []): batıya doğru hareket ve döngü
+            new Behavior(moving_east_and_looping, []): doğuya doğru hareket ve döngü
+            new Behavior(moving_north_and_looping, []): kuzeye hareket ve döngü
+            new Behavior(moving_south_and_looping, []): güneye hareket ve döngü
       gamelab_comment:
         text: 'yorum: {COMMENT}'
       gamelab_costumeImage:
@@ -990,6 +1030,20 @@ tr:
         text: |-
           eğer {NUM} ={VAL}
           {STATEMENT}
+      gamelab_int10:
+        text: "{VALUE}"
+        options:
+          VALUE:
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       gamelab_isCostumeEqual:
         text: "{SPRITE}'ın kostümü {COSTUME}'dir."
       gamelab_isKeyPressed:
@@ -1110,9 +1164,9 @@ tr:
       gamelab_moveToward:
         text: "{SPRITE} piksel {DISTANCE} doğru hareket {TARGET}"
       gamelab_newSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_objectSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_patrollingUpDown:
         text: yukarı ve aşağı kontrol sağla
       gamelab_playSound:
@@ -1162,6 +1216,13 @@ tr:
             "'sound://category_digital/jump_7.mp3'": zıpla
       gamelab_playSpeech:
         text: konuşmayı çal {SOUND}
+      gamelab_playerBehaviors:
+        text: "{BEHAVIOR}"
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): ok tuşları ile hareket
+            new Behavior(driving_with_arrow_keys, []): ok tuşları ile hareket
+            draggable(): sürüklenebilir olmak
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
         options:
@@ -1186,6 +1247,8 @@ tr:
         text: "{THIS} gelen rengi kaldır"
       gamelab_repeatForever:
         text: Sonsuza kadar tekrarla
+      gamelab_resetTimer:
+        text: zamanlayıcıyı sıfırla
       gamelab_setAnimation:
         text: "{THIS} kostüm {ANIMATION} değiştirmek"
       gamelab_setBackground:
@@ -1279,6 +1342,14 @@ tr:
             '"scale"': boyut
             '"width"': genişlik
             '"height"': Yükseklik
+      gamelab_setSpeed_dropdown:
+        options:
+          SIZE:
+            '1': extra slow
+            '3': yavaş
+            '5': normal
+            '7': hızlı
+            '9': extra fast
       gamelab_setTint:
         text: renk değiştirme {THIS} Hedef {COLOR}
       gamelab_setupScoreboard:
@@ -1319,7 +1390,7 @@ tr:
       gamelab_stopGliding:
         text: "{SPRITE} süzülmeyi durdurur"
       gamelab_subjectSpritePointer:
-        text: tıklandığında {SPRITE}
+        text: "{SPRITE}"
       gamelab_textJoin:
         text: "{LEFT_QUOTE}{TEXT1}{RIGHT_QUOTE}{TEXT2}"
       gamelab_textVariableJoin:

@@ -172,6 +172,21 @@
         },
         "implementation_guide/coursee/2021": {
           "name": "Vodnik za implementacijo"
+        },
+        "functions_2/csd/2021": {
+          "name": "Funkcije"
+        },
+        "variables_1/csd/2021": {
+          "name": "Spremenljivke"
+        },
+        "calling_and_defining_functions/csd/2021": {
+          "name": "Funkcije"
+        },
+        "functions_1/csd/2021": {
+          "name": "Funkcije"
+        },
+        "lists/csd/2021": {
+          "name": "Seznami"
         }
       }
     }

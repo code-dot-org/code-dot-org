@@ -1,0 +1,36 @@
+{
+  "key": "gamelab_jumpTo",
+  "name": "jump to",
+  "category": "Sprites",
+  "category_key": "actions",
+  "block_name": "gamelab_jumpTo",
+  "content": "Sprite jumps instantly to a specified location.",
+  "examples": [
+    {
+      "name": "Example 1",
+      "description": "Every time the ghost is clicked, it will jump to a random location.\r\n",
+      "code": "```\n\n```",
+      "app": "https://studio.code.org/projects/spritelab/ju6-mmhqGgBZ5PDwaVz3n6TRqtUea3tPh3vG2RBNBoM",
+      "image": null,
+      "app_display_type": "embedAppWithCode",
+      "embed_app_with_code_height": 310
+    }
+  ],
+  "image_url": "https://curriculum.code.org/media/blocks/jumpTo.PNG",
+  "palette_params": [
+    {
+      "name": "sprite",
+      "type": "",
+      "required": true,
+      "description": "The sprite or sprite group to jump"
+    },
+    {
+      "name": "location",
+      "type": "",
+      "required": true,
+      "description": "The location that the sprite(s) should jump to"
+    }
+  ],
+  "short_description": "Sprite jumps instantly to a specified location.",
+  "syntax": "jumpTo"
+}

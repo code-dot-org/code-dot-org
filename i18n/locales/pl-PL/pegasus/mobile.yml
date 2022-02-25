@@ -385,6 +385,7 @@
   homepage_donors_donate: "Podaruj"
   homepage_below_hero_announcement_text: "Dbamy o Twoją prywatność i dokonujemy kilku aktualizacji naszej Polityki prywatności, które wejdą w życie 25 maja."
   homepage_below_hero_announcement_link_text: "Dowiedz się więcej"
+  homepage_higher_power_body: "Twórz z Potańcówką, zyskaj szansę zobaczenia zespołu na żywo."
   contact_form_topic_student: "Jestem uczniem"
   contact_form_topic_parent: "Jestem rodzicem"
   contact_form_topic_teacher: "Jestem nauczycielem/edukatorem"
@@ -1715,6 +1716,8 @@
   hoc2018_dance_video2: "Potańcówka - Zdarzenia"
   hoc2018_dance_video3: "Potańcówka - Właściwości"
   hoc2018_dance_video4: "Potańcówka - Gratulacje"
+  dance_box_higher_power_line_1: "Zakoduj taniec do „Higher Power” Coldplay, a będziesz miał szansę zobaczyć zespół na żywo!"
+  dance_box_higher_power_line_2: "Więcej informacji znajdziesz na <a href=\"%{path}\">code.org/coldplay</a>."
   page_not_found_title: "Strona nie została znaleziona"
   page_not_found_header: '404: Strona nie została znaleziona'
   page_not_found_description: "Strona, której szukasz, nie istnieje pod tym adresem. Sprawdź adres strony i wyślij ponownie. Lub wróć na stronę główną."
@@ -1809,3 +1812,4 @@
   outbreak_tile_title: "Epidemia"
   outbreak_tile_subtitle: "Wirus zainfekował Miasto Potworów! Zakoduj symulator epidemii i przewiduj, co stanie się z sąsiadami tego miasta."
   outbreak_tile_alt: "Symulacja rozprzestrzeniania się wirusa przez grupę fioletowych potworów."
+  footer_cookie_notice: "Informacja o plikach cookie"

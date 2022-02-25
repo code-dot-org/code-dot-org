@@ -135,6 +135,9 @@ fi:
     Tietojenkäsittelyopissa on kyse niin paljon muustakin kuin vain koodauksesta!
     Nauti Code.orgin tarjoamista opetussuunnitelmista opettaessasi oppilaitasi tekoälyn
     upeasta maailmasta.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: 'Hour of Code Live
 
 '
@@ -993,6 +996,7 @@ fi:
   footer_menu_support: Tuki
   footer_menu_terms: Ehdot
   footer_menu_privacy: Yksityisyyskäytännöt
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: Koodaustunti
   learn_banner_blurb: Kokeile yhden tunnin opetusohjelma, joka on suunniteltu kaiken
     ikäisille yli 45 kielellä. Liity miljoonien opiskelijoiden ja opettajien kanssa

@@ -130,6 +130,9 @@ mr:
     bias, while exploring ethical issues and how AI can be used to address world problems.
     Computer science is about so much more than coding! Enjoy Code.org's first step
     in a new journey to teach more about AI throughout our curriculum.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -228,8 +231,8 @@ mr:
   codeorg_homepage_csc_title: CS कनेक्शन्स
   hoc2018_tutorial_mchoc_description: कोडचा तासमध्ये माइनक्राफ्ट एका नवीन कामासोबत
     परत आले आहे! माइक्राफ्टमध्ये कोडच्या सहाय्याने फिरा.
-  codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Support for parents and teachers facing school
     closures.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1002,6 +1005,7 @@ mr:
   footer_menu_support: मदत
   footer_menu_terms: अटी
   footer_menu_privacy: गोपनीयता धोरण
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: कोड चा तास
   learn_banner_blurb: 45 पेक्षा अधिक भाषांमध्ये उपलब्ध, सर्व वयोगटांसाठी डिझाइन केलेले
     एका तासाचे ट्यूटोरियल करून पाहा.  180 पेक्षा अधिक देशांतील कोट्यावधी विद्यार्थी

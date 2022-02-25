@@ -34,6 +34,7 @@ import QRCode from 'qrcode.react';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import experiments from '@cdo/apps/util/experiments';
 import clientState from '@cdo/apps/code-studio/clientState';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
@@ -117,7 +118,7 @@ FeedbackUtils.prototype.displayFeedback = function(
 ) {
   options.level = options.level || {};
 
-  const {onContinue, shareLink} = options;
+  const {onContinue, shareLink, doNothingOnHidden} = options;
   const hadShareFailure = options.response && options.response.share_failure;
   const showingSharing =
     options.showingSharing && !hadShareFailure && shareLink;
@@ -229,17 +230,25 @@ FeedbackUtils.prototype.displayFeedback = function(
     project.saveIfSourcesChanged();
   }
 
-  var onHidden = onlyContinue
-    ? onContinue
-    : function() {
-        if (!continueButton || feedbackDialog.hideButDontContinue) {
-          this.studioApp_.displayMissingBlockHints(
-            missingRecommendedBlockHints
-          );
-        } else {
-          onContinue();
-        }
-      }.bind(this);
+  let onHidden;
+  if (doNothingOnHidden) {
+    // No additional onHidden functionality upon closing the dialog
+  } else {
+    /*
+    hideButDontContinue toggles when the again button is pressed, so its value
+    may change after this definition
+    */
+    onHidden = function() {
+      if (
+        !continueButton ||
+        (feedbackDialog && feedbackDialog.hideButDontContinue)
+      ) {
+        this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
+      } else {
+        onContinue();
+      }
+    }.bind(this);
+  }
 
   var icon;
   if (!options.hideIcon) {
@@ -422,6 +431,7 @@ FeedbackUtils.prototype.displayFeedback = function(
           level_id: options.response.level_id
         });
       }
+      options.onContinue();
     });
   }
 
@@ -995,6 +1005,14 @@ FeedbackUtils.prototype.createSharingDiv = function(options) {
       sharingInput.focus();
       sharingInput.select();
       sharingInput.setSelectionRange(0, 9999);
+    });
+    var sharingInputCopyButton = sharingDiv.querySelector(
+      '#sharing-input-copy-button'
+    );
+    dom.addClickTouchEvent(sharingInputCopyButton, function() {
+      copyToClipboard(options.shareLink, () => {
+        sharingInputCopyButton.className = 'sharing-input-copy-button-shared';
+      });
     });
   }
 

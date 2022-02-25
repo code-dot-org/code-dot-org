@@ -1291,11 +1291,9 @@ pl-PL:
 
           W części 2 stworzysz swój własny projekt. Nie ma tu żadnych łamigłówek - zamiast tego przedstawionych jest wiele projektów, które pokazują różne sposoby tworzenia bardziej złożonych układów tanecznych.
 
-          Możesz zrealizować te poziomy _w dowolnej kolejności_. Zobacz w jaki sposób coś zostało zrobione na poprzednim poziomie lub połącz koncepcje między projektami. Wypróbuj je wszystkie, wybierz swoje ulubione i poświęć swój czas na pracę nad dodaniem ich do tego projektu, aby powstał z niego twój własny.
+          Możesz zrealizować te poziomy _w dowolnej kolejności_. Zobacz, w jaki sposób coś zostało zrobione na poprzednim poziomie lub połącz pomysły między projektami. Wypróbuj je wszystkie, wybierz swoje ulubione i poświęć swój czas na pracę nad dodaniem ich do tego projektu, aby powstał z niego Twój własny.
 
-          <a class="btn btn-large btn-primary next-stage submitButton pull-right">Kontynuuj</a>
-
-          <div class="clearfix"></div>
+          <a class="clearfix"></div>
 
           <div style="float: left; margin: 10px">
           <a href="2">
@@ -1357,11 +1355,11 @@ pl-PL:
 
           </div>
       Dance_Party_extras_intro_2019:
-        markdown: "\"# Tańcz dalej!\n\nW Ii części stworzysz swój własny projekt.
+        markdown: "\"# Tańcz dalej!\n\nW części 2, stworzysz swój własny projekt.
           Nie ma tam żadnych łamigłówek — za to jest zbiór projektów, które pokazują
           różne sposoby, w jakie można stworzyć bardziej złożone potańcówki.\n\nMożesz
-          przerabiać te poziomy _w dowolnej kolejności_. Przeskocz do poprzedniego
-          poziomu, aby zobaczyć, jak coś zostało w nim zrobione, lub połącz koncepcje
+          przechodzić te poziomy _w dowolnej kolejności_. Przeskocz do poprzedniego
+          poziomu, aby zobaczyć, jak coś zostało w nim zrobione, lub połącz pomysły
           z różnych projektów. Wypróbuj je wszystkie, wybierz swój ulubiony i poświęć
           trochę czasu na tworzenie projektu, tak by stał się on naprawdę Twój.\n\n<a
           class=\"\"btn btn-large btn-primary next-stage submitButton pull-right\"\">Dalej</a>\n\n<div
@@ -5204,7 +5202,7 @@ pl-PL:
         markdown: |
           # Bransoletki binarne
 
-          Utwórz bransoletkę, która przedstawia Twoje imię w systemie, zrozumiałą dla komputera!
+          Utwórz bransoletkę, która przedstawia Twoje imię w systemie, zrozumiałym dla komputerów!
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       CourseF_outbreak_story:
@@ -5743,7 +5741,7 @@ pl-PL:
           feedback: Poprawnie! Oba zachowania będą zachodzić jednocześnie.
         - text: Duszek najpierw będzie się obracał wokół własnej osi, a potem będzie
             się przemieszczał.
-          feedback: Błąd. W Sprite Lab, połączone bloki będą się pojawiać jednocześnie,
+          feedback: Niepoprawnie. W Sprite Lab połączone bloki będą się pojawiać jednocześnie,
             po każdym ostatni, zatem do obu zachowań dojdzie jednocześnie.
         questions:
         - text: Przeczytaj kod, a potem zgadnij.
@@ -5831,12 +5829,12 @@ pl-PL:
         - text: Przeczytaj kod, a potem zgadnij.
       courseF_variables_predict_multi:
         answers:
-        - text: Program wydrukuje Cześć imię!
-          feedback: Niepoprawnie. Blok imienia zastąpi to, co wpiszesz.
-        - text: Program przywita się z tobą imieniem, które wpiszesz.
+        - text: Program wydrukuje "Cześć imię!"
+          feedback: Niepoprawnie. Blok imienia zostanie zastąpiony przez to, co wpiszesz.
+        - text: Program przywita się z Tobą imieniem, które wpiszesz.
           correct: true
-          feedback: Poprawnie! To, co wpisujesz, stosuje się w miejscu bloku imieniu.
-        - text: 'Duszek będzie zmieniał rozmiary.
+          feedback: Poprawnie! To, co wpiszesz, zostanie użyte w miejscu w bloku imienia.
+        - text: 'Duszek zmieni rozmiar.
 
 '
           feedback: Niepoprawnie. Tekst jest wydrukowany na ekranie.
@@ -6044,7 +6042,7 @@ pl-PL:
           Na tej lekcji nauczysz się korzystać z historii pustej przestrzeni i pisać je. Obejrzyj ten film wideo i dowiedz się, jak łączy się to z informatyką.
       courseF_artist_practice:
         description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
-          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami i artystą!
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami i Artystą!
         display_name: " Ćwiczenie artysty"
       courseF_beeFor_practice:
         description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
@@ -6171,3 +6169,163 @@ pl-PL:
           ## Zasoby
 
           * [Wprowadzenie do zmienych](https://youtu.be/G41G_PEWFjE) - Video ([download](https://videos.code.org/2015/csp/applab/variables_1.mp4))
+      CSD Games Properties multi predict_2021:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      CSD Games Properties practice_2021:
+        display_name: Właściwości duszka
+      CSD Games variables practice_2021:
+        display_name: Zmienne - Praktyka
+      CSD Header Size MC_2018_2019_pilot_2021:
+        answers:
+        - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
+            AM.png
+        - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
+            AM.png
+          correct: true
+        - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
+            AM.png
+        - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
+            AM.png
+        content1: Spójrz na poniższy kod i spróbuj przewidzieć, jak będą wyświetlane
+          nagłówki. Wybierz jedną z opcji po prawej stronie.
+        title: Szybkie sprawdzenie nagłówków
+      CSD Interactive Animations and Games Post-Project Test_pilot_2021:
+        title: 'Test po projekcie Interaktywnych animacji i gier '
+      CSD Physical Computing Post-Project Test_2021:
+        title: 'Test po projekcie: Obliczenia fizyczne'
+      CSD U1 Test_2021:
+        title: "\nTest po projekcie: Komputery i rozwiązywanie problemów "
+      CSD U2 CSS practice_pilot_2021:
+        display_name: Ustalanie stylu tekstu przy użyciu CSS
+      CSD U2 Image challenge_pilot_2021:
+        display_name: Dodawanie obrazów
+      CSD U2 Image practice_pilot_2021:
+        display_name: Dodawanie obrazów
+      CSD U2 image debug match_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        teacher_markdown: Chociaż ten poziom można wykorzystać do oceny zrozumienia
+          przez uczniów składni znacznika `<img>`, jego głównym celem jest uświadomienie
+          uczniom najczęstszych rodzajów błędów, jakie mogą napotkać podczas dodawania
+          grafiki do stron internetowych.
+      CSD U2 project guide_2018_2019_pilot_2021:
+        content1: opis tutaj
+        teacher_markdown: |-
+          # Sprawdzenie planowania
+
+          Sprawdź plany uczniów, zanim pozwolisz im kontynuować na pozostałych poziomach.
+      CSD U3 - conditionals - Matching_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 Boolean MC_2018_2019_pilot_2021:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        title: tytuł
+      CSD U3 Card Examples_2018_2019_pilot_2021:
+        content1: opis tutaj
+      CSD U3 Functions Prediction define first_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+      CSD U3 Sprite Movement Predict Multi_2018_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      CSD U3 drawSprites placement match_2019_pilot_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+        - {}
+      CSD U3 drawing practice choice_2021:
+        display_name: Ćwiczenia
+      CSD U3 game intro_2018_2019_pilot_2021:
+        content1: opis tutaj
+      CSD U3 platform intro_2018_2019_pilot_2021:
+        content1: opis tutaj
+      CSD U5 test_2021:
+        title: 'Test po projekcie: Dane i społeczeństwo'
+      CSD U6 LED create intro_2021:
+        content1: opis tutaj
+      CSD U6 array multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      CSD U6 final intro_2021:
+        content1: opis tutaj
+      CSD U6 setProperty predict multi_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+        title: Przewidzieć coś
+      CSD User Centered Design Post-Project Test_2021:
+        title: 'Test po projekcie: Projektowanie zorientowane na użytkownika'
+      CSD Web Development Post-Project Test_pilot_2021:
+        title: 'Test po projekcie: Tworzenie stron internetowych '
+      CSD games cake challenge choice_2021:
+        display_name: Wyzwania
+      CSD games functions practice choice_2021:
+        display_name: Funkcje - Ćwiczenia
+      CSD games platform challenge choice_2021:
+        display_name: Wyzwania
+      CSD web conditionals practice choice_2021:
+        display_name: Zmienne - Praktyka
+      CSD web draw loop practice choice_2021:
+        display_name: Ćwiczenia
+      CSD web movement practice choice_2021:
+        display_name: Ćwiczenia
+      CSD web text practice choice_2021:
+        display_name: Ćwiczenia
+      csd-pre-survey-levelgroup_21_22:
+        title: 'Ankieta uczniowska przed kursem CS Discoveries '

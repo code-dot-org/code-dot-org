@@ -2588,6 +2588,10 @@ hy:
               display_name: ցուցակները
             csp_loops:
               display_name: loops
+        csp6-2021:
+          lesson_groups:
+            csp_unit6_2020:
+              display_name: ալգորիթմները
         csp9-2021:
           lesson_groups:
             csp_unit9_2020:
@@ -2880,10 +2884,25 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        2022drafting:
+          lessons:
+            For Loop Fun:
+              name: For Loop Fun
+          lesson_groups:
+            lessonGroup-8:
+              display_name: Կոդի ժամ
         csa7-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
+        csf-2022-pilot:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: փոփոխականների
+        csd6-pilot-2022:
+          lessons:
+            Functions with Parameters:
+              name: գործառույթները
         csa8-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2893,6 +2912,201 @@ hy:
             lessonGroup-2:
               display_name: պարունակություն
         csa8-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        coursea-2022:
+          lessons:
+            Happy Maps:
+              name: Ուրախ Քարտեզներ
+            'Programming: Happy Maps':
+              name: Ուրախ Քարտեզներ
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: loops
+            csf_events:
+              display_name: Իրադարձություններ
+        express-2022:
+          lesson_groups:
+            lessonGroup-9:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+            csf_conditionals:
+              display_name: conditionals
+            csf_functions:
+              display_name: գործառույթները
+            csf_variables:
+              display_name: փոփոխականների
+            csf_for_loops:
+              display_name: For Loops
+        csp1-2022:
+          lesson_groups:
+            csp_unit1_2020:
+              display_name: CS Principles Unit 1
+        csp2-2022:
+          lesson_groups:
+            csp_unit2_2020:
+              display_name: CS Principles Unit 2
+        csp3-2022:
+          lessons:
+            Debugging:
+              name: Debugging
+              key: Debugging
+        csp4-2022:
+          lesson_groups:
+            csp_variables:
+              display_name: փոփոխականների
+            csp_conditionals:
+              display_name: conditionals
+            csp_functions:
+              display_name: գործառույթները
+        csp5-2022:
+          lesson_groups:
+            csp_lists:
+              display_name: ցուցակները
+            csp_loops:
+              display_name: loops
+        courseb-2022:
+          lessons:
+            Move It, Move It:
+              name: Տեղափոխել այն, տեղափոխել այն
+              key: Տեղափոխել այն, տեղափոխել այն
+            Getting Loopy:
+              name: Getting Loopy
+            'Loops: Getting Loopy':
+              name: Getting Loopy
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: loops
+            csf_events:
+              display_name: Իրադարձություններ
+        coursec-2022:
+          lessons:
+            The Big Event:
+              name: The Big Event
+            Binary Bracelets:
+              name: Binary Bracelets
+              key: Binary Bracelets
+            'Events: The Big Event':
+              name: The Big Event
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_loops:
+              display_name: loops
+            csf_events:
+              display_name: Իրադարձություններ
+        csp9-2022:
+          lesson_groups:
+            csp_unit9_2020:
+              display_name: CS Principles Unit 9
+        coursed-2022:
+          lessons:
+            Graph Paper Programming:
+              name: Գրաֆիկի Թուղթ Ծրագրավորում
+            Relay Programming:
+              name: Relay programming
+              key: Relay programming
+            Conditionals with Cards:
+              name: Conditionals with Cards
+              key: Conditionals with Cards
+            'Algorithms: Graph Paper Programming':
+              name: Գրաֆիկի Թուղթ Ծրագրավորում
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digital Citizenship
+            csf_events:
+              display_name: Իրադարձություններ
+            csf_loops:
+              display_name: loops
+            csf_conditionals:
+              display_name: conditionals
+        coursee-2022:
+          lessons:
+            Songwriting:
+              name: songwriting
+            'Functions: Songwriting':
+              name: songwriting
+            Conditionals:
+              key: conditionals
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            ramp_up:
+              display_name: nested Loops
+            csf_functions:
+              display_name: գործառույթները
+            csf_nested_loops:
+              display_name: conditionals
+        coursef-2022:
+          lessons:
+            For Loop Fun:
+              name: For Loop Fun
+              key: For Loop Fun
+            The Internet:
+              name: Համացանց
+            Internet:
+              key: Internet
+              name: Համացանց
+          lesson_groups:
+            lessonGroup-7:
+              display_name: Digital Citizenship
+            lessonGroup-8:
+              display_name: փոփոխականների
+        csa1-2022:
+          lessons:
+            lesson-9:
+              name: loops
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        pre-express-2022:
+          lesson_groups:
+            csf_loops:
+              display_name: loops
+            csf_events:
+              display_name: Իրադարձություններ
+        csa2-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa3-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        cs4all-invasive-species:
+          lessons:
+            lesson-12:
+              name: conditionals
+            lesson-16:
+              name: Debugging
+            lesson-19:
+              name: Debugging
+        csa4-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa5-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa1-2022-exemplars:
+          lessons:
+            lesson-9:
+              name: loops
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa7-pilot-extra:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն
+        csa8-pilot-extra:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն

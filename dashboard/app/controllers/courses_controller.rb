@@ -3,15 +3,17 @@ class CoursesController < ApplicationController
 
   before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
+  check_authorization except: [:index]
   before_action :set_unit_group, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :get_rollup_resources]
+  before_action :check_plc_enrollment, only: [:show]
+  before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  authorize_resource class: 'UnitGroup', except: [:index]
+  # specifying instance_name and id_param tells CanCan to use the value of @unit_group set in set_unit_group
+  # when authorizing actions like vocab and resources. for more details, see
+  # https://github.com/ryanb/cancan/blob/705b5d6f0d8a78d9436eb90eda14e771309f155e/lib/cancan/controller_resource.rb#L161-L162
+  # https://github.com/ryanb/cancan/blob/705b5d6f0d8a78d9436eb90eda14e771309f155e/lib/cancan/controller_resource.rb#L137-L139
 
-  def set_unit_group
-    @unit_group = UnitGroup.get_from_cache(params[:course_name])
-    # the standards and show actions allow redirecting when given a family name so we do not want to raise in that case
-    raise ActiveRecord::RecordNotFound unless @unit_group || (['standards', 'show'].include?(params[:action]) && UnitGroup.family_names.include?(params[:course_name]))
-  end
+  authorize_resource class: 'UnitGroup', except: [:index], instance_name: 'unit_group', id_param: :course_name
 
   def index
     view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
@@ -36,51 +38,17 @@ class CoursesController < ApplicationController
       return
     end
 
-    if @unit_group.present?
-      if @unit_group.plc_course
-        authorize! :show, Plc::UserCourseEnrollment
-        user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)]
-        render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
-        return
-      end
-
-      if @unit_group.pilot?
-        authenticate_user!
-        unless @unit_group.has_pilot_access?(current_user)
-          render :no_access
-          return
-        end
-      end
-
-      if @unit_group.in_development?
-        authenticate_user!
-        unless current_user.permission?(UserPermission::LEVELBUILDER)
-          render :no_access
-          return
-        end
-      end
-
-      # Attempt to redirect user if we think they ended up on the wrong course overview page.
-      override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
-      if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
-        redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
-        return
-      end
-
-      sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :course_id, :script_id)}
-      @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:course_id] == @unit_group.id})}
-
-      render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
-    elsif UnitGroup.family_names.include?(params[:course_name])
-      # csp and csd are each "course families", each containing multiple "course versions".
-      # When the url of a course family is requested, redirect to a specific course version.
-      redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
-      redirect_to_course = UnitGroup.latest_stable(params[:course_name])
-      redirect_to "#{course_path(redirect_to_course)}#{redirect_query_string}"
+    # Attempt to redirect user if we think they ended up on the wrong course overview page.
+    override_redirect = VersionRedirectOverrider.override_course_redirect?(session, @unit_group)
+    if !override_redirect && redirect_unit_group = redirect_unit_group(@unit_group)
+      redirect_to "#{course_path(redirect_unit_group)}/?redirect_warning=true"
       return
-    else
-      raise ActiveRecord::RecordNotFound
     end
+
+    sections = current_user.try {|u| u.sections.where(hidden: false).select(:id, :name, :course_id, :script_id)}
+    @sections_with_assigned_info = sections&.map {|section| section.attributes.merge!({"isAssigned" => section[:course_id] == @unit_group.id})}
+
+    render 'show', locals: {unit_group: @unit_group, redirect_warning: params[:redirect_warning] == 'true'}
   end
 
   def new
@@ -121,36 +89,28 @@ class CoursesController < ApplicationController
   def edit
     # We don't support an edit experience for plc courses
     raise ActiveRecord::ReadOnlyRecord if @unit_group.try(:plc_course)
+    @unit_group_data = {
+      course_summary: @unit_group.summarize(@current_user, for_edit: true),
+      script_names: Script.all.map(&:name),
+      course_families: UnitGroup.family_names,
+      version_year_options: UnitGroup.get_version_year_options
+    }
     render 'edit', locals: {unit_group: @unit_group}
   end
 
   def vocab
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def resources
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def code
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
   def standards
-    if !@unit_group.present? && UnitGroup.family_names.include?(params[:course_name])
-      redirect_to_course = UnitGroup.latest_stable(params[:course_name])
-      redirect_to standards_course_path(redirect_to_course)
-      return
-    end
-    raise ActiveRecord::RecordNotFound unless @unit_group
-    # Assumes if one unit in a unit group is migrated they all are
-    return render :forbidden unless @unit_group.default_units[0].is_migrated
     @course_summary = @unit_group.summarize_for_rollup(@current_user)
   end
 
@@ -188,6 +148,41 @@ class CoursesController < ApplicationController
   end
 
   private
+
+  def get_unit_group
+    course_name = params[:course_name]
+
+    unit_group = UnitGroup.get_from_cache(course_name)
+    return unit_group if unit_group
+
+    # When the url of a course family is requested, redirect to a specific course version.
+    if UnitGroup.family_names.include?(params[:course_name])
+      unit_group = UnitGroup.latest_stable_version(params[:course_name])
+      redirect_to action: params[:action], course_name: unit_group.name if unit_group
+    end
+
+    unit_group
+  end
+
+  def set_unit_group
+    @unit_group = get_unit_group
+    raise ActiveRecord::RecordNotFound unless @unit_group
+  end
+
+  def check_plc_enrollment
+    if @unit_group.plc_course
+      authorize! :show, Plc::UserCourseEnrollment
+      user_course_enrollments = [Plc::UserCourseEnrollment.find_by(user: current_user, plc_course: @unit_group.plc_course)]
+      render 'plc/user_course_enrollments/index', locals: {user_course_enrollments: user_course_enrollments}
+      return
+    end
+  end
+
+  def render_no_access
+    if current_user && !current_user.admin? && !can?(:read, @unit_group)
+      render :no_access
+    end
+  end
 
   def course_params
     cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h

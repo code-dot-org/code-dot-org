@@ -169,6 +169,10 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
+        "event/outbreak/unversioned": {
+          "word": "Udalosť",
+          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
+        },
         "event/sports/unversioned": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
@@ -242,10 +246,6 @@
         "line/poem-art/unversioned": {
           "word": "Riadok",
           "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
-        },
-        "event/outbreak/unversioned": {
-          "word": "Udalosť",
-          "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "sprite/coursef/2021": {
           "word": "Sprajt",
@@ -763,6 +763,60 @@
         "try/coursee/2021": {
           "word": "Pokus",
           "definition": "Pokus urobiť niečo"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Strojové učenie"
+        },
+        "user_interface/csd/2021": {
+          "word": "Užívateľské prostredie"
+        },
+        "bug/csd/2021": {
+          "word": "Chyba",
+          "definition": "Časť programu, ktorá nefunguje správne."
+        },
+        "for_loop/csd/2021": {
+          "word": "Cyklus „for“",
+          "definition": "Cykly, ktoré majú vopred určený začiatok, koniec a prírastok."
+        },
+        "debugging/csd/2021": {
+          "word": "Hľadanie a odstraňovanie chýb",
+          "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
+        },
+        "program/csd/2021": {
+          "word": "Program",
+          "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
+        },
+        "variable/csd/2021": {
+          "word": "Premenná",
+          "definition": "Označenie pre nejaké informácie, ktoré sa využívajú v programe."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprajt"
+        },
+        "condition/csd/2021": {
+          "word": "Podmienka"
+        },
+        "conditionals/csd/2021": {
+          "word": "Podmienky"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstrakcia"
+        },
+        "function/csd/2021": {
+          "word": "Funkcia"
+        },
+        "input/csd/2021": {
+          "word": "Vstup"
+        },
+        "processing/csd/2021": {
+          "word": "Spracovanie"
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Digitálna stopa"
+        },
+        "copyright/csd/2021": {
+          "word": "Autorské práva",
+          "definition": "výlučné právo vytlačiť, publikovať, prezentovať, nakrútiť alebo zaznamenať literárne, umelecké alebo hudobné materiály a povoliť iným robiť to isté"
         }
       }
     }

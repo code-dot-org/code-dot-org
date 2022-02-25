@@ -144,6 +144,9 @@ ro:
     fi utilizată pentru abordarea problemelor mondiale. Informația este despre mult
     mai mult decât programare! Bucură-te de primul pas al Code.org într-o nouă călătorie
     pentru a învăța mai multe despre IA prin programa noastră.
+  social_coldplay_title: Create with Coldplay & Code.org
+  social_coldplay_desc: Show us your best moves! Code, dance, share with the world,
+    and you could win.
   hoc_live: Hour of Code Live
   hoc_live_sign_up_title: Sign up for Hour of Code Live
   hoc_live_learn_title: Learn with Hour of Code Live
@@ -243,7 +246,7 @@ ro:
   hoc2018_tutorial_mchoc_description: Folosește blocuri de coduri pentru a-l conduce
     pe Steve sau pe Alex într-o aventură prin lumea Minecraft.
   codeorg_homepage_hoc2019_dance_heading: Încearcă noua <span class="highlight-word">Dance&nbsp;Party!</span>
-  codeorg_homepage_hoc2019_dance_heading_markdown: Try the new **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
   codeorg_homepage_special2020_body1: Sprijin pentru părinții și profesorii care se
     confruntă cu închiderea școlilor.
   codeorg_homepage_special2020_body2: See our suggested learning resources.
@@ -1030,6 +1033,7 @@ ro:
   footer_menu_support: Suport
   footer_menu_terms: Termeni
   footer_menu_privacy: Politică de Confidenţialitate
+  footer_menu_cookie: Cookie Notice
   learn_banner_heading: HOUR of CODE
   learn_banner_blurb: Încearcă un tutorial de o oră conceput pentru toate vârstele
     în peste 45 de limbi.  Alătură-te milioanelor de elevi și profesori din peste

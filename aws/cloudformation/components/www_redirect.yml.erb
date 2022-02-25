@@ -3,7 +3,24 @@
     # As CDO properties can vary between workstations, using them here is generally unsafe
     # Since this line is restricted to only run in production, we are comfortable using it.
     redirected_domains << "www.#{CDO.pegasus_hostname}" if rack_env?(:production)
+    
+    www_redirect_hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
+    raise "Could not find #{domain} in hosted zones" unless www_redirect_hosted_zone.name.delete_suffix('.') == domain
+    www_redirect_hosted_zone_id = www_redirect_hosted_zone.id.delete_prefix("/hostedzone/")
   -%>
+
+  <%=app%>RedirectDNS:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneId: <%=www_redirect_hosted_zone_id%>
+      RecordSets:
+        <%- redirected_domains.each do |record_set_name| -%>
+        - Name: <%=record_set_name%>
+          Type: A
+          AliasTarget:
+            DNSName: !GetAtt [<%=app%>RedirectDistribution, DomainName]
+            HostedZoneId: Z2FDTNDATAQYW2 # static ID for CloudFront aliases
+        <%- end -%>
   
   <%=app%>RedirectDistribution:
     Type: AWS::CloudFront::Distribution
@@ -32,12 +49,6 @@
           AcmCertificateArn: !Ref <%=app%>RedirectedDomainCertificate
           SslSupportMethod: sni-only
 
-  <%
-      www_redirect_hosted_zone = Aws::Route53::Client.new.list_hosted_zones_by_name(dns_name: domain).hosted_zones.first
-      raise "Could not find #{domain} in hosted zones" unless www_redirect_hosted_zone.name.delete_suffix('.') == domain
-      www_redirect_hosted_zone_id = www_redirect_hosted_zone.id.delete_prefix("/hostedzone/")
-  -%>
-
   <%=app%>RedirectedDomainCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
@@ -54,7 +65,6 @@
         - DomainName: www.<%=CDO.pegasus_hostname%>
           HostedZoneId: <%= www_redirect_hosted_zone_id %>
         <%- end -%>
-
 
   <%=app%>RedirectCachePolicy:
     Type: AWS::CloudFront::CachePolicy
@@ -98,69 +108,3 @@
             }
           };
         };
-
-  <%=app%>WwwRedirectLambda:
-    Type: AWS::Lambda::Function
-    Properties:
-      Runtime: nodejs14.x
-      Role: !GetAtt <%=app%>WwwRedirectLambdaRole.Arn
-      Handler: index.handler
-      Code:
-        ZipFile: |
-          'use strict';
-
-          exports.handler = (event, context, callback) => {
-            const request = event.Records[0].cf.request;
-            const uri = request.uri;
-            const host = request.headers.host[0].value;
-            const querystring = request.querystring;
-
-            // Start building new url
-            let newUrl = 'https://<%=CDO.pegasus_hostname%>';
-
-            // Append path
-            if (uri) newUrl += uri;
-            
-            // Append query string
-            if (querystring && querystring != '') newUrl += "?" + querystring;
-
-            const response = {
-              status: '302',
-              statusDescription: '302 Redirect to root domain',
-              headers: {
-                location: [{
-                  key: 'Location',
-                  value: newUrl
-                }]
-              }
-            };
-            callback(null, response);
-          };
-      Description: Redirect www traffic to root domain
-      TracingConfig:
-        Mode: Active
-
-  # To make a new version, bump the NAME of this resource and all references
-  <%=app%>WwwRedirectLambdaVersion1:
-    Type: AWS::Lambda::Version
-    Properties:
-      FunctionName: !Ref <%=app%>WwwRedirectLambda
-
-  <%=app%>WwwRedirectLambdaRole:
-    Type: "AWS::IAM::Role"
-    Properties:
-      Path: "/"
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
-      ManagedPolicyArns:
-        - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
-      AssumeRolePolicyDocument:
-        Version: "2012-10-17"
-        Statement:
-          - Sid: "AllowLambdaServiceToAssumeRole"
-            Effect: "Allow"
-            Action:
-              - "sts:AssumeRole"
-            Principal:
-              Service:
-                - "lambda.amazonaws.com"
-                - "edgelambda.amazonaws.com"

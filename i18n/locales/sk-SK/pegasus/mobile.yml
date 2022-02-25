@@ -169,7 +169,7 @@
   thanks_for_voting: "Vďaka za hlasovanie!"
   share_on_facebook: "Zdieľať na Facebooku"
   share_on_twitter: "Zdieľať na Twitteri"
-  beyond_an_hour: "Ako ďalej po Hodine Kódu"
+  beyond_an_hour: "Ako ďalej po Hodine kódu"
   get_started: "Spustiť"
   i_agree: "Súhlasím"
   participant_select: "-Vybrať-"
@@ -789,7 +789,7 @@
   dashboard_multi_count: "# otázok s výberom odpovede"
   dashboard_multi_correct_percent: "% správnych odpovedí"
   dashboard_submission_timestamp: "Časová pečiatka odoslania"
-  stats_hoc_2013_heading: 'Neuveriteľná štatistika z minuloročnej Hodiny Kódu. Behom jediného týždňa:'
+  stats_hoc_2013_heading: 'Neuveriteľné štatistiky z minuloročnej Hodiny Kódu. Za jediný týždeň:'
   stats_hoc_2013_image_alt: "Štatistika z Hodiny Kódu 2013"
   dashboard_teacher: "Učiteľ"
   dashboard_student: "Študent"

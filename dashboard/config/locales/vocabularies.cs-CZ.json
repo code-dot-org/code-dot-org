@@ -132,6 +132,12 @@
         "program/starwarsblocks/unversioned": {
           "word": "Program "
         },
+        "event/outbreak/unversioned": {
+          "word": "Událost"
+        },
+        "models_and_simulations/outbreak/unversioned": {
+          "word": "Modely a simulace"
+        },
         "event/sports/unversioned": {
           "word": "Událost"
         },
@@ -193,12 +199,6 @@
           "word": "Verš",
           "definition": "(poezie) – dílčí část básně, uspořádaná do řádku, který končí na pravém okraji. "
         },
-        "event/outbreak/unversioned": {
-          "word": "Událost"
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "Modely a simulace"
-        },
         "sprite/coursef/2021": {
           "word": "Sprite",
           "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
@@ -208,6 +208,7 @@
           "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
         },
         "behavior/coursef/2021": {
+          "word": "Chování",
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "program/coursef/2021": {
@@ -510,6 +511,7 @@
           "definition": "Umění vytvoření programu"
         },
         "behavior/express/2021": {
+          "word": "Chování",
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "sprite/express/2021": {
@@ -627,6 +629,7 @@
           "word": "Událost"
         },
         "behavior/coursee/2021": {
+          "word": "Chování",
           "definition": "Akce, kterou sprite provádí nepřetržitě, dokud mu není řečeno, aby přestal."
         },
         "algorithm/coursee/2021": {
@@ -679,6 +682,49 @@
         "try/coursee/2021": {
           "word": "Zkusit",
           "definition": "Pokus něco udělat"
+        },
+        "machine_learning/csd/2021": {
+          "word": "Strojové učení"
+        },
+        "bug/csd/2021": {
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
+        },
+        "for_loop/csd/2021": {
+          "word": "Pro cyklus",
+          "definition": "Cykly, které mají předem určený začátek, konec a přírůstek (krokový interval)."
+        },
+        "debugging/csd/2021": {
+          "word": "Ladění"
+        },
+        "program/csd/2021": {
+          "word": "Program "
+        },
+        "variable/csd/2021": {
+          "word": "Proměnná",
+          "definition": "Popisek informace použité v programu."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
+        },
+        "condition/csd/2021": {
+          "word": "Podmínka"
+        },
+        "conditionals/csd/2021": {
+          "word": "Podmínky"
+        },
+        "abstraction/csd/2021": {
+          "word": "Abstrakce"
+        },
+        "function/csd/2021": {
+          "word": "Funkce"
+        },
+        "input/csd/2021": {
+          "word": "Vstup"
+        },
+        "copyright/csd/2021": {
+          "word": "Autorská práva",
+          "definition": "výhradní zákonné právo tisknout, publikovat, předvádět, filmovat nebo nahrávat literární, umělecký nebo hudební materiál a zmocňovat k témuž ostatní"
         }
       }
     }
