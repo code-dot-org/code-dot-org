@@ -11,8 +11,8 @@
       "code": "```\nfunction draw() {\r\n  console.log(mouseDown(\"leftButton\"));\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Pencil Drawing",
@@ -20,8 +20,8 @@
       "code": "```\n// Simple pencil drawing with mouseDown().\r\nvar sprite = createSprite(200, 200, 5, 5);\r\nWorld.frameRate=60;\r\nfunction draw() {\r\n  sprite.x=World.mouseX;\r\n  sprite.y=World.mouseY;\r\n  if (mouseDown(\"leftButton\")) drawSprites();\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/WF9eRgpjXDTOs0GWGFa9Kw/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

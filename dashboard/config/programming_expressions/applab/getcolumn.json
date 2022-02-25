@@ -11,8 +11,8 @@
       "code": "```\n//Assume the dataset \"US States\" has already been imported\r\n\r\nvar stateNames = getColumn(\"US States\", \"State Name\");\r\nconsole.log(\"There are \" + stateNames.length + \" states in the US.\");\r\nconsole.log(stateNames);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Cereal Nutrition",
@@ -20,8 +20,8 @@
       "code": "```\n//Assume the dataset \"Cereal Nutrition\" has already been imported\r\n\r\nvar cerealNames = getColumn(\"Cereal Nutrition\", \"Name\") ;\r\nvar cerealProtein = getColumn(\"Cereal Nutrition\", \"Grams of  Protein\") ;\r\nvar cerealFiber = getColumn(\"Cereal Nutrition\", \"Grams of Fiber\") ;\r\nvar randomIndex = randomNumber(0, cerealNames.length-1);\r\nconsole.log(cerealNames[randomIndex] + \" has \" + cerealProtein[randomIndex] + \" grams of protein and \" + cerealFiber[randomIndex] + \" grams of fiber.\" );\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

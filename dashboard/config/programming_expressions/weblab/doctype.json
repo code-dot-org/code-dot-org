@@ -11,8 +11,8 @@
       "code": "```\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n<title>Title of the document</title>\r\n</head>\r\n\r\n<body>\r\nThe content of the document......\r\n</body>\r\n\r\n</html>\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_doctype.asp",

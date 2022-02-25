@@ -11,8 +11,8 @@
       "code": "```\nvar myProfile = {\r\n\t\"name\": \"Michelle\",\r\n    \"age\": \"17\",\r\n    \"interests\": \"Computer science, playing music, basketball\",\r\n    \"favorite food\": \"seafood tacos\"\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Choose Your Own Adventure",
@@ -20,8 +20,8 @@
       "code": "```\nvar options = {\r\n\t\"left\": \"You see a giant squid! It looks dangerous at first, but then you start to pet it and it becomes friendly\",\r\n    \"straight\": \"You see a large table with food on it! All of your friends jump out and say 'Surprise! Happy Birthday!'\",\r\n    \"right\": \"You are now outside and it's snowing! You start making a snowman and humming your favorite song to yourself\"\r\n};\r\n\r\nconsole.log(\"There are three doors in front of you - which path will you take? left, right, or straight?\");\r\nvar answer = prompt(\"Enter your choice (left, right, or straight));\r\nvar response = getValue(options, answer);\r\nconsole.log(\"You chose \" + answer + \"! Here's what happens:\");\r\nconsole.log(response);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "An object with the pair \"key\": \"value\" stored in the object",

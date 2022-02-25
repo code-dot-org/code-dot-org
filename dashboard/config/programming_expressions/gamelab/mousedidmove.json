@@ -11,8 +11,8 @@
       "code": "```\nvar count=0;\r\nfunction draw() {\r\n  background(\"white\");\r\n  if (mouseDidMove()) {\r\n    count=count+1;\r\n  }\r\n  text(\"count=\"+count, 0, 15);\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\n// Keep the sprite up by moving the mouse over the sprite.\r\nvar sprite = createSprite(200, 200,25,25);\r\nfunction draw() {\r\n  background(\"white\");\r\n  if (mouseIsOver(sprite) && mouseDidMove()) {\r\n    sprite.y=sprite.y-1;\r\n  } else {\r\n    sprite.y=sprite.y+1;\r\n  }\r\n  drawSprites();\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/D4Mo6m5ukqlaEqQkKLO34Q/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "Boolean true or false.",

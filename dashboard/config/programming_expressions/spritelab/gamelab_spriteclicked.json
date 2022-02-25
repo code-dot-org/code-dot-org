@@ -11,24 +11,24 @@
       "description": "The paintbrush will change the background color each time it is clicked.\r\n",
       "app": "https://studio.code.org/projects/spritelab/NpcK_MoRv8zN7heUq18yIaPZIM690vQl35ihC6dPEZg",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "The pencil will grow as long as it is being clicked on.\r\n",
       "app": "https://studio.code.org/projects/spritelab/RSSlXfpAFKPsfEE_-isFfFUd0XhrIeju0kL1KdRkmY0",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 3",
       "description": "Click on the cupcake to move it away from the flies, and click on the flies to swat them away.\r\n",
       "app": "https://studio.code.org/projects/spritelab/n59f-yK4X-BeQwjEIsNczUC29MGN_pu1xdLGtbRF1lI",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/spriteClicked.PNG",

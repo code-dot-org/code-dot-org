@@ -11,8 +11,8 @@
       "code": "```\n// The up key turns on the shield and makes the dots bounce off, otherwise they overlap.\r\ncreateEdgeSprites();\r\nvar block = createSprite(200, 200);\r\nvar group = createGroup();\r\nfor (var i = 0; i < 100; i++) {\r\n  var sprite = createSprite(randomNumber(0, 400), randomNumber(0, 400), 5, 5);\r\n  sprite.shapeColor='red';\r\n  sprite.setVelocity(randomNumber(1, 5), randomNumber(1, 5));\r\n  group.add(sprite);\r\n}\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  if (keyDown(\"up\")) {\r\n   group.bounceOff(block);\r\n  }\r\n  else {\r\n    group.overlap(block);\r\n  }\r\n  group.bounceOff(topEdge);\r\n  group.bounceOff(bottomEdge);\r\n  group.bounceOff(leftEdge);\r\n  group.bounceOff(rightEdge);   \r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/WKAYzDVyZb87OAnKpevxDg/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

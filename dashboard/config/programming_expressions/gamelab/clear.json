@@ -11,8 +11,8 @@
       "code": "```\n// 100 blinks then remove the group.\r\nvar group = createGroup();\r\nfor (var i = 0; i < 20; i++) {\r\n  group.add(createSprite(randomNumber(0, 400), randomNumber(0, 400),randomNumber(10, 20),randomNumber(10, 20)));\r\n}\r\nvar counter=1;\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  counter=counter+1;\r\n  if (counter%2==1) group.setColorEach(\"red\");\r\n  else group.setColorEach(\"green\"); \r\n  if (counter>100) group.clear();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",

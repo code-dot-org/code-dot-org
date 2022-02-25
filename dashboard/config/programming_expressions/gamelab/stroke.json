@@ -11,8 +11,8 @@
       "code": "```\n// Draw a light blue line.\r\nstroke(\"lightblue\");\r\nline(0, 0, 400, 400);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Basketweave",
@@ -20,8 +20,8 @@
       "code": "```\n// Draw random colored lines in a square basketweave pattern.\r\nstrokeWeight(5);\r\nfor (var i = 0; i < 31; i++) {\r\n  var x1=i*10;\r\n  var x2=i*10+100;\r\n  var y1=i*10;\r\n  var y2=i*10+100;\r\n  for (var j = 0; j < 4; j++) {\r\n    stroke(rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n    if (j == 0) {\r\n      line (x1,y1,x2,y1);\r\n    } else {\r\n      if (j == 1) {\r\n        line (x2,y1,x2,y2);  \r\n      } else {\r\n        if (j == 2) {\r\n          line (x2,y2,x1,y2);\r\n        } else {\r\n          line (x1,y2,x1,y1);              \r\n        }\r\n      }\r\n    }\r\n  }\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Jackson Pollock",
@@ -29,8 +29,8 @@
       "code": "```\n// Use the mouse pointer position to place random lines and points.\r\nfunction draw() {\r\n  stroke(rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n  if (randomNumber(0,1)==1) {\r\n    strokeWeight(randomNumber(1,5));\r\n    line(World.mouseX, World.mouseY, World.mouseX+randomNumber(-50,50),World.mouseY+randomNumber(-50,50));\r\n  }\r\n  else {\r\n    strokeWeight(randomNumber(10,30));\r\n    point(World.mouseX, World.mouseY);\r\n  }\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/dpz_huDfXGmE6jkX7XHCmQ/view",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "2 Ways",
@@ -38,8 +38,8 @@
       "code": "```\n// Demonstrate the two ways to specify the color parameter.\r\n\r\n// Sets the stroke using a call to color with an rgba value.\r\n// The last value is the amount of transparency, a number from 0 to 1.\r\nstrokeWeight(20);\r\nstroke(rgb(127, 255, 0, 1));\r\nellipse(200, 200, 100, 400);\r\n\r\n// Sets the stroke using the name of a color in a string.\r\nstroke(\"purple\");\r\npoint(200, 200);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

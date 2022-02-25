@@ -11,24 +11,24 @@
       "description": "Here three string blocks with different topics are joined to create one continuous paragraph.\r\n",
       "app": "https://studio.code.org/projects/spritelab/Hptp8XGILFHWEcSvKOhPRhBJXyl9z998EcT-sVQsVWg",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "Text can be used to describe the value of a variable or sprite property. Here, text is used to explain the bunny’s size.\r\n",
       "app": "https://studio.code.org/projects/spritelab/LjB2aaHrtYzgArNr645547b5enACWshoEKmpaXg1AdU",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 3",
       "description": "This program uses a string block and math block to display a math equation.\r\n",
       "app": "https://studio.code.org/projects/spritelab/2dAi-tYlB0FjoNykbbqnIhG7NausDIZnQo8AMtK9z38",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/join.PNG",

@@ -11,8 +11,8 @@
       "code": "```\nvar testValues = {};\r\nonEvent(\"QuizWhereShouldYouTakeaVacation_predict\", \"click\", function() {\r\n    testValues.scent = getText(\"scent_dropdown\");\r\n\t\ttestValues.personality = getText(\"personality_dropdown\");\r\n\t\ttestValues.activity = getText(\"activity_dropdown\");\r\n\t\ttestValues.plant = getText(\"plant_dropdown\");\r\n    setText(\"QuizWhereShouldYouTakeaVacation_prediction\", '');\r\n    getPrediction(\"Quiz - Where Should You Take a Vacation?\", \"l1MvzjqO1K5L\", testValues, function(value) {\r\n      if (value == \"Paris\") {\r\n        setScreen(\"parisScreen\");\r\n      }\r\n      if (value == \"New York\") {\r\n        setScreen(\"newYorkScreen\");\r\n      }\r\n      if (value == \"London\") {\r\n        setScreen(\"londonScreen\");\r\n      }\r\n      if (value == \"Bahamas\") {\r\n        setScreen(\"bahamasScreen\");\r\n      }\r\n    });\r\n  });\n```",
       "app": "https://studio.code.org/projects/applab/Qd92HEe1u8OxN8C0i65EFMNuZ2YDJtrq5TY2iN4hqU8",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

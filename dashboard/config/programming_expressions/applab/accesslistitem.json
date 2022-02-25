@@ -11,8 +11,8 @@
       "code": "```\nvar favoriteMusicGenres = [\"Rock\", \"Jazz\", \"Funk\"];\r\n\r\nconsole.log(favoriteMusicGenres[0]);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The item from the list.",

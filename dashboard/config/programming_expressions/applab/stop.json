@@ -11,8 +11,8 @@
       "code": "```\n//Try turning the colorLED on, and then see what happens when you click the stop button.\r\n\r\nonEvent(\"off\", \"click\", function(event) {\r\n  colorLeds[5].off();\r\n});\r\n\r\nonEvent(\"on\", \"click\", function(event) {\r\n  colorLeds[5].on();\r\n});\r\n\r\nonEvent(\"blink\", \"click\", function(event) {\r\n  colorLeds[5].blink(100);\r\n});\r\n\r\nonEvent(\"stop\", \"click\", function(event) {\r\n  colorLeds[5].stop();\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "short_description": "Stops the colorLEDS from blinking.",

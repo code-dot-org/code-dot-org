@@ -11,8 +11,8 @@
       "code": "```\n//Mouse over emoji!\nvar sprite = createSprite(200, 200);\nsprite.setAnimation(\"emoji\");\nsprite.pause();\nfunction draw() {\n  background(\"white\");\n  drawSprites();\n  if (mouseIsOver(sprite)) {\n    sprite.nextFrame();\n  }\n}\n\n```",
       "app": "https://studio.code.org/projects/gamelab/KE6C8Cdp4Ued5SBzS6MMrRsQap39WUGPUHJtJUKaIH8/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "No return value. Changes output in the display after drawSprites() is called.",

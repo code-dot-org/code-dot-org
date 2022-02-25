@@ -9,14 +9,14 @@
       "name": "Multiple Text Decorations",
       "description": "Setting different text decorations for a `<h1>` element. ",
       "code": "```\nh2 {\n  text-decoration: underline overline wavy blue;\n}\n```",
-      "appDisplayType": "displayApp",
+      "appDisplayType": "codeFromCodeField",
       "appEmbedHeight": "310"
     },
     {
       "name": "Overline text decoration",
       "description": "Setting an overline text decoration for a `<h1>` element. ",
       "code": "```\nh1 {\n  text-decoration: overline;\n}\n```",
-      "appDisplayType": "displayApp",
+      "appDisplayType": "codeFromCodeField",
       "appEmbedHeight": "310"
     }
   ],

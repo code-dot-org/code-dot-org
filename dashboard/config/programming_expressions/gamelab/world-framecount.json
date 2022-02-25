@@ -11,8 +11,8 @@
       "code": "```\n// Make a timer using frameCount and the default frameRate.\r\nfunction draw() {\r\n  background(\"white\");\r\n  textSize(25);\r\n  text(Math.round(World.frameCount/30), 200, 200);\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The number of frames that have been displayed since the program started.",

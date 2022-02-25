@@ -11,8 +11,8 @@
       "code": "```\nvar interval = 100;\r\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  interval = interval - 5;\r\n  colorLeds[0].blink(interval);\r\n  colorLeds[1].blink(interval);\r\n  colorLeds[2].blink(interval);\r\n  colorLeds[3].blink(interval);\r\n  colorLeds[4].blink(interval);\r\n});\r\n\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Alternating Blinks",
@@ -20,8 +20,8 @@
       "code": "```\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  colorLeds[0].blink(100);\r\n  colorLeds[1].blink(50);\r\n  colorLeds[2].blink(100);\r\n  colorLeds[3].blink(50);\r\n  colorLeds[4].blink(100);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -29,8 +29,8 @@
       "code": "```\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  colorLeds[0].blink();\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

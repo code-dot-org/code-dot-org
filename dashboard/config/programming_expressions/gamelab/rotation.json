@@ -11,8 +11,8 @@
       "code": "```\n// Use polar coordinates and sprite.rotation to make an airplane perform loops.\nvar startx=200, starty=200, angle=0, increment=10, radius=150;\nvar sprite = createSprite(startx, starty);\nsprite.setAnimation(\"planeRed1_1\");\nsprite.mirrorX(-1);\nfunction draw() {\n  background(\"white\");\n  angle=angle+increment;\n  sprite.x=startx+radius*Math.cos(angle * Math.PI/180);\n  sprite.y=starty+radius*Math.sin(angle * Math.PI/180);\n  sprite.rotation=60-angle;\n  drawSprites();\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/OunIPmo9jkirIPII1_cdDw/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\nvar sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"car_blue_1\");\r\ndrawSprites();\r\nsprite.rotation = 45;\r\ndrawSprites();\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Skidding Car",
@@ -29,8 +29,8 @@
       "code": "```\n// Use slight random rotations to make a car skid.\r\nvar sprite = createSprite(0, 200);\r\nsprite.setAnimation(\"car_blue_1\");\r\nfunction draw() {\r\n  background(\"white\");\r\n  sprite.x = sprite.x + 5;\r\n  sprite.rotation = 90 + randomNumber(-3, 3);\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "Clockwise rotation in degrees of the sprite.",

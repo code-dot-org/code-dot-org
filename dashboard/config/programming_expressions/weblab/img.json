@@ -11,8 +11,8 @@
       "code": "```\n<html>\r\n<body>\r\n    <h1>\r\n      Grace Hopper Info\r\n    </h1>\r\n    <p>\r\n      Grace Hopper was a computer scientist in the United States Navy. She developed one of the first programming languages. She also discovered the first computer 'bug'. It was a literal bug in the machine.\r\n    </p>\r\n    <h2>\r\n      The First Computer Bug\r\n    </h2>\r\n    <img src=\"https://archive.computerhistory.org/resources/still-image/Hopper-Grace/hopper-grace.finds_bug.102640477.lg.jpg\" alt=\"Computer Bug\" />\r\n  </body>\r\n</html>\r\n\r\n\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/computer-bug_Small.png",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": " Local Image",
@@ -20,8 +20,8 @@
       "code": "```\n<img src=\"dog.jpg\" alt=\"My Dog\" width=\"500\" height=\"600\">\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Image on Another Website",
@@ -29,8 +29,8 @@
       "code": "```\n<img src=\"https://pbs.twimg.com/profile_images/1267892245362913281/2rm_VB9z.png\" alt=\"CODE\" width=\"500\" height=\"600\">\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_img.asp",

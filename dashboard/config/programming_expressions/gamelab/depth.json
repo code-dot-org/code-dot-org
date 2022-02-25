@@ -11,8 +11,8 @@
       "code": "```\n// Create a flickering box by swapping sprite depths.\r\nvar sprite1 = createSprite(200, 200);\r\nvar sprite2 = createSprite(200, 200);\r\nsprite2.shapeColor=\"black\";\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  var temp=sprite1.depth;\r\n  sprite1.depth=sprite2.depth;\r\n  sprite2.depth=temp;\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The depth of the sprite.",

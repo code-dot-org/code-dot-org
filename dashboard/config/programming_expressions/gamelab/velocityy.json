@@ -11,8 +11,8 @@
       "code": "```\nvar sprite = createSprite(200, 200);\r\nsprite.velocityY = -1;\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Zig-Zag",
@@ -20,8 +20,8 @@
       "code": "```\n// Move a sprite in a zig-zag pattern by alternating velocityY positive and negative.\r\nvar sprite = createSprite(200, 200);\r\nsprite.velocityX = 1;\r\nsprite.velocityY = 1;\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  if (sprite.y>225) {\r\n    sprite.velocityY = -1;\r\n  }\r\n  if (sprite.y<175) {  \r\n    sprite.velocityY = 1;\r\n  }\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "Velocity in the positive y direction, downward.",

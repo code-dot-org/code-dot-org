@@ -11,8 +11,8 @@
       "code": "```\ntext(World.height, 0, 15);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "Returns the height of the World in pixels.",

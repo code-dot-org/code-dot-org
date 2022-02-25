@@ -11,16 +11,16 @@
       "description": "These animals want to swap size. Press the spacebar to help them determine if they succeeded. \r\n(The code checks to see if the cow and the hippo are their desired sizes.)",
       "app": "https://studio.code.org/projects/spritelab/ALo9mONq6hLDKK4wlONdwn8ix9O6GmwO8stpZtVU_J4",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "This program checks if the pink alien or the yellow alien can guess the same number as the green alien. If either one gets it right, they celebrate. Press “g” to make them guess.\r\n",
       "app": "https://studio.code.org/projects/spritelab/eZNGi36tMBiNgAE0HJSYdTupGfY5VRyVM810PW4bkFY",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/andOr.PNG",

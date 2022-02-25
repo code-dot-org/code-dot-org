@@ -11,8 +11,8 @@
       "code": "```\n// Swarm of bees following the mouse.\r\nvar group = createGroup();\r\nfor (var i = 0; i < 100; i++) {\r\n  group.add(createSprite(randomNumber(150, 250), randomNumber(150, 250), 2, 2));\r\n}\r\ngroup.setAnimationEach(\"bee_1\");\r\ngroup.setScaleEach(0.5);\r\ngroup.setRotateToDirectionEach(true);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  var direction=(180*Math.atan2(World.mouseY-200, World.mouseX-200))/Math.PI;\r\n  group.setSpeedAndDirectionEach(10, direction);\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/BKqQhrhiP5vYlZG4j16vvw/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\nvar group = createGroup();\r\ngroup.add(createSprite(200, 200, 100, 100));\r\ngroup.add(createSprite(200, 100, 50, 50));\r\ngroup.setSpeedAndDirectionEach(randomNumber(-3, 3), randomNumber(-45, 45));\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

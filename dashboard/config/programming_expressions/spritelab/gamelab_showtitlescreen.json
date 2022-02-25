@@ -11,16 +11,16 @@
       "description": "A title screen is used to describe the project. \r\n",
       "app": "https://studio.code.org/projects/spritelab/O9Znd5YOetUz1qw8et-4adTSaFnSbJRnB3-bdc_LMQ0",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "The green monster is running away from the purple popsicle monsters. When the green monster is caught, a title screen appears to indicate the game is over.\r\n",
       "app": "https://studio.code.org/projects/spritelab/9LEF2zHnnT7efjEsLJ8MVo9Li9jyv-hTHin98NCpVJk",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/showTitle.PNG",

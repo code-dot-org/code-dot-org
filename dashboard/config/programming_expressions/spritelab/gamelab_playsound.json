@@ -11,16 +11,16 @@
       "description": "Play a happy sound whenever the sprite is clicked.\r\n",
       "app": "https://studio.code.org/projects/spritelab/MecP26Q6MZrKb8i55k0J66FRUQrW77KZeKN7H1ie1Yg",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "Play sounds to indicate when different events happen. \r\n",
       "app": "https://studio.code.org/projects/spritelab/WwtTeTb7Ztsx94o0m7U44FYkPM_DSfd1pLdik3cqdr0",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 515
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 515
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/playSound.PNG",

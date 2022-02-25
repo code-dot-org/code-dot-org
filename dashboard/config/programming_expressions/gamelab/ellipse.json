@@ -11,8 +11,8 @@
       "code": "```\n// Draw two ellipses at the same location but with different stroke widths and no fill color.\r\nstrokeWeight(40);\r\nstroke(\"lightblue\");\r\nnoFill();\r\nellipse(200, 200, 100, 200);\r\nstrokeWeight(1);\r\nstroke(\"black\");\r\nellipse(200, 200, 200, 100);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Quarter of an Ellipse",
@@ -20,8 +20,8 @@
       "code": "```\n// Change the thickness of a ellipse outline, filled in green, drawn in the upper left corner of the display.\r\nstrokeWeight(20);\r\nfill(\"green\");\r\nellipse(0, 0, 200 ,100);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Animated Ellipse",
@@ -29,8 +29,8 @@
       "code": "```\n// Use the draw() function to animate an oscillating ellipse.\r\nvar number = 0;\r\nvar count=0;\r\nfunction draw() {\r\n  background(\"white\");\r\n  ellipse(200, 200, 100-number, 100+number);\r\n  count=count+1;\r\n  if (count<=100) {\r\n      number=number+1;\r\n  }\r\n  else if (count<=200){\r\n    number=number-1;\r\n  }\r\n  else if (count>200) {\r\n    count=0;\r\n  }\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/r0WZgNVXawAK00MLTl2X3Q/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -38,8 +38,8 @@
       "code": "```\n// Draw a 100x100 pixel ellipse (circle) in the center of the display.\r\nellipse(200, 200, 100, 100);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Red Line",
@@ -47,8 +47,8 @@
       "code": "```\n// Change the color of the ellipse outline drawn in the center of the display.\r\nstroke(\"red\");\r\nellipse(160, 240, 100 ,200);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

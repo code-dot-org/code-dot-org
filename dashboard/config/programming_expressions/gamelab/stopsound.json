@@ -11,8 +11,8 @@
       "code": "```\n// Stop the background sound when a sprite reaches the edge of the display area.\r\nplaySound(\"https://audio.code.org/win3.mp3\", true);\r\nvar sprite = createSprite(200, 200);\r\nsprite.setSpeedAndDirection(randomNumber(-5, -5), randomNumber(-180, 180));\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  if (sprite.x<0 || sprite.x>400 || sprite.y<0 || sprite.y>400 ) {\r\n    stopSound(\"https://audio.code.org/win3.mp3\");\r\n  }\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

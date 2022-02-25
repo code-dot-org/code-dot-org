@@ -11,8 +11,8 @@
       "description": "The most common use of this block outside of behaviors is to make a sprite move with the arrow keys. \r\n",
       "app": "https://studio.code.org/projects/spritelab/anG6huOwRbHHLWGIAHq0WQhFGeuqPhpFOw3CEH9MvrI",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 550
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 550
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/moveDirection.PNG",

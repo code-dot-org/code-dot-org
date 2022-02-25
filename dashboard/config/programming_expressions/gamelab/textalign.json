@@ -11,8 +11,8 @@
       "code": "```\n// Display various text vertical alignments.\r\ntextSize(18);\r\ntext(\"Dog \"+textSize(), 0, 18);\r\ntextAlign(\"left\", \"baseline\");  // Same as the default.\r\ntext(\"Dog \"+textSize(), 75, 18);\r\ntextAlign(\"Left\", \"Bottom\");    // Bottom of the letters that go below the baseline on the y.\r\ntext(\"Dog \"+textSize(), 150, 18);\r\ntextAlign(\"Left\", \"Center\");    // Letters centered on the y.\r\ntext(\"Dog \"+textSize(), 225, 18);\r\ntextAlign(\"Left\", \"Top\");       // Top of the Letters on the y.\r\ntext(\"Dog \"+textSize(), 300, 18);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Horizontal Alignments",
@@ -20,8 +20,8 @@
       "code": "```\n// Display various text horizontal alignments.\r\ntextSize(18);\r\ntext(\"Dog \"+textSize(), 200, 75);\r\ntextAlign(LEFT);  // Same as the default.\r\ntext(\"Dog \"+textSize(), 200, 150);\r\ntextAlign(\"Center\");    // Text centered on the x.\r\ntext(\"Dog \"+textSize(), 200, 225);\r\ntextAlign(\"Right\");    // Text right justified on the x.\r\ntext(\"Dog \"+textSize(), 200, 300);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

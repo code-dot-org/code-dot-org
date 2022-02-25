@@ -11,8 +11,8 @@
       "code": "```\na:link {\r\n  color: blue;\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": " Mouse Over Link",
@@ -20,8 +20,8 @@
       "code": "```\na:hover {\r\n  color: green;\r\n}\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Visited Link",
@@ -29,8 +29,8 @@
       "code": "```\na:visited link {\r\n  color: green;\r\n}\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/Css/css_pseudo_classes.asp",

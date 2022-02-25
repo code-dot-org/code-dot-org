@@ -11,8 +11,8 @@
       "description": "The location picker makes it easy to place the sprites in locations that match the background. \r\n",
       "app": "https://studio.code.org/projects/spritelab/BBKcrQf3YOsE1074OqiKdpHRVONRXB8GvJLhaQygank",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 360
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 360
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/locationPicker.PNG",

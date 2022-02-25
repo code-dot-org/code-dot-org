@@ -11,8 +11,8 @@
       "code": "```\nvar red_cow = createSprite(100, 200);\nred_cow.setAnimation(\"cow\");\nred_cow.tint = \"red\";\n\nvar blue_cow = createSprite(200, 200);\nblue_cow.setAnimation(\"cow\");\nblue_cow.tint = \"#0000FF\";\n\nvar ghost_cow = createSprite(300, 200);\nghost_cow.setAnimation(\"cow\");\nghost_cow.alpha = 0.5;\n\ndrawSprites();\n\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/Screenshot_from_2018-03-30_09-52-47.png",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The sprite's tint color, or `null` if no tint has been applied.",

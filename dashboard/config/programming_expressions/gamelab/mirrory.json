@@ -11,8 +11,8 @@
       "code": "```\n// Flip the gnome with left and right clicks.\r\nvar sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"gnome_1\");\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  if (mouseWentDown(\"leftButton\")) {\r\n    sprite.mirrorX(sprite.mirrorX() * -1);\r\n  }\r\n  if (mouseWentDown(\"rightButton\")) {\r\n    sprite.mirrorY(sprite.mirrorY() * -1);\r\n  }\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/1qDMs6CeQ995Ml_wMijmDQ/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

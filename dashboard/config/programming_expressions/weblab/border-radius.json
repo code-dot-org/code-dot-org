@@ -11,8 +11,8 @@
       "code": "```\nh1 {\r\n  border: 2px solid red;\r\n  border-radius: 25px;\r\n}\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Rounded Corners as a Percentage",
@@ -20,8 +20,8 @@
       "code": "```\nh1 {\r\n  border: 2px solid red;\r\n  border-radius: 20%;\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/cssref/css3_pr_border-radius.asp",

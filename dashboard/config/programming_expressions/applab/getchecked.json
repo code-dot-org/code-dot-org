@@ -11,8 +11,8 @@
       "code": "```\n// Retrieve and display a checkbox value.\r\ncheckbox(\"agreeBox\", false);\r\ntextLabel(\"agreeLabel\",\"I agree to the above privacy statement.\",\"agreeBox\");\r\n\r\ntextLabel(\"response1\",\"Response: \");\r\ntextLabel(\"response2\",\"\");\r\nonEvent(\"agreeBox\", \"click\", function() {\r\n  setText(\"response2\",getChecked(\"agreeBox\"));\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example: Finding the Checked Item",
@@ -20,8 +20,8 @@
       "code": "```\n// Iterate over the radio buttons in a group to determine which one is selected each time the favorite button is clicked.\r\nradioButton(\"Red\", false,\"ColorGroup\");\r\ntextLabel(\"RedLabel\",\"Red\",\"Red\");\r\nradioButton(\"Blue\", false,\"ColorGroup\");\r\ntextLabel(\"BlueLabel\",\"Blue\",\"Blue\");\r\nradioButton(\"Green\", false,\"ColorGroup\");\r\ntextLabel(\"GreenLabel\",\"Green\",\"Green\");\r\nradioButton(\"Orange\", false,\"ColorGroup\");\r\ntextLabel(\"OrangeLabel\",\"Orange\",\"Orange\");\r\n\r\nbutton(\"favorite\",\"What's my favorite color?\");\r\nonEvent(\"favorite\",\"click\", function() {\r\n    var radioIDs = [\"Red\",\"Blue\",\"Green\",\"Orange\"];\r\n    var index = 0;\r\n    while (index < radioIDs.length && !getChecked(radioIDs[index])) {\r\n      index++;\r\n    }\r\n    console.log(\"Your favorite color is: \" + radioIDs[index]);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

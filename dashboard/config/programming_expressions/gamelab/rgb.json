@@ -11,8 +11,8 @@
       "code": "```\n// You can look up official RGB values for most country flags on Wikipedia.\r\nfill(rgb(0,85,164));\r\nrect(50, 50, 300, 100);\r\n\r\nfill(rgb(255,255,255));\r\nrect(50, 150, 300, 100);\r\n\r\nfill(rgb(239,65,53));\r\nrect(50, 250, 300, 100);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\n// one parameter is grayscale\r\nfill(rgb(100));  \r\nrect(100, 100, 50, 50);\r\n\r\n// two parameters is grayscale and transparency\r\nfill(rgb(100,0.5)); \r\nrect(150, 100, 50, 50);\r\n\r\n// three parameters are RGB values\r\nfill(rgb(0,100,200));\r\nrect(100, 150, 50, 50);\r\n\r\n// four parameters are RGB values and transparency\r\nfill(rgb(0, 100, 200, 1));\r\nrect(150, 150, 50, 50);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

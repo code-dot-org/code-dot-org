@@ -11,8 +11,8 @@
       "code": "```\n// Swarm of bees following the mouse.\r\nvar group = createGroup();\r\nfor (var i = 0; i < 100; i++) {\r\n  group.add(createSprite(randomNumber(150, 250), randomNumber(150, 250), 2, 2));\r\n}\r\ngroup.setAnimationEach(\"bee_1\");\r\ngroup.setScaleEach(0.5);\r\ngroup.setRotateToDirectionEach(true);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  var direction=(180*Math.atan2(World.mouseY-200, World.mouseX-200))/Math.PI;\r\n  group.setSpeedAndDirectionEach(10, direction);\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/BKqQhrhiP5vYlZG4j16vvw/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Stay Cool!",
@@ -20,8 +20,8 @@
       "code": "```\n// Stay cool! Keep all the bad vibes from getting you down.\r\n// Uses createGroup to make a bunch of bouncing baddies, \r\n// createEdgeSprites to make sure the baddies don't just fly off.\r\n\r\nvar cool = createSprite(200, 325);\r\ncool.setAnimation(\"cool\");\r\ncreateEdgeSprites();\r\nvar group = createGroup();\r\n\r\nfor (var i = 0; i < 20; i++) {\r\n  var sprite = createSprite(randomNumber(0, 400), randomNumber(0, 100), 10, 10);\r\n  sprite.velocityY=randomNumber(5, 10);\r\n  sprite.velocityX=randomNumber(-5, 5);\r\n  sprite.bounciness = 1\r\n  group.add(sprite);\r\n}\r\n\r\ngroup.setAnimationEach(\"mean\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  cool.x = World.mouseX;\r\n  group.bounceOff(cool);\r\n  group.bounceOff(topEdge);\r\n  group.bounceOff(leftEdge);\r\n  group.bounceOff(rightEdge);  \r\n}\r\n\n```",
       "app": "https://studio.code.org/projects/gamelab/xLeXLVoeiWE3pMPJrS1I3d66DnuylmvrbMWTB5Jqkp8",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -29,8 +29,8 @@
       "code": "```\nvar group = createGroup();\r\ngroup.add(createSprite(200, 200, 100, 100));\r\ngroup.add(createSprite(200, 100, 50, 50));\r\ngroup.setSpeedAndDirectionEach(randomNumber(-3, 3), randomNumber(-45, 45));\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "Returns the sprite group and assigns it to the variable specified.",

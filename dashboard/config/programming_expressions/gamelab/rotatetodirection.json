@@ -11,8 +11,8 @@
       "code": "```\n// Use sprite.rotateToDirection with sprite.velocityX to make a sprite pace back and forth.\r\nvar sprite = createSprite(200, 200, 50, 50);\r\nsprite.setAnimation(\"bunny1_1\");\r\nsprite.rotation = 180;\r\nsprite.scale = 0.5;\r\nsprite.rotateToDirection=true;\r\nsprite.velocityX = 5;\r\nfunction draw() {\r\n  background(\"white\");\r\n  if (sprite.x>300) {\r\n    sprite.velocityX = -5;\r\n  }\r\n  if (sprite.x<100) {\r\n    sprite.velocityX = 5;\r\n  } \r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Walking in a Circle",
@@ -20,8 +20,8 @@
       "code": "```\n// Use sprite.rotateToDirection with sprite.rotation to make a sprite walk in a circle.\r\nvar sprite = createSprite(200, 200, 50, 50);\r\nsprite.setAnimation(\"bunny1_1\");\r\nsprite.rotation = 180;\r\nsprite.scale = 0.5;\r\nsprite.rotateToDirection=true;\r\nsprite.velocityX = 5;\r\nfunction draw() {\r\n  background(\"white\");\r\n  sprite.rotation=sprite.rotation+5;\r\n  drawSprites();\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/Mcs4JMkd144OOJYYcHyeLw/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "Boolean true or false.",

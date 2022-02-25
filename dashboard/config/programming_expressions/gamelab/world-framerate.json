@@ -11,8 +11,8 @@
       "code": "```\n// Accelerate a square across the screen.\nvar rectX = 0;\nWorld.frameRate=10;\nfill(\"red\");\nfunction draw() {\n  background(\"white\");\n  rectX = rectX + 1;\n  if (rectX >= 40) {\n    World.frameRate=World.frameRate*2;\n    rectX = 0;\n  }\n  rect(rectX, 40, 20,20);\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/usvRCpcu7Vvsm18oMdgbvg/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The number of times per second the screen is refreshed.",

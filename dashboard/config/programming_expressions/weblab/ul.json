@@ -11,8 +11,8 @@
       "code": "```\n<ul>\r\n  <li>Tea</li>\r\n  <li>Milk</li>\r\n  <li>Water</li>\r\n</ul>\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Boba Flavors",
@@ -20,8 +20,8 @@
       "code": "```\n<html>\r\n\t<body>\r\n    \t<h1>Boba Flavor Choices</h1>\r\n        <ul>\r\n          <li>Lychee</li>\r\n          <li>Mango</li>\r\n          <li>Passion Fruit</li>\r\n          <li>Peach</li>\r\n          <li>Plum</li>\r\n          <li>Strawberry</li>\r\n        </ul>\r\n\t</body>\r\n</html>\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/boba.png",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_ul.asp",

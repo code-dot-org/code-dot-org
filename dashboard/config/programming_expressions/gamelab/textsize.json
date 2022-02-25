@@ -11,8 +11,8 @@
       "code": "```\n// Display various font sizes.\r\ntextSize(12);\r\ntext(\"Font Size \"+textSize(), 10, 30);\r\ntextSize(16);\r\ntext(\"Font Size \"+textSize(), 10, 60);\r\ntextSize(25);\r\ntext(\"Font Size \"+textSize(), 10, 90);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

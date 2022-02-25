@@ -11,8 +11,8 @@
       "code": "```\n// Zoom in and out.\r\nvar back = createSprite(200, 200);\r\nback.setAnimation(\"stone_snow_1\");\r\ncamera.on();\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  if (keyDown(\"up\")) {\r\n    camera.zoom = camera.zoom - 0.1;\r\n  }\r\n  if (keyDown(\"down\")) {\r\n    camera.zoom = camera.zoom + 0.1;\r\n  } \r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The zoom factor of the camera.",

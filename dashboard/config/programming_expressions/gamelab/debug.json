@@ -11,8 +11,8 @@
       "code": "```\nvar sprite1 = createSprite(200, 200);\r\nsprite1.debug = true;\r\nsprite1.setCollider(\"rectangle\", 0, 0, 50, 50);\r\nvar sprite2 = createSprite(50, 50);\r\nsprite2.debug = true;\r\ndrawSprites();\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The debug state of the sprite, true or false.",

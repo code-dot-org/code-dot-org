@@ -11,8 +11,8 @@
       "code": "```\ntextSize(60);\r\ntextAlign(CENTER, TOP);\r\ntextFont(\"Impact\");\r\nfill(\"yellow\");\r\nstroke(\"red\");\r\nstrokeWeight(5);\r\ntext(\"Ada Lovelace was one of the first computer programmers!\", 0, 0, 400, 400);\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/text.PNG",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\n// Display Hello World in top left corner.\r\ntext(\"Hello world.\", 10, 10);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "No line wrap vs. line wrap",
@@ -29,8 +29,8 @@
       "code": "```\n// No text wrapping\r\ntext(\"Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.\", 10, 100);\r\n\r\n// Use parameters four and five to create a text box with line wrapping.\r\n// This will wrap text in a 100 by 100 box\r\ntext(\"Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.\", 10, 200, 110, 300);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

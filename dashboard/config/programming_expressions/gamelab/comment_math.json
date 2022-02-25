@@ -11,8 +11,8 @@
       "code": "```\n// Call functions to generate two die rolls and sum the result. Display the value on the console.\r\nconsole.log(rollDie() + rollDie());\r\n\r\nfunction rollDie() { \r\n// Define a function that uses randomNumber(1,6) to randomly generate a die roll, 1 to 6, and return the value.\r\n  var roll = randomNumber(1,6);\r\n  return roll;\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "Comments are ignored by the computer.",

@@ -11,8 +11,8 @@
       "code": "```\n<p>My favorite animals are birds.</p>\r\n<p>My favorite sport is baseball.</p>\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Single Longer Paragraph",
@@ -20,8 +20,8 @@
       "code": "```\n<p>\nSoccer is an awesome sport because you get to play on a team with all your friends. My favorite players are Megan Rapinoe from the United States, and Marta from Brazil.\n</p>\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_p.asp",

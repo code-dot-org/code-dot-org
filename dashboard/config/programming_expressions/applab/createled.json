@@ -11,8 +11,8 @@
       "code": "```\nvar leftLED = createLed(3);\r\nleftLED.blink(200);\r\n\r\nvar rightLED = createLed(10);\r\nrightLED.blink(200);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\n// Create a new LED object attached to pin 2\r\nvar myLed = createLed(2);\r\n\r\n// turn myLed on\r\nmyLed.on();\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

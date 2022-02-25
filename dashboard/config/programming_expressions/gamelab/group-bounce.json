@@ -11,8 +11,8 @@
       "code": "```\n// Will the randomly moving parrots bounce the burger off the screen?\r\nvar target = createSprite(200, 200);\r\ntarget.setAnimation(\"burger_1\");\r\ntarget.scale=0.25;\r\ncreateEdgeSprites();\r\nvar group = createGroup();\r\nfor (var i = 0; i < 50; i++) {\r\n  var sprite = createSprite(randomNumber(0, 400), randomNumber(0, 400), 10, 10);\r\n  sprite.velocityY=randomNumber(-5, 5);\r\n  sprite.velocityX=randomNumber(-5, 5);\r\n  group.add(sprite);\r\n}\r\ngroup.setAnimationEach(\"parrot_1\");\r\ngroup.setScaleEach(0.1);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  group.bounce(target);\r\n  group.bounceOff(topEdge);\r\n  group.bounceOff(bottomEdge);\r\n  group.bounceOff(leftEdge);\r\n  group.bounceOff(rightEdge);  \r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/heczcDKKR7ULlti5oprZng/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

@@ -11,8 +11,8 @@
       "code": "```\n// Press 1, 2 or 3 to remove a sprite from the group and have it stop following the mouse.\r\nvar box1 = createSprite(75, 200, 50, 50);\r\nvar box2 = createSprite(200, 200, 50, 50);\r\nvar box3 = createSprite(325, 200, 50, 50);\r\nvar group = createGroup();\r\ngroup.add(box1);\r\ngroup.add(box2);\r\ngroup.add(box3);\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  if (keyWentDown(\"1\")) {\r\n    group.remove(box1);\r\n  }\r\n  if (keyWentDown(\"2\")) {\r\n    group.remove(box2);\r\n  }\r\n  if (keyWentDown(\"3\")) {\r\n    group.remove(box3);\r\n  }  \r\n  var direction=(180*Math.atan2(World.mouseY-200, World.mouseX-200))/Math.PI;\r\n  group.setSpeedAndDirectionEach(1, direction);\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

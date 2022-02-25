@@ -11,8 +11,8 @@
       "code": "```\n// Draw a square bullseye using four colors from an array.\r\nvar colors = [\"red\", \"magenta\", \"pink\", \"purple\"];\r\nfor (var i = 0; i < 10; i++) {\r\n  fill(colors[i%4]); // Choose a color from the array.\r\n  rect(100+10*i, 100+10*i, 200-20*i, 200-20*i);\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Seeing Red",
@@ -20,8 +20,8 @@
       "code": "```\n// Use the draw() function to animate a circle through \r\n// multiple shades of red.\r\nvar number = 0;\r\nvar count = 0;\r\nfunction draw() {\r\n  background(\"white\");\r\n  fill(rgb(number, 0, 0));\r\n  ellipse(200, 200, 100, 100);\r\n  count=count+5;\r\n  if (count<=255) {\r\n      number=number+5;\r\n  }\r\n  else if (count<=510){\r\n    number=number-5;\r\n  }\r\n  else if (count>510) {\r\n    count=0;\r\n  }\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/UtJD9AUT4fWcpf_t292WDQ/view",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -29,8 +29,8 @@
       "code": "```\n// Sets the fill color to cyan.\r\nfill(\"cyan\");\r\nrect(100, 100, 200, 200);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "2 Ways",
@@ -38,8 +38,8 @@
       "code": "```\n// Demonstrate the two ways to specify the color parameter.\r\n// Sets the color using the name of a color in a string.\r\nfill(\"chartreuse\");\r\nellipse(100, 100, 100, 100);\r\n\r\n// Sets the color using a call to color with an rgba value.\r\n// The last value is the amount of transparency, a number from 0 to 1.\r\nfill(rgb(127, 255, 0, 0.5));\r\nrect(100, 100, 200, 200);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

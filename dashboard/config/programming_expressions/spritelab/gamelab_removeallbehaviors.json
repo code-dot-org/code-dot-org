@@ -11,8 +11,8 @@
       "description": "The sprite has three behaviors: spinning, swimming, and growing. When it is clicked, all three behaviors will stop.\r\n",
       "app": "https://studio.code.org/projects/spritelab/7VN3d3ZyD39cXZL2occ6H7giOQ8dlrbMtkWBszyNb5Y",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/stopsEverything.PNG",

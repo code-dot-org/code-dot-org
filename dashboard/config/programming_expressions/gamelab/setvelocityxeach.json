@@ -11,8 +11,8 @@
       "code": "```\n// The gray dots have all the same velocity.\r\nvar group1 = createGroup();\r\nfor (var i = 0; i < 10; i++) {\r\n  var sprite = createSprite(0, randomNumber(0, 400), 5, 5);\r\n  sprite.shapeColor='red';\r\n  sprite.velocityX=randomNumber(1, 10);\r\n  group1.add(sprite);\r\n}\r\nvar group2 = createGroup();\r\nfor (var i = 0; i < 10; i++) {\r\n  var sprite = createSprite(0, randomNumber(0, 400), 5, 5);\r\n  group2.add(sprite);\r\n}\r\ngroup2.setVelocityXEach(randomNumber(1,10));\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

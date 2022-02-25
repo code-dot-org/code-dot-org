@@ -11,8 +11,8 @@
       "code": "```\nfunction draw() {\r\n  console.log(mouseWentDown(\"leftButton\"));\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Black and White",
@@ -20,8 +20,8 @@
       "code": "```\n// Change the background by clicking a mouse button.\r\nfunction draw() {\r\n  if (mouseWentDown(\"rightButton\")) background(\"black\");\r\n  if (mouseWentDown(\"leftButton\")) background(\"white\");\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

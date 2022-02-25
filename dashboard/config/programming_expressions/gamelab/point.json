@@ -11,8 +11,8 @@
       "code": "```\npoint(100, 300);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Jackson Pollock",
@@ -20,8 +20,8 @@
       "code": "```\n// Use the mouse pointer position to place random lines and points.\r\nfunction draw() {\r\n  stroke(rgb(randomNumber(0,255),randomNumber(0,255),randomNumber(0,255)));\r\n  if (randomNumber(0,1)==1) {\r\n    strokeWeight(randomNumber(1,5));\r\n    line(World.mouseX, World.mouseY, World.mouseX+randomNumber(-50,50),World.mouseY+randomNumber(-50,50));\r\n  }\r\n  else {\r\n    strokeWeight(randomNumber(10,30));\r\n    point(World.mouseX, World.mouseY);\r\n  }\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/dpz_huDfXGmE6jkX7XHCmQ/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Optical Illusion",
@@ -29,8 +29,8 @@
       "code": "```\n// Optical Illusion with Dots\r\nvar angle=0;\r\nWorld.frameRate=12;\r\nfunction draw() {\r\n  background(\"white\");\r\n  strokeWeight(5);\r\n  line(200,190,200,210);\r\n  line(190,200,210,200);  \r\n  stroke(rgb(255,0,255,0.5));\r\n  strokeWeight(40);\r\n  for (var i = 0; i <= 330; i=i+30) {\r\n    if (i!=angle) {\r\n      point(200+150*Math.cos(i*Math.PI/180), 200+150*Math.sin(i*Math.PI/180));\r\n    }\r\n  }\r\n  angle=(angle+30)%360;  \r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/sq_gfSkq4tqyoCP4SDUmJw/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Bullseye",
@@ -38,8 +38,8 @@
       "code": "```\n// Draw a bullseye.\r\nstroke(\"black\");\r\nstrokeWeight(400);\r\npoint(200, 200);\r\nstroke(\"lightgray\");\r\nstrokeWeight(325);\r\npoint(200, 200);\r\nstroke(\"blue\");\r\nstrokeWeight(250);\r\npoint(200, 200);\r\nstroke(\"red\");\r\nstrokeWeight(175);\r\npoint(200, 200);\r\nstroke(\"yellow\");\r\nstrokeWeight(100);\r\npoint(200, 200);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

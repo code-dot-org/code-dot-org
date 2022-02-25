@@ -11,8 +11,8 @@
       "code": "```\n// Red LED is connected to pin 13\r\npinMode(13, \"output\");\r\n// Turn pin 13 to on (1)\r\ndigitalWrite(13, 1);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

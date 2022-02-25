@@ -11,8 +11,8 @@
       "code": "```\n<ol>\r\n  <li>Tea</li> \r\n  <li>Milk</li>\r\n  <li>Water</li>\r\n</ol>\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Steps to Make Horchata",
@@ -20,8 +20,8 @@
       "code": "```\n<html>\r\n\t<body>\r\n      <h1>How to Make Horchata</h1>\r\n\r\n      <ol>\r\n        <li>Combine rice, cinnamon sticks, sugar, and water</li>\r\n        <li>Cover and refrigerate for 8 hours</li>\r\n        <li>Blend until smooth</li>\r\n        <li>Strain into a large bowl. Serve over ice</li>\r\n      </ol>\r\n\t</body>\r\n</html>\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/horchata.png",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_ol.asp",

@@ -11,8 +11,8 @@
       "code": "```\nline(10, 50, 100, 75);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Two Lane Road",
@@ -20,8 +20,8 @@
       "code": "```\n// Draw a two lane road.\r\nstrokeWeight(15);\r\nline(0, 0, 400, 400);\r\nstroke(\"yellow\");\r\nstrokeWeight(1);\r\nline(0, 0, 400, 400);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Tic-Tac-Toe",
@@ -29,8 +29,8 @@
       "code": "```\n// Draw a tic-tac-toe board.\r\nstrokeWeight(10);\r\nline(133, 0, 133, 400);\r\nline(266, 0, 266, 400);\r\nline(0, 133, 400, 133);\r\nline(0, 266, 400, 266);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Optical Illusion",
@@ -38,8 +38,8 @@
       "code": "```\n// Are the 4 lines straight?\r\nnoFill();\r\nfor (var i = 5; i < 20; i++) {\r\n  ellipse(200, 200, 20*i, 20*i);\r\n}\r\nstrokeWeight(5);\r\nline(200, 0, 400, 200);\r\nline(400, 200, 200, 400);\r\nline(200, 400, 0, 200);\r\nline(0, 200, 200, 0);\n```",
       "app": "https://studio.code.org/projects/gamelab/6xHcijFSxP2DOY7Vkuzbjg/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

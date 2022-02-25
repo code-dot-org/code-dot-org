@@ -11,8 +11,8 @@
       "code": "```\n//Get the user's mood.\r\ndropdown(\"id\", \"happy\", \"sad\");\r\nonEvent(\"id\", \"change\", function(event) {\r\n  write(getText(\"id\"));\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example Simple Form",
@@ -20,8 +20,8 @@
       "code": "```\n// Demonstrate UI element modification and query functions.\r\ntextLabel(\"subjectLabel\", \"What subject do you like the most?\");\r\ndropdown(\"subjectId\", \"Arts\", \"Science\", \"History\", \"Math\");\r\nbutton(\"submitID\", \"Submit\");\r\nonEvent(\"submitID\", \"click\", function(event) {\r\n  console.log(getText(\"subjectId\"));\r\n  setText(\"subjectId\", \"____\");\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

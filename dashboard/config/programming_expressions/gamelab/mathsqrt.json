@@ -10,8 +10,8 @@
       "description": "var t = Math.sqrt(16);\r\nconsole.log(t);",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

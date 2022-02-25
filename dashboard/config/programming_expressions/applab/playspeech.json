@@ -11,8 +11,8 @@
       "code": "```\n\r\ntextLabel(\"directions\", \"Click the Question Mark\");\r\nimage(\"questionMark\", \"icon://fa-question\");\r\nsetProperty(\"questionMark\", \"icon-color\", \"purple\");\r\nonEvent(\"questionMark\", \"click\", function( ) {\r\n  playSpeech(\"What is your question?\", \"female\", \"English\");\r\n});\r\n\r\n\r\n\n```",
       "app": "https://studio.code.org/projects/applab/UFA4aCEwYVVjHsv1PVjvzVQ_YA63xjYXqz5Pyr_fC_E",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

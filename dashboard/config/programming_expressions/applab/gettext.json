@@ -11,8 +11,8 @@
       "code": "```\n// Demonstrate reading and then clearing a textInput box.\r\ntextInput(\"yourThought\",\"\");\r\nonEvent(\"yourThought\", \"change\", function(event) {\r\n  write(getText(\"yourThought\"));\r\n  setText(\"yourThought\",\"\");\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\n// Echo user input.\r\ntextInput(\"id\", \"Enter your name\");\r\nonEvent(\"id\", \"change\", function(event) {\r\n  write(\"Hi \" + getText(\"id\"));\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

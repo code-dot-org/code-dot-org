@@ -11,8 +11,8 @@
       "code": "```\nonEvent(\"intensity_slider\", \"input\", function(event) {\r\n  // Change the brightness of the color LEDs\r\n  colorLeds[0].intensity(getNumber(\"intensity_slider\"));\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

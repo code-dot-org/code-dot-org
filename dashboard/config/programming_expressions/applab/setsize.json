@@ -11,8 +11,8 @@
       "code": "```\n// Three sizes.\r\nimage(\"idSmall\", \"https://code.org/images/logo.png\");\r\nsetSize(\"idSmall\", 50, 50);\r\nimage(\"idMedium\", \"https://code.org/images/logo.png\");\r\nimage(\"idLarge\", \"https://code.org/images/logo.png\");\r\nsetSize(\"idLarge\", 200, 200);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

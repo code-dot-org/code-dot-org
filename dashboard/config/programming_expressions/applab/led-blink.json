@@ -11,8 +11,8 @@
       "code": "```\nvar blinkRate = 50;\r\n\r\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  blinkRate = blinkRate - 10;\r\n  led.blink(blinkRate);\r\n});\r\n\r\nonBoardEvent(buttonR, \"down\", function(event) {\r\n  blinkRate = blinkRate + 10;\r\n  led.blink(blinkRate);\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Stop the Madness!",
@@ -20,8 +20,8 @@
       "code": "```\n//If the led is blinking too slowly or too fast, stop the led altogether.\r\nvar blinkRate = 50;\r\n\r\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  blinkRate = blinkRate - 10;\r\n  led.blink(blinkRate);\r\n  if(blinkRate < 10){\r\n  \tled.off();\r\n  }\r\n});\r\n\r\nonBoardEvent(buttonR, \"down\", function(event) {\r\n  blinkRate = blinkRate + 10;\r\n  led.blink(blinkRate);\r\n  if(blinkRate > 200){\r\n    led.off();\r\n  }\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -29,8 +29,8 @@
       "code": "```\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  led.blink(200);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

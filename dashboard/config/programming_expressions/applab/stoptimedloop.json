@@ -11,8 +11,8 @@
       "code": "```\nvar countdown = 10;\r\ntextLabel(\"countdown\", countdown);\r\ntimedLoop(1000, function() {\r\n  countdown = countdown - 1;\r\n  setText(\"countdown\", countdown);\r\n  if(countdown === 0) {\r\n    stopTimedLoop();\r\n  }\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Stop the Presses!",
@@ -20,8 +20,8 @@
       "code": "```\n// Run a half second timed loop until a button is pressed.\r\nbutton(\"stop\", \"Stop the timer\");\r\ntimedLoop(500, function() {\r\n  console.log(\"Timer code ran!\");\r\n});\r\nonEvent(\"stop\", \"click\", function(){\r\n  stopTimedLoop();\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [
