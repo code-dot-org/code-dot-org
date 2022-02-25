@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Make a sprite of a random size.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/pbcE4vEqnebD0OMqNWuafMo9idHh64ZbL-yNjHCKWck",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "The results of the race will change every time the project is run because the car and motorcycle will move a random number of pixels north each time the up arrow is pressed.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/zyJJLVj-U2uwqRqcQtKPNRO77-VXGwpz5FQPRtsSZ_U",
       "image": null,
       "app_display_type": "embedAppWithCode",
