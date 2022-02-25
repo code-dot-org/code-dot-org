@@ -69,7 +69,7 @@ module MultipleDatabasesTransitionHelper
     case Rails.version
     when "5.2.4.4"
       false
-    when ["6.0.4.1", "6.0.4.6"]
+    when "6.0.4.6"
       true
     else
       raise "unknown Rails version #{Rails.version.inspect}"
