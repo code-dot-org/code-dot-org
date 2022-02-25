@@ -689,7 +689,6 @@ Dance.prototype.displayFeedback_ = function() {
       : ['HourOfCode'];
 
   let feedbackOptions = {
-    doNothingOnHidden: true,
     feedbackType: this.testResults,
     message: this.message,
     response: this.response,
