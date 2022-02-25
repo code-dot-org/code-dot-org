@@ -7,6 +7,8 @@ import {getStore} from '@cdo/apps/redux';
 import {clearConsole} from '../redux/textConsole';
 import {clearPrompts, popPrompt} from '../redux/spritelabInput';
 import CoreLibrary from './CoreLibrary';
+import React from 'react';
+import {singleton as studioApp} from '../../StudioApp';
 
 export default class SpriteLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -91,9 +93,20 @@ export default class SpriteLab extends P5Lab {
 
   alertStudent(msg) {
     if (msg) {
-      console.log(msg);
+      studioApp().displayWorkspaceAlert(
+        'error',
+        React.createElement(
+          'div',
+          {},
+          this.getMsg().workspaceAlertError({
+            error: msg || ''
+          })
+        ),
+        true /* bottom */
+      );
     }
   }
+
   onPromptAnswer(variableName, value) {
     getStore().dispatch(popPrompt());
     this.library.onPromptAnswer(variableName, value);
