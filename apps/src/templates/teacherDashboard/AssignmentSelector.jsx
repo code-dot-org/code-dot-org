@@ -8,38 +8,16 @@ import {
   assignmentFamilyShape,
   assignmentCourseOfferingShape
 } from './shapes';
-import {assignmentId, assignmentFamilyFields} from './teacherSectionsRedux';
+import {assignmentId} from './teacherSectionsRedux';
 import AssignmentVersionSelector, {
   setRecommendedAndSelectedVersions
 } from './AssignmentVersionSelector';
+import {CourseOfferingCategories} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 const noAssignment = assignmentId(null, null);
 //Additional valid option in dropdown - no associated course
 const decideLater = '__decideLater__';
 const isValidAssignment = id => id !== noAssignment && id !== decideLater;
-
-const hasAssignmentFamily = (assignmentFamilies, assignment) =>
-  assignment &&
-  assignmentFamilies.some(
-    assignmentFamily =>
-      assignmentFamily.assignment_family_name ===
-      assignment.assignment_family_name
-  );
-
-/**
- * Group our assignment families by category for our dropdown
- */
-const categorizeAssignmentFamilies = assignmentFamilies =>
-  _(assignmentFamilies)
-    .values()
-    .orderBy([
-      'category_priority',
-      'category',
-      'position',
-      'assignment_family_title'
-    ])
-    .groupBy('category')
-    .value();
 
 const getVersion = assignment => ({
   year: assignment.version_year,
@@ -252,9 +230,7 @@ export default class AssignmentSelector extends Component {
   };
 
   render() {
-    const {assignments, dropdownStyle, disabled} = this.props;
-
-    let {assignmentFamilies} = this.props;
+    const {assignments, dropdownStyle, disabled, courseOfferings} = this.props;
     const {
       selectedPrimaryId,
       selectedSecondaryId,
@@ -266,15 +242,17 @@ export default class AssignmentSelector extends Component {
     const primaryAssignment = assignments[selectedPrimaryId];
     if (primaryAssignment) {
       secondaryOptions = primaryAssignment.scriptAssignIds;
-      if (!hasAssignmentFamily(assignmentFamilies, primaryAssignment)) {
-        assignmentFamilies = [
-          _.pick(primaryAssignment, assignmentFamilyFields)
-        ].concat(assignmentFamilies);
-      }
     }
 
-    const assignmentFamiliesByCategory = categorizeAssignmentFamilies(
-      assignmentFamilies
+    let orderedCourseOfferings = _.orderBy(courseOfferings, 'display_name');
+    orderedCourseOfferings = _.orderBy(
+      orderedCourseOfferings,
+      'is_featured',
+      'desc'
+    );
+    const courseOfferingsByCategories = _.groupBy(
+      orderedCourseOfferings,
+      'category'
     );
 
     return (
@@ -296,23 +274,18 @@ export default class AssignmentSelector extends Component {
                 {i18n.decideLater()}
               </option>
             )}
-            {Object.keys(assignmentFamiliesByCategory).map(
-              (categoryName, index) => (
-                <optgroup key={index} label={categoryName}>
-                  {assignmentFamiliesByCategory[categoryName].map(
-                    assignmentFamily =>
-                      assignmentFamily !== undefined && (
-                        <option
-                          key={assignmentFamily.assignment_family_name}
-                          value={assignmentFamily.assignment_family_name}
-                        >
-                          {assignmentFamily.assignment_family_title}
-                        </option>
-                      )
-                  )}
-                </optgroup>
-              )
-            )}
+            {Object.keys(CourseOfferingCategories).map(category => (
+              <optgroup
+                key={category}
+                label={CourseOfferingCategories[category]}
+              >
+                {courseOfferingsByCategories[category]?.map(courseOffering => (
+                  <option key={courseOffering.id} value={courseOffering.id}>
+                    {courseOffering.display_name}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
           </select>
         </span>
         {versions.length > 1 && (
