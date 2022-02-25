@@ -1211,6 +1211,9 @@ export const sectionFromServerSection = serverSection => ({
   sharingDisabled: serverSection.sharing_disabled,
   studentCount: serverSection.studentCount,
   code: serverSection.code,
+  courseOfferingId: serverSection.course_offering_id,
+  courseVersionId: serverSection.course_version_id,
+  unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   scriptId: serverSection.script
     ? serverSection.script.id
