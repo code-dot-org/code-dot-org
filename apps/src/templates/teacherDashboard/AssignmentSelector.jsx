@@ -5,7 +5,6 @@ import i18n from '@cdo/locale';
 import {
   sectionShape,
   assignmentShape,
-  assignmentFamilyShape,
   assignmentCourseOfferingShape
 } from './shapes';
 import {assignmentId} from './teacherSectionsRedux';
@@ -37,7 +36,6 @@ export default class AssignmentSelector extends Component {
     assignments: PropTypes.objectOf(assignmentShape).isRequired,
     courseOfferings: PropTypes.arrayOf(assignmentCourseOfferingShape)
       .isRequired,
-    assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
     chooseLaterOption: PropTypes.bool,
     dropdownStyle: PropTypes.object,
     onChange: PropTypes.func,

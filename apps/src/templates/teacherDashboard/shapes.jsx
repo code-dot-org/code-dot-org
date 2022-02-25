@@ -88,22 +88,6 @@ export const assignmentCourseOfferingShape = PropTypes.shape({
   course_versions: PropTypes.arrayOf(assignmentCourseVersionShape).isRequired
 });
 
-// An assignment family is a collection of versions of a course or script like
-// "csd" or "coursea". For example, the assignment family "csd" could contain the
-// courses csd-2017 and csd-2018.
-//
-// This is a bit confusing because we want to be able to just call csd a
-// "course" instead of an "assignment family", but we can't because the term
-// "course" is already used to refer to a specific version of a course such as
-// csd-2018.
-export const assignmentFamilyShape = PropTypes.shape({
-  category_priority: PropTypes.number.isRequired,
-  category: PropTypes.string.isRequired,
-  position: PropTypes.number,
-  assignment_family_title: PropTypes.string.isRequired,
-  assignment_family_name: PropTypes.string.isRequired
-});
-
 // Represents a version of an assignment (script or course) as it
 // appears in the version menu in the assignment selector.
 export const assignmentVersionShape = PropTypes.shape({

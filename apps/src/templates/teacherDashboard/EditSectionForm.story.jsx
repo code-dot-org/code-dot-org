@@ -2,11 +2,7 @@ import React from 'react';
 import {UnconnectedEditSectionForm as EditSectionForm} from './EditSectionForm';
 import {action} from '@storybook/addon-actions';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import {
-  assignmentFamilies,
-  validAssignments,
-  testSection
-} from './teacherDashboardTestHelpers';
+import {validAssignments, testSection} from './teacherDashboardTestHelpers';
 
 export default storybook => {
   storybook = storybook.storiesOf('EditSectionForm', module);
@@ -20,7 +16,6 @@ export default storybook => {
         editSectionProperties={action('editSectionProperties')}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{
           ...testSection,
@@ -42,7 +37,6 @@ export default storybook => {
         editSectionProperties={action('editSectionProperties')}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{
           ...testSection,
@@ -64,7 +58,6 @@ export default storybook => {
         editSectionProperties={action('editSectionProperties')}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={testSection}
         isSaveInProgress={true}

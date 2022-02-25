@@ -376,25 +376,9 @@ describe('teacherSectionsRedux', () => {
       ]);
     });
 
-    it('adds assignmentFamily for a course', () => {
-      const assignmentFamilies = nextState.assignmentFamilies;
-      ['csd', 'csp'].forEach(courseName => {
-        assert(
-          assignmentFamilies.find(
-            af => af.assignment_family_name === courseName
-          )
-        );
-      });
-    });
-
-    it('infer assignment family and version for a script not in a course', () => {
-      const {assignmentFamilies, validAssignments} = nextState;
+    it('infer version for a script not in a course', () => {
+      const {validAssignments} = nextState;
       const courselessScript = validScripts[0];
-      assert(
-        assignmentFamilies.find(
-          af => af.assignment_family_name === courselessScript.script_name
-        )
-      );
 
       const assignId = assignmentId(null, courselessScript.id);
       const assignment = validAssignments[assignId];
@@ -403,11 +387,8 @@ describe('teacherSectionsRedux', () => {
       assert.equal(undefined, assignment.version_year);
     });
 
-    it('sets assignment family, version and is_stable from validScripts for a script not in a course', () => {
-      const {assignmentFamilies, validAssignments} = nextState;
-      assert(
-        assignmentFamilies.find(af => af.assignment_family_name === 'coursea')
-      );
+    it('sets version and is_stable from validScripts for a script not in a course', () => {
+      const {validAssignments} = nextState;
 
       let assignId = assignmentId(null, validScripts[7].id);
       let assignment = validAssignments[assignId];
@@ -422,54 +403,6 @@ describe('teacherSectionsRedux', () => {
       assert.equal('coursea', assignment.assignment_family_name);
       assert.equal('2017', assignment.version_year);
       assert.equal(true, assignment.is_stable);
-    });
-
-    it('does not add assignmentFamily for a script that is in a course', () => {
-      const assignmentFamilies = nextState.assignmentFamilies;
-      const scriptInCourse = validScripts[4];
-      assert(
-        assignmentFamilies.find(
-          af => af.assignment_family_name === scriptInCourse.script_name
-        )
-      );
-    });
-
-    it('only adds assignmentFamily for courses with family name', () => {
-      assert(
-        nextState.assignmentFamilies.find(
-          af => af.assignment_family_title === 'CS Principles'
-        )
-      );
-      assert.isUndefined(
-        nextState.assignmentFamilies.find(
-          af => af.assignment_family_title === 'CS X'
-        )
-      );
-    });
-
-    it('adds assignmentFamily for standalone unit with non-2017 version year', () => {
-      const scripts = validScripts.concat([
-        {
-          id: 37,
-          name: 'CS Et Cetera 2021',
-          script_name: 'csetc-2021',
-          category: 'other',
-          position: null,
-          category_priority: 3,
-          assignment_family_title: 'CS Et Cetera',
-          assignment_family_name: 'csetc',
-          version_year: '2021'
-        }
-      ]);
-
-      const action = setValidAssignments(validCourses, scripts);
-      const nextState = reducer(initialState, action);
-
-      assert(
-        nextState.assignmentFamilies.find(
-          af => af.assignment_family_title === 'CS Et Cetera'
-        )
-      );
     });
   });
 
