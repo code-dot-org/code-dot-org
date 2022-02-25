@@ -230,7 +230,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       console.log('in promise');
       // It can take a moment for the reset() command to reach the board, so defer
       // closing the serialport for a moment.
-      setTimeout(() => {
+      setTimeout(async () => {
         // Close the serialport, cleaning it up properly so we can open it again
         // on the next run.
         // Note: This doesn't seem to be necessary when using browser-serialport
@@ -239,12 +239,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         console.log('this.serialPort_', this.serialPort_);
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           console.log('serial port defined');
-          resolve(this.serialPort_.close());
+          await this.serialPort_.close();
+          resolve();
           this.logWithFirehose('serial-port-closed');
         } else {
           resolve();
         }
         this.serialPort_ = null;
+        console.log('in end of promise', 'this.serialPort_', this.serialPort_);
         this.logWithFirehose('serial-port-cleared');
       }, 50);
     });
