@@ -1187,7 +1187,6 @@ export default class P5Lab {
     if (this.JSInterpreter) {
       if (this.interpreterStarted) {
         this.JSInterpreter.executeInterpreter();
-
         if (this.p5Wrapper.stepSpeed < 1) {
           this.p5Wrapper.drawDebugSpriteColliders();
         }
@@ -1376,7 +1375,6 @@ export default class P5Lab {
         // If the setup() method was not provided, we need to run the interpreter
         // for the first time at this point:
         this.JSInterpreter.executeInterpreter(true);
-        this.alertStudent(this.JSInterpreter.executionError?.message);
         this.interpreterStarted = true;
       }
       if (this.eventHandlers.setup) {
@@ -1471,6 +1469,12 @@ export default class P5Lab {
         this.eventHandlers.draw.apply(null);
       }
     }
+
+    /**
+     * If there is an executionError, alert the user. In Sprite Lab there is
+     * no user-facing console, so we instead create a WorkspaceAlert.
+     */
+    this.alertStudent(this.JSInterpreter.executionError?.message);
     this.completeRedrawIfDrawComplete();
   }
 
