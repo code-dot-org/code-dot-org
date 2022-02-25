@@ -679,7 +679,7 @@ class UnitEditor extends React.Component {
                     Our RED(research, evaluation, and data) team uses the
                     setting of this field to determine which initiative to
                     connect this unit to in order to track progress of students
-                    in our various work stream.
+                    in our various work streams.
                   </p>
                   <p>
                     Until we finalizing moving onto using Course Type for
