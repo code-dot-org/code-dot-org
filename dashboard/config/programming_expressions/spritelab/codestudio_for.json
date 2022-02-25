@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "The sprite will say the value of the counter. \r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/nhudy1zTMMbtzEezjWBQXj0lbF3UnOWDqsOWiaHt0j0",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "The x position of sprites is determined by the value of the counter in the loop. \r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/uL5gfcrOzDNgU-g7Z5h0qkgXHKij5IqA9UakDl2svmg",
       "image": null,
       "app_display_type": "embedAppWithCode",

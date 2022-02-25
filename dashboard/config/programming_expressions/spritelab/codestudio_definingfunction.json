@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Click `edit` to see how the function “switchBackgrounds” is defined.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/qgi6Fjhv4dMzxJPux-yJObPtxRLlTW6q9tkaxQGj3Fw",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Press different keys and touch other sprites to change the crab’s property. The project uses a “reset” function that can be called with various events to return the crab to its original properties.",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/iKX5KyOzeDYm_Fu1SGD3beI7ULezMbchXd0bUp77gRs",
       "image": null,
       "app_display_type": "embedAppWithCode",
