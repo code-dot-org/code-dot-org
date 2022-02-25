@@ -1,3 +1,5 @@
+- @page_title = I18n.t('teacher.dashboard')
+
 :ruby
   teacher_dashboard_data = {}
   teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url('', CDO.default_scheme)
@@ -12,7 +14,6 @@
   teacher_dashboard_data[:validGrades] = @valid_grades
   teacher_dashboard_data[:localeCode] = request.locale
   teacher_dashboard_data[:textToSpeechUnitIds] = Script.text_to_speech_unit_ids
-  teacher_dashboard_data[:preReaderUnitIds] = Script.pre_reader_unit_ids
   teacher_dashboard_data[:lessonExtrasUnitIds] = Script.lesson_extras_script_ids
   teacher_dashboard_data[:showLockSectionField] = DCDO.get('show_lock_section_field', true)
 

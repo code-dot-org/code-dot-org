@@ -136,7 +136,7 @@ export const mapStateToProps = state => {
       selectedSectionId,
       currentLessonId
     );
-  } else if (!state.verifiedTeacher.isVerified) {
+  } else if (!state.verifiedInstructor.isVerified) {
     // if not-authorized teacher
     isLockedLesson = state.progress.lessons.some(
       lesson => lesson.id === currentLessonId && lesson.lockable

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 
 export const sectionData = PropTypes.shape({
-  is_verified_teacher: PropTypes.bool,
+  is_verified_instructor: PropTypes.bool,
   lesson_extra: lessonExtra,
   level_examples: PropTypes.array,
   page_type: PropTypes.string,

@@ -314,7 +314,7 @@ class FollowersControllerTest < ActionController::TestCase
     user_script = UserScript.where(user: assigns(:user), script: @laurel_section_script.script).first
     assert user_script
     assert user_script.assigned_at
-    assert_equal @laurel_section_script.script, Queries::ScriptActivity.primary_script(assigns(:user))
+    assert_equal @laurel_section_script.script, Queries::ScriptActivity.primary_student_unit(assigns(:user))
   end
 
   test "student_register with a picture/word section redirects to section login" do
@@ -335,6 +335,19 @@ class FollowersControllerTest < ActionController::TestCase
 
     assert_redirected_to '/'
     expected = I18n.t('follower.error.provider_managed_section', provider: 'Clever')
+    assert_equal(expected, flash[:alert])
+  end
+
+  test 'student_register errors when joining a section where user does not meet participant type' do
+    sign_in @student
+    section = create(:section, login_type: Section::LOGIN_TYPE_EMAIL, participant_type: 'facilitator')
+
+    assert_does_not_create(User, Follower) do
+      get :student_register, params: {section_code: section.code}
+    end
+
+    assert_redirected_to '/'
+    expected = I18n.t('follower.error.not_participant_type', section_code: section.code)
     assert_equal(expected, flash[:alert])
   end
 

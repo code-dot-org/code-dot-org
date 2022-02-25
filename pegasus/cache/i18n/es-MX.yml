@@ -504,6 +504,8 @@ es-MX:
   homepage_below_hero_announcement_text: Nos importa su privacidad y estamos realizando
     algunas actualizaciones de nuestra política de privacidad, efectiva el 25 de mayo.
   homepage_below_hero_announcement_link_text: Aprende más
+  homepage_higher_power_body: Crea un proyecto con Fiesta de Baile y tendrás la oportunidad
+    de ganar entradas para ver a la banda en vivo.
   contact_form_topic_student: Soy estudiante
   contact_form_topic_parent: Soy padre/madre
   contact_form_topic_teacher: Soy docente/educador
@@ -923,7 +925,7 @@ es-MX:
     existente para ofertar este nuevo ámbito de estudio. Para inscribirse en los talleres
     de desarrollo profesional, realice una solicitud en <a href="/educate/districts">Institutos
     Asociados </a> de Code.org.
-  dashboard_course_csina: Las Ciencias de la Computación en el álgebra
+  dashboard_course_csina: Ciencias de la computación en álgebra
   dashboard_course_csina_desc: Code.org se ha asociado con Bootstrap para desarrollar
     un currículo para enseñar conceptos algebraicos y geométricos a través de la programación
     de computadoras.
@@ -1388,7 +1390,7 @@ es-MX:
   express-2020_name: Curso Express (2020)
   pre-express-2020_name: Curso Express para prelectores (2020)
   express-2021_name: Curso Express (2021)
-  pre-express-2021_name: Curso Express para prelectores (2021)
+  pre-express-2021_name: Curso rápido prescolar (2021)
   csd2_name: 'Unidad 2: desarrollo web'
   csd3_name: 'Unidad 3: Animaciones y juegos'
   accelerated_name: Curso acelerado
@@ -1653,8 +1655,8 @@ es-MX:
   courseb_shortdescription_congrats: Una introducción a las ciencias de la computación
     para prelectores (similar al Curso A, pero con más variedad para estudiantes más
     avanzados).
-  coursec_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
-    de la computación y crea tu propio arte, historias y juegos.
+  coursec_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
   coursed_shortdescription_congrats: Rápidamente repasada conceptos del Curso C, luego
     puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
@@ -1666,8 +1668,8 @@ es-MX:
   courseb-2017_shortdescription_congrats: Una introducción a las ciencias de la computación
     para prelectores (similar al Curso A, pero con más variedad para estudiantes más
     avanzados).
-  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
-    de la computación y crea tu propio arte, historias y juegos.
+  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
   coursed-2017_shortdescription_congrats: Rápidamente repasada conceptos del Curso
     C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2017_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
@@ -1679,8 +1681,8 @@ es-MX:
   courseb-2018_shortdescription_congrats: Una introducción a las ciencias de la computación
     para prelectores (similar al Curso A, pero con más variedad para estudiantes más
     avanzados).
-  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
-    de la computación y crea tu propio arte, historias y juegos.
+  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
   coursed-2018_shortdescription_congrats: Rápidamente repasada conceptos del Curso
     C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2018_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
@@ -1692,8 +1694,8 @@ es-MX:
   courseb-2019_shortdescription_congrats: Una introducción a las ciencias de la computación
     para prelectores (similar al Curso A, pero con más variedad para estudiantes más
     avanzados).
-  coursec-2019_shortdescription_congrats: Aprende los conceptos básicos de las ciencias
-    de la computación y crea tu propio arte, historias y juegos.
+  coursec-2019_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
+    de la Computación y crea tu propio arte, historias y juegos.
   coursed-2019_shortdescription_congrats: Rápidamente repasada conceptos del Curso
     C, luego puedes ir más allá con algoritmos, ciclos anidados, condicionales y más.
   coursee-2019_shortdescription_congrats: Cubre rápidamente los conceptos de los Cursos
@@ -2434,11 +2436,11 @@ es-MX:
     y niveles de experiencia, desarrolladas por Code.org y nuestros socios.
   hoc_overview_partner_activities_link: Ver actividades
   hoc_overview_start_tutorial: Comenzar
-  hoc_overview_more_resources: Quieres más información recursos para animar a tus
-    estudiantes en tus clases remotas? consulta a nuestra guía de [Hora de Código
-    virtual](https://hourofcode.com/us/how-to/virtual). Para estudiantes sin computadoras,
-    o con poca conectividad, comparte este paquete que contiene [actividades desconectadas
-    de la Hora de Codigo]{https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+  hoc_overview_more_resources: Para obtener más recursos sobre cómo participar en
+    tu aula a distancia, consulta nuestra guía para organizar una [Hora del Código
+    virtual](https://hourofcode.com/us/how-to/virtual). Para los alumnos con tecnología
+    o conectividad limitada o nula, comparte este paquete de [Actividades de la Hora
+    del Código Desconectadas](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_view_teacher_guide: Ver la guía para docentes
   hoc2018_creativity: creatividad
   hoc2018_creativity_create: Crear
@@ -2581,8 +2583,8 @@ es-MX:
     y tiene el objetivo de inspirar, educar y capacitar a niños y jóvenes de bajos
     ingresos y otros niños y jóvenes desfavorecidos para que sigan carreras en ciencias
     de la computación. [Más información](%{amazon_future_engineer_link})
-  hoc2018_dance_amazon_sponsor_section_france_link_markdown: Si eres estudiante o
-    profesor en Francia, visita [Amazon Future Engineer - France].(%{amazon_future_engineer_france_link})
+  hoc2018_dance_amazon_sponsor_section_france_link_markdown: Si eres alumno o profesor
+    en Francia, visita [Amazon Future Engineer - France].(%{amazon_future_engineer_france_link})
   hoc2018_dance_amazon_learn_more_future_engineer_subheading_title: Aprende más acerca
     de Amazon Future Engineer
   hoc2018_dance_amazon_about_future_engineer_title: Acerca de Amazon Future Engineer
@@ -2628,6 +2630,10 @@ es-MX:
   hoc2018_dance_video2: Fiesta de baile - Eventos
   hoc2018_dance_video3: Fiesta de baile - Propiedades
   hoc2018_dance_video4: Fiesta de baile - Felicitaciones
+  dance_box_higher_power_line_1: ¡Programa una coreografía con la nueva canción de
+    Coldplay, "Higher Power", y  gana la oportunidad de verlos en vivo!
+  dance_box_higher_power_line_2: Entra a <a href="%{path}">code.org/coldplay</a> para
+    saber más
   page_not_found_title: No se encontró la página
   page_not_found_header: '404: no se encontró la página'
   page_not_found_description: La página que buscas no existe en esta dirección. Comprueba
@@ -2651,9 +2657,9 @@ es-MX:
     2](%{dance_extras_2018_link}) del último año."
   homepage_slot_text_title_at_home: Aprende desde casa
   homepage_slot_text_blurb_at_home: Aprender es fácil con estos recursos
-  homepage_slot_text_link_code_break: "¡Tómate un recreo con código!"
+  homepage_slot_text_link_code_break: "¡Tómate un descanso de código!"
   homepage_slot_text_link_do_hoc: Prepara una Hora de Código
-  homepage_slot_text_link_express_course: Prueba el Curso Exprés
+  homepage_slot_text_link_express_course: Prueba un Curso Exprés
   page_not_available_title: Página no disponible
   page_not_available_description: Lo sentimos, la página que solicitó ya no está disponible
     en esta dirección. Si todavía necesita acceso, envíe un correo electrónico a [support@code.org](%{support_email_link}).
@@ -2666,23 +2672,23 @@ es-MX:
     y iPad. Aprende los fundamentos de la codificación y explora la diversidad y la
     inclusión con tus alumnos. Accede a recursos gratuitos que incluyen un plan de
     clases, vídeos, un plan de estudios de ciencias de la computación, lecciones de
-    igualdad y formación para docentes.'
+    igualdad y formación para profesores.'
   hoc2021_mc_mee_title: Minecraft TimeCraft
   hoc2021_mc_mee_description: "¡Viaja en el tiempo y aprende a codificar! El nuevo
     tutorial de Minecraft Hour of Code ya está disponible en Minecraft: Education
     Edition para Windows, Mac, Chromebook y iPad. Empieza con los recursos gratuitos
     para educadores, formaciones y vídeos."
   hoc2021_mc_mee_villages_title: Historia de Dos Pueblos
-  hoc2021_mc_mee_villages_description: 'Aprende los fundamentos de la programación
+  hoc2021_mc_mee_villages_description: 'Aprende los fundamentos de la codificación
     y explora la diversidad y la inclusión con tus alumnos en Minecraft: Education
     Edition.'
-  hoc2021_mc_mee_ai_title: Inteligencia Artificial para el Bien
+  hoc2021_mc_mee_ai_title: Inteligencia Artificial para el Bienestar
   hoc2021_mc_mee_ai_description: 'Explora la Inteligencia Artificial con tus alumnos
     y aprende a codificar en Minecraft: Education Edition.'
   footer_powered_by_aws: Impulsado por Amazon Web Services
   footer_built_on_github: Creado en GitHub de Microsoft
-  codebytes_skinny_banner_title: "¡Acompáñanos del 7-11 de diciembre para nuestras
-    mini sesiones de CodeBytes!"
+  codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras
+    mini-lecciones en vivo de CodeBytes!"
   codebytes_skinny_banner_description: "¡Únase a nosotros cada día en la Semana de
     la Educación en Ciencias de la Computación, para asistir a CodeBytes, lecciones
     interactivas de 20 minutos sobre ciencias de la computación. Transmitiendo en
@@ -2724,18 +2730,18 @@ es-MX:
     mesa redonda
   ai_ethics_panel_description_1: "¡Profundice con algunos de nuestros expertos favoritos
     en Inteligencia Artificial! Esta mesa redonda aborda temas importantes como el
-    sesgo algorítmico y el futuro del trabajo. Acompáñalo con nuestro"
+    sesgo algorítmico y el futuro del trabajo. Acompáñalo de nuestro"
   ai_ethics_lesson_plan: Plan de estudios de Inteligencia Artificial y Ética
   ai_ethics_panel_description_2: "¡para una gran introducción a la ética de la inteligencia
     artificial!"
-  cs_for_good: Ciencias de la computación para el bien
+  cs_for_good: Informática para el Bienestar
   cs_for_good_tile_description: Recursos para inspirar a los alumnos a pensar profundamente
-    en el papel que las ciencias de la computación puede desempeñar en la creación
-    de un mundo más equitativo y sostenible.
+    en el papel que la informática puede desempeñar en la creación de un mundo más
+    equitativo y sostenible.
   view_resources: Ver recursos
   imagine_cup_junior: Imagine Cup Junior
   imagine_cup_junior_tile_description: Este desafío global de Inteligencia Artificial
-    para el Bien presenta a los alumnos las iniciativas de Inteligencia Artificial
+    para el Bienestar presenta a los alumnos las iniciativas de Inteligencia Artificial
     para el Bienestar de Microsoft, permitiéndoles resolver un problema en el mundo
     con el poder de la Inteligencia Artificial.
   ai_activity: Actividad
@@ -2746,23 +2752,23 @@ es-MX:
   ai_quick_draw: Rápido, ¡a dibujar!
   ai_quick_draw_description: "¿Puede una red neuronal aprender a reconocer garabatos?"
   ai_teachable_machine: Enseñar a una máquina
-  ai_teachable_machine_description: Entrena una computadora para que reconozca tus
+  ai_teachable_machine_description: Entrena a un ordenador para que reconozca tus
     propias imágenes, sonidos y poses.
-  ai_google: Experimentos de IA con Google
-  ai_google_description: Comienza a explorar el aprendizaje automático a través de
-    imágenes, dibujos, lenguaje, música y más.
+  ai_google: Experimentos de Inteligencia Artificial con Google
+  ai_google_description: Empieza a explorar el aprendizaje automático a través de
+    imágenes, dibujos, lenguaje, música y mucho más.
   ai_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_zooniverse_description: Ayuda a proteger a la Cebra de Montaña de El Cabo en
     peligro de extinción identificando los diferentes animales en las imágenes.
   ai_audience: Audiencia
-  ai_minecraft_description: 'Accede a recursos gratuitos que incluyen un plan de lecciones,
-    videos, un plan de estudios en ciencias de la computación y entrenamientos para
-    docentes (requiere Minecraft: Education Edition).'
+  ai_minecraft_description: 'Accede a recursos gratuitos que incluyen un plan de clases,
+    vídeos, un plan de estudios de informática y formación para profesores. (Requiere
+    Minecraft: Education Edition)'
   ai_k_12_audience: K-12 (se requiere saber leer)
   ai_microsoft_workshop: Talleres virtuales gratuitos de Microsoft
   ai_microsoft_workshop_description: Despierta la curiosidad con talleres gratuitos
     de STEM y codificación.
-  ai_machine_learning_for_kids: Aprendizaje automático para niños/as
+  ai_machine_learning_for_kids: Aprendizaje automático para niños
   ai_machine_learning_for_kids_description: Entrena un modelo de aprendizaje automático
     con texto, números o imágenes y úsalo para crear juegos en Scratch.
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizaje Automático para Niños'
@@ -2777,6 +2783,9 @@ es-MX:
     robots y entrenar.
   ai_try_activity: Prueba la actividad
   outbreak_tile_title: Epidemia
-  outbreak_tile_subtitle: "¡Un virus ha infectado Monster Town! Programa un simulador
-    de epidemia y haz predicciones sobre lo que les ocurrirá a los ciudadanos de Monster
+  outbreak_tile_subtitle: "¡Un virus ha infectado Monster Town! Codifica un simulador
+    de brote y haz predicciones sobre lo que les ocurrirá a los vecinos de Monster
     Town."
+  outbreak_tile_alt: Una simulación de cómo se propaga un virus a través de un grupo
+    de monstruos morados.
+  footer_cookie_notice: Aviso de Cookies

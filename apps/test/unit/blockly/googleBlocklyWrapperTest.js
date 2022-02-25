@@ -103,14 +103,4 @@ describe('Google Blockly Wrapper', () => {
     Blockly.SNAP_RADIUS = 100;
     expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(100);
   });
-
-  it('fieldToDom_ creates title tags', () => {
-    const field = new Blockly.blockly_.Field(null);
-    field.SERIALIZABLE = true;
-    field.name = 'test';
-    const expectedXml = `<title xmlns="https://developers.google.com/blockly/xml" name="test"></title>`;
-    expect(Blockly.Xml.domToText(Blockly.Xml.fieldToDom_(field))).to.equal(
-      expectedXml
-    );
-  });
 });

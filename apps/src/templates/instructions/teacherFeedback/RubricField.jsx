@@ -21,7 +21,7 @@ class RubricField extends Component {
       .isRequired,
     rubricValue: PropTypes.string.isRequired,
     disabledMode: PropTypes.bool,
-    onChange: PropTypes.func.isRequired,
+    onChange: PropTypes.func,
     currentlyChecked: PropTypes.bool,
     expandByDefault: PropTypes.bool
   };

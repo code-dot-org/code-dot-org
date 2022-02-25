@@ -111,10 +111,6 @@ module ApplicationHelper
     '/home'
   end
 
-  def teacher_dashboard_url
-    CDO.code_org_url '/teacher-dashboard'
-  end
-
   def teacher_dashboard_section_progress_url(section)
     "/teacher_dashboard/sections/#{section.id}/progress"
   end
@@ -200,14 +196,6 @@ module ApplicationHelper
     HTML
 
     html.html_safe
-  end
-
-  def script_certificate_image_url(user, script)
-    certificate_image_url(
-      name: user.name,
-      course: script.name,
-      course_title: data_t_suffix('script.name', script.name, 'title')
-    )
   end
 
   # Returns a client state object for the current session and cookies.

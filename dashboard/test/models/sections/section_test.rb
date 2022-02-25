@@ -162,6 +162,23 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 'Untitled Section', section.name
   end
 
+  test 'pl section must use email logins required' do
+    section = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, login_type: 'word'
+    refute section.valid?
+    assert_equal ['Login type must be email for professional learning sections.'], section.errors.full_messages
+  end
+
+  test 'can not update participant type' do
+    section = create :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+
+    error = assert_raises do
+      section.participant_type = SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+      section.save!
+    end
+
+    assert_equal "Validation failed: Participant type can not be update once set.", error.message
+  end
+
   test 'user is required' do
     section = build :section, user: nil
     refute section.valid?
@@ -249,6 +266,14 @@ class SectionTest < ActiveSupport::TestCase
   test 'add_student returns failure for section teacher' do
     assert_does_not_create(Follower) do
       add_student_return = @section.add_student @teacher
+      assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
+    end
+  end
+
+  test 'add_student returns failure if user does not meet participant_type for section' do
+    section_with_teacher_participants = build :section, participant_type: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
+    assert_does_not_create(Follower) do
+      add_student_return = section_with_teacher_participants.add_student @student
       assert_equal Section::ADD_STUDENT_FAILURE, add_student_return
     end
   end
@@ -371,13 +396,13 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: 'somecourse',
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
         numberOfStudents: 0,
-        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -407,7 +432,6 @@ class SectionTest < ActiveSupport::TestCase
   test 'summarize: section with a script assigned' do
     # Use an existing script so that it has a translation
     script = Script.find_by_name('jigsaw')
-
     Timecop.freeze(Time.zone.now) do
       section = create :section, script: script, unit_group: nil
 
@@ -415,13 +439,13 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: 'Jigsaw',
         linkToAssigned: '/s/jigsaw',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
         numberOfStudents: 0,
-        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -462,13 +486,13 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: 'somecourse',
         linkToAssigned: '/courses/somecourse',
         currentUnitTitle: 'Jigsaw',
         linkToCurrentUnit: '/s/jigsaw',
         numberOfStudents: 0,
-        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
@@ -503,13 +527,13 @@ class SectionTest < ActiveSupport::TestCase
         id: section.id,
         name: section.name,
         teacherName: section.teacher.name,
-        linkToProgress: "//test.code.org/teacher-dashboard#/sections/#{section.id}/progress",
+        linkToProgress: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/progress",
         assignedTitle: '',
-        linkToAssigned: '//test.code.org/teacher-dashboard#/sections/',
+        linkToAssigned: '//test-studio.code.org/teacher_dashboard/sections/',
         currentUnitTitle: '',
         linkToCurrentUnit: '',
         numberOfStudents: 0,
-        linkToStudents: "//test.code.org/teacher-dashboard#/sections/#{section.id}/manage",
+        linkToStudents: "//test-studio.code.org/teacher_dashboard/sections/#{section.id}/manage_students",
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,

@@ -25,16 +25,14 @@ export const MB_COMPONENTS = [
   'Accelerometer',
   'MicroBitThermometer',
   'Compass',
-  'LightSensor'
+  'LightSensor',
+  'ExternalButton',
+  'ExternalLed',
+  'CapacitiveTouchSensor'
 ];
 
 export const MB_BUTTON_VARS = ['buttonA', 'buttonB'];
-export const MB_SENSOR_VARS = [
-  'soundSensor',
-  'lightSensor',
-  'tempSensor',
-  'compass'
-];
+export const MB_SENSOR_VARS = ['lightSensor', 'tempSensor', 'compass'];
 
 // milliseconds between samples for sensors
 export const SAMPLE_INTERVAL = 50;

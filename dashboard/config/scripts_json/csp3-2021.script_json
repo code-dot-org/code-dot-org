@@ -13,12 +13,11 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:08:41 UTC",
+    "serialized_at": "2022-02-23 18:05:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4146,6 +4145,7 @@
       "key": "pair_programming",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/pairprogramming-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

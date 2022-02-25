@@ -23,7 +23,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
         user_type: current_user.user_type,
         is_signed_in: true,
         short_name: current_user.short_name,
-        is_verified_teacher: current_user.verified_teacher?
+        is_verified_instructor: current_user.verified_instructor?
       }
     else
       render json: {
@@ -86,6 +86,11 @@ class Api::V1::UsersController < Api::V1::JsonApiController
   # GET /api/v1/users/<user_id>/school_donor_name
   def get_school_donor_name
     render json: @user.school_donor_name.nil? ? 'null' : @user.school_donor_name.inspect
+  end
+
+  # GET /api/v1/users/<user_id>/tos_version
+  def get_tos_version
+    render json: @user.terms_of_service_version.nil? ? -1 : @user.terms_of_service_version.inspect
   end
 
   # POST /api/v1/users/<user_id>/using_text_mode

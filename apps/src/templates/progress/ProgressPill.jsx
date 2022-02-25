@@ -6,6 +6,7 @@ import color from '@cdo/apps/util/color';
 import {levelWithProgressType} from './progressTypes';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {stringifyQueryParams} from '../../utils';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {isLevelAssessment} from './progressHelpers';
 import {connect} from 'react-redux';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
@@ -27,7 +28,7 @@ class ProgressPill extends React.Component {
     text: PropTypes.string,
     tooltip: PropTypes.element,
     disabled: PropTypes.bool,
-    selectedSectionId: PropTypes.string,
+    selectedSectionId: PropTypes.number,
     progressStyle: PropTypes.bool,
     onSingleLevelClick: PropTypes.func,
     // Redux
@@ -50,12 +51,18 @@ class ProgressPill extends React.Component {
     }
 
     let url = levels[0].url;
+    let params = {};
 
     if (selectedSectionId) {
-      url += stringifyQueryParams({section_id: selectedSectionId});
+      params['section_id'] = selectedSectionId;
     }
 
-    return url;
+    const userId = queryParams('user_id');
+    if (userId) {
+      params['user_id'] = userId;
+    }
+
+    return (url += stringifyQueryParams(params));
   }
 
   getTooltipProps() {

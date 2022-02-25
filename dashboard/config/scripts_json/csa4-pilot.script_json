@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:08:59 UTC",
+    "serialized_at": "2022-01-05 18:12:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -120,7 +120,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "Treating Data as a Different Types",
+      "name": "Treating Data as a Different Type",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -1370,7 +1370,7 @@
       "key": "79351cf1-a370-4e24-9e3d-8e1076e7d51d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you find most interesting about the `Math` class?*\n* *What questions do you have?*\n\n**Discussion Goal:** Students share what they found during the scavenger hunt and any questions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the “What We Want to Know” column on the KWL chart on the first page of their Solving Problems with the Math Class handout. Students can add to this column throughout the lesson."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you find most interesting about the `Math` class?*\n* *What questions do you have?*\n\n**Discussion Goal:** Students share what they found during the scavenger hunt and any questions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the “What We Know” column on the KWL chart on the first page of their Solving Problems with the Math Class handout. Students can add to this column throughout the lesson."
       },
       "seeding_key": {
         "activity_section.key": "79351cf1-a370-4e24-9e3d-8e1076e7d51d",
@@ -6773,8 +6773,8 @@
       "url": "https://youtu.be/HiRJW3IhgX8",
       "key": "probability_with_math_random_",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
+        "audience": "Student",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "probability_with_math_random_"

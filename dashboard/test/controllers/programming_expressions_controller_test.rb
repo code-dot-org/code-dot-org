@@ -4,6 +4,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
   setup do
+    File.stubs(:write)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     @levelbuilder = create :levelbuilder
     @programming_environment = create :programming_environment
@@ -11,6 +12,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
   test 'can create programming expression from params' do
     sign_in @levelbuilder
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "expression_key.json"}.once
     assert_creates(ProgrammingExpression) do
       post :create, params: {key: 'expression_key', name: 'expression name', programming_environment_id: @programming_environment.id}
     end
@@ -29,12 +31,16 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   test 'can update programming expression from params' do
     sign_in @levelbuilder
 
-    programming_expression = create :programming_expression
+    programming_expression = create :programming_expression, programming_environment: @programming_environment
+    category = create :programming_environment_category, programming_environment: @programming_environment
+
+    File.expects(:write).with {|filename, _| filename.to_s.end_with? "#{programming_expression.key}.json"}.once
     post :update, params: {
       id: programming_expression.id,
       key: programming_expression.key,
       name: 'new name',
-      category: 'world',
+      blockName: 'gamelab_location_picker',
+      categoryKey: category.key,
       videoKey: 'video-key',
       imageUrl: 'image.code.org/foo',
       shortDescription: 'short description of code',
@@ -50,7 +56,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     programming_expression.reload
 
     assert_equal 'new name', programming_expression.name
-    assert_equal 'world', programming_expression.category
+    assert_equal 'gamelab_location_picker', programming_expression.block_name
+    assert_equal category, programming_expression.programming_environment_category
     assert_equal 'video-key', programming_expression.video_key
     assert_equal 'image.code.org/foo', programming_expression.image_url
     assert_equal 'short description of code', programming_expression.short_description
@@ -79,19 +86,24 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
   test 'data is passed down to show page when using id path' do
     sign_in @levelbuilder
 
-    programming_expression = create :programming_expression, programming_environment: @programming_environment
+    category = create :programming_environment_category, programming_environment: @programming_environment
+    programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: category
 
     get :show, params: {id: programming_expression.id}
     assert_response :ok
 
     show_data = css_select('script[data-programmingexpression]').first.attribute('data-programmingexpression').to_s
     assert_equal programming_expression.summarize_for_show.to_json, show_data
+
+    nav_data = css_select('script[data-categoriesfornavigation]').first.attribute('data-categoriesfornavigation').to_s
+    assert_equal 1, JSON.parse(nav_data).length
   end
 
   test 'data is passed down to show page when using environment and expression path' do
     sign_in @levelbuilder
 
-    programming_expression = create :programming_expression, programming_environment: @programming_environment
+    category = create :programming_environment_category, programming_environment: @programming_environment
+    programming_expression = create :programming_expression, programming_environment: @programming_environment, programming_environment_category: category
 
     get :show_by_keys, params: {
       programming_environment_name: @programming_environment.name,
@@ -101,10 +113,14 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
     show_data = css_select('script[data-programmingexpression]').first.attribute('data-programmingexpression').to_s
     assert_equal programming_expression.summarize_for_show.to_json, show_data
+
+    nav_data = css_select('script[data-categoriesfornavigation]').first.attribute('data-categoriesfornavigation').to_s
+    assert_equal 1, JSON.parse(nav_data).length
   end
 
   class AccessTests < ActionController::TestCase
     setup do
+      File.stubs(:write)
       programming_environment = create :programming_environment
       @programming_expression = create :programming_expression, programming_environment: programming_environment
 

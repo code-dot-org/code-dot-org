@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:09:07 UTC",
+    "serialized_at": "2022-01-04 21:57:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -42,6 +42,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "You will:\n\n* Get an introduction to Code.org and CS Principles.",
+        "student_overview": "You will:\n\n* Get an introduction to Code.org and CS Principles."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -57,6 +59,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
+        "overview": "You will:\n\n* Learn how to engage in these professional learning modules.",
+        "student_overview": "You will:\n\n* Learn how to engage in these professional learning modules."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -255,15 +259,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod1-Advice-TipVid-CSP"
-        ],
         "progression": "Welcome to CS Principles"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-mod1-Advice-TipVid-CSP"
+          "SP-VPL-21-CSP-mod1-NewTeacherAdvice"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -271,7 +272,7 @@
         "activity_section.key": "9aec8cd0-2b02-4e1a-a102-3173f62566dd"
       },
       "level_keys": [
-        "SP-VPL-21-mod1-Advice-TipVid-CSP"
+        "SP-VPL-21-CSP-mod1-NewTeacherAdvice"
       ]
     },
     {
@@ -401,9 +402,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod1-Advice-TipVid-CSP",
+        "level.key": "SP-VPL-21-CSP-mod1-NewTeacherAdvice",
         "script_level.level_keys": [
-          "SP-VPL-21-mod1-Advice-TipVid-CSP"
+          "SP-VPL-21-CSP-mod1-NewTeacherAdvice"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

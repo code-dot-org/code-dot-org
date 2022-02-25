@@ -1,0 +1,56 @@
+---
+title: CS Connections
+theme: responsive
+set_dir: true
+social:
+  og:title: CS Connections
+  twitter:title: CS Connections
+  og:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  twitter:description: Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies.
+  og:image: https://code.org/images/social-media/csc-og-image-1200x630.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:card: summary_large_image
+  twitter:image:src: https://code.org/images/social-media/csc-og-image-1200x630.png
+---
+
+# Computer Science Connections
+
+Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
+
+## Try out CS Connections with these activities for Hour of Code
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Poem Art", left_description: "Express yourself! Use code to create animated poems.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Hello World", right_description: "Choose from four fun themes to code interactive characters in a world you create.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
+{{ clearfix }}
+
+## Modules
+
+CS Connections modules are a structured series of lessons that integrate computer science learning into core subject areas like math, ELA, and science. These modules are aligned to standards across subjects and culminate in a cross-curricular project.
+
+ఇతరు సబ్జెక్టుల కోసం తమ పాఠ్యప్రణాళిలలో కంప్యూటర్ సైన్స్‌ను చేర్చాలనుకునే ఉపాధ్యాయులకు మరియు ఇతర సబ్జెక్టులలో విద్యార్థులు నేర్చుకుంటున్నదాన్ని మరింత బలోపేతం చేయాలనుకునే CS విద్యావేత్తలకు ఇవి సరిగ్గా సరిపోతాయి.
+
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "View module" }}
+
+## Open-ended projects
+
+Continue making connections between computer science and traditional subjects with our cross-curricular projects. They take just 1-2 instructional hours to complete and are ideal for any teachers looking to develop topic-specific projects to fit within their existing curriculum.
+
+<em>చిట్కా: ఈ ప్రాజెక్టులకు కంప్యూటర్ సైన్స్ ప్రాధమిక అంశాల గురించి కొంత అవగాహన అవసరం, కాబట్టి ప్రారంభించడానికి ముందు మా హల్లో వర్ల్డ్ అవర్ ఆఫ్ కోడ్ యాక్టివిటీ పూర్తి చేయాలని మేము సిఫారసు చేస్తున్నాము!</em>
+
+{{ csc_module, title: "Ecosystems", image: "/images/csc/landing/project_ecosystems.png", grades: "3+", subject: "Science", duration: "1-2 hours", description: "Using basic coding skills, students create an interactive model of an ecosystem that explores how different animals, plants, and organisms affect each other. This model could also be adapted into interactions between the geosphere, biosphere, hydrosphere, and/or atmosphere.", button_text: "Learn more", url: "https://bit.ly/3wEMAyc" }}
+{{ csc_module, title: "Life Cycles", grades: "3+", image: "/images/csc/landing/project_cycles.png", subject: "Science", duration: "1-2 hours", description: "Go from egg to tadpole to frog with this project, in which students use code to create a model of a scientific cycle - like the life cycle of a frog or the transfer of energy!", button_text: "Learn more", url: "https://bit.ly/3Dc54Zq" }}
+{{ csc_module, title: "Character Study", image: "/images/csc/landing/project_characterstudy.png", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "Every action has a reaction! No, this isn't physics - this project allows students to use code to build a scene from a story that shows how one character's actions affects the chain of events.", button_text: "Learn more", url: "https://bit.ly/3wFlpTX" }}
+{{ csc_module, title: "Story Morals", image: "/images/csc/landing/project_storymorals.jpg", grades: "3+", subject: "ELA", duration: "1-2 hours", description: "What's between \"Once upon a time\" and \"The End?\" Students code an interactive app that recounts a story and its morals. Students could apply this skill to any story, folktale, book, or fable.", button_text: "Learn more", url: "https://bit.ly/3wBJbQO" }}
+{{ clearfix }}
+
+## Bridging Lessons
+
+Our bridging lessons provide a quick and interesting way to make a connection between computer science and other subjects. These lessons don't require any prior knowledge of computer science, so they're perfect for any teacher who wants to incorporate essential 21st century learning into traditional curriculum or motivate students with new exciting ways to learn older subjects.
+
+
+{{ csc_module, title: "Spelling with Bee", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 hour", description: "F-U-N! In this lesson, students use basic coding skills to tell Bee where to B-U-Z-Z in order to spell words on a letter-filled grid.", button_text: "Learn more", url: "https://studio.code.org/s/spelling-bee-2021/lessons/1" }}
+{{ csc_module, title: "Counting with Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Math", duration: "1 hour", description: "It's a treasure hunt! Students will practice counting and adding when they code with loops to help Laurel collect gems across a maze grid.", button_text: "Learn more", url: "https://studio.code.org/s/counting-csc-2021/lessons/1" }}
+{{ csc_module, title: "AI Code of Ethics", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA or Humanities", duration: "1 hour", description: "After researching the potential ethical pitfalls of artificial intelligence (AI), students work together to develop a class \"AI Code of Ethics\" resource.", button_text: "Learn more", url: "https://studio.code.org/s/ai-ethics-2021/lessons/1" }}
+{{ csc_module, title: "Data Visualization", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Math", duration: "1 hour", description: "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types: a bar chart and a histogram. Over the course of the lesson, students will build skills in using this tool and in reading data.", button_text: "Learn more", url: "https://studio.code.org/s/explore-data-1-2021/lessons/1" }}
+{{ clearfix }}
+
+<em>Finished a CS Connection activity and/or looking for more options for your classroom? Please <a href="https://forms.gle/pXNL6DYMpnfYY8Hf6" target="_blank">share your feedback</a> and ideas for more lessons here!</em>

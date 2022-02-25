@@ -14,8 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:09:00 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2022-02-16 20:16:29 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -338,12 +338,27 @@
       }
     },
     {
-      "key": "Java Lab",
-      "name": "Java Lab",
+      "key": "lesson-16",
+      "name": "Unit 6 Pilot Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-pilot"
+      }
+    },
+    {
+      "key": "Java Lab",
+      "name": "Java Lab",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -355,10 +370,10 @@
     {
       "key": "The Neighborhood",
       "name": "The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -370,10 +385,10 @@
     {
       "key": "The Theater",
       "name": "The Theater",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -385,10 +400,10 @@
     {
       "key": "The Playground",
       "name": "The Playground",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -999,6 +1014,18 @@
       }
     },
     {
+      "key": "a49655cf-c9df-4011-810a-b72435500030",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a49655cf-c9df-4011-810a-b72435500030",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-pilot"
+      }
+    },
+    {
       "key": "12426ee7-f6b6-462a-bb2a-04ff884ff135",
       "position": 1,
       "properties": {
@@ -1049,20 +1076,8 @@
   ],
   "activity_sections": [
     {
-      "key": "4350de08-9e14-4d0c-a3bc-ed54603dd890",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Dr. Seuss Book Written by A.I. video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students notice that the story closely follows the same format as popular Dr. Seuss stories and may also note that the story does not consistently rhyme. Students may wonder how they might write a program to generate a story based on a line of text entered.",
-        "name": "Stories Written by A.I."
-      },
-      "seeding_key": {
-        "activity_section.key": "4350de08-9e14-4d0c-a3bc-ed54603dd890",
-        "lesson_activity.key": "2331fd78-407b-41a8-a2b8-4c13e296e27d"
-      }
-    },
-    {
       "key": "0b15b241-c5a7-45f4-b49f-9a7863e9803d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "You have learned a lot about Java throughout the year, much of which we can use to create a simple version of a program that can produce something like this story.",
         "remarks": true
@@ -1074,15 +1089,9 @@
     },
     {
       "key": "33315e67-d0fd-456c-a7f0-9f3c0785ce3c",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you create a program that generated a story like this?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for creating a similar program, such as searching for words with specific characteristics and using conditionals and iteration. Students note that they need to know how to work with `String`s to find some of these characteristics and might even suggest needing a way to search for words in an existing dictionary file.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The program used to produce the story in the video is more complex than what students would typically create in this course. Help students identify simple aspects that they could implement, such as finding words by characteristics such as using conditionals and iteration to check for syllables, length, positive or negative connotations, or other characteristics."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you create a program that generates a story?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for creating a similar program, such as searching for words with specific characteristics and using conditionals and iteration. Students note that they need to know how to work with `String`s to find some of these characteristics and might even suggest needing a way to search for words in an existing dictionary file."
       },
       "seeding_key": {
         "activity_section.key": "33315e67-d0fd-456c-a7f0-9f3c0785ce3c",
@@ -1287,7 +1296,7 @@
       "key": "81cc1f1c-a915-461a-8259-362e0a555afb",
       "position": 15,
       "properties": {
-        "description": "**Do This:** Have students respond to each self-check question by giving them time to think independently, discuss briefly with a neighbor, then share their answer as a class. Click through the animated slide to display the correct answer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Choose the appropriate precondition for the example method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Choose the appropriate postcondition for the example method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to add Javadocs comments to their `Owner` class. Have students share their documentation with a neighbor for feedback regarding the clarity and structure of their comments.",
+        "description": "**Do This:** Have students respond to each self-check question by giving them time to think independently, discuss briefly with a neighbor, then share their answer as a class. Click through the animated slide to display the correct answer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Choose the appropriate precondition for the example method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Choose the appropriate postcondition for the example method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to add Javadocs comments to their `Owner` class. Have students share their documentation with a neighbor for feedback regarding the clarity and structure of their comments.",
         "progression_name": "Documenting Program Code",
         "tips": [
           {
@@ -1343,7 +1352,7 @@
       "key": "0e9e203b-79ab-4b4d-9d07-ce8a53419f3b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a manilla folder and a small stack of sticky notes (10-12).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students tape the Project Planning Board to one side of their manilla folder.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define benchmark and identify the key benchmarks and deadlines for the project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a manilla folder, a Project Planning Board handout, and a small stack of sticky notes (10-12).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students tape the Project Planning Board to one side of their manilla folder.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define benchmark and identify the key benchmarks and deadlines for the project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1385,7 +1394,7 @@
       "key": "e4969caf-7076-4053-92e5-d5a9615bac1e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened when you ran the program?*\n* *Why do you think this happened?*\n\n**Discussion Goal:** Students note that instead of performing arithmetic operations, the program concatenated the numbers together as `String`s. Students realize that the data was read from the text file as `String`s and suggest reading the data as integers or converting the data to integers."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened when you ran the program?*\n* *Why do you think this happened?*\n\n**Discussion Goal:** Students note that the program concatenates the numbers together as `String`s rather than calculating the sum because `sum` is a `String`. Students realize that the data was read from the text file as `String`s using the `next()` method and suggest reading the data as integers using `nextInt()` and setting the type for `sum` as an `int` or converting the data to integers."
       },
       "seeding_key": {
         "activity_section.key": "e4969caf-7076-4053-92e5-d5a9615bac1e",
@@ -1396,7 +1405,7 @@
       "key": "5c6ec5cf-1b54-4860-83f7-1ea499d8a963",
       "position": 3,
       "properties": {
-        "description": "This program attempts to read numbers from a text file to perform arithmetic operations on this data. Since the program reads the information as `String`s instead of numbers, it can't do the arithmetic operations. There are multiple ways we can fix this problem depending on the structure and contents of the text file. Let's explore one approach.",
+        "description": "This program attempts to read numbers from a text file to find the sum of the numbers. Since the program reads the information as `String`s instead of numbers and `sum` is a `String`, it can't do arithmetic operations on the numbers. There are multiple ways we can fix this problem depending on the structure and contents of the text file. Let's explore one approach.",
         "remarks": true
       },
       "seeding_key": {
@@ -1633,7 +1642,7 @@
       "key": "8b2343c0-f152-4640-9f1a-6bc5ccfc8e6f",
       "position": 8,
       "properties": {
-        "description": "Once we’ve created an `ArrayList`, we want to update the list to store more items. We can use an `ArrayList` in our warmup problem to store user input, adding each item to the list as the user enters them.\n\nLet's learn how to add elements to our `ArrayList` and determine its size using its `add()` and `add()` methods.",
+        "description": "Once we’ve created an `ArrayList`, we want to update the list to store more items. We can use an `ArrayList` in our warmup problem to store user input, adding each item to the list as the user enters them.\n\nLet's learn how to add elements to our `ArrayList` and determine its size using its `add()` and `size()` methods.",
         "duration": "15",
         "name": "ArrayLists and File Input",
         "remarks": true
@@ -1659,7 +1668,7 @@
       "key": "6f85a6ed-bbfa-4101-8d25-94a0de3b16c6",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the `add()` and `size()` methods?*\n* *What do you wonder about the `add()` and `size()` methods?*\n\n**Discussion Goal:** Students note that the `add()` method adds items to the `ArrayList`. Students realize that one version of the `add()` method adds items at the end of the list, while the other version adds the item at a specific index. Students note that the `add()` method returns the number of items in the `ArrayList`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and demonstrate autoboxing."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the `add()` and `size()` methods?*\n* *What do you wonder about the `add()` and `size()` methods?*\n\n**Discussion Goal:** Students note that the `add()` method adds items to the `ArrayList`. Students realize that one version of the `add()` method adds items at the end of the list, while the other version adds the item at a specific index. Students note that the `size()` method returns the number of elements in the `ArrayList`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and demonstrate autoboxing."
       },
       "seeding_key": {
         "activity_section.key": "6f85a6ed-bbfa-4101-8d25-94a0de3b16c6",
@@ -1706,7 +1715,7 @@
       "key": "0444b13a-bc2a-498e-9d29-f9cddde06bc3",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio to add data from a text file to an `ArrayList`. Students do a code review with a partner on Level 5 to receive feedback and improve their work before moving on to complete a Check for Understanding on Level 6.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the `hasNext()` methods in the `Scanner` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio to add data from a text file to an `ArrayList`. Students do a code review with a partner on Level 5 to receive feedback and improve their work before moving on to complete a Check for Understanding on Level 6.",
         "progression_name": "Reading Data from a File"
       },
       "seeding_key": {
@@ -1789,7 +1798,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students might be unsure what task they should complete next. Encourage students to focus on brainstorming and planning tasks to determine the story or idea they want to create and identify the major components of their program that they need to develop. Refer students to pages five through nine for planning space and templates."
+            "markdown": "Students might be unsure what task they should complete next. Encourage students to focus on brainstorming and planning tasks to determine the story or idea they want to create and identify the major components of their program that they need to develop. Refer students to pages five through eight for planning space and templates."
           }
         ]
       },
@@ -2399,7 +2408,7 @@
       "key": "127ae1fb-a5e6-4143-ae30-da672a8b36c9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how `String`s are indexed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question by giving them time to think independently, discuss briefly with a neighbor, then share their answer as a class. Click through the animated slide to display the correct answer."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how `String`s are indexed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and demonstrate `IndexOutOfBoundsException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question by giving them time to think independently, discuss briefly with a neighbor, then share their answer as a class. Click through the animated slide to display the correct answer."
       },
       "seeding_key": {
         "activity_section.key": "127ae1fb-a5e6-4143-ae30-da672a8b36c9",
@@ -2457,7 +2466,7 @@
       "key": "66218e38-0590-4376-93af-4a20a75e2d83",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students debug a program that generates an `IndexOutOfBoundsException`. On Level 3, students complete a choice level to use the `indexOf()` method to count the number of words, count the number of sentences, or count the number of words that contain a specific substring.",
+        "description": "Do This: Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students write code to find the index location of a space. On Level 3, students complete a choice level to use the `indexOf()` method to find the first space, first instance of a word, or first punctuation in a given text.",
         "progression_name": "Analyzing Text",
         "tips": [
           {
@@ -2524,8 +2533,14 @@
       "key": "d7600d1c-3cf9-43af-bd15-3e341a12dcf6",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5, 6, and 7 on Code Studio. Students complete a Check for Understanding on Level 5, then use the `substring()` method on Level 6 to find individual words and determine their parts of speech. On Level 7, students choose how to find and use parts of speech in their Neighborhood Lit Fest Project.",
-        "progression_name": "Identifying Parts of Speech"
+        "description": "Direct students to complete Levels 5, 6, and 7 on Code Studio. Students complete a Check for Understanding on Level 5, then use the `substring()` method on Level 6 to identify the part of speech for a specified word. On Level 7, students identify the parts of speech in a given story or a story, poem, song, or other form of written literature of their choice.",
+        "progression_name": "Identifying Parts of Speech",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may notice that the list returned on Level 7 is missing values. Encourage students to investigate the cause of the missing values by comparing the words in the story to the words in the text file to find that some words are missing from the text file and that punctuation and capitalization causes the words to not be considered equal. Have students consider and implement solutions to these problems, such as:\n\n* Adding missing terms and their parts of speech to the text file\n* Writing a method that returns the word without punctuation\n* Using additional methods available in the `String` class, such as `toLowerCase()`"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d7600d1c-3cf9-43af-bd15-3e341a12dcf6",
@@ -2813,7 +2828,7 @@
       "key": "f64ce262-2f28-4927-890a-b1c6da519e9f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many different ways can we check if a `String` is a palindrome?*\n\n**Discussion Goal:** Students suggest checking if the `String` is equal to the reverse of the `String`. Students may suggest comparing the first character to the last character, then the second to the second to last, etc.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some different ways we can check if a `String` is a palindrome?*\n\n**Discussion Goal:** Students suggest checking if the `String` is equal to the reverse of the `String`. Students may suggest comparing the first character to the last character, then the second to the second to last, etc.",
         "duration": "15",
         "name": "Palindromes"
       },
@@ -2838,7 +2853,7 @@
       "key": "a1a09835-fffa-4e79-a6fb-fd1d7b132af3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. Students complete a Check for Understanding on Level 1, then implement an algorithm to create a new string with the characters reversed on Level 2.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. Students complete a Check for Understanding on Level 1, then implement an algorithm to create a new `String` with the characters reversed and compare it to the original `String` on Level 2.",
         "progression_name": "Checking for Palindromes"
       },
       "seeding_key": {
@@ -2864,7 +2879,7 @@
       "key": "b01b01d4-d31b-4ab6-ab46-3f9b87a329e1",
       "position": 5,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and framing questions and sharing feedback. Students should take notes on their Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Development Feedback handout."
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout."
       },
       "seeding_key": {
         "activity_section.key": "b01b01d4-d31b-4ab6-ab46-3f9b87a329e1",
@@ -2987,7 +3002,7 @@
       "key": "9c87e300-20ef-4183-8f78-ef8c78496451",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define sentiment value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3 and 4 on Code Studio. On Level 3, students identify the overall tone of their chosen author or artist. On Level 4, students choose and implement tone in their Neighborhood Lit Fest Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define sentiment value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3 and 4 on Code Studio. On Level 3, students write a method to find the sentiment value of a word. On Level 4, students calculate the overall sentiment value of a story.",
         "progression_name": "Neighborhood Lit Fest Project"
       },
       "seeding_key": {
@@ -3012,7 +3027,7 @@
       "key": "be3c126a-cdd7-496c-9cb3-e4a80d6a2e3c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "be3c126a-cdd7-496c-9cb3-e4a80d6a2e3c",
@@ -3200,7 +3215,7 @@
       "key": "a1b4cd63-6480-4b9c-927a-bf72e611f937",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and framing questions and sharing feedback. Students should take notes on their Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Development Feedback handout."
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout."
       },
       "seeding_key": {
         "activity_section.key": "a1b4cd63-6480-4b9c-927a-bf72e611f937",
@@ -3230,17 +3245,6 @@
       },
       "seeding_key": {
         "activity_section.key": "d4015d7e-b949-4545-90c0-70b8b40ac84d",
-        "lesson_activity.key": "1af08b9b-35c0-46ec-9894-ceed899f8dbe"
-      }
-    },
-    {
-      "key": "9386f38a-97e2-458f-9ceb-aa8b99bf5e3f",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
-      },
-      "seeding_key": {
-        "activity_section.key": "9386f38a-97e2-458f-9ceb-aa8b99bf5e3f",
         "lesson_activity.key": "1af08b9b-35c0-46ec-9894-ceed899f8dbe"
       }
     },
@@ -3342,7 +3346,7 @@
       "key": "bb3b4e2e-321b-46cf-b1c3-d93a318ac9a7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the End of Project Self-Reflection on page eleven of the Neighborhood Lit Fest Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the End of Project Self-Reflection on page nine of the Neighborhood Lit Fest Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3545,6 +3549,17 @@
       "seeding_key": {
         "activity_section.key": "95e98de7-4347-450b-a4e5-1d49f589b228",
         "lesson_activity.key": "917818f4-3178-42c9-9a37-758e4b679479"
+      }
+    },
+    {
+      "key": "731e48fb-7db5-4ee9-bed2-5743fdb36aca",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 6 Pilot Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "731e48fb-7db5-4ee9-bed2-5743fdb36aca",
+        "lesson_activity.key": "a49655cf-c9df-4011-810a-b72435500030"
       }
     },
     {
@@ -5100,6 +5115,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "CSA Pilot Survey Unit 6"
+        ],
+        "progression": "Unit 6 Pilot Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 6"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "731e48fb-7db5-4ee9-bed2-5743fdb36aca"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 6"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "CSA Java Lab Sandbox"
         ],
         "progression": "Java Lab"
@@ -5119,7 +5159,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5144,7 +5184,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5169,7 +5209,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5917,6 +5957,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 6",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 6"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "731e48fb-7db5-4ee9-bed2-5743fdb36aca"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA Java Lab Sandbox",
         "script_level.level_keys": [
           "CSA Java Lab Sandbox"
@@ -6098,18 +6150,6 @@
       }
     },
     {
-      "name": "Dr. Seuss Book Written by A.I.",
-      "url": "https://youtu.be/DckBBDU6V4k",
-      "key": "dr_seuss_book_written_by_a_i_",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "dr_seuss_book_written_by_a_i_"
-      }
-    },
-    {
       "name": "FRQ Scoring Guide",
       "url": "https://docs.google.com/document/d/1Z3bc2oSUQPe5Y3bCOTgnc_NkRqSn3S6uyLhZO8yuA8M/edit",
       "key": "frq_scoring_guide_4",
@@ -6134,6 +6174,30 @@
       }
     },
     {
+      "name": "Generic Types",
+      "url": "https://youtu.be/YPmsU7iBY18",
+      "key": "generic_types",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "generic_types"
+      }
+    },
+    {
+      "name": "Introduction to ArrayLists",
+      "url": "https://youtu.be/o043zkwXVw0",
+      "key": "introduction_to_arraylists",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_arraylists"
+      }
+    },
+    {
       "name": "Java Quick Reference",
       "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
       "key": "java_quick_reference",
@@ -6155,6 +6219,18 @@
       },
       "seeding_key": {
         "resource.key": "neighborhood_lit_fest_project_planning_guide"
+      }
+    },
+    {
+      "name": "Preconditions and Postconditions",
+      "url": "https://youtu.be/ITMPlfwyY3s",
+      "key": "preconditions_and_postconditions",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "preconditions_and_postconditions"
       }
     },
     {
@@ -6372,6 +6448,18 @@
       "seeding_key": {
         "resource.key": "unit_6_presentation_slides"
       }
+    },
+    {
+      "name": "Wrapper Classes",
+      "url": "https://youtu.be/Lthrwc-PJQw",
+      "key": "wrapper_classes",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wrapper_classes"
+      }
     }
   ],
   "lessons_resources": [
@@ -6384,13 +6472,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "dr_seuss_book_written_by_a_i_"
+        "resource.key": "neighborhood_lit_fest_project_planning_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "resource.key": "neighborhood_lit_fest_project_planning_guide"
+        "resource.key": "preconditions_and_postconditions"
       }
     },
     {
@@ -6521,8 +6609,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "wrapper_classes"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "_key_u6l3_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "introduction_to_arraylists"
       }
     },
     {
@@ -6559,6 +6659,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_u6l5_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "generic_types"
       }
     },
     {

@@ -1,35 +1,48 @@
 {
-  "func": "shape",
+  "key": "shape",
+  "name": "shape()",
   "category": "Drawing",
-  "paramButtons": {
-    "minArgs": 6
-  },
-  "paletteParams": [
+  "category_key": "drawing",
+  "content": "Connect the points to draw a shape.\r\n\r\nAre not limited to rectangles, ellipses and regular polygons. shape() allows you to draw any shape you want by connecting points. Shapes are drawn using the current stroke weight and current stroke color, and then filled with the current fill color (unless `noStroke()` or `noFill()` commands have been run).",
+  "examples": [
     {
-      "name": "x1"
-    },
-    {
-      "name": "y1"
-    },
-    {
-      "name": "x2"
-    },
-    {
-      "name": "y2"
-    },
-    {
-      "name": "x3"
-    },
-    {
-      "name": "y3"
+      "name": "Star",
+      "description": "Draw a star.",
+      "code": "```\n// Draw a star.\r\nshape(200, 100, 275, 300, 90, 175, 310, 175, 125, 300);\n```",
+      "app": "",
+      "image": null,
+      "app_display_type": "codeFromCodeField",
+      "embed_app_with_code_height": 310
     }
   ],
-  "params": [
-    "200",
-    "0",
-    "0",
-    "400",
-    "400",
-    "400"
-  ]
+  "palette_params": [
+    {
+      "name": "x1",
+      "type": "Number",
+      "required": true,
+      "description": "The x-location in pixels of the first point of the shape, from left to right on the display. Should be a number from 0 to 400, but negative numbers will locate the point to the left of the display and numbers greater than 400 will locate the point to the right of the display (possibly unseen)."
+    },
+    {
+      "name": "y1",
+      "type": "Number",
+      "required": true,
+      "description": "The y-location in pixels of the first point of the shape, from top to bottom on the display. Should be a number from 0 to 400, but negative numbers will locate the point above the display and numbers greater than 400 will locate the point below the display (possibly unseen)."
+    },
+    {
+      "name": "x2",
+      "type": "Number",
+      "required": true,
+      "description": "The x-location in pixels of the second point of the shape, from left to right on the display. Should be a number from 0 to 400, but negative numbers will locate the point to the left of the display and numbers greater than 400 will locate the point to the right of the display (possibly unseen)."
+    },
+    {
+      "name": "y2",
+      "type": "Number",
+      "required": true,
+      "description": "The y-location in pixels of the second point of the shape, from top to bottom on the display. Should be a number from 0 to 400, but negative numbers will locate the point above the display and numbers greater than 400 will locate the point below the display (possibly unseen)."
+    }
+  ],
+  "return_value": "No return value. Outputs to the display only.",
+  "short_description": "Connect the points to draw a shape.",
+  "syntax": "shape(x1, y1, x2, y2, x3, y3)",
+  "tips": "- If you're having trouble getting a shape to show up, make sure that `noFill()` or `noStroke()` haven't been called, and where you're trying to draw the shape fits within the coordinates of the display (400 x 400).\r\n- Anything you draw will overlap previous things you drew. The sequence of drawing statements is usually important.\r\n- The default stroke is black, the default stroke weight is 1 pixel, and the default fill is gray. Change the width of the line, color of the line, and fill color used to draw all subsequent shapes using `strokeWeight()`, `stroke()`, and `fill()`.\r\n- When drawing thick lines, the size of the shape is relative to the center of the perimeter line. The outside perimeter of the shape will be one half the stroke weight larger all around."
 }

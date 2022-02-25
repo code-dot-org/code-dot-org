@@ -1,7 +1,0 @@
-{
-  "category": "Logic",
-  "config": {
-    "docFunc": "codestudio_comparisonOperator",
-    "func": "logic_compare"
-  }
-}

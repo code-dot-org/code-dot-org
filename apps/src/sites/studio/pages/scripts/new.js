@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import NewUnitForm from '@cdo/apps/lib/levelbuilder/unit-editor/NewUnitForm';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
-  ReactDOM.render(<NewUnitForm />, document.getElementById('form'));
+  ReactDOM.render(
+    <NewUnitForm
+      families={getScriptData('families')}
+      versionYearOptions={getScriptData('versionYearOptions')}
+    />,
+    document.getElementById('form')
+  );
 });

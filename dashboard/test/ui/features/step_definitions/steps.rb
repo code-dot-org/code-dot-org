@@ -154,6 +154,15 @@ When /^I wait until "([^"]*)" in localStorage equals "([^"]*)"$/ do |key, value|
   wait_until {@browser.execute_script("return localStorage.getItem('#{key}') === '#{value}';")}
 end
 
+And /^I add another version to the project$/ do
+  steps <<-STEPS
+    And I add code "// comment A" to ace editor
+    And I wait until element "#resetButton" is visible
+    And I press "resetButton"
+    And I click selector "#runButton" once I see it
+  STEPS
+end
+
 When /^I reset the puzzle to the starting version$/ do
   steps <<-STEPS
     Then I click selector "#versions-header"
@@ -196,6 +205,10 @@ end
 
 When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
+end
+
+When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, negation|
+  wait_until {@browser.execute_script("return $(\"#{selector}\").is(':checked');") == negation.nil?}
 end
 
 def jquery_is_element_visible(selector)
@@ -531,6 +544,10 @@ end
 
 Then /^I should see title "([^"]*)"$/ do |title|
   expect(@browser.title).to eq(title)
+end
+
+Then /^I should see title includes "([^"]*)"$/ do |title|
+  expect(@browser.title).to include(title)
 end
 
 Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
@@ -1016,10 +1033,6 @@ And(/^I submit this level$/) do
     And I wait to see ".modal"
     And I press "confirm-button" to load a new page
   }
-end
-
-And(/^I get hidden script access$/) do
-  browser_request(url: '/api/test/hidden_script_access', method: 'POST')
 end
 
 And(/^I wait until I am on the join page$/) do

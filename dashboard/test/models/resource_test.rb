@@ -156,7 +156,7 @@ class ResourceTest < ActiveSupport::TestCase
     custom_i18n = {
       "data" => {
         "resources" => {
-          resource.key => {
+          Services::GloballyUniqueIdentifiers.build_resource_key(resource) => {
             "name" => "Translated name"
           }
         }

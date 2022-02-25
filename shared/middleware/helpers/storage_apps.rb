@@ -47,6 +47,16 @@ class StorageApps
     true
   end
 
+  def restore(channel_id)
+    owner, storage_app_id = storage_decrypt_channel_id(channel_id)
+    raise NotFound, "channel `#{channel_id}` not found in your storage" unless owner == @storage_id
+
+    update_count = @table.where(id: storage_app_id).update(state: 'active')
+    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+
+    true
+  end
+
   def get(channel_id)
     owner, storage_app_id = storage_decrypt_channel_id(channel_id)
     row = @table.where(id: storage_app_id).exclude(state: 'deleted').first
@@ -145,7 +155,7 @@ class StorageApps
   # Determine if the current user can view the project
   def get_sharing_disabled(channel_id, current_user_id)
     owner_storage_id, storage_app_id = storage_decrypt_channel_id(channel_id)
-    owner_user_id = user_storage_ids_table.where(id: owner_storage_id).first[:user_id]
+    owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     # Sharing of a project is not disabled for the project owner
     # or the teachers of the project owner

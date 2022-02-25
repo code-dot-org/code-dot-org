@@ -9,7 +9,7 @@
         {
           "type": "html",
           "name": "title_and_consent_language",
-          "html": "<h1>Administrator Questionnaire</h1><p>As part of the Equity in AP Computer Science Principles study, we are asking you to complete this survey that tells us about your thoughts and beliefs about computer science as well as the state of computer science education at your school.</p><p>Participation is voluntary and you may stop at any time without penalty. It generally takes between 20 and 30 minutes to complete this survey, depending on your responses.</p><p>All of your responses will be confidential and reported out only in the aggregate.</p><p>If you have questions about the evaluation or the survey, you may contact <strong>Nara Nayar</strong> at <a href='mailto:nnayar@air.org'>nnayar@air.org</a> or (202) 403-5391. If you have any questions about your rights as a research participant, you may contact AIR’s Institutional Review Board at <a href='mailto:IRB@air.org'>IRB@air.org</a>, or toll free at 1-800-634-0797.</p><p>If you have understood this information and agree to have your survey responses used for this study, please click below to continue to the survey. If you do not want to participate in the study, please exit now.</p><br/><br/><p>Best,</P><p>Nara Nayar<br/><br/>she/her/hers<br/>Technical Assistance Consultant<br/>American Institutes for Research<br/><a href='mailto:nnayar@air.org'>nnayar@air.org</a><br/>708-834-4118<br/>10 S. Riverside Plaza, 6th floor<br/>Chicago, IL 60606</p>"
+          "html": "<h1>Administrator Questionnaire</h1><p>As part of the Equity in AP Computer Science Principles study, we are asking you to complete this survey that tells us about your thoughts and beliefs about computer science as well as the state of computer science education at your school.</p><p>Participation is voluntary and you may stop at any time without penalty. It generally takes between 20 and 30 minutes to complete this survey, depending on your responses.</p><p>All of your responses will be confidential and reported out only in the aggregate.</p><p>If you have questions about the evaluation or the survey, you may contact <strong>Nara Nayar</strong> at <a href='mailto:nnayar@air.org'>nnayar@air.org</a> or (202) 403-5391. If you have any questions about your rights as a research participant, you may contact AIR’s Institutional Review Board at <a href='mailto:IRB@air.org'>IRB@air.org</a>, or toll free at 1-800-634-0797.</p><p>If you have understood this information and agree to have your survey responses used for this study, please click below to continue to the survey. If you do not want to participate in the study, please exit now.</p>"
         }
       ]
     },
@@ -24,7 +24,7 @@
         {
           "type": "html",
           "name": "section_cs_school_intro",
-          "html": "<h3> We would like to know about Computer Science courses currently offered at your school. <br> <br> <b> Please refer to this definition of Computer Science courses to answer the questions in this survey: </b> <br> <p> <b> Computer Science </b> focuses on understanding why and how computers work. Students study the impact of technology on society, and aims to develop coding and hardware and software design skills. <br> <br> Computer Science courses do not aim to teach students how to use computers or computer applications like word processing software. "
+          "html": "<h3> We would like to know about Computer Science courses currently offered at your school. <br> <br> <b> Please refer to this definition of Computer Science courses to answer the questions in this survey: <br> </b> <br> <h3> <b> Computer Science </b> focuses on understanding why and how computers work. Students study the impact of technology on society, and develop coding and hardware and software design skills. <br> <br> Computer Science courses do not aim to teach students how to use computers or computer applications like word processing software. "
         },
         {
           "type": "radiogroup",
@@ -259,7 +259,7 @@
             },
             {
               "value": "2",
-              "text": "2 year"
+              "text": "1 year"
             },
             {
               "value": "3",
@@ -782,14 +782,14 @@
             },
             {
               "value": "reg_partner",
-              "text": "I see my Code.org Regional Partner as a resource and support for computer science education in my community"
+              "text": "I see my Code.org representative as a resource and support for computer science education in my community"
             }
           ]
         },
         {
           "type": "matrix",
           "name": "cs_community_important",
-          "title": "How much to you agree or disagree with the following statements about the leaders and community members around you? (Check one in each row.) \n",
+          "title": "How much to you agree or disagree with the following statements about the leaders and community members in your area? (Check one in each row.) \n",
           "columns": [
             {
               "value": "0",
@@ -831,15 +831,15 @@
             },
             {
               "value": "families_important",
-              "text": "Families here think offering computer science is important"
+              "text": "Families in my area think offering computer science is important"
             },
             {
               "value": "comm_leaders_important",
-              "text": "Community leaders (political leaders, clergy, other) here think offering computer science courses is important"
+              "text": "Community leaders (political leaders, clergy, other) in my area think offering computer science courses is important"
             },
             {
               "value": "other_stakeholders_important",
-              "text": "Other local stakeholders (businesses, higher education, other) here think offering computer science courses is important"
+              "text": "Other local stakeholders (businesses, higher education, other) in my area think offering computer science courses is important"
             },
             {
               "value": "student_cs_demand",
@@ -1073,7 +1073,7 @@
             },
             {
               "value": "pbl_activities",
-              "text": "Engage the class in project-based learning (PBL) activities"
+              "text": "Engage the class in project-based learning activities"
             },
             {
               "value": "independent_work",

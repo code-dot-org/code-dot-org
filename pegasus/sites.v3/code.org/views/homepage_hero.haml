@@ -3,50 +3,21 @@
   show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions(request)
-  hoc_csc_enable_svg = DCDO.get("hoc_csc_enable_svg", false)
-
-:css
-  .csc-hero-message-line2 {
-    font-size: 52px;
-  }
-
-  @media screen and (min-width: 576px) and (max-width: 900px) {
-    .csc-hero-message-line2 {
-      font-size: 38px;
-    }
-  }
-
-  #pageheader-wrapper #pageheader {
-    margin: 0 !important;
-  }
-
-  #left-fades {
-    box-shadow: inset -15px -15px 15px 0px rgb(255 255 255), inset -15px -15px 15px 0px rgb(255 255 255);
-  }
-
-  #right-fades {
-    box-shadow: inset 15px -15px 15px 0px rgb(255 255 255), inset 15px -15px 15px 0px rgb(255 255 255);
-  }
 
 - main_actions = capture_haml do
-  - if show_single_hero == "csc"
-    .hero-message-line1{style: "color: #4D575F; font-size: 28px; line-height: 28px; padding-bottom: 20px; font-family: 'Gotham 4r', sans-serif", dir: "auto"}
-      - if hoc_mode == 'actual-hoc'
-        = I18n.t(:og_title_here)
-      - else
-        = hoc_s(:codeorg_homepage_hoc_is_coming)
-    %div{style: "padding-bottom: 20px; text-align: center"}
-      %span.hero-message-line2.csc-hero-message-line2{style: "color: #4D575F; line-height: 1.2em; font-family: 'Gotham 5r', sans-serif", dir: "auto"}<
-        = hoc_s(:codeorg_homepage_csc_title)
-      %div{style: "margin-top: 20px; padding: 0px 20px; color: #4D575F"}
-        = hoc_s(:codeorg_homepage_csc_long)
-    %img.phone-feature{src: "/shared/images/fit-1200/hoc-csc-arrows-screen.png", style: "width: 100%; padding-bottom: 20px"}
-
   - if show_single_hero == "changeworld"
     .hero-message-line1{style: "color: white; font-size: 28px; line-height: 28px; padding-top: 20px; padding-bottom: 20px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
       = hoc_s(:hoc2019_header_line1_mobile)
     .hero-message-line2{style: "color: white; font-size: 28px; line-height: 28px; padding-bottom: 80px; font-family: 'Gotham 5r', sans-serif", dir: "auto"}
       = hoc_s(:hoc2019_header_line2_mobile)
+  - elsif show_single_hero == "custom"
+    .hero-messages{style: "padding-top: 60px; padding-bottom: 60px"}
+      - heroes_arranged[0][:items].map do |item|
+        - if item["type"] == "text"
+          .hero-message-line{style: "color: white; font-size: 24px; line-height: 1.5em; padding-bottom: 0px; font-family: 'Gotham 4r', sans-serif", dir: "auto"}
+            = I18n.t(item["text"])
+        - elsif item["type"] == "image"
+          %img{src: item["url"], style: "width: 100%; max-width: 600px; margin-bottom: 20px"}
 
   .action_buttons
     - actions.each do |entry|
@@ -95,31 +66,9 @@
       #mobile-header.mobile-headers.mobile-feature
         = view :mobile_header_responsive
 
-  - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
-    #actions{style: "padding-top: 0px; padding-left: 0px; padding-right: 0px;"}
-      #bars{style: "display: flex; max-width: 1920px; margin: 0 auto;"}
-        #left-bars-img.col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-csc-left-fade-wider.png); background-position: 100% 50%; background-size: cover; background-repeat: no-repeat"}
-        #csc-main-actions.col-33{style: "z-index: 1; background-color: white; padding-top: 40px"}
-          = main_actions
-        #right-bars-img.col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-csc-right-fade-wider.png); background-position: 0% 50%; background-size: cover; background-repeat: no-repeat"}
-      - if hoc_csc_enable_svg
-        #svgbars{style: "display: none; max-width: 1920px; margin: 0 auto; position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%"}
-          #left-svg-bars.col-33.tablet-feature{style: "overflow: hidden"}
-            %svg#left-bars-svg.tablet-feature{viewBox: "0 0 640 332", style: "opacity: 0; height: 100%; float: right"}
-          #central-empty.col-33
-            &nbsp;
-          #right-svg-bars.col-33.tablet-feature{style: "overflow: hidden"}
-            %svg#right-bars-svg.tablet-feature{viewBox: "0 0 640 332", style: "opacity: 0; height: 100%; float: left"}
-        #csc-fades{style: "display: none; max-width: 1920px; margin: 0 auto; position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%"}
-          #left-fades.col-33.tablet-feature
-          #central-empty.col-33
-            &nbsp;
-          #right-fades.col-33.tablet-feature
-
-  - else
-    - if show_single_hero
-      #actions
-        = main_actions
+  - if show_single_hero
+    #actions
+      = main_actions
 
   #caption_container.container_responsive
     - unless show_single_hero
@@ -235,6 +184,3 @@
 
     showQuote(lastImage, currentImage);
   }
-
-- if ["soon-hoc", "actual-hoc"].include?(hoc_mode) && hoc_csc_enable_svg
-  %script{src: "/js/csc-bars.js"}

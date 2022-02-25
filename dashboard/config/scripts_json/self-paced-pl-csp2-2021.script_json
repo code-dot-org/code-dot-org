@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:09:07 UTC",
+    "serialized_at": "2021-12-14 21:33:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -75,8 +75,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**You will:**\n\n* Access support while teaching CS Principles.\n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Access support while teaching CS Principles.\n\n**Suggested time:** 15 minutes"
+        "overview": "**You will:**\n\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Learn how to access support while teaching the course.\n\n**Suggested time:** 15 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -176,6 +176,16 @@
       },
       "seeding_key": {
         "activity_section.key": "87d28c1a-4b89-4292-a545-435f0cc4c010",
+        "lesson_activity.key": "a9ac1851-c892-457b-84f4-42cda6fa246e"
+      }
+    },
+    {
+      "key": "48787476-db4f-43ba-bb28-7e40f99c3ea4",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "48787476-db4f-43ba-bb28-7e40f99c3ea4",
         "lesson_activity.key": "a9ac1851-c892-457b-84f4-42cda6fa246e"
       }
     },
@@ -478,15 +488,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-progress-c4u"
-        ],
         "progression": "Track student progress and provide feedback"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-mod2-progress-c4u"
+          "SP-VPL-21-mod2-progress-c4u-csp"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -494,7 +501,7 @@
         "activity_section.key": "87d28c1a-4b89-4292-a545-435f0cc4c010"
       },
       "level_keys": [
-        "SP-VPL-21-mod2-progress-c4u"
+        "SP-VPL-21-mod2-progress-c4u-csp"
       ]
     },
     {
@@ -828,15 +835,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-CSP-21-Navigation"
-        ],
         "progression": "Wrap up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CSP-21-Navigation"
+          "SP-VPL-CSP-21-Navigation-Mod2"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -844,7 +848,7 @@
         "activity_section.key": "7c48726e-bf6e-4533-bba9-5dce019e4091"
       },
       "level_keys": [
-        "SP-VPL-CSP-21-Navigation"
+        "SP-VPL-CSP-21-Navigation-Mod2"
       ]
     }
   ],
@@ -959,9 +963,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod2-progress-c4u",
+        "level.key": "SP-VPL-21-mod2-progress-c4u-csp",
         "script_level.level_keys": [
-          "SP-VPL-21-mod2-progress-c4u"
+          "SP-VPL-21-mod2-progress-c4u-csp"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -1127,9 +1131,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CSP-21-Navigation",
+        "level.key": "SP-VPL-CSP-21-Navigation-Mod2",
         "script_level.level_keys": [
-          "SP-VPL-CSP-21-Navigation"
+          "SP-VPL-CSP-21-Navigation-Mod2"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",

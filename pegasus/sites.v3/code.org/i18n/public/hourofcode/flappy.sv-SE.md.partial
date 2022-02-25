@@ -1,45 +1,45 @@
 ---
-title: Teacher Resources - Make a Flappy Game
+title: Lärarresurser – skapa ett Flappy-spel
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Skapa ett Flappy-spel: en lektion från Hour of Code
 
 {{ hoc_flappy_video }}
 
 [col-50]
 
-## Teacher Resources
+## Lärarresurser
 
-### Lesson Plans:
+### Lektionsplaner:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [Skapa ett Flappy-spel]({{ hoc_flappy_cb_url }})
 
-### Extension Activities:
+### Avancerade aktiviteter:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Mer än en timmes kodning med Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: kurs 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Andra lärarresurser:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: handbok för lärare](https://hourofcode.com/how-to)
+- [Bästa praxis från framgångsrika lärare](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Direktsänt event: [Lärarhandbok till Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
 [col-50]
 
-## Overview
+## Översikt
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Add the game to your phone in one click.
+Använd dra och släpp-programmering för att göra ditt eget Flappy Bird-spel och anpassa dess utseende (Flappy Shark, Flappy Santa – precis vad du vill). Lägg in spelet på din telefon med ett klick.
 
-**Recommended Age Range:** 4-104
+**Rekommenderad ålder:** 4–104
 
-**Technology Requirements:** Modern browsers, smartphones + tablets
+**Tekniska behov:** Modern webbläsare, smarta telefoner och surfplattor
 
-<a href="http://studio.code.org/s/flappy/reset"><button>Try the tutorial</button></a>
+<a href="http://studio.code.org/s/flappy/reset"><button>Prova på den handledda delen</button></a>
 
 [/col-50]

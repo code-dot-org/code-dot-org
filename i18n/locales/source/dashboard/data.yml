@@ -665,9 +665,12 @@ en:
         csd_u6_variables_part2: Variables - Part 2
         csd_ml_ethics_ai: 'Ethics and AI '
         outbreak_intro: 'Outbreak Simulation: Introduction'
-        outbreak_events: 'Outbreak: Events'
+        outbreak_events: 'Outbreak Simulator: Events'
         outbreak_scientist: 'Outbreak Simulator: Thinking Like a Scientist'
         outbreak_outro: 'Outbreak Simulator: Free Play'
+        PL_overview_CSP: What is Computer Science Principles?
+        PL_CSP_EIPMOverview: Guide to EIPM Lessons
+        tesstest: Tesstes
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

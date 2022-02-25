@@ -3,6 +3,7 @@ require 'securerandom' unless defined?(SecureRandom)
 require 'cdo/firehose'
 
 class JavabuilderSessionsController < ApplicationController
+  include JavalabFilesHelper
   authorize_resource class: false
 
   PRIVATE_KEY = CDO.javabuilder_private_key
@@ -17,8 +18,10 @@ class JavabuilderSessionsController < ApplicationController
     level_id = params[:levelId]
     options = params[:options]
     execution_type = params[:executionType]
+    use_dashboard_sources = params[:useDashboardSources]
+    mini_app_type = params[:miniAppType]
     options = options ? options.to_json : '{}'
-    if !channel_id || !project_version || !project_url || !execution_type
+    if !channel_id || !project_version || !project_url || !execution_type || !mini_app_type
       return render status: :bad_request, json: {}
     end
 
@@ -45,6 +48,8 @@ class JavabuilderSessionsController < ApplicationController
       project_url: project_url,
       level_id: level_id,
       execution_type: execution_type,
+      mini_app_type: mini_app_type,
+      use_dashboard_sources: use_dashboard_sources,
       options: options
     }
 
@@ -64,6 +69,12 @@ class JavabuilderSessionsController < ApplicationController
       OpenSSL::PKey::RSA.new(PRIVATE_KEY, PASSWORD),
       'RS256'
     )
+
+    if use_dashboard_sources == 'false'
+      success = JavalabFilesHelper.upload_project_files(channel_id, level_id, request.host, encoded_payload)
+      return render status: :internal_server_error, json: {error: "Error uploading sources."} unless success
+    end
+
     render json: {token: encoded_payload, session_id: session_id}
   end
 end

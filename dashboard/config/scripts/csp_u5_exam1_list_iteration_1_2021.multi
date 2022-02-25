@@ -15,10 +15,11 @@ markdown <<MARKDOWN
 `ageList` and `gradeList` contain information about students in a classroom. A programmer has already written the following code with that information.
 
 ```
-var ages = [16,17,18, 17]
-var names = [“Beni”, “Analise”, “Ricardo”, “Tanya”]
+var ages = [16,17,18, 17];
+var names = [“Beni”, “Analise”, “Ricardo”, “Tanya”];
 
 var filteredNames = [];
+var age;
 ```
 
 Which of the following programs will result in filteredNames only containing the names of students who are 17 or older? 

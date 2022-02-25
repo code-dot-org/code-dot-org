@@ -9,6 +9,7 @@ import {
   clearConsoleLogs,
   closePhotoPrompter
 } from './javalabRedux';
+import {DisplayTheme} from './DisplayTheme';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
   PaneSection,
@@ -47,7 +48,7 @@ class JavalabConsole extends React.Component {
     consoleLogs: PropTypes.array,
     appendInputLog: PropTypes.func,
     clearConsoleLogs: PropTypes.func,
-    isDarkMode: PropTypes.bool,
+    displayTheme: PropTypes.oneOf(Object.values(DisplayTheme)),
     isPhotoPrompterOpen: PropTypes.bool,
     closePhotoPrompter: PropTypes.func,
     photoPrompterPromptText: PropTypes.string
@@ -100,7 +101,7 @@ class JavalabConsole extends React.Component {
 
   // Returns a rendering of the console log.  It includes the input field following the final
   // content, taking up the remaining width of the line.
-  renderConsoleLogs(isDarkMode) {
+  renderConsoleLogs(displayTheme) {
     const lines = this.getConsoleLines();
 
     return lines.map((line, index) => {
@@ -114,7 +115,9 @@ class JavalabConsole extends React.Component {
               spellCheck="false"
               style={{
                 ...styles.input,
-                ...(isDarkMode ? styles.darkModeInput : styles.lightModeInput)
+                ...(displayTheme === DisplayTheme.DARK
+                  ? styles.darkModeInput
+                  : styles.lightModeInput)
               }}
               onKeyDown={this.onInputKeyDown}
               aria-label="console input"
@@ -135,7 +138,7 @@ class JavalabConsole extends React.Component {
       photoPrompterPromptText,
       onPhotoPrompterFileSelected,
       closePhotoPrompter,
-      isDarkMode
+      displayTheme
     } = this.props;
 
     if (isPhotoPrompterOpen) {
@@ -152,7 +155,7 @@ class JavalabConsole extends React.Component {
     } else {
       return (
         <div onClick={this.onLogsClick} style={styles.logs}>
-          {this.renderConsoleLogs(isDarkMode)}
+          {this.renderConsoleLogs(displayTheme)}
         </div>
       );
     }
@@ -184,28 +187,41 @@ class JavalabConsole extends React.Component {
   };
 
   render() {
-    const {isDarkMode, style, bottomRow, clearConsoleLogs} = this.props;
+    const {displayTheme, style, bottomRow, clearConsoleLogs} = this.props;
 
     return (
       <div style={style}>
         <PaneHeader id="pane-header" style={styles.header} hasFocus>
-          <PaneButton
-            id="javalab-console-clear"
-            headerHasFocus
-            isRtl={false}
-            onClick={() => {
-              clearConsoleLogs();
-            }}
-            iconClass="fa fa-eraser"
-            label={javalabMsg.clearConsole()}
+          <PaneSection
+            className={'pane-header-section pane-header-section-left'}
           />
-          <PaneSection>{javalabMsg.console()}</PaneSection>
+          <PaneSection
+            className={'pane-header-section pane-header-section-center'}
+          >
+            {javalabMsg.console()}
+          </PaneSection>
+          <PaneSection
+            className={'pane-header-section pane-header-section-right'}
+          >
+            <PaneButton
+              id="javalab-console-clear"
+              headerHasFocus
+              isRtl={false}
+              onClick={() => {
+                clearConsoleLogs();
+              }}
+              iconClass="fa fa-eraser"
+              label={javalabMsg.clearConsole()}
+            />
+          </PaneSection>
         </PaneHeader>
         <div style={styles.container}>
           <div
             style={{
               ...styles.console,
-              ...(isDarkMode ? styles.darkMode : styles.lightMode)
+              ...(displayTheme === DisplayTheme.DARK
+                ? styles.darkMode
+                : styles.lightMode)
             }}
             ref={el => (this._consoleLogs = el)}
             className="javalab-console"
@@ -225,7 +241,7 @@ class JavalabConsole extends React.Component {
 export default connect(
   state => ({
     consoleLogs: state.javalab.consoleLogs,
-    isDarkMode: state.javalab.isDarkMode,
+    displayTheme: state.javalab.displayTheme,
     isPhotoPrompterOpen: state.javalab.isPhotoPrompterOpen,
     photoPrompterPromptText: state.javalab.photoPrompterPromptText
   }),
@@ -294,7 +310,8 @@ const styles = {
     position: 'absolute',
     textAlign: 'center',
     lineHeight: '30px',
-    width: '100%'
+    width: '100%',
+    display: 'flex'
   },
   log: {
     padding: 0,

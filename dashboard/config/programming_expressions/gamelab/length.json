@@ -1,6 +1,8 @@
 {
-  "func": "length",
+  "key": "length",
+  "name": "strlength",
   "category": "Variables",
-  "modeOptionName": "*.length",
-  "type": "property"
+  "category_key": "variables",
+  "short_description": "Game Lab - strlength",
+  "syntax": "length"
 }

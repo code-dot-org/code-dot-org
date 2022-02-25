@@ -66,7 +66,7 @@ def main
 
   # Uses a Google Cloud service account to access Google Drive
   sheet = Google::Sheet.new CDO.applications_2022_2023_gsheet_key
-  sheet.export(tab_name: 'all_apps_21_22', rows: get_rows)
+  sheet.export(tab_name: 'all_apps', rows: get_rows)
   sheet.notify_of_external_sharing(allowed_list)
 end
 

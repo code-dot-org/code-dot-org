@@ -4,15 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "announcements": [
-        {
-          "notice": "We Want Your Feedback!",
-          "details": "Code.org is interested in learning from your experience teaching the new AI and Machine Learning unit and developing resources to support teachers getting started teaching the curriculum. Please share your experience with us!",
-          "link": "https://docs.google.com/forms/d/e/1FAIpQLSd1kyOPVCWxX6zcox-y3vc5M7bC-M8hem6dZvih1ha4AQonZw/viewform?usp=sf_link",
-          "type": "information",
-          "visibility": "Teacher-only"
-        }
-      ],
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -27,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-11-30 19:29:07 UTC",
+    "serialized_at": "2022-01-13 15:42:37 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -87,6 +78,15 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1. **Apply the Problem Solving Process to train a computer to solve a problem**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
@@ -107,6 +107,15 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1) **Describe the differences between supervised and unsupervised learning.**\n\n\tCheck student responses on the activity guide at the end of the class period.",
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called \"Green Glass Door\" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.\n\n**Question of the Day:** What are different types of machine learning?",
@@ -128,6 +137,15 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
         "assessment_opportunities": "1) **Describe how Artificial Intelligence is having an impact on society**\n\n\tSee the activity guide for this lesson as a way to measure each step of the problem solving process.",
         "overview": "In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.",
         "preparation": "- Print copies of the activity guide for each student\n- Prepare to digitally distribute the AI Research Areas resource to students. ",
@@ -6265,7 +6283,7 @@
       "key": "7e193cf9-3052-42b0-9e27-e72c6e548a80",
       "position": 1,
       "properties": {
-        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](../21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
+        "description": "This lesson is the first in a series of five that helps prepare students to complete the final project in this unit. The tasks that students complete this week are identical to the tasks they will complete for their project. As such, it may be helpful to read the project guide for the final project so you can see how each lesson connects to the final project - [click here to access the lesson plan for the final project](./21)\n\nStudents will also be creating their own surveys during this week using Google Forms. This requires students to have a Google account. If your students do not have a Google account, consider incorporating that into part of your lesson today or tomorrow."
       },
       "seeding_key": {
         "activity_section.key": "7e193cf9-3052-42b0-9e27-e72c6e548a80",
@@ -10994,7 +11012,7 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/edit",
+      "url": "https://docs.google.com/presentation/d/1lDwfSAfjllPGMuJgo7bJmrJWSUJsidsTLw4Tz67zfyQ/copy",
       "key": "ai_lab_numerical_data",
       "properties": {
         "audience": "Teacher",
@@ -11339,7 +11357,7 @@
     },
     {
       "name": "Innovations in AI",
-      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/edit",
+      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/copy",
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
@@ -11809,7 +11827,7 @@
     },
     {
       "name": "Numerical Models",
-      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/edit",
+      "url": "https://docs.google.com/presentation/d/1lKn_IQjmALHkAS7B1iJzFfg5DXIexbgJQOhjJ2F0wpM/copy",
       "key": "unplugged_knn",
       "properties": {
         "audience": "Teacher",

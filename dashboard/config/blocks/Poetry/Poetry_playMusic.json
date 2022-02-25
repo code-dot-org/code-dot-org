@@ -13,75 +13,75 @@
         "name": "SOUND",
         "options": [
           [
-            "Bright",
+            "bright",
             "\"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3\""
           ],
           [
-            "Calm",
+            "calm",
             "\"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3\""
           ],
           [
-            "Campfire",
+            "campfire",
             "\"sound://category_nature/steady_campfire_loop.mp3\""
           ],
           [
-            "Drizzle",
+            "drizzle",
             "\"sound://category_nature/rain_loop.mp3\""
           ],
           [
-            "Fireside",
+            "fireside",
             "\"sound://category_background/fire_burning.mp3\""
           ],
           [
-            "Forest",
+            "forest",
             "\"sound://category_nature/forest_woodland_ambience_2.mp3\""
           ],
           [
-            "Harps",
+            "harps",
             "\"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3\""
           ],
           [
-            "Haunted",
+            "haunted",
             "\"sound://category_loops/faultering_desicion_loop1.mp3\""
           ],
           [
-            "Hum",
+            "hum",
             "\"sound://category_background/inside_plane.mp3\""
           ],
           [
-            "Mission",
+            "mission",
             "\"sound://category_loops/red_flag_loop1.mp3\""
           ],
           [
-            "Night",
+            "night",
             "\"sound://category_nature/summer_night_loop.mp3\""
           ],
           [
-            "Ocean",
+            "ocean",
             "\"sound://category_background/ocean_waves.mp3\""
           ],
           [
-            "Rainy",
+            "rainy",
             "\"sound://category_background/rain_thunderstorm_calm.mp3\""
           ],
           [
-            "Rainforest",
+            "rainforest",
             "\"sound://category_background/rainforest_ambient_sound.mp3\""
           ],
           [
-            "Riding",
+            "riding",
             "\"sound://category_background/repitition.mp3\""
           ],
           [
-            "Sleepy",
+            "sleepy",
             "\"sound://category_background/wavering_wind.mp3\""
           ],
           [
-            "Slow",
+            "slow",
             "\"sound://category_loops/stabilizing_breath_loop1.mp3\""
           ],
           [
-            "Waterfall",
+            "waterfall",
             "\"sound://category_background/waterfall.mp3\""
           ]
         ]

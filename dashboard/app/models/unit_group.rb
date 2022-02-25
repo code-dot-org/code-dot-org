@@ -27,6 +27,7 @@ require 'cdo/shared_constants/curriculum/shared_course_constants'
 class UnitGroup < ApplicationRecord
   include SharedCourseConstants
   include Curriculum::CourseTypes
+  include Rails.application.routes.url_helpers
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
@@ -238,7 +239,8 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil)
+        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false)
+        unit.course_version.destroy if unit.course_version
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -261,6 +263,14 @@ class UnitGroup < ApplicationRecord
     end
 
     units_to_remove.each do |unit|
+      # Units that are not in a unit group need to have these fields set in order to determine course type and visibility of course
+      unit.update!(
+        published_state: (unit.published_state ? unit.published_state : published_state),
+        instruction_type: instruction_type,
+        participant_audience: participant_audience,
+        instructor_audience: instructor_audience
+      )
+
       UnitGroupUnit.where(unit_group: self, script: unit).destroy_all
     end
     # Reload model so that default_unit_group_units is up to date
@@ -380,8 +390,8 @@ class UnitGroup < ApplicationRecord
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,
       course_version_id: course_version&.id,
-      prevent_course_version_change: for_edit && prevent_course_version_change?,
-      course_path: link
+      course_path: link,
+      course_offering_edit_path: for_edit && course_version ? edit_course_offering_path(course_version.course_offering.key) : nil
     }
   end
 
@@ -523,15 +533,17 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
   def can_view_version?(user = nil)
+    return false unless Ability.new(user).can?(:read, self)
+
     latest_course_version = UnitGroup.latest_stable_version(family_name)
     is_latest = latest_course_version == self
 
     # All users can see the latest course version.
     return true if is_latest
 
-    # Restrictions only apply to students and logged out users.
+    # Restrictions only apply to participants and logged out users.
     return false if user.nil?
-    return true unless user.student?
+    return true if can_be_instructor?(user)
 
     # A student can view the course version if they are assigned to it or they have progress in it.
     user.section_courses.include?(self) || has_progress?(user)
@@ -713,15 +725,5 @@ class UnitGroup < ApplicationRecord
       student_resources.any? ||
       default_units.any? {|s| s.prevent_course_version_change?}
     # rubocop:enable Style/SymbolProc
-  end
-
-  # Look through all of the objects with the specified family name which have
-  # a stable published_state, and return the one with the latest version year.
-  def self.latest_stable(family_name)
-    raise unless family_name.present?
-    all_courses.
-      select {|c| c.family_name == family_name && c.stable?}.
-      sort_by(&:version_year).
-      last
   end
 end

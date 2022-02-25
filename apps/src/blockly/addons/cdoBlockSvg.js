@@ -24,10 +24,9 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
   }
 
   isUnused() {
-    return (
-      this.disabled ||
-      this.workspace?.currentGesture_?.blockDragger_?.draggingBlock_ === this
-    );
+    const isTopBlock = this.previousConnection === null;
+    const hasParentBlock = !!this.parentBlock_;
+    return !(isTopBlock || hasParentBlock);
   }
 
   isVisible() {
@@ -42,7 +41,7 @@ export default class BlockSvg extends GoogleBlockly.BlockSvg {
 
   customContextMenu(menuOptions) {
     // Only show context menu for levelbuilders
-    if (Blockly.editBlocks) {
+    if (Blockly.isStartMode) {
       const deletable = {
         text: this.deletable_
           ? 'Make Undeletable to Users'

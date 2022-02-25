@@ -17,11 +17,14 @@ import i18n from '@cdo/locale';
 import CensusTeacherBanner from '../census2017/CensusTeacherBanner';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRedux';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import Button from '@cdo/apps/templates/Button';
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
   canViewAdvancedTools,
   censusQuestion,
+  plCourses,
   courses,
   donorBannerName,
   isEnglish,
@@ -30,12 +33,15 @@ export const UnconnectedTeacherHomepage = ({
   queryStringOpen,
   schoolYear,
   showCensusBanner,
+  showFinishTeacherApplication,
+  showReturnToReopenedTeacherApplication,
   showNpsSurvey,
   specialAnnouncement,
   teacherEmail,
   teacherId,
   teacherName,
   topCourse,
+  topPlCourse,
   beginGoogleImportRosterFlow
 }) => {
   const censusBanner = useRef(null);
@@ -138,6 +144,7 @@ export const UnconnectedTeacherHomepage = ({
 
   const showDonorBanner = isEnglish && donorBannerName;
 
+  // [MEG] TODO: Once experiment is complete, modify buttonUrl not to use experiment
   return (
     <div>
       <HeaderBanner
@@ -171,6 +178,26 @@ export const UnconnectedTeacherHomepage = ({
           </div>
         )}
         {!showAnnouncement && <br />}
+        {showFinishTeacherApplication && (
+          <BorderedCallToAction
+            headingText="Return to Your Application"
+            descriptionText="Finish applying for our Professional Learning Program"
+            buttonText="Finish Application"
+            buttonColor={Button.ButtonColor.orange}
+            buttonUrl="/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
+            solidBorder={true}
+          />
+        )}
+        {showReturnToReopenedTeacherApplication && (
+          <BorderedCallToAction
+            headingText="Return to Your Application"
+            descriptionText="Your Regional Partner has requested updates to your Professional Learning Application."
+            buttonText="Return to Application"
+            buttonColor={Button.ButtonColor.orange}
+            buttonUrl="/pd/application/teacher?enableExperiments=teacher-application-saving-reopening"
+            solidBorder={true}
+          />
+        )}
         {displayCensusBanner && (
           <div>
             <CensusTeacherBanner
@@ -214,6 +241,14 @@ export const UnconnectedTeacherHomepage = ({
           showAllCoursesLink={true}
           isTeacher={true}
         />
+        {(plCourses?.length > 0 || topPlCourse) && (
+          <RecentCourses
+            courses={plCourses}
+            topCourse={topPlCourse}
+            showAllCoursesLink={true}
+            isProfessionalLearningCourse={true}
+          />
+        )}
         <TeacherResources />
         <ProjectWidgetWithData
           canViewFullList={true}
@@ -229,6 +264,7 @@ UnconnectedTeacherHomepage.propTypes = {
   announcement: shapes.teacherAnnouncement,
   canViewAdvancedTools: PropTypes.bool,
   censusQuestion: PropTypes.oneOf(['how_many_10_hours', 'how_many_20_hours']),
+  plCourses: shapes.courses,
   courses: shapes.courses,
   donorBannerName: PropTypes.string,
   hocLaunch: PropTypes.string,
@@ -239,11 +275,14 @@ UnconnectedTeacherHomepage.propTypes = {
   schoolYear: PropTypes.number,
   showCensusBanner: PropTypes.bool.isRequired,
   showNpsSurvey: PropTypes.bool,
+  showFinishTeacherApplication: PropTypes.bool,
+  showReturnToReopenedTeacherApplication: PropTypes.bool,
   specialAnnouncement: shapes.specialAnnouncement,
   teacherEmail: PropTypes.string,
   teacherId: PropTypes.number,
   teacherName: PropTypes.string,
   topCourse: shapes.topCourse,
+  topPlCourse: shapes.topCourse,
   beginGoogleImportRosterFlow: PropTypes.func
 };
 

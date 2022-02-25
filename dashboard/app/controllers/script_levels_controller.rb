@@ -6,7 +6,6 @@ require 'cdo/script_constants'
 class ScriptLevelsController < ApplicationController
   check_authorization
   include LevelsHelper
-  include ScriptConstants
   include VersionRedirectOverrider
 
   # Default s-maxage to use for script level pages which are configured as
@@ -75,7 +74,7 @@ class ScriptLevelsController < ApplicationController
     redirect_to(path) && return
   end
 
-  use_database_pool show: :persistent
+  use_reader_connection_for_route(:show)
   def show
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
@@ -117,7 +116,9 @@ class ScriptLevelsController < ApplicationController
 
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
-    authorize! :read, @script_level, params.slice(:login_required)
+    # If we have a signed out user for any of these cases we will want to redirect them to sign in
+    authenticate_user! if !can?(:read, @script) || @script.login_required? || (!params.nil? && params[:login_required] == "true")
+    return render 'levels/no_access' unless can?(:read, @script_level)
 
     if current_user && current_user.script_level_hidden?(@script_level)
       view_options(full_width: true)
@@ -511,18 +512,15 @@ class ScriptLevelsController < ApplicationController
       )
     end
 
-    # To do: rename this variable, as it gets passed into redux as sectionData.section.codeReviewEnabled,
-    # which is confusing as there is a section-level method (used below, code_review_enabled?)
-    # that is different from what is returned here.
-    @code_review_enabled = if DCDO.get('code_review_groups_enabled', false)
-                             @level.is_a?(Javalab) &&
-                               current_user.present? &&
-                               (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
-                           else
-                             @level.is_a?(Javalab) &&
-                               current_user.present? &&
-                               (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
-                           end
+    @code_review_enabled_for_level = if DCDO.get('code_review_groups_enabled', false)
+                                       @level.is_a?(Javalab) &&
+                                        current_user.present? &&
+                                        (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
+                                     else
+                                       @level.is_a?(Javalab) &&
+                                         current_user.present? &&
+                                         (current_user.teacher? || current_user&.sections_as_student&.all?(&:code_review_enabled?))
+                                     end
 
     view_options(
       full_width: true,
@@ -530,12 +528,13 @@ class ScriptLevelsController < ApplicationController
       has_i18n: @game.has_i18n?,
       is_challenge_level: @script_level.challenge,
       is_bonus_level: @script_level.bonus,
-      useGoogleBlockly: params[:blocklyVersion] == "Google",
+      blocklyVersion: params[:blocklyVersion],
       azure_speech_service_voices: azure_speech_service_options[:voices],
       authenticity_token: form_authenticity_token,
       disallowed_html_tags: disallowed_html_tags
     )
-    readonly_view_options if @level.channel_backed? && params[:version]
+
+    readonly_view_options if @level.channel_backed? && params[:version].present?
 
     # Add video generation URL for only the last level of Dance
     # If we eventually want to add video generation for other levels or level

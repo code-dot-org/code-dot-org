@@ -361,4 +361,70 @@ describe('CourseEditor', () => {
       $.ajax.restore();
     });
   });
+
+  it('shows error when version year is set but family name is not', () => {
+    sinon.stub($, 'ajax');
+    const wrapper = createWrapper({});
+
+    const courseEditor = wrapper.find('CourseEditor');
+    courseEditor.setState({
+      versionYear: '1991',
+      familyName: ''
+    });
+
+    const saveBar = wrapper.find('SaveBar');
+
+    const saveAndKeepEditingButton = saveBar.find('button').at(1);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
+    saveAndKeepEditingButton.simulate('click');
+
+    expect($.ajax).to.not.have.been.called;
+
+    expect(courseEditor.state().isSaving).to.equal(false);
+    expect(courseEditor.state().error).to.equal(
+      'Please set both version year and family name.'
+    );
+
+    expect(
+      wrapper
+        .find('.saveBar')
+        .contains('Error Saving: Please set both version year and family name.')
+    ).to.be.true;
+
+    $.ajax.restore();
+  });
+
+  it('shows error when family name is set but version year is not', () => {
+    sinon.stub($, 'ajax');
+    const wrapper = createWrapper({});
+
+    const courseEditor = wrapper.find('CourseEditor');
+    courseEditor.setState({
+      versionYear: '',
+      familyName: 'new-family-name'
+    });
+
+    const saveBar = wrapper.find('SaveBar');
+
+    const saveAndKeepEditingButton = saveBar.find('button').at(1);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
+    saveAndKeepEditingButton.simulate('click');
+
+    expect($.ajax).to.not.have.been.called;
+
+    expect(courseEditor.state().isSaving).to.equal(false);
+    expect(courseEditor.state().error).to.equal(
+      'Please set both version year and family name.'
+    );
+
+    expect(
+      wrapper
+        .find('.saveBar')
+        .contains('Error Saving: Please set both version year and family name.')
+    ).to.be.true;
+
+    $.ajax.restore();
+  });
 });

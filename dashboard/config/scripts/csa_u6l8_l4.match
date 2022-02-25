@@ -3,14 +3,14 @@ title 'Check for Understanding'
 description 'Match each term to its correct definition.'
 height 'auto'
 
-question 'Question'
-answer 'Answer1'
+question 'lexicographical order'
+answer 'placing words in alphabetical order'
 
-question 'Question'
-answer 'Answer2'
+question 'mutable'
+answer 'the ability to change after initialization'
 
-question 'Question'
-answer 'Answer3'
+question 'parsing'
+answer 'the process of dividing text into parts for analysis or conversion'
 
-question 'Question'
-answer 'Answer4'
+question 'postcondition'
+answer 'a condition that must be true just after a block of code executes'

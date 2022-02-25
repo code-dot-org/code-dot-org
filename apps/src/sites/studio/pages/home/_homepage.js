@@ -14,7 +14,6 @@ import {
   setPageType,
   setLessonExtrasUnitIds,
   setTextToSpeechUnitIds,
-  setPreReaderUnitIds,
   setValidGrades,
   setShowLockSectionField // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -23,6 +22,7 @@ import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import experiments from '@cdo/apps/util/experiments';
 
 $(document).ready(showHomepage);
 
@@ -39,7 +39,6 @@ function showHomepage() {
   store.dispatch(setValidGrades(homepageData.valid_grades));
   store.dispatch(setLessonExtrasUnitIds(homepageData.lessonExtrasUnitIds));
   store.dispatch(setTextToSpeechUnitIds(homepageData.textToSpeechUnitIds));
-  store.dispatch(setPreReaderUnitIds(homepageData.preReaderUnitIds));
   store.dispatch(setAuthProviders(homepageData.providers));
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setPageType(pageTypes.homepage));
@@ -70,6 +69,10 @@ function showHomepage() {
 
   const announcement = getTeacherAnnouncement(announcementOverride);
 
+  const allowTeacherAppReopening = experiments.isEnabled(
+    experiments.TEACHER_APPLICATION_SAVING_REOPENING
+  );
+
   ReactDOM.render(
     <Provider store={store}>
       <div>
@@ -78,8 +81,10 @@ function showHomepage() {
             announcement={announcement}
             hocLaunch={homepageData.hocLaunch}
             courses={homepageData.courses}
+            plCourses={homepageData.plCourses}
             joinedSections={homepageData.joined_sections}
             topCourse={homepageData.topCourse}
+            topPlCourse={homepageData.topPlCourse}
             queryStringOpen={query['open']}
             canViewAdvancedTools={homepageData.canViewAdvancedTools}
             isEnglish={isEnglish}
@@ -87,6 +92,14 @@ function showHomepage() {
             censusQuestion={homepageData.censusQuestion}
             showCensusBanner={homepageData.showCensusBanner}
             showNpsSurvey={homepageData.showNpsSurvey}
+            showFinishTeacherApplication={
+              allowTeacherAppReopening &&
+              homepageData.showFinishTeacherApplication
+            }
+            showReturnToReopenedTeacherApplication={
+              allowTeacherAppReopening &&
+              homepageData.showReturnToReopenedTeacherApplication
+            }
             donorBannerName={homepageData.donorBannerName}
             teacherName={homepageData.teacherName}
             teacherId={homepageData.teacherId}

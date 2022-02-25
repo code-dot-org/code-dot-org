@@ -56,24 +56,11 @@ social:
 
   - hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
   - hoc_cse_enable_svg = DCDO.get("hoc_cse_enable_svg", false)
-  - hoc_image = ["soon-hoc", "actual-hoc"].include?(hoc_mode) ? "/images/hoc-cse-banner.png" : "/images/hoc2020-banner.png"
+  - hoc_image = ["soon-hoc", "actual-hoc", "post-hoc"].include?(hoc_mode) ? "/images/hoc-cse-banner.png" : "/images/hoc2020-banner.png"
 
   .full-resource-block{style: "position: relative"}
-    - if ["soon-hoc", "actual-hoc"].include?(hoc_mode) && hoc_cse_enable_svg
-      :css
-        .bars path { mix-blend-mode: multiply; }
-      %a{href: CDO.hourofcode_url('/learn')}
-        #bars{style: "display: flex; padding-bottom: 10px; padding-top: 10px; border: 1px solid #949ca2"}
-          #left-bars-img{style: "width: 33%; align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-left-fade.png); background-position: 100% 50%; background-size: contain; background-repeat: no-repeat"}
-          %div{style: "width: 33%; box-shadow: 15px 0px 4px 3px rgb(255 255 255), -5px 0px 4px 3px rgb(255 255 255); z-index: 1; position: relative; min-height: 200px"}
-            %img{src:"/shared/images/hour-of-code-logo.png", style: "top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80%; position: absolute;"}
-          #right-bars-img{style: "width: 33%; align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-cse-right-fade.png); background-position: 0% 50%; background-size: contain; background-repeat: no-repeat"}
-        %svg#left-bars-svg{viewBox: "0 0 210 250", style: "opacity: 0; position: absolute; width: 0; height: 0"}
-        %svg#right-bars-svg{viewBox: "0 0 210 250", style: "opacity: 0; position: absolute; width: 0; height: 0"}
-
-    - else
-      %a{href: CDO.hourofcode_url('/learn')}
-        %img.full-resource-image{src: hoc_image, style: "border: 1px solid #949ca2"}
+    %a{href: CDO.hourofcode_url('/learn')}
+      %img.full-resource-image{src: hoc_image, style: "border: 1px solid #949ca2"}
     .activities-info
       %span
         %h2.resource-title.white= I18n.t(:hoc_overview_partner_activities_title)
@@ -83,6 +70,3 @@ social:
           %button.tutorial-info-start.tutorial-gray= I18n.t(:hoc_overview_partner_activities_link)
 
   .hoc-tiles-container
-
-- if ["soon-hoc", "actual-hoc"].include?(hoc_mode) && hoc_cse_enable_svg
-  %script{src: "/js/cse-bars.js"}

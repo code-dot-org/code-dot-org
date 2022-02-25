@@ -13,7 +13,7 @@ import {
   getLevelResult
 } from '@cdo/apps/templates/progress/progressHelpers';
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {authorizeLockable} from './lessonLockRedux';
 
 // Action types
@@ -24,7 +24,6 @@ const MERGE_RESULTS = 'progress/MERGE_RESULTS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
-const SET_IS_HOC_UNIT = 'progress/SET_IS_HOC_UNIT';
 const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
 const SET_IS_MINI_VIEW = 'progress/SET_IS_MINI_VIEW';
@@ -47,7 +46,6 @@ const initialState = {
   saveAnswersBeforeNavigation: null,
   lessons: null,
   lessonGroups: null,
-  unitData: {},
   scriptId: null,
   scriptName: null,
   unitTitle: null,
@@ -58,6 +56,7 @@ const initialState = {
   // unitProgress is of type unitProgressType (a map of levelId ->
   // studentLevelProgressType)
   unitProgress: {},
+  unitProgressHasLoaded: false,
   // levelResults is a map of levelId -> TestResult
   // note: eventually, we expect usage of this field to be replaced with unitProgress
   levelResults: {},
@@ -65,7 +64,6 @@ const initialState = {
   peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
   postMilestoneDisabled: false,
-  isHocScript: null,
   isAge13Required: false,
   // Do students see summary view by default?
   studentDefaultsSummaryView: true,
@@ -100,13 +98,11 @@ export default function reducer(state = initialState, action) {
       lessons: processedLessons(lessons, action.professionalLearningCourse),
       lessonGroups: action.lessonGroups,
       peerReviewLessonInfo: action.peerReviewLessonInfo,
-      unitData: action.unitData,
       scriptId: action.scriptId,
       scriptName: action.scriptName,
       unitTitle: action.unitTitle,
       unitDescription: action.unitDescription,
       unitStudentDescription: action.unitStudentDescription,
-      betaTitle: action.betaTitle,
       courseId: action.courseId,
       currentLessonId: currentLessonId,
       hasFullProgress: action.isFullProgress,
@@ -118,7 +114,8 @@ export default function reducer(state = initialState, action) {
   if (action.type === SET_UNIT_PROGRESS) {
     return {
       ...state,
-      unitProgress: processServerStudentProgress(action.unitProgress)
+      unitProgress: processServerStudentProgress(action.unitProgress),
+      unitProgressHasLoaded: true
     };
   }
 
@@ -187,13 +184,6 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       postMilestoneDisabled: true
-    };
-  }
-
-  if (action.type === SET_IS_HOC_UNIT) {
-    return {
-      ...state,
-      isHocScript: action.isHocScript
     };
   }
 
@@ -344,7 +334,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
       return;
     }
 
-    if (data.isVerifiedTeacher) {
+    if (data.isVerifiedInstructor) {
       dispatch(setVerified());
     }
 
@@ -402,13 +392,11 @@ export const initProgress = ({
   lessons,
   lessonGroups,
   peerReviewLessonInfo,
-  unitData,
   scriptId,
   scriptName,
   unitTitle,
   unitDescription,
   unitStudentDescription,
-  betaTitle,
   courseId,
   isFullProgress,
   isLessonExtras,
@@ -421,13 +409,11 @@ export const initProgress = ({
   lessons,
   lessonGroups,
   peerReviewLessonInfo,
-  unitData,
   scriptId,
   scriptName,
   unitTitle,
   unitDescription,
   unitStudentDescription,
-  betaTitle,
   courseId,
   isFullProgress,
   isLessonExtras,
@@ -475,10 +461,6 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaLessonIds) => ({
 });
 
 export const disablePostMilestone = () => ({type: DISABLE_POST_MILESTONE});
-export const setIsHocScript = isHocScript => ({
-  type: SET_IS_HOC_UNIT,
-  isHocScript
-});
 export const setIsAge13Required = isAge13Required => ({
   type: SET_IS_AGE_13_REQUIRED,
   isAge13Required

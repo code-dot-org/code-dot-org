@@ -809,6 +809,10 @@ FactoryGirl.define do
       school_type 'Public school'
     end
 
+    trait :with_no_school do
+      school(-1)
+    end
+
     trait :with_multiple_workshops do
       able_to_attend_multiple ['December 11-15, 2017 in Indiana, USA']
 
@@ -820,10 +824,9 @@ FactoryGirl.define do
     pay_fee Pd::Application::TeacherApplication.options[:pay_fee].first
     plan_to_teach Pd::Application::TeacherApplication.options[:plan_to_teach].first
     completing_on_behalf_of_someone_else 'No'
-    cs_how_many_minutes 45
-    cs_how_many_days_per_week 5
-    cs_how_many_weeks_per_year 20
-    cs_total_course_hours 75
+    cs_how_many_minutes '45'
+    cs_how_many_days_per_week '5'
+    cs_how_many_weeks_per_year '20'
     replace_existing 'No, this course will be added to the schedule in addition to an existing computer science course'
 
     trait :csp do
@@ -855,12 +858,6 @@ FactoryGirl.define do
       after(:create) do |application|
         application.update!(status: 'accepted_not_notified')
         application.lock!
-      end
-    end
-
-    trait :incomplete do
-      after(:create) do |application|
-        application.update!(status: 'incomplete')
       end
     end
   end

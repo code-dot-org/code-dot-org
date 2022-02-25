@@ -5,18 +5,30 @@ import {
   WebSocketMessageType,
   StatusMessageType,
   STATUS_MESSAGE_PREFIX,
-  ExecutionType
+  ExecutionType,
+  CsaViewMode
 } from '@cdo/apps/javalab/constants';
 import * as ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
+import * as TestResultHandler from '@cdo/apps/javalab/testResultHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
+import {
+  UserTestResultSignalType,
+  TestStatus
+} from '../../../src/javalab/constants';
 
 describe('JavabuilderConnection', () => {
-  let onOutputMessage, handleException, connection, setIsRunning, setIsTesting;
+  let onOutputMessage,
+    handleException,
+    connection,
+    setIsRunning,
+    setIsTesting,
+    handleTestResult;
 
   beforeEach(() => {
     sinon.stub(project, 'getCurrentId');
     onOutputMessage = sinon.stub();
     handleException = sinon.stub(ExceptionHandler, 'handleException');
+    handleTestResult = sinon.stub(TestResultHandler, 'onTestResult');
     setIsRunning = sinon.stub();
     setIsTesting = sinon.stub();
     connection = new JavabuilderConnection(
@@ -28,12 +40,14 @@ describe('JavabuilderConnection', () => {
       sinon.stub(),
       setIsRunning,
       setIsTesting,
-      ExecutionType.RUN
+      ExecutionType.RUN,
+      CsaViewMode.NEIGHBORHOOD
     );
   });
 
   afterEach(() => {
     ExceptionHandler.handleException.restore();
+    TestResultHandler.onTestResult.restore();
     project.getCurrentId.restore();
   });
 
@@ -60,6 +74,23 @@ describe('JavabuilderConnection', () => {
       };
       connection.onMessage(event);
       expect(onOutputMessage).to.have.been.calledWith(data.value);
+    });
+
+    it('passes the parsed event data to the test result handler for test results', () => {
+      const data = {
+        type: WebSocketMessageType.TEST_RESULT,
+        value: UserTestResultSignalType.TEST_STATUS,
+        detail: {
+          status: TestStatus.SUCCESSFUL,
+          className: 'MyTestClass',
+          methodName: 'myTestMethod'
+        }
+      };
+      const event = {
+        data: JSON.stringify(data)
+      };
+      connection.onMessage(event);
+      expect(handleTestResult).to.have.been.calledWith(data, onOutputMessage);
     });
 
     it('appends [JAVALAB] to status messages', () => {
@@ -120,7 +151,8 @@ describe('JavabuilderConnection', () => {
         sinon.stub(),
         setIsRunning,
         setIsTesting,
-        executionType
+        executionType,
+        CsaViewMode.NEIGHBORHOOD
       );
     }
   });

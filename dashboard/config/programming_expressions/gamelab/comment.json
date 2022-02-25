@@ -1,6 +1,8 @@
 {
-  "func": "comment",
-  "block": "// Comment",
-  "expansion": "// ",
-  "category": "Functions"
+  "key": "comment",
+  "name": "Comment",
+  "category": "Functions",
+  "category_key": "functions",
+  "short_description": "Game Lab - Comment",
+  "syntax": "// Comment"
 }

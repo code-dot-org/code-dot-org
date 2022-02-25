@@ -320,11 +320,12 @@ class ProjectsController < ApplicationController
       small_footer: !iframe_embed_app_and_code && !sharing && (@game.uses_small_footer? || @level.enable_scrolling?),
       has_i18n: @game.has_i18n?,
       game_display_name: data_t("game.name", @game.name),
+      app_name: Rails.env.production? ? t(:appname) : "#{t(:appname)} [#{Rails.env}]",
       azure_speech_service_voices: azure_speech_service_options[:voices],
       disallowed_html_tags: disallowed_html_tags
     )
 
-    if ['artist', 'spritelab'].include? params[:key]
+    if [Game::ARTIST, Game::SPRITELAB, Game::POETRY].include? @game.app
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
 
@@ -381,6 +382,7 @@ class ProjectsController < ApplicationController
       remix_parent_id: remix_parent_id,
     )
     AssetBucket.new.copy_files src_channel_id, new_channel_id if uses_asset_bucket?(project_type)
+    AssetBucket.new.copy_level_starter_assets src_channel_id, new_channel_id if uses_starter_assets?(project_type)
     animation_list = uses_animation_bucket?(project_type) ? AnimationBucket.new.copy_files(src_channel_id, new_channel_id) : []
     SourceBucket.new.remix_source src_channel_id, new_channel_id, animation_list
     FileBucket.new.copy_files src_channel_id, new_channel_id if uses_file_bucket?(project_type)
@@ -388,7 +390,7 @@ class ProjectsController < ApplicationController
   end
 
   private def uses_asset_bucket?(project_type)
-    %w(applab makerlab gamelab spritelab).include? project_type
+    %w(applab makerlab gamelab spritelab javalab).include? project_type
   end
 
   private def uses_animation_bucket?(project_type)
@@ -397,6 +399,10 @@ class ProjectsController < ApplicationController
 
   private def uses_file_bucket?(project_type)
     %w(weblab).include? project_type
+  end
+
+  private def uses_starter_assets?(project_type)
+    %w(javalab).include? project_type
   end
 
   def export_create_channel

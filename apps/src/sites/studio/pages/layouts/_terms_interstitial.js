@@ -21,14 +21,14 @@ $(document).ready(function() {
       data: $(this).serialize(),
       dataType: 'json',
       complete: function(data) {
-        $('#terms-modal').modal('hide');
+        $('#implicit-terms-modal').modal('hide');
         location.reload();
       }
     });
   });
 
   $('#later-link').click(function() {
-    $('#terms-modal').modal('hide');
+    $('#implicit-terms-modal').modal('hide');
   });
 });
 
@@ -58,7 +58,7 @@ function getCookie(key) {
 $(document).ready(function() {
   var already_shown = !!getCookie('hide_tos');
   if (!already_shown) {
-    $('#terms-modal').modal('show');
+    $('#implicit-terms-modal').modal('show');
     setCookie('hide_tos', '1');
   }
 });

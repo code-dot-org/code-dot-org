@@ -53,6 +53,35 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal 2, sl2.lesson_total
   end
 
+  class InstructorInTrainingTests < ActiveSupport::TestCase
+    setup do
+      @authorized_teacher = create :authorized_teacher
+      @student = create :student
+
+      @pl_script = create(:script, name: 'test-script',  instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator,  participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: false)
+      @instructor_in_training_sl = create(:script_level, levels: [create(:level)], script: @pl_script, instructor_in_training: true)
+    end
+
+    test 'view_as_instructor_in_training? returns false if not instructor in training level' do
+      refute @sl.view_as_instructor_in_training?(@authorized_teacher)
+    end
+
+    test 'view_as_instructor_in_training? returns false if not a pl course' do
+      sl = create(:script_level, levels: [create(:level)], instructor_in_training: true)
+
+      refute sl.view_as_instructor_in_training?(@authorized_teacher)
+    end
+
+    test 'view_as_instructor_in_training? returns false if can not be a participant in course' do
+      refute @instructor_in_training_sl.view_as_instructor_in_training?(@student)
+    end
+
+    test 'view_as_instructor_in_training? returns true if participant in pl course on instructor in training level' do
+      assert @instructor_in_training_sl.view_as_instructor_in_training?(@authorized_teacher)
+    end
+  end
+
   class ExampleSolutionsTests < ActiveSupport::TestCase
     setup do
       @authorized_teacher = create :authorized_teacher
@@ -227,7 +256,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test 'teacher panel summarize' do
-    sl = create_script_level_with_ancestors
+    sl = create_script_level_with_ancestors({assessment: false})
 
     student = create :student
     teacher = create :teacher
@@ -253,7 +282,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     section = create :section, teacher: teacher
     section.students << student # we query for feedback where student is currently in section
 
-    sl = create_script_level_with_ancestors
+    sl = create_script_level_with_ancestors({assessment: false})
     sl_other = create_script_level_with_ancestors({levels: sl.levels})
 
     User.track_level_progress(
@@ -340,7 +369,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
     level_1 = create :level, name: 'level 1'
     level_1.contained_level_names = [contained_level_1.name]
-    sl2 = create_script_level_with_ancestors({levels: [level_1]})
+    sl2 = create_script_level_with_ancestors({levels: [level_1], assessment: false})
 
     create :teacher_feedback, student: student, teacher: teacher, level: level_1, script: sl2.script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking
 
@@ -620,7 +649,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script_level = create_script_level_with_ancestors({levels: [bubble_choice_level]})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
     bubble_choice_parent = true
-    assert_equal "/s/#{script_level.script.name}", script_level.next_level_or_redirect_path_for_user(student, nil, bubble_choice_parent)
+    assert_equal "/s/#{script_level.script.name}?completedLessonNumber=1", script_level.next_level_or_redirect_path_for_user(student, nil, bubble_choice_parent)
   end
 
   # Bubble Choice parent levels mid-lesson redirect to next level.
@@ -664,7 +693,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     student.stubs(:has_pilot_experiment?).returns true
     script_level = create_script_level_with_ancestors({})
     script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
-    assert_equal "/s/#{script_level.script.name}", script_level.next_level_or_redirect_path_for_user(student)
+    assert_equal "/s/#{script_level.script.name}?completedLessonNumber=1", script_level.next_level_or_redirect_path_for_user(student)
   end
 
   # For script where show_unit_overview_between_lessons? == true

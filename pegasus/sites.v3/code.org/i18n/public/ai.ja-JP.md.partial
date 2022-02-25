@@ -52,7 +52,7 @@ AI および機械学習は私たちの世界全体に生活の仕方および�
 <p>AI および機械学習モジュールは大まかにCS Discoveriesの <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >標準モジュール</a> またはオプション  <a href="https://studio.code.org/s/csd7-2021">ユニットとして授業を行う 5週間のカリキュラムモジュールです</a>。 本科は AI 倫理バイアスの問題の調査および基本的コンセプトを探索し説明することに焦点を置きます</p><p>機械学習は大規模なセットのデータに依存するため、新規のユニットは医療、人口統計などの実生活におけるデータベースを含んで学生を引き込み、「機械学習がどのような問題を解決するのに役立つか」などの質問について考えます。 「AI はどのように社会に役立てるか？ 」 「誰がAIから恩恵を受け入れるか？」  「誰が害を受けるか？」 「誰が参加するか？」 「誰が足りないか？」  </p>
 <p>倫理的配慮がこれらのテクノロジーの影響に関して頻繁に話し合われるポイントとともに、これらの議論の最前部にあります。 これは学生がテクノロジーがどのように機能するかの技術的な理解を学びながら、これらのテクノロジーの全体的かつ思慮深い理解を発展させるのに役立ちます。</p>
 </div>
-<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>モジュールを探索</button></a></div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021?viewAs=Instructor" target="_blank"><button>Explore the module</button></a></div>
 <div class="clear"></div>
 </div>
 

@@ -14,6 +14,8 @@ class Ability
     can :read, :all
     cannot :read, [
       TeacherFeedback,
+      CourseOffering,
+      UnitGroup, # see override below
       Script, # see override below
       Lesson, # see override below
       ScriptLevel, # see override below
@@ -249,58 +251,59 @@ class Ability
       end
     end
 
-    can [:vocab, :resources, :code, :standards], UnitGroup do
-      true
+    # Override UnitGroup, Unit, Lesson and ScriptLevel.
+    can [:vocab, :resources, :code, :standards, :get_rollup_resources], UnitGroup do |unit_group|
+      # Assumes if one unit in a unit group is migrated they all are
+      unit_group.default_units[0].is_migrated && !unit_group.plc_course && can?(:read, unit_group)
     end
 
-    # Override UnitGroup, Unit, Lesson and ScriptLevel.
+    can [:vocab, :resources, :code, :standards, :get_rollup_resources], Script do |script|
+      script.is_migrated && can?(:read, script)
+    end
+
     can :read, UnitGroup do |unit_group|
-      if unit_group.in_development?
-        user.permission?(UserPermission::LEVELBUILDER)
-      elsif unit_group.pilot?
-        unit_group.has_pilot_access?(user)
+      if unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
+        if unit_group.in_development?
+          user.permission?(UserPermission::LEVELBUILDER)
+        elsif unit_group.pilot?
+          unit_group.has_pilot_access?(user)
+        else
+          true
+        end
       else
-        true
+        false
       end
     end
 
     can :read, Script do |script|
-      if script.in_development?
-        user.permission?(UserPermission::LEVELBUILDER)
-      elsif script.pilot?
-        script.has_pilot_access?(user)
+      if script.can_be_participant?(user) || script.can_be_instructor?(user)
+        if script.in_development?
+          user.permission?(UserPermission::LEVELBUILDER)
+        elsif script.pilot?
+          script.has_pilot_access?(user)
+        else
+          true
+        end
       else
-        true
+        false
       end
     end
 
     can :read, ScriptLevel do |script_level, params|
       script = script_level.script
-      if script.in_development?
-        user.permission?(UserPermission::LEVELBUILDER)
-      elsif script.pilot?
-        script.has_pilot_access?(user)
-      else
+      if can?(:read, script)
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
         user.persisted? || !login_required
+      else
+        false
       end
-    end
-
-    can [:vocab, :resources, :code, :standards], Script do |script|
-      !!script.is_migrated
     end
 
     can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson|
       script = lesson.script
-      if script.in_development?
-        user.permission?(UserPermission::LEVELBUILDER)
-      elsif script.pilot?
-        script.has_pilot_access?(user)
-      else
-        true
-      end
+      can?(:read, script)
     end
 
     # Handle standalone projects as a special case.
@@ -320,7 +323,18 @@ class Ability
     # In order to accommodate the possibility of there being no database, we
     # need to check that the user is persisted before checking the user
     # permissions.
-    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+
+    # When in levelbuilder_mode, we want to grant users with levelbuilder
+    # permissions broad abilities to change curriculum and form objects.
+    #
+    # Note: We also grant these abilities in the 'test' environment to support
+    # running UI tests that cover level editing without having levelbuilder_mode
+    # set. An unfortunate side effect of this is that unit tests that cover the
+    # levelbuilder permission will mimic levelbuilder_mode instead of production
+    # by default.
+    if user.persisted? &&
+      user.permission?(UserPermission::LEVELBUILDER) &&
+      (Rails.application.config.levelbuilder_mode || rack_env?(:test))
       can :manage, [
         Block,
         SharedBlocklyFunction,
@@ -328,7 +342,9 @@ class Ability
         Game,
         Level,
         Lesson,
+        ProgrammingEnvironment,
         ProgrammingExpression,
+        CourseOffering,
         UnitGroup,
         Resource,
         Script,
@@ -339,7 +355,6 @@ class Ability
         Foorm::Form,
         Foorm::Library,
         Foorm::LibraryQuestion,
-        :javabuilder_session
       ]
 
       # Only custom levels are editable.
@@ -357,6 +372,7 @@ class Ability
     end
 
     if user.persisted?
+      # TODO: should add editor experiment for Unit Group
       editor_experiment = Experiment.get_editor_experiment(user)
       if editor_experiment
         can :index, Level
@@ -369,10 +385,11 @@ class Ability
 
     # Checks if user is directly enrolled in pilot or has a teacher enrolled
     if user.persisted?
-      if user.has_pilot_experiment?(CSA_PILOT) ||
+      if user.permission?(UserPermission::LEVELBUILDER) ||
+        user.has_pilot_experiment?(CSA_PILOT) ||
         user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT)} ||
-          user.has_pilot_experiment?(CSA_PILOT_FACILITATORS) ||
-          user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)}
+        user.has_pilot_experiment?(CSA_PILOT_FACILITATORS) ||
+        user.teachers.any? {|t| t.has_pilot_experiment?(CSA_PILOT_FACILITATORS)}
 
         can :get_access_token, :javabuilder_session
       end
@@ -395,6 +412,7 @@ class Ability
         Game,
         Level,
         UnitGroup,
+        CourseOffering,
         Script,
         Lesson,
         ScriptLevel,

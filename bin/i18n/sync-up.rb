@@ -13,7 +13,7 @@ def sync_up
     puts "Sync up starting"
     CROWDIN_PROJECTS.each do |name, options|
       puts "Uploading source strings to #{name} project"
-      command = "crowdin --config #{options[:config_file]} --identity #{options[:identity_file]} upload sources"
+      command = "crowdin upload sources --config #{options[:config_file]} --identity #{options[:identity_file_v2]}"
       Open3.popen2(command) do |_stdin, stdout, status_thread|
         while line = stdout.gets
           # skip lines detailing individual file upload, unless that file

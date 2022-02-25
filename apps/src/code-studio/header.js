@@ -1,5 +1,6 @@
 /* globals dashboard */
 
+import $ from 'jquery';
 import {
   showProjectHeader,
   showMinimalProjectHeader,
@@ -22,7 +23,7 @@ import {
   setUserSignedIn,
   setInitialData
 } from '@cdo/apps/templates/currentUserRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
@@ -38,7 +39,6 @@ var header = {};
 /**
  * @param {object} scriptData
  * @param {boolean} scriptData.disablePostMilestone
- * @param {boolean} scriptData.isHocScript
  * @param {string} scriptData.name
  * @param {object} lessonData{{
  *   script_id: number,
@@ -121,7 +121,7 @@ header.build = function(
     );
     // Only render sign in callout if the course is CSF and the user is
     // not signed in
-    if (scriptData.is_csf && signedIn === false) {
+    if (scriptData.show_sign_in_callout && signedIn === false) {
       ReactDOM.render(
         <SignInCalloutWrapper />,
         document.querySelector('.signin_callout_wrapper')
@@ -137,6 +137,25 @@ header.buildProjectInfoOnly = function() {
     </Provider>,
     document.querySelector('.header_level')
   );
+};
+
+// When the page is cached, this function is called to retrieve and set the
+// sign-in button or user menu in the DOM.
+header.buildUserMenu = function() {
+  // Need to wait until the document is ready so we can accurately check to see
+  // if the create menu is present.
+  $(document).ready(() => {
+    const showCreateMenu = $('.create_menu').length > 0;
+
+    fetch(`/dashboardapi/user_menu?showCreateMenu=${showCreateMenu}`, {
+      credentials: 'same-origin'
+    })
+      .then(response => response.text())
+      .then(data => $('#sign_in_or_user').html(data))
+      .catch(err => {
+        console.log(err);
+      });
+  });
 };
 
 function setupReduxSubscribers(store) {
@@ -179,10 +198,7 @@ function setUpGlobalData(store) {
       store.dispatch(setUserSignedIn(data.is_signed_in));
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
-        data.is_verified_teacher && store.dispatch(setVerified());
-        ensureHeaderSigninState(true, data.short_name);
-      } else {
-        ensureHeaderSigninState(false);
+        data.is_verified_instructor && store.dispatch(setVerified());
       }
     })
     .catch(err => {
@@ -190,25 +206,6 @@ function setUpGlobalData(store) {
     });
 }
 setUpGlobalData(getStore());
-
-// Some of our cached pages can become cached by the browser with the
-// wrong sign-in state. This is a temporary patch to ensure that the header
-// displays the correct sign-in state for the user.
-function ensureHeaderSigninState(isSignedIn, shortName) {
-  const userMenu = document.querySelector('#header_user_menu');
-  const signinButton = document.querySelector('#signin_button');
-
-  if (isSignedIn && userMenu.style.display === 'none') {
-    userMenu.style.display = 'block';
-    signinButton.style.display = 'none';
-
-    const displayName = document.querySelector('#header_display_name');
-    displayName.textContent = shortName;
-  } else if (!isSignedIn && signinButton.style.display === 'none') {
-    userMenu.style.display = 'none';
-    signinButton.style.display = 'inline';
-  }
-}
 
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(refreshProjectName());
