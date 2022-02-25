@@ -88,6 +88,7 @@ export default function ProgrammingExpressionEditor({
             navigateToHref(showPath);
           } else {
             setLastUpdated(Date.now());
+            setError(null);
           }
         } else {
           setError(response.statusText);
