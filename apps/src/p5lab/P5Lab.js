@@ -673,6 +673,8 @@ export default class P5Lab {
    */
   onPause() {}
 
+  alertStudent(msg) {}
+
   onIsRunningChange() {
     this.setCrosshairCursorForPlaySpace();
   }
@@ -1374,6 +1376,7 @@ export default class P5Lab {
         // If the setup() method was not provided, we need to run the interpreter
         // for the first time at this point:
         this.JSInterpreter.executeInterpreter(true);
+        this.alertStudent(this.JSInterpreter.executionError?.message);
         this.interpreterStarted = true;
       }
       if (this.eventHandlers.setup) {

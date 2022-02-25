@@ -89,6 +89,11 @@ export default class SpriteLab extends P5Lab {
     }
   }
 
+  alertStudent(msg) {
+    if (msg) {
+      console.log(msg);
+    }
+  }
   onPromptAnswer(variableName, value) {
     getStore().dispatch(popPrompt());
     this.library.onPromptAnswer(variableName, value);
