@@ -72,6 +72,7 @@ const FormController = props => {
     onSetPage,
     onSuccessfulSubmit,
     onSuccessfulSave,
+    savedStatus,
     serializeAdditionalData,
     sessionStorageKey,
     submitButtonText,
@@ -365,14 +366,15 @@ const FormController = props => {
     setGlobalError(false);
     setSaving(true);
 
-    const handleSuccessfulSave = data => {
+    const handleSuccessfulSave = response => {
+      console.log('on successful save, data is', data, response);
       scrollToTop();
       setShowSavedMessage(true);
       setShowDataWasLoadedMessage(false);
-      setUpdatedApplicationId(data.id);
-      data.form_data && setSavedData(JSON.parse(data.form_data));
+      setUpdatedApplicationId(response.id);
+      setSavedData(data);
       setSaving(false);
-      onSuccessfulSave(data);
+      onSuccessfulSave(response);
     };
 
     makeRequest(applicationStatusOnSave)
