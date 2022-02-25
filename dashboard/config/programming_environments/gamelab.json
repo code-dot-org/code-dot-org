@@ -7,59 +7,58 @@
   "title": "Game Lab",
   "categories": [
     {
+      "key": "game_lab",
+      "name": "Game Lab",
+      "color": "#fff176",
+      "position": 0
+    },
+    {
       "key": "sprites",
       "name": "Sprites",
-      "color": "#f78183"
+      "color": "#f78183",
+      "position": 1
     },
     {
       "key": "groups",
       "name": "Groups",
-      "color": "#f78183"
+      "color": "#f78183",
+      "position": 2
     },
     {
       "key": "drawing",
       "name": "Drawing",
-      "color": "#4dd0e1"
+      "color": "#4dd0e1",
+      "position": 3
     },
     {
       "key": "control",
       "name": "Control",
-      "color": "#64B5F6"
+      "color": "#64B5F6",
+      "position": 4
     },
     {
       "key": "math",
       "name": "Math",
-      "color": "#FFB74D"
+      "color": "#FFB74D",
+      "position": 5
     },
     {
       "key": "variables",
       "name": "Variables",
-      "color": "#BB77C7"
+      "color": "#BB77C7",
+      "position": 6
     },
     {
       "key": "functions",
       "name": "Functions",
-      "color": "#68D995"
+      "color": "#68D995",
+      "position": 7
     },
     {
       "key": "world",
       "name": "World",
-      "color": "#fff176"
-    },
-    {
-      "key": "animations",
-      "name": "Animations",
-      "color": "#f78183"
-    },
-    {
-      "key": "ui_controls",
-      "name": "UI controls",
-      "color": "#fff176"
-    },
-    {
-      "key": "game_lab",
-      "name": "Game Lab",
-      "color": "#fff176"
+      "color": "#fff176",
+      "position": 8
     }
   ]
 }
