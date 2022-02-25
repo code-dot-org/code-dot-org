@@ -96,6 +96,40 @@ module Api::V1::Pd
       test_user_gets_response_for :update, params: -> {@test_update_params}, user: user, response: response
     end
 
+    # Auth for incomplete applications
+    {
+      program_manager: :forbidden,
+      workshop_admin: :success
+    }.each do |user, response|
+      test_user_gets_response_for :show,
+        name: "#{user} gets #{response} when showing incomplete applications",
+        user: user,
+        params: -> {{id: @csd_incomplete_application_with_partner.id}},
+        response: response
+    end
+
+    {
+      program_manager: :forbidden,
+      workshop_admin: :success
+    }.each do |user, response|
+      test_user_gets_response_for :destroy,
+        name: "#{user} gets #{response} when deleting incomplete applications",
+        user: user,
+        params: -> {{id: @csd_incomplete_application_with_partner.id}},
+        response: response
+    end
+
+    {
+      program_manager: :forbidden,
+      workshop_admin: :success
+    }.each do |user, response|
+      test_user_gets_response_for :update,
+        name: "#{user} gets #{response} when updating incomplete applications",
+        user: user,
+        params: -> {{application: {notes: 'Notes!'}, id: @csd_incomplete_application_with_partner.id}},
+        response: response
+    end
+
     test "quick view returns appropriate application type" do
       create FACILITATOR_APPLICATION_FACTORY, course: 'csf'
       create FACILITATOR_APPLICATION_FACTORY, course: 'csp'
@@ -1241,6 +1275,14 @@ module Api::V1::Pd
     test 'search does not reveal applications outside the regional partners cohort' do
       sign_in @program_manager
       get :search, params: {email: @csd_teacher_application.user.email}
+      assert_response :success
+      result = JSON.parse response.body
+      assert_equal [], result
+    end
+
+    test 'search does not reveal applications incomplete applications if not workshop admin' do
+      sign_in @program_manager
+      get :search, params: {email: @csd_incomplete_application_with_partner.user.email}
       assert_response :success
       result = JSON.parse response.body
       assert_equal [], result
