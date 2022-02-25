@@ -1,6 +1,7 @@
 module Api::V1::Pd
   class ApplicationsController < ::ApplicationController
     load_and_authorize_resource class: 'Pd::Application::ApplicationBase'
+    authorize_resource Pd::Application::TeacherApplication if @application.is_a? Pd::Application::TeacherApplication
 
     include Pd::Application::ActiveApplicationModels
 
@@ -44,8 +45,6 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/applications/1
     def show
-      return head :forbidden if @application.status == 'incomplete' && !current_user.workshop_admin?
-
       serialized_application = ApplicationSerializer.new(
         @application,
         scope: {raw_form_data: params[:raw_form_data]}
@@ -116,7 +115,6 @@ module Api::V1::Pd
 
     # PATCH /api/v1/pd/applications/1
     def update
-      return head :forbidden if @application.status == 'incomplete' && !current_user.workshop_admin?
       application_data = application_params.to_h
 
       if application_data[:status] != @application.status
@@ -190,7 +188,6 @@ module Api::V1::Pd
 
     # DELETE /api/v1/pd/applications/1
     def destroy
-      return head :forbidden if @application.status == 'incomplete' && !current_user.workshop_admin?
       @application.destroy
     end
 
