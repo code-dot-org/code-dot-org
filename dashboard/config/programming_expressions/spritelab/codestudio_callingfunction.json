@@ -8,7 +8,6 @@
     {
       "name": "Example 1",
       "description": "The function “switchBackgrounds” is used twice in this program. The function can be called instead of rewriting the blocks of code inside of it each time.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/qgi6Fjhv4dMzxJPux-yJObPtxRLlTW6q9tkaxQGj3Fw",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -17,7 +16,6 @@
     {
       "name": "Example 2",
       "description": "Functions can be called inside other functions. Here, the function “dropOre” calls the function “moveNorthwest” in it so that the compass exposes the ore after creates one in its location.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/xf6d350b8wlBO2qh8K0Cr7fIol6KCOOMGXE49xEoGlM",
       "image": null,
       "app_display_type": "embedAppWithCode",
