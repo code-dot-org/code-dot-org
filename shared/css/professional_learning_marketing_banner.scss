@@ -46,7 +46,7 @@ $dark_blue_background_colour: #0d4172;
   }
 
   .professional-learning-banner-desktop.homepage {
-    
+
     .text-wrapper {
       left: 3.5vw;
       width: calc(100% - 650px);
@@ -61,7 +61,22 @@ $dark_blue_background_colour: #0d4172;
         font-size: 1.2vw;
       }
     }
+
+    @media screen and (min-width: 1440px) {
+
+      .text-wrapper {
+        
+        .header {
+          font-size: 26px;
+        }
+    
+        .text {
+          font-size: 17px;
+        }
+      }
+    }
   }
+
 
   .professional-learning-banner-desktop {
     background-color: $gold_background_colour;
@@ -136,6 +151,7 @@ $dark_blue_background_colour: #0d4172;
       }
     }
   }
+
   .professional-learning-banner-tablet {
     margin: 0 auto;
     position: relative;
@@ -179,14 +195,7 @@ $dark_blue_background_colour: #0d4172;
     background-color: $gold_background_colour;
 
     .text-wrapper {
-
-      .header {
-        color: black;
-      }
-      
-      .text {
-        color: black;
-      }
+      color: black;
     }
   }
 
@@ -198,19 +207,18 @@ $dark_blue_background_colour: #0d4172;
     background-color: $dark_blue_background_colour;
 
     .text-wrapper {
+      color: white;
       width: 100%;
       padding-left: 24px;
       padding-right: 24px;
 
       .header {
-        color: white;
         padding: 15px 30px 5px 30px;
         text-align: center;
         top: 0px;
       }
 
       .text {
-        color: white;
         text-align: center;
         margin-left: 5px;
         margin-right: 5px;
