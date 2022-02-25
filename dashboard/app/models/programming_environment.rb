@@ -22,7 +22,7 @@ class ProgrammingEnvironment < ApplicationRecord
   validates_uniqueness_of :name, case_sensitive: false
 
   alias_attribute :categories, :programming_environment_categories
-  has_many :programming_environment_categories, dependent: :destroy
+  has_many :programming_environment_categories, -> {order(:position)}, dependent: :destroy
   has_many :programming_expressions, dependent: :destroy
 
   # @attr [String] editor_type - Type of editor one of the following: 'text-based', 'droplet', 'blockly'
