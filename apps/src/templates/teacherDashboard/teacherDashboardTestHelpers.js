@@ -62,22 +62,3 @@ export const validAssignments = {
     version_title: '2017'
   }
 };
-
-export const assignmentFamilies = [
-  {
-    name: 'CS Discoveries 2017',
-    category: 'Full Courses',
-    position: 1,
-    category_priority: 0,
-    assignment_family_name: 'csd',
-    assignment_family_title: 'CS Discoveries'
-  },
-  {
-    name: 'Unit 1: Problem Solving',
-    category: 'CS Discoveries',
-    position: 0,
-    category_priority: 7,
-    assignment_family_name: 'csd1',
-    assignment_family_title: 'Unit 1: Problem Solving'
-  }
-];

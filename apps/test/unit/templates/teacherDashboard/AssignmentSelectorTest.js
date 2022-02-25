@@ -94,23 +94,7 @@ const defaultProps = {
       version_title: '2018',
       is_stable: true
     }
-  },
-  assignmentFamilies: [
-    {
-      assignment_family_title: 'CS Discoveries',
-      category: 'Full Courses',
-      position: 1,
-      category_priority: 0,
-      assignment_family_name: 'csd'
-    },
-    {
-      assignment_family_title: 'Make a Flappy game',
-      category: 'Hour of Code',
-      position: 4,
-      category_priority: 2,
-      assignment_family_name: 'flappy'
-    }
-  ]
+  }
 };
 
 const hiddenSectionProps = {
@@ -127,8 +111,7 @@ const hiddenSectionProps = {
     courseId: null,
     scriptId: 36
   },
-  assignments: defaultProps.assignments,
-  assignmentFamilies: defaultProps.assignmentFamilies
+  assignments: defaultProps.assignments
 };
 
 describe('AssignmentSelector', () => {

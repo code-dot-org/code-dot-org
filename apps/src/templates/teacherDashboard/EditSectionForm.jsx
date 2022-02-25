@@ -8,7 +8,6 @@ import AssignmentSelector from '@cdo/apps/templates/teacherDashboard/AssignmentS
 import {
   sectionShape,
   assignmentShape,
-  assignmentFamilyShape,
   assignmentCourseOfferingShape
 } from './shapes';
 import DialogFooter from './DialogFooter';
@@ -43,7 +42,6 @@ class EditSectionForm extends Component {
     initialCourseId: PropTypes.number,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
-    assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
     courseOfferings: PropTypes.arrayOf(assignmentCourseOfferingShape)
       .isRequired,
     section: sectionShape.isRequired,
@@ -140,7 +138,6 @@ class EditSectionForm extends Component {
       title,
       validGrades,
       validAssignments,
-      assignmentFamilies,
       courseOfferings,
       isSaveInProgress,
       editSectionProperties,
@@ -217,7 +214,6 @@ class EditSectionForm extends Component {
             section={section}
             onChange={ids => editSectionProperties(ids)}
             validAssignments={validAssignments}
-            assignmentFamilies={assignmentFamilies}
             courseOfferings={courseOfferings}
             disabled={isSaveInProgress}
             localeCode={localeCode}
@@ -382,7 +378,6 @@ const AssignmentField = ({
   section,
   onChange,
   validAssignments,
-  assignmentFamilies,
   courseOfferings,
   disabled,
   localeCode,
@@ -396,7 +391,6 @@ const AssignmentField = ({
       onChange={ids => onChange(ids)}
       courseOfferings={courseOfferings}
       assignments={validAssignments}
-      assignmentFamilies={assignmentFamilies}
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
@@ -409,7 +403,6 @@ AssignmentField.propTypes = {
   section: sectionShape,
   onChange: PropTypes.func.isRequired,
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
-  assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   courseOfferings: PropTypes.arrayOf(assignmentCourseOfferingShape).isRequired,
   disabled: PropTypes.bool,
   localeCode: PropTypes.string,
@@ -557,7 +550,6 @@ let defaultPropsFromState = state => ({
   initialUnitId: state.teacherSections.initialUnitId,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
-  assignmentFamilies: state.teacherSections.assignmentFamilies,
   courseOfferings: state.teacherSections.courseOfferings,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,

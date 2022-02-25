@@ -3,7 +3,6 @@ import {mount} from 'enzyme';
 import {assert} from '../../../util/reconfiguredChai';
 import {UnconnectedEditSectionForm as EditSectionForm} from '@cdo/apps/templates/teacherDashboard/EditSectionForm';
 import {
-  assignmentFamilies,
   validAssignments,
   testSection,
   noStudentsSection
@@ -20,7 +19,6 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={testSection}
         isSaveInProgress={false}
@@ -58,7 +56,6 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={noStudentsSection}
         isSaveInProgress={false}
@@ -96,7 +93,6 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
@@ -134,7 +130,6 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.picture}}
         isSaveInProgress={false}
@@ -172,7 +167,6 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{
           ...testSection,
@@ -198,7 +192,6 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{
           ...noStudentsSection,
@@ -224,7 +217,6 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.google_classroom}}
         isSaveInProgress={false}
@@ -247,7 +239,6 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{
           ...noStudentsSection,
@@ -273,7 +264,6 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...testSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
@@ -296,7 +286,6 @@ describe('EditSectionForm', () => {
         editSectionProperties={() => {}}
         validGrades={['K', '1', '2', '3']}
         validAssignments={validAssignments}
-        assignmentFamilies={assignmentFamilies}
         sections={{}}
         section={{...noStudentsSection, loginType: SectionLoginType.clever}}
         isSaveInProgress={false}
