@@ -4,9 +4,13 @@
  */
 const path = require('path');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const envConstants = require('./envConstants');
+const mode = envConstants.DEV ? 'development' : 'production';
 
 const config = {
   target: 'webworker',
+  mode: mode,
+  devtool: 'source-map',
   entry: {
     'offline-service-worker': './src/offline/offline-service-worker.js'
   },
@@ -38,12 +42,9 @@ const config = {
     // e.g. 'js/offline-service-worker.js': 'offline-service-workerwpfb055f24d3026d753ccc.min.js'
     new ManifestPlugin({
       basePath: 'js/',
-      fileName: 'offline-manifest.json',
-      filter: file => {
-        // This webpack build is only concerned with the offline service worker code.
-        return file.name === 'js/offline-service-worker.js';
-      }
+      fileName: 'offline-manifest.json'
     })
   ]
 };
+
 module.exports = config;

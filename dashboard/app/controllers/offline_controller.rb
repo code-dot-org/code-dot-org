@@ -5,7 +5,7 @@ class OfflineController < ApplicationController
     redirect_to '/home'
   end
 
-  # Responds with the offline-service-worker.js file.
+  # Responds with the offline-service-worker.js or .js.map files.
   def offline_service_worker
     filename = ActiveStorage::Filename.new(params[:file]).sanitized
     send_file(dashboard_dir('public', 'blockly', 'js', filename), type: 'application/javascript')
