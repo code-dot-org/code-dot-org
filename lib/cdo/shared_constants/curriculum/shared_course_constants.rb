@@ -6,7 +6,9 @@ module SharedCourseConstants
       pilot: "pilot",
       beta: "beta",
       preview: "preview",
-      stable: "stable"
+      stable: "stable",
+      sunsetting: "sunsetting",
+      deprecated: "deprecated"
     }
   ).freeze
 
