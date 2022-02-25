@@ -98,8 +98,6 @@ export default class AssignmentSelector extends Component {
 
     const {section, assignments} = props;
 
-    console.log(section);
-
     let selectedAssignmentFamily,
       versions,
       selectedPrimaryId,
