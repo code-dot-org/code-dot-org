@@ -8,7 +8,6 @@
     {
       "name": "",
       "description": "var t = Math.sqrt(16);\r\nconsole.log(t);",
-      "code": "```\n\n```",
       "app": "",
       "image": null,
       "app_display_type": "codeFromCodeField",

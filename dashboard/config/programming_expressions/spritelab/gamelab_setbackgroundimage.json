@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "The background starts white in Sprite Lab, but it can be changed to any image.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/qLBVoFZUftgEwgH2kPMq_XtJp8xxO3AWA6kPCMWd6cc",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "The background can be changed multiple times throughout a project. \r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/IHitubrSGPFNtWgt-IHCdx1YYLH2PlWHQ7rIw2WVJKU",
       "image": null,
       "app_display_type": "embedAppWithCode",
