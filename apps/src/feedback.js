@@ -118,7 +118,7 @@ FeedbackUtils.prototype.displayFeedback = function(
 ) {
   options.level = options.level || {};
 
-  const {onContinue, shareLink, doNothingOnHidden} = options;
+  const {onContinue, shareLink} = options;
   const hadShareFailure = options.response && options.response.share_failure;
   const showingSharing =
     options.showingSharing && !hadShareFailure && shareLink;
@@ -230,25 +230,13 @@ FeedbackUtils.prototype.displayFeedback = function(
     project.saveIfSourcesChanged();
   }
 
-  let onHidden;
-  if (doNothingOnHidden) {
-    // No additional onHidden functionality upon closing the dialog
-  } else {
-    /*
-    hideButDontContinue toggles when the again button is pressed, so its value
-    may change after this definition
-    */
-    onHidden = function() {
-      if (
-        !continueButton ||
-        (feedbackDialog && feedbackDialog.hideButDontContinue)
-      ) {
-        this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
-      } else {
-        onContinue();
-      }
-    }.bind(this);
-  }
+  // onHidden is called when the dialog is closed: only do something extra
+  // if there are hints for missing blocks.
+  let onHidden = function() {
+    if (!continueButton) {
+      this.studioApp_.displayMissingBlockHints(missingRecommendedBlockHints);
+    }
+  }.bind(this);
 
   var icon;
   if (!options.hideIcon) {
@@ -334,9 +322,7 @@ FeedbackUtils.prototype.displayFeedback = function(
         options,
         idealBlocks === Infinity ? null : isPerfect
       );
-      feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
-      feedbackDialog.hideButDontContinue = false;
     });
   }
 
@@ -466,9 +452,7 @@ FeedbackUtils.prototype.displayFeedback = function(
   if (publishButton) {
     dom.addClickTouchEvent(publishButton, () => {
       // Hide the current dialog since we're about to show the publish dialog
-      feedbackDialog.hideButDontContinue = true;
       feedbackDialog.hide();
-      feedbackDialog.hideButDontContinue = false;
 
       const store = getStore();
 
