@@ -13,7 +13,7 @@ export default function Example({example, programmingEnvironmentName}) {
     </>
   );
   if (example.app) {
-    if (example.appDisplayType === 'displayApp') {
+    if (example.appDisplayType === 'codeFromCodeField') {
       const embedUrl = example.app.endsWith('embed')
         ? example.app
         : example.app + '/embed';
