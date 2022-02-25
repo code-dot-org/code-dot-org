@@ -39,7 +39,7 @@
     "autocomplete_palette_apis_only": "false",
     "execute_palette_apis_only": "false",
     "design_mode_at_start": "false",
-    "hide_design_mode": "false",
+    "hide_design_mode": "true",
     "beginner_mode": "false",
     "hide_view_data_button": "true",
     "show_debug_watch": "false",
@@ -64,13 +64,13 @@
     "ai_enabled": "false",
     "start_blocks": "setText(\"titleLabel\", The App Is Running!);\r\nsetProperty(\"titleLabel\", text-color\", \"green\");\r\nsetProperty(\"screen1\", \"background-color\", \"yellow\");\r\nsetProperty(\"titleLabel\", \"BORDER-WIDTH\", 2);\r\nsetProperty(\"title Label\", \"font-family\", \"Courier\");\r\nsetText(\"titleLabel\", \"font-size\", 24);\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 13px; padding: 2px 15px; width: 320px; height: 50px; position: absolute; left: -1.66533e-16px; top: 140px; text-align: center;\" id=\"titleLabel\">The App Is Not Running</label></div></div>",
+    "display_name": "Debugging",
+    "bubble_choice_description": "Help fix the bugs so the app appears correctly",
+    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L3/practice/C.png",
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "display_name": "Debugging",
-    "bubble_choice_description": "Help fix the bugs so the app appears correctly",
-    "thumbnail_url": "https://dancodedotorg.github.io/CSD-U6-Images/L3/practice/C.png"
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -78,7 +78,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-12-16T03:03:16.614+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - PracB_2022\"},{\"changed_at\":\"2021-12-16 03:03:19 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:52:40 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:55:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:58:04 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:54:38 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-12-16T03:03:16.614+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Screen Outputs - PracB_2022\\\"\"],\"cloned_from\":\"CSD U6 - Screen Outputs - PracB_2022\"},{\"changed_at\":\"2021-12-16 03:03:19 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:52:40 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:55:05 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-12-20 21:58:04 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-15 16:54:38 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2022-02-25 15:33:48 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
