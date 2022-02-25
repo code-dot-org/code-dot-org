@@ -88,6 +88,7 @@ export function connect({interpreter, onDisconnect}) {
         // Must've called reset() - exit the promise chain.
         return Promise.reject(new ConnectionCanceledError());
       }
+      console.log('in toolkit.js#connect(),currentBoard = board', board);
       currentBoard = board;
       return currentBoard.connect();
     })

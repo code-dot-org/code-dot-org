@@ -55,6 +55,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {string} a port identifier, e.g. "/dev/ttyACM0" */
     this.port_ = port;
+    console.log('this.port_', port);
 
     /** @private {SerialPort} serial port controller */
     this.serialPort_ = null;
@@ -233,6 +234,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // Note: This doesn't seem to be necessary when using browser-serialport
         // and the Chrome App connector, but it is required for native
         // node serialport in the Code.org Maker App.
+        console.log('this.serialPort_', this.serialPort_);
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           console.log('serial port defined');
           resolve(this.serialPort_.close());
