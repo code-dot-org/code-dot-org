@@ -28412,7 +28412,7 @@ en:
 
 '
               description_teacher: |-
-                To kick off the final unit of this course, students will do some research into interesting innovations in computing. This lesson will expose students to wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
+                In this lesson, students will do some research into interesting innovations in computing. This lesson will expose students to a wider variety of computing form factors (what a computer looks like) and fields that are impacted by computing. Later in this unit students will look back on the devices they encountered in this lesson as they develop their own physical computing devices.
 
                 **Question of the Day:** What is a computing innovation?
             Designing Screens with Code:
@@ -31594,8 +31594,12 @@ en:
           lessons:
             lesson-1:
               name: Welcome to CSA
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: Java Lab
+              description_student: 
+              description_teacher: 
             lesson-3:
               name: The Neighborhood
             lesson-4:
@@ -31673,10 +31677,18 @@ en:
         self-paced-pl-csa2-2022:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-csa2-2022
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         self-paced-pl-csa3-2022:
           lessons:
             lesson-1:
               name: Introduction to JavaLab
+              description_student: 
+              description_teacher: 
             lesson-2:
               name: Using variables in Java
           lesson_groups: {}
@@ -31861,7 +31873,7 @@ en:
               display_name: Pilot Survey
             lessonGroup-5:
               display_name: Sandbox
-          title: Expanding Software Design
+          title: 'Expanding Software Design '
           description: In this unit, students practice software design and development using the skills and programming constructs they have learned to develop a title sequence for their favorite content creator. Students use decomposition strategies and object-oriented principles to plan and implement their ideas while ensuring their projects meet specified requirements. Students explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, students consider the need for maximizing system reliability as they explore bugs and issues in existing programs.
           student_description: In this unit, you practice software design and development using the skills and programming constructs you have learned to develop a title sequence for your favorite content creator. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your projects meet specified requirements. You explore recursive methods by tracing and writing recursive methods and comparing recursive and iterative solutions for efficiency. At the end of the unit, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.
           description_short: ''
@@ -32047,6 +32059,7 @@ en:
           student_description: In this unit, you implement searching and sorting algorithms to work with lists of primitive and object data stored in 1D and 2D arrays and `ArrayList`s. You analyze the efficiency of searching and sorting algorithms and expand the standard algorithms you have developed throughout the course to solve more complex problems. Throughout the unit, you apply your knowledge and programming skills to develop a game that incorporates object-oriented design and efficiency. You wrap up the unit and course considering the privacy and security of their programs and users.
           description_short: ''
           description_audience: ''
+          name: csa8-pilot-extra
         csa-backpack-2022:
           lessons:
             lesson-1:

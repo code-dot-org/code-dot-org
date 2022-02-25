@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-02-23 14:20:29 UTC",
+    "serialized_at": "2022-02-25 14:11:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3766,7 +3766,7 @@
       "key": "15dab1df-7176-4280-8a6f-45f1efc1b1a1",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Decomposition handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Decomposition handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students use Levels 1 and 2 and the Decomposition handout to explore the Java implementation of the problem and answer the provided questions.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Decomposition handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students use Levels 1 and 2 and the Decomposition handout to explore the Java implementation of the problem and answer the provided questions.",
         "progression_name": "Exploring Decomposition"
       },
       "seeding_key": {
@@ -6064,6 +6064,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L3v2_2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6086,6 +6089,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L4v2_2022"
+        ],
         "progression": "Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6108,6 +6114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L5 CR_2022"
+        ],
         "progression": "Code Review: New PainterPlus Methods"
       },
       "bonus": false,
@@ -6130,6 +6139,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6202,6 +6214,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L3v2_2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6224,6 +6239,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L4v2_2022"
+        ],
         "progression": "Using Two-Way Selection and NOT"
       },
       "bonus": false,
@@ -6246,6 +6264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L5 CR_2022"
+        ],
         "progression": "Code Review: New PainterPlus Methods"
       },
       "bonus": false,
@@ -6268,6 +6289,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L6_2022"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
