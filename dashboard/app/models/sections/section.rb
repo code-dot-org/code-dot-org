@@ -328,9 +328,6 @@ class Section < ApplicationRecord
       tts_autoplay_enabled: tts_autoplay_enabled,
       sharing_disabled: sharing_disabled?,
       login_type: login_type,
-      course_offering_id: unit_group ? unit_group&.course_version&.course_offering : script&.course_version&.course_offering,
-      course_version_id: unit_group ? unit_group&.course_version : script&.course_version,
-      unit_id: script_id,
       course_id: course_id,
       script: {
         id: script_id,
