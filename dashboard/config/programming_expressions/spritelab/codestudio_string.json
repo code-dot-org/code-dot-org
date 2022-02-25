@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Printing text can make it look like the sprite is talking.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/9l51UN7wYsT3Gqqwn6xocQzzHyyHjk97Mn6K-oP_z3o",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "Text can be used to describe data. Here, text is used to explain the bunny’s size.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/LjB2aaHrtYzgArNr645547b5enACWshoEKmpaXg1AdU",
       "image": null,
       "app_display_type": "embedAppWithCode",
