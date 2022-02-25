@@ -44,6 +44,8 @@ module Api::V1::Pd
 
     # GET /api/v1/pd/applications/1
     def show
+      return head :forbidden if @application.status == 'incomplete' && !current_user.workshop_admin?
+
       serialized_application = ApplicationSerializer.new(
         @application,
         scope: {raw_form_data: params[:raw_form_data]}
@@ -114,6 +116,7 @@ module Api::V1::Pd
 
     # PATCH /api/v1/pd/applications/1
     def update
+      return head :forbidden if @application.status == 'incomplete' && !current_user.workshop_admin?
       application_data = application_params.to_h
 
       if application_data[:status] != @application.status
@@ -187,6 +190,7 @@ module Api::V1::Pd
 
     # DELETE /api/v1/pd/applications/1
     def destroy
+      return head :forbidden if @application.status == 'incomplete' && !current_user.workshop_admin?
       @application.destroy
     end
 
@@ -194,7 +198,13 @@ module Api::V1::Pd
     def search
       email = params[:email]
       user = User.find_by_email email
-      filtered_applications = @applications.where(
+
+      # only workshop admins can see incomplete applications
+      filtered_applications = current_user.workshop_admin? ? @applications.where(
+        application_year: APPLICATION_CURRENT_YEAR,
+        application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
+        user: user
+      ) : @applications.where.not(status: 'incomplete').where(
         application_year: APPLICATION_CURRENT_YEAR,
         application_type: [TEACHER_APPLICATION, FACILITATOR_APPLICATION],
         user: user
