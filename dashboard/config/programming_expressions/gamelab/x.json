@@ -11,8 +11,8 @@
       "code": "```\n// Move a sprite by incrementing sprite.x within the draw function.\r\nvar sprite = createSprite(200, 200);\r\nfunction draw() {\r\n  background(\"white\");\r\n  sprite.x = sprite.x+5;\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\nvar sprite = createSprite(200, 200);\r\nconsole.log(sprite.x);\r\ndrawSprites();\r\nsprite.x = 50;\r\nconsole.log(sprite.x);\r\ndrawSprites();\r\nsprite.x = sprite.x+300;\r\nconsole.log(sprite.x);\r\ndrawSprites();\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The  x coordinate of the center of the sprite.",

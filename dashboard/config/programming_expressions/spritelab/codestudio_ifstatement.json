@@ -11,16 +11,16 @@
       "description": "This simple program checks if a random addition expression equals a number greater than 50.\r\nClick on the gold coin, and the green critter will guess a random number between 1 and 25. If the green critter guesses a number that is higher than the one the princess critter was thinking of, he will get her gold coin!\r\n",
       "app": "https://studio.code.org/projects/spritelab/sOXRJcZJe-z5xSkg_AapcMIhbU1JkjzNUm4Zu4rKRbA",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "The bear is looking for the perfect sized stew. Help it check the stews until it finds the right one. \r\nIf the stew is too big or small, the bear will let you know. Else, the stew is the perfect size.\r\n",
       "app": "https://studio.code.org/projects/spritelab/PRSgJeT7JYSp69gJQt0nLcGS6pTsUc1HnjMVnE451Mw",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/if.PNG",

@@ -11,8 +11,8 @@
       "code": "```\n<style>\r\n  h1 {color:red;}\r\n  p {color:blue;}\r\n</style>\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Text Align Property",
@@ -20,8 +20,8 @@
       "code": "```\np {\r\n  text-align: right;\r\n}\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_style.asp",

@@ -11,8 +11,8 @@
       "code": "```\nvar sprite = createSprite();\r\ndrawSprites();\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Red Stripe",
@@ -20,8 +20,8 @@
       "code": "```\n// A later sprite overwrites an earlier sprite.\r\nvar sprite1 = createSprite(200,200,100,100);\r\nvar sprite2 = createSprite(200,200,50,100);\r\nsprite2.shapeColor=\"red\";\r\ndrawSprites();\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Make Some Stickers",
@@ -29,8 +29,8 @@
       "code": "```\n// Use 10 different images for stickers, and randomNumber to place the stickers\r\nvar count = 0;\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  count = count + 1;\r\n  if (count < 20) {\r\n    var sprite = createSprite(200, 200);\r\n    sprite.setAnimation(\"sticker\" + randomNumber(1,10));\r\n    sprite.x = randomNumber(40, 360);\r\n    sprite.y = randomNumber(40, 360);\r\n    \r\n  }\r\n  drawSprites();\r\n}\r\n\n```",
       "app": "https://studio.code.org/projects/gamelab/BIJQLGDNofmVTjkVlt1zjz8qonkbfNM9RYHjSqf3jNg",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

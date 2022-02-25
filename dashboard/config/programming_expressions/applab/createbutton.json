@@ -11,8 +11,8 @@
       "code": "```\n// Create a button attached to a pin\r\nvar myButton = createButton(5);\r\n\r\n// Buzz when the button goes down\r\nonBoardEvent(myButton, \"down\", function() {\r\n  buzzer.note(\"G4\", 100);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

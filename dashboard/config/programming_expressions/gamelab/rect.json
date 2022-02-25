@@ -11,8 +11,8 @@
       "code": "```\n// Change the thickness of the rectangle outline.\r\nstrokeWeight(20);\r\nrect(50, 50, 100, 200);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Two Rectangles",
@@ -20,8 +20,8 @@
       "code": "```\n// Draw two rectangles at the same location and with the same width and height but with different stroke widths and no fill color.\r\nstrokeWeight(40);\r\nstroke(\"lightblue\");\r\nnoFill();\r\nrect(50, 50, 100, 200);\r\nstrokeWeight(1);\r\nstroke(\"black\");\r\nrect(50, 50, 100, 200);\r\n\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Part of a Rectangle",
@@ -29,8 +29,8 @@
       "code": "```\n// Start a large rectangle off the display so that only part of the rectangle is visible.\r\nstrokeWeight(15);\r\nrect(60, -15, 50, 500);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Animated Box",
@@ -38,8 +38,8 @@
       "code": "```\n// Use the draw() function to animate a moving and growing box.\r\nvar number = 0;\r\nfunction draw() {\r\n  background(\"white\");\r\n  rect(number, number, number, number);\r\n  if (number<200) {\r\n    number=number+1;\r\n  }\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/1eTaLf8B8Mw5TaUAn2fUJg/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Big Blue Box",
@@ -47,8 +47,8 @@
       "code": "```\n// Draw a blue rectangle offset from the top left corner.\r\nfill(\"blue\");\r\nrect(50, 50, 200, 100);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -56,8 +56,8 @@
       "code": "```\n// Draw a 100x100 pixel rectangle in the top left corner.\r\nrect(0, 0, 100, 100);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

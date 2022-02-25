@@ -11,8 +11,8 @@
       "code": "```\np {\r\n  margin: 40px;\r\n}\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Multiple Margin Values",
@@ -20,8 +20,8 @@
       "code": "```\np {\r\n margin: 10px 5px 15px 20px;\r\n}\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/cssref/pr_margin.asp",

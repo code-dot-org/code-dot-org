@@ -11,8 +11,8 @@
       "code": "```\nvar group = createGroup();\r\nfor (var i = 0; i < 10; i++) {\r\n  var sprite = createSprite(randomNumber(0, 400), randomNumber(0, 400),randomNumber(10, 20),randomNumber(10, 20));\r\n  sprite.debug = true;\r\n  group.add(sprite);\r\n}\r\ngroup.setAnimationEach(\"carrot_1\");\r\ngroup.setColliderEach(\"rectangle\", 0, 0, 20, 80, -45);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

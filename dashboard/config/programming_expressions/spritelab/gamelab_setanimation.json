@@ -11,16 +11,16 @@
       "description": "A costume change can be triggered by an event. For example, when the alien is pressed, it changes all the green fish costumes to pink fish costumes.\r\n",
       "app": "https://studio.code.org/projects/spritelab/Vy5_BjpcgKP221KLELwqS1Djv1AhpCvKH9Eq20m8JR4",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 463
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 463
     },
     {
       "name": "Example 2",
       "description": "Just one sprite can be changed by name. In this case, there is one alien pretending to be like the others. When that alien clicked, it reveals its true self.\r\n",
       "app": "https://studio.code.org/projects/spritelab/ohjuE1RU581tK0JXi7zgUu3f6wOONUXVbRdBFeM8gTw",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 555
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 555
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/changecostume.PNG",

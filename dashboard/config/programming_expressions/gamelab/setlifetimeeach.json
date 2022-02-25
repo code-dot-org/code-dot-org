@@ -11,8 +11,8 @@
       "code": "```\nvar group1 = createGroup();\r\nfor (var i = 0; i < 20; i++) {\r\n  group1.add(createSprite(randomNumber(0, 400), randomNumber(0, 400),randomNumber(10, 20),randomNumber(10, 20)));\r\n}\r\nvar group2 = createGroup();\r\nfor (var i = 0; i < 20; i++) {\r\n  group2.add(createSprite(randomNumber(0, 400), randomNumber(0, 400),randomNumber(10, 20),randomNumber(10, 20)));\r\n}\r\ngroup1.setLifetimeEach(50);\r\ngroup2.setLifetimeEach(100);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

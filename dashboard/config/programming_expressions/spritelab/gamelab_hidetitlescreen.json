@@ -11,8 +11,8 @@
       "description": "Here is an example of a start screen.\r\n",
       "app": "https://studio.code.org/projects/spritelab/_zdlsF8tJTkF0kqjiyxkIj4_cc8Jt4KkLPuF1w-1fbQ",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/hideTitle.PNG",

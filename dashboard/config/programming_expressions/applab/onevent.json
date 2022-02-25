@@ -11,8 +11,8 @@
       "code": "```\n// Move the turtle forward on every click of the button.\r\n\r\nbutton(\"forward\", \"Move Forward\");\r\nonEvent(\"forward\", \"click\", function(event) {\r\n  moveForward();\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Shrink and Grow",
@@ -20,8 +20,8 @@
       "code": "```\n// Grow an image on mouseover,\r\n// back to normal size on mouseout.\r\n\r\nimage(\"logo\", \"https://code.org/images/logo.png\");\r\nsetPosition(\"logo\", 160, 240, 32, 32);\r\n\r\nonEvent(\"logo\", \"mouseover\", function(event){\r\n  setSize(\"logo\", 48, 48);\r\n});\r\n\r\nonEvent(\"logo\", \"mouseout\", function(event){\r\n  setSize(\"logo\", 32, 32);\r\n});\n```",
       "app": "https://studio.code.org/projects/applab/1b8adMcaLlyk1IyeD9jXow/view",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Event Details",
@@ -29,8 +29,8 @@
       "code": "```\n// Show the details of the callback function event parameter.\r\nbutton(\"data\", \"Show Me Event Details\");\r\nonEvent(\"data\", \"click\", function(event) {\r\n  console.log(JSON.stringify(event));\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "The Event parameter",
@@ -38,8 +38,8 @@
       "code": "```\n// Show the x, y coordinates of the mouse as it moves around the screen\r\nonEvent(\"screen1\", \"mousemove\", function(event) {\r\n  console.log(\"x = \"+event.x+\" y=\"+event.y);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Two Different Types",
@@ -47,8 +47,8 @@
       "code": "```\n// Move the turtle forward on each click or backward on each key press.\r\n\r\nbutton(\"move\", \"Move\");\r\nonEvent(\"move\", \"click\", function(event) {\r\n  moveForward();\r\n});\r\nonEvent(\"move\", \"keypress\", function(event) {\r\n  moveBackward();\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Where do you want it?",
@@ -56,8 +56,8 @@
       "code": "```\n// Move an image to the coordinates specified in a textboxes.\r\n// Note that we declare one function that we use as callback for two different event handlers.\r\n\r\ntextLabel(\"xLabel\", \"X coordinate:\");\r\ntextInput(\"xCoordinate\", 160);\r\ntextLabel(\"yLabel\", \"Y coordinate:\");\r\ntextInput(\"yCoordinate\", 240);\r\nimage(\"logo\", \"https://code.org/images/logo.png\");\r\nsetPosition(\"logo\", 160, 240, 32, 32);\r\n\r\nonEvent(\"xCoordinate\", \"change\", moveFromText);\r\nonEvent(\"yCoordinate\", \"change\", moveFromText);\r\n\r\n// Define a funtion that moves the image based on the text box values\r\nfunction moveFromText() { \r\n  var x = getText(\"xCoordinate\");\r\n  var y = getText(\"yCoordinate\");\r\n  setPosition(\"logo\", x, y);\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

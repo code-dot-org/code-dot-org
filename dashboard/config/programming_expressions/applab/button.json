@@ -11,8 +11,8 @@
       "code": "```\n// Move the turtle forward or backward depending on the button clicked.\r\nbutton(\"forward\", \"Move Forward\");\r\nbutton(\"backward\", \"Move Backward\");\r\nonEvent(\"forward\", \"click\", function(event) {\r\n  moveForward();\r\n});\r\n\r\nonEvent(\"backward\", \"click\", function(event) {\r\n  moveBackward();\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\n// Create a \"Click Me\" button.\r\nbutton(\"id\", \"Click Me!\");\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example: Simple Turtle Control 1",
@@ -29,8 +29,8 @@
       "code": "```\n// Move the turtle forward on every click of the button.\nbutton(\"forward\", \"Move Forward\");\nonEvent(\"forward\", \"click\", function(event) {\n  moveForward();\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

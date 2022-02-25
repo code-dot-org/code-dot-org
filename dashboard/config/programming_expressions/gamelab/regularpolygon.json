@@ -11,8 +11,8 @@
       "code": "```\nregularPolygon(200, 200, 5, 50);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Three to Fourteen Sides",
@@ -20,8 +20,8 @@
       "code": "```\n// Display all the regular polygons with three to fourteen sides.\r\nregularPolygon(50, 75, 3, 50);\r\nregularPolygon(150, 75, 4, 50);\r\nregularPolygon(250, 75, 5, 50);\r\nregularPolygon(350, 75, 6, 50);\r\nregularPolygon(50, 175, 7, 50);\r\nregularPolygon(150, 175, 8, 50);\r\nregularPolygon(250, 175, 9, 50);\r\nregularPolygon(350, 175, 10, 50);\r\nregularPolygon(50, 275, 11, 50);\r\nregularPolygon(150, 275, 12, 50);\r\nregularPolygon(250, 275, 13, 50);\r\nregularPolygon(350, 275, 14, 50);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Tile Floor",
@@ -29,8 +29,8 @@
       "code": "```\n// Make a patterned tile floor.\r\nbackground(\"orange\");\r\nfor (var i = 0; i < 4; i++) {\r\n  fill(\"pink\");\r\n  regularPolygon(50+100*i, 5, 4, 35);\r\n  regularPolygon(50+100*i, 145, 4, 35);\r\n  regularPolygon(50+100*i, 285, 4, 35);  \r\n  fill(\"red\");\r\n  regularPolygon(50+100*i, 75, 6, 50);\r\n  regularPolygon(50+100*i, 215, 6, 50);\r\n  regularPolygon(50+100*i, 355, 6, 50);\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

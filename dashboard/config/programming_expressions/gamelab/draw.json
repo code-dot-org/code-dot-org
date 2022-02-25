@@ -11,8 +11,8 @@
       "code": "```\nfunction draw() {\r\n  strokeWeight(randomNumber(10, 20));\r\n  point(randomNumber(0, 400), randomNumber(0, 400));\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "TV Static Line",
@@ -20,8 +20,8 @@
       "code": "```\n// Animate a line like on a broken old television.\r\nvar yPos = 0;\r\nfunction draw() {  \r\n  background(\"white\");\r\n  yPos = yPos - 1;\r\n  if (yPos < 0) {\r\n    yPos = 400;\r\n  }\r\n  line(0, yPos, 400, yPos);\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/93oYBOXj67FzNgsKl_omzw/view",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Mouse-Controlled Dots",
@@ -29,8 +29,8 @@
       "code": "```\n// Draw random sized dots where the mouse is clicked.\r\nfunction draw() {\r\n  if (mouseDown(\"leftButton\")) {\r\n    strokeWeight(randomNumber(10, 20));\r\n    point(World.mouseX,World.mouseY);\r\n  }\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "No return value.",

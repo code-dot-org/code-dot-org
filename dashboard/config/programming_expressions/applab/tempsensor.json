@@ -11,8 +11,8 @@
       "code": "```\nonBoardEvent(tempSensor, \"data\", function(event) {\r\n  setNumber(\"temperature\", tempSensor.F);\r\n});\r\n\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/U6TempSense.gif",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "short_description": "tempSensor is an object that represents the analog temperature sensor at pin A0. ",

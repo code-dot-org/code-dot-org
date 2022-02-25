@@ -11,8 +11,8 @@
       "code": "```\nvar sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"car_blue_1\");\r\ndrawSprites();\r\nsprite.scale = 0.5;\r\ndrawSprites();\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Different Sized Pinwheels",
@@ -20,8 +20,8 @@
       "code": "```\n// Animate three different sized pinwheels.\r\nvar pinwheel1 = createSprite(randomNumber(0, 400), randomNumber(0, 400));\r\npinwheel1.setAnimation(\"Pinwheel.png_1\");\r\npinwheel1.scale = 0.1;\r\nvar pinwheel2 = createSprite(randomNumber(0, 400), randomNumber(0, 400));\r\npinwheel2.setAnimation(\"Pinwheel.png_1\");\r\npinwheel2.scale = 0.2;\r\nvar pinwheel3 = createSprite(randomNumber(0, 400), randomNumber(0, 400));\r\npinwheel3.setAnimation(\"Pinwheel.png_1\");\r\npinwheel3.scale = 0.05;\r\nfunction draw() {\r\n  background(\"white\");\r\n  pinwheel1.rotation=pinwheel1.rotation+10;\r\n  pinwheel2.rotation=pinwheel2.rotation-30;\r\n  pinwheel3.rotation=pinwheel3.rotation+50;\r\n  drawSprites();\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/IBoW8Y09FjTKO3MidXHwfQ/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The scale of the sprite.",

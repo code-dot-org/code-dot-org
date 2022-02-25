@@ -11,8 +11,8 @@
       "code": "```\nvar sprite = createSprite(200,200);\r\nconsole.log(sprite.shapeColor);\r\nsprite.shapeColor = \"blue\";\r\nconsole.log(sprite.shapeColor);\r\ndrawSprites();\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The color of the sprite placeholder.",

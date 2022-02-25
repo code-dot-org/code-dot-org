@@ -11,24 +11,24 @@
       "description": "This block is most often used to control a sprite’s movement using the arrow keys. \r\n",
       "app": "https://studio.code.org/projects/spritelab/vcSPIOWG5gARFhVKCA_Uzvjq6t-bQgi-BBpEQNlOqqY",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "Compare the use of “when” and “while.” The bunny will only move 10 pixels up or down when the corresponding arrows are pressed. However it will continuously move 10 pixels east and west while the corresponding arrows are pressed.  \r\n",
       "app": "https://studio.code.org/projects/spritelab/wwdQZZB_p19abrngKn6pOSWKraA89vXFbgvyJWT86KU",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 3",
       "description": "Nearly any key can be pressed as an event. In this example, each key triggers a different action.\r\n",
       "app": "https://studio.code.org/projects/spritelab/Uz_ijBH2wx9qDby8OPRnJChWzgnATSFF1L3ccLLFEPY",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/keyPressed.PNG",

@@ -11,8 +11,8 @@
       "code": "```\np{\r\n  font-family: Arial, Helvetica, sans-serif;\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/cssref/pr_font_font-family.asp",

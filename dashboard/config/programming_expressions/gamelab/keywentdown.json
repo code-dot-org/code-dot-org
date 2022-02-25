@@ -11,8 +11,8 @@
       "code": "```\nfunction draw() {\r\n  console.log(keyWentDown(\"left\"));\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Click Counter",
@@ -20,8 +20,8 @@
       "code": "```\n// Simple click counter using keyWentDown().\r\nvar count=0;\r\nfunction draw() {\r\n  background(\"white\");\r\n  if (keyWentDown(\"down\")) count=count+1;\r\n  text(count, 200, 200);\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

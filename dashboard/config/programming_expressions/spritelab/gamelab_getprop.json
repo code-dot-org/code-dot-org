@@ -11,16 +11,16 @@
       "description": "Make the cow move forward by its size each time it is clicked.\r\n",
       "app": "https://studio.code.org/projects/spritelab/YF9qqbU2thaidVnAsyO5xZZg-Qyd8sbffBtHIMKqNiY",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "There is a bee hiding in a random location on the screen, but where is it? Printing the x and y positions of the sprite helps you find it faster.\r\n",
       "app": "https://studio.code.org/projects/spritelab/BGMPqEYSlbx-7A3K4irU0TEtqMUYXEhotBNOJpwXh7k",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 650
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 650
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/property.PNG",

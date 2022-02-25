@@ -11,8 +11,8 @@
       "code": "```\n// Demonstrate reading a number from a slider. Assumes a slider named todayTempID has been placed on the screen in design mode.\r\nvar todayTemp=50;\r\ntextLabel(\"id\", \"Choose a temperature (in F) with the slider:\");\r\ntextLabel(\"displayTemp\", todayTemp);\r\nonEvent(\"todayTempID\", \"change\", function() {\r\n  todayTemp=getNumber(\"todayTempID\");\r\n  setText(\"displayTemp\",todayTemp);\r\n});\r\nbutton(\"convert\", \"Convert\");\r\nsetPosition(\"convert\", 210, 20);\r\nonEvent(\"convert\", \"click\", function() {\r\n  var celcius=(todayTemp-32)/1.8;\r\n  write(todayTemp+ \" Fahrenheit is \" + celcius + \" Celcius\");\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\ntextInput(\"id\", \"Enter your age\");\r\nonEvent(\"id\", \"change\", function(event) {\r\n  write(\"In 10 more years you will be \" + (getNumber(\"id\")+10));\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

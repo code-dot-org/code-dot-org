@@ -11,8 +11,8 @@
       "code": "```\n// Move a sprite in a circle.\r\nvar sprite = createSprite(200, 100);\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  sprite.setSpeedAndDirection(2,sprite.getDirection()+1);\r\n  console.log(sprite.getDirection());\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The direction angle of the sprite in degrees.",

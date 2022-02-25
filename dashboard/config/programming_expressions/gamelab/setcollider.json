@@ -11,8 +11,8 @@
       "code": "```\nvar sprite = createSprite(200, 200);\nsprite.setAnimation(\"carrot_1\");\nsprite.scale = 4;\nsprite.setCollider(\"rectangle\", 0, 0, 20, 80, -45);\nsprite.debug = true;\ndrawSprites();\n```",
       "app": "https://studio.code.org/projects/gamelab/tQQxJ9MZKTMvYqw4psIiMg/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

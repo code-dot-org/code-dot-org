@@ -11,16 +11,16 @@
       "description": "The `make a new sprite` block is only used once, but repeating it five times allows five chemistry flask sprites to be created. \r\n",
       "app": "https://studio.code.org/projects/spritelab/_lrDlxY2SBYz0Ve0x3M7SF_cX0d1m9Ss2AiiYjfO6e4",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "Multiple lines of code can be used in a repeat loop, and a repeat loop can be used anywhere in a sequence of code.\r\n",
       "app": "https://studio.code.org/projects/spritelab/QzP4dfZKg8yImODSSczRcmM64rgv_ywJBin5_8lY3q0",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/repeat.PNG",

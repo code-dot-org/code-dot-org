@@ -11,8 +11,8 @@
       "code": "```\n// Update the number on a button with every click\r\nbutton(\"clickCounter\",\"0\");\r\nonEvent(\"clickCounter\", \"click\", function() {\r\n  var count=getNumber(\"clickCounter\")+1;\r\n  setNumber(\"clickCounter\", count);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\ntextLabel(\"randomNumber\",\"\");\r\nsetNumber(\"randomNumber\",randomNumber(0,100));\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example: Where is the mouse click?",
@@ -29,8 +29,8 @@
       "code": "```\n// Demonstrate setting the number on a slider. Assumes sliders named xPositionSlider and yPositionSlider have been placed on the screen in design mode.\r\nonEvent(\"screen1\", \"click\", function(event) {\r\n  setNumber(\"xPositionSlider\",event.offsetX);\r\n  setNumber(\"yPositionSlider\",event.offsetY);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

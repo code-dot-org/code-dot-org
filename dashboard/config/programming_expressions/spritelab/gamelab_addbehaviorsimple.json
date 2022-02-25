@@ -11,16 +11,16 @@
       "description": "The fish will begin continuously swimming left and right when the project is run.\r\n",
       "app": "https://studio.code.org/projects/spritelab/QuiVqdMFx60Z7dpZ-OvosClMLhjIFo5T-6jWGeApB9c",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "When the phone is clicked, it will begin jittering. \r\n",
       "app": "https://studio.code.org/projects/spritelab/jLtVI22qRmJVvlTSqVRsShucGyNtS1YdR_eXM2h92IY",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/spriteBegins.PNG",

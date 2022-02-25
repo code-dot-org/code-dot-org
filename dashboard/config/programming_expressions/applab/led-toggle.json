@@ -11,8 +11,8 @@
       "code": "```\nonBoardEvent(lightSensor,\"data\", function(event) {\r\n  led.toggle();\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Toggle by 3's",
@@ -20,8 +20,8 @@
       "code": "```\nvar buttonPress = 1;\r\n\r\nonBoardEvent(buttonL,\"down\", function(event) {\r\n  if (buttonPress >= 3){\r\n    led.toggle();\r\n    buttonPress = 1;\r\n  } else {\r\n    buttonPress = buttonPress + 1;\r\n  }\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -29,8 +29,8 @@
       "code": "```\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  led.toggle();\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "short_description": "Alternates from turning the red LED on and  off",

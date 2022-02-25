@@ -11,8 +11,8 @@
       "code": "```\nvar group = createGroup();\r\nfor (var i = 0; i < 20; i++) {\r\n  group.add(createSprite(randomNumber(0, 400), randomNumber(0, 400), 20, 20));\r\n}\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  group.pointToEach(mouseX, mouseY);\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

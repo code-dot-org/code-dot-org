@@ -11,8 +11,8 @@
       "code": "```\nvar sprite = createSprite();\r\ndrawSprites();\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Spinning Square",
@@ -20,8 +20,8 @@
       "code": "```\n// Animate a spinning square using the draw loop, background, and drawSprites commands.\r\nvar sprite = createSprite(200,200);\r\nfunction draw() {\r\n  background(\"white\");\r\n  sprite.rotation = sprite.rotation + 10;\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

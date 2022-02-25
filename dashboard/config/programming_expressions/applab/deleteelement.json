@@ -11,8 +11,8 @@
       "code": "```\nimage(\"ant\", \"http://www.pdclipart.org/albums/Animals_Bugs_Insects/ant.png\");\r\nonEvent(\"ant\", \"click\", function() {\r\n  deleteElement(\"ant\");\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Squash the ant swarm!",
@@ -20,8 +20,8 @@
       "code": "```\n// Ants will randomly appear on the screen every second for one minute. Click on the ant to squash it and remove it from the screen.\r\nfunction createAnt() {\r\n  var antId = \"ant\" + randomNumber(0, 1000);\r\n  var antHeight = randomNumber(35,100);\r\n  var antWidth = randomNumber(35, 100);\r\n  var antXPosition = randomNumber(0, 300);\r\n  var antYPosition = randomNumber(0, 400);\r\n  image(antId, \"http://www.pdclipart.org/albums/Animals_Bugs_Insects/ant.png\");\r\n  setPosition(antId, antXPosition, antYPosition, antHeight, antWidth);\r\n  onEvent(antId, \"click\", function() {\r\n    deleteElement(antId);\r\n  });\r\n}\r\n\r\nvar oneSecondInMilliseconds = 1000;\r\nvar oneMinuteInMilliseconds = 60 * oneSecondInMilliseconds;\r\nvar createAntInterval = setInterval(createAnt, oneSecondInMilliseconds);\r\n\r\nsetTimeout(function() {\r\n  clearInterval(createAntInterval);\r\n}, oneMinuteInMilliseconds);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

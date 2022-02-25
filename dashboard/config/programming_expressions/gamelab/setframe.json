@@ -11,8 +11,8 @@
       "code": "```\n// Use the mouse to move the smiley face. \r\n// High in the display for happy, middle of the display for surprised, low in the display for sad.\r\nvar sprite = createSprite(200, 200);\r\nsprite.setAnimation(\"smiley\");\r\nsprite.pause();\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  sprite.x = World.mouseX;\r\n  sprite.y = World.mouseY;\r\n  if (sprite.y < 100) {\r\n    sprite.setFrame(0);\r\n  } else if (sprite.y > 300) {\r\n    sprite.setFrame(1);\r\n  } else {\r\n    sprite.setFrame(2);\r\n  }\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/l69CSXlKQyUyipHNixfCNA/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

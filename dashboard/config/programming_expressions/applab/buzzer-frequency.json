@@ -11,8 +11,8 @@
       "code": "```\nonEvent(\"low_button\", \"click\", function(event) {\r\n  buzzer.frequency(100, 200);\r\n  \r\n});\r\nonEvent(\"medium_button\", \"click\", function(event) {\r\n  buzzer.frequency(300, 200);\r\n  \r\n});\r\nonEvent(\"high_button\", \"click\", function(event) {\r\n  buzzer.frequency(500, 200);\r\n  \r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

@@ -11,8 +11,8 @@
       "description": "Every time the ghost is clicked, it will jump to a random location.\r\n",
       "app": "https://studio.code.org/projects/spritelab/ju6-mmhqGgBZ5PDwaVz3n6TRqtUea3tPh3vG2RBNBoM",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/jumpTo.PNG",

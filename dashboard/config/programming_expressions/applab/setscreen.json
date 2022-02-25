@@ -11,8 +11,8 @@
       "code": "```\n// Screen swap. screen2, textLabels and buttons were added in Design mode.\r\nonEvent(\"screen1button\", \"click\", function(event) {\r\n  setScreen(\"screen2\");\r\n});\r\nonEvent(\"screen2button\", \"click\", function(event) {\r\n  setScreen(\"screen1\");\r\n});\n```",
       "app": "https://studio.code.org/projects/applab/jUBYejbm7qG0IxzlZpxllA/embed",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

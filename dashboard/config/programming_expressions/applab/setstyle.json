@@ -11,8 +11,8 @@
       "code": "```\nsetStyle(\"fancyButton\", \"font-family: monospace;\");\r\nsetStyle(\"fancyButton\", \"font-size: 40px;\");\r\nsetStyle(\"fancyButton\", \"font-weight: bold;\");\r\nsetStyle(\"fancyButton\", \"border-radius: 50px;\");\r\nsetStyle(\"fancyButton\", \"background: linear-gradient(red, yellow);\");\r\nsetStyle(\"fancyButton\", \"border: 2px solid red\");\n```",
       "app": "https://studio.code.org/projects/applab/uXaRKMraKX3ub2HTsxRYEA/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Big and Bold",
@@ -20,8 +20,8 @@
       "code": "```\ntextLabel(\"myLabel\", \"some text to style\");\r\nsetStyle(\"myLabel\", \"font-weight: bold; font-size: 30px;\");\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

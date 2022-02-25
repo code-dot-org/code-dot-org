@@ -11,8 +11,8 @@
       "code": "```\nonBoardEvent(toggleSwitch, \"close\", function(event) {\r\n  led.pulse(200);\r\n});\r\nonBoardEvent(toggleSwitch, \"open\", function(event) {\r\n  led.blink(200);\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Pulse Rates",
@@ -20,8 +20,8 @@
       "code": "```\nonBoardEvent(toggleSwitch, \"close\", function(event) {\r\n  led.pulse();\r\n});\r\nonBoardEvent(toggleSwitch, \"open\", function(event) {\r\n  led.pulse(150);\r\n});\r\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  led.pulse(50);\r\n});\r\nonBoardEvent(buttonR, \"down\", function(event) {\r\n  led.pulse(100);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Pulse On, Pulse Off",
@@ -29,8 +29,8 @@
       "code": "```\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  led.pulse(200);\r\n});\r\nonBoardEvent(buttonL, \"up\", function(event) {\r\n  led.off();\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

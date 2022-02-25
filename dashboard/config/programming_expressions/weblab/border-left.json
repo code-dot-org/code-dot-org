@@ -11,8 +11,8 @@
       "code": "```\nh1 {\r\n  border-left: 5px solid red;\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/cssref/pr_border-left.asp",

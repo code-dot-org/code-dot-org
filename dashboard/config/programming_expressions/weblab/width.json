@@ -11,8 +11,8 @@
       "code": "```\nimg {\n  width: 50%;\n}\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Width in pixels",
@@ -20,8 +20,8 @@
       "code": "```\np {\n  width: 300px;\n}\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/cssref/pr_dim_width.asp",

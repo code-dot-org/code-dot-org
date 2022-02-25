@@ -11,8 +11,8 @@
       "code": "```\n// Use a loop to sweep out many sections of a circle in different shades of red.\r\nvar sections=50;\r\nfor (var i = 0; i < sections; i++) {\r\n  fill(rgb(255-((255/sections)*i), 0, 0));\r\n  arc(200, 200, 200, 200, i*(360/sections), (i+1)*(360/sections));\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\narc(0, 0, 800, 800, 0, 90);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Some Arcs",
@@ -29,8 +29,8 @@
       "code": "```\n// A selection of arcs.\r\narc(50, 55, 50, 50, 0, 90);\r\nnoFill();\r\narc(50, 55, 60, 60, 90, 180);\r\narc(50, 55, 70, 70, 180, 225);\r\narc(50, 55, 80, 80, 225, 360);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

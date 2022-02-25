@@ -11,8 +11,8 @@
       "code": "```\n// Play a goal sound.\r\nplaySound(\"https://studio.code.org/blockly/media/skins/studio/1_goal.mp3\");\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example: Don't Go Too Far",
@@ -20,8 +20,8 @@
       "code": "```\n// Beep whenever the turtle moves to a position outside a rectangle at the center of the screen.\r\nvar count = 1;\r\nwhile ((count <= 3)) {\r\n  turnTo(randomNumber(1, 360));\r\n  moveForward(randomNumber(25, 50));\r\n  if (getX() < 100 || getX() > 220 || getY() < 165 || getY() > 285) {\r\n    playSound(\"beep-01a.mp3\");\r\n    count = count+1;\r\n  }\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Animal Piano",
@@ -29,8 +29,8 @@
       "code": "```\n// Play an animal sound when each animal image is clicked. \r\nimage(\"dog\", \"http://animalia-life.com/data_images/dog/dog7.jpg\");\r\nsetPosition(\"dog\", 50, 100, 100, 100);\r\nimage(\"cat\", \"http://animalia-life.com/data_images/cat/cat1.jpg\");\r\nsetPosition(\"cat\", 150, 100, 100, 100);\r\nimage(\"pig\", \"http://animalia-life.com/data_images/pig/pig1.jpg\");\r\nsetPosition(\"pig\", 50, 200, 100, 100);\r\nimage(\"owl\", \"http://animalia-life.com/data_images/owl/owl1.jpg\");\r\nsetPosition(\"owl\", 150, 200, 100, 100);\r\nonEvent(\"dog\", \"click\", function(event) {\r\n  playSound(\"http://static1.grsites.com/archive/sounds/animals/animals079.mp3\");\r\n});\r\nonEvent(\"cat\", \"click\", function(event) {\r\n  playSound(\"http://static1.grsites.com/archive/sounds/animals/animals021.mp3\");\r\n});\r\nonEvent(\"pig\", \"click\", function(event) {\r\n  playSound(\"http://static1.grsites.com/archive/sounds/animals/animals025.mp3\");\r\n});\r\nonEvent(\"owl\", \"click\", function(event) {\r\n  playSound(\"http://static1.grsites.com/archive/sounds/animals/animals074.mp3\");\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Making Music",
@@ -38,8 +38,8 @@
       "code": "```\n// Loop some background sounds.\r\nplaySound(\"https://audio.code.org/win3.mp3\", true);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

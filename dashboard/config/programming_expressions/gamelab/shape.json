@@ -11,8 +11,8 @@
       "code": "```\n// Draw a star.\r\nshape(200, 100, 275, 300, 90, 175, 310, 175, 125, 300);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

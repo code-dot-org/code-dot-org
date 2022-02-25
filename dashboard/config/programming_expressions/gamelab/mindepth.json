@@ -11,8 +11,8 @@
       "code": "```\nvar group = createGroup();\r\nfor (var i = 0; i < randomNumber(10, 20); i++) {\r\n  group.add(createSprite(randomNumber(0, 400), randomNumber(0, 400),randomNumber(10, 20),randomNumber(10, 20)));\r\n}\r\nconsole.log(group.minDepth());\r\nconsole.log(group.maxDepth());\r\nfill(\"red\");\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  for (var i = 0; i < group.maxDepth(); i++) {\r\n    var temp=group.get(i);\r\n    text(i, temp.x, temp.y);\r\n  }  \r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The lowest depth in the group.",

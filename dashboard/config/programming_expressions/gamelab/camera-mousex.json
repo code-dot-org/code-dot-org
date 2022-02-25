@@ -11,8 +11,8 @@
       "code": "```\nfunction draw() {\r\n  background(\"white\");\r\n  camera.x=World.mouseX;\r\n  text(\"worldMouseX\"+World.mouseX,World.mouseX,200);\r\n  text(\"camera.x\"+ camera.x,World.mouseX,225);\r\n  text(\"cameraMouseX\"+camera.mouseX,World.mouseX,250);\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The x coordinate of the mouse translated to the camera view.",

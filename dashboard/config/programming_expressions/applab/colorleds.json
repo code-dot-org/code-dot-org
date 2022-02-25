@@ -11,8 +11,8 @@
       "code": "```\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  colorLeds[0].on();\r\n  colorLeds[9].on();\r\n});\r\nonBoardEvent(buttonR, \"down\", function(event) {\r\n  colorLeds[0].off();\r\n  colorLeds[9].off();\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "syntax": "colorLeds"

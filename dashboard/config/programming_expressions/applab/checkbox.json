@@ -11,8 +11,8 @@
       "code": "```\n// Retrieve and display a checkbox value.\r\ncheckbox(\"agreeBox\", false);\r\ntextLabel(\"agreeLabel\",\"I agree to the above privacy statement.\",\"agreeBox\");\r\n\r\ntextLabel(\"response1\",\"Response: \");\r\ntextLabel(\"response2\",\"\");\r\nonEvent(\"agreeBox\", \"click\", function() {\r\n  setText(\"response2\",getChecked(\"agreeBox\"));\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\n// Create a basic privacy statement checkbox.\r\ncheckbox(\"agreeBox\", false);\r\ntextLabel(\"agreeLabel\",\"I agree to the above privacy statement.\",\"agreeBox\");\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

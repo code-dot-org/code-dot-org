@@ -11,8 +11,8 @@
       "code": "```\n<div style = \"color:red\">\r\n  <h4>This is first group</h4>\r\n  <p>Following is a list of vegetables</p>\r\n  <ul>\r\n    <li>Beetroot</li>\r\n    <li>Ginger</li>\r\n  </ul>\r\n </div>\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_div.asp",

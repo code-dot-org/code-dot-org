@@ -11,8 +11,8 @@
       "code": "```\n// Use the left and right keys to avoid the raindrops or get pushed off the screen.\r\nvar umbrella = createSprite(200, 300);\r\numbrella.setAnimation(\"umbrella\");\r\numbrella.scale = 0.1;\r\nvar group = createGroup();\r\nfor (var i = 0; i < 100; i++) {\r\n  var sprite = createSprite(randomNumber(0, 400), randomNumber(-200, 0), 10, 10);\r\n  sprite.setAnimation(\"raindrop\");\r\n  sprite.scale=0.03;\r\n  sprite.velocityY=randomNumber(1, 5);  \r\n  group.add(sprite);\r\n}\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  group.displace(umbrella);\r\n  drawSprites();\r\n  if (keyDown(\"right\")) {\r\n    umbrella.x = umbrella.x+10;\r\n  }\r\n  if (keyDown(\"left\")) {\r\n    umbrella.x = umbrella.x-10;\r\n  }    \r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/0a7JMI6adJgpWfAxwswZXA/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

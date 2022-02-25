@@ -11,8 +11,8 @@
       "code": "```\n//Changes the rate of how fast the button blinks depending on which button is pressed.\r\nvar blinkRate = 50;\r\n\r\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  blinkRate = blinkRate - 10;\r\n  led.blink(blinkRate);\r\n});\r\n\r\nonBoardEvent(buttonR, \"down\", function(event) {\r\n  blinkRate = blinkRate + 10;\r\n  led.blink(blinkRate);\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Pulse: Pulse versus Blink",
@@ -20,8 +20,8 @@
       "code": "```\nonBoardEvent(toggleSwitch, \"close\", function(event) {\r\n  led.pulse(200);\r\n});\r\nonBoardEvent(toggleSwitch, \"open\", function(event) {\r\n  led.blink(200);\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Toggle: Button Lightswitch",
@@ -29,8 +29,8 @@
       "code": "```\nonBoardEvent(buttonL, \"down\", function(event) {\r\n  led.toggle();\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "On and Off: Lightswitch",
@@ -38,8 +38,8 @@
       "code": "```\n//The red LED light turns on when the switch is flipped open, and off when the switch is flipped closed.\r\nonBoardEvent(\"toggleSwitch\", \"open\", function(event) {\r\n  led.on();\r\n});\r\nonBoardEvent(\"toggleSwitch\", \"closed\", function(event) {\r\n  led.off();\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "syntax": "led"

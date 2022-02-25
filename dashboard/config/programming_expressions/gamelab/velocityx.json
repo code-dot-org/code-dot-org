@@ -11,8 +11,8 @@
       "code": "```\n// Make a sprite vibrate by alternating velocityX positive and negative.\r\nvar sprite = createSprite(200, 200);\r\nsprite.velocityX = 5;\r\nsprite.velocityY = 1;\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  if (sprite.velocityX>0) {\r\n    sprite.velocityX = -5;\r\n  }\r\n  else {\r\n    sprite.velocityX = 5;\r\n  }\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\nvar sprite = createSprite(200, 200);\r\nsprite.velocityX = 1;\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "Velocity in the positive x direction.",

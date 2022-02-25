@@ -11,8 +11,8 @@
       "code": "```\n// Determines if it is currently working hours.\r\nvar now = new Date();\r\nvar hours = now.getHours(); \r\nvar workHours = false;\r\nif (hours >= 9 && hours < 17) {\r\n    workHours = true;\r\n}\r\nconsole.log(workHours);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Take Your Temperature",
@@ -20,8 +20,8 @@
       "code": "```\n// Check for temperature in a good range or not.\r\ntextLabel(\"tempLabelID\", \"What is your temperature?\");\r\ntextInput(\"tempID\", \"\");\r\nbutton(\"buttonID\", \"Submit\");\r\ntextLabel(\"tempMessageID\", \"\");\r\nonEvent(\"buttonID\", \"click\", function(event) {\r\n  setText(\"tempMessageID\",\"\");\r\n  var temp = getText(\"tempID\");\r\n  if (temp >= 98 && temp <= 99.5) {\r\n    setText(\"tempMessageID\", \"Your temperature is fine.\");\r\n  }\r\n  else {\r\n    setText(\"tempMessageID\", \"You may be sick.\");\r\n  }\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

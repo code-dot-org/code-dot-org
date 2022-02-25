@@ -11,8 +11,8 @@
       "code": "```\n// Turn off the fill and then back on again.\r\nellipse(100, 100, 200, 200);\r\nnoFill();\r\nellipse(120, 120, 200, 250);\r\nfill(\"pink\");\r\nrect(175, 250, 20, 25);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "No return value. Changes future output to the display only.",

@@ -11,8 +11,8 @@
       "code": "```\n\r\n<html>\r\n<head>\r\n  <title>Title of the document</title>\r\n</head>\r\n\r\n<body>\r\n  <h1>This is a heading</h1>\r\n  <p>This is a paragraph.</p>\r\n</body>\r\n\r\n</html>\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_body.asp",

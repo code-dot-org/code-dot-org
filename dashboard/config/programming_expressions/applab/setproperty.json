@@ -11,8 +11,8 @@
       "code": "```\n// Change button color and font size\r\nbutton(\"myButton\", \"Click me!\");\r\nsetProperty(\"myButton\", \"background-color\", \"red\");\r\nsetProperty(\"myButton\", \"font-size\", 20);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

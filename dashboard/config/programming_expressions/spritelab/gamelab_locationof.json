@@ -11,16 +11,16 @@
       "description": "This block allows one sprite to move towards another, no matter where it is on the screen. Here is a simple tag game where you can press the spacebar to make the chaser follow the runner.\r\n",
       "app": "https://studio.code.org/projects/spritelab/2rF3nhfgM0kQJLvbHd0Uw-O3QZ5KizoDo6QKsj-s7oY",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 500
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 500
     },
     {
       "name": "Example 1",
       "description": "The first sprite is drawn at a random location, but the second sprite is always drawn at the same place.",
       "app": "https://studio.code.org/projects/spritelab/tewA4hP6AQUQ-LCtJl3H9ragHH0CnWI96wkEWM39Ox4",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/locationOf.PNG",

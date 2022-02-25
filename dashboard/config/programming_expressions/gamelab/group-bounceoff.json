@@ -11,8 +11,8 @@
       "code": "```\n// Stay cool! Keep all the bad vibes from getting you down.\r\n// Uses createGroup to make a bunch of bouncing baddies, \r\n// createEdgeSprites to make sure the baddies don't just fly off.\r\n\r\nvar cool = createSprite(200, 325);\r\ncool.setAnimation(\"cool\");\r\ncreateEdgeSprites();\r\nvar group = createGroup();\r\n\r\nfor (var i = 0; i < 20; i++) {\r\n  var sprite = createSprite(randomNumber(0, 400), randomNumber(0, 100), 10, 10);\r\n  sprite.velocityY=randomNumber(5, 10);\r\n  sprite.velocityX=randomNumber(-5, 5);\r\n  sprite.bounciness = 1\r\n  group.add(sprite);\r\n}\r\n\r\ngroup.setAnimationEach(\"mean\");\r\n\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  cool.x = World.mouseX;\r\n  group.bounceOff(cool);\r\n  group.bounceOff(topEdge);\r\n  group.bounceOff(leftEdge);\r\n  group.bounceOff(rightEdge);  \r\n}\r\n\n```",
       "app": "https://studio.code.org/projects/gamelab/xLeXLVoeiWE3pMPJrS1I3d66DnuylmvrbMWTB5Jqkp8",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

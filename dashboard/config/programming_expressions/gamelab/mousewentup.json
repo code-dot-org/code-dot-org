@@ -11,8 +11,8 @@
       "code": "```\nfunction draw() {\r\n  console.log(mouseWentUp(\"leftButton\"));\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Move to the Mouse",
@@ -20,8 +20,8 @@
       "code": "```\n// Have the sprite move in the direction of the mouse when button was released.\r\nvar sprite = createSprite(200, 200);\r\nvar angle;\r\ndrawSprites();\r\nfunction draw() {\r\n  background(\"white\");\r\n  if (mouseWentUp(\"leftButton\")) {\r\n    console.log(\"here\");\r\n    angle=(180/Math.PI)*Math.atan2(mouseY-sprite.y, mouseX-sprite.x);\r\n    sprite.setSpeedAndDirection(10, angle);\r\n  }\r\n  drawSprites();\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/WsiIZu7QGJ9DS3LItnFIKA/",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

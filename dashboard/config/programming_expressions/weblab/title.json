@@ -11,8 +11,8 @@
       "code": "```\n<head>\r\n  <title>HTML Elements Reference</title>\r\n</head>\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_title.asp",

@@ -11,8 +11,8 @@
       "code": "```\nvar sprite = createSprite(200, 200);\r\nsprite.rotationSpeed=10;\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Faster and Faster",
@@ -20,8 +20,8 @@
       "code": "```\n// Make the sprite spin faster and faster when the mouse moves.\r\nvar sprite = createSprite(200, 200);\r\nfunction draw() {\r\n  background(\"white\");\r\n  if (mouseDidMove()) sprite.rotationSpeed=sprite.rotationSpeed+1;\r\n  drawSprites();\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "The clockwise rotation speed.",

@@ -11,8 +11,8 @@
       "code": "```\n// Turn off the stroke and then back on again. Note the strokeWeight is maintained throughout.\r\nrect(100, 100, 200, 200);\r\nstrokeWeight(10);\r\npoint(150, 150);\r\nline(125, 250, 150, 250);\r\nnoStroke();\r\npoint(175, 150);\r\nstroke(\"red\");\r\nline(175, 250, 200, 250);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "return_value": "No return value. Changes future output to the display only.\r\n",

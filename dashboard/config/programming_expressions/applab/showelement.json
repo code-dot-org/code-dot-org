@@ -11,8 +11,8 @@
       "code": "```\n// Make the Code.org logo blink.\r\nimage(\"logo\", \"http://code.org/images/logo.png\");\r\nsetInterval(function() {\r\n  hideElement(\"logo\");\r\n  setTimeout(function() {\r\n    showElement(\"logo\");\r\n  }, 500);\r\n}, 1000);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\nimage(\"logo\", \"http://code.org/images/logo.png\");\r\nbutton(\"hideButton\", \"Hide logo\");\r\nbutton(\"showButton\", \"Show logo\");\r\nonEvent(\"hideButton\", \"click\", function(event) {\r\n  hideElement(\"logo\");\r\n});\r\nonEvent(\"showButton\", \"click\", function(event) {\r\n  showElement(\"logo\");\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

@@ -11,8 +11,8 @@
       "code": "```\n// Various fonts.\r\ntextSize(18);\r\ntext(\"Hello World\", 100, 75);\r\ntextFont(\"Arial\");  // Same as default font.\r\ntext(\"Hello World\", 100, 125);\r\ntextFont(\"Georgia\");\r\ntext(\"Hello World\", 100, 175);\r\ntextFont(\"Times New Roman\");\r\ntext(\"Hello World\", 100, 225);\r\ntextFont(\"Courier New\");\r\ntext(\"Hello World\", 100, 275);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

@@ -11,8 +11,8 @@
       "code": "```\n// Update the number on a button with every click\r\nvar count=0;\r\nbutton(\"clickCounter\",\"0\");\r\nonEvent(\"clickCounter\", \"click\", function(event) {\r\n  count=count+1;\r\n  setText(\"clickCounter\", count);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example Random Thoughts",
@@ -20,8 +20,8 @@
       "code": "```\n// Demonstrate reading and then clearing a textInput box.\r\ntextInput(\"yourThought\",\"\");\r\nonEvent(\"yourThought\", \"change\", function(event) {\r\n  write(getText(\"yourThought\"));\r\n  setText(\"yourThought\",\"\");\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -29,8 +29,8 @@
       "code": "```\n// Create a label for a screen title.\r\ntextLabel(\"screenTitle\",\"\");\r\nsetText(\"screenTitle\",\"My App\");\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

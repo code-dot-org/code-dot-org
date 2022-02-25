@@ -11,8 +11,8 @@
       "code": "```\n<html>\r\n\t<body>\r\n    \t<h2>Katherine Johnson</h2>\r\n        <p>\r\n          Katherine Johnson was an American mathematician whose calculations as a NASA employee were critical to the success of the first U.S. missions to space.\r\n        </p>\r\n        <a href=\"https://www.nasa.gov/content/katherine-johnson-biography\">Click Here to learn more about Katherine Johnson</a>\r\n    </body>\r\n</html>\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/katherine.png",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "External Website",
@@ -20,8 +20,8 @@
       "code": "```\n<a href=\"https://code.org/\">Visit Code.org!</a>\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Page on the Same Website",
@@ -29,8 +29,8 @@
       "code": "```\n<a href=\"books.html\">Books</a>\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_a.asp",

@@ -11,8 +11,8 @@
       "code": "```\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  buzzer.note(\"C4\", 100);\r\n  \r\n});\r\n\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  buzzer.note(\"D3\", 100);\r\n  \r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Circuit Piano ",
@@ -20,8 +20,8 @@
       "code": "```\n//Piano keys\r\nonEvent(\"c4\", \"click\", function(event) {\r\n  buzzer.note(\"C4\", 100);\r\n  \r\n});\r\nonEvent(\"d4\", \"click\", function(event) {\r\n  buzzer.note(\"D4\", 100);\r\n});\r\nonEvent(\"e4\", \"click\", function(event) {\r\n  buzzer.note(\"E4\", 100);\r\n});\r\nonEvent(\"f4\", \"click\", function(event) {\r\n  buzzer.note(\"F4\", 100);\r\n});\r\nonEvent(\"g4\", \"click\", function(event) {\r\n  buzzer.note(\"G4\", 100);\r\n});\r\nonEvent(\"a4\", \"click\", function(event) {\r\n  buzzer.note(\"A4\", 100);\r\n});\r\nonEvent(\"b4\", \"click\", function(event) {\r\n  buzzer.note(\"B4\", 100);\r\n});\r\n\r\n//Sharp notes\r\nonEvent(\"c#\", \"click\", function(event) {\r\n  buzzer.note(\"C#4\", 100);\r\n});\r\nonEvent(\"d#\", \"click\", function(event) {\r\n  buzzer.note(\"D#4\", 100);\r\n});\r\nonEvent(\"f#\", \"click\", function(event) {\r\n  buzzer.note(\"F#4\", 100);\r\n});\r\nonEvent(\"g#\", \"click\", function(event) {\r\n  buzzer.note(\"G#4\", 100);\r\n});\r\nonEvent(\"a#\", \"click\", function(event) {\r\n  buzzer.note(\"A#4\", 100);\r\n});\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/U6PianoBoard.gif",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

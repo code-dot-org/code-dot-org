@@ -11,8 +11,8 @@
       "code": "```\n// Collect, count and display messages from friends.\r\ntextLabel(\"myTextLabel\", \"Type a message and press press enter\");\r\ntextInput(\"myTextInput\", \"\");\r\nvar count = 1;\r\nonEvent(\"myTextInput\", \"change\", function(event) {\r\n  var myText = getText(\"myTextInput\");\r\n  write(\"Message #\" + count + \": \" + myText);\r\n  setText(\"myTextInput\", \"\");\r\n  count = count + 1;\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example: Ticker Tape Calculator",
@@ -20,8 +20,8 @@
       "code": "```\n// Creates a simple ticker tape calculator.\r\nvar total = 0;\r\ntextInput(\"value\",\"0\");\r\nwrite(\"<br>\");\r\nbutton(\"plus\",\"+\");\r\nbutton(\"minus\",\"-\");\r\nbutton(\"clear\",\"clear\");\r\nwrite(total);\r\nonEvent(\"plus\",\"click\", function(event) {\r\n  total += parseFloat(getText(\"value\"));\r\n  write(total);\r\n});\r\nonEvent(\"minus\",\"click\", function(event) {\r\n  total -= parseFloat(getText(\"value\"));\r\n  write(total);\r\n});\r\nonEvent(\"clear\", \"click\", function(event) {\r\n  total = 0;\r\n  write(total);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -29,8 +29,8 @@
       "code": "```\n// Let's you know your code is running.\r\nwrite(\"It's Alive!\");\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

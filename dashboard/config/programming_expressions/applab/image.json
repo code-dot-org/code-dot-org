@@ -11,8 +11,8 @@
       "code": "```\n// Click the button to change the character image on the screen from the dog to the bee and back again.\r\nvar dogURL=\"https://studio.code.org/blockly/media/skins/applab/static_avatar.png\";\r\nvar beeURL=\"https://studio.code.org/blockly/media/skins/bee/static_avatar.png\";\r\n\r\nimage(\"character\", dogURL);\r\nbutton(\"changeButton\", \"Change Character\");\r\n\r\nonEvent(\"changeButton\", \"click\", function(event) {\r\n  var currentCharacterURL = getImageURL(\"character\");\r\n  if (currentCharacterURL == dogURL) {\r\n    setImageURL(\"character\", beeURL);\r\n  } else {\r\n    setImageURL(\"character\", dogURL);  }\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\n// add the Code.org logo to the screen from the url\r\nimage(\"logo\", \"http://code.org/images/logo.png\");\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

@@ -11,8 +11,8 @@
       "code": "```\nvar target = createSprite(200, 200);\r\ntarget.shapeColor=\"green\";\r\nvar group = createGroup();\r\nfor (var i = 0; i < 5; i++) {\r\n  group.add(createSprite(randomNumber(0, 400), randomNumber(0, 400), 20, 20));\r\n}\r\nfunction draw() {\r\n  background(\"white\");\r\n  drawSprites();\r\n  if (group.isTouching(target)) {\r\n    target.shapeColor=\"red\";\r\n  }\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

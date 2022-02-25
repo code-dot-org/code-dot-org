@@ -11,8 +11,8 @@
       "code": "```\nonBoardEvent(buttonL, \"press\", function(event) {\r\n  buzzer.note(\"A4\");\r\n});\r\nonBoardEvent(buttonR, \"press\", function(event) {\r\n  buzzer.stop();\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Event Example: tempSensor Thermometer ",
@@ -20,8 +20,8 @@
       "code": "```\nonBoardEvent(tempSensor, \"data\", function(event) {\r\n  setNumber(\"temperature\", tempSensor.F);\r\n});\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/U6TempSense.gif",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Event Example: lightSensor Color Changer",
@@ -29,8 +29,8 @@
       "code": "```\nonBoardEvent(lightSensor, \"data\", function(event) {\r\n  lightSensor.setScale(0, 255);\r\n  var light1 = lightSensor.value;\r\n  lightSensor.setScale(100, 150);\r\n  var light2 = lightSensor.value;\r\n  lightSensor.setScale(0, 200);\r\n  var light3 = lightSensor.value;\r\n  setProperty(\"screen1\", \"background-color\", rgb(light1,light2,light3));\r\n});\r\n\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/U6ColorChanger.gif",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Event Example: toggleSwitch Lightswitch",
@@ -38,8 +38,8 @@
       "code": "```\nonBoardEvent(toggleSwitch, \"open\", function(event) {\r\n  led.off();\r\n});\r\nonBoardEvent(toggleSwitch, \"close\", function(event) {\r\n  led.on();\r\n});\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Event Example: accelerometer Tilt Detector",
@@ -47,8 +47,8 @@
       "code": "```\nvar colors = \"white\";\r\n\r\nonBoardEvent(accelerometer, \"data\", function(event) {\r\n  var pitch = accelerometer.getOrientation(\"pitch\");\r\n  var inclination = accelerometer.getOrientation(\"inclination\");\r\n  var roll = accelerometer.getOrientation(\"roll\");\r\n  \r\n  //front to back\r\n  if (pitch < -10) {\r\n    colorLeds[0].on();\r\n    colorLeds[9].on();\r\n  }\r\n  if (pitch > 10) {\r\n    colorLeds[4].on();\r\n    colorLeds[5].on();\r\n  }\r\n  \r\n  //side-to-side\r\n  if (roll > 20) {\r\n    colorLeds[7].on();\r\n  } \r\n  if(roll < -20){\r\n    colorLeds[2].on();\r\n  }\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

@@ -11,8 +11,8 @@
       "code": "```\n// Make 10 random turtle moves in half second intervals. \r\nvar count=0;\r\ntimedLoop(500, function(){\r\n  var x = randomNumber(-50, 50);\r\n  var y = randomNumber(-50, 50);\r\n  console.log(\"Move \" + x + \" horizontally and \" + y + \" vertically.\");\r\n  move(x, y);\r\n  count=count+1;\r\n  if (count==10) {\r\n  \tstopTimedLoop();\r\n  }\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Seconds Elapsed",
@@ -20,8 +20,8 @@
       "code": "```\nvar seconds = 0;\r\ntimedLoop(1000, function() {\r\n  seconds = seconds + 1;\r\n  console.log(seconds + \" seconds have elapsed\");\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

@@ -11,8 +11,8 @@
       "code": "```\n<ol>\r\n  <li>Tea</li> \r\n  <li>Milk</li>\r\n  <li>Water</li>\r\n</ol>\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Unordered List",
@@ -20,8 +20,8 @@
       "code": "```\n<ul>\r\n  <li>Tea</li>\r\n  <li>Milk</li>\r\n  <li>Water</li>\r\n</ul>\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_li.asp",

@@ -11,8 +11,8 @@
       "code": "```\n//playSpeech Example\r\nvar bg = createSprite(200, 200);\r\nbg.setAnimation(\"background_landscape07_1\");\r\nvar bird = createSprite(250, 100);\r\nbird.scale = 0.25;\r\nbird.setAnimation(\"birdside_07_1\");\r\nvar daniela = createSprite(150, 300);\r\ndaniela.setAnimation(\"green_shirt_wave2_1\");\r\ndaniela.scale = 0.6;\r\ndrawSprites();\r\nplaySpeech(\"Hello! I'm Daniela! Check out this cool bird!\", \"female\", \"English\");\r\n\n```",
       "app": "",
       "image": "https://curriculum.code.org/media/playspeech-example.PNG",
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

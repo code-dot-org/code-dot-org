@@ -11,8 +11,8 @@
       "code": "```\n// Draw a blue background\r\nbackground(\"blue\");\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Changing the Background Color",
@@ -20,8 +20,8 @@
       "code": "```\n// Use the mouse pointer position to change the color of the background.\r\nfunction draw() {\r\n  background(rgb(World.mouseX, World.mouseY, 0));\r\n}\n```",
       "app": "https://studio.code.org/projects/gamelab/0ukCXycdid1iD1bNS1dh1g/view",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "RGB Colors",
@@ -29,8 +29,8 @@
       "code": "```\n// Use RGB numbers to set a background color.\r\nbackground(rgb(63, 127, 255));\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

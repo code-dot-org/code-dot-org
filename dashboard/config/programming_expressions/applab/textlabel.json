@@ -11,8 +11,8 @@
       "code": "```\n// Create a label and associate it with a text input box.\r\ntextLabel(\"YourNameLabel\",\"Enter your name:\", \"YourName\");\r\ntextInput(\"YourName\",\"\");\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\n// Create a label for a screen title.\r\ntextLabel(\"screenTitle\",\"My App\");\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example Opinion Survey",
@@ -29,8 +29,8 @@
       "code": "```\n// Demonstrate a label for each of the user input screen elements. No event handlers have been defined yet.\r\ntextLabel(\"textInputLabel\",\"Name:\", \"textInputName\");\r\ntextInput(\"textInputName\",\"\");\r\nwrite(\"<br>\");\r\ntextLabel(\"dropdownLabel\",\"Year In School\",\"dropdownYear\");\r\ndropdown(\"dropdownYear\",\"Freshman\",\"Sophomore\",\"Junior\",\"Senior\");\r\nwrite(\"<br>\");\r\ntextLabel(\"radioTitleLabel\", \"Gender\");\r\nradioButton(\"radioFemale\",\"false\",\"genderGroup\");\r\ntextLabel(\"radioFemaleLabel\",\"Female\",\"radioFemale\");\r\nradioButton(\"radioMale\",\"false\",\"genderGroup\");\r\ntextLabel(\"radioMaleLabel\",\"Male\",\"radioMale\");\r\nwrite(\"<br>\");\r\ntextLabel(\"checkBoxLabel\",\"Excited about programming?\", \"checkBoxProgramming\");\r\ncheckbox(\"checkBoxProgramming\",false);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

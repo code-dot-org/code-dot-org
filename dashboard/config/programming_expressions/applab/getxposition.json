@@ -11,8 +11,8 @@
       "code": "```\n// Check whether the logo has been displayed too close to the right edge.\r\nimage(\"logo\", \"http://code.org/images/logo.png\");\r\nsetPosition(\"logo\", randomNumber(0,320), randomNumber(0,450));\r\nif (isCloseToEdge()){\r\n  write(\"Too Close to Edge\");\r\n}\r\nfunction isCloseToEdge(){\r\n  if (getXPosition(\"logo\")>=270) {\r\n    return true;\r\n  } else{\r\n    return false;\r\n  }\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "",
@@ -20,8 +20,8 @@
       "code": "```\n// add the Code.org logo at a random position on the screen and display it's position.\r\nimage(\"logo\", \"http://code.org/images/logo.png\");\r\nsetPosition(\"logo\", randomNumber(0,320), randomNumber(0,450));\r\nwrite(getXPosition(\"logo\"));\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

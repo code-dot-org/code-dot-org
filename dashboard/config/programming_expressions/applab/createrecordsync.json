@@ -11,8 +11,8 @@
       "code": "```\n// Collect favorite food data from friends and store it in a table.\r\ntextInput(\"nameInput\", \"What is your name?\");\r\ntextInput(\"ageInput\", \"What is your age?\");\r\ntextInput(\"foodInput\", \"What is your favorite food?\");\r\nbutton(\"doneButton\", \"Done\");\r\n\r\nonEvent(\"doneButton\", \"click\", function() {\r\n  var favFoodData={};\r\n  favFoodData.name = getText(\"nameInput\");\r\n  favFoodData.age = getNumber(\"ageInput\");\r\n  favFoodData.food = getText(\"foodInput\");\r\n  createRecordSync(\"fav_foods\", favFoodData);\r\n});\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

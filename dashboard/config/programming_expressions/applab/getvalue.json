@@ -11,8 +11,8 @@
       "code": "```\nvar dictionary = {\r\n    \"tortilla\": \"a thin, flat pancake of cornmeal or flour, eaten hot or cold, typically with a savory filling as a part of Mexican cuisine.\",\r\n    \"naan\": \"a type of leavened bread, typically of teardrop shape and traditionally cooked in a clay oven as part of Indian cuisine.\",\r\n    \"injera\": \"a white leavened Ethiopian bread made from teff flour, similar to a crêpe.\"\r\n}\r\n\r\nvar definition = getValue(dictionary, \"tortilla\");\r\nconsole.log(\"Tortilla: \" + definition);\r\ndefinition = getValue(dictionary, \"naan\");\r\nconsole.log(\"Naan: \" + definition);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Phone Number Lookup",
@@ -20,8 +20,8 @@
       "code": "```\nvar phoneNumbers = {\r\n\t\"Brendan\": \"520-555-1827\",\r\n    \"Alicia\": \"510-555-9182\",\r\n    \"Omar\": \"720-555-2817\",\r\n    \"Emergency\": \"911\"\r\n};\r\n\r\nvar name = prompt(\"Enter the phone number you want to look up (Brendan, Alicia, Omar, Emergency)\");\r\nvar number = getValue(phoneNumbers, name);\r\nconsole.log(name + \": \" + number);\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Abbreviation Dictionary",
@@ -29,8 +29,8 @@
       "code": "```\nvar abbreviations = {\r\n\t\"LOL\": \"Laugh out loud\",\r\n    \"TIL\": \"Today I Learned\",\r\n    \"LGTM\": \"Looks Good To Me\",\r\n    \"FWIW\": \"For What It's Worth\",\r\n    \"FYI\": \"For Your Information\"\r\n};\r\n\r\nconsole.log(\"Hello! I am learning new abbreviations! Would you like to look up an abbreviation, or teach me a new one?);\r\nvar choice = prompt(\"(1) Look Up an Abbreviation (2) Teach a New Abbreviation);\r\n\r\nif(choice == 1) {\r\n\tvar word = prompt(\"What abbreviation do you want to look up?\");\r\n    var definition = getValue(abbreviations, word);\r\n    console.log(word + \": \" + definition);\r\n}\r\nif(choice == 2) {\r\n\tvar word = prompt(\"What is the new abbreviation?\");\r\n    var definition = prompt(\"What does it mean?\");\r\n    addPair(abbreviations, word, definition);\r\n    console.log(\"Successfully Added!\");\r\n}\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "palette_params": [

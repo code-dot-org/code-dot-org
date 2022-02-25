@@ -11,16 +11,16 @@
       "description": "Each sprite is set to a different size.",
       "app": "https://studio.code.org/projects/spritelab/LLivCo_Re1h4pHsRFRnS2L68tpF6RFPfinwb_dAyu2w",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Example 2",
       "description": "Each sprite is set to a different rotation.",
       "app": "https://studio.code.org/projects/spritelab/Ems0tkcP45ZIBWpmWwCNkMabLNrQorCCiXlN7hOJVLI",
       "image": null,
-      "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "embedAppWithCode",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/setProperty.PNG",

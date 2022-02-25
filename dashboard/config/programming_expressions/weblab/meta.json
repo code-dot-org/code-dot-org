@@ -11,8 +11,8 @@
       "code": "```\n<head>\r\n  <meta name = \"description\" \r\n    content = \"This section is an example answer.” />\r\n</head>\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     },
     {
       "name": "Revision Details",
@@ -20,8 +20,8 @@
       "code": "```\n<head>\r\n  <meta name = \"revised detail\" \r\n    content = \"last updated time\"/>\r\n</head>\r\n\n```",
       "app": "",
       "image": null,
-      "app_display_type": "codeFromCodeField",
-      "embed_app_with_code_height": 310
+      "appDisplayType": "codeFromCodeField",
+      "embedAppWithCodeHeight": 310
     }
   ],
   "external_documentation": "http://www.w3schools.com/tags/tag_meta.asp",
