@@ -9,7 +9,6 @@
     {
       "name": "Example 1",
       "description": "Using “this” lets an action apply to just one sprite in a costume group without creating a name for every sprite. In this example, any sun that is clicked will disappear when clicked without affecting the others.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/BB02x207ZceIeJqOAVLuDtpMBlbR_eIvs111X6gZjLU",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -18,7 +17,6 @@
     {
       "name": "Example 2",
       "description": "“Other” only works if more than one sprite is involved. When two sprites touch, “this” and “other” can be used to make a different action occur for each sprite.  Press 'up' and 'down' arrows to have the middle sprite eat the pizza.\r\n",
-      "code": "```\n\n```",
       "app": "https://studio.code.org/projects/spritelab/vpJR48129a0EGLyJbsA01C1eH-ij1qDPLNggqQc-sN8",
       "image": null,
       "app_display_type": "embedAppWithCode",

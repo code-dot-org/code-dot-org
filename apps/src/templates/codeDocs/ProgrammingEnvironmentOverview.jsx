@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import CodeDocLink from '@cdo/apps/templates/codeDocs/CodeDocLink';
 import i18n from '@cdo/locale';
+import {TextLink} from '@dsco_/link';
 
 export function CategorySection({category}) {
   return (
@@ -37,7 +38,11 @@ export default function ProgrammingEnvironmentOverview({
       )}
       {programmingEnvironment.projectUrl && (
         <div>
-          <a href={programmingEnvironment.projectUrl}>{i18n.tryItOut()}</a>
+          <TextLink
+            href={programmingEnvironment.projectUrl}
+            weight="medium"
+            text={i18n.tryItOut()}
+          />
         </div>
       )}
       {programmingEnvironment.categories.map(category => (
