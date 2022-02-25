@@ -22,7 +22,9 @@ class CourseOfferingTest < ActiveSupport::TestCase
     CourseOffering.add_course_offering(@unit_teacher_to_students2)
     @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher2', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher, family_name: 'family-3', version_year: '1991', is_course: true, published_state: 'stable')
     CourseOffering.add_course_offering(@unit_facilitator_to_teacher)
+  end
 
+  setup do
     @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
     @pilot_unit = create :script, pilot_experiment: 'my-experiment', family_name: 'family-4', version_year: '1991', is_course: true, published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     CourseOffering.add_course_offering(@pilot_unit)
