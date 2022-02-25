@@ -153,6 +153,7 @@
   "removeSpriteWhenTouch": "A sprite needs to be removed when another sprite touches it.",
   "removeOnlyClickedSprite": "All of the sprites were removed instead of just the one that was clicked. Try using the `clicked sprite` block with the `remove` block.",
   "removeOnlyTouchedSprite": "All of the sprites were removed instead of just the one that was touched. Try using the `subject sprite` or `object sprite` block with the `remove` block.",
+  "renameVariable": "Choose a different label for your variable. Click on `???` and rename it to something else, like `count` or `score`.",
   "sayBlock": "Type something for the sprite to say in a `say` block. \n<xml><block type=\"gamelab_spriteSay\"><title name=\"SPEECH\">Hello, world!</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"default\"</title></block></value></block></xml>",
   "saySprite": "The sprite didn't say anything.",
   "sayVariable": "Make the sprite say the value of your variable. Be sure the label matches your code. \n <xml><block type=\"gamelab_spriteSayTime\">\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <field name=\"ANIMATION\">\"purple bunny\"</field>\n      </block>\n    </value>\n    <value name=\"TEXT1\">\n      <block type=\"variables_get\">\n        <field name=\"VAR\">count</field>\n      </block>\n    </value>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">4</field>\n      </block>\n    </value>\n  </block></xml>",
